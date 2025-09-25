@@ -1,0 +1,80 @@
+{
+  "metadata": {
+    "exportedAt": "2025-09-13T05:17:20.031Z",
+    "componentName": "Component 2",
+    "totalElements": 5,
+    "nestingDepth": 2,
+    "plugin": "Figma to JSON Exporter"
+  },
+  "designTokens": {
+    "colors": {},
+    "fonts": {},
+    "spacing": {},
+    "effects": {}
+  },
+  "structure": {
+    "name": "component-2",
+    "type": "COMPONENT_SET",
+    "size": {
+      "w": 1155,
+      "h": 240
+    },
+    "styles": {
+      "border": {
+        "width": 1,
+        "color": "rgb(138, 56, 245)"
+      },
+      "radius": 5,
+      "layout": {
+        "direction": "row",
+        "gap": 0,
+        "align": {
+          "main": "start",
+          "cross": "start"
+        }
+      }
+    },
+    "children": [
+      {
+        "name": "property-1-box1",
+        "type": "COMPONENT",
+        "size": {
+          "w": 0,
+          "h": 0
+        }
+      },
+      {
+        "name": "property-1-box2",
+        "type": "COMPONENT",
+        "size": {
+          "w": 0,
+          "h": 0
+        }
+      },
+      {
+        "name": "property-1-box3",
+        "type": "COMPONENT",
+        "size": {
+          "w": 0,
+          "h": 0
+        }
+      },
+      {
+        "name": "property-1-box4",
+        "type": "COMPONENT",
+        "size": {
+          "w": 0,
+          "h": 0
+        }
+      }
+    ]
+  },
+  "summary": {
+    "components": 4,
+    "instances": 0,
+    "frames": 0,
+    "texts": 0,
+    "hasAutoLayout": true,
+    "hasEffects": false
+  }
+}

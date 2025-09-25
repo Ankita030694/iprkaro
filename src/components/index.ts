@@ -1,0 +1,13 @@
+export { default as Navbar } from './Navbar';
+export { default as HeroSection } from './HeroSection';
+export { default as AILogo } from './AILogo';
+export { default as ClientLogoSlider } from './ClientLogoSlider';
+export { default as FeatureCards } from './FeatureCards';
+export { default as HowItWorks } from './HowItWorks';
+export { default as WhyRegisterTrademark } from './WhyRegisterTrademark';
+export { default as SimplePlans } from './SimplePlans';
+export { default as Faq } from './Faq';
+export { default as Footer } from './Footer';
+export { default as TrademarkSearchPopup } from './TrademarkSearchPopup';
+export { default as WhyTrademark } from './WhyTrademark';
+export { default as Expert } from './Expert';

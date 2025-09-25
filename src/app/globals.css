@@ -3,6 +3,29 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  
+  /* Primary Color Palette */
+  --color-green: #16a34a; /* Green 70% */
+  --color-yellow: #FFB400; /* Yellow 15% */
+  --color-light-green: #86efac; /* Light Green 5% */
+  --color-light-yellow: #FFC107; /* Light Yellow 5% */
+  
+  /* Accent Colors */
+  --color-cyan: #00CFE8;
+  
+  /* Neutral Colors */
+  --color-black: #000000;
+  --color-dark-brown: #1f1310;
+  --color-warm-brown: #3b2412;
+  --color-grey-dark: #5a5250;
+  --color-grey-medium: #6f6a68;
+  --color-grey-light: #BEB6B4;
+  --color-off-white: #F2F0EF;
+  --color-white: #FFFFFF;
+  
+  /* Legacy support */
+  --color-primary-yellow: var(--color-yellow);
+  --color-light-yellow: var(--color-light-yellow);
 }
 
 @theme inline {
@@ -10,6 +33,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-nunito: var(--font-nunito);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,8 +43,493 @@
   }
 }
 
+/* Enhanced scroll optimization */
+html {
+  scroll-behavior: auto; /* Let Lenis handle smooth scrolling */
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  /* Performance optimizations for smoother scrolling */
+  overflow-x: hidden;
+  will-change: scroll-position;
+}
+
+/* Global scroll optimization classes */
+.lenis {
+  height: 100vh;
+  resize: none;
+  border: none;
+  outline: none;
+  overflow: hidden;
+}
+
+.lenis [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+/* Optimize animations for better performance during scroll */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Enhanced GPU acceleration for smooth scrolling elements */
+*[class*="animate-"],
+*[class*="transition-"],
+*[class*="transform"] {
+  will-change: transform;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Smooth transform optimizations */
+.smooth-transform {
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* Yellow Button Styles */
+.yellow-button {
+  background: transparent;
+  border: 2px solid var(--color-primary-yellow);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.yellow-button::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: var(--color-primary-yellow);
+  transition: height 0.3s ease-in-out;
+  z-index: -1;
+}
+
+.yellow-button:hover {
+  color: black;
+}
+
+.yellow-button:hover::before {
+  height: 100%;
+}
+
+/* Contact Page Glassmorphism Styles */
+.glass-card {
+  background: linear-gradient(135deg, 
+    rgba(59, 36, 18, 0.7) 0%, 
+    rgba(31, 19, 16, 0.8) 50%, 
+    rgba(0, 0, 0, 0.9) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.8),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.glass-input {
+  background: rgba(87, 83, 78, 0.8);
+  border: 1px solid rgba(120, 113, 108, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.glass-input:focus {
+  background: rgba(87, 83, 78, 0.9);
+  border-color: var(--color-yellow);
+  box-shadow: 0 0 0 2px rgba(255, 180, 0, 0.3);
+}
+
+/* Enhanced Typography */
+.hero-display {
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.micro-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Button Enhancements */
+.submit-button {
+  background: var(--color-yellow);
+  box-shadow: 
+    0 4px 14px 0 rgba(255, 180, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.submit-button:hover {
+  background: var(--color-light-yellow);
+  box-shadow: 
+    0 6px 20px 0 rgba(255, 180, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.cta-arrow-button {
+  background: var(--color-yellow);
+  box-shadow: 0 2px 8px rgba(255, 180, 0, 0.3);
+}
+
+.cta-arrow-button:hover {
+  background: var(--color-light-yellow);
+  box-shadow: 0 4px 12px rgba(255, 180, 0, 0.5);
+}
+
+/* Radio Button Styling */
+.custom-radio {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(190, 182, 180, 0.8);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.custom-radio.checked {
+  border-color: var(--color-yellow);
+  background: var(--color-yellow);
+}
+
+.custom-radio.checked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background: black;
+  border-radius: 50%;
+}
+
+/* Hide scrollbar but keep functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome */
+}
+
+/* Animated Gradient Text */
+.animated-gradient {
+  background: linear-gradient(
+    90deg,
+    #FFFFFF 0%,
+    #8A38F5 25%,
+    #FFB703 50%,
+    #8A38F5 75%,
+    #FFFFFF 100%
+  );
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientFlow 3s ease-in-out infinite;
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Slide animations for Expert component background images - All 8 directions */
+
+/* EXIT ANIMATIONS - Images sliding out from center to off-screen */
+
+/* Slide to North (exit upward) */
+@keyframes slideToNorth {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+/* Slide to South (exit downward) */
+@keyframes slideToSouth {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+
+/* Slide to East (exit rightward) */
+@keyframes slideToEast {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+/* Slide to West (exit leftward) */
+@keyframes slideToWest {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* Slide to Northeast (exit up-right) */
+@keyframes slideToNortheast {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(100%, -100%);
+  }
+}
+
+/* Slide to Northwest (exit up-left) */
+@keyframes slideToNorthwest {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(-100%, -100%);
+  }
+}
+
+/* Slide to Southeast (exit down-right) */
+@keyframes slideToSoutheast {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(100%, 100%);
+  }
+}
+
+/* Slide to Southwest (exit down-left) */
+@keyframes slideToSouthwest {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(-100%, 100%);
+  }
+}
+
+/* ENTER ANIMATIONS - Images sliding in from off-screen to center */
+
+/* Slide from North */
+@keyframes slideFromNorth {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Slide from South */
+@keyframes slideFromSouth {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Slide from East */
+@keyframes slideFromEast {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Slide from West */
+@keyframes slideFromWest {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Slide from Northeast */
+@keyframes slideFromNortheast {
+  from {
+    transform: translate(100%, -100%);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+/* Slide from Northwest */
+@keyframes slideFromNorthwest {
+  from {
+    transform: translate(-100%, -100%);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+/* Slide from Southeast */
+@keyframes slideFromSoutheast {
+  from {
+    transform: translate(100%, 100%);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+/* Slide from Southwest */
+@keyframes slideFromSouthwest {
+  from {
+    transform: translate(-100%, 100%);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+/* Animation classes for EXIT animations - Optimized for performance */
+.animate-slide-to-north {
+  animation: slideToNorth 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  will-change: transform;
+}
+
+.animate-slide-to-south {
+  animation: slideToSouth 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  will-change: transform;
+}
+
+.animate-slide-to-east {
+  animation: slideToEast 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  will-change: transform;
+}
+
+.animate-slide-to-west {
+  animation: slideToWest 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  will-change: transform;
+}
+
+.animate-slide-to-northeast {
+  animation: slideToNortheast 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  will-change: transform;
+}
+
+.animate-slide-to-northwest {
+  animation: slideToNorthwest 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  will-change: transform;
+}
+
+.animate-slide-to-southeast {
+  animation: slideToSoutheast 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  will-change: transform;
+}
+
+.animate-slide-to-southwest {
+  animation: slideToSouthwest 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  will-change: transform;
+}
+
+/* Animation classes for ENTER animations - Optimized for performance */
+.animate-slide-from-north {
+  animation: slideFromNorth 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  will-change: transform;
+}
+
+.animate-slide-from-south {
+  animation: slideFromSouth 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  will-change: transform;
+}
+
+.animate-slide-from-east {
+  animation: slideFromEast 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  will-change: transform;
+}
+
+.animate-slide-from-west {
+  animation: slideFromWest 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  will-change: transform;
+}
+
+.animate-slide-from-northeast {
+  animation: slideFromNortheast 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  will-change: transform;
+}
+
+.animate-slide-from-northwest {
+  animation: slideFromNorthwest 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  will-change: transform;
+}
+
+.animate-slide-from-southeast {
+  animation: slideFromSoutheast 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  will-change: transform;
+}
+
+.animate-slide-from-southwest {
+  animation: slideFromSouthwest 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  will-change: transform;
+}
+
+/* Legacy support */
+.animate-slide-in-right {
+  animation: slideFromEast 700ms ease-in-out forwards;
+}
+
+/* Text Reveal Animation Styles */
+.reveal-container {
+  position: relative;
+}
+
+.reveal-section {
+  height: auto;
+  min-height: auto;
+  padding: 0;
+}
+
+.reveal-content {
+  height: auto;
+}
+
+.reveal-word {
+  opacity: 0.2;
+  transition: opacity 0.3s ease-out;
+  display: inline;
+  word-spacing: normal;
 }
