@@ -1,8 +1,9 @@
 import { useEffect, useCallback } from 'react'
+import Lenis from 'lenis'
 
 declare global {
   interface Window {
-    lenis?: any
+    lenis?: Lenis
   }
 }
 
