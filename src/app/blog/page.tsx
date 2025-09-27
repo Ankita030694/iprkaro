@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import Navbar from '@/components/Navbar';
 import { Faq } from '@/components';
 
 export default function BlogPage() {
@@ -75,19 +74,23 @@ export default function BlogPage() {
 
   return (
     <div className="min-h-screen relative">
-      {/* Background using same gradient as hero */}
-      <div className="absolute inset-0">
+      {/* Background using same gradient as hero - Optimized */}
+      <div className="absolute inset-0 will-change-transform">
         <Image 
           src="/figmacomp/iprhero.svg" 
           alt="Background" 
           className="w-full h-full object-cover"
-          width={1728}
-          height={1117}
+          width={1920}
+          height={1080}
+          priority
+          quality={85}
+          sizes="100vw"
+          placeholder="empty"
+          loading="eager"
         />
       </div>
 
       {/* Navbar */}
-      <Navbar />
 
       {/* Main Content */}
       <div className="relative z-10 pt-32 px-12">

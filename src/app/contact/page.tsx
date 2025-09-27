@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import Navbar from '@/components/Navbar';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -46,9 +45,6 @@ export default function ContactPage() {
       backgroundRepeat: 'no-repeat'
     }}
   >
-      {/* Navbar Overlay */}
-      <Navbar />
-      
       {/* Main Content Container */}
       <div className="w-full py-16 px-24 pt-32">
         <div className="w-full mx-auto">

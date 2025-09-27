@@ -58,7 +58,7 @@ const Faq = () => {
           {/* Left Section - Questions */}
           <div className="space-y-8 flex flex-col justify-center">
             <div className="space-y-4">
-              <h2 className="text-4xl lg:text-5xl font-bold text-white leading-tight">
+              <h2 className="text-white text-center font-nunito text-[28px] md:text-[45px] font-medium leading-[32px] md:leading-[45px] w-full">
                 Have Question?
                 <br />
                 <span style={{ color: '#FFB703' }}>
@@ -66,7 +66,7 @@ const Faq = () => {
                 </span>
               </h2>
               
-              <p className="text-purple-200 text-lg">
+              <p className="text-white font-nunito text-[10px] md:text-xs lg:text-sm xl:text-base font-medium">
                 Still have questions? <span style={{ color: '#FFB703' }} className="font-medium">Contact us</span> anytime.
               </p>
             </div>
@@ -109,7 +109,7 @@ const Faq = () => {
                 >
                  
                   <div className="flex justify-between items-center">
-                    <h3 className="text-white font-semibold text-lg pr-4">
+                    <h3 className="text-white font-nunito text-[16px] md:text-[20px] lg:text-[25px] font-semibold pr-4">
                       {faq.question}
                     </h3>
                     <FontAwesomeIcon 
@@ -127,7 +127,7 @@ const Faq = () => {
                     }`}
                   >
                     <div className="mt-4 pt-4 border-t border-black/20 transform transition-all duration-500 ease-in-out">
-                      <p className="text-white leading-relaxed">
+                      <p className="text-white font-nunito text-[10px] md:text-xs lg:text-sm xl:text-base font-medium leading-relaxed">
                         {faq.answer}
                       </p>
                     </div>

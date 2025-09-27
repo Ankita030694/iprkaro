@@ -19,7 +19,7 @@ function ServicesHeroSection() {
       ></div>
 
       {/* Main Content Container with Glassmorphism */}
-      <div className="relative z-10 w-full w-full mx-auto px-30 py-12">
+      <div className="relative z-10 w-full w-full mx-auto px-30 mt-30">
           <div 
             className="p-8 md:p-12"
             style={{

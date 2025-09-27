@@ -1,6 +1,5 @@
 'use client';
 
-import Navbar from '@/components/Navbar';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
@@ -89,9 +88,6 @@ export default function AboutPage() {
         backgroundRepeat: 'no-repeat'
       }}
     >
-      {/* Navbar Overlay */}
-      <Navbar />
-      
       {/* Heading Section - Just below navbar */}
       <div className="w-full px-24 pt-32 pb-8">
         <div className="text-center space-y-6">

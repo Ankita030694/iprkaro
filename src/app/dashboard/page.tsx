@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import Navbar from '@/components/Navbar';
 
 export default function Dashboard() {
   // Sample data - in real app, this would come from API/props
@@ -71,8 +70,6 @@ export default function Dashboard() {
         <div className="absolute bottom-20 left-1/2 w-1 h-1 bg-[#069A81] rounded-full animate-pulse opacity-60" style={{ animationDelay: '2s' }}></div>
         <div className="absolute top-1/3 right-10 w-1.5 h-1.5 bg-[#1345C3] rounded-full animate-ping opacity-40" style={{ animationDelay: '0.5s' }}></div>
       </div>
-      
-      <Navbar />
       
       <div className="max-w-7xl mx-auto px-6 py-8 relative z-10">
         {/* Header */}

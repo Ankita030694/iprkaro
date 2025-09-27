@@ -14,17 +14,17 @@ export default function SmoothScroll() {
   const lenisRef = useRef<Lenis | null>(null)
 
   useEffect(() => {
-    // Enhanced smooth scroll configuration
+    // Enhanced smooth scroll configuration - Cross-browser optimized
     const lenis = new Lenis({
-      duration: 1.2, // Optimal duration for smooth feel
+      duration: 1.0, // Reduced duration for better non-Chrome performance
       easing: (t: number) => {
-        // Custom easing function for ultra-smooth animation
-        return t === 1 ? 1 : 1 - Math.pow(2, -10 * t)
+        // Simpler easing function for better cross-browser performance
+        return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2
       },
       smoothWheel: true, // Enable smooth wheel scrolling
       syncTouch: false, // Disable for better mobile performance
-      touchMultiplier: 2, // Balanced multiplier for touch devices
-      wheelMultiplier: 1, // Standard wheel sensitivity
+      touchMultiplier: 1.5, // Reduced for better cross-browser performance
+      wheelMultiplier: 0.8, // Reduced sensitivity for better non-Chrome experience
       infinite: false,
       autoResize: true,
       orientation: 'vertical', // Correct property name for scroll direction
@@ -73,7 +73,7 @@ export default function SmoothScroll() {
         if (!isDestroyed && lenisRef.current) {
           lenisRef.current.resize()
         }
-      }, 150) // Throttle resize events
+      }, 200) // Increased throttle for better performance on slower browsers
     }
 
     // Use passive listeners for better performance

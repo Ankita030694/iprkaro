@@ -99,10 +99,10 @@ export default function Expert() {
     }
   ], []);
 
-  // Preload all images for smooth transitions
+  // Optimized image preloading for smooth transitions
   useEffect(() => {
     const preloadImages = async () => {
-      const imagePromises = services.map((service) => {
+      const imagePromises = services.map((service, index) => {
         return new Promise<void>((resolve) => {
           const img = document.createElement('img');
           img.onload = () => {
@@ -111,13 +111,22 @@ export default function Expert() {
           };
           img.onerror = () => resolve(); // Continue even if image fails to load
           img.src = service.backgroundImage;
+          // Add decode for better performance
+          if (img.decode) {
+            img.decode().catch(() => resolve());
+          }
         });
       });
       
       await Promise.all(imagePromises);
     };
 
-    preloadImages();
+    // Use requestIdleCallback for non-blocking preloading
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(preloadImages);
+    } else {
+      setTimeout(preloadImages, 0);
+    }
   }, [services]);
 
   // Optimize dropdown click handler with useCallback
@@ -144,13 +153,13 @@ export default function Expert() {
       // Start transition immediately
       setSelectedService(index);
       
-      // Use requestAnimationFrame for better performance
+      // Optimized transition timing with reduced duration for snappier feel
       const animationId = requestAnimationFrame(() => {
         setTimeout(() => {
           setIsTransitioning(false);
           // Set the enter direction as the new current direction for next transition
           setCurrentDirection(enterDirection);
-        }, 800); // Updated to match CSS animation duration for smoother transitions
+        }, 600); // Reduced from 800ms to 600ms for snappier transitions
       });
       
       // Cleanup function
@@ -160,74 +169,86 @@ export default function Expert() {
 
   return (
     <section className="w-full min-h-screen relative bg-[#0C002B] flex items-center justify-center overflow-hidden">
-      {/* Dynamic Background Image with Random Directional Animation */}
-      <div className="absolute inset-0 z-0 overflow-hidden will-change-transform">
-        {/* Only preload current and next likely images to reduce memory usage */}
-        {services.slice(0, 2).map((service, index) => (
-          <div key={`preload-${index}`} className="absolute inset-0 opacity-0 pointer-events-none">
-            <Image 
-              src={service.backgroundImage}
-              alt={`${service.title} background`}
-              className="w-full h-full object-cover"
-              width={1920}
-              height={1080}
-              priority={index === 0} // Only prioritize the first image
-              quality={80} // Further reduce quality for better performance
-              sizes="100vw"
-              {...(index > 0 && { loading: "lazy" })} // Only add loading="lazy" for non-priority images
-            />
-          </div>
-        ))}
+      {/* Optimized Background Image with Random Directional Animation */}
+      <div className="absolute inset-0 z-0 overflow-hidden transform-gpu">
+        {/* Optimized preload strategy - only current and next */}
+        {services.map((service, index) => {
+          // Only render preload for current and next service to save memory
+          const shouldPreload = index === selectedService || index === (selectedService + 1) % services.length;
+          if (!shouldPreload) return null;
+          
+          return (
+            <div key={`preload-${index}`} className="absolute inset-0 opacity-0 pointer-events-none transform-gpu">
+              <Image 
+                src={service.backgroundImage}
+                alt={`${service.title} background`}
+                className="w-full h-full object-cover md:object-cover object-center md:object-center"
+                width={1920}
+                height={1080}
+                priority={index === selectedService}
+                quality={75}
+                sizes="100vw"
+                loading={index === selectedService ? "eager" : "lazy"}
+                placeholder="empty"
+              />
+            </div>
+          );
+        })}
         
-        {/* Show current image when not transitioning */}
+        {/* Show current image when not transitioning - with fade-in */}
         {!isTransitioning && (
-          <div className="absolute inset-0 will-change-transform">
+          <div className="absolute inset-0 transform-gpu opacity-100 transition-opacity duration-300">
             <Image 
               src={services[selectedService].backgroundImage}
               alt={`${services[selectedService].title} background`}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover md:object-cover object-center md:object-center"
               width={1920}
               height={1080}
               priority
-              quality={85}
+              quality={80}
               sizes="100vw"
               placeholder="empty"
+              loading="eager"
             />
           </div>
         )}
         
-        {/* During transition: Previous image slides out in current direction */}
+        {/* During transition: Previous image slides out with hardware acceleration */}
         {isTransitioning && (
           <div 
-            className={`absolute inset-0 will-change-transform ${getExitAnimation(currentDirection)}`}
+            className={`absolute inset-0 transform-gpu ${getExitAnimation(currentDirection)}`}
+            style={{ zIndex: 1 }}
           >
             <Image 
               src={services[previousService].backgroundImage}
               alt={`${services[previousService].title} background`}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover md:object-cover object-center md:object-center"
               width={1920}
               height={1080}
-              quality={85}
+              quality={80}
               sizes="100vw"
               placeholder="empty"
+              loading="eager"
             />
           </div>
         )}
         
-        {/* During transition: New image slides in from opposite direction */}
+        {/* During transition: New image slides in with hardware acceleration */}
         {isTransitioning && (
           <div 
-            className={`absolute inset-0 will-change-transform ${getEnterAnimation(nextDirection)}`}
+            className={`absolute inset-0 transform-gpu ${getEnterAnimation(nextDirection)}`}
+            style={{ zIndex: 2 }}
           >
             <Image 
               src={services[selectedService].backgroundImage}
               alt={`${services[selectedService].title} background`}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover md:object-cover object-center md:object-center"
               width={1920}
               height={1080}
-              quality={85}
+              quality={80}
               sizes="100vw"
               placeholder="empty"
+              loading="eager"
             />
           </div>
         )}
@@ -237,14 +258,12 @@ export default function Expert() {
       </div>
 
       {/* Content Container */}
-      <div className="relative z-10 w-full max-w-8xl mx-auto px-8 py-8 -mt-50">
+      <div className="relative z-10 w-full max-w-8xl mx-auto px-8 py-8 -mt-20">
         {/* Centered Main Heading */}
         <div className="text-center mb-16">
-          <h2 className="text-white font-nunito text-[48px] font-bold leading-[52px]">
-            
+          <h2 className="text-white font-nunito text-[28px] md:text-[48px] font-medium leading-[32px] md:leading-[52px]">
             Our Expert IPR SOLUTIONS
           </h2>
-
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -254,7 +273,7 @@ export default function Expert() {
 
             {/* Explore Services Section */}
             <div className="space-y-6">
-              <h3 className="text-white font-nunito text-[32px] font-semibold leading-[36px]">
+              <h3 className="text-white font-nunito text-[16px] md:text-[32px] font-semibold leading-[20px] md:leading-[36px]">
                 Explore our Services
               </h3>
 
@@ -267,7 +286,7 @@ export default function Expert() {
                       onClick={() => handleDropdownClick(index)}
                       className="w-full p-6 flex items-center justify-between text-left hover:bg-white/5 transition-all duration-300"
                     >
-                      <span className="text-white font-nunito text-[24px] font-medium">
+                      <span className="text-white font-nunito text-[16px] md:text-[24px] font-medium">
                         {service.title}
                       </span>
                       {/* Arrow Icon */}
@@ -289,7 +308,7 @@ export default function Expert() {
                                 <path d="M16.6667 5L7.50004 14.1667L3.33337 10" stroke="#16a34a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                               </svg>
                             </div>
-                            <span className="text-white/90 font-nunito text-[18px] font-normal">
+                            <span className="text-white/90 font-nunito text-[10px] md:text-[18px] font-medium">
                               {item}
                             </span>
                           </div>
