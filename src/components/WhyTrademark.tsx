@@ -170,29 +170,213 @@ export default function WhyTrademark() {
     </svg>
   ];
 
+  // Mobile-specific icons
+  const mobileCardIcons = [
+    // Lightning icon for "Expert Legal Guidance"
+    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22" fill="none">
+      <path d="M1.14933 11.2623L5.77496 6.29174C6.13652 5.90275 11 0.517143 11 1.03506L6.8147 10.5098C6.8147 10.8196 7.08042 11.0714 7.40893 11.0714H9.65895C10.1699 11.0714 10.4422 11.6413 10.1045 12.0043L5.47883 16.9748C5.11727 17.3633 1.59484 21.4729 1.59484 20.9549L4.43909 12.7563C4.43909 12.4464 4.17271 12.1946 3.84486 12.1946H1.59484C1.0839 12.1946 0.811567 11.6253 1.14933 11.2623Z" stroke="url(#paint0_linear_1095_4992)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+      <defs>
+        <linearGradient id="paint0_linear_1095_4992" x1="1" y1="14" x2="11.0544" y2="14.1347" gradientUnits="userSpaceOnUse">
+          <stop stopColor="white"/>
+          <stop offset="0.490385" stopColor="#8A38F5"/>
+          <stop offset="0.88" stopColor="#FFB703"/>
+        </linearGradient>
+      </defs>
+    </svg>,
+    // User check icon for "Fast Processing"
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+      <g filter="url(#filter0_ii_1099_5066)">
+        <path d="M7.36364 10.0909C8.56917 10.0909 9.72532 9.61201 10.5778 8.75958C11.4302 7.90714 11.9091 6.75098 11.9091 5.54545C11.9091 4.33993 11.4302 3.18377 10.5778 2.33133C9.72532 1.47889 8.56917 1 7.36364 1C6.15811 1 5.00195 1.47889 4.14951 2.33133C3.29708 3.18377 2.81818 4.33993 2.81818 5.54545C2.81818 6.75098 3.29708 7.90714 4.14951 8.75958C5.00195 9.61201 6.15811 10.0909 7.36364 10.0909ZM7.36364 10.0909C9.19364 10.0909 10.7927 10.7818 11.93 11.93C12.6043 12.6136 13.1087 13.4459 13.4027 14.36M7.36364 10.0909C3.72727 10.0909 1 12.8182 1 16.4545V21H10.0909M11 17.2036L14.8091 20.0909L21 11.9091" stroke="url(#paint0_linear_1099_5066)" strokeWidth="1.5"/>
+      </g>
+      <defs>
+        <filter id="filter0_ii_1099_5066" x="0.25" y="0.25" width="21.3477" height="25.5" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+          <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+          <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+          <feOffset dy="4"/>
+          <feGaussianBlur stdDeviation="2"/>
+          <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+          <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.15 0"/>
+          <feBlend mode="normal" in2="shape" result="effect1_innerShadow_1099_5066"/>
+          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+          <feOffset dy="4"/>
+          <feGaussianBlur stdDeviation="2"/>
+          <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+          <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.15 0"/>
+          <feBlend mode="normal" in2="effect1_innerShadow_1099_5066" result="effect2_innerShadow_1099_5066"/>
+        </filter>
+        <linearGradient id="paint0_linear_1099_5066" x1="1" y1="14" x2="21.0981" y2="14.5383" gradientUnits="userSpaceOnUse">
+          <stop stopColor="white"/>
+          <stop offset="0.490385" stopColor="#8A38F5"/>
+          <stop offset="0.88" stopColor="#FFB703"/>
+        </linearGradient>
+      </defs>
+    </svg>,
+    // Shield icon for "Comprehensive Search"
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 24 22" fill="none">
+      <g filter="url(#filter0_ii_1095_5003)">
+        <path d="M17.8421 20.6537C17.5276 20.7959 17.189 20.8773 16.8442 20.8937C15.7168 20.9505 14.1379 21 12.0526 21C9.96737 21 8.38842 20.95 7.26105 20.8932C6.9163 20.877 6.57771 20.7957 6.26316 20.6537M20.2105 17.7784C19.8078 18.037 19.3443 18.1854 18.8663 18.2089C17.3989 18.2889 15.1637 18.3679 12.0526 18.3679C8.94158 18.3679 6.70632 18.2889 5.23895 18.2089C4.76094 18.1854 4.29746 18.037 3.89474 17.7784M1.20947 13.2158C1.33895 14.5289 2.39789 15.4726 3.71632 15.5447C5.41158 15.6379 8.13789 15.7368 12.0526 15.7368C15.9674 15.7368 18.6937 15.6379 20.3895 15.5447C21.7074 15.4726 22.7663 14.5289 22.8958 13.2158C23.0074 12.0847 23.1053 10.4879 23.1053 8.36842C23.1053 6.24895 23.0074 4.65211 22.8958 3.52105C22.7663 2.20737 21.7074 1.26421 20.3889 1.19211C18.6937 1.09895 15.9674 1 12.0526 1C8.13789 1 5.41158 1.09895 3.71579 1.19211C2.39789 1.26421 1.33895 2.20789 1.20947 3.52105C1.09789 4.65263 1 6.24895 1 8.36842C1 10.4879 1.09789 12.0847 1.20947 13.2158Z" stroke="url(#paint0_linear_1095_5003)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M14.1583 6.00752C14.1583 6.00752 13.3162 5.36279 12.053 5.36279C11.0004 5.36279 9.94778 6.00752 9.94778 6.86647C9.94778 9.01489 14.1583 7.72595 14.1583 9.87437C14.1583 10.7333 13.1057 11.3781 12.053 11.3781M12.053 11.3781C10.7899 11.3781 9.94778 10.7333 9.94778 10.7333M12.053 11.3781V12.5812M12.053 5.36331V4.16016M18.8951 8.37068H18.3688M5.73725 8.37068H5.21094" stroke="url(#paint1_linear_1095_5003)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+      </g>
+      <defs>
+        <filter id="filter0_ii_1095_5003" x="0.25" y="0.25" width="23.6055" height="25.5" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+          <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+          <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+          <feOffset dy="4"/>
+          <feGaussianBlur stdDeviation="2"/>
+          <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+          <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.15 0"/>
+          <feBlend mode="normal" in2="shape" result="effect1_innerShadow_1095_5003"/>
+          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+          <feOffset dy="4"/>
+          <feGaussianBlur stdDeviation="2"/>
+          <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+          <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.15 0"/>
+          <feBlend mode="normal" in2="effect1_innerShadow_1095_5003" result="effect2_innerShadow_1095_5003"/>
+        </filter>
+        <linearGradient id="paint0_linear_1095_5003" x1="1" y1="14" x2="23.2101" y2="14.6575" gradientUnits="userSpaceOnUse">
+          <stop stopColor="white"/>
+          <stop offset="0.490385" stopColor="#8A38F5"/>
+          <stop offset="0.88" stopColor="#FFB703"/>
+        </linearGradient>
+        <linearGradient id="paint1_linear_1095_5003" x1="5.21094" y1="9.63384" x2="18.9461" y2="10.2317" gradientUnits="userSpaceOnUse">
+          <stop stopColor="white"/>
+          <stop offset="0.490385" stopColor="#8A38F5"/>
+          <stop offset="0.88" stopColor="#FFB703"/>
+        </linearGradient>
+      </defs>
+    </svg>,
+    // Star icon for "End-to-End Support"
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+      <g filter="url(#filter0_ii_1099_5061)">
+        <path d="M11.1055 19C14.8765 19 16.7625 19 17.9335 17.828C19.1055 16.657 19.1055 14.771 19.1055 11M11.1055 19C7.33447 19 5.44847 19 4.27747 17.828C3.10647 16.656 3.10547 14.771 3.10547 11M11.1055 19V21M3.10547 11C3.10547 7.229 3.10547 5.343 4.27747 4.172C5.44947 3.001 7.33447 3 11.1055 3M3.10547 11H1.10547M11.1055 3C14.8765 3 16.7625 3 17.9335 4.172C19.1045 5.344 19.1055 7.229 19.1055 11M11.1055 3V1M19.1055 11H21.1055M7.10547 1V3M15.1055 1V3M7.10547 19V21M15.1055 19V21M21.1055 15H19.1055M3.10547 7H1.10547M3.10547 15H1.10547M21.1055 7H19.1055" stroke="url(#paint0_linear_1099_5061)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M10.5864 6.86291C10.6255 6.75647 10.6963 6.6646 10.7893 6.5997C10.8823 6.5348 10.993 6.5 11.1064 6.5C11.2198 6.5 11.3304 6.5348 11.4234 6.5997C11.5164 6.6646 11.5873 6.75647 11.6264 6.86291L12.4264 9.02591C12.5384 9.32891 12.7784 9.56891 13.0814 9.68091L15.2444 10.4809C15.3508 10.52 15.4427 10.5909 15.5076 10.6839C15.5725 10.7768 15.6073 10.8875 15.6073 11.0009C15.6073 11.1143 15.5725 11.225 15.5076 11.318C15.4427 11.411 15.3508 11.4818 15.2444 11.5209L13.0814 12.3209C12.9311 12.3759 12.7947 12.463 12.6816 12.5761C12.5684 12.6892 12.4814 12.8257 12.4264 12.9759L11.6264 15.1389C11.5873 15.2453 11.5164 15.3372 11.4234 15.4021C11.3304 15.467 11.2198 15.5018 11.1064 15.5018C10.993 15.5018 10.8823 15.467 10.7893 15.4021C10.6963 15.3372 10.6255 15.2453 10.5864 15.1389L9.78638 12.9759C9.7314 12.8257 9.64431 12.6892 9.53118 12.5761C9.41806 12.463 9.28162 12.3759 9.13138 12.3209L6.96838 11.5209C6.86194 11.4818 6.77007 11.411 6.70517 11.318C6.64027 11.225 6.60547 11.1143 6.60547 11.0009C6.60547 10.8875 6.64027 10.7768 6.70517 10.6839C6.77007 10.5909 6.86194 10.52 6.96838 10.4809L9.13138 9.68091C9.28128 9.62534 9.41742 9.53805 9.53047 9.425C9.64352 9.31195 9.73081 9.17582 9.78638 9.02591L10.5864 6.86291Z" stroke="url(#paint1_linear_1099_5061)" strokeWidth="1.5"/>
+      </g>
+      <defs>
+        <filter id="filter0_ii_1099_5061" x="0.355469" y="0.25" width="21.5" height="25.5" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+          <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+          <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+          <feOffset dy="4"/>
+          <feGaussianBlur stdDeviation="2"/>
+          <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+          <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.15 0"/>
+          <feBlend mode="normal" in2="shape" result="effect1_innerShadow_1099_5061"/>
+          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+          <feOffset dy="4"/>
+          <feGaussianBlur stdDeviation="2"/>
+          <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+          <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.15 0"/>
+          <feBlend mode="normal" in2="effect1_innerShadow_1099_5061" result="effect2_innerShadow_1099_5061"/>
+        </filter>
+        <linearGradient id="paint0_linear_1099_5061" x1="1.10547" y1="14" x2="21.2035" y2="14.5383" gradientUnits="userSpaceOnUse">
+          <stop stopColor="white"/>
+          <stop offset="0.490385" stopColor="#8A38F5"/>
+          <stop offset="0.88" stopColor="#FFB703"/>
+        </linearGradient>
+        <linearGradient id="paint1_linear_1099_5061" x1="6.60547" y1="12.3512" x2="15.6514" y2="12.5935" gradientUnits="userSpaceOnUse">
+          <stop stopColor="white"/>
+          <stop offset="0.490385" stopColor="#8A38F5"/>
+          <stop offset="0.88" stopColor="#FFB703"/>
+        </linearGradient>
+      </defs>
+    </svg>,
+    // Shield with check icon for "Affordable Pricing"
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="22" viewBox="0 0 20 22" fill="none">
+      <g filter="url(#filter0_ii_1095_4979)">
+        <path d="M1 10L10 7L19 10M10 1V20.5" stroke="url(#paint0_linear_1095_4979)" strokeWidth="1.5"/>
+        <path d="M1.193 13C2.05 17.298 5.576 19.513 7.899 20.527C8.62 20.842 8.981 21 10 21C11.02 21 11.38 20.842 12.101 20.527C12.68 20.275 13.332 19.947 14 19.533M17 16.904C18.163 15.428 19 13.496 19 10.991V9.417C19 6.219 19 4.62 18.622 4.082C18.245 3.545 16.742 3.03 13.735 2.001L13.162 1.805C11.595 1.268 10.812 1 10 1C9.188 1 8.405 1.268 6.838 1.805L6.265 2C3.258 3.03 1.755 3.545 1.378 4.082C1 4.62 1 6.22 1 9.417V10" stroke="url(#paint1_linear_1095_4979)" strokeWidth="1.5" strokeLinecap="round"/>
+      </g>
+      <defs>
+        <filter id="filter0_ii_1095_4979" x="0.25" y="0.25" width="19.5" height="25.5" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+          <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+          <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+          <feOffset dy="4"/>
+          <feGaussianBlur stdDeviation="2"/>
+          <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+          <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.15 0"/>
+          <feBlend mode="normal" in2="shape" result="effect1_innerShadow_1095_4979"/>
+          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+          <feOffset dy="4"/>
+          <feGaussianBlur stdDeviation="2"/>
+          <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+          <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.15 0"/>
+          <feBlend mode="normal" in2="effect1_innerShadow_1095_4979" result="effect2_innerShadow_1095_4979"/>
+        </filter>
+        <linearGradient id="paint0_linear_1095_4979" x1="1" y1="13.675" x2="19.0902" y2="14.1223" gradientUnits="userSpaceOnUse">
+          <stop stopColor="white"/>
+          <stop offset="0.490385" stopColor="#8A38F5"/>
+          <stop offset="0.88" stopColor="#FFB703"/>
+        </linearGradient>
+        <linearGradient id="paint1_linear_1095_4979" x1="1" y1="14" x2="19.0907" y2="14.4361" gradientUnits="userSpaceOnUse">
+          <stop stopColor="white"/>
+          <stop offset="0.490385" stopColor="#8A38F5"/>
+          <stop offset="0.88" stopColor="#FFB703"/>
+        </linearGradient>
+      </defs>
+    </svg>,
+    // Clock icon for "Government Certified"
+    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="22" viewBox="0 0 25 22" fill="none">
+      <g filter="url(#filter0_ii_1095_4985)">
+        <path d="M12.1766 21.0016C17.0505 21.0016 21.0016 17.0505 21.0016 12.1766C21.0016 7.30265 17.0505 3.35156 12.1766 3.35156C7.30265 3.35156 3.35156 7.30265 3.35156 12.1766C3.35156 17.0505 7.30265 21.0016 12.1766 21.0016Z" stroke="url(#paint0_linear_1095_4985)" strokeWidth="1.5"/>
+        <path d="M4.56657 1C3.7113 1.22906 2.93142 1.67926 2.30534 2.30534C1.67926 2.93142 1.22906 3.7113 1 4.56656M19.7834 1C20.6387 1.22906 21.4186 1.67926 22.0446 2.30534C22.6707 2.93142 23.1209 3.7113 23.35 4.56656M12.175 7.13212V11.8598C12.175 12.0338 12.3162 12.175 12.4902 12.175H15.9571" stroke="url(#paint1_linear_1095_4985)" strokeWidth="1.5" strokeLinecap="round"/>
+      </g>
+      <defs>
+        <filter id="filter0_ii_1095_4985" x="0.25" y="0.25" width="23.8516" height="25.5" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+          <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+          <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+          <feOffset dy="4"/>
+          <feGaussianBlur stdDeviation="2"/>
+          <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+          <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.15 0"/>
+          <feBlend mode="normal" in2="shape" result="effect1_innerShadow_1095_4985"/>
+          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+          <feOffset dy="4"/>
+          <feGaussianBlur stdDeviation="2"/>
+          <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+          <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.15 0"/>
+          <feBlend mode="normal" in2="effect1_innerShadow_1095_4985" result="effect2_innerShadow_1095_4985"/>
+        </filter>
+        <linearGradient id="paint0_linear_1095_4985" x1="3.35156" y1="14.8241" x2="21.0881" y2="15.2992" gradientUnits="userSpaceOnUse">
+          <stop stopColor="white"/>
+          <stop offset="0.490385" stopColor="#8A38F5"/>
+          <stop offset="0.88" stopColor="#FFB703"/>
+        </linearGradient>
+        <linearGradient id="paint1_linear_1095_4985" x1="1" y1="8.26373" x2="23.4114" y2="9.46434" gradientUnits="userSpaceOnUse">
+          <stop stopColor="white"/>
+          <stop offset="0.490385" stopColor="#8A38F5"/>
+          <stop offset="0.88" stopColor="#FFB703"/>
+        </linearGradient>
+      </defs>
+    </svg>
+  ];
+
   const featureCards = [
     {
-      title: "Expert Legal Guidance",
+      title: "Fast Process",
       description: "Professional trademark attorneys to guide you through every step"
     },
     {
-      title: "Fast Processing",
+      title: "Expert Guidance",
       description: "Quick turnaround times with efficient application handling"
     },
     {
-      title: "Comprehensive Search",
+      title: "Cost Effective",
       description: "Thorough trademark searches to ensure registrability"
     },
     {
-      title: "End-to-End Support",
+      title: "AI Driven",
       description: "Complete assistance from application to registration"
     },
     {
-      title: "Affordable Pricing",
+      title: "Risk Reduction",
       description: "Competitive rates with transparent pricing structure"
     },
     {
-      title: "Government Certified",
+      title: "24/7 Accessibility",
       description: "Authorized agents with official government recognition"
     }
   ];
@@ -341,7 +525,8 @@ export default function WhyTrademark() {
 
           {/* Left Column - Feature Cards (Second on mobile) */}
           <div className="w-full order-2 lg:order-1">
-            <div className="grid grid-cols-2 grid-rows-3 gap-3 md:gap-4 lg:gap-6 w-full h-full">
+            {/* Desktop Layout */}
+            <div className="hidden md:grid grid-cols-2 grid-rows-3 gap-3 md:gap-4 lg:gap-6 w-full h-full">
               {featureCards.map((card, index) => (
                 <div
                   key={index}
@@ -363,6 +548,45 @@ export default function WhyTrademark() {
                   </div>
                 </div>
               ))}
+            </div>
+
+            {/* Mobile Layout */}
+            <div className="md:hidden w-full">
+              <div 
+                className="w-full rounded-[5px] p-4"
+                style={{
+                  background: 'linear-gradient(145deg, rgba(12, 0, 43, 0.20) 6.6%, rgba(255, 183, 3, 0.20) 120.24%), rgba(0, 0, 0, 0.78)',
+                  boxShadow: '0 0 20px 1px rgba(255, 255, 255, 0.10) inset'
+                }}
+              >
+                <div className="grid grid-cols-2 grid-rows-3 gap-4">
+                  {featureCards.map((card, index) => (
+                    <div
+                      key={index}
+                      className="flex items-center gap-3"
+                    >
+                      {/* Icon on the left */}
+                      <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center opacity-60">
+                        {mobileCardIcons[index]}
+                      </div>
+                      {/* Title */}
+                      <h3 
+                        className="text-white font-nunito text-[14px] font-medium leading-[14px] break-words flex-1"
+                        style={{
+                          color: '#FFF',
+                          fontFamily: 'Nunito',
+                          fontSize: '14px',
+                          fontStyle: 'normal',
+                          fontWeight: '500',
+                          lineHeight: '14px'
+                        }}
+                      >
+                        {card.title}
+                      </h3>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -535,7 +759,7 @@ export default function WhyTrademark() {
               alt="How it works right"
               width={350}
               height={100}
-              className="w-full h-[200px] object-contain"
+              className="w-full h-auto object-contain"
             />
           </div>
 

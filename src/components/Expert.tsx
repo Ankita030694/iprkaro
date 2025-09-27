@@ -169,92 +169,94 @@ export default function Expert() {
 
   return (
     <section className="w-full min-h-screen relative bg-[#0C002B] flex items-center justify-center overflow-hidden">
-      {/* Optimized Background Image with Random Directional Animation */}
-      <div className="absolute inset-0 z-0 overflow-hidden transform-gpu">
-        {/* Optimized preload strategy - only current and next */}
-        {services.map((service, index) => {
-          // Only render preload for current and next service to save memory
-          const shouldPreload = index === selectedService || index === (selectedService + 1) % services.length;
-          if (!shouldPreload) return null;
+      {/* Mobile: Simple background with solid color, Desktop: Background Image with Random Directional Animation */}
+      <div className="absolute inset-0 z-0 overflow-hidden transform-gpu bg-[#0C002B] md:bg-transparent">
+        {/* Desktop only: Optimized preload strategy - only current and next */}
+        <div className="hidden md:block">
+          {services.map((service, index) => {
+            // Only render preload for current and next service to save memory
+            const shouldPreload = index === selectedService || index === (selectedService + 1) % services.length;
+            if (!shouldPreload) return null;
+            
+            return (
+              <div key={`preload-${index}`} className="absolute inset-0 opacity-0 pointer-events-none transform-gpu">
+                <Image 
+                  src={service.backgroundImage}
+                  alt={`${service.title} background`}
+                  className="w-full h-full object-cover object-center"
+                  width={1920}
+                  height={1080}
+                  priority={index === selectedService}
+                  quality={75}
+                  sizes="100vw"
+                  loading={index === selectedService ? "eager" : "lazy"}
+                  placeholder="empty"
+                />
+              </div>
+            );
+          })}
           
-          return (
-            <div key={`preload-${index}`} className="absolute inset-0 opacity-0 pointer-events-none transform-gpu">
+          {/* Show current image when not transitioning - with fade-in */}
+          {!isTransitioning && (
+            <div className="absolute inset-0 transform-gpu opacity-100 transition-opacity duration-300">
               <Image 
-                src={service.backgroundImage}
-                alt={`${service.title} background`}
-                className="w-full h-full object-cover md:object-cover object-center md:object-center"
+                src={services[selectedService].backgroundImage}
+                alt={`${services[selectedService].title} background`}
+                className="w-full h-full object-cover object-center"
                 width={1920}
                 height={1080}
-                priority={index === selectedService}
-                quality={75}
+                priority
+                quality={80}
                 sizes="100vw"
-                loading={index === selectedService ? "eager" : "lazy"}
                 placeholder="empty"
+                loading="eager"
               />
             </div>
-          );
-        })}
-        
-        {/* Show current image when not transitioning - with fade-in */}
-        {!isTransitioning && (
-          <div className="absolute inset-0 transform-gpu opacity-100 transition-opacity duration-300">
-            <Image 
-              src={services[selectedService].backgroundImage}
-              alt={`${services[selectedService].title} background`}
-              className="w-full h-full object-cover md:object-cover object-center md:object-center"
-              width={1920}
-              height={1080}
-              priority
-              quality={80}
-              sizes="100vw"
-              placeholder="empty"
-              loading="eager"
-            />
-          </div>
-        )}
-        
-        {/* During transition: Previous image slides out with hardware acceleration */}
-        {isTransitioning && (
-          <div 
-            className={`absolute inset-0 transform-gpu ${getExitAnimation(currentDirection)}`}
-            style={{ zIndex: 1 }}
-          >
-            <Image 
-              src={services[previousService].backgroundImage}
-              alt={`${services[previousService].title} background`}
-              className="w-full h-full object-cover md:object-cover object-center md:object-center"
-              width={1920}
-              height={1080}
-              quality={80}
-              sizes="100vw"
-              placeholder="empty"
-              loading="eager"
-            />
-          </div>
-        )}
-        
-        {/* During transition: New image slides in with hardware acceleration */}
-        {isTransitioning && (
-          <div 
-            className={`absolute inset-0 transform-gpu ${getEnterAnimation(nextDirection)}`}
-            style={{ zIndex: 2 }}
-          >
-            <Image 
-              src={services[selectedService].backgroundImage}
-              alt={`${services[selectedService].title} background`}
-              className="w-full h-full object-cover md:object-cover object-center md:object-center"
-              width={1920}
-              height={1080}
-              quality={80}
-              sizes="100vw"
-              placeholder="empty"
-              loading="eager"
-            />
-          </div>
-        )}
-        
-        {/* Dark overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/40 z-10"></div>
+          )}
+          
+          {/* During transition: Previous image slides out with hardware acceleration */}
+          {isTransitioning && (
+            <div 
+              className={`absolute inset-0 transform-gpu ${getExitAnimation(currentDirection)}`}
+              style={{ zIndex: 1 }}
+            >
+              <Image 
+                src={services[previousService].backgroundImage}
+                alt={`${services[previousService].title} background`}
+                className="w-full h-full object-cover object-center"
+                width={1920}
+                height={1080}
+                quality={80}
+                sizes="100vw"
+                placeholder="empty"
+                loading="eager"
+              />
+            </div>
+          )}
+          
+          {/* During transition: New image slides in with hardware acceleration */}
+          {isTransitioning && (
+            <div 
+              className={`absolute inset-0 transform-gpu ${getEnterAnimation(nextDirection)}`}
+              style={{ zIndex: 2 }}
+            >
+              <Image 
+                src={services[selectedService].backgroundImage}
+                alt={`${services[selectedService].title} background`}
+                className="w-full h-full object-cover object-center"
+                width={1920}
+                height={1080}
+                quality={80}
+                sizes="100vw"
+                placeholder="empty"
+                loading="eager"
+              />
+            </div>
+          )}
+          
+          {/* Dark overlay for better text readability */}
+          <div className="absolute inset-0 bg-black/40 z-10"></div>
+        </div>
       </div>
 
       {/* Content Container */}
@@ -284,7 +286,10 @@ export default function Expert() {
                     {/* Dropdown Header */}
                     <button
                       onClick={() => handleDropdownClick(index)}
-                      className="w-full p-6 flex items-center justify-between text-left hover:bg-white/5 transition-all duration-300"
+                      className="w-full p-6 flex items-center justify-between text-left hover:bg-white/5 transition-all duration-300 md:bg-transparent md:border-0 md:shadow-none bg-gradient-to-br from-[rgba(12,0,43,0.60)] via-[rgba(255,183,3,0.60)] to-[rgba(12,0,43,0.60)] bg-[rgba(0,0,0,0.20)] border border-transparent rounded-lg shadow-[0_0_20px_1px_rgba(255,255,255,0.49)_inset]"
+                      style={{
+                        background: 'linear-gradient(145deg, rgba(12, 0, 43, 0.60) 6.6%, rgba(255, 183, 3, 0.60) 120.24%), rgba(0, 0, 0, 0.20)'
+                      }}
                     >
                       <span className="text-white font-nunito text-[16px] md:text-[24px] font-medium">
                         {service.title}

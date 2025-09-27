@@ -60,13 +60,25 @@ export default function SimplePlans() {
   };
 
   return (
-    <section className="w-full relative overflow-hidden">
+    <>
+      <style jsx>{`
+        .mobile-scroll-container::-webkit-scrollbar {
+          display: none;
+        }
+        @media (max-width: 1023px) {
+          .mobile-scroll-container {
+            padding-left: 8px;
+            padding-right: 8px;
+          }
+        }
+      `}</style>
+      <section className="w-full relative overflow-hidden">
       {/* Solid Background */}
       <div className="absolute inset-0 bg-[#0C002B]"></div>
 
       {/* Main Content */}
-      <div className="relative z-10 mt-20 px-4 mb-20">
-        <div className="max-w-6xl mx-auto">
+      <div className="relative z-10 mt-20 px-2 lg:px-4 mb-20">
+        <div className="max-w-8xl mx-auto">
           {/* Section Heading with Gradient Text */}
           <div className="text-center mb-12">
             <h2 className="text-white text-center font-nunito text-[28px] md:text-[45px] font-medium leading-[32px] md:leading-[45px] w-full mb-4">
@@ -78,16 +90,23 @@ export default function SimplePlans() {
           </div>
 
           {/* Pricing Cards */}
-          <div className="flex flex-col lg:flex-row items-center justify-center mb-12 mt-20 gap-8">
+          <div 
+            className="mobile-scroll-container flex flex-row overflow-x-auto overflow-y-hidden justify-start items-start lg:flex-row lg:items-center lg:justify-center lg:overflow-x-visible mb-12 mt-20 gap-4 lg:gap-8 pb-4 px-2 lg:px-0" 
+            style={{ 
+              scrollbarWidth: 'none', 
+              msOverflowStyle: 'none',
+              WebkitOverflowScrolling: 'touch'
+            }}
+          >
             {plans.map((plan, index) => (
               <div 
                 key={plan.id} 
-                className="relative cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 flex flex-col items-center group"
+                className="relative cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 flex flex-col items-center group flex-shrink-0"
                 onClick={() => setSelectedPlan(plan.id)}
                 style={{
                   display: 'flex',
-                  width: '448px',
-                  height: '502px',
+                  width: 'clamp(380px, 85vw, 448px)', // Increased mobile width from 314px to 380px (85% of original)
+                  height: 'clamp(427px, 85vh, 502px)', // Increased mobile height to match width proportion (502px * 0.85 = 427px)
                   padding: '15px 24px 24px 24px',
                   flexDirection: 'column',
                   alignItems: 'center',
@@ -136,7 +155,7 @@ export default function SimplePlans() {
                       boxShadow: selectedPlan === plan.id ? 'none' : '0 0 20px 0 rgba(255, 255, 255, 0.31) inset',
                       backdropFilter: 'blur(16px)',
                       width: '100%',
-                      height: '430px'
+                      height: 'clamp(365px, 70vh, 430px)' // Increased mobile height to match width proportion (430px * 0.85 = 365px)
                     }}
                     onMouseEnter={(e) => {
                       if (selectedPlan !== plan.id) {
@@ -256,6 +275,7 @@ export default function SimplePlans() {
       >
         <i className="fas fa-arrow-up text-white text-lg"></i>
       </button>
-    </section>
+      </section>
+    </>
   );
 }
