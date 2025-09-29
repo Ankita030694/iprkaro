@@ -6,7 +6,7 @@ import Image from 'next/image';
 // Create a Services Hero Component similar to HeroSection
 function ServicesHeroSection() {
   return (
-    <section className="w-full h-screen relative overflow-hidden flex flex-col justify-center items-center">
+    <section className="w-full min-h-screen relative overflow-hidden flex flex-col justify-center items-center pt-20 md:pt-0">
       {/* Background */}
       <div 
         className="absolute inset-0" 
@@ -19,9 +19,9 @@ function ServicesHeroSection() {
       ></div>
 
       {/* Main Content Container with Glassmorphism */}
-      <div className="relative z-10 w-full w-full mx-auto px-30 mt-30">
+      <div className="relative z-10 w-full mx-auto px-4 md:px-30 mt-8 md:mt-30">
           <div 
-            className="p-8 md:p-12"
+            className="p-4 md:p-12"
             style={{
               borderRadius: '20px',
               background: 'linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), linear-gradient(145deg, rgba(12, 0, 43, 0.40) 6.6%, rgba(255, 183, 3, 0.40) 120.24%), rgba(0, 0, 0, 0.50)',
@@ -31,20 +31,20 @@ function ServicesHeroSection() {
             }}
           >
             {/* Section Header */}
-            <div className="text-left mb-12">
-              <h1 className="text-white font-nunito text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4">
+            <div className="text-left mb-8 md:mb-12">
+              <h1 className="text-white font-nunito text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4">
                 Our Services
               </h1>
-              <p className="text-white font-nunito text-lg md:text-xl max-w-3xl">
+              <p className="text-white font-nunito text-base md:text-xl max-w-3xl">
                 Comprehensive intellectual property solutions powered by AI technology and expert legal guidance
               </p>
             </div>
 
             {/* Three Service Containers */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 max-w-6xl mx-auto">
               {/* Service 1 - Trademark Search & Registration */}
               <div 
-                className="p-6 md:p-8 text-center space-y-6 relative group cursor-pointer transition-all duration-300 hover:scale-105"
+                className="p-4 md:p-8 text-center space-y-4 md:space-y-6 relative group cursor-pointer transition-all duration-300 hover:scale-105"
                 style={{
                   borderRadius: '25px',
                   border: '2px solid rgba(255, 255, 255, 0.15)',
@@ -88,7 +88,7 @@ function ServicesHeroSection() {
 
               {/* Service 2 - Registration & Filing */}
               <div 
-                className="p-6 md:p-8 text-center space-y-6 relative group cursor-pointer transition-all duration-300 hover:scale-105"
+                className="p-4 md:p-8 text-center space-y-4 md:space-y-6 relative group cursor-pointer transition-all duration-300 hover:scale-105"
                 style={{
                   borderRadius: '25px',
                   border: '2px solid rgba(255, 255, 255, 0.15)',
@@ -132,7 +132,7 @@ function ServicesHeroSection() {
 
               {/* Service 3 - Monitoring & Protection */}
               <div 
-                className="p-6 md:p-8 text-center space-y-6 relative group cursor-pointer transition-all duration-300 hover:scale-105"
+                className="p-4 md:p-8 text-center space-y-4 md:space-y-6 relative group cursor-pointer transition-all duration-300 hover:scale-105"
                 style={{
                   borderRadius: '25px',
                   border: '2px solid rgba(255, 255, 255, 0.15)',

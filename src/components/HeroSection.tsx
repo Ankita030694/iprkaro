@@ -6,21 +6,13 @@ const ClientLogoSlider = dynamic(() => import('./ClientLogoSlider'));
 export default function HeroSection() {
   return (
     <section className="w-full h-screen relative overflow-hidden flex flex-col justify-center items-center rounded-b-[40px]">
-      {/* Background using iprhero.svg - Cross-browser optimized */}
-      <div className="absolute inset-0">
-        <img
-          src="/figmacomp/iprhero.svg"
-          alt="Background"
-          className="w-full h-full object-cover"
-          loading="eager"
-          decoding="async"
-          style={{
-            imageRendering: 'auto',
-            transform: 'translateZ(0)',
-            backfaceVisibility: 'hidden'
-          }}
-        />
-      </div>
+      {/* Background using linear gradient */}
+      <div 
+        className="absolute inset-0"
+        style={{
+          background: 'linear-gradient(to bottom, #0C002B 0%, #160049 45%, #6E5E93 80%, #FFFFFF 100%)'
+        }}
+      />
     
       {/* Main Content Section - Responsive Layout */}
       <div className="flex flex-col lg:flex-row w-full h-full z-[60] px-4 lg:px-0">

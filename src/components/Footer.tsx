@@ -24,10 +24,98 @@ const Footer: React.FC = () => {
                 Turn Ideas Into Assets - <span className="text-cyan-300">IPR Karo</span>.
               </p>
             </div>
+            
+            {/* Social Media - Mobile Only */}
+            <div className="lg:hidden">
+              <h3 className="text-sm font-semibold mb-4 uppercase">Follow us on</h3>
+              <div className="flex space-x-10">
+                {/* YouTube */}
+                <a href="#" className="text-red-600 hover:text-red-500 transition-colors">
+                  <i className="fab fa-youtube text-xl"></i>
+                </a>
+                
+                {/* Facebook */}
+                <a href="#" className="text-blue-600 hover:text-blue-500 transition-colors">
+                  <i className="fab fa-facebook-f text-xl"></i>
+                </a>
+                
+                {/* Instagram */}
+                <a href="#" className="text-pink-500 hover:text-pink-400 transition-colors">
+                  <i className="fab fa-instagram text-xl"></i>
+                </a>
+                
+                {/* X */}
+                <a href="#" className="text-white hover:text-gray-300 transition-colors flex items-center justify-center w-5 h-5 text-xl font-bold">
+                  <span className="text-xl font-bold">𝕏</span>
+                </a>
+              </div>
+            </div>
           </div>
 
-          {/* Quick Links */}
-          <div className="lg:col-span-1">
+          {/* Mobile Layout: Quick Links and About side by side */}
+          <div className="lg:hidden grid grid-cols-2 gap-8">
+            {/* Quick Links */}
+            <div>
+              <h3 className="text-sm font-semibold mb-4 uppercase">Quick Links</h3>
+              <ul className="space-y-2">
+                <li>
+                  <a href="#" className="text-sm hover:text-cyan-300 transition-colors">
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-sm hover:text-cyan-300 transition-colors">
+                    About Us
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-sm hover:text-cyan-300 transition-colors">
+                    Trademark Services
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-sm hover:text-cyan-300 transition-colors">
+                    Pricing Plans
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-sm hover:text-cyan-300 transition-colors">
+                    FAQs
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* About */}
+            <div>
+              <h3 className="text-sm font-semibold mb-4 uppercase">About</h3>
+              <ul className="space-y-2">
+                <li>
+                  <a href="#" className="text-sm hover:text-cyan-300 transition-colors">
+                    Contact Us
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-sm hover:text-cyan-300 transition-colors">
+                    Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-sm hover:text-cyan-300 transition-colors">
+                    Request a Feature
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-sm hover:text-cyan-300 transition-colors">
+                    Report an Issue
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Desktop Layout: Quick Links */}
+          <div className="hidden lg:block lg:col-span-1">
             <h3 className="text-sm font-semibold mb-4 uppercase">Quick Links</h3>
             <ul className="space-y-2">
               <li>
@@ -58,8 +146,8 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* About */}
-          <div className="lg:col-span-1">
+          {/* Desktop Layout: About */}
+          <div className="hidden lg:block lg:col-span-1">
             <h3 className="text-sm font-semibold mb-4 uppercase">About</h3>
             <ul className="space-y-2">
               <li>
@@ -85,8 +173,8 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Social Media */}
-          <div className="lg:col-span-1">
+          {/* Desktop Layout: Social Media */}
+          <div className="hidden lg:block lg:col-span-1">
             <h3 className="text-sm font-semibold mb-4 uppercase">Follow us on</h3>
             <div className="flex space-x-10">
               {/* YouTube */}

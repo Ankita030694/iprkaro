@@ -168,7 +168,7 @@ export default function Expert() {
   }, [isTransitioning, selectedService, getRandomDirection, directions, openDropdown]);
 
   return (
-    <section className="w-full min-h-screen relative bg-[#0C002B] flex items-center justify-center overflow-hidden">
+    <section className="w-full min-h-fit md:min-h-screen relative bg-[#0C002B] flex items-center justify-center overflow-hidden py-8 md:py-0">
       {/* Mobile: Simple background with solid color, Desktop: Background Image with Random Directional Animation */}
       <div className="absolute inset-0 z-0 overflow-hidden transform-gpu bg-[#0C002B] md:bg-transparent">
         {/* Desktop only: Optimized preload strategy - only current and next */}
@@ -260,21 +260,21 @@ export default function Expert() {
       </div>
 
       {/* Content Container */}
-      <div className="relative z-10 w-full max-w-8xl mx-auto px-8 py-8 -mt-20">
+      <div className="relative z-10 w-full max-w-8xl mx-auto px-8 -mt-8 md:-mt-20">
         {/* Centered Main Heading */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 md:mb-16">
           <h2 className="text-white font-nunito text-[28px] md:text-[48px] font-medium leading-[32px] md:leading-[52px]">
             Our Expert IPR SOLUTIONS
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center">
           
           {/* Left Side - Dropdown Section */}
-          <div className="space-y-8">
+          <div className="space-y-4 md:space-y-8">
 
             {/* Explore Services Section */}
-            <div className="space-y-6">
+            <div className="space-y-4 md:space-y-6">
               <h3 className="text-white font-nunito text-[16px] md:text-[32px] font-semibold leading-[20px] md:leading-[36px]">
                 Explore our Services
               </h3>
@@ -286,9 +286,16 @@ export default function Expert() {
                     {/* Dropdown Header */}
                     <button
                       onClick={() => handleDropdownClick(index)}
-                      className="w-full p-6 flex items-center justify-between text-left hover:bg-white/5 transition-all duration-300 md:bg-transparent md:border-0 md:shadow-none bg-gradient-to-br from-[rgba(12,0,43,0.60)] via-[rgba(255,183,3,0.60)] to-[rgba(12,0,43,0.60)] bg-[rgba(0,0,0,0.20)] border border-transparent rounded-lg shadow-[0_0_20px_1px_rgba(255,255,255,0.49)_inset]"
+                      className="w-full p-6 flex items-center justify-between text-left hover:bg-white/5 transition-all duration-300 border border-transparent rounded-lg"
                       style={{
-                        background: 'linear-gradient(145deg, rgba(12, 0, 43, 0.60) 6.6%, rgba(255, 183, 3, 0.60) 120.24%), rgba(0, 0, 0, 0.20)'
+                        background: 'linear-gradient(145deg, rgba(12, 0, 43, 0.60) 6.6%, rgba(255, 183, 3, 0.60) 120.24%), rgba(0, 0, 0, 0.20)',
+                        boxShadow: '0 0 20px 1px rgba(255, 255, 255, 0.49) inset'
+                      }}
+                      ref={(el) => {
+                        if (el && window.innerWidth >= 768) {
+                          el.style.background = 'transparent';
+                          el.style.boxShadow = 'none';
+                        }
                       }}
                     >
                       <span className="text-white font-nunito text-[16px] md:text-[24px] font-medium">
@@ -313,7 +320,7 @@ export default function Expert() {
                                 <path d="M16.6667 5L7.50004 14.1667L3.33337 10" stroke="#16a34a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                               </svg>
                             </div>
-                            <span className="text-white/90 font-nunito text-[10px] md:text-[18px] font-medium">
+                            <span className="text-white/90 font-nunito text-[14px] md:text-[18px] font-medium">
                               {item}
                             </span>
                           </div>

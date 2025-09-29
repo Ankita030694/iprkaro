@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import React, { useEffect, useRef } from 'react';
 import { Faq } from '@/components';
+import ClientLogoSlider from '@/components/ClientLogoSlider';
 
 // Helper function to split text into word spans
 const splitTextIntoWords = (text: string) => {
@@ -79,70 +80,66 @@ export default function AboutPage() {
     };
   }, []);
   return (
-    <div 
-      className="min-h-[90vh] relative" 
+    <div
+      className="min-h-[90vh] relative overflow-x-hidden"
       style={{
-        backgroundImage: 'linear-gradient(to left top, #0c002b, #0c002b,rgb(25, 10, 60),rgb(92, 75, 130), #ffffff)',
-        backgroundSize: '100% 100%',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
+        background: '#0C002B'
       }}
     >
       {/* Heading Section - Just below navbar */}
-      <div className="w-full px-24 pt-32 pb-8">
+      <div className="w-full px-6 sm:px-12 lg:px-24 pt-32 pb-8">
         <div className="text-center space-y-6">
           {/* Main Heading */}
           <h1 
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center"
             style={{
               color: '#FFF',
-              textAlign: 'center',
               fontFamily: 'Nunito',
-              fontSize: '50px',
               fontStyle: 'normal',
               fontWeight: 700,
-              lineHeight: '45px'
+              lineHeight: '1.2'
             }}
           >
             About IPR Karo
           </h1>
           
           {/* Subtitle with special styling for AI */}
-          <h2 className="flex flex-wrap justify-center items-center gap-2">
+          <h2 className="flex flex-wrap justify-center items-center gap-1 sm:gap-2 text-center">
             <span
+              className="text-lg sm:text-xl md:text-2xl lg:text-[35px] font-semibold"
               style={{
                 background: 'linear-gradient(90deg, #069A81 0%, #1345C3 10.1%)',
                 backgroundClip: 'text',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 fontFamily: 'Nunito',
-                fontSize: '35px',
                 fontStyle: 'italic',
                 fontWeight: 600,
-                lineHeight: '35px'
+                lineHeight: '1.2'
               }}
             >
               AI
             </span>
             <span
+              className="text-lg sm:text-xl md:text-2xl lg:text-[35px] font-semibold"
               style={{
                 color: '#FFF',
                 fontFamily: 'Nunito',
-                fontSize: '35px',
                 fontStyle: 'italic',
                 fontWeight: 600,
-                lineHeight: '35px'
+                lineHeight: '1.2'
               }}
             >
               Driven Platform for Registration of
             </span>
             <span
+              className="text-lg sm:text-xl md:text-2xl lg:text-[35px] font-medium"
               style={{
                 color: '#FFF',
                 fontFamily: 'Nunito',
-                fontSize: '35px',
                 fontStyle: 'italic',
                 fontWeight: 500,
-                lineHeight: '35px'
+                lineHeight: '1.2'
               }}
             >
               Trademark in India
@@ -153,14 +150,14 @@ export default function AboutPage() {
 
 
       {/* About Bento SVG Section */}
-      <div className="w-full px-24 py-8 relative">
+      <div className="w-full px-6 sm:px-12 lg:px-24 py-8 relative">
         <div className="flex justify-center">
           <Image
             src="/figmacomp/aboutbento.svg"
             alt="About IPR Karo Bento Grid"
             width={1320}
             height={828}
-            className="max-w-full h-auto"
+            className="w-full max-w-full h-auto"
           />
         </div>
         
@@ -178,8 +175,61 @@ export default function AboutPage() {
       </div>
 
       {/* IPR KARO Section - Under Bento */}
-      <div className="w-full px-24 py-12">
-        <div className="flex items-center justify-center gap-4">
+      <div className="w-full px-6 sm:px-12 lg:px-24 py-12">
+        {/* Mobile Layout - IPR KARO vertical on left, content on right */}
+        <div className="block lg:hidden">
+          <div className="flex items-center justify-center gap-4">
+            {/* Vertical IPR Karo Text - Left Side for Mobile */}
+            <div className="flex flex-col items-center flex-shrink-0">
+              <div
+                style={{
+                  writingMode: 'vertical-lr',
+                  textOrientation: 'mixed',
+                  color: '#FFB703',
+                  fontFamily: 'Nunito',
+                  fontSize: '24px',
+                  fontWeight: 700,
+                  lineHeight: '1.2',
+                  letterSpacing: '2px',
+                  transform: 'rotate(180deg)'
+                }}
+              >
+                IPR KARO
+              </div>
+            </div>
+
+            {/* Right Content - Mobile */}
+            <div className="flex-1 max-w-2xl space-y-4">
+              <h3
+                className="text-xl sm:text-2xl font-semibold"
+                style={{
+                  color: '#FFF',
+                  fontFamily: 'Nunito',
+                  fontWeight: 600,
+                  lineHeight: '1.3'
+                }}
+              >
+                An AI-Driven Platform for Smarter Brand Protection
+              </h3>
+
+              <p
+                className="text-base sm:text-lg"
+                style={{
+                  color: '#FFF',
+                  fontFamily: 'Nunito',
+                  fontWeight: 400,
+                  lineHeight: '1.6',
+                  opacity: 0.9
+                }}
+              >
+                At IPR Karo, we believe that protecting your brand should be simple, fast, and transparent. That's why we built an AI-driven platform that combines technology and legal expertise to safeguard your intellectual property.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Desktop Layout - Keep original */}
+        <div className="hidden lg:flex items-center justify-center gap-4">
           {/* Vertical IPR Karo Text - Flipped */}
           <div className="flex flex-col items-center">
             <div 
@@ -233,10 +283,10 @@ export default function AboutPage() {
       <div className="w-full py-16">
         <div className="text-center mb-12">
           <h2 
+            className="text-3xl sm:text-4xl lg:text-[42px] font-bold"
             style={{
               color: '#FFF',
               fontFamily: 'Nunito',
-              fontSize: '42px',
               fontWeight: 700,
               lineHeight: '1.2'
             }}
@@ -245,7 +295,13 @@ export default function AboutPage() {
           </h2>
         </div>
         
-        {/* Client Logos Grid - 4x2 */}
+        {/* Mobile: Client Logos Slider */}
+        <div className="block lg:hidden">
+          <ClientLogoSlider />
+        </div>
+
+        {/* Desktop: Client Logos Grid - 4x2 */}
+        <div className="hidden lg:block">
         <div className="grid grid-cols-4 gap-12 max-w-7xl mx-auto">
           {[1, 2, 3, 4, 5, 6, 7, 8].map((logoNumber) => (
             <div 
@@ -266,6 +322,7 @@ export default function AboutPage() {
               />
             </div>
           ))}
+          </div>
         </div>
       </div>
 
@@ -273,10 +330,10 @@ export default function AboutPage() {
       <div ref={sectionsRef} className="reveal-container w-full py-16">
         <div className="text-center mb-16">
           <h2 
+            className="text-3xl sm:text-4xl lg:text-[42px] font-bold"
             style={{
               color: '#FFF',
               fontFamily: 'Nunito',
-              fontSize: '42px',
               fontWeight: 700,
               lineHeight: '1.2'
             }}
@@ -285,19 +342,19 @@ export default function AboutPage() {
           </h2>
         </div>
         
-        {/* Timeline Container */}
-        <div className="max-w-6xl mx-auto relative">
+        {/* Desktop Timeline Section */}
+        <div className="hidden lg:block max-w-6xl mx-auto relative">
           {/* Decorative "Our" Text - Left Side */}
-          <div 
+          <div
             className="absolute left-0 top-1/2 transform -translate-y-1/2 -rotate-90"
             style={{
-              left: '-400px',
-              fontSize: '300px',
+              left: '-200px',
+              fontSize: '200px',
               fontFamily: 'Nunito',
               fontWeight: 700,
               color: 'transparent',
-              WebkitTextStroke: '2px #FFB703',
-              letterSpacing: '4px',
+              WebkitTextStroke: '1px #FFB703',
+              letterSpacing: '2px',
               userSelect: 'none',
               pointerEvents: 'none'
             }}
@@ -306,16 +363,16 @@ export default function AboutPage() {
           </div>
 
           {/* Decorative "Story" Text - Right Side */}
-          <div 
+          <div
             className="absolute right-0 top-1/2 transform -translate-y-1/2 -rotate-90"
             style={{
-              right: '-490px',
-              fontSize: '300px',
+              right: '-250px',
+              fontSize: '200px',
               fontFamily: 'Nunito',
               fontWeight: 700,
               color: 'transparent',
-              WebkitTextStroke: '2px #FFB703',
-              letterSpacing: '4px',
+              WebkitTextStroke: '1px #FFB703',
+              letterSpacing: '2px',
               userSelect: 'none',
               pointerEvents: 'none'
             }}
@@ -324,15 +381,15 @@ export default function AboutPage() {
           </div>
 
           {/* Vertical Line */}
-          <div 
+          <div
             className="absolute left-1/2 transform -translate-x-1/2 h-full w-2"
-            style={{ 
+            style={{
               background: 'linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.3))',
               borderRadius: '2px'
             }}
           />
-          
-          {/* Timeline Items */}
+
+          {/* Timeline Items - Desktop Original Layout */}
           <div className="space-y-16">
             {/* Timeline Item 1 - Left Year, Right Heading & Description */}
             <div className="reveal-section">
@@ -340,7 +397,7 @@ export default function AboutPage() {
                 <div className="relative flex items-start">
                   {/* Year (Left) */}
                   <div className="w-1/2 pr-8 text-right pt-2">
-                    <h3 
+                    <h3
                       style={{
                         color: '#FFB703',
                         fontFamily: 'Nunito',
@@ -351,20 +408,20 @@ export default function AboutPage() {
                       2018
                     </h3>
                   </div>
-                  
+
                   {/* White Dot */}
-                  <div 
+                  <div
                     className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full border-2 mt-2"
-                    style={{ 
+                    style={{
                       background: 'radial-gradient(circle, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.7))',
                       borderColor: 'rgba(255, 255, 255, 0.8)',
                       boxShadow: '0 0 8px rgba(255, 255, 255, 0.3)'
                     }}
                   />
-                  
+
                   {/* Heading & Description (Right) */}
                   <div className="w-1/2 pl-8">
-                    <h4 
+                    <h4
                       style={{
                         color: '#FFF',
                         fontFamily: 'Nunito',
@@ -375,7 +432,7 @@ export default function AboutPage() {
                     >
                       The Foundation
                     </h4>
-                    <div 
+                    <div
                       style={{
                         color: '#FFF',
                         fontFamily: 'Nunito',
@@ -398,7 +455,7 @@ export default function AboutPage() {
                 <div className="relative flex items-start">
                   {/* Heading & Description (Left) */}
                   <div className="w-1/2 pr-8 text-right">
-                    <h4 
+                    <h4
                       style={{
                         color: '#FFF',
                         fontFamily: 'Nunito',
@@ -409,7 +466,7 @@ export default function AboutPage() {
                     >
                       AI Revolution
                     </h4>
-                    <div 
+                    <div
                       style={{
                         color: '#FFF',
                         fontFamily: 'Nunito',
@@ -422,20 +479,20 @@ export default function AboutPage() {
                       {splitTextIntoWords('Launched our AI-powered trademark search technology, revolutionizing the way businesses approach intellectual property protection. Our advanced algorithms could analyze millions of existing trademarks instantly. We introduced automated similarity detection and conflict analysis. The technology reduced search time from days to minutes. This breakthrough positioned us as innovators in the IP industry.')}
                     </div>
                   </div>
-                  
+
                   {/* White Dot */}
-                  <div 
+                  <div
                     className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full border-2 mt-2"
-                    style={{ 
+                    style={{
                       background: 'radial-gradient(circle, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.7))',
                       borderColor: 'rgba(255, 255, 255, 0.8)',
                       boxShadow: '0 0 8px rgba(255, 255, 255, 0.3)'
                     }}
                   />
-                  
+
                   {/* Year (Right) */}
                   <div className="w-1/2 pl-8 pt-2">
-                    <h3 
+                    <h3
                       style={{
                         color: '#FFB703',
                         fontFamily: 'Nunito',
@@ -456,7 +513,7 @@ export default function AboutPage() {
                 <div className="relative flex items-start">
                   {/* Year (Left) */}
                   <div className="w-1/2 pr-8 text-right pt-2">
-                    <h3 
+                    <h3
                       style={{
                         color: '#FFB703',
                         fontFamily: 'Nunito',
@@ -467,20 +524,20 @@ export default function AboutPage() {
                       2020
                     </h3>
                   </div>
-                  
+
                   {/* White Dot */}
-                  <div 
+                  <div
                     className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full border-2 mt-2"
-                    style={{ 
+                    style={{
                       background: 'radial-gradient(circle, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.7))',
                       borderColor: 'rgba(255, 255, 255, 0.8)',
                       boxShadow: '0 0 8px rgba(255, 255, 255, 0.3)'
                     }}
                   />
-                  
+
                   {/* Heading & Description (Right) */}
                   <div className="w-1/2 pl-8">
-                    <h4 
+                    <h4
                       style={{
                         color: '#FFF',
                         fontFamily: 'Nunito',
@@ -491,7 +548,7 @@ export default function AboutPage() {
                     >
                       Trust & Growth
                     </h4>
-                    <div 
+                    <div
                       style={{
                         color: '#FFF',
                         fontFamily: 'Nunito',
@@ -514,7 +571,7 @@ export default function AboutPage() {
                 <div className="relative flex items-start">
                   {/* Heading & Description (Left) */}
                   <div className="w-1/2 pr-8 text-right">
-                    <h4 
+                    <h4
                       style={{
                         color: '#FFF',
                         fontFamily: 'Nunito',
@@ -525,7 +582,7 @@ export default function AboutPage() {
                     >
                       Service Expansion
                     </h4>
-                    <div 
+                    <div
                       style={{
                         color: '#FFF',
                         fontFamily: 'Nunito',
@@ -538,20 +595,20 @@ export default function AboutPage() {
                       {splitTextIntoWords('Expanded our services to include comprehensive IP portfolio management and introduced automated filing systems for faster processing. We launched our enterprise solutions for large corporations. Our team grew to include specialized patent and design experts. We implemented blockchain technology for secure document verification. The automated systems reduced processing time by 60%.')}
                     </div>
                   </div>
-                  
+
                   {/* White Dot */}
-                  <div 
+                  <div
                     className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full border-2 mt-2"
-                    style={{ 
+                    style={{
                       background: 'radial-gradient(circle, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.7))',
                       borderColor: 'rgba(255, 255, 255, 0.8)',
                       boxShadow: '0 0 8px rgba(255, 255, 255, 0.3)'
                     }}
                   />
-                  
+
                   {/* Year (Right) */}
                   <div className="w-1/2 pl-8 pt-2">
-                    <h3 
+                    <h3
                       style={{
                         color: '#FFB703',
                         fontFamily: 'Nunito',
@@ -572,7 +629,7 @@ export default function AboutPage() {
                 <div className="relative flex items-start">
                   {/* Year (Left) */}
                   <div className="w-1/2 pr-8 text-right pt-2">
-                    <h3 
+                    <h3
                       style={{
                         color: '#FFB703',
                         fontFamily: 'Nunito',
@@ -583,20 +640,20 @@ export default function AboutPage() {
                       2022
                     </h3>
                   </div>
-                  
+
                   {/* White Dot */}
-                  <div 
+                  <div
                     className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full border-2 mt-2"
-                    style={{ 
+                    style={{
                       background: 'radial-gradient(circle, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.7))',
                       borderColor: 'rgba(255, 255, 255, 0.8)',
                       boxShadow: '0 0 8px rgba(255, 255, 255, 0.3)'
                     }}
                   />
-                  
+
                   {/* Heading & Description (Right) */}
                   <div className="w-1/2 pl-8">
-                    <h4 
+                    <h4
                       style={{
                         color: '#FFF',
                         fontFamily: 'Nunito',
@@ -607,7 +664,7 @@ export default function AboutPage() {
                     >
                       Mobile Innovation
                     </h4>
-                    <div 
+                    <div
                       style={{
                         color: '#FFF',
                         fontFamily: 'Nunito',
@@ -630,7 +687,7 @@ export default function AboutPage() {
                 <div className="relative flex items-start">
                   {/* Heading & Description (Left) */}
                   <div className="w-1/2 pr-8 text-right">
-                    <h4 
+                    <h4
                       style={{
                         color: '#FFF',
                         fontFamily: 'Nunito',
@@ -641,7 +698,7 @@ export default function AboutPage() {
                     >
                       AI Intelligence
                     </h4>
-                    <div 
+                    <div
                       style={{
                         color: '#FFF',
                         fontFamily: 'Nunito',
@@ -654,20 +711,20 @@ export default function AboutPage() {
                       {splitTextIntoWords('Introduced advanced AI analytics for trademark monitoring and infringement detection, making IP protection more proactive and intelligent than ever before. Our AI system now monitors over 100 million trademarks globally. We launched predictive analytics for trademark success probability. The platform achieved 99.7% accuracy in conflict detection. Today, we stand as India\'s leading AI-powered IP protection platform.')}
                     </div>
                   </div>
-                  
+
                   {/* White Dot */}
-                  <div 
+                  <div
                     className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full border-2 mt-2"
-            style={{
+                    style={{
                       background: 'radial-gradient(circle, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.7))',
                       borderColor: 'rgba(255, 255, 255, 0.8)',
                       boxShadow: '0 0 8px rgba(255, 255, 255, 0.3)'
                     }}
                   />
-                  
+
                   {/* Year (Right) */}
                   <div className="w-1/2 pl-8 pt-2">
-                    <h3 
+                    <h3
                       style={{
                         color: '#FFB703',
                         fontFamily: 'Nunito',
@@ -683,16 +740,408 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
+
+        {/* Mobile Timeline Section */}
+        <div className="block lg:hidden">
+          <div className="max-w-4xl mx-auto relative">
+            {/* Decorative "Our Story" Text - Right Side for Mobile */}
+           
+
+            {/* Vertical Line - Left Side for Mobile */}
+            <div
+              className="absolute left-7.5 top-0 bottom-0 w-2"
+              style={{
+                background: 'linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.3))',
+                borderRadius: '2px'
+              }}
+            />
+
+            {/* Timeline Items - Mobile Layout */}
+            <div className="space-y-16 relative">
+              {/* Timeline Item 1 - Year and Content on Right for Mobile */}
+              <div className="reveal-section">
+                <div className="reveal-content">
+                  <div className="relative flex items-start">
+                    {/* White Dot - Left for Mobile */}
+                    <div
+                      className="absolute left-5.5 w-6 h-6 rounded-full border-2 -mt-2"
+                      style={{
+                        background: 'radial-gradient(circle, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.7))',
+                        borderColor: 'rgba(255, 255, 255, 0.8)',
+                        boxShadow: '0 0 8px rgba(255, 255, 255, 0.3)'
+                      }}
+                    />
+
+                    {/* Year - Right for Mobile */}
+                    <div className="w-full pl-16">
+                      <div className="flex items-center gap-4 mb-4">
+                        <h3
+                          className="text-xl sm:text-2xl font-bold"
+                          style={{
+                            color: '#FFB703',
+                            fontFamily: 'Nunito',
+                            fontWeight: 700
+                          }}
+                        >
+                          2018
+                        </h3>
+                      </div>
+
+                      {/* Heading & Description */}
+                      <div>
+                        <h4
+                          className="text-lg sm:text-xl font-semibold mb-2"
+                          style={{
+                            color: '#FFF',
+                            fontFamily: 'Nunito',
+                            fontWeight: 600
+                          }}
+                        >
+                          The Foundation
+                        </h4>
+                        <div
+                          className="text-sm sm:text-base"
+                          style={{
+                            color: '#FFF',
+                            fontFamily: 'Nunito',
+                            fontWeight: 400,
+                            lineHeight: '1.6',
+                            opacity: 0.9
+                          }}
+                        >
+                          {splitTextIntoWords('IPR Karo was founded with a vision to democratize intellectual property protection for businesses of all sizes across India. We recognized the gap in accessible IP services for startups and SMEs. Our mission was to simplify complex trademark procedures. We aimed to provide transparent pricing and faster processing times. The journey began with a small team of passionate IP experts.')}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Timeline Item 2 - Year and Content on Right for Mobile */}
+              <div className="reveal-section">
+                <div className="reveal-content">
+                  <div className="relative flex items-start">
+                    {/* White Dot - Left for Mobile */}
+                    <div
+                      className="absolute left-5.5 w-6 h-6 rounded-full border-2 -mt-2"
+                      style={{
+                        background: 'radial-gradient(circle, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.7))',
+                        borderColor: 'rgba(255, 255, 255, 0.8)',
+                        boxShadow: '0 0 8px rgba(255, 255, 255, 0.3)'
+                      }}
+                    />
+
+                    {/* Year - Right for Mobile */}
+                    <div className="w-full pl-16">
+                      <div className="flex items-center gap-4 mb-4">
+                        <h3
+                          className="text-xl sm:text-2xl font-bold"
+                          style={{
+                            color: '#FFB703',
+                            fontFamily: 'Nunito',
+                            fontWeight: 700
+                          }}
+                        >
+                          2019
+                        </h3>
+                      </div>
+
+                      {/* Heading & Description */}
+                      <div>
+                        <h4
+                          className="text-lg sm:text-xl font-semibold mb-2"
+                          style={{
+                            color: '#FFF',
+                            fontFamily: 'Nunito',
+                            fontWeight: 600
+                          }}
+                        >
+                          AI Revolution
+                        </h4>
+                        <div
+                          className="text-sm sm:text-base"
+                          style={{
+                            color: '#FFF',
+                            fontFamily: 'Nunito',
+                            fontWeight: 400,
+                            lineHeight: '1.6',
+                            opacity: 0.9
+                          }}
+                        >
+                          {splitTextIntoWords('Launched our AI-powered trademark search technology, revolutionizing the way businesses approach intellectual property protection. Our advanced algorithms could analyze millions of existing trademarks instantly. We introduced automated similarity detection and conflict analysis. The technology reduced search time from days to minutes. This breakthrough positioned us as innovators in the IP industry.')}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Timeline Item 3 - Year and Content on Right for Mobile */}
+              <div className="reveal-section">
+                <div className="reveal-content">
+                  <div className="relative flex items-start">
+                    {/* White Dot - Left for Mobile */}
+                    <div
+                      className="absolute left-5.5 w-6 h-6 rounded-full border-2 -mt-2"
+                      style={{
+                        background: 'radial-gradient(circle, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.7))',
+                        borderColor: 'rgba(255, 255, 255, 0.8)',
+                        boxShadow: '0 0 8px rgba(255, 255, 255, 0.3)'
+                      }}
+                    />
+
+                    {/* Year - Right for Mobile */}
+                    <div className="w-full pl-16">
+                      <div className="flex items-center gap-4 mb-4">
+                        <h3
+                          className="text-xl sm:text-2xl font-bold"
+                          style={{
+                            color: '#FFB703',
+                            fontFamily: 'Nunito',
+                            fontWeight: 700
+                          }}
+                        >
+                          2020
+                        </h3>
+                      </div>
+
+                      {/* Heading & Description */}
+                      <div>
+                        <h4
+                          className="text-lg sm:text-xl font-semibold mb-2"
+                          style={{
+                            color: '#FFF',
+                            fontFamily: 'Nunito',
+                            fontWeight: 600
+                          }}
+                        >
+                          Trust & Growth
+                        </h4>
+                        <div
+                          className="text-sm sm:text-base"
+                          style={{
+                            color: '#FFF',
+                            fontFamily: 'Nunito',
+                            fontWeight: 400,
+                            lineHeight: '1.6',
+                            opacity: 0.9
+                          }}
+                        >
+                          {splitTextIntoWords('Successfully processed over 10,000 trademark applications, establishing ourselves as a trusted partner for startups and SMEs. We achieved a 98% success rate in trademark registrations. Our client base expanded across 15 major Indian cities. We introduced 24/7 customer support and live tracking features. The year marked our transition from startup to established IP service provider.')}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Decorative "Our Story" Text - Vertically positioned at right end of screen */}
+              <div
+                className="absolute -right-95 top-1/2 transform -translate-y-1/2 -rotate-90 origin-center"
+                style={{
+                  fontSize: '200px',
+                  fontFamily: 'Nunito',
+                  fontWeight: 700,
+                  color: 'transparent',
+                  WebkitTextStroke: '1px #FFB703',
+                  letterSpacing: '1px',
+                  userSelect: 'none',
+                  pointerEvents: 'none',
+                  whiteSpace: 'nowrap'
+                }}
+              >
+                Our Story
+              </div>
+
+              {/* Timeline Item 4 - Year and Content on Right for Mobile */}
+              <div className="reveal-section">
+                <div className="reveal-content">
+                  <div className="relative flex items-start">
+                    {/* White Dot - Left for Mobile */}
+                    <div
+                      className="absolute left-5.5 w-6 h-6 rounded-full border-2 -mt-2"
+                      style={{
+                        background: 'radial-gradient(circle, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.7))',
+                        borderColor: 'rgba(255, 255, 255, 0.8)',
+                        boxShadow: '0 0 8px rgba(255, 255, 255, 0.3)'
+                      }}
+                    />
+
+                    {/* Year - Right for Mobile */}
+                    <div className="w-full pl-16">
+                      <div className="flex items-center gap-4 mb-4">
+                        <h3
+                          className="text-xl sm:text-2xl font-bold"
+                          style={{
+                            color: '#FFB703',
+                            fontFamily: 'Nunito',
+                            fontWeight: 700
+                          }}
+                        >
+                          2021
+                        </h3>
+                      </div>
+
+                      {/* Heading & Description */}
+                      <div>
+                        <h4
+                          className="text-lg sm:text-xl font-semibold mb-2"
+                          style={{
+                            color: '#FFF',
+                            fontFamily: 'Nunito',
+                            fontWeight: 600
+                          }}
+                        >
+                          Service Expansion
+                        </h4>
+                        <div
+                          className="text-sm sm:text-base"
+                          style={{
+                            color: '#FFF',
+                            fontFamily: 'Nunito',
+                            fontWeight: 400,
+                            lineHeight: '1.6',
+                            opacity: 0.9
+                          }}
+                        >
+                          {splitTextIntoWords('Expanded our services to include comprehensive IP portfolio management and introduced automated filing systems for faster processing. We launched our enterprise solutions for large corporations. Our team grew to include specialized patent and design experts. We implemented blockchain technology for secure document verification. The automated systems reduced processing time by 60%.')}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Timeline Item 5 - Year and Content on Right for Mobile */}
+              <div className="reveal-section">
+                <div className="reveal-content">
+                  <div className="relative flex items-start">
+                    {/* White Dot - Left for Mobile */}
+                    <div
+                      className="absolute left-5.5 w-6 h-6 rounded-full border-2 -mt-2"
+                      style={{
+                        background: 'radial-gradient(circle, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.7))',
+                        borderColor: 'rgba(255, 255, 255, 0.8)',
+                        boxShadow: '0 0 8px rgba(255, 255, 255, 0.3)'
+                      }}
+                    />
+
+                    {/* Year - Right for Mobile */}
+                    <div className="w-full pl-16">
+                      <div className="flex items-center gap-4 mb-4">
+                        <h3
+                          className="text-xl sm:text-2xl font-bold"
+                          style={{
+                            color: '#FFB703',
+                            fontFamily: 'Nunito',
+                            fontWeight: 700
+                          }}
+                        >
+                          2022
+                        </h3>
+                      </div>
+
+                      {/* Heading & Description */}
+                      <div>
+                        <h4
+                          className="text-lg sm:text-xl font-semibold mb-2"
+                          style={{
+                            color: '#FFF',
+                            fontFamily: 'Nunito',
+                            fontWeight: 600
+                          }}
+                        >
+                          Mobile Innovation
+                        </h4>
+                        <div
+                          className="text-sm sm:text-base"
+                          style={{
+                            color: '#FFF',
+                            fontFamily: 'Nunito',
+                            fontWeight: 400,
+                            lineHeight: '1.6',
+                            opacity: 0.9
+                          }}
+                        >
+                          {splitTextIntoWords('Reached a milestone of 50,000+ successful trademark registrations and launched our mobile application for seamless IP management on-the-go. The mobile app featured real-time application tracking and notifications. We introduced QR code scanning for instant trademark verification. Our platform integrated with major business management tools. Client satisfaction scores reached an all-time high of 96%.')}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Timeline Item 6 - Year and Content on Right for Mobile */}
+              <div className="reveal-section">
+                <div className="reveal-content">
+                  <div className="relative flex items-start">
+                    {/* White Dot - Left for Mobile */}
+                    <div
+                      className="absolute left-5.5 w-6 h-6 rounded-full border-2 -mt-2"
+                      style={{
+                        background: 'radial-gradient(circle, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.7))',
+                        borderColor: 'rgba(255, 255, 255, 0.8)',
+                        boxShadow: '0 0 8px rgba(255, 255, 255, 0.3)'
+                      }}
+                    />
+
+                    {/* Year - Right for Mobile */}
+                    <div className="w-full pl-16">
+                      <div className="flex items-center gap-4 mb-4">
+                        <h3
+                          className="text-xl sm:text-2xl font-bold"
+                          style={{
+                            color: '#FFB703',
+                            fontFamily: 'Nunito',
+                            fontWeight: 700
+                          }}
+                        >
+                          2024
+                        </h3>
+                      </div>
+
+                      {/* Heading & Description */}
+                      <div>
+                        <h4
+                          className="text-lg sm:text-xl font-semibold mb-2"
+                          style={{
+                            color: '#FFF',
+                            fontFamily: 'Nunito',
+                            fontWeight: 600
+                          }}
+                        >
+                          AI Intelligence
+                        </h4>
+                        <div
+                          className="text-sm sm:text-base"
+                          style={{
+                            color: '#FFF',
+                            fontFamily: 'Nunito',
+                            fontWeight: 400,
+                            lineHeight: '1.6',
+                            opacity: 0.9
+                          }}
+                        >
+                          {splitTextIntoWords('Introduced advanced AI analytics for trademark monitoring and infringement detection, making IP protection more proactive and intelligent than ever before. Our AI system now monitors over 100 million trademarks globally. We launched predictive analytics for trademark success probability. The platform achieved 99.7% accuracy in conflict detection. Today, we stand as India\'s leading AI-powered IP protection platform.')}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* What makes IPR Karo Different Section */}
-      <div className="w-full py-16 px-24">
+      <div className="w-full py-16 px-6 sm:px-12 lg:px-24">
         <div className="text-center mb-16">
           <h2 
+            className="text-3xl sm:text-4xl lg:text-[42px] font-bold"
             style={{
               color: '#FFF',
               fontFamily: 'Nunito',
-              fontSize: '42px',
               fontWeight: 700,
               lineHeight: '1.2'
             }}
@@ -704,10 +1153,10 @@ export default function AboutPage() {
         {/* Cards Container */}
         <div className="max-w-7xl mx-auto space-y-8">
           {/* First Row - 3 Cards */}
-          <div className="grid grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {/* Card 1 */}
-            <div 
-              className="p-8 text-center h-80 flex flex-col justify-center items-center space-y-6"
+            <div
+              className="p-4 sm:p-6 lg:p-8 text-center h-auto sm:h-80 flex flex-col justify-center items-center space-y-4 sm:space-y-6"
               style={{
                 borderRadius: '20px 0 0 0',
                 background: 'linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), linear-gradient(145deg, rgba(12, 0, 43, 0.40) 6.6%, rgba(255, 183, 3, 0.40) 120.24%), rgba(0, 0, 0, 0.50)',
@@ -715,37 +1164,37 @@ export default function AboutPage() {
               }}
             >
               {/* Icon with white background */}
-              <div 
-                className="w-16 h-16 rounded-full flex items-center justify-center"
+              <div
+                className="w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center"
                 style={{ backgroundColor: '#FFF' }}
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="27" viewBox="0 0 28 27" fill="none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 28 27" fill="none">
                   <path d="M15.7233 15.2252C18.9724 11.9761 18.9724 6.69981 15.7233 3.43682C12.4742 0.187726 7.19792 0.187726 3.93494 3.43682C0.685844 6.68592 0.685844 11.9622 3.93494 15.2252C7.18404 18.4743 12.4604 18.4743 15.7233 15.2252Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   <path d="M16.0823 15.5859L26.4961 25.9997" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>
-              
-              <h3 
+
+              <h3
+                className="text-lg sm:text-xl lg:text-[30px] font-medium"
                 style={{
                   color: '#FFF',
                   fontFamily: 'Nunito',
-                  fontSize: '30px',
                   fontStyle: 'normal',
                   fontWeight: 500,
-                  lineHeight: '30px'
+                  lineHeight: '1.2'
                 }}
               >
                 AI-Powered Speed
               </h3>
-              <p 
+              <p
+                className="text-sm sm:text-base lg:text-[20px]"
                 style={{
                   color: 'rgba(255, 255, 255, 0.80)',
                   textAlign: 'center',
                   fontFamily: 'Nunito',
-                  fontSize: '20px',
                   fontStyle: 'normal',
                   fontWeight: 400,
-                  lineHeight: '20px'
+                  lineHeight: '1.4'
                 }}
               >
                 Our advanced AI technology processes trademark searches in minutes, not days. Get instant conflict analysis and trademark availability reports with 99.7% accuracy.
@@ -753,8 +1202,8 @@ export default function AboutPage() {
             </div>
 
             {/* Card 2 */}
-            <div 
-              className="p-8 text-center h-80 flex flex-col justify-center items-center space-y-6"
+            <div
+              className="p-4 sm:p-6 lg:p-8 text-center h-auto sm:h-80 flex flex-col justify-center items-center space-y-4 sm:space-y-6"
               style={{
                 borderRadius: '20px 0 0 0',
                 background: 'linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), linear-gradient(145deg, rgba(12, 0, 43, 0.40) 6.6%, rgba(255, 183, 3, 0.40) 120.24%), rgba(0, 0, 0, 0.50)',
@@ -762,36 +1211,36 @@ export default function AboutPage() {
               }}
             >
               {/* Icon with white background */}
-              <div 
-                className="w-16 h-16 rounded-full flex items-center justify-center"
+              <div
+                className="w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center"
                 style={{ backgroundColor: '#FFF' }}
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="27" viewBox="0 0 28 27" fill="none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 28 27" fill="none">
                   <path d="M9.45455 12.3636C10.9615 12.3636 12.4066 11.765 13.4722 10.6995C14.5377 9.63392 15.1364 8.18873 15.1364 6.68182C15.1364 5.17491 14.5377 3.72971 13.4722 2.66417C12.4066 1.59862 10.9615 1 9.45455 1C7.94763 1 6.50244 1.59862 5.43689 2.66417C4.37135 3.72971 3.77273 5.17491 3.77273 6.68182C3.77273 8.18873 4.37135 9.63392 5.43689 10.6995C6.50244 11.765 7.94763 12.3636 9.45455 12.3636ZM9.45455 12.3636C11.742 12.3636 13.7409 13.2273 15.1625 14.6625C16.0053 15.517 16.6359 16.5574 17.0034 17.7M9.45455 12.3636C4.90909 12.3636 1.5 15.7727 1.5 20.3182V26H12.8636M14 21.2545L18.7614 24.8636L26.5 14.6364" stroke="black" strokeWidth="2"/>
                 </svg>
               </div>
-              
-              <h3 
+
+              <h3
+                className="text-lg sm:text-xl lg:text-[30px] font-medium"
                 style={{
                   color: '#FFF',
                   fontFamily: 'Nunito',
-                  fontSize: '30px',
                   fontStyle: 'normal',
                   fontWeight: 500,
-                  lineHeight: '30px'
+                  lineHeight: '1.2'
                 }}
               >
                 Transparent Pricing
               </h3>
-              <p 
+              <p
+                className="text-sm sm:text-base lg:text-[20px]"
                 style={{
                   color: 'rgba(255, 255, 255, 0.80)',
                   textAlign: 'center',
                   fontFamily: 'Nunito',
-                  fontSize: '20px',
                   fontStyle: 'normal',
                   fontWeight: 400,
-                  lineHeight: '20px'
+                  lineHeight: '1.4'
                 }}
               >
                 No hidden fees, no surprises. Get upfront pricing with clear breakdown of all costs. Pay only for what you need with our flexible service packages.
@@ -848,10 +1297,10 @@ export default function AboutPage() {
           </div>
 
           {/* Second Row - 2 Cards (bento style - each spans 1.5 columns) */}
-          <div className="grid grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
             {/* Card 4 */}
-            <div 
-              className="p-8 text-center h-80 flex flex-col justify-center items-center space-y-6"
+            <div
+              className="p-4 sm:p-6 lg:p-8 text-center h-auto sm:h-80 flex flex-col justify-center items-center space-y-4 sm:space-y-6"
               style={{
                 borderRadius: '20px 0 0 0',
                 background: 'linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), linear-gradient(145deg, rgba(12, 0, 43, 0.40) 6.6%, rgba(255, 183, 3, 0.40) 120.24%), rgba(0, 0, 0, 0.50)',
@@ -859,37 +1308,37 @@ export default function AboutPage() {
               }}
             >
               {/* Icon with white background */}
-              <div 
-                className="w-16 h-16 rounded-full flex items-center justify-center"
+              <div
+                className="w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center"
                 style={{ backgroundColor: '#FFF' }}
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 27 27" fill="none">
                   <path d="M1 13.5C1 15.1415 1.32332 16.767 1.95151 18.2835C2.57969 19.8001 3.50043 21.1781 4.66116 22.3388C5.8219 23.4996 7.19989 24.4203 8.71646 25.0485C10.233 25.6767 11.8585 26 13.5 26C15.1415 26 16.767 25.6767 18.2835 25.0485C19.8001 24.4203 21.1781 23.4996 22.3388 22.3388C23.4996 21.1781 24.4203 19.8001 25.0485 18.2835C25.6767 16.767 26 15.1415 26 13.5C26 10.1848 24.683 7.00537 22.3388 4.66117C19.9946 2.31696 16.8152 1 13.5 1C10.1848 1 7.00537 2.31696 4.66116 4.66117C2.31696 7.00537 1 10.1848 1 13.5Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   <path d="M13.5 6.55469V13.4991L17.6667 17.6658" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>
-              
-              <h3 
+
+              <h3
+                className="text-lg sm:text-xl lg:text-[30px] font-medium"
                 style={{
                   color: '#FFF',
                   fontFamily: 'Nunito',
-                  fontSize: '30px',
                   fontStyle: 'normal',
                   fontWeight: 500,
-                  lineHeight: '30px'
+                  lineHeight: '1.2'
                 }}
               >
                 98% Success Rate
               </h3>
-              <p 
+              <p
+                className="text-sm sm:text-base lg:text-[20px]"
                 style={{
                   color: 'rgba(255, 255, 255, 0.80)',
                   textAlign: 'center',
                   fontFamily: 'Nunito',
-                  fontSize: '20px',
                   fontStyle: 'normal',
                   fontWeight: 400,
-                  lineHeight: '20px'
+                  lineHeight: '1.4'
                 }}
               >
                 Industry-leading success rate with over 50,000+ successful trademark registrations. Our expertise ensures your application gets approved.
@@ -897,8 +1346,8 @@ export default function AboutPage() {
             </div>
 
             {/* Card 5 */}
-            <div 
-              className="p-8 text-center h-80 flex flex-col justify-center items-center space-y-6"
+            <div
+              className="p-4 sm:p-6 lg:p-8 text-center h-auto sm:h-80 flex flex-col justify-center items-center space-y-4 sm:space-y-6"
               style={{
                 borderRadius: '20px 0 0 0',
                 background: 'linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), linear-gradient(145deg, rgba(12, 0, 43, 0.40) 6.6%, rgba(255, 183, 3, 0.40) 120.24%), rgba(0, 0, 0, 0.50)',
@@ -906,39 +1355,39 @@ export default function AboutPage() {
               }}
             >
               {/* Icon with white background */}
-              <div 
-                className="w-16 h-16 rounded-full flex items-center justify-center"
+              <div
+                className="w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center"
                 style={{ backgroundColor: '#FFF' }}
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="27" viewBox="0 0 35 27" fill="none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 35 27" fill="none">
                   <path d="M2.72443 19.1816L32.2699 19.1816C32.8975 19.1816 33.4062 18.6729 33.4062 18.0453V2.13619C33.4062 1.50859 32.8975 0.999823 32.2699 0.999823L2.72443 0.999823C2.09684 0.999823 1.58807 1.50859 1.58807 2.13619L1.58807 18.0453C1.58807 18.6729 2.09684 19.1816 2.72443 19.1816Z" stroke="black" strokeWidth="2" strokeLinejoin="round"/>
                   <path d="M3.86328 22.5918H31.136M6.13601 26.0009H28.8633" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   <path d="M17.4982 15.7718C20.6362 15.7718 23.18 13.228 23.18 10.09C23.18 6.95204 20.6362 4.4082 17.4982 4.4082C14.3602 4.4082 11.8164 6.95204 11.8164 10.09C11.8164 13.228 14.3602 15.7718 17.4982 15.7718Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   <path d="M33.408 6.68182C31.9011 6.68182 30.4559 6.0832 29.3904 5.01765C28.3248 3.9521 27.7262 2.50691 27.7262 1M1.58984 6.68182C2.33599 6.68182 3.07483 6.53485 3.76418 6.24932C4.45353 5.96378 5.07989 5.54526 5.6075 5.01765C6.1351 4.49005 6.55362 3.86369 6.83916 3.17434C7.1247 2.48499 7.27166 1.74615 7.27166 1M33.408 13.5C31.9011 13.5 30.4559 14.0986 29.3904 15.1642C28.3248 16.2297 27.7262 17.6749 27.7262 19.1818M1.58984 13.5C2.33599 13.5 3.07483 13.647 3.76418 13.9325C4.45353 14.218 5.07989 14.6366 5.6075 15.1642C6.1351 15.6918 6.55362 16.3181 6.83916 17.0075C7.1247 17.6968 7.27166 18.4357 7.27166 19.1818" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>
-              
-              <h3 
+
+              <h3
+                className="text-lg sm:text-xl lg:text-[30px] font-medium"
                 style={{
                   color: '#FFF',
                   fontFamily: 'Nunito',
-                  fontSize: '30px',
                   fontStyle: 'normal',
                   fontWeight: 500,
-                  lineHeight: '30px'
+                  lineHeight: '1.2'
                 }}
               >
                 End-to-End Service
               </h3>
-              <p 
+              <p
+                className="text-sm sm:text-base lg:text-[20px]"
                 style={{
                   color: 'rgba(255, 255, 255, 0.80)',
                   textAlign: 'center',
                   fontFamily: 'Nunito',
-                  fontSize: '20px',
                   fontStyle: 'normal',
                   fontWeight: 400,
-                  lineHeight: '20px'
+                  lineHeight: '1.4'
                 }}
               >
                 From initial search to final registration, we handle everything. Complete IP portfolio management with ongoing monitoring and protection services.
@@ -948,7 +1397,6 @@ export default function AboutPage() {
         </div>
       </div>
       <Faq />
-
     </div>
   );
 }

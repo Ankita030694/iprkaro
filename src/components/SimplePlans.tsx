@@ -77,10 +77,10 @@ export default function SimplePlans() {
       <div className="absolute inset-0 bg-[#0C002B]"></div>
 
       {/* Main Content */}
-      <div className="relative z-10 mt-20 px-2 lg:px-4 mb-20">
+      <div className="relative z-10 mt-8 md:mt-20 px-2 lg:px-4 mb-8 md:mb-20">
         <div className="max-w-8xl mx-auto">
           {/* Section Heading with Gradient Text */}
-          <div className="text-center mb-12">
+          <div className="text-center mb-8 md:mb-12">
             <h2 className="text-white text-center font-nunito text-[28px] md:text-[45px] font-medium leading-[32px] md:leading-[45px] w-full mb-4">
               Simple Plans, Maximum Protection
             </h2>
@@ -91,7 +91,7 @@ export default function SimplePlans() {
 
           {/* Pricing Cards */}
           <div 
-            className="mobile-scroll-container flex flex-row overflow-x-auto overflow-y-hidden justify-start items-start lg:flex-row lg:items-center lg:justify-center lg:overflow-x-visible mb-12 mt-20 gap-4 lg:gap-8 pb-4 px-2 lg:px-0" 
+            className="mobile-scroll-container flex flex-row overflow-x-auto overflow-y-hidden justify-start items-start lg:flex-row lg:items-center lg:justify-center lg:overflow-x-visible mb-8 md:mb-12 mt-8 md:mt-20 gap-4 lg:gap-8 pb-4 px-2 lg:px-0" 
             style={{ 
               scrollbarWidth: 'none', 
               msOverflowStyle: 'none',
@@ -105,8 +105,8 @@ export default function SimplePlans() {
                 onClick={() => setSelectedPlan(plan.id)}
                 style={{
                   display: 'flex',
-                  width: 'clamp(380px, 85vw, 448px)', // Increased mobile width from 314px to 380px (85% of original)
-                  height: 'clamp(427px, 85vh, 502px)', // Increased mobile height to match width proportion (502px * 0.85 = 427px)
+                  width: 'clamp(320px, 75vw, 448px)', // Reduced mobile width to 320px (75% of original) to show part of second card
+                  height: 'clamp(360px, 75vh, 502px)', // Reduced mobile height to match width proportion (502px * 0.75 = 376px, but using 360px for better mobile fit)
                   padding: '15px 24px 24px 24px',
                   flexDirection: 'column',
                   alignItems: 'center',
@@ -155,7 +155,7 @@ export default function SimplePlans() {
                       boxShadow: selectedPlan === plan.id ? 'none' : '0 0 20px 0 rgba(255, 255, 255, 0.31) inset',
                       backdropFilter: 'blur(16px)',
                       width: '100%',
-                      height: 'clamp(365px, 70vh, 430px)' // Increased mobile height to match width proportion (430px * 0.85 = 365px)
+                      height: 'clamp(300px, 60vh, 430px)' // Reduced mobile height to match new card proportions (430px * 0.7 = 301px, using 300px)
                     }}
                     onMouseEnter={(e) => {
                       if (selectedPlan !== plan.id) {
@@ -239,10 +239,9 @@ export default function SimplePlans() {
                       }}
                     >
                       <span 
-                        className="font-nunito font-semibold"
+                        className="font-nunito font-semibold text-[18px] md:text-[25px]"
                         style={{
                           color: '#0C002B',
-                          fontSize: '25px',
                           lineHeight: '25px',
                           fontWeight: 600
                         }}
@@ -259,7 +258,7 @@ export default function SimplePlans() {
           </div>
 
           {/* Footer Text */}
-          <div className="text-center mb-20">
+          <div className="text-center mb-8 md:mb-20">
             <p className="text-white font-nunito text-[10px] md:text-xs lg:text-sm xl:text-base font-medium">
               This product and all trademark services are legally ensured by AMA Legal Solutions
             </p>
