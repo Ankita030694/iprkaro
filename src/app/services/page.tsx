@@ -65,6 +65,7 @@ function ServicesHeroSection() {
                     Use our AI-powered trademark search to instantly check name availability, assess risks, and get fast filing support. Easily register your trademark online and safeguard your brand’s identity with expert guidance every step of the way.
                   </p>
                 </div>
+                <p className="text-right opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-yellow-400">Learn More →</p>
               </div>
 
               {/* Service 2 - Copyright Protection */}
@@ -90,6 +91,7 @@ function ServicesHeroSection() {
                     Secure your art, music, software, and content through fast online copyright registration. Our platform and legal experts ensure full control and ownership rights, using AI to detect infringement and keep your creations protected.
                   </p>
                 </div>
+                <p className="text-right opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-yellow-400">Learn More →</p>
               </div>
 
               {/* Service 3 - Patent Services */}
@@ -115,6 +117,7 @@ function ServicesHeroSection() {
                     From filing to legal action, our patent services leverage AI for prior art search and efficient patent drafting. Get step-by-step support to defend your unique ideas, technologies, and maintain your competitive edge.
                   </p>
                 </div>
+                <p className="text-right opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-yellow-400">Learn More →</p>
               </div>
             </div>
           </div>
