@@ -30,7 +30,7 @@ export default function SearchClient() {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             onKeyPress={handleKeyPress}
-            placeholder="Search your trademark availability here"
+            placeholder="Search your trademark registration availability instantly"
             className="w-full px-4 lg:px-6 py-3 pr-20 lg:pr-14 rounded-[20px] bg-[rgba(255,255,255,0.1)] backdrop-blur-sm border border-[rgba(255,255,255,0.2)] text-[#F8F9FA] placeholder-[rgba(248,249,250,0.6)] focus:outline-none focus:ring-2 focus:ring-[#FFB703] focus:border-[#FFB703] transition-all duration-300 text-[14px] lg:text-[16px] font-nunito"
           />
           <button 

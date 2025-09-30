@@ -11,23 +11,23 @@ const Faq = () => {
   const faqs = [
     {
       question: "What is IPR Karo?",
-      answer: "IPR Karo is a comprehensive intellectual property rights platform that helps businesses and individuals protect their trademarks, copyrights, patents, and other IP assets with AI-powered assistance and expert legal support."
+      answer: "IPR Karo is a platform to search, register, and protect trademarks online using AI-powered search reports and expert legal support, making trademark registration fast and secure."
     },
     {
       question: "Who can use IPR Karo?",
-      answer: "IPR Karo is designed for entrepreneurs, startups, small and medium businesses, inventors, creators, and anyone looking to protect their intellectual property rights efficiently and affordably."
+      answer: "Startups, businesses, creative professionals, and entrepreneurs seeking hassle-free trademark registration, copyright filing, or patent protection online in India can use IPR Karo."
     },
     {
       question: "Is IPR Karo backed by legal experts?",
-      answer: "Yes, IPR Karo is backed by a team of qualified legal experts and IP attorneys who review all applications and provide guidance throughout the registration process to ensure compliance and success."
+      answer: "Yes, all trademark and IP services with IPR Karo are reviewed by experienced attorneys to ensure complete legal compliance and robust intellectual property protection."
     },
     {
       question: "Why choose IPR Karo over traditional methods?",
-      answer: "IPR Karo offers faster processing, AI-powered search and analysis, transparent pricing, expert legal support, and a user-friendly digital platform that makes IP protection accessible and affordable compared to traditional law firms."
+      answer: "IPR Karo offers AI-driven trademark search, instant conflict checks, risk assessment reports, and seamless online filings—delivering faster results and more accurate protection than manual, offline methods."
     },
     {
       question: "How does AI help in trademark protection?",
-      answer: "Our AI technology performs comprehensive trademark searches, analyzes similarity risks, suggests improvements, automates documentation, and provides instant feedback to increase your chances of successful registration while reducing time and costs."
+      answer: "AI instantly scans trademark databases, detects similarities and conflicts, generates registerability scores, and guides users through every step to maximize the success of trademark registration."
     }
   ];
 
@@ -44,10 +44,32 @@ const Faq = () => {
     }
   };
 
+  // Schema markup for FAQPage
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map((faq, index) => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   return (
-    <section className="py-20 relative overflow-hidden" style={{ backgroundColor: '#0C002B' }}>
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
+    <>
+      {/* Schema Markup for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema),
+        }}
+      />
+      <section className="py-20 relative overflow-hidden" style={{ backgroundColor: '#0C002B' }}>
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-full h-full" style={{ background: 'linear-gradient(to right, #FFB70320, transparent)' }}></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 rounded-full blur-3xl" style={{ background: 'linear-gradient(to left, #FFB70320, transparent)' }}></div>
       </div>
@@ -58,7 +80,7 @@ const Faq = () => {
           {/* Left Section - Questions */}
           <div className="space-y-8 flex flex-col justify-center">
             <div className="space-y-4">
-              <h2 className="text-white text-center font-nunito text-[28px] md:text-[45px] font-medium leading-[32px] md:leading-[45px] w-full">
+              <h2 className="text-white text-left font-nunito text-[28px] md:text-[45px] font-medium leading-[32px] md:leading-[45px] w-full">
                 Have Question?
                 <br />
                 <span style={{ color: '#FFB703' }}>
@@ -139,6 +161,7 @@ const Faq = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

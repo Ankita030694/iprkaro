@@ -21,8 +21,7 @@ export default function HeroSection() {
           <div className="flex flex-col items-center gap-4 text-center max-w-sm">
             {/* Main Heading */}
             <h1 className="text-[#F8F9FA] font-nunito text-[24px] font-bold leading-[30px]">
-              AI-Powered Trademark Search &
-              Registration – <span className="animated-gradient text-[24px] font-bold">Start in 60 Seconds</span>
+            How to Register a Trademark? Start Online with Smart AI Search Reports – <span className="animated-gradient text-[24px] font-bold">Start in 60 Seconds</span>
             </h1>
 
             {/* Subtitle */}
@@ -59,14 +58,12 @@ export default function HeroSection() {
           <div className="flex flex-col items-start gap-5 text-left">
             {/* Main Heading */}
             <h1 className="w-full text-[#F8F9FA] font-nunito text-[40px] font-bold leading-[50px]">
-              AI-Powered Trademark Search &
-              Registration – <span className="animated-gradient text-[40px] font-bold">Start in 60 Seconds</span>
+            Trademark Registration Made Easy: Fast, Accurate, and Powered by AI – <span className="animated-gradient text-[40px] font-bold">Start in 60 Seconds</span>
             </h1>
 
             {/* Subtitle */}
             <p className="w-full text-[rgba(255,255,255,0.77)] font-nunito text-[13px] font-normal leading-[15.6px] max-w-lg">
-              AI-powered search, risk check & filing – all in one place. Protect your brand name
-              in minutes with iprkaro.com.
+            AI-powered reports ensure your trademark is unique and legally secure before you apply.
             </p>
           </div>
 

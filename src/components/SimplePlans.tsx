@@ -8,47 +8,45 @@ export default function SimplePlans() {
   const plans = [
     {
       id: 'standard',
-      name: 'Standard',
+      name: 'AI Trademark Filing – Standard',
       subtitle: 'Deeper search with risk insights',
-      description: 'Perfect for small businesses',
+      description: 'Best for small businesses/startups',
       content: 'Essential trademark protection',
       features: [
-        'Complete Filing included',
-        'Expert Guidance assured',
-        'AI Risk checkup',
-        'Strong Safeguard for brand'
+        'Complete online trademark filing included',
+        'AI trademark search & conflict check',
+        'Expert legal guidance throughout the process',
+        'Essential trademark protection for your brand'
       ],
       price: '₹3,999',
       highlighted: true
     },
     {
       id: 'premium',
-      name: 'Premium',
+      name: 'Premium Trademark Registration – With AI Risk Checkup',
       subtitle: 'Complete filing included',
-      description: 'Ideal for growing companies',
+      description: 'Suited for growing brands',
       content: 'Enhanced trademark services',
       features: [
-        'Complete filing included',
-        'Expert legal guidance',
-        'AI risk checkup',
-        'Strong brand safeguard',
-        'Priority VIP support'
+        'AI-powered trademark registration and risk report',
+        'Advanced legal guidance and trademark filing',
+        'Priority VIP support, fast application monitoring',
+        'Enhanced trademark and brand safeguard'
       ],
       price: '₹6,999',
       highlighted: false
     },
     {
       id: 'pro',
-      name: 'Pro Monitoring',
+      name: 'Brand Monitoring & Protection – AI Powered',
       subtitle: '24/7 brand monitoring',
-      description: 'For established enterprises',
+      description: 'Enterprises, ongoing protection',
       content: 'Complete brand protection',
       features: [
-        '24/7 brand monitoring',
-        'Instant conflict alerts',
-        'Continuous brand protection',
-        'Block copycat attempts',
-        'Ongoing peace of mind'
+        '24/7 AI-powered brand & trademark monitoring',
+        'Instant alerts for conflicts and infringements',
+        'Continuous protection against copycats',
+        'Ongoing legal peace of mind for your brand'
       ],
       price: '₹4,999',
       highlighted: false
@@ -69,6 +67,11 @@ export default function SimplePlans() {
           .mobile-scroll-container {
             padding-left: 8px;
             padding-right: 8px;
+            gap: 16px;
+          }
+          /* Ensure cards maintain proper height on mobile */
+          .mobile-scroll-container > div {
+            min-height: 500px !important;
           }
         }
       `}</style>
@@ -82,7 +85,7 @@ export default function SimplePlans() {
           {/* Section Heading with Gradient Text */}
           <div className="text-center mb-8 md:mb-12">
             <h2 className="text-white text-center font-nunito text-[28px] md:text-[45px] font-medium leading-[32px] md:leading-[45px] w-full mb-4">
-              Simple Plans, Maximum Protection
+            Trademark Registration Packages with AI-Powered Search Report
             </h2>
             <p className="text-white font-nunito text-[10px] md:text-xs lg:text-sm xl:text-base font-medium text-center">
               Search, File, Secure.
@@ -99,14 +102,14 @@ export default function SimplePlans() {
             }}
           >
             {plans.map((plan, index) => (
-              <div 
-                key={plan.id} 
+              <div
+                key={plan.id}
                 className="relative cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 flex flex-col items-center group flex-shrink-0"
                 onClick={() => setSelectedPlan(plan.id)}
                 style={{
                   display: 'flex',
                   width: 'clamp(320px, 75vw, 448px)', // Reduced mobile width to 320px (75% of original) to show part of second card
-                  height: 'clamp(360px, 75vh, 502px)', // Reduced mobile height to match width proportion (502px * 0.75 = 376px, but using 360px for better mobile fit)
+                  minHeight: 'clamp(500px, 75vh, 650px)', // Increased minimum height to accommodate all content
                   padding: '15px 24px 24px 24px',
                   flexDirection: 'column',
                   alignItems: 'center',
@@ -114,12 +117,12 @@ export default function SimplePlans() {
                 }}
               >
                 {/* Container with conditional blue gradient */}
-                <div 
+                <div
                   className="w-full relative transition-all duration-300"
                   style={{
                     borderRadius: '30px',
                     padding: '4px',
-                    paddingTop: '50px'
+                    paddingTop: '60px'
                   }}
                 >
                   {/* Blue Gradient Background - Only visible on hover/selection */}
@@ -134,28 +137,16 @@ export default function SimplePlans() {
                     }}
                   ></div>
                   
-                  {/* Plan Name Header Overlapping Container */}
-                  <div 
-                    className="absolute w-full text-center z-20"
-                    style={{
-                      top: '15px'
-                    }}
-                  >
-                    <h3 className="text-white font-nunito text-[16px] md:text-[20px] lg:text-[25px] font-semibold">
-                      {plan.name}
-                    </h3>
-                  </div>
-                  
                   {/* Black Card Container - Glass effect by default, solid on hover/selection */}
-                  <div 
-                    className="relative flex flex-col z-10 transition-all duration-300"
+                  <div
+                    className="relative flex flex-col z-10 transition-all duration-300 min-h-0 flex-1"
                     style={{
                       borderRadius: selectedPlan === plan.id ? '26px' : '25px',
                       background: selectedPlan === plan.id ? '#000' : 'rgba(0, 0, 0, 0.05)',
                       boxShadow: selectedPlan === plan.id ? 'none' : '0 0 20px 0 rgba(255, 255, 255, 0.31) inset',
                       backdropFilter: 'blur(16px)',
                       width: '100%',
-                      height: 'clamp(300px, 60vh, 430px)' // Reduced mobile height to match new card proportions (430px * 0.7 = 301px, using 300px)
+                      minHeight: 'clamp(450px, 60vh, 600px)' // Increased to accommodate all content properly
                     }}
                     onMouseEnter={(e) => {
                       if (selectedPlan !== plan.id) {
@@ -174,82 +165,84 @@ export default function SimplePlans() {
                   >
 
                     {/* Main Content Container */}
-                    <div 
-                      className="relative flex-1 p-6"
+                    <div
+                      className="relative flex flex-col h-full p-6"
                       style={{
                         borderRadius: '0 0 26px 26px'
                       }}
                     >
-                  {/* Content Layout */}
-                  <div className="flex items-start justify-between mb-4">
-                    {/* Left Side Heading */}
-                    <h4 className="text-white font-nunito text-[16px] md:text-[20px] lg:text-[25px] font-semibold">
-                      {plan.name}
-                    </h4>
-                    
-                    {/* Right Side Price */}
-                    <div 
-                      className="text-white font-nunito font-bold"
-                      style={{
-                        fontSize: '30px',
-                        lineHeight: '30px',
-                        fontWeight: 700
-                      }}
-                    >
-                      {plan.price}
-                    </div>
-                  </div>
+                      {/* Plan Name Header - Now inside the card */}
+                      <div className="w-full text-center mb-4">
+                        <h3 className="text-white font-nunito text-[16px] md:text-[20px] lg:text-[25px] font-semibold">
+                          {plan.name}
+                        </h3>
+                      </div>
 
-                  {/* Description Text */}
-                  <p className="text-white font-nunito text-[10px] md:text-xs lg:text-sm xl:text-base font-medium mb-4">
-                    {plan.description}
-                  </p>
-
-                  {/* Content Text */}
-                  <p className="text-white font-nunito text-[10px] md:text-xs lg:text-sm xl:text-base font-medium mb-6">
-                    {plan.content}
-                  </p>
-
-                  {/* Features List */}
-                  <div className="space-y-3 mb-8">
-                    {plan.features.map((feature, featIndex) => (
-                      <div key={featIndex}>
-                        <span 
-                          className="text-white font-nunito"
+                      {/* Content Layout */}
+                      <div className="flex items-start justify-end mb-4">
+                        {/* Right Side Price */}
+                        <div
+                          className="text-white font-nunito font-bold flex-shrink-0"
                           style={{
-                            fontSize: '16px',
-                            fontWeight: 500
+                            fontSize: '30px',
+                            lineHeight: '30px',
+                            fontWeight: 700
                           }}
                         >
-                          <i className="fas fa-check text-green-400 mr-2"></i>
-                          {feature}
-                        </span>
+                          {plan.price}
+                        </div>
                       </div>
-                    ))}
-                  </div>
 
-                  {/* Get Protected Button */}
-                  <div className="absolute bottom-6 left-6 right-6">
-                    <button 
-                      className="w-full text-center py-3 px-6 transition-all duration-300 hover:scale-105"
-                      style={{
-                        borderRadius: '15px',
-                        background: '#FFB703',
-                        boxShadow: '0 0 20px 0 #000 inset'
-                      }}
-                    >
-                      <span 
-                        className="font-nunito font-semibold text-[18px] md:text-[25px]"
-                        style={{
-                          color: '#0C002B',
-                          lineHeight: '25px',
-                          fontWeight: 600
-                        }}
-                      >
-                        Get Protected
-                      </span>
-                    </button>
-                  </div>
+                      {/* Description Text */}
+                      <p className="text-white font-nunito text-[10px] md:text-xs lg:text-sm xl:text-base font-medium mb-4">
+                        {plan.description}
+                      </p>
+
+                      {/* Content Text */}
+                      <p className="text-white font-nunito text-[10px] md:text-xs lg:text-sm xl:text-base font-medium mb-6">
+                        {plan.content}
+                      </p>
+
+                      {/* Features List - Flexible height */}
+                      <div className="space-y-2 flex-1 mb-4 overflow-y-auto">
+                        {plan.features.map((feature, featIndex) => (
+                          <div key={featIndex} className="flex items-start">
+                            <i className="fas fa-check text-green-400 mr-3 mt-1 flex-shrink-0"></i>
+                            <span
+                              className="text-white font-nunito leading-relaxed"
+                              style={{
+                                fontSize: '14px',
+                                fontWeight: 500
+                              }}
+                            >
+                              {feature}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
+
+                      {/* Get Protected Button - Fixed at bottom */}
+                      <div className="flex-shrink-0 mt-auto">
+                        <button
+                          className="w-full text-center py-3 px-6 transition-all duration-300 hover:scale-105"
+                          style={{
+                            borderRadius: '15px',
+                            background: '#FFB703',
+                            boxShadow: '0 0 20px 0 #000 inset'
+                          }}
+                        >
+                          <span
+                            className="font-nunito font-semibold text-[18px] md:text-[25px]"
+                            style={{
+                              color: '#0C002B',
+                              lineHeight: '25px',
+                              fontWeight: 600
+                            }}
+                          >
+                            Get Protected
+                          </span>
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>

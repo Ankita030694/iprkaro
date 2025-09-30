@@ -68,33 +68,36 @@ export default function Expert() {
   // Memoize services data to prevent recreation
   const services = useMemo(() => [
     {
-      title: "Copyright Protection",
-      backgroundImage: "/rs1.svg",
+      title: "Trademark Registration",
+      subtitle: "Register your trademark online start with our AI trademark search, review your report, and file instantly. India's fastest, most reliable brand protection platform.",
+      backgroundImage: "/rs2.svg",
       items: [
-        "Safeguards creative works & content",
-        "Prevents unauthorized duplication", 
-        "Gives full ownership rights",
-        "Strengthens your artistic recognition"
+        "AI-powered trademark search for instant conflict detection and brand availability.",
+        "Register trademark online with a fast, step-by-step guided application.",
+        "How to register a trademark in India: Complete filing and legal support.",
+        "Get your trademark search report with AI—maximize registerability and minimize risk.",
+        "Secure your brand identity with expert trademark protection."
       ]
     },
     {
-      title: "Trademark Registration",
-      backgroundImage: "/rs2.svg",
+      title: "Copyright Protection",
+      subtitle: "Secure creative works digitally AI copyright search and seamless online application keep your assets protected.",
+      backgroundImage: "/rs1.svg",
       items: [
-        "Safeguards creative works & content",
-        "Prevents unauthorized duplication",
-        "Gives full ownership rights", 
-        "Strengthens your artistic recognition"
+        "Online copyright registration for digital content and creative works.",
+        "AI copyright search for originality and infringement checks.",
+        "How to protect your copyright online: From application to monitoring.",
+        "Efficient copyright filing and expert guidance for complete protection."
       ]
     },
     {
       title: "Patent Services",
+      subtitle: "Protect inventions with AI-optimized patent search and application file quickly, stay ahead of the competition.",
       backgroundImage: "/rs3.svg",
       items: [
-        "Safeguards creative works & content",
-        "Prevents unauthorized duplication",
-        "Gives full ownership rights",
-        "Strengthens your artistic recognition"
+        "Patent registration for inventions with AI-powered search and risk analysis.",
+        "How to file a patent: Quick patent search, filing, and legal compliance in India.",
+        "End-to-end patent application support for maximizing protection and market advantage."
       ]
     }
   ], []);
@@ -264,7 +267,7 @@ export default function Expert() {
         {/* Centered Main Heading */}
         <div className="text-center mb-8 md:mb-16">
           <h2 className="text-white font-nunito text-[28px] md:text-[48px] font-medium leading-[32px] md:leading-[52px]">
-            Our Expert IPR SOLUTIONS
+          Expert IPR Solutions for Your Brand Protection
           </h2>
         </div>
 
@@ -298,9 +301,14 @@ export default function Expert() {
                         }
                       }}
                     >
-                      <span className="text-white font-nunito text-[16px] md:text-[24px] font-medium">
-                        {service.title}
-                      </span>
+                      <div className="flex-1">
+                        <div className="text-white font-nunito text-[16px] md:text-[24px] font-medium mb-1">
+                          {service.title}
+                        </div>
+                        <div className="text-white/80 font-nunito text-[12px] md:text-[16px] font-normal leading-relaxed">
+                          {service.subtitle}
+                        </div>
+                      </div>
                       {/* Arrow Icon */}
                       <div className={`transform transition-transform duration-300 ${openDropdown === index ? 'rotate-180' : ''}`}>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -42,9 +42,9 @@ function ServicesHeroSection() {
 
             {/* Three Service Containers */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 max-w-6xl mx-auto">
-              {/* Service 1 - Trademark Search & Registration */}
-              <div 
-                className="p-4 md:p-8 text-center space-y-4 md:space-y-6 relative group cursor-pointer transition-all duration-300 hover:scale-105"
+              {/* Service 1 - Trademark Registration */}
+              <div
+                className="p-4 md:p-8 text-center space-y-4 md:space-y-6 relative group transition-all duration-300 hover:scale-105"
                 style={{
                   borderRadius: '25px',
                   border: '2px solid rgba(255, 255, 255, 0.15)',
@@ -54,41 +54,22 @@ function ServicesHeroSection() {
                 }}
               >
                 <div className="mb-4">
-                  <h3 className="text-white font-nunito text-xl font-bold mb-2">
-                    AI-Powered Trademark Search
+                  <h3 className="text-white font-nunito text-xl font-bold mb-2 text-center">
+                    Trademark Registration
                   </h3>
                 </div>
-                <div className="absolute left-0 right-0 h-px bg-white" style={{ top: '100px' }}></div>
-                <p className="text-white font-nunito text-sm leading-relaxed mt-17">
-                  Advanced AI algorithms scan millions of existing trademarks to identify potential conflicts and calculate your approval chances.
-                </p>
-                <ul className="text-left space-y-2 text-white text-sm">
-                  <li className="flex items-center">
-                    <i className="fas fa-check text-[#FFB703] text-xs mr-2"></i>
-                    Instant similarity analysis
-                  </li>
-                  <li className="flex items-center">
-                    <i className="fas fa-check text-[#FFB703] text-xs mr-2"></i>
-                    Risk assessment report
-                  </li>
-                  <li className="flex items-center">
-                    <i className="fas fa-check text-[#FFB703] text-xs mr-2"></i>
-                    Smart filing recommendations
-                  </li>
-                </ul>
-                
-                {/* Learn More Button - appears on hover */}
-                <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <button className="flex items-center gap-2 text-[#FFB703] font-nunito text-sm font-medium hover:text-white transition-colors">
-                    Learn More
-                    <i className="fas fa-arrow-right text-xs"></i>
-                  </button>
+                <div className="absolute left-0 right-0 h-px bg-white" style={{ top: '72px' }}></div>
+                <div className="pt-8 text-left">
+                  <p className="text-white font-nunito text-sm leading-relaxed">
+                    <span className="font-semibold">How can I register a trademark online with AI?</span><br />
+                    Use our AI-powered trademark search to instantly check name availability, assess risks, and get fast filing support. Easily register your trademark online and safeguard your brand’s identity with expert guidance every step of the way.
+                  </p>
                 </div>
               </div>
 
-              {/* Service 2 - Registration & Filing */}
-              <div 
-                className="p-4 md:p-8 text-center space-y-4 md:space-y-6 relative group cursor-pointer transition-all duration-300 hover:scale-105"
+              {/* Service 2 - Copyright Protection */}
+              <div
+                className="p-4 md:p-8 text-center space-y-4 md:space-y-6 relative group transition-all duration-300 hover:scale-105"
                 style={{
                   borderRadius: '25px',
                   border: '2px solid rgba(255, 255, 255, 0.15)',
@@ -98,41 +79,22 @@ function ServicesHeroSection() {
                 }}
               >
                 <div className="mb-4">
-                  <h3 className="text-white font-nunito text-xl font-bold mb-2">
-                    Complete Registration Service
+                  <h3 className="text-white font-nunito text-xl font-bold mb-2 text-center">
+                    Copyright Protection
                   </h3>
                 </div>
-                <div className="absolute left-0 right-0 h-px bg-white" style={{ top: '100px' }}></div>
-                <p className="text-white font-nunito text-sm leading-relaxed mt-17">
-                  End-to-end trademark registration with expert legal review and government filing support.
-                </p>
-                <ul className="text-left space-y-2 text-white text-sm">
-                  <li className="flex items-center">
-                    <i className="fas fa-check text-[#FFB703] text-xs mr-2"></i>
-                    Professional application preparation
-                  </li>
-                  <li className="flex items-center">
-                    <i className="fas fa-check text-[#FFB703] text-xs mr-2"></i>
-                    Expert legal review
-                  </li>
-                  <li className="flex items-center">
-                    <i className="fas fa-check text-[#FFB703] text-xs mr-2"></i>
-                    Government filing support
-                  </li>
-                </ul>
-                
-                {/* Learn More Button - appears on hover */}
-                <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <button className="flex items-center gap-2 text-[#FFB703] font-nunito text-sm font-medium hover:text-white transition-colors">
-                    Learn More
-                    <i className="fas fa-arrow-right text-xs"></i>
-                  </button>
+                <div className="absolute left-0 right-0 h-px bg-white" style={{ top: '72px' }}></div>
+                <div className="pt-8 text-left">
+                  <p className="text-white font-nunito text-sm leading-relaxed">
+                    <span className="font-semibold">How does copyright protection work at IPR Karo?</span><br />
+                    Secure your art, music, software, and content through fast online copyright registration. Our platform and legal experts ensure full control and ownership rights, using AI to detect infringement and keep your creations protected.
+                  </p>
                 </div>
               </div>
 
-              {/* Service 3 - Monitoring & Protection */}
-              <div 
-                className="p-4 md:p-8 text-center space-y-4 md:space-y-6 relative group cursor-pointer transition-all duration-300 hover:scale-105"
+              {/* Service 3 - Patent Services */}
+              <div
+                className="p-4 md:p-8 text-center space-y-4 md:space-y-6 relative group transition-all duration-300 hover:scale-105"
                 style={{
                   borderRadius: '25px',
                   border: '2px solid rgba(255, 255, 255, 0.15)',
@@ -141,37 +103,17 @@ function ServicesHeroSection() {
                   WebkitBackdropFilter: 'blur(28.95px)'
                 }}
               >
-                
                 <div className="mb-4">
-                  <h3 className="text-white font-nunito text-xl font-bold mb-2">
-                    24/7 Brand Monitoring
+                  <h3 className="text-white font-nunito text-xl font-bold mb-2 text-center">
+                    Patent Services
                   </h3>
                 </div>
-                <div className="absolute left-0 right-0 h-px bg-white" style={{ top: '100px' }}></div>
-                <p className="text-white font-nunito text-sm leading-relaxed mt-17">
-                  Continuous monitoring and protection of your registered trademarks against infringement and misuse.
-                </p>
-                <ul className="text-left space-y-2 text-white text-sm">
-                  <li className="flex items-center">
-                    <i className="fas fa-check text-[#FFB703] text-xs mr-2"></i>
-                    Real-time infringement alerts
-                  </li>
-                  <li className="flex items-center">
-                    <i className="fas fa-check text-[#FFB703] text-xs mr-2"></i>
-                    Enforcement support
-                  </li>
-                  <li className="flex items-center">
-                    <i className="fas fa-check text-[#FFB703] text-xs mr-2"></i>
-                    Legal action guidance
-                  </li>
-                </ul>
-                
-                {/* Learn More Button - appears on hover */}
-                <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <button className="flex items-center gap-2 text-[#FFB703] font-nunito text-sm font-medium hover:text-white transition-colors">
-                    Learn More
-                    <i className="fas fa-arrow-right text-xs"></i>
-                  </button>
+                <div className="absolute left-0 right-0 h-px bg-white" style={{ top: '72px' }}></div>
+                <div className="pt-8 text-left">
+                  <p className="text-white font-nunito text-sm leading-relaxed">
+                    <span className="font-semibold">How do I get patent protection for my invention?</span><br />
+                    From filing to legal action, our patent services leverage AI for prior art search and efficient patent drafting. Get step-by-step support to defend your unique ideas, technologies, and maintain your competitive edge.
+                  </p>
                 </div>
               </div>
             </div>

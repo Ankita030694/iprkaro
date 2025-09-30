@@ -356,28 +356,28 @@ export default function WhyTrademark() {
 
   const featureCards = [
     {
-      title: "Fast Process",
-      description: "Professional trademark attorneys to guide you through every step"
+      title: "Fast Trademark Registration",
+      description: "Rapid, professional trademark filing handled by experienced attorneys for swift brand protection."
     },
     {
-      title: "Expert Guidance",
-      description: "Quick turnaround times with efficient application handling"
+      title: "Expert Trademark Guidance",
+      description: "Quick responses and expert support for every step of your trademark application, ensuring legal compliance."
     },
     {
-      title: "Cost Effective",
-      description: "Thorough trademark searches to ensure registrability"
+      title: "Affordable Trademark Services",
+      description: "Cost-effective and transparent trademark search and registration — maximize value, minimize risk."
     },
     {
-      title: "AI Driven",
-      description: "Complete assistance from application to registration"
+      title: "AI-Powered Trademark Solutions",
+      description: "Intelligent AI-driven search and reporting for complete assistance, from trademark search to registration."
     },
     {
-      title: "Risk Reduction",
-      description: "Competitive rates with transparent pricing structure"
+      title: "Trademark Risk Reduction",
+      description: "Robust trademark risk assessment with advanced search, lowering the chances of conflicts and rejections."
     },
     {
-      title: "24/7 Accessibility",
-      description: "Authorized agents with official government recognition"
+      title: "24/7 Trademark Protection",
+      description: "Round-the-clock accessibility with certified trademark agents recognized by official authorities."
     }
   ];
 
@@ -399,7 +399,7 @@ export default function WhyTrademark() {
       
       <div className="w-full mx-auto relative z-10 px-4 md:px-10">
       <h2 className="text-white text-center font-nunito text-[28px] md:text-[45px] font-medium leading-[32px] md:leading-[45px] w-full my-8 md:my-20">
-            Why Trademark with IPRKaro?
+      Why Register Your Trademark with IPRKaro?
         </h2>
         
         {/* Mobile Layout: Right column first, then left cards */}
@@ -441,10 +441,10 @@ export default function WhyTrademark() {
                 {/* Main Content - Center */}
                 <div className="text-center">
                   <div className="text-white font-nunito text-[18px] font-medium leading-[22px] mb-2">
-                    Loved and Trusted by<br />1.25L Indians
+                    Trusted by Over 1.25 Lakh Clients
                   </div>
                   <div className="text-white font-nunito text-[12px] italic font-normal leading-[14px]">
-                    Rated 5 stars by Startups, Entrepreneur<br />and Companies
+                    Rated 4.7/5 stars for reliable trademark registration across India, startups, and enterprises.
                   </div>
                 </div>
               </div>
@@ -475,11 +475,11 @@ export default function WhyTrademark() {
                 
                 {/* Right Column - Remaining Content */}
                 <div className="flex-1">
-                  <div className="text-white font-nunito text-[25px] font-medium leading-[30px] mb-2">
-                    Loved and Trusted by<br />1.25L Indians
+                  <div className="text-white font-nunito text-[20px] font-medium leading-[24px] mb-2">
+                    Trusted by Over 1.25 Lakh Clients
                   </div>
-                  <div className="text-white font-nunito text-[15px] italic font-normal leading-[15px]">
-                    Rated 5 stars by Startups, Entrepreneur<br />and Companies
+                  <div className="text-white font-nunito text-[12px] italic font-normal leading-[14px]">
+                    Rated 4.7/5 stars for reliable trademark registration across India, startups, and enterprises.
                   </div>
                 </div>
               </div>
@@ -487,11 +487,14 @@ export default function WhyTrademark() {
 
             {/* Certification Checklist */}
             <div
-              className="flex py-2.5 pl-2.5 pr-[119px] items-center self-stretch rounded-[20px] border-2 border-white/[0.15] backdrop-blur-[16px]"
+              className="flex flex-col py-2.5 pl-2.5 pr-[119px] items-start self-stretch rounded-[20px] border-2 border-white/[0.15] backdrop-blur-[16px]"
               style={{
                 background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.62) 0%, rgba(255, 255, 255, 0.62) 100%)',
               }}
             >
+              <div className="w-full text-center text-white font-nunito text-[17px] font-semibold leading-[22px] mb-2">
+                Government & International Recognition:
+              </div>
               <ul className="flex flex-col gap-3 m-0 p-0 list-none">
                 {checklistItems.map((item, index) => (
                   <li key={index} className="flex items-center gap-3">
@@ -653,11 +656,11 @@ export default function WhyTrademark() {
       {/* How It Works? */}
       <div className="w-full relative z-10 px-4 md:px-20 min-h-fit">
         <h2 className="text-white text-center font-nunito text-[28px] md:text-[45px] font-medium leading-[32px] md:leading-[45px] w-full my-8 md:my-20">
-          How It Works?
+          How It Works
         </h2>
         {/* Desktop Layout */}
         <div className="hidden md:flex flex-row w-full gap-4">
-          {/* Left Column */}
+          {/* Step 1: Instant AI-Powered Trademark Search */}
           <div className="flex-1 flex justify-center items-center">
             <div
               className="relative w-full h-full rounded-[25px] border-[6px] border-white/[0.07] bg-white/[0.05] flex flex-col overflow-hidden group transition-all duration-300"
@@ -672,19 +675,16 @@ export default function WhyTrademark() {
                   className="object-cover"
                 />
               </div>
-              
               {/* Content */}
               <div className="relative z-10 flex flex-col h-full">
-                {/* Text Content - Top */}
                 <div className="flex flex-col justify-start px-3 md:px-4 lg:px-8 py-3 md:py-4 lg:py-5 items-start">
                   <h3 className="text-white font-nunito text-[18px] md:text-[22px] lg:text-[25px] font-semibold leading-tight mb-1 md:mb-2 break-words mt-6 md:mt-8 lg:mt-12">
-                    Find Conflicts Instantly
+                    Instant AI-Powered Trademark Search
                   </h3>
                   <p className="text-white font-nunito text-[10px] md:text-xs lg:text-sm xl:text-base font-medium leading-snug m-0 break-words">
-                    Enter your brand name or logo and let our AI scan trademark databases in seconds. Get quick insights without manual searching.
+                    Enter your brand name or logo to instantly access a comprehensive AI-driven trademark database scan. Receive instant insights on potential conflicts, similarities, and risks—no manual searching needed.
                   </p>
                 </div>
-                
                 {/* Search SVG - Bottom Left */}
                 <div className="absolute bottom-0 left-0 w-32 h-20 flex items-end justify-start">
                   <Image
@@ -698,73 +698,97 @@ export default function WhyTrademark() {
               </div>
             </div>
           </div>
-          {/* Right Column: 2 equal rows */}
+          {/* Step 2 and 3: Report and Approval Chances */}
           <div className="flex-1 flex flex-col gap-4">
-            {/* Row 1 */}
-            <div className="flex-1 flex justify-center items-center">
-              <Image
-                src="/hiwright.svg"
-                alt="How it works right"
-                width={350}
-                height={100}
-                className="w-full h-[250px] object-contain"
-              />
-            </div>
-            {/* Row 2 */}
+            {/* Step 2: Comprehensive Trademark Search Report */}
             <div className="flex-1 flex justify-center items-center">
               <div
-                className="relative w-full rounded-[25px] border-[6px] border-white/[0.07] flex flex-col items-start justify-start px-3 md:px-4 lg:px-8 py-3 md:py-4 lg:py-5 overflow-hidden group transition-all duration-300"
+                className="relative w-full rounded-[25px] border-[6px] border-white/[0.07] bg-white/[0.05] flex flex-col overflow-hidden group transition-all duration-300"
               >
-                <h3 className="text-white font-nunito text-[18px] md:text-[22px] lg:text-[25px] font-semibold leading-tight mb-1 md:mb-2 break-words">
-                  Secure Your Brand Fast
-                </h3>
-                <p className="text-white font-nunito text-[10px] md:text-xs lg:text-sm xl:text-base font-medium leading-snug m-0 mb-3 md:mb-5 break-words">
-                  File your trademark instantly with AI guidance — or hand it over to our experts for end-to-end protection.
-                </p>
-                <button
-                  className="relative overflow-hidden border-2 border-[#FFB703] rounded-[10px] px-4 md:px-6 py-1.5 md:py-2 font-nunito font-semibold text-sm md:text-base mt-2 group"
-                  style={{ color: '#FFB703', background: 'transparent' }}
-                >
-                  <span className="relative z-10 transition-colors duration-300 group-hover:text-white text-white">
-                    Check Your Registrability Now &rarr;
-                  </span>
-                  <span
-                    className="absolute inset-0 z-0 transition-all duration-300 pointer-events-none"
-                    style={{
-                      background: 'linear-gradient(0deg, #FFB703 0%, #FFB703 0%, transparent 100%)',
-                      opacity: 0,
-                    }}
-                  ></span>
-                  <style jsx>{`
-                    button {
-                      position: relative;
-                      overflow: hidden;
-                    }
-                    button .z-0 {
-                      transition: opacity 0.3s;
-                    }
-                    button:hover .z-0,
-                    button:focus .z-0 {
-                      opacity: 1 !important;
-                      background: linear-gradient(0deg, #FFB703 100%, transparent 0%);
-                    }
-                    button .z-10 {
-                      transition: color 0.3s;
-                    }
-                    button:hover .z-10,
-                    button:focus .z-10 {
-                      color: #fff !important;
-                    }
-                  `}</style>
-                </button>
+                <div className="relative z-10 flex flex-col h-full">
+                  <div className="flex flex-col justify-start px-3 md:px-4 lg:px-8 py-3 md:py-4 lg:py-5 items-start">
+                    <h3 className="text-white font-nunito text-[18px] md:text-[22px] lg:text-[25px] font-semibold leading-tight mb-1 md:mb-2 break-words mt-6 md:mt-8 lg:mt-12">
+                      Comprehensive Trademark Search Report
+                    </h3>
+                    <p className="text-white font-nunito text-[10px] md:text-xs lg:text-sm xl:text-base font-medium leading-snug m-0 break-words">
+                      Get a detailed trademark search report generated by AI, complete with conflict analysis, phonetic matching, and a registerability score to help you make informed filing decisions.
+                    </p>
+                  </div>
+                </div>
               </div>
+            </div>
+            {/* Step 3: Know Your Approval Chances */}
+            <div className="flex-1 flex justify-center items-center">
+              <div
+                className="relative w-full rounded-[25px] border-[6px] border-white/[0.07] bg-white/[0.05] flex flex-col overflow-hidden group transition-all duration-300"
+              >
+                <div className="relative z-10 flex flex-col h-full">
+                  <div className="flex flex-col justify-start px-3 md:px-4 lg:px-8 py-3 md:py-4 lg:py-5 items-start">
+                    <h3 className="text-white font-nunito text-[18px] md:text-[22px] lg:text-[25px] font-semibold leading-tight mb-1 md:mb-2 break-words mt-6 md:mt-8 lg:mt-12">
+                      Know Your Approval Chances
+                    </h3>
+                    <p className="text-white font-nunito text-[10px] md:text-xs lg:text-sm xl:text-base font-medium leading-snug m-0 break-words">
+                      Understand your brand’s approval likelihood with a clear risk score and suggested trademark classes to increase registration success and reduce rejections.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* Call to Action: Check Your Registrability Now */}
+          <div className="flex flex-col justify-center items-center w-1/3 min-w-[260px]">
+            <div
+              className="relative w-full rounded-[25px] border-[6px] border-[#FFB703]/[0.2] bg-white/[0.03] flex flex-col items-center justify-center px-6 py-8 overflow-hidden group transition-all duration-300"
+            >
+              <h3 className="text-white font-nunito text-[20px] md:text-[24px] font-semibold leading-tight mb-2 text-center">
+                Check Your Registrability Now
+              </h3>
+              <p className="text-white font-nunito text-[12px] md:text-[14px] font-medium leading-snug m-0 mb-4 text-center">
+                Use our AI-powered tool to check your trademark eligibility instantly and secure your brand with confidence.
+              </p>
+              <button
+                className="relative overflow-hidden border-2 border-[#FFB703] rounded-[10px] px-4 md:px-6 py-1.5 md:py-2 font-nunito font-semibold text-sm md:text-base mt-2 group"
+                style={{ color: '#FFB703', background: 'transparent' }}
+              >
+                <span className="relative z-10 transition-colors duration-300 group-hover:text-white text-white">
+                  Check Your Registrability Now &rarr;
+                </span>
+                <span
+                  className="absolute inset-0 z-0 transition-all duration-300 pointer-events-none"
+                  style={{
+                    background: 'linear-gradient(0deg, #FFB703 0%, #FFB703 0%, transparent 100%)',
+                    opacity: 0,
+                  }}
+                ></span>
+                <style jsx>{`
+                  button {
+                    position: relative;
+                    overflow: hidden;
+                  }
+                  button .z-0 {
+                    transition: opacity 0.3s;
+                  }
+                  button:hover .z-0,
+                  button:focus .z-0 {
+                    opacity: 1 !important;
+                    background: linear-gradient(0deg, #FFB703 100%, transparent 0%);
+                  }
+                  button .z-10 {
+                    transition: color 0.3s;
+                  }
+                  button:hover .z-10,
+                  button:focus .z-10 {
+                    color: #fff !important;
+                  }
+                `}</style>
+              </button>
             </div>
           </div>
         </div>
 
-        {/* Mobile Layout - 1 column 3 rows */}
+        {/* Mobile Layout - 1 column, 4 rows */}
         <div className="flex md:hidden flex-col w-full gap-4 min-h-fit">
-          {/* Row 1: Left column image (smaller) */}
+          {/* Step 1: Instant AI-Powered Trademark Search */}
           <div className="flex justify-center items-center">
             <div
               className="relative w-full max-w-sm h-48 rounded-[25px] border-[6px] border-white/[0.07] bg-white/[0.05] flex flex-col overflow-hidden group transition-all duration-300"
@@ -779,19 +803,16 @@ export default function WhyTrademark() {
                   className="object-cover"
                 />
               </div>
-              
               {/* Content */}
               <div className="relative z-10 flex flex-col h-full">
-                {/* Text Content - Top */}
                 <div className="flex flex-col justify-start px-3 py-3 items-start">
                   <h3 className="text-white font-nunito text-[16px] font-semibold leading-tight mb-1 break-words mt-4">
-                    Find Conflicts Instantly
+                    Instant AI-Powered Trademark Search
                   </h3>
                   <p className="text-white font-nunito text-[10px] font-medium leading-snug m-0 break-words">
-                    Enter your brand name or logo and let our AI scan trademark databases in seconds. Get quick insights without manual searching.
+                    Enter your brand name or logo to instantly access a comprehensive AI-driven trademark database scan. Receive instant insights on potential conflicts, similarities, and risks—no manual searching needed.
                   </p>
                 </div>
-                
                 {/* Search SVG - Bottom Left */}
                 <div className="absolute bottom-0 left-0 w-20 h-12 flex items-end justify-start">
                   <Image
@@ -805,28 +826,50 @@ export default function WhyTrademark() {
               </div>
             </div>
           </div>
-
-          {/* Row 2: Right column image */}
-          <div className="flex justify-center items-center">
-            <Image
-              src="/hiwright.svg"
-              alt="How it works right"
-              width={350}
-              height={100}
-              className="w-full h-auto object-contain"
-            />
-          </div>
-
-          {/* Row 3: Secure Your Brand Fast container */}
+          {/* Step 2: Comprehensive Trademark Search Report */}
           <div className="flex justify-center items-center">
             <div
-              className="relative w-full rounded-[25px] border-[6px] border-white/[0.07] bg-white/[0.05] flex flex-col items-start justify-start px-3 py-3 overflow-hidden group transition-all duration-300"
+              className="relative w-full max-w-sm h-48 rounded-[25px] border-[6px] border-white/[0.07] bg-white/[0.05] flex flex-col overflow-hidden group transition-all duration-300"
             >
-              <h3 className="text-white font-nunito text-[16px] font-semibold leading-tight mb-1 break-words">
-                Secure Your Brand Fast
+              <div className="relative z-10 flex flex-col h-full">
+                <div className="flex flex-col justify-start px-3 py-3 items-start">
+                  <h3 className="text-white font-nunito text-[16px] font-semibold leading-tight mb-1 break-words mt-4">
+                    Comprehensive Trademark Search Report
+                  </h3>
+                  <p className="text-white font-nunito text-[10px] font-medium leading-snug m-0 break-words">
+                    Get a detailed trademark search report generated by AI, complete with conflict analysis, phonetic matching, and a registerability score to help you make informed filing decisions.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* Step 3: Know Your Approval Chances */}
+          <div className="flex justify-center items-center">
+            <div
+              className="relative w-full max-w-sm h-48 rounded-[25px] border-[6px] border-white/[0.07] bg-white/[0.05] flex flex-col overflow-hidden group transition-all duration-300"
+            >
+              <div className="relative z-10 flex flex-col h-full">
+                <div className="flex flex-col justify-start px-3 py-3 items-start">
+                  <h3 className="text-white font-nunito text-[16px] font-semibold leading-tight mb-1 break-words mt-4">
+                    Know Your Approval Chances
+                  </h3>
+                  <p className="text-white font-nunito text-[10px] font-medium leading-snug m-0 break-words">
+                    Understand your brand’s approval likelihood with a clear risk score and suggested trademark classes to increase registration success and reduce rejections.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* Step 4: Call to Action */}
+          <div className="flex justify-center items-center">
+            <div
+              className="relative w-full max-w-sm rounded-[25px] border-[6px] border-[#FFB703]/[0.2] bg-white/[0.03] flex flex-col items-center justify-center px-6 py-8 overflow-hidden group transition-all duration-300"
+            >
+              <h3 className="text-white font-nunito text-[18px] font-semibold leading-tight mb-2 text-center">
+                Check Your Registrability Now
               </h3>
-              <p className="text-white font-nunito text-[10px] font-medium leading-snug m-0 mb-3 break-words">
-                File your trademark instantly with AI guidance — or hand it over to our experts for end-to-end protection.
+              <p className="text-white font-nunito text-[11px] font-medium leading-snug m-0 mb-4 text-center">
+                Use our AI-powered tool to check your trademark eligibility instantly and secure your brand with confidence.
               </p>
               <button
                 className="relative overflow-hidden border-2 border-[#FFB703] rounded-[10px] px-4 py-1.5 font-nunito font-semibold text-sm mt-2 group"

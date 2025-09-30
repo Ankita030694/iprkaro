@@ -130,7 +130,7 @@ export default function AboutPage() {
                 lineHeight: '1.2'
               }}
             >
-              Driven Platform for Registration of
+              Driven Platform for Fast, Accurate Trademark 
             </span>
             <span
               className="text-lg sm:text-xl md:text-2xl lg:text-[35px] font-medium"
@@ -142,7 +142,7 @@ export default function AboutPage() {
                 lineHeight: '1.2'
               }}
             >
-              Trademark in India
+              Registration in India
             </span>
           </h2>
         </div>
@@ -209,7 +209,7 @@ export default function AboutPage() {
                   lineHeight: '1.3'
                 }}
               >
-                An AI-Driven Platform for Smarter Brand Protection
+                Advanced AI-Powered Trademark Search
               </h3>
 
               <p
@@ -222,7 +222,7 @@ export default function AboutPage() {
                   opacity: 0.9
                 }}
               >
-                At IPR Karo, we believe that protecting your brand should be simple, fast, and transparent. That's why we built an AI-driven platform that combines technology and legal expertise to safeguard your intellectual property.
+                IPR Karo uses cutting-edge AI to scan millions of trademarks instantly, providing clear risk reports and similarity analyses. Our platform guides you step-by-step with smart filing recommendations—making online trademark registration fast, safe, and hassle-free.
               </p>
             </div>
           </div>
@@ -251,29 +251,29 @@ export default function AboutPage() {
 
           {/* Right Content */}
           <div className="flex-1 max-w-3xl space-y-6">
-            <h3 
+            <h3
+              className="text-xl sm:text-2xl font-semibold"
               style={{
                 color: '#FFF',
                 fontFamily: 'Nunito',
-                fontSize: '32px',
                 fontWeight: 600,
                 lineHeight: '1.3'
               }}
             >
-              An AI-Driven Platform for Smarter Brand Protection
+              Advanced AI-Powered Trademark Search
             </h3>
             
-            <p 
+            <p
+              className="text-base sm:text-lg"
               style={{
                 color: '#FFF',
                 fontFamily: 'Nunito',
-                fontSize: '18px',
                 fontWeight: 400,
                 lineHeight: '1.6',
                 opacity: 0.9
               }}
             >
-              At IPR Karo, we believe that protecting your brand should be simple, fast, and transparent. That's why we built an AI-driven platform that combines technology and legal expertise to safeguard your intellectual property.
+              IPR Karo uses cutting-edge AI to scan millions of trademarks instantly, providing clear risk reports and similarity analyses. Our platform guides you step-by-step with smart filing recommendations—making online trademark registration fast, safe, and hassle-free.
             </p>
           </div>
         </div>
@@ -405,7 +405,7 @@ export default function AboutPage() {
                         fontWeight: 700
                       }}
                     >
-                      2018
+                      2019
                     </h3>
                   </div>
 
@@ -442,7 +442,7 @@ export default function AboutPage() {
                         opacity: 0.9
                       }}
                     >
-                      {splitTextIntoWords('IPR Karo was founded with a vision to democratize intellectual property protection for businesses of all sizes across India. We recognized the gap in accessible IP services for startups and SMEs. Our mission was to simplify complex trademark procedures. We aimed to provide transparent pricing and faster processing times. The journey began with a small team of passionate IP experts.')}
+                      {splitTextIntoWords('IPR Karo began with a mission: to simplify and democratize trademark registration for businesses of all sizes in India. We focused on making it easy for anyone to understand how to register a trademark and get expert help online.')}
                     </div>
                   </div>
                 </div>
@@ -476,7 +476,7 @@ export default function AboutPage() {
                         opacity: 0.9
                       }}
                     >
-                      {splitTextIntoWords('Launched our AI-powered trademark search technology, revolutionizing the way businesses approach intellectual property protection. Our advanced algorithms could analyze millions of existing trademarks instantly. We introduced automated similarity detection and conflict analysis. The technology reduced search time from days to minutes. This breakthrough positioned us as innovators in the IP industry.')}
+                      {splitTextIntoWords('We launched India\'s first AI-powered trademark search—instantly scanning millions of trademarks for similarity and conflicts. This breakthrough helped users quickly check if their brand name is available, receive an AI-powered risk report, and improve their chances to register a trademark successfully.')}
                     </div>
                   </div>
 
@@ -500,7 +500,7 @@ export default function AboutPage() {
                         fontWeight: 700
                       }}
                     >
-                      2019
+                      2020
                     </h3>
                   </div>
                 </div>
@@ -521,7 +521,7 @@ export default function AboutPage() {
                         fontWeight: 700
                       }}
                     >
-                      2020
+                      2021
                     </h3>
                   </div>
 
@@ -558,7 +558,7 @@ export default function AboutPage() {
                         opacity: 0.9
                       }}
                     >
-                      {splitTextIntoWords('Successfully processed over 10,000 trademark applications, establishing ourselves as a trusted partner for startups and SMEs. We achieved a 98% success rate in trademark registrations. Our client base expanded across 15 major Indian cities. We introduced 24/7 customer support and live tracking features. The year marked our transition from startup to established IP service provider.')}
+                      {splitTextIntoWords('With over 5,000 trademark registrations, IPR Karo became known for reliable, AI-driven brand protection. Our platform delivered accurate legal results, faster registration, and ongoing trademark monitoring.')}
                     </div>
                   </div>
                 </div>
@@ -592,7 +592,7 @@ export default function AboutPage() {
                         opacity: 0.9
                       }}
                     >
-                      {splitTextIntoWords('Expanded our services to include comprehensive IP portfolio management and introduced automated filing systems for faster processing. We launched our enterprise solutions for large corporations. Our team grew to include specialized patent and design experts. We implemented blockchain technology for secure document verification. The automated systems reduced processing time by 60%.')}
+                      {splitTextIntoWords('Today, IPR Karo is India\'s leading online partner for trademark registration. Startups and enterprises rely on our AI search reports, expert legal support, and full-service brand protection—making how to register a trademark in India easier than ever.')}
                     </div>
                   </div>
 
@@ -616,128 +616,13 @@ export default function AboutPage() {
                         fontWeight: 700
                       }}
                     >
-                      2021
+                      2021–Present
                     </h3>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Timeline Item 5 - Left Year, Right Heading & Description */}
-            <div className="reveal-section">
-              <div className="reveal-content">
-                <div className="relative flex items-start">
-                  {/* Year (Left) */}
-                  <div className="w-1/2 pr-8 text-right pt-2">
-                    <h3
-                      style={{
-                        color: '#FFB703',
-                        fontFamily: 'Nunito',
-                        fontSize: '28px',
-                        fontWeight: 700
-                      }}
-                    >
-                      2022
-                    </h3>
-                  </div>
-
-                  {/* White Dot */}
-                  <div
-                    className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full border-2 mt-2"
-                    style={{
-                      background: 'radial-gradient(circle, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.7))',
-                      borderColor: 'rgba(255, 255, 255, 0.8)',
-                      boxShadow: '0 0 8px rgba(255, 255, 255, 0.3)'
-                    }}
-                  />
-
-                  {/* Heading & Description (Right) */}
-                  <div className="w-1/2 pl-8">
-                    <h4
-                      style={{
-                        color: '#FFF',
-                        fontFamily: 'Nunito',
-                        fontSize: '20px',
-                        fontWeight: 600,
-                        marginBottom: '8px'
-                      }}
-                    >
-                      Mobile Innovation
-                    </h4>
-                    <div
-                      style={{
-                        color: '#FFF',
-                        fontFamily: 'Nunito',
-                        fontSize: '16px',
-                        fontWeight: 400,
-                        lineHeight: '1.6',
-                        opacity: 0.9
-                      }}
-                    >
-                      {splitTextIntoWords('Reached a milestone of 50,000+ successful trademark registrations and launched our mobile application for seamless IP management on-the-go. The mobile app featured real-time application tracking and notifications. We introduced QR code scanning for instant trademark verification. Our platform integrated with major business management tools. Client satisfaction scores reached an all-time high of 96%.')}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Timeline Item 6 - Right Year, Left Heading & Description */}
-            <div className="reveal-section">
-              <div className="reveal-content">
-                <div className="relative flex items-start">
-                  {/* Heading & Description (Left) */}
-                  <div className="w-1/2 pr-8 text-right">
-                    <h4
-                      style={{
-                        color: '#FFF',
-                        fontFamily: 'Nunito',
-                        fontSize: '20px',
-                        fontWeight: 600,
-                        marginBottom: '8px'
-                      }}
-                    >
-                      AI Intelligence
-                    </h4>
-                    <div
-                      style={{
-                        color: '#FFF',
-                        fontFamily: 'Nunito',
-                        fontSize: '16px',
-                        fontWeight: 400,
-                        lineHeight: '1.6',
-                        opacity: 0.9
-                      }}
-                    >
-                      {splitTextIntoWords('Introduced advanced AI analytics for trademark monitoring and infringement detection, making IP protection more proactive and intelligent than ever before. Our AI system now monitors over 100 million trademarks globally. We launched predictive analytics for trademark success probability. The platform achieved 99.7% accuracy in conflict detection. Today, we stand as India\'s leading AI-powered IP protection platform.')}
-                    </div>
-                  </div>
-
-                  {/* White Dot */}
-                  <div
-                    className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full border-2 mt-2"
-                    style={{
-                      background: 'radial-gradient(circle, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.7))',
-                      borderColor: 'rgba(255, 255, 255, 0.8)',
-                      boxShadow: '0 0 8px rgba(255, 255, 255, 0.3)'
-                    }}
-                  />
-
-                  {/* Year (Right) */}
-                  <div className="w-1/2 pl-8 pt-2">
-                    <h3
-                      style={{
-                        color: '#FFB703',
-                        fontFamily: 'Nunito',
-                        fontSize: '28px',
-                        fontWeight: 700
-                      }}
-                    >
-                      2024
-                    </h3>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
 
@@ -783,7 +668,7 @@ export default function AboutPage() {
                             fontWeight: 700
                           }}
                         >
-                          2018
+                          2019
                         </h3>
                       </div>
 
@@ -809,7 +694,7 @@ export default function AboutPage() {
                             opacity: 0.9
                           }}
                         >
-                          {splitTextIntoWords('IPR Karo was founded with a vision to democratize intellectual property protection for businesses of all sizes across India. We recognized the gap in accessible IP services for startups and SMEs. Our mission was to simplify complex trademark procedures. We aimed to provide transparent pricing and faster processing times. The journey began with a small team of passionate IP experts.')}
+                          {splitTextIntoWords('IPR Karo began with a mission: to simplify and democratize trademark registration for businesses of all sizes in India. We focused on making it easy for anyone to understand how to register a trademark and get expert help online.')}
                         </div>
                       </div>
                     </div>
@@ -818,65 +703,6 @@ export default function AboutPage() {
               </div>
 
               {/* Timeline Item 2 - Year and Content on Right for Mobile */}
-              <div className="reveal-section">
-                <div className="reveal-content">
-                  <div className="relative flex items-start">
-                    {/* White Dot - Left for Mobile */}
-                    <div
-                      className="absolute left-5.5 w-6 h-6 rounded-full border-2 -mt-2"
-                      style={{
-                        background: 'radial-gradient(circle, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.7))',
-                        borderColor: 'rgba(255, 255, 255, 0.8)',
-                        boxShadow: '0 0 8px rgba(255, 255, 255, 0.3)'
-                      }}
-                    />
-
-                    {/* Year - Right for Mobile */}
-                    <div className="w-full pl-16">
-                      <div className="flex items-center gap-4 mb-4">
-                        <h3
-                          className="text-xl sm:text-2xl font-bold"
-                          style={{
-                            color: '#FFB703',
-                            fontFamily: 'Nunito',
-                            fontWeight: 700
-                          }}
-                        >
-                          2019
-                        </h3>
-                      </div>
-
-                      {/* Heading & Description */}
-                      <div>
-                        <h4
-                          className="text-lg sm:text-xl font-semibold mb-2"
-                          style={{
-                            color: '#FFF',
-                            fontFamily: 'Nunito',
-                            fontWeight: 600
-                          }}
-                        >
-                          AI Revolution
-                        </h4>
-                        <div
-                          className="text-sm sm:text-base"
-                          style={{
-                            color: '#FFF',
-                            fontFamily: 'Nunito',
-                            fontWeight: 400,
-                            lineHeight: '1.6',
-                            opacity: 0.9
-                          }}
-                        >
-                          {splitTextIntoWords('Launched our AI-powered trademark search technology, revolutionizing the way businesses approach intellectual property protection. Our advanced algorithms could analyze millions of existing trademarks instantly. We introduced automated similarity detection and conflict analysis. The technology reduced search time from days to minutes. This breakthrough positioned us as innovators in the IP industry.')}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Timeline Item 3 - Year and Content on Right for Mobile */}
               <div className="reveal-section">
                 <div className="reveal-content">
                   <div className="relative flex items-start">
@@ -915,6 +741,65 @@ export default function AboutPage() {
                             fontWeight: 600
                           }}
                         >
+                          AI Revolution
+                        </h4>
+                        <div
+                          className="text-sm sm:text-base"
+                          style={{
+                            color: '#FFF',
+                            fontFamily: 'Nunito',
+                            fontWeight: 400,
+                            lineHeight: '1.6',
+                            opacity: 0.9
+                          }}
+                        >
+                          {splitTextIntoWords('We launched India\'s first AI-powered trademark search—instantly scanning millions of trademarks for similarity and conflicts. This breakthrough helped users quickly check if their brand name is available, receive an AI-powered risk report, and improve their chances to register a trademark successfully.')}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Timeline Item 3 - Year and Content on Right for Mobile */}
+              <div className="reveal-section">
+                <div className="reveal-content">
+                  <div className="relative flex items-start">
+                    {/* White Dot - Left for Mobile */}
+                    <div
+                      className="absolute left-5.5 w-6 h-6 rounded-full border-2 -mt-2"
+                      style={{
+                        background: 'radial-gradient(circle, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.7))',
+                        borderColor: 'rgba(255, 255, 255, 0.8)',
+                        boxShadow: '0 0 8px rgba(255, 255, 255, 0.3)'
+                      }}
+                    />
+
+                    {/* Year - Right for Mobile */}
+                    <div className="w-full pl-16">
+                      <div className="flex items-center gap-4 mb-4">
+                        <h3
+                          className="text-xl sm:text-2xl font-bold"
+                          style={{
+                            color: '#FFB703',
+                            fontFamily: 'Nunito',
+                            fontWeight: 700
+                          }}
+                        >
+                          2021
+                        </h3>
+                      </div>
+
+                      {/* Heading & Description */}
+                      <div>
+                        <h4
+                          className="text-lg sm:text-xl font-semibold mb-2"
+                          style={{
+                            color: '#FFF',
+                            fontFamily: 'Nunito',
+                            fontWeight: 600
+                          }}
+                        >
                           Trust & Growth
                         </h4>
                         <div
@@ -927,7 +812,7 @@ export default function AboutPage() {
                             opacity: 0.9
                           }}
                         >
-                          {splitTextIntoWords('Successfully processed over 10,000 trademark applications, establishing ourselves as a trusted partner for startups and SMEs. We achieved a 98% success rate in trademark registrations. Our client base expanded across 15 major Indian cities. We introduced 24/7 customer support and live tracking features. The year marked our transition from startup to established IP service provider.')}
+                          {splitTextIntoWords('With over 5,000 trademark registrations, IPR Karo became known for reliable, AI-driven brand protection. Our platform delivered accurate legal results, faster registration, and ongoing trademark monitoring.')}
                         </div>
                       </div>
                     </div>
@@ -978,7 +863,7 @@ export default function AboutPage() {
                             fontWeight: 700
                           }}
                         >
-                          2021
+                          2021–Present
                         </h3>
                       </div>
 
@@ -1004,125 +889,7 @@ export default function AboutPage() {
                             opacity: 0.9
                           }}
                         >
-                          {splitTextIntoWords('Expanded our services to include comprehensive IP portfolio management and introduced automated filing systems for faster processing. We launched our enterprise solutions for large corporations. Our team grew to include specialized patent and design experts. We implemented blockchain technology for secure document verification. The automated systems reduced processing time by 60%.')}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Timeline Item 5 - Year and Content on Right for Mobile */}
-              <div className="reveal-section">
-                <div className="reveal-content">
-                  <div className="relative flex items-start">
-                    {/* White Dot - Left for Mobile */}
-                    <div
-                      className="absolute left-5.5 w-6 h-6 rounded-full border-2 -mt-2"
-                      style={{
-                        background: 'radial-gradient(circle, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.7))',
-                        borderColor: 'rgba(255, 255, 255, 0.8)',
-                        boxShadow: '0 0 8px rgba(255, 255, 255, 0.3)'
-                      }}
-                    />
-
-                    {/* Year - Right for Mobile */}
-                    <div className="w-full pl-16">
-                      <div className="flex items-center gap-4 mb-4">
-                        <h3
-                          className="text-xl sm:text-2xl font-bold"
-                          style={{
-                            color: '#FFB703',
-                            fontFamily: 'Nunito',
-                            fontWeight: 700
-                          }}
-                        >
-                          2022
-                        </h3>
-                      </div>
-
-                      {/* Heading & Description */}
-                      <div>
-                        <h4
-                          className="text-lg sm:text-xl font-semibold mb-2"
-                          style={{
-                            color: '#FFF',
-                            fontFamily: 'Nunito',
-                            fontWeight: 600
-                          }}
-                        >
-                          Mobile Innovation
-                        </h4>
-                        <div
-                          className="text-sm sm:text-base"
-                          style={{
-                            color: '#FFF',
-                            fontFamily: 'Nunito',
-                            fontWeight: 400,
-                            lineHeight: '1.6',
-                            opacity: 0.9
-                          }}
-                        >
-                          {splitTextIntoWords('Reached a milestone of 50,000+ successful trademark registrations and launched our mobile application for seamless IP management on-the-go. The mobile app featured real-time application tracking and notifications. We introduced QR code scanning for instant trademark verification. Our platform integrated with major business management tools. Client satisfaction scores reached an all-time high of 96%.')}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Timeline Item 6 - Year and Content on Right for Mobile */}
-              <div className="reveal-section">
-                <div className="reveal-content">
-                  <div className="relative flex items-start">
-                    {/* White Dot - Left for Mobile */}
-                    <div
-                      className="absolute left-5.5 w-6 h-6 rounded-full border-2 -mt-2"
-                      style={{
-                        background: 'radial-gradient(circle, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.7))',
-                        borderColor: 'rgba(255, 255, 255, 0.8)',
-                        boxShadow: '0 0 8px rgba(255, 255, 255, 0.3)'
-                      }}
-                    />
-
-                    {/* Year - Right for Mobile */}
-                    <div className="w-full pl-16">
-                      <div className="flex items-center gap-4 mb-4">
-                        <h3
-                          className="text-xl sm:text-2xl font-bold"
-                          style={{
-                            color: '#FFB703',
-                            fontFamily: 'Nunito',
-                            fontWeight: 700
-                          }}
-                        >
-                          2024
-                        </h3>
-                      </div>
-
-                      {/* Heading & Description */}
-                      <div>
-                        <h4
-                          className="text-lg sm:text-xl font-semibold mb-2"
-                          style={{
-                            color: '#FFF',
-                            fontFamily: 'Nunito',
-                            fontWeight: 600
-                          }}
-                        >
-                          AI Intelligence
-                        </h4>
-                        <div
-                          className="text-sm sm:text-base"
-                          style={{
-                            color: '#FFF',
-                            fontFamily: 'Nunito',
-                            fontWeight: 400,
-                            lineHeight: '1.6',
-                            opacity: 0.9
-                          }}
-                        >
-                          {splitTextIntoWords('Introduced advanced AI analytics for trademark monitoring and infringement detection, making IP protection more proactive and intelligent than ever before. Our AI system now monitors over 100 million trademarks globally. We launched predictive analytics for trademark success probability. The platform achieved 99.7% accuracy in conflict detection. Today, we stand as India\'s leading AI-powered IP protection platform.')}
+                          {splitTextIntoWords('Today, IPR Karo is India\'s leading online partner for trademark registration. Startups and enterprises rely on our AI search reports, expert legal support, and full-service brand protection—making how to register a trademark in India easier than ever.')}
                         </div>
                       </div>
                     </div>

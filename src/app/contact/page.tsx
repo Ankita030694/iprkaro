@@ -76,10 +76,15 @@ export default function ContactPage() {
                 </div>
 
                 {/* Main Headline */}
-                <h1 className="font-nunito text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-normal leading-tight text-white">
-                  Your Brand's Journey Starts Here, Let's{' '}
-                  <span className="font-bold text-[#FFB703]">Connect Now</span>
+                <h1 className="font-nunito text-2xl sm:text-3xl md:text-4xl lg:text-[2.625rem] font-normal leading-tight text-white">
+                  Your Brand's Trademark Registration Journey Starts Here — <span className="font-bold text-[#FFB703]">Connect With Expert Help</span>
                 </h1>
+
+                {/* Description */}
+                <p className="text-[rgba(255,255,255,0.85)] font-nunito text-base sm:text-lg md:text-xl font-normal max-w-2xl">
+                  IPR Karo simplifies trademark registration in India using AI-powered search, risk reports, and expert legal support.<br />
+                  Start by searching your trademark availability, get instant AI conflict analysis, and file online for fast, reliable protection.
+                </p>
 
                 {/* Email Contact */}
                 <div className="flex items-center gap-3 sm:gap-4">
@@ -89,23 +94,11 @@ export default function ContactPage() {
                   >
                     info@iprkaro.com
                   </a>
-                  <button className="flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-md bg-[#FFB703] hover:bg-[#e6a602] transition-colors cursor-pointer">
-                    <svg
-                      width="16"
-                      height="16"
-                      className="sm:w-5 sm:h-5"
-                      viewBox="0 0 33 33"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M11.4266 25.1023L29.1043 7.4246C28.6669 6.9874 28.0718 6.7439 27.4496 6.7474L14.8564 6.8233M29.7057 21.6725L29.7815 9.0793C29.7845 8.4574 29.5405 7.8627 29.1032 7.4257"
-                        stroke="#0C002B"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
+                  <button
+                    className="flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-md bg-[#FFB703] hover:bg-[#e6a602] transition-colors cursor-pointer"
+                    aria-label="Send Email"
+                  >
+                    <i className="fas fa-paper-plane text-[#0C002B] text-lg sm:text-xl" aria-hidden="true"></i>
                   </button>
                 </div>
               </div>
@@ -256,34 +249,189 @@ export default function ContactPage() {
       <div className="bg-[#0C002B]">
         <div className="w-full py-8 sm:py-12 md:py-16 px-4 sm:px-8 md:px-12">
           <div className="w-full mx-auto">
-            <div className="flex flex-col justify-center items-center space-y-6 sm:space-y-8">
+            <div className="flex flex-col justify-center items-center space-y-4 sm:space-y-6">
               <div
+                className="text-white text-center font-nunito font-semibold"
                 style={{
-                  color: '#FFF',
-                  textAlign: 'center',
-                  fontFamily: 'Nunito, sans-serif',
-                  fontSize: 'clamp(24px, 5vw, 38px)',
-                  fontStyle: 'normal',
-                  fontWeight: 600,
-                  lineHeight: 'clamp(28px, 6vw, 45px)',
+                  fontSize: 'clamp(22px, 4vw, 32px)',
+                  lineHeight: 'clamp(28px, 5vw, 40px)',
                 }}
               >
                 Our Locations
               </div>
-              
+              <div
+                className="text-[rgba(255,255,255,0.8)] text-center font-nunito font-normal"
+                style={{
+                  fontSize: 'clamp(14px, 2.5vw, 18px)',
+                  lineHeight: 'clamp(18px, 3vw, 26px)',
+                  maxWidth: 600,
+                }}
+              >
+                Trusted Trademark Registration and <span className="whitespace-nowrap">AI-Powered</span> Search Across India’s Leading Cities
+              </div>
               {/* Location Images */}
               <div className="flex items-center justify-start sm:justify-center w-full gap-2 sm:gap-3 overflow-x-auto pb-2 sm:pb-0">
                 {[1, 2, 3, 4, 5, 6].map((cityNumber) => (
-                    <div key={cityNumber} className="flex-shrink-0 p-2 sm:p-4 hover:border-white transition-all duration-300">
-                      <Image
-                        src={`/locations/city${cityNumber}.svg`}
-                        alt={`City ${cityNumber} Location`}
-                        width={120}
-                        height={240}
-                        className="w-[120px] h-[120px] sm:w-[160px] sm:h-[160px] md:w-[200px] md:h-[200px] grayscale brightness-70 contrast-125 hover:grayscale-0 hover:brightness-100 hover:contrast-100 transition-all duration-300 object-cover rounded-lg"
-                      />
-                    </div>
+                  <div
+                    key={cityNumber}
+                    className="flex-shrink-0 p-2 sm:p-4 hover:border-white transition-all duration-300"
+                  >
+                    <Image
+                      src={`/locations/city${cityNumber}.svg`}
+                      alt={`City ${cityNumber} Location`}
+                      width={120}
+                      height={240}
+                      className="w-[120px] h-[120px] sm:w-[160px] sm:h-[160px] md:w-[200px] md:h-[200px] grayscale brightness-70 contrast-125 hover:grayscale-0 hover:brightness-100 hover:contrast-100 transition-all duration-300 object-cover rounded-lg"
+                    />
+                  </div>
                 ))}
+              </div>
+              {/* Nationwide Support & Service and City Details */}
+              <div className="w-full flex flex-col md:flex-row justify-center items-center gap-6 md:gap-10 mt-12">
+                {/* Nationwide Support & Service Box */}
+                <div
+                  className="relative bg-gradient-to-br from-[#1345C3] via-[#069A81] to-[#FFB703] p-1 rounded-2xl shadow-lg w-full max-w-xl md:max-w-lg"
+                  style={{
+                    boxShadow: '0 8px 32px 0 rgba(12,0,43,0.25), 0 1.5px 8px 0 rgba(255,183,3,0.10)',
+                  }}
+                >
+                  <div className="bg-[#0C002B] rounded-2xl p-6 sm:p-8 flex flex-col gap-4 items-start text-left relative z-10">
+                    <div className="flex items-center gap-3 mb-2">
+                      <i className="fas fa-headset text-[#FFB703] text-xl sm:text-2xl" aria-hidden="true"></i>
+                      <span className="font-nunito font-bold text-white text-xl sm:text-2xl md:text-3xl tracking-tight">
+                        Nationwide Support &amp; Service
+                      </span>
+                    </div>
+                    <ul className="space-y-4 mt-2 w-full max-w-xl">
+                      <li className="flex items-start gap-3">
+                        <span className="flex-shrink-0 mt-1">
+                          <i className="fas fa-globe-asia text-[#069A81] text-lg" aria-hidden="true"></i>
+                        </span>
+                        <span className="text-white font-nunito text-base sm:text-lg font-normal leading-relaxed">
+                          Register trademark online from any location in India
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="flex-shrink-0 mt-1">
+                          <i className="fas fa-search text-[#1345C3] text-lg" aria-hidden="true"></i>
+                        </span>
+                        <span className="text-white font-nunito text-base sm:text-lg font-normal leading-relaxed">
+                          Get AI-powered trademark search and risk reports tailored for major cities
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="flex-shrink-0 mt-1">
+                          <i className="fas fa-balance-scale text-[#FFB703] text-lg" aria-hidden="true"></i>
+                        </span>
+                        <span className="text-white font-nunito text-base sm:text-lg font-normal leading-relaxed">
+                          Legal guidance, monitoring, and IP protection available for startups, SMEs, and enterprises
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                  {/* Decorative Gradient Glow */}
+                  <div
+                    className="absolute -inset-1 rounded-2xl pointer-events-none"
+                    style={{
+                      background: 'radial-gradient(ellipse at 60% 40%, rgba(255,183,3,0.18) 0%, rgba(19,69,195,0.10) 60%, transparent 100%)',
+                      zIndex: 0,
+                      filter: 'blur(8px)',
+                    }}
+                  />
+                </div>
+                {/* City Details Box */}
+                <div
+                  className="relative bg-gradient-to-br from-[#FFB703] via-[#1345C3] to-[#069A81] p-1 rounded-2xl shadow-lg w-full max-w-xl md:max-w-lg"
+                  style={{
+                    boxShadow: '0 8px 32px 0 rgba(12,0,43,0.18), 0 1.5px 8px 0 rgba(6,154,129,0.10)',
+                  }}
+                >
+                  <div className="bg-[#0C002B] rounded-2xl p-6 sm:p-8 flex flex-col gap-4 items-start text-left relative z-10">
+                    <div className="flex items-center gap-3 mb-2">
+                      <i className="fas fa-city text-[#FFB703] text-xl sm:text-2xl" aria-hidden="true"></i>
+                      <span className="font-nunito font-bold text-white text-lg sm:text-xl md:text-2xl tracking-tight">
+                        City-Specific Trademark Services
+                      </span>
+                    </div>
+                    <ul className="space-y-4 mt-2 w-full max-w-xl">
+                      <li className="flex items-start gap-3">
+                        <span className="flex-shrink-0 mt-1">
+                          <i className="fas fa-location-dot text-[#FFB703] text-base" aria-hidden="true"></i>
+                        </span>
+                        <span>
+                          <span className="font-semibold text-[#FFB703]">New Delhi:</span>{" "}
+                          <span className="text-white font-nunito text-base sm:text-lg font-normal leading-relaxed">
+                            Trademark registration online, AI trademark risk analysis, fast approvals
+                          </span>
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="flex-shrink-0 mt-1">
+                          <i className="fas fa-location-dot text-[#FFB703] text-base" aria-hidden="true"></i>
+                        </span>
+                        <span>
+                          <span className="font-semibold text-[#FFB703]">Mumbai:</span>{" "}
+                          <span className="text-white font-nunito text-base sm:text-lg font-normal leading-relaxed">
+                            How to register trademark, expert legal review, AI search report
+                          </span>
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="flex-shrink-0 mt-1">
+                          <i className="fas fa-location-dot text-[#FFB703] text-base" aria-hidden="true"></i>
+                        </span>
+                        <span>
+                          <span className="font-semibold text-[#FFB703]">Kolkata:</span>{" "}
+                          <span className="text-white font-nunito text-base sm:text-lg font-normal leading-relaxed">
+                            AI-powered trademark search India, register trademark with risk reports
+                          </span>
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="flex-shrink-0 mt-1">
+                          <i className="fas fa-location-dot text-[#FFB703] text-base" aria-hidden="true"></i>
+                        </span>
+                        <span>
+                          <span className="font-semibold text-[#FFB703]">Jaipur:</span>{" "}
+                          <span className="text-white font-nunito text-base sm:text-lg font-normal leading-relaxed">
+                            Instant online trademark filing, advanced similarity check, legal compliance
+                          </span>
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="flex-shrink-0 mt-1">
+                          <i className="fas fa-location-dot text-[#FFB703] text-base" aria-hidden="true"></i>
+                        </span>
+                        <span>
+                          <span className="font-semibold text-[#FFB703]">Bangalore:</span>{" "}
+                          <span className="text-white font-nunito text-base sm:text-lg font-normal leading-relaxed">
+                            Brand monitoring, AI trademark conflict detection, startup support
+                          </span>
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="flex-shrink-0 mt-1">
+                          <i className="fas fa-location-dot text-[#FFB703] text-base" aria-hidden="true"></i>
+                        </span>
+                        <span>
+                          <span className="font-semibold text-[#FFB703]">Chennai:</span>{" "}
+                          <span className="text-white font-nunito text-base sm:text-lg font-normal leading-relaxed">
+                            Trademark registration with AI search report, regional expertise, end-to-end filing
+                          </span>
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                  {/* Decorative Gradient Glow */}
+                  <div
+                    className="absolute -inset-1 rounded-2xl pointer-events-none"
+                    style={{
+                      background: 'radial-gradient(ellipse at 60% 40%, rgba(6,154,129,0.13) 0%, rgba(255,183,3,0.10) 60%, transparent 100%)',
+                      zIndex: 0,
+                      filter: 'blur(8px)',
+                    }}
+                  />
+                </div>
               </div>
             </div>
           </div>
