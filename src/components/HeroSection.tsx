@@ -21,7 +21,7 @@ export default function HeroSection() {
           <div className="flex flex-col items-center gap-4 text-center max-w-sm">
             {/* Main Heading */}
             <h1 className="text-[#F8F9FA] font-nunito text-[24px] font-bold leading-[30px]">
-            How to Register a Trademark? Start Online with Smart AI Search Reports – <span className="animated-gradient text-[24px] font-bold">Start in 60 Seconds</span>
+            Trademark Registration Made Easy: Fast, Accurate, and Powered by AI – <span className="animated-gradient text-[24px] font-bold">Start in 60 Seconds</span>
             </h1>
 
             {/* Subtitle */}

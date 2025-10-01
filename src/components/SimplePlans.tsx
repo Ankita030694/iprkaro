@@ -104,7 +104,9 @@ export default function SimplePlans() {
             {plans.map((plan, index) => (
               <div
                 key={plan.id}
-                className="relative cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 flex flex-col items-center group flex-shrink-0"
+                className={`relative cursor-pointer transition-all duration-300 ease-in-out flex flex-col items-center flex-shrink-0 ${
+                  index === 1 ? '' : ''
+                }`}
                 onClick={() => setSelectedPlan(plan.id)}
                 style={{
                   display: 'flex',
@@ -125,42 +127,45 @@ export default function SimplePlans() {
                     paddingTop: '60px'
                   }}
                 >
-                  {/* Blue Gradient Background - Only visible on hover/selection */}
-                  <div 
+                  {/* Blue Gradient Background - Only for middle card */}
+                  <div
                     className={`absolute inset-0 transition-opacity duration-300 ${
-                      selectedPlan === plan.id ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
+                      index === 1 ? 'opacity-100' : 'opacity-0'
                     }`}
                     style={{
                       borderRadius: '30px',
                       background: 'linear-gradient(180deg, #1345C3 0%, rgba(19, 69, 195, 0) 50%)',
                       pointerEvents: 'none'
                     }}
-                  ></div>
-                  
-                  {/* Black Card Container - Glass effect by default, solid on hover/selection */}
+                  >
+                    {/* Most Popular Badge - Only for middle card */}
+                    {index === 1 && (
+                      <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-20">
+                        <span
+                          className="font-nunito font-bold text-lg"
+                          style={{
+                            background: 'linear-gradient(90deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 183, 3, 0.75) 50%, rgba(138, 56, 245, 0.75) 100%)',
+                            backgroundClip: 'text',
+                            WebkitBackgroundClip: 'text',
+                            WebkitTextFillColor: 'transparent'
+                          }}
+                        >
+                          Most Popular
+                        </span>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Black Card Container - Glass effect by default, solid black for middle card only */}
                   <div
                     className="relative flex flex-col z-10 transition-all duration-300 min-h-0 flex-1"
                     style={{
-                      borderRadius: selectedPlan === plan.id ? '26px' : '25px',
-                      background: selectedPlan === plan.id ? '#000' : 'rgba(0, 0, 0, 0.05)',
-                      boxShadow: selectedPlan === plan.id ? 'none' : '0 0 20px 0 rgba(255, 255, 255, 0.31) inset',
+                      borderRadius: index === 1 ? '26px' : '25px',
+                      background: index === 1 ? '#000' : 'rgba(0, 0, 0, 0.05)',
+                      boxShadow: index === 1 ? 'none' : '0 0 20px 0 rgba(255, 255, 255, 0.31) inset',
                       backdropFilter: 'blur(16px)',
                       width: '100%',
                       minHeight: 'clamp(450px, 60vh, 600px)' // Increased to accommodate all content properly
-                    }}
-                    onMouseEnter={(e) => {
-                      if (selectedPlan !== plan.id) {
-                        e.currentTarget.style.background = '#000';
-                        e.currentTarget.style.boxShadow = 'none';
-                        e.currentTarget.style.borderRadius = '26px';
-                      }
-                    }}
-                    onMouseLeave={(e) => {
-                      if (selectedPlan !== plan.id) {
-                        e.currentTarget.style.background = 'rgba(0, 0, 0, 0.05)';
-                        e.currentTarget.style.boxShadow = '0 0 20px 0 rgba(255, 255, 255, 0.31) inset';
-                        e.currentTarget.style.borderRadius = '25px';
-                      }
                     }}
                   >
 

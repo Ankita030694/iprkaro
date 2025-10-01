@@ -216,24 +216,24 @@ export default function TrademarkRegistrationPage() {
             {/* Main Heading */}
             <div className="space-y-4">
               <h1 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-medium leading-tight">
-                Trademark Registration in India – Complete Guide by IPRKaro
+                Copyright Registration in India – Complete Guide by IPRKaro
               </h1>
 
               <h2 className="text-white font-nunito text-lg md:text-xl lg:text-xl font-medium leading-tight">
-                Protect Your Brand with Expert Trademark Registration in India
+                Protect Your Creativity with Expert Copyright Registration in India
               </h2>
 
               <p className="text-white font-nunito text-xs md:text-sm lg:text-base leading-relaxed">
-                In today's competitive marketplace, your brand is your most valuable asset. A trademark distinguishes your products and services from competitors, builds customer loyalty, and represents the quality and reputation of your business. Trademark registration in India provides legal protection for your brand name, logo, slogan, or any distinctive mark that identifies your business.
+                In today's digital-first world, content and creativity are the foundation of every business. From songs, films, blogs, software, and artwork to website content, every creative work deserves protection against misuse. This is where copyright registration in India becomes crucial.
 
-At IPRKaro, we combine AI-powered trademark search technology with expert legal guidance to ensure your brand receives comprehensive protection under the Indian Trademarks Act, 1999. Our end-to-end trademark registration services help businesses of all sizes secure their brand identity and prevent unauthorized use.
+At IPRKaro, we combine expert legal knowledge with technology-driven solutions to simplify the copyright registration process. Whether you are a startup, an independent artist, a software developer, or a large enterprise, our copyright services ensure your original works are legally protected under the Indian Copyright Act, 1957.
               </p>
             </div>
 
-            {/* Why Trademark Section */}
+            {/* Why Copyright Section */}
             <div className="space-y-4">
               <h3 className="text-white font-nunito text-lg md:text-3xl font-medium">
-                Why Trademark with IPRKaro ?
+                Why Copyright with IPRKaro ?
               </h3>
 
               {/* Mobile Layout - Exactly like homepage */}
@@ -338,7 +338,7 @@ At IPRKaro, we combine AI-powered trademark search technology with expert legal 
                   {/* Heading */}
                   <div className="text-center lg:text-left">
                     <h3 className="text-white font-nunito text-xl md:text-3xl font-medium">
-                      Get a Guaranteed Trademark on
+                      Get a Guaranteed Copyright on
                     </h3>
                   </div>
 
@@ -387,7 +387,7 @@ At IPRKaro, we combine AI-powered trademark search technology with expert legal 
             </div>
             <div className="space-y-6">
               <h3 className="text-white font-nunito text-lg md:text-3xl font-medium">
-              Trademark Requirements
+              Copyright Requirements
               </h3>
 
               {/* Requirements Grid - 2 rows, 2 columns on mobile; 2 rows, 2 columns on desktop */}
@@ -519,218 +519,196 @@ At IPRKaro, we combine AI-powered trademark search technology with expert legal 
               </div>
             </div>
 
-            {/* About Trademark Registration Section */}
+            {/* About Copyright Registration Section */}
             <div className="space-y-6 mt-20">
               <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-medium">
-                About Trademark Registration in India
+                About Copyright Registration in India
               </h2>
 
               <h3 className="text-white font-nunito text-lg md:text-xl lg:text-2xl font-medium">
-                Trademark Registration Services – Intro
+                Copyright Registration Services – Intro
               </h3>
 
               <h4 className="text-white font-nunito text-base md:text-lg lg:text-xl font-medium">
-                Protect Your Brand with Expert Trademark Registration in India
+                Protect Your Creativity with Expert Copyright Registration in India
               </h4>
 
               <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
-                In today's competitive marketplace, your brand is your most valuable asset. A trademark distinguishes your products and services from competitors, builds customer loyalty, and represents the quality and reputation of your business. Trademark registration in India provides legal protection for your brand name, logo, slogan, or any distinctive mark that identifies your business.
+                In today's digital-first world, content and creativity are the foundation of every business. From songs, films, blogs, software, and artwork to website content, every creative work deserves protection against misuse. This is where copyright registration in India becomes crucial.
 
-At IPRKaro, we combine AI-powered trademark search technology with expert legal guidance to ensure your brand receives comprehensive protection under the Indian Trademarks Act, 1999. Our end-to-end trademark registration services help businesses of all sizes secure their brand identity and prevent unauthorized use.
+At IPRKaro, we combine expert legal knowledge with technology-driven solutions to simplify the copyright registration process. Whether you are a startup, an independent artist, a software developer, or a large enterprise, our copyright services ensure your original works are legally protected under the Indian Copyright Act, 1957.
               </p>
             </div>
 
-            {/* What is a Trademark Section */}
+            {/* What is Copyright Section */}
             <div className="space-y-6">
               <h3 className="text-white font-nunito text-lg md:text-xl lg:text-2xl font-medium">
-                What is a Trademark?
+                What is Copyright?
               </h3>
 
               <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
-                A trademark is a distinctive sign, symbol, word, phrase, logo, design, or combination thereof that identifies and distinguishes the goods or services of one enterprise from those of others. It serves as a badge of origin, indicating the source and quality of products or services.
+                Copyright is a legal right that protects original creative works such as literary, artistic, musical, and digital content. It gives the creator exclusive rights to reproduce, distribute, perform, display, and license their work.
 
-Trademarks can include:
+Unlike patents and trademarks, copyright specifically protects expressions of creativity, not inventions or brand names. For example:
+
+A song is copyrightable, but the name of the band is trademarked.
+
+A software code is copyrightable, but the innovative algorithm behind it may be patented.
+              </p>
+            </div>
+
+            {/* Why Register Copyright Section */}
+            <div className="space-y-6">
+              <h3 className="text-white font-nunito text-lg md:text-xl lg:text-2xl font-medium">
+                Why Register a Copyright in India?
+              </h3>
+
+              <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
+                While copyright exists automatically upon creation of a work, registering it provides strong legal protection. Here's why you should register your copyright:
+              </p>
+
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
+                  <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
+                    <strong>Proof of Ownership</strong><br />
+                    A registered copyright serves as a legal certificate of authorship and ownership.
+                  </p>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
+                  <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
+                    <strong>Exclusive Rights</strong><br />
+                    You control how your work is reproduced, distributed, or adapted.
+                  </p>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
+                  <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
+                    <strong>Legal Protection Against Infringement</strong><br />
+                    If someone copies your work without permission, a registered copyright makes it easier to take legal action, file for injunctions, and claim damages.
+                  </p>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
+                  <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
+                    <strong>Commercial Benefits</strong><br />
+                    Registered works can be licensed, franchised, or sold, creating revenue streams.
+                  </p>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
+                  <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
+                    <strong>International Recognition</strong><br />
+                    Through international treaties like the Berne Convention, your copyright in India can be enforced in other member countries.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* What Works Can Be Copyrighted Section */}
+            <div className="space-y-6">
+              <h3 className="text-white font-nunito text-lg md:text-xl lg:text-2xl font-medium">
+                What Works Can Be Copyrighted in India?
+              </h3>
+
+              <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
+                The Indian Copyright Act, 1957 recognizes protection for a wide range of works, including:
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-[#FFB703] flex-shrink-0"></div>
-                    <span className="text-white font-nunito text-sm md:text-base">Brand names and product names</span>
+                    <span className="text-white font-nunito text-sm md:text-base">Literary Works – Books, articles, blogs, computer programs, and scripts</span>
                   </div>
 
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-[#FFB703] flex-shrink-0"></div>
-                    <span className="text-white font-nunito text-sm md:text-base">Logos and symbols</span>
+                    <span className="text-white font-nunito text-sm md:text-base">Artistic Works – Paintings, drawings, photography, architecture, logos, and designs</span>
                   </div>
 
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-[#FFB703] flex-shrink-0"></div>
-                    <span className="text-white font-nunito text-sm md:text-base">Slogans and taglines</span>
+                    <span className="text-white font-nunito text-sm md:text-base">Musical Works – Compositions, lyrics, soundtracks</span>
                   </div>
                 </div>
 
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-[#FFB703] flex-shrink-0"></div>
-                    <span className="text-white font-nunito text-sm md:text-base">Product packaging and trade dress</span>
+                    <span className="text-white font-nunito text-sm md:text-base">Cinematographic Films – Movies, short films, web series, advertisements</span>
                   </div>
 
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-[#FFB703] flex-shrink-0"></div>
-                    <span className="text-white font-nunito text-sm md:text-base">Sounds and colors (in some cases)</span>
+                    <span className="text-white font-nunito text-sm md:text-base">Sound Recordings – Songs, podcasts, background scores</span>
                   </div>
 
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-[#FFB703] flex-shrink-0"></div>
-                    <span className="text-white font-nunito text-sm md:text-base">Domain names and social media handles</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Why Register a Trademark Section */}
-            <div className="space-y-6">
-              <h3 className="text-white font-nunito text-lg md:text-xl lg:text-2xl font-medium">
-                Why Register a Trademark in India?
-              </h3>
-
-              <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
-                Trademark registration in India provides numerous benefits for businesses:
-              </p>
-
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
-                  <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
-                    <strong>Exclusive Rights</strong><br />
-                    Gain exclusive rights to use the trademark and prevent others from using similar marks for similar goods/services.
-                  </p>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
-                  <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
-                    <strong>Legal Protection</strong><br />
-                    Registered trademarks can be enforced through civil and criminal actions against infringement.
-                  </p>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
-                  <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
-                    <strong>Brand Value</strong><br />
-                    Enhances brand recognition and increases the commercial value of your business.
-                  </p>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
-                  <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
-                    <strong>Asset Creation</strong><br />
-                    Registered trademarks can be licensed, franchised, or sold, creating additional revenue streams.
-                  </p>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
-                  <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
-                    <strong>Market Expansion</strong><br />
-                    Provides protection for brand expansion into new markets and product categories.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* What Can Be Trademarked Section */}
-            <div className="space-y-6">
-              <h3 className="text-white font-nunito text-lg md:text-xl lg:text-2xl font-medium">
-                What Can Be Trademarked in India?
-              </h3>
-
-              <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
-                For a mark to be registrable as a trademark in India, it must be:
-              </p>
-
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
-                  <div>
-                    <h4 className="text-white font-nunito text-base md:text-lg font-medium mb-1">Distinctive</h4>
-                    <p className="text-white font-nunito text-sm md:text-base leading-relaxed">The mark must be capable of distinguishing your goods/services from others.</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
-                  <div>
-                    <h4 className="text-white font-nunito text-base md:text-lg font-medium mb-1">Not Descriptive</h4>
-                    <p className="text-white font-nunito text-sm md:text-base leading-relaxed">Generic or descriptive terms that others need to use in trade cannot be trademarked.</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
-                  <div>
-                    <h4 className="text-white font-nunito text-base md:text-lg font-medium mb-1">Not Confusingly Similar</h4>
-                    <p className="text-white font-nunito text-sm md:text-base leading-relaxed">The mark should not be identical or similar to existing registered trademarks.</p>
+                    <span className="text-white font-nunito text-sm md:text-base">Software – Source code, applications, and digital programs</span>
                   </div>
                 </div>
               </div>
 
               <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
-                <strong>Trademark Classes:</strong> India follows the Nice Classification system with 45 classes – 34 for goods and 11 for services. You can register your trademark in multiple classes for broader protection.
+                <strong>Website Content & Digital Creations</strong> – Content, infographics, UI/UX designs
               </p>
             </div>
 
-            {/* Trademark Registration Process Section */}
+            {/* Copyright Registration Process Section */}
             <div className="space-y-6">
               <h3 className="text-white font-nunito text-lg md:text-xl lg:text-2xl font-medium">
-                Trademark Registration Process in India
+                Copyright Registration Process in India
               </h3>
 
               <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
-                The trademark registration process in India involves several key stages:
+                Registering a copyright with IPRKaro involves a step-by-step process handled by our legal experts:
               </p>
 
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <div className="w-6 h-6 rounded-full bg-[#FFB703] flex items-center justify-center text-white font-nunito font-bold text-sm flex-shrink-0">1</div>
                   <div>
-                    <h4 className="text-white font-nunito text-base md:text-lg font-medium mb-1">Trademark Search</h4>
-                    <p className="text-white font-nunito text-sm md:text-base leading-relaxed">Comprehensive search to check availability and identify potential conflicts.</p>
+                    <h4 className="text-white font-nunito text-base md:text-lg font-medium mb-1">Application Preparation (Form XIV)</h4>
+                    <p className="text-white font-nunito text-sm md:text-base leading-relaxed">Drafting and filing the copyright application with details of the work.</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <div className="w-6 h-6 rounded-full bg-[#FFB703] flex items-center justify-center text-white font-nunito font-bold text-sm flex-shrink-0">2</div>
                   <div>
-                    <h4 className="text-white font-nunito text-base md:text-lg font-medium mb-1">Application Filing</h4>
-                    <p className="text-white font-nunito text-sm md:text-base leading-relaxed">Submit trademark application in appropriate classes with all required documents.</p>
+                    <h4 className="text-white font-nunito text-base md:text-lg font-medium mb-1">Submission to Copyright Office</h4>
+                    <p className="text-white font-nunito text-sm md:text-base leading-relaxed">Application is filed along with supporting documents and prescribed fees.</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <div className="w-6 h-6 rounded-full bg-[#FFB703] flex items-center justify-center text-white font-nunito font-bold text-sm flex-shrink-0">3</div>
                   <div>
-                    <h4 className="text-white font-nunito text-base md:text-lg font-medium mb-1">Examination</h4>
-                    <p className="text-white font-nunito text-sm md:text-base leading-relaxed">Trademark office examines the application and may raise objections if any.</p>
+                    <h4 className="text-white font-nunito text-base md:text-lg font-medium mb-1">Diary Number Issued</h4>
+                    <p className="text-white font-nunito text-sm md:text-base leading-relaxed">A diary number (acknowledgment) is given, marking the start of the registration process.</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <div className="w-6 h-6 rounded-full bg-[#FFB703] flex items-center justify-center text-white font-nunito font-bold text-sm flex-shrink-0">4</div>
                   <div>
-                    <h4 className="text-white font-nunito text-base md:text-lg font-medium mb-1">Publication</h4>
-                    <p className="text-white font-nunito text-sm md:text-base leading-relaxed">Approved applications are published in the Trademark Journal for opposition.</p>
+                    <h4 className="text-white font-nunito text-base md:text-lg font-medium mb-1">Examination & Objections (if any)</h4>
+                    <p className="text-white font-nunito text-sm md:text-base leading-relaxed">The Copyright Office examines the work. In case of objections or opposition, our attorneys respond with strong legal representation.</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <div className="w-6 h-6 rounded-full bg-[#FFB703] flex items-center justify-center text-white font-nunito font-bold text-sm flex-shrink-0">5</div>
                   <div>
-                    <h4 className="text-white font-nunito text-base md:text-lg font-medium mb-1">Registration</h4>
-                    <p className="text-white font-nunito text-sm md:text-base leading-relaxed">If no opposition is filed, the trademark is registered and certificate is issued.</p>
+                    <h4 className="text-white font-nunito text-base md:text-lg font-medium mb-1">Registration & Certificate</h4>
+                    <p className="text-white font-nunito text-sm md:text-base leading-relaxed">Upon approval, the applicant receives an official copyright registration certificate, valid for the lifetime of the author plus 60 years.</p>
                   </div>
                 </div>
               </div>
@@ -739,104 +717,110 @@ Trademarks can include:
             {/* Documents Required Section */}
             <div className="space-y-6">
               <h3 className="text-white font-nunito text-lg md:text-xl lg:text-2xl font-medium">
-                Documents Required for Trademark Registration
+                Documents Required for Copyright Registration
               </h3>
+
+              <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
+                To file a copyright application in India, you will need:
+              </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-[#FFB703] flex-shrink-0"></div>
-                    <span className="text-white font-nunito text-sm md:text-base">Applicant's identity and address proof</span>
+                    <span className="text-white font-nunito text-sm md:text-base">Identity proof of the applicant (PAN / Aadhaar / Passport)</span>
                   </div>
 
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-[#FFB703] flex-shrink-0"></div>
-                    <span className="text-white font-nunito text-sm md:text-base">Trademark/logo representation</span>
+                    <span className="text-white font-nunito text-sm md:text-base">Address proof of the applicant</span>
                   </div>
 
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-[#FFB703] flex-shrink-0"></div>
-                    <span className="text-white font-nunito text-sm md:text-base">List of goods/services with classes</span>
+                    <span className="text-white font-nunito text-sm md:text-base">Work sample (manuscript, music file, software code, design, etc.)</span>
                   </div>
                 </div>
 
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-[#FFB703] flex-shrink-0"></div>
-                    <span className="text-white font-nunito text-sm md:text-base">Business registration proof (if applicable)</span>
+                    <span className="text-white font-nunito text-sm md:text-base">NOC from publisher/author (if applicable)</span>
                   </div>
 
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-[#FFB703] flex-shrink-0"></div>
-                    <span className="text-white font-nunito text-sm md:text-base">Priority claim document (if applicable)</span>
+                    <span className="text-white font-nunito text-sm md:text-base">Incorporation certificate (if the applicant is a company)</span>
                   </div>
 
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-[#FFB703] flex-shrink-0"></div>
-                    <span className="text-white font-nunito text-sm md:text-base">Power of Attorney (Form TM-48)</span>
+                    <span className="text-white font-nunito text-sm md:text-base">Power of Attorney (if filed through an attorney)</span>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Trademark Duration Section */}
+            {/* Copyright Duration Section */}
             <div className="space-y-6">
               <h3 className="text-white font-nunito text-lg md:text-xl lg:text-2xl font-medium">
-                How Long Does Trademark Protection Last in India?
+                How Long Does Copyright Protection Last in India?
               </h3>
 
               <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
-                A registered trademark in India is valid for 10 years from the date of filing. The registration can be renewed indefinitely every 10 years by paying renewal fees. If not renewed, the trademark will be removed from the register and become available for others to use.
+                Copyright protection in India generally lasts for the lifetime of the author plus 60 years after their death. For works like films, sound recordings, and government publications, the validity is 60 years from the date of publication.
               </p>
             </div>
 
             {/* Why Choose IPRKaro Section */}
             <div className="space-y-6">
               <h3 className="text-white font-nunito text-lg md:text-xl lg:text-2xl font-medium">
-                Why Choose IPRKaro for Trademark Registration?
+                Why Choose IPRKaro for Copyright Registration?
               </h3>
 
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
                   <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
-                    <strong>AI-Powered Trademark Search</strong> – Advanced technology to identify potential conflicts and ensure availability.
+                    <strong>Expert Legal Assistance</strong> – Our IP attorneys ensure your application is drafted and filed correctly.
                   </p>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
                   <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
-                    <strong>Expert Legal Guidance</strong> – Professional assistance with application drafting and class selection.
+                    <strong>End-to-End Support</strong> – From filing to handling objections and disputes, we manage the process.
                   </p>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
                   <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
-                    <strong>Objection Handling</strong> – Expert response to trademark office objections and examination reports.
+                    <strong>Digital & Nationwide Service</strong> – Register your copyright online from anywhere in India.
                   </p>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
                   <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
-                    <strong>Watch Services</strong> – Ongoing monitoring for potential infringements and similar marks.
+                    <strong>Affordable Pricing</strong> – Transparent fee structure with no hidden costs.
                   </p>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
                   <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
-                    <strong>Renewal Management</strong> – Timely reminders and assistance with trademark renewals.
+                    <strong>Strong Legal Defense</strong> – In case of disputes, we represent you legally to enforce your rights.
                   </p>
                 </div>
               </div>
 
               <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
-                Protect your brand identity with IPRKaro's comprehensive trademark registration services. Our AI-powered search technology combined with expert legal guidance ensures your trademark receives the strongest possible protection. From startups to multinational corporations, we help businesses secure their brand assets and build lasting value.
+                In today's competitive and digital-driven environment, protecting intellectual property is no longer optional — it's essential. Copyright registration in India not only gives creators legal ownership but also ensures long-term commercial benefits.
 
-👉 Register your trademark today with IPRKaro — safeguard your brand, prevent infringement, and build a strong foundation for your business success.
+With IPRKaro's expert legal team and technology-backed process, you can register your copyright easily, avoid delays, and safeguard your creative work for decades.
+
+👉 Get your copyright registered today with IPRKaro — protect your creativity, monetize your work, and secure your legacy.
               </p>
             </div>
           </div>

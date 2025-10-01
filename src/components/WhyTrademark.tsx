@@ -666,7 +666,7 @@ export default function WhyTrademark() {
               className="relative w-full h-full rounded-[25px] border-[6px] border-white/[0.07] bg-white/[0.05] flex flex-col overflow-hidden group transition-all duration-300"
             >
               {/* Background Image - heross.png in bottom right */}
-              <div className="absolute bottom-[-30px] right-0 z-0">
+              <div className="absolute bottom-[-100px] right-[-100px] z-0">
                 <Image
                   src="/figmacomp/heross.png"
                   alt="Hero background"
@@ -736,9 +736,9 @@ export default function WhyTrademark() {
             </div>
           </div>
           {/* Call to Action: Check Your Registrability Now */}
-          <div className="flex flex-col justify-center items-center w-1/3 min-w-[260px]">
+          <div className="flex-1 flex flex-col items-stretch min-w-[260px]">
             <div
-              className="relative w-full rounded-[25px] border-[6px] border-[#FFB703]/[0.2] bg-white/[0.03] flex flex-col items-center justify-center px-6 py-8 overflow-hidden group transition-all duration-300"
+              className="relative w-full h-full rounded-[25px] border-[6px] border-[#FFB703]/[0.2] bg-white/[0.03] flex flex-col items-center justify-center px-6 py-8 overflow-hidden group transition-all duration-300"
             >
               <h3 className="text-white font-nunito text-[20px] md:text-[24px] font-semibold leading-tight mb-2 text-center">
                 Check Your Registrability Now

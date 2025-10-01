@@ -12,26 +12,26 @@ export default function TrademarkRegistrationPage() {
     setOpenFaq(openFaq === index ? null : index);
   };
 
-  const trademarkFaqs = [
+  const patentFaqs = [
     {
-      question: "What is a trademark, and why should I register it?",
-      answer: "A trademark is a unique symbol, word, name, or logo that identifies your goods or services. Registering it gives you exclusive legal rights to use it, prevents misuse by others, and enhances your brand's credibility."
+      question: "What is a patent, and why should I register it?",
+      answer: "A patent is a legal right granted for an invention that is novel, non-obvious, and useful. Registering a patent gives you exclusive rights to prevent others from making, using, selling, or importing your invention for 20 years, protecting your innovation and investment."
     },
     {
-      question: "How long does it take to register a trademark in India?",
-      answer: "The average time is 12–18 months, depending on objections or oppositions. With IPRKaro's AI-powered search reports, you can reduce risks of delay by identifying conflicts early."
+      question: "How long does it take to register a patent in India?",
+      answer: "The patent registration process typically takes 3-5 years from filing to grant, depending on examination and objections. With IPRKaro's AI-driven prior art search, we minimize delays by ensuring strong applications from the start."
     },
     {
-      question: "What documents are required for trademark registration?",
-      answer: "Applicant's ID & Address Proof, Brand Logo / Wordmark (optional for wordmark filing), Incorporation Certificate (for companies), Power of Attorney (Form TM-48)"
+      question: "What documents are required for patent registration?",
+      answer: "Complete patent specification, drawings (if applicable), inventor's details and assignments, prior art search report, Form-1 (application), Form-2 (provisional/complete specification), and Power of Attorney."
     },
     {
-      question: "Can I register a trademark online in India?",
-      answer: "Yes. With IPRKaro, the entire process — from search to filing and objection handling — is managed 100% online with expert support."
+      question: "Can I register a patent online in India?",
+      answer: "Yes. With IPRKaro, the entire patent registration process — from prior art search to filing and examination response — is managed 100% online with expert legal support and AI-powered tools."
     },
     {
-      question: "How long is a trademark valid in India?",
-      answer: "A registered trademark is valid for 10 years and can be renewed indefinitely every 10 years."
+      question: "How long is a patent valid in India?",
+      answer: "A granted patent is valid for 20 years from the date of filing, after which it enters the public domain. Annual renewal fees must be paid to maintain the patent."
     }
   ];
 
@@ -39,7 +39,7 @@ export default function TrademarkRegistrationPage() {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": trademarkFaqs.map((faq, index) => ({
+    "mainEntity": patentFaqs.map((faq, index) => ({
       "@type": "Question",
       "name": `Q${index + 1}. ${faq.question}`,
       "acceptedAnswer": {
@@ -58,7 +58,7 @@ export default function TrademarkRegistrationPage() {
     { text: "24/7 Accessibility", icon: 5 }
   ];
 
-  const trademarkRequirements = [
+  const patentRequirements = [
     {
       text: "Govt. Registration",
       icon: (
@@ -68,7 +68,7 @@ export default function TrademarkRegistrationPage() {
       )
     },
     {
-      text: "Personal Information",
+      text: "Inventor Information",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" width="27" height="28" viewBox="0 0 27 28" fill="none">
           <path d="M1 26.5H26M9.33333 8.44444H10.7222M9.33333 14H10.7222M9.33333 19.5556H10.7222M16.2778 8.44444H17.6667M16.2778 14H17.6667M16.2778 19.5556H17.6667M3.77778 26.5V4.27778C3.77778 3.54107 4.07044 2.83453 4.59137 2.31359C5.1123 1.79266 5.81884 1.5 6.55556 1.5H20.4444C21.1812 1.5 21.8877 1.79266 22.4086 2.31359C22.9296 2.83453 23.2222 3.54107 23.2222 4.27778V26.5" stroke="#FFB703" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -76,7 +76,7 @@ export default function TrademarkRegistrationPage() {
       )
     },
     {
-      text: "Trademark Name & Class",
+      text: "Invention Details",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" width="27" height="28" viewBox="0 0 27 28" fill="none">
           <path d="M10.375 18.375V14.875M10.375 14.875V9.625H13.9463C14.8388 9.625 16.625 9.625 16.625 12.25C16.625 14.875 14.8388 14.875 13.9463 14.875M10.375 14.875H13.9463M13.9463 14.875L16.625 18.375" stroke="#FFB703" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -85,7 +85,7 @@ export default function TrademarkRegistrationPage() {
       )
     },
     {
-      text: "Authorization Letter",
+      text: "Prior Art Search",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" width="23" height="28" viewBox="0 0 23 28" fill="none">
           <path d="M16.5405 1.5H5.72973C3.11757 1.5 1 3.61757 1 6.22973V21.7703C1 24.3824 3.11757 26.5 5.72973 26.5H16.5405C19.1527 26.5 21.2703 24.3824 21.2703 21.7703V6.22973C21.2703 3.61757 19.1527 1.5 16.5405 1.5Z" stroke="#FFB703" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -159,47 +159,47 @@ export default function TrademarkRegistrationPage() {
   const plans = [
     {
       id: 'standard',
-      name: 'AI Trademark Filing – Standard',
-      subtitle: 'Deeper search with risk insights',
-      description: 'Best for small businesses/startups',
-      content: 'Essential trademark protection',
+      name: 'AI Patent Filing – Standard',
+      subtitle: 'Comprehensive prior art search',
+      description: 'Best for individual inventors/startups',
+      content: 'Essential patent protection',
       features: [
-        'Complete online trademark filing included',
-        'AI trademark search & conflict check',
+        'Complete online patent filing included',
+        'AI-powered prior art search & novelty check',
         'Expert legal guidance throughout the process',
-        'Essential trademark protection for your brand'
+        'Essential patent protection for your invention'
       ],
-      price: '₹3,999',
+      price: '₹15,999',
       highlighted: true
     },
     {
       id: 'premium',
-      name: 'Premium Trademark Registration – With AI Risk Checkup',
-      subtitle: 'Complete filing included',
-      description: 'Suited for growing brands',
-      content: 'Enhanced trademark services',
+      name: 'Premium Patent Registration – With AI Risk Assessment',
+      subtitle: 'Complete filing with examination support',
+      description: 'Suited for growing companies',
+      content: 'Enhanced patent services',
       features: [
-        'AI-powered trademark registration and risk report',
-        'Advanced legal guidance and trademark filing',
-        'Priority VIP support, fast application monitoring',
-        'Enhanced trademark and brand safeguard'
+        'AI-powered patent registration and risk analysis',
+        'Advanced legal guidance and examination response',
+        'Priority support and fast-track processing',
+        'Enhanced patent protection and claim optimization'
       ],
-      price: '₹6,999',
+      price: '₹24,999',
       highlighted: false
     },
     {
       id: 'pro',
-      name: 'Brand Monitoring & Protection – AI Powered',
-      subtitle: '24/7 brand monitoring',
+      name: 'Patent Portfolio Management – AI Powered',
+      subtitle: 'Complete patent lifecycle management',
       description: 'Enterprises, ongoing protection',
-      content: 'Complete brand protection',
+      content: 'Complete patent portfolio protection',
       features: [
-        '24/7 AI-powered brand & trademark monitoring',
-        'Instant alerts for conflicts and infringements',
-        'Continuous protection against copycats',
-        'Ongoing legal peace of mind for your brand'
+        '24/7 AI-powered patent monitoring and alerts',
+        'Portfolio management and maintenance services',
+        'Annual renewal and annuity payment management',
+        'Ongoing legal protection for your patent portfolio'
       ],
-      price: '₹4,999',
+      price: '₹19,999',
       highlighted: false
     }
   ];
@@ -216,24 +216,24 @@ export default function TrademarkRegistrationPage() {
             {/* Main Heading */}
             <div className="space-y-4">
               <h1 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-medium leading-tight">
-                Trademark Registration in India – Complete Guide by IPRKaro
+                Patent Registration in India – Complete Guide by IPRKaro
               </h1>
 
               <h2 className="text-white font-nunito text-lg md:text-xl lg:text-xl font-medium leading-tight">
-                Protect Your Brand with Expert Trademark Registration in India
+                Protect Your Innovation with Expert Patent Registration in India
               </h2>
 
               <p className="text-white font-nunito text-xs md:text-sm lg:text-base leading-relaxed">
-                In today's competitive marketplace, your brand is your most valuable asset. A trademark distinguishes your products and services from competitors, builds customer loyalty, and represents the quality and reputation of your business. Trademark registration in India provides legal protection for your brand name, logo, slogan, or any distinctive mark that identifies your business.
+                In today's competitive business landscape, innovation is the key to success. Whether you're a startup developing groundbreaking technology, a researcher with a revolutionary invention, or an established company with proprietary processes, protecting your intellectual property through patent registration in India is crucial for maintaining your competitive edge.
 
-At IPRKaro, we combine AI-powered trademark search technology with expert legal guidance to ensure your brand receives comprehensive protection under the Indian Trademarks Act, 1999. Our end-to-end trademark registration services help businesses of all sizes secure their brand identity and prevent unauthorized use.
+At IPRKaro, we combine cutting-edge AI technology with deep legal expertise to streamline the patent registration process. Our comprehensive patent services ensure your inventions are thoroughly protected under the Indian Patents Act, 1970, giving you the exclusive rights to commercialize your innovations.
               </p>
             </div>
 
             {/* Why Trademark Section */}
             <div className="space-y-4">
               <h3 className="text-white font-nunito text-lg md:text-3xl font-medium">
-                Why Trademark with IPRKaro ?
+                Why Patent with IPRKaro ?
               </h3>
 
               {/* Mobile Layout - Exactly like homepage */}
@@ -338,7 +338,7 @@ At IPRKaro, we combine AI-powered trademark search technology with expert legal 
                   {/* Heading */}
                   <div className="text-center lg:text-left">
                     <h3 className="text-white font-nunito text-xl md:text-3xl font-medium">
-                      Get a Guaranteed Trademark on
+                      Get a Guaranteed Patent on
                     </h3>
                   </div>
 
@@ -358,12 +358,12 @@ At IPRKaro, we combine AI-powered trademark search technology with expert legal 
                           Filing Date
                         </div>
                         <div className="text-white font-nunito text-sm md:text-base opacity-90">
-                          Apr 12, 2025
+                          Apr 15, 2025
                         </div>
                       </div>
                     </div>
 
-                    {/* Second Container - Trademark Estimated Date */}
+                    {/* Second Container - Patent Estimated Date */}
                     <div
                       className="relative p-4 rounded-2xl w-full max-w-[500px]"
                       style={{
@@ -374,10 +374,10 @@ At IPRKaro, we combine AI-powered trademark search technology with expert legal 
                     >
                       <div className="flex items-center justify-between px-10">
                         <div className="text-white font-nunito text-base md:text-lg font-medium">
-                          Trademark Estimated Date
+                          Patent Estimated Date
                         </div>
                         <div className="text-white font-nunito text-sm md:text-base opacity-90">
-                          Dec 12, 2025
+                          Jan 15, 2026
                         </div>
                       </div>
                     </div>
@@ -387,12 +387,12 @@ At IPRKaro, we combine AI-powered trademark search technology with expert legal 
             </div>
             <div className="space-y-6">
               <h3 className="text-white font-nunito text-lg md:text-3xl font-medium">
-              Trademark Requirements
+              Patent Requirements
               </h3>
 
               {/* Requirements Grid - 2 rows, 2 columns on mobile; 2 rows, 2 columns on desktop */}
               <div className="grid grid-cols-2 gap-4">
-                {trademarkRequirements.map((requirement, index) => (
+                {patentRequirements.map((requirement, index) => (
                   <div
                     key={index}
                     className="flex items-center space-x-3 p-4"
@@ -519,84 +519,48 @@ At IPRKaro, we combine AI-powered trademark search technology with expert legal 
               </div>
             </div>
 
-            {/* About Trademark Registration Section */}
+            {/* About Patent Registration Section */}
             <div className="space-y-6 mt-20">
               <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-medium">
-                About Trademark Registration in India
+                About Patent Registration in India
               </h2>
 
               <h3 className="text-white font-nunito text-lg md:text-xl lg:text-2xl font-medium">
-                Trademark Registration Services – Intro
+                Patent Registration Services – Intro
               </h3>
 
               <h4 className="text-white font-nunito text-base md:text-lg lg:text-xl font-medium">
-                Protect Your Brand with Expert Trademark Registration in India
+                Protect Your Innovation with Expert Patent Registration in India
               </h4>
 
               <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
-                In today's competitive marketplace, your brand is your most valuable asset. A trademark distinguishes your products and services from competitors, builds customer loyalty, and represents the quality and reputation of your business. Trademark registration in India provides legal protection for your brand name, logo, slogan, or any distinctive mark that identifies your business.
+                In today's competitive business landscape, innovation is the key to success. Whether you're a startup developing groundbreaking technology, a researcher with a revolutionary invention, or an established company with proprietary processes, protecting your intellectual property through patent registration in India is crucial for maintaining your competitive edge.
 
-At IPRKaro, we combine AI-powered trademark search technology with expert legal guidance to ensure your brand receives comprehensive protection under the Indian Trademarks Act, 1999. Our end-to-end trademark registration services help businesses of all sizes secure their brand identity and prevent unauthorized use.
+At IPRKaro, we combine cutting-edge AI technology with deep legal expertise to streamline the patent registration process. Our comprehensive patent services ensure your inventions are thoroughly protected under the Indian Patents Act, 1970, giving you the exclusive rights to commercialize your innovations.
               </p>
             </div>
 
-            {/* What is a Trademark Section */}
+            {/* What is a Patent Section */}
             <div className="space-y-6">
               <h3 className="text-white font-nunito text-lg md:text-xl lg:text-2xl font-medium">
-                What is a Trademark?
+                What is a Patent?
               </h3>
 
               <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
-                A trademark is a distinctive sign, symbol, word, phrase, logo, design, or combination thereof that identifies and distinguishes the goods or services of one enterprise from those of others. It serves as a badge of origin, indicating the source and quality of products or services.
+                A patent is an exclusive right granted by the government to an inventor for a limited period, typically 20 years, in exchange for public disclosure of the invention. This legal protection prevents others from making, using, selling, or importing the patented invention without permission.
 
-Trademarks can include:
+Patents are territorial rights, meaning they are only enforceable in the country where they are granted. In India, patents are governed by the Patents Act, 1970 and provide inventors with a monopoly over their inventions, encouraging innovation and technological advancement.
               </p>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-[#FFB703] flex-shrink-0"></div>
-                    <span className="text-white font-nunito text-sm md:text-base">Brand names and product names</span>
-                  </div>
-
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-[#FFB703] flex-shrink-0"></div>
-                    <span className="text-white font-nunito text-sm md:text-base">Logos and symbols</span>
-                  </div>
-
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-[#FFB703] flex-shrink-0"></div>
-                    <span className="text-white font-nunito text-sm md:text-base">Slogans and taglines</span>
-                  </div>
-                </div>
-
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-[#FFB703] flex-shrink-0"></div>
-                    <span className="text-white font-nunito text-sm md:text-base">Product packaging and trade dress</span>
-                  </div>
-
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-[#FFB703] flex-shrink-0"></div>
-                    <span className="text-white font-nunito text-sm md:text-base">Sounds and colors (in some cases)</span>
-                  </div>
-
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-[#FFB703] flex-shrink-0"></div>
-                    <span className="text-white font-nunito text-sm md:text-base">Domain names and social media handles</span>
-                  </div>
-                </div>
-              </div>
             </div>
 
-            {/* Why Register a Trademark Section */}
+            {/* Why Register a Patent Section */}
             <div className="space-y-6">
               <h3 className="text-white font-nunito text-lg md:text-xl lg:text-2xl font-medium">
-                Why Register a Trademark in India?
+                Why Register a Patent in India?
               </h3>
 
               <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
-                Trademark registration in India provides numerous benefits for businesses:
+                Patent registration in India offers numerous advantages for inventors and businesses:
               </p>
 
               <div className="space-y-4">
@@ -604,117 +568,117 @@ Trademarks can include:
                   <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
                   <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
                     <strong>Exclusive Rights</strong><br />
-                    Gain exclusive rights to use the trademark and prevent others from using similar marks for similar goods/services.
+                    Gain the exclusive right to prevent others from commercially exploiting your invention for 20 years.
                   </p>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
                   <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
-                    <strong>Legal Protection</strong><br />
-                    Registered trademarks can be enforced through civil and criminal actions against infringement.
+                    <strong>Commercial Advantage</strong><br />
+                    Patents provide a competitive edge by allowing you to license, sell, or commercialize your invention exclusively.
                   </p>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
                   <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
-                    <strong>Brand Value</strong><br />
-                    Enhances brand recognition and increases the commercial value of your business.
+                    <strong>Investment Protection</strong><br />
+                    Secure funding and attract investors by demonstrating legal protection of your intellectual property.
                   </p>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
                   <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
-                    <strong>Asset Creation</strong><br />
-                    Registered trademarks can be licensed, franchised, or sold, creating additional revenue streams.
+                    <strong>Research & Development Incentive</strong><br />
+                    Patents encourage continued innovation by protecting the results of significant R&D investments.
                   </p>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
                   <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
-                    <strong>Market Expansion</strong><br />
-                    Provides protection for brand expansion into new markets and product categories.
+                    <strong>Global Recognition</strong><br />
+                    Indian patents can be used as a basis for international patent protection through PCT and other treaties.
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* What Can Be Trademarked Section */}
+            {/* What Can Be Patented Section */}
             <div className="space-y-6">
               <h3 className="text-white font-nunito text-lg md:text-xl lg:text-2xl font-medium">
-                What Can Be Trademarked in India?
+                What Can Be Patented in India?
               </h3>
 
               <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
-                For a mark to be registrable as a trademark in India, it must be:
+                For an invention to be patentable in India, it must meet three essential criteria:
               </p>
 
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
                   <div>
-                    <h4 className="text-white font-nunito text-base md:text-lg font-medium mb-1">Distinctive</h4>
-                    <p className="text-white font-nunito text-sm md:text-base leading-relaxed">The mark must be capable of distinguishing your goods/services from others.</p>
+                    <h4 className="text-white font-nunito text-base md:text-lg font-medium mb-1">Novelty</h4>
+                    <p className="text-white font-nunito text-sm md:text-base leading-relaxed">The invention must be new and not previously known or used anywhere in the world.</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
                   <div>
-                    <h4 className="text-white font-nunito text-base md:text-lg font-medium mb-1">Not Descriptive</h4>
-                    <p className="text-white font-nunito text-sm md:text-base leading-relaxed">Generic or descriptive terms that others need to use in trade cannot be trademarked.</p>
+                    <h4 className="text-white font-nunito text-base md:text-lg font-medium mb-1">Non-obviousness</h4>
+                    <p className="text-white font-nunito text-sm md:text-base leading-relaxed">The invention must involve an inventive step that is not obvious to a person skilled in the relevant field.</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
                   <div>
-                    <h4 className="text-white font-nunito text-base md:text-lg font-medium mb-1">Not Confusingly Similar</h4>
-                    <p className="text-white font-nunito text-sm md:text-base leading-relaxed">The mark should not be identical or similar to existing registered trademarks.</p>
+                    <h4 className="text-white font-nunito text-base md:text-lg font-medium mb-1">Industrial Applicability</h4>
+                    <p className="text-white font-nunito text-sm md:text-base leading-relaxed">The invention must be capable of industrial application and have utility.</p>
                   </div>
                 </div>
               </div>
 
               <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
-                <strong>Trademark Classes:</strong> India follows the Nice Classification system with 45 classes – 34 for goods and 11 for services. You can register your trademark in multiple classes for broader protection.
+                <strong>Patentable Subject Matter:</strong> Processes, machines, manufactured articles, compositions of matter, and improvements thereof. Software and business methods may also be patentable if they meet technical criteria.
               </p>
             </div>
 
-            {/* Trademark Registration Process Section */}
+            {/* Patent Registration Process Section */}
             <div className="space-y-6">
               <h3 className="text-white font-nunito text-lg md:text-xl lg:text-2xl font-medium">
-                Trademark Registration Process in India
+                Patent Registration Process in India
               </h3>
 
               <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
-                The trademark registration process in India involves several key stages:
+                The patent registration process in India involves several stages:
               </p>
 
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <div className="w-6 h-6 rounded-full bg-[#FFB703] flex items-center justify-center text-white font-nunito font-bold text-sm flex-shrink-0">1</div>
                   <div>
-                    <h4 className="text-white font-nunito text-base md:text-lg font-medium mb-1">Trademark Search</h4>
-                    <p className="text-white font-nunito text-sm md:text-base leading-relaxed">Comprehensive search to check availability and identify potential conflicts.</p>
+                    <h4 className="text-white font-nunito text-base md:text-lg font-medium mb-1">Prior Art Search</h4>
+                    <p className="text-white font-nunito text-sm md:text-base leading-relaxed">Comprehensive search of existing patents and literature to ensure novelty.</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <div className="w-6 h-6 rounded-full bg-[#FFB703] flex items-center justify-center text-white font-nunito font-bold text-sm flex-shrink-0">2</div>
                   <div>
-                    <h4 className="text-white font-nunito text-base md:text-lg font-medium mb-1">Application Filing</h4>
-                    <p className="text-white font-nunito text-sm md:text-base leading-relaxed">Submit trademark application in appropriate classes with all required documents.</p>
+                    <h4 className="text-white font-nunito text-base md:text-lg font-medium mb-1">Patent Drafting</h4>
+                    <p className="text-white font-nunito text-sm md:text-base leading-relaxed">Professional drafting of patent specification with detailed claims and descriptions.</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <div className="w-6 h-6 rounded-full bg-[#FFB703] flex items-center justify-center text-white font-nunito font-bold text-sm flex-shrink-0">3</div>
                   <div>
-                    <h4 className="text-white font-nunito text-base md:text-lg font-medium mb-1">Examination</h4>
-                    <p className="text-white font-nunito text-sm md:text-base leading-relaxed">Trademark office examines the application and may raise objections if any.</p>
+                    <h4 className="text-white font-nunito text-base md:text-lg font-medium mb-1">Filing Application</h4>
+                    <p className="text-white font-nunito text-sm md:text-base leading-relaxed">Submission of complete patent application to the Indian Patent Office.</p>
                   </div>
                 </div>
 
@@ -722,15 +686,15 @@ Trademarks can include:
                   <div className="w-6 h-6 rounded-full bg-[#FFB703] flex items-center justify-center text-white font-nunito font-bold text-sm flex-shrink-0">4</div>
                   <div>
                     <h4 className="text-white font-nunito text-base md:text-lg font-medium mb-1">Publication</h4>
-                    <p className="text-white font-nunito text-sm md:text-base leading-relaxed">Approved applications are published in the Trademark Journal for opposition.</p>
+                    <p className="text-white font-nunito text-sm md:text-base leading-relaxed">Application is published in the Patent Journal after 18 months for public examination.</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <div className="w-6 h-6 rounded-full bg-[#FFB703] flex items-center justify-center text-white font-nunito font-bold text-sm flex-shrink-0">5</div>
                   <div>
-                    <h4 className="text-white font-nunito text-base md:text-lg font-medium mb-1">Registration</h4>
-                    <p className="text-white font-nunito text-sm md:text-base leading-relaxed">If no opposition is filed, the trademark is registered and certificate is issued.</p>
+                    <h4 className="text-white font-nunito text-base md:text-lg font-medium mb-1">Examination & Grant</h4>
+                    <p className="text-white font-nunito text-sm md:text-base leading-relaxed">Request for examination, response to objections, and final grant of patent.</p>
                   </div>
                 </div>
               </div>
@@ -739,104 +703,104 @@ Trademarks can include:
             {/* Documents Required Section */}
             <div className="space-y-6">
               <h3 className="text-white font-nunito text-lg md:text-xl lg:text-2xl font-medium">
-                Documents Required for Trademark Registration
+                Documents Required for Patent Registration
               </h3>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-[#FFB703] flex-shrink-0"></div>
-                    <span className="text-white font-nunito text-sm md:text-base">Applicant's identity and address proof</span>
+                    <span className="text-white font-nunito text-sm md:text-base">Complete patent specification</span>
                   </div>
 
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-[#FFB703] flex-shrink-0"></div>
-                    <span className="text-white font-nunito text-sm md:text-base">Trademark/logo representation</span>
+                    <span className="text-white font-nunito text-sm md:text-base">Drawings and diagrams (if applicable)</span>
                   </div>
 
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-[#FFB703] flex-shrink-0"></div>
-                    <span className="text-white font-nunito text-sm md:text-base">List of goods/services with classes</span>
+                    <span className="text-white font-nunito text-sm md:text-base">Inventor details and assignments</span>
                   </div>
                 </div>
 
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-[#FFB703] flex-shrink-0"></div>
-                    <span className="text-white font-nunito text-sm md:text-base">Business registration proof (if applicable)</span>
+                    <span className="text-white font-nunito text-sm md:text-base">Priority document (if claiming priority)</span>
                   </div>
 
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-[#FFB703] flex-shrink-0"></div>
-                    <span className="text-white font-nunito text-sm md:text-base">Priority claim document (if applicable)</span>
+                    <span className="text-white font-nunito text-sm md:text-base">Proof of right to apply</span>
                   </div>
 
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-[#FFB703] flex-shrink-0"></div>
-                    <span className="text-white font-nunito text-sm md:text-base">Power of Attorney (Form TM-48)</span>
+                    <span className="text-white font-nunito text-sm md:text-base">Power of Attorney (if filed through agent)</span>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Trademark Duration Section */}
+            {/* Patent Duration Section */}
             <div className="space-y-6">
               <h3 className="text-white font-nunito text-lg md:text-xl lg:text-2xl font-medium">
-                How Long Does Trademark Protection Last in India?
+                How Long Does Patent Protection Last in India?
               </h3>
 
               <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
-                A registered trademark in India is valid for 10 years from the date of filing. The registration can be renewed indefinitely every 10 years by paying renewal fees. If not renewed, the trademark will be removed from the register and become available for others to use.
+                Patents in India are valid for a period of 20 years from the date of filing. During this period, the patent holder has exclusive rights to the invention. Annual renewal fees must be paid to maintain the patent in force. After 20 years, the invention enters the public domain and can be used by anyone.
               </p>
             </div>
 
             {/* Why Choose IPRKaro Section */}
             <div className="space-y-6">
               <h3 className="text-white font-nunito text-lg md:text-xl lg:text-2xl font-medium">
-                Why Choose IPRKaro for Trademark Registration?
+                Why Choose IPRKaro for Patent Registration?
               </h3>
 
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
                   <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
-                    <strong>AI-Powered Trademark Search</strong> – Advanced technology to identify potential conflicts and ensure availability.
+                    <strong>AI-Powered Prior Art Search</strong> – Advanced technology to ensure your invention's novelty and patentability.
                   </p>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
                   <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
-                    <strong>Expert Legal Guidance</strong> – Professional assistance with application drafting and class selection.
+                    <strong>Expert Patent Drafting</strong> – Professional specification writing with strong, defensible claims.
                   </p>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
                   <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
-                    <strong>Objection Handling</strong> – Expert response to trademark office objections and examination reports.
+                    <strong>Complete Application Management</strong> – From filing to grant, we handle the entire process.
                   </p>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
                   <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
-                    <strong>Watch Services</strong> – Ongoing monitoring for potential infringements and similar marks.
+                    <strong>Examination Response Support</strong> – Expert handling of patent office objections and responses.
                   </p>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
                   <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
-                    <strong>Renewal Management</strong> – Timely reminders and assistance with trademark renewals.
+                    <strong>Global Patent Strategy</strong> – Assistance with international patent protection and PCT filings.
                   </p>
                 </div>
               </div>
 
               <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
-                Protect your brand identity with IPRKaro's comprehensive trademark registration services. Our AI-powered search technology combined with expert legal guidance ensures your trademark receives the strongest possible protection. From startups to multinational corporations, we help businesses secure their brand assets and build lasting value.
+                Protect your innovations with IPRKaro's comprehensive patent registration services. Our AI-driven approach, combined with deep legal expertise, ensures your inventions receive the strongest possible protection. From startups to Fortune 500 companies, we help innovators secure their intellectual property and drive business growth.
 
-👉 Register your trademark today with IPRKaro — safeguard your brand, prevent infringement, and build a strong foundation for your business success.
+👉 Register your patent today with IPRKaro — safeguard your innovation, secure your competitive advantage, and unlock your invention's commercial potential.
               </p>
             </div>
           </div>
@@ -891,19 +855,19 @@ Trademarks can include:
                 <div className="space-y-3">
                   <div className="flex justify-between items-center py-2 border-b border-gray-400">
                     <span className="text-white font-nunito text-sm md:text-base opacity-90">Government Fee</span>
-                    <span className="text-white font-nunito text-sm md:text-base">₹4,500</span>
+                    <span className="text-white font-nunito text-sm md:text-base">₹16,000</span>
                   </div>
                   <div className="flex justify-between items-center py-2 border-b border-gray-400">
                     <span className="text-white font-nunito text-sm md:text-base opacity-90">Professional Fee</span>
-                    <span className="text-white font-nunito text-sm md:text-base">₹2,500</span>
+                    <span className="text-white font-nunito text-sm md:text-base">₹8,999</span>
                   </div>
                   <div className="flex justify-between items-center py-2 border-b border-gray-400">
                     <span className="text-white font-nunito text-sm md:text-base opacity-90">GST (18%)</span>
-                    <span className="text-white font-nunito text-sm md:text-base">₹1,260</span>
+                    <span className="text-white font-nunito text-sm md:text-base">₹4,500</span>
                   </div>
                   <div className="flex justify-between items-center py-3 font-semibold">
                     <span className="text-white font-nunito text-base md:text-lg">Total</span>
-                    <span className="text-white font-nunito text-base md:text-lg">₹8,260</span>
+                    <span className="text-white font-nunito text-base md:text-lg">₹29,499</span>
                   </div>
 
                   {/* Start Registration Button */}
@@ -1055,7 +1019,7 @@ Trademarks can include:
                   }}
                 >
                   <span className="text-white font-nunito text-sm md:text-base font-medium">
-                    Identity proof (PAN / Aadhaar / Passport)
+                    Complete patent specification with claims
                   </span>
                 </div>
 
@@ -1069,7 +1033,7 @@ Trademarks can include:
                   }}
                 >
                   <span className="text-white font-nunito text-sm md:text-base font-medium">
-                    Address proof (utility bill / bank statement)
+                    Drawings and diagrams (if applicable)
                   </span>
                 </div>
 
@@ -1083,7 +1047,7 @@ Trademarks can include:
                   }}
                 >
                   <span className="text-white font-nunito text-sm md:text-base font-medium">
-                    Legal entity proof (if business — e.g. company registration certificate)
+                    Inventor details and assignments
                   </span>
                 </div>
 
@@ -1097,7 +1061,7 @@ Trademarks can include:
                   }}
                 >
                   <span className="text-white font-nunito text-sm md:text-base font-medium">
-                    Trademark/logo/wordmark images
+                    Prior art search report and analysis
                   </span>
                 </div>
 
@@ -1111,7 +1075,7 @@ Trademarks can include:
                   }}
                 >
                   <span className="text-white font-nunito text-sm md:text-base font-medium">
-                    Power of Attorney (Form TM-48)
+                    Power of Attorney (Form-1 authorization)
                   </span>
                 </div>
               </div>
@@ -1133,7 +1097,7 @@ Trademarks can include:
             {/* Left Side - Pay Now Text */}
             <div className="flex-1">
               <span className="text-white font-nunito font-semibold text-lg">
-                Pay Now ₹6,999
+                Pay Now ₹15,999
               </span>
             </div>
 
@@ -1391,7 +1355,7 @@ Trademarks can include:
                     }}
                   >
                     <span className="text-white font-nunito text-xs font-medium">
-                      Identity proof (PAN / Aadhaar / Passport)
+                      Complete patent specification with claims
                     </span>
                   </div>
 
@@ -1405,7 +1369,7 @@ Trademarks can include:
                     }}
                   >
                     <span className="text-white font-nunito text-xs font-medium">
-                      Address proof (utility bill / bank statement)
+                      Drawings and diagrams (if applicable)
                     </span>
                   </div>
 
@@ -1419,7 +1383,7 @@ Trademarks can include:
                     }}
                   >
                     <span className="text-white font-nunito text-xs font-medium">
-                      Legal entity proof (if business — e.g. company registration certificate)
+                      Inventor details and assignments
                     </span>
                   </div>
 
@@ -1433,7 +1397,7 @@ Trademarks can include:
                     }}
                   >
                     <span className="text-white font-nunito text-xs font-medium">
-                      Trademark/logo/wordmark images
+                      Prior art search report and analysis
                     </span>
                   </div>
 
@@ -1447,7 +1411,7 @@ Trademarks can include:
                     }}
                   >
                     <span className="text-white font-nunito text-xs font-medium">
-                      Power of Attorney (Form TM-48)
+                      Power of Attorney (Form-1 authorization)
                     </span>
                   </div>
                 </div>
@@ -1483,7 +1447,7 @@ Trademarks can include:
                 Frequently Asked Questions
                 <br />
                 <span style={{ color: '#FFB703' }}>
-                  on Trademark Registration
+                  on Patent Registration
                 </span>
               </h2>
 
@@ -1497,7 +1461,7 @@ Trademarks can include:
               <div className="relative bg-black/20 backdrop-blur-sm border border-purple-400/30 rounded-xl p-4">
                 <input
                   type="text"
-                  placeholder="Ask about Trademark Registration...."
+                  placeholder="Ask about Patent Registration...."
                   className="w-full bg-transparent text-white placeholder-purple-300 outline-none text-lg"
                 />
                 <button
@@ -1515,7 +1479,7 @@ Trademarks can include:
 
           {/* Right Section - FAQ Items */}
           <div className="space-y-4">
-            {trademarkFaqs.map((faq, index) => (
+            {patentFaqs.map((faq, index) => (
               <div key={index} className="relative">
                 <div
                   className="p-6 cursor-pointer transition-all duration-300 ease-in-out hover:scale-[1.02] transform"
