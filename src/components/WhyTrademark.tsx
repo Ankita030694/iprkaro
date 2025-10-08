@@ -1,5 +1,6 @@
 'use client';
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { useState } from 'react';
 
 export default function WhyTrademark() {
@@ -584,11 +585,20 @@ export default function WhyTrademark() {
           <div className="w-full order-2 lg:order-1">
             {/* Desktop Layout */}
             <div className="hidden md:grid grid-cols-2 grid-rows-3 gap-3 md:gap-4 lg:gap-6 w-full h-full">
-              {featureCards.map((card, index) => (
-                <div
-                  key={index}
-                  className="relative w-full min-h-[120px] md:min-h-[140px] lg:min-h-[160px] rounded-[15px] border-[6px] border-white/[0.07] bg-white/[0.05] flex items-center px-3 md:px-4 lg:px-8 py-3 md:py-4 lg:py-5 overflow-hidden group transition-all duration-300 hover:-translate-y-2 cursor-pointer"
-                >
+              {featureCards.map((card, index) => {
+                const featureRoutes = [
+                  '/features/fast-trademark-registration',
+                  '/features/expert-trademark-guidance',
+                  '/features/affordable-trademark-services',
+                  '/features/ai-powered-trademark-solutions',
+                  '/features/trademark-risk-reduction',
+                  '/features/247-trademark-protection'
+                ];
+
+                return (
+                  <Link key={index} href={featureRoutes[index]}>
+                    <div className="relative w-full min-h-[120px] md:min-h-[140px] lg:min-h-[160px] rounded-[15px] border-[6px] border-white/[0.07] bg-white/[0.05] flex items-center px-3 md:px-4 lg:px-8 py-3 md:py-4 lg:py-5 overflow-hidden group transition-all duration-300 hover:-translate-y-2 cursor-pointer"
+                  >
                   {/* Decorative SVG Icon - Top Right */}
                   <div
                     className="w-20 md:w-32 h-20 md:h-32 flex-shrink-0 absolute top-0 right-0 z-[1] flex items-center justify-center pointer-events-none opacity-60"
@@ -603,13 +613,15 @@ export default function WhyTrademark() {
                       {card.description}
                     </p>
                   </div>
-                </div>
-              ))}
+                    </div>
+                  </Link>
+                );
+              })}
             </div>
 
             {/* Mobile Layout */}
             <div className="md:hidden w-full">
-              <div 
+              <div
                 className="w-full rounded-[5px] p-4"
                 style={{
                   background: 'linear-gradient(145deg, rgba(12, 0, 43, 0.20) 6.6%, rgba(255, 183, 3, 0.20) 120.24%), rgba(0, 0, 0, 0.78)',
@@ -617,11 +629,20 @@ export default function WhyTrademark() {
                 }}
               >
                 <div className="grid grid-cols-2 grid-rows-3 gap-4">
-                  {featureCards.map((card, index) => (
-                    <div
-                      key={index}
-                      className="flex items-center gap-3"
-                    >
+                  {featureCards.map((card, index) => {
+                    const featureRoutes = [
+                      '/features/fast-trademark-registration',
+                      '/features/expert-trademark-guidance',
+                      '/features/affordable-trademark-services',
+                      '/features/ai-powered-trademark-solutions',
+                      '/features/trademark-risk-reduction',
+                      '/features/247-trademark-protection'
+                    ];
+
+                    return (
+                      <Link key={index} href={featureRoutes[index]}>
+                        <div className="flex items-center gap-3 cursor-pointer"
+                      >
                       {/* Icon on the left */}
                       <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center opacity-60">
                         {mobileCardIcons[index]}
@@ -640,8 +661,10 @@ export default function WhyTrademark() {
                       >
                         {card.title}
                       </h3>
-                    </div>
-                  ))}
+                        </div>
+                      </Link>
+                    );
+                  })}
                 </div>
               </div>
             </div>

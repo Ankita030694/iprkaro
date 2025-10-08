@@ -9,5 +9,6 @@ export { default as SimplePlans } from './SimplePlans';
 export { default as Faq } from './Faq';
 export { default as Footer } from './Footer';
 export { default as TrademarkSearchPopup } from './TrademarkSearchPopup';
+export { default as TrademarkCounter } from './TrademarkCounter';
 export { default as WhyTrademark } from './WhyTrademark';
 export { default as Expert } from './Expert';

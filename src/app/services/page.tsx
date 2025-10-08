@@ -67,7 +67,11 @@ function ServicesHeroSection() {
                   </p>
                 </div>
                 <Link href="/services/trademark-registration">
-                <p className="text-right opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-yellow-400">Learn More →</p>
+                <p className="text-right opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="text-transparent bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text font-medium">
+                    Learn More →
+                  </span>
+                </p>
                 </Link>
               </div>
 
@@ -95,7 +99,11 @@ function ServicesHeroSection() {
                   </p>
                 </div>
                 <Link href="/services/copyright-protection">
-                <p className="text-right opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-yellow-400">Learn More →</p>
+                <p className="text-right opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="text-transparent bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text font-medium">
+                    Learn More →
+                  </span>
+                </p>
                 </Link>
               </div>
 
@@ -123,7 +131,11 @@ function ServicesHeroSection() {
                   </p>
                 </div>
                 <Link href="/services/patent-services">
-                <p className="text-right opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-yellow-400">Learn More →</p>
+                <p className="text-right opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="text-transparent bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text font-medium">
+                    Learn More →
+                  </span>
+                </p>
                 </Link>
               </div>
             </div>

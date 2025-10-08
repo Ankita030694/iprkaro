@@ -934,6 +934,14 @@ With IPRKaro's expert legal team and technology-backed process, you can register
                       </option>
                     ))}
                   </select>
+                  <div className="mt-3 text-center space-x-2 space-y-2">
+                    <a
+                      href="/services/copyright-protection"
+                      className="inline-flex items-center px-4 py-2 text-sm font-medium text-[#0C002B] bg-[#FFB703] rounded-lg hover:bg-[#e6a503] transition-colors duration-300"
+                    >
+                      Learn More About Copyright Services
+                    </a>
+                  </div>
                 </div>
 
                 {/* Selected Plan Card */}
@@ -1270,6 +1278,14 @@ With IPRKaro's expert legal team and technology-backed process, you can register
                         </option>
                       ))}
                     </select>
+                    <div className="mt-2 text-center">
+                      <a
+                        href="/services/copyright-protection"
+                        className="inline-flex items-center px-3 py-1.5 text-xs font-medium text-[#0C002B] bg-[#FFB703] rounded-md hover:bg-[#e6a503] transition-colors duration-300"
+                      >
+                        Learn More About Copyright Services
+                      </a>
+                    </div>
                   </div>
 
                   {/* Selected Plan Card */}
@@ -1448,6 +1464,134 @@ With IPRKaro's expert legal team and technology-backed process, you can register
           __html: JSON.stringify(faqSchema),
         }}
       />
+
+      {/* We Provide Solutions In Section */}
+      <section className="py-20 relative overflow-hidden" style={{ backgroundColor: '#0C002B' }}>
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="text-center mb-12">
+            <h2 className="text-white font-nunito text-3xl md:text-4xl lg:text-5xl font-medium mb-4">
+              We Provide Solutions In:
+            </h2>
+            <p className="text-white font-nunito text-base md:text-lg opacity-80">
+              Comprehensive IPR services across all states and union territories of India
+            </p>
+          </div>
+
+          {/* States Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mb-12">
+            {/* 27 States */}
+            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-sm md:text-base font-medium">Andhra Pradesh</span>
+            </div>
+            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-sm md:text-base font-medium">Arunachal Pradesh</span>
+            </div>
+            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-sm md:text-base font-medium">Assam</span>
+            </div>
+            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-sm md:text-base font-medium">Bihar</span>
+            </div>
+            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-sm md:text-base font-medium">Chhattisgarh</span>
+            </div>
+            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-sm md:text-base font-medium">Goa</span>
+            </div>
+            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-sm md:text-base font-medium">Gujarat</span>
+            </div>
+            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-sm md:text-base font-medium">Haryana</span>
+            </div>
+            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-sm md:text-base font-medium">Himachal Pradesh</span>
+            </div>
+            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-sm md:text-base font-medium">Jharkhand</span>
+            </div>
+            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-sm md:text-base font-medium">Karnataka</span>
+            </div>
+            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-sm md:text-base font-medium">Kerala</span>
+            </div>
+            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-sm md:text-base font-medium">Madhya Pradesh</span>
+            </div>
+            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-sm md:text-base font-medium">Maharashtra</span>
+            </div>
+            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-sm md:text-base font-medium">Manipur</span>
+            </div>
+            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-sm md:text-base font-medium">Meghalaya</span>
+            </div>
+            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-sm md:text-base font-medium">Mizoram</span>
+            </div>
+            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-sm md:text-base font-medium">Nagaland</span>
+            </div>
+            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-sm md:text-base font-medium">Odisha</span>
+            </div>
+            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-sm md:text-base font-medium">Punjab</span>
+            </div>
+            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-sm md:text-base font-medium">Rajasthan</span>
+            </div>
+            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-sm md:text-base font-medium">Sikkim</span>
+            </div>
+            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-sm md:text-base font-medium">Tamil Nadu</span>
+            </div>
+            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-sm md:text-base font-medium">Telangana</span>
+            </div>
+            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-sm md:text-base font-medium">Tripura</span>
+            </div>
+            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-sm md:text-base font-medium">Uttar Pradesh</span>
+            </div>
+            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-sm md:text-base font-medium">Uttarakhand</span>
+            </div>
+          </div>
+
+          {/* Union Territories Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(19, 69, 195, 0.1)', border: '1px solid rgba(19, 69, 195, 0.3)' }}>
+              <span className="text-white font-nunito text-sm md:text-base font-medium">Andaman and Nicobar Islands</span>
+            </div>
+            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(19, 69, 195, 0.1)', border: '1px solid rgba(19, 69, 195, 0.3)' }}>
+              <span className="text-white font-nunito text-sm md:text-base font-medium">Chandigarh</span>
+            </div>
+            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(19, 69, 195, 0.1)', border: '1px solid rgba(19, 69, 195, 0.3)' }}>
+              <span className="text-white font-nunito text-sm md:text-base font-medium">Dadra and Nagar Haveli and Daman and Diu</span>
+            </div>
+            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(19, 69, 195, 0.1)', border: '1px solid rgba(19, 69, 195, 0.3)' }}>
+              <span className="text-white font-nunito text-sm md:text-base font-medium">Delhi</span>
+            </div>
+            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(19, 69, 195, 0.1)', border: '1px solid rgba(19, 69, 195, 0.3)' }}>
+              <span className="text-white font-nunito text-sm md:text-base font-medium">Jammu and Kashmir</span>
+            </div>
+            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(19, 69, 195, 0.1)', border: '1px solid rgba(19, 69, 195, 0.3)' }}>
+              <span className="text-white font-nunito text-sm md:text-base font-medium">Ladakh</span>
+            </div>
+            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(19, 69, 195, 0.1)', border: '1px solid rgba(19, 69, 195, 0.3)' }}>
+              <span className="text-white font-nunito text-sm md:text-base font-medium">Lakshadweep</span>
+            </div>
+            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(19, 69, 195, 0.1)', border: '1px solid rgba(19, 69, 195, 0.3)' }}>
+              <span className="text-white font-nunito text-sm md:text-base font-medium">Puducherry</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* FAQ Section */}
       <section className="py-20 relative overflow-hidden" style={{ backgroundColor: '#0C002B' }}>

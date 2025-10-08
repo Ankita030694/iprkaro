@@ -29,24 +29,63 @@ export default function AboutPage() {
     revealSectionsRef.current = Array.from(sections) as HTMLDivElement[];
 
     let ticking = false;
+    let lastScrollY = window.scrollY;
+    
+    // Track maximum progress for each section (for scroll down behavior)
+    const maxProgressMap = new Map<HTMLDivElement, number>();
 
     const updateScrollProgress = () => {
       if (ticking) return;
       ticking = true;
 
       requestAnimationFrame(() => {
+        const currentScrollY = window.scrollY;
+        const isScrollingDown = currentScrollY > lastScrollY;
+        lastScrollY = currentScrollY;
+
         const viewportHeight = window.innerHeight;
+        const viewportCenter = viewportHeight / 2;
 
         revealSectionsRef.current.forEach((section) => {
           const rect = section.getBoundingClientRect();
           
-          // Simple approach: calculate progress based on how much the section has entered the viewport
-          // Progress = 0 when section is completely below viewport
-          // Progress = 1 when section top reaches the top of viewport
+          // Calculate section center position
+          const sectionCenter = rect.top + rect.height / 2;
           
-          const progress = Math.max(0, Math.min(1, 
-            (viewportHeight - rect.top) / viewportHeight
-          ));
+          // Calculate distance from viewport center
+          const distanceFromCenter = Math.abs(sectionCenter - viewportCenter);
+          
+          // Calculate progress based on scroll direction
+          let progress = 0;
+          
+          if (isScrollingDown) {
+            // When scrolling down: reveal when approaching/at center, stay revealed after
+            const maxDistance = viewportHeight / 2;
+            const calculatedProgress = Math.max(0, Math.min(1, 
+              1 - (distanceFromCenter / maxDistance)
+            ));
+            
+            // Keep the maximum progress achieved
+            const currentMaxProgress = maxProgressMap.get(section) || 0;
+            progress = Math.max(calculatedProgress, currentMaxProgress);
+            maxProgressMap.set(section, progress);
+          } else {
+            // When scrolling up: unreveal based on position relative to viewport
+            // Use a larger range to ensure complete unrevealing
+            const maxDistance = viewportHeight * 0.8; // Larger range for smoother unrevealing
+            
+            // If section is above viewport center, unreveal progressively
+            if (sectionCenter < viewportCenter) {
+              progress = Math.max(0, Math.min(1, 
+                1 - (Math.abs(sectionCenter - viewportCenter) / maxDistance)
+              ));
+            } else {
+              // If section is still below center while scrolling up, keep it revealed
+              progress = maxProgressMap.get(section) || 0;
+            }
+            
+            maxProgressMap.set(section, progress);
+          }
           
           // Update word opacity based on progress
           const wordElements = section.querySelectorAll('.reveal-word');
@@ -344,7 +383,7 @@ export default function AboutPage() {
       </div>
 
       {/* Our Story Timeline Section */}
-      <div ref={sectionsRef} className="reveal-container w-full py-16">
+      <div ref={sectionsRef} className="reveal-container w-full py-16 relative">
         <div className="text-center mb-16">
           <h2 
             className="text-3xl sm:text-4xl lg:text-[42px] font-bold"
@@ -359,43 +398,50 @@ export default function AboutPage() {
           </h2>
         </div>
         
+        {/* Decorative "Our" Text - Left Side - Desktop Only */}
+        <div
+          className="hidden lg:block absolute top-1/2 transform -translate-y-1/2 -rotate-90"
+          style={{
+            left: '0',
+            fontSize: '200px',
+            fontFamily: 'Nunito',
+            fontWeight: 700,
+            color: 'transparent',
+            WebkitTextStroke: '1px #FFB703',
+            letterSpacing: '2px',
+            userSelect: 'none',
+            pointerEvents: 'none',
+            zIndex: 1,
+            margin: 0,
+            padding: 0
+          }}
+        >
+          Our
+        </div>
+
+        {/* Decorative "Story" Text - Right Side - Desktop Only */}
+        <div
+          className="hidden lg:block absolute top-1/2 transform -translate-y-1/2 -rotate-90"
+          style={{
+            right: '0',
+            fontSize: '200px',
+            fontFamily: 'Nunito',
+            fontWeight: 700,
+            color: 'transparent',
+            WebkitTextStroke: '1px #FFB703',
+            letterSpacing: '2px',
+            userSelect: 'none',
+            pointerEvents: 'none',
+            zIndex: 1,
+            margin: 0,
+            padding: 0
+          }}
+        >
+          Story
+        </div>
+        
         {/* Desktop Timeline Section */}
         <div className="hidden lg:block max-w-6xl mx-auto relative">
-          {/* Decorative "Our" Text - Left Side */}
-          <div
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 -rotate-90"
-            style={{
-              left: '-200px',
-              fontSize: '200px',
-              fontFamily: 'Nunito',
-              fontWeight: 700,
-              color: 'transparent',
-              WebkitTextStroke: '1px #FFB703',
-              letterSpacing: '2px',
-              userSelect: 'none',
-              pointerEvents: 'none'
-            }}
-          >
-            Our
-          </div>
-
-          {/* Decorative "Story" Text - Right Side */}
-          <div
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 -rotate-90"
-            style={{
-              right: '-250px',
-              fontSize: '200px',
-              fontFamily: 'Nunito',
-              fontWeight: 700,
-              color: 'transparent',
-              WebkitTextStroke: '1px #FFB703',
-              letterSpacing: '2px',
-              userSelect: 'none',
-              pointerEvents: 'none'
-            }}
-          >
-            Story
-          </div>
 
           {/* Vertical Line */}
           <div

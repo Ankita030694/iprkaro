@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
@@ -11,6 +12,31 @@ export default function TrademarkRegistrationPage() {
   const toggleFaq = (index: number) => {
     setOpenFaq(openFaq === index ? null : index);
   };
+
+  // Function to generate state-specific slug URL
+  const generateStateSlug = (stateName: string) => {
+    const slug = stateName.toLowerCase()
+      .replace(/[^a-z0-9\s]/g, '') // Remove special characters
+      .replace(/\s+/g, '-') // Replace spaces with hyphens
+      .replace(/&/g, 'and') // Replace & with 'and'
+      .trim();
+    return `trademark-registration-in-${slug}`;
+  };
+
+  // List of all states and union territories
+  const states = [
+    'Andhra Pradesh', 'Arunachal Pradesh', 'Assam', 'Bihar', 'Chhattisgarh',
+    'Goa', 'Gujarat', 'Haryana', 'Himachal Pradesh', 'Jharkhand', 'Karnataka',
+    'Kerala', 'Madhya Pradesh', 'Maharashtra', 'Manipur', 'Meghalaya',
+    'Mizoram', 'Nagaland', 'Odisha', 'Punjab', 'Rajasthan', 'Sikkim',
+    'Tamil Nadu', 'Telangana', 'Tripura', 'Uttar Pradesh', 'Uttarakhand'
+  ];
+
+  const unionTerritories = [
+    'Andaman and Nicobar Islands', 'Chandigarh',
+    'Dadra and Nagar Haveli and Daman and Diu', 'Delhi',
+    'Jammu and Kashmir', 'Ladakh', 'Lakshadweep', 'Puducherry'
+  ];
 
   const trademarkFaqs = [
     {
@@ -950,6 +976,14 @@ Trademarks can include:
                       </option>
                     ))}
                   </select>
+                  <div className="mt-3 text-center space-x-2 space-y-2">
+                    <a
+                      href="/services/trademark-registration"
+                      className="inline-flex items-center px-4 py-2 text-sm font-medium text-[#0C002B] bg-[#FFB703] rounded-lg hover:bg-[#e6a503] transition-colors duration-300"
+                    >
+                      Learn More About Trademark Services
+                    </a>
+                  </div>
                 </div>
 
                 {/* Selected Plan Card */}
@@ -1286,6 +1320,14 @@ Trademarks can include:
                         </option>
                       ))}
                     </select>
+                    <div className="mt-2 text-center">
+                      <a
+                        href="/services/trademark-registration"
+                        className="inline-flex items-center px-3 py-1.5 text-xs font-medium text-[#0C002B] bg-[#FFB703] rounded-md hover:bg-[#e6a503] transition-colors duration-300"
+                      >
+                        Learn More About Trademark Services
+                      </a>
+                    </div>
                   </div>
 
                   {/* Selected Plan Card */}
@@ -1464,6 +1506,64 @@ Trademarks can include:
           __html: JSON.stringify(faqSchema),
         }}
       />
+
+      {/* We Provide Solutions In Section */}
+      <section className="py-20 relative overflow-hidden" style={{ backgroundColor: '#0C002B' }}>
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="text-center mb-12">
+            <h2 className="text-white font-nunito text-3xl md:text-4xl lg:text-5xl font-medium mb-4">
+              We Provide Solutions In:
+            </h2>
+            <p className="text-white font-nunito text-base md:text-lg opacity-80">
+              Comprehensive IPR services across all states and union territories of India
+            </p>
+          </div>
+
+          {/* States Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mb-12">
+            {states.map((state, index) => (
+              <Link
+                key={index}
+                href={`/services/trademark-registration/${generateStateSlug(state)}`}
+                className="p-4 rounded-lg text-center transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer group"
+                style={{
+                  background: 'rgba(255, 183, 3, 0.1)',
+                  border: '1px solid rgba(255, 183, 3, 0.3)'
+                }}
+              >
+                <span className="text-white font-nunito text-sm md:text-base font-medium group-hover:text-[#FFB703] transition-colors">
+                  {state}
+                </span>
+                <div className="mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <i className="fas fa-arrow-right text-[#FFB703] text-xs"></i>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          {/* Union Territories Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {unionTerritories.map((territory, index) => (
+              <Link
+                key={index}
+                href={`/services/trademark-registration/${generateStateSlug(territory)}`}
+                className="p-4 rounded-lg text-center transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer group"
+                style={{
+                  background: 'rgba(19, 69, 195, 0.1)',
+                  border: '1px solid rgba(19, 69, 195, 0.3)'
+                }}
+              >
+                <span className="text-white font-nunito text-sm md:text-base font-medium group-hover:text-[#1345C3] transition-colors">
+                  {territory}
+                </span>
+                <div className="mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <i className="fas fa-arrow-right text-[#1345C3] text-xs"></i>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* FAQ Section */}
       <section className="py-20 relative overflow-hidden" style={{ backgroundColor: '#0C002B' }}>

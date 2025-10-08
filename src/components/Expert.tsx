@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Expert() {
   const [selectedService, setSelectedService] = useState(0);
@@ -333,6 +334,14 @@ export default function Expert() {
                             </span>
                           </div>
                         ))}
+                        {/* Learn More Button */}
+                        <div className="mt-4 pt-2 border-t border-white/20">
+                          <Link href={`/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`}>
+                            <span className="inline-block text-transparent bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text font-medium hover:opacity-80 transition-opacity duration-200">
+                              Learn More →
+                            </span>
+                          </Link>
+                        </div>
                       </div>
                     </div>
                   </div>

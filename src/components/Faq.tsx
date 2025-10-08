@@ -117,7 +117,15 @@ const Faq = () => {
           </div>
 
           {/* Right Section - FAQ Items */}
-          <div className="space-y-4">
+          <div 
+            className="space-y-4 p-6"
+            style={{
+              borderRadius: '20px',
+              background: 'linear-gradient(140deg, rgba(12, 0, 43, 0.10) 6.89%, rgba(255, 183, 3, 0.10) 101.84%)',
+              boxShadow: '4px 4px 25.2px 0 rgba(0, 0, 0, 0.15), 0 0 20px 1px rgba(255, 255, 255, 0.10) inset',
+              backdropFilter: 'blur(122.05px)'
+            }}
+          >
             {faqs.map((faq, index) => (
               <div key={index} className="relative">
                 <div 

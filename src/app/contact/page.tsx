@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import OurHeadOffice from '@/components/OurHeadOffice';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -27,12 +28,9 @@ export default function ContactPage() {
   };
 
   const interestOptions = [
-    'Trademark Registration & Protection',
-    'Trademark Health Check & Risk Report',
-    'AI-Powered Brand Search',
-    'Intellectual Property Consultation',
-    'Monitoring & Enforcement Solutions',
-    'Something Else'
+    'Trademark Registration',
+    'Copyright Protection',
+    'Patent Services'
   ];
 
   return (
@@ -46,12 +44,12 @@ export default function ContactPage() {
     }}
   >
       {/* Main Content Container */}
-      <div className="w-full py-8 sm:py-12 md:py-16 px-4 sm:px-8 md:px-12 lg:px-24 pt-16 sm:pt-20 md:pt-24 lg:pt-32">
+      <div className="w-full px-4 sm:px-8 md:px-12 lg:px-24 pt-32 sm:pt-36 md:pt-30 lg:pt-44">
         <div className="w-full mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16 items-start">
             
             {/* Left Section - Content */}
-            <div className="space-y-6 sm:space-y-8 md:space-y-10 lg:space-y-12 mt-8 sm:mt-12 md:mt-16 lg:mt-20 pt-16 sm:pt-0">
+            <div className="space-y-6 sm:space-y-8 md:space-y-10 lg:space-y-12 mt-4 sm:mt-6 md:mt-8 lg:mt-10">
               {/* IPR Logo */}
               <div className="hidden sm:flex items-center gap-3 sm:gap-4">
                 <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-27 md:h-27 relative">
@@ -105,7 +103,7 @@ export default function ContactPage() {
             </div>
 
             {/* Right Section - Contact Form */}
-            <div className="w-full">
+            <div className="w-full flex justify-center lg:justify-start">
               {/* Glassmorphism Container */}
               <div 
                 className="rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 w-full"
@@ -113,7 +111,9 @@ export default function ContactPage() {
                   background: `linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), linear-gradient(145deg, rgba(12, 0, 43, 0.40) 6.6%, rgba(255, 183, 3, 0.40) 120.24%), rgba(0, 0, 0, 0.50)`,
                   boxShadow: '0 0 20px 0 rgba(255, 255, 255, 0.31) inset',
                   backdropFilter: 'blur(31.7px)',
-                  WebkitBackdropFilter: 'blur(31.7px)'
+                  WebkitBackdropFilter: 'blur(31.7px)',
+                  transform: 'scale(0.9)',
+                  transformOrigin: 'top center'
                 }}
               >
                 <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5 md:space-y-6">
@@ -245,7 +245,7 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
-      {/* <OfficeContact /> */}
+      <OurHeadOffice />
       <div className="bg-[#0C002B]">
         <div className="w-full py-8 sm:py-12 md:py-16 px-4 sm:px-8 md:px-12">
           <div className="w-full mx-auto">
