@@ -20,14 +20,14 @@ export default function ClientLogoSlider({ className = '' }: ClientLogoSliderPro
 
 
   return (
-    <div className={`w-full overflow-hidden pt-15 ${className}`}>
-      <div className="relative">
+    <div className={`w-full overflow-hidden h-full ${className}`}>
+      <div className="relative h-full flex items-center">
         {/* Horizontal Logo Slider */}
         <div className="w-full">
           <motion.div 
-            className="flex items-center gap-8 sm:gap-12 lg:gap-16"
+            className="flex items-center gap-4 sm:gap-6 md:gap-8 lg:gap-10"
             animate={{
-              x: [0, -1664] // 8 logos * (160px + 48px gap) = 1664px
+              x: [0, -1216] // 8 logos * (128px + 24px gap) = 1216px
             }}
             transition={{
               x: {
@@ -42,23 +42,34 @@ export default function ClientLogoSlider({ className = '' }: ClientLogoSliderPro
             {logos.map((logo, index) => (
               <motion.div
                 key={`${logo}-${index}`}
-                className="flex-shrink-0 h-20 sm:h-24 lg:h-28 w-32 sm:w-40 lg:w-48 flex items-center justify-center p-2 sm:p-3 lg:p-4"
+                className="flex-shrink-0 h-12 sm:h-14 md:h-15 lg:h-16 w-24 sm:w-28 md:w-30 lg:w-32 flex items-center justify-center p-1.5"
                 whileHover={{ 
                   scale: 1.05,
                   y: -2
                 }}
                 transition={{ duration: 0.3 }}
+                style={{
+                  willChange: 'transform',
+                  backfaceVisibility: 'hidden',
+                  WebkitBackfaceVisibility: 'hidden'
+                } as React.CSSProperties}
               >
                 <Image
                   src={logo}
                   alt={`Client Logo ${(index % 8) + 1}`}
-                  width={200}
-                  height={120}
+                  width={128}
+                  height={80}
                   className="object-contain filter-none w-auto h-auto max-w-full max-h-full"
                   style={{ 
                     filter: 'none',
-                    backgroundColor: 'transparent'
-                  }}
+                    backgroundColor: 'transparent',
+                    imageRendering: 'crisp-edges',
+                    transform: 'translateZ(0)',
+                    backfaceVisibility: 'hidden',
+                    WebkitBackfaceVisibility: 'hidden',
+                    WebkitFontSmoothing: 'antialiased'
+                  } as React.CSSProperties}
+                  unoptimized={true}
                 />
               </motion.div>
             ))}

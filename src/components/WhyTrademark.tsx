@@ -392,22 +392,33 @@ export default function WhyTrademark() {
   ];
 
   return (
-    <section className="w-full py-8 md:py-16 px-4 relative overflow-visible mt-5 rounded-t-[40px] md:min-h-fit min-h-[1200px]" style={{
+    <section className="w-full px-4 relative overflow-visible mt-5 rounded-t-[40px] md:min-h-fit min-h-[1200px]" style={{
       background: 'linear-gradient(to bottom, #FFFFFF 0%, #6E5E93 20%, #160049 55%, #0C002B 100%)'
     }}>
       
     
       
-      <div className="w-full mx-auto relative z-10 px-4 md:px-10">
-      <h2 className="text-white text-center font-nunito text-[28px] md:text-[45px] font-medium leading-[32px] md:leading-[45px] w-full my-8 md:my-20">
-      Why Register Your Trademark with IPRKaro?
+      <div className="w-full mx-auto relative z-10 px-4 md:px-10 lg:px-8">
+      <h2 className="text-white text-center font-nunito text-[28px] md:text-[45px] lg:text-[38px] font-medium leading-[32px] md:leading-[45px] lg:leading-[42px] w-full my-8 md:my-20 lg:my-16">
+          <span
+                          className="font-nunito font-bold text-[28px] md:text-[44px] lg:text-[37px]"
+                          style={{
+                            background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.75) 0%, rgba(255, 183, 3, 0.75) 50%, rgba(138, 56, 245, 0.75) 100%)',
+                            backgroundClip: 'text',
+                            WebkitBackgroundClip: 'text',
+                            WebkitTextFillColor: 'transparent'
+                          }}
+                        >
+                         Why Register Your Trademark with IPRKaro?
+                        </span>
+      
         </h2>
         
         {/* Mobile Layout: Right column first, then left cards */}
-        <div className="flex flex-col lg:grid lg:grid-cols-[2fr_1fr] items-stretch gap-4 md:gap-6">
+        <div className="flex flex-col lg:grid lg:grid-cols-[2fr_1fr] items-stretch gap-4 md:gap-6 lg:gap-4">
           {/* Right Column - Info Panels (First on mobile) */}
           <div
-            className="flex w-full py-6 md:py-10 px-4 md:px-7 flex-col justify-between items-center gap-4 md:gap-6 rounded-[15px] border-[6px] border-white/[0.07] bg-white/[0.05] mx-auto h-full order-1 lg:order-2"
+            className="flex w-full py-6 md:py-10 lg:py-7 px-4 md:px-7 lg:px-5 flex-col justify-between items-center gap-4 md:gap-6 lg:gap-4 rounded-[15px] border-[6px] lg:border-[4px] border-white/[0.07] bg-white/[0.05] mx-auto h-full order-1 lg:order-2"
           >
             {/* Trust & Rating Card */}
             <div
@@ -434,17 +445,17 @@ export default function WhyTrademark() {
     </clipPath>
   </defs>
 </svg>
-                  <span className="text-white font-nunito text-[20px] font-medium leading-[24px]">
+                  <span className="text-white font-nunito text-[20px] lg:text-[18px] font-medium leading-[24px] lg:leading-[22px]">
                     4.7
                   </span>
                 </div>
                 
                 {/* Main Content - Center */}
                 <div className="text-center">
-                  <div className="text-white font-nunito text-[18px] font-medium leading-[22px] mb-2">
+                  <div className="text-white font-nunito text-[18px] lg:text-[16px] font-medium leading-[22px] lg:leading-[20px] mb-2">
                     Trusted by Over 1.25 Lakh Clients
                   </div>
-                  <div className="text-white font-nunito text-[12px] italic font-normal leading-[14px]">
+                  <div className="text-white font-nunito text-[12px] lg:text-[11px] italic font-normal leading-[14px] lg:leading-[13px]">
                     Rated 4.7/5 stars for reliable trademark registration across India, startups, and enterprises.
                   </div>
                 </div>
@@ -469,17 +480,17 @@ export default function WhyTrademark() {
     </clipPath>
   </defs>
 </svg>
-                  <span className="text-white font-nunito text-[25px] font-medium leading-[30px] ml-1">
+                  <span className="text-white font-nunito text-[25px] lg:text-[22px] font-medium leading-[30px] lg:leading-[26px] ml-1">
                     4.7
                   </span>
                 </div>
                 
                 {/* Right Column - Remaining Content */}
                 <div className="flex-1">
-                  <div className="text-white font-nunito text-[20px] font-medium leading-[24px] mb-2">
+                  <div className="text-white font-nunito text-[20px] lg:text-[18px] font-medium leading-[24px] lg:leading-[22px] mb-2">
                     Trusted by Over 1.25 Lakh Clients
                   </div>
-                  <div className="text-white font-nunito text-[12px] italic font-normal leading-[14px]">
+                  <div className="text-white font-nunito text-[12px] lg:text-[11px] italic font-normal leading-[14px] lg:leading-[13px]">
                     Rated 4.7/5 stars for reliable trademark registration across India, startups, and enterprises.
                   </div>
                 </div>
@@ -488,15 +499,15 @@ export default function WhyTrademark() {
 
             {/* Certification Checklist */}
             <div
-              className="flex flex-col py-2.5 pl-2.5 pr-[119px] items-start self-stretch rounded-[20px] border-2 border-white/[0.15] backdrop-blur-[16px]"
+              className="flex flex-col py-2.5 pl-2.5 pr-[119px] lg:pr-[80px] items-start self-stretch rounded-[20px] lg:rounded-[16px] border-2 border-white/[0.15] backdrop-blur-[16px]"
               style={{
                 background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.62) 0%, rgba(255, 255, 255, 0.62) 100%)',
               }}
             >
-              <div className="w-full text-center text-white font-nunito text-[17px] font-semibold leading-[22px] mb-2">
+              <div className="w-full text-center text-white font-nunito text-[17px] lg:text-[15px] font-semibold leading-[22px] lg:leading-[20px] mb-2">
                 Government & International Recognition:
               </div>
-              <ul className="flex flex-col gap-3 m-0 p-0 list-none">
+              <ul className="flex flex-col gap-3 lg:gap-2 m-0 p-0 list-none">
                 {checklistItems.map((item, index) => (
                   <li key={index} className="flex items-center gap-3">
                     {/* Custom SVG Checkmark */}
@@ -517,7 +528,7 @@ export default function WhyTrademark() {
                         </defs>
                       </svg>
                     </span>
-                    <span className="text-white font-nunito text-[15px] font-medium leading-[18px]">
+                    <span className="text-white font-nunito text-[15px] lg:text-[13px] font-medium leading-[18px] lg:leading-[16px]">
                       {item}
                     </span>
                   </li>
@@ -527,13 +538,13 @@ export default function WhyTrademark() {
 
             {/* Guidelines Partners */}
             <div
-              className="flex p-2.5 px-6 justify-center items-center self-stretch rounded-[20px] border-2 border-white/[0.15] backdrop-blur-[16px]"
+              className="flex p-2.5 px-6 lg:px-4 justify-center items-center self-stretch rounded-[20px] lg:rounded-[16px] border-2 border-white/[0.15] backdrop-blur-[16px]"
               style={{
                 background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.62) 0%, rgba(255, 255, 255, 0.62) 100%)',
               }}
             >
               <div className="w-full">
-                <div className="text-white text-center font-nunito text-[25px] font-medium leading-[30px] mb-4">
+                <div className="text-white text-center font-nunito text-[25px] lg:text-[20px] font-medium leading-[30px] lg:leading-[26px] mb-4 lg:mb-3">
                   We work with Guidelines of
                 </div>
                 {/* Mobile Layout - Single Row */}
@@ -584,7 +595,7 @@ export default function WhyTrademark() {
           {/* Left Column - Feature Cards (Second on mobile) */}
           <div className="w-full order-2 lg:order-1">
             {/* Desktop Layout */}
-            <div className="hidden md:grid grid-cols-2 grid-rows-3 gap-3 md:gap-4 lg:gap-6 w-full h-full">
+            <div className="hidden md:grid grid-cols-2 grid-rows-3 gap-3 md:gap-4 lg:gap-3 w-full h-full">
               {featureCards.map((card, index) => {
                 const featureRoutes = [
                   '/features/fast-trademark-registration',
@@ -597,19 +608,19 @@ export default function WhyTrademark() {
 
                 return (
                   <Link key={index} href={featureRoutes[index]}>
-                    <div className="relative w-full min-h-[120px] md:min-h-[140px] lg:min-h-[160px] rounded-[15px] border-[6px] border-white/[0.07] bg-white/[0.05] flex items-center px-3 md:px-4 lg:px-8 py-3 md:py-4 lg:py-5 overflow-hidden group transition-all duration-300 hover:-translate-y-2 cursor-pointer"
+                    <div className="relative w-full min-h-[120px] md:min-h-[140px] lg:min-h-[130px] rounded-[15px] lg:rounded-[12px] border-[6px] lg:border-[4px] border-white/[0.07] bg-white/[0.05] flex items-center px-3 md:px-4 lg:px-5 py-3 md:py-4 lg:py-3 overflow-hidden group transition-all duration-300 hover:-translate-y-2 cursor-pointer"
                   >
                   {/* Decorative SVG Icon - Top Right */}
                   <div
-                    className="w-20 md:w-32 h-20 md:h-32 flex-shrink-0 absolute top-0 right-0 z-[1] flex items-center justify-center pointer-events-none opacity-60"
+                    className="w-20 md:w-32 lg:w-24 h-20 md:h-32 lg:h-24 flex-shrink-0 absolute top-0 right-0 z-[1] flex items-center justify-center pointer-events-none opacity-60"
                   >
                     {cardIcons[index]}
                   </div>
                   <div className="relative z-[2] w-full">
-                    <h3 className="text-white font-nunito text-[16px] md:text-[20px] lg:text-[25px] font-semibold leading-tight mb-1 md:mb-1.5 lg:mb-2 break-words">
+                    <h3 className="text-white font-nunito text-[16px] md:text-[20px] lg:text-[18px] font-semibold leading-tight mb-1 md:mb-1.5 lg:mb-1 break-words">
                       {card.title}
                     </h3>
-                    <p className="text-white font-nunito text-[10px] md:text-xs lg:text-sm xl:text-base font-medium leading-snug m-0 break-words">
+                    <p className="text-white font-nunito text-[10px] md:text-xs lg:text-[11px] font-medium leading-snug m-0 break-words">
                       {card.description}
                     </p>
                   </div>
@@ -677,39 +688,39 @@ export default function WhyTrademark() {
       </div>
 
       {/* How It Works? */}
-      <div className="w-full relative z-10 px-4 md:px-20 min-h-fit">
-        <h2 className="text-white text-center font-nunito text-[28px] md:text-[45px] font-medium leading-[32px] md:leading-[45px] w-full my-8 md:my-20">
+      <div className="w-full relative z-10 px-4 md:px-20 lg:px-12 min-h-fit">
+        <h2 className="text-white text-center font-nunito text-[28px] md:text-[45px] lg:text-[38px] font-medium leading-[32px] md:leading-[45px] lg:leading-[42px] w-full my-8 md:my-20 lg:my-16">
           How It Works
         </h2>
         {/* Desktop Layout */}
-        <div className="hidden md:flex flex-row w-full gap-4">
+        <div className="hidden md:flex flex-row w-full gap-4 lg:gap-3">
           {/* Step 1: Instant AI-Powered Trademark Search */}
           <div className="flex-1 flex justify-center items-center">
             <div
-              className="relative w-full h-full rounded-[25px] border-[6px] border-white/[0.07] bg-white/[0.05] flex flex-col overflow-hidden group transition-all duration-300"
+              className="relative w-full h-full rounded-[25px] lg:rounded-[20px] border-[6px] lg:border-[4px] border-white/[0.07] bg-white/[0.05] flex flex-col overflow-hidden group transition-all duration-300"
             >
               {/* Background Image - heross.png in bottom right */}
-              <div className="absolute bottom-[-100px] right-[-100px] z-0">
+              <div className="absolute bottom-[-100px] lg:bottom-[-80px] right-[-100px] lg:right-[-80px] z-0">
                 <Image
                   src="/figmacomp/heross.png"
                   alt="Hero background"
                   width={400}
                   height={300}
-                  className="object-cover"
+                  className="object-cover lg:w-[320px] lg:h-[200px] rounded-lg"
                 />
               </div>
               {/* Content */}
               <div className="relative z-10 flex flex-col h-full">
-                <div className="flex flex-col justify-start px-3 md:px-4 lg:px-8 py-3 md:py-4 lg:py-5 items-start">
-                  <h3 className="text-white font-nunito text-[18px] md:text-[22px] lg:text-[25px] font-semibold leading-tight mb-1 md:mb-2 break-words mt-6 md:mt-8 lg:mt-12">
+                <div className="flex flex-col justify-start px-3 md:px-4 lg:px-5 py-3 md:py-4 lg:py-4 items-start">
+                  <h3 className="text-white font-nunito text-[18px] md:text-[22px] lg:text-[20px] font-semibold leading-tight mb-1 md:mb-2 lg:mb-1.5 break-words mt-6 md:mt-8 lg:mt-6">
                     Instant AI-Powered Trademark Search
                   </h3>
-                  <p className="text-white font-nunito text-[10px] md:text-xs lg:text-sm xl:text-base font-medium leading-snug m-0 break-words">
+                  <p className="text-white font-nunito text-[10px] md:text-[10px] lg:text-[13px] font-medium leading-snug m-0 break-words">
                     Enter your brand name or logo to instantly access a comprehensive AI-driven trademark database scan. Receive instant insights on potential conflicts, similarities, and risks—no manual searching needed.
                   </p>
                 </div>
                 {/* Search SVG - Bottom Left */}
-                <div className="absolute bottom-0 left-0 w-32 h-20 flex items-end justify-start">
+                <div className="absolute bottom-0 left-0 w-32 lg:w-24 h-10 lg:h-16 flex items-end justify-start">
                   <Image
                     src="/figmacomp/search.svg"
                     alt="Search icon"
@@ -722,18 +733,18 @@ export default function WhyTrademark() {
             </div>
           </div>
           {/* Step 2 and 3: Report and Approval Chances */}
-          <div className="flex-1 flex flex-col gap-4">
+          <div className="flex-1 flex flex-col gap-4 lg:gap-3">
             {/* Step 2: Comprehensive Trademark Search Report */}
             <div className="flex-1 flex justify-center items-center">
               <div
-                className="relative w-full rounded-[25px] border-[6px] border-white/[0.07] bg-white/[0.05] flex flex-col overflow-hidden group transition-all duration-300"
+                className="relative w-full rounded-[25px] lg:rounded-[20px] border-[6px] lg:border-[4px] border-white/[0.07] bg-white/[0.05] flex flex-col overflow-hidden group transition-all duration-300"
               >
                 <div className="relative z-10 flex flex-col h-full">
-                  <div className="flex flex-col justify-start px-3 md:px-4 lg:px-8 py-3 md:py-4 lg:py-5 items-start">
-                    <h3 className="text-white font-nunito text-[18px] md:text-[22px] lg:text-[25px] font-semibold leading-tight mb-1 md:mb-2 break-words mt-6 md:mt-8 lg:mt-12">
+                  <div className="flex flex-col justify-start px-3 md:px-4 lg:px-5 py-3 md:py-4 lg:py-4 items-start">
+                    <h3 className="text-white font-nunito text-[18px] md:text-[22px] lg:text-[20px] font-semibold leading-tight mb-1 md:mb-2 lg:mb-1.5 break-words mt-6 md:mt-8 lg:mt-6">
                       Comprehensive Trademark Search Report
                     </h3>
-                    <p className="text-white font-nunito text-[10px] md:text-xs lg:text-sm xl:text-base font-medium leading-snug m-0 break-words">
+                    <p className="text-white font-nunito text-[10px] md:text-xs lg:text-[13px] font-medium leading-snug m-0 break-words">
                       Get a detailed trademark search report generated by AI, complete with conflict analysis, phonetic matching, and a registerability score to help you make informed filing decisions.
                     </p>
                   </div>
@@ -743,15 +754,15 @@ export default function WhyTrademark() {
             {/* Step 3: Know Your Approval Chances */}
             <div className="flex-1 flex justify-center items-center">
               <div
-                className="relative w-full rounded-[25px] border-[6px] border-white/[0.07] bg-white/[0.05] flex flex-col overflow-hidden group transition-all duration-300"
+                className="relative w-full rounded-[25px] lg:rounded-[20px] border-[6px] lg:border-[4px] border-white/[0.07] bg-white/[0.05] flex flex-col overflow-hidden group transition-all duration-300"
               >
                 <div className="relative z-10 flex flex-col h-full">
-                  <div className="flex flex-col justify-start px-3 md:px-4 lg:px-8 py-3 md:py-4 lg:py-5 items-start">
-                    <h3 className="text-white font-nunito text-[18px] md:text-[22px] lg:text-[25px] font-semibold leading-tight mb-1 md:mb-2 break-words mt-6 md:mt-8 lg:mt-12">
+                  <div className="flex flex-col justify-start px-3 md:px-4 lg:px-5 py-3 md:py-4 lg:py-4 items-start">
+                    <h3 className="text-white font-nunito text-[18px] md:text-[22px] lg:text-[20px] font-semibold leading-tight mb-1 md:mb-2 lg:mb-1.5 break-words mt-6 md:mt-8 lg:mt-6">
                       Know Your Approval Chances
                     </h3>
-                    <p className="text-white font-nunito text-[10px] md:text-xs lg:text-sm xl:text-base font-medium leading-snug m-0 break-words">
-                      Understand your brand’s approval likelihood with a clear risk score and suggested trademark classes to increase registration success and reduce rejections.
+                    <p className="text-white font-nunito text-[10px] md:text-xs lg:text-[13px] font-medium leading-snug m-0 break-words">
+                      Understand your brand's approval likelihood with a clear risk score and suggested trademark classes to increase registration success and reduce rejections.
                     </p>
                   </div>
                 </div>
@@ -759,18 +770,18 @@ export default function WhyTrademark() {
             </div>
           </div>
           {/* Call to Action: Check Your Registrability Now */}
-          <div className="flex-1 flex flex-col items-stretch min-w-[260px]">
+          <div className="flex-1 flex flex-col items-stretch min-w-[260px] lg:min-w-[220px]">
             <div
-              className="relative w-full h-full rounded-[25px] border-[6px] border-[#FFB703]/[0.2] bg-white/[0.03] flex flex-col items-center justify-center px-6 py-8 overflow-hidden group transition-all duration-300"
+              className="relative w-full h-full rounded-[25px] lg:rounded-[20px] border-[6px] lg:border-[4px] border-[#FFB703]/[0.2] bg-white/[0.03] flex flex-col items-center justify-center px-6 lg:px-4 py-8 lg:py-6 overflow-hidden group transition-all duration-300"
             >
-              <h3 className="text-white font-nunito text-[20px] md:text-[24px] font-semibold leading-tight mb-2 text-center">
+              <h3 className="text-white font-nunito text-[20px] md:text-[24px] lg:text-[20px] font-semibold leading-tight mb-2 lg:mb-1.5 text-center -mt-20">
                 Check Your Registrability Now
               </h3>
-              <p className="text-white font-nunito text-[12px] md:text-[14px] font-medium leading-snug m-0 mb-4 text-center">
+              <p className="text-white font-nunito text-[12px] md:text-[14px] lg:text-[13px] font-medium leading-snug m-0 mb-4 lg:mb-3 text-center">
                 Use our AI-powered tool to check your trademark eligibility instantly and secure your brand with confidence.
               </p>
               <button
-                className="relative overflow-hidden border-2 border-[#FFB703] rounded-[10px] px-4 md:px-6 py-1.5 md:py-2 font-nunito font-semibold text-sm md:text-base mt-2 group"
+                className="relative overflow-hidden border-2 border-[#FFB703] rounded-[10px] px-4 md:px-6 lg:px-4 py-1.5 md:py-2 lg:py-1.5 font-nunito font-semibold text-sm md:text-base lg:text-sm mt-2 group"
                 style={{ color: '#FFB703', background: 'transparent' }}
               >
                 <span className="relative z-10 transition-colors duration-300 group-hover:text-white text-white">
@@ -805,6 +816,17 @@ export default function WhyTrademark() {
                   }
                 `}</style>
               </button>
+              
+              {/* Background Image - mess.png in bottom center */}
+              <div className="absolute bottom-[-100px] lg:bottom-[-90px] left-1/2 transform -translate-x-1/2 z-0">
+                <Image
+                  src="/mess.png"
+                  alt="Messenger chat icon"
+                  width={400}
+                  height={300}
+                  className="object-contain lg:w-[600px] lg:h-[250px] rounded-lg"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -930,6 +952,17 @@ export default function WhyTrademark() {
                   }
                 `}</style>
               </button>
+              
+              {/* Background Image - mess.png in bottom center */}
+              <div className="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 z-0">
+                <Image
+                  src="/mess.png"
+                  alt="Messenger chat icon"
+                  width={200}
+                  height={150}
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>

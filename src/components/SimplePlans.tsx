@@ -8,7 +8,7 @@ export default function SimplePlans() {
   const plans = [
     {
       id: 'standard',
-      name: 'AI Trademark Filing – Standard',
+      name: 'AI Trademark Filing Process – Standard',
       subtitle: 'Deeper search with risk insights',
       description: 'Best for small businesses/startups',
       content: 'Essential trademark protection',
@@ -65,13 +65,13 @@ export default function SimplePlans() {
         }
         @media (max-width: 1023px) {
           .mobile-scroll-container {
-            padding-left: 8px;
-            padding-right: 8px;
-            gap: 16px;
+            padding-left: 5.76px;
+            padding-right: 5.76px;
+            gap: 11.52px;
           }
           /* Ensure cards maintain proper height on mobile */
           .mobile-scroll-container > div {
-            min-height: 500px !important;
+            min-height: 360px !important;
           }
         }
       `}</style>
@@ -80,21 +80,21 @@ export default function SimplePlans() {
       <div className="absolute inset-0 bg-[#0C002B]"></div>
 
       {/* Main Content */}
-      <div className="relative z-10 mt-8 md:mt-20 px-2 lg:px-4 mb-8 md:mb-20">
+      <div className="relative z-10 mt-6 md:mt-16 px-2 lg:px-3 mb-6 md:mb-16">
         <div className="max-w-8xl mx-auto">
           {/* Section Heading with Gradient Text */}
-          <div className="text-center mb-8 md:mb-12">
-            <h2 className="text-white text-center font-nunito text-[28px] md:text-[45px] font-medium leading-[32px] md:leading-[45px] w-full mb-4">
+          <div className="text-center mb-6 md:mb-10">
+            <h2 className="text-white text-center font-nunito text-[23.4px] md:text-[36px] font-medium leading-[27px] md:leading-[39.6px] w-full mb-3">
             Trademark Registration Packages with AI-Powered Search Report
             </h2>
-            <p className="text-white font-nunito text-[10px] md:text-xs lg:text-sm xl:text-base font-medium text-center">
+            <p className="text-white font-nunito text-[10.8px] md:text-[12.6px] lg:text-[13.5px] xl:text-[14.4px] font-medium text-center">
               Search, File, Secure.
             </p>
           </div>
 
           {/* Pricing Cards */}
-          <div 
-            className="mobile-scroll-container flex flex-row overflow-x-auto overflow-y-hidden justify-start items-start lg:flex-row lg:items-center lg:justify-center lg:overflow-x-visible mb-8 md:mb-12 mt-8 md:mt-20 gap-4 lg:gap-8 pb-4 px-2 lg:px-0" 
+          <div
+            className="mobile-scroll-container flex flex-row overflow-x-auto overflow-y-hidden justify-start items-start lg:flex-row lg:items-center lg:justify-center lg:overflow-x-visible mb-6 md:mb-10 mt-6 md:mt-16 gap-3 lg:gap-6 pb-3 px-2 lg:px-0" 
             style={{ 
               scrollbarWidth: 'none', 
               msOverflowStyle: 'none',
@@ -110,9 +110,9 @@ export default function SimplePlans() {
                 onClick={() => setSelectedPlan(plan.id)}
                 style={{
                   display: 'flex',
-                  width: 'clamp(320px, 75vw, 448px)', // Reduced mobile width to 320px (75% of original) to show part of second card
-                  minHeight: 'clamp(500px, 75vh, 650px)', // Increased minimum height to accommodate all content
-                  padding: '15px 24px 24px 24px',
+                  width: 'clamp(276.3px, 72vw, 387px)',
+                  minHeight: 'clamp(360px, 60vh, 468px)',
+                  padding: '10.8px 17.28px 17.28px 17.28px',
                   flexDirection: 'column',
                   alignItems: 'center',
                   flexShrink: 0
@@ -122,9 +122,9 @@ export default function SimplePlans() {
                 <div
                   className="w-full relative transition-all duration-300"
                   style={{
-                    borderRadius: '30px',
-                    padding: '4px',
-                    paddingTop: '60px'
+                    borderRadius: '21.6px',
+                    padding: '2.88px',
+                    paddingTop: '43.2px'
                   }}
                 >
                   {/* Blue Gradient Background - Only for middle card */}
@@ -133,7 +133,7 @@ export default function SimplePlans() {
                       index === 1 ? 'opacity-100' : 'opacity-0'
                     }`}
                     style={{
-                      borderRadius: '30px',
+                      borderRadius: '27px',
                       background: 'linear-gradient(180deg, #1345C3 0%, rgba(19, 69, 195, 0) 50%)',
                       pointerEvents: 'none'
                     }}
@@ -160,12 +160,12 @@ export default function SimplePlans() {
                   <div
                     className="relative flex flex-col z-10 transition-all duration-300 min-h-0 flex-1"
                     style={{
-                      borderRadius: index === 1 ? '26px' : '25px',
+                      borderRadius: index === 1 ? '18.72px' : '18px',
                       background: index === 1 ? '#000' : 'rgba(0, 0, 0, 0.05)',
-                      boxShadow: index === 1 ? 'none' : '0 0 20px 0 rgba(255, 255, 255, 0.31) inset',
-                      backdropFilter: 'blur(16px)',
+                      boxShadow: index === 1 ? 'none' : '0 0 14.4px 0 rgba(255, 255, 255, 0.31) inset',
+                      backdropFilter: 'blur(11.52px)',
                       width: '100%',
-                      minHeight: 'clamp(450px, 60vh, 600px)' // Increased to accommodate all content properly
+                      minHeight: 'clamp(324px, 48vh, 432px)'
                     }}
                   >
 
@@ -173,12 +173,12 @@ export default function SimplePlans() {
                     <div
                       className="relative flex flex-col h-full p-6"
                       style={{
-                        borderRadius: '0 0 26px 26px'
+                        borderRadius: '0 0 18.72px 18.72px'
                       }}
                     >
                       {/* Plan Name Header - Now inside the card */}
                       <div className="w-full text-center mb-4">
-                        <h3 className="text-white font-nunito text-[16px] md:text-[20px] lg:text-[25px] font-semibold">
+                        <h3 className="text-white font-nunito text-[13.5px] md:text-[16.2px] lg:text-[19.8px] font-semibold leading-snug">
                           {plan.name}
                         </h3>
                       </div>
@@ -189,8 +189,8 @@ export default function SimplePlans() {
                         <div
                           className="text-white font-nunito font-bold flex-shrink-0"
                           style={{
-                            fontSize: '30px',
-                            lineHeight: '30px',
+                            fontSize: '25.2px',
+                            lineHeight: '25.2px',
                             fontWeight: 700
                           }}
                         >
@@ -199,24 +199,24 @@ export default function SimplePlans() {
                       </div>
 
                       {/* Description Text */}
-                      <p className="text-white font-nunito text-[10px] md:text-xs lg:text-sm xl:text-base font-medium mb-4">
+                      <p className="text-white font-nunito text-[9.9px] md:text-[10.8px] lg:text-[11.7px] xl:text-[12.6px] font-medium mb-4 leading-relaxed">
                         {plan.description}
                       </p>
 
                       {/* Content Text */}
-                      <p className="text-white font-nunito text-[10px] md:text-xs lg:text-sm xl:text-base font-medium mb-6">
+                      <p className="text-white font-nunito text-[9.9px] md:text-[10.8px] lg:text-[11.7px] xl:text-[12.6px] font-medium mb-6 leading-relaxed">
                         {plan.content}
                       </p>
 
                       {/* Features List - Flexible height */}
-                      <div className="space-y-2 flex-1 mb-4 overflow-y-auto">
+                      <div className="space-y-3 flex-1 mb-4 overflow-y-auto">
                         {plan.features.map((feature, featIndex) => (
                           <div key={featIndex} className="flex items-start">
-                            <i className="fas fa-check text-green-400 mr-3 mt-1 flex-shrink-0"></i>
+                            <i className="fas fa-check text-green-400 mr-3 mt-1 flex-shrink-0 text-sm"></i>
                             <span
                               className="text-white font-nunito leading-relaxed"
                               style={{
-                                fontSize: '14px',
+                                fontSize: '11.7px',
                                 fontWeight: 500
                               }}
                             >
@@ -229,18 +229,18 @@ export default function SimplePlans() {
                       {/* Get Protected Button - Fixed at bottom */}
                       <div className="flex-shrink-0 mt-auto">
                         <button
-                          className="w-full text-center py-3 px-6 transition-all duration-300 hover:scale-105"
+                          className="w-full text-center py-3 px-5 transition-all duration-300 hover:scale-105"
                           style={{
-                            borderRadius: '15px',
+                            borderRadius: '10.8px',
                             background: '#FFB703',
-                            boxShadow: '0 0 20px 0 #000 inset'
+                            boxShadow: '0 0 14.4px 0 #000 inset'
                           }}
                         >
                           <span
-                            className="font-nunito font-semibold text-[18px] md:text-[25px]"
+                            className="font-nunito font-semibold text-[14.4px] md:text-[19.8px]"
                             style={{
                               color: '#0C002B',
-                              lineHeight: '25px',
+                              lineHeight: '19.8px',
                               fontWeight: 600
                             }}
                           >
@@ -255,22 +255,17 @@ export default function SimplePlans() {
             ))}
           </div>
 
-          {/* Footer Text */}
-          <div className="text-center mb-8 md:mb-20">
-            <p className="text-white font-nunito text-[10px] md:text-xs lg:text-sm xl:text-base font-medium">
-              This product and all trademark services are legally ensured by AMA Legal Solutions
-            </p>
-          </div>
+         
         </div>
       </div>
 
       {/* Scroll to Top Icon */}
       <button
         onClick={scrollToTop}
-        className="fixed bottom-8 right-8 w-14 h-14 bg-[#1345C3] rounded-full flex items-center justify-center shadow-lg hover:bg-[#0f3aa3] transition-colors duration-300 z-50"
+        className="fixed bottom-6.4 right-6.4 w-11.2 h-11.2 bg-[#1345C3] rounded-full flex items-center justify-center shadow-lg hover:bg-[#0f3aa3] transition-colors duration-300 z-50"
         aria-label="Scroll to top"
       >
-        <i className="fas fa-arrow-up text-white text-lg"></i>
+        <i className="fas fa-arrow-up text-white text-[12.96px]"></i>
       </button>
       </section>
     </>

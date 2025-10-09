@@ -12,3 +12,4 @@ export { default as TrademarkSearchPopup } from './TrademarkSearchPopup';
 export { default as TrademarkCounter } from './TrademarkCounter';
 export { default as WhyTrademark } from './WhyTrademark';
 export { default as Expert } from './Expert';
+export { default as CitiesAndTerritories } from './CitiesAndTerritories';

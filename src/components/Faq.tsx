@@ -67,41 +67,41 @@ const Faq = () => {
           __html: JSON.stringify(faqSchema),
         }}
       />
-      <section className="py-20 relative overflow-hidden" style={{ backgroundColor: '#0C002B' }}>
+      <section className="py-16 relative overflow-hidden" style={{ backgroundColor: '#0C002B' }}>
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-full h-full" style={{ background: 'linear-gradient(to right, #FFB70320, transparent)' }}></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 rounded-full blur-3xl" style={{ background: 'linear-gradient(to left, #FFB70320, transparent)' }}></div>
+        <div className="absolute bottom-0 right-0 w-76.8 h-76.8 rounded-full blur-2.4xl" style={{ background: 'linear-gradient(to left, #FFB70320, transparent)' }}></div>
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-5 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-9.6 items-start">
           
           {/* Left Section - Questions */}
-          <div className="space-y-8 flex flex-col justify-center">
-            <div className="space-y-4">
-              <h2 className="text-white text-left font-nunito text-[28px] md:text-[45px] font-medium leading-[32px] md:leading-[45px] w-full">
+          <div className="space-y-8 flex flex-col justify-start">
+            <div className="space-y-5">
+              <h2 className="text-white text-left font-nunito text-[26px] md:text-[40px] font-medium leading-[32px] md:leading-[44px] w-full">
                 Have Question?
                 <br />
                 <span style={{ color: '#FFB703' }}>
                   We've Got Answers.
                 </span>
               </h2>
-              
-              <p className="text-white font-nunito text-[10px] md:text-xs lg:text-sm xl:text-base font-medium">
+
+              <p className="text-white font-nunito text-[12px] md:text-[14px] lg:text-[15px] xl:text-[16px] font-medium">
                 Still have questions? <span style={{ color: '#FFB703' }} className="font-medium">Contact us</span> anytime.
               </p>
             </div>
 
             {/* AI Input */}
             <form onSubmit={handleAiSubmit} className="relative">
-              <div className="relative bg-black/20 backdrop-blur-sm border border-purple-400/30 rounded-xl p-4">
+              <div className="relative bg-white/50 backdrop-blur-sm border border-purple-400/30 rounded-xl p-4 max-w-lg">
                 <input
                   type="text"
                   value={aiQuestion}
                   onChange={(e) => setAiQuestion(e.target.value)}
                   placeholder="Smart AI, Ask me Anything...."
-                  className="w-full bg-transparent text-white placeholder-purple-300 outline-none text-lg"
+                  className="bg-transparent text-white placeholder-white outline-none text-[16px]"
                 />
                 <button
                   type="submit"
@@ -110,54 +110,54 @@ const Faq = () => {
                   onMouseEnter={(e) => e.currentTarget.style.color = '#e6a503'}
                   onMouseLeave={(e) => e.currentTarget.style.color = '#FFB703'}
                 >
-                  <FontAwesomeIcon icon={faPaperPlane} className="w-6 h-6" />
+                  <FontAwesomeIcon icon={faPaperPlane} className="w-5 h-5" />
                 </button>
               </div>
             </form>
           </div>
 
           {/* Right Section - FAQ Items */}
-          <div 
+          <div
             className="space-y-4 p-6"
             style={{
-              borderRadius: '20px',
+              borderRadius: '16px',
               background: 'linear-gradient(140deg, rgba(12, 0, 43, 0.10) 6.89%, rgba(255, 183, 3, 0.10) 101.84%)',
-              boxShadow: '4px 4px 25.2px 0 rgba(0, 0, 0, 0.15), 0 0 20px 1px rgba(255, 255, 255, 0.10) inset',
-              backdropFilter: 'blur(122.05px)'
+              boxShadow: '3.2px 3.2px 20.16px 0 rgba(0, 0, 0, 0.15), 0 0 16px 0.8px rgba(255, 255, 255, 0.10) inset',
+              backdropFilter: 'blur(97.64px)'
             }}
           >
             {faqs.map((faq, index) => (
               <div key={index} className="relative">
-                <div 
-                  className="p-6 cursor-pointer transition-all duration-300 ease-in-out hover:scale-[1.02] transform"
+                <div
+                  className="p-5 cursor-pointer transition-all duration-300 ease-in-out hover:scale-[1.02] transform"
                   style={{
-                    borderRadius: '15px',
+                    borderRadius: '12px',
                     background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%)',
-                    ...(openFaq === index ? { boxShadow: `0 0 0 2px #FFB70380` } : {})
+                    ...(openFaq === index ? { boxShadow: `0 0 0 1.6px #FFB70380` } : {})
                   }}
                   onClick={() => toggleFaq(index)}
                 >
-                 
-                  <div className="flex justify-between items-center">
-                    <h3 className="text-white font-nunito text-[16px] md:text-[20px] lg:text-[25px] font-semibold pr-4">
+
+                  <div className="flex justify-between items-center mb-3">
+                    <h3 className="text-white font-nunito text-[15px] md:text-[18px] lg:text-[22px] font-semibold pr-4 leading-snug">
                       {faq.question}
                     </h3>
-                    <FontAwesomeIcon 
+                    <FontAwesomeIcon
                       icon={faChevronDown}
-                      className={`w-6 h-6 transition-all duration-500 ease-in-out flex-shrink-0 ${
+                      className={`w-5 h-5 transition-all duration-500 ease-in-out flex-shrink-0 ${
                         openFaq === index ? 'rotate-180 scale-110' : 'rotate-0 scale-100'
                       }`}
                       style={{ color: '#000000' }}
                     />
                   </div>
-                  
-                  <div 
+
+                  <div
                     className={`overflow-hidden transition-all duration-500 ease-in-out ${
                       openFaq === index ? 'max-h-96 opacity-100 mt-0' : 'max-h-0 opacity-0 -mt-4'
                     }`}
                   >
                     <div className="mt-4 pt-4 border-t border-black/20 transform transition-all duration-500 ease-in-out">
-                      <p className="text-white font-nunito text-[10px] md:text-xs lg:text-sm xl:text-base font-medium leading-relaxed">
+                      <p className="text-white font-nunito text-[12px] md:text-[13px] lg:text-[14px] xl:text-[15px] font-medium leading-relaxed">
                         {faq.answer}
                       </p>
                     </div>

@@ -63,38 +63,55 @@ const OurHeadOffice = () => {
   ];
 
   return (
-    <div className="bg-[#171717] py-16 sm:py-18 md:py-20 lg:py-24 px-6 sm:px-10 md:px-12 lg:px-16 xl:px-[72px]">
-      <div className="max-w-[1583px] mx-auto flex flex-col lg:flex-row justify-between items-start lg:items-center gap-16 lg:gap-20">
+    <div
+      className="bg-[#171717] py-6 sm:py-12 md:py-14 lg:py-14"
+      style={{
+        transform: 'scale(1)',
+        transformOrigin: 'top center',
+      }}
+    >
+      {/* Large screen scaling */}
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          @media (min-width: 1024px) {
+            .head-office-scale {
+              transform: scale(0.8) !important;
+            }
+          }
+        `
+      }} />
+
+      <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-10 lg:gap-12 head-office-scale px-6 sm:px-10 md:px-12 lg:px-12 xl:px-[72px]">
         {/* Left Section - Our Head Office */}
-        <div className="flex flex-col gap-12 sm:gap-12 md:gap-12 w-full lg:max-w-[374px]">
-          <div className="flex flex-col gap-10 sm:gap-10 md:gap-12">
-            <div className="flex flex-col gap-12 sm:gap-14 md:gap-16 lg:gap-[60px]">
-              <h2 className="text-white font-nunito text-3xl sm:text-4xl md:text-[42px] lg:text-[50px] font-normal leading-tight sm:leading-tight md:leading-tight lg:leading-[50px]">
+        <div className="flex flex-col gap-8 sm:gap-10 md:gap-10 w-full lg:max-w-[374px]">
+          <div className="flex flex-col gap-8 sm:gap-8 md:gap-10">
+            <div className="flex flex-col gap-8 sm:gap-10 md:gap-12 lg:gap-12">
+              <h2 className="text-white font-nunito text-3xl sm:text-4xl md:text-[42px] lg:text-[42px] font-normal leading-tight sm:leading-tight md:leading-tight lg:leading-tight">
                 Our Head Office
               </h2>
               <div className="flex flex-col gap-6 sm:gap-7">
                 <a 
                   href="tel:+918700343611" 
-                  className="text-white font-nunito text-lg sm:text-xl md:text-2xl lg:text-[25px] font-normal leading-relaxed hover:text-[#FFB703] transition-colors"
+                  className="text-white font-nunito text-lg sm:text-xl md:text-2xl lg:text-2xl font-normal leading-relaxed hover:text-[#FFB703] transition-colors"
                 >
                   +918700343611
                 </a>
                 <a 
                   href="mailto:notify@amalegalsolutions.com" 
-                  className="text-white font-nunito text-lg sm:text-xl md:text-2xl lg:text-[25px] font-normal leading-relaxed hover:text-[#FFB703] transition-colors break-words"
+                  className="text-white font-nunito text-lg sm:text-xl md:text-2xl lg:text-2xl font-normal leading-relaxed hover:text-[#FFB703] transition-colors break-words"
                 >
                   notify@amalegalsolutions.com
                 </a>
               </div>
             </div>
-            <div className="text-white font-nunito text-base sm:text-lg md:text-xl lg:text-[25px] font-normal leading-relaxed mt-2">
+            <div className="text-white font-nunito text-base sm:text-lg md:text-xl lg:text-xl font-normal leading-relaxed mt-2">
               2493AP, Block G, Sushant Lok 2, Sector 57, Gurugram, Haryana 122001
             </div>
           </div>
         </div>
 
         {/* Right Section */}
-        <div className="flex flex-col gap-14 sm:gap-16 md:gap-18 lg:gap-[60px] w-full lg:max-w-[794px]">
+        <div className="flex flex-col gap-10 sm:gap-12 md:gap-14 lg:gap-14 w-full lg:max-w-[794px]">
           {/* Google Rating Section */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-8 sm:gap-10 md:gap-12">
             <div className="flex items-center gap-4 sm:gap-[15px] flex-shrink-0">
@@ -117,7 +134,7 @@ const OurHeadOffice = () => {
               </span>
             </div>
             <div className="flex flex-col gap-2 sm:gap-2">
-              <h3 className="text-white font-nunito text-xl sm:text-2xl md:text-[28px] lg:text-[30px] font-bold leading-tight">
+              <h3 className="text-white font-nunito text-xl sm:text-2xl md:text-[28px] lg:text-[28px] font-bold leading-tight">
                 Loved and Trusted by 1.25L Indians
               </h3>
               <p className="text-white font-nunito text-sm sm:text-sm md:text-[15px] font-normal italic leading-relaxed">
@@ -127,20 +144,20 @@ const OurHeadOffice = () => {
           </div>
 
           {/* Why Trademark Section */}
-          <div className="flex flex-col gap-10 sm:gap-11 md:gap-12">
-            <h3 className="text-white font-nunito text-2xl sm:text-3xl md:text-[32px] lg:text-[35px] font-normal leading-tight">
+          <div className="flex flex-col gap-6 sm:gap-8 md:gap-8">
+            <h3 className="text-white font-nunito text-2xl sm:text-3xl md:text-[32px] lg:text-[32px] font-normal leading-tight">
               Why Trademark with IPRKaro ?
             </h3>
-            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-6 sm:gap-y-24 sm:gap-x-10 md:gap-y-20 md:gap-x-12 lg:gap-y-20 lg:gap-x-14 xl:gap-20">
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-y-6 gap-x-4 sm:gap-y-10 sm:gap-x-6 md:gap-y-10 md:gap-x-8 lg:gap-y-12 lg:gap-x-12 xl:gap-10">
               {/* Feature Items */}
               {features.map((feature, index) => (
-                <div key={index} className="flex items-start gap-4 sm:gap-5 md:gap-6 lg:gap-[30px]">
+                <div key={index} className="flex items-start gap-4 sm:gap-5 md:gap-6 lg:gap-">
                   <div className="flex-shrink-0">
-                    <div className="w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 lg:w-10 lg:h-10">
+                    <div className="w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 lg:w-11 lg:h-11">
                       {feature.icon}
                     </div>
                   </div>
-                  <span className="text-white font-nunito text-sm sm:text-base md:text-[17px] lg:text-[20px] font-normal leading-relaxed">
+                  <span className="text-white font-nunito text-sm sm:text-base md:text-[17px] lg:text-[17px] font-normal leading-relaxed">
                     {feature.title}
                   </span>
                 </div>

@@ -241,15 +241,15 @@ export default function TrademarkRegistrationPage() {
           <div className="space-y-8">
             {/* Main Heading */}
             <div className="space-y-4">
-              <h1 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-medium leading-tight">
+              <h1 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-medium leading-tight">
                 Trademark Registration in India – Complete Guide by IPRKaro
               </h1>
 
-              <h2 className="text-white font-nunito text-lg md:text-xl lg:text-xl font-medium leading-tight">
+              <h2 className="text-white font-nunito text-base md:text-lg lg:text-lg font-medium leading-tight">
                 Protect Your Brand with Expert Trademark Registration in India
               </h2>
 
-              <p className="text-white font-nunito text-xs md:text-sm lg:text-base leading-relaxed">
+              <p className="text-white font-nunito text-xs md:text-xs lg:text-sm leading-relaxed">
                 In today's competitive marketplace, your brand is your most valuable asset. A trademark distinguishes your products and services from competitors, builds customer loyalty, and represents the quality and reputation of your business. Trademark registration in India provides legal protection for your brand name, logo, slogan, or any distinctive mark that identifies your business.
 
 At IPRKaro, we combine AI-powered trademark search technology with expert legal guidance to ensure your brand receives comprehensive protection under the Indian Trademarks Act, 1999. Our end-to-end trademark registration services help businesses of all sizes secure their brand identity and prevent unauthorized use.
@@ -258,7 +258,7 @@ At IPRKaro, we combine AI-powered trademark search technology with expert legal 
 
             {/* Why Trademark Section */}
             <div className="space-y-4">
-              <h3 className="text-white font-nunito text-lg md:text-3xl font-medium">
+              <h3 className="text-white font-nunito text-base md:text-2xl font-medium">
                 Why Trademark with IPRKaro ?
               </h3>
 
@@ -318,7 +318,7 @@ At IPRKaro, we combine AI-powered trademark search technology with expert legal 
                       >
                         {mobileCardIcons[feature.icon]}
                       </div>
-                      <span className="text-white font-nunito text-xs md:text-sm font-medium">
+                      <span className="text-white font-nunito text-xs md:text-xs font-medium">
                         {feature.text}
                       </span>
                     </div>
@@ -363,7 +363,7 @@ At IPRKaro, we combine AI-powered trademark search technology with expert legal 
                 <div className="flex-1 space-y-8">
                   {/* Heading */}
                   <div className="text-center lg:text-left">
-                    <h3 className="text-white font-nunito text-xl md:text-3xl font-medium">
+                    <h3 className="text-white font-nunito text-lg md:text-2xl font-medium">
                       Get a Guaranteed Trademark on
                     </h3>
                   </div>
@@ -380,10 +380,10 @@ At IPRKaro, we combine AI-powered trademark search technology with expert legal 
                       }}
                     >
                       <div className="flex items-center justify-between px-10">
-                        <div className="text-white font-nunito text-base md:text-lg font-medium">
+                        <div className="text-white font-nunito text-sm md:text-base font-medium">
                           Filing Date
                         </div>
-                        <div className="text-white font-nunito text-sm md:text-base opacity-90">
+                        <div className="text-white font-nunito text-xs md:text-sm opacity-90">
                           Apr 12, 2025
                         </div>
                       </div>
@@ -399,10 +399,10 @@ At IPRKaro, we combine AI-powered trademark search technology with expert legal 
                       }}
                     >
                       <div className="flex items-center justify-between px-10">
-                        <div className="text-white font-nunito text-base md:text-lg font-medium">
+                        <div className="text-white font-nunito text-sm md:text-base font-medium">
                           Trademark Estimated Date
                         </div>
-                        <div className="text-white font-nunito text-sm md:text-base opacity-90">
+                        <div className="text-white font-nunito text-xs md:text-sm opacity-90">
                           Dec 12, 2025
                         </div>
                       </div>
@@ -412,7 +412,7 @@ At IPRKaro, we combine AI-powered trademark search technology with expert legal 
               </div>
             </div>
             <div className="space-y-6">
-              <h3 className="text-white font-nunito text-lg md:text-3xl font-medium">
+              <h3 className="text-white font-nunito text-base md:text-2xl font-medium">
               Trademark Requirements
               </h3>
 
@@ -432,7 +432,7 @@ At IPRKaro, we combine AI-powered trademark search technology with expert legal 
                     >
                       {requirement.icon}
                     </div>
-                    <span className="text-white font-nunito text-xs md:text-sm font-medium">
+                    <span className="text-white font-nunito text-xs md:text-xs font-medium">
                       {requirement.text}
                     </span>
                   </div>
@@ -442,7 +442,7 @@ At IPRKaro, we combine AI-powered trademark search technology with expert legal 
 
             {/* Guidelines Section */}
             <div className="space-y-6">
-              <h3 className="text-white font-nunito text-lg md:text-3xl font-medium">
+              <h3 className="text-white font-nunito text-base md:text-2xl font-medium">
                 we work with the Guidelines of
               </h3>
 
@@ -547,19 +547,19 @@ At IPRKaro, we combine AI-powered trademark search technology with expert legal 
 
             {/* About Trademark Registration Section */}
             <div className="space-y-6 mt-20">
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-medium">
+              <h2 className="text-white font-nunito text-lg md:text-xl lg:text-2xl font-medium">
                 About Trademark Registration in India
               </h2>
 
-              <h3 className="text-white font-nunito text-lg md:text-xl lg:text-2xl font-medium">
+              <h3 className="text-white font-nunito text-base md:text-lg lg:text-xl font-medium">
                 Trademark Registration Services – Intro
               </h3>
 
-              <h4 className="text-white font-nunito text-base md:text-lg lg:text-xl font-medium">
+              <h4 className="text-white font-nunito text-sm md:text-base lg:text-lg font-medium">
                 Protect Your Brand with Expert Trademark Registration in India
               </h4>
 
-              <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
+              <p className="text-white font-nunito text-xs md:text-xs lg:text-sm leading-relaxed">
                 In today's competitive marketplace, your brand is your most valuable asset. A trademark distinguishes your products and services from competitors, builds customer loyalty, and represents the quality and reputation of your business. Trademark registration in India provides legal protection for your brand name, logo, slogan, or any distinctive mark that identifies your business.
 
 At IPRKaro, we combine AI-powered trademark search technology with expert legal guidance to ensure your brand receives comprehensive protection under the Indian Trademarks Act, 1999. Our end-to-end trademark registration services help businesses of all sizes secure their brand identity and prevent unauthorized use.
@@ -568,11 +568,11 @@ At IPRKaro, we combine AI-powered trademark search technology with expert legal 
 
             {/* What is a Trademark Section */}
             <div className="space-y-6">
-              <h3 className="text-white font-nunito text-lg md:text-xl lg:text-2xl font-medium">
+              <h3 className="text-white font-nunito text-base md:text-lg lg:text-xl font-medium">
                 What is a Trademark?
               </h3>
 
-              <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
+              <p className="text-white font-nunito text-xs md:text-xs lg:text-sm leading-relaxed">
                 A trademark is a distinctive sign, symbol, word, phrase, logo, design, or combination thereof that identifies and distinguishes the goods or services of one enterprise from those of others. It serves as a badge of origin, indicating the source and quality of products or services.
 
 Trademarks can include:
@@ -582,34 +582,34 @@ Trademarks can include:
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-[#FFB703] flex-shrink-0"></div>
-                    <span className="text-white font-nunito text-sm md:text-base">Brand names and product names</span>
+                    <span className="text-white font-nunito text-xs md:text-xs">Brand names and product names</span>
                   </div>
 
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-[#FFB703] flex-shrink-0"></div>
-                    <span className="text-white font-nunito text-sm md:text-base">Logos and symbols</span>
+                    <span className="text-white font-nunito text-xs md:text-xs">Logos and symbols</span>
                   </div>
 
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-[#FFB703] flex-shrink-0"></div>
-                    <span className="text-white font-nunito text-sm md:text-base">Slogans and taglines</span>
+                    <span className="text-white font-nunito text-xs md:text-xs">Slogans and taglines</span>
                   </div>
                 </div>
 
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-[#FFB703] flex-shrink-0"></div>
-                    <span className="text-white font-nunito text-sm md:text-base">Product packaging and trade dress</span>
+                    <span className="text-white font-nunito text-xs md:text-xs">Product packaging and trade dress</span>
                   </div>
 
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-[#FFB703] flex-shrink-0"></div>
-                    <span className="text-white font-nunito text-sm md:text-base">Sounds and colors (in some cases)</span>
+                    <span className="text-white font-nunito text-xs md:text-xs">Sounds and colors (in some cases)</span>
                   </div>
 
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-[#FFB703] flex-shrink-0"></div>
-                    <span className="text-white font-nunito text-sm md:text-base">Domain names and social media handles</span>
+                    <span className="text-white font-nunito text-xs md:text-xs">Domain names and social media handles</span>
                   </div>
                 </div>
               </div>
@@ -617,18 +617,18 @@ Trademarks can include:
 
             {/* Why Register a Trademark Section */}
             <div className="space-y-6">
-              <h3 className="text-white font-nunito text-lg md:text-xl lg:text-2xl font-medium">
+              <h3 className="text-white font-nunito text-base md:text-lg lg:text-xl font-medium">
                 Why Register a Trademark in India?
               </h3>
 
-              <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
+              <p className="text-white font-nunito text-xs md:text-xs lg:text-sm leading-relaxed">
                 Trademark registration in India provides numerous benefits for businesses:
               </p>
 
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
-                  <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
+                  <p className="text-white font-nunito text-xs md:text-xs lg:text-sm leading-relaxed">
                     <strong>Exclusive Rights</strong><br />
                     Gain exclusive rights to use the trademark and prevent others from using similar marks for similar goods/services.
                   </p>
@@ -636,7 +636,7 @@ Trademarks can include:
 
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
-                  <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
+                  <p className="text-white font-nunito text-xs md:text-xs lg:text-sm leading-relaxed">
                     <strong>Legal Protection</strong><br />
                     Registered trademarks can be enforced through civil and criminal actions against infringement.
                   </p>
@@ -644,7 +644,7 @@ Trademarks can include:
 
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
-                  <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
+                  <p className="text-white font-nunito text-xs md:text-xs lg:text-sm leading-relaxed">
                     <strong>Brand Value</strong><br />
                     Enhances brand recognition and increases the commercial value of your business.
                   </p>
@@ -652,7 +652,7 @@ Trademarks can include:
 
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
-                  <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
+                  <p className="text-white font-nunito text-xs md:text-xs lg:text-sm leading-relaxed">
                     <strong>Asset Creation</strong><br />
                     Registered trademarks can be licensed, franchised, or sold, creating additional revenue streams.
                   </p>
@@ -660,7 +660,7 @@ Trademarks can include:
 
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
-                  <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
+                  <p className="text-white font-nunito text-xs md:text-xs lg:text-sm leading-relaxed">
                     <strong>Market Expansion</strong><br />
                     Provides protection for brand expansion into new markets and product categories.
                   </p>
@@ -887,10 +887,10 @@ Trademarks can include:
                 }}
               >
                 <h3
-                  className="text-white font-nunito font-medium leading-[30px]"
+                  className="text-white font-nunito font-medium leading-[24px]"
                   style={{
-                    fontSize: 'clamp(24px, 4vw, 30px)',
-                    lineHeight: '30px'
+                    fontSize: 'clamp(18px, 3vw, 24px)',
+                    lineHeight: '24px'
                   }}
                 >
                   Get Your Trademark Registered
@@ -905,10 +905,10 @@ Trademarks can include:
                 }}
               >
                 <h4
-                  className="text-white font-nunito font-medium leading-[25px] mb-4 text-center"
+                  className="text-white font-nunito font-medium leading-[20px] mb-4 text-center"
                   style={{
-                    fontSize: 'clamp(20px, 3vw, 25px)',
-                    lineHeight: '25px'
+                    fontSize: 'clamp(16px, 2.5vw, 20px)',
+                    lineHeight: '20px'
                   }}
                 >
                   Price Breakdown
@@ -916,25 +916,25 @@ Trademarks can include:
 
                 <div className="space-y-3">
                   <div className="flex justify-between items-center py-2 border-b border-gray-400">
-                    <span className="text-white font-nunito text-sm md:text-base opacity-90">Government Fee</span>
-                    <span className="text-white font-nunito text-sm md:text-base">₹4,500</span>
+                    <span className="text-white font-nunito text-xs md:text-sm opacity-90">Government Fee</span>
+                    <span className="text-white font-nunito text-xs md:text-sm">₹4,500</span>
                   </div>
                   <div className="flex justify-between items-center py-2 border-b border-gray-400">
-                    <span className="text-white font-nunito text-sm md:text-base opacity-90">Professional Fee</span>
-                    <span className="text-white font-nunito text-sm md:text-base">₹2,500</span>
+                    <span className="text-white font-nunito text-xs md:text-sm opacity-90">Professional Fee</span>
+                    <span className="text-white font-nunito text-xs md:text-sm">₹2,500</span>
                   </div>
                   <div className="flex justify-between items-center py-2 border-b border-gray-400">
-                    <span className="text-white font-nunito text-sm md:text-base opacity-90">GST (18%)</span>
-                    <span className="text-white font-nunito text-sm md:text-base">₹1,260</span>
+                    <span className="text-white font-nunito text-xs md:text-sm opacity-90">GST (18%)</span>
+                    <span className="text-white font-nunito text-xs md:text-sm">₹1,260</span>
                   </div>
                   <div className="flex justify-between items-center py-3 font-semibold">
-                    <span className="text-white font-nunito text-base md:text-lg">Total</span>
-                    <span className="text-white font-nunito text-base md:text-lg">₹8,260</span>
+                    <span className="text-white font-nunito text-sm md:text-base">Total</span>
+                    <span className="text-white font-nunito text-sm md:text-base">₹8,260</span>
                   </div>
 
                   {/* Start Registration Button */}
                   <button
-                    className="w-full py-4 px-6 rounded-xl font-nunito font-semibold text-lg md:text-xl transition-all duration-300 hover:scale-105 mt-4"
+                    className="w-full py-3 px-4 rounded-xl font-nunito font-semibold text-sm md:text-base transition-all duration-300 hover:scale-105 mt-4"
                     style={{
                       background: '#FFB703',
                       boxShadow: '0 0 20px 0 #000 inset',
@@ -949,10 +949,10 @@ Trademarks can include:
               {/* Our Plans Section - Dropdown Style */}
               <div className="flex-1">
                 <h4
-                  className="text-white font-nunito font-medium leading-[30px] mb-6 text-center"
+                  className="text-white font-nunito font-medium leading-[24px] mb-6 text-center"
                   style={{
-                    fontSize: 'clamp(24px, 4vw, 30px)',
-                    lineHeight: '30px'
+                    fontSize: 'clamp(18px, 3vw, 24px)',
+                    lineHeight: '24px'
                   }}
                 >
                   Our Plans
@@ -961,7 +961,7 @@ Trademarks can include:
                 {/* Plan Selector Dropdown */}
                 <div className="mb-6">
                   <select
-                    className="w-full p-4 rounded-xl text-white font-nunito font-medium text-lg bg-transparent border-2 border-white/20 focus:border-white/40 focus:outline-none cursor-pointer"
+                    className="w-full p-3 rounded-xl text-white font-nunito font-medium text-sm bg-transparent border-2 border-white/20 focus:border-white/40 focus:outline-none cursor-pointer"
                     style={{
                       background: 'rgba(255, 255, 255, 0.05)',
                       backdropFilter: 'blur(10px)',
@@ -999,16 +999,16 @@ Trademarks can include:
                 >
                   {/* Plan Header */}
                   <div className="text-center mb-6">
-                    <h3 className="text-white font-nunito text-xl md:text-2xl font-semibold mb-2">
+                    <h3 className="text-white font-nunito text-lg md:text-xl font-semibold mb-2">
                       {selectedPlan.name}
                     </h3>
                     <div className="flex items-center justify-center gap-4 mb-4">
-                      <span className="text-white font-nunito text-sm opacity-80">{selectedPlan.description}</span>
+                      <span className="text-white font-nunito text-xs opacity-80">{selectedPlan.description}</span>
                     </div>
                     <div className="text-right">
                       <span
-                        className="text-white font-nunito font-bold text-2xl md:text-3xl"
-                        style={{ fontSize: 'clamp(24px, 4vw, 30px)' }}
+                        className="text-white font-nunito font-bold text-xl md:text-2xl"
+                        style={{ fontSize: 'clamp(18px, 3vw, 24px)' }}
                       >
                         {selectedPlan.price}
                       </span>
@@ -1020,7 +1020,7 @@ Trademarks can include:
                     {selectedPlan.features.map((feature, index) => (
                       <div key={index} className="flex items-start gap-3">
                         <i className="fas fa-check text-green-400 mt-1 flex-shrink-0"></i>
-                        <span className="text-white font-nunito text-sm md:text-base leading-relaxed">
+                        <span className="text-white font-nunito text-xs md:text-sm leading-relaxed">
                           {feature}
                         </span>
                       </div>
@@ -1029,7 +1029,7 @@ Trademarks can include:
 
                   {/* Action Button */}
                   <button
-                    className="w-full py-4 px-6 rounded-xl font-nunito font-semibold text-lg md:text-xl transition-all duration-300 hover:scale-105"
+                    className="w-full py-3 px-4 rounded-xl font-nunito font-semibold text-sm md:text-base transition-all duration-300 hover:scale-105"
                     style={{
                       background: '#1345C3',
                       boxShadow: '0 0 20px 0 #000 inset',
@@ -1042,7 +1042,7 @@ Trademarks can include:
 
                 {/* Plan Type Indicator */}
                 <div className="mt-4 text-center">
-                  <span className="text-white font-nunito text-sm opacity-80">
+                  <span className="text-white font-nunito text-xs opacity-80">
                     {selectedPlan.subtitle}
                   </span>
                 </div>
@@ -1060,17 +1060,17 @@ Trademarks can include:
             >
               {/* Quick Insight's Heading */}
               <div className="mb-8 text-center">
-                <h3 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-medium">
+                <h3 className="text-white font-nunito text-lg md:text-xl lg:text-2xl font-medium">
                   Quick Insight's
                 </h3>
               </div>
 
               {/* Documents You'll Need Heading */}
               <div className="mb-6 text-center">
-                <h4 className="text-white font-nunito font-medium leading-[25px]"
+                <h4 className="text-white font-nunito font-medium leading-[20px]"
                     style={{
-                      fontSize: 'clamp(20px, 3vw, 25px)',
-                      lineHeight: '25px'
+                      fontSize: 'clamp(16px, 2.5vw, 20px)',
+                      lineHeight: '20px'
                     }}
                 >
                   Documents You'll Need
@@ -1088,7 +1088,7 @@ Trademarks can include:
                     backdropFilter: 'blur(16px)'
                   }}
                 >
-                  <span className="text-white font-nunito text-sm md:text-base font-medium">
+                  <span className="text-white font-nunito text-xs md:text-sm font-medium">
                     Identity proof (PAN / Aadhaar / Passport)
                   </span>
                 </div>
@@ -1102,7 +1102,7 @@ Trademarks can include:
                     backdropFilter: 'blur(16px)'
                   }}
                 >
-                  <span className="text-white font-nunito text-sm md:text-base font-medium">
+                  <span className="text-white font-nunito text-xs md:text-sm font-medium">
                     Address proof (utility bill / bank statement)
                   </span>
                 </div>
@@ -1116,7 +1116,7 @@ Trademarks can include:
                     backdropFilter: 'blur(16px)'
                   }}
                 >
-                  <span className="text-white font-nunito text-sm md:text-base font-medium">
+                  <span className="text-white font-nunito text-xs md:text-sm font-medium">
                     Legal entity proof (if business — e.g. company registration certificate)
                   </span>
                 </div>
@@ -1130,7 +1130,7 @@ Trademarks can include:
                     backdropFilter: 'blur(16px)'
                   }}
                 >
-                  <span className="text-white font-nunito text-sm md:text-base font-medium">
+                  <span className="text-white font-nunito text-xs md:text-sm font-medium">
                     Trademark/logo/wordmark images
                   </span>
                 </div>
@@ -1144,7 +1144,7 @@ Trademarks can include:
                     backdropFilter: 'blur(16px)'
                   }}
                 >
-                  <span className="text-white font-nunito text-sm md:text-base font-medium">
+                  <span className="text-white font-nunito text-xs md:text-sm font-medium">
                     Power of Attorney (Form TM-48)
                   </span>
                 </div>
@@ -1231,10 +1231,10 @@ Trademarks can include:
                   }}
                 >
                   <h3
-                    className="text-white font-nunito font-medium leading-[24px]"
+                    className="text-white font-nunito font-medium leading-[20px]"
                     style={{
-                      fontSize: 'clamp(16px, 4vw, 20px)',
-                      lineHeight: '24px'
+                      fontSize: 'clamp(14px, 3vw, 18px)',
+                      lineHeight: '20px'
                     }}
                   >
                     Get Your Trademark Registered
@@ -1249,10 +1249,10 @@ Trademarks can include:
                   }}
                 >
                   <h4
-                    className="text-white font-nunito font-medium leading-[20px] mb-3 text-center"
+                    className="text-white font-nunito font-medium leading-[18px] mb-3 text-center"
                     style={{
-                      fontSize: 'clamp(14px, 3.5vw, 18px)',
-                      lineHeight: '20px'
+                      fontSize: 'clamp(12px, 3vw, 16px)',
+                      lineHeight: '18px'
                     }}
                   >
                     Price Breakdown
@@ -1525,7 +1525,7 @@ Trademarks can include:
               <Link
                 key={index}
                 href={`/services/trademark-registration/${generateStateSlug(state)}`}
-                className="p-4 rounded-lg text-center transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer group"
+                className="p-4 rounded-lg flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer group"
                 style={{
                   background: 'rgba(255, 183, 3, 0.1)',
                   border: '1px solid rgba(255, 183, 3, 0.3)'
@@ -1534,9 +1534,7 @@ Trademarks can include:
                 <span className="text-white font-nunito text-sm md:text-base font-medium group-hover:text-[#FFB703] transition-colors">
                   {state}
                 </span>
-                <div className="mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                  <i className="fas fa-arrow-right text-[#FFB703] text-xs"></i>
-                </div>
+                <i className="fas fa-arrow-right text-[#FFB703] text-xs opacity-0 group-hover:opacity-100 transition-opacity"></i>
               </Link>
             ))}
           </div>
@@ -1547,7 +1545,7 @@ Trademarks can include:
               <Link
                 key={index}
                 href={`/services/trademark-registration/${generateStateSlug(territory)}`}
-                className="p-4 rounded-lg text-center transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer group"
+                className="p-4 rounded-lg flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer group"
                 style={{
                   background: 'rgba(19, 69, 195, 0.1)',
                   border: '1px solid rgba(19, 69, 195, 0.3)'
@@ -1556,9 +1554,7 @@ Trademarks can include:
                 <span className="text-white font-nunito text-sm md:text-base font-medium group-hover:text-[#1345C3] transition-colors">
                   {territory}
                 </span>
-                <div className="mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                  <i className="fas fa-arrow-right text-[#1345C3] text-xs"></i>
-                </div>
+                <i className="fas fa-arrow-right text-[#1345C3] text-xs opacity-0 group-hover:opacity-100 transition-opacity"></i>
               </Link>
             ))}
           </div>

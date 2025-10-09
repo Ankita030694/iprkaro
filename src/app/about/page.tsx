@@ -143,26 +143,27 @@ export default function AboutPage() {
         </defs>
       </svg>
       {/* Heading Section - Just below navbar */}
-      <div className="w-full px-6 sm:px-12 lg:px-24 pt-32 pb-8">
-        <div className="text-center space-y-6">
+      <div className="w-full px-6 sm:px-12 lg:px-24 pt-32 pb-4">
+        <div className="text-center space-y-4">
           {/* Main Heading */}
-          <h1 
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center"
+          <h1
+            className="font-bold text-center"
             style={{
               color: '#FFF',
               fontFamily: 'Nunito',
               fontStyle: 'normal',
               fontWeight: 700,
-              lineHeight: '1.2'
+              lineHeight: '1.2',
+              fontSize: 'clamp(22px, 3vw, 67px)' /* Scaled down 30% from 32px, 48px, 72px, 96px */
             }}
           >
             About IPR Karo
           </h1>
-          
+
           {/* Subtitle with special styling for AI */}
           <h2 className="flex flex-wrap justify-center items-center gap-1 sm:gap-2 text-center">
             <span
-              className="text-lg sm:text-xl md:text-2xl lg:text-[35px] font-semibold"
+              className="font-semibold"
               style={{
                 background: 'linear-gradient(90deg, #069A81 0%, #1345C3 10.1%)',
                 backgroundClip: 'text',
@@ -171,31 +172,34 @@ export default function AboutPage() {
                 fontFamily: 'Nunito',
                 fontStyle: 'italic',
                 fontWeight: 600,
-                lineHeight: '1.2'
+                lineHeight: '1.2',
+                fontSize: 'clamp(13px, 2vw, 24px)' /* Scaled down 30% from 18px, 24px, 32px, 35px */
               }}
             >
               AI
             </span>
             <span
-              className="text-lg sm:text-xl md:text-2xl lg:text-[35px] font-semibold"
+              className="font-semibold"
               style={{
                 color: '#FFF',
                 fontFamily: 'Nunito',
                 fontStyle: 'italic',
                 fontWeight: 600,
-                lineHeight: '1.2'
+                lineHeight: '1.2',
+                fontSize: 'clamp(13px, 2vw, 24px)' /* Scaled down 30% from 18px, 24px, 32px, 35px */
               }}
             >
-              Driven Platform for Fast, Accurate Trademark 
+              Driven Platform for Fast, Accurate Trademark
             </span>
             <span
-              className="text-lg sm:text-xl md:text-2xl lg:text-[35px] font-medium"
+              className="font-medium"
               style={{
                 color: '#FFF',
                 fontFamily: 'Nunito',
                 fontStyle: 'italic',
                 fontWeight: 500,
-                lineHeight: '1.2'
+                lineHeight: '1.2',
+                fontSize: 'clamp(13px, 2vw, 24px)' /* Scaled down 30% from 18px, 24px, 32px, 35px */
               }}
             >
               Registration in India
@@ -206,32 +210,26 @@ export default function AboutPage() {
 
 
       {/* About Bento SVG Section */}
-      <div className="w-full px-6 sm:px-12 lg:px-24 py-8 relative">
+      <div className="w-full px-6 sm:px-12 lg:px-24 relative pb-20">
         <div className="flex justify-center">
-          <Image
-            src="/figmacomp/aboutbento.svg"
-            alt="About IPR Karo Bento Grid"
-            width={1320}
-            height={828}
-            className="w-full max-w-full h-auto"
-          />
+          <div className="relative w-full">
+            <img
+              src="/figmacomp/aboutbento.svg"
+              alt="About IPR Karo Bento Grid"
+              className="w-full h-auto"
+              style={{
+                maxHeight: '600px',
+                objectFit: 'contain',
+                maskImage: 'linear-gradient(to bottom, black 0%, black 60%, transparent 75%)',
+                WebkitMaskImage: 'linear-gradient(to bottom, black 0%, black 60%, transparent 75%)'
+              }}
+            />
+          </div>
         </div>
-        
-        {/* Blur fade-out at the bottom of SVG */}
-        <div 
-          className="absolute bottom-8 left-0 right-0 h-16"
-          style={{
-            maskImage: 'linear-gradient(to bottom, transparent 0%, black 100%)',
-            WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 100%)',
-            backdropFilter: 'blur(6px)',
-            WebkitBackdropFilter: 'blur(6px)',
-            pointerEvents: 'none'
-          }}
-        />
       </div>
 
       {/* IPR KARO Section - Under Bento */}
-      <div className="w-full px-6 sm:px-12 lg:px-24 py-12">
+      <div className="w-full px-6 sm:px-12 lg:px-24 -mt-40">
         {/* Mobile Layout - IPR KARO vertical on left, content on right */}
         <div className="block lg:hidden">
           <div className="flex items-center justify-center gap-4">
@@ -356,29 +354,38 @@ export default function AboutPage() {
           <ClientLogoSlider />
         </div>
 
-        {/* Desktop: Client Logos Grid - 4x2 */}
+        {/* Desktop: Client Logos Grid - 2x5 */}
         <div className="hidden lg:block">
-        <div className="grid grid-cols-4 gap-12 max-w-7xl mx-auto">
-          {[1, 2, 3, 4, 5, 6, 7, 8].map((logoNumber) => (
-            <div 
+        <div className="flex justify-center">
+          <div className="grid grid-cols-5 gap-20 w-fit">
+            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((logoNumber) => (
+            <div
               key={logoNumber}
-              className="flex items-center justify-center p-4 rounded-lg"
+              className="flex items-center justify-center rounded-lg"
               style={{
-                backgroundColor: '#FFF',
-                minHeight: '84px',
-                boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
+                display: 'flex',
+                width: '200px',
+                height: '200px',
+                padding: '0 25px',
+                justifyContent: 'center',
+                alignItems: 'center',
+                aspectRatio: '1/1',
+                borderRadius: '15px',
+                background: 'linear-gradient(145deg, rgba(12, 0, 43, 0.20) 6.6%, rgba(255, 183, 3, 0.20) 120.24%), rgba(0, 0, 0, 0.20)',
+                boxShadow: '0 0 20px 1px rgba(255, 255, 255, 0.10) inset'
               }}
             >
               <Image
-                src={`/clientlogos/${logoNumber}.svg`}
-                alt={`Client ${logoNumber}`}
-                width={70}
-                height={70}
-                className="max-w-full h-auto object-contain"
+                src={`/clientlogos/white${logoNumber}.png`}
+                alt={`Client Logo ${logoNumber}`}
+                width={100}
+                height={100}
+                className="max-w-full h-auto object-contain opacity-90"
               />
             </div>
           ))}
           </div>
+        </div>
         </div>
       </div>
 
@@ -400,7 +407,7 @@ export default function AboutPage() {
         
         {/* Decorative "Our" Text - Left Side - Desktop Only */}
         <div
-          className="hidden lg:block absolute top-1/2 transform -translate-y-1/2 -rotate-90"
+          className="hidden lg:block absolute top-1/2 transform -translate-y-1/2 -rotate-90 -translate-x-25"
           style={{
             left: '0',
             fontSize: '200px',
@@ -421,7 +428,7 @@ export default function AboutPage() {
 
         {/* Decorative "Story" Text - Right Side - Desktop Only */}
         <div
-          className="hidden lg:block absolute top-1/2 transform -translate-y-1/2 -rotate-90"
+          className="hidden lg:block absolute top-1/2 transform -translate-y-1/2 -rotate-90 translate-x-35"
           style={{
             right: '0',
             fontSize: '200px',
@@ -965,10 +972,10 @@ export default function AboutPage() {
       </div>
 
       {/* What makes IPR Karo Different Section */}
-      <div className="w-full py-16">
-        <div className="text-center mb-16 px-6 sm:px-12 lg:px-24">
+      <div className="w-full py-8">
+        <div className="text-center mb-8 px-6 sm:px-12 lg:px-24">
           <h2
-            className="text-3xl sm:text-4xl lg:text-[42px] font-bold"
+            className="text-2xl sm:text-3xl lg:text-[36px] font-bold"
             style={{
               color: '#FFF',
               fontFamily: 'Nunito',
@@ -980,15 +987,18 @@ export default function AboutPage() {
           </h2>
         </div>
 
-        {/* Cards Container - Full Width */}
-        <div className="w-full">
+        {/* Cards Container - Full Width with Scaling */}
+        <div className="w-full" style={{
+          transform: 'scale(0.85)',
+          transformOrigin: 'top center'
+        }}>
           {/* Main Grid - Full width layout */}
-          <div className="flex flex-col gap-4 sm:gap-6 lg:gap-8 px-6 sm:px-12 lg:px-24">
+          <div className="flex flex-col gap-3 sm:gap-4 lg:gap-6 px-6 sm:px-12 lg:px-24">
             {/* Mobile Layout - Desktop-like Cards in Single Column */}
-            <div className="block lg:hidden space-y-6">
+            <div className="block lg:hidden space-y-4">
               {/* Card 1 - AI-Powered Trademark Search */}
               <div
-                className="relative group cursor-pointer overflow-hidden h-72"
+                className="relative group cursor-pointer overflow-hidden h-56"
                 style={{
                   borderRadius: '20px 0 0 0',
                   background: 'linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), linear-gradient(145deg, rgba(12, 0, 43, 0.40) 6.6%, rgba(255, 183, 3, 0.40) 120.24%), rgba(0, 0, 0, 0.50)',
@@ -1021,7 +1031,7 @@ export default function AboutPage() {
 
               {/* Card 2 - Expert-Led Guidance */}
               <div
-                className="relative group cursor-pointer overflow-hidden h-72"
+                className="relative group cursor-pointer overflow-hidden h-56"
                 style={{
                   borderRadius: '20px 0 0 0',
                   background: 'linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), linear-gradient(145deg, rgba(12, 0, 43, 0.40) 6.6%, rgba(255, 183, 3, 0.40) 120.24%), rgba(0, 0, 0, 0.50)',
@@ -1054,7 +1064,7 @@ export default function AboutPage() {
 
               {/* Card 3 - Fast Processing */}
               <div
-                className="relative group cursor-pointer overflow-hidden h-72"
+                className="relative group cursor-pointer overflow-hidden h-56"
                 style={{
                   borderRadius: '20px 0 0 0',
                   background: 'linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), linear-gradient(145deg, rgba(12, 0, 43, 0.40) 6.6%, rgba(255, 183, 3, 0.40) 120.24%), rgba(0, 0, 0, 0.50)',
@@ -1087,7 +1097,7 @@ export default function AboutPage() {
 
               {/* Card 4 - Affordable & Transparent Pricing */}
               <div
-                className="relative group cursor-pointer overflow-hidden h-72"
+                className="relative group cursor-pointer overflow-hidden h-56"
                 style={{
                   borderRadius: '20px 0 0 0',
                   background: 'linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), linear-gradient(145deg, rgba(12, 0, 43, 0.40) 6.6%, rgba(255, 183, 3, 0.40) 120.24%), rgba(0, 0, 0, 0.50)',
@@ -1120,7 +1130,7 @@ export default function AboutPage() {
 
               {/* Card 5 - End-to-End Support */}
               <div
-                className="relative group cursor-pointer overflow-hidden h-80"
+                className="relative group cursor-pointer overflow-hidden h-64"
                 style={{
                   borderRadius: '20px 0 0 0',
                   background: 'linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), linear-gradient(145deg, rgba(12, 0, 43, 0.40) 6.6%, rgba(255, 183, 3, 0.40) 120.24%), rgba(0, 0, 0, 0.50)',
@@ -1178,12 +1188,12 @@ export default function AboutPage() {
               </div>
             </div>
             {/* Desktop Layout - Original 2x2 Grid + Right Card */}
-            <div className="hidden lg:flex flex-row gap-8">
+            <div className="hidden lg:flex flex-row gap-6">
               {/* Left Section - 2x2 Grid for Cards 1-4 */}
-              <div className="flex-1 grid grid-cols-2 gap-8">
+              <div className="flex-1 grid grid-cols-2 gap-6">
                 {/* Card 1 - AI-Powered Trademark Search */}
                 <div
-                  className="p-8 text-center h-80 flex flex-col justify-center items-center relative group cursor-pointer"
+                  className="p-6 text-center h-64 flex flex-col justify-center items-center relative group cursor-pointer"
                   style={{
                     borderRadius: '20px 0 0 0',
                     background: 'linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), linear-gradient(145deg, rgba(12, 0, 43, 0.40) 6.6%, rgba(255, 183, 3, 0.40) 120.24%), rgba(0, 0, 0, 0.50)',
@@ -1191,9 +1201,9 @@ export default function AboutPage() {
                   }}
                 >
                   {/* Centered text content */}
-                  <div className="z-10 my-6">
+                  <div className="z-10 my-4">
                     <h3
-                      className="text-[24px] font-semibold mb-4"
+                      className="text-[20px] font-semibold mb-3 mt-4"
                       style={{
                         color: '#FFF',
                         fontFamily: 'Nunito',
@@ -1205,7 +1215,7 @@ export default function AboutPage() {
                       AI-Powered Trademark Search
                     </h3>
                     <p
-                      className="text-[16px] max-w-[300px] mx-auto"
+                      className="text-[14px] max-w-[280px] mx-auto"
                       style={{
                         color: 'rgba(255, 255, 255, 0.90)',
                         fontFamily: 'Nunito',
@@ -1227,14 +1237,14 @@ export default function AboutPage() {
                       alt="Search Icon"
                       width={432}
                       height={112}
-                      className="w-full max-w-[400px] h-auto object-contain group-hover:filter-[url(#yellow-filter)] transition-all duration-300"
+                      className="w-full max-w-[350px] h-auto object-contain group-hover:filter-[url(#yellow-filter)] transition-all duration-300"
                     />
                   </div>
                 </div>
 
                 {/* Card 2 - Expert-Led Guidance */}
                 <div
-                  className="p-8 h-80 relative group cursor-pointer"
+                  className="p-6 h-64 relative group cursor-pointer"
                   style={{
                     borderRadius: '20px 0 0 0',
                     background: 'linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), linear-gradient(145deg, rgba(12, 0, 43, 0.40) 6.6%, rgba(255, 183, 3, 0.40) 120.24%), rgba(0, 0, 0, 0.50)',
@@ -1242,9 +1252,9 @@ export default function AboutPage() {
                   }}
                 >
                   {/* Text positioned in top left */}
-                  <div className="absolute top-8 left-8">
+                  <div className="absolute top-6 left-6">
                     <h3
-                      className="text-[22px] font-semibold mb-3"
+                      className="text-[18px] font-semibold mb-2"
                       style={{
                         color: '#FFF',
                         fontFamily: 'Nunito',
@@ -1256,7 +1266,7 @@ export default function AboutPage() {
                       Expert-Led Guidance
                     </h3>
                     <p
-                      className="text-[14px] max-w-[200px]"
+                      className="text-[13px] max-w-[180px]"
                       style={{
                         color: 'rgba(255, 255, 255, 0.90)',
                         fontFamily: 'Nunito',
@@ -1285,7 +1295,7 @@ export default function AboutPage() {
 
                 {/* Card 3 - Fast Processing */}
                 <div
-                  className="p-8 h-80 relative group cursor-pointer"
+                  className="p-6 h-64 relative group cursor-pointer"
                   style={{
                     borderRadius: '20px 0 0 0',
                     background: 'linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), linear-gradient(145deg, rgba(12, 0, 43, 0.40) 6.6%, rgba(255, 183, 3, 0.40) 120.24%), rgba(0, 0, 0, 0.50)',
@@ -1293,9 +1303,9 @@ export default function AboutPage() {
                   }}
                 >
                   {/* Text positioned in top left */}
-                  <div className="absolute top-8 left-8">
+                  <div className="absolute top-6 left-6">
                     <h3
-                      className="text-[22px] font-semibold mb-3"
+                      className="text-[18px] font-semibold mb-2"
                       style={{
                         color: '#FFF',
                         fontFamily: 'Nunito',
@@ -1307,7 +1317,7 @@ export default function AboutPage() {
                       Fast Processing
                     </h3>
                     <p
-                      className="text-[14px] max-w-[200px]"
+                      className="text-[13px] max-w-[180px]"
                       style={{
                         color: 'rgba(255, 255, 255, 0.90)',
                         fontFamily: 'Nunito',
@@ -1336,7 +1346,7 @@ export default function AboutPage() {
 
                 {/* Card 4 - Affordable & Transparent Pricing */}
                 <div
-                  className="p-8 h-80 relative group cursor-pointer"
+                  className="p-6 h-64 relative group cursor-pointer"
                   style={{
                     borderRadius: '20px 0 0 0',
                     background: 'linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), linear-gradient(145deg, rgba(12, 0, 43, 0.40) 6.6%, rgba(255, 183, 3, 0.40) 120.24%), rgba(0, 0, 0, 0.50)',
@@ -1344,9 +1354,9 @@ export default function AboutPage() {
                   }}
                 >
                   {/* Text positioned in top left */}
-                  <div className="absolute top-8 left-8">
+                  <div className="absolute top-6 left-6">
                     <h3
-                      className="text-[20px] font-semibold mb-3"
+                      className="text-[17px] font-semibold mb-2"
                       style={{
                         color: '#FFF',
                         fontFamily: 'Nunito',
@@ -1358,7 +1368,7 @@ export default function AboutPage() {
                       Affordable & Transparent Pricing
                     </h3>
                     <p
-                      className="text-[14px] max-w-[200px]"
+                      className="text-[13px] max-w-[180px]"
                       style={{
                         color: 'rgba(255, 255, 255, 0.90)',
                         fontFamily: 'Nunito',
@@ -1387,9 +1397,9 @@ export default function AboutPage() {
               </div>
 
               {/* Right Section - Card 5 (End-to-End Support) */}
-              <div className="w-96 flex-shrink-0">
+              <div className="w-80 flex-shrink-0">
                 <div
-                  className="relative h-[41rem] group cursor-pointer overflow-hidden"
+                  className="relative h-[33rem] group cursor-pointer overflow-hidden"
                   style={{
                     borderRadius: '20px 0 0 0',
                     background: 'linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), linear-gradient(145deg, rgba(12, 0, 43, 0.40) 6.6%, rgba(255, 183, 3, 0.40) 120.24%), rgba(0, 0, 0, 0.50)',
@@ -1409,9 +1419,9 @@ export default function AboutPage() {
 
                   {/* Main content - positioned at top */}
                   <div className="relative z-20">
-                    <div className="p-8 pl-12 text-center">
+                    <div className="p-6 pl-10 text-center">
                       <h3
-                        className="text-[28px] font-semibold mb-6"
+                        className="text-[22px] font-semibold mb-4"
                         style={{
                           color: '#FFF',
                           fontFamily: 'Nunito',
@@ -1423,7 +1433,7 @@ export default function AboutPage() {
                         End-to-End Support
                       </h3>
                       <p
-                        className="text-[18px] mb-4"
+                        className="text-[15px] mb-4"
                         style={{
                           color: 'rgba(255, 255, 255, 0.90)',
                           textAlign: 'center',

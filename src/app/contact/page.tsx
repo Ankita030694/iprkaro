@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import OurHeadOffice from '@/components/OurHeadOffice';
+import { CitiesAndTerritories } from '@/components';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -34,22 +35,41 @@ export default function ContactPage() {
   ];
 
   return (
-    <div 
-    className="min-h-screen" 
+    <div
+    className="min-h-screen"
     style={{
       backgroundImage: 'linear-gradient(to right top, #0c002b, #0c002b,rgb(25, 10, 60),rgb(92, 75, 130), #ffffff)',
-      backgroundSize: '120% 80%',
+      backgroundSize: '100% 80%',
       backgroundPosition: '10% 20%',
-      backgroundRepeat: 'no-repeat'
+      backgroundRepeat: 'no-repeat',
+      marginTop: '-100px',
+      paddingTop: '100px'
     }}
   >
-      {/* Main Content Container */}
-      <div className="w-full px-4 sm:px-8 md:px-12 lg:px-24 pt-32 sm:pt-36 md:pt-30 lg:pt-44">
-        <div className="w-full mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16 items-start">
+      {/* Main Content Container with Responsive Scaling */}
+      <div
+        className="w-full pt-28 sm:pt-32 md:pt-36 lg:pt-36"
+        style={{
+          transform: 'scale(0.9)',
+          transformOrigin: 'top center',
+        }}
+      >
+        {/* Large screen scaling */}
+        <style dangerouslySetInnerHTML={{
+          __html: `
+            @media (min-width: 1024px) {
+              .origin-top {
+                transform: scale(0.8) !important;
+              }
+            }
+          `
+        }} />
+
+        <div className="w-full mx-auto px-4 sm:px-8 md:px-12 lg:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-12 items-start">
             
             {/* Left Section - Content */}
-            <div className="space-y-6 sm:space-y-8 md:space-y-10 lg:space-y-12 mt-4 sm:mt-6 md:mt-8 lg:mt-10">
+            <div className="space-y-6 sm:space-y-8 md:space-y-10 lg:space-y-10 mt-4 sm:mt-6 md:mt-8 lg:mt-8">
               {/* IPR Logo */}
               <div className="hidden sm:flex items-center gap-3 sm:gap-4">
                 <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-27 md:h-27 relative">
@@ -74,7 +94,7 @@ export default function ContactPage() {
                 </div>
 
                 {/* Main Headline */}
-                <h1 className="font-nunito text-2xl sm:text-3xl md:text-4xl lg:text-[2.625rem] font-normal leading-tight text-white">
+                <h1 className="font-nunito text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-normal leading-tight text-white">
                   Your Brand's Trademark Registration Journey Starts Here — <span className="font-bold text-[#FFB703]">Connect With Expert Help</span>
                 </h1>
 
@@ -105,22 +125,20 @@ export default function ContactPage() {
             {/* Right Section - Contact Form */}
             <div className="w-full flex justify-center lg:justify-start">
               {/* Glassmorphism Container */}
-              <div 
-                className="rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 w-full"
+              <div
+                className="rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-7 w-full"
                 style={{
                   background: `linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), linear-gradient(145deg, rgba(12, 0, 43, 0.40) 6.6%, rgba(255, 183, 3, 0.40) 120.24%), rgba(0, 0, 0, 0.50)`,
                   boxShadow: '0 0 20px 0 rgba(255, 255, 255, 0.31) inset',
                   backdropFilter: 'blur(31.7px)',
-                  WebkitBackdropFilter: 'blur(31.7px)',
-                  transform: 'scale(0.9)',
-                  transformOrigin: 'top center'
+                  WebkitBackdropFilter: 'blur(31.7px)'
                 }}
               >
-                <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5 md:space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-3.5 md:space-y-4">
                   {/* Basic Input Fields */}
-                  <div className="space-y-3 sm:space-y-4">
+                  <div className="space-y-2 sm:space-y-2.5">
                     {/* Name Field */}
-                    <div className="space-y-1.5 sm:space-y-2">
+                    <div className="space-y-1 sm:space-y-1.5">
                       <label className="block text-white font-nunito text-base sm:text-lg font-normal">
                         Name
                       </label>
@@ -140,7 +158,7 @@ export default function ContactPage() {
                     </div>
 
                     {/* Email Field */}
-                    <div className="space-y-1.5 sm:space-y-2">
+                    <div className="space-y-1 sm:space-y-1.5">
                       <label className="block text-white font-nunito text-base sm:text-lg font-normal">
                         Email
                       </label>
@@ -160,7 +178,7 @@ export default function ContactPage() {
                     </div>
 
                     {/* Phone Field */}
-                    <div className="space-y-1.5 sm:space-y-2">
+                    <div className="space-y-1 sm:space-y-1.5">
                       <label className="block text-white font-nunito text-base sm:text-lg font-normal">
                         Phone No.
                       </label>
@@ -181,7 +199,7 @@ export default function ContactPage() {
                   </div>
 
                   {/* Interest Section */}
-                  <div className="space-y-3 sm:space-y-4">
+                  <div className="space-y-2 sm:space-y-2.5">
                     <div className="text-white font-nunito text-base sm:text-lg font-normal">
                       What are you Interested in? <span className="text-red-500">*</span>
                     </div>
@@ -211,7 +229,7 @@ export default function ContactPage() {
                   </div>
 
                   {/* Message Field */}
-                  <div className="space-y-1.5 sm:space-y-2">
+                  <div className="space-y-1 sm:space-y-1.5">
                     <label className="block text-white font-nunito text-base sm:text-lg font-normal">
                       Write a message
                     </label>
@@ -223,8 +241,8 @@ export default function ContactPage() {
                         name="message"
                         value={formData.message}
                         onChange={handleInputChange}
-                        rows={3}
-                        className="w-full p-3 sm:p-4 rounded-lg bg-transparent text-white placeholder-[rgba(255,255,255,0.6)] border-0 outline-0 resize-none font-nunito text-sm sm:text-base"
+                        rows={2}
+                        className="w-full p-2.5 sm:p-3 rounded-lg bg-transparent text-white placeholder-[rgba(255,255,255,0.6)] border-0 outline-0 resize-none font-nunito text-sm sm:text-base"
                         placeholder="Tell us about your needs..."
                       />
                     </div>
@@ -233,7 +251,7 @@ export default function ContactPage() {
                   {/* Submit Button */}
                   <button
                     type="submit"
-                    className="w-full flex items-center justify-center py-2.5 sm:py-3 px-6 sm:px-8 rounded-lg bg-[#FFB703] hover:bg-[#e6a602] transition-colors cursor-pointer"
+                    className="w-full flex items-center justify-center py-2 sm:py-2.5 px-6 sm:px-8 rounded-lg bg-[#FFB703] hover:bg-[#e6a602] transition-colors cursor-pointer"
                   >
                     <span className="text-[#0C002B] font-nunito text-base sm:text-lg font-medium">
                       Submit Form
@@ -246,8 +264,8 @@ export default function ContactPage() {
         </div>
       </div>
       <OurHeadOffice />
-      <div className="bg-[#0C002B]">
-        <div className="w-full py-8 sm:py-12 md:py-16 px-4 sm:px-8 md:px-12">
+      <div className="bg-[#0C002B] min-h-screen flex items-center">
+        <div className="w-full py-8 sm:py-12 md:py-16 px-4 sm:px-8 md:px-20">
           <div className="w-full mx-auto">
             <div className="flex flex-col justify-center items-center space-y-4 sm:space-y-6">
               <div
@@ -270,24 +288,24 @@ export default function ContactPage() {
                 Trusted Trademark Registration and <span className="whitespace-nowrap">AI-Powered</span> Search Across India’s Leading Cities
               </div>
               {/* Location Images */}
-              <div className="flex items-center justify-start sm:justify-center w-full gap-2 sm:gap-3 overflow-x-auto pb-2 sm:pb-0">
+              <div className="flex items-center justify-center w-full gap-2 sm:gap-2.5 md:gap-10 flex-wrap sm:flex-nowrap">
                 {[1, 2, 3, 4, 5, 6].map((cityNumber) => (
                   <div
                     key={cityNumber}
-                    className="flex-shrink-0 p-2 sm:p-4 hover:border-white transition-all duration-300"
+                    className="flex-shrink-0 p-1 sm:p-1.5 hover:border-white transition-all duration-300"
                   >
                     <Image
                       src={`/locations/city${cityNumber}.svg`}
                       alt={`City ${cityNumber} Location`}
-                      width={120}
-                      height={240}
-                      className="w-[120px] h-[120px] sm:w-[160px] sm:h-[160px] md:w-[200px] md:h-[200px] grayscale brightness-70 contrast-125 hover:grayscale-0 hover:brightness-100 hover:contrast-100 transition-all duration-300 object-cover rounded-lg"
+                      width={100}
+                      height={100}
+                      className="w-[70px] h-[70px] sm:w-[85px] sm:h-[85px] md:w-[100px] md:h-[100px] lg:w-[155px] lg:h-[155px] grayscale brightness-70 contrast-125 hover:grayscale-0 hover:brightness-100 hover:contrast-100 transition-all duration-300 object-cover rounded-lg"
                     />
                   </div>
                 ))}
               </div>
               {/* Nationwide Support & Service and City Details */}
-              <div className="w-full flex flex-col md:flex-row justify-center items-center gap-6 md:gap-10 mt-12">
+              <div className="w-full flex flex-col md:flex-row justify-center items-center gap-6 md:gap-10 mt-4a">
                 {/* Nationwide Support & Service Box */}
                 <div
                   className="relative bg-gradient-to-br from-[#1345C3] via-[#069A81] to-[#FFB703] p-1 rounded-2xl shadow-lg w-full max-w-xl md:max-w-lg"
@@ -339,104 +357,13 @@ export default function ContactPage() {
                     }}
                   />
                 </div>
-                {/* City Details Box */}
-                <div
-                  className="relative bg-gradient-to-br from-[#FFB703] via-[#1345C3] to-[#069A81] p-1 rounded-2xl shadow-lg w-full max-w-xl md:max-w-lg"
-                  style={{
-                    boxShadow: '0 8px 32px 0 rgba(12,0,43,0.18), 0 1.5px 8px 0 rgba(6,154,129,0.10)',
-                  }}
-                >
-                  <div className="bg-[#0C002B] rounded-2xl p-6 sm:p-8 flex flex-col gap-4 items-start text-left relative z-10">
-                    <div className="flex items-center gap-3 mb-2">
-                      <i className="fas fa-city text-[#FFB703] text-xl sm:text-2xl" aria-hidden="true"></i>
-                      <span className="font-nunito font-bold text-white text-lg sm:text-xl md:text-2xl tracking-tight">
-                        City-Specific Trademark Services
-                      </span>
-                    </div>
-                    <ul className="space-y-4 mt-2 w-full max-w-xl">
-                      <li className="flex items-start gap-3">
-                        <span className="flex-shrink-0 mt-1">
-                          <i className="fas fa-location-dot text-[#FFB703] text-base" aria-hidden="true"></i>
-                        </span>
-                        <span>
-                          <span className="font-semibold text-[#FFB703]">New Delhi:</span>{" "}
-                          <span className="text-white font-nunito text-base sm:text-lg font-normal leading-relaxed">
-                            Trademark registration online, AI trademark risk analysis, fast approvals
-                          </span>
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <span className="flex-shrink-0 mt-1">
-                          <i className="fas fa-location-dot text-[#FFB703] text-base" aria-hidden="true"></i>
-                        </span>
-                        <span>
-                          <span className="font-semibold text-[#FFB703]">Mumbai:</span>{" "}
-                          <span className="text-white font-nunito text-base sm:text-lg font-normal leading-relaxed">
-                            How to register trademark, expert legal review, AI search report
-                          </span>
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <span className="flex-shrink-0 mt-1">
-                          <i className="fas fa-location-dot text-[#FFB703] text-base" aria-hidden="true"></i>
-                        </span>
-                        <span>
-                          <span className="font-semibold text-[#FFB703]">Kolkata:</span>{" "}
-                          <span className="text-white font-nunito text-base sm:text-lg font-normal leading-relaxed">
-                            AI-powered trademark search India, register trademark with risk reports
-                          </span>
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <span className="flex-shrink-0 mt-1">
-                          <i className="fas fa-location-dot text-[#FFB703] text-base" aria-hidden="true"></i>
-                        </span>
-                        <span>
-                          <span className="font-semibold text-[#FFB703]">Jaipur:</span>{" "}
-                          <span className="text-white font-nunito text-base sm:text-lg font-normal leading-relaxed">
-                            Instant online trademark filing, advanced similarity check, legal compliance
-                          </span>
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <span className="flex-shrink-0 mt-1">
-                          <i className="fas fa-location-dot text-[#FFB703] text-base" aria-hidden="true"></i>
-                        </span>
-                        <span>
-                          <span className="font-semibold text-[#FFB703]">Bangalore:</span>{" "}
-                          <span className="text-white font-nunito text-base sm:text-lg font-normal leading-relaxed">
-                            Brand monitoring, AI trademark conflict detection, startup support
-                          </span>
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <span className="flex-shrink-0 mt-1">
-                          <i className="fas fa-location-dot text-[#FFB703] text-base" aria-hidden="true"></i>
-                        </span>
-                        <span>
-                          <span className="font-semibold text-[#FFB703]">Chennai:</span>{" "}
-                          <span className="text-white font-nunito text-base sm:text-lg font-normal leading-relaxed">
-                            Trademark registration with AI search report, regional expertise, end-to-end filing
-                          </span>
-                        </span>
-                      </li>
-                    </ul>
-                  </div>
-                  {/* Decorative Gradient Glow */}
-                  <div
-                    className="absolute -inset-1 rounded-2xl pointer-events-none"
-                    style={{
-                      background: 'radial-gradient(ellipse at 60% 40%, rgba(6,154,129,0.13) 0%, rgba(255,183,3,0.10) 60%, transparent 100%)',
-                      zIndex: 0,
-                      filter: 'blur(8px)',
-                    }}
-                  />
-                </div>
+
               </div>
             </div>
           </div>
         </div>
       </div>
+      <CitiesAndTerritories />
     </div>
   );
 }

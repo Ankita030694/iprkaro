@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Nunito } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
-import { Navbar, Footer } from "@/components";
+import { Navbar, Footer, CitiesAndTerritories } from "@/components";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
