@@ -818,7 +818,7 @@ export default function WhyTrademark() {
               </button>
               
               {/* Background Image - mess.png in bottom center */}
-              <div className="absolute bottom-[-100px] lg:bottom-[-90px] left-1/2 transform -translate-x-1/2 z-0">
+              <div className="hidden md:block absolute bottom-[-100px] lg:bottom-[-90px] left-1/2 transform -translate-x-1/2 z-0">
                 <img
                   src="/mess.png"
                   alt="Messenger chat icon"
@@ -954,7 +954,7 @@ export default function WhyTrademark() {
               </button>
               
               {/* Background Image - mess.png in bottom center */}
-              <div className="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 z-0">
+              <div className="hidden md:block absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 z-0">
                 <img
                   src="/mess.png"
                   alt="Messenger chat icon"
