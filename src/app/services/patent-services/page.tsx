@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
@@ -16,6 +17,31 @@ export default function TrademarkRegistrationPage() {
   const togglePlan = (planId: string) => {
     setExpandedPlan(expandedPlan === planId ? null : planId);
   };
+
+  // Function to generate state-specific slug URL
+  const generateStateSlug = (stateName: string) => {
+    const slug = stateName.toLowerCase()
+      .replace(/[^a-z0-9\s]/g, '') // Remove special characters
+      .replace(/\s+/g, '-') // Replace spaces with hyphens
+      .replace(/&/g, 'and') // Replace & with 'and'
+      .trim();
+    return `patent-services-in-${slug}`;
+  };
+
+  // List of all states and union territories
+  const states = [
+    'Andhra Pradesh', 'Arunachal Pradesh', 'Assam', 'Bihar', 'Chhattisgarh',
+    'Goa', 'Gujarat', 'Haryana', 'Himachal Pradesh', 'Jharkhand', 'Karnataka',
+    'Kerala', 'Madhya Pradesh', 'Maharashtra', 'Manipur', 'Meghalaya',
+    'Mizoram', 'Nagaland', 'Odisha', 'Punjab', 'Rajasthan', 'Sikkim',
+    'Tamil Nadu', 'Telangana', 'Tripura', 'Uttar Pradesh', 'Uttarakhand'
+  ];
+
+  const unionTerritories = [
+    'Andaman and Nicobar Islands', 'Chandigarh',
+    'Dadra and Nagar Haveli and Daman and Diu', 'Delhi',
+    'Jammu and Kashmir', 'Ladakh', 'Lakshadweep', 'Puducherry'
+  ];
 
   const patentFaqs = [
     {
@@ -1458,116 +1484,42 @@ Register your patent today with IPRKaro to safeguard your innovation, secure you
 
           {/* States Grid */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 mb-12">
-            {/* 27 States */}
-            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-xs md:text-sm font-medium">Andhra Pradesh</span>
-            </div>
-            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-xs md:text-sm font-medium">Arunachal Pradesh</span>
-            </div>
-            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-xs md:text-sm font-medium">Assam</span>
-            </div>
-            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-xs md:text-sm font-medium">Bihar</span>
-            </div>
-            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-xs md:text-sm font-medium">Chhattisgarh</span>
-            </div>
-            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-xs md:text-sm font-medium">Goa</span>
-            </div>
-            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-xs md:text-sm font-medium">Gujarat</span>
-            </div>
-            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-xs md:text-sm font-medium">Haryana</span>
-            </div>
-            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-xs md:text-sm font-medium">Himachal Pradesh</span>
-            </div>
-            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-xs md:text-sm font-medium">Jharkhand</span>
-            </div>
-            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-xs md:text-sm font-medium">Karnataka</span>
-            </div>
-            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-xs md:text-sm font-medium">Kerala</span>
-            </div>
-            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-xs md:text-sm font-medium">Madhya Pradesh</span>
-            </div>
-            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-xs md:text-sm font-medium">Maharashtra</span>
-            </div>
-            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-xs md:text-sm font-medium">Manipur</span>
-            </div>
-            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-xs md:text-sm font-medium">Meghalaya</span>
-            </div>
-            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-xs md:text-sm font-medium">Mizoram</span>
-            </div>
-            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-xs md:text-sm font-medium">Nagaland</span>
-            </div>
-            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-xs md:text-sm font-medium">Odisha</span>
-            </div>
-            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-xs md:text-sm font-medium">Punjab</span>
-            </div>
-            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-xs md:text-sm font-medium">Rajasthan</span>
-            </div>
-            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-xs md:text-sm font-medium">Sikkim</span>
-            </div>
-            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-xs md:text-sm font-medium">Tamil Nadu</span>
-            </div>
-            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-xs md:text-sm font-medium">Telangana</span>
-            </div>
-            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-xs md:text-sm font-medium">Tripura</span>
-            </div>
-            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-xs md:text-sm font-medium">Uttar Pradesh</span>
-            </div>
-            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-xs md:text-sm font-medium">Uttarakhand</span>
-            </div>
+            {states.map((state, index) => (
+              <Link
+                key={index}
+                href={`/services/patent-services/${generateStateSlug(state)}`}
+                className="p-3 rounded-lg flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer group"
+                style={{
+                  background: 'rgba(255, 183, 3, 0.1)',
+                  border: '1px solid rgba(255, 183, 3, 0.3)'
+                }}
+              >
+                <span className="text-white font-nunito text-xs md:text-sm font-medium group-hover:text-[#FFB703] transition-colors">
+                  {state}
+                </span>
+                <i className="fas fa-arrow-right text-[#FFB703] text-xs opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true"></i>
+              </Link>
+            ))}
           </div>
 
           {/* Union Territories Grid */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(19, 69, 195, 0.1)', border: '1px solid rgba(19, 69, 195, 0.3)' }}>
-              <span className="text-white font-nunito text-xs md:text-sm font-medium">Andaman and Nicobar Islands</span>
-            </div>
-            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(19, 69, 195, 0.1)', border: '1px solid rgba(19, 69, 195, 0.3)' }}>
-              <span className="text-white font-nunito text-xs md:text-sm font-medium">Chandigarh</span>
-            </div>
-            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(19, 69, 195, 0.1)', border: '1px solid rgba(19, 69, 195, 0.3)' }}>
-              <span className="text-white font-nunito text-xs md:text-sm font-medium">Dadra and Nagar Haveli and Daman and Diu</span>
-            </div>
-            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(19, 69, 195, 0.1)', border: '1px solid rgba(19, 69, 195, 0.3)' }}>
-              <span className="text-white font-nunito text-xs md:text-sm font-medium">Delhi</span>
-            </div>
-            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(19, 69, 195, 0.1)', border: '1px solid rgba(19, 69, 195, 0.3)' }}>
-              <span className="text-white font-nunito text-xs md:text-sm font-medium">Jammu and Kashmir</span>
-            </div>
-            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(19, 69, 195, 0.1)', border: '1px solid rgba(19, 69, 195, 0.3)' }}>
-              <span className="text-white font-nunito text-xs md:text-sm font-medium">Ladakh</span>
-            </div>
-            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(19, 69, 195, 0.1)', border: '1px solid rgba(19, 69, 195, 0.3)' }}>
-              <span className="text-white font-nunito text-xs md:text-sm font-medium">Lakshadweep</span>
-            </div>
-            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(19, 69, 195, 0.1)', border: '1px solid rgba(19, 69, 195, 0.3)' }}>
-              <span className="text-white font-nunito text-xs md:text-sm font-medium">Puducherry</span>
-            </div>
+            {unionTerritories.map((territory, index) => (
+              <Link
+                key={index}
+                href={`/services/patent-services/${generateStateSlug(territory)}`}
+                className="p-3 rounded-lg flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer group"
+                style={{
+                  background: 'rgba(19, 69, 195, 0.1)',
+                  border: '1px solid rgba(19, 69, 195, 0.3)'
+                }}
+              >
+                <span className="text-white font-nunito text-xs md:text-sm font-medium group-hover:text-[#1345C3] transition-colors">
+                  {territory}
+                </span>
+                <i className="fas fa-arrow-right text-[#1345C3] text-xs opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true"></i>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

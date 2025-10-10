@@ -1,126 +1,56 @@
 'use client';
 
 import Image from 'next/image';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import React, { useEffect, useRef, useState } from 'react';
-import { Faq } from '@/components';
+import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import ClientLogoSlider from '@/components/ClientLogoSlider';
 
-// Helper function to split text into word spans
-const splitTextIntoWords = (text: string) => {
-  return text.split(' ').map((word, index) => (
-    <span key={index} className="reveal-word">
-      {word}{' '}
-    </span>
-  ));
-};
-
 export default function AboutPage() {
-  // Refs for scroll-driven animation
-  const sectionsRef = useRef<HTMLDivElement>(null);
-  const revealSectionsRef = useRef<HTMLDivElement[]>([]);
-
   // State for mobile card interactions
   const [activeCard, setActiveCard] = useState<number | null>(null);
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
-  useEffect(() => {
-    const sections = document.querySelectorAll('.reveal-section');
-    revealSectionsRef.current = Array.from(sections) as HTMLDivElement[];
+  const toggleFaq = (index: number) => {
+    setOpenFaq(openFaq === index ? null : index);
+  };
 
-    let ticking = false;
-    let lastScrollY = window.scrollY;
-    
-    // Track maximum progress for each section (for scroll down behavior)
-    const maxProgressMap = new Map<HTMLDivElement, number>();
+  const aboutFaqs = [
+    {
+      question: "What is IPR Karo and how did it start?",
+      answer: "IPR Karo was founded in 2019 with a mission to simplify and democratize trademark registration for businesses of all sizes in India. We launched India's first AI-powered trademark search in 2020, making it easy for anyone to understand how to register a trademark and get expert help online."
+    },
+    {
+      question: "What makes IPR Karo different from traditional IP firms?",
+      answer: "IPR Karo combines cutting-edge AI technology with expert legal guidance. Our AI instantly scans millions of trademarks, provides clear risk reports, and delivers results within minutes. We offer transparent pricing, 24/7 accessibility, and end-to-end support from search to registration to monitoring."
+    },
+    {
+      question: "How many trademark registrations has IPR Karo completed?",
+      answer: "IPR Karo has successfully completed over 5,000 trademark registrations since our inception. We've become India's leading online partner for trademark registration, trusted by startups and enterprises alike for AI-driven brand protection."
+    },
+    {
+      question: "Is IPR Karo available across all of India?",
+      answer: "Yes, IPR Karo provides 100% online trademark registration services across all states and union territories in India. You can access our AI-powered search, expert legal support, and filing services from anywhere in the country."
+    },
+    {
+      question: "What services does IPR Karo offer?",
+      answer: "IPR Karo offers comprehensive IP protection services including AI-powered trademark search and registration, copyright protection for creative works, patent services for inventions, ongoing brand monitoring, and legal support for objections and renewals."
+    }
+  ];
 
-    const updateScrollProgress = () => {
-      if (ticking) return;
-      ticking = true;
-
-      requestAnimationFrame(() => {
-        const currentScrollY = window.scrollY;
-        const isScrollingDown = currentScrollY > lastScrollY;
-        lastScrollY = currentScrollY;
-
-        const viewportHeight = window.innerHeight;
-        const viewportCenter = viewportHeight / 2;
-
-        revealSectionsRef.current.forEach((section) => {
-          const rect = section.getBoundingClientRect();
-          
-          // Calculate section center position
-          const sectionCenter = rect.top + rect.height / 2;
-          
-          // Calculate distance from viewport center
-          const distanceFromCenter = Math.abs(sectionCenter - viewportCenter);
-          
-          // Calculate progress based on scroll direction
-          let progress = 0;
-          
-          if (isScrollingDown) {
-            // When scrolling down: reveal when approaching/at center, stay revealed after
-            const maxDistance = viewportHeight / 2;
-            const calculatedProgress = Math.max(0, Math.min(1, 
-              1 - (distanceFromCenter / maxDistance)
-            ));
-            
-            // Keep the maximum progress achieved
-            const currentMaxProgress = maxProgressMap.get(section) || 0;
-            progress = Math.max(calculatedProgress, currentMaxProgress);
-            maxProgressMap.set(section, progress);
-          } else {
-            // When scrolling up: unreveal based on position relative to viewport
-            // Use a larger range to ensure complete unrevealing
-            const maxDistance = viewportHeight * 0.8; // Larger range for smoother unrevealing
-            
-            // If section is above viewport center, unreveal progressively
-            if (sectionCenter < viewportCenter) {
-              progress = Math.max(0, Math.min(1, 
-                1 - (Math.abs(sectionCenter - viewportCenter) / maxDistance)
-              ));
-            } else {
-              // If section is still below center while scrolling up, keep it revealed
-              progress = maxProgressMap.get(section) || 0;
-            }
-            
-            maxProgressMap.set(section, progress);
-          }
-          
-          // Update word opacity based on progress
-          const wordElements = section.querySelectorAll('.reveal-word');
-          wordElements.forEach((wordEl, wordIndex) => {
-            const element = wordEl as HTMLElement;
-            const totalWords = wordElements.length;
-            
-            // Map the overall section progress to individual word progress.
-            const wordProgressStart = wordIndex / totalWords;
-            const wordProgressEnd = (wordIndex + 1) / totalWords;
-            
-            const wordProgress = Math.max(0, Math.min(1, 
-              (progress - wordProgressStart) / (wordProgressEnd - wordProgressStart)
-            ));
-            
-            const opacity = 0.2 + (wordProgress * 0.8);
-            element.style.opacity = opacity.toString();
-          });
-        });
-
-        ticking = false;
-      });
-    };
-
-    window.addEventListener('scroll', updateScrollProgress, { passive: true });
-    window.addEventListener('resize', updateScrollProgress, { passive: true });
-
-    // Initial call
-    updateScrollProgress();
-
-    return () => {
-      window.removeEventListener('scroll', updateScrollProgress);
-      window.removeEventListener('resize', updateScrollProgress);
-    };
-  }, []);
+  // Schema markup for FAQPage
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": aboutFaqs.map((faq) => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
   return (
     <div
       className="min-h-[90vh] relative overflow-x-hidden"
@@ -390,7 +320,7 @@ export default function AboutPage() {
       </div>
 
       {/* Our Story Timeline Section */}
-      <div ref={sectionsRef} className="reveal-container w-full py-16 relative">
+      <div className="w-full py-16 relative">
         <div className="text-center mb-16">
           <h2 
             className="text-3xl sm:text-4xl lg:text-[42px] font-bold"
@@ -462,8 +392,7 @@ export default function AboutPage() {
           {/* Timeline Items - Desktop Original Layout */}
           <div className="space-y-16">
             {/* Timeline Item 1 - Left Year, Right Heading & Description */}
-            <div className="reveal-section">
-              <div className="reveal-content">
+            <div>
                 <div className="relative flex items-start">
                   {/* Year (Left) */}
                   <div className="w-1/2 pr-8 text-right pt-2">
@@ -502,7 +431,7 @@ export default function AboutPage() {
                     >
                       The Foundation
                     </h4>
-                    <div
+                  <p
                       style={{
                         color: '#FFF',
                         fontFamily: 'Nunito',
@@ -512,16 +441,14 @@ export default function AboutPage() {
                         opacity: 0.9
                       }}
                     >
-                      {splitTextIntoWords('IPR Karo began with a mission: to simplify and democratize trademark registration for businesses of all sizes in India. We focused on making it easy for anyone to understand how to register a trademark and get expert help online.')}
-                    </div>
-                  </div>
+                    IPR Karo began with a mission: to simplify and democratize trademark registration for businesses of all sizes in India. We focused on making it easy for anyone to understand how to register a trademark and get expert help online.
+                  </p>
                 </div>
               </div>
             </div>
 
             {/* Timeline Item 2 - Right Year, Left Heading & Description */}
-            <div className="reveal-section">
-              <div className="reveal-content">
+            <div>
                 <div className="relative flex items-start">
                   {/* Heading & Description (Left) */}
                   <div className="w-1/2 pr-8 text-right">
@@ -536,7 +463,7 @@ export default function AboutPage() {
                     >
                       AI Revolution
                     </h4>
-                    <div
+                  <p
                       style={{
                         color: '#FFF',
                         fontFamily: 'Nunito',
@@ -546,8 +473,8 @@ export default function AboutPage() {
                         opacity: 0.9
                       }}
                     >
-                      {splitTextIntoWords('We launched India\'s first AI-powered trademark search, instantly scanning millions of trademarks for similarity and conflicts. This breakthrough helped users quickly check if their brand name is available, receive an AI-powered risk report, and improve their chances to register a trademark successfully.')}
-                    </div>
+                    We launched India's first AI-powered trademark search, instantly scanning millions of trademarks for similarity and conflicts. This breakthrough helped users quickly check if their brand name is available, receive an AI-powered risk report, and improve their chances to register a trademark successfully.
+                  </p>
                   </div>
 
                   {/* White Dot */}
@@ -572,14 +499,12 @@ export default function AboutPage() {
                     >
                       2020
                     </h3>
-                  </div>
                 </div>
               </div>
             </div>
 
             {/* Timeline Item 3 - Left Year, Right Heading & Description */}
-            <div className="reveal-section">
-              <div className="reveal-content">
+            <div>
                 <div className="relative flex items-start">
                   {/* Year (Left) */}
                   <div className="w-1/2 pr-8 text-right pt-2">
@@ -618,7 +543,7 @@ export default function AboutPage() {
                     >
                       Trust & Growth
                     </h4>
-                    <div
+                  <p
                       style={{
                         color: '#FFF',
                         fontFamily: 'Nunito',
@@ -628,16 +553,14 @@ export default function AboutPage() {
                         opacity: 0.9
                       }}
                     >
-                      {splitTextIntoWords('With over 5,000 trademark registrations, IPR Karo became known for reliable, AI-driven brand protection. Our platform delivered accurate legal results, faster registration, and ongoing trademark monitoring.')}
-                    </div>
-                  </div>
+                    With over 5,000 trademark registrations, IPR Karo became known for reliable, AI-driven brand protection. Our platform delivered accurate legal results, faster registration, and ongoing trademark monitoring.
+                  </p>
                 </div>
               </div>
             </div>
 
             {/* Timeline Item 4 - Right Year, Left Heading & Description */}
-            <div className="reveal-section">
-              <div className="reveal-content">
+            <div>
                 <div className="relative flex items-start">
                   {/* Heading & Description (Left) */}
                   <div className="w-1/2 pr-8 text-right">
@@ -652,7 +575,7 @@ export default function AboutPage() {
                     >
                       Service Expansion
                     </h4>
-                    <div
+                  <p
                       style={{
                         color: '#FFF',
                         fontFamily: 'Nunito',
@@ -662,8 +585,8 @@ export default function AboutPage() {
                         opacity: 0.9
                       }}
                     >
-                      {splitTextIntoWords('Today, IPR Karo is India\'s leading online partner for trademark registration. Startups and enterprises rely on our AI search reports, expert legal support, and full-service brand protection, making how to register a trademark in India easier than ever.')}
-                    </div>
+                    Today, IPR Karo is India's leading online partner for trademark registration. Startups and enterprises rely on our AI search reports, expert legal support, and full-service brand protection, making how to register a trademark in India easier than ever.
+                  </p>
                   </div>
 
                   {/* White Dot */}
@@ -688,7 +611,6 @@ export default function AboutPage() {
                     >
                       2021 to Present
                     </h3>
-                  </div>
                 </div>
               </div>
             </div>
@@ -714,8 +636,7 @@ export default function AboutPage() {
             {/* Timeline Items - Mobile Layout */}
             <div className="space-y-16 relative">
               {/* Timeline Item 1 - Year and Content on Right for Mobile */}
-              <div className="reveal-section">
-                <div className="reveal-content">
+              <div>
                   <div className="relative flex items-start">
                     {/* White Dot - Left for Mobile */}
                     <div
@@ -754,7 +675,7 @@ export default function AboutPage() {
                         >
                           The Foundation
                         </h4>
-                        <div
+                      <p
                           className="text-sm sm:text-base"
                           style={{
                             color: '#FFF',
@@ -764,17 +685,15 @@ export default function AboutPage() {
                             opacity: 0.9
                           }}
                         >
-                          {splitTextIntoWords('IPR Karo began with a mission: to simplify and democratize trademark registration for businesses of all sizes in India. We focused on making it easy for anyone to understand how to register a trademark and get expert help online.')}
-                        </div>
-                      </div>
+                        IPR Karo began with a mission: to simplify and democratize trademark registration for businesses of all sizes in India. We focused on making it easy for anyone to understand how to register a trademark and get expert help online.
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
 
               {/* Timeline Item 2 - Year and Content on Right for Mobile */}
-              <div className="reveal-section">
-                <div className="reveal-content">
+              <div>
                   <div className="relative flex items-start">
                     {/* White Dot - Left for Mobile */}
                     <div
@@ -813,7 +732,7 @@ export default function AboutPage() {
                         >
                           AI Revolution
                         </h4>
-                        <div
+                      <p
                           className="text-sm sm:text-base"
                           style={{
                             color: '#FFF',
@@ -823,17 +742,15 @@ export default function AboutPage() {
                             opacity: 0.9
                           }}
                         >
-                          {splitTextIntoWords('We launched India\'s first AI-powered trademark search, instantly scanning millions of trademarks for similarity and conflicts. This breakthrough helped users quickly check if their brand name is available, receive an AI-powered risk report, and improve their chances to register a trademark successfully.')}
-                        </div>
-                      </div>
+                        We launched India's first AI-powered trademark search, instantly scanning millions of trademarks for similarity and conflicts. This breakthrough helped users quickly check if their brand name is available, receive an AI-powered risk report, and improve their chances to register a trademark successfully.
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
 
               {/* Timeline Item 3 - Year and Content on Right for Mobile */}
-              <div className="reveal-section">
-                <div className="reveal-content">
+              <div>
                   <div className="relative flex items-start">
                     {/* White Dot - Left for Mobile */}
                     <div
@@ -872,7 +789,7 @@ export default function AboutPage() {
                         >
                           Trust & Growth
                         </h4>
-                        <div
+                      <p
                           className="text-sm sm:text-base"
                           style={{
                             color: '#FFF',
@@ -882,9 +799,8 @@ export default function AboutPage() {
                             opacity: 0.9
                           }}
                         >
-                          {splitTextIntoWords('With over 5,000 trademark registrations, IPR Karo became known for reliable, AI-driven brand protection. Our platform delivered accurate legal results, faster registration, and ongoing trademark monitoring.')}
-                        </div>
-                      </div>
+                        With over 5,000 trademark registrations, IPR Karo became known for reliable, AI-driven brand protection. Our platform delivered accurate legal results, faster registration, and ongoing trademark monitoring.
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -909,8 +825,7 @@ export default function AboutPage() {
               </div>
 
               {/* Timeline Item 4 - Year and Content on Right for Mobile */}
-              <div className="reveal-section">
-                <div className="reveal-content">
+              <div>
                   <div className="relative flex items-start">
                     {/* White Dot - Left for Mobile */}
                     <div
@@ -949,7 +864,7 @@ export default function AboutPage() {
                         >
                           Service Expansion
                         </h4>
-                        <div
+                      <p
                           className="text-sm sm:text-base"
                           style={{
                             color: '#FFF',
@@ -959,9 +874,8 @@ export default function AboutPage() {
                             opacity: 0.9
                           }}
                         >
-                          {splitTextIntoWords('Today, IPR Karo is India\'s leading online partner for trademark registration. Startups and enterprises rely on our AI search reports, expert legal support, and full-service brand protection, making how to register a trademark in India easier than ever.')}
-                        </div>
-                      </div>
+                        Today, IPR Karo is India's leading online partner for trademark registration. Startups and enterprises rely on our AI search reports, expert legal support, and full-service brand protection, making how to register a trademark in India easier than ever.
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -1485,7 +1399,107 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
-      <Faq />
+
+      {/* FAQ Section */}
+      <section className="py-20 relative overflow-hidden -mt-3" style={{ backgroundColor: '#0C002B' }}>
+        {/* Schema Markup for SEO */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(faqSchema),
+          }}
+        />
+
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-0 w-full h-full" style={{ background: 'linear-gradient(to right, #FFB70320, transparent)' }}></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 rounded-full blur-3xl" style={{ background: 'linear-gradient(to left, #FFB70320, transparent)' }}></div>
+        </div>
+
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+
+            {/* Left Section - Questions */}
+            <div className="space-y-8 flex flex-col justify-center">
+              <div className="space-y-4">
+                <h2 className="text-white text-left font-nunito text-lg md:text-xl lg:text-2xl font-medium leading-tight w-full">
+                  Frequently Asked Questions
+                  <br />
+                  <span style={{ color: '#FFB703' }}>
+                    About IPR Karo
+                  </span>
+                </h2>
+
+                <p className="text-white font-nunito text-xs md:text-xs lg:text-sm font-medium">
+                  Still have questions? <span style={{ color: '#FFB703' }} className="font-medium">Contact us</span> anytime.
+                </p>
+              </div>
+
+              {/* AI Input */}
+              <form onSubmit={(e) => { e.preventDefault(); console.log('AI Question submitted'); }}>
+                <div className="relative bg-black/20 backdrop-blur-sm border border-purple-400/30 rounded-xl p-4">
+                  <input
+                    type="text"
+                    placeholder="Ask about IPR Karo...."
+                    className="w-full bg-transparent text-white placeholder-purple-300 outline-none text-lg"
+                  />
+                  <button
+                    type="submit"
+                    className="absolute right-4 top-1/2 transform -translate-y-1/2 transition-colors"
+                    style={{ color: '#FFB703' }}
+                    onMouseEnter={(e) => e.currentTarget.style.color = '#e6a503'}
+                    onMouseLeave={(e) => e.currentTarget.style.color = '#FFB703'}
+                  >
+                    <FontAwesomeIcon icon={faPaperPlane} className="w-6 h-6" />
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            {/* Right Section - FAQ Items */}
+            <div className="space-y-4">
+              {aboutFaqs.map((faq, index) => (
+                <div key={index} className="relative">
+                  <div
+                    className="p-6 cursor-pointer transition-all duration-300 ease-in-out hover:scale-[1.02] transform"
+                    style={{
+                      borderRadius: '15px',
+                      background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%)',
+                      ...(openFaq === index ? { boxShadow: `0 0 0 2px #FFB70380` } : {})
+                    }}
+                    onClick={() => toggleFaq(index)}
+                  >
+                    <div className="flex justify-between items-center">
+                      <h3 className="text-white font-nunito text-sm md:text-base lg:text-lg font-semibold pr-4">
+                        Q{index + 1}. {faq.question}
+                      </h3>
+                      <FontAwesomeIcon
+                        icon={faChevronDown}
+                        className={`w-5 h-5 transition-all duration-500 ease-in-out flex-shrink-0 ${
+                          openFaq === index ? 'rotate-180 scale-110' : 'rotate-0 scale-100'
+                        }`}
+                        style={{ color: '#000000' }}
+                      />
+                    </div>
+
+                    <div
+                      className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                        openFaq === index ? 'max-h-96 opacity-100 mt-4' : 'max-h-0 opacity-0 -mt-4'
+                      }`}
+                    >
+                      <div className="pt-4 border-t border-black/20 transform transition-all duration-500 ease-in-out">
+                        <p className="text-white font-nunito text-xs md:text-xs lg:text-sm font-medium leading-relaxed">
+                          {faq.answer}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

@@ -1,8 +1,11 @@
 'use client';
 
-import { SimplePlans, Faq } from "@/components";
+import { SimplePlans } from "@/components";
 import Link from "next/link";
 import dynamic from 'next/dynamic';
+import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 const SearchClient = dynamic(() => import('@/components/SearchClient'));
 
@@ -164,11 +167,154 @@ function ServicesHeroSection() {
 }
 
 export default function ServicesPage() {
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+  const toggleFaq = (index: number) => {
+    setOpenFaq(openFaq === index ? null : index);
+  };
+
+  const servicesFaqs = [
+    {
+      question: "What IP services does IPR Karo provide?",
+      answer: "IPR Karo offers comprehensive intellectual property services including trademark registration with AI-powered search, copyright protection for creative works, and patent services for inventions. All services include expert legal guidance and end-to-end support."
+    },
+    {
+      question: "How does the AI-powered trademark search work?",
+      answer: "Our AI instantly scans millions of trademark records across databases to find identical and confusingly similar marks. It provides a detailed risk report with similarity scores, conflict analysis, and recommendations to help you decide whether to proceed with registration or modify your brand."
+    },
+    {
+      question: "Can I get all IP services in one place?",
+      answer: "Yes! IPR Karo is your one-stop solution for all intellectual property needs. From trademark registration to copyright filing and patent applications, we handle everything online with expert legal support, making IP protection simple and accessible."
+    },
+    {
+      question: "What is the typical timeline for each service?",
+      answer: "Trademark registration typically takes 12-18 months, copyright registration takes 4-6 months, and patent registration takes 3-5 years. However, our AI-powered search and expert guidance help minimize delays by identifying potential issues early in the process."
+    },
+    {
+      question: "Do you provide support after registration?",
+      answer: "Absolutely! We offer comprehensive post-registration support including trademark renewals, opposition handling, infringement monitoring, licensing assistance, and legal defense. Our 24/7 AI-powered monitoring keeps your intellectual property protected continuously."
+    }
+  ];
+
+  // Schema markup for FAQPage
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": servicesFaqs.map((faq) => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   return (
     <>
       <ServicesHeroSection />
       <SimplePlans />
-      <Faq />
+      
+      {/* FAQ Section */}
+      <section className="py-20 relative overflow-hidden -mt-3" style={{ backgroundColor: '#0C002B' }}>
+        {/* Schema Markup for SEO */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(faqSchema),
+          }}
+        />
+
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-0 w-full h-full" style={{ background: 'linear-gradient(to right, #FFB70320, transparent)' }}></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 rounded-full blur-3xl" style={{ background: 'linear-gradient(to left, #FFB70320, transparent)' }}></div>
+        </div>
+
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+
+            {/* Left Section - Questions */}
+            <div className="space-y-8 flex flex-col justify-center">
+              <div className="space-y-4">
+                <h2 className="text-white text-left font-nunito text-lg md:text-xl lg:text-2xl font-medium leading-tight w-full">
+                  Frequently Asked Questions
+                  <br />
+                  <span style={{ color: '#FFB703' }}>
+                    About Our Services
+                  </span>
+                </h2>
+
+                <p className="text-white font-nunito text-xs md:text-xs lg:text-sm font-medium">
+                  Still have questions? <span style={{ color: '#FFB703' }} className="font-medium">Contact us</span> anytime.
+                </p>
+              </div>
+
+              {/* AI Input */}
+              <form onSubmit={(e) => { e.preventDefault(); console.log('AI Question submitted'); }}>
+                <div className="relative bg-black/20 backdrop-blur-sm border border-purple-400/30 rounded-xl p-4">
+                  <input
+                    type="text"
+                    placeholder="Ask about our services...."
+                    className="w-full bg-transparent text-white placeholder-purple-300 outline-none text-lg"
+                  />
+                  <button
+                    type="submit"
+                    className="absolute right-4 top-1/2 transform -translate-y-1/2 transition-colors"
+                    style={{ color: '#FFB703' }}
+                    onMouseEnter={(e) => e.currentTarget.style.color = '#e6a503'}
+                    onMouseLeave={(e) => e.currentTarget.style.color = '#FFB703'}
+                  >
+                    <FontAwesomeIcon icon={faPaperPlane} className="w-6 h-6" />
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            {/* Right Section - FAQ Items */}
+            <div className="space-y-4">
+              {servicesFaqs.map((faq, index) => (
+                <div key={index} className="relative">
+                  <div
+                    className="p-6 cursor-pointer transition-all duration-300 ease-in-out hover:scale-[1.02] transform"
+                    style={{
+                      borderRadius: '15px',
+                      background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%)',
+                      ...(openFaq === index ? { boxShadow: `0 0 0 2px #FFB70380` } : {})
+                    }}
+                    onClick={() => toggleFaq(index)}
+                  >
+                    <div className="flex justify-between items-center">
+                      <h3 className="text-white font-nunito text-sm md:text-base lg:text-lg font-semibold pr-4">
+                        Q{index + 1}. {faq.question}
+                      </h3>
+                      <FontAwesomeIcon
+                        icon={faChevronDown}
+                        className={`w-5 h-5 transition-all duration-500 ease-in-out flex-shrink-0 ${
+                          openFaq === index ? 'rotate-180 scale-110' : 'rotate-0 scale-100'
+                        }`}
+                        style={{ color: '#000000' }}
+                      />
+                    </div>
+
+                    <div
+                      className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                        openFaq === index ? 'max-h-96 opacity-100 mt-4' : 'max-h-0 opacity-0 -mt-4'
+                      }`}
+                    >
+                      <div className="pt-4 border-t border-black/20 transform transition-all duration-500 ease-in-out">
+                        <p className="text-white font-nunito text-xs md:text-xs lg:text-sm font-medium leading-relaxed">
+                          {faq.answer}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

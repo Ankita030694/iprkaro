@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import OurHeadOffice from '@/components/OurHeadOffice';
 import { CitiesAndTerritories } from '@/components';
 
@@ -13,6 +15,49 @@ export default function ContactPage() {
     interest: '',
     message: ''
   });
+
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+  const toggleFaq = (index: number) => {
+    setOpenFaq(openFaq === index ? null : index);
+  };
+
+  const contactFaqs = [
+    {
+      question: "How can I contact IPR Karo for support?",
+      answer: "You can reach us via email at info@iprkaro.com, through our contact form on this page, or by calling our support team. We provide 24/7 online support for all trademark, copyright, and patent registration queries."
+    },
+    {
+      question: "Do you have physical offices I can visit?",
+      answer: "Yes, we have offices in major cities across India including Delhi, Mumbai, Bangalore, Hyderabad, Chennai, and Kolkata. However, our services are 100% available online, so you can complete your entire trademark registration from anywhere in India."
+    },
+    {
+      question: "What are your response times for queries?",
+      answer: "We typically respond to all queries within 2-4 hours during business hours. For urgent matters, our AI-powered chat support is available 24/7 to provide instant answers and guidance on trademark searches and registration processes."
+    },
+    {
+      question: "Can I schedule a consultation with an IP expert?",
+      answer: "Yes! You can schedule a free consultation with our IP attorneys through our contact form or by emailing us. Our experts will review your trademark needs, discuss registration strategy, and provide personalized legal guidance."
+    },
+    {
+      question: "How do I track my trademark application status?",
+      answer: "Once you register with IPR Karo, you'll receive regular updates via email and SMS. You can also log into your dashboard to track your application status in real-time, view documents, and communicate directly with your assigned legal expert."
+    }
+  ];
+
+  // Schema markup for FAQPage
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": contactFaqs.map((faq) => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -363,6 +408,108 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
+
+      {/* FAQ Section */}
+      <section className="py-20 relative overflow-hidden -mt-3" style={{ backgroundColor: '#0C002B' }}>
+        {/* Schema Markup for SEO */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(faqSchema),
+          }}
+        />
+
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-0 w-full h-full" style={{ background: 'linear-gradient(to right, #FFB70320, transparent)' }}></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 rounded-full blur-3xl" style={{ background: 'linear-gradient(to left, #FFB70320, transparent)' }}></div>
+        </div>
+
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+
+            {/* Left Section - Questions */}
+            <div className="space-y-8 flex flex-col justify-center">
+              <div className="space-y-4">
+                <h2 className="text-white text-left font-nunito text-lg md:text-xl lg:text-2xl font-medium leading-tight w-full">
+                  Frequently Asked Questions
+                  <br />
+                  <span style={{ color: '#FFB703' }}>
+                    About Contacting Us
+                  </span>
+                </h2>
+
+                <p className="text-white font-nunito text-xs md:text-xs lg:text-sm font-medium">
+                  Still have questions? <span style={{ color: '#FFB703' }} className="font-medium">We're here to help</span> anytime.
+                </p>
+              </div>
+
+              {/* AI Input */}
+              <form onSubmit={(e) => { e.preventDefault(); console.log('AI Question submitted'); }}>
+                <div className="relative bg-black/20 backdrop-blur-sm border border-purple-400/30 rounded-xl p-4">
+                  <input
+                    type="text"
+                    placeholder="Ask about support and contact...."
+                    className="w-full bg-transparent text-white placeholder-purple-300 outline-none text-lg"
+                  />
+                  <button
+                    type="submit"
+                    className="absolute right-4 top-1/2 transform -translate-y-1/2 transition-colors"
+                    style={{ color: '#FFB703' }}
+                    onMouseEnter={(e) => e.currentTarget.style.color = '#e6a503'}
+                    onMouseLeave={(e) => e.currentTarget.style.color = '#FFB703'}
+                  >
+                    <FontAwesomeIcon icon={faPaperPlane} className="w-6 h-6" />
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            {/* Right Section - FAQ Items */}
+            <div className="space-y-4">
+              {contactFaqs.map((faq, index) => (
+                <div key={index} className="relative">
+                  <div
+                    className="p-6 cursor-pointer transition-all duration-300 ease-in-out hover:scale-[1.02] transform"
+                    style={{
+                      borderRadius: '15px',
+                      background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%)',
+                      ...(openFaq === index ? { boxShadow: `0 0 0 2px #FFB70380` } : {})
+                    }}
+                    onClick={() => toggleFaq(index)}
+                  >
+                    <div className="flex justify-between items-center">
+                      <h3 className="text-white font-nunito text-sm md:text-base lg:text-lg font-semibold pr-4">
+                        Q{index + 1}. {faq.question}
+                      </h3>
+                      <FontAwesomeIcon
+                        icon={faChevronDown}
+                        className={`w-5 h-5 transition-all duration-500 ease-in-out flex-shrink-0 ${
+                          openFaq === index ? 'rotate-180 scale-110' : 'rotate-0 scale-100'
+                        }`}
+                        style={{ color: '#000000' }}
+                      />
+                    </div>
+
+                    <div
+                      className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                        openFaq === index ? 'max-h-96 opacity-100 mt-4' : 'max-h-0 opacity-0 -mt-4'
+                      }`}
+                    >
+                      <div className="pt-4 border-t border-black/20 transform transition-all duration-500 ease-in-out">
+                        <p className="text-white font-nunito text-xs md:text-xs lg:text-sm font-medium leading-relaxed">
+                          {faq.answer}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <CitiesAndTerritories />
     </div>
   );
