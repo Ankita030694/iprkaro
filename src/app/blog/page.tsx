@@ -107,7 +107,7 @@ export default function BlogPage() {
 
             {/* Main Title */}
             <h1 className="text-white font-nunito text-4xl lg:text-5xl font-normal leading-tight mb-8">
-              Insights & Trends – The<br />
+              Insights & Trends: The<br />
               Future of Communications
             </h1>
 

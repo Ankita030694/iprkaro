@@ -159,7 +159,7 @@ export default function Dashboard() {
                     <CircularProgress percentage={trademarkData.registrability} color="#1345C3" />
                     <h3 className="font-semibold text-white mt-4 mb-2 font-nunito">Trademark Registrability</h3>
                     <p className="text-sm text-[rgba(255,255,255,0.77)] font-nunito">
-                      Genericness — note about uniqueness / conflicts / legal eligibility
+                      Genericness: note about uniqueness / conflicts / legal eligibility
                     </p>
                     {/* Pulsing indicator */}
                     <div className="absolute top-4 right-4 w-2 h-2 bg-[#1345C3] rounded-full animate-pulse"></div>
@@ -282,12 +282,12 @@ export default function Dashboard() {
                 </div>
                 <div className="flex justify-between items-center py-2">
                   <span className="text-[rgba(255,255,255,0.77)] font-nunito">IPR Karo Platform Fee</span>
-                  <span className="font-semibold text-white font-nunito">₹2,499</span>
+                  <span className="font-semibold text-white font-nunito">-₹1,501</span>
                 </div>
                 <div className="border-t border-[rgba(255,255,255,0.2)] pt-3">
                   <div className="flex justify-between items-center">
                     <span className="font-semibold text-white font-nunito">Total Amount</span>
-                    <span className="text-2xl font-bold text-[#FFB703] font-nunito">₹6,999</span>
+                    <span className="text-2xl font-bold text-[#FFB703] font-nunito">₹2,999</span>
                   </div>
                 </div>
               </div>
@@ -381,7 +381,7 @@ export default function Dashboard() {
                           </div>
                         </div>
                         <div className="text-right">
-                          <p className="text-[#FFB703] font-bold font-nunito">₹2,999</p>
+                          <p className="text-[#FFB703] font-bold font-nunito">₹1,999</p>
                           <p className="text-[rgba(255,255,255,0.77)] text-xs font-nunito">/month</p>
                         </div>
                       </div>
@@ -428,7 +428,7 @@ export default function Dashboard() {
                           </div>
                         </div>
                         <div className="text-right">
-                          <p className="text-[#FFB703] font-bold font-nunito">₹4,999</p>
+                          <p className="text-[#FFB703] font-bold font-nunito">₹3,999</p>
                           <p className="text-[rgba(255,255,255,0.77)] text-xs font-nunito">/month</p>
                         </div>
                       </div>
@@ -478,7 +478,7 @@ export default function Dashboard() {
                           </div>
                         </div>
                         <div className="text-right">
-                          <p className="text-[#FFB703] font-bold font-nunito">₹6,999</p>
+                          <p className="text-[#FFB703] font-bold font-nunito">₹2,999</p>
                           <p className="text-[rgba(255,255,255,0.77)] text-xs font-nunito">/month</p>
                         </div>
                       </div>

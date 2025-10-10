@@ -276,7 +276,7 @@ export default function AboutPage() {
                   opacity: 0.9
                 }}
               >
-                IPR Karo uses cutting-edge AI to scan millions of trademarks instantly, providing clear risk reports and similarity analyses. Our platform guides you step-by-step with smart filing recommendations—making online trademark registration fast, safe, and hassle-free.
+                IPR Karo uses cutting-edge AI to scan millions of trademarks instantly, providing clear risk reports and similarity analyses. Our platform guides you step-by-step with smart filing recommendations, making online trademark registration fast, safe, and hassle-free.
               </p>
             </div>
           </div>
@@ -327,7 +327,7 @@ export default function AboutPage() {
                 opacity: 0.9
               }}
             >
-              IPR Karo uses cutting-edge AI to scan millions of trademarks instantly, providing clear risk reports and similarity analyses. Our platform guides you step-by-step with smart filing recommendations—making online trademark registration fast, safe, and hassle-free.
+              IPR Karo uses cutting-edge AI to scan millions of trademarks instantly, providing clear risk reports and similarity analyses. Our platform guides you step-by-step with smart filing recommendations, making online trademark registration fast, safe, and hassle-free.
             </p>
           </div>
         </div>
@@ -546,7 +546,7 @@ export default function AboutPage() {
                         opacity: 0.9
                       }}
                     >
-                      {splitTextIntoWords('We launched India\'s first AI-powered trademark search—instantly scanning millions of trademarks for similarity and conflicts. This breakthrough helped users quickly check if their brand name is available, receive an AI-powered risk report, and improve their chances to register a trademark successfully.')}
+                      {splitTextIntoWords('We launched India\'s first AI-powered trademark search, instantly scanning millions of trademarks for similarity and conflicts. This breakthrough helped users quickly check if their brand name is available, receive an AI-powered risk report, and improve their chances to register a trademark successfully.')}
                     </div>
                   </div>
 
@@ -662,7 +662,7 @@ export default function AboutPage() {
                         opacity: 0.9
                       }}
                     >
-                      {splitTextIntoWords('Today, IPR Karo is India\'s leading online partner for trademark registration. Startups and enterprises rely on our AI search reports, expert legal support, and full-service brand protection—making how to register a trademark in India easier than ever.')}
+                      {splitTextIntoWords('Today, IPR Karo is India\'s leading online partner for trademark registration. Startups and enterprises rely on our AI search reports, expert legal support, and full-service brand protection, making how to register a trademark in India easier than ever.')}
                     </div>
                   </div>
 
@@ -686,7 +686,7 @@ export default function AboutPage() {
                         fontWeight: 700
                       }}
                     >
-                      2021–Present
+                      2021 to Present
                     </h3>
                   </div>
                 </div>
@@ -823,7 +823,7 @@ export default function AboutPage() {
                             opacity: 0.9
                           }}
                         >
-                          {splitTextIntoWords('We launched India\'s first AI-powered trademark search—instantly scanning millions of trademarks for similarity and conflicts. This breakthrough helped users quickly check if their brand name is available, receive an AI-powered risk report, and improve their chances to register a trademark successfully.')}
+                          {splitTextIntoWords('We launched India\'s first AI-powered trademark search, instantly scanning millions of trademarks for similarity and conflicts. This breakthrough helped users quickly check if their brand name is available, receive an AI-powered risk report, and improve their chances to register a trademark successfully.')}
                         </div>
                       </div>
                     </div>
@@ -933,7 +933,7 @@ export default function AboutPage() {
                             fontWeight: 700
                           }}
                         >
-                          2021–Present
+                          2021 to Present
                         </h3>
                       </div>
 
@@ -959,7 +959,7 @@ export default function AboutPage() {
                             opacity: 0.9
                           }}
                         >
-                          {splitTextIntoWords('Today, IPR Karo is India\'s leading online partner for trademark registration. Startups and enterprises rely on our AI search reports, expert legal support, and full-service brand protection—making how to register a trademark in India easier than ever.')}
+                          {splitTextIntoWords('Today, IPR Karo is India\'s leading online partner for trademark registration. Startups and enterprises rely on our AI search reports, expert legal support, and full-service brand protection, making how to register a trademark in India easier than ever.')}
                         </div>
                       </div>
                     </div>
@@ -1045,7 +1045,7 @@ export default function AboutPage() {
                     Expert-Led Guidance
                   </h3>
                   <p className="text-sm max-w-[200px]" style={{color: 'rgba(255, 255, 255, 0.90)', fontFamily: 'Nunito', lineHeight: '1.5'}}>
-                    Certified IP lawyers review your AI report, advise on registrability, and prepare filing documents. Clear legal answers — no jargon.
+                    Certified IP lawyers review your AI report, advise on registrability, and prepare filing documents. Clear legal answers with no jargon.
                   </p>
                 </div>
                 {/* SVG positioned in top right */}
@@ -1078,7 +1078,7 @@ export default function AboutPage() {
                     Fast Processing
                   </h3>
                   <p className="text-sm max-w-[200px]" style={{color: 'rgba(255, 255, 255, 0.90)', fontFamily: 'Nunito', lineHeight: '1.5'}}>
-                    Optimised workflows cut filing time — get search results within minutes and an expert review within 24–48 hours.
+                    Optimised workflows cut filing time to get search results within minutes and an expert review within 24 to 48 hours.
                   </p>
                 </div>
                 {/* Icon positioned in top right */}
@@ -1111,7 +1111,7 @@ export default function AboutPage() {
                     Affordable & Transparent Pricing
                   </h3>
                   <p className="text-sm max-w-[200px]" style={{color: 'rgba(255, 255, 255, 0.90)', fontFamily: 'Nunito', lineHeight: '1.5'}}>
-                    No hidden fees. Choose a plan that fits your needs — search report, filing, or full legal package — with one-page invoices that explain every cost.
+                    No hidden fees. Choose a plan that fits your needs (search report, filing, or full legal package) with one-page invoices that explain every cost.
                   </p>
                 </div>
                 {/* Icon positioned in bottom right */}
@@ -1157,7 +1157,7 @@ export default function AboutPage() {
                     End-to-End Support
                   </h3>
                   <p className="text-sm mb-4" style={{color: 'rgba(255, 255, 255, 0.90)', fontFamily: 'Nunito', lineHeight: '1.6'}}>
-                    From search to filing to post-registration monitoring — we handle filings, replies, and renewals so your brand stays protected.
+                    From search to filing to post-registration monitoring, we handle filings, replies, and renewals so your brand stays protected.
                   </p>
                 </div>
 
@@ -1275,7 +1275,7 @@ export default function AboutPage() {
                         lineHeight: '1.5'
                       }}
                     >
-                      Certified IP lawyers review your AI report, advise on registrability, and prepare filing documents. Clear legal answers — no jargon.
+                      Certified IP lawyers review your AI report, advise on registrability, and prepare filing documents. Clear legal answers with no jargon.
                     </p>
                     <div className="mt-2 text-xs text-yellow-300 font-medium tracking-wide hidden">
                       trademark lawyer, how to register trademark
@@ -1326,7 +1326,7 @@ export default function AboutPage() {
                         lineHeight: '1.5'
                       }}
                     >
-                      Optimised workflows cut filing time — get search results within minutes and an expert review within 24–48 hours.
+                      Optimised workflows cut filing time to get search results within minutes and an expert review within 24 to 48 hours.
                     </p>
                     <div className="mt-2 text-xs text-yellow-300 font-medium tracking-wide hidden">
                       fast trademark search, trademark registration timeline
@@ -1377,7 +1377,7 @@ export default function AboutPage() {
                         lineHeight: '1.5'
                       }}
                     >
-                      No hidden fees. Choose a plan that fits your needs — search report, filing, or full legal package — with one-page invoices that explain every cost.
+                      No hidden fees. Choose a plan that fits your needs (search report, filing, or full legal package) with one-page invoices that explain every cost.
                     </p>
                     <div className="mt-2 text-xs text-yellow-300 font-medium tracking-wide hidden">
                       trademark cost, trademark price
@@ -1443,7 +1443,7 @@ export default function AboutPage() {
                           lineHeight: '1.6'
                         }}
                       >
-                        From search to filing to post-registration monitoring — we handle filings, replies, and renewals so your brand stays protected.
+                        From search to filing to post-registration monitoring, we handle filings, replies, and renewals so your brand stays protected.
                       </p>
                       <div className="mb-6 text-xs text-yellow-300 font-medium tracking-wide hidden">
                         register trademark, trademark filing services
@@ -1480,7 +1480,7 @@ export default function AboutPage() {
           {/* Trust & Proof line */}
           <div className="w-full text-center mt-8">
             <span className="text-xs sm:text-sm text-neutral-300 font-medium tracking-wide">
-              Trusted by entrepreneurs and startups — official filings, attorney review, and secure document handling.
+              Trusted by entrepreneurs and startups with official filings, attorney review, and secure document handling.
             </span>
           </div>
         </div>

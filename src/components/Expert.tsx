@@ -22,7 +22,7 @@ export default function Expert() {
         "AI-powered trademark search for instant conflict detection and brand availability.",
         "Register trademark online with a fast, step-by-step guided application.",
         "How to register a trademark in India: Complete filing and legal support.",
-        "Get your trademark search report with AI—maximize registerability and minimize risk.",
+        "Get your trademark search report with AI to maximize registerability and minimize risk.",
         "Secure your brand identity with expert trademark protection."
       ]
     },

@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 
 export default function TrademarkRiskReduction() {
   return (
@@ -145,9 +146,11 @@ export default function TrademarkRiskReduction() {
               <p className="text-white/90 mb-6">
                 Get comprehensive risk assessment and expert guidance to maximize your trademark registration success.
               </p>
-              <button className="bg-white text-green-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">
+              <Link href="/contact" className="cursor-pointer"> 
+              <button className="bg-white text-green-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer">
                 Get Risk Assessment
               </button>
+              </Link>
             </div>
 
             <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-white/10">

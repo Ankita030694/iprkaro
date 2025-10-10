@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 
 export default function ExpertTrademarkGuidance() {
   return (
@@ -154,9 +155,11 @@ export default function ExpertTrademarkGuidance() {
               <p className="text-white/90 mb-6">
                 Connect with our trademark experts today for personalized guidance on your trademark matters.
               </p>
-              <button className="bg-white text-yellow-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">
+              <Link href="/contact" className="cursor-pointer"> 
+              <button className="bg-white text-yellow-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer">
                 Schedule Consultation
               </button>
+              </Link>
             </div>
 
             <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-white/10">

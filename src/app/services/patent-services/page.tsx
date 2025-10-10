@@ -7,9 +7,14 @@ import { faChevronDown, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 export default function TrademarkRegistrationPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [showMobilePopup, setShowMobilePopup] = useState(false);
+  const [expandedPlan, setExpandedPlan] = useState<string | null>(null);
 
   const toggleFaq = (index: number) => {
     setOpenFaq(openFaq === index ? null : index);
+  };
+
+  const togglePlan = (planId: string) => {
+    setExpandedPlan(expandedPlan === planId ? null : planId);
   };
 
   const patentFaqs = [
@@ -27,7 +32,7 @@ export default function TrademarkRegistrationPage() {
     },
     {
       question: "Can I register a patent online in India?",
-      answer: "Yes. With IPRKaro, the entire patent registration process — from prior art search to filing and examination response — is managed 100% online with expert legal support and AI-powered tools."
+      answer: "Yes. With IPRKaro, the entire patent registration process (from prior art search to filing and examination response) is managed 100% online with expert legal support and AI-powered tools."
     },
     {
       question: "How long is a patent valid in India?",
@@ -119,47 +124,17 @@ export default function TrademarkRegistrationPage() {
       <path d="M1 10L10 7L19 10M10 1V20.5" stroke="#FFD700" strokeWidth="1.5"/>
       <path d="M1.193 13C2.05 17.298 5.576 19.513 7.899 20.527C8.62 20.842 8.981 21 10 21C11.02 21 11.38 20.842 12.101 20.527C12.68 20.275 13.332 19.947 14 19.533M17 16.904C18.163 15.428 19 13.496 19 10.991V9.417C19 6.219 19 4.62 18.622 4.082C18.245 3.545 16.742 3.03 13.735 2.001L13.162 1.805C11.595 1.268 10.812 1 10 1C9.188 1 8.405 1.268 6.838 1.805L6.265 2C3.258 3.03 1.755 3.545 1.378 4.082C1 4.62 1 6.22 1 9.417V10" stroke="#FFD700" strokeWidth="1.5" strokeLinecap="round"/>
     </svg>,
-    // Clock icon for "Government Certified"
-    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="22" viewBox="0 0 25 22" fill="none" key="clock">
-      <g filter="url(#filter0_ii_1095_4985)">
-        <path d="M12.1766 21.0016C17.0505 21.0016 21.0016 17.0505 21.0016 12.1766C21.0016 7.30265 17.0505 3.35156 12.1766 3.35156C7.30265 3.35156 3.35156 7.30265 3.35156 12.1766C3.35156 17.0505 7.30265 21.0016 12.1766 21.0016Z" stroke="url(#paint0_linear_1095_4985)" strokeWidth="1.5"/>
-        <path d="M4.56657 1C3.7113 1.22906 2.93142 1.67926 2.30534 2.30534C1.67926 2.93142 1.22906 3.7113 1 4.56656M19.7834 1C20.6387 1.22906 21.4186 1.67926 22.0446 2.30534C22.6707 2.93142 23.1209 3.7113 23.35 4.56656M12.175 7.13212V11.8598C12.175 12.0338 12.3162 12.175 12.4902 12.175H15.9571" stroke="url(#paint1_linear_1095_4985)" strokeWidth="1.5" strokeLinecap="round"/>
-      </g>
-      <defs>
-        <filter id="filter0_ii_1095_4985" x="0.25" y="0.25" width="23.8516" height="25.5" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-          <feFlood floodOpacity="0" result="BackgroundImageFix"/>
-          <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-          <feOffset dy="4"/>
-          <feGaussianBlur stdDeviation="2"/>
-          <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
-          <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.15 0"/>
-          <feBlend mode="normal" in2="shape" result="effect1_innerShadow_1095_4985"/>
-          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-          <feOffset dy="4"/>
-          <feGaussianBlur stdDeviation="2"/>
-          <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
-          <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.15 0"/>
-          <feBlend mode="normal" in2="effect1_innerShadow_1095_4985" result="effect2_innerShadow_1095_4985"/>
-        </filter>
-        <linearGradient id="paint0_linear_1095_4985" x1="3.35156" y1="14.8241" x2="21.0881" y2="15.2992" gradientUnits="userSpaceOnUse">
-          <stop stopColor="white"/>
-          <stop offset="0.490385" stopColor="#8A38F5"/>
-          <stop offset="0.88" stopColor="#FFB703"/>
-        </linearGradient>
-        <linearGradient id="paint1_linear_1095_4985" x1="1" y1="8.26373" x2="23.4114" y2="9.46434" gradientUnits="userSpaceOnUse">
-          <stop stopColor="white"/>
-          <stop offset="0.490385" stopColor="#8A38F5"/>
-          <stop offset="0.88" stopColor="#FFB703"/>
-        </linearGradient>
-      </defs>
+    // Clock icon for "24/7 Accessibility"
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" key="clock">
+      <circle cx="12" cy="12" r="9" stroke="#FFD700" strokeWidth="1.5" strokeLinecap="round"/>
+      <path d="M12 7V12L15 15" stroke="#FFD700" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
   ];
 
   const plans = [
     {
       id: 'standard',
-      name: 'AI Patent Filing – Standard',
+      name: 'AI Patent Filing: Standard',
       subtitle: 'Comprehensive prior art search',
       description: 'Best for individual inventors/startups',
       content: 'Essential patent protection',
@@ -174,7 +149,7 @@ export default function TrademarkRegistrationPage() {
     },
     {
       id: 'premium',
-      name: 'Premium Patent Registration – With AI Risk Assessment',
+      name: 'Premium Patent Registration: With AI Risk Assessment',
       subtitle: 'Complete filing with examination support',
       description: 'Suited for growing companies',
       content: 'Enhanced patent services',
@@ -189,7 +164,7 @@ export default function TrademarkRegistrationPage() {
     },
     {
       id: 'pro',
-      name: 'Patent Portfolio Management – AI Powered',
+      name: 'Patent Portfolio Management: AI Powered',
       subtitle: 'Complete patent lifecycle management',
       description: 'Enterprises, ongoing protection',
       content: 'Complete patent portfolio protection',
@@ -204,26 +179,24 @@ export default function TrademarkRegistrationPage() {
     }
   ];
 
-  const [selectedPlan, setSelectedPlan] = useState(plans[0]);
-
   return (
     <div className="min-h-screen pt-20 pb-24 md:pb-8 overflow-x-hidden" style={{ backgroundColor: '#0C002B' }}>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-16">
+      <div className="mx-15 py-8 lg:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-start">
 
           {/* Left Section */}
           <div className="space-y-8">
             {/* Main Heading */}
             <div className="space-y-4">
-              <h1 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-medium leading-tight">
-                Patent Registration in India – Complete Guide by IPRKaro
+              <h1 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-medium leading-tight">
+                Patent Registration in India: Complete Guide by IPRKaro
               </h1>
 
-              <h2 className="text-white font-nunito text-lg md:text-xl lg:text-xl font-medium leading-tight">
+              <h2 className="text-white font-nunito text-base md:text-lg lg:text-lg font-medium leading-tight">
                 Protect Your Innovation with Expert Patent Registration in India
               </h2>
 
-              <p className="text-white font-nunito text-xs md:text-sm lg:text-base leading-relaxed">
+              <p className="text-white font-nunito text-xs md:text-xs lg:text-sm leading-relaxed">
                 In today's competitive business landscape, innovation is the key to success. Whether you're a startup developing groundbreaking technology, a researcher with a revolutionary invention, or an established company with proprietary processes, protecting your intellectual property through patent registration in India is crucial for maintaining your competitive edge.
 
 At IPRKaro, we combine cutting-edge AI technology with deep legal expertise to streamline the patent registration process. Our comprehensive patent services ensure your inventions are thoroughly protected under the Indian Patents Act, 1970, giving you the exclusive rights to commercialize your innovations.
@@ -232,7 +205,7 @@ At IPRKaro, we combine cutting-edge AI technology with deep legal expertise to s
 
             {/* Why Trademark Section */}
             <div className="space-y-4">
-              <h3 className="text-white font-nunito text-lg md:text-3xl font-medium">
+              <h3 className="text-white font-nunito text-base md:text-2xl font-medium">
                 Why Patent with IPRKaro ?
               </h3>
 
@@ -337,7 +310,7 @@ At IPRKaro, we combine cutting-edge AI technology with deep legal expertise to s
                 <div className="flex-1 space-y-8">
                   {/* Heading */}
                   <div className="text-center lg:text-left">
-                    <h3 className="text-white font-nunito text-xl md:text-3xl font-medium">
+                    <h3 className="text-white font-nunito text-lg md:text-2xl font-medium">
                       Get a Guaranteed Patent on
                     </h3>
                   </div>
@@ -386,7 +359,7 @@ At IPRKaro, we combine cutting-edge AI technology with deep legal expertise to s
               </div>
             </div>
             <div className="space-y-6">
-              <h3 className="text-white font-nunito text-lg md:text-3xl font-medium">
+              <h3 className="text-white font-nunito text-base md:text-2xl font-medium">
               Patent Requirements
               </h3>
 
@@ -406,7 +379,7 @@ At IPRKaro, we combine cutting-edge AI technology with deep legal expertise to s
                     >
                       {requirement.icon}
                     </div>
-                    <span className="text-white font-nunito text-xs md:text-sm font-medium">
+                    <span className="text-white font-nunito text-xs md:text-xs font-medium">
                       {requirement.text}
                     </span>
                   </div>
@@ -416,7 +389,7 @@ At IPRKaro, we combine cutting-edge AI technology with deep legal expertise to s
 
             {/* Guidelines Section */}
             <div className="space-y-6">
-              <h3 className="text-white font-nunito text-lg md:text-3xl font-medium">
+              <h3 className="text-white font-nunito text-base md:text-2xl font-medium">
                 we work with the Guidelines of
               </h3>
 
@@ -521,19 +494,19 @@ At IPRKaro, we combine cutting-edge AI technology with deep legal expertise to s
 
             {/* About Patent Registration Section */}
             <div className="space-y-6 mt-20">
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-medium">
+              <h2 className="text-white font-nunito text-lg md:text-xl lg:text-2xl font-medium">
                 About Patent Registration in India
               </h2>
 
-              <h3 className="text-white font-nunito text-lg md:text-xl lg:text-2xl font-medium">
-                Patent Registration Services – Intro
+              <h3 className="text-white font-nunito text-base md:text-lg lg:text-xl font-medium">
+                Patent Registration Services: Intro
               </h3>
 
-              <h4 className="text-white font-nunito text-base md:text-lg lg:text-xl font-medium">
+              <h4 className="text-white font-nunito text-sm md:text-base lg:text-lg font-medium">
                 Protect Your Innovation with Expert Patent Registration in India
               </h4>
 
-              <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
+              <p className="text-white font-nunito text-xs md:text-xs lg:text-sm leading-relaxed">
                 In today's competitive business landscape, innovation is the key to success. Whether you're a startup developing groundbreaking technology, a researcher with a revolutionary invention, or an established company with proprietary processes, protecting your intellectual property through patent registration in India is crucial for maintaining your competitive edge.
 
 At IPRKaro, we combine cutting-edge AI technology with deep legal expertise to streamline the patent registration process. Our comprehensive patent services ensure your inventions are thoroughly protected under the Indian Patents Act, 1970, giving you the exclusive rights to commercialize your innovations.
@@ -542,11 +515,11 @@ At IPRKaro, we combine cutting-edge AI technology with deep legal expertise to s
 
             {/* What is a Patent Section */}
             <div className="space-y-6">
-              <h3 className="text-white font-nunito text-lg md:text-xl lg:text-2xl font-medium">
+              <h3 className="text-white font-nunito text-base md:text-lg lg:text-xl font-medium">
                 What is a Patent?
               </h3>
 
-              <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
+              <p className="text-white font-nunito text-xs md:text-xs lg:text-sm leading-relaxed">
                 A patent is an exclusive right granted by the government to an inventor for a limited period, typically 20 years, in exchange for public disclosure of the invention. This legal protection prevents others from making, using, selling, or importing the patented invention without permission.
 
 Patents are territorial rights, meaning they are only enforceable in the country where they are granted. In India, patents are governed by the Patents Act, 1970 and provide inventors with a monopoly over their inventions, encouraging innovation and technological advancement.
@@ -555,18 +528,18 @@ Patents are territorial rights, meaning they are only enforceable in the country
 
             {/* Why Register a Patent Section */}
             <div className="space-y-6">
-              <h3 className="text-white font-nunito text-lg md:text-xl lg:text-2xl font-medium">
+              <h3 className="text-white font-nunito text-base md:text-lg lg:text-xl font-medium">
                 Why Register a Patent in India?
               </h3>
 
-              <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
+              <p className="text-white font-nunito text-xs md:text-xs lg:text-sm leading-relaxed">
                 Patent registration in India offers numerous advantages for inventors and businesses:
               </p>
 
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
-                  <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
+                  <p className="text-white font-nunito text-xs md:text-xs lg:text-sm leading-relaxed">
                     <strong>Exclusive Rights</strong><br />
                     Gain the exclusive right to prevent others from commercially exploiting your invention for 20 years.
                   </p>
@@ -574,7 +547,7 @@ Patents are territorial rights, meaning they are only enforceable in the country
 
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
-                  <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
+                  <p className="text-white font-nunito text-xs md:text-xs lg:text-sm leading-relaxed">
                     <strong>Commercial Advantage</strong><br />
                     Patents provide a competitive edge by allowing you to license, sell, or commercialize your invention exclusively.
                   </p>
@@ -582,7 +555,7 @@ Patents are territorial rights, meaning they are only enforceable in the country
 
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
-                  <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
+                  <p className="text-white font-nunito text-xs md:text-xs lg:text-sm leading-relaxed">
                     <strong>Investment Protection</strong><br />
                     Secure funding and attract investors by demonstrating legal protection of your intellectual property.
                   </p>
@@ -590,7 +563,7 @@ Patents are territorial rights, meaning they are only enforceable in the country
 
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
-                  <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
+                  <p className="text-white font-nunito text-xs md:text-xs lg:text-sm leading-relaxed">
                     <strong>Research & Development Incentive</strong><br />
                     Patents encourage continued innovation by protecting the results of significant R&D investments.
                   </p>
@@ -598,7 +571,7 @@ Patents are territorial rights, meaning they are only enforceable in the country
 
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
-                  <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
+                  <p className="text-white font-nunito text-xs md:text-xs lg:text-sm leading-relaxed">
                     <strong>Global Recognition</strong><br />
                     Indian patents can be used as a basis for international patent protection through PCT and other treaties.
                   </p>
@@ -621,7 +594,7 @@ Patents are territorial rights, meaning they are only enforceable in the country
                   <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
                   <div>
                     <h4 className="text-white font-nunito text-base md:text-lg font-medium mb-1">Novelty</h4>
-                    <p className="text-white font-nunito text-sm md:text-base leading-relaxed">The invention must be new and not previously known or used anywhere in the world.</p>
+                    <p className="text-white font-nunito text-xs md:text-xs leading-relaxed">The invention must be new and not previously known or used anywhere in the world.</p>
                   </div>
                 </div>
 
@@ -629,7 +602,7 @@ Patents are territorial rights, meaning they are only enforceable in the country
                   <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
                   <div>
                     <h4 className="text-white font-nunito text-base md:text-lg font-medium mb-1">Non-obviousness</h4>
-                    <p className="text-white font-nunito text-sm md:text-base leading-relaxed">The invention must involve an inventive step that is not obvious to a person skilled in the relevant field.</p>
+                    <p className="text-white font-nunito text-xs md:text-xs leading-relaxed">The invention must involve an inventive step that is not obvious to a person skilled in the relevant field.</p>
                   </div>
                 </div>
 
@@ -637,7 +610,7 @@ Patents are territorial rights, meaning they are only enforceable in the country
                   <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
                   <div>
                     <h4 className="text-white font-nunito text-base md:text-lg font-medium mb-1">Industrial Applicability</h4>
-                    <p className="text-white font-nunito text-sm md:text-base leading-relaxed">The invention must be capable of industrial application and have utility.</p>
+                    <p className="text-white font-nunito text-xs md:text-xs leading-relaxed">The invention must be capable of industrial application and have utility.</p>
                   </div>
                 </div>
               </div>
@@ -653,7 +626,7 @@ Patents are territorial rights, meaning they are only enforceable in the country
                 Patent Registration Process in India
               </h3>
 
-              <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
+              <p className="text-white font-nunito text-xs md:text-xs lg:text-sm leading-relaxed">
                 The patent registration process in India involves several stages:
               </p>
 
@@ -662,7 +635,7 @@ Patents are territorial rights, meaning they are only enforceable in the country
                   <div className="w-6 h-6 rounded-full bg-[#FFB703] flex items-center justify-center text-white font-nunito font-bold text-sm flex-shrink-0">1</div>
                   <div>
                     <h4 className="text-white font-nunito text-base md:text-lg font-medium mb-1">Prior Art Search</h4>
-                    <p className="text-white font-nunito text-sm md:text-base leading-relaxed">Comprehensive search of existing patents and literature to ensure novelty.</p>
+                    <p className="text-white font-nunito text-xs md:text-xs leading-relaxed">Comprehensive search of existing patents and literature to ensure novelty.</p>
                   </div>
                 </div>
 
@@ -670,7 +643,7 @@ Patents are territorial rights, meaning they are only enforceable in the country
                   <div className="w-6 h-6 rounded-full bg-[#FFB703] flex items-center justify-center text-white font-nunito font-bold text-sm flex-shrink-0">2</div>
                   <div>
                     <h4 className="text-white font-nunito text-base md:text-lg font-medium mb-1">Patent Drafting</h4>
-                    <p className="text-white font-nunito text-sm md:text-base leading-relaxed">Professional drafting of patent specification with detailed claims and descriptions.</p>
+                    <p className="text-white font-nunito text-xs md:text-xs leading-relaxed">Professional drafting of patent specification with detailed claims and descriptions.</p>
                   </div>
                 </div>
 
@@ -678,7 +651,7 @@ Patents are territorial rights, meaning they are only enforceable in the country
                   <div className="w-6 h-6 rounded-full bg-[#FFB703] flex items-center justify-center text-white font-nunito font-bold text-sm flex-shrink-0">3</div>
                   <div>
                     <h4 className="text-white font-nunito text-base md:text-lg font-medium mb-1">Filing Application</h4>
-                    <p className="text-white font-nunito text-sm md:text-base leading-relaxed">Submission of complete patent application to the Indian Patent Office.</p>
+                    <p className="text-white font-nunito text-xs md:text-xs leading-relaxed">Submission of complete patent application to the Indian Patent Office.</p>
                   </div>
                 </div>
 
@@ -686,7 +659,7 @@ Patents are territorial rights, meaning they are only enforceable in the country
                   <div className="w-6 h-6 rounded-full bg-[#FFB703] flex items-center justify-center text-white font-nunito font-bold text-sm flex-shrink-0">4</div>
                   <div>
                     <h4 className="text-white font-nunito text-base md:text-lg font-medium mb-1">Publication</h4>
-                    <p className="text-white font-nunito text-sm md:text-base leading-relaxed">Application is published in the Patent Journal after 18 months for public examination.</p>
+                    <p className="text-white font-nunito text-xs md:text-xs leading-relaxed">Application is published in the Patent Journal after 18 months for public examination.</p>
                   </div>
                 </div>
 
@@ -694,7 +667,7 @@ Patents are territorial rights, meaning they are only enforceable in the country
                   <div className="w-6 h-6 rounded-full bg-[#FFB703] flex items-center justify-center text-white font-nunito font-bold text-sm flex-shrink-0">5</div>
                   <div>
                     <h4 className="text-white font-nunito text-base md:text-lg font-medium mb-1">Examination & Grant</h4>
-                    <p className="text-white font-nunito text-sm md:text-base leading-relaxed">Request for examination, response to objections, and final grant of patent.</p>
+                    <p className="text-white font-nunito text-xs md:text-xs leading-relaxed">Request for examination, response to objections, and final grant of patent.</p>
                   </div>
                 </div>
               </div>
@@ -749,7 +722,7 @@ Patents are territorial rights, meaning they are only enforceable in the country
                 How Long Does Patent Protection Last in India?
               </h3>
 
-              <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
+              <p className="text-white font-nunito text-xs md:text-xs lg:text-sm leading-relaxed">
                 Patents in India are valid for a period of 20 years from the date of filing. During this period, the patent holder has exclusive rights to the invention. Annual renewal fees must be paid to maintain the patent in force. After 20 years, the invention enters the public domain and can be used by anyone.
               </p>
             </div>
@@ -764,35 +737,35 @@ Patents are territorial rights, meaning they are only enforceable in the country
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
                   <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
-                    <strong>AI-Powered Prior Art Search</strong> – Advanced technology to ensure your invention's novelty and patentability.
+                    <strong>AI-Powered Prior Art Search:</strong> Advanced technology to ensure your invention's novelty and patentability.
                   </p>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
                   <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
-                    <strong>Expert Patent Drafting</strong> – Professional specification writing with strong, defensible claims.
+                    <strong>Expert Patent Drafting:</strong> Professional specification writing with strong, defensible claims.
                   </p>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
                   <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
-                    <strong>Complete Application Management</strong> – From filing to grant, we handle the entire process.
+                    <strong>Complete Application Management:</strong> From filing to grant, we handle the entire process.
                   </p>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
                   <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
-                    <strong>Examination Response Support</strong> – Expert handling of patent office objections and responses.
+                    <strong>Examination Response Support:</strong> Expert handling of patent office objections and responses.
                   </p>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
                   <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
-                    <strong>Global Patent Strategy</strong> – Assistance with international patent protection and PCT filings.
+                    <strong>Global Patent Strategy:</strong> Assistance with international patent protection and PCT filings.
                   </p>
                 </div>
               </div>
@@ -800,13 +773,14 @@ Patents are territorial rights, meaning they are only enforceable in the country
               <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
                 Protect your innovations with IPRKaro's comprehensive patent registration services. Our AI-driven approach, combined with deep legal expertise, ensures your inventions receive the strongest possible protection. From startups to Fortune 500 companies, we help innovators secure their intellectual property and drive business growth.
 
-👉 Register your patent today with IPRKaro — safeguard your innovation, secure your competitive advantage, and unlock your invention's commercial potential.
+Register your patent today with IPRKaro to safeguard your innovation, secure your competitive advantage, and unlock your invention's commercial potential.
               </p>
             </div>
           </div>
 
           {/* Right Section - Hidden on mobile, visible on desktop */}
-          <div className="hidden md:block space-y-8">
+          <div className="hidden md:block" style={{ zoom: 0.7 }}>
+            <div className="space-y-8">
             {/* Main Card Container */}
             <div
               className="relative flex flex-col p-5 md:p-6 lg:p-8 w-full max-w-full md:max-w-[532px] mx-auto"
@@ -825,10 +799,10 @@ Patents are territorial rights, meaning they are only enforceable in the country
                 }}
               >
                 <h3
-                  className="text-white font-nunito font-medium leading-[30px]"
+                  className="text-white font-nunito font-medium leading-[24px]"
                   style={{
-                    fontSize: 'clamp(24px, 4vw, 30px)',
-                    lineHeight: '30px'
+                    fontSize: 'clamp(18px, 3vw, 24px)',
+                    lineHeight: '24px'
                   }}
                 >
                   Get Your Trademark Registered
@@ -843,10 +817,10 @@ Patents are territorial rights, meaning they are only enforceable in the country
                 }}
               >
                 <h4
-                  className="text-white font-nunito font-medium leading-[25px] mb-4 text-center"
+                  className="text-white font-nunito font-medium leading-[20px] mb-4 text-center"
                   style={{
-                    fontSize: 'clamp(20px, 3vw, 25px)',
-                    lineHeight: '25px'
+                    fontSize: 'clamp(16px, 2.5vw, 20px)',
+                    lineHeight: '20px'
                   }}
                 >
                   Price Breakdown
@@ -854,25 +828,25 @@ Patents are territorial rights, meaning they are only enforceable in the country
 
                 <div className="space-y-3">
                   <div className="flex justify-between items-center py-2 border-b border-gray-400">
-                    <span className="text-white font-nunito text-sm md:text-base opacity-90">Government Fee</span>
-                    <span className="text-white font-nunito text-sm md:text-base">₹16,000</span>
+                    <span className="text-white font-nunito text-xs md:text-xl opacity-90">Government Fee</span>
+                    <span className="text-white font-nunito text-xs md:text-xl">₹16,000</span>
                   </div>
                   <div className="flex justify-between items-center py-2 border-b border-gray-400">
-                    <span className="text-white font-nunito text-sm md:text-base opacity-90">Professional Fee</span>
-                    <span className="text-white font-nunito text-sm md:text-base">₹8,999</span>
+                    <span className="text-white font-nunito text-xs md:text-xl opacity-90">Professional Fee</span>
+                    <span className="text-white font-nunito text-xs md:text-xl">₹8,999</span>
                   </div>
                   <div className="flex justify-between items-center py-2 border-b border-gray-400">
-                    <span className="text-white font-nunito text-sm md:text-base opacity-90">GST (18%)</span>
-                    <span className="text-white font-nunito text-sm md:text-base">₹4,500</span>
+                    <span className="text-white font-nunito text-xs md:text-xl opacity-90">GST (18%)</span>
+                    <span className="text-white font-nunito text-xs md:text-xl">₹4,500</span>
                   </div>
                   <div className="flex justify-between items-center py-3 font-semibold">
-                    <span className="text-white font-nunito text-base md:text-lg">Total</span>
-                    <span className="text-white font-nunito text-base md:text-lg">₹29,499</span>
+                    <span className="text-white font-nunito text-sm md:text-xl">Total</span>
+                    <span className="text-white font-nunito text-sm md:text-xl">₹29,499</span>
                   </div>
 
                   {/* Start Registration Button */}
                   <button
-                    className="w-full py-4 px-6 rounded-xl font-nunito font-semibold text-lg md:text-xl transition-all duration-300 hover:scale-105 mt-4"
+                    className="w-full py-3 px-4 rounded-xl font-nunito font-semibold text-xl md:text-xl transition-all duration-300 hover:scale-105 mt-4"
                     style={{
                       background: '#FFB703',
                       boxShadow: '0 0 20px 0 #000 inset',
@@ -884,112 +858,124 @@ Patents are territorial rights, meaning they are only enforceable in the country
                 </div>
               </div>
 
-              {/* Our Plans Section - Dropdown Style */}
-              <div className="flex-1">
+              {/* Our Plans Section - Expandable Dropdowns */}
+              <div className="flex-1 space-y-4">
                 <h4
-                  className="text-white font-nunito font-medium leading-[30px] mb-6 text-center"
+                  className="text-white font-nunito font-medium leading-[24px] mb-6 text-center"
                   style={{
-                    fontSize: 'clamp(24px, 4vw, 30px)',
-                    lineHeight: '30px'
+                    fontSize: 'clamp(22px, 5vw, 28px)',
+                    lineHeight: '24px'
                   }}
                 >
                   Our Plans
                 </h4>
 
-                {/* Plan Selector Dropdown */}
-                <div className="mb-6">
-                  <select
-                    className="w-full p-4 rounded-xl text-white font-nunito font-medium text-lg bg-transparent border-2 border-white/20 focus:border-white/40 focus:outline-none cursor-pointer"
-                    style={{
-                      background: 'rgba(255, 255, 255, 0.05)',
-                      backdropFilter: 'blur(10px)',
-                      WebkitBackdropFilter: 'blur(10px)'
-                    }}
-                    value={selectedPlan.id}
-                    onChange={(e) => setSelectedPlan(plans.find(p => p.id === e.target.value) || plans[0])}
-                  >
-                    {plans.map((plan) => (
-                      <option key={plan.id} value={plan.id} className="bg-[#0C002B] text-white">
-                        {plan.name} - {plan.price}
-                      </option>
-                    ))}
-                  </select>
-                  <div className="mt-3 text-center">
-                    <a
-                      href="/services/patent-services"
-                      className="inline-flex items-center px-4 py-2 text-sm font-medium text-[#0C002B] bg-[#FFB703] rounded-lg hover:bg-[#e6a503] transition-colors duration-300"
+                {/* Display all three plans as expandable dropdowns */}
+                {plans.map((plan) => (
+                  <div key={plan.id} className="mb-4">
+                    {/* Plan Dropdown Header - Clickable */}
+                    <div
+                      onClick={() => togglePlan(plan.id)}
+                      className="w-full p-3 rounded-xl text-white font-nunito font-medium text-lg border-2 border-white/20 cursor-pointer hover:border-white/40 transition-all duration-300 flex items-center justify-between"
+                      style={{
+                        background: 'rgba(255, 255, 255, 0.05)',
+                        backdropFilter: 'blur(10px)',
+                        WebkitBackdropFilter: 'blur(10px)'
+                      }}
                     >
-                      Learn More About Patent Services
-                    </a>
-                  </div>
-                </div>
-
-                {/* Selected Plan Card */}
-                <div
-                  className="relative p-6 rounded-2xl transition-all duration-300"
-                  style={{
-                    background: 'rgba(255, 255, 255, 0.10)',
-                    backdropFilter: 'blur(16px)',
-                    WebkitBackdropFilter: 'blur(16px)',
-                    border: selectedPlan.highlighted ? '2px solid #1345C3' : 'none',
-                    boxShadow: '0 0 20px 0 rgba(0, 0, 0, 0.10) inset, inset 0 0 20px rgba(255, 255, 255, 0.1)'
-                  }}
-                >
-                  {/* Plan Header */}
-                  <div className="text-center mb-6">
-                    <h3 className="text-white font-nunito text-xl md:text-2xl font-semibold mb-2">
-                      {selectedPlan.name}
-                    </h3>
-                    <div className="flex items-center justify-center gap-4 mb-4">
-                      <span className="text-white font-nunito text-sm opacity-80">{selectedPlan.description}</span>
+                      <span>{plan.name} - {plan.price}</span>
+                      <FontAwesomeIcon
+                        icon={faChevronDown}
+                        className={`w-4 h-4 transition-transform duration-300 ${
+                          expandedPlan === plan.id ? 'rotate-180' : 'rotate-0'
+                        }`}
+                      />
                     </div>
-                    <div className="text-right">
-                      <span
-                        className="text-white font-nunito font-bold text-2xl md:text-3xl"
-                        style={{ fontSize: 'clamp(24px, 4vw, 30px)' }}
+
+                    {/* Plan Card - Only visible when expanded */}
+                    <div
+                      className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                        expandedPlan === plan.id ? 'max-h-[1000px] opacity-100 mt-4' : 'max-h-0 opacity-0'
+                      }`}
+                    >
+                      <div
+                        className="relative p-6 rounded-2xl transition-all duration-300"
+                        style={{
+                          background: 'rgba(255, 255, 255, 0.10)',
+                          backdropFilter: 'blur(16px)',
+                          WebkitBackdropFilter: 'blur(16px)',
+                          border: plan.highlighted ? '2px solid #1345C3' : 'none',
+                          boxShadow: '0 0 20px 0 rgba(0, 0, 0, 0.10) inset, inset 0 0 20px rgba(255, 255, 255, 0.1)'
+                        }}
                       >
-                        {selectedPlan.price}
-                      </span>
+                        {/* Plan Header */}
+                        <div className="text-center mb-6">
+                          <h3 className="text-white font-nunito text-lg md:text-xl font-semibold mb-2">
+                            {plan.name}
+                          </h3>
+                          <div className="flex items-center justify-center gap-4 mb-4">
+                            <span className="text-white font-nunito text-md opacity-80">{plan.description}</span>
+                          </div>
+                          <div className="text-right">
+                            <span
+                              className="text-white font-nunito font-bold text-xl md:text-3xl"
+                            >
+                              {plan.price}
+                            </span>
+                          </div>
+                        </div>
+
+                        {/* Plan Features */}
+                        <div className="space-y-3 mb-6">
+                          {plan.features.map((feature, index) => (
+                            <div key={index} className="flex items-start gap-3">
+                              <i className="fas fa-check text-green-400 mt-1 flex-shrink-0"></i>
+                              <span className="text-white font-nunito text-xs md:text-lg leading-relaxed">
+                                {feature}
+                              </span>
+                            </div>
+                          ))}
+                        </div>
+
+                        {/* Action Button */}
+                        <button
+                          className="w-full py-3 px-4 rounded-xl font-nunito font-semibold text-sm md:text-base transition-all duration-300 hover:scale-105"
+                          style={{
+                            background: '#1345C3',
+                            boxShadow: '0 0 20px 0 #000 inset',
+                            color: '#FFFFFF'
+                          }}
+                        >
+                          Get Protected
+                        </button>
+
+                        {/* Plan Type Indicator */}
+                        <div className="mt-4 text-center">
+                          <span className="text-white font-nunito text-xs opacity-80">
+                            {plan.subtitle}
+                          </span>
+                        </div>
+                      </div>
                     </div>
                   </div>
+                ))}
 
-                  {/* Plan Features */}
-                  <div className="space-y-3 mb-6">
-                    {selectedPlan.features.map((feature, index) => (
-                      <div key={index} className="flex items-start gap-3">
-                        <i className="fas fa-check text-green-400 mt-1 flex-shrink-0"></i>
-                        <span className="text-white font-nunito text-sm md:text-base leading-relaxed">
-                          {feature}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Action Button */}
-                  <button
-                    className="w-full py-4 px-6 rounded-xl font-nunito font-semibold text-lg md:text-xl transition-all duration-300 hover:scale-105"
-                    style={{
-                      background: '#1345C3',
-                      boxShadow: '0 0 20px 0 #000 inset',
-                      color: '#FFFFFF'
-                    }}
+                {/* Learn More Link */}
+                <div className="mt-6 text-center">
+                  <a
+                    href="/services/patent-services"
+                    className="inline-flex items-center px-4 py-2 text-sm font-medium text-[#0C002B] bg-[#FFB703] rounded-lg hover:bg-[#e6a503] transition-colors duration-300"
                   >
-                    Get Protected
-                  </button>
-                </div>
-
-                {/* Plan Type Indicator */}
-                <div className="mt-4 text-center">
-                  <span className="text-white font-nunito text-sm opacity-80">
-                    {selectedPlan.subtitle}
-                  </span>
+                    Learn More About Patent Services
+                  </a>
                 </div>
               </div>
             </div>
 
             {/* Quick Insights Container */}
             <div
-              className="relative flex flex-col p-6 md:p-8 w-full max-w-full md:max-w-[532px] mx-auto mt-8"
+              id="quick-insights"
+              className="sticky top-24 flex flex-col p-6 md:p-8 w-full max-w-full md:max-w-[532px] mx-auto"
               style={{
                 borderRadius: '30px',
                 background: 'rgba(255, 255, 255, 0.10)',
@@ -998,17 +984,17 @@ Patents are territorial rights, meaning they are only enforceable in the country
             >
               {/* Quick Insight's Heading */}
               <div className="mb-8 text-center">
-                <h3 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-medium">
+                <h3 className="text-white font-nunito text-lg md:text-xl lg:text-3xl font-medium">
                   Quick Insight's
                 </h3>
               </div>
 
               {/* Documents You'll Need Heading */}
               <div className="mb-6 text-center">
-                <h4 className="text-white font-nunito font-medium leading-[25px]"
+                <h4 className="text-white font-nunito font-medium leading-[20px]"
                     style={{
-                      fontSize: 'clamp(20px, 3vw, 25px)',
-                      lineHeight: '25px'
+                      fontSize: 'clamp(18px, 3vw, 22px)',
+                      lineHeight: '20px'
                     }}
                 >
                   Documents You'll Need
@@ -1026,7 +1012,7 @@ Patents are territorial rights, meaning they are only enforceable in the country
                     backdropFilter: 'blur(16px)'
                   }}
                 >
-                  <span className="text-white font-nunito text-sm md:text-base font-medium">
+                  <span className="text-white font-nunito text-xs md:text-lg font-medium">
                     Complete patent specification with claims
                   </span>
                 </div>
@@ -1040,7 +1026,7 @@ Patents are territorial rights, meaning they are only enforceable in the country
                     backdropFilter: 'blur(16px)'
                   }}
                 >
-                  <span className="text-white font-nunito text-sm md:text-base font-medium">
+                  <span className="text-white font-nunito text-xs md:text-lg font-medium">
                     Drawings and diagrams (if applicable)
                   </span>
                 </div>
@@ -1054,7 +1040,7 @@ Patents are territorial rights, meaning they are only enforceable in the country
                     backdropFilter: 'blur(16px)'
                   }}
                 >
-                  <span className="text-white font-nunito text-sm md:text-base font-medium">
+                  <span className="text-white font-nunito text-xs md:text-lg font-medium">
                     Inventor details and assignments
                   </span>
                 </div>
@@ -1068,7 +1054,7 @@ Patents are territorial rights, meaning they are only enforceable in the country
                     backdropFilter: 'blur(16px)'
                   }}
                 >
-                  <span className="text-white font-nunito text-sm md:text-base font-medium">
+                  <span className="text-white font-nunito text-xs md:text-lg font-medium">
                     Prior art search report and analysis
                   </span>
                 </div>
@@ -1082,11 +1068,12 @@ Patents are territorial rights, meaning they are only enforceable in the country
                     backdropFilter: 'blur(16px)'
                   }}
                 >
-                  <span className="text-white font-nunito text-sm md:text-base font-medium">
+                  <span className="text-white font-nunito text-xs md:text-lg font-medium">
                     Power of Attorney (Form-1 authorization)
                   </span>
                 </div>
               </div>
+            </div>
             </div>
           </div>
         </div>
@@ -1228,8 +1215,8 @@ Patents are territorial rights, meaning they are only enforceable in the country
                   </div>
                 </div>
 
-                {/* Our Plans Section - Dropdown Style */}
-                <div className="flex-1">
+                {/* Our Plans Section - Expandable Dropdowns */}
+                <div className="flex-1 space-y-3">
                   <h4
                     className="text-white font-nunito font-medium leading-[24px] mb-4 text-center"
                     style={{
@@ -1240,93 +1227,105 @@ Patents are territorial rights, meaning they are only enforceable in the country
                     Our Plans
                   </h4>
 
-                  {/* Plan Selector Dropdown */}
-                  <div className="mb-4">
-                    <select
-                      className="w-full p-3 rounded-lg text-white font-nunito font-medium text-sm bg-transparent border-2 border-white/20 focus:border-white/40 focus:outline-none cursor-pointer"
-                      style={{
-                        background: 'rgba(255, 255, 255, 0.05)',
-                        backdropFilter: 'blur(10px)',
-                        WebkitBackdropFilter: 'blur(10px)'
-                      }}
-                      value={selectedPlan.id}
-                      onChange={(e) => setSelectedPlan(plans.find(p => p.id === e.target.value) || plans[0])}
-                    >
-                      {plans.map((plan) => (
-                        <option key={plan.id} value={plan.id} className="bg-[#0C002B] text-white">
-                          {plan.name} - {plan.price}
-                        </option>
-                      ))}
-                    </select>
-                    <div className="mt-2 text-center">
-                      <a
-                        href="/services/patent-services"
-                        className="inline-flex items-center px-3 py-1.5 text-xs font-medium text-[#0C002B] bg-[#FFB703] rounded-md hover:bg-[#e6a503] transition-colors duration-300"
+                  {/* Display all three plans as expandable dropdowns */}
+                  {plans.map((plan) => (
+                    <div key={plan.id} className="mb-3">
+                      {/* Plan Dropdown Header - Clickable */}
+                      <div
+                        onClick={() => togglePlan(plan.id)}
+                        className="w-full p-3 rounded-lg text-white font-nunito font-medium text-sm border-2 border-white/20 cursor-pointer hover:border-white/40 transition-all duration-300 flex items-center justify-between"
+                        style={{
+                          background: 'rgba(255, 255, 255, 0.05)',
+                          backdropFilter: 'blur(10px)',
+                          WebkitBackdropFilter: 'blur(10px)'
+                        }}
                       >
-                        Learn More About Patent Services
-                      </a>
-                    </div>
-                  </div>
-
-                  {/* Selected Plan Card */}
-                  <div
-                    className="relative p-4 rounded-xl transition-all duration-300"
-                    style={{
-                      background: 'rgba(255, 255, 255, 0.10)',
-                      backdropFilter: 'blur(16px)',
-                      WebkitBackdropFilter: 'blur(16px)',
-                      border: selectedPlan.highlighted ? '2px solid #1345C3' : 'none',
-                      boxShadow: '0 0 20px 0 rgba(0, 0, 0, 0.10) inset, inset 0 0 20px rgba(255, 255, 255, 0.1)'
-                    }}
-                  >
-                    {/* Plan Header */}
-                    <div className="text-center mb-4">
-                      <h3 className="text-white font-nunito text-sm font-semibold mb-1">
-                        {selectedPlan.name}
-                      </h3>
-                      <div className="flex items-center justify-center gap-2 mb-2">
-                        <span className="text-white font-nunito text-xs opacity-80">{selectedPlan.description}</span>
+                        <span className="text-xs">{plan.name} - {plan.price}</span>
+                        <FontAwesomeIcon
+                          icon={faChevronDown}
+                          className={`w-3 h-3 transition-transform duration-300 flex-shrink-0 ml-2 ${
+                            expandedPlan === plan.id ? 'rotate-180' : 'rotate-0'
+                          }`}
+                        />
                       </div>
-                      <div className="text-right">
-                        <span
-                          className="text-white font-nunito font-bold text-lg"
-                          style={{ fontSize: 'clamp(16px, 4vw, 20px)' }}
+
+                      {/* Plan Card - Only visible when expanded */}
+                      <div
+                        className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                          expandedPlan === plan.id ? 'max-h-[1000px] opacity-100 mt-3' : 'max-h-0 opacity-0'
+                        }`}
+                      >
+                        <div
+                          className="relative p-4 rounded-xl transition-all duration-300"
+                          style={{
+                            background: 'rgba(255, 255, 255, 0.10)',
+                            backdropFilter: 'blur(16px)',
+                            WebkitBackdropFilter: 'blur(16px)',
+                            border: plan.highlighted ? '2px solid #1345C3' : 'none',
+                            boxShadow: '0 0 20px 0 rgba(0, 0, 0, 0.10) inset, inset 0 0 20px rgba(255, 255, 255, 0.1)'
+                          }}
                         >
-                          {selectedPlan.price}
-                        </span>
+                          {/* Plan Header */}
+                          <div className="text-center mb-4">
+                            <h3 className="text-white font-nunito text-sm font-semibold mb-1">
+                              {plan.name}
+                            </h3>
+                            <div className="flex items-center justify-center gap-2 mb-2">
+                              <span className="text-white font-nunito text-xs opacity-80">{plan.description}</span>
+                            </div>
+                            <div className="text-right">
+                              <span
+                                className="text-white font-nunito font-bold text-lg"
+                                style={{ fontSize: 'clamp(16px, 4vw, 20px)' }}
+                              >
+                                {plan.price}
+                              </span>
+                            </div>
+                          </div>
+
+                          {/* Plan Features */}
+                          <div className="space-y-2 mb-4">
+                            {plan.features.map((feature, index) => (
+                              <div key={index} className="flex items-start gap-2">
+                                <i className="fas fa-check text-green-400 mt-0.5 flex-shrink-0 text-xs"></i>
+                                <span className="text-white font-nunito text-xs leading-relaxed">
+                                  {feature}
+                                </span>
+                              </div>
+                            ))}
+                          </div>
+
+                          {/* Action Button */}
+                          <button
+                            className="w-full py-2.5 px-4 rounded-lg font-nunito font-semibold text-sm transition-all duration-300 hover:scale-105"
+                            style={{
+                              background: '#1345C3',
+                              boxShadow: '0 0 20px 0 #000 inset',
+                              color: '#FFFFFF'
+                            }}
+                          >
+                            Get Protected
+                          </button>
+
+                          {/* Plan Type Indicator */}
+                          <div className="mt-3 text-center">
+                            <span className="text-white font-nunito text-xs opacity-80">
+                              {plan.subtitle}
+                            </span>
+                          </div>
+                        </div>
                       </div>
                     </div>
+                  ))}
 
-                    {/* Plan Features */}
-                    <div className="space-y-2 mb-4">
-                      {selectedPlan.features.map((feature, index) => (
-                        <div key={index} className="flex items-start gap-2">
-                          <i className="fas fa-check text-green-400 mt-0.5 flex-shrink-0 text-xs"></i>
-                          <span className="text-white font-nunito text-xs leading-relaxed">
-                            {feature}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
-
-                    {/* Action Button */}
-                    <button
-                      className="w-full py-2.5 px-4 rounded-lg font-nunito font-semibold text-sm transition-all duration-300 hover:scale-105"
-                      style={{
-                        background: '#1345C3',
-                        boxShadow: '0 0 20px 0 #000 inset',
-                        color: '#FFFFFF'
-                      }}
+                  {/* Learn More Link */}
+                  <div className="mt-4 text-center">
+                    <a
+                      href="/services/patent-services"
+                      className="inline-flex items-center px-3 py-1.5 text-xs font-medium text-[#0C002B] bg-[#FFB703] rounded-md hover:bg-[#e6a503] transition-colors duration-300"
                     >
-                      Get Protected
-                    </button>
-                  </div>
-
-                  {/* Plan Type Indicator */}
-                  <div className="mt-3 text-center">
-                    <span className="text-white font-nunito text-xs opacity-80">
-                      {selectedPlan.subtitle}
-                    </span>
+                      Learn More About Patent Services
+                    </a>
                   </div>
                 </div>
               </div>
@@ -1449,125 +1448,125 @@ Patents are territorial rights, meaning they are only enforceable in the country
       <section className="py-20 relative overflow-hidden" style={{ backgroundColor: '#0C002B' }}>
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-12">
-            <h2 className="text-white font-nunito text-3xl md:text-4xl lg:text-5xl font-medium mb-4">
-              We Provide Solutions In:
+            <h2 className="text-white font-nunito text-lg md:text-xl lg:text-4xl font-medium mb-4">
+            IPR Registration Services Across India: Patent, Trademark & Copyright Experts Near You
             </h2>
-            <p className="text-white font-nunito text-base md:text-lg opacity-80">
+            <p className="text-white font-nunito text-xs md:text-sm opacity-80">
               Comprehensive IPR services across all states and union territories of India
             </p>
           </div>
 
           {/* States Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mb-12">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 mb-12">
             {/* 27 States */}
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Andhra Pradesh</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Andhra Pradesh</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Arunachal Pradesh</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Arunachal Pradesh</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Assam</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Assam</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Bihar</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Bihar</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Chhattisgarh</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Chhattisgarh</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Goa</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Goa</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Gujarat</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Gujarat</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Haryana</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Haryana</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Himachal Pradesh</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Himachal Pradesh</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Jharkhand</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Jharkhand</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Karnataka</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Karnataka</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Kerala</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Kerala</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Madhya Pradesh</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Madhya Pradesh</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Maharashtra</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Maharashtra</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Manipur</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Manipur</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Meghalaya</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Meghalaya</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Mizoram</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Mizoram</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Nagaland</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Nagaland</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Odisha</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Odisha</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Punjab</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Punjab</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Rajasthan</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Rajasthan</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Sikkim</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Sikkim</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Tamil Nadu</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Tamil Nadu</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Telangana</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Telangana</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Tripura</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Tripura</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Uttar Pradesh</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Uttar Pradesh</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Uttarakhand</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Uttarakhand</span>
             </div>
           </div>
 
           {/* Union Territories Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(19, 69, 195, 0.1)', border: '1px solid rgba(19, 69, 195, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Andaman and Nicobar Islands</span>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(19, 69, 195, 0.1)', border: '1px solid rgba(19, 69, 195, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Andaman and Nicobar Islands</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(19, 69, 195, 0.1)', border: '1px solid rgba(19, 69, 195, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Chandigarh</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(19, 69, 195, 0.1)', border: '1px solid rgba(19, 69, 195, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Chandigarh</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(19, 69, 195, 0.1)', border: '1px solid rgba(19, 69, 195, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Dadra and Nagar Haveli and Daman and Diu</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(19, 69, 195, 0.1)', border: '1px solid rgba(19, 69, 195, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Dadra and Nagar Haveli and Daman and Diu</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(19, 69, 195, 0.1)', border: '1px solid rgba(19, 69, 195, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Delhi</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(19, 69, 195, 0.1)', border: '1px solid rgba(19, 69, 195, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Delhi</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(19, 69, 195, 0.1)', border: '1px solid rgba(19, 69, 195, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Jammu and Kashmir</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(19, 69, 195, 0.1)', border: '1px solid rgba(19, 69, 195, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Jammu and Kashmir</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(19, 69, 195, 0.1)', border: '1px solid rgba(19, 69, 195, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Ladakh</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(19, 69, 195, 0.1)', border: '1px solid rgba(19, 69, 195, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Ladakh</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(19, 69, 195, 0.1)', border: '1px solid rgba(19, 69, 195, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Lakshadweep</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(19, 69, 195, 0.1)', border: '1px solid rgba(19, 69, 195, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Lakshadweep</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(19, 69, 195, 0.1)', border: '1px solid rgba(19, 69, 195, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Puducherry</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(19, 69, 195, 0.1)', border: '1px solid rgba(19, 69, 195, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Puducherry</span>
             </div>
           </div>
         </div>
@@ -1587,7 +1586,7 @@ Patents are territorial rights, meaning they are only enforceable in the country
           {/* Left Section - Questions */}
           <div className="space-y-8 flex flex-col justify-center">
             <div className="space-y-4">
-              <h2 className="text-white text-left font-nunito text-[28px] md:text-[45px] font-medium leading-[32px] md:leading-[45px] w-full">
+              <h2 className="text-white text-left font-nunito text-lg md:text-xl lg:text-2xl font-medium leading-tight w-full">
                 Frequently Asked Questions
                 <br />
                 <span style={{ color: '#FFB703' }}>
@@ -1595,7 +1594,7 @@ Patents are territorial rights, meaning they are only enforceable in the country
                 </span>
               </h2>
 
-              <p className="text-white font-nunito text-[10px] md:text-xs lg:text-sm xl:text-base font-medium">
+              <p className="text-white font-nunito text-xs md:text-xs lg:text-sm font-medium">
                 Still have questions? <span style={{ color: '#FFB703' }} className="font-medium">Contact us</span> anytime.
               </p>
             </div>
@@ -1636,12 +1635,12 @@ Patents are territorial rights, meaning they are only enforceable in the country
                 >
 
                   <div className="flex justify-between items-center">
-                    <h3 className="text-white font-nunito text-[16px] md:text-[20px] lg:text-[25px] font-semibold pr-4">
+                    <h3 className="text-white font-nunito text-sm md:text-base lg:text-lg font-semibold pr-4">
                       Q{index + 1}. {faq.question}
                     </h3>
                     <FontAwesomeIcon
                       icon={faChevronDown}
-                      className={`w-6 h-6 transition-all duration-500 ease-in-out flex-shrink-0 ${
+                      className={`w-5 h-5 transition-all duration-500 ease-in-out flex-shrink-0 ${
                         openFaq === index ? 'rotate-180 scale-110' : 'rotate-0 scale-100'
                       }`}
                       style={{ color: '#000000' }}
@@ -1654,7 +1653,7 @@ Patents are territorial rights, meaning they are only enforceable in the country
                     }`}
                   >
                     <div className="pt-4 border-t border-black/20 transform transition-all duration-500 ease-in-out">
-                      <p className="text-white font-nunito text-[10px] md:text-xs lg:text-sm xl:text-base font-medium leading-relaxed">
+                      <p className="text-white font-nunito text-xs md:text-xs lg:text-sm font-medium leading-relaxed">
                         {faq.answer}
                       </p>
                     </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 
 export default function AIPoweredTrademarkSolutions() {
   return (
@@ -14,26 +15,26 @@ export default function AIPoweredTrademarkSolutions() {
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="canonical" href="https://iprkaro.com/features/ai-powered-trademark-solutions" />
       </Head>
-      <div className="min-h-screen bg-gradient-to-b from-[#0C002B] via-[#160049] to-[#6E5E93] pt-32 pb-16 px-4">
-      <div className="max-w-6xl mx-auto">
+      <div className="min-h-screen bg-gradient-to-b from-[#0C002B] via-[#160049] to-[#6E5E93] pt-28 pb-14 px-3.5">
+      <div className="max-w-5xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-8 md:mb-16">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-6">
+        <div className="text-center mb-7 md:mb-14">
+          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-3.5 md:mb-5">
             AI-Powered Trademark Solutions India - Intelligent Brand Protection Technology
           </h1>
-          <p className="text-base md:text-lg lg:text-xl text-gray-300 max-w-4xl mx-auto px-4 leading-relaxed">
+          <p className="text-sm md:text-base lg:text-lg text-gray-300 max-w-3xl mx-auto px-3.5 leading-relaxed">
             Revolutionary AI-powered trademark solutions in India with 98.5% accuracy. Get intelligent trademark search,
             risk assessment, and automated reporting with advanced machine learning for comprehensive brand protection.
           </p>
         </div>
 
         {/* Main Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-7 lg:gap-10 items-start">
           {/* Left Column - Content */}
-          <div className="space-y-8">
-            <div className="bg-white/5 backdrop-blur-sm rounded-lg p-4 md:p-8 border border-white/10">
-              <h2 className="text-xl md:text-2xl font-semibold text-white mb-4">Revolutionary AI Technology</h2>
-              <p className="text-gray-300 leading-relaxed">
+          <div className="space-y-7">
+            <div className="bg-white/5 backdrop-blur-sm rounded-lg p-3.5 md:p-7 border border-white/10">
+              <h2 className="text-lg md:text-xl font-semibold text-white mb-3.5">Revolutionary AI Technology</h2>
+              <p className="text-sm text-gray-300 leading-relaxed">
                 Our AI-powered trademark solutions combine cutting-edge artificial intelligence with legal expertise
                 to deliver faster, more accurate, and more comprehensive trademark services. Our proprietary AI
                 algorithms analyze millions of trademark records to provide insights that were previously only
@@ -41,24 +42,24 @@ export default function AIPoweredTrademarkSolutions() {
               </p>
             </div>
 
-            <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-white/10">
-              <h2 className="text-2xl font-semibold text-white mb-4">AI-Powered Features</h2>
-              <div className="space-y-4">
-                <div className="p-4 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-lg border border-blue-400/30">
-                  <h3 className="text-white font-semibold mb-2">🤖 Intelligent Search Engine</h3>
-                  <p className="text-gray-300 text-sm">
+            <div className="bg-white/5 backdrop-blur-sm rounded-lg p-3.5 md:p-7 border border-white/10">
+              <h2 className="text-lg md:text-xl font-semibold text-white mb-3.5">AI-Powered Features</h2>
+              <div className="space-y-3.5">
+                <div className="p-3.5 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-lg border border-blue-400/30">
+                  <h3 className="text-sm text-white font-semibold mb-1.5">🤖 Intelligent Search Engine</h3>
+                  <p className="text-xs text-gray-300">
                     Advanced natural language processing identifies potential conflicts across multiple databases simultaneously.
                   </p>
                 </div>
-                <div className="p-4 bg-gradient-to-r from-green-500/20 to-teal-500/20 rounded-lg border border-green-400/30">
-                  <h3 className="text-white font-semibold mb-2">📊 Risk Assessment</h3>
-                  <p className="text-gray-300 text-sm">
+                <div className="p-3.5 bg-gradient-to-r from-green-500/20 to-teal-500/20 rounded-lg border border-green-400/30">
+                  <h3 className="text-sm text-white font-semibold mb-1.5">📊 Risk Assessment</h3>
+                  <p className="text-xs text-gray-300">
                     Machine learning algorithms calculate registration probability and identify potential obstacles.
                   </p>
                 </div>
-                <div className="p-4 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-lg border border-purple-400/30">
-                  <h3 className="text-white font-semibold mb-2">⚡ Instant Analysis</h3>
-                  <p className="text-gray-300 text-sm">
+                <div className="p-3.5 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-lg border border-purple-400/30">
+                  <h3 className="text-sm text-white font-semibold mb-1.5">⚡ Instant Analysis</h3>
+                  <p className="text-xs text-gray-300">
                     Get comprehensive trademark reports in minutes instead of days with automated processing.
                   </p>
                 </div>
@@ -153,9 +154,11 @@ export default function AIPoweredTrademarkSolutions() {
               <p className="text-white/90 mb-6">
                 Try our AI-powered trademark search tool and see how artificial intelligence can revolutionize your trademark strategy.
               </p>
-              <button className="bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">
-                Try AI Search Demo
+              <Link href="/contact" className="cursor-pointer"> 
+              <button className="bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer">
+                Contact Us
               </button>
+              </Link>
             </div>
 
             <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-white/10">
@@ -343,7 +346,7 @@ export default function AIPoweredTrademarkSolutions() {
                     "@type": "Answer",
                     "text": "Absolutely! Our AI handles complex searches including phonetic matching, visual similarity detection, international database screening, and industry-specific research for comprehensive protection."
                   }
-                }
+                }   
               ]
             })
           }}

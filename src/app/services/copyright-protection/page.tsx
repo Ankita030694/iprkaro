@@ -7,9 +7,14 @@ import { faChevronDown, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 export default function TrademarkRegistrationPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [showMobilePopup, setShowMobilePopup] = useState(false);
+  const [expandedPlan, setExpandedPlan] = useState<string | null>(null);
 
   const toggleFaq = (index: number) => {
     setOpenFaq(openFaq === index ? null : index);
+  };
+
+  const togglePlan = (planId: string) => {
+    setExpandedPlan(expandedPlan === planId ? null : planId);
   };
 
   const trademarkFaqs = [
@@ -19,7 +24,7 @@ export default function TrademarkRegistrationPage() {
     },
     {
       question: "How long does it take to register a trademark in India?",
-      answer: "The average time is 12–18 months, depending on objections or oppositions. With IPRKaro's AI-powered search reports, you can reduce risks of delay by identifying conflicts early."
+      answer: "The average time is 12 to 18 months, depending on objections or oppositions. With IPRKaro's AI-powered search reports, you can reduce risks of delay by identifying conflicts early."
     },
     {
       question: "What documents are required for trademark registration?",
@@ -27,7 +32,7 @@ export default function TrademarkRegistrationPage() {
     },
     {
       question: "Can I register a trademark online in India?",
-      answer: "Yes. With IPRKaro, the entire process — from search to filing and objection handling — is managed 100% online with expert support."
+      answer: "Yes. With IPRKaro, the entire process (from search to filing and objection handling) is managed 100% online with expert support."
     },
     {
       question: "How long is a trademark valid in India?",
@@ -119,111 +124,79 @@ export default function TrademarkRegistrationPage() {
       <path d="M1 10L10 7L19 10M10 1V20.5" stroke="#FFD700" strokeWidth="1.5"/>
       <path d="M1.193 13C2.05 17.298 5.576 19.513 7.899 20.527C8.62 20.842 8.981 21 10 21C11.02 21 11.38 20.842 12.101 20.527C12.68 20.275 13.332 19.947 14 19.533M17 16.904C18.163 15.428 19 13.496 19 10.991V9.417C19 6.219 19 4.62 18.622 4.082C18.245 3.545 16.742 3.03 13.735 2.001L13.162 1.805C11.595 1.268 10.812 1 10 1C9.188 1 8.405 1.268 6.838 1.805L6.265 2C3.258 3.03 1.755 3.545 1.378 4.082C1 4.62 1 6.22 1 9.417V10" stroke="#FFD700" strokeWidth="1.5" strokeLinecap="round"/>
     </svg>,
-    // Clock icon for "Government Certified"
-    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="22" viewBox="0 0 25 22" fill="none" key="clock">
-      <g filter="url(#filter0_ii_1095_4985)">
-        <path d="M12.1766 21.0016C17.0505 21.0016 21.0016 17.0505 21.0016 12.1766C21.0016 7.30265 17.0505 3.35156 12.1766 3.35156C7.30265 3.35156 3.35156 7.30265 3.35156 12.1766C3.35156 17.0505 7.30265 21.0016 12.1766 21.0016Z" stroke="url(#paint0_linear_1095_4985)" strokeWidth="1.5"/>
-        <path d="M4.56657 1C3.7113 1.22906 2.93142 1.67926 2.30534 2.30534C1.67926 2.93142 1.22906 3.7113 1 4.56656M19.7834 1C20.6387 1.22906 21.4186 1.67926 22.0446 2.30534C22.6707 2.93142 23.1209 3.7113 23.35 4.56656M12.175 7.13212V11.8598C12.175 12.0338 12.3162 12.175 12.4902 12.175H15.9571" stroke="url(#paint1_linear_1095_4985)" strokeWidth="1.5" strokeLinecap="round"/>
-      </g>
-      <defs>
-        <filter id="filter0_ii_1095_4985" x="0.25" y="0.25" width="23.8516" height="25.5" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-          <feFlood floodOpacity="0" result="BackgroundImageFix"/>
-          <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-          <feOffset dy="4"/>
-          <feGaussianBlur stdDeviation="2"/>
-          <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
-          <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.15 0"/>
-          <feBlend mode="normal" in2="shape" result="effect1_innerShadow_1095_4985"/>
-          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-          <feOffset dy="4"/>
-          <feGaussianBlur stdDeviation="2"/>
-          <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
-          <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.15 0"/>
-          <feBlend mode="normal" in2="effect1_innerShadow_1095_4985" result="effect2_innerShadow_1095_4985"/>
-        </filter>
-        <linearGradient id="paint0_linear_1095_4985" x1="3.35156" y1="14.8241" x2="21.0881" y2="15.2992" gradientUnits="userSpaceOnUse">
-          <stop stopColor="white"/>
-          <stop offset="0.490385" stopColor="#8A38F5"/>
-          <stop offset="0.88" stopColor="#FFB703"/>
-        </linearGradient>
-        <linearGradient id="paint1_linear_1095_4985" x1="1" y1="8.26373" x2="23.4114" y2="9.46434" gradientUnits="userSpaceOnUse">
-          <stop stopColor="white"/>
-          <stop offset="0.490385" stopColor="#8A38F5"/>
-          <stop offset="0.88" stopColor="#FFB703"/>
-        </linearGradient>
-      </defs>
+    // Clock icon for "24/7 Accessibility"
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" key="clock">
+      <circle cx="12" cy="12" r="9" stroke="#FFD700" strokeWidth="1.5" strokeLinecap="round"/>
+      <path d="M12 7V12L15 15" stroke="#FFD700" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
   ];
 
   const plans = [
     {
       id: 'standard',
-      name: 'AI Trademark Filing – Standard',
+      name: 'AI Copyright Filing: Standard',
       subtitle: 'Deeper search with risk insights',
       description: 'Best for small businesses/startups',
-      content: 'Essential trademark protection',
+      content: 'Essential copyright protection',
       features: [
-        'Complete online trademark filing included',
-        'AI trademark search & conflict check',
+        'Complete online copyright filing included',
+        'AI copyright search & conflict check',
         'Expert legal guidance throughout the process',
-        'Essential trademark protection for your brand'
+        'Essential copyright protection for your brand'
       ],
-      price: '₹3,999',
+      price: '₹1,999',
       highlighted: true
     },
     {
       id: 'premium',
-      name: 'Premium Trademark Registration – With AI Risk Checkup',
+      name: 'Premium Copyright Registration: With AI Risk Checkup',
       subtitle: 'Complete filing included',
       description: 'Suited for growing brands',
-      content: 'Enhanced trademark services',
+      content: 'Enhanced copyright services',
       features: [
-        'AI-powered trademark registration and risk report',
-        'Advanced legal guidance and trademark filing',
+        'AI-powered copyright registration and risk report',
+        'Advanced legal guidance and copyright filing',
         'Priority VIP support, fast application monitoring',
-        'Enhanced trademark and brand safeguard'
+        'Enhanced copyright and brand safeguard'
       ],
-      price: '₹6,999',
+      price: '₹2,999',
       highlighted: false
     },
     {
       id: 'pro',
-      name: 'Brand Monitoring & Protection – AI Powered',
-      subtitle: '24/7 brand monitoring',
+      name: 'Copyright Monitoring & Protection: AI Powered',
+      subtitle: '24/7 copyright monitoring',
       description: 'Enterprises, ongoing protection',
-      content: 'Complete brand protection',
+      content: 'Complete copyright protection',
       features: [
-        '24/7 AI-powered brand & trademark monitoring',
+        '24/7 AI-powered brand & copyright monitoring',
         'Instant alerts for conflicts and infringements',
         'Continuous protection against copycats',
-        'Ongoing legal peace of mind for your brand'
+        'Ongoing legal peace of mind for your copyright'
       ],
-      price: '₹4,999',
+      price: '₹3,999',
       highlighted: false
     }
   ];
 
-  const [selectedPlan, setSelectedPlan] = useState(plans[0]);
-
   return (
     <div className="min-h-screen pt-20 pb-24 md:pb-8 overflow-x-hidden" style={{ backgroundColor: '#0C002B' }}>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-16">
+      <div className="mx-15 py-8 lg:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-start">
 
           {/* Left Section */}
           <div className="space-y-8">
             {/* Main Heading */}
             <div className="space-y-4">
-              <h1 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-medium leading-tight">
-                Copyright Registration in India – Complete Guide by IPRKaro
+              <h1 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-medium leading-tight">
+                Copyright Registration in India: Complete Guide by IPRKaro
               </h1>
 
-              <h2 className="text-white font-nunito text-lg md:text-xl lg:text-xl font-medium leading-tight">
+              <h2 className="text-white font-nunito text-base md:text-lg lg:text-lg font-medium leading-tight">
                 Protect Your Creativity with Expert Copyright Registration in India
               </h2>
 
-              <p className="text-white font-nunito text-xs md:text-sm lg:text-base leading-relaxed">
+              <p className="text-white font-nunito text-xs md:text-xs lg:text-sm leading-relaxed">
                 In today's digital-first world, content and creativity are the foundation of every business. From songs, films, blogs, software, and artwork to website content, every creative work deserves protection against misuse. This is where copyright registration in India becomes crucial.
 
 At IPRKaro, we combine expert legal knowledge with technology-driven solutions to simplify the copyright registration process. Whether you are a startup, an independent artist, a software developer, or a large enterprise, our copyright services ensure your original works are legally protected under the Indian Copyright Act, 1957.
@@ -232,7 +205,7 @@ At IPRKaro, we combine expert legal knowledge with technology-driven solutions t
 
             {/* Why Copyright Section */}
             <div className="space-y-4">
-              <h3 className="text-white font-nunito text-lg md:text-3xl font-medium">
+              <h3 className="text-white font-nunito text-base md:text-2xl font-medium">
                 Why Copyright with IPRKaro ?
               </h3>
 
@@ -337,7 +310,7 @@ At IPRKaro, we combine expert legal knowledge with technology-driven solutions t
                 <div className="flex-1 space-y-8">
                   {/* Heading */}
                   <div className="text-center lg:text-left">
-                    <h3 className="text-white font-nunito text-xl md:text-3xl font-medium">
+                    <h3 className="text-white font-nunito text-lg md:text-2xl font-medium">
                       Get a Guaranteed Copyright on
                     </h3>
                   </div>
@@ -354,10 +327,10 @@ At IPRKaro, we combine expert legal knowledge with technology-driven solutions t
                       }}
                     >
                       <div className="flex items-center justify-between px-10">
-                        <div className="text-white font-nunito text-base md:text-lg font-medium">
+                        <div className="text-white font-nunito text-sm md:text-base font-medium">
                           Filing Date
                         </div>
-                        <div className="text-white font-nunito text-sm md:text-base opacity-90">
+                        <div className="text-white font-nunito text-xs md:text-sm opacity-90">
                           Apr 12, 2025
                         </div>
                       </div>
@@ -373,10 +346,10 @@ At IPRKaro, we combine expert legal knowledge with technology-driven solutions t
                       }}
                     >
                       <div className="flex items-center justify-between px-10">
-                        <div className="text-white font-nunito text-base md:text-lg font-medium">
+                        <div className="text-white font-nunito text-sm md:text-base font-medium">
                           Trademark Estimated Date
                         </div>
-                        <div className="text-white font-nunito text-sm md:text-base opacity-90">
+                        <div className="text-white font-nunito text-xs md:text-sm opacity-90">
                           Dec 12, 2025
                         </div>
                       </div>
@@ -386,7 +359,7 @@ At IPRKaro, we combine expert legal knowledge with technology-driven solutions t
               </div>
             </div>
             <div className="space-y-6">
-              <h3 className="text-white font-nunito text-lg md:text-3xl font-medium">
+              <h3 className="text-white font-nunito text-base md:text-2xl font-medium">
               Copyright Requirements
               </h3>
 
@@ -406,7 +379,7 @@ At IPRKaro, we combine expert legal knowledge with technology-driven solutions t
                     >
                       {requirement.icon}
                     </div>
-                    <span className="text-white font-nunito text-xs md:text-sm font-medium">
+                    <span className="text-white font-nunito text-xs md:text-xs font-medium">
                       {requirement.text}
                     </span>
                   </div>
@@ -416,7 +389,7 @@ At IPRKaro, we combine expert legal knowledge with technology-driven solutions t
 
             {/* Guidelines Section */}
             <div className="space-y-6">
-              <h3 className="text-white font-nunito text-lg md:text-3xl font-medium">
+              <h3 className="text-white font-nunito text-base md:text-2xl font-medium">
                 we work with the Guidelines of
               </h3>
 
@@ -521,19 +494,19 @@ At IPRKaro, we combine expert legal knowledge with technology-driven solutions t
 
             {/* About Copyright Registration Section */}
             <div className="space-y-6 mt-20">
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-medium">
+              <h2 className="text-white font-nunito text-lg md:text-xl lg:text-2xl font-medium">
                 About Copyright Registration in India
               </h2>
 
-              <h3 className="text-white font-nunito text-lg md:text-xl lg:text-2xl font-medium">
-                Copyright Registration Services – Intro
+              <h3 className="text-white font-nunito text-base md:text-lg lg:text-xl font-medium">
+                Copyright Registration Services: Intro
               </h3>
 
-              <h4 className="text-white font-nunito text-base md:text-lg lg:text-xl font-medium">
+              <h4 className="text-white font-nunito text-sm md:text-base lg:text-lg font-medium">
                 Protect Your Creativity with Expert Copyright Registration in India
               </h4>
 
-              <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
+              <p className="text-white font-nunito text-xs md:text-xs lg:text-sm leading-relaxed">
                 In today's digital-first world, content and creativity are the foundation of every business. From songs, films, blogs, software, and artwork to website content, every creative work deserves protection against misuse. This is where copyright registration in India becomes crucial.
 
 At IPRKaro, we combine expert legal knowledge with technology-driven solutions to simplify the copyright registration process. Whether you are a startup, an independent artist, a software developer, or a large enterprise, our copyright services ensure your original works are legally protected under the Indian Copyright Act, 1957.
@@ -542,11 +515,11 @@ At IPRKaro, we combine expert legal knowledge with technology-driven solutions t
 
             {/* What is Copyright Section */}
             <div className="space-y-6">
-              <h3 className="text-white font-nunito text-lg md:text-xl lg:text-2xl font-medium">
+              <h3 className="text-white font-nunito text-base md:text-lg lg:text-xl font-medium">
                 What is Copyright?
               </h3>
 
-              <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
+              <p className="text-white font-nunito text-xs md:text-xs lg:text-sm leading-relaxed">
                 Copyright is a legal right that protects original creative works such as literary, artistic, musical, and digital content. It gives the creator exclusive rights to reproduce, distribute, perform, display, and license their work.
 
 Unlike patents and trademarks, copyright specifically protects expressions of creativity, not inventions or brand names. For example:
@@ -559,18 +532,18 @@ A software code is copyrightable, but the innovative algorithm behind it may be 
 
             {/* Why Register Copyright Section */}
             <div className="space-y-6">
-              <h3 className="text-white font-nunito text-lg md:text-xl lg:text-2xl font-medium">
+              <h3 className="text-white font-nunito text-base md:text-lg lg:text-xl font-medium">
                 Why Register a Copyright in India?
               </h3>
 
-              <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
+              <p className="text-white font-nunito text-xs md:text-xs lg:text-sm leading-relaxed">
                 While copyright exists automatically upon creation of a work, registering it provides strong legal protection. Here's why you should register your copyright:
               </p>
 
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
-                  <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
+                  <p className="text-white font-nunito text-xs md:text-xs lg:text-sm leading-relaxed">
                     <strong>Proof of Ownership</strong><br />
                     A registered copyright serves as a legal certificate of authorship and ownership.
                   </p>
@@ -578,7 +551,7 @@ A software code is copyrightable, but the innovative algorithm behind it may be 
 
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
-                  <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
+                  <p className="text-white font-nunito text-xs md:text-xs lg:text-sm leading-relaxed">
                     <strong>Exclusive Rights</strong><br />
                     You control how your work is reproduced, distributed, or adapted.
                   </p>
@@ -586,7 +559,7 @@ A software code is copyrightable, but the innovative algorithm behind it may be 
 
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
-                  <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
+                  <p className="text-white font-nunito text-xs md:text-xs lg:text-sm leading-relaxed">
                     <strong>Legal Protection Against Infringement</strong><br />
                     If someone copies your work without permission, a registered copyright makes it easier to take legal action, file for injunctions, and claim damages.
                   </p>
@@ -594,7 +567,7 @@ A software code is copyrightable, but the innovative algorithm behind it may be 
 
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
-                  <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
+                  <p className="text-white font-nunito text-xs md:text-xs lg:text-sm leading-relaxed">
                     <strong>Commercial Benefits</strong><br />
                     Registered works can be licensed, franchised, or sold, creating revenue streams.
                   </p>
@@ -602,7 +575,7 @@ A software code is copyrightable, but the innovative algorithm behind it may be 
 
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
-                  <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
+                  <p className="text-white font-nunito text-xs md:text-xs lg:text-sm leading-relaxed">
                     <strong>International Recognition</strong><br />
                     Through international treaties like the Berne Convention, your copyright in India can be enforced in other member countries.
                   </p>
@@ -612,11 +585,11 @@ A software code is copyrightable, but the innovative algorithm behind it may be 
 
             {/* What Works Can Be Copyrighted Section */}
             <div className="space-y-6">
-              <h3 className="text-white font-nunito text-lg md:text-xl lg:text-2xl font-medium">
+              <h3 className="text-white font-nunito text-base md:text-lg lg:text-xl font-medium">
                 What Works Can Be Copyrighted in India?
               </h3>
 
-              <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
+              <p className="text-white font-nunito text-xs md:text-xs lg:text-sm leading-relaxed">
                 The Indian Copyright Act, 1957 recognizes protection for a wide range of works, including:
               </p>
 
@@ -624,50 +597,50 @@ A software code is copyrightable, but the innovative algorithm behind it may be 
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-[#FFB703] flex-shrink-0"></div>
-                    <span className="text-white font-nunito text-sm md:text-base">Literary Works – Books, articles, blogs, computer programs, and scripts</span>
+                    <span className="text-white font-nunito text-sm md:text-base">Literary Works (Books, articles, blogs, computer programs, and scripts)</span>
                   </div>
 
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-[#FFB703] flex-shrink-0"></div>
-                    <span className="text-white font-nunito text-sm md:text-base">Artistic Works – Paintings, drawings, photography, architecture, logos, and designs</span>
+                    <span className="text-white font-nunito text-sm md:text-base">Artistic Works (Paintings, drawings, photography, architecture, logos, and designs)</span>
                   </div>
 
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-[#FFB703] flex-shrink-0"></div>
-                    <span className="text-white font-nunito text-sm md:text-base">Musical Works – Compositions, lyrics, soundtracks</span>
+                    <span className="text-white font-nunito text-sm md:text-base">Musical Works (Compositions, lyrics, soundtracks)</span>
                   </div>
                 </div>
 
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-[#FFB703] flex-shrink-0"></div>
-                    <span className="text-white font-nunito text-sm md:text-base">Cinematographic Films – Movies, short films, web series, advertisements</span>
+                    <span className="text-white font-nunito text-xs md:text-xs">Cinematographic Films (Movies, short films, web series, advertisements)</span>
                   </div>
 
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-[#FFB703] flex-shrink-0"></div>
-                    <span className="text-white font-nunito text-sm md:text-base">Sound Recordings – Songs, podcasts, background scores</span>
+                    <span className="text-white font-nunito text-xs md:text-xs">Sound Recordings (Songs, podcasts, background scores)</span>
                   </div>
 
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-[#FFB703] flex-shrink-0"></div>
-                    <span className="text-white font-nunito text-sm md:text-base">Software – Source code, applications, and digital programs</span>
+                    <span className="text-white font-nunito text-xs md:text-xs">Software (Source code, applications, and digital programs)</span>
                   </div>
                 </div>
               </div>
 
-              <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
-                <strong>Website Content & Digital Creations</strong> – Content, infographics, UI/UX designs
+              <p className="text-white font-nunito text-xs md:text-xs lg:text-sm leading-relaxed">
+                <strong>Website Content & Digital Creations:</strong> Content, infographics, UI/UX designs
               </p>
             </div>
 
             {/* Copyright Registration Process Section */}
             <div className="space-y-6">
-              <h3 className="text-white font-nunito text-lg md:text-xl lg:text-2xl font-medium">
+              <h3 className="text-white font-nunito text-base md:text-lg lg:text-xl font-medium">
                 Copyright Registration Process in India
               </h3>
 
-              <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
+              <p className="text-white font-nunito text-xs md:text-xs lg:text-sm leading-relaxed">
                 Registering a copyright with IPRKaro involves a step-by-step process handled by our legal experts:
               </p>
 
@@ -676,7 +649,7 @@ A software code is copyrightable, but the innovative algorithm behind it may be 
                   <div className="w-6 h-6 rounded-full bg-[#FFB703] flex items-center justify-center text-white font-nunito font-bold text-sm flex-shrink-0">1</div>
                   <div>
                     <h4 className="text-white font-nunito text-base md:text-lg font-medium mb-1">Application Preparation (Form XIV)</h4>
-                    <p className="text-white font-nunito text-sm md:text-base leading-relaxed">Drafting and filing the copyright application with details of the work.</p>
+                    <p className="text-white font-nunito text-xs md:text-xs leading-relaxed">Drafting and filing the copyright application with details of the work.</p>
                   </div>
                 </div>
 
@@ -684,7 +657,7 @@ A software code is copyrightable, but the innovative algorithm behind it may be 
                   <div className="w-6 h-6 rounded-full bg-[#FFB703] flex items-center justify-center text-white font-nunito font-bold text-sm flex-shrink-0">2</div>
                   <div>
                     <h4 className="text-white font-nunito text-base md:text-lg font-medium mb-1">Submission to Copyright Office</h4>
-                    <p className="text-white font-nunito text-sm md:text-base leading-relaxed">Application is filed along with supporting documents and prescribed fees.</p>
+                    <p className="text-white font-nunito text-xs md:text-xs leading-relaxed">Application is filed along with supporting documents and prescribed fees.</p>
                   </div>
                 </div>
 
@@ -692,7 +665,7 @@ A software code is copyrightable, but the innovative algorithm behind it may be 
                   <div className="w-6 h-6 rounded-full bg-[#FFB703] flex items-center justify-center text-white font-nunito font-bold text-sm flex-shrink-0">3</div>
                   <div>
                     <h4 className="text-white font-nunito text-base md:text-lg font-medium mb-1">Diary Number Issued</h4>
-                    <p className="text-white font-nunito text-sm md:text-base leading-relaxed">A diary number (acknowledgment) is given, marking the start of the registration process.</p>
+                    <p className="text-white font-nunito text-xs md:text-xs leading-relaxed">A diary number (acknowledgment) is given, marking the start of the registration process.</p>
                   </div>
                 </div>
 
@@ -700,7 +673,7 @@ A software code is copyrightable, but the innovative algorithm behind it may be 
                   <div className="w-6 h-6 rounded-full bg-[#FFB703] flex items-center justify-center text-white font-nunito font-bold text-sm flex-shrink-0">4</div>
                   <div>
                     <h4 className="text-white font-nunito text-base md:text-lg font-medium mb-1">Examination & Objections (if any)</h4>
-                    <p className="text-white font-nunito text-sm md:text-base leading-relaxed">The Copyright Office examines the work. In case of objections or opposition, our attorneys respond with strong legal representation.</p>
+                    <p className="text-white font-nunito text-xs md:text-xs leading-relaxed">The Copyright Office examines the work. In case of objections or opposition, our attorneys respond with strong legal representation.</p>
                   </div>
                 </div>
 
@@ -708,7 +681,7 @@ A software code is copyrightable, but the innovative algorithm behind it may be 
                   <div className="w-6 h-6 rounded-full bg-[#FFB703] flex items-center justify-center text-white font-nunito font-bold text-sm flex-shrink-0">5</div>
                   <div>
                     <h4 className="text-white font-nunito text-base md:text-lg font-medium mb-1">Registration & Certificate</h4>
-                    <p className="text-white font-nunito text-sm md:text-base leading-relaxed">Upon approval, the applicant receives an official copyright registration certificate, valid for the lifetime of the author plus 60 years.</p>
+                    <p className="text-white font-nunito text-xs md:text-xs leading-relaxed">Upon approval, the applicant receives an official copyright registration certificate, valid for the lifetime of the author plus 60 years.</p>
                   </div>
                 </div>
               </div>
@@ -719,10 +692,6 @@ A software code is copyrightable, but the innovative algorithm behind it may be 
               <h3 className="text-white font-nunito text-lg md:text-xl lg:text-2xl font-medium">
                 Documents Required for Copyright Registration
               </h3>
-
-              <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
-                To file a copyright application in India, you will need:
-              </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-3">
@@ -767,7 +736,7 @@ A software code is copyrightable, but the innovative algorithm behind it may be 
                 How Long Does Copyright Protection Last in India?
               </h3>
 
-              <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
+              <p className="text-white font-nunito text-xs md:text-xs lg:text-sm leading-relaxed">
                 Copyright protection in India generally lasts for the lifetime of the author plus 60 years after their death. For works like films, sound recordings, and government publications, the validity is 60 years from the date of publication.
               </p>
             </div>
@@ -782,51 +751,52 @@ A software code is copyrightable, but the innovative algorithm behind it may be 
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
                   <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
-                    <strong>Expert Legal Assistance</strong> – Our IP attorneys ensure your application is drafted and filed correctly.
+                    <strong>Expert Legal Assistance:</strong> Our IP attorneys ensure your application is drafted and filed correctly.
                   </p>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
                   <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
-                    <strong>End-to-End Support</strong> – From filing to handling objections and disputes, we manage the process.
+                    <strong>End-to-End Support:</strong> From filing to handling objections and disputes, we manage the process.
                   </p>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
                   <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
-                    <strong>Digital & Nationwide Service</strong> – Register your copyright online from anywhere in India.
+                    <strong>Digital & Nationwide Service:</strong> Register your copyright online from anywhere in India.
                   </p>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
                   <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
-                    <strong>Affordable Pricing</strong> – Transparent fee structure with no hidden costs.
+                    <strong>Affordable Pricing:</strong> Transparent fee structure with no hidden costs.
                   </p>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#FFB703] mt-2 flex-shrink-0"></div>
                   <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
-                    <strong>Strong Legal Defense</strong> – In case of disputes, we represent you legally to enforce your rights.
+                    <strong>Strong Legal Defense:</strong> In case of disputes, we represent you legally to enforce your rights.
                   </p>
                 </div>
               </div>
 
               <p className="text-white font-nunito text-sm md:text-base lg:text-base leading-relaxed">
-                In today's competitive and digital-driven environment, protecting intellectual property is no longer optional — it's essential. Copyright registration in India not only gives creators legal ownership but also ensures long-term commercial benefits.
+                In today's competitive and digital-driven environment, protecting intellectual property is no longer optional but essential. Copyright registration in India not only gives creators legal ownership but also ensures long-term commercial benefits.
 
 With IPRKaro's expert legal team and technology-backed process, you can register your copyright easily, avoid delays, and safeguard your creative work for decades.
 
-👉 Get your copyright registered today with IPRKaro — protect your creativity, monetize your work, and secure your legacy.
+Get your copyright registered today with IPRKaro to protect your creativity, monetize your work, and secure your legacy.
               </p>
             </div>
           </div>
 
           {/* Right Section - Hidden on mobile, visible on desktop */}
-          <div className="hidden md:block space-y-8">
+          <div className="hidden md:block" style={{ zoom: 0.7 }}>
+            <div className="space-y-8">
             {/* Main Card Container */}
             <div
               className="relative flex flex-col p-5 md:p-6 lg:p-8 w-full max-w-full md:max-w-[532px] mx-auto"
@@ -845,10 +815,10 @@ With IPRKaro's expert legal team and technology-backed process, you can register
                 }}
               >
                 <h3
-                  className="text-white font-nunito font-medium leading-[30px]"
+                  className="text-white font-nunito font-medium leading-[24px]"
                   style={{
-                    fontSize: 'clamp(24px, 4vw, 30px)',
-                    lineHeight: '30px'
+                    fontSize: 'clamp(18px, 3vw, 24px)',
+                    lineHeight: '24px'
                   }}
                 >
                   Get Your Trademark Registered
@@ -863,10 +833,10 @@ With IPRKaro's expert legal team and technology-backed process, you can register
                 }}
               >
                 <h4
-                  className="text-white font-nunito font-medium leading-[25px] mb-4 text-center"
+                  className="text-white font-nunito font-medium leading-[20px] mb-4 text-center"
                   style={{
-                    fontSize: 'clamp(20px, 3vw, 25px)',
-                    lineHeight: '25px'
+                    fontSize: 'clamp(16px, 2.5vw, 20px)',
+                    lineHeight: '20px'
                   }}
                 >
                   Price Breakdown
@@ -874,25 +844,25 @@ With IPRKaro's expert legal team and technology-backed process, you can register
 
                 <div className="space-y-3">
                   <div className="flex justify-between items-center py-2 border-b border-gray-400">
-                    <span className="text-white font-nunito text-sm md:text-base opacity-90">Government Fee</span>
-                    <span className="text-white font-nunito text-sm md:text-base">₹4,500</span>
+                    <span className="text-white font-nunito text-xs md:text-xl opacity-90">Government Fee</span>
+                    <span className="text-white font-nunito text-xs md:text-xl">₹4,500</span>
                   </div>
                   <div className="flex justify-between items-center py-2 border-b border-gray-400">
-                    <span className="text-white font-nunito text-sm md:text-base opacity-90">Professional Fee</span>
-                    <span className="text-white font-nunito text-sm md:text-base">₹2,500</span>
+                    <span className="text-white font-nunito text-xs md:text-xl opacity-90">Professional Fee</span>
+                    <span className="text-white font-nunito text-xs md:text-xl">₹2,500</span>
                   </div>
                   <div className="flex justify-between items-center py-2 border-b border-gray-400">
-                    <span className="text-white font-nunito text-sm md:text-base opacity-90">GST (18%)</span>
-                    <span className="text-white font-nunito text-sm md:text-base">₹1,260</span>
+                    <span className="text-white font-nunito text-xs md:text-xl opacity-90">GST (18%)</span>
+                    <span className="text-white font-nunito text-xs md:text-xl">₹1,260</span>
                   </div>
                   <div className="flex justify-between items-center py-3 font-semibold">
-                    <span className="text-white font-nunito text-base md:text-lg">Total</span>
-                    <span className="text-white font-nunito text-base md:text-lg">₹8,260</span>
+                    <span className="text-white font-nunito text-sm md:text-xl">Total</span>
+                    <span className="text-white font-nunito text-sm md:text-xl">₹8,260</span>
                   </div>
 
                   {/* Start Registration Button */}
                   <button
-                    className="w-full py-4 px-6 rounded-xl font-nunito font-semibold text-lg md:text-xl transition-all duration-300 hover:scale-105 mt-4"
+                    className="w-full py-3 px-4 rounded-xl font-nunito font-semibold text-xl md:text-xl transition-all duration-300 hover:scale-105 mt-4"
                     style={{
                       background: '#FFB703',
                       boxShadow: '0 0 20px 0 #000 inset',
@@ -904,112 +874,124 @@ With IPRKaro's expert legal team and technology-backed process, you can register
                 </div>
               </div>
 
-              {/* Our Plans Section - Dropdown Style */}
-              <div className="flex-1">
+              {/* Our Plans Section - Expandable Dropdowns */}
+              <div className="flex-1 space-y-4">
                 <h4
-                  className="text-white font-nunito font-medium leading-[30px] mb-6 text-center"
+                  className="text-white font-nunito font-medium leading-[24px] mb-6 text-center"
                   style={{
-                    fontSize: 'clamp(24px, 4vw, 30px)',
-                    lineHeight: '30px'
+                    fontSize: 'clamp(22px, 5vw, 28px)',
+                    lineHeight: '24px'
                   }}
                 >
                   Our Plans
                 </h4>
 
-                {/* Plan Selector Dropdown */}
-                <div className="mb-6">
-                  <select
-                    className="w-full p-4 rounded-xl text-white font-nunito font-medium text-lg bg-transparent border-2 border-white/20 focus:border-white/40 focus:outline-none cursor-pointer"
-                    style={{
-                      background: 'rgba(255, 255, 255, 0.05)',
-                      backdropFilter: 'blur(10px)',
-                      WebkitBackdropFilter: 'blur(10px)'
-                    }}
-                    value={selectedPlan.id}
-                    onChange={(e) => setSelectedPlan(plans.find(p => p.id === e.target.value) || plans[0])}
-                  >
-                    {plans.map((plan) => (
-                      <option key={plan.id} value={plan.id} className="bg-[#0C002B] text-white">
-                        {plan.name} - {plan.price}
-                      </option>
-                    ))}
-                  </select>
-                  <div className="mt-3 text-center space-x-2 space-y-2">
-                    <a
-                      href="/services/copyright-protection"
-                      className="inline-flex items-center px-4 py-2 text-sm font-medium text-[#0C002B] bg-[#FFB703] rounded-lg hover:bg-[#e6a503] transition-colors duration-300"
+                {/* Display all three plans as expandable dropdowns */}
+                {plans.map((plan) => (
+                  <div key={plan.id} className="mb-4">
+                    {/* Plan Dropdown Header - Clickable */}
+                    <div
+                      onClick={() => togglePlan(plan.id)}
+                      className="w-full p-3 rounded-xl text-white font-nunito font-medium text-lg border-2 border-white/20 cursor-pointer hover:border-white/40 transition-all duration-300 flex items-center justify-between"
+                      style={{
+                        background: 'rgba(255, 255, 255, 0.05)',
+                        backdropFilter: 'blur(10px)',
+                        WebkitBackdropFilter: 'blur(10px)'
+                      }}
                     >
-                      Learn More About Copyright Services
-                    </a>
-                  </div>
-                </div>
-
-                {/* Selected Plan Card */}
-                <div
-                  className="relative p-6 rounded-2xl transition-all duration-300"
-                  style={{
-                    background: 'rgba(255, 255, 255, 0.10)',
-                    backdropFilter: 'blur(16px)',
-                    WebkitBackdropFilter: 'blur(16px)',
-                    border: selectedPlan.highlighted ? '2px solid #1345C3' : 'none',
-                    boxShadow: '0 0 20px 0 rgba(0, 0, 0, 0.10) inset, inset 0 0 20px rgba(255, 255, 255, 0.1)'
-                  }}
-                >
-                  {/* Plan Header */}
-                  <div className="text-center mb-6">
-                    <h3 className="text-white font-nunito text-xl md:text-2xl font-semibold mb-2">
-                      {selectedPlan.name}
-                    </h3>
-                    <div className="flex items-center justify-center gap-4 mb-4">
-                      <span className="text-white font-nunito text-sm opacity-80">{selectedPlan.description}</span>
+                      <span>{plan.name} - {plan.price}</span>
+                      <FontAwesomeIcon
+                        icon={faChevronDown}
+                        className={`w-4 h-4 transition-transform duration-300 ${
+                          expandedPlan === plan.id ? 'rotate-180' : 'rotate-0'
+                        }`}
+                      />
                     </div>
-                    <div className="text-right">
-                      <span
-                        className="text-white font-nunito font-bold text-2xl md:text-3xl"
-                        style={{ fontSize: 'clamp(24px, 4vw, 30px)' }}
+
+                    {/* Plan Card - Only visible when expanded */}
+                    <div
+                      className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                        expandedPlan === plan.id ? 'max-h-[1000px] opacity-100 mt-4' : 'max-h-0 opacity-0'
+                      }`}
+                    >
+                      <div
+                        className="relative p-6 rounded-2xl transition-all duration-300"
+                        style={{
+                          background: 'rgba(255, 255, 255, 0.10)',
+                          backdropFilter: 'blur(16px)',
+                          WebkitBackdropFilter: 'blur(16px)',
+                          border: plan.highlighted ? '2px solid #1345C3' : 'none',
+                          boxShadow: '0 0 20px 0 rgba(0, 0, 0, 0.10) inset, inset 0 0 20px rgba(255, 255, 255, 0.1)'
+                        }}
                       >
-                        {selectedPlan.price}
-                      </span>
+                        {/* Plan Header */}
+                        <div className="text-center mb-6">
+                          <h3 className="text-white font-nunito text-lg md:text-xl font-semibold mb-2">
+                            {plan.name}
+                          </h3>
+                          <div className="flex items-center justify-center gap-4 mb-4">
+                            <span className="text-white font-nunito text-md opacity-80">{plan.description}</span>
+                          </div>
+                          <div className="text-right">
+                            <span
+                              className="text-white font-nunito font-bold text-xl md:text-3xl"
+                            >
+                              {plan.price}
+                            </span>
+                          </div>
+                        </div>
+
+                        {/* Plan Features */}
+                        <div className="space-y-3 mb-6">
+                          {plan.features.map((feature, index) => (
+                            <div key={index} className="flex items-start gap-3">
+                              <i className="fas fa-check text-green-400 mt-1 flex-shrink-0"></i>
+                              <span className="text-white font-nunito text-xs md:text-lg leading-relaxed">
+                                {feature}
+                              </span>
+                            </div>
+                          ))}
+                        </div>
+
+                        {/* Action Button */}
+                        <button
+                          className="w-full py-3 px-4 rounded-xl font-nunito font-semibold text-sm md:text-base transition-all duration-300 hover:scale-105"
+                          style={{
+                            background: '#1345C3',
+                            boxShadow: '0 0 20px 0 #000 inset',
+                            color: '#FFFFFF'
+                          }}
+                        >
+                          Get Protected
+                        </button>
+
+                        {/* Plan Type Indicator */}
+                        <div className="mt-4 text-center">
+                          <span className="text-white font-nunito text-xs opacity-80">
+                            {plan.subtitle}
+                          </span>
+                        </div>
+                      </div>
                     </div>
                   </div>
+                ))}
 
-                  {/* Plan Features */}
-                  <div className="space-y-3 mb-6">
-                    {selectedPlan.features.map((feature, index) => (
-                      <div key={index} className="flex items-start gap-3">
-                        <i className="fas fa-check text-green-400 mt-1 flex-shrink-0"></i>
-                        <span className="text-white font-nunito text-sm md:text-base leading-relaxed">
-                          {feature}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Action Button */}
-                  <button
-                    className="w-full py-4 px-6 rounded-xl font-nunito font-semibold text-lg md:text-xl transition-all duration-300 hover:scale-105"
-                    style={{
-                      background: '#1345C3',
-                      boxShadow: '0 0 20px 0 #000 inset',
-                      color: '#FFFFFF'
-                    }}
+                {/* Learn More Link */}
+                <div className="mt-6 text-center">
+                  <a
+                    href="/services/copyright-protection"
+                    className="inline-flex items-center px-4 py-2 text-sm font-medium text-[#0C002B] bg-[#FFB703] rounded-lg hover:bg-[#e6a503] transition-colors duration-300"
                   >
-                    Get Protected
-                  </button>
-                </div>
-
-                {/* Plan Type Indicator */}
-                <div className="mt-4 text-center">
-                  <span className="text-white font-nunito text-sm opacity-80">
-                    {selectedPlan.subtitle}
-                  </span>
+                    Learn More About Copyright Services
+                  </a>
                 </div>
               </div>
             </div>
 
             {/* Quick Insights Container */}
             <div
-              className="relative flex flex-col p-6 md:p-8 w-full max-w-full md:max-w-[532px] mx-auto mt-8"
+              id="quick-insights"
+              className="sticky top-24 flex flex-col p-6 md:p-8 w-full max-w-full md:max-w-[532px] mx-auto"
               style={{
                 borderRadius: '30px',
                 background: 'rgba(255, 255, 255, 0.10)',
@@ -1018,17 +1000,17 @@ With IPRKaro's expert legal team and technology-backed process, you can register
             >
               {/* Quick Insight's Heading */}
               <div className="mb-8 text-center">
-                <h3 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-medium">
+                <h3 className="text-white font-nunito text-lg md:text-xl lg:text-3xl font-medium">
                   Quick Insight's
                 </h3>
               </div>
 
               {/* Documents You'll Need Heading */}
               <div className="mb-6 text-center">
-                <h4 className="text-white font-nunito font-medium leading-[25px]"
+                <h4 className="text-white font-nunito font-medium leading-[20px]"
                     style={{
-                      fontSize: 'clamp(20px, 3vw, 25px)',
-                      lineHeight: '25px'
+                      fontSize: 'clamp(18px, 3vw, 22px)',
+                      lineHeight: '20px'
                     }}
                 >
                   Documents You'll Need
@@ -1046,7 +1028,7 @@ With IPRKaro's expert legal team and technology-backed process, you can register
                     backdropFilter: 'blur(16px)'
                   }}
                 >
-                  <span className="text-white font-nunito text-sm md:text-base font-medium">
+                  <span className="text-white font-nunito text-xs md:text-lg font-medium">
                     Identity proof (PAN / Aadhaar / Passport)
                   </span>
                 </div>
@@ -1060,7 +1042,7 @@ With IPRKaro's expert legal team and technology-backed process, you can register
                     backdropFilter: 'blur(16px)'
                   }}
                 >
-                  <span className="text-white font-nunito text-sm md:text-base font-medium">
+                  <span className="text-white font-nunito text-xs md:text-lg font-medium">
                     Address proof (utility bill / bank statement)
                   </span>
                 </div>
@@ -1074,8 +1056,8 @@ With IPRKaro's expert legal team and technology-backed process, you can register
                     backdropFilter: 'blur(16px)'
                   }}
                 >
-                  <span className="text-white font-nunito text-sm md:text-base font-medium">
-                    Legal entity proof (if business — e.g. company registration certificate)
+                  <span className="text-white font-nunito text-xs md:text-lg font-medium">
+                    Legal entity proof (if business, e.g. company registration certificate)
                   </span>
                 </div>
 
@@ -1088,7 +1070,7 @@ With IPRKaro's expert legal team and technology-backed process, you can register
                     backdropFilter: 'blur(16px)'
                   }}
                 >
-                  <span className="text-white font-nunito text-sm md:text-base font-medium">
+                  <span className="text-white font-nunito text-xs md:text-lg font-medium">
                     Trademark/logo/wordmark images
                   </span>
                 </div>
@@ -1102,11 +1084,12 @@ With IPRKaro's expert legal team and technology-backed process, you can register
                     backdropFilter: 'blur(16px)'
                   }}
                 >
-                  <span className="text-white font-nunito text-sm md:text-base font-medium">
+                  <span className="text-white font-nunito text-xs md:text-lg font-medium">
                     Power of Attorney (Form TM-48)
                   </span>
                 </div>
               </div>
+            </div>
             </div>
           </div>
         </div>
@@ -1125,7 +1108,7 @@ With IPRKaro's expert legal team and technology-backed process, you can register
             {/* Left Side - Pay Now Text */}
             <div className="flex-1">
               <span className="text-white font-nunito font-semibold text-lg">
-                Pay Now ₹6,999
+                Pay Now ₹2,999
               </span>
             </div>
 
@@ -1248,8 +1231,8 @@ With IPRKaro's expert legal team and technology-backed process, you can register
                   </div>
                 </div>
 
-                {/* Our Plans Section - Dropdown Style */}
-                <div className="flex-1">
+                {/* Our Plans Section - Expandable Dropdowns */}
+                <div className="flex-1 space-y-3">
                   <h4
                     className="text-white font-nunito font-medium leading-[24px] mb-4 text-center"
                     style={{
@@ -1260,93 +1243,105 @@ With IPRKaro's expert legal team and technology-backed process, you can register
                     Our Plans
                   </h4>
 
-                  {/* Plan Selector Dropdown */}
-                  <div className="mb-4">
-                    <select
-                      className="w-full p-3 rounded-lg text-white font-nunito font-medium text-sm bg-transparent border-2 border-white/20 focus:border-white/40 focus:outline-none cursor-pointer"
-                      style={{
-                        background: 'rgba(255, 255, 255, 0.05)',
-                        backdropFilter: 'blur(10px)',
-                        WebkitBackdropFilter: 'blur(10px)'
-                      }}
-                      value={selectedPlan.id}
-                      onChange={(e) => setSelectedPlan(plans.find(p => p.id === e.target.value) || plans[0])}
-                    >
-                      {plans.map((plan) => (
-                        <option key={plan.id} value={plan.id} className="bg-[#0C002B] text-white">
-                          {plan.name} - {plan.price}
-                        </option>
-                      ))}
-                    </select>
-                    <div className="mt-2 text-center">
-                      <a
-                        href="/services/copyright-protection"
-                        className="inline-flex items-center px-3 py-1.5 text-xs font-medium text-[#0C002B] bg-[#FFB703] rounded-md hover:bg-[#e6a503] transition-colors duration-300"
+                  {/* Display all three plans as expandable dropdowns */}
+                  {plans.map((plan) => (
+                    <div key={plan.id} className="mb-3">
+                      {/* Plan Dropdown Header - Clickable */}
+                      <div
+                        onClick={() => togglePlan(plan.id)}
+                        className="w-full p-3 rounded-lg text-white font-nunito font-medium text-sm border-2 border-white/20 cursor-pointer hover:border-white/40 transition-all duration-300 flex items-center justify-between"
+                        style={{
+                          background: 'rgba(255, 255, 255, 0.05)',
+                          backdropFilter: 'blur(10px)',
+                          WebkitBackdropFilter: 'blur(10px)'
+                        }}
                       >
-                        Learn More About Copyright Services
-                      </a>
-                    </div>
-                  </div>
-
-                  {/* Selected Plan Card */}
-                  <div
-                    className="relative p-4 rounded-xl transition-all duration-300"
-                    style={{
-                      background: 'rgba(255, 255, 255, 0.10)',
-                      backdropFilter: 'blur(16px)',
-                      WebkitBackdropFilter: 'blur(16px)',
-                      border: selectedPlan.highlighted ? '2px solid #1345C3' : 'none',
-                      boxShadow: '0 0 20px 0 rgba(0, 0, 0, 0.10) inset, inset 0 0 20px rgba(255, 255, 255, 0.1)'
-                    }}
-                  >
-                    {/* Plan Header */}
-                    <div className="text-center mb-4">
-                      <h3 className="text-white font-nunito text-sm font-semibold mb-1">
-                        {selectedPlan.name}
-                      </h3>
-                      <div className="flex items-center justify-center gap-2 mb-2">
-                        <span className="text-white font-nunito text-xs opacity-80">{selectedPlan.description}</span>
+                        <span className="text-xs">{plan.name} - {plan.price}</span>
+                        <FontAwesomeIcon
+                          icon={faChevronDown}
+                          className={`w-3 h-3 transition-transform duration-300 flex-shrink-0 ml-2 ${
+                            expandedPlan === plan.id ? 'rotate-180' : 'rotate-0'
+                          }`}
+                        />
                       </div>
-                      <div className="text-right">
-                        <span
-                          className="text-white font-nunito font-bold text-lg"
-                          style={{ fontSize: 'clamp(16px, 4vw, 20px)' }}
+
+                      {/* Plan Card - Only visible when expanded */}
+                      <div
+                        className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                          expandedPlan === plan.id ? 'max-h-[1000px] opacity-100 mt-3' : 'max-h-0 opacity-0'
+                        }`}
+                      >
+                        <div
+                          className="relative p-4 rounded-xl transition-all duration-300"
+                          style={{
+                            background: 'rgba(255, 255, 255, 0.10)',
+                            backdropFilter: 'blur(16px)',
+                            WebkitBackdropFilter: 'blur(16px)',
+                            border: plan.highlighted ? '2px solid #1345C3' : 'none',
+                            boxShadow: '0 0 20px 0 rgba(0, 0, 0, 0.10) inset, inset 0 0 20px rgba(255, 255, 255, 0.1)'
+                          }}
                         >
-                          {selectedPlan.price}
-                        </span>
+                          {/* Plan Header */}
+                          <div className="text-center mb-4">
+                            <h3 className="text-white font-nunito text-sm font-semibold mb-1">
+                              {plan.name}
+                            </h3>
+                            <div className="flex items-center justify-center gap-2 mb-2">
+                              <span className="text-white font-nunito text-xs opacity-80">{plan.description}</span>
+                            </div>
+                            <div className="text-right">
+                              <span
+                                className="text-white font-nunito font-bold text-lg"
+                                style={{ fontSize: 'clamp(16px, 4vw, 20px)' }}
+                              >
+                                {plan.price}
+                              </span>
+                            </div>
+                          </div>
+
+                          {/* Plan Features */}
+                          <div className="space-y-2 mb-4">
+                            {plan.features.map((feature, index) => (
+                              <div key={index} className="flex items-start gap-2">
+                                <i className="fas fa-check text-green-400 mt-0.5 flex-shrink-0 text-xs"></i>
+                                <span className="text-white font-nunito text-xs leading-relaxed">
+                                  {feature}
+                                </span>
+                              </div>
+                            ))}
+                          </div>
+
+                          {/* Action Button */}
+                          <button
+                            className="w-full py-2.5 px-4 rounded-lg font-nunito font-semibold text-sm transition-all duration-300 hover:scale-105"
+                            style={{
+                              background: '#1345C3',
+                              boxShadow: '0 0 20px 0 #000 inset',
+                              color: '#FFFFFF'
+                            }}
+                          >
+                            Get Protected
+                          </button>
+
+                          {/* Plan Type Indicator */}
+                          <div className="mt-3 text-center">
+                            <span className="text-white font-nunito text-xs opacity-80">
+                              {plan.subtitle}
+                            </span>
+                          </div>
+                        </div>
                       </div>
                     </div>
+                  ))}
 
-                    {/* Plan Features */}
-                    <div className="space-y-2 mb-4">
-                      {selectedPlan.features.map((feature, index) => (
-                        <div key={index} className="flex items-start gap-2">
-                          <i className="fas fa-check text-green-400 mt-0.5 flex-shrink-0 text-xs"></i>
-                          <span className="text-white font-nunito text-xs leading-relaxed">
-                            {feature}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
-
-                    {/* Action Button */}
-                    <button
-                      className="w-full py-2.5 px-4 rounded-lg font-nunito font-semibold text-sm transition-all duration-300 hover:scale-105"
-                      style={{
-                        background: '#1345C3',
-                        boxShadow: '0 0 20px 0 #000 inset',
-                        color: '#FFFFFF'
-                      }}
+                  {/* Learn More Link */}
+                  <div className="mt-4 text-center">
+                    <a
+                      href="/services/copyright-protection"
+                      className="inline-flex items-center px-3 py-1.5 text-xs font-medium text-[#0C002B] bg-[#FFB703] rounded-md hover:bg-[#e6a503] transition-colors duration-300"
                     >
-                      Get Protected
-                    </button>
-                  </div>
-
-                  {/* Plan Type Indicator */}
-                  <div className="mt-3 text-center">
-                    <span className="text-white font-nunito text-xs opacity-80">
-                      {selectedPlan.subtitle}
-                    </span>
+                      Learn More About Copyright Services
+                    </a>
                   </div>
                 </div>
               </div>
@@ -1419,7 +1414,7 @@ With IPRKaro's expert legal team and technology-backed process, you can register
                     }}
                   >
                     <span className="text-white font-nunito text-xs font-medium">
-                      Legal entity proof (if business — e.g. company registration certificate)
+                      Legal entity proof (if business, e.g. company registration certificate)
                     </span>
                   </div>
 
@@ -1469,125 +1464,126 @@ With IPRKaro's expert legal team and technology-backed process, you can register
       <section className="py-20 relative overflow-hidden" style={{ backgroundColor: '#0C002B' }}>
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-12">
-            <h2 className="text-white font-nunito text-3xl md:text-4xl lg:text-5xl font-medium mb-4">
-              We Provide Solutions In:
+            <h2 className="text-white font-nunito text-lg md:text-xl lg:text-4xl font-medium mb-4">
+            Copyright Registration in India: Protect Your Creative Work Legally Across All States  
             </h2>
-            <p className="text-white font-nunito text-base md:text-lg opacity-80">
-              Comprehensive IPR services across all states and union territories of India
+            <p className="text-white font-nunito text-xs md:text-sm opacity-80">
+            At IPRKaro.com, we provide hassle-free copyright registration services across all states and cities. Whether you’re an artist, writer, designer, or business owner, our team helps you with online copyright registration in India to safeguard your original content from misuse.
+            If you’re searching for “copyright registration near me”, we offer legal copyright protection in India with end-to-end guidance from filing to certification.
             </p>
           </div>
 
           {/* States Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mb-12">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 mb-12">
             {/* 27 States */}
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Andhra Pradesh</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Andhra Pradesh</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Arunachal Pradesh</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Arunachal Pradesh</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Assam</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Assam</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Bihar</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Bihar</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Chhattisgarh</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Chhattisgarh</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Goa</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Goa</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Gujarat</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Gujarat</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Haryana</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Haryana</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Himachal Pradesh</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Himachal Pradesh</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Jharkhand</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Jharkhand</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Karnataka</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Karnataka</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Kerala</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Kerala</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Madhya Pradesh</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Madhya Pradesh</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Maharashtra</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Maharashtra</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Manipur</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Manipur</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Meghalaya</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Meghalaya</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Mizoram</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Mizoram</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Nagaland</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Nagaland</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Odisha</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Odisha</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Punjab</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Punjab</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Rajasthan</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Rajasthan</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Sikkim</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Sikkim</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Tamil Nadu</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Tamil Nadu</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Telangana</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Telangana</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Tripura</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Tripura</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Uttar Pradesh</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Uttar Pradesh</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Uttarakhand</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(255, 183, 3, 0.1)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Uttarakhand</span>
             </div>
           </div>
 
           {/* Union Territories Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(19, 69, 195, 0.1)', border: '1px solid rgba(19, 69, 195, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Andaman and Nicobar Islands</span>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(19, 69, 195, 0.1)', border: '1px solid rgba(19, 69, 195, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Andaman and Nicobar Islands</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(19, 69, 195, 0.1)', border: '1px solid rgba(19, 69, 195, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Chandigarh</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(19, 69, 195, 0.1)', border: '1px solid rgba(19, 69, 195, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Chandigarh</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(19, 69, 195, 0.1)', border: '1px solid rgba(19, 69, 195, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Dadra and Nagar Haveli and Daman and Diu</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(19, 69, 195, 0.1)', border: '1px solid rgba(19, 69, 195, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Dadra and Nagar Haveli and Daman and Diu</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(19, 69, 195, 0.1)', border: '1px solid rgba(19, 69, 195, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Delhi</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(19, 69, 195, 0.1)', border: '1px solid rgba(19, 69, 195, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Delhi</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(19, 69, 195, 0.1)', border: '1px solid rgba(19, 69, 195, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Jammu and Kashmir</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(19, 69, 195, 0.1)', border: '1px solid rgba(19, 69, 195, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Jammu and Kashmir</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(19, 69, 195, 0.1)', border: '1px solid rgba(19, 69, 195, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Ladakh</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(19, 69, 195, 0.1)', border: '1px solid rgba(19, 69, 195, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Ladakh</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(19, 69, 195, 0.1)', border: '1px solid rgba(19, 69, 195, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Lakshadweep</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(19, 69, 195, 0.1)', border: '1px solid rgba(19, 69, 195, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Lakshadweep</span>
             </div>
-            <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(19, 69, 195, 0.1)', border: '1px solid rgba(19, 69, 195, 0.3)' }}>
-              <span className="text-white font-nunito text-sm md:text-base font-medium">Puducherry</span>
+            <div className="p-3 rounded-lg text-center" style={{ background: 'rgba(19, 69, 195, 0.1)', border: '1px solid rgba(19, 69, 195, 0.3)' }}>
+              <span className="text-white font-nunito text-xs md:text-sm font-medium">Puducherry</span>
             </div>
           </div>
         </div>
@@ -1607,7 +1603,7 @@ With IPRKaro's expert legal team and technology-backed process, you can register
           {/* Left Section - Questions */}
           <div className="space-y-8 flex flex-col justify-center">
             <div className="space-y-4">
-              <h2 className="text-white text-left font-nunito text-[28px] md:text-[45px] font-medium leading-[32px] md:leading-[45px] w-full">
+              <h2 className="text-white text-left font-nunito text-lg md:text-xl lg:text-2xl font-medium leading-tight w-full">
                 Frequently Asked Questions
                 <br />
                 <span style={{ color: '#FFB703' }}>
@@ -1615,7 +1611,7 @@ With IPRKaro's expert legal team and technology-backed process, you can register
                 </span>
               </h2>
 
-              <p className="text-white font-nunito text-[10px] md:text-xs lg:text-sm xl:text-base font-medium">
+              <p className="text-white font-nunito text-xs md:text-xs lg:text-sm font-medium">
                 Still have questions? <span style={{ color: '#FFB703' }} className="font-medium">Contact us</span> anytime.
               </p>
             </div>
@@ -1656,7 +1652,7 @@ With IPRKaro's expert legal team and technology-backed process, you can register
                 >
 
                   <div className="flex justify-between items-center">
-                    <h3 className="text-white font-nunito text-[16px] md:text-[20px] lg:text-[25px] font-semibold pr-4">
+                    <h3 className="text-white font-nunito text-sm md:text-base lg:text-lg font-semibold pr-4">
                       Q{index + 1}. {faq.question}
                     </h3>
                     <FontAwesomeIcon
@@ -1674,7 +1670,7 @@ With IPRKaro's expert legal team and technology-backed process, you can register
                     }`}
                   >
                     <div className="pt-4 border-t border-black/20 transform transition-all duration-500 ease-in-out">
-                      <p className="text-white font-nunito text-[10px] md:text-xs lg:text-sm xl:text-base font-medium leading-relaxed">
+                      <p className="text-white font-nunito text-xs md:text-xs lg:text-sm font-medium leading-relaxed">
                         {faq.answer}
                       </p>
                     </div>

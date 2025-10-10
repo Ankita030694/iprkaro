@@ -23,7 +23,7 @@ const Faq = () => {
     },
     {
       question: "Why choose IPR Karo over traditional methods?",
-      answer: "IPR Karo offers AI-driven trademark search, instant conflict checks, risk assessment reports, and seamless online filings—delivering faster results and more accurate protection than manual, offline methods."
+      answer: "IPR Karo offers AI-driven trademark search, instant conflict checks, risk assessment reports, and seamless online filings, delivering faster results and more accurate protection than manual, offline methods."
     },
     {
       question: "How does AI help in trademark protection?",
@@ -67,20 +67,20 @@ const Faq = () => {
           __html: JSON.stringify(faqSchema),
         }}
       />
-      <section className="py-16 relative overflow-hidden" style={{ backgroundColor: '#0C002B' }}>
+      <section className="py-[57.6px] relative overflow-hidden" style={{ backgroundColor: '#0C002B' }}>
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-full h-full" style={{ background: 'linear-gradient(to right, #FFB70320, transparent)' }}></div>
-        <div className="absolute bottom-0 right-0 w-76.8 h-76.8 rounded-full blur-2.4xl" style={{ background: 'linear-gradient(to left, #FFB70320, transparent)' }}></div>
+        <div className="absolute bottom-0 right-0 w-[69.12px] h-[69.12px] rounded-full blur-[2.16rem]" style={{ background: 'linear-gradient(to left, #FFB70320, transparent)' }}></div>
       </div>
 
-      <div className="container mx-auto px-5 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-9.6 items-start">
+      <div className="mx-20 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-10 items-start">
           
           {/* Left Section - Questions */}
-          <div className="space-y-8 flex flex-col justify-start">
-            <div className="space-y-5">
-              <h2 className="text-white text-left font-nunito text-[26px] md:text-[40px] font-medium leading-[32px] md:leading-[44px] w-full">
+          <div className="space-y-[28.8px] flex flex-col justify-start">
+            <div className="space-y-[18px]">
+              <h2 className="text-white text-left font-nunito text-[23.4px] md:text-[36px] font-medium leading-[28.8px] md:leading-[39.6px] w-full">
                 Have Question?
                 <br />
                 <span style={{ color: '#FFB703' }}>
@@ -88,29 +88,29 @@ const Faq = () => {
                 </span>
               </h2>
 
-              <p className="text-white font-nunito text-[12px] md:text-[14px] lg:text-[15px] xl:text-[16px] font-medium">
+              <p className="text-white font-nunito text-[10.8px] md:text-[12.6px] lg:text-[13.5px] xl:text-[14.4px] font-medium">
                 Still have questions? <span style={{ color: '#FFB703' }} className="font-medium">Contact us</span> anytime.
               </p>
             </div>
 
             {/* AI Input */}
             <form onSubmit={handleAiSubmit} className="relative">
-              <div className="relative bg-white/50 backdrop-blur-sm border border-purple-400/30 rounded-xl p-4 max-w-lg">
+              <div className="relative bg-white/50 backdrop-blur-sm border border-purple-400/30 rounded-[10.8px] p-[14.4px] max-w-lg">
                 <input
                   type="text"
                   value={aiQuestion}
                   onChange={(e) => setAiQuestion(e.target.value)}
                   placeholder="Smart AI, Ask me Anything...."
-                  className="bg-transparent text-white placeholder-white outline-none text-[16px]"
+                  className="bg-transparent text-white placeholder-white outline-none text-[14.4px]"
                 />
                 <button
                   type="submit"
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2 transition-colors"
+                  className="absolute right-[14.4px] top-1/2 transform -translate-y-1/2 transition-colors"
                   style={{ color: '#FFB703' }}
                   onMouseEnter={(e) => e.currentTarget.style.color = '#e6a503'}
                   onMouseLeave={(e) => e.currentTarget.style.color = '#FFB703'}
                 >
-                  <FontAwesomeIcon icon={faPaperPlane} className="w-5 h-5" />
+                  <FontAwesomeIcon icon={faPaperPlane} className="w-[18px] h-[18px]" />
                 </button>
               </div>
             </form>
@@ -118,33 +118,33 @@ const Faq = () => {
 
           {/* Right Section - FAQ Items */}
           <div
-            className="space-y-4 p-6"
+            className="space-y-[14.4px] p-[21.6px]"
             style={{
-              borderRadius: '16px',
+              borderRadius: '14.4px',
               background: 'linear-gradient(140deg, rgba(12, 0, 43, 0.10) 6.89%, rgba(255, 183, 3, 0.10) 101.84%)',
-              boxShadow: '3.2px 3.2px 20.16px 0 rgba(0, 0, 0, 0.15), 0 0 16px 0.8px rgba(255, 255, 255, 0.10) inset',
-              backdropFilter: 'blur(97.64px)'
+              boxShadow: '2.88px 2.88px 18.144px 0 rgba(0, 0, 0, 0.15), 0 0 14.4px 0.72px rgba(255, 255, 255, 0.10) inset',
+              backdropFilter: 'blur(87.876px)'
             }}
           >
             {faqs.map((faq, index) => (
               <div key={index} className="relative">
                 <div
-                  className="p-5 cursor-pointer transition-all duration-300 ease-in-out hover:scale-[1.02] transform"
+                  className="p-[18px] cursor-pointer transition-all duration-300 ease-in-out hover:scale-[1.02] transform"
                   style={{
-                    borderRadius: '12px',
+                    borderRadius: '10.8px',
                     background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%)',
-                    ...(openFaq === index ? { boxShadow: `0 0 0 1.6px #FFB70380` } : {})
+                    ...(openFaq === index ? { boxShadow: `0 0 0 1.44px #FFB70380` } : {})
                   }}
                   onClick={() => toggleFaq(index)}
                 >
 
-                  <div className="flex justify-between items-center mb-3">
-                    <h3 className="text-white font-nunito text-[15px] md:text-[18px] lg:text-[22px] font-semibold pr-4 leading-snug">
+                  <div className="flex justify-between items-center mb-[10.8px]">
+                    <h3 className="text-white font-nunito text-[13.5px] md:text-[16.2px] lg:text-[19.8px] font-semibold pr-[14.4px] leading-snug">
                       {faq.question}
                     </h3>
                     <FontAwesomeIcon
                       icon={faChevronDown}
-                      className={`w-5 h-5 transition-all duration-500 ease-in-out flex-shrink-0 ${
+                      className={`w-[18px] h-[18px] transition-all duration-500 ease-in-out flex-shrink-0 ${
                         openFaq === index ? 'rotate-180 scale-110' : 'rotate-0 scale-100'
                       }`}
                       style={{ color: '#000000' }}
@@ -153,11 +153,11 @@ const Faq = () => {
 
                   <div
                     className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                      openFaq === index ? 'max-h-96 opacity-100 mt-0' : 'max-h-0 opacity-0 -mt-4'
+                      openFaq === index ? 'max-h-[345.6px] opacity-100 mt-0' : 'max-h-0 opacity-0 -mt-[14.4px]'
                     }`}
                   >
-                    <div className="mt-4 pt-4 border-t border-black/20 transform transition-all duration-500 ease-in-out">
-                      <p className="text-white font-nunito text-[12px] md:text-[13px] lg:text-[14px] xl:text-[15px] font-medium leading-relaxed">
+                    <div className="mt-[14.4px] pt-[14.4px] border-t border-black/20 transform transition-all duration-500 ease-in-out">
+                      <p className="text-white font-nunito text-[10.8px] md:text-[11.7px] lg:text-[12.6px] xl:text-[13.5px] font-medium leading-relaxed">
                         {faq.answer}
                       </p>
                     </div>

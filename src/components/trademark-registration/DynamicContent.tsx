@@ -150,7 +150,7 @@ export default function DynamicContent({ stateName }: DynamicContentProps) {
                     Complete Trademark Registration Fast
                   </h3>
                   <p className="text-white font-nunito text-xs lg:text-sm xl:text-base 2xl:text-lg opacity-90">
-                    Register Trademark with IPRKaro - Just ₹3,999/-
+                    Register Trademark with IPRKaro - Just ₹1,999/-
                   </p>
                 </div>
               </div>

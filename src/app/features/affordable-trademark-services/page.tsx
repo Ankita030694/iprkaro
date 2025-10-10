@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 
 export default function AffordableTrademarkServices() {
   return (
@@ -14,99 +15,99 @@ export default function AffordableTrademarkServices() {
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="canonical" href="https://iprkaro.com/features/affordable-trademark-services" />
       </Head>
-      <div className="min-h-screen bg-gradient-to-b from-[#0C002B] via-[#160049] to-[#6E5E93] pt-32 pb-16 px-4">
-      <div className="max-w-6xl mx-auto">
+      <div className="min-h-screen bg-gradient-to-b from-[#0C002B] via-[#160049] to-[#6E5E93] pt-28 pb-14 px-3.5">
+      <div className="max-w-5xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-8 md:mb-16">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-6">
+        <div className="text-center mb-7 md:mb-14">
+          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-3.5 md:mb-5">
             Affordable Trademark Services India - Cost-Effective Brand Protection
           </h1>
-          <p className="text-base md:text-lg lg:text-xl text-gray-300 max-w-4xl mx-auto px-4 leading-relaxed">
+          <p className="text-sm md:text-base lg:text-lg text-gray-300 max-w-3xl mx-auto px-3.5 leading-relaxed">
             Get affordable trademark registration services in India with transparent pricing and no hidden fees.
             Save up to 60% compared to traditional law firms while getting professional trademark filing and expert attorney support.
           </p>
         </div>
 
         {/* Main Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-7 lg:gap-10 items-start">
           {/* Left Column - Content */}
-          <div className="space-y-8">
-            <div className="bg-white/5 backdrop-blur-sm rounded-lg p-4 md:p-8 border border-white/10">
-              <h2 className="text-xl md:text-2xl font-semibold text-white mb-4">What Makes Our Services Affordable?</h2>
-              <p className="text-gray-300 leading-relaxed mb-4">
+          <div className="space-y-7">
+            <div className="bg-white/5 backdrop-blur-sm rounded-lg p-3.5 md:p-7 border border-white/10">
+              <h2 className="text-lg md:text-xl font-semibold text-white mb-3.5">What Makes Our Services Affordable?</h2>
+              <p className="text-sm text-gray-300 leading-relaxed mb-3.5">
                 At IPRKaro, we believe that quality trademark services should be accessible to businesses of all sizes.
                 Our streamlined processes, technology integration, and efficient workflows allow us to provide
                 premium trademark services at competitive prices without compromising on quality or expertise.
               </p>
-              <div className="grid grid-cols-2 gap-4 mt-6">
-                <div className="text-center p-4 bg-white/10 rounded-lg">
-                  <div className="text-2xl font-bold text-yellow-400 mb-1">60%</div>
-                  <div className="text-white text-sm">Lower than traditional law firms</div>
+              <div className="grid grid-cols-2 gap-3.5 mt-5">
+                <div className="text-center p-3.5 bg-white/10 rounded-lg">
+                  <div className="text-xl font-bold text-yellow-400 mb-1">60%</div>
+                  <div className="text-white text-xs">Lower than traditional firms</div>
                 </div>
-                <div className="text-center p-4 bg-white/10 rounded-lg">
-                  <div className="text-2xl font-bold text-yellow-400 mb-1">₹0</div>
-                  <div className="text-white text-sm">Hidden fees or surprise charges</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-white/10">
-              <h2 className="text-2xl font-semibold text-white mb-4">Service Packages</h2>
-              <div className="space-y-4">
-                <div className="p-4 border border-yellow-400/30 rounded-lg">
-                  <div className="flex justify-between items-center mb-2">
-                    <h3 className="text-white font-semibold">Basic Search Package</h3>
-                    <span className="text-yellow-400 font-bold">₹2,999</span>
-                  </div>
-                  <p className="text-gray-300 text-sm">Comprehensive trademark availability search with basic conflict analysis</p>
-                </div>
-                <div className="p-4 border border-yellow-400/30 rounded-lg bg-yellow-400/10">
-                  <div className="flex justify-between items-center mb-2">
-                    <h3 className="text-white font-semibold">Standard Registration</h3>
-                    <span className="text-yellow-400 font-bold">₹8,999</span>
-                  </div>
-                  <p className="text-gray-300 text-sm">Complete trademark registration service with attorney support</p>
-                </div>
-                <div className="p-4 border border-yellow-400/30 rounded-lg">
-                  <div className="flex justify-between items-center mb-2">
-                    <h3 className="text-white font-semibold">Premium Protection</h3>
-                    <span className="text-yellow-400 font-bold">₹15,999</span>
-                  </div>
-                  <p className="text-gray-300 text-sm">Full service including watch service and opposition monitoring</p>
+                <div className="text-center p-3.5 bg-white/10 rounded-lg">
+                  <div className="text-xl font-bold text-yellow-400 mb-1">₹0</div>
+                  <div className="text-white text-xs">Hidden fees or surprise charges</div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-white/10">
-              <h2 className="text-2xl font-semibold text-white mb-4">Cost Comparison</h2>
+            <div className="bg-white/5 backdrop-blur-sm rounded-lg p-3.5 md:p-7 border border-white/10">
+              <h2 className="text-lg md:text-xl font-semibold text-white mb-3.5">Service Packages</h2>
+              <div className="space-y-3.5">
+                <div className="p-3.5 border border-yellow-400/30 rounded-lg">
+                  <div className="flex justify-between items-center mb-1.5">
+                    <h3 className="text-sm text-white font-semibold">Basic Search Package</h3>
+                    <span className="text-yellow-400 font-bold text-sm">₹1,999</span>
+                  </div>
+                  <p className="text-xs text-gray-300">Comprehensive trademark availability search with basic conflict analysis</p>
+                </div>
+                <div className="p-3.5 border border-yellow-400/30 rounded-lg bg-yellow-400/10">
+                  <div className="flex justify-between items-center mb-1.5">
+                    <h3 className="text-sm text-white font-semibold">Standard Registration</h3>
+                    <span className="text-yellow-400 font-bold text-sm">₹2,999</span>
+                  </div>
+                  <p className="text-xs text-gray-300">Complete trademark registration service with attorney support</p>
+                </div>
+                <div className="p-3.5 border border-yellow-400/30 rounded-lg">
+                  <div className="flex justify-between items-center mb-1.5">
+                    <h3 className="text-sm text-white font-semibold">Premium Protection</h3>
+                    <span className="text-yellow-400 font-bold text-sm">₹3,999</span>
+                  </div>
+                  <p className="text-xs text-gray-300">Full service including watch service and opposition monitoring</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white/5 backdrop-blur-sm rounded-lg p-3.5 md:p-7 border border-white/10">
+              <h2 className="text-lg md:text-xl font-semibold text-white mb-3.5">Cost Comparison</h2>
               <div className="overflow-x-auto">
-                <table className="w-full text-left">
+                <table className="w-full text-left text-sm">
                   <thead>
                     <tr className="border-b border-white/20">
-                      <th className="text-white py-2">Service</th>
-                      <th className="text-white py-2">IPRKaro</th>
-                      <th className="text-white py-2">Traditional Firm</th>
-                      <th className="text-white py-2">Savings</th>
+                      <th className="text-white py-1.5 text-xs">Service</th>
+                      <th className="text-white py-1.5 text-xs">IPRKaro</th>
+                      <th className="text-white py-1.5 text-xs">Traditional Firm</th>
+                      <th className="text-white py-1.5 text-xs">Savings</th>
                     </tr>
                   </thead>
-                  <tbody className="text-gray-300">
+                  <tbody className="text-gray-300 text-xs">
                     <tr className="border-b border-white/10">
-                      <td className="py-2">Trademark Search</td>
-                      <td className="py-2">₹2,999</td>
-                      <td className="py-2">₹8,000</td>
-                      <td className="py-2 text-green-400">62% Saved</td>
+                      <td className="py-1.5">Trademark Search</td>
+                      <td className="py-1.5">₹1,999</td>
+                      <td className="py-1.5">₹8,000</td>
+                      <td className="py-1.5 text-green-400">75% Saved</td>
                     </tr>
                     <tr className="border-b border-white/10">
-                      <td className="py-2">Registration Filing</td>
-                      <td className="py-2">₹8,999</td>
-                      <td className="py-2">₹25,000</td>
-                      <td className="py-2 text-green-400">64% Saved</td>
+                      <td className="py-1.5">Registration Filing</td>
+                      <td className="py-1.5">₹2,999</td>
+                      <td className="py-1.5">₹25,000</td>
+                      <td className="py-1.5 text-green-400">88% Saved</td>
                     </tr>
                     <tr className="border-b border-white/10">
-                      <td className="py-2">Annual Renewal</td>
-                      <td className="py-2">₹4,999</td>
-                      <td className="py-2">₹12,000</td>
-                      <td className="py-2 text-green-400">58% Saved</td>
+                      <td className="py-1.5">Annual Renewal</td>
+                      <td className="py-1.5">₹3,999</td>
+                      <td className="py-1.5">₹12,000</td>
+                      <td className="py-1.5 text-green-400">67% Saved</td>
                     </tr>
                   </tbody>
                 </table>
@@ -115,65 +116,67 @@ export default function AffordableTrademarkServices() {
           </div>
 
           {/* Right Column - Value & Benefits */}
-          <div className="space-y-8">
-            <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-white/10">
-              <h2 className="text-2xl font-semibold text-white mb-4">What's Included</h2>
-              <div className="space-y-4">
+          <div className="space-y-7">
+            <div className="bg-white/5 backdrop-blur-sm rounded-lg p-3.5 md:p-7 border border-white/10">
+              <h2 className="text-lg md:text-xl font-semibold text-white mb-3.5">What's Included</h2>
+              <div className="space-y-3.5">
                 <div className="flex items-start">
-                  <span className="text-yellow-400 mr-3 mt-1">✓</span>
+                  <span className="text-yellow-400 mr-2.5 mt-0.5 text-sm">✓</span>
                   <div>
-                    <h3 className="text-white font-semibold">Transparent Pricing</h3>
-                    <p className="text-gray-300 text-sm">No hidden fees, no surprise charges - pay only for what you need</p>
+                    <h3 className="text-sm text-white font-semibold">Transparent Pricing</h3>
+                    <p className="text-xs text-gray-300">No hidden fees, no surprise charges - pay only for what you need</p>
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <span className="text-yellow-400 mr-3 mt-1">✓</span>
+                  <span className="text-yellow-400 mr-2.5 mt-0.5 text-sm">✓</span>
                   <div>
-                    <h3 className="text-white font-semibold">Expert Attorney Support</h3>
-                    <p className="text-gray-300 text-sm">Qualified trademark attorneys handle your case, not paralegals</p>
+                    <h3 className="text-sm text-white font-semibold">Expert Attorney Support</h3>
+                    <p className="text-xs text-gray-300">Qualified trademark attorneys handle your case, not paralegals</p>
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <span className="text-yellow-400 mr-3 mt-1">✓</span>
+                  <span className="text-yellow-400 mr-2.5 mt-0.5 text-sm">✓</span>
                   <div>
-                    <h3 className="text-white font-semibold">Technology Integration</h3>
-                    <p className="text-gray-300 text-sm">AI-powered tools streamline processes and reduce manual work</p>
+                    <h3 className="text-sm text-white font-semibold">Technology Integration</h3>
+                    <p className="text-xs text-gray-300">AI-powered tools streamline processes and reduce manual work</p>
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <span className="text-yellow-400 mr-3 mt-1">✓</span>
+                  <span className="text-yellow-400 mr-2.5 mt-0.5 text-sm">✓</span>
                   <div>
-                    <h3 className="text-white font-semibold">Bulk Discounts</h3>
-                    <p className="text-gray-300 text-sm">Special pricing for multiple trademarks or portfolio management</p>
+                    <h3 className="text-sm text-white font-semibold">Bulk Discounts</h3>
+                    <p className="text-xs text-gray-300">Special pricing for multiple trademarks or portfolio management</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-lg p-8 text-center">
-              <h2 className="text-2xl font-bold text-white mb-4">Start Saving Today</h2>
-              <p className="text-white/90 mb-6">
+            <div className="bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-lg p-3.5 md:p-7 text-center">
+              <h2 className="text-base md:text-lg lg:text-xl font-bold text-white mb-3.5">Start Saving Today</h2>
+              <p className="text-sm text-white/90 mb-5">
                 Get premium trademark services at affordable prices. Start your application and see the difference.
               </p>
-              <button className="bg-white text-yellow-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">
-                Get Started Now
-              </button>
+              <Link href="/contact" className="cursor-pointer">
+                <button className="bg-white text-yellow-600 font-semibold py-2.5 px-7 text-sm rounded-lg hover:bg-gray-100 transition-colors">
+                  Get Started Now
+                </button>
+              </Link>
             </div>
 
-            <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-white/10">
-              <h2 className="text-2xl font-semibold text-white mb-4">Client Testimonials</h2>
-              <div className="space-y-4">
-                <div className="p-4 bg-white/10 rounded">
-                  <p className="text-gray-300 italic mb-2">
+            <div className="bg-white/5 backdrop-blur-sm rounded-lg p-3.5 md:p-7 border border-white/10">
+              <h2 className="text-lg md:text-xl font-semibold text-white mb-3.5">Client Testimonials</h2>
+              <div className="space-y-3.5">
+                <div className="p-3.5 bg-white/10 rounded">
+                  <p className="text-sm text-gray-300 italic mb-1.5">
                     "IPRKaro's affordable services delivered the same quality as expensive law firms but at half the cost!"
                   </p>
-                  <p className="text-yellow-400 font-semibold">- Startup Founder</p>
+                  <p className="text-xs text-yellow-400 font-semibold">- Startup Founder</p>
                 </div>
-                <div className="p-4 bg-white/10 rounded">
-                  <p className="text-gray-300 italic mb-2">
+                <div className="p-3.5 bg-white/10 rounded">
+                  <p className="text-sm text-gray-300 italic mb-1.5">
                     "Transparent pricing and excellent service. No hidden fees and great value for money."
                   </p>
-                  <p className="text-yellow-400 font-semibold">- Small Business Owner</p>
+                  <p className="text-xs text-yellow-400 font-semibold">- Small Business Owner</p>
                 </div>
               </div>
             </div>
@@ -181,56 +184,56 @@ export default function AffordableTrademarkServices() {
         </div>
 
         {/* Money-Back Guarantee */}
-        <div className="mt-16 bg-gradient-to-r from-green-600 to-green-700 rounded-lg p-8 text-center">
-          <h2 className="text-2xl font-bold text-white mb-4">100% Money-Back Guarantee</h2>
-          <p className="text-white/90 mb-6 max-w-2xl mx-auto">
+        <div className="mt-14 bg-gradient-to-r from-green-600 to-green-700 rounded-lg p-3.5 md:p-7 text-center">
+          <h2 className="text-base md:text-lg lg:text-xl font-bold text-white mb-3.5">100% Money-Back Guarantee</h2>
+          <p className="text-sm text-white/90 mb-5 max-w-2xl mx-auto">
             We're confident in our services. If you're not satisfied with our trademark search or registration services,
             we'll refund your payment within 30 days - no questions asked.
           </p>
-          <div className="grid md:grid-cols-3 gap-6 mt-8">
+          <div className="grid md:grid-cols-3 gap-5 mt-7">
             <div className="text-center">
-              <div className="text-3xl mb-2">🔒</div>
-              <h3 className="text-white font-semibold">Secure Payment</h3>
-              <p className="text-white/80 text-sm">All transactions are encrypted and secure</p>
+              <div className="text-2xl mb-1.5">🔒</div>
+              <h3 className="text-sm text-white font-semibold">Secure Payment</h3>
+              <p className="text-white/80 text-xs">All transactions are encrypted and secure</p>
             </div>
             <div className="text-center">
-              <div className="text-3xl mb-2">⏰</div>
-              <h3 className="text-white font-semibold">30-Day Guarantee</h3>
-              <p className="text-white/80 text-sm">Full refund if not satisfied with our service</p>
+              <div className="text-2xl mb-1.5">⏰</div>
+              <h3 className="text-sm text-white font-semibold">30-Day Guarantee</h3>
+              <p className="text-white/80 text-xs">Full refund if not satisfied with our service</p>
             </div>
             <div className="text-center">
-              <div className="text-3xl mb-2">📞</div>
-              <h3 className="text-white font-semibold">Expert Support</h3>
-              <p className="text-white/80 text-sm">Get help whenever you need it</p>
+              <div className="text-2xl mb-1.5">📞</div>
+              <h3 className="text-sm text-white font-semibold">Expert Support</h3>
+              <p className="text-white/80 text-xs">Get help whenever you need it</p>
             </div>
           </div>
         </div>
 
         {/* FAQ Section */}
-        <div className="mt-8 md:mt-16 bg-white/5 backdrop-blur-sm rounded-lg p-4 md:p-8 border border-white/10">
-          <h2 className="text-lg md:text-xl lg:text-2xl font-semibold text-white mb-6 text-center">Frequently Asked Questions</h2>
-          <div className="space-y-4">
+        <div className="mt-7 md:mt-14 bg-white/5 backdrop-blur-sm rounded-lg p-3.5 md:p-7 border border-white/10">
+          <h2 className="text-base md:text-lg lg:text-xl font-semibold text-white mb-5 text-center">Frequently Asked Questions</h2>
+          <div className="space-y-3.5">
             <details className="group">
-              <summary className="flex cursor-pointer items-center justify-between p-4 bg-white/10 rounded-lg hover:bg-white/20 transition-colors">
-                <h3 className="text-white font-semibold">How much do your trademark services cost in India?</h3>
-                <i className="fas fa-chevron-down text-[#FFB400] group-open:rotate-180 transition-transform"></i>
+              <summary className="flex cursor-pointer items-center justify-between p-3.5 bg-white/10 rounded-lg hover:bg-white/20 transition-colors">
+                <h3 className="text-sm text-white font-semibold">How much do your trademark services cost in India?</h3>
+                <i className="fas fa-chevron-down text-sm text-[#FFB400] group-open:rotate-180 transition-transform"></i>
               </summary>
-              <div className="mt-4 p-4 bg-white/5 rounded-lg">
-                <p className="text-gray-300">
-                  Our trademark services start from ₹2,999 for basic search packages, ₹8,999 for standard registration,
-                  and ₹15,999 for premium protection. We offer transparent pricing with no hidden fees and save you up to 60%
+              <div className="mt-3.5 p-3.5 bg-white/5 rounded-lg">
+                <p className="text-xs text-gray-300">
+                  Our trademark services start from ₹1,999 for basic search packages, ₹2,999 for standard registration,
+                  and ₹3,999 for premium protection. We offer transparent pricing with no hidden fees and save you up to 88%
                   compared to traditional law firms.
                 </p>
               </div>
             </details>
 
             <details className="group">
-              <summary className="flex cursor-pointer items-center justify-between p-4 bg-white/10 rounded-lg hover:bg-white/20 transition-colors">
-                <h3 className="text-white font-semibold">Why are your trademark services more affordable?</h3>
-                <i className="fas fa-chevron-down text-[#FFB400] group-open:rotate-180 transition-transform"></i>
+              <summary className="flex cursor-pointer items-center justify-between p-3.5 bg-white/10 rounded-lg hover:bg-white/20 transition-colors">
+                <h3 className="text-sm text-white font-semibold">Why are your trademark services more affordable?</h3>
+                <i className="fas fa-chevron-down text-sm text-[#FFB400] group-open:rotate-180 transition-transform"></i>
               </summary>
-              <div className="mt-4 p-4 bg-white/5 rounded-lg">
-                <p className="text-gray-300">
+              <div className="mt-3.5 p-3.5 bg-white/5 rounded-lg">
+                <p className="text-xs text-gray-300">
                   We leverage technology integration, streamlined processes, and efficient workflows to provide
                   premium trademark services at competitive prices. Our AI-powered tools and optimized operations
                   reduce manual work while maintaining quality.
@@ -239,12 +242,12 @@ export default function AffordableTrademarkServices() {
             </details>
 
             <details className="group">
-              <summary className="flex cursor-pointer items-center justify-between p-4 bg-white/10 rounded-lg hover:bg-white/20 transition-colors">
-                <h3 className="text-white font-semibold">Do you offer money-back guarantee?</h3>
-                <i className="fas fa-chevron-down text-[#FFB400] group-open:rotate-180 transition-transform"></i>
+              <summary className="flex cursor-pointer items-center justify-between p-3.5 bg-white/10 rounded-lg hover:bg-white/20 transition-colors">
+                <h3 className="text-sm text-white font-semibold">Do you offer money-back guarantee?</h3>
+                <i className="fas fa-chevron-down text-sm text-[#FFB400] group-open:rotate-180 transition-transform"></i>
               </summary>
-              <div className="mt-4 p-4 bg-white/5 rounded-lg">
-                <p className="text-gray-300">
+              <div className="mt-3.5 p-3.5 bg-white/5 rounded-lg">
+                <p className="text-xs text-gray-300">
                   Yes, we offer a 100% money-back guarantee. If you're not satisfied with our trademark search
                   or registration services, we'll refund your payment within 30 days - no questions asked.
                 </p>
@@ -252,12 +255,12 @@ export default function AffordableTrademarkServices() {
             </details>
 
             <details className="group">
-              <summary className="flex cursor-pointer items-center justify-between p-4 bg-white/10 rounded-lg hover:bg-white/20 transition-colors">
-                <h3 className="text-white font-semibold">Are there any hidden fees in your pricing?</h3>
-                <i className="fas fa-chevron-down text-[#FFB400] group-open:rotate-180 transition-transform"></i>
+              <summary className="flex cursor-pointer items-center justify-between p-3.5 bg-white/10 rounded-lg hover:bg-white/20 transition-colors">
+                <h3 className="text-sm text-white font-semibold">Are there any hidden fees in your pricing?</h3>
+                <i className="fas fa-chevron-down text-sm text-[#FFB400] group-open:rotate-180 transition-transform"></i>
               </summary>
-              <div className="mt-4 p-4 bg-white/5 rounded-lg">
-                <p className="text-gray-300">
+              <div className="mt-3.5 p-3.5 bg-white/5 rounded-lg">
+                <p className="text-xs text-gray-300">
                   Absolutely not! We believe in complete transparency. All our pricing is upfront with no hidden fees
                   or surprise charges. You'll pay exactly what's quoted with no additional costs.
                 </p>
@@ -265,12 +268,12 @@ export default function AffordableTrademarkServices() {
             </details>
 
             <details className="group">
-              <summary className="flex cursor-pointer items-center justify-between p-4 bg-white/10 rounded-lg hover:bg-white/20 transition-colors">
-                <h3 className="text-white font-semibold">Do you offer bulk discounts for multiple trademarks?</h3>
-                <i className="fas fa-chevron-down text-[#FFB400] group-open:rotate-180 transition-transform"></i>
+              <summary className="flex cursor-pointer items-center justify-between p-3.5 bg-white/10 rounded-lg hover:bg-white/20 transition-colors">
+                <h3 className="text-sm text-white font-semibold">Do you offer bulk discounts for multiple trademarks?</h3>
+                <i className="fas fa-chevron-down text-sm text-[#FFB400] group-open:rotate-180 transition-transform"></i>
               </summary>
-              <div className="mt-4 p-4 bg-white/5 rounded-lg">
-                <p className="text-gray-300">
+              <div className="mt-3.5 p-3.5 bg-white/5 rounded-lg">
+                <p className="text-xs text-gray-300">
                   Yes, we offer special pricing for multiple trademarks and portfolio management. Contact our team
                   to discuss bulk discounts and customized pricing for your specific requirements.
                 </p>
@@ -292,7 +295,7 @@ export default function AffordableTrademarkServices() {
                   "name": "How much do your trademark services cost in India?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Our trademark services start from ₹2,999 for basic search packages, ₹8,999 for standard registration, and ₹15,999 for premium protection. We offer transparent pricing with no hidden fees and save you up to 60% compared to traditional law firms."
+                    "text": "Our trademark services start from ₹1,999 for basic search packages, ₹2,999 for standard registration, and ₹3,999 for premium protection. We offer transparent pricing with no hidden fees and save you up to 88% compared to traditional law firms."
                   }
                 },
                 {

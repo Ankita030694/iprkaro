@@ -1,13 +1,15 @@
 'use client';
 
 import { SimplePlans, Faq } from "@/components";
-import Image from 'next/image';
 import Link from "next/link";
+import dynamic from 'next/dynamic';
+
+const SearchClient = dynamic(() => import('@/components/SearchClient'));
 
 // Create a Services Hero Component similar to HeroSection
 function ServicesHeroSection() {
   return (
-    <section className="w-full min-h-screen relative overflow-hidden flex flex-col justify-center items-center pt-16 md:pt-0">
+    <section className="w-full min-h-[110vh] relative overflow-hidden flex flex-col justify-center items-center pt-16 md:pt-0 pb-16 md:pb-24 mt-15">
       {/* Background */}
       <div
         className="absolute inset-0"
@@ -19,30 +21,45 @@ function ServicesHeroSection() {
         }}
       ></div>
 
-      {/* Main Content Container with Glassmorphism */}
-      <div className="relative z-10 w-full mx-auto px-3 md:px-24 mt-6 md:mt-24">
-          <div
-            className="p-3 md:p-10"
-            style={{
-              borderRadius: '16px',
-              background: 'linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), linear-gradient(145deg, rgba(12, 0, 43, 0.40) 6.6%, rgba(255, 183, 3, 0.40) 120.24%), rgba(0, 0, 0, 0.50)',
-              boxShadow: '0 0 16px 0 rgba(255, 255, 255, 0.31) inset',
-              backdropFilter: 'blur(25.36px)',
-              WebkitBackdropFilter: 'blur(25.36px)'
-            }}
-          >
-            {/* Section Header */}
-            <div className="text-left mb-6 md:mb-10">
-              <h1 className="text-white font-nunito text-2xl md:text-4xl lg:text-5xl font-bold leading-tight mb-3">
-                Our Services
-              </h1>
-              <p className="text-white font-nunito text-sm md:text-lg max-w-3xl">
-                Comprehensive intellectual property solutions powered by AI technology and expert legal guidance
-              </p>
-            </div>
+      {/* Unified Hero and Services Container */}
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-3 md:px-8 mt-6 md:mt-20 mb-8 md:mb-12">
+        <div 
+          className="p-6 md:p-12 lg:p-16"
+          style={{
+            borderRadius: '28px',
+            background: 'linear-gradient(0deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.45) 100%), linear-gradient(145deg, rgba(12, 0, 43, 0.40) 6.6%, rgba(255, 183, 3, 0.40) 120.24%), rgba(0, 0, 0, 0.45)',
+            boxShadow: '0 0 24px 0 rgba(255, 255, 255, 0.28) inset, 0 8px 32px 0 rgba(0, 0, 0, 0.3)',
+            backdropFilter: 'blur(32px)',
+            WebkitBackdropFilter: 'blur(32px)',
+            border: '1.5px solid rgba(255, 255, 255, 0.12)'
+          }}
+        >
+          {/* Our Services Heading */}
+          <div className="text-center mb-8 md:mb-10">
+            <h1 className="text-white font-nunito text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-3 md:mb-4">
+              Our Services
+            </h1>
+            <p className="text-[rgba(255,255,255,0.85)] font-nunito text-sm md:text-base lg:text-lg max-w-4xl mx-auto leading-relaxed">
+              Comprehensive intellectual property solutions powered by AI and backed by expert legal guidance. From trademarks to patents, we protect what matters most to your business.
+            </p>
+          </div>
 
-            {/* Three Service Containers */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-6 max-w-6xl mx-auto">
+          {/* Search Bar */}
+          <div className="w-full flex justify-center mb-10 md:mb-14">
+            <div className="w-full max-w-2xl">
+              <SearchClient />
+            </div>
+          </div>
+
+          {/* Elegant Divider */}
+          <div className="relative w-full h-px mb-10 md:mb-14">
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-30"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#FFB703] to-transparent opacity-20 blur-sm"></div>
+          </div>
+
+          {/* Three Service Containers */}
+          <div className="w-full">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 max-w-6xl mx-auto">
               {/* Service 1 - Trademark Registration */}
               <div
                 className="p-3 md:p-6 text-center space-y-3 md:space-y-5 relative group transition-all duration-300 hover:scale-105"
@@ -141,6 +158,7 @@ function ServicesHeroSection() {
             </div>
           </div>
         </div>
+      </div>
     </section>
   );
 }

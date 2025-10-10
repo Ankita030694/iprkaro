@@ -55,7 +55,7 @@ export default function TrademarkCounter() {
       <div className="relative">
         <div className="absolute inset-0 blur-xl"></div>
         <div className="relative p-6">
-          <div className="flex flex-row gap-4 sm:gap-8 justify-start items-center">
+          <div className="flex flex-row gap-4 sm:gap-8 justify-center items-center">
             {/* Clients */}
             <div className="flex flex-col items-center text-center group">
               <div className="relative">

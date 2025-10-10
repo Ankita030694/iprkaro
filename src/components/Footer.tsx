@@ -5,7 +5,7 @@ import ClientLogoSlider from './ClientLogoSlider';
 const Footer: React.FC = () => {
   return (
     <footer className="text-white" style={{ backgroundColor: '#202020' }}>
-      <div className="max-w-7xl mx-auto px-4 py-12">
+      <div className="max-w-8xl px-24 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-16">
           {/* Logo and Email Signup Section */}
           <div className="lg:col-span-2">
