@@ -1401,7 +1401,7 @@ export default function AboutPage() {
       </div>
 
       {/* FAQ Section */}
-      <section className="py-20 relative overflow-hidden -mt-3" style={{ backgroundColor: '#0C002B' }}>
+      <section className="py-[57.6px] relative overflow-hidden" style={{ backgroundColor: '#0C002B' }}>
         {/* Schema Markup for SEO */}
         <script
           type="application/ld+json"
@@ -1413,69 +1413,77 @@ export default function AboutPage() {
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-0 w-full h-full" style={{ background: 'linear-gradient(to right, #FFB70320, transparent)' }}></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 rounded-full blur-3xl" style={{ background: 'linear-gradient(to left, #FFB70320, transparent)' }}></div>
+          <div className="absolute bottom-0 right-0 w-[69.12px] h-[69.12px] rounded-full blur-[2.16rem]" style={{ background: 'linear-gradient(to left, #FFB70320, transparent)' }}></div>
         </div>
 
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="mx-20 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-10 items-start">
 
             {/* Left Section - Questions */}
-            <div className="space-y-8 flex flex-col justify-center">
-              <div className="space-y-4">
-                <h2 className="text-white text-left font-nunito text-lg md:text-xl lg:text-2xl font-medium leading-tight w-full">
-                  Frequently Asked Questions
+            <div className="space-y-[28.8px] flex flex-col justify-start">
+              <div className="space-y-[18px]">
+                <h2 className="text-white text-left font-nunito text-[23.4px] md:text-[36px] font-medium leading-[28.8px] md:leading-[39.6px] w-full">
+                  Have Question?
                   <br />
                   <span style={{ color: '#FFB703' }}>
-                    About IPR Karo
+                    We've Got Answers.
                   </span>
                 </h2>
 
-                <p className="text-white font-nunito text-xs md:text-xs lg:text-sm font-medium">
+                <p className="text-white font-nunito text-[10.8px] md:text-[12.6px] lg:text-[13.5px] xl:text-[14.4px] font-medium">
                   Still have questions? <span style={{ color: '#FFB703' }} className="font-medium">Contact us</span> anytime.
                 </p>
               </div>
 
               {/* AI Input */}
-              <form onSubmit={(e) => { e.preventDefault(); console.log('AI Question submitted'); }}>
-                <div className="relative bg-black/20 backdrop-blur-sm border border-purple-400/30 rounded-xl p-4">
+              <form onSubmit={(e) => { e.preventDefault(); console.log('AI Question submitted'); }} className="relative">
+                <div className="relative bg-white/50 backdrop-blur-sm border border-purple-400/30 rounded-[10.8px] p-[14.4px] max-w-lg">
                   <input
                     type="text"
-                    placeholder="Ask about IPR Karo...."
-                    className="w-full bg-transparent text-white placeholder-purple-300 outline-none text-lg"
+                    placeholder="Smart AI, Ask me Anything...."
+                    className="bg-transparent text-white placeholder-white outline-none text-[14.4px]"
                   />
                   <button
                     type="submit"
-                    className="absolute right-4 top-1/2 transform -translate-y-1/2 transition-colors"
+                    className="absolute right-[14.4px] top-1/2 transform -translate-y-1/2 transition-colors"
                     style={{ color: '#FFB703' }}
                     onMouseEnter={(e) => e.currentTarget.style.color = '#e6a503'}
                     onMouseLeave={(e) => e.currentTarget.style.color = '#FFB703'}
                   >
-                    <FontAwesomeIcon icon={faPaperPlane} className="w-6 h-6" />
+                    <FontAwesomeIcon icon={faPaperPlane} className="w-[18px] h-[18px]" />
                   </button>
                 </div>
               </form>
             </div>
 
             {/* Right Section - FAQ Items */}
-            <div className="space-y-4">
+            <div
+              className="space-y-[14.4px] p-[21.6px]"
+              style={{
+                borderRadius: '14.4px',
+                background: 'linear-gradient(140deg, rgba(12, 0, 43, 0.10) 6.89%, rgba(255, 183, 3, 0.10) 101.84%)',
+                boxShadow: '2.88px 2.88px 18.144px 0 rgba(0, 0, 0, 0.15), 0 0 14.4px 0.72px rgba(255, 255, 255, 0.10) inset',
+                backdropFilter: 'blur(87.876px)'
+              }}
+            >
               {aboutFaqs.map((faq, index) => (
                 <div key={index} className="relative">
                   <div
-                    className="p-6 cursor-pointer transition-all duration-300 ease-in-out hover:scale-[1.02] transform"
+                    className="p-[18px] cursor-pointer transition-all duration-300 ease-in-out hover:scale-[1.02] transform"
                     style={{
-                      borderRadius: '15px',
+                      borderRadius: '10.8px',
                       background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%)',
-                      ...(openFaq === index ? { boxShadow: `0 0 0 2px #FFB70380` } : {})
+                      ...(openFaq === index ? { boxShadow: `0 0 0 1.44px #FFB70380` } : {})
                     }}
                     onClick={() => toggleFaq(index)}
                   >
-                    <div className="flex justify-between items-center">
-                      <h3 className="text-white font-nunito text-sm md:text-base lg:text-lg font-semibold pr-4">
-                        Q{index + 1}. {faq.question}
+                    <div className="flex justify-between items-center mb-[10.8px]">
+                      <h3 className="text-white font-nunito text-[13.5px] md:text-[16.2px] lg:text-[19.8px] font-semibold pr-[14.4px] leading-snug">
+                        {faq.question}
                       </h3>
                       <FontAwesomeIcon
                         icon={faChevronDown}
-                        className={`w-5 h-5 transition-all duration-500 ease-in-out flex-shrink-0 ${
+                        className={`w-[18px] h-[18px] transition-all duration-500 ease-in-out flex-shrink-0 ${
                           openFaq === index ? 'rotate-180 scale-110' : 'rotate-0 scale-100'
                         }`}
                         style={{ color: '#000000' }}
@@ -1484,11 +1492,11 @@ export default function AboutPage() {
 
                     <div
                       className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                        openFaq === index ? 'max-h-96 opacity-100 mt-4' : 'max-h-0 opacity-0 -mt-4'
+                        openFaq === index ? 'max-h-[345.6px] opacity-100 mt-0' : 'max-h-0 opacity-0 -mt-[14.4px]'
                       }`}
                     >
-                      <div className="pt-4 border-t border-black/20 transform transition-all duration-500 ease-in-out">
-                        <p className="text-white font-nunito text-xs md:text-xs lg:text-sm font-medium leading-relaxed">
+                      <div className="mt-[14.4px] pt-[14.4px] border-t border-black/20 transform transition-all duration-500 ease-in-out">
+                        <p className="text-white font-nunito text-[10.8px] md:text-[11.7px] lg:text-[12.6px] xl:text-[13.5px] font-medium leading-relaxed">
                           {faq.answer}
                         </p>
                       </div>
