@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import ClientLogoSlider from '@/components/ClientLogoSlider';
+import AboutBento from '@/components/AboutBento';
 
 export default function AboutPage() {
   // State for mobile card interactions
@@ -139,27 +140,14 @@ export default function AboutPage() {
       </div>
 
 
-      {/* About Bento SVG Section */}
-      <div className="w-full px-6 sm:px-12 lg:px-24 relative pb-20">
-        <div className="flex justify-center">
-          <div className="relative w-full">
-            <img
-              src="/figmacomp/aboutbento.svg"
-              alt="About IPR Karo Bento Grid"
-              className="w-full h-auto"
-              style={{
-                maxHeight: '600px',
-                objectFit: 'contain',
-                maskImage: 'linear-gradient(to bottom, black 0%, black 60%, transparent 75%)',
-                WebkitMaskImage: 'linear-gradient(to bottom, black 0%, black 60%, transparent 75%)'
-              }}
-            />
-          </div>
-        </div>
+      {/* About Bento Section */}
+      <div className="hidden md:block">
+      <AboutBento />
+
       </div>
 
       {/* IPR KARO Section - Under Bento */}
-      <div className="w-full px-6 sm:px-12 lg:px-24 -mt-40">
+      <div className="w-full px-6 sm:px-12 lg:px-24 -mt-20 mt-1 sm:mt-15">
         {/* Mobile Layout - IPR KARO vertical on left, content on right */}
         <div className="block lg:hidden">
           <div className="flex items-center justify-center gap-4">
@@ -281,7 +269,7 @@ export default function AboutPage() {
         
         {/* Mobile: Client Logos Slider */}
         <div className="block lg:hidden">
-          <ClientLogoSlider />
+          <ClientLogoSlider useWhiteLogos={true} />
         </div>
 
         {/* Desktop: Client Logos Grid - 2x5 */}
@@ -1469,7 +1457,7 @@ export default function AboutPage() {
               {aboutFaqs.map((faq, index) => (
                 <div key={index} className="relative">
                   <div
-                    className="p-[18px] cursor-pointer transition-all duration-300 ease-in-out hover:scale-[1.02] transform"
+                    className="p-[18px] cursor-pointer transition-all durat2ion-300 ease-in-out hover:scale-[1.02] transform"
                     style={{
                       borderRadius: '10.8px',
                       background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%)',

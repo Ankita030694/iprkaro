@@ -309,105 +309,8 @@ export default function ContactPage() {
         </div>
       </div>
       <OurHeadOffice />
-      <div className="bg-[#0C002B] min-h-screen flex items-center">
-        <div className="w-full py-8 sm:py-12 md:py-16 px-4 sm:px-8 md:px-20">
-          <div className="w-full mx-auto">
-            <div className="flex flex-col justify-center items-center space-y-4 sm:space-y-6">
-              <div
-                className="text-white text-center font-nunito font-semibold"
-                style={{
-                  fontSize: 'clamp(22px, 4vw, 32px)',
-                  lineHeight: 'clamp(28px, 5vw, 40px)',
-                }}
-              >
-                Our Locations
-              </div>
-              <div
-                className="text-[rgba(255,255,255,0.8)] text-center font-nunito font-normal"
-                style={{
-                  fontSize: 'clamp(14px, 2.5vw, 18px)',
-                  lineHeight: 'clamp(18px, 3vw, 26px)',
-                  maxWidth: 600,
-                }}
-              >
-                Trusted Trademark Registration and <span className="whitespace-nowrap">AI-Powered</span> Search Across India’s Leading Cities
-              </div>
-              {/* Location Images */}
-              <div className="flex items-center justify-center w-full gap-2 sm:gap-2.5 md:gap-10 flex-wrap sm:flex-nowrap">
-                {[1, 2, 3, 4, 5, 6].map((cityNumber) => (
-                  <div
-                    key={cityNumber}
-                    className="flex-shrink-0 p-1 sm:p-1.5 hover:border-white transition-all duration-300"
-                  >
-                    <Image
-                      src={`/locations/city${cityNumber}.svg`}
-                      alt={`City ${cityNumber} Location`}
-                      width={100}
-                      height={100}
-                      className="w-[70px] h-[70px] sm:w-[85px] sm:h-[85px] md:w-[100px] md:h-[100px] lg:w-[155px] lg:h-[155px] grayscale brightness-70 contrast-125 hover:grayscale-0 hover:brightness-100 hover:contrast-100 transition-all duration-300 object-cover rounded-lg"
-                    />
-                  </div>
-                ))}
-              </div>
-              {/* Nationwide Support & Service and City Details */}
-              <div className="w-full flex flex-col md:flex-row justify-center items-center gap-6 md:gap-10 mt-4a">
-                {/* Nationwide Support & Service Box */}
-                <div
-                  className="relative bg-gradient-to-br from-[#1345C3] via-[#069A81] to-[#FFB703] p-1 rounded-2xl shadow-lg w-full max-w-xl md:max-w-lg"
-                  style={{
-                    boxShadow: '0 8px 32px 0 rgba(12,0,43,0.25), 0 1.5px 8px 0 rgba(255,183,3,0.10)',
-                  }}
-                >
-                  <div className="bg-[#0C002B] rounded-2xl p-6 sm:p-8 flex flex-col gap-4 items-start text-left relative z-10">
-                    <div className="flex items-center gap-3 mb-2">
-                      <i className="fas fa-headset text-[#FFB703] text-xl sm:text-2xl" aria-hidden="true"></i>
-                      <span className="font-nunito font-bold text-white text-xl sm:text-2xl md:text-3xl tracking-tight">
-                        Nationwide Support &amp; Service
-                      </span>
-                    </div>
-                    <ul className="space-y-4 mt-2 w-full max-w-xl">
-                      <li className="flex items-start gap-3">
-                        <span className="flex-shrink-0 mt-1">
-                          <i className="fas fa-globe-asia text-[#069A81] text-lg" aria-hidden="true"></i>
-                        </span>
-                        <span className="text-white font-nunito text-base sm:text-lg font-normal leading-relaxed">
-                          Register trademark online from any location in India
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <span className="flex-shrink-0 mt-1">
-                          <i className="fas fa-search text-[#1345C3] text-lg" aria-hidden="true"></i>
-                        </span>
-                        <span className="text-white font-nunito text-base sm:text-lg font-normal leading-relaxed">
-                          Get AI-powered trademark search and risk reports tailored for major cities
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <span className="flex-shrink-0 mt-1">
-                          <i className="fas fa-balance-scale text-[#FFB703] text-lg" aria-hidden="true"></i>
-                        </span>
-                        <span className="text-white font-nunito text-base sm:text-lg font-normal leading-relaxed">
-                          Legal guidance, monitoring, and IP protection available for startups, SMEs, and enterprises
-                        </span>
-                      </li>
-                    </ul>
-                  </div>
-                  {/* Decorative Gradient Glow */}
-                  <div
-                    className="absolute -inset-1 rounded-2xl pointer-events-none"
-                    style={{
-                      background: 'radial-gradient(ellipse at 60% 40%, rgba(255,183,3,0.18) 0%, rgba(19,69,195,0.10) 60%, transparent 100%)',
-                      zIndex: 0,
-                      filter: 'blur(8px)',
-                    }}
-                  />
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <CitiesAndTerritories />
+   
 
       {/* FAQ Section */}
       <section className="py-[57.6px] relative overflow-hidden" style={{ backgroundColor: '#0C002B' }}>
@@ -518,7 +421,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <CitiesAndTerritories />
     </div>
   );
 }

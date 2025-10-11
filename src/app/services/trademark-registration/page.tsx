@@ -207,22 +207,22 @@ export default function TrademarkRegistrationPage() {
 
   return (
     <div className="min-h-screen pt-20 pb-24 md:pb-8 overflow-x-hidden" style={{ backgroundColor: '#0C002B' }}>
-      <div className="mx-15 py-8 lg:py-16">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 py-8 lg:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-start">
 
           {/* Left Section */}
           <div className="space-y-8">
             {/* Main Heading */}
-            <div className="space-y-4">
-              <h1 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-medium leading-tight">
+            <div className="space-y-4 px-2 md:px-0">
+              <h1 className="text-white font-nunito text-lg md:text-2xl lg:text-3xl font-medium leading-tight">
                 Trademark Registration in India: Complete Guide by IPRKaro
               </h1>
 
-              <h2 className="text-white font-nunito text-base md:text-lg lg:text-lg font-medium leading-tight">
+              <h2 className="text-white font-nunito text-sm md:text-lg lg:text-lg font-medium leading-tight">
                 Protect Your Brand with Expert Trademark Registration in India
               </h2>
 
-              <p className="text-white font-nunito text-xs md:text-xs lg:text-sm leading-relaxed">
+              <p className="text-white font-nunito text-xs md:text-sm lg:text-base leading-relaxed">
                 In today's competitive marketplace, your brand is your most valuable asset. A trademark distinguishes your products and services from competitors, builds customer loyalty, and represents the quality and reputation of your business. Trademark registration in India provides legal protection for your brand name, logo, slogan, or any distinctive mark that identifies your business.
 
 At IPRKaro, we combine AI-powered trademark search technology with expert legal guidance to ensure your brand receives comprehensive protection under the Indian Trademarks Act, 1999. Our end-to-end trademark registration services help businesses of all sizes secure their brand identity and prevent unauthorized use.
@@ -230,8 +230,8 @@ At IPRKaro, we combine AI-powered trademark search technology with expert legal 
             </div>
 
             {/* Why Trademark Section */}
-            <div className="space-y-4">
-              <h3 className="text-white font-nunito text-base md:text-2xl font-medium">
+            <div className="space-y-4 px-2 md:px-0">
+              <h3 className="text-white font-nunito text-sm md:text-xl lg:text-2xl font-medium">
                 Why Trademark with IPRKaro ?
               </h3>
 
@@ -291,7 +291,7 @@ At IPRKaro, we combine AI-powered trademark search technology with expert legal 
                       >
                         {mobileCardIcons[feature.icon]}
                       </div>
-                      <span className="text-white font-nunito text-xs md:text-xs font-medium">
+                      <span className="text-white font-nunito text-[10px] md:text-xs lg:text-sm font-medium">
                         {feature.text}
                       </span>
                     </div>
@@ -301,7 +301,7 @@ At IPRKaro, we combine AI-powered trademark search technology with expert legal 
             </div>
 
             {/* Timeline Section */}
-            <div className="mt-16 mb-8">
+            <div className="mt-16 mb-8 px-2 md:px-0">
               <div className="flex flex-col lg:flex-row items-start gap-10">
                 {/* Left Side - Circle and Line - Hidden on mobile, visible on desktop */}
                 <div className="hidden md:flex justify-center lg:justify-start">
@@ -336,7 +336,7 @@ At IPRKaro, we combine AI-powered trademark search technology with expert legal 
                 <div className="flex-1 space-y-8">
                   {/* Heading */}
                   <div className="text-center lg:text-left">
-                    <h3 className="text-white font-nunito text-lg md:text-2xl font-medium">
+                    <h3 className="text-white font-nunito text-base md:text-xl lg:text-2xl font-medium">
                       Get a Guaranteed Trademark on
                     </h3>
                   </div>
@@ -384,8 +384,8 @@ At IPRKaro, we combine AI-powered trademark search technology with expert legal 
                 </div>
               </div>
             </div>
-            <div className="space-y-6">
-              <h3 className="text-white font-nunito text-base md:text-2xl font-medium">
+            <div className="space-y-6 px-2 md:px-0">
+              <h3 className="text-white font-nunito text-sm md:text-xl lg:text-2xl font-medium">
               Trademark Requirements
               </h3>
 
@@ -405,7 +405,7 @@ At IPRKaro, we combine AI-powered trademark search technology with expert legal 
                     >
                       {requirement.icon}
                     </div>
-                    <span className="text-white font-nunito text-xs md:text-xs font-medium">
+                    <span className="text-white font-nunito text-[10px] md:text-xs lg:text-sm font-medium">
                       {requirement.text}
                     </span>
                   </div>
@@ -414,8 +414,8 @@ At IPRKaro, we combine AI-powered trademark search technology with expert legal 
             </div>
 
             {/* Guidelines Section */}
-            <div className="space-y-6">
-              <h3 className="text-white font-nunito text-base md:text-2xl font-medium">
+            <div className="space-y-6 px-2 md:px-0">
+              <h3 className="text-white font-nunito text-sm md:text-xl lg:text-2xl font-medium">
                 we work with the Guidelines of
               </h3>
 
@@ -519,20 +519,20 @@ At IPRKaro, we combine AI-powered trademark search technology with expert legal 
             </div>
 
             {/* About Trademark Registration Section */}
-            <div className="space-y-6 mt-20">
-              <h2 className="text-white font-nunito text-lg md:text-xl lg:text-2xl font-medium">
+            <div className="space-y-6 mt-20 px-2 md:px-0">
+              <h2 className="text-white font-nunito text-base md:text-xl lg:text-2xl font-medium">
                 About Trademark Registration in India
               </h2>
 
-              <h3 className="text-white font-nunito text-base md:text-lg lg:text-xl font-medium">
+              <h3 className="text-white font-nunito text-sm md:text-lg lg:text-xl font-medium">
                 Trademark Registration Services: Intro
               </h3>
 
-              <h4 className="text-white font-nunito text-sm md:text-base lg:text-lg font-medium">
+              <h4 className="text-white font-nunito text-xs md:text-base lg:text-lg font-medium">
                 Protect Your Brand with Expert Trademark Registration in India
               </h4>
 
-              <p className="text-white font-nunito text-xs md:text-xs lg:text-sm leading-relaxed">
+              <p className="text-white font-nunito text-xs md:text-sm lg:text-base leading-relaxed">
                 In today's competitive marketplace, your brand is your most valuable asset. A trademark distinguishes your products and services from competitors, builds customer loyalty, and represents the quality and reputation of your business. Trademark registration in India provides legal protection for your brand name, logo, slogan, or any distinctive mark that identifies your business.
 
 At IPRKaro, we combine AI-powered trademark search technology with expert legal guidance to ensure your brand receives comprehensive protection under the Indian Trademarks Act, 1999. Our end-to-end trademark registration services help businesses of all sizes secure their brand identity and prevent unauthorized use.
@@ -540,8 +540,8 @@ At IPRKaro, we combine AI-powered trademark search technology with expert legal 
             </div>
 
             {/* What is a Trademark Section */}
-            <div className="space-y-6">
-              <h3 className="text-white font-nunito text-base md:text-lg lg:text-xl font-medium">
+            <div className="space-y-6 px-2 md:px-0">
+              <h3 className="text-white font-nunito text-sm md:text-lg lg:text-xl font-medium">
                 What is a Trademark?
               </h3>
 
@@ -589,7 +589,7 @@ Trademarks can include:
             </div>
 
             {/* Why Register a Trademark Section */}
-            <div className="space-y-6">
+            <div className="space-y-6 px-2 md:px-0">
               <h3 className="text-white font-nunito text-base md:text-lg lg:text-xl font-medium">
                 Why Register a Trademark in India?
               </h3>
@@ -642,7 +642,7 @@ Trademarks can include:
             </div>
 
             {/* What Can Be Trademarked Section */}
-            <div className="space-y-6">
+            <div className="space-y-6 px-2 md:px-0">
               <h3 className="text-white font-nunito text-lg md:text-xl lg:text-2xl font-medium">
                 What Can Be Trademarked in India?
               </h3>
@@ -683,7 +683,7 @@ Trademarks can include:
             </div>
 
             {/* Trademark Registration Process Section */}
-            <div className="space-y-6">
+            <div className="space-y-6 px-2 md:px-0">
               <h3 className="text-white font-nunito text-lg md:text-xl lg:text-2xl font-medium">
                 Trademark Registration Process in India
               </h3>
@@ -736,7 +736,7 @@ Trademarks can include:
             </div>
 
             {/* Documents Required Section */}
-            <div className="space-y-6">
+            <div className="space-y-6 px-2 md:px-0">
               <h3 className="text-white font-nunito text-lg md:text-xl lg:text-2xl font-medium">
                 Documents Required for Trademark Registration
               </h3>
@@ -779,7 +779,7 @@ Trademarks can include:
             </div>
 
             {/* Trademark Duration Section */}
-            <div className="space-y-6">
+            <div className="space-y-6 px-2 md:px-0">
               <h3 className="text-white font-nunito text-lg md:text-xl lg:text-2xl font-medium">
                 How Long Does Trademark Protection Last in India?
               </h3>
@@ -790,7 +790,7 @@ Trademarks can include:
             </div>
 
             {/* Why Choose IPRKaro Section */}
-            <div className="space-y-6">
+            <div className="space-y-6 px-2 md:px-0">
               <h3 className="text-white font-nunito text-lg md:text-xl lg:text-2xl font-medium">
                 Why Choose IPRKaro for Trademark Registration?
               </h3>

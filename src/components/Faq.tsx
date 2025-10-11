@@ -101,7 +101,7 @@ const Faq = () => {
                   value={aiQuestion}
                   onChange={(e) => setAiQuestion(e.target.value)}
                   placeholder="Smart AI, Ask me Anything...."
-                  className="bg-transparent text-white placeholder-white outline-none text-[14.4px]"
+                  className="bg-transparent text-white placeholder-white outline-none text-[14.4px] w-full"
                 />
                 <button
                   type="submit"

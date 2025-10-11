@@ -207,18 +207,18 @@ export default function TrademarkRegistrationPage() {
 
   return (
     <div className="min-h-screen pt-20 pb-24 md:pb-8 overflow-x-hidden" style={{ backgroundColor: '#0C002B' }}>
-      <div className="mx-15 py-8 lg:py-16">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 py-8 lg:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-start">
 
           {/* Left Section */}
           <div className="space-y-8">
             {/* Main Heading */}
-            <div className="space-y-4">
-              <h1 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-medium leading-tight">
+            <div className="space-y-4 px-2 md:px-0">
+              <h1 className="text-white font-nunito text-lg md:text-2xl lg:text-3xl font-medium leading-tight">
                 Patent Registration in India: Complete Guide by IPRKaro
               </h1>
 
-              <h2 className="text-white font-nunito text-base md:text-lg lg:text-lg font-medium leading-tight">
+              <h2 className="text-white font-nunito text-sm md:text-lg lg:text-lg font-medium leading-tight">
                 Protect Your Innovation with Expert Patent Registration in India
               </h2>
 
@@ -230,8 +230,8 @@ At IPRKaro, we combine cutting-edge AI technology with deep legal expertise to s
             </div>
 
             {/* Why Trademark Section */}
-            <div className="space-y-4">
-              <h3 className="text-white font-nunito text-base md:text-2xl font-medium">
+            <div className="space-y-4 px-2 md:px-0">
+              <h3 className="text-white font-nunito text-sm md:text-xl lg:text-2xl font-medium">
                 Why Patent with IPRKaro ?
               </h3>
 
@@ -291,7 +291,7 @@ At IPRKaro, we combine cutting-edge AI technology with deep legal expertise to s
                       >
                         {mobileCardIcons[feature.icon]}
                       </div>
-                      <span className="text-white font-nunito text-xs md:text-sm font-medium">
+                      <span className="text-white font-nunito text-[10px] md:text-xs lg:text-sm font-medium">
                         {feature.text}
                       </span>
                     </div>
@@ -301,7 +301,7 @@ At IPRKaro, we combine cutting-edge AI technology with deep legal expertise to s
             </div>
 
             {/* Timeline Section */}
-            <div className="mt-16 mb-8">
+            <div className="mt-16 mb-8 px-2 md:px-0">
               <div className="flex flex-col lg:flex-row items-start gap-10">
                 {/* Left Side - Circle and Line - Hidden on mobile, visible on desktop */}
                 <div className="hidden md:flex justify-center lg:justify-start">
@@ -336,7 +336,7 @@ At IPRKaro, we combine cutting-edge AI technology with deep legal expertise to s
                 <div className="flex-1 space-y-8">
                   {/* Heading */}
                   <div className="text-center lg:text-left">
-                    <h3 className="text-white font-nunito text-lg md:text-2xl font-medium">
+                    <h3 className="text-white font-nunito text-base md:text-xl lg:text-2xl font-medium">
                       Get a Guaranteed Patent on
                     </h3>
                   </div>
@@ -384,8 +384,8 @@ At IPRKaro, we combine cutting-edge AI technology with deep legal expertise to s
                 </div>
               </div>
             </div>
-            <div className="space-y-6">
-              <h3 className="text-white font-nunito text-base md:text-2xl font-medium">
+            <div className="space-y-6 px-2 md:px-0">
+              <h3 className="text-white font-nunito text-sm md:text-xl lg:text-2xl font-medium">
               Patent Requirements
               </h3>
 
@@ -405,7 +405,7 @@ At IPRKaro, we combine cutting-edge AI technology with deep legal expertise to s
                     >
                       {requirement.icon}
                     </div>
-                    <span className="text-white font-nunito text-xs md:text-xs font-medium">
+                    <span className="text-white font-nunito text-[10px] md:text-xs lg:text-sm font-medium">
                       {requirement.text}
                     </span>
                   </div>
@@ -414,8 +414,8 @@ At IPRKaro, we combine cutting-edge AI technology with deep legal expertise to s
             </div>
 
             {/* Guidelines Section */}
-            <div className="space-y-6">
-              <h3 className="text-white font-nunito text-base md:text-2xl font-medium">
+            <div className="space-y-6 px-2 md:px-0">
+              <h3 className="text-white font-nunito text-sm md:text-xl lg:text-2xl font-medium">
                 we work with the Guidelines of
               </h3>
 
@@ -519,7 +519,7 @@ At IPRKaro, we combine cutting-edge AI technology with deep legal expertise to s
             </div>
 
             {/* About Patent Registration Section */}
-            <div className="space-y-6 mt-20">
+            <div className="space-y-6 mt-20 px-2 md:px-0">
               <h2 className="text-white font-nunito text-lg md:text-xl lg:text-2xl font-medium">
                 About Patent Registration in India
               </h2>
@@ -540,7 +540,7 @@ At IPRKaro, we combine cutting-edge AI technology with deep legal expertise to s
             </div>
 
             {/* What is a Patent Section */}
-            <div className="space-y-6">
+            <div className="space-y-6 px-2 md:px-0">
               <h3 className="text-white font-nunito text-base md:text-lg lg:text-xl font-medium">
                 What is a Patent?
               </h3>
@@ -553,7 +553,7 @@ Patents are territorial rights, meaning they are only enforceable in the country
             </div>
 
             {/* Why Register a Patent Section */}
-            <div className="space-y-6">
+            <div className="space-y-6 px-2 md:px-0">
               <h3 className="text-white font-nunito text-base md:text-lg lg:text-xl font-medium">
                 Why Register a Patent in India?
               </h3>
@@ -606,7 +606,7 @@ Patents are territorial rights, meaning they are only enforceable in the country
             </div>
 
             {/* What Can Be Patented Section */}
-            <div className="space-y-6">
+            <div className="space-y-6 px-2 md:px-0">
               <h3 className="text-white font-nunito text-lg md:text-xl lg:text-2xl font-medium">
                 What Can Be Patented in India?
               </h3>
@@ -647,7 +647,7 @@ Patents are territorial rights, meaning they are only enforceable in the country
             </div>
 
             {/* Patent Registration Process Section */}
-            <div className="space-y-6">
+            <div className="space-y-6 px-2 md:px-0">
               <h3 className="text-white font-nunito text-lg md:text-xl lg:text-2xl font-medium">
                 Patent Registration Process in India
               </h3>
@@ -700,7 +700,7 @@ Patents are territorial rights, meaning they are only enforceable in the country
             </div>
 
             {/* Documents Required Section */}
-            <div className="space-y-6">
+            <div className="space-y-6 px-2 md:px-0">
               <h3 className="text-white font-nunito text-lg md:text-xl lg:text-2xl font-medium">
                 Documents Required for Patent Registration
               </h3>
@@ -743,7 +743,7 @@ Patents are territorial rights, meaning they are only enforceable in the country
             </div>
 
             {/* Patent Duration Section */}
-            <div className="space-y-6">
+            <div className="space-y-6 px-2 md:px-0">
               <h3 className="text-white font-nunito text-lg md:text-xl lg:text-2xl font-medium">
                 How Long Does Patent Protection Last in India?
               </h3>
@@ -754,7 +754,7 @@ Patents are territorial rights, meaning they are only enforceable in the country
             </div>
 
             {/* Why Choose IPRKaro Section */}
-            <div className="space-y-6">
+            <div className="space-y-6 px-2 md:px-0">
               <h3 className="text-white font-nunito text-lg md:text-xl lg:text-2xl font-medium">
                 Why Choose IPRKaro for Patent Registration?
               </h3>

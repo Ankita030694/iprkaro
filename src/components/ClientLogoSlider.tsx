@@ -6,18 +6,26 @@ import { useEffect, useState } from 'react';
 
 interface ClientLogoSliderProps {
   className?: string;
+  useWhiteLogos?: boolean; // New prop to use white PNG logos
 }
 
-export default function ClientLogoSlider({ className = '' }: ClientLogoSliderProps) {
+export default function ClientLogoSlider({ className = '', useWhiteLogos = false }: ClientLogoSliderProps) {
   const [logos, setLogos] = useState<string[]>([]);
 
   // Initialize logos
   useEffect(() => {
-    const logoPaths = Array.from({ length: 8 }, (_, i) => `/clientlogos/${i + 1}.svg`);
+    const logoPaths = useWhiteLogos 
+      ? Array.from({ length: 10 }, (_, i) => `/clientlogos/white${i + 1}.png`)
+      : Array.from({ length: 8 }, (_, i) => `/clientlogos/${i + 1}.svg`);
     // Create duplicates for seamless infinite scroll
     setLogos([...logoPaths, ...logoPaths]);
-  }, []);
+  }, [useWhiteLogos]);
 
+
+  const logoCount = useWhiteLogos ? 10 : 8;
+  const logoWidth = 128;
+  const gapSize = 24;
+  const totalDistance = logoCount * (logoWidth + gapSize);
 
   return (
     <div className={`w-full overflow-hidden h-full ${className}`}>
@@ -27,13 +35,13 @@ export default function ClientLogoSlider({ className = '' }: ClientLogoSliderPro
           <motion.div 
             className="flex items-center gap-4 sm:gap-6 md:gap-8 lg:gap-10"
             animate={{
-              x: [0, -1216] // 8 logos * (128px + 24px gap) = 1216px
+              x: [0, -totalDistance] // Dynamic based on logo count
             }}
             transition={{
               x: {
                 repeat: Infinity,
                 repeatType: "loop",
-                duration: 25,
+                duration: useWhiteLogos ? 30 : 25, // Slower for more logos
                 ease: "linear",
               },
             }}
@@ -56,7 +64,7 @@ export default function ClientLogoSlider({ className = '' }: ClientLogoSliderPro
               >
                 <Image
                   src={logo}
-                  alt={`Client Logo ${(index % 8) + 1}`}
+                  alt={`Client Logo ${(index % logoCount) + 1}`}
                   width={128}
                   height={80}
                   className="object-contain filter-none w-auto h-auto max-w-full max-h-full"
