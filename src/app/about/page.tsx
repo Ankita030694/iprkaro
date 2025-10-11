@@ -1416,7 +1416,7 @@ export default function AboutPage() {
           <div className="absolute bottom-0 right-0 w-[69.12px] h-[69.12px] rounded-full blur-[2.16rem]" style={{ background: 'linear-gradient(to left, #FFB70320, transparent)' }}></div>
         </div>
 
-        <div className="mx-20 relative z-10">
+        <div className="mx-4 lg:mx-20 relative z-10">
           <div className="grid lg:grid-cols-2 gap-10 items-start">
 
             {/* Left Section - Questions */}

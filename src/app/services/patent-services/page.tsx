@@ -1532,7 +1532,7 @@ Register your patent today with IPRKaro to safeguard your innovation, secure you
         <div className="absolute bottom-0 right-0 w-96 h-96 rounded-full blur-3xl" style={{ background: 'linear-gradient(to left, #FFB70320, transparent)' }}></div>
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 lg:px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
 
           {/* Left Section - Questions */}

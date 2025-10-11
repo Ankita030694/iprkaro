@@ -15,7 +15,7 @@ export default function AffordableTrademarkServices() {
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="canonical" href="https://iprkaro.com/features/affordable-trademark-services" />
       </Head>
-      <div className="min-h-screen bg-gradient-to-b from-[#0C002B] via-[#160049] to-[#6E5E93] pt-28 pb-14 px-3.5">
+      <div className="min-h-screen bg-gradient-to-b from-[#0C002B] via-[#160049] to-[#6E5E93] pt-28 pb-14 px-2 lg:px-3.5">
       <div className="max-w-5xl mx-auto">
         {/* Header */}
         <div className="text-center mb-7 md:mb-14">

@@ -15,7 +15,7 @@ export default function ExpertTrademarkGuidance() {
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="canonical" href="https://iprkaro.com/features/expert-trademark-guidance" />
       </Head>
-      <div className="min-h-screen bg-gradient-to-b from-[#0C002B] via-[#160049] to-[#6E5E93] pt-32 pb-16 px-4">
+      <div className="min-h-screen bg-gradient-to-b from-[#0C002B] via-[#160049] to-[#6E5E93] pt-32 pb-16 px-2 lg:px-4">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8 md:mb-16">
