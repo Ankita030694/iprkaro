@@ -65,19 +65,20 @@ export default function ClientLogoSlider({ className = '', useWhiteLogos = false
                 <Image
                   src={logo}
                   alt={`Client Logo ${(index % logoCount) + 1}`}
-                  width={128}
-                  height={80}
+                  width={256}
+                  height={160}
+                  quality={100}
                   className="object-contain filter-none w-auto h-auto max-w-full max-h-full"
                   style={{ 
                     filter: 'none',
                     backgroundColor: 'transparent',
-                    imageRendering: 'crisp-edges',
+                    imageRendering: 'auto',
                     transform: 'translateZ(0)',
                     backfaceVisibility: 'hidden',
                     WebkitBackfaceVisibility: 'hidden',
                     WebkitFontSmoothing: 'antialiased'
                   } as React.CSSProperties}
-                  unoptimized={true}
+                  unoptimized={logo.endsWith('.svg')}
                 />
               </motion.div>
             ))}

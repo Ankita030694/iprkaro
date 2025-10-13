@@ -29,6 +29,25 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "IPR Karo",
+    "url": "https://iprkaro.com",
+    "logo": "https://iprkaro.com/logo/iprlogo.svg",
+    "description": "Turn Ideas Into Assets - IPR Karo. AI-powered trademark registration, patent services, and copyright protection in India.",
+    "sameAs": [
+      "https://www.linkedin.com/company/iprkaro/",
+      "https://www.instagram.com/iprkaro",
+      "https://www.facebook.com/share/18hrN3YcMu/?mibextid=wwXIfr"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Service",
+      "availableLanguage": ["English", "Hindi"]
+    }
+  };
+
   return (
     <html lang="en">
       <head>
@@ -38,6 +57,10 @@ export default function RootLayout({
           integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
           crossOrigin="anonymous"
           referrerPolicy="no-referrer"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
       </head>
       <body

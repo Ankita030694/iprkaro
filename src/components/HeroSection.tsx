@@ -42,8 +42,16 @@ export default function HeroSection() {
                 src="/underhero.svg"
                 alt="Underhero"
                 className="w-full max-w-[300px] object-contain"
-                width={200}
-                height={200}
+                width={600}
+                height={600}
+                priority
+                quality={100}
+                style={{
+                  imageRendering: 'auto',
+                  transform: 'translateZ(0)',
+                  backfaceVisibility: 'hidden',
+                  WebkitBackfaceVisibility: 'hidden'
+                }}
               />
             </div>
           </div>

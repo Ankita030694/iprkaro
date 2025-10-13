@@ -59,28 +59,28 @@ const Footer: React.FC = () => {
               <h3 className="text-sm font-semibold mb-4 uppercase">Quick Links</h3>
               <ul className="space-y-2">
                 <li>
-                  <a href="#" className="text-sm hover:text-cyan-300 transition-colors">
+                  <a href="/" className="text-sm hover:text-cyan-300 transition-colors">
                     Home
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-sm hover:text-cyan-300 transition-colors">
+                  <a href="/about" className="text-sm hover:text-cyan-300 transition-colors">
                     About Us
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-sm hover:text-cyan-300 transition-colors">
-                    Trademark Services
+                  <a href="/services" className="text-sm hover:text-cyan-300 transition-colors">
+                     Services
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-sm hover:text-cyan-300 transition-colors">
-                    Pricing Plans
+                  <a href="/blog" className="text-sm hover:text-cyan-300 transition-colors">
+                    Blogs
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-sm hover:text-cyan-300 transition-colors">
-                    FAQs
+                  <a href="/contact" className="text-sm hover:text-cyan-300 transition-colors">
+                    Contact Us
                   </a>
                 </li>
               </ul>
@@ -91,22 +91,22 @@ const Footer: React.FC = () => {
               <h3 className="text-sm font-semibold mb-4 uppercase">About</h3>
               <ul className="space-y-2">
                 <li>
-                  <a href="#" className="text-sm hover:text-cyan-300 transition-colors">
+                  <a href="/contact" className="text-sm hover:text-cyan-300 transition-colors">
                     Contact Us
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-sm hover:text-cyan-300 transition-colors">
+                  <a href="/privacy-policy" className="text-sm hover:text-cyan-300 transition-colors">
                     Privacy Policy
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-sm hover:text-cyan-300 transition-colors">
+                  <a href="/contact?type=feature" className="text-sm hover:text-cyan-300 transition-colors">
                     Request a Feature
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-sm hover:text-cyan-300 transition-colors">
+                  <a href="/contact?type=issue" className="text-sm hover:text-cyan-300 transition-colors">
                     Report an Issue
                   </a>
                 </li>
@@ -119,28 +119,28 @@ const Footer: React.FC = () => {
             <h3 className="text-sm font-semibold mb-4 uppercase">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-sm hover:text-cyan-300 transition-colors">
+                <a href="/" className="text-sm hover:text-cyan-300 transition-colors">
                   Home
                 </a>
               </li>
               <li>
-                <a href="#" className="text-sm hover:text-cyan-300 transition-colors">
+                <a href="/about" className="text-sm hover:text-cyan-300 transition-colors">
                   About Us
                 </a>
               </li>
               <li>
-                <a href="#" className="text-sm hover:text-cyan-300 transition-colors">
-                  Trademark Services
+                <a href="/services" className="text-sm hover:text-cyan-300 transition-colors">
+                  Services
                 </a>
               </li>
               <li>
-                <a href="#" className="text-sm hover:text-cyan-300 transition-colors">
-                  Pricing Plans
+                <a href="/blog" className="text-sm hover:text-cyan-300 transition-colors">
+                  Blogs
                 </a>
               </li>
               <li>
-                <a href="#" className="text-sm hover:text-cyan-300 transition-colors">
-                  FAQs
+                <a href="/contact" className="text-sm hover:text-cyan-300 transition-colors">
+                  Contact Us
                 </a>
               </li>
             </ul>
@@ -150,26 +150,18 @@ const Footer: React.FC = () => {
           <div className="hidden lg:block lg:col-span-1">
             <h3 className="text-sm font-semibold mb-4 uppercase">About</h3>
             <ul className="space-y-2">
+             
               <li>
-                <a href="#" className="text-sm hover:text-cyan-300 transition-colors">
-                  Contact Us
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-sm hover:text-cyan-300 transition-colors">
+                <a href="/privacy-policy" className="text-sm hover:text-cyan-300 transition-colors">
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <a href="#" className="text-sm hover:text-cyan-300 transition-colors">
-                  Request a Feature
+                <a href="/contact?type=feature" className="text-sm hover:text-cyan-300 transition-colors">
+                  Terms & Conditions
                 </a>
               </li>
-              <li>
-                <a href="#" className="text-sm hover:text-cyan-300 transition-colors">
-                  Report an Issue
-                </a>
-              </li>
+              
             </ul>
           </div>
 
@@ -178,24 +170,21 @@ const Footer: React.FC = () => {
             <h3 className="text-sm font-semibold mb-4 uppercase">Follow us on</h3>
             <div className="flex space-x-10">
               {/* YouTube */}
-              <a href="#" className="text-red-600 hover:text-red-500 transition-colors">
-                <i className="fab fa-youtube text-xl"></i>
+              <a href="https://www.linkedin.com/company/iprkaro/" className="text-white hover:text-blue-500 transition-colors">
+                <i className="fab fa-linkedin-in text-xl"></i>
               </a>
-              
-              {/* Facebook */}
-              <a href="#" className="text-blue-600 hover:text-blue-500 transition-colors">
-                <i className="fab fa-facebook-f text-xl"></i>
-              </a>
-              
+                
               {/* Instagram */}
-              <a href="#" className="text-pink-500 hover:text-pink-400 transition-colors">
+              <a href="https://www.instagram.com/iprkaro" className="text-pink-500 hover:text-pink-400 transition-colors">
                 <i className="fab fa-instagram text-xl"></i>
               </a>
-              
-              {/* X */}
-              <a href="#" className="text-white hover:text-gray-300 transition-colors flex items-center justify-center w-5 h-5 text-xl font-bold">
-                <span className="text-xl font-bold">𝕏</span>
+              {/* Facebook */}
+              <a href="https://www.facebook.com/share/18hrN3YcMu/?mibextid=wwXIfr" className="text-blue-600 hover:text-blue-500 transition-colors">
+                <i className="fab fa-facebook-f text-xl"></i>
               </a>
+            
+              
+             
             </div>
           </div>
         </div>
