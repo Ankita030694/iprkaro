@@ -15,7 +15,7 @@ export default function ClientLogoSlider({ className = '', useWhiteLogos = false
   useEffect(() => {
     const logoPaths = useWhiteLogos 
       ? Array.from({ length: 10 }, (_, i) => `/clientlogos/white${i + 1}.png`)
-      : Array.from({ length: 10 }, (_, i) => `/clientlogos/${i + 1}.png`);
+      : Array.from({ length: 14 }, (_, i) => `/clientlogos/${i + 1}.png`);
     // Create duplicates for seamless infinite scroll
     setLogos([...logoPaths, ...logoPaths]);
   }, [useWhiteLogos]);
