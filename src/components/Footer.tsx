@@ -101,13 +101,8 @@ const Footer: React.FC = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="/contact?type=feature" className="text-sm hover:text-cyan-300 transition-colors">
-                    Request a Feature
-                  </a>
-                </li>
-                <li>
-                  <a href="/contact?type=issue" className="text-sm hover:text-cyan-300 transition-colors">
-                    Report an Issue
+                  <a href="/terms-and-conditions" className="text-sm hover:text-cyan-300 transition-colors">
+                    Terms & Conditions
                   </a>
                 </li>
               </ul>
@@ -157,8 +152,13 @@ const Footer: React.FC = () => {
                 </a>
               </li>
               <li>
-                <a href="/contact?type=feature" className="text-sm hover:text-cyan-300 transition-colors">
+                <a href="/terms-and-conditions" className="text-sm hover:text-cyan-300 transition-colors">
                   Terms & Conditions
+                </a>
+              </li>
+              <li>
+                <a href="/contact" className="text-sm hover:text-cyan-300 transition-colors">
+                  Contact Us
                 </a>
               </li>
               
