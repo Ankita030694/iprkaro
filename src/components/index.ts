@@ -1,5 +1,6 @@
 export { default as Navbar } from './Navbar';
 export { default as HeroSection } from './HeroSection';
+export { default as HeroSection2 } from './HeroSection2';
 export { default as AILogo } from './AILogo';
 export { default as ClientLogoSlider } from './ClientLogoSlider';
 export { default as FeatureCards } from './FeatureCards';

@@ -44,9 +44,9 @@ export default function SearchClient() {
       </div>
 
       {/* Trademark Counter */}
-      <div className="w-full flex justify-center">
+      {/* <div className="w-full flex justify-start">
         <TrademarkCounter />
-      </div>
+      </div> */}
 
       {/* Trademark Search Popup */}
       <TrademarkSearchPopup 

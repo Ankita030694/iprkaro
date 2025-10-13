@@ -29,7 +29,7 @@ export default function WhyRegisterTrademark() {
   };
 
   return (
-    <section className="w-full bg-[#171717] py-16">
+    <section className="w-full bg-[#171717] py-16 px-4">
       <div className="max-w-4xl mx-auto">
         {/* Section Heading */}
         <h2 className="text-white text-3xl font-bold text-center mb-4 font-nunito">
@@ -40,7 +40,7 @@ export default function WhyRegisterTrademark() {
         </p>
         
         {/* FAQ Items */}
-        <div className="space-y-4 relative z-20">
+        <div className="space-y-4">
           {faqs.map((faq, index) => (
             <div 
               key={index}
@@ -75,39 +75,10 @@ export default function WhyRegisterTrademark() {
               </div>
             </div>
           ))}
-          <p className="text-white text-center text-sm leading-relaxed mt-10 relative z-20">
+          <p className="text-white text-center text-sm leading-relaxed mt-20">
             Still have questions? Email us at <a href="mailto:info@iprkaro.com" className="text-white" style={{textDecoration: 'underline'}}>info@iprkaro.com</a>
           </p>
         </div>
-      </div>
-
-      {/* Bottom Curved Line - Thick downward semi-circle with gradient */}
-      <div className="w-full relative -mt-40 z-10">
-        <svg width="100%" height="250" viewBox="0 -450 1600 600" preserveAspectRatio="none" className="w-full">
-          <defs>
-            <linearGradient id="curveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#069A81"/>
-              <stop offset="20%" stopColor="#1345C3"/>
-              <stop offset="40%" stopColor="#069A81"/>
-              <stop offset="60%" stopColor="#069CA8"/>
-              <stop offset="80%" stopColor="#1345C3"/>
-              <stop offset="100%" stopColor="#069A81"/>
-            </linearGradient>
-          </defs>
-          {/* Background area under the curve */}
-          <path 
-            d="M 0 -120 Q 800 400 1600 -120 L 1600 -600 L 0 -600 Z" 
-            fill="#171717"
-          />
-          {/* Curve line */}
-          <path 
-            d="M 0 -120 Q 800 400 1600 -120" 
-            stroke="url(#curveGradient)" 
-            strokeWidth="20" 
-            fill="none"
-            strokeLinecap="round"
-          />
-        </svg>
       </div>
     </section>
   );
