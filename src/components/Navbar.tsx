@@ -48,12 +48,12 @@ export default function Navbar() {
                 <div className="absolute bottom-[-17px] left-1/2 transform -translate-x-1/2 w-[60px] h-0.5 bg-[#ffb703] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
             </Link>
-            <Link href="/blog"> 
+            {/* <Link href="/blog"> 
               <div className="text-white text-[17px] font-normal leading-normal cursor-pointer relative group hover:text-[#ffb703] transition-colors duration-300">
                 Blogs
                 <div className="absolute bottom-[-17px] left-1/2 transform -translate-x-1/2 w-[60px] h-0.5 bg-[#ffb703] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
-            </Link>
+            </Link> */}
             <Link href="/about"> 
               <div className="text-white text-[17px] font-normal leading-normal cursor-pointer relative group hover:text-[#ffb703] transition-colors duration-300">
                 About Us
@@ -126,11 +126,11 @@ export default function Navbar() {
                   Help Centre
                 </div>
               </Link>
-              <Link href="/blog" onClick={closeMobileMenu}> 
+              {/* <Link href="/blog" onClick={closeMobileMenu}> 
                 <div className="text-white text-lg font-normal cursor-pointer relative group hover:text-[#ffb703] transition-all duration-300">
                   Blogs
                 </div>
-              </Link>
+              </Link> */}
             </div>
 
             {/* Faded Line Divider */}

@@ -106,12 +106,7 @@ export default function OurServices() {
         {/* Section Header */}
         <div className="text-center mb-8 lg:mb-12">
           <h2 className="text-white font-nunito text-[28px] md:text-[36px] lg:text-[38px] font-medium leading-[32px] md:leading-[39.6px] lg:leading-[42px] mb-3">
-            Comprehensive <span className="font-nunito font-bold" style={{
-              background: 'linear-gradient(90deg, white 0%, #8A38F5 50%, #FFB703 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text'
-            }}>IPR Services</span>
+          IPR Services in India – Protect Your Brand, Patent, and Creative Work Hassle-Free
           </h2>
           <p className="text-white font-nunito text-[10.8px] md:text-[12.6px] lg:text-[14px] font-medium opacity-90">
             AI-Powered Protection for Your Intellectual Property
