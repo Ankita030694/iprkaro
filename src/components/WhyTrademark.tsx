@@ -424,16 +424,16 @@ export default function WhyTrademark() {
           >
             {/* Trust & Rating Card */}
             <div
-              className="flex p-2.5 justify-center items-center self-stretch rounded-[20px] border-2 border-white/[0.15] backdrop-blur-[16px]"
+              className="flex p-1.5 md:p-2.5 justify-center items-center self-stretch rounded-[14px] md:rounded-[20px] border border-white/[0.15] md:border-2 backdrop-blur-[16px]"
               style={{
                 background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.62) 0%, rgba(255, 255, 255, 0.62) 100%)',
               }}
             >
               {/* Mobile Layout - Vertical Stack */}
-              <div className="md:hidden flex flex-col items-center gap-3 w-full">
+              <div className="md:hidden flex flex-col items-center gap-2 w-full">
                 {/* Google Icon and 4.7 Rating - Top */}
-                <div className="flex items-center justify-center gap-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none" className="flex-shrink-0">
+                <div className="flex items-center justify-center gap-1.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 20 21" fill="none" className="flex-shrink-0">
   <g clipPath="url(#clip0_829_5631)">
     <path d="M6.96721 1.15827C4.9689 1.8515 3.24556 3.16728 2.05032 4.91233C0.855082 6.65739 0.250946 8.73974 0.326651 10.8535C0.402355 12.9673 1.15391 15.0011 2.47092 16.6562C3.78794 18.3113 5.60099 19.5004 7.64377 20.0489C9.2999 20.4762 11.035 20.495 12.7 20.1036C14.2083 19.7648 15.6028 19.0401 16.7469 18.0005C17.9376 16.8854 18.802 15.4668 19.2469 13.8973C19.7305 12.1906 19.8166 10.3957 19.4985 8.65046H10.1985V12.5083H15.5844C15.4768 13.1236 15.2461 13.7108 14.9062 14.2349C14.5663 14.7589 14.1242 15.2091 13.6063 15.5583C12.9486 15.9933 12.2072 16.286 11.4297 16.4176C10.6499 16.5626 9.85011 16.5626 9.07033 16.4176C8.28 16.2542 7.53236 15.928 6.87502 15.4598C5.819 14.7123 5.02608 13.6503 4.6094 12.4255C4.18567 11.1776 4.18567 9.82484 4.6094 8.57702C4.906 7.70236 5.39632 6.90598 6.04377 6.24733C6.7847 5.47975 7.72273 4.93108 8.75495 4.66151C9.78718 4.39195 10.8737 4.41191 11.8953 4.71921C12.6934 4.96419 13.4232 5.39223 14.0266 5.96921C14.6339 5.36504 15.2401 4.75931 15.8453 4.15202C16.1578 3.82546 16.4985 3.51452 16.8063 3.18014C15.8853 2.32307 14.8042 1.65617 13.625 1.21764C11.4777 0.437939 9.12811 0.416985 6.96721 1.15827Z" fill="black"/>
     <path d="M6.96562 1.15707C9.12635 0.415288 11.4759 0.43569 13.6234 1.21489C14.8028 1.65639 15.8834 2.32651 16.8031 3.18676C16.4906 3.52114 16.1609 3.83364 15.8422 4.15864C15.2359 4.76384 14.6302 5.36697 14.025 5.96801C13.4216 5.39104 12.6918 4.963 11.8937 4.71801C10.8725 4.40964 9.78597 4.38852 8.75347 4.65698C7.72097 4.92544 6.78236 5.47311 6.04062 6.23989C5.39318 6.89854 4.90285 7.69491 4.60625 8.56957L1.36719 6.06176C2.52658 3.76264 4.53398 2.00399 6.96562 1.15707Z" fill="#E33629"/>
@@ -447,17 +447,17 @@ export default function WhyTrademark() {
     </clipPath>
   </defs>
 </svg>
-                  <span className="text-white font-nunito text-[20px] lg:text-[18px] font-medium leading-[24px] lg:leading-[20px]">
+                  <span className="text-white font-nunito text-[14px] lg:text-[18px] font-medium leading-[17px] lg:leading-[20px]">
                     4.7
                   </span>
                 </div>
                 
                 {/* Main Content - Center */}
                 <div className="text-center">
-                  <div className="text-white font-nunito text-[18px] lg:text-[16px] font-medium leading-[22px] lg:leading-[18px] mb-2">
+                  <div className="text-white font-nunito text-[12.6px] lg:text-[16px] font-medium leading-[15px] lg:leading-[18px] mb-1">
                     Trusted by Over 1.25 Lakh Clients
                   </div>
-                  <div className="text-white font-nunito text-[12px] lg:text-[11px] italic font-normal leading-[14px] lg:leading-[12px]">
+                  <div className="text-white font-nunito text-[8.4px] lg:text-[11px] italic font-normal leading-[10px] lg:leading-[12px]">
                     Rated 4.7/5 stars for reliable trademark registration across India, startups, and enterprises.
                   </div>
                 </div>

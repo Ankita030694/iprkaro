@@ -1,5 +1,4 @@
 import dynamic from 'next/dynamic';
-import Image from 'next/image';
 
 const SearchClient = dynamic(() => import('./SearchClient'));
 const ClientLogoSlider = dynamic(() => import('./ClientLogoSlider'));
@@ -38,19 +37,21 @@ export default function HeroSection() {
 
             {/* Underhero Image - Mobile Only */}
             <div className="w-full mt-3 flex justify-center">
-              <Image
-                src="/underhero.svg"
+              <img
+                src="/underhero.png"
                 alt="Underhero"
-                className="w-full max-w-[300px] object-contain"
-                width={600}
-                height={600}
-                priority
-                quality={100}
+                className="w-full max-w-[500px] object-cover"
+                loading="eager"
+                decoding="sync"
                 style={{
-                  imageRendering: 'auto',
-                  transform: 'translateZ(0)',
+                  imageRendering: '-webkit-optimize-contrast',
+                  transform: 'translate3d(0, 0, 0)',
+                  WebkitTransform: 'translate3d(0, 0, 0)',
                   backfaceVisibility: 'hidden',
-                  WebkitBackfaceVisibility: 'hidden'
+                  WebkitBackfaceVisibility: 'hidden',
+                  WebkitFontSmoothing: 'subpixel-antialiased',
+                  perspective: 1000,
+                  WebkitPerspective: 1000
                 }}
               />
             </div>
