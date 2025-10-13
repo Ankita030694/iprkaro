@@ -68,10 +68,10 @@ export default function HeroSection() {
       />
     
       {/* Main Content Section - Responsive Layout - Reserve space for logo slider */}
-      <div className="flex flex-col lg:flex-row w-full z-[60] px-4 lg:px-0 pt-16 lg:pt-28 h-full lg:h-auto" style={{ height: 'calc(100vh - 100px)' }}>
+      <div className="flex flex-col lg:flex-row w-full z-[60] px-4 lg:px-0 pt-28 lg:pt-28 h-full lg:h-auto" style={{ height: 'calc(100vh - 100px)' }}>
         {/* Mobile Layout - Centered Content */}
-        <div className="flex flex-col justify-center items-center w-full h-full lg:hidden">
-          <div className="flex flex-col items-center gap-2 text-center max-w-sm mt-20">
+        <div className="flex flex-col justify-start items-center w-full h-full lg:hidden pt-4">
+          <div className="flex flex-col items-center gap-2 text-center max-w-sm">
             {/* Main Heading */}
             <h1 className="text-[#F8F9FA] font-nunito text-[20px] font-bold leading-[26px]">
             Trademark Registration Made Easy: Fast, Accurate, and Powered by AI <span className="animated-gradient text-[20px] font-bold">- Start in 60 Seconds</span>
@@ -89,7 +89,7 @@ export default function HeroSection() {
             </div>
 
             {/* Underhero Image - Mobile Only */}
-            <div className="w-full mt-20 flex justify-center">
+            <div className="w-full mt-6 flex justify-center">
               <img
                 src="/underhero.png"
                 alt="Underhero"
