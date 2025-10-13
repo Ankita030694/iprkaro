@@ -1,0 +1,13 @@
+# robots.txt for IPRKaro
+
+# Allow all crawlers to access all content
+User-agent: *
+Allow: /
+
+# Disallow crawling of API routes and private directories
+Disallow: /api/
+Disallow: /_next/
+
+# Sitemap location
+Sitemap: https://iprkaro.com/sitemap.xml
+
