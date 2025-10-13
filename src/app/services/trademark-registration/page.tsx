@@ -416,14 +416,14 @@ At IPRKaro, we combine AI-powered trademark search technology with expert legal 
             {/* Guidelines Section */}
             <div className="space-y-6 px-2 md:px-0">
               <h3 className="text-white font-nunito text-sm md:text-xl lg:text-2xl font-medium">
-                we work with the Guidelines of
+                We work with the Guidelines of
               </h3>
 
               {/* Guidelines Images - Mobile: Full width, no containers */}
               <div className="md:hidden flex items-center justify-between w-full gap-0">
                 <div className="flex-1 flex items-center justify-center">
                   <img
-                    src="/serv1.svg"
+                    src="/clientlogos/white9.png"
                     alt="Service 1"
                     className="w-full h-auto object-contain max-w-[80px]"
                   />
@@ -431,7 +431,7 @@ At IPRKaro, we combine AI-powered trademark search technology with expert legal 
 
                 <div className="flex-1 flex items-center justify-center">
                   <img
-                    src="/serv2.svg"
+                    src="/clientlogos/white10.png"
                     alt="Service 2"
                     className="w-full h-auto object-contain max-w-[80px]"
                   />
@@ -439,7 +439,7 @@ At IPRKaro, we combine AI-powered trademark search technology with expert legal 
 
                 <div className="flex-1 flex items-center justify-center">
                   <img
-                    src="/serv3.svg"
+                    src="/clientlogos/white11.png"
                     alt="Service 3"
                     className="w-full h-auto object-contain max-w-[80px]"
                   />
@@ -447,7 +447,7 @@ At IPRKaro, we combine AI-powered trademark search technology with expert legal 
 
                 <div className="flex-1 flex items-center justify-center">
                   <img
-                    src="/serv4.svg"
+                    src="/clientlogos/white12.png"
                     alt="Service 4"
                     className="w-full h-auto object-contain max-w-[80px]"
                   />

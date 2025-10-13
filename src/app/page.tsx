@@ -1,4 +1,4 @@
-import { HeroSection, WhyTrademark, Expert, SimplePlans, Faq } from "@/components";
+import { HeroSection, WhyTrademark, OurServices, SimplePlans, Faq } from "@/components";
 
 export default function Home() {
   return (
@@ -6,7 +6,7 @@ export default function Home() {
 
       <HeroSection />
       <WhyTrademark />
-      {/* <Expert /> */}
+      <OurServices />
       <SimplePlans />
       <Faq />
     </>
