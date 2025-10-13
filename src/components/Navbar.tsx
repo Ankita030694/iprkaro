@@ -2,9 +2,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import ContactFormPopup from './ContactFormPopup';
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isContactFormOpen, setIsContactFormOpen] = useState(false);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -66,7 +68,9 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Sign Up Button */}
-        <div className="hidden md:inline-flex px-2 py-[4px] justify-center items-center gap-[10px] bg-transparent w-[110px] h-[40px] cursor-pointer transition-all duration-300 relative group"
+        <div 
+          onClick={() => setIsContactFormOpen(true)}
+          className="hidden md:inline-flex px-2 py-[4px] justify-center items-center gap-[10px] bg-transparent w-[110px] h-[40px] cursor-pointer transition-all duration-300 relative group"
           style={{
             border: "2px solid transparent",
             borderRadius: "20px",
@@ -129,6 +133,24 @@ export default function Navbar() {
 
             {/* Faded Line Divider */}
             <div className="w-1/2 h-1 bg-gradient-to-r from-white to-transparent rounded-full"></div>
+
+            {/* Sign Up Button for Mobile */}
+            <div 
+              onClick={() => {
+                closeMobileMenu();
+                setIsContactFormOpen(true);
+              }}
+              className="inline-flex px-4 py-2 justify-center items-center gap-2 bg-transparent cursor-pointer transition-all duration-300 relative group"
+              style={{
+                border: "2px solid transparent",
+                borderRadius: "20px",
+                borderImage: "linear-gradient(to right, #FFFFFF 0%, #8A38F5 49%, #FFB703 88%) 1",
+                borderImageSlice: 1,
+                WebkitMaskComposite: "destination-out",
+                maskComposite: "exclude"
+              }}>
+              <span className="text-white text-base font-normal group-hover:text-[#FFB703] transition-colors duration-300">Sign Up</span>
+            </div>
 
             {/* Bottom Section */}
             <div className="space-y-10 text-left">
@@ -196,6 +218,12 @@ export default function Navbar() {
           </div>
         </div>
       </div>
+
+      {/* Contact Form Popup */}
+      <ContactFormPopup 
+        isOpen={isContactFormOpen} 
+        onClose={() => setIsContactFormOpen(false)} 
+      />
     </>
   );
 }
