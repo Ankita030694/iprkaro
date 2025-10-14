@@ -7,6 +7,20 @@ const nextConfig: NextConfig = {
     remotePatterns: [],
     formats: ['image/webp', 'image/avif'],
   },
+  async redirects() {
+    return [
+      {
+        source: '/terms',
+        destination: '/terms-and-conditions',
+        permanent: true, // 301 redirect
+      },
+      {
+        source: '/help',
+        destination: '/contact',
+        permanent: true, // 301 redirect
+      },
+    ];
+  },
   /* config options here */
 };
 

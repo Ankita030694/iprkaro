@@ -116,7 +116,7 @@ export default function Navbar() {
           <div className="flex flex-col justify-start items-start h-full px-8 pt-32 space-y-8">
             {/* Top Section */}
             <div className="space-y-6 text-left">
-              <Link href="/terms" onClick={closeMobileMenu}>
+              <Link href="/terms-and-conditions" onClick={closeMobileMenu}>
                 <div className="text-white text-lg font-normal cursor-pointer relative group hover:text-[#ffb703] transition-all duration-300">
                   Terms of Services
                 </div>
