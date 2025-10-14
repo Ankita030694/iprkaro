@@ -15,7 +15,9 @@ function getStateName(slug: string): string {
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const stateName = getStateName(params.slug);
   
-  const title = `Trademark Registration ${stateName} | IPR Karo`;
+  // Use shorter format for very long state names to keep under 60 chars
+  const baseTitle = `TM Registration ${stateName} | IPR Karo`;
+  const title = baseTitle.length > 60 ? `${stateName} TM | IPR Karo` : baseTitle;
   const description = `Get your trademark registered in ${stateName} with AI-powered search, expert guidance & 24/7 support. Starting at ₹499. Fast processing, 100% secure. Register your brand today!`;
   
   return {
