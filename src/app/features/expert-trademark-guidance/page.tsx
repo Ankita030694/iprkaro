@@ -1,21 +1,9 @@
 import React from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
 
 export default function ExpertTrademarkGuidance() {
   return (
-    <>
-      <Head>
-        <title>Expert Trademark Guidance India | IPR Karo</title>
-        <meta name="description" content="Get expert trademark guidance from experienced attorneys in India. 24/7 consultation, legal support, and professional advice for trademark registration, opposition, and protection." />
-        <meta name="keywords" content="expert trademark guidance, trademark attorney consultation India, trademark legal advice, professional trademark support, trademark opposition help, brand protection consultation" />
-        <meta property="og:title" content="Expert Trademark Guidance India | Professional Legal Support & Consultation" />
-        <meta property="og:description" content="Get expert trademark guidance from experienced attorneys in India. 24/7 consultation, legal support, and professional advice for trademark registration, opposition, and protection." />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href="https://iprkaro.com/features/expert-trademark-guidance" />
-      </Head>
-      <div className="min-h-screen bg-gradient-to-b from-[#0C002B] via-[#160049] to-[#6E5E93] pt-32 pb-16 px-2 lg:px-4">
+    <div className="min-h-screen bg-gradient-to-b from-[#0C002B] via-[#160049] to-[#6E5E93] pt-32 pb-16 px-2 lg:px-4">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8 md:mb-16">
@@ -310,6 +298,5 @@ export default function ExpertTrademarkGuidance() {
         </script>
       </div>
       </div>
-    </>
   );
 }

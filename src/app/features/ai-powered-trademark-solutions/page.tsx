@@ -1,21 +1,9 @@
 import React from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
 
 export default function AIPoweredTrademarkSolutions() {
   return (
-    <>
-      <Head>
-        <title>AI Trademark Solutions India | IPR Karo</title>
-        <meta name="description" content="Revolutionary AI-powered trademark solutions in India. Get intelligent trademark search, risk assessment, and automated reporting with 98.5% accuracy. Advanced machine learning for brand protection." />
-        <meta name="keywords" content="AI trademark solutions India, AI-powered trademark search, intelligent brand protection, machine learning trademark, automated trademark reporting, AI trademark technology" />
-        <meta property="og:title" content="AI-Powered Trademark Solutions India | Intelligent Brand Protection Technology" />
-        <meta property="og:description" content="Revolutionary AI-powered trademark solutions in India. Get intelligent trademark search, risk assessment, and automated reporting with 98.5% accuracy." />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href="https://iprkaro.com/features/ai-powered-trademark-solutions" />
-      </Head>
-      <div className="min-h-screen bg-gradient-to-b from-[#0C002B] via-[#160049] to-[#6E5E93] pt-28 pb-14 px-2 lg:px-3.5">
+    <div className="min-h-screen bg-gradient-to-b from-[#0C002B] via-[#160049] to-[#6E5E93] pt-28 pb-14 px-2 lg:px-3.5">
       <div className="max-w-5xl mx-auto">
         {/* Header */}
         <div className="text-center mb-7 md:mb-14">
@@ -354,6 +342,5 @@ export default function AIPoweredTrademarkSolutions() {
         </script>
       </div>
       </div>
-    </>
   );
 }

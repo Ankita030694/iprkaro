@@ -60,7 +60,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       images: ['/figmacomp/iprhero.svg'],
     },
     alternates: {
-      canonical: `/services/trademark-registration/${params.slug}`,
+      canonical: `https://iprkaro.com/services/trademark-registration/${params.slug}`,
     },
     robots: {
       index: true,

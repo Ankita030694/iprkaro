@@ -1,21 +1,9 @@
 import React from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
 
 export default function AffordableTrademarkServices() {
   return (
-    <>
-      <Head>
-        <title>Affordable Trademark Services India | IPR Karo</title>
-        <meta name="description" content="Get affordable trademark registration services in India with transparent pricing. Professional trademark filing at competitive rates with no hidden fees. Save up to 60% compared to traditional law firms." />
-        <meta name="keywords" content="affordable trademark services, cheap trademark registration India, cost-effective brand protection, transparent trademark pricing, budget trademark filing, trademark services rates" />
-        <meta property="og:title" content="Affordable Trademark Services India | Cost-Effective Brand Protection" />
-        <meta property="og:description" content="Get affordable trademark registration services in India with transparent pricing. Professional trademark filing at competitive rates with no hidden fees." />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href="https://iprkaro.com/features/affordable-trademark-services" />
-      </Head>
-      <div className="min-h-screen bg-gradient-to-b from-[#0C002B] via-[#160049] to-[#6E5E93] pt-28 pb-14 px-2 lg:px-3.5">
+    <div className="min-h-screen bg-gradient-to-b from-[#0C002B] via-[#160049] to-[#6E5E93] pt-28 pb-14 px-2 lg:px-3.5">
       <div className="max-w-5xl mx-auto">
         {/* Header */}
         <div className="text-center mb-7 md:mb-14">
@@ -337,6 +325,5 @@ export default function AffordableTrademarkServices() {
         </script>
       </div>
       </div>
-    </>
   );
 }

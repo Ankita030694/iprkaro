@@ -1,22 +1,9 @@
 import React from 'react';
-import Head from 'next/head';
-import { div } from 'framer-motion/client';
 import Link from 'next/link';
 
 export default function TwentyFourSevenTrademarkProtection() {
   return (
-    <div>
-      <Head>
-        <title>24/7 Trademark Protection India | IPR Karo</title>
-        <meta name="description" content="Get 24/7 trademark protection in India with certified trademark agents. Continuous monitoring, emergency response, and round-the-clock accessibility for comprehensive brand protection." />
-        <meta name="keywords" content="24/7 trademark protection India, round-the-clock trademark monitoring, emergency trademark response, continuous brand protection, trademark watch service, trademark infringement monitoring" />
-        <meta property="og:title" content="24/7 Trademark Protection India | Round-the-Clock Brand Monitoring Service" />
-        <meta property="og:description" content="Get 24/7 trademark protection in India with certified trademark agents. Continuous monitoring, emergency response, and round-the-clock accessibility." />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href="https://iprkaro.com/features/247-trademark-protection" />
-      </Head>
-      <div className="min-h-screen bg-gradient-to-b from-[#0C002B] via-[#160049] to-[#6E5E93] pt-28 pb-14 px-2 lg:px-3.5">
+    <div className="min-h-screen bg-gradient-to-b from-[#0C002B] via-[#160049] to-[#6E5E93] pt-28 pb-14 px-2 lg:px-3.5">
       <div className="max-w-5xl mx-auto">
         {/* Header */}
         <div className="text-center mb-7 md:mb-14">
@@ -339,7 +326,5 @@ export default function TwentyFourSevenTrademarkProtection() {
         </script>
       </div>
       </div>
-      </div>
-    
   );
 }

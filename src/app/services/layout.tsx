@@ -3,6 +3,9 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "IP Protection Services India | IPR Karo",
   description: "Comprehensive intellectual property services including trademark registration, copyright protection, and patent filing. AI-powered solutions with expert legal support.",
+  alternates: {
+    canonical: "https://iprkaro.com/services",
+  },
 };
 
 export default function ServicesLayout({

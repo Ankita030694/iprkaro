@@ -1,21 +1,9 @@
 import React from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
 
 export default function TrademarkRiskReduction() {
   return (
-    <>
-      <Head>
-        <title>Trademark Risk Reduction India | IPR Karo</title>
-        <meta name="description" content="Reduce trademark registration risks in India with comprehensive risk assessment, advanced search methodologies, and expert legal analysis. Maximize approval chances and minimize conflicts." />
-        <meta name="keywords" content="trademark risk reduction India, trademark risk assessment, trademark conflict analysis, trademark opposition prevention, trademark clearance search, brand protection risk management" />
-        <meta property="og:title" content="Trademark Risk Reduction India | Comprehensive Risk Assessment & Protection" />
-        <meta property="og:description" content="Reduce trademark registration risks in India with comprehensive risk assessment, advanced search methodologies, and expert legal analysis." />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href="https://iprkaro.com/features/trademark-risk-reduction" />
-      </Head>
-      <div className="min-h-screen bg-gradient-to-b from-[#0C002B] via-[#160049] to-[#6E5E93] pt-32 pb-16 px-2 lg:px-4">
+    <div className="min-h-screen bg-gradient-to-b from-[#0C002B] via-[#160049] to-[#6E5E93] pt-32 pb-16 px-2 lg:px-4">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8 md:mb-16">
@@ -346,6 +334,5 @@ export default function TrademarkRiskReduction() {
         </script>
       </div>
       </div>
-    </>
   );
 }
