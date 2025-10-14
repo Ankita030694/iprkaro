@@ -125,21 +125,23 @@ export default function TrademarkRegistrationClient({ stateName }: TrademarkRegi
 
             {/* Main Heading with Gradient Accent */}
             <div className="relative inline-block mb-4">
-              <h1 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold leading-tight mb-1.5">
-                Trademark Registration in
+              <h1 className="font-nunito font-bold leading-tight mb-1.5">
+                <span className="block text-white text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl">
+                  Trademark Registration in
+                </span>
+                <span 
+                  className="block text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-extrabold leading-none"
+                  style={{
+                    background: 'linear-gradient(135deg, #FFB703 0%, #FFC93D 50%, #FFB703 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text',
+                    textShadow: '0 0 40px rgba(255, 183, 3, 0.3)'
+                  }}
+                >
+                  {stateName}
+                </span>
               </h1>
-              <h2 
-                className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-nunito font-extrabold leading-none"
-                style={{
-                  background: 'linear-gradient(135deg, #FFB703 0%, #FFC93D 50%, #FFB703 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
-                  textShadow: '0 0 40px rgba(255, 183, 3, 0.3)'
-                }}
-              >
-                {stateName}
-              </h2>
               {/* Decorative underline */}
               <div 
                 className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 h-0.5 rounded-full"
