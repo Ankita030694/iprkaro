@@ -12,11 +12,12 @@ function getStateName(slug: string): string {
 }
 
 // Generate dynamic metadata for SEO and AEO optimization
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const stateName = getStateName(params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const stateName = getStateName(slug);
   
   const title = `Copyright Protection in ${stateName} | Online Copyright Registration 2025`;
-  const description = `Secure copyright protection in ${stateName} with expert legal support. Fast filing, lifetime protection, and affordable pricing from ₹2,999. Register books, music, software & more today!`;
+  const description = `Secure copyright protection in ${stateName} with expert legal support. Fast filing, lifetime protection, and affordable pricing from ₹1,999. Register books, music, software & more today!`;
   
   return {
     title,
@@ -59,7 +60,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       images: ['/figmacomp/iprhero.svg'],
     },
     alternates: {
-      canonical: `/services/copyright-protection/${params.slug}`,
+      canonical: `/services/copyright-protection/${slug}`,
     },
     robots: {
       index: true,

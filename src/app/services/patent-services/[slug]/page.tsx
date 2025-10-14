@@ -12,11 +12,12 @@ function getStateName(slug: string): string {
 }
 
 // Generate dynamic metadata for SEO and AEO optimization
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const stateName = getStateName(params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const stateName = getStateName(slug);
   
   const title = `Patent Services in ${stateName} | Patent Filing & Registration India 2025`;
-  const description = `Expert patent services in ${stateName}. File provisional, utility & design patents with complete IP protection. Get patent search, filing, and prosecution support. Starting at ₹9,999. Protect your innovation today!`;
+  const description = `Expert patent services in ${stateName}. File provisional, utility & design patents with complete IP protection. Get patent search, filing, and prosecution support. Starting at ₹1,999. Protect your innovation today!`;
   
   return {
     title,
@@ -60,7 +61,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       images: ['/figmacomp/iprhero.svg'],
     },
     alternates: {
-      canonical: `/services/patent-services/${params.slug}`,
+      canonical: `/services/patent-services/${slug}`,
     },
     robots: {
       index: true,
@@ -83,8 +84,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-export default function PatentServicesSlugPage({ params }: { params: { slug: string } }) {
-  const stateName = getStateName(params.slug);
+export default async function PatentServicesSlugPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const stateName = getStateName(slug);
 
   return <PatentServicesClient stateName={stateName} />;
 }
