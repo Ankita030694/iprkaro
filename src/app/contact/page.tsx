@@ -83,7 +83,7 @@ export default function ContactPage() {
     <div
     className="min-h-screen"
     style={{
-      backgroundImage: 'linear-gradient(to right top, #0c002b, #0c002b,rgb(25, 10, 60),rgb(92, 75, 130), #ffffff)',
+      backgroundImage: 'linear-gradient(to right top, #0c002b, #0c002b,rgb(25, 10, 60),rgb(92, 75, 130),rgb(91, 88, 88))',
       backgroundSize: '100% 80%',
       backgroundPosition: '10% 20%',
       backgroundRepeat: 'no-repeat',

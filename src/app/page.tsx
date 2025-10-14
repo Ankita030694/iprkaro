@@ -6,7 +6,10 @@ export default function Home() {
 
       <HeroSection />
       <WhyTrademark />
+      <div className="-mt-10">
       <OurServices />
+
+      </div>
       <SimplePlans />
       <Faq />
     </>

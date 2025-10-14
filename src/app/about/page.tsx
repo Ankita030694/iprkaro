@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import ClientLogoSlider from '@/components/ClientLogoSlider';
@@ -11,10 +11,51 @@ export default function AboutPage() {
   // State for mobile card interactions
   const [activeCard, setActiveCard] = useState<number | null>(null);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [timelineProgress, setTimelineProgress] = useState(0);
+  const timelineRef = useRef<HTMLDivElement>(null);
 
   const toggleFaq = (index: number) => {
     setOpenFaq(openFaq === index ? null : index);
   };
+
+  // Handle scroll progress for timeline - pixel by pixel
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!timelineRef.current) return;
+
+      const rect = timelineRef.current.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      const timelineTop = rect.top + window.scrollY;
+      const timelineHeight = rect.height;
+      const currentScroll = window.scrollY + windowHeight * 0.5; // Consider middle of viewport
+      
+      // Calculate the start and end points for the fill
+      // Start filling earlier when timeline comes into view
+      const fillStart = timelineTop - windowHeight * 0.3; // Start earlier
+      const fillEnd = timelineTop + timelineHeight * 0.85; // End a bit before the actual end
+      
+      let progress = 0;
+      
+      if (currentScroll >= fillStart && currentScroll <= fillEnd) {
+        // Calculate pixel-by-pixel progress
+        const scrolledIntoSection = currentScroll - fillStart;
+        const totalScrollDistance = fillEnd - fillStart;
+        progress = (scrolledIntoSection / totalScrollDistance) * 100;
+      } else if (currentScroll > fillEnd) {
+        progress = 100;
+      }
+      
+      // Clamp between 0 and 100
+      progress = Math.min(Math.max(progress, 0), 100);
+      
+      setTimelineProgress(progress);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll(); // Initial calculation
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const aboutFaqs = [
     {
@@ -56,7 +97,7 @@ export default function AboutPage() {
     <div
       className="min-h-screen relative overflow-x-hidden"
       style={{
-        backgroundImage: 'linear-gradient(to right top, #0c002b, #0c002b,rgb(25, 10, 60),rgb(92, 75, 130), #ffffff)',
+        backgroundImage: 'linear-gradient(to right top, #0c002b, #0c002b,rgb(25, 10, 60),rgb(92, 75, 130),rgb(91, 88, 88))',
         backgroundSize: '100% 80%',
         backgroundPosition: '10% 20%',
         backgroundRepeat: 'no-repeat',
@@ -64,6 +105,17 @@ export default function AboutPage() {
         paddingTop: '100px'
       }}
     >
+      {/* Global styles for yellow hover effect */}
+      <style jsx global>{`
+        .icon-hover-yellow {
+          filter: grayscale(0%);
+          transition: all 0.5s ease;
+        }
+        .group:hover .icon-hover-yellow {
+          filter: brightness(0) saturate(100%) invert(64%) sepia(77%) saturate(458%) hue-rotate(1deg) brightness(98%) contrast(92%);
+        }
+      `}</style>
+      
       {/* SVG Filter for yellow color transformation */}
       <svg width="0" height="0" style={{ position: 'absolute' }}>
         <defs>
@@ -313,7 +365,7 @@ export default function AboutPage() {
       </div>
 
       {/* Our Story Timeline Section */}
-      <div className="w-full py-16 relative">
+      <div className="w-full md:py-8 relative -mt-10 md:mt-0">
         <div className="text-center mb-16">
           <h2 
             className="text-3xl sm:text-4xl lg:text-[42px] font-bold"
@@ -613,7 +665,7 @@ export default function AboutPage() {
 
         {/* Mobile Timeline Section */}
         <div className="block lg:hidden">
-          <div className="max-w-4xl mx-auto relative">
+          <div className="max-w-4xl mx-auto relative" ref={timelineRef}>
             {/* Decorative "Our Story" Text - Right Side for Mobile */}
            
 
@@ -623,6 +675,18 @@ export default function AboutPage() {
               style={{
                 background: 'linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.3))',
                 borderRadius: '2px'
+              }}
+            />
+            
+            {/* Purple Progress Line - Fills up on scroll */}
+            <div
+              className="absolute left-7.5 top-0 w-2 transition-all duration-75 ease-linear"
+              style={{
+                height: `${timelineProgress}%`,
+                background: 'linear-gradient(to bottom, #8A38F5, #a855f7)',
+                borderRadius: '2px',
+                boxShadow: '0 0 10px rgba(138, 56, 245, 0.6)',
+                willChange: 'height'
               }}
             />
 
@@ -879,10 +943,10 @@ export default function AboutPage() {
       </div>
 
       {/* What makes IPR Karo Different Section */}
-      <div className="w-full py-8" style={{ backgroundColor: '#0C002B' }}>
-        <div className="text-center mb-8 px-6 sm:px-12 lg:px-24">
+      <div className="w-full py-20 mt-10">
+        <div className="text-center mb-16 px-6 sm:px-12 lg:px-24">
           <h2
-            className="text-2xl sm:text-3xl lg:text-[36px] font-bold"
+            className="text-3xl sm:text-4xl lg:text-[42px] font-bold mb-4"
             style={{
               color: '#FFF',
               fontFamily: 'Nunito',
@@ -892,503 +956,491 @@ export default function AboutPage() {
           >
             What makes IPR Karo Different
           </h2>
+          <p 
+            className="text-base sm:text-lg max-w-3xl mx-auto"
+            style={{
+              color: 'rgba(255, 255, 255, 0.7)',
+              fontFamily: 'Nunito',
+              fontWeight: 400,
+              lineHeight: '1.6'
+            }}
+          >
+            Experience the perfect blend of AI technology and expert guidance for comprehensive trademark protection
+          </p>
         </div>
 
-        {/* Cards Container - Full Width with Scaling */}
-        <div className="w-full" style={{
-          transform: 'scale(0.85)',
-          transformOrigin: 'top center'
-        }}>
+        {/* Cards Container */}
+        <div className="w-full">
           {/* Main Grid - Full width layout */}
-          <div className="flex flex-col gap-3 sm:gap-4 lg:gap-6 px-6 sm:px-12 lg:px-24">
-            {/* Mobile Layout - Desktop-like Cards in Single Column */}
-            <div className="block lg:hidden space-y-4">
+          <div className="flex flex-col gap-6 lg:gap-8 px-6 sm:px-12 lg:px-24">
+            {/* Mobile Layout - Professional Card Design */}
+            <div className="block lg:hidden space-y-6">
               {/* Card 1 - AI-Powered Trademark Search */}
               <div
-                className="relative group cursor-pointer overflow-hidden h-56"
+                className="relative group cursor-pointer overflow-hidden transition-all duration-300 hover:scale-[1.02]"
                 style={{
-                  borderRadius: '20px 0 0 0',
-                  background: 'linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), linear-gradient(145deg, rgba(12, 0, 43, 0.40) 6.6%, rgba(255, 183, 3, 0.40) 120.24%), rgba(0, 0, 0, 0.50)',
-                  boxShadow: '0 0 20px 1px rgba(255, 255, 255, 0.40) inset, 4px 4px 25.2px 0 rgba(0, 0, 0, 0.15)'
+                  borderRadius: '24px',
+                  background: 'linear-gradient(135deg, rgba(255, 183, 3, 0.08) 0%, rgba(12, 0, 43, 0.4) 100%)',
+                  border: '1px solid rgba(255, 183, 3, 0.2)',
+                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3), inset 0 0 24px rgba(255, 255, 255, 0.05)'
                 }}
                 onClick={() => setActiveCard(activeCard === 1 ? null : 1)}
               >
-                {/* Centered text content */}
-                <div className="relative z-10 p-6 h-full flex flex-col justify-center items-center text-center">
-                  <h3 className="text-xl font-semibold mb-4 text-white" style={{fontFamily: 'Nunito', fontWeight: 600}}>
+                {/* Content */}
+                <div className="relative z-10 p-8">
+                  <h3 className="text-xl font-bold mb-3 text-white" style={{fontFamily: 'Nunito', fontWeight: 700}}>
                     AI-Powered Trademark Search
                   </h3>
-                  <p className="text-sm max-w-[280px] mx-auto mb-4" style={{color: 'rgba(255, 255, 255, 0.90)', fontFamily: 'Nunito', lineHeight: '1.5'}}>
+                  <p className="text-sm mb-6" style={{color: 'rgba(255, 255, 255, 0.85)', fontFamily: 'Nunito', lineHeight: '1.6'}}>
                     Instantly scan millions of records. Our AI-powered search report finds identical and confusingly similar marks so you can decide whether to register or tweak your brand.
                   </p>
-                </div>
-                {/* Search icon positioned at bottom center */}
-                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20">
-                  <Image
-                    src="/figmacomp/searchabout.svg"
-                    alt="Search Icon"
-                    width={300}
-                    height={80}
-                    className={`w-full max-w-[280px] h-auto object-contain opacity-80 transition-all duration-300 ${
-                      activeCard === 1 ? 'opacity-100 filter-[url(#yellow-filter)]' : ''
-                    }`}
-                  />
+                  
+                  {/* Icon Container */}
+                  <div className="flex justify-center mt-4">
+                    <Image
+                      src="/figmacomp/searchabout.svg"
+                      alt="Search Icon"
+                      width={280}
+                      height={80}
+                      className={`w-full max-w-[280px] h-auto object-contain transition-all duration-500 ${
+                        activeCard === 1 ? 'opacity-100 scale-110 brightness-[1.2] saturate-[1.5] hue-rotate-[-15deg]' : 'opacity-60'
+                      }`}
+                      style={{
+                        filter: activeCard === 1 ? 'brightness(1.2) saturate(1.5) hue-rotate(-15deg)' : 'none'
+                      }}
+                    />
+                  </div>
                 </div>
               </div>
 
               {/* Card 2 - Expert-Led Guidance */}
               <div
-                className="relative group cursor-pointer overflow-hidden h-56"
+                className="relative group cursor-pointer overflow-hidden transition-all duration-300 hover:scale-[1.02]"
                 style={{
-                  borderRadius: '20px 0 0 0',
-                  background: 'linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), linear-gradient(145deg, rgba(12, 0, 43, 0.40) 6.6%, rgba(255, 183, 3, 0.40) 120.24%), rgba(0, 0, 0, 0.50)',
-                  boxShadow: '0 0 20px 1px rgba(255, 255, 255, 0.40) inset, 4px 4px 25.2px 0 rgba(0, 0, 0, 0.15)'
+                  borderRadius: '24px',
+                  background: 'linear-gradient(135deg, rgba(255, 183, 3, 0.08) 0%, rgba(12, 0, 43, 0.4) 100%)',
+                  border: '1px solid rgba(255, 183, 3, 0.2)',
+                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3), inset 0 0 24px rgba(255, 255, 255, 0.05)'
                 }}
                 onClick={() => setActiveCard(activeCard === 2 ? null : 2)}
               >
-                {/* Text positioned in top left */}
-                <div className="absolute top-6 left-6 z-10">
-                  <h3 className="text-lg font-semibold mb-3 text-white" style={{fontFamily: 'Nunito', fontWeight: 600}}>
-                    Expert-Led Guidance
-                  </h3>
-                  <p className="text-sm max-w-[200px]" style={{color: 'rgba(255, 255, 255, 0.90)', fontFamily: 'Nunito', lineHeight: '1.5'}}>
-                    Certified IP lawyers review your AI report, advise on registrability, and prepare filing documents. Clear legal answers with no jargon.
-                  </p>
-                </div>
-                {/* SVG positioned in top right */}
-                <div className="absolute top-0 right-0 z-10">
+                {/* Icon - top right */}
+                <div className="absolute top-0 right-0">
                   <Image
                     src="/figmacomp/expert-guidance.svg"
                     alt="Expert Guidance Icon"
-                    width={80}
-                    height={120}
-                    className={`w-full h-full object-contain filter grayscale transition-all duration-300 ${
-                      activeCard === 2 ? 'filter-[url(#yellow-filter)] grayscale-0' : ''
-                    }`}
+                    width={100}
+                    height={140}
+                    className="w-auto h-32 object-contain icon-hover-yellow opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"
                   />
+                </div>
+
+                {/* Content */}
+                <div className="relative z-10 p-8">
+                  <h3 className="text-xl font-bold mb-3 text-white" style={{fontFamily: 'Nunito', fontWeight: 700}}>
+                    Expert-Led Guidance
+                  </h3>
+                  <p className="text-sm max-w-[240px]" style={{color: 'rgba(255, 255, 255, 0.85)', fontFamily: 'Nunito', lineHeight: '1.6'}}>
+                    Certified IP lawyers review your AI report, advise on registrability, and prepare filing documents. Clear legal answers with no jargon.
+                  </p>
                 </div>
               </div>
 
               {/* Card 3 - Fast Processing */}
               <div
-                className="relative group cursor-pointer overflow-hidden h-56"
+                className="relative group cursor-pointer overflow-hidden transition-all duration-300 hover:scale-[1.02]"
                 style={{
-                  borderRadius: '20px 0 0 0',
-                  background: 'linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), linear-gradient(145deg, rgba(12, 0, 43, 0.40) 6.6%, rgba(255, 183, 3, 0.40) 120.24%), rgba(0, 0, 0, 0.50)',
-                  boxShadow: '0 0 20px 1px rgba(255, 255, 255, 0.40) inset, 4px 4px 25.2px 0 rgba(0, 0, 0, 0.15)'
+                  borderRadius: '24px',
+                  background: 'linear-gradient(135deg, rgba(255, 183, 3, 0.08) 0%, rgba(12, 0, 43, 0.4) 100%)',
+                  border: '1px solid rgba(255, 183, 3, 0.2)',
+                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3), inset 0 0 24px rgba(255, 255, 255, 0.05)'
                 }}
                 onClick={() => setActiveCard(activeCard === 3 ? null : 3)}
               >
-                {/* Text positioned in top left */}
-                <div className="absolute top-6 left-6 z-10">
-                  <h3 className="text-lg font-semibold mb-3 text-white" style={{fontFamily: 'Nunito', fontWeight: 600}}>
-                    Fast Processing
-                  </h3>
-                  <p className="text-sm max-w-[200px]" style={{color: 'rgba(255, 255, 255, 0.90)', fontFamily: 'Nunito', lineHeight: '1.5'}}>
-                    Optimised workflows cut filing time to get search results within minutes and an expert review within 24 to 48 hours.
-                  </p>
-                </div>
-                {/* Icon positioned in top right */}
-                <div className="absolute top-0 right-0 z-10">
+                {/* Icon - top right */}
+                <div className="absolute top-0 right-0">
                   <Image
                     src="/figmacomp/fast-processing.svg"
                     alt="Fast Processing Icon"
-                    width={80}
-                    height={160}
-                    className={`w-full h-full object-contain transition-all duration-300 ${
-                      activeCard === 3 ? 'filter-[url(#yellow-filter)]' : ''
-                    }`}
+                    width={100}
+                    height={180}
+                    className="w-auto h-40 object-contain icon-hover-yellow opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"
                   />
+                </div>
+
+                {/* Content */}
+                <div className="relative z-10 p-8">
+                  <h3 className="text-xl font-bold mb-3 text-white" style={{fontFamily: 'Nunito', fontWeight: 700}}>
+                    Fast Processing
+                  </h3>
+                  <p className="text-sm max-w-[240px]" style={{color: 'rgba(255, 255, 255, 0.85)', fontFamily: 'Nunito', lineHeight: '1.6'}}>
+                    Optimised workflows cut filing time to get search results within minutes and an expert review within 24 to 48 hours.
+                  </p>
                 </div>
               </div>
 
               {/* Card 4 - Affordable & Transparent Pricing */}
               <div
-                className="relative group cursor-pointer overflow-hidden h-56"
+                className="relative group cursor-pointer overflow-hidden transition-all duration-300 hover:scale-[1.02]"
                 style={{
-                  borderRadius: '20px 0 0 0',
-                  background: 'linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), linear-gradient(145deg, rgba(12, 0, 43, 0.40) 6.6%, rgba(255, 183, 3, 0.40) 120.24%), rgba(0, 0, 0, 0.50)',
-                  boxShadow: '0 0 20px 1px rgba(255, 255, 255, 0.40) inset, 4px 4px 25.2px 0 rgba(0, 0, 0, 0.15)'
+                  borderRadius: '24px',
+                  background: 'linear-gradient(135deg, rgba(255, 183, 3, 0.08) 0%, rgba(12, 0, 43, 0.4) 100%)',
+                  border: '1px solid rgba(255, 183, 3, 0.2)',
+                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3), inset 0 0 24px rgba(255, 255, 255, 0.05)'
                 }}
                 onClick={() => setActiveCard(activeCard === 4 ? null : 4)}
               >
-                {/* Text positioned in top left */}
-                <div className="absolute top-6 left-6 z-10">
-                  <h3 className="text-lg font-semibold mb-3 text-white" style={{fontFamily: 'Nunito', fontWeight: 600}}>
-                    Affordable & Transparent Pricing
-                  </h3>
-                  <p className="text-sm max-w-[200px]" style={{color: 'rgba(255, 255, 255, 0.90)', fontFamily: 'Nunito', lineHeight: '1.5'}}>
-                    No hidden fees. Choose a plan that fits your needs (search report, filing, or full legal package) with one-page invoices that explain every cost.
-                  </p>
-                </div>
-                {/* Icon positioned in bottom right */}
-                <div className="absolute bottom-0 right-0 z-10">
+                {/* Icon - bottom right */}
+                <div className="absolute bottom-0 right-0">
                   <Image
                     src="/figmacomp/affordable-pricing.svg"
                     alt="Affordable Pricing Icon"
-                    width={150}
-                    height={100}
-                    className={`w-full h-full object-contain transition-all duration-300 ${
-                      activeCard === 4 ? 'filter-[url(#yellow-filter)]' : ''
-                    }`}
+                    width={160}
+                    height={120}
+                    className="w-auto h-28 object-contain icon-hover-yellow opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"
                   />
+                </div>
+
+                {/* Content */}
+                <div className="relative z-10 p-8">
+                  <h3 className="text-xl font-bold mb-3 text-white" style={{fontFamily: 'Nunito', fontWeight: 700}}>
+                    Affordable & Transparent Pricing
+                  </h3>
+                  <p className="text-sm max-w-[240px]" style={{color: 'rgba(255, 255, 255, 0.85)', fontFamily: 'Nunito', lineHeight: '1.6'}}>
+                    No hidden fees. Choose a plan that fits your needs (search report, filing, or full legal package) with one-page invoices that explain every cost.
+                  </p>
                 </div>
               </div>
 
               {/* Card 5 - End-to-End Support */}
               <div
-                className="relative group cursor-pointer overflow-hidden h-64"
+                className="relative group cursor-pointer overflow-hidden transition-all duration-300 hover:scale-[1.02]"
                 style={{
-                  borderRadius: '20px 0 0 0',
-                  background: 'linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), linear-gradient(145deg, rgba(12, 0, 43, 0.40) 6.6%, rgba(255, 183, 3, 0.40) 120.24%), rgba(0, 0, 0, 0.50)',
-                  boxShadow: '0 0 20px 1px rgba(255, 255, 255, 0.40) inset, 4px 4px 25.2px 0 rgba(0, 0, 0, 0.15)'
+                  borderRadius: '24px',
+                  background: 'linear-gradient(135deg, rgba(255, 183, 3, 0.08) 0%, rgba(12, 0, 43, 0.4) 100%)',
+                  border: '1px solid rgba(255, 183, 3, 0.2)',
+                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3), inset 0 0 24px rgba(255, 255, 255, 0.05)'
                 }}
                 onClick={() => setActiveCard(activeCard === 5 ? null : 5)}
               >
-                {/* Icon positioned inside the left edge */}
-                <div className="absolute left-2 top-1/2 transform -translate-y-1/2 z-10">
-                  <Image
-                    src="/figmacomp/end-to-end-support.svg"
-                    alt="End-to-End Support Icon"
-                    width={40}
-                    height={320}
-                    className={`w-8 h-full object-contain transition-all duration-300 ${
-                      activeCard === 5 ? 'filter-[url(#yellow-filter)]' : ''
-                    }`}
-                  />
-                </div>
-
-                {/* Main content - positioned at top */}
-                <div className="relative z-20 p-6 pl-12 h-full flex flex-col justify-start">
-                  <h3 className="text-xl font-semibold mb-4 text-white" style={{fontFamily: 'Nunito', fontWeight: 600}}>
+                {/* Content */}
+                <div className="relative z-10 p-8">
+                  <h3 className="text-xl font-bold mb-3 text-white" style={{fontFamily: 'Nunito', fontWeight: 700}}>
                     End-to-End Support
                   </h3>
-                  <p className="text-sm mb-4" style={{color: 'rgba(255, 255, 255, 0.90)', fontFamily: 'Nunito', lineHeight: '1.6'}}>
+                  <p className="text-sm mb-6" style={{color: 'rgba(255, 255, 255, 0.85)', fontFamily: 'Nunito', lineHeight: '1.6'}}>
                     From search to filing to post-registration monitoring, we handle filings, replies, and renewals so your brand stays protected.
                   </p>
-                </div>
 
-                {/* Complete Process - shown on active as overlay at bottom */}
-                <div className={`absolute right-4 bottom-4 bg-black/90 text-white p-3 rounded-lg transition-all duration-300 pointer-events-none z-30 max-w-[260px] ${
-                  activeCard === 5 ? 'opacity-100' : 'opacity-0'
-                }`}>
-                  <div className="text-sm font-semibold mb-2 text-yellow-300">Complete Process:</div>
-                  <ul className="space-y-1 text-xs">
-                    <li className="flex items-start">
-                      <span className="w-1.5 h-1.5 bg-yellow-300 rounded-full mt-1 mr-2 flex-shrink-0"></span>
-                      <span>AI-powered trademark search & analysis</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="w-1.5 h-1.5 bg-yellow-300 rounded-full mt-1 mr-2 flex-shrink-0"></span>
-                      <span>Expert legal review & consultation</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="w-1.5 h-1.5 bg-yellow-300 rounded-full mt-1 mr-2 flex-shrink-0"></span>
-                      <span>Complete filing & documentation</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="w-1.5 h-1.5 bg-yellow-300 rounded-full mt-1 mr-2 flex-shrink-0"></span>
-                      <span>Post-registration monitoring & renewals</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            {/* Desktop Layout - Original 2x2 Grid + Right Card */}
-            <div className="hidden lg:flex flex-row gap-6">
-              {/* Left Section - 2x2 Grid for Cards 1-4 */}
-              <div className="flex-1 grid grid-cols-2 gap-6">
-                {/* Card 1 - AI-Powered Trademark Search */}
-                <div
-                  className="p-6 text-center h-64 flex flex-col justify-center items-center relative group cursor-pointer"
-                  style={{
-                    borderRadius: '20px 0 0 0',
-                    background: 'linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), linear-gradient(145deg, rgba(12, 0, 43, 0.40) 6.6%, rgba(255, 183, 3, 0.40) 120.24%), rgba(0, 0, 0, 0.50)',
-                    boxShadow: '0 0 20px 1px rgba(255, 255, 255, 0.40) inset, 4px 4px 25.2px 0 rgba(0, 0, 0, 0.15)'
-                  }}
-                >
-                  {/* Centered text content */}
-                  <div className="z-10 my-4">
-                    <h3
-                      className="text-[20px] font-semibold mb-3 mt-4"
-                      style={{
-                        color: '#FFF',
-                        fontFamily: 'Nunito',
-                        fontStyle: 'normal',
-                        fontWeight: 600,
-                        lineHeight: '1.3'
-                      }}
-                    >
-                      AI-Powered Trademark Search
-                    </h3>
-                    <p
-                      className="text-[14px] max-w-[280px] mx-auto"
-                      style={{
-                        color: 'rgba(255, 255, 255, 0.90)',
-                        fontFamily: 'Nunito',
-                        fontStyle: 'normal',
-                        fontWeight: 400,
-                        lineHeight: '1.5'
-                      }}
-                    >
-                      Instantly scan millions of records. Our AI-powered search report finds identical and confusingly similar marks so you can decide whether to register or tweak your brand.
-                    </p>
-                    <div className="mt-2 text-xs text-yellow-300 font-medium tracking-wide hidden">
-                      trademark search, AI trademark report
-                    </div>
-                  </div>
-                  {/* Search icon below the text */}
-                  <div className="flex justify-center">
-                    <Image
-                      src="/figmacomp/searchabout.svg"
-                      alt="Search Icon"
-                      width={432}
-                      height={112}
-                      className="w-full max-w-[350px] h-auto object-contain group-hover:filter-[url(#yellow-filter)] transition-all duration-300"
-                    />
-                  </div>
-                </div>
-
-                {/* Card 2 - Expert-Led Guidance */}
-                <div
-                  className="p-6 h-64 relative group cursor-pointer"
-                  style={{
-                    borderRadius: '20px 0 0 0',
-                    background: 'linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), linear-gradient(145deg, rgba(12, 0, 43, 0.40) 6.6%, rgba(255, 183, 3, 0.40) 120.24%), rgba(0, 0, 0, 0.50)',
-                    boxShadow: '0 0 20px 1px rgba(255, 255, 255, 0.40) inset, 4px 4px 25.2px 0 rgba(0, 0, 0, 0.15)'
-                  }}
-                >
-                  {/* Text positioned in top left */}
-                  <div className="absolute top-6 left-6">
-                    <h3
-                      className="text-[18px] font-semibold mb-2"
-                      style={{
-                        color: '#FFF',
-                        fontFamily: 'Nunito',
-                        fontStyle: 'normal',
-                        fontWeight: 600,
-                        lineHeight: '1.3'
-                      }}
-                    >
-                      Expert-Led Guidance
-                    </h3>
-                    <p
-                      className="text-[13px] max-w-[180px]"
-                      style={{
-                        color: 'rgba(255, 255, 255, 0.90)',
-                        fontFamily: 'Nunito',
-                        fontStyle: 'normal',
-                        fontWeight: 400,
-                        lineHeight: '1.5'
-                      }}
-                    >
-                      Certified IP lawyers review your AI report, advise on registrability, and prepare filing documents. Clear legal answers with no jargon.
-                    </p>
-                    <div className="mt-2 text-xs text-yellow-300 font-medium tracking-wide hidden">
-                      trademark lawyer, how to register trademark
-                    </div>
-                  </div>
-                  {/* SVG positioned in top right - attached to borders */}
-                  <div className="absolute top-0 right-0">
-                    <Image
-                      src="/figmacomp/expert-guidance.svg"
-                      alt="Expert Guidance Icon"
-                      width={96}
-                      height={158}
-                      className="w-full h-full object-contain filter grayscale group-hover:filter-[url(#yellow-filter)] group-hover:grayscale-0 transition-all duration-300"
-                    />
-                  </div>
-                </div>
-
-                {/* Card 3 - Fast Processing */}
-                <div
-                  className="p-6 h-64 relative group cursor-pointer"
-                  style={{
-                    borderRadius: '20px 0 0 0',
-                    background: 'linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), linear-gradient(145deg, rgba(12, 0, 43, 0.40) 6.6%, rgba(255, 183, 3, 0.40) 120.24%), rgba(0, 0, 0, 0.50)',
-                    boxShadow: '0 0 20px 1px rgba(255, 255, 255, 0.40) inset, 4px 4px 25.2px 0 rgba(0, 0, 0, 0.15)'
-                  }}
-                >
-                  {/* Text positioned in top left */}
-                  <div className="absolute top-6 left-6">
-                    <h3
-                      className="text-[18px] font-semibold mb-2"
-                      style={{
-                        color: '#FFF',
-                        fontFamily: 'Nunito',
-                        fontStyle: 'normal',
-                        fontWeight: 600,
-                        lineHeight: '1.3'
-                      }}
-                    >
-                      Fast Processing
-                    </h3>
-                    <p
-                      className="text-[13px] max-w-[180px]"
-                      style={{
-                        color: 'rgba(255, 255, 255, 0.90)',
-                        fontFamily: 'Nunito',
-                        fontStyle: 'normal',
-                        fontWeight: 400,
-                        lineHeight: '1.5'
-                      }}
-                    >
-                      Optimised workflows cut filing time to get search results within minutes and an expert review within 24 to 48 hours.
-                    </p>
-                    <div className="mt-2 text-xs text-yellow-300 font-medium tracking-wide hidden">
-                      fast trademark search, trademark registration timeline
-                    </div>
-                  </div>
-                  {/* Icon positioned in top right - attached to borders */}
-                  <div className="absolute top-0 right-0">
-                    <Image
-                      src="/figmacomp/fast-processing.svg"
-                      alt="Fast Processing Icon"
-                      width={99}
-                      height={204}
-                      className="w-full h-full object-contain group-hover:filter-[url(#yellow-filter)] transition-all duration-300"
-                    />
-                  </div>
-                </div>
-
-                {/* Card 4 - Affordable & Transparent Pricing */}
-                <div
-                  className="p-6 h-64 relative group cursor-pointer"
-                  style={{
-                    borderRadius: '20px 0 0 0',
-                    background: 'linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), linear-gradient(145deg, rgba(12, 0, 43, 0.40) 6.6%, rgba(255, 183, 3, 0.40) 120.24%), rgba(0, 0, 0, 0.50)',
-                    boxShadow: '0 0 20px 1px rgba(255, 255, 255, 0.40) inset, 4px 4px 25.2px 0 rgba(0, 0, 0, 0.15)'
-                  }}
-                >
-                  {/* Text positioned in top left */}
-                  <div className="absolute top-6 left-6">
-                    <h3
-                      className="text-[17px] font-semibold mb-2"
-                      style={{
-                        color: '#FFF',
-                        fontFamily: 'Nunito',
-                        fontStyle: 'normal',
-                        fontWeight: 600,
-                        lineHeight: '1.3'
-                      }}
-                    >
-                      Affordable & Transparent Pricing
-                    </h3>
-                    <p
-                      className="text-[13px] max-w-[180px]"
-                      style={{
-                        color: 'rgba(255, 255, 255, 0.90)',
-                        fontFamily: 'Nunito',
-                        fontStyle: 'normal',
-                        fontWeight: 400,
-                        lineHeight: '1.5'
-                      }}
-                    >
-                      No hidden fees. Choose a plan that fits your needs (search report, filing, or full legal package) with one-page invoices that explain every cost.
-                    </p>
-                    <div className="mt-2 text-xs text-yellow-300 font-medium tracking-wide hidden">
-                      trademark cost, trademark price
-                    </div>
-                  </div>
-                  {/* Icon positioned in bottom right - attached to borders */}
-                  <div className="absolute bottom-0 right-0">
-                    <Image
-                      src="/figmacomp/affordable-pricing.svg"
-                      alt="Affordable Pricing Icon"
-                      width={187}
-                      height={136}
-                      className="w-full h-full object-contain group-hover:filter-[url(#yellow-filter)] transition-all duration-300"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              {/* Right Section - Card 5 (End-to-End Support) */}
-              <div className="w-80 flex-shrink-0">
-                <div
-                  className="relative h-[33rem] group cursor-pointer overflow-hidden"
-                  style={{
-                    borderRadius: '20px 0 0 0',
-                    background: 'linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), linear-gradient(145deg, rgba(12, 0, 43, 0.40) 6.6%, rgba(255, 183, 3, 0.40) 120.24%), rgba(0, 0, 0, 0.50)',
-                    boxShadow: '0 0 20px 1px rgba(255, 255, 255, 0.40) inset, 4px 4px 25.2px 0 rgba(0, 0, 0, 0.15)'
-                  }}
-                >
-                  {/* Icon positioned inside the left edge */}
-                  <div className="absolute left-2 top-1/2 transform -translate-y-1/2 z-10">
-                    <Image
-                      src="/figmacomp/end-to-end-support.svg"
-                      alt="End-to-End Support Icon"
-                      width={49}
-                      height={445}
-                      className="w-8 h-full object-contain group-hover:filter-[url(#yellow-filter)] transition-all duration-300"
-                    />
-                  </div>
-
-                  {/* Main content - positioned at top */}
-                  <div className="relative z-20">
-                    <div className="p-6 pl-10 text-center">
-                      <h3
-                        className="text-[22px] font-semibold mb-4"
-                        style={{
-                          color: '#FFF',
-                          fontFamily: 'Nunito',
-                          fontStyle: 'normal',
-                          fontWeight: 600,
-                          lineHeight: '1.3'
-                        }}
-                      >
-                        End-to-End Support
-                      </h3>
-                      <p
-                        className="text-[15px] mb-4"
-                        style={{
-                          color: 'rgba(255, 255, 255, 0.90)',
-                          textAlign: 'center',
-                          fontFamily: 'Nunito',
-                          fontStyle: 'normal',
-                          fontWeight: 400,
-                          lineHeight: '1.6'
-                        }}
-                      >
-                        From search to filing to post-registration monitoring, we handle filings, replies, and renewals so your brand stays protected.
-                      </p>
-                      <div className="mb-6 text-xs text-yellow-300 font-medium tracking-wide hidden">
-                        register trademark, trademark filing services
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Complete Process - shown on hover as overlay at bottom */}
-                  <div className="absolute right-15 bottom-50 bg-black/90 text-white p-3 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none z-30 max-w-[260px]">
-                    <div className="text-sm font-semibold mb-2 text-yellow-300">Complete Process:</div>
-                    <ul className="space-y-1 text-xs">
+                  {/* Process List */}
+                  <div className={`bg-white/10 backdrop-blur-sm rounded-2xl p-4 transition-all duration-500 ${
+                    activeCard === 5 ? 'opacity-100 scale-100' : 'opacity-70 scale-95'
+                  }`}>
+                    <div className="text-xs font-semibold mb-3 text-yellow-400" style={{fontFamily: 'Nunito'}}>Complete Process:</div>
+                    <ul className="space-y-2 text-xs">
                       <li className="flex items-start">
-                        <span className="w-1.5 h-1.5 bg-yellow-300 rounded-full mt-1 mr-2 flex-shrink-0"></span>
-                        <span>AI-powered trademark search & analysis</span>
+                        <span className="w-2 h-2 bg-yellow-400 rounded-full mt-1 mr-2 flex-shrink-0"></span>
+                        <span style={{color: 'rgba(255, 255, 255, 0.9)', fontFamily: 'Nunito'}}>AI-powered trademark search & analysis</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="w-1.5 h-1.5 bg-yellow-300 rounded-full mt-1 mr-2 flex-shrink-0"></span>
-                        <span>Expert legal review & consultation</span>
+                        <span className="w-2 h-2 bg-yellow-400 rounded-full mt-1 mr-2 flex-shrink-0"></span>
+                        <span style={{color: 'rgba(255, 255, 255, 0.9)', fontFamily: 'Nunito'}}>Expert legal review & consultation</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="w-1.5 h-1.5 bg-yellow-300 rounded-full mt-1 mr-2 flex-shrink-0"></span>
-                        <span>Complete filing & documentation</span>
+                        <span className="w-2 h-2 bg-yellow-400 rounded-full mt-1 mr-2 flex-shrink-0"></span>
+                        <span style={{color: 'rgba(255, 255, 255, 0.9)', fontFamily: 'Nunito'}}>Complete filing & documentation</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="w-1.5 h-1.5 bg-yellow-300 rounded-full mt-1 mr-2 flex-shrink-0"></span>
-                        <span>Post-registration monitoring & renewals</span>
+                        <span className="w-2 h-2 bg-yellow-400 rounded-full mt-1 mr-2 flex-shrink-0"></span>
+                        <span style={{color: 'rgba(255, 255, 255, 0.9)', fontFamily: 'Nunito'}}>Post-registration monitoring & renewals</span>
                       </li>
                     </ul>
                   </div>
                 </div>
               </div>
             </div>
+            {/* Desktop Layout - Professional Grid Design */}
+            <div className="hidden lg:flex flex-row gap-8">
+              {/* Left Section - 2x2 Grid for Cards 1-4 */}
+              <div className="flex-1 grid grid-cols-2 gap-8">
+                {/* Card 1 - AI-Powered Trademark Search */}
+                <div
+                  className="relative text-center h-80 flex flex-col group cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+                  style={{
+                    borderRadius: '24px',
+                    background: 'linear-gradient(135deg, rgba(255, 183, 3, 0.08) 0%, rgba(12, 0, 43, 0.4) 100%)',
+                    border: '1px solid rgba(255, 183, 3, 0.2)',
+                    boxShadow: '0 12px 48px rgba(0, 0, 0, 0.4), inset 0 0 32px rgba(255, 255, 255, 0.05)'
+                  }}
+                >
+                  {/* Content */}
+                  <div className="z-10 p-8 flex-1 flex flex-col">
+                    <h3
+                      className="text-[22px] font-bold mb-4"
+                      style={{
+                        color: '#FFF',
+                        fontFamily: 'Nunito',
+                        fontWeight: 700,
+                        lineHeight: '1.3'
+                      }}
+                    >
+                      AI-Powered Trademark Search
+                    </h3>
+                    <p
+                      className="text-[15px] px-4 mb-6"
+                      style={{
+                        color: 'rgba(255, 255, 255, 0.85)',
+                        fontFamily: 'Nunito',
+                        fontWeight: 400,
+                        lineHeight: '1.6'
+                      }}
+                    >
+                      Instantly scan millions of records. Our AI-powered search report finds identical and confusingly similar marks.
+                    </p>
+                    
+                    {/* Icon Container */}
+                    <div className="flex justify-center mt-auto">
+                      <Image
+                        src="/figmacomp/searchabout.svg"
+                        alt="Search Icon"
+                        width={350}
+                        height={100}
+                        className="w-full max-w-[300px] h-auto object-contain icon-hover-yellow group-hover:scale-110 opacity-70 group-hover:opacity-100"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Card 2 - Expert-Led Guidance */}
+                <div
+                  className="relative h-80 group cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl overflow-hidden"
+                  style={{
+                    borderRadius: '24px',
+                    background: 'linear-gradient(135deg, rgba(255, 183, 3, 0.08) 0%, rgba(12, 0, 43, 0.4) 100%)',
+                    border: '1px solid rgba(255, 183, 3, 0.2)',
+                    boxShadow: '0 12px 48px rgba(0, 0, 0, 0.4), inset 0 0 32px rgba(255, 255, 255, 0.05)'
+                  }}
+                >
+                  {/* Icon - top right */}
+                  <div className="absolute top-0 right-0 z-10">
+                    <Image
+                      src="/figmacomp/expert-guidance.svg"
+                      alt="Expert Guidance Icon"
+                      width={120}
+                      height={180}
+                      className="w-auto h-44 object-contain icon-hover-yellow opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"
+                    />
+                  </div>
+
+                  {/* Content */}
+                  <div className="relative z-10 p-8">
+                    <h3
+                      className="text-[20px] font-bold mb-3"
+                      style={{
+                        color: '#FFF',
+                        fontFamily: 'Nunito',
+                        fontWeight: 700,
+                        lineHeight: '1.3'
+                      }}
+                    >
+                      Expert-Led Guidance
+                    </h3>
+                    <p
+                      className="text-[14px] max-w-[200px]"
+                      style={{
+                        color: 'rgba(255, 255, 255, 0.85)',
+                        fontFamily: 'Nunito',
+                        fontWeight: 400,
+                        lineHeight: '1.6'
+                      }}
+                    >
+                      Certified IP lawyers review your AI report, advise on registrability, and prepare filing documents. Clear legal answers with no jargon.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Card 3 - Fast Processing */}
+                <div
+                  className="relative h-80 group cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl overflow-hidden"
+                  style={{
+                    borderRadius: '24px',
+                    background: 'linear-gradient(135deg, rgba(255, 183, 3, 0.08) 0%, rgba(12, 0, 43, 0.4) 100%)',
+                    border: '1px solid rgba(255, 183, 3, 0.2)',
+                    boxShadow: '0 12px 48px rgba(0, 0, 0, 0.4), inset 0 0 32px rgba(255, 255, 255, 0.05)'
+                  }}
+                >
+                  {/* Icon - top right */}
+                  <div className="absolute top-0 right-0 z-10">
+                    <Image
+                      src="/figmacomp/fast-processing.svg"
+                      alt="Fast Processing Icon"
+                      width={120}
+                      height={240}
+                      className="w-auto h-48 object-contain icon-hover-yellow opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"
+                    />
+                  </div>
+
+                  {/* Content */}
+                  <div className="relative z-10 p-8">
+                    <h3
+                      className="text-[20px] font-bold mb-3"
+                      style={{
+                        color: '#FFF',
+                        fontFamily: 'Nunito',
+                        fontWeight: 700,
+                        lineHeight: '1.3'
+                      }}
+                    >
+                      Fast Processing
+                    </h3>
+                    <p
+                      className="text-[14px] max-w-[200px]"
+                      style={{
+                        color: 'rgba(255, 255, 255, 0.85)',
+                        fontFamily: 'Nunito',
+                        fontWeight: 400,
+                        lineHeight: '1.6'
+                      }}
+                    >
+                      Optimised workflows cut filing time to get search results within minutes and an expert review within 24 to 48 hours.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Card 4 - Affordable & Transparent Pricing */}
+                <div
+                  className="relative h-80 group cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl overflow-hidden"
+                  style={{
+                    borderRadius: '24px',
+                    background: 'linear-gradient(135deg, rgba(255, 183, 3, 0.08) 0%, rgba(12, 0, 43, 0.4) 100%)',
+                    border: '1px solid rgba(255, 183, 3, 0.2)',
+                    boxShadow: '0 12px 48px rgba(0, 0, 0, 0.4), inset 0 0 32px rgba(255, 255, 255, 0.05)'
+                  }}
+                >
+                  {/* Icon - bottom right */}
+                  <div className="absolute bottom-0 right-0 z-10">
+                    <Image
+                      src="/figmacomp/affordable-pricing.svg"
+                      alt="Affordable Pricing Icon"
+                      width={200}
+                      height={150}
+                      className="w-auto h-36 object-contain icon-hover-yellow opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"
+                    />
+                  </div>
+
+                  {/* Content */}
+                  <div className="relative z-10 p-8">
+                    <h3
+                      className="text-[19px] font-bold mb-3"
+                      style={{
+                        color: '#FFF',
+                        fontFamily: 'Nunito',
+                        fontWeight: 700,
+                        lineHeight: '1.3'
+                      }}
+                    >
+                      Affordable & Transparent Pricing
+                    </h3>
+                    <p
+                      className="text-[14px] max-w-[200px]"
+                      style={{
+                        color: 'rgba(255, 255, 255, 0.85)',
+                        fontFamily: 'Nunito',
+                        fontWeight: 400,
+                        lineHeight: '1.6'
+                      }}
+                    >
+                      No hidden fees. Choose a plan that fits your needs (search report, filing, or full legal package) with one-page invoices that explain every cost.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Section - Card 5 (End-to-End Support) */}
+              <div className="w-96 flex-shrink-0">
+                <div
+                  className="relative h-[41.5rem] group cursor-pointer overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+                  style={{
+                    borderRadius: '24px',
+                    background: 'linear-gradient(135deg, rgba(255, 183, 3, 0.12) 0%, rgba(12, 0, 43, 0.5) 100%)',
+                    border: '1px solid rgba(255, 183, 3, 0.3)',
+                    boxShadow: '0 12px 48px rgba(0, 0, 0, 0.4), inset 0 0 32px rgba(255, 255, 255, 0.05)'
+                  }}
+                >
+                  {/* Main content */}
+                  <div className="relative z-20 p-8 h-full flex flex-col">
+                    <h3
+                      className="text-[24px] font-bold mb-4 text-center"
+                      style={{
+                        color: '#FFF',
+                        fontFamily: 'Nunito',
+                        fontWeight: 700,
+                        lineHeight: '1.3'
+                      }}
+                    >
+                      End-to-End Support
+                    </h3>
+                    <p
+                      className="text-[16px] mb-8 text-center"
+                      style={{
+                        color: 'rgba(255, 255, 255, 0.85)',
+                        fontFamily: 'Nunito',
+                        fontWeight: 400,
+                        lineHeight: '1.6'
+                      }}
+                    >
+                      From search to filing to post-registration monitoring, we handle filings, replies, and renewals so your brand stays protected.
+                    </p>
+
+                    {/* Process Steps - Always Visible */}
+                    <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-6 flex-1 flex flex-col justify-center">
+                      <div className="text-base font-bold mb-6 text-yellow-400 text-center" style={{fontFamily: 'Nunito'}}>Complete Process</div>
+                      <ul className="space-y-4">
+                        <li className="flex items-start group/item">
+                          <div className="w-8 h-8 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mt-0.5 mr-3 flex-shrink-0 group-hover/item:scale-110 transition-transform">
+                            <span className="text-white font-bold text-sm" style={{fontFamily: 'Nunito'}}>1</span>
+                          </div>
+                          <span className="text-sm leading-relaxed" style={{color: 'rgba(255, 255, 255, 0.9)', fontFamily: 'Nunito'}}>AI-powered trademark search & analysis</span>
+                        </li>
+                        <li className="flex items-start group/item">
+                          <div className="w-8 h-8 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mt-0.5 mr-3 flex-shrink-0 group-hover/item:scale-110 transition-transform">
+                            <span className="text-white font-bold text-sm" style={{fontFamily: 'Nunito'}}>2</span>
+                          </div>
+                          <span className="text-sm leading-relaxed" style={{color: 'rgba(255, 255, 255, 0.9)', fontFamily: 'Nunito'}}>Expert legal review & consultation</span>
+                        </li>
+                        <li className="flex items-start group/item">
+                          <div className="w-8 h-8 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mt-0.5 mr-3 flex-shrink-0 group-hover/item:scale-110 transition-transform">
+                            <span className="text-white font-bold text-sm" style={{fontFamily: 'Nunito'}}>3</span>
+                          </div>
+                          <span className="text-sm leading-relaxed" style={{color: 'rgba(255, 255, 255, 0.9)', fontFamily: 'Nunito'}}>Complete filing & documentation</span>
+                        </li>
+                        <li className="flex items-start group/item">
+                          <div className="w-8 h-8 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mt-0.5 mr-3 flex-shrink-0 group-hover/item:scale-110 transition-transform">
+                            <span className="text-white font-bold text-sm" style={{fontFamily: 'Nunito'}}>4</span>
+                          </div>
+                          <span className="text-sm leading-relaxed" style={{color: 'rgba(255, 255, 255, 0.9)', fontFamily: 'Nunito'}}>Post-registration monitoring & renewals</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           {/* Trust & Proof line */}
-          <div className="w-full text-center mt-8">
-            <span className="text-xs sm:text-sm text-neutral-300 font-medium tracking-wide">
-              Trusted by entrepreneurs and startups with official filings, attorney review, and secure document handling.
-            </span>
+          <div className="w-full text-center mt-12 px-6">
+            <div 
+              className="inline-flex items-center gap-3 px-8 py-4 rounded-full"
+              style={{
+                background: 'linear-gradient(135deg, rgba(255, 183, 3, 0.1) 0%, rgba(12, 0, 43, 0.3) 100%)',
+                border: '1px solid rgba(255, 183, 3, 0.2)',
+                boxShadow: '0 4px 16px rgba(0, 0, 0, 0.2)'
+              }}
+            >
+              <span className="text-sm font-medium" style={{color: 'rgba(255, 255, 255, 0.9)', fontFamily: 'Nunito'}}>
+                Trusted by 5,000+ entrepreneurs and startups with official filings, attorney review, and secure document handling.
+              </span>
+            </div>
           </div>
         </div>
       </div>

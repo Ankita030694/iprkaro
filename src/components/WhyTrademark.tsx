@@ -426,11 +426,11 @@ export default function WhyTrademark() {
             <div
               className="flex p-1.5 md:p-2.5 justify-center items-center self-stretch rounded-[14px] md:rounded-[20px] border border-white/[0.15] md:border-2 backdrop-blur-[16px]"
               style={{
-                background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.62) 0%, rgba(255, 255, 255, 0.62) 100%)',
+                background: 'linear-gradient(135deg, rgba(138, 56, 245, 0.25) 0%, rgba(255, 183, 3, 0.15) 50%, rgba(138, 56, 245, 0.25) 100%)',
               }}
             >
               {/* Mobile Layout - Vertical Stack */}
-              <div className="md:hidden flex flex-col items-center gap-2 w-full">
+              <div className="md:hidden flex flex-col items-center gap-2 w-full px-2 py-1">
                 {/* Google Icon and 4.7 Rating - Top */}
                 <div className="flex items-center justify-center gap-1.5">
                   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 20 21" fill="none" className="flex-shrink-0">
@@ -503,7 +503,7 @@ export default function WhyTrademark() {
             <div
               className="flex flex-col py-2.5 pl-2.5 pr-[119px] lg:pr-[80px] items-start self-stretch rounded-[20px] lg:rounded-[16px] border-2 border-white/[0.15] backdrop-blur-[16px]"
               style={{
-                background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.62) 0%, rgba(255, 255, 255, 0.62) 100%)',
+                background: 'linear-gradient(135deg, rgba(138, 56, 245, 0.25) 0%, rgba(255, 183, 3, 0.15) 50%, rgba(138, 56, 245, 0.25) 100%)',
               }}
             >
              
@@ -540,11 +540,11 @@ export default function WhyTrademark() {
             <div
               className="flex p-2.5 px-6 lg:px-4 justify-center items-center self-stretch rounded-[20px] lg:rounded-[16px] border-2 border-white/[0.15] backdrop-blur-[16px]"
               style={{
-                background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.62) 0%, rgba(255, 255, 255, 0.62) 100%)',
+                background: 'linear-gradient(135deg, rgba(138, 56, 245, 0.25) 0%, rgba(255, 183, 3, 0.15) 50%, rgba(138, 56, 245, 0.25) 100%)',
               }}
             >
               <div className="w-full">
-                <div className="text-white text-center font-nunito text-[25px] lg:text-[20px] font-medium leading-[30px] lg:leading-[26px] mb-4 lg:mb-3">
+                <div className="text-white text-center font-nunito text-[18px] lg:text-[20px] font-medium leading-[30px] lg:leading-[26px] mb-4 lg:mb-3">
                   We work with Guidelines of
                 </div>
                 {/* Mobile Layout - Single Row */}
@@ -633,10 +633,9 @@ export default function WhyTrademark() {
             {/* Mobile Layout */}
             <div className="md:hidden w-full">
               <div
-                className="w-full rounded-[5px] p-4"
+                className="w-full rounded-[20px] p-4 border-2 border-white/[0.15] backdrop-blur-[16px]"
                 style={{
-                  background: 'linear-gradient(145deg, rgba(12, 0, 43, 0.20) 6.6%, rgba(255, 183, 3, 0.20) 120.24%), rgba(0, 0, 0, 0.78)',
-                  boxShadow: '0 0 20px 1px rgba(255, 255, 255, 0.10) inset'
+                  background: 'linear-gradient(135deg, rgba(138, 56, 245, 0.25) 0%, rgba(255, 183, 3, 0.15) 50%, rgba(138, 56, 245, 0.25) 100%)',
                 }}
               >
                 <div className="grid grid-cols-2 grid-rows-3 gap-4">
@@ -697,7 +696,10 @@ export default function WhyTrademark() {
           {/* Step 1: Instant AI-Powered Trademark Search */}
           <div className="flex-1 flex justify-center items-center">
             <div
-              className="relative w-full h-full rounded-[25px] lg:rounded-[20px] border-[6px] lg:border-[4px] border-white/[0.07] bg-white/[0.05] flex flex-col overflow-hidden group transition-all duration-300"
+              className="relative w-full h-full rounded-[25px] lg:rounded-[20px] border-2 border-white/[0.15] backdrop-blur-[16px] flex flex-col overflow-hidden group transition-all duration-300"
+              style={{
+                background: 'linear-gradient(135deg, rgba(138, 56, 245, 0.25) 0%, rgba(255, 183, 3, 0.15) 50%, rgba(138, 56, 245, 0.25) 100%)',
+              }}
             >
               {/* Background Image - heross.png in bottom right */}
               <div className="absolute bottom-[-100px] lg:bottom-[-80px] right-[-100px] lg:right-[-80px] z-0">
@@ -737,7 +739,10 @@ export default function WhyTrademark() {
             {/* Step 2: Comprehensive Trademark Search Report */}
             <div className="flex-1 flex justify-center items-center">
               <div
-                className="relative w-full rounded-[25px] lg:rounded-[20px] border-[6px] lg:border-[4px] border-white/[0.07] bg-white/[0.05] flex flex-col overflow-hidden group transition-all duration-300"
+                className="relative w-full rounded-[25px] lg:rounded-[20px] border-2 border-white/[0.15] backdrop-blur-[16px] flex flex-col overflow-hidden group transition-all duration-300"
+                style={{
+                  background: 'linear-gradient(135deg, rgba(138, 56, 245, 0.25) 0%, rgba(255, 183, 3, 0.15) 50%, rgba(138, 56, 245, 0.25) 100%)',
+                }}
               >
                 <div className="relative z-10 flex flex-col h-full">
                   <div className="flex flex-col justify-start px-3 md:px-4 lg:px-5 py-3 md:py-4 lg:py-4 items-start">
@@ -754,7 +759,10 @@ export default function WhyTrademark() {
             {/* Step 3: Know Your Approval Chances */}
             <div className="flex-1 flex justify-center items-center">
               <div
-                className="relative w-full rounded-[25px] lg:rounded-[20px] border-[6px] lg:border-[4px] border-white/[0.07] bg-white/[0.05] flex flex-col overflow-hidden group transition-all duration-300"
+                className="relative w-full rounded-[25px] lg:rounded-[20px] border-2 border-white/[0.15] backdrop-blur-[16px] flex flex-col overflow-hidden group transition-all duration-300"
+                style={{
+                  background: 'linear-gradient(135deg, rgba(138, 56, 245, 0.25) 0%, rgba(255, 183, 3, 0.15) 50%, rgba(138, 56, 245, 0.25) 100%)',
+                }}
               >
                 <div className="relative z-10 flex flex-col h-full">
                   <div className="flex flex-col justify-start px-3 md:px-4 lg:px-5 py-3 md:py-4 lg:py-4 items-start">
@@ -772,7 +780,10 @@ export default function WhyTrademark() {
           {/* Call to Action: Check Your Registrability Now */}
           <div className="flex-1 flex flex-col items-stretch min-w-[260px] lg:min-w-[220px]">
             <div
-              className="relative w-full h-full rounded-[25px] lg:rounded-[20px] border-[6px] lg:border-[4px] border-[#FFB703]/[0.2] bg-white/[0.03] flex flex-col items-center justify-center px-6 lg:px-4 py-8 lg:py-6 overflow-hidden group transition-all duration-300"
+              className="relative w-full h-full rounded-[25px] lg:rounded-[20px] border-2 border-white/[0.15] backdrop-blur-[16px] flex flex-col items-center justify-center px-6 lg:px-4 py-8 lg:py-6 overflow-hidden group transition-all duration-300"
+              style={{
+                background: 'linear-gradient(135deg, rgba(138, 56, 245, 0.3) 0%, rgba(255, 183, 3, 0.2) 50%, rgba(138, 56, 245, 0.3) 100%)',
+              }}
             >
               <h3 className="text-white font-nunito text-[20px] md:text-[24px] lg:text-[20px] font-semibold leading-tight mb-2 lg:mb-1.5 text-center -mt-20">
                 Check Your Registrability Now
@@ -836,7 +847,10 @@ export default function WhyTrademark() {
           {/* Step 1: Instant AI-Powered Trademark Search */}
           <div className="flex justify-center items-center">
             <div
-              className="relative w-full max-w-sm h-48 rounded-[25px] border-[6px] border-white/[0.07] bg-white/[0.05] flex flex-col overflow-hidden group transition-all duration-300"
+              className="relative w-full max-w-sm h-48 rounded-[20px] border-2 border-white/[0.15] backdrop-blur-[16px] flex flex-col overflow-hidden group transition-all duration-300"
+              style={{
+                background: 'linear-gradient(135deg, rgba(138, 56, 245, 0.25) 0%, rgba(255, 183, 3, 0.15) 50%, rgba(138, 56, 245, 0.25) 100%)',
+              }}
             >
               {/* Background Image - heross.png in bottom right */}
               <div className="absolute bottom-[-20px] right-0 z-0">
@@ -874,7 +888,10 @@ export default function WhyTrademark() {
           {/* Step 2: Comprehensive Trademark Search Report */}
           <div className="flex justify-center items-center">
             <div
-              className="relative w-full max-w-sm h-48 rounded-[25px] border-[6px] border-white/[0.07] bg-white/[0.05] flex flex-col overflow-hidden group transition-all duration-300"
+              className="relative w-full max-w-sm h-48 rounded-[20px] border-2 border-white/[0.15] backdrop-blur-[16px] flex flex-col overflow-hidden group transition-all duration-300"
+              style={{
+                background: 'linear-gradient(135deg, rgba(138, 56, 245, 0.25) 0%, rgba(255, 183, 3, 0.15) 50%, rgba(138, 56, 245, 0.25) 100%)',
+              }}
             >
               <div className="relative z-10 flex flex-col h-full">
                 <div className="flex flex-col justify-start px-3 py-3 items-start">
@@ -891,7 +908,10 @@ export default function WhyTrademark() {
           {/* Step 3: Know Your Approval Chances */}
           <div className="flex justify-center items-center">
             <div
-              className="relative w-full max-w-sm h-48 rounded-[25px] border-[6px] border-white/[0.07] bg-white/[0.05] flex flex-col overflow-hidden group transition-all duration-300"
+              className="relative w-full max-w-sm h-48 rounded-[20px] border-2 border-white/[0.15] backdrop-blur-[16px] flex flex-col overflow-hidden group transition-all duration-300"
+              style={{
+                background: 'linear-gradient(135deg, rgba(138, 56, 245, 0.25) 0%, rgba(255, 183, 3, 0.15) 50%, rgba(138, 56, 245, 0.25) 100%)',
+              }}
             >
               <div className="relative z-10 flex flex-col h-full">
                 <div className="flex flex-col justify-start px-3 py-3 items-start">
@@ -908,7 +928,10 @@ export default function WhyTrademark() {
           {/* Step 4: Call to Action */}
           <div className="flex justify-center items-center">
             <div
-              className="relative w-full max-w-sm rounded-[25px] border-[6px] border-[#FFB703]/[0.2] bg-white/[0.03] flex flex-col items-center justify-center px-6 py-8 overflow-hidden group transition-all duration-300"
+              className="relative w-full max-w-sm rounded-[20px] border-2 border-white/[0.15] backdrop-blur-[16px] flex flex-col items-center justify-center px-6 py-8 overflow-hidden group transition-all duration-300"
+              style={{
+                background: 'linear-gradient(135deg, rgba(138, 56, 245, 0.3) 0%, rgba(255, 183, 3, 0.2) 50%, rgba(138, 56, 245, 0.3) 100%)',
+              }}
             >
               <h3 className="text-white font-nunito text-[18px] font-semibold leading-tight mb-2 text-center">
                 Check Your Registrability Now

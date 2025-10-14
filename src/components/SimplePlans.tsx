@@ -1,9 +1,13 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 export default function SimplePlans() {
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
+  const [activeCardIndex, setActiveCardIndex] = useState(1); // Start with middle card (most popular)
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const hasInitiallyScrolled = useRef(false);
 
   const plans = [
     {
@@ -53,6 +57,78 @@ export default function SimplePlans() {
     }
   ];
 
+  // Scroll to most popular card on initial load (mobile only)
+  useEffect(() => {
+    const isMobile = window.innerWidth < 1024;
+    if (isMobile && scrollContainerRef.current && cardRefs.current[1] && !hasInitiallyScrolled.current) {
+      const container = scrollContainerRef.current;
+      const card = cardRefs.current[1];
+      
+      // Use requestAnimationFrame and setTimeout for Safari compatibility
+      // Use 'auto' for initial scroll to avoid Safari smooth scroll issues on page load
+      requestAnimationFrame(() => {
+        setTimeout(() => {
+          if (container && card && !hasInitiallyScrolled.current) {
+            const scrollLeft = card.offsetLeft - (container.offsetWidth - card.offsetWidth) / 2;
+            container.scrollTo({ left: scrollLeft, behavior: 'auto' });
+            hasInitiallyScrolled.current = true;
+          }
+        }, 150);
+      });
+    }
+  }, []);
+
+  // Handle scroll to update active card indicator
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+
+    const handleScroll = () => {
+      const isMobile = window.innerWidth < 1024;
+      if (!isMobile) return;
+
+      // Use requestAnimationFrame for smoother updates on Safari
+      requestAnimationFrame(() => {
+        const scrollLeft = container.scrollLeft;
+        const containerWidth = container.offsetWidth;
+        const scrollCenter = scrollLeft + containerWidth / 2;
+        
+        // Find which card is closest to center
+        let closestIndex = 0;
+        let closestDistance = Infinity;
+        
+        cardRefs.current.forEach((card, index) => {
+          if (card) {
+            const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+            const distance = Math.abs(scrollCenter - cardCenter);
+            if (distance < closestDistance) {
+              closestDistance = distance;
+              closestIndex = index;
+            }
+          }
+        });
+        
+        setActiveCardIndex(closestIndex);
+      });
+    };
+
+    container.addEventListener('scroll', handleScroll, { passive: true });
+    return () => container.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToCard = (index: number) => {
+    if (scrollContainerRef.current && cardRefs.current[index]) {
+      const container = scrollContainerRef.current;
+      const card = cardRefs.current[index];
+      
+      // Use requestAnimationFrame for Safari compatibility
+      requestAnimationFrame(() => {
+        const scrollLeft = card.offsetLeft - (container.offsetWidth - card.offsetWidth) / 2;
+        container.scrollTo({ left: scrollLeft, behavior: 'smooth' });
+      });
+    }
+  };
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -68,10 +144,14 @@ export default function SimplePlans() {
             padding-left: 5.76px;
             padding-right: 5.76px;
             gap: 11.52px;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
           }
           /* Ensure cards maintain proper height on mobile */
           .mobile-scroll-container > div {
             min-height: 360px !important;
+            scroll-snap-align: center;
+            scroll-snap-stop: always;
           }
         }
         @media (min-width: 1024px) {
@@ -105,6 +185,7 @@ export default function SimplePlans() {
 
           {/* Pricing Cards */}
           <div
+            ref={scrollContainerRef}
             className="mobile-scroll-container flex flex-row overflow-x-auto overflow-y-hidden justify-start items-start lg:flex-row lg:items-center lg:justify-center lg:overflow-x-visible mb-6 md:mb-10 mt-6 md:mt-10 gap-3 lg:gap-5 pb-3 px-2 lg:px-0"
             style={{ 
               scrollbarWidth: 'none', 
@@ -115,6 +196,7 @@ export default function SimplePlans() {
             {plans.map((plan, index) => (
               <div
                 key={plan.id}
+                ref={(el) => (cardRefs.current[index] = el)}
                 className={`relative cursor-pointer transition-all duration-300 ease-in-out flex flex-col items-center flex-shrink-0 ${
                   index === 1 ? '' : ''
                 }`}
@@ -253,6 +335,25 @@ export default function SimplePlans() {
             ))}
           </div>
 
+          {/* Navigation Dots - Mobile Only */}
+          <div className="flex justify-center items-center gap-2 mt-4 lg:hidden">
+            {plans.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => scrollToCard(index)}
+                className="transition-all duration-300"
+                aria-label={`Go to plan ${index + 1}`}
+                style={{
+                  width: activeCardIndex === index ? '24px' : '8px',
+                  height: '8px',
+                  borderRadius: '4px',
+                  backgroundColor: activeCardIndex === index ? '#FFB703' : 'rgba(255, 255, 255, 0.4)',
+                  border: 'none',
+                  cursor: 'pointer'
+                }}
+              />
+            ))}
+          </div>
          
         </div>
       </div>

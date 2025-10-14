@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const OurHeadOffice = () => {
@@ -91,16 +92,16 @@ const OurHeadOffice = () => {
               </h2>
               <div className="flex flex-col gap-6 sm:gap-7">
                 <a 
-                  href="tel:+918700343611" 
+                  href="tel:+919289707648" 
                   className="text-white font-nunito text-lg sm:text-xl md:text-2xl lg:text-2xl font-normal leading-relaxed hover:text-[#FFB703] transition-colors"
                 >
-                  +918700343611
+                  +91-9289707648
                 </a>
                 <a 
-                  href="mailto:notify@amalegalsolutions.com" 
+                  href="mailto:info@iprkaro.com" 
                   className="text-white font-nunito text-lg sm:text-xl md:text-2xl lg:text-2xl font-normal leading-relaxed hover:text-[#FFB703] transition-colors break-words"
                 >
-                  notify@amalegalsolutions.com
+                  info@iprkaro.com
                 </a>
               </div>
             </div>
@@ -113,7 +114,9 @@ const OurHeadOffice = () => {
         {/* Right Section */}
         <div className="flex flex-col gap-10 sm:gap-12 md:gap-14 lg:gap-14 w-full lg:max-w-[794px]">
           {/* Google Rating Section */}
+          <a href = "https://maps.app.goo.gl/cYLbGkykCPV5b2Xg7" target='_blank'>
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-8 sm:gap-10 md:gap-12">
+
             <div className="flex items-center gap-4 sm:gap-[15px] flex-shrink-0">
               <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-7 h-7 sm:w-[25px] sm:h-[25px]">
                 <g clipPath="url(#clip0_977_4548)">
@@ -142,6 +145,7 @@ const OurHeadOffice = () => {
               </p>
             </div>
           </div>
+          </a>
 
           {/* Why Trademark Section */}
           <div className="flex flex-col gap-6 sm:gap-8 md:gap-8">

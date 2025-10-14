@@ -208,7 +208,7 @@ export default function TrademarkRegistrationPage() {
   return (
     <div className="min-h-screen pb-24 md:pb-8 overflow-x-hidden pt-20" style={{ 
       background: '#0C002B',
-      backgroundImage: 'linear-gradient(to right top, #0c002b, #0c002b,rgb(25, 10, 60),rgb(92, 75, 130), #ffffff)',
+      backgroundImage: 'linear-gradient(to right top, #0c002b, #0c002b,rgb(25, 10, 60),rgb(80, 60, 124),rgb(79, 75, 75))',
       backgroundSize: '100% 100%',
       backgroundPosition: 'center top',
       backgroundRepeat: 'no-repeat'

@@ -29,25 +29,19 @@ const Footer: React.FC = () => {
             <div className="lg:hidden">
               <h3 className="text-sm font-semibold mb-4 uppercase">Follow us on</h3>
               <div className="flex space-x-10">
-                {/* YouTube */}
-                <a href="#" className="text-red-600 hover:text-red-500 transition-colors">
-                  <i className="fab fa-youtube text-xl"></i>
-                </a>
+                 {/* YouTube */}
+              <a href="https://www.linkedin.com/company/iprkaro/" className="text-white hover:text-blue-500 transition-colors">
+                <i className="fab fa-linkedin-in text-xl"></i>
+              </a>
                 
-                {/* Facebook */}
-                <a href="https://www.facebook.com/profile.php?id=61580675227718" className="text-blue-600 hover:text-blue-500 transition-colors">
-                  <i className="fab fa-facebook-f text-xl"></i>
-                </a>
-                
-                {/* Instagram */}
-                <a href="#" className="text-pink-500 hover:text-pink-400 transition-colors">
-                  <i className="fab fa-instagram text-xl"></i>
-                </a>
-                
-                {/* X */}
-                <a href="#" className="text-white hover:text-gray-300 transition-colors flex items-center justify-center w-5 h-5 text-xl font-bold">
-                  <span className="text-xl font-bold">𝕏</span>
-                </a>
+              {/* Instagram */}
+              <a href="https://www.instagram.com/iprkaro" className="text-pink-500 hover:text-pink-400 transition-colors">
+                <i className="fab fa-instagram text-xl"></i>
+              </a>
+              {/* Facebook */}
+              <a href="https://www.facebook.com/profile.php?id=61580675227718" className="text-blue-600 hover:text-blue-500 transition-colors">
+                <i className="fab fa-facebook-f text-xl"></i>
+              </a>
               </div>
             </div>
           </div>

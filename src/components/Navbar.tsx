@@ -48,6 +48,7 @@ export default function Navbar() {
                 <div className="absolute bottom-[-17px] left-1/2 transform -translate-x-1/2 w-[60px] h-0.5 bg-[#ffb703] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
             </Link>
+           
             {/* <Link href="/blog"> 
               <div className="text-white text-[17px] font-normal leading-normal cursor-pointer relative group hover:text-[#ffb703] transition-colors duration-300">
                 Blogs
@@ -114,23 +115,117 @@ export default function Navbar() {
         >
           {/* Mobile Navigation Links */}
           <div className="flex flex-col justify-start items-start h-full px-8 pt-32 space-y-8">
-            {/* Top Section */}
-            <div className="space-y-6 text-left">
-              <Link href="/terms-and-conditions" onClick={closeMobileMenu}>
-                <div className="text-white text-lg font-normal cursor-pointer relative group hover:text-[#ffb703] transition-all duration-300">
-                  Terms of Services
+            {/* Main Navigation Links (matching desktop) */}
+            <div className="space-y-10 text-left">
+              <Link href="/" onClick={closeMobileMenu}>
+                <div 
+                  className="cursor-pointer relative group hover:text-[#ffb703] transition-all duration-300 mb-3"
+                  style={{
+                    color: 'rgba(255, 255, 255, 0.60)',
+                    fontFamily: 'Nunito',
+                    fontSize: '40px',
+                    fontStyle: 'normal',
+                    fontWeight: '500',
+                    lineHeight: '40px'
+                  }}
+                >
+                  Home
                 </div>
               </Link>
-            
-              {/* <Link href="/blog" onClick={closeMobileMenu}> 
-                <div className="text-white text-lg font-normal cursor-pointer relative group hover:text-[#ffb703] transition-all duration-300">
-                  Blogs
+              <Link href="/services" onClick={closeMobileMenu}> 
+                <div 
+                  className="cursor-pointer relative group hover:text-[#ffb703] transition-all duration-300 mb-3"
+                  style={{
+                    color: 'rgba(255, 255, 255, 0.60)',
+                    fontFamily: 'Nunito',
+                    fontSize: '40px',
+                    fontStyle: 'normal',
+                    fontWeight: '500',
+                    lineHeight: '40px'
+                  }}
+                >
+                  Services
                 </div>
-              </Link> */}
+              </Link>
+             
+              <Link href="/about" onClick={closeMobileMenu}> 
+                <div 
+                  className="cursor-pointer relative group hover:text-[#ffb703] transition-all duration-300 mb-3"
+                  style={{
+                    color: 'rgba(255, 255, 255, 0.60)',
+                    fontFamily: 'Nunito',
+                    fontSize: '40px',
+                    fontStyle: 'normal',
+                    fontWeight: '500',
+                    lineHeight: '40px'
+                  }}
+                >
+                  About Us
+                </div>
+              </Link>
+              <Link href="/contact" onClick={closeMobileMenu}> 
+                <div 
+                  className="cursor-pointer relative group hover:text-[#ffb703] transition-all duration-300 mb-3"
+                  style={{
+                    color: 'rgba(255, 255, 255, 0.60)',
+                    fontFamily: 'Nunito',
+                    fontSize: '40px',
+                    fontStyle: 'normal',
+                    fontWeight: '500',
+                    lineHeight: '40px'
+                  }}
+                >
+                  Contact Us
+                </div>
+              </Link>
             </div>
 
             {/* Faded Line Divider */}
             <div className="w-1/2 h-1 bg-gradient-to-r from-white to-transparent rounded-full"></div>
+
+            {/* Secondary Links */}
+            <div className="space-y-6 text-left">
+              <Link href="/terms-and-conditions" onClick={closeMobileMenu}>
+                <div className="text-white text-lg font-normal cursor-pointer relative group hover:text-[#ffb703] transition-all duration-300"
+                 style={{
+                  color: 'rgba(255, 255, 255, 0.60)',
+                  fontFamily: 'Nunito',
+                  fontSize: '20px',
+                  fontStyle: 'normal',
+                  fontWeight: '200',
+                  lineHeight: '40px'
+                }}>
+                  Terms of Services
+                </div>
+              </Link>
+              <Link href="/privacy-policy" onClick={closeMobileMenu}>
+                <div className="text-white text-lg font-normal cursor-pointer relative group hover:text-[#ffb703] transition-all duration-300"
+                 style={{
+                  color: 'rgba(255, 255, 255, 0.60)',
+                  fontFamily: 'Nunito',
+                  fontSize: '20px',
+                  fontStyle: 'normal',
+                  fontWeight: '200',
+                  lineHeight: '40px'
+                }}>
+                  Privacy Policy
+                </div>
+              </Link>
+              <Link href="/trademark-registration-guide" onClick={closeMobileMenu}>
+                <div className="text-white text-lg font-normal cursor-pointer relative group hover:text-[#ffb703] transition-all duration-300"
+                 style={{
+                  color: 'rgba(255, 255, 255, 0.60)',
+                  fontFamily: 'Nunito',
+                  fontSize: '20px',
+                  fontStyle: 'normal',
+                  fontWeight: '200',
+                  lineHeight: '40px'
+                }}>
+                   Trademark Registration Guide
+                </div>
+              </Link>
+            </div>
+            
 
             {/* Sign Up Button for Mobile */}
             <div 
@@ -148,70 +243,6 @@ export default function Navbar() {
                 maskComposite: "exclude"
               }}>
               <span className="text-white text-base font-normal group-hover:text-[#FFB703] transition-colors duration-300">Sign Up</span>
-            </div>
-
-            {/* Bottom Section */}
-            <div className="space-y-10 text-left">
-              <Link href="/services" onClick={closeMobileMenu}> 
-                <div 
-                  className="cursor-pointer relative group hover:text-[#ffb703] transition-all duration-300 mb-3"
-                  style={{
-                    color: 'rgba(255, 255, 255, 0.60)',
-                    fontFamily: 'Nunito',
-                    fontSize: '40px',
-                    fontStyle: 'normal',
-                    fontWeight: '200',
-                    lineHeight: '40px'
-                  }}
-                >
-                  Services
-                </div>
-              </Link>
-              <Link href="/contact" onClick={closeMobileMenu}> 
-                <div 
-                  className="cursor-pointer relative group hover:text-[#ffb703] transition-all duration-300 mb-3"
-                  style={{
-                    color: 'rgba(255, 255, 255, 0.60)',
-                    fontFamily: 'Nunito',
-                    fontSize: '40px',
-                    fontStyle: 'normal',
-                    fontWeight: '200',
-                    lineHeight: '40px'
-                  }}
-                >
-                  Contact Us
-                </div>
-              </Link>
-              <Link href="/about" onClick={closeMobileMenu}> 
-                <div 
-                  className="cursor-pointer relative group hover:text-[#ffb703] transition-all duration-300 mb-3"
-                  style={{
-                    color: 'rgba(255, 255, 255, 0.60)',
-                    fontFamily: 'Nunito',
-                    fontSize: '40px',
-                    fontStyle: 'normal',
-                    fontWeight: '200',
-                    lineHeight: '40px'
-                  }}
-                >
-                  About Us
-                </div>
-              </Link>
-              <Link href="/" onClick={closeMobileMenu}>
-                <div 
-                  className="cursor-pointer relative group hover:text-[#ffb703] transition-all duration-300 mb-3"
-                  style={{
-                    color: 'rgba(255, 255, 255, 0.60)',
-                    fontFamily: 'Nunito',
-                    fontSize: '40px',
-                    fontStyle: 'normal',
-                    fontWeight: '200',
-                    lineHeight: '40px'
-                  }}
-                >
-                  Home
-                </div>
-              </Link>
             </div>
           </div>
         </div>

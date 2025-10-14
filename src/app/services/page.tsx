@@ -165,223 +165,223 @@ function ServicesHeroSection() {
           <div className="w-full">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 max-w-6xl mx-auto">
               {/* Service 1 - Trademark Registration */}
-              <div
-                className="p-3 md:p-6 text-center space-y-3 md:space-y-5 relative group transition-all duration-300 hover:scale-105"
-                style={{
-                  borderRadius: '20px',
-                  border: '2px solid rgba(255, 255, 255, 0.15)',
-                  background: 'rgba(255, 255, 255, 0.01)',
-                  backdropFilter: 'blur(23.16px)',
-                  WebkitBackdropFilter: 'blur(23.16px)'
-                }}
-              >
-                <div className="mb-3">
-                  <h3 className="text-white font-nunito text-lg font-bold mb-2 text-center">
-                    Trademark Registration
-                  </h3>
-                </div>
-                <div className="absolute left-0 right-0 h-px bg-white" style={{ top: '58px' }}></div>
-                <div className="pt-6 text-left space-y-3">
-                  <p className="text-white font-nunito text-sm leading-relaxed mb-4 opacity-90">
-                    Register your trademark online start with our AI trademark search, review your report, and file instantly.
-                  </p>
-                  <div className="space-y-2">
-                    <div className="flex items-start gap-2">
-                      <div className="w-4 h-4 flex-shrink-0 mt-0.5">
-                        <div className="w-full h-full rounded-full flex items-center justify-center" style={{ background: '#16a34a' }}>
-                          <i className="fas fa-check text-white text-[8px]" aria-hidden="true"></i>
+              <Link href="/services/trademark-registration">
+                <div
+                  className="p-3 md:p-6 text-center space-y-3 md:space-y-5 relative group transition-all duration-300 hover:scale-105 cursor-pointer"
+                  style={{
+                    borderRadius: '20px',
+                    border: '2px solid rgba(255, 255, 255, 0.15)',
+                    background: 'rgba(255, 255, 255, 0.01)',
+                    backdropFilter: 'blur(23.16px)',
+                    WebkitBackdropFilter: 'blur(23.16px)'
+                  }}
+                >
+                  <div className="mb-3">
+                    <h3 className="text-white font-nunito text-lg font-bold mb-2 text-center">
+                      Trademark Registration
+                    </h3>
+                  </div>
+                  <div className="absolute left-0 right-0 h-px bg-white" style={{ top: '58px' }}></div>
+                  <div className="pt-6 text-left space-y-3">
+                    <p className="text-white font-nunito text-sm leading-relaxed mb-4 opacity-90">
+                      Register your trademark online start with our AI trademark search, review your report, and file instantly.
+                    </p>
+                    <div className="space-y-2">
+                      <div className="flex items-start gap-2">
+                        <div className="w-4 h-4 flex-shrink-0 mt-0.5">
+                          <div className="w-full h-full rounded-full flex items-center justify-center" style={{ background: '#16a34a' }}>
+                            <i className="fas fa-check text-white text-[8px]" aria-hidden="true"></i>
+                          </div>
                         </div>
+                        <span className="text-white/80 font-nunito text-xs leading-relaxed">AI-powered trademark search for instant conflict detection and brand availability</span>
                       </div>
-                      <span className="text-white/80 font-nunito text-xs leading-relaxed">AI-powered trademark search for instant conflict detection and brand availability</span>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <div className="w-4 h-4 flex-shrink-0 mt-0.5">
-                        <div className="w-full h-full rounded-full flex items-center justify-center" style={{ background: '#16a34a' }}>
-                          <i className="fas fa-check text-white text-[8px]" aria-hidden="true"></i>
+                      <div className="flex items-start gap-2">
+                        <div className="w-4 h-4 flex-shrink-0 mt-0.5">
+                          <div className="w-full h-full rounded-full flex items-center justify-center" style={{ background: '#16a34a' }}>
+                            <i className="fas fa-check text-white text-[8px]" aria-hidden="true"></i>
+                          </div>
                         </div>
+                        <span className="text-white/80 font-nunito text-xs leading-relaxed">Register trademark online with a fast, step-by-step guided application</span>
                       </div>
-                      <span className="text-white/80 font-nunito text-xs leading-relaxed">Register trademark online with a fast, step-by-step guided application</span>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <div className="w-4 h-4 flex-shrink-0 mt-0.5">
-                        <div className="w-full h-full rounded-full flex items-center justify-center" style={{ background: '#16a34a' }}>
-                          <i className="fas fa-check text-white text-[8px]" aria-hidden="true"></i>
+                      <div className="flex items-start gap-2">
+                        <div className="w-4 h-4 flex-shrink-0 mt-0.5">
+                          <div className="w-full h-full rounded-full flex items-center justify-center" style={{ background: '#16a34a' }}>
+                            <i className="fas fa-check text-white text-[8px]" aria-hidden="true"></i>
+                          </div>
                         </div>
+                        <span className="text-white/80 font-nunito text-xs leading-relaxed">How to register a trademark in India: Complete filing and legal support</span>
                       </div>
-                      <span className="text-white/80 font-nunito text-xs leading-relaxed">How to register a trademark in India: Complete filing and legal support</span>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <div className="w-4 h-4 flex-shrink-0 mt-0.5">
-                        <div className="w-full h-full rounded-full flex items-center justify-center" style={{ background: '#16a34a' }}>
-                          <i className="fas fa-check text-white text-[8px]" aria-hidden="true"></i>
+                      <div className="flex items-start gap-2">
+                        <div className="w-4 h-4 flex-shrink-0 mt-0.5">
+                          <div className="w-full h-full rounded-full flex items-center justify-center" style={{ background: '#16a34a' }}>
+                            <i className="fas fa-check text-white text-[8px]" aria-hidden="true"></i>
+                          </div>
                         </div>
+                        <span className="text-white/80 font-nunito text-xs leading-relaxed">Get your trademark search report with AI to maximize registerability</span>
                       </div>
-                      <span className="text-white/80 font-nunito text-xs leading-relaxed">Get your trademark search report with AI to maximize registerability</span>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <div className="w-4 h-4 flex-shrink-0 mt-0.5">
-                        <div className="w-full h-full rounded-full flex items-center justify-center" style={{ background: '#16a34a' }}>
-                          <i className="fas fa-check text-white text-[8px]" aria-hidden="true"></i>
+                      <div className="flex items-start gap-2">
+                        <div className="w-4 h-4 flex-shrink-0 mt-0.5">
+                          <div className="w-full h-full rounded-full flex items-center justify-center" style={{ background: '#16a34a' }}>
+                            <i className="fas fa-check text-white text-[8px]" aria-hidden="true"></i>
+                          </div>
                         </div>
+                        <span className="text-white/80 font-nunito text-xs leading-relaxed">Secure your brand identity with expert trademark protection</span>
                       </div>
-                      <span className="text-white/80 font-nunito text-xs leading-relaxed">Secure your brand identity with expert trademark protection</span>
                     </div>
                   </div>
+                  <p className="text-right opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-4">
+                    <span className="text-transparent bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text font-medium">
+                      Learn More →
+                    </span>
+                  </p>
                 </div>
-                <Link href="/services/trademark-registration">
-                <p className="text-right opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-4">
-                  <span className="text-transparent bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text font-medium">
-                    Learn More →
-                  </span>
-                </p>
-                </Link>
-              </div>
+              </Link>
 
               {/* Service 2 - Copyright Protection */}
-              <div
-                className="p-3 md:p-6 text-center space-y-3 md:space-y-5 relative group transition-all duration-300 hover:scale-105"
-                style={{
-                  borderRadius: '20px',
-                  border: '2px solid rgba(255, 255, 255, 0.15)',
-                  background: 'rgba(255, 255, 255, 0.01)',
-                  backdropFilter: 'blur(23.16px)',
-                  WebkitBackdropFilter: 'blur(23.16px)'
-                }}
-              >
-                <div className="mb-3">
-                  <h3 className="text-white font-nunito text-lg font-bold mb-2 text-center">
-                    Copyright Protection
-                  </h3>
-                </div>
-                <div className="absolute left-0 right-0 h-px bg-white" style={{ top: '58px' }}></div>
-                <div className="pt-6 text-left space-y-3">
-                  <p className="text-white font-nunito text-sm leading-relaxed mb-4 opacity-90">
-                    Secure creative works digitally AI copyright search and seamless online application keep your assets protected.
-                  </p>
-                  <div className="space-y-2">
-                    <div className="flex items-start gap-2">
-                      <div className="w-4 h-4 flex-shrink-0 mt-0.5">
-                        <div className="w-full h-full rounded-full flex items-center justify-center" style={{ background: '#16a34a' }}>
-                          <i className="fas fa-check text-white text-[8px]" aria-hidden="true"></i>
+              <Link href="/services/copyright-protection">
+                <div
+                  className="p-3 md:p-6 text-center space-y-3 md:space-y-5 relative group transition-all duration-300 hover:scale-105 cursor-pointer"
+                  style={{
+                    borderRadius: '20px',
+                    border: '2px solid rgba(255, 255, 255, 0.15)',
+                    background: 'rgba(255, 255, 255, 0.01)',
+                    backdropFilter: 'blur(23.16px)',
+                    WebkitBackdropFilter: 'blur(23.16px)'
+                  }}
+                >
+                  <div className="mb-3">
+                    <h3 className="text-white font-nunito text-lg font-bold mb-2 text-center">
+                      Copyright Protection
+                    </h3>
+                  </div>
+                  <div className="absolute left-0 right-0 h-px bg-white" style={{ top: '58px' }}></div>
+                  <div className="pt-6 text-left space-y-3">
+                    <p className="text-white font-nunito text-sm leading-relaxed mb-4 opacity-90">
+                      Secure creative works digitally AI copyright search and seamless online application keep your assets protected.
+                    </p>
+                    <div className="space-y-2">
+                      <div className="flex items-start gap-2">
+                        <div className="w-4 h-4 flex-shrink-0 mt-0.5">
+                          <div className="w-full h-full rounded-full flex items-center justify-center" style={{ background: '#16a34a' }}>
+                            <i className="fas fa-check text-white text-[8px]" aria-hidden="true"></i>
+                          </div>
                         </div>
+                        <span className="text-white/80 font-nunito text-xs leading-relaxed">Online copyright registration for digital content and creative works</span>
                       </div>
-                      <span className="text-white/80 font-nunito text-xs leading-relaxed">Online copyright registration for digital content and creative works</span>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <div className="w-4 h-4 flex-shrink-0 mt-0.5">
-                        <div className="w-full h-full rounded-full flex items-center justify-center" style={{ background: '#16a34a' }}>
-                          <i className="fas fa-check text-white text-[8px]" aria-hidden="true"></i>
+                      <div className="flex items-start gap-2">
+                        <div className="w-4 h-4 flex-shrink-0 mt-0.5">
+                          <div className="w-full h-full rounded-full flex items-center justify-center" style={{ background: '#16a34a' }}>
+                            <i className="fas fa-check text-white text-[8px]" aria-hidden="true"></i>
+                          </div>
                         </div>
+                        <span className="text-white/80 font-nunito text-xs leading-relaxed">AI copyright search for originality and infringement checks</span>
                       </div>
-                      <span className="text-white/80 font-nunito text-xs leading-relaxed">AI copyright search for originality and infringement checks</span>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <div className="w-4 h-4 flex-shrink-0 mt-0.5">
-                        <div className="w-full h-full rounded-full flex items-center justify-center" style={{ background: '#16a34a' }}>
-                          <i className="fas fa-check text-white text-[8px]" aria-hidden="true"></i>
+                      <div className="flex items-start gap-2">
+                        <div className="w-4 h-4 flex-shrink-0 mt-0.5">
+                          <div className="w-full h-full rounded-full flex items-center justify-center" style={{ background: '#16a34a' }}>
+                            <i className="fas fa-check text-white text-[8px]" aria-hidden="true"></i>
+                          </div>
                         </div>
+                        <span className="text-white/80 font-nunito text-xs leading-relaxed">How to protect your copyright online: From application to monitoring</span>
                       </div>
-                      <span className="text-white/80 font-nunito text-xs leading-relaxed">How to protect your copyright online: From application to monitoring</span>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <div className="w-4 h-4 flex-shrink-0 mt-0.5">
-                        <div className="w-full h-full rounded-full flex items-center justify-center" style={{ background: '#16a34a' }}>
-                          <i className="fas fa-check text-white text-[8px]" aria-hidden="true"></i>
+                      <div className="flex items-start gap-2">
+                        <div className="w-4 h-4 flex-shrink-0 mt-0.5">
+                          <div className="w-full h-full rounded-full flex items-center justify-center" style={{ background: '#16a34a' }}>
+                            <i className="fas fa-check text-white text-[8px]" aria-hidden="true"></i>
+                          </div>
                         </div>
+                        <span className="text-white/80 font-nunito text-xs leading-relaxed">Efficient copyright filing and expert guidance for complete protection</span>
                       </div>
-                      <span className="text-white/80 font-nunito text-xs leading-relaxed">Efficient copyright filing and expert guidance for complete protection</span>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <div className="w-4 h-4 flex-shrink-0 mt-0.5">
-                        <div className="w-full h-full rounded-full flex items-center justify-center" style={{ background: '#16a34a' }}>
-                          <i className="fas fa-check text-white text-[8px]" aria-hidden="true"></i>
+                      <div className="flex items-start gap-2">
+                        <div className="w-4 h-4 flex-shrink-0 mt-0.5">
+                          <div className="w-full h-full rounded-full flex items-center justify-center" style={{ background: '#16a34a' }}>
+                            <i className="fas fa-check text-white text-[8px]" aria-hidden="true"></i>
+                          </div>
                         </div>
+                        <span className="text-white/80 font-nunito text-xs leading-relaxed">Lifetime protection plus 60 years for your creative works</span>
                       </div>
-                      <span className="text-white/80 font-nunito text-xs leading-relaxed">Lifetime protection plus 60 years for your creative works</span>
                     </div>
                   </div>
+                  <p className="text-right opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-4">
+                    <span className="text-transparent bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text font-medium">
+                      Learn More →
+                    </span>
+                  </p>
                 </div>
-                <Link href="/services/copyright-protection">
-                <p className="text-right opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-4">
-                  <span className="text-transparent bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text font-medium">
-                    Learn More →
-                  </span>
-                </p>
-                </Link>
-              </div>
+              </Link>
 
               {/* Service 3 - Patent Services */}
-              <div
-                className="p-3 md:p-6 text-center space-y-3 md:space-y-5 relative group transition-all duration-300 hover:scale-105"
-                style={{
-                  borderRadius: '20px',
-                  border: '2px solid rgba(255, 255, 255, 0.15)',
-                  background: 'rgba(255, 255, 255, 0.01)',
-                  backdropFilter: 'blur(23.16px)',
-                  WebkitBackdropFilter: 'blur(23.16px)'
-                }}
-              >
-                <div className="mb-3">
-                  <h3 className="text-white font-nunito text-lg font-bold mb-2 text-center">
-                    Patent Services
-                  </h3>
-                </div>
-                <div className="absolute left-0 right-0 h-px bg-white" style={{ top: '58px' }}></div>
-                <div className="pt-6 text-left space-y-3">
-                  <p className="text-white font-nunito text-sm leading-relaxed mb-4 opacity-90">
-                    Protect inventions with AI-optimized patent search and application file quickly, stay ahead of the competition.
-                  </p>
-                  <div className="space-y-2">
-                    <div className="flex items-start gap-2">
-                      <div className="w-4 h-4 flex-shrink-0 mt-0.5">
-                        <div className="w-full h-full rounded-full flex items-center justify-center" style={{ background: '#16a34a' }}>
-                          <i className="fas fa-check text-white text-[8px]" aria-hidden="true"></i>
+              <Link href="/services/patent-services">
+                <div
+                  className="p-3 md:p-6 text-center space-y-3 md:space-y-5 relative group transition-all duration-300 hover:scale-105 cursor-pointer"
+                  style={{
+                    borderRadius: '20px',
+                    border: '2px solid rgba(255, 255, 255, 0.15)',
+                    background: 'rgba(255, 255, 255, 0.01)',
+                    backdropFilter: 'blur(23.16px)',
+                    WebkitBackdropFilter: 'blur(23.16px)'
+                  }}
+                >
+                  <div className="mb-3">
+                    <h3 className="text-white font-nunito text-lg font-bold mb-2 text-center">
+                      Patent Services
+                    </h3>
+                  </div>
+                  <div className="absolute left-0 right-0 h-px bg-white" style={{ top: '58px' }}></div>
+                  <div className="pt-6 text-left space-y-3">
+                    <p className="text-white font-nunito text-sm leading-relaxed mb-4 opacity-90">
+                      Protect inventions with AI-optimized patent search and application file quickly, stay ahead of the competition.
+                    </p>
+                    <div className="space-y-2">
+                      <div className="flex items-start gap-2">
+                        <div className="w-4 h-4 flex-shrink-0 mt-0.5">
+                          <div className="w-full h-full rounded-full flex items-center justify-center" style={{ background: '#16a34a' }}>
+                            <i className="fas fa-check text-white text-[8px]" aria-hidden="true"></i>
+                          </div>
                         </div>
+                        <span className="text-white/80 font-nunito text-xs leading-relaxed">Patent registration for inventions with AI-powered search and risk analysis</span>
                       </div>
-                      <span className="text-white/80 font-nunito text-xs leading-relaxed">Patent registration for inventions with AI-powered search and risk analysis</span>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <div className="w-4 h-4 flex-shrink-0 mt-0.5">
-                        <div className="w-full h-full rounded-full flex items-center justify-center" style={{ background: '#16a34a' }}>
-                          <i className="fas fa-check text-white text-[8px]" aria-hidden="true"></i>
+                      <div className="flex items-start gap-2">
+                        <div className="w-4 h-4 flex-shrink-0 mt-0.5">
+                          <div className="w-full h-full rounded-full flex items-center justify-center" style={{ background: '#16a34a' }}>
+                            <i className="fas fa-check text-white text-[8px]" aria-hidden="true"></i>
+                          </div>
                         </div>
+                        <span className="text-white/80 font-nunito text-xs leading-relaxed">How to file a patent: Quick patent search, filing, and legal compliance in India</span>
                       </div>
-                      <span className="text-white/80 font-nunito text-xs leading-relaxed">How to file a patent: Quick patent search, filing, and legal compliance in India</span>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <div className="w-4 h-4 flex-shrink-0 mt-0.5">
-                        <div className="w-full h-full rounded-full flex items-center justify-center" style={{ background: '#16a34a' }}>
-                          <i className="fas fa-check text-white text-[8px]" aria-hidden="true"></i>
+                      <div className="flex items-start gap-2">
+                        <div className="w-4 h-4 flex-shrink-0 mt-0.5">
+                          <div className="w-full h-full rounded-full flex items-center justify-center" style={{ background: '#16a34a' }}>
+                            <i className="fas fa-check text-white text-[8px]" aria-hidden="true"></i>
+                          </div>
                         </div>
+                        <span className="text-white/80 font-nunito text-xs leading-relaxed">End-to-end patent application support for maximizing protection and market advantage</span>
                       </div>
-                      <span className="text-white/80 font-nunito text-xs leading-relaxed">End-to-end patent application support for maximizing protection and market advantage</span>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <div className="w-4 h-4 flex-shrink-0 mt-0.5">
-                        <div className="w-full h-full rounded-full flex items-center justify-center" style={{ background: '#16a34a' }}>
-                          <i className="fas fa-check text-white text-[8px]" aria-hidden="true"></i>
+                      <div className="flex items-start gap-2">
+                        <div className="w-4 h-4 flex-shrink-0 mt-0.5">
+                          <div className="w-full h-full rounded-full flex items-center justify-center" style={{ background: '#16a34a' }}>
+                            <i className="fas fa-check text-white text-[8px]" aria-hidden="true"></i>
+                          </div>
                         </div>
+                        <span className="text-white/80 font-nunito text-xs leading-relaxed">Expert patent drafting with strong defensible claims for your innovations</span>
                       </div>
-                      <span className="text-white/80 font-nunito text-xs leading-relaxed">Expert patent drafting with strong defensible claims for your innovations</span>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <div className="w-4 h-4 flex-shrink-0 mt-0.5">
-                        <div className="w-full h-full rounded-full flex items-center justify-center" style={{ background: '#16a34a' }}>
-                          <i className="fas fa-check text-white text-[8px]" aria-hidden="true"></i>
+                      <div className="flex items-start gap-2">
+                        <div className="w-4 h-4 flex-shrink-0 mt-0.5">
+                          <div className="w-full h-full rounded-full flex items-center justify-center" style={{ background: '#16a34a' }}>
+                            <i className="fas fa-check text-white text-[8px]" aria-hidden="true"></i>
+                          </div>
                         </div>
+                        <span className="text-white/80 font-nunito text-xs leading-relaxed">20-year exclusive rights protection with examination response support</span>
                       </div>
-                      <span className="text-white/80 font-nunito text-xs leading-relaxed">20-year exclusive rights protection with examination response support</span>
                     </div>
                   </div>
+                  <p className="text-right opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-4">
+                    <span className="text-transparent bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text font-medium">
+                      Learn More →
+                    </span>
+                  </p>
                 </div>
-                <Link href="/services/patent-services">
-                <p className="text-right opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-4">
-                  <span className="text-transparent bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text font-medium">
-                    Learn More →
-                  </span>
-                </p>
-                </Link>
-              </div>
+              </Link>
             </div>
           </div>
         </div>
