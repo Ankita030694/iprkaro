@@ -6,7 +6,7 @@ export default function FastTrademarkRegistration() {
   return (
     <>
       <Head>
-        <title>Fast Trademark Registration India | Quick Brand Protection Service</title>
+        <title>Fast Trademark Registration India | IPR Karo</title>
         <meta name="description" content="Get your trademark registered fast in India with IPRKaro's expedited service. Professional trademark filing, priority processing, and expert attorney support. Register your brand in 8-12 weeks." />
         <meta name="keywords" content="fast trademark registration, quick trademark filing India, expedited trademark service, trademark registration timeline, professional trademark attorney, brand protection India" />
         <meta property="og:title" content="Fast Trademark Registration India | Quick Brand Protection Service" />

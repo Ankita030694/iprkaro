@@ -7,7 +7,7 @@ export default function TwentyFourSevenTrademarkProtection() {
   return (
     <div>
       <Head>
-        <title>24/7 Trademark Protection India | Round-the-Clock Brand Monitoring Service</title>
+        <title>24/7 Trademark Protection India | IPR Karo</title>
         <meta name="description" content="Get 24/7 trademark protection in India with certified trademark agents. Continuous monitoring, emergency response, and round-the-clock accessibility for comprehensive brand protection." />
         <meta name="keywords" content="24/7 trademark protection India, round-the-clock trademark monitoring, emergency trademark response, continuous brand protection, trademark watch service, trademark infringement monitoring" />
         <meta property="og:title" content="24/7 Trademark Protection India | Round-the-Clock Brand Monitoring Service" />

@@ -20,7 +20,7 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
-  title: "Trademark Registration Online | AI-Powered Search & Filing in India - IPR Karo",
+  title: "AI Trademark Registration India | IPR Karo",
   description: "Instant trademark search, risk checks, and online registration. Register your trademark with AI-powered reports for fast, secure brand protection. Start in under 60 seconds with IPR Karo.",
 };
 

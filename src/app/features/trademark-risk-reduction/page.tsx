@@ -6,7 +6,7 @@ export default function TrademarkRiskReduction() {
   return (
     <>
       <Head>
-        <title>Trademark Risk Reduction India | Comprehensive Risk Assessment & Protection</title>
+        <title>Trademark Risk Reduction India | IPR Karo</title>
         <meta name="description" content="Reduce trademark registration risks in India with comprehensive risk assessment, advanced search methodologies, and expert legal analysis. Maximize approval chances and minimize conflicts." />
         <meta name="keywords" content="trademark risk reduction India, trademark risk assessment, trademark conflict analysis, trademark opposition prevention, trademark clearance search, brand protection risk management" />
         <meta property="og:title" content="Trademark Risk Reduction India | Comprehensive Risk Assessment & Protection" />

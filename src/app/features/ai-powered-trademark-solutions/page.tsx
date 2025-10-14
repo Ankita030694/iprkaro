@@ -6,7 +6,7 @@ export default function AIPoweredTrademarkSolutions() {
   return (
     <>
       <Head>
-        <title>AI-Powered Trademark Solutions India | Intelligent Brand Protection Technology</title>
+        <title>AI Trademark Solutions India | IPR Karo</title>
         <meta name="description" content="Revolutionary AI-powered trademark solutions in India. Get intelligent trademark search, risk assessment, and automated reporting with 98.5% accuracy. Advanced machine learning for brand protection." />
         <meta name="keywords" content="AI trademark solutions India, AI-powered trademark search, intelligent brand protection, machine learning trademark, automated trademark reporting, AI trademark technology" />
         <meta property="og:title" content="AI-Powered Trademark Solutions India | Intelligent Brand Protection Technology" />

@@ -6,7 +6,7 @@ export default function ExpertTrademarkGuidance() {
   return (
     <>
       <Head>
-        <title>Expert Trademark Guidance India | Professional Legal Support & Consultation</title>
+        <title>Expert Trademark Guidance India | IPR Karo</title>
         <meta name="description" content="Get expert trademark guidance from experienced attorneys in India. 24/7 consultation, legal support, and professional advice for trademark registration, opposition, and protection." />
         <meta name="keywords" content="expert trademark guidance, trademark attorney consultation India, trademark legal advice, professional trademark support, trademark opposition help, brand protection consultation" />
         <meta property="og:title" content="Expert Trademark Guidance India | Professional Legal Support & Consultation" />

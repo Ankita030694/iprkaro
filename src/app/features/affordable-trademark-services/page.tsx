@@ -6,7 +6,7 @@ export default function AffordableTrademarkServices() {
   return (
     <>
       <Head>
-        <title>Affordable Trademark Services India | Cost-Effective Brand Protection</title>
+        <title>Affordable Trademark Services India | IPR Karo</title>
         <meta name="description" content="Get affordable trademark registration services in India with transparent pricing. Professional trademark filing at competitive rates with no hidden fees. Save up to 60% compared to traditional law firms." />
         <meta name="keywords" content="affordable trademark services, cheap trademark registration India, cost-effective brand protection, transparent trademark pricing, budget trademark filing, trademark services rates" />
         <meta property="og:title" content="Affordable Trademark Services India | Cost-Effective Brand Protection" />
