@@ -90,6 +90,11 @@ const Footer: React.FC = () => {
             <div>
               <h3 className="text-sm font-semibold mb-4 uppercase">About</h3>
               <ul className="space-y-2">
+              <li>
+                  <a href="/trademark-registration-guide" className="text-sm hover:text-cyan-300 transition-colors">
+                    Trademark Registration Guide
+                  </a>
+                </li>
                 <li>
                   <a href="/contact" className="text-sm hover:text-cyan-300 transition-colors">
                     Contact Us
@@ -145,7 +150,11 @@ const Footer: React.FC = () => {
           <div className="hidden lg:block lg:col-span-1">
             <h3 className="text-sm font-semibold mb-4 uppercase">About</h3>
             <ul className="space-y-2">
-             
+              <li>
+                <a href="/trademark-registration-guide" className="text-sm hover:text-cyan-300 transition-colors">
+                  Trademark Registration Guide
+                </a>
+              </li>
               <li>
                 <a href="/privacy-policy" className="text-sm hover:text-cyan-300 transition-colors">
                   Privacy Policy
