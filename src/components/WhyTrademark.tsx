@@ -392,7 +392,7 @@ export default function WhyTrademark() {
   ];
 
   return (
-    <section className="w-full px-5 md:px-20 lg:px-10 relative overflow-visible mt-5 rounded-[40px] md:min-h-fit min-h-[1200px] py-8" style={{
+    <section className="w-full px-0 md:px-20 lg:px-10 relative overflow-visible mt-5 rounded-[40px] md:min-h-fit min-h-[1200px] py-8" style={{
       background: 'linear-gradient(to bottom,rgb(174, 173, 173) 0%, #6E5E93 20%, #160049 55%, #0C002B 100%)'
     }}>
       
@@ -687,7 +687,7 @@ export default function WhyTrademark() {
       </div>
 
       {/* How It Works? */}
-      <div className="w-full relative z-10 px-4 md:px-20 lg:px-20 min-h-fit mt-30 mb-30" style={{scale:1.1}}>
+      <div className="w-full relative z-10 px-8 md:px-20 lg:px-20 min-h-fit mt-30 mb-30" style={{scale:1.1}}>
         <h2 className="text-white text-center font-nunito text-[28px] md:text-[45px] lg:text-[38px] font-medium leading-[32px] md:leading-[45px] lg:leading-[42px] w-full my-8 md:my-20 lg:my-16">
           How It Works
         </h2>
