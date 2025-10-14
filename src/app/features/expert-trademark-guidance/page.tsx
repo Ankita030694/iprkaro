@@ -20,7 +20,7 @@ export default function ExpertTrademarkGuidance() {
         {/* Header */}
         <div className="text-center mb-8 md:mb-16">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-6">
-            Expert Trademark Guidance India - Professional Legal Support & Consultation
+            Expert Trademark Guidance & Legal Support in India
           </h1>
           <p className="text-base md:text-lg lg:text-xl text-gray-300 max-w-4xl mx-auto px-4 leading-relaxed">
             Get expert trademark guidance from experienced attorneys in India. 24/7 consultation, legal support,

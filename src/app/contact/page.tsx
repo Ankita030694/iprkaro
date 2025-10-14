@@ -140,7 +140,7 @@ export default function ContactPage() {
 
                 {/* Main Headline */}
                 <h1 className="font-nunito text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-normal leading-tight text-white">
-                  Your Brand's Trademark Registration Journey Starts Here: <span className="font-bold text-[#FFB703]">Connect With Expert Help</span>
+                  Connect With Expert <span className="font-bold text-[#FFB703]">Trademark Registration Help in India</span>
                 </h1>
 
                 {/* Description */}

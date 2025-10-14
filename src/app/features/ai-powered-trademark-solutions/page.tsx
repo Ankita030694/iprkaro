@@ -20,7 +20,7 @@ export default function AIPoweredTrademarkSolutions() {
         {/* Header */}
         <div className="text-center mb-7 md:mb-14">
           <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-3.5 md:mb-5">
-            AI-Powered Trademark Solutions India - Intelligent Brand Protection Technology
+            AI-Powered Trademark Solutions & Smart Brand Protection
           </h1>
           <p className="text-sm md:text-base lg:text-lg text-gray-300 max-w-3xl mx-auto px-3.5 leading-relaxed">
             Revolutionary AI-powered trademark solutions in India with 98.5% accuracy. Get intelligent trademark search,

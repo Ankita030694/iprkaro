@@ -20,7 +20,7 @@ export default function TrademarkRiskReduction() {
         {/* Header */}
         <div className="text-center mb-8 md:mb-16">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-6">
-            Trademark Risk Reduction India - Comprehensive Risk Assessment & Protection
+            Trademark Risk Reduction & Protection Services in India
           </h1>
           <p className="text-base md:text-lg lg:text-xl text-gray-300 max-w-4xl mx-auto px-4 leading-relaxed">
             Reduce trademark registration risks in India with comprehensive risk assessment, advanced search methodologies,

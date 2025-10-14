@@ -21,7 +21,7 @@ export default function TwentyFourSevenTrademarkProtection() {
         {/* Header */}
         <div className="text-center mb-7 md:mb-14">
           <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-3.5 md:mb-5">
-            24/7 Trademark Protection India - Round-the-Clock Brand Monitoring Service
+            24/7 Trademark Protection & Monitoring Service in India
           </h1>
           <p className="text-sm md:text-base lg:text-lg text-gray-300 max-w-3xl mx-auto px-3.5 leading-relaxed">
             Get 24/7 trademark protection in India with certified trademark agents. Continuous monitoring, emergency response,

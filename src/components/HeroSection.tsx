@@ -73,9 +73,9 @@ export default function HeroSection() {
         <div className="flex flex-col justify-start items-center w-full h-full lg:hidden pt-4">
           <div className="flex flex-col items-center gap-2 text-center max-w-sm">
             {/* Main Heading */}
-            <h1 className="text-[#F8F9FA] font-nunito text-[20px] font-bold leading-[26px]">
+            <h2 className="text-[#F8F9FA] font-nunito text-[20px] font-bold leading-[26px]">
             Trademark Registration Made Easy: Fast, Accurate, and Powered by AI <span className="animated-gradient text-[20px] font-bold">- Start in 60 Seconds</span>
-            </h1>
+            </h2>
 
             {/* Subtitle */}
             <p className="text-[rgba(255,255,255,0.77)] font-nunito text-[11px] font-normal leading-[13px]">
@@ -116,7 +116,7 @@ export default function HeroSection() {
           <div className="flex flex-col items-start gap-3 text-left">
             {/* Main Heading */}
             <h1 className="w-full text-[#F8F9FA] font-nunito text-[32px] font-bold leading-[40px]">
-            Trademark Registration Made Easy: Fast, Accurate, and Powered by AI <span className="animated-gradient text-[32px] font-bold">- Start in 60 Seconds</span>
+            Fast AI-Powered Trademark Registration India <span className="animated-gradient text-[32px] font-bold">- Start in 60 Seconds</span>
             </h1>
 
             {/* Subtitle */}
