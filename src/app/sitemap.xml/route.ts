@@ -52,6 +52,9 @@ export async function GET() {
     '/features/expert-trademark-guidance',
     '/features/fast-trademark-registration',
     '/features/trademark-risk-reduction',
+    '/privacy-policy',
+    '/terms-and-conditions',
+    '/trademark-registration-guide',
   ];
 
   // Generate dynamic service pages
