@@ -121,11 +121,7 @@ export default function Navbar() {
                   Terms of Services
                 </div>
               </Link>
-              <Link href="/help" onClick={closeMobileMenu}>
-                <div className="text-white text-lg font-normal cursor-pointer relative group hover:text-[#ffb703] transition-all duration-300">
-                  Help Centre
-                </div>
-              </Link>
+            
               {/* <Link href="/blog" onClick={closeMobileMenu}> 
                 <div className="text-white text-lg font-normal cursor-pointer relative group hover:text-[#ffb703] transition-all duration-300">
                   Blogs
