@@ -41,17 +41,23 @@ export default function TrademarkGuideClient() {
   }, []);
 
   return (
-    <>
+    <div style={{ backgroundColor: '#0C002B' }}>
       <Navbar />
       <TableOfContents activeSection={activeSection} />
       
       {/* Main Content */}
-      <div className="pb-16 pt-[180px]" style={{ background: '#0C002B' }}>
+      <div className="pb-16 pt-[180px]" style={{ 
+        background: '#0C002B',
+        backgroundImage: 'linear-gradient(to right top, #0c002b, #0c002b,rgb(25, 10, 60),rgb(92, 75, 130), #ffffff)',
+        backgroundSize: '100% 100%',
+        backgroundPosition: 'center top',
+        backgroundRepeat: 'no-repeat'
+      }}>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16" style={{ transform: 'scale(1)', transformOrigin: 'top center'}}>
           <PillarContent />
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

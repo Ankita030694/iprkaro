@@ -54,9 +54,14 @@ export default function AboutPage() {
   };
   return (
     <div
-      className="min-h-[90vh] relative overflow-x-hidden"
+      className="min-h-screen relative overflow-x-hidden"
       style={{
-        background: '#0C002B'
+        backgroundImage: 'linear-gradient(to right top, #0c002b, #0c002b,rgb(25, 10, 60),rgb(92, 75, 130), #ffffff)',
+        backgroundSize: '100% 80%',
+        backgroundPosition: '10% 20%',
+        backgroundRepeat: 'no-repeat',
+        marginTop: '-100px',
+        paddingTop: '100px'
       }}
     >
       {/* SVG Filter for yellow color transformation */}
@@ -874,7 +879,7 @@ export default function AboutPage() {
       </div>
 
       {/* What makes IPR Karo Different Section */}
-      <div className="w-full py-8">
+      <div className="w-full py-8" style={{ backgroundColor: '#0C002B' }}>
         <div className="text-center mb-8 px-6 sm:px-12 lg:px-24">
           <h2
             className="text-2xl sm:text-3xl lg:text-[36px] font-bold"

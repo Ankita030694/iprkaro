@@ -3,7 +3,13 @@ import Link from 'next/link';
 
 export default function TrademarkRiskReduction() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#0C002B] via-[#160049] to-[#6E5E93] pt-32 pb-16 px-2 lg:px-4">
+    <div className="min-h-screen pb-16 px-2 lg:px-4 pt-32" style={{
+      background: '#0C002B',
+      backgroundImage: 'linear-gradient(to right top, #0c002b, #0c002b,rgb(25, 10, 60),rgb(92, 75, 130), #ffffff)',
+      backgroundSize: '100% 100%',
+      backgroundPosition: 'center top',
+      backgroundRepeat: 'no-repeat'
+    }}>
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8 md:mb-16">
@@ -165,6 +171,7 @@ export default function TrademarkRiskReduction() {
           </div>
         </div>
 
+      <div style={{ backgroundColor: '#0C002B', paddingTop: '1px' }}>
         {/* Risk Mitigation Process */}
         <div className="mt-16 bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-white/10">
           <h2 className="text-2xl font-semibold text-white mb-6 text-center">Our Risk Mitigation Process</h2>
@@ -332,6 +339,7 @@ export default function TrademarkRiskReduction() {
           }}
         >
         </script>
+      </div>
       </div>
       </div>
   );
