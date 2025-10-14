@@ -196,7 +196,7 @@ export default function SimplePlans() {
             {plans.map((plan, index) => (
               <div
                 key={plan.id}
-                ref={(el) => (cardRefs.current[index] = el)}
+                ref={(el) => { cardRefs.current[index] = el; }}
                 className={`relative cursor-pointer transition-all duration-300 ease-in-out flex flex-col items-center flex-shrink-0 ${
                   index === 1 ? '' : ''
                 }`}
