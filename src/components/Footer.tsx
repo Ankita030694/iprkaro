@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
                 </a>
                 
                 {/* Facebook */}
-                <a href="#" className="text-blue-600 hover:text-blue-500 transition-colors">
+                <a href="https://www.facebook.com/profile.php?id=61580675227718" className="text-blue-600 hover:text-blue-500 transition-colors">
                   <i className="fab fa-facebook-f text-xl"></i>
                 </a>
                 
@@ -179,7 +179,7 @@ const Footer: React.FC = () => {
                 <i className="fab fa-instagram text-xl"></i>
               </a>
               {/* Facebook */}
-              <a href="https://www.facebook.com/share/18hrN3YcMu/?mibextid=wwXIfr" className="text-blue-600 hover:text-blue-500 transition-colors">
+              <a href="https://www.facebook.com/profile.php?id=61580675227718" className="text-blue-600 hover:text-blue-500 transition-colors">
                 <i className="fab fa-facebook-f text-xl"></i>
               </a>
             

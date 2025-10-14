@@ -39,7 +39,7 @@ export default function RootLayout({
     "sameAs": [
       "https://www.linkedin.com/company/iprkaro/",
       "https://www.instagram.com/iprkaro",
-      "https://www.facebook.com/share/18hrN3YcMu/?mibextid=wwXIfr"
+      "https://www.facebook.com/profile.php?id=61580675227718"
     ],
     "contactPoint": {
       "@type": "ContactPoint",
