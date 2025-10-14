@@ -98,7 +98,7 @@ export default function AboutPage() {
       className="min-h-screen relative overflow-x-hidden"
       style={{
         backgroundImage: 'linear-gradient(to right top, #0c002b, #0c002b,rgb(25, 10, 60),rgb(92, 75, 130),rgb(91, 88, 88))',
-        backgroundSize: '100% 80%',
+        backgroundSize: '100% 100%',
         backgroundPosition: '10% 20%',
         backgroundRepeat: 'no-repeat',
         marginTop: '-100px',
@@ -423,7 +423,7 @@ export default function AboutPage() {
         </div>
         
         {/* Desktop Timeline Section */}
-        <div className="hidden lg:block max-w-6xl mx-auto relative">
+        <div className="hidden lg:block max-w-6xl mx-auto relative" ref={timelineRef}>
 
           {/* Vertical Line */}
           <div
@@ -431,6 +431,18 @@ export default function AboutPage() {
             style={{
               background: 'linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.3))',
               borderRadius: '2px'
+            }}
+          />
+
+          {/* Purple Progress Line - Fills up on scroll */}
+          <div
+            className="absolute left-1/2 transform -translate-x-1/2 top-0 w-2 transition-all duration-75 ease-linear"
+            style={{
+              height: `${timelineProgress}%`,
+              background: 'linear-gradient(to bottom, #8A38F5, #a855f7)',
+              borderRadius: '2px',
+              boxShadow: '0 0 10px rgba(138, 56, 245, 0.6)',
+              willChange: 'height'
             }}
           />
 
@@ -1445,8 +1457,8 @@ export default function AboutPage() {
         </div>
       </div>
 
-      {/* FAQ Section */}
-      <section className="py-[57.6px] relative overflow-hidden" style={{ backgroundColor: '#0C002B' }}>
+        {/* FAQ Section */}
+        <div className="py-[57.6px] relative overflow-hidden w-full">
         {/* Schema Markup for SEO */}
         <script
           type="application/ld+json"
@@ -1552,7 +1564,7 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 }

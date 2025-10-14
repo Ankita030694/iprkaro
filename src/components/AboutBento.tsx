@@ -10,7 +10,6 @@ const AboutBento = () => {
           width: 4px;
         }
         .custom-scrollbar::-webkit-scrollbar-track {
-          background: rgba(63, 63, 70, 0.3);
           border-radius: 10px;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb {
@@ -21,7 +20,7 @@ const AboutBento = () => {
           background: rgba(255, 183, 3, 0.8);
         }
       `}</style>
-      <div className="w-full min-h-screen px-4 relative" style={{ background: '#0C002B', scale: '0.90',marginTop: '-50px' }}>
+      <div className="w-full min-h-screen px-4 relative" style={{scale: '0.90',marginTop: '-50px' }}>
       <div className="max-w-7xl mx-auto h-full">
         {/* Desktop Version - 4 Column Grid */}
         <div className="hidden md:grid grid-cols-4 gap-4 lg:gap-6 h-screen py-6">
