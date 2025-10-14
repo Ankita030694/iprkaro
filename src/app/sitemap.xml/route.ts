@@ -45,6 +45,7 @@ export async function GET() {
     '/services/trademark-registration',
     '/services/patent-services',
     '/services/copyright-protection',
+    '/trademark-registration-guide',
     '/features/247-trademark-protection',
     '/features/affordable-trademark-services',
     '/features/ai-powered-trademark-solutions',
@@ -72,12 +73,14 @@ export async function GET() {
 ${allPages.map((page) => {
     const url = `${baseUrl}${page}`;
     const priority = page === '' ? '1.0' : 
+                    page === '/trademark-registration-guide' ? '0.95' :
                     page.startsWith('/services/') && !page.includes('-in-') ? '0.9' :
                     page.startsWith('/features/') ? '0.8' :
                     page === '/about' || page === '/contact' ? '0.7' :
                     page.includes('-in-') ? '0.6' : '0.5';
     
     const changefreq = page === '' ? 'daily' :
+                      page === '/trademark-registration-guide' ? 'weekly' :
                       page.startsWith('/services/') && !page.includes('-in-') ? 'weekly' :
                       page.startsWith('/features/') ? 'weekly' :
                       page.includes('-in-') ? 'monthly' : 'monthly';
