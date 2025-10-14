@@ -12,8 +12,9 @@ function getStateName(slug: string): string {
 }
 
 // Generate dynamic metadata for SEO and AEO optimization
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const stateName = getStateName(params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const stateName = getStateName(slug);
   
   // Use shorter format for very long state names to keep under 60 chars
   const baseTitle = `TM Registration ${stateName} | IPR Karo`;
@@ -60,7 +61,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       images: ['/figmacomp/iprhero.svg'],
     },
     alternates: {
-      canonical: `https://iprkaro.com/services/trademark-registration/${params.slug}`,
+      canonical: `https://iprkaro.com/services/trademark-registration/${slug}`,
     },
     robots: {
       index: true,
@@ -83,8 +84,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-export default function TrademarkRegistrationSlugPage({ params }: { params: { slug: string } }) {
-  const stateName = getStateName(params.slug);
+export default async function TrademarkRegistrationSlugPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const stateName = getStateName(slug);
 
   return <TrademarkRegistrationClient stateName={stateName} />;
 }
