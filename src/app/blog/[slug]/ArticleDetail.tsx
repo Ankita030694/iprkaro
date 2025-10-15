@@ -745,11 +745,34 @@ const ArticleDetail = memo(function ArticleDetail({ slug }: BlogDetailProps) {
         .blog-content ol {
           margin: 1.5em 0;
           padding-left: 2em;
+          list-style-position: outside;
+        }
+        
+        .blog-content ul {
+          list-style-type: disc;
+        }
+        
+        .blog-content ol {
+          list-style-type: decimal;
         }
         
         .blog-content li {
           margin: 0.75em 0;
           color: rgba(255, 255, 255, 0.9);
+          padding-left: 0.5em;
+        }
+        
+        .blog-content ul ul {
+          list-style-type: circle;
+          margin-top: 0.5em;
+        }
+        
+        .blog-content ul ul ul {
+          list-style-type: square;
+        }
+        
+        .blog-content li::marker {
+          color: #FFB703;
         }
         
         .blog-content img {
