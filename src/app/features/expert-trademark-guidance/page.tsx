@@ -1,5 +1,47 @@
 import React from 'react';
 import Link from 'next/link';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Expert Trademark Guidance India | IPR Karo',
+  description: 'Get expert trademark guidance from experienced attorneys in India. 24/7 consultation, legal support, and professional advice for trademark registration, opposition handling, and comprehensive brand protection strategies.',
+  keywords: [
+    'expert trademark guidance',
+    'trademark attorney consultation',
+    'trademark legal advice India',
+    'professional trademark guidance',
+    'trademark expert support',
+    'trademark consultation services',
+    '24/7 trademark guidance',
+    'trademark attorney India'
+  ],
+  openGraph: {
+    title: 'Expert Trademark Guidance India | IPR Karo',
+    description: 'Get expert trademark guidance from experienced attorneys in India. 24/7 consultation, legal support, and professional advice for trademark registration, opposition handling, and comprehensive brand protection strategies.',
+    type: 'website',
+    locale: 'en_IN',
+    siteName: 'IPRKaro',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Expert Trademark Guidance India | IPR Karo',
+    description: 'Get expert trademark guidance from experienced attorneys in India. 24/7 consultation, legal support, and professional advice for trademark registration, opposition handling, and comprehensive brand protection strategies.',
+  },
+  alternates: {
+    canonical: 'https://iprkaro.com/features/expert-trademark-guidance',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+};
 
 export default function ExpertTrademarkGuidance() {
   return (

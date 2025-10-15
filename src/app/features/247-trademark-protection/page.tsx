@@ -1,5 +1,47 @@
 import React from 'react';
 import Link from 'next/link';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: '24/7 Trademark Protection India | IPR Karo',
+  description: 'Get 24/7 trademark protection in India with certified trademark agents. Continuous monitoring, emergency response, and round-the-clock accessibility ensure your brand is protected whenever threats arise.',
+  keywords: [
+    '24/7 trademark protection',
+    'trademark monitoring service India',
+    'round the clock trademark support',
+    'emergency trademark response',
+    'continuous trademark monitoring',
+    '24x7 brand protection',
+    'always-on trademark security',
+    'trademark watch service India'
+  ],
+  openGraph: {
+    title: '24/7 Trademark Protection India | IPR Karo',
+    description: 'Get 24/7 trademark protection in India with certified trademark agents. Continuous monitoring, emergency response, and round-the-clock accessibility ensure your brand is protected whenever threats arise.',
+    type: 'website',
+    locale: 'en_IN',
+    siteName: 'IPRKaro',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '24/7 Trademark Protection India | IPR Karo',
+    description: 'Get 24/7 trademark protection in India with certified trademark agents. Continuous monitoring, emergency response, and round-the-clock accessibility ensure your brand is protected whenever threats arise.',
+  },
+  alternates: {
+    canonical: 'https://iprkaro.com/features/247-trademark-protection',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+};
 
 export default function TwentyFourSevenTrademarkProtection() {
   return (

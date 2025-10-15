@@ -1,5 +1,47 @@
 import React from 'react';
 import Link from 'next/link';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Trademark Risk Reduction India | IPR Karo',
+  description: 'Reduce trademark registration risks in India with comprehensive risk assessment, advanced search methodologies, and expert legal analysis. Maximize approval chances and minimize conflicts with our proven risk reduction strategies.',
+  keywords: [
+    'trademark risk reduction',
+    'trademark risk assessment India',
+    'trademark conflict analysis',
+    'trademark opposition risk',
+    'trademark clearance search',
+    'brand protection risk management',
+    'trademark success rate',
+    'minimize trademark rejection'
+  ],
+  openGraph: {
+    title: 'Trademark Risk Reduction India | IPR Karo',
+    description: 'Reduce trademark registration risks in India with comprehensive risk assessment, advanced search methodologies, and expert legal analysis. Maximize approval chances and minimize conflicts with our proven risk reduction strategies.',
+    type: 'website',
+    locale: 'en_IN',
+    siteName: 'IPRKaro',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Trademark Risk Reduction India | IPR Karo',
+    description: 'Reduce trademark registration risks in India with comprehensive risk assessment, advanced search methodologies, and expert legal analysis. Maximize approval chances and minimize conflicts with our proven risk reduction strategies.',
+  },
+  alternates: {
+    canonical: 'https://iprkaro.com/features/trademark-risk-reduction',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+};
 
 export default function TrademarkRiskReduction() {
   return (

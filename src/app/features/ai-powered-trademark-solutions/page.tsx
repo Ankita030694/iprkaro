@@ -1,5 +1,47 @@
 import React from 'react';
 import Link from 'next/link';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'AI-Powered Trademark Solutions India | IPR Karo',
+  description: 'Revolutionary AI-powered trademark solutions in India with 98.5% accuracy. Get intelligent trademark search, risk assessment, and automated reporting with advanced machine learning for comprehensive brand protection.',
+  keywords: [
+    'AI-powered trademark solutions',
+    'AI trademark search India',
+    'machine learning trademark',
+    'automated trademark search',
+    'intelligent trademark analysis',
+    'AI trademark technology',
+    'smart trademark solutions',
+    'AI-powered brand protection'
+  ],
+  openGraph: {
+    title: 'AI-Powered Trademark Solutions India | IPR Karo',
+    description: 'Revolutionary AI-powered trademark solutions in India with 98.5% accuracy. Get intelligent trademark search, risk assessment, and automated reporting with advanced machine learning for comprehensive brand protection.',
+    type: 'website',
+    locale: 'en_IN',
+    siteName: 'IPRKaro',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AI-Powered Trademark Solutions India | IPR Karo',
+    description: 'Revolutionary AI-powered trademark solutions in India with 98.5% accuracy. Get intelligent trademark search, risk assessment, and automated reporting with advanced machine learning for comprehensive brand protection.',
+  },
+  alternates: {
+    canonical: 'https://iprkaro.com/features/ai-powered-trademark-solutions',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+};
 
 export default function AIPoweredTrademarkSolutions() {
   return (

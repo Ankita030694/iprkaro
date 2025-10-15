@@ -52,7 +52,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
           images: blogData.image ? [blogData.image] : [],
         },
         alternates: {
-          canonical: `/blog/${slug}`,
+          canonical: `https://iprkaro.com/blog/${slug}`,
         },
       };
     }

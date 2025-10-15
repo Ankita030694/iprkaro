@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     images: ['/figmacomp/iprhero.svg'],
   },
   alternates: {
-    canonical: '/trademark-registration-guide',
+    canonical: 'https://iprkaro.com/trademark-registration-guide',
   },
   robots: {
     index: true,

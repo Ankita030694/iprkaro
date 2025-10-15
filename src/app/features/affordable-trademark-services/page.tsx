@@ -1,5 +1,47 @@
 import React from 'react';
 import Link from 'next/link';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Affordable Trademark Services India | IPR Karo',
+  description: 'Get affordable trademark registration services in India with transparent pricing and no hidden fees. Save up to 60% compared to traditional law firms while getting professional trademark filing and expert attorney support.',
+  keywords: [
+    'affordable trademark services India',
+    'cheap trademark registration',
+    'low cost trademark filing',
+    'budget trademark services',
+    'affordable brand protection',
+    'cost-effective trademark',
+    'transparent trademark pricing',
+    'discount trademark services'
+  ],
+  openGraph: {
+    title: 'Affordable Trademark Services India | IPR Karo',
+    description: 'Get affordable trademark registration services in India with transparent pricing and no hidden fees. Save up to 60% compared to traditional law firms while getting professional trademark filing and expert attorney support.',
+    type: 'website',
+    locale: 'en_IN',
+    siteName: 'IPRKaro',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Affordable Trademark Services India | IPR Karo',
+    description: 'Get affordable trademark registration services in India with transparent pricing and no hidden fees. Save up to 60% compared to traditional law firms while getting professional trademark filing and expert attorney support.',
+  },
+  alternates: {
+    canonical: 'https://iprkaro.com/features/affordable-trademark-services',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+};
 
 export default function AffordableTrademarkServices() {
   return (

@@ -1,5 +1,47 @@
 import React from 'react';
 import Link from 'next/link';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Fast Trademark Registration India | IPR Karo',
+  description: 'Get your trademark registered fast in India with IPRKaro\'s expedited service. Professional trademark filing, priority processing, and expert attorney support ensure your brand protection in 8-12 weeks.',
+  keywords: [
+    'fast trademark registration India',
+    'quick trademark filing',
+    'expedited trademark service',
+    'fast brand registration',
+    'quick trademark approval',
+    'priority trademark processing',
+    'rapid trademark registration',
+    'speedy trademark filing'
+  ],
+  openGraph: {
+    title: 'Fast Trademark Registration India | IPR Karo',
+    description: 'Get your trademark registered fast in India with IPRKaro\'s expedited service. Professional trademark filing, priority processing, and expert attorney support ensure your brand protection in 8-12 weeks.',
+    type: 'website',
+    locale: 'en_IN',
+    siteName: 'IPRKaro',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Fast Trademark Registration India | IPR Karo',
+    description: 'Get your trademark registered fast in India with IPRKaro\'s expedited service. Professional trademark filing, priority processing, and expert attorney support ensure your brand protection in 8-12 weeks.',
+  },
+  alternates: {
+    canonical: 'https://iprkaro.com/features/fast-trademark-registration',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+};
 
 export default function FastTrademarkRegistration() {
   return (
