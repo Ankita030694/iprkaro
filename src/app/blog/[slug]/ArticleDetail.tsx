@@ -179,15 +179,15 @@ const ArticleDetail = memo(function ArticleDetail({ slug }: BlogDetailProps) {
   const renderClickableSubtitle = useCallback((subtitle: string) => {
     const segments = subtitle.split('|').map(segment => segment.trim()).filter(segment => segment.length > 0);
     
-    // If no related blogs are loaded yet, show green text without links
+    // If no related blogs are loaded yet, show white text without links
     if (relatedBlogs.length === 0) {
       return (
         <div className="text-base md:text-lg">
           {segments.map((segment, index) => (
             <span key={index}>
-              <span className="text-[#16a34a]">{segment}</span>
+              <span className="text-white">{segment}</span>
               {index < segments.length - 1 && (
-                <span className="text-white mx-2">|</span>
+                <span className="text-[#FFB400] mx-2">|</span>
               )}
             </span>
           ))}
@@ -201,11 +201,11 @@ const ArticleDetail = memo(function ArticleDetail({ slug }: BlogDetailProps) {
       <div className="text-base md:text-lg">
         {segments.map((segment, index) => (
           <span key={index}>
-            <Link href={`/blog/${randomBlogs[index]?.slug}`} className="text-[#16a34a] hover:text-[#86efac] transition-colors" prefetch={true}>
+            <Link href={`/blog/${randomBlogs[index]?.slug}`} className="text-white hover:text-[#FFB400] transition-colors" prefetch={true}>
               {segment}
             </Link>
             {index < segments.length - 1 && (
-              <span className="text-white mx-2">|</span>
+              <span className="text-[#FFB400] mx-2">|</span>
             )}
           </span>
         ))}
@@ -295,13 +295,21 @@ const ArticleDetail = memo(function ArticleDetail({ slug }: BlogDetailProps) {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-b from-white to-green-50">
+      <div 
+        className="min-h-screen"
+        style={{
+          backgroundImage: 'linear-gradient(to right top, #0c002b, #0c002b,rgb(25, 10, 60),rgb(92, 75, 130),rgb(91, 88, 88))',
+          backgroundSize: '100% 100%',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
         {/* Skeleton Header */}
-        <div className="w-full bg-[#16a34a] text-center py-8 md:py-12">
+        <div className="w-full text-center py-8 md:py-12" style={{ background: 'rgba(31, 19, 16, 0.6)' }}>
           <div className="container mx-auto px-4 mt-12 md:mt-16 max-w-4xl">
-            <div className="h-8 md:h-12 bg-gray-300 rounded-lg mb-4 animate-pulse"></div>
-            <div className="h-4 md:h-6 bg-gray-300 rounded-lg mb-4 animate-pulse"></div>
-            <div className="bg-gray-300 h-1 w-20 md:w-24 rounded-full mx-auto animate-pulse"></div>
+            <div className="h-8 md:h-12 bg-gray-300/30 rounded-lg mb-4 animate-pulse"></div>
+            <div className="h-4 md:h-6 bg-gray-300/30 rounded-lg mb-4 animate-pulse"></div>
+            <div className="bg-gray-300/30 h-1 w-20 md:w-24 rounded-full mx-auto animate-pulse"></div>
           </div>
         </div>
         
@@ -337,11 +345,19 @@ const ArticleDetail = memo(function ArticleDetail({ slug }: BlogDetailProps) {
 
   if (!blog) {
     return (
-      <div className="min-h-screen bg-gradient-to-b from-white to-green-50 p-6 flex flex-col items-center justify-center">
+      <div 
+        className="min-h-screen p-6 flex flex-col items-center justify-center"
+        style={{
+          backgroundImage: 'linear-gradient(to right top, #0c002b, #0c002b,rgb(25, 10, 60),rgb(92, 75, 130),rgb(91, 88, 88))',
+          backgroundSize: '100% 100%',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
         <div className="text-center max-w-lg mx-auto p-6 bg-white rounded-lg shadow-lg">
-          <h1 className="text-2xl font-bold text-[#16a34a] mb-3">Article Not Found</h1>
+          <h1 className="text-2xl font-bold text-[#FFB400] mb-3">Article Not Found</h1>
           <p className="text-black mb-4 text-sm">We could not find the blog post you are looking for.</p>
-          <Link href="/blog" className="bg-[#FFB400] text-black px-4 py-2 rounded-md hover:bg-[#16a34a] hover:text-white transition-all text-sm">
+          <Link href="/blog" className="bg-[#FFB400] text-black px-4 py-2 rounded-md hover:bg-[#FFC107] hover:text-black transition-all text-sm">
             Return to Blog
           </Link>
         </div>
@@ -350,9 +366,17 @@ const ArticleDetail = memo(function ArticleDetail({ slug }: BlogDetailProps) {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-green-50">
+    <div 
+      className="min-h-screen"
+      style={{
+        backgroundImage: 'linear-gradient(to right top, #0c002b, #0c002b,rgb(25, 10, 60),rgb(92, 75, 130),rgb(91, 88, 88))',
+        backgroundSize: '100% 100%',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
       {/* Header Banner */}
-      <div className="w-full bg-[#16a34a] text-center py-8 md:py-12">
+      <div className="w-full text-center py-8 md:py-12" style={{ background: 'rgba(31, 19, 16, 0.6)' }}>
         <div className="container mx-auto px-4 mt-12 md:mt-16 max-w-4xl">
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#FFB400] mb-2 md:mb-3 leading-tight">
             {blog.title}
@@ -383,7 +407,7 @@ const ArticleDetail = memo(function ArticleDetail({ slug }: BlogDetailProps) {
                   </p>
                   {blog.author && (
                     <p className="text-black text-sm">
-                      By: <span className="font-medium text-[#16a34a]">{blog.author}</span>
+                      By: <span className="font-medium text-[#FFB400]">{blog.author}</span>
                     </p>
                   )}
                 </div>
@@ -418,22 +442,22 @@ const ArticleDetail = memo(function ArticleDetail({ slug }: BlogDetailProps) {
                 
                 {/* Add this style block to handle Tiptap specific styling */}
                 <style jsx global>{`
-                  .tiptap-content h1 { font-size: 1.75em; font-weight: bold; margin-top: 0.6em; margin-bottom: 0.6em; color: #16a34a; }
-                  .tiptap-content h2 { font-size: 1.4em; font-weight: bold; margin-top: 0.75em; margin-bottom: 0.75em; color: #16a34a; }
-                  .tiptap-content h3 { font-size: 1.15em; font-weight: bold; margin-top: 0.9em; margin-bottom: 0.9em; color: #16a34a; }
+                  .tiptap-content h1 { font-size: 1.75em; font-weight: bold; margin-top: 0.6em; margin-bottom: 0.6em; }
+                  .tiptap-content h2 { font-size: 1.4em; font-weight: bold; margin-top: 0.75em; margin-bottom: 0.75em; }
+                  .tiptap-content h3 { font-size: 1.15em; font-weight: bold; margin-top: 0.9em; margin-bottom: 0.9em; }
                   .tiptap-content h4 { font-size: 1em; font-weight: bold; margin-top: 1.2em; margin-bottom: 1.2em; }
                   .tiptap-content h5 { font-size: 0.9em; font-weight: bold; margin-top: 1.5em; margin-bottom: 1.5em; }
                   .tiptap-content h6 { font-size: 0.75em; font-weight: bold; margin-top: 2em; margin-bottom: 2em; }
                   
                   .tiptap-content p { margin: 0.8em 0; line-height: 1.6; font-size: 0.95em; }
-                  .tiptap-content a { color: #16a34a; text-decoration: underline; }
+                  .tiptap-content a { color: #3B82F6; text-decoration: underline; }
                   .tiptap-content blockquote { border-left: 4px solid #FFB400; margin-left: 0; padding-left: 0.8em; font-style: italic; background-color: #fef3c7; padding: 0.8em; border-radius: 0.4em; }
                   .tiptap-content pre { background-color: #f5f5f5; padding: 0.8em; border-radius: 0.4em; font-family: monospace; overflow-x: auto; font-size: 0.85em; }
                   .tiptap-content code { background-color: rgba(#616161, 0.1); color: #616161; padding: 0.15em 0.3em; border-radius: 0.25em; font-size: 0.9em; }
                   
                   .tiptap-content table { border-collapse: collapse; margin: 1.2em 0; overflow: hidden; table-layout: fixed; width: 100%; box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.1); border-radius: 0.4em; }
                   .tiptap-content table td, .tiptap-content table th { border: 2px solid #ced4da; box-sizing: border-box; min-width: 1em; padding: 6px 10px; position: relative; vertical-align: top; font-size: 0.9em; }
-                  .tiptap-content table th { background-color: #16a34a; color: white; font-weight: bold; text-align: left; }
+                  .tiptap-content table th { background-color: #f8f9fa; font-weight: bold; text-align: left; }
                   
                   /* List styles - Fixed to show bullets and numbers */
                   .tiptap-content ul { 
@@ -503,7 +527,7 @@ const ArticleDetail = memo(function ArticleDetail({ slug }: BlogDetailProps) {
                       <div className="flex space-x-2 md:space-x-3">
                         <button 
                           onClick={() => handleShare('facebook')}
-                          className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-[#16a34a] text-white flex items-center justify-center hover:bg-[#FFB400] hover:scale-110 transition-all duration-300 shadow-lg"
+                          className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-[#FFB400] text-black flex items-center justify-center hover:bg-[#FFC107] hover:scale-110 transition-all duration-300 shadow-lg"
                           title="Share on Facebook"
                         >
                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -512,7 +536,7 @@ const ArticleDetail = memo(function ArticleDetail({ slug }: BlogDetailProps) {
                         </button>
                         <button 
                           onClick={() => handleShare('twitter')}
-                          className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-[#16a34a] text-white flex items-center justify-center hover:bg-[#FFB400] hover:scale-110 transition-all duration-300 shadow-lg"
+                          className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-[#FFB400] text-black flex items-center justify-center hover:bg-[#FFC107] hover:scale-110 transition-all duration-300 shadow-lg"
                           title="Share on Twitter"
                         >
                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -521,7 +545,7 @@ const ArticleDetail = memo(function ArticleDetail({ slug }: BlogDetailProps) {
                         </button>
                         <button 
                           onClick={() => handleShare('linkedin')}
-                          className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-[#16a34a] text-white flex items-center justify-center hover:bg-[#FFB400] hover:scale-110 transition-all duration-300 shadow-lg"
+                          className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-[#FFB400] text-black flex items-center justify-center hover:bg-[#FFC107] hover:scale-110 transition-all duration-300 shadow-lg"
                           title="Share on LinkedIn"
                         >
                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -543,7 +567,7 @@ const ArticleDetail = memo(function ArticleDetail({ slug }: BlogDetailProps) {
             {/* Author Bio Sidebar for Desktop */}
             {blog.author && authorBios[blog.author as keyof typeof authorBios] && (
               <div className="hidden lg:block bg-white rounded-lg shadow-lg overflow-hidden sticky top-6">
-                <div className="bg-[#16a34a] px-4 py-3">
+                <div className="px-4 py-3" style={{ background: 'rgba(31, 19, 16, 0.8)' }}>
                   <h3 className="text-lg font-bold text-[#FFB400]">About the Author</h3>
                 </div>
                 <div className="p-4">
@@ -566,7 +590,7 @@ const ArticleDetail = memo(function ArticleDetail({ slug }: BlogDetailProps) {
                       href={authorBios[blog.author as keyof typeof authorBios]?.linkedInUrl || "https://www.linkedin.com/company/ama-legal-solutions/"}
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="flex items-center justify-center text-[#16a34a] hover:text-[#FFB400] font-medium transition-colors text-xs"
+                      className="flex items-center justify-center text-[#FFB400] hover:text-[#FFC107] font-medium transition-colors text-xs"
                     >
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 mr-1" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
@@ -602,7 +626,7 @@ const ArticleDetail = memo(function ArticleDetail({ slug }: BlogDetailProps) {
                     href={authorBios[blog.author as keyof typeof authorBios]?.linkedInUrl || "https://www.linkedin.com/company/ama-legal-solutions/"}
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="flex items-center text-[#16a34a] hover:text-[#FFB400] font-medium transition-colors text-sm"
+                    className="flex items-center text-[#FFB400] hover:text-[#FFC107] font-medium transition-colors text-sm"
                   >
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
@@ -618,7 +642,7 @@ const ArticleDetail = memo(function ArticleDetail({ slug }: BlogDetailProps) {
         {/* FAQs Section */}
         {faqs.length > 0 && (
           <div className="max-w-4xl mx-auto mt-6 lg:mt-8 bg-white rounded-lg shadow-lg overflow-hidden" itemScope itemType="https://schema.org/FAQPage">
-            <div className="px-4 md:px-5 py-4 border-b border-gray-200 bg-[#16a34a]">
+            <div className="px-4 md:px-5 py-4 border-b border-gray-200" style={{ background: 'rgba(31, 19, 16, 0.8)' }}>
               <h2 className="text-lg md:text-xl lg:text-2xl font-bold text-[#FFB400]">Frequently Asked Questions</h2>
             </div>
             <div className="p-4 md:p-5 lg:p-6">
@@ -627,16 +651,16 @@ const ArticleDetail = memo(function ArticleDetail({ slug }: BlogDetailProps) {
                   <div key={faq.id} className="border border-gray-200 rounded-lg overflow-hidden" itemScope itemType="https://schema.org/Question" itemProp="mainEntity">
                     <button
                       onClick={() => toggleFaq(faq.id)}
-                      className="flex justify-between items-center w-full text-left p-3 md:p-4 font-medium text-black hover:text-[#16a34a] hover:bg-green-50 focus:outline-none transition-all duration-300"
+                      className="flex justify-between items-center w-full text-left p-3 md:p-4 font-medium text-black hover:text-[#FFB400] hover:bg-yellow-50 focus:outline-none transition-all duration-300"
                     >
                       <span className="text-sm md:text-base pr-3" itemProp="name">{faq.question}</span>
                       <span className="flex-shrink-0">
                         {expandedFaqs.includes(faq.id) ? (
-                          <svg className="h-4 w-4 md:h-5 md:w-5 text-[#16a34a] transform rotate-180 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                          <svg className="h-4 w-4 md:h-5 md:w-5 text-[#FFB400] transform rotate-180 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                             <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
                           </svg>
                         ) : (
-                          <svg className="h-4 w-4 md:h-5 md:w-5 text-[#16a34a] transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                          <svg className="h-4 w-4 md:h-5 md:w-5 text-[#FFB400] transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                             <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
                           </svg>
                         )}
@@ -658,32 +682,32 @@ const ArticleDetail = memo(function ArticleDetail({ slug }: BlogDetailProps) {
         {relatedBlogs.length > 0 && (
           <div className="max-w-4xl mx-auto mt-6 lg:mt-8">
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="px-4 md:px-5 py-4 border-b border-gray-200 bg-[#16a34a]">
+              <div className="px-4 md:px-5 py-4 border-b border-gray-200" style={{ background: 'rgba(31, 19, 16, 0.8)' }}>
                 <h2 className="text-lg md:text-xl lg:text-2xl font-bold text-[#FFB400]">Related Articles</h2>
               </div>
               <div className="p-4 md:p-5 lg:p-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
                   {relatedBlogs.map((article) => (
                     <Link key={article.id} href={`/blog/${article.slug}`} prefetch={true}>
-                      <div className="group rounded-lg overflow-hidden border border-gray-100 h-full hover:shadow-lg hover:border-[#16a34a] transition-all duration-300 transform hover:-translate-y-1">
+                      <div className="group rounded-lg overflow-hidden border border-gray-100 h-full hover:shadow-lg hover:border-[#FFB400] transition-all duration-300 transform hover:-translate-y-1">
                         <div className="relative h-36 lg:h-40 overflow-hidden">
                           <img 
                             src={article.image}
                             alt={article.title}
                             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                           />
-                          <div className="absolute bottom-2 right-2 bg-white/90 backdrop-blur-sm rounded px-1.5 py-0.5 text-xs uppercase text-[#16a34a] font-semibold">
+                          <div className="absolute bottom-2 right-2 bg-white/90 backdrop-blur-sm rounded px-1.5 py-0.5 text-xs uppercase text-[#FFB400] font-semibold">
                             {article.date}
                           </div>
                         </div>
                         <div className="p-3 lg:p-4 relative bg-white">
-                          <h3 className="text-sm md:text-base font-semibold mb-1 lg:mb-2 group-hover:text-[#16a34a] transition-colors duration-300 line-clamp-2 text-black">
+                          <h3 className="text-sm md:text-base font-semibold mb-1 lg:mb-2 group-hover:text-[#FFB400] transition-colors duration-300 line-clamp-2 text-black">
                             {article.title}
                           </h3>
                           {article.subtitle && (
-                            <p className="text-xs md:text-sm mb-2 text-[#86efac] line-clamp-2">{article.subtitle}</p>
+                            <p className="text-xs md:text-sm mb-2 text-gray-600 line-clamp-2">{article.subtitle}</p>
                           )}
-                          <div className="flex items-center text-[#FFB400] group-hover:text-[#16a34a] transition-colors duration-300">
+                          <div className="flex items-center text-[#FFB400] group-hover:text-[#FFC107] transition-colors duration-300">
                             <span className="text-xs font-medium">Read more</span>
                             <svg className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -701,7 +725,7 @@ const ArticleDetail = memo(function ArticleDetail({ slug }: BlogDetailProps) {
         
         {/* Fixed Contact Button */}
         <div className="fixed bottom-3 right-3 md:bottom-4 md:right-4 z-[999]">
-          <Link href="/contact" className="group inline-flex items-center bg-[#FFB400] text-black font-bold px-3 py-2 md:px-4 md:py-2 text-sm md:text-base rounded-full shadow-2xl hover:bg-[#16a34a] hover:text-white hover:scale-105 transition-all duration-300">
+          <Link href="/contact" className="group inline-flex items-center bg-[#FFB400] text-black font-bold px-3 py-2 md:px-4 md:py-2 text-sm md:text-base rounded-full shadow-2xl hover:bg-[#FFC107] hover:text-black hover:scale-105 transition-all duration-300">
             <span>Get in Touch</span>
             <svg className="w-3 h-3 md:w-4 md:h-4 ml-1 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
