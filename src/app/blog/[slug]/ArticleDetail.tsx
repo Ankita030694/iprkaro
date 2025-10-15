@@ -388,7 +388,7 @@ const ArticleDetail = memo(function ArticleDetail({ slug }: BlogDetailProps) {
         />
       )}
 
-      <div className="relative z-10 pt-[160px] pb-16 md:pb-8">
+      <div className="relative z-10 pt-8 pb-16 md:pb-8">
         <div className="container mx-auto px-3 sm:px-4 lg:px-5 xl:px-6 2xl:px-8 max-w-7xl">
           {/* Hero Section */}
           <div className={`text-center mb-8 lg:mb-10 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
