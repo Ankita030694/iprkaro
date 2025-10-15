@@ -1,517 +1,824 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import Faq from '@/components/Faq';
 
 export default function Dashboard() {
-  // Sample data - in real app, this would come from API/props
-  const trademarkData = {
-    healthScore: "Excellent",
-    registrability: 75,
-    similarityRate: 25,
-    classProbability: 90,
-    registrationDate: "25 Dec 2025",
-    filingDate: "15 Sept 2025",
-    similarityScore: "20 %",
-    lowConflictDetected: "Low conflict detected",
-    suggestedClass: 25,
-    riskAnalysis: "Medium Chance & Fashion"
+  const [expandedPlan, setExpandedPlan] = useState<string | null>(null);
+  const [registrabilityScore, setRegistrabilityScore] = useState(75);
+  const [similarityScore, setSimilarityScore] = useState(50);
+  const [classScore, setClassScore] = useState(90);
+
+  const togglePlan = (planId: string) => {
+    setExpandedPlan(expandedPlan === planId ? null : planId);
   };
 
-  const CircularProgress = ({ percentage, color, size = 120 }: { percentage: number; color: string; size?: number }) => {
-    const radius = 45;
-    const circumference = 2 * Math.PI * radius;
-    const strokeDasharray = `${(percentage / 100) * circumference} ${circumference}`;
-    
-    return (
-      <div className="flex flex-col items-center">
-        <div className="relative" style={{ width: size, height: size }}>
-          <svg className="transform -rotate-90" width={size} height={size}>
-            <circle
-              cx={size / 2}
-              cy={size / 2}
-              r={radius}
-              stroke="rgba(255,255,255,0.1)"
-              strokeWidth="8"
-              fill="none"
-            />
-            <circle
-              cx={size / 2}
-              cy={size / 2}
-              r={radius}
-              stroke={color}
-              strokeWidth="8"
-              fill="none"
-              strokeDasharray={strokeDasharray}
-              strokeLinecap="round"
-              className="transition-all duration-1000"
-            />
-          </svg>
-          <div className="absolute inset-0 flex items-center justify-center">
-            <span className="text-2xl font-bold text-white font-nunito">{percentage}%</span>
-          </div>
-        </div>
-      </div>
-    );
+  const handleScoreChange = (setter: React.Dispatch<React.SetStateAction<number>>, value: string) => {
+    const numValue = parseInt(value) || 0;
+    const clampedValue = Math.max(0, Math.min(100, numValue));
+    setter(clampedValue);
   };
+
+  const calculateDashOffset = (score: number) => {
+    return 251.2 * (1 - score / 100);
+  };
+
+  const features = [
+    { text: "Cost Effective", icon: 0 },
+    { text: "Fast Process", icon: 1 },
+    { text: "Risk Reduction", icon: 2 },
+    { text: "AI Driven", icon: 3 },
+    { text: "Expert Guidance", icon: 4 },
+    { text: "24/7 Accessibility", icon: 5 }
+  ];
+
+  const mobileCardIcons = [
+    // Lightning icon for "Cost Effective"
+    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22" fill="none" key="lightning">
+      <path d="M1.14933 11.2623L5.77496 6.29174C6.13652 5.90275 11 0.517143 11 1.03506L6.8147 10.5098C6.8147 10.8196 7.08042 11.0714 7.40893 11.0714H9.65895C10.1699 11.0714 10.4422 11.6413 10.1045 12.0043L5.47883 16.9748C5.11727 17.3633 1.59484 21.4729 1.59484 20.9549L4.43909 12.7563C4.43909 12.4464 4.17271 12.1946 3.84486 12.1946H1.59484C1.0839 12.1946 0.811567 11.6253 1.14933 11.2623Z" stroke="#FFD700" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>,
+    // User check icon for "Fast Processing"
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none" key="usercheck">
+      <path d="M7.36364 10.0909C8.56917 10.0909 9.72532 9.61201 10.5778 8.75958C11.4302 7.90714 11.9091 6.75098 11.9091 5.54545C11.9091 4.33993 11.4302 3.18377 10.5778 2.33133C9.72532 1.47889 8.56917 1 7.36364 1C6.15811 1 5.00195 1.47889 4.14951 2.33133C3.29708 3.18377 2.81818 4.33993 2.81818 5.54545C2.81818 6.75098 3.29708 7.90714 4.14951 8.75958C5.00195 9.61201 6.15811 10.0909 7.36364 10.0909ZM7.36364 10.0909C9.19364 10.0909 10.7927 10.7818 11.93 11.93C12.6043 12.6136 13.1087 13.4459 13.4027 14.36M7.36364 10.0909C3.72727 10.0909 1 12.8182 1 16.4545V21H10.0909M11 17.2036L14.8091 20.0909L21 11.9091" stroke="#FFD700" strokeWidth="1.5"/>
+    </svg>,
+    // Shield icon for "Risk Reduction"
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 24 22" fill="none" key="shield">
+      <path d="M17.8421 20.6537C17.5276 20.7959 17.189 20.8773 16.8442 20.8937C15.7168 20.9505 14.1379 21 12.0526 21C9.96737 21 8.38842 20.95 7.26105 20.8932C6.9163 20.877 6.57771 20.7957 6.26316 20.6537M20.2105 17.7784C19.8078 18.037 19.3443 18.1854 18.8663 18.2089C17.3989 18.2889 15.1637 18.3679 12.0526 18.3679C8.94158 18.3679 6.70632 18.2889 5.23895 18.2089C4.76094 18.1854 4.29746 18.037 3.89474 17.7784M1.20947 13.2158C1.33895 14.5289 2.39789 15.4726 3.71632 15.5447C5.41158 15.6379 8.13789 15.7368 12.0526 15.7368C15.9674 15.7368 18.6937 15.6379 20.3895 15.5447C21.7074 15.4726 22.7663 14.5289 22.8958 13.2158C23.0074 12.0847 23.1053 10.4879 23.1053 8.36842C23.1053 6.24895 23.0074 4.65211 22.8958 3.52105C22.7663 2.20737 21.7074 1.26421 20.3889 1.19211C18.6937 1.09895 15.9674 1 12.0526 1C8.13789 1 5.41158 1.09895 3.71579 1.19211C2.39789 1.26421 1.33895 2.20789 1.20947 3.52105C1.09789 4.65263 1 6.24895 1 8.36842C1 10.4879 1.09789 12.0847 1.20947 13.2158Z" stroke="#FFD700" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M14.1583 6.00752C14.1583 6.00752 13.3162 5.36279 12.053 5.36279C11.0004 5.36279 9.94778 6.00752 9.94778 6.86647C9.94778 9.01489 14.1583 7.72595 14.1583 9.87437C14.1583 10.7333 13.1057 11.3781 12.053 11.3781M12.053 11.3781C10.7899 11.3781 9.94778 10.7333 9.94778 10.7333M12.053 11.3781V12.5812M12.053 5.36331V4.16016M18.8951 8.37068H18.3688M5.73725 8.37068H5.21094" stroke="#FFD700" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>,
+    // Star icon for "AI Driven"
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none" key="star">
+      <path d="M11.1055 19C14.8765 19 16.7625 19 17.9335 17.828C19.1055 16.657 19.1055 14.771 19.1055 11M11.1055 19C7.33447 19 5.44847 19 4.27747 17.828C3.10647 16.656 3.10547 14.771 3.10547 11M11.1055 19V21M3.10547 11C3.10547 7.229 3.10547 5.343 4.27747 4.172C5.44947 3.001 7.33447 3 11.1055 3M3.10547 11H1.10547M11.1055 3C14.8765 3 16.7625 3 17.9335 4.172C19.1045 5.344 19.1055 7.229 19.1055 11M11.1055 3V1M19.1055 11H21.1055M7.10547 1V3M15.1055 1V3M7.10547 19V21M15.1055 19V21M21.1055 15H19.1055M3.10547 7H1.10547M3.10547 15H1.10547M21.1055 7H19.1055" stroke="#FFD700" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M10.5864 6.86291C10.6255 6.75647 10.6963 6.6646 10.7893 6.5997C10.8823 6.5348 10.993 6.5 11.1064 6.5C11.2198 6.5 11.3304 6.5348 11.4234 6.5997C11.5164 6.6646 11.5873 6.75647 11.6264 6.86291L12.4264 9.02591C12.5384 9.32891 12.7784 9.56891 13.0814 9.68091L15.2444 10.4809C15.3508 10.52 15.4427 10.5909 15.5076 10.6839C15.5725 10.7768 15.6073 10.8875 15.6073 11.0009C15.6073 11.1143 15.5725 11.225 15.5076 11.318C15.4427 11.411 15.3508 11.4818 15.2444 11.5209L13.0814 12.3209C12.9311 12.3759 12.7947 12.463 12.6816 12.5761C12.5684 12.6892 12.4814 12.8257 12.4264 12.9759L11.6264 15.1389C11.5873 15.2453 11.5164 15.3372 11.4234 15.4021C11.3304 15.467 11.2198 15.5018 11.1064 15.5018C10.993 15.5018 10.8823 15.467 10.7893 15.4021C10.6963 15.3372 10.6255 15.2453 10.5864 15.1389L9.78638 12.9759C9.7314 12.8257 9.64431 12.6892 9.53118 12.5761C9.41806 12.463 9.28162 12.3759 9.13138 12.3209L6.96838 11.5209C6.86194 11.4818 6.77007 11.411 6.70517 11.318C6.64027 11.225 6.60547 11.1143 6.60547 11.0009C6.60547 10.8875 6.64027 10.7768 6.70517 10.6839C6.77007 10.5909 6.86194 10.52 6.96838 10.4809L9.13138 9.68091C9.28128 9.62534 9.41742 9.53805 9.53047 9.425C9.64352 9.31195 9.73081 9.17582 9.78638 9.02591L10.5864 6.86291Z" stroke="#FFD700" strokeWidth="1.5"/>
+    </svg>,
+    // Shield with check icon for "Expert Guidance"
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="22" viewBox="0 0 20 22" fill="none" key="shieldcheck">
+      <path d="M1 10L10 7L19 10M10 1V20.5" stroke="#FFD700" strokeWidth="1.5"/>
+      <path d="M1.193 13C2.05 17.298 5.576 19.513 7.899 20.527C8.62 20.842 8.981 21 10 21C11.02 21 11.38 20.842 12.101 20.527C12.68 20.275 13.332 19.947 14 19.533M17 16.904C18.163 15.428 19 13.496 19 10.991V9.417C19 6.219 19 4.62 18.622 4.082C18.245 3.545 16.742 3.03 13.735 2.001L13.162 1.805C11.595 1.268 10.812 1 10 1C9.188 1 8.405 1.268 6.838 1.805L6.265 2C3.258 3.03 1.755 3.545 1.378 4.082C1 4.62 1 6.22 1 9.417V10" stroke="#FFD700" strokeWidth="1.5" strokeLinecap="round"/>
+    </svg>,
+    // Clock icon for "24/7 Accessibility"
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" key="clock">
+      <circle cx="12" cy="12" r="9" stroke="#FFD700" strokeWidth="1.5" strokeLinecap="round"/>
+      <path d="M12 7V12L15 15" stroke="#FFD700" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+  ];
+
+  const trademarkRequirements = [
+    {
+      text: "Govt. Registration",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="28" viewBox="0 0 27 28" fill="none">
+          <path d="M1 26.5H26M9.33333 8.44444H10.7222M9.33333 14H10.7222M9.33333 19.5556H10.7222M16.2778 8.44444H17.6667M16.2778 14H17.6667M16.2778 19.5556H17.6667M3.77778 26.5V4.27778C3.77778 3.54107 4.07044 2.83453 4.59137 2.31359C5.1123 1.79266 5.81884 1.5 6.55556 1.5H20.4444C21.1812 1.5 21.8877 1.79266 22.4086 2.31359C22.9296 2.83453 23.2222 3.54107 23.2222 4.27778V26.5" stroke="#FFB703" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      )
+    },
+    {
+      text: "Personal Information",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="28" viewBox="0 0 27 28" fill="none">
+          <path d="M1 26.5H26M9.33333 8.44444H10.7222M9.33333 14H10.7222M9.33333 19.5556H10.7222M16.2778 8.44444H17.6667M16.2778 14H17.6667M16.2778 19.5556H17.6667M3.77778 26.5V4.27778C3.77778 3.54107 4.07044 2.83453 4.59137 2.31359C5.1123 1.79266 5.81884 1.5 6.55556 1.5H20.4444C21.1812 1.5 21.8877 1.79266 22.4086 2.31359C22.9296 2.83453 23.2222 3.54107 23.2222 4.27778V26.5" stroke="#FFB703" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      )
+    },
+    {
+      text: "Trademark Name & Class",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="28" viewBox="0 0 27 28" fill="none">
+          <path d="M10.375 18.375V14.875M10.375 14.875V9.625H13.9463C14.8388 9.625 16.625 9.625 16.625 12.25C16.625 14.875 14.8388 14.875 13.9463 14.875M10.375 14.875H13.9463M13.9463 14.875L16.625 18.375" stroke="#FFB703" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M13.5 26.5C20.4037 26.5 26 20.9037 26 14C26 7.09625 20.4037 1.5 13.5 1.5C6.59625 1.5 1 7.09625 1 14C1 20.9037 6.59625 26.5 13.5 26.5Z" stroke="#FFB703" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      )
+    },
+    {
+      text: "Authorization Letter",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="28" viewBox="0 0 23 28" fill="none">
+          <path d="M16.5405 1.5H5.72973C3.11757 1.5 1 3.61757 1 6.22973V21.7703C1 24.3824 3.11757 26.5 5.72973 26.5H16.5405C19.1527 26.5 21.2703 24.3824 21.2703 21.7703V6.22973C21.2703 3.61757 19.1527 1.5 16.5405 1.5Z" stroke="#FFB703" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M6.40625 6.91211H15.8657M6.40625 12.3175H15.8657M6.40625 17.7229H11.136" stroke="#FFB703" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      )
+    }
+  ];
+
+  const plans = [
+    {
+      id: 'standard',
+      name: 'AI Trademark Filing: Standard',
+      subtitle: 'Deeper search with risk insights',
+      description: 'Best for small businesses/startups',
+      content: 'Essential trademark protection',
+      features: [
+        'Complete online trademark filing included',
+        'AI trademark search & conflict check',
+        'Expert legal guidance throughout the process',
+        'Essential trademark protection for your brand'
+      ],
+      price: '₹1,999',
+      highlighted: true
+    },
+    {
+      id: 'premium',
+      name: 'Premium Trademark Registration: With AI Risk Checkup',
+      subtitle: 'Complete filing included',
+      description: 'Suited for growing brands',
+      content: 'Enhanced trademark services',
+      features: [
+        'AI-powered trademark registration and risk report',
+        'Advanced legal guidance and trademark filing',
+        'Priority VIP support, fast application monitoring',
+        'Enhanced trademark and brand safeguard'
+      ],
+      price: '₹2,999',
+      highlighted: false
+    },
+    {
+      id: 'pro',
+      name: 'Brand Monitoring & Protection: AI Powered',
+      subtitle: '24/7 brand monitoring',
+      description: 'Enterprises, ongoing protection',
+      content: 'Complete brand protection',
+      features: [
+        '24/7 AI-powered brand & trademark monitoring',
+        'Instant alerts for conflicts and infringements',
+        'Continuous protection against copycats',
+        'Ongoing legal peace of mind for your brand'
+      ],
+      price: '₹3,999',
+      highlighted: false
+    }
+  ];
 
   return (
-    <div className="min-h-screen bg-[#0C002B] relative overflow-hidden">
-      {/* Background Gradient */}
-      <div className="absolute inset-0" style={{
-        background: `radial-gradient(ellipse 1600px 640px at 50% 20%, #1345C3 0%, #1345C3 20%, rgba(19, 69, 195, 0.8) 60%, rgba(19, 69, 195, 0.4) 70%, transparent 100%)`
-      }}></div>
-      
-      {/* Floating Particles */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 left-10 w-2 h-2 bg-[#FFB703] rounded-full animate-bounce opacity-60"></div>
-        <div className="absolute top-40 right-20 w-1 h-1 bg-[#069A81] rounded-full animate-pulse opacity-40"></div>
-        <div className="absolute top-60 left-1/4 w-1.5 h-1.5 bg-[#1345C3] rounded-full animate-ping opacity-50"></div>
-        <div className="absolute bottom-40 right-1/3 w-2 h-2 bg-[#FFB703] rounded-full animate-bounce opacity-30" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute bottom-20 left-1/2 w-1 h-1 bg-[#069A81] rounded-full animate-pulse opacity-60" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/3 right-10 w-1.5 h-1.5 bg-[#1345C3] rounded-full animate-ping opacity-40" style={{ animationDelay: '0.5s' }}></div>
-      </div>
-      
-      <div className="max-w-7xl mx-auto px-6 py-8 relative z-10">
-        {/* Header */}
-        <div className="mb-8">
-          <p className="text-[rgba(255,255,255,0.77)] text-sm mb-2 font-nunito">Top / Primary Metrics</p>
-          <h1 className="text-3xl font-bold text-white mb-6 font-nunito">Your Trademark Health Score</h1>
-          
-          {/* Health Score Banner */}
-          <div className="mb-8">
-            <h2 className="text-5xl font-bold text-white mb-4 font-nunito">Excellent</h2>
-            <div className="w-full bg-[rgba(255,255,255,0.1)] rounded-full h-4 backdrop-blur-sm border border-[rgba(255,255,255,0.2)]">
-              <div className="bg-gradient-to-r from-[#22c55e] to-[#16a34a] h-4 rounded-full transition-all duration-1000" style={{ width: '85%' }}></div>
+    <div className="min-h-screen pt-20" style={{ 
+      background: '#0C002B',
+      backgroundImage: 'linear-gradient(to right top, #0c002b, #0c002b,rgb(25, 10, 60),rgb(80, 60, 124),rgb(79, 75, 75))',
+      backgroundSize: '100% 100%',
+      backgroundPosition: 'center top',
+      backgroundRepeat: 'no-repeat'
+    }}>
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 py-8 lg:py-16">
+        {/* Top Metrics Section */}
+        <div className="mb-12">
+          {/* Metrics Heading */}
+          <div className="text-left mb-6">
+            <h4 className="text-white font-nunito text-sm md:text-base lg:text-lg font-medium mb-2">
+              Top/Primary Metrics
+            </h4>
+            <h1 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold mb-2">
+              Your Trademark Health Score
+            </h1>
+            <p className="text-[#4ADE80] font-nunito text-xl md:text-2xl lg:text-3xl font-semibold">
+              Excellent
+            </p>
+          </div>
+
+          {/* Metrics Container */}
+          <div
+            className="w-full px-6 md:px-8 lg:px-10 py-8 md:py-10 lg:py-12"
+            style={{
+              borderRadius: '40px',
+              background: 'rgba(255, 255, 255, 0.10)',
+              boxShadow: '0 0 20px 0 rgba(0, 0, 0, 0.10) inset, 0 0 20px 6px rgba(255, 255, 255, 0.20) inset'
+            }}
+          >
+            {/* Two Column Layout */}
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+              {/* First Container - 3/4 width */}
+              <div className="lg:col-span-3">
+                {/* Heading */}
+                <div
+                  className="flex items-center justify-between px-6 py-4 mb-4"
+                  style={{
+                    borderRadius: '5px 5px 0 0',
+                    background: 'rgba(0, 0, 0, 0.26)'
+                  }}
+                >
+                  <h3 className="text-white font-nunito text-lg md:text-xl font-semibold">
+                    Your Trademark Health Score
+                  </h3>
+                  <span className="text-[#4ADE80] font-nunito text-lg md:text-xl font-semibold">
+                    Excellent
+                  </span>
+                </div>
+                
+                {/* Content area - 3 Columns */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  {/* Column 1 - Trademark Registrability */}
+                  <div className="flex flex-col items-center">
+                    <h4 className="text-white font-nunito text-base md:text-lg font-semibold mb-4">
+                      Trademark Registrability
+                    </h4>
+                    
+                    {/* Curved Gauge */}
+                    <div className="relative w-40 h-20 mb-4">
+                      <svg viewBox="0 0 200 100" className="w-full h-full">
+                        {/* Background arc */}
+                        <path
+                          d="M 20 90 A 80 80 0 0 1 180 90"
+                          fill="none"
+                          stroke="rgba(255, 255, 255, 0.1)"
+                          strokeWidth="20"
+                          strokeLinecap="round"
+                        />
+                        {/* Gradient arc - Red to Orange to Green */}
+                        <defs>
+                          <linearGradient id="gaugeGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stopColor="#EF4444" />
+                            <stop offset="50%" stopColor="#F59E0B" />
+                            <stop offset="100%" stopColor="#10B981" />
+                          </linearGradient>
+                        </defs>
+                        <path
+                          d="M 20 90 A 80 80 0 0 1 180 90"
+                          fill="none"
+                          stroke="url(#gaugeGradient1)"
+                          strokeWidth="20"
+                          strokeLinecap="round"
+                          strokeDasharray="251.2"
+                          strokeDashoffset={calculateDashOffset(registrabilityScore)}
+                          style={{ transition: 'stroke-dashoffset 0.5s ease-in-out' }}
+                        />
+                        {/* Center text */}
+                        <text x="100" y="75" textAnchor="middle" fill="white" fontSize="24" fontWeight="bold">
+                          {registrabilityScore}
+                        </text>
+                      </svg>
+                    </div>
+
+                    {/* Input Field */}
+                    <input
+                      type="number"
+                      min="0"
+                      max="100"
+                      value={registrabilityScore}
+                      onChange={(e) => handleScoreChange(setRegistrabilityScore, e.target.value)}
+                      className="w-full px-3 py-2 mb-4 rounded-lg text-center font-nunito font-semibold text-white bg-white/10 border border-white/20 focus:outline-none focus:border-[#FFB703] transition-colors"
+                      placeholder="Enter 0-100"
+                    />
+
+                    {/* Genericness Container */}
+                    <div
+                      className="w-full p-4"
+                      style={{
+                        borderRadius: '15px',
+                        border: '2px solid #171717',
+                        background: 'rgba(24, 24, 24, 0.15)'
+                      }}
+                    >
+                      <div className="flex items-center justify-between mb-2">
+                        <h5 className="text-white font-nunito text-sm font-semibold">
+                          Genericness
+                        </h5>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <polyline points="18 15 12 9 6 15"></polyline>
+                        </svg>
+                      </div>
+                      <p className="text-white/70 font-nunito text-xs leading-relaxed">
+                        Trademark uniqueness, existing conflicts, and overall legal eligibility.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Column 2 - Similarity Rate */}
+                  <div className="flex flex-col items-center">
+                    <h4 className="text-white font-nunito text-base md:text-lg font-semibold mb-4">
+                      Similarity Rate
+                    </h4>
+                    
+                    {/* Curved Gauge */}
+                    <div className="relative w-40 h-20 mb-4">
+                      <svg viewBox="0 0 200 100" className="w-full h-full">
+                        {/* Background arc */}
+                        <path
+                          d="M 20 90 A 80 80 0 0 1 180 90"
+                          fill="none"
+                          stroke="rgba(255, 255, 255, 0.1)"
+                          strokeWidth="20"
+                          strokeLinecap="round"
+                        />
+                        {/* Gradient arc */}
+                        <defs>
+                          <linearGradient id="gaugeGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stopColor="#EF4444" />
+                            <stop offset="50%" stopColor="#F59E0B" />
+                            <stop offset="100%" stopColor="#10B981" />
+                          </linearGradient>
+                        </defs>
+                        <path
+                          d="M 20 90 A 80 80 0 0 1 180 90"
+                          fill="none"
+                          stroke="url(#gaugeGradient2)"
+                          strokeWidth="20"
+                          strokeLinecap="round"
+                          strokeDasharray="251.2"
+                          strokeDashoffset={calculateDashOffset(similarityScore)}
+                          style={{ transition: 'stroke-dashoffset 0.5s ease-in-out' }}
+                        />
+                        {/* Center text */}
+                        <text x="100" y="75" textAnchor="middle" fill="white" fontSize="24" fontWeight="bold">
+                          {similarityScore}
+                        </text>
+                      </svg>
+                    </div>
+
+                    {/* Input Field */}
+                    <input
+                      type="number"
+                      min="0"
+                      max="100"
+                      value={similarityScore}
+                      onChange={(e) => handleScoreChange(setSimilarityScore, e.target.value)}
+                      className="w-full px-3 py-2 mb-4 rounded-lg text-center font-nunito font-semibold text-white bg-white/10 border border-white/20 focus:outline-none focus:border-[#FFB703] transition-colors"
+                      placeholder="Enter 0-100"
+                    />
+
+                    {/* Genericness Container */}
+                    <div
+                      className="w-full p-4"
+                      style={{
+                        borderRadius: '15px',
+                        border: '2px solid #171717',
+                        background: 'rgba(24, 24, 24, 0.15)'
+                      }}
+                    >
+                      <div className="flex items-center justify-between mb-2">
+                        <h5 className="text-white font-nunito text-sm font-semibold">
+                          Genericness
+                        </h5>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EF4444" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                      </div>
+                      <p className="text-white/70 font-nunito text-xs leading-relaxed">
+                        Trademark uniqueness, existing conflicts, and overall legal eligibility.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Column 3 - Class Probability */}
+                  <div className="flex flex-col items-center">
+                    <h4 className="text-white font-nunito text-base md:text-lg font-semibold mb-4">
+                      Class Probability
+                    </h4>
+                    
+                    {/* Curved Gauge */}
+                    <div className="relative w-40 h-20 mb-4">
+                      <svg viewBox="0 0 200 100" className="w-full h-full">
+                        {/* Background arc */}
+                        <path
+                          d="M 20 90 A 80 80 0 0 1 180 90"
+                          fill="none"
+                          stroke="rgba(255, 255, 255, 0.1)"
+                          strokeWidth="20"
+                          strokeLinecap="round"
+                        />
+                        {/* Gradient arc */}
+                        <defs>
+                          <linearGradient id="gaugeGradient3" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stopColor="#EF4444" />
+                            <stop offset="50%" stopColor="#F59E0B" />
+                            <stop offset="100%" stopColor="#10B981" />
+                          </linearGradient>
+                        </defs>
+                        <path
+                          d="M 20 90 A 80 80 0 0 1 180 90"
+                          fill="none"
+                          stroke="url(#gaugeGradient3)"
+                          strokeWidth="20"
+                          strokeLinecap="round"
+                          strokeDasharray="251.2"
+                          strokeDashoffset={calculateDashOffset(classScore)}
+                          style={{ transition: 'stroke-dashoffset 0.5s ease-in-out' }}
+                        />
+                        {/* Center text */}
+                        <text x="100" y="75" textAnchor="middle" fill="white" fontSize="24" fontWeight="bold">
+                          {classScore}
+                        </text>
+                      </svg>
+                    </div>
+
+                    {/* Input Field */}
+                    <input
+                      type="number"
+                      min="0"
+                      max="100"
+                      value={classScore}
+                      onChange={(e) => handleScoreChange(setClassScore, e.target.value)}
+                      className="w-full px-3 py-2 mb-4 rounded-lg text-center font-nunito font-semibold text-white bg-white/10 border border-white/20 focus:outline-none focus:border-[#FFB703] transition-colors"
+                      placeholder="Enter 0-100"
+                    />
+
+                    {/* Genericness Container */}
+                    <div
+                      className="w-full p-4"
+                      style={{
+                        borderRadius: '15px',
+                        border: '2px solid #171717',
+                        background: 'rgba(24, 24, 24, 0.15)'
+                      }}
+                    >
+                      <div className="flex items-center justify-between mb-2">
+                        <h5 className="text-white font-nunito text-sm font-semibold">
+                          Genericness
+                        </h5>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <polyline points="18 15 12 9 6 15"></polyline>
+                        </svg>
+                      </div>
+                      <p className="text-white/70 font-nunito text-xs leading-relaxed">
+                        Trademark uniqueness, existing conflicts, and overall legal eligibility.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Second Container - 1/4 width */}
+              <div className="lg:col-span-1 flex flex-col">
+                {/* Heading */}
+                <div
+                  className="flex items-center justify-center px-6 py-4 mb-4"
+                  style={{
+                    borderRadius: '5px 5px 0 0',
+                    background: 'rgba(0, 0, 0, 0.26)'
+                  }}
+                >
+                  <h3 className="text-white font-nunito text-lg md:text-xl font-semibold">
+                    Key Factors
+                  </h3>
+                </div>
+                
+                {/* Content area - 5 Rows */}
+                <div className="flex flex-col flex-1 space-y-3">
+                  {/* Row 1 - Brand Strength */}
+                  <div
+                    className="p-3 flex items-center gap-3 flex-1"
+                    style={{
+                      borderRadius: '15px',
+                      border: '2px solid rgba(255, 255, 255, 0.15)',
+                      background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%)',
+                      backdropFilter: 'blur(16px)'
+                    }}
+                  >
+                    {/* Icon */}
+                    <div className="flex-shrink-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                        <path d="M2 17l10 5 10-5"></path>
+                        <path d="M2 12l10 5 10-5"></path>
+                      </svg>
+                    </div>
+                    {/* Content */}
+                    <div className="flex-1">
+                      <h4 className="text-white font-nunito text-xs font-semibold mb-0.5">
+                        Brand Strength
+                      </h4>
+                      <p className="text-white/80 font-nunito text-[10px] leading-tight">
+                        Strong unique brand identity
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Row 2 - Legal Risk */}
+                  <div
+                    className="p-3 flex items-center gap-3 flex-1"
+                    style={{
+                      borderRadius: '15px',
+                      border: '2px solid rgba(255, 255, 255, 0.15)',
+                      background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%)',
+                      backdropFilter: 'blur(16px)'
+                    }}
+                  >
+                    {/* Icon */}
+                    <div className="flex-shrink-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                      </svg>
+                    </div>
+                    {/* Content */}
+                    <div className="flex-1">
+                      <h4 className="text-white font-nunito text-xs font-semibold mb-0.5">
+                        Legal Risk
+                      </h4>
+                      <p className="text-white/80 font-nunito text-[10px] leading-tight">
+                        Low risk of legal conflicts
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Row 3 - Market Position */}
+                  <div
+                    className="p-3 flex items-center gap-3 flex-1"
+                    style={{
+                      borderRadius: '15px',
+                      border: '2px solid rgba(255, 255, 255, 0.15)',
+                      background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%)',
+                      backdropFilter: 'blur(16px)'
+                    }}
+                  >
+                    {/* Icon */}
+                    <div className="flex-shrink-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                        <line x1="12" y1="1" x2="12" y2="23"></line>
+                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                      </svg>
+                    </div>
+                    {/* Content */}
+                    <div className="flex-1">
+                      <h4 className="text-white font-nunito text-xs font-semibold mb-0.5">
+                        Market Position
+                      </h4>
+                      <p className="text-white/80 font-nunito text-[10px] leading-tight">
+                        Competitive advantage in market
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Row 4 - Registration Speed */}
+                  <div
+                    className="p-3 flex items-center gap-3 flex-1"
+                    style={{
+                      borderRadius: '15px',
+                      border: '2px solid rgba(255, 255, 255, 0.15)',
+                      background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%)',
+                      backdropFilter: 'blur(16px)'
+                    }}
+                  >
+                    {/* Icon */}
+                    <div className="flex-shrink-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                        <polyline points="17 6 23 6 23 12"></polyline>
+                      </svg>
+                    </div>
+                    {/* Content */}
+                    <div className="flex-1">
+                      <h4 className="text-white font-nunito text-xs font-semibold mb-0.5">
+                        Registration Speed
+                      </h4>
+                      <p className="text-white/80 font-nunito text-[10px] leading-tight">
+                        Fast approval process expected
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Row 5 - Protection Level */}
+                  <div
+                    className="p-3 flex items-center gap-3 flex-1"
+                    style={{
+                      borderRadius: '15px',
+                      border: '2px solid rgba(255, 255, 255, 0.15)',
+                      background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%)',
+                      backdropFilter: 'blur(16px)'
+                    }}
+                  >
+                    {/* Icon */}
+                    <div className="flex-shrink-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                      </svg>
+                    </div>
+                    {/* Content */}
+                    <div className="flex-1">
+                      <h4 className="text-white font-nunito text-xs font-semibold mb-0.5">
+                        Protection Level
+                      </h4>
+                      <p className="text-white/80 font-nunito text-[10px] leading-tight">
+                        Comprehensive brand protection coverage
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Quick Stats Bar */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
-          <div className="bg-[rgba(255,255,255,0.1)] rounded-[15px] p-4 backdrop-blur-sm border border-[rgba(255,255,255,0.2)] hover:bg-[rgba(255,255,255,0.15)] transition-all duration-300">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-[rgba(255,255,255,0.77)] text-xs font-nunito">Total Applications</p>
-                <p className="text-2xl font-bold text-white font-nunito">1,247</p>
-                <p className="text-green-400 text-xs font-nunito flex items-center">
-                  <i className="fas fa-arrow-up mr-1"></i>
-                  +12.5%
-                </p>
-              </div>
-              <i className="fas fa-file-alt text-[#FFB703] text-2xl"></i>
-            </div>
-          </div>
-          
-          <div className="bg-[rgba(255,255,255,0.1)] rounded-[15px] p-4 backdrop-blur-sm border border-[rgba(255,255,255,0.2)] hover:bg-[rgba(255,255,255,0.15)] transition-all duration-300">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-[rgba(255,255,255,0.77)] text-xs font-nunito">Success Rate</p>
-                <p className="text-2xl font-bold text-white font-nunito">94.5%</p>
-                <p className="text-green-400 text-xs font-nunito flex items-center">
-                  <i className="fas fa-arrow-up mr-1"></i>
-                  +2.1%
-                </p>
-              </div>
-              <i className="fas fa-chart-line text-[#1345C3] text-2xl"></i>
-            </div>
-          </div>
-          
-          <div className="bg-[rgba(255,255,255,0.1)] rounded-[15px] p-4 backdrop-blur-sm border border-[rgba(255,255,255,0.2)] hover:bg-[rgba(255,255,255,0.15)] transition-all duration-300">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-[rgba(255,255,255,0.77)] text-xs font-nunito">Avg. Processing</p>
-                <p className="text-2xl font-bold text-white font-nunito">18d</p>
-                <p className="text-red-400 text-xs font-nunito flex items-center">
-                  <i className="fas fa-arrow-down mr-1"></i>
-                  -3 days
-                </p>
-              </div>
-              <i className="fas fa-clock text-[#069A81] text-2xl"></i>
-            </div>
-          </div>
-          
-          <div className="bg-[rgba(255,255,255,0.1)] rounded-[15px] p-4 backdrop-blur-sm border border-[rgba(255,255,255,0.2)] hover:bg-[rgba(255,255,255,0.15)] transition-all duration-300">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-[rgba(255,255,255,0.77)] text-xs font-nunito">Active Monitors</p>
-                <p className="text-2xl font-bold text-white font-nunito">342</p>
-                <p className="text-green-400 text-xs font-nunito flex items-center">
-                  <i className="fas fa-arrow-up mr-1"></i>
-                  +28
-                </p>
-              </div>
-              <i className="fas fa-shield-alt text-[#FFB703] text-2xl"></i>
-            </div>
-          </div>
-        </div>
+        {/* Top Heading */}
+        <h1 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-12">
+          Register Today and get your Trademark in <span style={{ color: '#FFB703' }}>9 months</span>
+        </h1>
 
-        {/* Main Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Left Column - Metrics and Overview */}
-          <div className="lg:col-span-2 space-y-8">
-            {/* Circular Progress Indicators */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center group">
-                <div className="bg-[rgba(251,191,36,0.10)] hover:bg-[rgba(251,191,36,0.15)] rounded-[15px] p-6 backdrop-blur-sm border border-[rgba(255,255,255,0.1)] transition-all duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden">
-                  {/* Animated background effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#1345C3] to-[#069A81] opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
-                  <div className="relative z-10">
-                    <CircularProgress percentage={trademarkData.registrability} color="#1345C3" />
-                    <h3 className="font-semibold text-white mt-4 mb-2 font-nunito">Trademark Registrability</h3>
-                    <p className="text-sm text-[rgba(255,255,255,0.77)] font-nunito">
-                      Genericness: note about uniqueness / conflicts / legal eligibility
-                    </p>
-                    {/* Pulsing indicator */}
-                    <div className="absolute top-4 right-4 w-2 h-2 bg-[#1345C3] rounded-full animate-pulse"></div>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="text-center group">
-                <div className="bg-[rgba(251,191,36,0.10)] hover:bg-[rgba(251,191,36,0.15)] rounded-[15px] p-6 backdrop-blur-sm border border-[rgba(255,255,255,0.1)] transition-all duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden">
-                  {/* Animated background effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#1345C3] to-[#069A81] opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
-                  <div className="relative z-10">
-                    <CircularProgress percentage={trademarkData.similarityRate} color="#1345C3" />
-                    <h3 className="font-semibold text-white mt-4 mb-2 font-nunito">Similarity Rate</h3>
-                    <p className="text-sm text-[rgba(255,255,255,0.77)] font-nunito">Low conflict risk</p>
-                    {/* Status badge */}
-                    <div className="absolute top-4 right-4 flex items-center">
-                      <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse mr-1"></div>
-                      <span className="text-[10px] text-green-400 font-nunito">LOW</span>
-                    </div>
-                  </div>
-                </div>
-                </div>
-
-              <div className="text-center group">
-                <div className="bg-[rgba(251,191,36,0.10)] hover:bg-[rgba(251,191,36,0.15)] rounded-[15px] p-6 backdrop-blur-sm border border-[rgba(255,255,255,0.1)] transition-all duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden">
-                  {/* Animated background effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#069A81] to-[#1345C3] opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
-                  <div className="relative z-10">
-                    <CircularProgress percentage={trademarkData.classProbability} color="#069A81" />
-                    <h3 className="font-semibold text-white mt-4 mb-2 font-nunito">Class Probability</h3>
-                    <p className="text-sm text-[rgba(255,255,255,0.77)] font-nunito">
-                      Confidence that the suggested trademark class is the correct fit
-                    </p>
-                    {/* Confidence badge */}
-                    <div className="absolute top-4 right-4 flex items-center">
-                      <div className="w-2 h-2 bg-[#069A81] rounded-full animate-pulse mr-1"></div>
-                      <span className="text-[10px] text-[#069A81] font-nunito">HIGH</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Trademark Report Overview */}
-            <div className="bg-[rgba(255,255,255,0.1)] rounded-[15px] p-6 backdrop-blur-sm border border-[rgba(255,255,255,0.2)] hover:bg-[rgba(255,255,255,0.15)] transition-all duration-300">
-              <h3 className="text-lg font-semibold text-white mb-6 font-nunito flex items-center">
-                <i className="fas fa-chart-line text-[#FFB703] mr-3"></i>
-                Trademark Report Overview
-              </h3>
-              
-              <div className="space-y-4">
-                <div className="bg-[rgba(251,191,36,0.15)] rounded-lg p-4 border border-[rgba(251,191,36,0.3)]">
-                  <p className="text-sm text-[rgba(255,255,255,0.77)] mb-1 font-nunito">Estimated registration completion date</p>
-                  <p className="text-2xl font-bold text-white font-nunito">{trademarkData.registrationDate}</p>
-                </div>
-
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-[rgba(255,255,255,0.05)] rounded-lg p-3 border border-[rgba(255,255,255,0.1)]">
-                    <p className="text-sm text-[rgba(255,255,255,0.77)] mb-1 font-nunito">Filing Date</p>
-                    <p className="font-semibold text-white font-nunito">{trademarkData.filingDate}</p>
-                  </div>
-                  <div className="bg-[rgba(255,255,255,0.05)] rounded-lg p-3 border border-[rgba(255,255,255,0.1)]">
-                    <p className="text-sm text-[rgba(255,255,255,0.77)] mb-1 font-nunito">Similarity Rate</p>
-                    <p className="font-semibold text-white font-nunito">{trademarkData.similarityScore}</p>
-                  </div>
-                  <div className="bg-[rgba(255,255,255,0.05)] rounded-lg p-3 border border-[rgba(255,255,255,0.1)] col-span-2">
-                    <p className="text-sm text-[rgba(255,255,255,0.77)] mb-1 font-nunito">Status</p>
-                    <p className="font-semibold text-white font-nunito flex items-center">
-                      <i className="fas fa-check-circle text-green-400 mr-2"></i>
-                      {trademarkData.lowConflictDetected}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Suggested Options */}
-            <div className="bg-[rgba(255,255,255,0.1)] rounded-[15px] p-6 backdrop-blur-sm border border-[rgba(255,255,255,0.2)] hover:bg-[rgba(255,255,255,0.15)] transition-all duration-300">
-              <h3 className="text-lg font-semibold text-white mb-6 font-nunito flex items-center">
-                <i className="fas fa-lightbulb text-[#FFB703] mr-3"></i>
-                Suggested Options
-              </h3>
-              
-              <div className="space-y-4">
-                <div className="bg-[rgba(251,191,36,0.15)] rounded-lg p-4 border border-[rgba(251,191,36,0.3)]">
-                  <h4 className="font-semibold text-white text-2xl font-nunito mb-2">Class {trademarkData.suggestedClass}</h4>
-                  <p className="text-[rgba(255,255,255,0.77)] text-sm font-nunito">Recommended trademark class for your application</p>
+        {/* Two Column Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start mb-16">
+          {/* Left Column */}
+          <div className="space-y-8">
+            {/* Google Trust Rating Card */}
+            <div
+              className="flex p-4 md:p-6 justify-center items-center rounded-[20px] border-2 border-white/[0.15] backdrop-blur-[16px]"
+              style={{
+                background: 'linear-gradient(135deg, rgba(138, 56, 245, 0.25) 0%, rgba(255, 183, 3, 0.15) 50%, rgba(138, 56, 245, 0.25) 100%)',
+              }}
+            >
+              {/* Mobile Layout - Vertical Stack */}
+              <div className="md:hidden flex flex-col items-center gap-2 w-full px-2 py-1">
+                {/* Google Icon and 4.7 Rating - Top */}
+                <div className="flex items-center justify-center gap-1.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 20 21" fill="none" className="flex-shrink-0">
+                    <g clipPath="url(#clip0_829_5631_mobile)">
+                      <path d="M6.96721 1.15827C4.9689 1.8515 3.24556 3.16728 2.05032 4.91233C0.855082 6.65739 0.250946 8.73974 0.326651 10.8535C0.402355 12.9673 1.15391 15.0011 2.47092 16.6562C3.78794 18.3113 5.60099 19.5004 7.64377 20.0489C9.2999 20.4762 11.035 20.495 12.7 20.1036C14.2083 19.7648 15.6028 19.0401 16.7469 18.0005C17.9376 16.8854 18.802 15.4668 19.2469 13.8973C19.7305 12.1906 19.8166 10.3957 19.4985 8.65046H10.1985V12.5083H15.5844C15.4768 13.1236 15.2461 13.7108 14.9062 14.2349C14.5663 14.7589 14.1242 15.2091 13.6063 15.5583C12.9486 15.9933 12.2072 16.286 11.4297 16.4176C10.6499 16.5626 9.85011 16.5626 9.07033 16.4176C8.28 16.2542 7.53236 15.928 6.87502 15.4598C5.819 14.7123 5.02608 13.6503 4.6094 12.4255C4.18567 11.1776 4.18567 9.82484 4.6094 8.57702C4.906 7.70236 5.39632 6.90598 6.04377 6.24733C6.7847 5.47975 7.72273 4.93108 8.75495 4.66151C9.78718 4.39195 10.8737 4.41191 11.8953 4.71921C12.6934 4.96419 13.4232 5.39223 14.0266 5.96921C14.6339 5.36504 15.2401 4.75931 15.8453 4.15202C16.1578 3.82546 16.4985 3.51452 16.8063 3.18014C15.8853 2.32307 14.8042 1.65617 13.625 1.21764C11.4777 0.437939 9.12811 0.416985 6.96721 1.15827Z" fill="black"/>
+                      <path d="M6.96562 1.15707C9.12635 0.415288 11.4759 0.43569 13.6234 1.21489C14.8028 1.65639 15.8834 2.32651 16.8031 3.18676C16.4906 3.52114 16.1609 3.83364 15.8422 4.15864C15.2359 4.76384 14.6302 5.36697 14.025 5.96801C13.4216 5.39104 12.6918 4.963 11.8937 4.71801C10.8725 4.40964 9.78597 4.38852 8.75347 4.65698C7.72097 4.92544 6.78236 5.47311 6.04062 6.23989C5.39318 6.89854 4.90285 7.69491 4.60625 8.56957L1.36719 6.06176C2.52658 3.76264 4.53398 2.00399 6.96562 1.15707Z" fill="#E33629"/>
+                      <path d="M0.510152 8.54687C0.684247 7.68405 0.973283 6.84848 1.36953 6.0625L4.60859 8.57656C4.18486 9.82438 4.18486 11.1772 4.60859 12.425C3.52942 13.2583 2.44974 14.0958 1.36953 14.9375C0.377575 12.963 0.0750466 10.7133 0.510152 8.54687Z" fill="#F8BD00"/>
+                      <path d="M10.1999 8.64844H19.4999C19.818 10.3936 19.732 12.1885 19.2484 13.8953C18.8034 15.4648 17.9391 16.8834 16.7484 17.9984C15.703 17.1828 14.653 16.3734 13.6077 15.5578C14.126 15.2082 14.5683 14.7576 14.9082 14.233C15.2481 13.7084 15.4786 13.1205 15.5859 12.5047H10.1999C10.1984 11.2203 10.1999 9.93438 10.1999 8.64844Z" fill="#587DBD"/>
+                      <path d="M1.36719 14.9383C2.4474 14.1049 3.52708 13.2674 4.60625 12.4258C5.02376 13.6511 5.81782 14.7131 6.875 15.4602C7.53439 15.9262 8.28364 16.2497 9.075 16.4102C9.85478 16.5552 10.6546 16.5552 11.4344 16.4102C12.2119 16.2786 12.9533 15.9858 13.6109 15.5508C14.6563 16.3664 15.7063 17.1758 16.7516 17.9914C15.6076 19.0316 14.2132 19.7568 12.7047 20.0961C11.0397 20.4875 9.30457 20.4687 7.64844 20.0414C6.3386 19.6917 5.11512 19.0751 4.05469 18.2305C2.93228 17.3394 2.01556 16.2164 1.36719 14.9383Z" fill="#319F43"/>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_829_5631_mobile">
+                        <rect width="20" height="20" fill="white" transform="translate(0 0.5)"/>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  <span className="text-white font-nunito text-[14px] lg:text-[18px] font-medium leading-[17px] lg:leading-[20px]">
+                    4.7
+                  </span>
                 </div>
                 
-                <div className="bg-[rgba(255,255,255,0.05)] rounded-lg p-4 border border-[rgba(255,255,255,0.1)]">
-                  <h4 className="font-semibold text-white mb-2 font-nunito flex items-center">
-                    <i className="fas fa-exclamation-triangle text-yellow-400 mr-2"></i>
-                    Risk Analysis
-                  </h4>
-                  <p className="text-[rgba(255,255,255,0.77)] font-nunito">{trademarkData.riskAnalysis}</p>
-                </div>
-                
-                <button className="flex items-center text-[#FFB703] hover:text-[#e6a602] transition-colors duration-200 font-nunito">
-                  <i className="fas fa-user-circle mr-2"></i>
-                  <span className="text-sm">Set a presistration</span>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Column - Pricing and Actions */}
-          <div className="space-y-6">
-            {/* Get Your Trademark Registered */}
-            <div className="bg-[rgba(255,255,255,0.1)] rounded-[15px] p-6 backdrop-blur-sm border border-[rgba(255,255,255,0.2)] hover:bg-[rgba(255,255,255,0.15)] transition-all duration-300">
-              <h3 className="text-lg font-semibold text-white mb-6 font-nunito flex items-center">
-                <i className="fas fa-shield-alt text-[#FFB703] mr-3"></i>
-                Get Your Trademark Registered
-              </h3>
-              
-              <div className="space-y-3 mb-6">
-                <div className="flex justify-between items-center py-2">
-                  <span className="text-[rgba(255,255,255,0.77)] font-nunito">Government fee</span>
-                  <span className="font-semibold text-white font-nunito">₹4,500</span>
-                </div>
-                <div className="flex justify-between items-center py-2">
-                  <span className="text-[rgba(255,255,255,0.77)] font-nunito">IPR Karo Platform Fee</span>
-                  <span className="font-semibold text-white font-nunito">-₹1,501</span>
-                </div>
-                <div className="border-t border-[rgba(255,255,255,0.2)] pt-3">
-                  <div className="flex justify-between items-center">
-                    <span className="font-semibold text-white font-nunito">Total Amount</span>
-                    <span className="text-2xl font-bold text-[#FFB703] font-nunito">₹2,999</span>
+                {/* Main Content - Center */}
+                <div className="text-center">
+                  <div className="text-white font-nunito text-[12.6px] lg:text-[16px] font-medium leading-[15px] lg:leading-[18px] mb-1">
+                    Trusted by Over 1.25 Lakh Clients
+                  </div>
+                  <div className="text-white font-nunito text-[8.4px] lg:text-[11px] italic font-normal leading-[10px] lg:leading-[12px]">
+                    Rated 4.7/5 stars for reliable trademark registration across India, startups, and enterprises.
                   </div>
                 </div>
               </div>
-              
-              <button className="w-full yellow-button font-nunito font-semibold text-base">
-                <i className="fas fa-rocket mr-2"></i>
-                Start Registration
-              </button>
-            </div>
 
-            {/* AI Chatbot */}
-            <div className="bg-[rgba(255,255,255,0.1)] rounded-[15px] p-6 backdrop-blur-sm border border-[rgba(255,255,255,0.2)] hover:bg-[rgba(255,255,255,0.15)] transition-all duration-300">
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-lg font-semibold text-white font-nunito">AI Chatbot</h3>
-                <div className="w-10 h-10 bg-[#FFB703] rounded-lg flex items-center justify-center">
-                  <i className="fas fa-robot text-black text-lg"></i>
+              {/* Desktop Layout - Horizontal */}
+              <div className="hidden md:flex items-start gap-4 w-full">
+                {/* Left Column - Google Icon and 4.7 Rating */}
+                <div className="flex items-center justify-start shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none" className="flex-shrink-0">
+                    <g clipPath="url(#clip0_829_5631_desktop)">
+                      <path d="M6.96721 1.15827C4.9689 1.8515 3.24556 3.16728 2.05032 4.91233C0.855082 6.65739 0.250946 8.73974 0.326651 10.8535C0.402355 12.9673 1.15391 15.0011 2.47092 16.6562C3.78794 18.3113 5.60099 19.5004 7.64377 20.0489C9.2999 20.4762 11.035 20.495 12.7 20.1036C14.2083 19.7648 15.6028 19.0401 16.7469 18.0005C17.9376 16.8854 18.802 15.4668 19.2469 13.8973C19.7305 12.1906 19.8166 10.3957 19.4985 8.65046H10.1985V12.5083H15.5844C15.4768 13.1236 15.2461 13.7108 14.9062 14.2349C14.5663 14.7589 14.1242 15.2091 13.6063 15.5583C12.9486 15.9933 12.2072 16.286 11.4297 16.4176C10.6499 16.5626 9.85011 16.5626 9.07033 16.4176C8.28 16.2542 7.53236 15.928 6.87502 15.4598C5.819 14.7123 5.02608 13.6503 4.6094 12.4255C4.18567 11.1776 4.18567 9.82484 4.6094 8.57702C4.906 7.70236 5.39632 6.90598 6.04377 6.24733C6.7847 5.47975 7.72273 4.93108 8.75495 4.66151C9.78718 4.39195 10.8737 4.41191 11.8953 4.71921C12.6934 4.96419 13.4232 5.39223 14.0266 5.96921C14.6339 5.36504 15.2401 4.75931 15.8453 4.15202C16.1578 3.82546 16.4985 3.51452 16.8063 3.18014C15.8853 2.32307 14.8042 1.65617 13.625 1.21764C11.4777 0.437939 9.12811 0.416985 6.96721 1.15827Z" fill="black"/>
+                      <path d="M6.96562 1.15707C9.12635 0.415288 11.4759 0.43569 13.6234 1.21489C14.8028 1.65639 15.8834 2.32651 16.8031 3.18676C16.4906 3.52114 16.1609 3.83364 15.8422 4.15864C15.2359 4.76384 14.6302 5.36697 14.025 5.96801C13.4216 5.39104 12.6918 4.963 11.8937 4.71801C10.8725 4.40964 9.78597 4.38852 8.75347 4.65698C7.72097 4.92544 6.78236 5.47311 6.04062 6.23989C5.39318 6.89854 4.90285 7.69491 4.60625 8.56957L1.36719 6.06176C2.52658 3.76264 4.53398 2.00399 6.96562 1.15707Z" fill="#E33629"/>
+                      <path d="M0.510152 8.54687C0.684247 7.68405 0.973283 6.84848 1.36953 6.0625L4.60859 8.57656C4.18486 9.82438 4.18486 11.1772 4.60859 12.425C3.52942 13.2583 2.44974 14.0958 1.36953 14.9375C0.377575 12.963 0.0750466 10.7133 0.510152 8.54687Z" fill="#F8BD00"/>
+                      <path d="M10.1999 8.64844H19.4999C19.818 10.3936 19.732 12.1885 19.2484 13.8953C18.8034 15.4648 17.9391 16.8834 16.7484 17.9984C15.703 17.1828 14.653 16.3734 13.6077 15.5578C14.126 15.2082 14.5683 14.7576 14.9082 14.233C15.2481 13.7084 15.4786 13.1205 15.5859 12.5047H10.1999C10.1984 11.2203 10.1999 9.93438 10.1999 8.64844Z" fill="#587DBD"/>
+                      <path d="M1.36719 14.9383C2.4474 14.1049 3.52708 13.2674 4.60625 12.4258C5.02376 13.6511 5.81782 14.7131 6.875 15.4602C7.53439 15.9262 8.28364 16.2497 9.075 16.4102C9.85478 16.5552 10.6546 16.5552 11.4344 16.4102C12.2119 16.2786 12.9533 15.9858 13.6109 15.5508C14.6563 16.3664 15.7063 17.1758 16.7516 17.9914C15.6076 19.0316 14.2132 19.7568 12.7047 20.0961C11.0397 20.4875 9.30457 20.4687 7.64844 20.0414C6.3386 19.6917 5.11512 19.0751 4.05469 18.2305C2.93228 17.3394 2.01556 16.2164 1.36719 14.9383Z" fill="#319F43"/>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_829_5631_desktop">
+                        <rect width="20" height="20" fill="white" transform="translate(0 0.5)"/>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  <span className="text-white font-nunito text-[25px] lg:text-[22px] font-medium leading-[30px] lg:leading-[24px] ml-1">
+                    4.7
+                  </span>
+                </div>
+                
+                {/* Right Column - Remaining Content */}
+                <div className="flex-1">
+                  <div className="text-white font-nunito text-[20px] lg:text-[18px] font-medium leading-[24px] lg:leading-[20px] mb-2">
+                    Trusted by Over 1.25 Lakh Clients
+                  </div>
+                  <div className="text-white font-nunito text-[12px] lg:text-[11px] italic font-normal leading-[14px] lg:leading-[12px]">
+                    Rated 4.7/5 stars for reliable trademark registration across India, startups, and enterprises.
+                  </div>
                 </div>
               </div>
-              
-              <p className="text-[rgba(255,255,255,0.77)] text-sm mb-4 font-nunito">How can I assist you?</p>
-              
-              <div className="space-y-3">
-                <button className="w-full yellow-button font-nunito font-medium text-sm">
-                  <i className="fas fa-search mr-2"></i>
-                  Search My Brand
-                </button>
-                <button className="w-full yellow-button font-nunito font-medium text-sm">
-                  <i className="fas fa-question-circle mr-2"></i>
-                  Ask Your Questions
-                </button>
-              </div>
             </div>
 
-            {/* Analytics & Packages */}
+            {/* Why Trademark with IPR Karo Section */}
             <div className="space-y-6">
-              {/* Analytics Overview */}
-              <div className="bg-[rgba(255,255,255,0.1)] rounded-[15px] p-6 backdrop-blur-sm border border-[rgba(255,255,255,0.2)] hover:bg-[rgba(255,255,255,0.15)] transition-all duration-300">
-                <h3 className="text-lg font-semibold text-white mb-4 font-nunito flex items-center">
-                  <i className="fas fa-chart-bar text-[#FFB703] mr-3"></i>
-                  Analytics Overview
-                </h3>
-                
-                <div className="grid grid-cols-2 gap-4 mb-4">
-                  <div className="bg-[rgba(251,191,36,0.15)] rounded-lg p-3 border border-[rgba(251,191,36,0.3)]">
-                    <div className="flex items-center justify-between">
-                      <span className="text-[rgba(255,255,255,0.77)] text-xs font-nunito">Success Rate</span>
-                      <i className="fas fa-trending-up text-green-400 text-sm"></i>
-                    </div>
-                    <p className="text-xl font-bold text-white font-nunito">94.5%</p>
-                  </div>
-                  <div className="bg-[rgba(251,191,36,0.15)] rounded-lg p-3 border border-[rgba(251,191,36,0.3)]">
-                  <div className="flex items-center justify-between">
-                      <span className="text-[rgba(255,255,255,0.77)] text-xs font-nunito">Avg. Time</span>
-                      <i className="fas fa-clock text-blue-400 text-sm"></i>
-                    </div>
-                    <p className="text-xl font-bold text-white font-nunito">18 days</p>
-                  </div>
-                </div>
+              <h3 className="text-white font-nunito text-xl md:text-2xl font-medium">
+                Why Trademark with IPRKaro ?
+              </h3>
 
-                {/* Mini Charts */}
-                <div className="grid grid-cols-1 gap-3">
-                  <div className="bg-[rgba(255,255,255,0.05)] rounded-lg p-3">
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-[rgba(255,255,255,0.77)] text-xs font-nunito">Registration Progress</span>
-                      <span className="text-white text-xs font-nunito">85%</span>
-                    </div>
-                    <div className="w-full bg-[rgba(255,255,255,0.1)] rounded-full h-2">
-                      <div className="bg-gradient-to-r from-[#1345C3] to-[#069A81] h-2 rounded-full transition-all duration-1000" style={{ width: '85%' }}></div>
-                    </div>
+              {/* Mobile Layout */}
+              <div className="md:hidden w-full">
+                <div
+                  className="w-full rounded-[5px] p-4"
+                  style={{
+                    background: 'linear-gradient(145deg, rgba(12, 0, 43, 0.20) 6.6%, rgba(255, 183, 3, 0.20) 120.24%), rgba(0, 0, 0, 0.78)',
+                    boxShadow: '0 0 20px 1px rgba(255, 255, 255, 0.10) inset'
+                  }}
+                >
+                  <div className="grid grid-cols-2 grid-rows-3 gap-4">
+                    {features.map((feature, index) => (
+                      <div
+                        key={index}
+                        className="flex items-center gap-3"
+                      >
+                        <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center opacity-60">
+                          {mobileCardIcons[feature.icon]}
+                        </div>
+                        <h3 className="text-white font-nunito text-[14px] font-medium leading-[14px] break-words flex-1">
+                          {feature.text}
+                        </h3>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
 
-              {/* Enhanced Packages */}
-              <div className="bg-[rgba(255,255,255,0.1)] rounded-[15px] p-6 backdrop-blur-sm border border-[rgba(255,255,255,0.2)] transition-all duration-300">
-                <h3 className="text-lg font-semibold text-white mb-6 font-nunito flex items-center">
-                  <i className="fas fa-layer-group text-[#FFB703] mr-3"></i>
-                  Protection Plans
-                </h3>
-                
-                <div className="space-y-4">
-                  {/* Standard Plan */}
-                  <div className="group bg-[rgba(251,191,36,0.10)] hover:bg-[rgba(251,191,36,0.15)] rounded-lg border border-[rgba(251,191,36,0.3)] transition-all duration-500 overflow-hidden">
-                    <div className="p-4 cursor-pointer">
-                  <div className="flex items-center justify-between">
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-[#1345C3] rounded-full animate-pulse"></div>
-                    <div>
-                            <h4 className="text-white font-semibold font-nunito">Standard Plan</h4>
-                            <p className="text-[rgba(255,255,255,0.77)] text-xs font-nunito">AI-powered search & analysis</p>
-                          </div>
-                        </div>
-                        <div className="text-right">
-                          <p className="text-[#FFB703] font-bold font-nunito">₹1,999</p>
-                          <p className="text-[rgba(255,255,255,0.77)] text-xs font-nunito">/month</p>
-                        </div>
+              {/* Desktop Layout */}
+              <div className="hidden md:block">
+                <div className="grid grid-cols-3 gap-4">
+                  {features.map((feature, index) => (
+                    <div
+                      key={index}
+                      className="flex items-center space-x-3 p-4"
+                    >
+                      <div
+                        className="flex-shrink-0 text-white p-3"
+                        style={{
+                          borderRadius: '5px',
+                          background: 'rgba(255, 255, 255, 0.25)'
+                        }}
+                      >
+                        {mobileCardIcons[feature.icon]}
                       </div>
-                      
-                      {/* Expandable Content */}
-                      <div className="mt-4 opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-96 transition-all duration-500 overflow-hidden">
-                        <div className="border-t border-[rgba(255,255,255,0.1)] pt-4 space-y-3">
-                          <h5 className="text-white text-sm font-semibold font-nunito mb-2">What's included:</h5>
-                          <ul className="space-y-2">
-                            <li className="flex items-center text-[rgba(255,255,255,0.77)] text-sm font-nunito">
-                              <i className="fas fa-check text-[#FFB703] mr-2 text-xs"></i>
-                              AI-powered smart search
-                            </li>
-                            <li className="flex items-center text-[rgba(255,255,255,0.77)] text-sm font-nunito">
-                              <i className="fas fa-check text-[#FFB703] mr-2 text-xs"></i>
-                              Approval chances revealed
-                            </li>
-                            <li className="flex items-center text-[rgba(255,255,255,0.77)] text-sm font-nunito">
-                              <i className="fas fa-check text-[#FFB703] mr-2 text-xs"></i>
-                              Spot risks before filing
-                            </li>
-                            <li className="flex items-center text-[rgba(255,255,255,0.77)] text-sm font-nunito">
-                              <i className="fas fa-check text-[#FFB703] mr-2 text-xs"></i>
-                              Perfect for new brands
-                            </li>
-                          </ul>
-                          <button className="w-full mt-4 bg-[#FFB703] hover:bg-[#e6a602] text-black font-semibold py-2 px-4 rounded-lg transition-colors duration-200 font-nunito text-sm">
-                            Select Standard Plan
-                          </button>
-                        </div>
-                      </div>
+                      <span className="text-white font-nunito text-xs lg:text-sm font-medium">
+                        {feature.text}
+                      </span>
                     </div>
-                  </div>
+                  ))}
+                </div>
+              </div>
+            </div>
 
-                  {/* Pro Monitoring Plan */}
-                  <div className="group bg-[rgba(251,191,36,0.10)] hover:bg-[rgba(251,191,36,0.15)] rounded-lg border border-[rgba(251,191,36,0.3)] transition-all duration-500 overflow-hidden">
-                    <div className="p-4 cursor-pointer">
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-[#069A81] rounded-full animate-pulse"></div>
-                          <div>
-                            <h4 className="text-white font-semibold font-nunito">Pro Monitoring</h4>
-                            <p className="text-[rgba(255,255,255,0.77)] text-xs font-nunito">24/7 brand protection</p>
-                          </div>
-                        </div>
-                        <div className="text-right">
-                          <p className="text-[#FFB703] font-bold font-nunito">₹3,999</p>
-                          <p className="text-[rgba(255,255,255,0.77)] text-xs font-nunito">/month</p>
-                        </div>
-                      </div>
-                      
-                      {/* Expandable Content */}
-                      <div className="mt-4 opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-96 transition-all duration-500 overflow-hidden">
-                        <div className="border-t border-[rgba(255,255,255,0.1)] pt-4 space-y-3">
-                          <h5 className="text-white text-sm font-semibold font-nunito mb-2">What's included:</h5>
-                          <ul className="space-y-2">
-                            <li className="flex items-center text-[rgba(255,255,255,0.77)] text-sm font-nunito">
-                              <i className="fas fa-check text-[#FFB703] mr-2 text-xs"></i>
-                              24/7 brand monitoring
-                            </li>
-                            <li className="flex items-center text-[rgba(255,255,255,0.77)] text-sm font-nunito">
-                              <i className="fas fa-check text-[#FFB703] mr-2 text-xs"></i>
-                              Instant conflict alerts
-                            </li>
-                            <li className="flex items-center text-[rgba(255,255,255,0.77)] text-sm font-nunito">
-                              <i className="fas fa-check text-[#FFB703] mr-2 text-xs"></i>
-                              Continuous brand protection
-                            </li>
-                            <li className="flex items-center text-[rgba(255,255,255,0.77)] text-sm font-nunito">
-                              <i className="fas fa-check text-[#FFB703] mr-2 text-xs"></i>
-                              Block copycat attempts
-                            </li>
-                          </ul>
-                          <button className="w-full mt-4 bg-[#FFB703] hover:bg-[#e6a602] text-black font-semibold py-2 px-4 rounded-lg transition-colors duration-200 font-nunito text-sm">
-                            Select Pro Plan
-                          </button>
-                        </div>
-                      </div>
+            {/* Get a Guaranteed Trademark on Section */}
+            <div className="mt-16 mb-8">
+              <div className="flex flex-col lg:flex-row items-start gap-10">
+                {/* Left Side - Circle and Line - Hidden on mobile, visible on desktop */}
+                <div className="hidden md:flex justify-center lg:justify-start">
+                  <div className="relative">
+                    {/* White outer circle */}
+                    <div
+                      className="w-8 h-8 rounded-full flex items-center justify-center"
+                      style={{
+                        background: 'rgba(255, 255, 255, 0.9)',
+                        border: '3px solid rgba(255, 255, 255, 0.8)'
+                      }}
+                    >
+                      {/* Golden inner circle */}
+                      <div
+                        className="w-4 h-4 rounded-full"
+                        style={{
+                          background: '#FFD700'
+                        }}
+                      ></div>
+                    </div>
+
+                    {/* Curved line going down then right */}
+                    <div className="absolute top-9 left-11.5 transform -translate-x-1/2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="62" height="119" viewBox="0 0 62 119" fill="none">
+                        <path d="M1 0V102C1 110.837 8.16344 118 17 118H61.5" stroke="white" strokeOpacity="0.7" strokeWidth="2"/>
+                      </svg>
+                    </div>
                   </div>
                 </div>
 
-                {/* Premium Plan */}
-                  <div className="group bg-[rgba(251,191,36,0.10)] hover:bg-[rgba(251,191,36,0.15)] rounded-lg border border-[rgba(251,191,36,0.3)] transition-all duration-500 overflow-hidden relative">
-                    <div className="absolute top-2 right-2 bg-[#FFB703] text-black px-2 py-1 rounded-full text-xs font-semibold font-nunito">
-                      Most Popular
-                    </div>
-                    <div className="p-4 cursor-pointer">
-                  <div className="flex items-center justify-between">
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-[#FFB703] rounded-full animate-pulse"></div>
-                    <div>
-                            <h4 className="text-white font-semibold font-nunito">Premium Plan</h4>
-                            <p className="text-[rgba(255,255,255,0.77)] text-xs font-nunito">Complete filing included</p>
-                          </div>
+                {/* Right Side - Heading and Containers */}
+                <div className="flex-1 space-y-8">
+                  {/* Heading */}
+                  <div className="text-center lg:text-left">
+                    <h3 className="text-white font-nunito text-base md:text-xl lg:text-2xl font-medium">
+                      Get a Guaranteed Trademark on
+                    </h3>
+                  </div>
+
+                  {/* Timeline Containers - Single Column, 2 Rows */}
+                  <div className="space-y-4 mt-13">
+                    {/* First Container - Filing Date */}
+                    <div
+                      className="relative p-4 rounded-2xl w-full max-w-[500px]"
+                      style={{
+                        background: 'transparent',
+                        border: '2px solid rgba(128, 128, 128, 0.4)',
+                        borderRadius: '16px'
+                      }}
+                    >
+                      <div className="flex items-center justify-between px-10">
+                        <div className="text-white font-nunito text-sm md:text-base font-medium">
+                          Filing Date
                         </div>
-                        <div className="text-right">
-                          <p className="text-[#FFB703] font-bold font-nunito">₹2,999</p>
-                          <p className="text-[rgba(255,255,255,0.77)] text-xs font-nunito">/month</p>
+                        <div className="text-white font-nunito text-xs md:text-sm opacity-90">
+                          Apr 12, 2025
                         </div>
                       </div>
-                      
-                      {/* Expandable Content */}
-                      <div className="mt-4 opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-96 transition-all duration-500 overflow-hidden">
-                        <div className="border-t border-[rgba(255,255,255,0.1)] pt-4 space-y-3">
-                          <h5 className="text-white text-sm font-semibold font-nunito mb-2">What's included:</h5>
-                          <ul className="space-y-2">
-                            <li className="flex items-center text-[rgba(255,255,255,0.77)] text-sm font-nunito">
-                              <i className="fas fa-check text-[#FFB703] mr-2 text-xs"></i>
-                              Complete filing included
-                            </li>
-                            <li className="flex items-center text-[rgba(255,255,255,0.77)] text-sm font-nunito">
-                              <i className="fas fa-check text-[#FFB703] mr-2 text-xs"></i>
-                              Expert legal guidance
-                            </li>
-                            <li className="flex items-center text-[rgba(255,255,255,0.77)] text-sm font-nunito">
-                              <i className="fas fa-check text-[#FFB703] mr-2 text-xs"></i>
-                              AI risk checkup
-                            </li>
-                            <li className="flex items-center text-[rgba(255,255,255,0.77)] text-sm font-nunito">
-                              <i className="fas fa-check text-[#FFB703] mr-2 text-xs"></i>
-                              Strong brand safeguard
-                            </li>
-                            <li className="flex items-center text-[rgba(255,255,255,0.77)] text-sm font-nunito">
-                              <i className="fas fa-check text-[#FFB703] mr-2 text-xs"></i>
-                              Priority VIP support
-                            </li>
-                          </ul>
-                          <button className="w-full mt-4 bg-[#FFB703] hover:bg-[#e6a602] text-black font-semibold py-2 px-4 rounded-lg transition-colors duration-200 font-nunito text-sm">
-                            Select Premium Plan
-                          </button>
+                    </div>
+
+                    {/* Second Container - Trademark Estimated Date */}
+                    <div
+                      className="relative p-4 rounded-2xl w-full max-w-[500px]"
+                      style={{
+                        background: 'transparent',
+                        border: '2px solid rgba(128, 128, 128, 0.4)',
+                        borderRadius: '16px'
+                      }}
+                    >
+                      <div className="flex items-center justify-between px-10">
+                        <div className="text-white font-nunito text-sm md:text-base font-medium">
+                          Trademark Estimated Date
+                        </div>
+                        <div className="text-white font-nunito text-xs md:text-sm opacity-90">
+                          Dec 12, 2025
                         </div>
                       </div>
                     </div>
@@ -519,9 +826,317 @@ export default function Dashboard() {
                 </div>
               </div>
             </div>
+
+            {/* Trademark Requirements Section */}
+            <div className="space-y-6">
+              <h3 className="text-white font-nunito text-xl md:text-2xl font-medium">
+                Trademark Requirements
+              </h3>
+
+              <div className="grid grid-cols-2 gap-4">
+                {trademarkRequirements.map((requirement, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center space-x-3 p-4"
+                  >
+                    <div
+                      className="flex-shrink-0 text-white p-3"
+                      style={{
+                        borderRadius: '5px',
+                        background: 'rgba(255, 255, 255, 0.25)'
+                      }}
+                    >
+                      {requirement.icon}
+                    </div>
+                    <span className="text-white font-nunito text-[10px] md:text-xs lg:text-sm font-medium">
+                      {requirement.text}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Guidelines Section */}
+            <div className="space-y-6">
+              <h3 className="text-white font-nunito text-xl md:text-2xl font-medium">
+                We work with the Guidelines of
+              </h3>
+
+              {/* Mobile - Full width, no containers */}
+              <div className="md:hidden flex items-center justify-between w-full gap-0">
+                <div className="flex-1 flex items-center justify-center">
+                  <Image
+                    src="/clientlogos/white9.png"
+                    alt="Service 1"
+                    className="w-full h-auto object-contain max-w-[80px]"
+                    width={80}
+                    height={60}
+                  />
+                </div>
+
+                <div className="flex-1 flex items-center justify-center">
+                  <Image
+                    src="/clientlogos/white10.png"
+                    alt="Service 2"
+                    className="w-full h-auto object-contain max-w-[80px]"
+                    width={80}
+                    height={60}
+                  />
+                </div>
+
+                <div className="flex-1 flex items-center justify-center">
+                  <Image
+                    src="/clientlogos/white11.png"
+                    alt="Service 3"
+                    className="w-full h-auto object-contain max-w-[80px]"
+                    width={80}
+                    height={60}
+                  />
+                </div>
+
+                <div className="flex-1 flex items-center justify-center">
+                  <Image
+                    src="/clientlogos/white12.png"
+                    alt="Service 4"
+                    className="w-full h-auto object-contain max-w-[80px]"
+                    width={80}
+                    height={60}
+                  />
+                </div>
+              </div>
+
+              {/* Desktop Guidelines Containers */}
+              <div className="hidden md:flex items-center justify-start gap-8 md:gap-10">
+                <div
+                  className="flex items-center justify-center p-5 md:p-6"
+                  style={{
+                    background: 'transparent',
+                    border: '1px solid rgba(255, 255, 255, 0.2)',
+                    borderRadius: '20px',
+                    width: '140px',
+                    height: '140px',
+                    minWidth: '120px',
+                    minHeight: '120px'
+                  }}
+                >
+                  <Image src="/serv1.svg" alt="Service 1" className="w-14 h-14 md:w-16 md:h-16" width={64} height={64} />
+                </div>
+
+                <div
+                  className="flex items-center justify-center p-5 md:p-6"
+                  style={{
+                    background: 'transparent',
+                    border: '1px solid rgba(255, 255, 255, 0.2)',
+                    borderRadius: '20px',
+                    width: '140px',
+                    height: '140px',
+                    minWidth: '120px',
+                    minHeight: '120px'
+                  }}
+                >
+                  <Image src="/serv2.svg" alt="Service 2" className="w-14 h-14 md:w-16 md:h-16" width={64} height={64} />
+                </div>
+
+                <div
+                  className="flex items-center justify-center p-5 md:p-6"
+                  style={{
+                    background: 'transparent',
+                    border: '1px solid rgba(255, 255, 255, 0.2)',
+                    borderRadius: '20px',
+                    width: '140px',
+                    height: '140px',
+                    minWidth: '120px',
+                    minHeight: '120px'
+                  }}
+                >
+                  <Image src="/serv3.svg" alt="Service 3" className="w-14 h-14 md:w-16 md:h-16" width={64} height={64} />
+                </div>
+
+                <div
+                  className="flex items-center justify-center p-5 md:p-6"
+                  style={{
+                    background: 'transparent',
+                    border: '1px solid rgba(255, 255, 255, 0.2)',
+                    borderRadius: '20px',
+                    width: '140px',
+                    height: '140px',
+                    minWidth: '120px',
+                    minHeight: '120px'
+                  }}
+                >
+                  <Image src="/serv4.svg" alt="Service 4" className="w-14 h-14 md:w-16 md:h-16" width={64} height={64} />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column - Pricing Card */}
+          <div className="sticky top-24" style={{ zoom: 0.85 }}>
+            <div
+              className="relative flex flex-col p-5 md:p-6 lg:p-8 w-full max-w-full md:max-w-[532px] mx-auto"
+              style={{
+                borderRadius: '30px',
+                background: 'rgba(255, 255, 255, 0.10)',
+                boxShadow: '0 0 20px 0 rgba(0, 0, 0, 0.10) inset, 0 0 20px 6px rgba(255, 255, 255, 0.20) inset',
+                minHeight: '650px'
+              }}
+            >
+              {/* Heading Container */}
+              <div
+                className="mb-6 p-5 rounded-[20px] text-center relative"
+                style={{
+                  background: 'rgba(0, 0, 0, 0.26)'
+                }}
+              >
+                <h3 className="text-white font-nunito font-medium text-xl md:text-2xl leading-[24px]">
+                  Get Your Trademark Registered
+                </h3>
+              </div>
+
+              {/* Price Breakdown Section */}
+              <div
+                className="mb-8 p-5 rounded-[20px] w-full"
+                style={{
+                  background: 'transparent'
+                }}
+              >
+                <h4 className="text-white font-nunito font-medium text-lg md:text-xl leading-[20px] mb-4 text-center">
+                  Price Breakdown
+                </h4>
+
+                <div className="space-y-3">
+                  <div className="flex justify-between items-center py-2 border-b border-gray-400">
+                    <span className="text-white font-nunito text-base md:text-xl opacity-90">Government Fee</span>
+                    <span className="text-white font-nunito text-base md:text-xl">₹4,500</span>
+                  </div>
+                  <div className="flex justify-between items-center py-2 border-b border-gray-400">
+                    <span className="text-white font-nunito text-base md:text-xl opacity-90">Professional Fee</span>
+                    <span className="text-white font-nunito text-base md:text-xl">₹2,500</span>
+                  </div>
+                  <div className="flex justify-between items-center py-2 border-b border-gray-400">
+                    <span className="text-white font-nunito text-base md:text-xl opacity-90">GST (18%)</span>
+                    <span className="text-white font-nunito text-base md:text-xl">₹1,260</span>
+                  </div>
+                  <div className="flex justify-between items-center py-3 font-semibold">
+                    <span className="text-white font-nunito text-lg md:text-xl">Total</span>
+                    <span className="text-white font-nunito text-lg md:text-xl">₹8,260</span>
+                  </div>
+
+                  {/* Start Registration Button */}
+                  <button
+                    className="w-full py-3 px-4 rounded-xl font-nunito font-semibold text-lg md:text-xl transition-all duration-300 hover:scale-105 mt-4"
+                    style={{
+                      background: '#FFB703',
+                      boxShadow: '0 0 20px 0 #000 inset',
+                      color: '#0C002B'
+                    }}
+                  >
+                    Start Registration
+                  </button>
+                </div>
+              </div>
+
+              {/* Our Plans Section */}
+              <div className="flex-1 space-y-4">
+                <h4 className="text-white font-nunito font-medium text-xl md:text-2xl leading-[24px] mb-6 text-center">
+                  Our Plans
+                </h4>
+
+                {plans.map((plan) => (
+                  <div key={plan.id} className="mb-4">
+                    {/* Plan Dropdown Header */}
+                    <div
+                      onClick={() => togglePlan(plan.id)}
+                      className="w-full p-3 rounded-xl text-white font-nunito font-medium text-base md:text-lg border-2 border-white/20 cursor-pointer hover:border-white/40 transition-all duration-300 flex items-center justify-between"
+                      style={{
+                        background: 'rgba(255, 255, 255, 0.05)',
+                        backdropFilter: 'blur(10px)',
+                        WebkitBackdropFilter: 'blur(10px)'
+                      }}
+                    >
+                      <span>{plan.name} - {plan.price}</span>
+                      <FontAwesomeIcon
+                        icon={faChevronDown}
+                        className={`w-4 h-4 transition-transform duration-300 ${
+                          expandedPlan === plan.id ? 'rotate-180' : 'rotate-0'
+                        }`}
+                      />
+                    </div>
+
+                    {/* Plan Card - Only visible when expanded */}
+                    <div
+                      className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                        expandedPlan === plan.id ? 'max-h-[1000px] opacity-100 mt-4' : 'max-h-0 opacity-0'
+                      }`}
+                    >
+                      <div
+                        className="relative p-6 rounded-2xl transition-all duration-300"
+                        style={{
+                          background: 'rgba(255, 255, 255, 0.10)',
+                          backdropFilter: 'blur(16px)',
+                          WebkitBackdropFilter: 'blur(16px)',
+                          border: plan.highlighted ? '2px solid #1345C3' : 'none',
+                          boxShadow: '0 0 20px 0 rgba(0, 0, 0, 0.10) inset, inset 0 0 20px rgba(255, 255, 255, 0.1)'
+                        }}
+                      >
+                        {/* Plan Header */}
+                        <div className="text-center mb-6">
+                          <h3 className="text-white font-nunito text-lg md:text-xl font-semibold mb-2">
+                            {plan.name}
+                          </h3>
+                          <div className="flex items-center justify-center gap-4 mb-4">
+                            <span className="text-white font-nunito text-sm md:text-base opacity-80">{plan.description}</span>
+                          </div>
+                          <div className="text-right">
+                            <span className="text-white font-nunito font-bold text-2xl md:text-3xl">
+                              {plan.price}
+                            </span>
+                          </div>
+                        </div>
+
+                        {/* Plan Features */}
+                        <div className="space-y-3 mb-6">
+                          {plan.features.map((feature, index) => (
+                            <div key={index} className="flex items-start gap-3">
+                              <i className="fas fa-check text-green-400 mt-1 flex-shrink-0"></i>
+                              <span className="text-white font-nunito text-sm md:text-base leading-relaxed">
+                                {feature}
+                              </span>
+                            </div>
+                          ))}
+                        </div>
+
+                        {/* Action Button */}
+                        <button
+                          className="w-full py-3 px-4 rounded-xl font-nunito font-semibold text-sm md:text-base transition-all duration-300 hover:scale-105"
+                          style={{
+                            background: '#1345C3',
+                            boxShadow: '0 0 20px 0 #000 inset',
+                            color: '#FFFFFF'
+                          }}
+                        >
+                          Get Protected
+                        </button>
+
+                        {/* Plan Type Indicator */}
+                        <div className="mt-4 text-center">
+                          <span className="text-white font-nunito text-xs opacity-80">
+                            {plan.subtitle}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
+      {/* FAQ Section */}
+      <Faq />
     </div>
   );
 }
+

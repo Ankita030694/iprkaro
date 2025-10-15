@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { db } from '@/lib/firebase';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
@@ -177,13 +178,13 @@ export default function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trad
         // Get deterministic confidence score
         const confidenceScore = getConfidenceScore(searchTerm, userClass);
 
-        return {
+    return {
           class: {
             ...selectedClass,
             description: getClassDescription(classNumber)
           },
-          confidenceScore
-        };
+      confidenceScore
+    };
       }
     }
     
@@ -203,11 +204,11 @@ export default function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trad
 
   // Set form data when component loads
   useEffect(() => {
-    setFormData(prev => ({
-      ...prev,
-      trademarkSearched: searchTerm,
+      setFormData(prev => ({
+        ...prev,
+        trademarkSearched: searchTerm,
       class: trademarkClass || ''
-    }));
+      }));
   }, [searchTerm, trademarkClass]);
 
   const validateForm = () => {
@@ -375,7 +376,7 @@ export default function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trad
             {/* Content Container */}
             <div className="max-w-3xl mx-auto w-full px-4 sm:px-6 md:px-8 h-full flex flex-col justify-center py-4 sm:py-6 lg:py-8">
               {/* Logo Section */}
-              <div className="flex justify-center mb-3 sm:mb-4">
+              <Link href="/" className="flex justify-center mb-3 sm:mb-4 cursor-pointer hover:opacity-80 transition-opacity">
                 <div className="w-12 h-10 sm:w-16 sm:h-12">
                   <svg width="65" height="49" viewBox="0 0 65 49" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M51.5449 6.37838C51.5449 6.37838 53.1893 8.32436 54.2579 10.2051C54.2579 10.2051 59.0267 3.22541 63.8798 1" stroke="url(#paint0_linear_134_395)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -388,7 +389,7 @@ export default function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trad
                     </defs>
                   </svg>
                 </div>
-              </div>
+              </Link>
             {/* Trademark Check Results Container */}
             <div 
               className="relative p-3 sm:p-4 lg:p-5 mb-3 sm:mb-4 max-w-2xl mx-auto w-full"
@@ -499,6 +500,38 @@ export default function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trad
               
           {/* Right Section - Signup Form (30%) */}
           <div className="w-full lg:w-[30%] bg-[#121212] p-4 sm:p-5 lg:p-6 flex flex-col justify-center h-full overflow-hidden">
+            
+            {/* AI Creative Section */}
+            <div className="text-center mb-4 sm:mb-5">
+              <div className="flex justify-center mb-3">
+                <div className="relative">
+                  {/* Animated glow effect */}
+                  <div className="absolute inset-0 rounded-full bg-[#FFB703] opacity-20 blur-xl animate-pulse"></div>
+                  
+                  {/* AI Icon */}
+                  <div 
+                    className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center border-2"
+                    style={{
+                      background: 'transparent',
+                      borderColor: '#FFB703',
+                      boxShadow: '0 0 20px rgba(255, 183, 3, 0.3)'
+                    }}
+                  >
+                    <i className="fas fa-brain text-[#FFB703] text-xl sm:text-2xl"></i>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="space-y-1">
+                <h4 className="text-[#FFB703] text-xs sm:text-sm font-bold font-nunito tracking-wide">
+                  AI-POWERED INSIGHTS
+                </h4>
+                <p className="text-white text-xs font-nunito opacity-80">
+                  Intelligent trademark analysis at your fingertips
+                </p>
+              </div>
+            </div>
+
             <div className="text-center mb-3 sm:mb-4">
               <h3 className="text-white text-lg sm:text-xl font-bold mb-1 sm:mb-2 font-nunito">Create your account</h3>
               <p className="text-gray-300 text-xs sm:text-sm font-nunito">
