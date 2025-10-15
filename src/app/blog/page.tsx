@@ -140,7 +140,7 @@ export default function BlogPage() {
 
             {/* Main Title */}
             <h1 className="text-white font-nunito text-[28px] md:text-[45px] lg:text-[38px] font-medium leading-[32px] md:leading-[45px] lg:leading-[42px] mb-8 md:mb-12 lg:mb-10">
-              Insights & Trends: The<br />
+              Insights & Trends: The&nbsp;<br />
               Future of Intellectual Property
             </h1>
 
