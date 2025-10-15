@@ -2,12 +2,16 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import OurHeadOffice from '@/components/OurHeadOffice';
 import { CitiesAndTerritories } from '@/components';
+import { db } from '@/lib/firebase';
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 
 export default function ContactPage() {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -17,6 +21,8 @@ export default function ContactPage() {
   });
 
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
 
   const toggleFaq = (index: number) => {
     setOpenFaq(openFaq === index ? null : index);
@@ -68,9 +74,30 @@ export default function ContactPage() {
     setFormData(prev => ({ ...prev, interest: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      // Add the lead to Firestore
+      await addDoc(collection(db, 'leads'), {
+        ...formData,
+        createdAt: serverTimestamp(),
+        status: 'new'
+      });
+
+      // Redirect to thank you page
+      router.push('/thank-you');
+
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitStatus({
+        type: 'error',
+        message: 'Oops! Something went wrong. Please try again or contact us at info@iprkaro.com'
+      });
+      setIsSubmitting(false);
+    }
   };
 
   const interestOptions = [
@@ -293,13 +320,35 @@ export default function ContactPage() {
                     </div>
                   </div>
 
+                  {/* Status Message */}
+                  {submitStatus && (
+                    <div 
+                      className={`p-3 rounded-lg ${
+                        submitStatus.type === 'success' 
+                          ? 'bg-green-500/20 border border-green-500/30' 
+                          : 'bg-red-500/20 border border-red-500/30'
+                      }`}
+                    >
+                      <p className={`text-sm font-nunito ${
+                        submitStatus.type === 'success' ? 'text-green-200' : 'text-red-200'
+                      }`}>
+                        {submitStatus.message}
+                      </p>
+                    </div>
+                  )}
+
                   {/* Submit Button */}
                   <button
                     type="submit"
-                    className="w-full flex items-center justify-center py-2 sm:py-2.5 px-6 sm:px-8 rounded-lg bg-[#FFB703] hover:bg-[#e6a602] transition-colors cursor-pointer"
+                    disabled={isSubmitting}
+                    className={`w-full flex items-center justify-center py-2 sm:py-2.5 px-6 sm:px-8 rounded-lg transition-colors cursor-pointer ${
+                      isSubmitting 
+                        ? 'bg-[#FFB703]/50 cursor-not-allowed' 
+                        : 'bg-[#FFB703] hover:bg-[#e6a602]'
+                    }`}
                   >
                     <span className="text-[#0C002B] font-nunito text-base sm:text-lg font-medium">
-                      Submit Form
+                      {isSubmitting ? 'Submitting...' : 'Submit Form'}
                     </span>
                   </button>
                 </form>
