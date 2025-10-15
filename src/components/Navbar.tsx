@@ -133,22 +133,7 @@ export default function Navbar() {
                   Home
                 </div>
               </Link>
-              <Link href="/services" onClick={closeMobileMenu}> 
-                <div 
-                  className="cursor-pointer relative group hover:text-[#ffb703] transition-all duration-300 mb-3"
-                  style={{
-                    color: 'rgba(255, 255, 255, 0.60)',
-                    fontFamily: 'Nunito',
-                    fontSize: '40px',
-                    fontStyle: 'normal',
-                    fontWeight: '500',
-                    lineHeight: '40px'
-                  }}
-                >
-                  Services
-                </div>
-              </Link>
-             
+               
               <Link href="/about" onClick={closeMobileMenu}> 
                 <div 
                   className="cursor-pointer relative group hover:text-[#ffb703] transition-all duration-300 mb-3"
@@ -164,6 +149,38 @@ export default function Navbar() {
                   About Us
                 </div>
               </Link>
+               
+              <Link href="/blog" onClick={closeMobileMenu}> 
+                <div 
+                  className="cursor-pointer relative group hover:text-[#ffb703] transition-all duration-300 mb-3"
+                  style={{
+                    color: 'rgba(255, 255, 255, 0.60)',
+                    fontFamily: 'Nunito',
+                    fontSize: '40px',
+                    fontStyle: 'normal',
+                    fontWeight: '500',
+                    lineHeight: '40px'
+                  }}
+                >
+                  Blogs
+                </div>
+              </Link>
+              <Link href="/services" onClick={closeMobileMenu}> 
+                <div 
+                  className="cursor-pointer relative group hover:text-[#ffb703] transition-all duration-300 mb-3"
+                  style={{
+                    color: 'rgba(255, 255, 255, 0.60)',
+                    fontFamily: 'Nunito',
+                    fontSize: '40px',
+                    fontStyle: 'normal',
+                    fontWeight: '500',
+                    lineHeight: '40px'
+                  }}
+                >
+                  Services
+                </div>
+              </Link>
+            
               <Link href="/contact" onClick={closeMobileMenu}> 
                 <div 
                   className="cursor-pointer relative group hover:text-[#ffb703] transition-all duration-300 mb-3"
