@@ -127,7 +127,7 @@ export default function TrademarkRegistrationClient({ stateName }: TrademarkRegi
             <div className="relative inline-block mb-4">
               <h1 className="font-nunito font-bold leading-tight mb-1.5">
                 <span className="block text-white text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl">
-                  Trademark Registration in &nbsp;
+                  Trademark Registration in&nbsp;
                 </span>
                 <span 
                   className="block text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-extrabold leading-none"
