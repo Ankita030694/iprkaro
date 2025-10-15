@@ -3,6 +3,8 @@ import { useEffect, useState, useCallback, memo } from 'react';
 import { collection, getDocs, query, where, limit, orderBy } from 'firebase/firestore';
 import { db } from '../../../lib/firebase';
 import Link from 'next/link';
+import BlogTableOfContents from '@/components/blog/BlogTableOfContents';
+import BlogSidebarForm from '@/components/blog/BlogSidebarForm';
 
 // Define the Blog interface
 interface Blog {
@@ -32,6 +34,11 @@ interface BlogDetailProps {
   slug: string;
 }
 
+interface TOCSection {
+  id: string;
+  title: string;
+}
+
 // Enhanced cache with TTL for better performance
 const blogCache = new Map<string, { data: Blog; timestamp: number }>();
 const relatedBlogsCache = new Map<string, { data: Blog[]; timestamp: number }>();
@@ -56,7 +63,7 @@ const shuffleArray = (array: Blog[]) => {
 const authorBios = {
   "Anuj Anand Malik": {
     name: "Anuj Anand Malik",
-    description: "Anuj Anand Malik, Founder of AMA Legal Solutions, is a trusted advocate, loan settlement expert, legal advisor, and banking lawyer. With over a decade of experience in loan settlement, corporate law, financial disputes, and compliance, he leads a result-driven law firm based in India that helps individuals, startups, and businesses achieve legal and financial stability. As a member of the Bar Council of India, Bar Council of Delhi, MCIA, and IACC, Anuj delivers trusted, business-focused legal solutions backed by professional credibility.",
+    description: "Anuj Anand Malik, Founder of AMA Legal Solutions, is a trusted advocate, loan settlement expert, legal advisor, and banking lawyer. With over a decade of experience in loan settlement, corporate law, financial disputes, and compliance, he leads a result-driven law firm based in India that helps individuals, startups, and businesses achieve legal and financial stability.",
     image: "/anujbhiya.svg",
     linkedInUrl: "https://www.linkedin.com/in/iamanujmalik/"
   },
@@ -68,9 +75,27 @@ const authorBios = {
   }
 };
 
+// Function to extract H2 headings from HTML content
+const extractH2Headings = (htmlContent: string): TOCSection[] => {
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(htmlContent, 'text/html');
+  const h2Elements = doc.querySelectorAll('h2');
+  
+  const sections: TOCSection[] = [];
+  h2Elements.forEach((h2, index) => {
+    const title = h2.textContent?.trim() || '';
+    if (title) {
+      const id = `section-${index}`;
+      h2.id = id; // Set ID on the element
+      sections.push({ id, title });
+    }
+  });
+  
+  return sections;
+};
+
 // Optimized function to fetch blog by slug with enhanced caching
 const fetchBlogBySlug = async (slug: string): Promise<Blog | null> => {
-  // Check cache first with TTL validation
   const cached = blogCache.get(slug);
   if (cached && isCacheValid(cached.timestamp)) {
     return cached.data;
@@ -84,8 +109,6 @@ const fetchBlogBySlug = async (slug: string): Promise<Blog | null> => {
     if (!querySnapshot.empty) {
       const doc = querySnapshot.docs[0];
       const blogData = { id: doc.id, ...doc.data() } as Blog;
-      
-      // Cache the result with timestamp
       blogCache.set(slug, { data: blogData, timestamp: Date.now() });
       return blogData;
     }
@@ -100,8 +123,6 @@ const fetchBlogBySlug = async (slug: string): Promise<Blog | null> => {
 // Optimized function to fetch related blogs with enhanced caching
 const fetchRelatedBlogs = async (excludeId: string): Promise<Blog[]> => {
   const cacheKey = `related_${excludeId}`;
-  
-  // Check cache first with TTL validation
   const cached = relatedBlogsCache.get(cacheKey);
   if (cached && isCacheValid(cached.timestamp)) {
     return cached.data;
@@ -109,11 +130,7 @@ const fetchRelatedBlogs = async (excludeId: string): Promise<Blog[]> => {
 
   try {
     const blogsCollection = collection(db, 'blogs');
-    const q = query(
-      blogsCollection, 
-      orderBy('created', 'desc'), 
-      limit(10) // Limit to 10 for better performance
-    );
+    const q = query(blogsCollection, orderBy('created', 'desc'), limit(10));
     const querySnapshot = await getDocs(q);
     
     const allBlogs = querySnapshot.docs.map(doc => ({
@@ -121,11 +138,9 @@ const fetchRelatedBlogs = async (excludeId: string): Promise<Blog[]> => {
       ...doc.data()
     })) as Blog[];
     
-    // Filter out current blog and get 3 random ones
     const otherBlogs = allBlogs.filter(blog => blog.id !== excludeId);
     const randomBlogs = shuffleArray(otherBlogs).slice(0, 3);
     
-    // Cache the result with timestamp
     relatedBlogsCache.set(cacheKey, { data: randomBlogs, timestamp: Date.now() });
     return randomBlogs;
   } catch (error) {
@@ -152,72 +167,18 @@ const fetchFAQs = async (blogId: string): Promise<FAQ[]> => {
 const ArticleDetail = memo(function ArticleDetail({ slug }: BlogDetailProps) {
   const [blog, setBlog] = useState<Blog | null>(null);
   const [loading, setLoading] = useState(true);
-  const [currentUrl, setCurrentUrl] = useState('');
   const [faqs, setFaqs] = useState<FAQ[]>([]);
   const [expandedFaqs, setExpandedFaqs] = useState<string[]>([]);
   const [relatedBlogs, setRelatedBlogs] = useState<Blog[]>([]);
-
-  // Helper function to get a random blog from related blogs
-  const getRandomBlog = useCallback(() => {
-    if (relatedBlogs.length === 0) return null;
-    const randomIndex = Math.floor(Math.random() * relatedBlogs.length);
-    return relatedBlogs[randomIndex];
-  }, [relatedBlogs]);
-
-  // Helper function to get different random blogs for each subtitle segment
-  const getRandomBlogsForSegments = useCallback((segmentCount: number) => {
-    if (relatedBlogs.length === 0) return [];
-    const shuffledBlogs = shuffleArray(relatedBlogs);
-    const result = [];
-    for (let i = 0; i < segmentCount; i++) {
-      result.push(shuffledBlogs[i % shuffledBlogs.length]);
-    }
-    return result;
-  }, [relatedBlogs]);
-
-  // Helper function to render clickable subtitle segments
-  const renderClickableSubtitle = useCallback((subtitle: string) => {
-    const segments = subtitle.split('|').map(segment => segment.trim()).filter(segment => segment.length > 0);
-    
-    // If no related blogs are loaded yet, show white text without links
-    if (relatedBlogs.length === 0) {
-      return (
-        <div className="text-base md:text-lg">
-          {segments.map((segment, index) => (
-            <span key={index}>
-              <span className="text-white">{segment}</span>
-              {index < segments.length - 1 && (
-                <span className="text-[#FFB400] mx-2">|</span>
-              )}
-            </span>
-          ))}
-        </div>
-      );
-    }
-    
-    const randomBlogs = getRandomBlogsForSegments(segments.length);
-    
-    return (
-      <div className="text-base md:text-lg">
-        {segments.map((segment, index) => (
-          <span key={index}>
-            <Link href={`/blog/${randomBlogs[index]?.slug}`} className="text-white hover:text-[#FFB400] transition-colors" prefetch={true}>
-              {segment}
-            </Link>
-            {index < segments.length - 1 && (
-              <span className="text-[#FFB400] mx-2">|</span>
-            )}
-          </span>
-        ))}
-      </div>
-    );
-  }, [relatedBlogs, getRandomBlogsForSegments]);
+  const [activeSection, setActiveSection] = useState('');
+  const [tocSections, setTocSections] = useState<TOCSection[]>([]);
+  const [sidebarsFixed, setSidebarsFixed] = useState(true);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [processedDescription, setProcessedDescription] = useState('');
 
   useEffect(() => {
-    // Set current URL for sharing
-    setCurrentUrl(window.location.href);
+    setIsLoaded(true);
     
-    // Disable browser scroll restoration for better UX
     if (typeof window !== 'undefined' && 'scrollRestoration' in window.history) {
       window.history.scrollRestoration = 'manual';
     }
@@ -225,14 +186,31 @@ const ArticleDetail = memo(function ArticleDetail({ slug }: BlogDetailProps) {
     const loadBlogData = async () => {
       try {
         setLoading(true);
-        
-        // Fetch blog data using optimized function
         const blogData = await fetchBlogBySlug(slug);
         
         if (blogData) {
           setBlog(blogData);
           
-          // Fetch related blogs and FAQs in parallel
+          // Extract H2 headings and add IDs
+          const sections = extractH2Headings(blogData.description);
+          setTocSections(sections);
+          
+          // Add IDs to H2 elements in the description
+          let modifiedDescription = blogData.description;
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(blogData.description, 'text/html');
+          const h2Elements = doc.querySelectorAll('h2');
+          h2Elements.forEach((h2, index) => {
+            const id = `section-${index}`;
+            h2.id = id;
+          });
+          modifiedDescription = doc.body.innerHTML;
+          setProcessedDescription(modifiedDescription);
+          
+          if (sections.length > 0) {
+            setActiveSection(sections[0].id);
+          }
+          
           const [relatedBlogsData, faqsData] = await Promise.all([
             fetchRelatedBlogs(blogData.id),
             fetchFAQs(blogData.id)
@@ -253,7 +231,6 @@ const ArticleDetail = memo(function ArticleDetail({ slug }: BlogDetailProps) {
       loadBlogData();
     }
     
-    // Cleanup: restore scroll restoration when component unmounts
     return () => {
       if (typeof window !== 'undefined' && 'scrollRestoration' in window.history) {
         window.history.scrollRestoration = 'auto';
@@ -261,17 +238,60 @@ const ArticleDetail = memo(function ArticleDetail({ slug }: BlogDetailProps) {
     };
   }, [slug]);
 
-  // Toggle FAQ expansion
+  useEffect(() => {
+    const updateSidebarPosition = () => {
+      const footer = document.querySelector('footer');
+      if (!footer) return;
+
+      const scrollY = window.scrollY;
+      const footerTop = footer.getBoundingClientRect().top + scrollY;
+      const shouldApplyConstraint = footerTop < scrollY + 400;
+      setSidebarsFixed(!shouldApplyConstraint);
+    };
+
+    let ticking = false;
+    const handleScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          updateSidebarPosition();
+
+          // Section tracking
+          const scrollPosition = window.scrollY + 250;
+          for (const section of tocSections) {
+            const element = document.getElementById(section.id);
+            if (element) {
+              const { offsetTop, offsetHeight } = element;
+              if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+                setActiveSection(section.id);
+                break;
+              }
+            }
+          }
+
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    updateSidebarPosition();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('resize', updateSidebarPosition);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', updateSidebarPosition);
+    };
+  }, [tocSections]);
+
   const toggleFaq = (faqId: string) => {
     setExpandedFaqs(prev => 
-      prev.includes(faqId)
-        ? prev.filter(id => id !== faqId)
-        : [...prev, faqId]
+      prev.includes(faqId) ? prev.filter(id => id !== faqId) : [...prev, faqId]
     );
   };
 
-  // Function to handle social media sharing
   const handleShare = (platform: string) => {
+    const currentUrl = typeof window !== 'undefined' ? window.location.href : '';
     const title = blog?.title || 'Check out this blog post';
     let shareUrl = '';
 
@@ -289,54 +309,19 @@ const ArticleDetail = memo(function ArticleDetail({ slug }: BlogDetailProps) {
         return;
     }
 
-    // Open in a new window
     window.open(shareUrl, '_blank', 'width=600,height=400');
   };
 
   if (loading) {
     return (
-      <div 
-        className="min-h-screen"
-        style={{
-          backgroundImage: 'linear-gradient(to right top, #0c002b, #0c002b,rgb(25, 10, 60),rgb(92, 75, 130),rgb(91, 88, 88))',
-          backgroundSize: '100% 100%',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      >
-        {/* Skeleton Header */}
-        <div className="w-full text-center py-8 md:py-12" style={{ background: 'rgba(31, 19, 16, 0.6)' }}>
-          <div className="container mx-auto px-4 mt-12 md:mt-16 max-w-4xl">
-            <div className="h-8 md:h-12 bg-gray-300/30 rounded-lg mb-4 animate-pulse"></div>
-            <div className="h-4 md:h-6 bg-gray-300/30 rounded-lg mb-4 animate-pulse"></div>
-            <div className="bg-gray-300/30 h-1 w-20 md:w-24 rounded-full mx-auto animate-pulse"></div>
-          </div>
-        </div>
-        
-        {/* Skeleton Content */}
-        <div className="container mx-auto px-4 py-6 md:py-8 max-w-5xl">
-          <div className="flex flex-col lg:flex-row lg:gap-6">
-            <div className="lg:w-2/3">
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden mb-6">
-                <div className="h-48 md:h-64 bg-gray-200 animate-pulse"></div>
-                <div className="p-4 md:p-6 lg:p-7">
-                  <div className="space-y-3">
-                    <div className="h-4 bg-gray-200 rounded animate-pulse"></div>
-                    <div className="h-4 bg-gray-200 rounded animate-pulse"></div>
-                    <div className="h-4 bg-gray-200 rounded w-3/4 animate-pulse"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="lg:w-1/3">
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-                <div className="p-4">
-                  <div className="h-4 bg-gray-200 rounded mb-3 animate-pulse"></div>
-                  <div className="h-3 bg-gray-200 rounded mb-2 animate-pulse"></div>
-                  <div className="h-3 bg-gray-200 rounded w-2/3 animate-pulse"></div>
-                </div>
-              </div>
-            </div>
+      <div className="min-h-screen relative overflow-x-hidden mt-20" style={{ 
+        background: 'radial-gradient(ellipse 80% 50% at 50% -20%, rgba(19, 69, 195, 0.15), transparent), linear-gradient(180deg, #0C002B 0%, #1a0052 50%, #0C002B 100%)'
+      }}>
+        <div className="container mx-auto px-4 py-20">
+          <div className="animate-pulse space-y-8">
+            <div className="h-12 bg-white/10 rounded-lg w-3/4 mx-auto"></div>
+            <div className="h-6 bg-white/10 rounded-lg w-1/2 mx-auto"></div>
+            <div className="h-64 bg-white/10 rounded-lg"></div>
           </div>
         </div>
       </div>
@@ -345,19 +330,18 @@ const ArticleDetail = memo(function ArticleDetail({ slug }: BlogDetailProps) {
 
   if (!blog) {
     return (
-      <div 
-        className="min-h-screen p-6 flex flex-col items-center justify-center"
-        style={{
-          backgroundImage: 'linear-gradient(to right top, #0c002b, #0c002b,rgb(25, 10, 60),rgb(92, 75, 130),rgb(91, 88, 88))',
-          backgroundSize: '100% 100%',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      >
-        <div className="text-center max-w-lg mx-auto p-6 bg-white rounded-lg shadow-lg">
-          <h1 className="text-2xl font-bold text-[#FFB400] mb-3">Article Not Found</h1>
-          <p className="text-black mb-4 text-sm">We could not find the blog post you are looking for.</p>
-          <Link href="/blog" className="bg-[#FFB400] text-black px-4 py-2 rounded-md hover:bg-[#FFC107] hover:text-black transition-all text-sm">
+      <div className="min-h-screen flex items-center justify-center" style={{ 
+        background: 'radial-gradient(ellipse 80% 50% at 50% -20%, rgba(19, 69, 195, 0.15), transparent), linear-gradient(180deg, #0C002B 0%, #1a0052 50%, #0C002B 100%)'
+      }}>
+        <div className="text-center">
+          <i className="fas fa-book-open text-[#FFB703] text-6xl mb-6" aria-hidden="true"></i>
+          <h1 className="text-3xl font-bold text-white mb-4 font-nunito">Article Not Found</h1>
+          <p className="text-white/70 mb-8 font-nunito">We couldn't find the blog post you're looking for.</p>
+          <Link href="/blog" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-nunito font-bold text-sm transition-all duration-300 hover:scale-105" style={{
+            background: 'linear-gradient(135deg, #FFB703 0%, #FFA000 100%)',
+            color: '#0C002B'
+          }}>
+            <i className="fas fa-arrow-left text-xs" aria-hidden="true"></i>
             Return to Blog
           </Link>
         </div>
@@ -366,378 +350,455 @@ const ArticleDetail = memo(function ArticleDetail({ slug }: BlogDetailProps) {
   }
 
   return (
-    <div 
-      className="min-h-screen"
+    <div className="min-h-screen relative overflow-x-hidden mt-20" style={{ 
+      background: 'radial-gradient(ellipse 80% 50% at 50% -20%, rgba(19, 69, 195, 0.15), transparent), linear-gradient(180deg, #0C002B 0%, #1a0052 50%, #0C002B 100%)'
+    }}>
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none" style={{ contain: 'layout style paint' }}>
+        <div 
+          className="absolute -top-40 -right-40 w-96 h-96 rounded-full opacity-20 blur-3xl"
+          style={{
+            background: 'radial-gradient(circle, #FFB703 0%, transparent 70%)',
+            animation: 'float 8s ease-in-out infinite'
+          }}
+        />
+        <div 
+          className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full opacity-15 blur-3xl"
+          style={{
+            background: 'radial-gradient(circle, #1345C3 0%, transparent 70%)',
+            animation: 'float 10s ease-in-out infinite reverse',
+            animationDelay: '2s'
+          }}
+        />
+        <div 
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full opacity-10 blur-3xl"
+          style={{
+            background: 'radial-gradient(circle, #069A81 0%, transparent 70%)',
+            animation: 'glow-pulse 6s ease-in-out infinite'
+          }}
+        />
+      </div>
+
+      {/* Table of Contents */}
+      {tocSections.length > 0 && (
+        <BlogTableOfContents 
+          activeSection={activeSection} 
+          blogTitle={blog.title}
+          sections={tocSections}
+        />
+      )}
+
+      <div className="relative z-10 pt-[160px] pb-16 md:pb-8">
+        <div className="container mx-auto px-3 sm:px-4 lg:px-5 xl:px-6 2xl:px-8 max-w-7xl">
+          {/* Hero Section */}
+          <div className={`text-center mb-8 lg:mb-10 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            {/* Breadcrumb */}
+            <div className="flex items-center justify-center gap-1.5 mb-3 text-[10px] lg:text-xs">
+              <span className="text-white/60 font-nunito">Home</span>
+              <i className="fas fa-chevron-right text-white/40 text-[8px]" aria-hidden="true"></i>
+              <span className="text-white/60 font-nunito">Blog</span>
+              <i className="fas fa-chevron-right text-white/40 text-[8px]" aria-hidden="true"></i>
+              <span className="text-[#FFB703] font-nunito font-medium">Article</span>
+            </div>
+
+            {/* Main Heading */}
+            <div className="relative inline-block mb-4">
+              <h1 
+                className="font-nunito font-extrabold text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl leading-tight mb-3"
       style={{
-        backgroundImage: 'linear-gradient(to right top, #0c002b, #0c002b,rgb(25, 10, 60),rgb(92, 75, 130),rgb(91, 88, 88))',
-        backgroundSize: '100% 100%',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-      }}
-    >
-      {/* Header Banner */}
-      <div className="w-full text-center py-8 md:py-12" style={{ background: 'rgba(31, 19, 16, 0.6)' }}>
-        <div className="container mx-auto px-4 mt-12 md:mt-16 max-w-4xl">
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#FFB400] mb-2 md:mb-3 leading-tight">
+                  background: 'linear-gradient(135deg, #FFB703 0%, #FFC93D 50%, #FFB703 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                  textShadow: '0 0 40px rgba(255, 183, 3, 0.3)'
+                }}
+              >
             {blog.title}
           </h1>
-          {blog.subtitle && (
-            <div className="mt-2 md:mt-3 max-w-3xl mx-auto">
-              {renderClickableSubtitle(blog.subtitle)}
-            </div>
-          )}
-          <div className="flex justify-center items-center mt-3 md:mt-4">
-            <div className="bg-[#FFB400] h-1 w-20 md:w-24 rounded-full"></div>
-          </div>
-        </div>
+              <div 
+                className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 h-0.5 rounded-full"
+                style={{
+                  width: '60%',
+                  background: 'linear-gradient(90deg, transparent, #FFB703, transparent)',
+                  boxShadow: '0 0 20px rgba(255, 183, 3, 0.5)'
+                }}
+              />
       </div>
       
-      {/* Main Content Container */}
-      <div className="container mx-auto px-4 py-6 md:py-8 max-w-5xl">
-        <div className="flex flex-col lg:flex-row lg:gap-6">
-          
-          {/* Main Article Content */}
-          <div className="lg:w-2/3">
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden mb-6">
-              {/* Article Metadata */}
-              <div className="border-b border-gray-200 px-4 md:px-5 py-3 bg-green-50">
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
-                  <p className="text-black italic text-sm">
-                    Published on: <span className="font-medium">{blog.date}</span>
-                  </p>
-                  {blog.author && (
-                    <p className="text-black text-sm">
-                      By: <span className="font-medium text-[#FFB400]">{blog.author}</span>
+            {/* Subtitle */}
+            {blog.subtitle && (
+              <p className="text-white/90 font-nunito text-xs md:text-sm lg:text-base leading-relaxed max-w-3xl mx-auto mb-5">
+                {blog.subtitle}
                     </p>
                   )}
+
+            {/* Metadata */}
+            <div className="flex flex-wrap items-center justify-center gap-4 mb-4">
+              <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 backdrop-blur-sm border border-white/10">
+                <i className="fas fa-calendar text-[#FFB703] text-xs" aria-hidden="true"></i>
+                <span className="text-white text-[10px] lg:text-xs font-nunito">{blog.date}</span>
+              </div>
+              {blog.author && (
+                <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 backdrop-blur-sm border border-white/10">
+                  <i className="fas fa-user text-[#FFB703] text-xs" aria-hidden="true"></i>
+                  <span className="text-white text-[10px] lg:text-xs font-nunito">{blog.author}</span>
                 </div>
+              )}
               </div>
               
-              {/* Feature Image with optimized loading */}
+            {/* Featured Image */}
               {blog.image && (
-                <div className="relative w-full h-[200px] md:h-[300px] lg:h-[350px] mb-4 md:mb-6">
+              <div className="max-w-5xl mx-auto mb-8 rounded-2xl overflow-hidden shadow-2xl">
                   <img
                     src={blog.image}
-                    alt={`${blog.title} - AMA Legal Solutions`}
-                    className="w-full h-full object-cover"
+                  alt={blog.title}
+                  className="w-full h-auto"
                     loading="eager"
-                    title={blog.title}
-                    decoding="async"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 66vw, 50vw"
-                    onLoad={(e) => {
-                      const img = e.target as HTMLImageElement;
-                      img.style.opacity = '1';
-                    }}
-                    style={{ opacity: 0, transition: 'opacity 0.3s ease' }}
                   />
                 </div>
               )}
-              
-              {/* Article Content */}
-              <div className="p-4 md:p-6 lg:p-7">
+          </div>
+
+          {/* Content Layout with Right Sidebar */}
+          <div className="relative grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-6">
+            {/* Main Content Area */}
+            <div 
+              className={`lg:col-span-8 min-h-[500px] transition-all duration-700 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+            >
+              <div 
+                className="rounded-2xl p-6 md:p-8 backdrop-blur-xl border border-white/10 shadow-2xl"
+                style={{
+                  background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(12, 0, 43, 0.8) 100%)'
+                }}
+              >
                 <div 
-                  className="prose prose-sm md:prose lg:prose-lg max-w-none text-black tiptap-content" 
-                  dangerouslySetInnerHTML={{ __html: blog.description }}
+                  className="prose prose-invert prose-lg max-w-none blog-content" 
+                  dangerouslySetInnerHTML={{ __html: processedDescription }}
                 />
-                
-                {/* Add this style block to handle Tiptap specific styling */}
-                <style jsx global>{`
-                  .tiptap-content h1 { font-size: 1.75em; font-weight: bold; margin-top: 0.6em; margin-bottom: 0.6em; }
-                  .tiptap-content h2 { font-size: 1.4em; font-weight: bold; margin-top: 0.75em; margin-bottom: 0.75em; }
-                  .tiptap-content h3 { font-size: 1.15em; font-weight: bold; margin-top: 0.9em; margin-bottom: 0.9em; }
-                  .tiptap-content h4 { font-size: 1em; font-weight: bold; margin-top: 1.2em; margin-bottom: 1.2em; }
-                  .tiptap-content h5 { font-size: 0.9em; font-weight: bold; margin-top: 1.5em; margin-bottom: 1.5em; }
-                  .tiptap-content h6 { font-size: 0.75em; font-weight: bold; margin-top: 2em; margin-bottom: 2em; }
-                  
-                  .tiptap-content p { margin: 0.8em 0; line-height: 1.6; font-size: 0.95em; }
-                  .tiptap-content a { color: #3B82F6; text-decoration: underline; }
-                  .tiptap-content blockquote { border-left: 4px solid #FFB400; margin-left: 0; padding-left: 0.8em; font-style: italic; background-color: #fef3c7; padding: 0.8em; border-radius: 0.4em; }
-                  .tiptap-content pre { background-color: #f5f5f5; padding: 0.8em; border-radius: 0.4em; font-family: monospace; overflow-x: auto; font-size: 0.85em; }
-                  .tiptap-content code { background-color: rgba(#616161, 0.1); color: #616161; padding: 0.15em 0.3em; border-radius: 0.25em; font-size: 0.9em; }
-                  
-                  .tiptap-content table { border-collapse: collapse; margin: 1.2em 0; overflow: hidden; table-layout: fixed; width: 100%; box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.1); border-radius: 0.4em; }
-                  .tiptap-content table td, .tiptap-content table th { border: 2px solid #ced4da; box-sizing: border-box; min-width: 1em; padding: 6px 10px; position: relative; vertical-align: top; font-size: 0.9em; }
-                  .tiptap-content table th { background-color: #f8f9fa; font-weight: bold; text-align: left; }
-                  
-                  /* List styles - Fixed to show bullets and numbers */
-                  .tiptap-content ul { 
-                    list-style-type: disc; 
-                    padding-left: 1.5em; 
-                    margin: 1.2em 0;
-                  }
-                  .tiptap-content ol { 
-                    list-style-type: decimal; 
-                    padding-left: 1.5em; 
-                    margin: 1.2em 0;
-                  }
-                  .tiptap-content li { 
-                    margin: 0.4em 0; 
-                    line-height: 1.5; 
-                    font-size: 0.95em;
-                    display: list-item;
-                  }
-                  .tiptap-content ul ul { 
-                    list-style-type: circle; 
-                    margin: 0.5em 0;
-                  }
-                  .tiptap-content ul ul ul { 
-                    list-style-type: square; 
-                    margin: 0.5em 0;
-                  }
-                  .tiptap-content ol ol { 
-                    list-style-type: lower-alpha; 
-                    margin: 0.5em 0;
-                  }
-                  .tiptap-content ol ol ol { 
-                    list-style-type: lower-roman; 
-                    margin: 0.5em 0;
-                  }
-                  
-                  .tiptap-content hr { border: none; border-top: 2px solid #ced4da; margin: 1.5em 0; }
-                  .tiptap-content img { max-width: 100%; height: auto; border-radius: 0.4em; box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.1); }
-                  
-                  /* Text alignment classes */
-                  .tiptap-content .text-left { text-align: left; }
-                  .tiptap-content .text-center { text-align: center; }
-                  .tiptap-content .text-right { text-align: right; }
-                  .tiptap-content .text-justify { text-align: justify; }
-                  
-                  /* Subscript and superscript */
-                  .tiptap-content sub { vertical-align: sub; font-size: smaller; }
-                  .tiptap-content sup { vertical-align: super; font-size: smaller; }
-                  
-                  /* Highlighted text */
-                  .tiptap-content mark { background-color: #fef3c7; padding: 0.1em 0.2em; border-radius: 0.2em; }
-                  
-                  /* Responsive adjustments */
-                  @media (min-width: 1024px) {
-                    .tiptap-content h1 { font-size: 2em; }
-                    .tiptap-content h2 { font-size: 1.6em; }
-                    .tiptap-content h3 { font-size: 1.3em; }
-                    .tiptap-content p { font-size: 1em; line-height: 1.7; }
-                    .tiptap-content li { font-size: 1em; }
-                  }
-                `}</style>
+              </div>
                 
                 {/* Share Section */}
-                <div className="mt-6 md:mt-8 pt-4 md:pt-6 border-t border-gray-200">
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 md:gap-4">
-                    <div className="flex items-center space-x-3 md:space-x-4">
-                      <span className="text-black font-medium">Share this article:</span>
-                      <div className="flex space-x-2 md:space-x-3">
+              <div className="mt-6 rounded-xl p-5 backdrop-blur-xl border border-white/10" style={{
+                background: 'linear-gradient(135deg, rgba(255, 183, 3, 0.1) 0%, rgba(12, 0, 43, 0.8) 100%)'
+              }}>
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                  <div className="flex items-center gap-2">
+                    <i className="fas fa-share-alt text-[#FFB703] text-lg" aria-hidden="true"></i>
+                    <span className="text-white font-nunito font-semibold">Share this article</span>
+                  </div>
+                  <div className="flex gap-2">
                         <button 
                           onClick={() => handleShare('facebook')}
-                          className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-[#FFB400] text-black flex items-center justify-center hover:bg-[#FFC107] hover:scale-110 transition-all duration-300 shadow-lg"
-                          title="Share on Facebook"
+                      className="w-10 h-10 rounded-lg bg-white/10 hover:bg-blue-600 flex items-center justify-center transition-all duration-300 border border-white/20"
+                      aria-label="Share on Facebook"
                         >
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                          </svg>
+                      <i className="fab fa-facebook-f text-white text-sm" aria-hidden="true"></i>
                         </button>
                         <button 
                           onClick={() => handleShare('twitter')}
-                          className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-[#FFB400] text-black flex items-center justify-center hover:bg-[#FFC107] hover:scale-110 transition-all duration-300 shadow-lg"
-                          title="Share on Twitter"
+                      className="w-10 h-10 rounded-lg bg-white/10 hover:bg-black flex items-center justify-center transition-all duration-300 border border-white/20"
+                      aria-label="Share on Twitter"
                         >
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
-                          </svg>
+                      <i className="fab fa-twitter text-white text-sm" aria-hidden="true"></i>
                         </button>
                         <button 
                           onClick={() => handleShare('linkedin')}
-                          className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-[#FFB400] text-black flex items-center justify-center hover:bg-[#FFC107] hover:scale-110 transition-all duration-300 shadow-lg"
-                          title="Share on LinkedIn"
-                        >
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                            <rect x="2" y="9" width="4" height="12"></rect>
-                            <circle cx="4" cy="4" r="2"></circle>
-                          </svg>
+                      className="w-10 h-10 rounded-lg bg-white/10 hover:bg-blue-700 flex items-center justify-center transition-all duration-300 border border-white/20"
+                      aria-label="Share on LinkedIn"
+                    >
+                      <i className="fab fa-linkedin-in text-white text-sm" aria-hidden="true"></i>
                         </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
           
-          {/* Sidebar for desktop - Author & Quick Links */}
-          <div className="lg:w-1/3 space-y-4 lg:space-y-5">
-            {/* Author Bio Sidebar for Desktop */}
+              {/* Author Bio */}
             {blog.author && authorBios[blog.author as keyof typeof authorBios] && (
-              <div className="hidden lg:block bg-white rounded-lg shadow-lg overflow-hidden sticky top-6">
-                <div className="px-4 py-3" style={{ background: 'rgba(31, 19, 16, 0.8)' }}>
-                  <h3 className="text-lg font-bold text-[#FFB400]">About the Author</h3>
-                </div>
-                <div className="p-4">
-                  <div className="text-center mb-3">
-                    <div className="relative w-16 h-16 mx-auto rounded-full overflow-hidden mb-3">
-                      <img 
-                        src={authorBios[blog.author as keyof typeof authorBios]?.image || "/default-author.svg"}
+                <div className="mt-6 rounded-2xl p-6 backdrop-blur-xl border border-white/10 shadow-xl" style={{
+                  background: 'linear-gradient(135deg, rgba(255, 183, 3, 0.1) 0%, rgba(12, 0, 43, 0.9) 100%)'
+                }}>
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <img 
+                      src={authorBios[blog.author as keyof typeof authorBios].image}
                         alt={blog.author}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <h4 className="text-base font-bold text-black mb-2">{blog.author}</h4>
-                  </div>
-                  <p className="text-xs text-black leading-relaxed mb-3">
-                    {authorBios[blog.author as keyof typeof authorBios]?.description.substring(0, 100) + "..." || 
-                      "Legal expert at AMA Legal Solutions."}
-                  </p>
-                  <div className="flex flex-col space-y-2">
-                    <a 
-                      href={authorBios[blog.author as keyof typeof authorBios]?.linkedInUrl || "https://www.linkedin.com/company/ama-legal-solutions/"}
+                      className="w-20 h-20 rounded-xl border-2 border-[#FFB703]/30 shadow-lg"
+                    />
+                    <div className="flex-1">
+                      <h3 className="text-white font-nunito font-bold text-lg mb-1">{blog.author}</h3>
+                      <p className="text-white/70 font-nunito text-sm mb-3 leading-relaxed">
+                        {authorBios[blog.author as keyof typeof authorBios].description.substring(0, 200) + "..."}
+                      </p>
+                      <a 
+                        href={authorBios[blog.author as keyof typeof authorBios].linkedInUrl}
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="flex items-center justify-center text-[#FFB400] hover:text-[#FFC107] font-medium transition-colors text-xs"
+                        className="inline-flex items-center gap-2 text-[#FFB703] hover:text-[#FFC93D] font-nunito font-medium text-sm transition-colors"
                     >
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 mr-1" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                      </svg>
+                        <i className="fab fa-linkedin" aria-hidden="true"></i>
                       Connect on LinkedIn
                     </a>
                   </div>
                 </div>
               </div>
             )}
-          </div>
-        </div>
-        
-        {/* Mobile Author Bio - Hidden on desktop */}
-        {blog.author && authorBios[blog.author as keyof typeof authorBios] && (
-          <div className="lg:hidden max-w-3xl mx-auto mt-6 bg-white rounded-lg shadow-lg overflow-hidden">
-            <div className="p-4 flex flex-col md:flex-row gap-4">
-              <div className="relative w-20 h-20 rounded-full overflow-hidden flex-shrink-0">
-                <img 
-                  src={authorBios[blog.author as keyof typeof authorBios]?.image || "/default-author.svg"}
-                  alt={blog.author}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="flex-1">
-                <h3 className="text-lg font-bold text-black mb-2">{blog.author}</h3>
-                <p className="text-black mb-3 text-sm">
-                  {authorBios[blog.author as keyof typeof authorBios]?.description || 
-                    "Legal expert at AMA Legal Solutions specializing in providing comprehensive legal advice and solutions."}
-                </p>
-                <div className="flex space-x-3">
-                  <a 
-                    href={authorBios[blog.author as keyof typeof authorBios]?.linkedInUrl || "https://www.linkedin.com/company/ama-legal-solutions/"}
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="flex items-center text-[#FFB400] hover:text-[#FFC107] font-medium transition-colors text-sm"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                    </svg>
-                    LinkedIn
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-        
-        {/* FAQs Section */}
+
+              {/* FAQs */}
         {faqs.length > 0 && (
-          <div className="max-w-4xl mx-auto mt-6 lg:mt-8 bg-white rounded-lg shadow-lg overflow-hidden" itemScope itemType="https://schema.org/FAQPage">
-            <div className="px-4 md:px-5 py-4 border-b border-gray-200" style={{ background: 'rgba(31, 19, 16, 0.8)' }}>
-              <h2 className="text-lg md:text-xl lg:text-2xl font-bold text-[#FFB400]">Frequently Asked Questions</h2>
-            </div>
-            <div className="p-4 md:p-5 lg:p-6">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-5">
+                <div className="mt-6 rounded-2xl p-6 backdrop-blur-xl border border-white/10 shadow-xl" style={{
+                  background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(12, 0, 43, 0.8) 100%)'
+                }}>
+                  <h2 className="text-white font-nunito font-bold text-2xl mb-6 flex items-center gap-2">
+                    <i className="fas fa-question-circle text-[#FFB703]" aria-hidden="true"></i>
+                    Frequently Asked Questions
+                  </h2>
+                  <div className="space-y-3">
                 {faqs.map((faq) => (
-                  <div key={faq.id} className="border border-gray-200 rounded-lg overflow-hidden" itemScope itemType="https://schema.org/Question" itemProp="mainEntity">
+                      <div 
+                        key={faq.id} 
+                        className="border border-white/10 rounded-lg overflow-hidden bg-white/5 hover:bg-white/10 transition-all"
+                      >
                     <button
                       onClick={() => toggleFaq(faq.id)}
-                      className="flex justify-between items-center w-full text-left p-3 md:p-4 font-medium text-black hover:text-[#FFB400] hover:bg-yellow-50 focus:outline-none transition-all duration-300"
-                    >
-                      <span className="text-sm md:text-base pr-3" itemProp="name">{faq.question}</span>
-                      <span className="flex-shrink-0">
-                        {expandedFaqs.includes(faq.id) ? (
-                          <svg className="h-4 w-4 md:h-5 md:w-5 text-[#FFB400] transform rotate-180 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                            <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-                          </svg>
-                        ) : (
-                          <svg className="h-4 w-4 md:h-5 md:w-5 text-[#FFB400] transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                            <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-                          </svg>
-                        )}
-                      </span>
+                          className="flex justify-between items-start w-full text-left p-4 font-medium text-white hover:text-[#FFB703] transition-colors"
+                        >
+                          <span className="pr-4 text-sm font-nunito">{faq.question}</span>
+                          <i className={`fas fa-chevron-down text-[#FFB703] transition-transform ${expandedFaqs.includes(faq.id) ? 'rotate-180' : ''}`} aria-hidden="true"></i>
                     </button>
                     {expandedFaqs.includes(faq.id) && (
-                      <div className="px-3 md:px-4 pb-3 md:pb-4 border-t border-gray-100" itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                        <p className="text-xs md:text-sm text-black leading-relaxed mt-2" itemProp="text">{faq.answer}</p>
+                          <div className="px-4 pb-4 border-t border-white/10">
+                            <p className="text-white/80 text-sm leading-relaxed mt-3 font-nunito">{faq.answer}</p>
                       </div>
                     )}
                   </div>
                 ))}
               </div>
             </div>
+              )}
           </div>
-        )}
-        
-        {/* Related Blogs Section */}
+
+            {/* Right Sidebar */}
+            <div 
+              className={`lg:col-span-4 transition-all duration-700 delay-100 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+            >
+              <div className={`${sidebarsFixed ? 'lg:sticky lg:top-[200px]' : ''}`}>
+                <BlogSidebarForm />
+
+                {/* Related Articles */}
         {relatedBlogs.length > 0 && (
-          <div className="max-w-4xl mx-auto mt-6 lg:mt-8">
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="px-4 md:px-5 py-4 border-b border-gray-200" style={{ background: 'rgba(31, 19, 16, 0.8)' }}>
-                <h2 className="text-lg md:text-xl lg:text-2xl font-bold text-[#FFB400]">Related Articles</h2>
-              </div>
-              <div className="p-4 md:p-5 lg:p-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
+                  <div className="mt-6 rounded-2xl p-6 backdrop-blur-xl border border-white/10 shadow-xl" style={{
+                    background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(12, 0, 43, 0.8) 100%)'
+                  }}>
+                    <h3 className="text-white font-nunito font-bold text-lg mb-4 flex items-center gap-2">
+                      <i className="fas fa-newspaper text-[#FFB703]" aria-hidden="true"></i>
+                      Related Articles
+                    </h3>
+                    <div className="space-y-4">
                   {relatedBlogs.map((article) => (
                     <Link key={article.id} href={`/blog/${article.slug}`} prefetch={true}>
-                      <div className="group rounded-lg overflow-hidden border border-gray-100 h-full hover:shadow-lg hover:border-[#FFB400] transition-all duration-300 transform hover:-translate-y-1">
-                        <div className="relative h-36 lg:h-40 overflow-hidden">
+                          <div className="group rounded-xl overflow-hidden border border-white/10 hover:border-[#FFB703]/50 transition-all bg-white/5 hover:bg-white/10">
+                            {article.image && (
+                              <div className="relative h-32 overflow-hidden">
                           <img 
                             src={article.image}
                             alt={article.title}
                             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                           />
-                          <div className="absolute bottom-2 right-2 bg-white/90 backdrop-blur-sm rounded px-1.5 py-0.5 text-xs uppercase text-[#FFB400] font-semibold">
-                            {article.date}
                           </div>
-                        </div>
-                        <div className="p-3 lg:p-4 relative bg-white">
-                          <h3 className="text-sm md:text-base font-semibold mb-1 lg:mb-2 group-hover:text-[#FFB400] transition-colors duration-300 line-clamp-2 text-black">
-                            {article.title}
-                          </h3>
-                          {article.subtitle && (
-                            <p className="text-xs md:text-sm mb-2 text-gray-600 line-clamp-2">{article.subtitle}</p>
-                          )}
-                          <div className="flex items-center text-[#FFB400] group-hover:text-[#FFC107] transition-colors duration-300">
-                            <span className="text-xs font-medium">Read more</span>
-                            <svg className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                            </svg>
-                          </div>
+                            )}
+                            <div className="p-3">
+                              <h4 className="text-white font-nunito font-semibold text-sm mb-1 line-clamp-2 group-hover:text-[#FFB703] transition-colors">
+                                {article.title}
+                              </h4>
+                              <span className="text-white/60 text-xs font-nunito">{article.date}</span>
                         </div>
                       </div>
                     </Link>
                   ))}
                 </div>
+                  </div>
+                )}
               </div>
             </div>
           </div>
-        )}
-        
-        {/* Fixed Contact Button */}
-        <div className="fixed bottom-3 right-3 md:bottom-4 md:right-4 z-[999]">
-          <Link href="/contact" className="group inline-flex items-center bg-[#FFB400] text-black font-bold px-3 py-2 md:px-4 md:py-2 text-sm md:text-base rounded-full shadow-2xl hover:bg-[#FFC107] hover:text-black hover:scale-105 transition-all duration-300">
-            <span>Get in Touch</span>
-            <svg className="w-3 h-3 md:w-4 md:h-4 ml-1 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-            </svg>
-          </Link>
         </div>
+
+        {/* Scroll to Top Button */}
+        {isLoaded && (
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="fixed bottom-8 right-8 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 z-50"
+            style={{
+              background: 'linear-gradient(135deg, #FFB703, #FFA000)',
+              boxShadow: '0 4px 20px rgba(255, 183, 3, 0.4)'
+            }}
+            aria-label="Scroll to top"
+          >
+            <i className="fas fa-arrow-up text-[#0C002B]" aria-hidden="true"></i>
+          </button>
+        )}
       </div>
+
+      {/* Animations */}
+      <style jsx global>{`
+        @keyframes float {
+          0%, 100% {
+            transform: translateY(0) rotate(0deg);
+          }
+          50% {
+            transform: translateY(-20px) rotate(5deg);
+          }
+        }
+        
+        @keyframes glow-pulse {
+          0%, 100% {
+            opacity: 0.1;
+            transform: translate(-50%, -50%) scale(1);
+          }
+          50% {
+            opacity: 0.15;
+            transform: translate(-50%, -50%) scale(1.05);
+          }
+        }
+
+        /* Blog Content Styling */
+        .blog-content {
+          color: #e5e7eb;
+          line-height: 1.8;
+        }
+        
+        .blog-content h1,
+        .blog-content h2,
+        .blog-content h3,
+        .blog-content h4,
+        .blog-content h5,
+        .blog-content h6 {
+          color: #FFB703;
+          font-weight: 700;
+          margin-top: 2em;
+          margin-bottom: 1em;
+          font-family: 'Nunito', sans-serif;
+        }
+        
+        .blog-content h2 {
+          font-size: 1.875em;
+          border-bottom: 2px solid rgba(255, 183, 3, 0.2);
+          padding-bottom: 0.5em;
+        }
+        
+        .blog-content h3 {
+          font-size: 1.5em;
+        }
+        
+        .blog-content p {
+          margin: 1.5em 0;
+          color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .blog-content a {
+          color: #FFB703;
+          text-decoration: underline;
+          text-decoration-color: rgba(255, 183, 3, 0.3);
+          transition: all 0.2s;
+        }
+        
+        .blog-content a:hover {
+          color: #FFC93D;
+          text-decoration-color: #FFC93D;
+        }
+        
+        .blog-content blockquote {
+          border-left: 4px solid #FFB703;
+          margin: 2em 0;
+          padding: 1em 1.5em;
+          background: rgba(255, 183, 3, 0.1);
+          border-radius: 0.5rem;
+          font-style: italic;
+          color: rgba(255, 255, 255, 0.85);
+        }
+        
+        .blog-content code {
+          background: rgba(255, 183, 3, 0.1);
+          color: #FFB703;
+          padding: 0.2em 0.4em;
+          border-radius: 0.25rem;
+          font-size: 0.875em;
+          font-family: 'Monaco', 'Courier New', monospace;
+        }
+        
+        .blog-content pre {
+          background: rgba(0, 0, 0, 0.3);
+          color: #e5e7eb;
+          padding: 1.5em;
+          border-radius: 0.75rem;
+          overflow-x: auto;
+          margin: 2em 0;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .blog-content pre code {
+          background: transparent;
+          color: inherit;
+          padding: 0;
+        }
+        
+        .blog-content ul,
+        .blog-content ol {
+          margin: 1.5em 0;
+          padding-left: 2em;
+        }
+        
+        .blog-content li {
+          margin: 0.75em 0;
+          color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .blog-content img {
+          max-width: 100%;
+          height: auto;
+          border-radius: 0.75rem;
+          margin: 2em 0;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .blog-content table {
+          width: 100%;
+          border-collapse: collapse;
+          margin: 2em 0;
+          border-radius: 0.5rem;
+          overflow: hidden;
+        }
+        
+        .blog-content table th,
+        .blog-content table td {
+          padding: 0.75em 1em;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          text-align: left;
+        }
+        
+        .blog-content table th {
+          background: rgba(255, 183, 3, 0.1);
+          color: #FFB703;
+          font-weight: 600;
+        }
+        
+        .blog-content table tbody tr:hover {
+          background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .blog-content strong {
+          color: #FFB703;
+          font-weight: 600;
+        }
+        
+        .blog-content hr {
+          border: none;
+          height: 1px;
+          background: linear-gradient(90deg, transparent, rgba(255, 183, 3, 0.3), transparent);
+          margin: 3em 0;
+        }
+      `}</style>
     </div>
   );
 });
 
 export default ArticleDetail;
-
-
-

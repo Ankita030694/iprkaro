@@ -23,7 +23,7 @@ export default function ClientLogoSlider({ className = '', useWhiteLogos = false
 
   const logoCount = useWhiteLogos ? 10 : 8;
   const logoWidth = 128;
-  const gapSize = 32; // Consistent gap size
+  const gapSize = 16; // Reduced gap size for tighter spacing
   const totalDistance = logoCount * (logoWidth + gapSize);
 
   return (
@@ -32,7 +32,7 @@ export default function ClientLogoSlider({ className = '', useWhiteLogos = false
         {/* Horizontal Logo Slider */}
         <div className="w-full">
           <motion.div 
-            className="flex items-center gap-8"
+            className="flex items-center gap-4"
             animate={{
               x: [0, -totalDistance] // Dynamic based on logo count
             }}
@@ -54,46 +54,53 @@ export default function ClientLogoSlider({ className = '', useWhiteLogos = false
               WebkitPerspective: 1000
             } as React.CSSProperties}
           >
-            {logos.map((logo, index) => (
-              <motion.div
-                key={`${logo}-${index}`}
-                className="flex-shrink-0 h-70 sm:h-18 md:h-20 lg:h-20 w-32 sm:w-36 md:w-40 lg:w-40 flex items-center justify-center -mt-13 md:-mt-0 lg:-mt-0"
-                whileHover={{ 
-                  scale: 1.05,
-                  y: -2
-                }}
-                transition={{ duration: 0.3 }}
-                style={{
-                  willChange: 'transform',
-                  transform: 'translate3d(0, 0, 0)',
-                  WebkitTransform: 'translate3d(0, 0, 0)',
-                  backfaceVisibility: 'hidden',
-                  WebkitBackfaceVisibility: 'hidden',
-                  perspective: 1000,
-                  WebkitPerspective: 1000
-                } as React.CSSProperties}
-              >
-                <img
-                  src={logo}
-                  alt={`Client Logo ${(index % logoCount) + 1}`}
-                  className="object-contain filter-none w-auto h-auto max-w-full max-h-full"
-                  loading="eager"
-                  decoding="sync"
-                  style={{ 
-                    filter: 'none',
-                    backgroundColor: 'transparent',
-                    imageRendering: '-webkit-optimize-contrast',
+            {logos.map((logo, index) => {
+              const logoIndex = (index % logoCount) + 1;
+              const hasExtraPadding = logoIndex === 1 || logoIndex === 2;
+              
+              return (
+                <motion.div
+                  key={`${logo}-${index}`}
+                  className="flex-shrink-0 h-16 w-32 flex items-center justify-center"
+                  whileHover={{ 
+                    scale: 1.05,
+                    y: -2
+                  }}
+                  transition={{ duration: 0.3 }}
+                  style={{
+                    willChange: 'transform',
                     transform: 'translate3d(0, 0, 0)',
                     WebkitTransform: 'translate3d(0, 0, 0)',
                     backfaceVisibility: 'hidden',
                     WebkitBackfaceVisibility: 'hidden',
-                    WebkitFontSmoothing: 'subpixel-antialiased',
                     perspective: 1000,
-                    WebkitPerspective: 1000
-                  }}
-                />
-              </motion.div>
-            ))}
+                    WebkitPerspective: 1000,
+                    marginLeft: logoIndex === 1 ? '-12px' : '0',
+                    marginRight: logoIndex === 2 ? '-12px' : '0'
+                  } as React.CSSProperties}
+                >
+                  <img
+                    src={logo}
+                    alt={`Client Logo ${logoIndex}`}
+                    className="object-contain filter-none w-full h-full"
+                    loading="eager"
+                    decoding="sync"
+                    style={{ 
+                      filter: 'none',
+                      backgroundColor: 'transparent',
+                      imageRendering: '-webkit-optimize-contrast',
+                      transform: 'translate3d(0, 0, 0)',
+                      WebkitTransform: 'translate3d(0, 0, 0)',
+                      backfaceVisibility: 'hidden',
+                      WebkitBackfaceVisibility: 'hidden',
+                      WebkitFontSmoothing: 'subpixel-antialiased',
+                      perspective: 1000,
+                      WebkitPerspective: 1000
+                    }}
+                  />
+                </motion.div>
+              );
+            })}
           </motion.div>
         </div>
       </div>
