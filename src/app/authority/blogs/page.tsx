@@ -617,40 +617,28 @@ const BlogsDashboard = () => {
   };
 
   return (
-    <div className="min-h-screen overflow-hidden relative bg-black">
+    <div className="min-h-screen overflow-hidden relative bg-gray-50">
 
       {/* Main Dashboard */}
       <motion.div 
-        className="min-h-screen bg-black flex flex-col pt-28 pb-12"
+        className="min-h-screen bg-gray-50 flex flex-col pt-28 pb-12"
         initial={{ opacity: 1 }}
         transition={{ duration: 0.7 }}
       >
-        {/* Decorative background elements */}
-        <motion.div 
-          className="absolute top-0 right-0 w-96 h-96 rounded-full bg-gradient-to-br from-[#16a34a] to-[#FFB400] opacity-10 blur-3xl"
-          animate={{ x: [0, 30, 0], y: [0, -30, 0] }}
-          transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-        />
-        <motion.div 
-          className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-gradient-to-tr from-[#FFB400] to-[#16a34a] opacity-10 blur-3xl"
-          animate={{ x: [0, -20, 0], y: [0, 20, 0] }}
-          transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
-        />
-
         {/* Dashboard Content */}
         <div className="flex-1 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full relative z-10">
           {/* Dashboard Header */}
-          <div className="bg-gradient-to-br from-[#1f1310]/80 via-[#3b2412]/60 to-black/90 backdrop-blur-md rounded-2xl p-6 sm:p-8 shadow-2xl border border-[#FFB400]/20 mb-8 flex justify-between items-center">
+          <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg border border-gray-200 mb-8 flex justify-between items-center">
             <div>
-              <h1 className="text-3xl sm:text-4xl font-bold text-white mb-2">Blogs Dashboard</h1>
-              <div className="w-32 h-1 bg-gradient-to-r from-[#16a34a] to-[#FFB400] rounded-full"></div>
+              <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">Blogs Dashboard</h1>
+              <div className="w-32 h-1 bg-gray-900 rounded-full"></div>
             </div>
             {/* Logout Button */}
             <motion.button 
               onClick={handleLogout}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-5 py-2.5 bg-red-500/90 hover:bg-red-600 text-white rounded-lg font-medium transition-all shadow-lg hover:shadow-red-500/50"
+              className="px-5 py-2.5 bg-red-600 hover:bg-red-700 text-white rounded-lg font-medium transition-all shadow-md"
             >
               <FontAwesomeIcon icon={faUsers} className="mr-2" />
               Logout
@@ -662,11 +650,11 @@ const BlogsDashboard = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="glass-card rounded-2xl p-6 sm:p-8 shadow-2xl border border-[#16a34a]/30"
+            className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg border border-gray-200"
           >
             {/* Header with Add Blog Button */}
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
-              <h2 className="text-2xl font-bold text-white">
+              <h2 className="text-2xl font-bold text-gray-900">
                 {showBlogForm ? (formMode === 'add' ? 'Create New Blog' : 'Edit Blog') : 'Blog Management'}
               </h2>
               <motion.button
@@ -680,7 +668,7 @@ const BlogsDashboard = () => {
                 }}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="flex items-center px-6 py-3 bg-gradient-to-r from-[#16a34a] to-[#FFB400] text-black rounded-lg font-semibold shadow-lg hover:shadow-[#FFB400]/50 transition-all"
+                className="flex items-center px-6 py-3 bg-gray-900 hover:bg-gray-800 text-white rounded-lg font-semibold shadow-md transition-all"
               >
                 <FontAwesomeIcon icon={showBlogForm ? faChartLine : faPlus} className="mr-2" />
                 {showBlogForm ? 'View Blogs' : 'Add Blog'}
@@ -701,7 +689,7 @@ const BlogsDashboard = () => {
                 >
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="title" className="block text-sm font-medium text-[#FFB400] mb-2">Blog Title</label>
+                      <label htmlFor="title" className="block text-sm font-medium text-gray-700 mb-2">Blog Title</label>
                       <input
                         type="text"
                         id="title"
@@ -709,13 +697,13 @@ const BlogsDashboard = () => {
                         value={newBlog.title}
                         onChange={handleInputChange}
                         required
-                        className="glass-input w-full px-4 py-3 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-[#16a34a] transition-all"
+                        className="w-full px-4 py-3 bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-all"
                         placeholder="Enter blog title"
                       />
                     </div>
                     
                     <div>
-                      <label htmlFor="slug" className="block text-sm font-medium text-[#FFB400] mb-2">URL Slug</label>
+                      <label htmlFor="slug" className="block text-sm font-medium text-gray-700 mb-2">URL Slug</label>
                       <input
                         type="text"
                         id="slug"
@@ -723,16 +711,16 @@ const BlogsDashboard = () => {
                         value={newBlog.slug}
                         onChange={handleInputChange}
                         required
-                        className="glass-input w-full px-4 py-3 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-[#16a34a] transition-all"
+                        className="w-full px-4 py-3 bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-all"
                         placeholder="url-friendly-blog-name"
                       />
-                      <p className="mt-2 text-xs text-gray-400">Will be used in the URL: /blog/{newBlog.slug}</p>
+                      <p className="mt-2 text-xs text-gray-500">Will be used in the URL: /blog/{newBlog.slug}</p>
                     </div>
                   </div>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="subtitle" className="block text-sm font-medium text-[#FFB400] mb-2">Subtitle/SEO Keywords</label>
+                      <label htmlFor="subtitle" className="block text-sm font-medium text-gray-700 mb-2">Subtitle/SEO Keywords</label>
                       <input
                         type="text"
                         id="subtitle"
@@ -740,20 +728,20 @@ const BlogsDashboard = () => {
                         value={newBlog.subtitle}
                         onChange={handleInputChange}
                         required
-                        className="glass-input w-full px-4 py-3 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-[#16a34a] transition-all"
+                        className="w-full px-4 py-3 bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-all"
                         placeholder="Enter subtitle or SEO keywords"
                       />
                     </div>
                     
                     <div>
-                      <label htmlFor="metaTitle" className="block text-sm font-medium text-[#FFB400] mb-2">Meta Title</label>
+                      <label htmlFor="metaTitle" className="block text-sm font-medium text-gray-700 mb-2">Meta Title</label>
                       <input
                         type="text"
                         id="metaTitle"
                         name="metaTitle"
                         value={newBlog.metaTitle || ''}
                         onChange={handleInputChange}
-                        className="glass-input w-full px-4 py-3 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-[#16a34a] transition-all"
+                        className="w-full px-4 py-3 bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-all"
                         placeholder="Enter meta title for SEO"
                       />
                     </div>
@@ -761,7 +749,7 @@ const BlogsDashboard = () => {
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="date" className="block text-sm font-medium text-[#FFB400] mb-2">Publication Date</label>
+                      <label htmlFor="date" className="block text-sm font-medium text-gray-700 mb-2">Publication Date</label>
                       <input
                         type="date"
                         id="date"
@@ -769,12 +757,12 @@ const BlogsDashboard = () => {
                         value={newBlog.date}
                         onChange={handleInputChange}
                         required
-                        className="glass-input w-full px-4 py-3 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-[#16a34a] transition-all"
+                        className="w-full px-4 py-3 bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-all"
                       />
                     </div>
                     
                     <div>
-                      <label htmlFor="image" className="block text-sm font-medium text-[#FFB400] mb-2">Blog Image</label>
+                      <label htmlFor="image" className="block text-sm font-medium text-gray-700 mb-2">Blog Image</label>
                       <div className="flex flex-col space-y-3">
                         <div className="flex items-center space-x-3">
                           <input
@@ -790,20 +778,20 @@ const BlogsDashboard = () => {
                             onClick={() => fileInputRef.current?.click()}
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="px-5 py-2.5 bg-gradient-to-r from-[#16a34a]/20 to-[#FFB400]/20 text-white border border-[#16a34a]/50 rounded-lg text-sm font-medium flex items-center hover:border-[#FFB400]/80 transition-all"
+                            className="px-5 py-2.5 bg-gray-100 hover:bg-gray-200 text-gray-900 border border-gray-300 rounded-lg text-sm font-medium flex items-center transition-all"
                           >
                             <FontAwesomeIcon icon={faUpload} className="mr-2" />
                             {uploading ? 'Uploading...' : 'Choose Image'}
                           </motion.button>
                           {newBlog.image && (
-                            <span className="text-xs text-[#16a34a]">✓ Image uploaded successfully</span>
+                            <span className="text-xs text-green-600">✓ Image uploaded successfully</span>
                           )}
                         </div>
                         
                         {uploading && (
-                          <div className="w-full bg-gray-700/50 rounded-full h-2.5 overflow-hidden">
+                          <div className="w-full bg-gray-200 rounded-full h-2.5 overflow-hidden">
                             <div 
-                              className="bg-gradient-to-r from-[#16a34a] to-[#FFB400] h-2.5 rounded-full transition-all duration-300" 
+                              className="bg-gray-900 h-2.5 rounded-full transition-all duration-300" 
                               style={{ width: `${uploadProgress}%` }}
                             ></div>
                           </div>
@@ -815,7 +803,7 @@ const BlogsDashboard = () => {
                             <img 
                               src={imagePreview || newBlog.image} 
                               alt="Blog image preview" 
-                              className="w-32 h-32 object-cover rounded-lg border-2 border-[#16a34a]/50 shadow-lg"
+                              className="w-32 h-32 object-cover rounded-lg border-2 border-gray-300 shadow-md"
                             />
                           </div>
                         )}
@@ -832,27 +820,27 @@ const BlogsDashboard = () => {
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="metaDescription" className="block text-sm font-medium text-[#FFB400] mb-2">Meta Description</label>
+                      <label htmlFor="metaDescription" className="block text-sm font-medium text-gray-700 mb-2">Meta Description</label>
                       <input
                         type="text"
                         id="metaDescription"
                         name="metaDescription"
                         value={newBlog.metaDescription || ''}
                         onChange={handleInputChange}
-                        className="glass-input w-full px-4 py-3 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-[#16a34a] transition-all"
+                        className="w-full px-4 py-3 bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-all"
                         placeholder="Enter meta description for SEO"
                       />
                     </div>
                     
                     <div>
-                      <label htmlFor="author" className="block text-sm font-medium text-[#FFB400] mb-2">Author</label>
+                      <label htmlFor="author" className="block text-sm font-medium text-gray-700 mb-2">Author</label>
                       <select
                         id="author"
                         name="author"
                         value={newBlog.author}
                         onChange={handleInputChange}
                         required
-                        className="glass-input w-full px-4 py-3 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-[#16a34a] transition-all"
+                        className="w-full px-4 py-3 bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-all"
                       >
                         <option value="Anuj Anand Malik">Anuj Anand Malik</option>
                         <option value="Shrey Arora">Shrey Arora</option>
@@ -861,40 +849,40 @@ const BlogsDashboard = () => {
                   </div>
                   
                   <div>
-                    <label className="block text-sm font-medium text-[#FFB400] mb-2">FAQs</label>
-                    <div className="border border-[#16a34a]/30 rounded-lg p-4 bg-black/30 backdrop-blur-sm">
+                    <label className="block text-sm font-medium text-gray-700 mb-2">FAQs</label>
+                    <div className="border border-gray-300 rounded-lg p-4 bg-gray-50">
                       {/* Display existing FAQs */}
                       {(newBlog.faqs || []).map((faq, index) => (
-                        <div key={index} className="mb-4 p-4 glass-card rounded-lg shadow-lg border border-[#FFB400]/20">
+                        <div key={index} className="mb-4 p-4 bg-white rounded-lg shadow-sm border border-gray-200">
                           <div className="flex justify-between items-center mb-3">
-                            <h3 className="text-sm font-semibold text-[#FFB400]">FAQ #{index + 1}</h3>
+                            <h3 className="text-sm font-semibold text-gray-900">FAQ #{index + 1}</h3>
                             <motion.button
                               type="button"
                               onClick={() => removeFaq(index)}
                               whileHover={{ scale: 1.05 }}
                               whileTap={{ scale: 0.95 }}
-                              className="px-3 py-1 bg-red-500/80 hover:bg-red-600 text-white text-xs rounded-md transition-all"
+                              className="px-3 py-1 bg-red-600 hover:bg-red-700 text-white text-xs rounded-md transition-all"
                             >
                               Remove
                             </motion.button>
                           </div>
                           <div className="mb-3">
-                            <label className="block text-xs font-medium text-gray-300 mb-1">Question</label>
+                            <label className="block text-xs font-medium text-gray-700 mb-1">Question</label>
                             <input
                               type="text"
                               value={faq.question}
                               onChange={(e) => handleFaqChange(index, 'question', e.target.value)}
-                              className="glass-input w-full px-3 py-2 text-sm text-white rounded-md focus:outline-none focus:ring-2 focus:ring-[#16a34a] transition-all"
+                              className="w-full px-3 py-2 text-sm bg-gray-50 border border-gray-300 text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-all"
                               placeholder="Enter FAQ question"
                             />
                           </div>
                           <div>
-                            <label className="block text-xs font-medium text-gray-300 mb-1">Answer</label>
+                            <label className="block text-xs font-medium text-gray-700 mb-1">Answer</label>
                             <textarea
                               value={faq.answer}
                               onChange={(e) => handleFaqChange(index, 'answer', e.target.value)}
                               rows={3}
-                              className="glass-input w-full px-3 py-2 text-sm text-white rounded-md focus:outline-none focus:ring-2 focus:ring-[#16a34a] transition-all"
+                              className="w-full px-3 py-2 text-sm bg-gray-50 border border-gray-300 text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-all"
                               placeholder="Enter FAQ answer"
                             />
                           </div>
@@ -907,19 +895,19 @@ const BlogsDashboard = () => {
                         onClick={addFaq}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="mt-2 px-5 py-2.5 bg-gradient-to-r from-[#16a34a] to-[#FFB400] text-black rounded-lg text-sm font-semibold flex items-center shadow-lg hover:shadow-[#FFB400]/50 transition-all"
+                        className="mt-2 px-5 py-2.5 bg-gray-900 hover:bg-gray-800 text-white rounded-lg text-sm font-semibold flex items-center shadow-md transition-all"
                       >
                         <FontAwesomeIcon icon={faPlus} className="mr-2" />
                         Add FAQ
                       </motion.button>
-                      <p className="mt-2 text-xs text-gray-400">Add frequently asked questions related to this blog post.</p>
+                      <p className="mt-2 text-xs text-gray-500">Add frequently asked questions related to this blog post.</p>
                     </div>
                   </div>
                   
                   <div>
-                    <label htmlFor="description" className="block text-sm font-medium text-[#FFB400] mb-2">Blog Content</label>
+                    <label htmlFor="description" className="block text-sm font-medium text-gray-700 mb-2">Blog Content</label>
                     {/* Tiptap Editor Integration */}
-                    <div className="border border-[#16a34a]/30 rounded-lg overflow-hidden shadow-lg">
+                    <div className="border border-gray-300 rounded-lg overflow-hidden shadow-sm">
                       {typeof window !== 'undefined' && (
                         <TiptapEditor
                           content={newBlog.description}
@@ -928,13 +916,13 @@ const BlogsDashboard = () => {
                         />
                       )}
                     </div>
-                    <p className="mt-2 text-xs text-gray-400">Use the toolbar above to format your content.</p>
+                    <p className="mt-2 text-xs text-gray-500">Use the toolbar above to format your content.</p>
                   </div>
                   
-                  <div className="mt-6 p-5 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-400/30 rounded-lg backdrop-blur-sm">
-                    <h3 className="text-sm font-semibold text-blue-400 mb-2">RSS Feed Information</h3>
-                    <p className="text-xs text-blue-300/90">
-                      Your blog will be automatically added to the RSS feed at <strong className="text-blue-200">{process.env.NEXT_PUBLIC_WEBSITE_URL || 'https://www.amalegalsolutions.com'}/api/rss</strong> 
+                  <div className="mt-6 p-5 bg-blue-50 border border-blue-200 rounded-lg">
+                    <h3 className="text-sm font-semibold text-blue-900 mb-2">RSS Feed Information</h3>
+                    <p className="text-xs text-blue-700">
+                      Your blog will be automatically added to the RSS feed at <strong className="text-blue-900">{process.env.NEXT_PUBLIC_WEBSITE_URL || 'https://www.amalegalsolutions.com'}/api/rss</strong> 
                       which syncs with LinkedIn's RSS automation feature.
                     </p>
                   </div>
@@ -945,7 +933,7 @@ const BlogsDashboard = () => {
                       onClick={handleCancelForm}
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="px-6 py-3 bg-gray-700/50 hover:bg-gray-600/50 text-white rounded-lg font-medium border border-gray-600/50 transition-all"
+                      className="px-6 py-3 bg-gray-200 hover:bg-gray-300 text-gray-900 rounded-lg font-medium border border-gray-300 transition-all"
                     >
                       Cancel
                     </motion.button>
@@ -953,7 +941,7 @@ const BlogsDashboard = () => {
                       type="submit"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="px-6 py-3 bg-gradient-to-r from-[#16a34a] to-[#FFB400] text-black rounded-lg font-semibold shadow-lg hover:shadow-[#FFB400]/50 transition-all"
+                      className="px-6 py-3 bg-gray-900 hover:bg-gray-800 text-white rounded-lg font-semibold shadow-md transition-all"
                     >
                       {formMode === 'add' ? 'Publish Blog' : 'Update Blog'}
                     </motion.button>
@@ -970,25 +958,25 @@ const BlogsDashboard = () => {
                   transition={{ duration: 0.3 }}
                   className="overflow-x-auto rounded-lg"
                 >
-                  <table className="min-w-full divide-y divide-[#16a34a]/20">
-                    <thead className="bg-gradient-to-r from-[#1f1310]/60 to-[#3b2412]/40 backdrop-blur-sm">
+                  <table className="min-w-full divide-y divide-gray-200">
+                    <thead className="bg-gray-100">
                       <tr>
-                        <th className="px-6 py-4 text-left text-xs font-semibold text-[#FFB400] uppercase tracking-wider">Date</th>
-                        <th className="px-6 py-4 text-left text-xs font-semibold text-[#FFB400] uppercase tracking-wider">Title</th>
-                        <th className="px-6 py-4 text-left text-xs font-semibold text-[#FFB400] uppercase tracking-wider">Subtitle</th>
-                        <th className="px-6 py-4 text-left text-xs font-semibold text-[#FFB400] uppercase tracking-wider">Image</th>
-                        <th className="px-6 py-4 text-left text-xs font-semibold text-[#FFB400] uppercase tracking-wider">Actions</th>
+                        <th className="px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Date</th>
+                        <th className="px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Title</th>
+                        <th className="px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Subtitle</th>
+                        <th className="px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Image</th>
+                        <th className="px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Actions</th>
                       </tr>
                     </thead>
-                    <tbody className="bg-black/20 divide-y divide-[#16a34a]/10 backdrop-blur-sm">
+                    <tbody className="bg-white divide-y divide-gray-200">
                       {currentBlogs.length > 0 ? (
                         currentBlogs.map((blog) => (
-                          <tr key={blog.id} className="hover:bg-[#16a34a]/10 transition-colors duration-200">
-                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">{new Date(blog.date).toLocaleDateString()}</td>
-                            <td className="px-6 py-4 text-sm font-medium text-white max-w-xs truncate">{blog.title}</td>
-                            <td className="px-6 py-4 text-sm text-gray-300 max-w-xs truncate">{blog.subtitle}</td>
+                          <tr key={blog.id} className="hover:bg-gray-50 transition-colors duration-200">
+                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">{new Date(blog.date).toLocaleDateString()}</td>
+                            <td className="px-6 py-4 text-sm font-medium text-gray-900 max-w-xs truncate">{blog.title}</td>
+                            <td className="px-6 py-4 text-sm text-gray-600 max-w-xs truncate">{blog.subtitle}</td>
                             <td className="px-6 py-4 whitespace-nowrap text-sm">
-                              <img src={blog.image} alt="" className="w-16 h-16 rounded-lg object-cover border-2 border-[#16a34a]/30 shadow-md" />
+                              <img src={blog.image} alt="" className="w-16 h-16 rounded-lg object-cover border-2 border-gray-200 shadow-sm" />
                             </td>
                             <td className="px-6 py-4 whitespace-nowrap text-sm">
                               <div className="flex space-x-2">
@@ -996,7 +984,7 @@ const BlogsDashboard = () => {
                                   onClick={() => handleEdit(blog)}
                                   whileHover={{ scale: 1.1 }}
                                   whileTap={{ scale: 0.9 }}
-                                  className="px-3 py-2 bg-blue-500/80 hover:bg-blue-600 text-white rounded-lg text-xs flex items-center shadow-md hover:shadow-blue-500/50 transition-all"
+                                  className="px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-xs flex items-center shadow-sm transition-all"
                                 >
                                   <FontAwesomeIcon icon={faEdit} className="mr-1" />
                                   Edit
@@ -1005,7 +993,7 @@ const BlogsDashboard = () => {
                                   onClick={() => handleDelete(blog.id)}
                                   whileHover={{ scale: 1.1 }}
                                   whileTap={{ scale: 0.9 }}
-                                  className="px-3 py-2 bg-red-500/80 hover:bg-red-600 text-white rounded-lg text-xs flex items-center shadow-md hover:shadow-red-500/50 transition-all"
+                                  className="px-3 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg text-xs flex items-center shadow-sm transition-all"
                                 >
                                   <FontAwesomeIcon icon={faTrash} className="mr-1" />
                                   Delete
@@ -1016,7 +1004,7 @@ const BlogsDashboard = () => {
                         ))
                       ) : (
                         <tr>
-                          <td colSpan={5} className="px-6 py-12 text-center text-sm text-gray-400">
+                          <td colSpan={5} className="px-6 py-12 text-center text-sm text-gray-500">
                             No blogs found. Click Add Blog to create a new blog.
                           </td>
                         </tr>
@@ -1025,15 +1013,15 @@ const BlogsDashboard = () => {
                   </table>
 
                   <div className="mt-6 flex flex-col sm:flex-row justify-between items-center gap-4">
-                    <div className="text-sm text-gray-300">
-                      Showing <span className="font-semibold text-[#FFB400]">{(currentPage - 1) * itemsPerPage + 1}</span> to <span className="font-semibold text-[#FFB400]">{Math.min(currentPage * itemsPerPage, blogs.length)}</span> of <span className="font-semibold text-[#FFB400]">{blogs.length}</span> results
+                    <div className="text-sm text-gray-600">
+                      Showing <span className="font-semibold text-gray-900">{(currentPage - 1) * itemsPerPage + 1}</span> to <span className="font-semibold text-gray-900">{Math.min(currentPage * itemsPerPage, blogs.length)}</span> of <span className="font-semibold text-gray-900">{blogs.length}</span> results
                     </div>
                     <div className="flex space-x-3">
                       <motion.button
                         onClick={handlePreviousPage}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="px-4 py-2 bg-gradient-to-r from-[#1f1310]/60 to-[#3b2412]/40 text-white rounded-lg text-sm font-medium border border-[#16a34a]/30 disabled:opacity-50 disabled:cursor-not-allowed hover:border-[#FFB400]/50 transition-all"
+                        className="px-4 py-2 bg-white hover:bg-gray-100 text-gray-900 rounded-lg text-sm font-medium border border-gray-300 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-sm"
                         disabled={currentPage === 1}
                       >
                         Previous
@@ -1042,7 +1030,7 @@ const BlogsDashboard = () => {
                         onClick={handleNextPage}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="px-4 py-2 bg-gradient-to-r from-[#1f1310]/60 to-[#3b2412]/40 text-white rounded-lg text-sm font-medium border border-[#16a34a]/30 disabled:opacity-50 disabled:cursor-not-allowed hover:border-[#FFB400]/50 transition-all"
+                        className="px-4 py-2 bg-white hover:bg-gray-100 text-gray-900 rounded-lg text-sm font-medium border border-gray-300 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-sm"
                         disabled={currentPage === totalPages}
                       >
                         Next
@@ -1058,16 +1046,16 @@ const BlogsDashboard = () => {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                className="mt-8 p-6 border border-blue-400/30 rounded-lg bg-gradient-to-br from-blue-500/10 to-cyan-500/10 backdrop-blur-sm"
+                className="mt-8 p-6 border border-blue-200 rounded-lg bg-blue-50"
               >
                 <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 gap-3">
-                  <h3 className="text-lg font-bold text-blue-400">RSS Feed Diagnostics</h3>
+                  <h3 className="text-lg font-bold text-blue-900">RSS Feed Diagnostics</h3>
                   <motion.button
                     onClick={testRssFeed}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     disabled={isLoadingRss}
-                    className="px-4 py-2 bg-blue-600/80 hover:bg-blue-700 text-white text-sm rounded-lg flex items-center font-medium shadow-md hover:shadow-blue-500/50 transition-all disabled:opacity-50"
+                    className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded-lg flex items-center font-medium shadow-sm transition-all disabled:opacity-50"
                   >
                     {isLoadingRss ? 'Testing...' : 'Test RSS Feed'}
                   </motion.button>
@@ -1078,7 +1066,7 @@ const BlogsDashboard = () => {
                     href="/api/rss" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-blue-300 hover:text-blue-200 hover:underline text-sm font-medium transition-colors"
+                    className="text-blue-600 hover:text-blue-800 hover:underline text-sm font-medium transition-colors"
                   >
                     View RSS Feed →
                   </a>
@@ -1086,7 +1074,7 @@ const BlogsDashboard = () => {
                     href="https://validator.w3.org/feed/check.cgi?url=https://www.amalegalsolutions.com/api/rss" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-blue-300 hover:text-blue-200 hover:underline text-sm font-medium transition-colors"
+                    className="text-blue-600 hover:text-blue-800 hover:underline text-sm font-medium transition-colors"
                   >
                     Validate with W3C Feed Validator →
                   </a>
@@ -1094,14 +1082,14 @@ const BlogsDashboard = () => {
                 
                 {rssDebugInfo && (
                   <div className="mt-4">
-                    <pre className="bg-black/40 p-4 rounded-lg text-xs text-blue-200 overflow-x-auto whitespace-pre-wrap border border-blue-500/20 shadow-inner">
+                    <pre className="bg-white p-4 rounded-lg text-xs text-gray-800 overflow-x-auto whitespace-pre-wrap border border-gray-200 shadow-sm">
                       {rssDebugInfo}
                     </pre>
                   </div>
                 )}
                 
-                <p className="mt-4 text-xs text-blue-300/90 bg-blue-500/10 p-3 rounded-md border border-blue-400/20">
-                  <strong className="text-blue-200">Tip:</strong> RSS feeds should be valid XML with proper entity escaping for special characters. 
+                <p className="mt-4 text-xs text-blue-700 bg-blue-100 p-3 rounded-md border border-blue-200">
+                  <strong className="text-blue-900">Tip:</strong> RSS feeds should be valid XML with proper entity escaping for special characters. 
                   Make sure all required fields (title, link, description, pubDate) are present for each item.
                 </p>
               </motion.div>
