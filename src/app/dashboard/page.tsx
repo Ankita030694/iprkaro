@@ -3,14 +3,15 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
-import Faq from '@/components/Faq';
+import { faChevronDown, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 export default function Dashboard() {
   const [expandedPlan, setExpandedPlan] = useState<string | null>(null);
   const [registrabilityScore, setRegistrabilityScore] = useState(75);
   const [similarityScore, setSimilarityScore] = useState(50);
   const [classScore, setClassScore] = useState(90);
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [aiQuestion, setAiQuestion] = useState('');
 
   const togglePlan = (planId: string) => {
     setExpandedPlan(expandedPlan === planId ? null : planId);
@@ -25,6 +26,41 @@ export default function Dashboard() {
   const calculateDashOffset = (score: number) => {
     return 251.2 * (1 - score / 100);
   };
+
+  const toggleFaq = (index: number) => {
+    setOpenFaq(openFaq === index ? null : index);
+  };
+
+  const handleAiSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (aiQuestion.trim()) {
+      console.log('AI Question:', aiQuestion);
+      setAiQuestion('');
+    }
+  };
+
+  const faqs = [
+    {
+      question: "What is IPR Karo?",
+      answer: "IPR Karo is a platform to search, register, and protect trademarks online using AI-powered search reports and expert legal support, making trademark registration fast and secure."
+    },
+    {
+      question: "Who can use IPR Karo?",
+      answer: "Startups, businesses, creative professionals, and entrepreneurs seeking hassle-free trademark registration, copyright filing, or patent protection online in India can use IPR Karo."
+    },
+    {
+      question: "Is IPR Karo backed by legal experts?",
+      answer: "Yes, all trademark and IP services with IPR Karo are reviewed by experienced attorneys to ensure complete legal compliance and robust intellectual property protection."
+    },
+    {
+      question: "Why choose IPR Karo over traditional methods?",
+      answer: "IPR Karo offers AI-driven trademark search, instant conflict checks, risk assessment reports, and seamless online filings, delivering faster results and more accurate protection than manual, offline methods."
+    },
+    {
+      question: "How does AI help in trademark protection?",
+      answer: "AI instantly scans trademark databases, detects similarities and conflicts, generates registerability scores, and guides users through every step to maximize the success of trademark registration."
+    }
+  ];
 
   const features = [
     { text: "Cost Effective", icon: 0 },
@@ -161,66 +197,66 @@ export default function Dashboard() {
     }}>
       <div className="container mx-auto px-4 md:px-6 lg:px-8 py-8 lg:py-16">
         {/* Top Metrics Section */}
-        <div className="mb-12">
+        <div className="mb-10">
           {/* Metrics Heading */}
-          <div className="text-left mb-6">
-            <h4 className="text-white font-nunito text-sm md:text-base lg:text-lg font-medium mb-2">
+          <div className="text-left mb-5">
+            <h4 className="text-white font-nunito text-xs md:text-sm lg:text-base font-medium mb-1.5">
               Top/Primary Metrics
             </h4>
-            <h1 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold mb-2">
+            <h1 className="text-white font-nunito text-lg md:text-2xl lg:text-3xl font-bold mb-1.5">
               Your Trademark Health Score
             </h1>
-            <p className="text-[#4ADE80] font-nunito text-xl md:text-2xl lg:text-3xl font-semibold">
+            <p className="text-[#4ADE80] font-nunito text-base md:text-xl lg:text-2xl font-semibold">
               Excellent
             </p>
           </div>
 
           {/* Metrics Container */}
           <div
-            className="w-full px-6 md:px-8 lg:px-10 py-8 md:py-10 lg:py-12"
+            className="w-full px-5 md:px-6 lg:px-8 py-6 md:py-8 lg:py-10"
             style={{
-              borderRadius: '40px',
+              borderRadius: '32px',
               background: 'rgba(255, 255, 255, 0.10)',
-              boxShadow: '0 0 20px 0 rgba(0, 0, 0, 0.10) inset, 0 0 20px 6px rgba(255, 255, 255, 0.20) inset'
+              boxShadow: '0 0 16px 0 rgba(0, 0, 0, 0.10) inset, 0 0 16px 5px rgba(255, 255, 255, 0.20) inset'
             }}
           >
             {/* Two Column Layout */}
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-5">
               {/* First Container - 3/4 width */}
               <div className="lg:col-span-3">
                 {/* Heading */}
                 <div
-                  className="flex items-center justify-between px-6 py-4 mb-4"
+                  className="flex items-center justify-between px-5 py-3 mb-3"
                   style={{
-                    borderRadius: '5px 5px 0 0',
+                    borderRadius: '4px 4px 0 0',
                     background: 'rgba(0, 0, 0, 0.26)'
                   }}
                 >
-                  <h3 className="text-white font-nunito text-lg md:text-xl font-semibold">
+                  <h3 className="text-white font-nunito text-base md:text-lg font-semibold">
                     Your Trademark Health Score
                   </h3>
-                  <span className="text-[#4ADE80] font-nunito text-lg md:text-xl font-semibold">
+                  <span className="text-[#4ADE80] font-nunito text-base md:text-lg font-semibold">
                     Excellent
                   </span>
                 </div>
                 
                 {/* Content area - 3 Columns */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                   {/* Column 1 - Trademark Registrability */}
                   <div className="flex flex-col items-center">
-                    <h4 className="text-white font-nunito text-base md:text-lg font-semibold mb-4">
+                    <h4 className="text-white font-nunito text-sm md:text-base font-semibold mb-3">
                       Trademark Registrability
                     </h4>
                     
                     {/* Curved Gauge */}
-                    <div className="relative w-40 h-20 mb-4">
+                    <div className="relative w-32 h-16 mb-3">
                       <svg viewBox="0 0 200 100" className="w-full h-full">
                         {/* Background arc */}
                         <path
                           d="M 20 90 A 80 80 0 0 1 180 90"
                           fill="none"
                           stroke="rgba(255, 255, 255, 0.1)"
-                          strokeWidth="20"
+                          strokeWidth="16"
                           strokeLinecap="round"
                         />
                         {/* Gradient arc - Red to Orange to Green */}
@@ -235,14 +271,14 @@ export default function Dashboard() {
                           d="M 20 90 A 80 80 0 0 1 180 90"
                           fill="none"
                           stroke="url(#gaugeGradient1)"
-                          strokeWidth="20"
+                          strokeWidth="16"
                           strokeLinecap="round"
                           strokeDasharray="251.2"
                           strokeDashoffset={calculateDashOffset(registrabilityScore)}
                           style={{ transition: 'stroke-dashoffset 0.5s ease-in-out' }}
                         />
                         {/* Center text */}
-                        <text x="100" y="75" textAnchor="middle" fill="white" fontSize="24" fontWeight="bold">
+                        <text x="100" y="75" textAnchor="middle" fill="white" fontSize="20" fontWeight="bold">
                           {registrabilityScore}
                         </text>
                       </svg>
@@ -255,28 +291,36 @@ export default function Dashboard() {
                       max="100"
                       value={registrabilityScore}
                       onChange={(e) => handleScoreChange(setRegistrabilityScore, e.target.value)}
-                      className="w-full px-3 py-2 mb-4 rounded-lg text-center font-nunito font-semibold text-white bg-white/10 border border-white/20 focus:outline-none focus:border-[#FFB703] transition-colors"
+                      className="w-full px-2.5 py-1.5 mb-3 rounded-lg text-center font-nunito font-semibold text-sm text-white bg-white/10 border border-white/20 focus:outline-none focus:border-[#FFB703] transition-colors"
                       placeholder="Enter 0-100"
                     />
 
                     {/* Genericness Container */}
                     <div
-                      className="w-full p-4"
+                      className="w-full p-3"
                       style={{
-                        borderRadius: '15px',
-                        border: '2px solid #171717',
+                        borderRadius: '12px',
+                        border: '1.5px solid #171717',
                         background: 'rgba(24, 24, 24, 0.15)'
                       }}
                     >
-                      <div className="flex items-center justify-between mb-2">
-                        <h5 className="text-white font-nunito text-sm font-semibold">
+                      <div className="flex items-center justify-between mb-1.5">
+                        <h5 className="text-white font-nunito text-xs font-semibold">
                           Genericness
                         </h5>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                          <polyline points="18 15 12 9 6 15"></polyline>
-                        </svg>
+                        <div className="transition-all duration-300">
+                          {registrabilityScore < 30 ? (
+                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#EF4444" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-all duration-300">
+                              <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                          ) : (
+                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-all duration-300">
+                              <polyline points="18 15 12 9 6 15"></polyline>
+                            </svg>
+                          )}
+                        </div>
                       </div>
-                      <p className="text-white/70 font-nunito text-xs leading-relaxed">
+                      <p className="text-white/70 font-nunito text-[10px] leading-snug">
                         Trademark uniqueness, existing conflicts, and overall legal eligibility.
                       </p>
                     </div>
@@ -284,19 +328,19 @@ export default function Dashboard() {
 
                   {/* Column 2 - Similarity Rate */}
                   <div className="flex flex-col items-center">
-                    <h4 className="text-white font-nunito text-base md:text-lg font-semibold mb-4">
+                    <h4 className="text-white font-nunito text-sm md:text-base font-semibold mb-3">
                       Similarity Rate
                     </h4>
                     
                     {/* Curved Gauge */}
-                    <div className="relative w-40 h-20 mb-4">
+                    <div className="relative w-32 h-16 mb-3">
                       <svg viewBox="0 0 200 100" className="w-full h-full">
                         {/* Background arc */}
                         <path
                           d="M 20 90 A 80 80 0 0 1 180 90"
                           fill="none"
                           stroke="rgba(255, 255, 255, 0.1)"
-                          strokeWidth="20"
+                          strokeWidth="16"
                           strokeLinecap="round"
                         />
                         {/* Gradient arc */}
@@ -311,14 +355,14 @@ export default function Dashboard() {
                           d="M 20 90 A 80 80 0 0 1 180 90"
                           fill="none"
                           stroke="url(#gaugeGradient2)"
-                          strokeWidth="20"
+                          strokeWidth="16"
                           strokeLinecap="round"
                           strokeDasharray="251.2"
                           strokeDashoffset={calculateDashOffset(similarityScore)}
                           style={{ transition: 'stroke-dashoffset 0.5s ease-in-out' }}
                         />
                         {/* Center text */}
-                        <text x="100" y="75" textAnchor="middle" fill="white" fontSize="24" fontWeight="bold">
+                        <text x="100" y="75" textAnchor="middle" fill="white" fontSize="20" fontWeight="bold">
                           {similarityScore}
                         </text>
                       </svg>
@@ -331,28 +375,36 @@ export default function Dashboard() {
                       max="100"
                       value={similarityScore}
                       onChange={(e) => handleScoreChange(setSimilarityScore, e.target.value)}
-                      className="w-full px-3 py-2 mb-4 rounded-lg text-center font-nunito font-semibold text-white bg-white/10 border border-white/20 focus:outline-none focus:border-[#FFB703] transition-colors"
+                      className="w-full px-2.5 py-1.5 mb-3 rounded-lg text-center font-nunito font-semibold text-sm text-white bg-white/10 border border-white/20 focus:outline-none focus:border-[#FFB703] transition-colors"
                       placeholder="Enter 0-100"
                     />
 
                     {/* Genericness Container */}
                     <div
-                      className="w-full p-4"
+                      className="w-full p-3"
                       style={{
-                        borderRadius: '15px',
-                        border: '2px solid #171717',
+                        borderRadius: '12px',
+                        border: '1.5px solid #171717',
                         background: 'rgba(24, 24, 24, 0.15)'
                       }}
                     >
-                      <div className="flex items-center justify-between mb-2">
-                        <h5 className="text-white font-nunito text-sm font-semibold">
+                      <div className="flex items-center justify-between mb-1.5">
+                        <h5 className="text-white font-nunito text-xs font-semibold">
                           Genericness
                         </h5>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EF4444" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                          <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
+                        <div className="transition-all duration-300">
+                          {similarityScore > 70 ? (
+                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#EF4444" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-all duration-300">
+                              <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                          ) : (
+                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-all duration-300">
+                              <polyline points="18 15 12 9 6 15"></polyline>
+                            </svg>
+                          )}
+                        </div>
                       </div>
-                      <p className="text-white/70 font-nunito text-xs leading-relaxed">
+                      <p className="text-white/70 font-nunito text-[10px] leading-snug">
                         Trademark uniqueness, existing conflicts, and overall legal eligibility.
                       </p>
                     </div>
@@ -360,19 +412,19 @@ export default function Dashboard() {
 
                   {/* Column 3 - Class Probability */}
                   <div className="flex flex-col items-center">
-                    <h4 className="text-white font-nunito text-base md:text-lg font-semibold mb-4">
+                    <h4 className="text-white font-nunito text-sm md:text-base font-semibold mb-3">
                       Class Probability
                     </h4>
                     
                     {/* Curved Gauge */}
-                    <div className="relative w-40 h-20 mb-4">
+                    <div className="relative w-32 h-16 mb-3">
                       <svg viewBox="0 0 200 100" className="w-full h-full">
                         {/* Background arc */}
                         <path
                           d="M 20 90 A 80 80 0 0 1 180 90"
                           fill="none"
                           stroke="rgba(255, 255, 255, 0.1)"
-                          strokeWidth="20"
+                          strokeWidth="16"
                           strokeLinecap="round"
                         />
                         {/* Gradient arc */}
@@ -387,14 +439,14 @@ export default function Dashboard() {
                           d="M 20 90 A 80 80 0 0 1 180 90"
                           fill="none"
                           stroke="url(#gaugeGradient3)"
-                          strokeWidth="20"
+                          strokeWidth="16"
                           strokeLinecap="round"
                           strokeDasharray="251.2"
                           strokeDashoffset={calculateDashOffset(classScore)}
                           style={{ transition: 'stroke-dashoffset 0.5s ease-in-out' }}
                         />
                         {/* Center text */}
-                        <text x="100" y="75" textAnchor="middle" fill="white" fontSize="24" fontWeight="bold">
+                        <text x="100" y="75" textAnchor="middle" fill="white" fontSize="20" fontWeight="bold">
                           {classScore}
                         </text>
                       </svg>
@@ -407,28 +459,36 @@ export default function Dashboard() {
                       max="100"
                       value={classScore}
                       onChange={(e) => handleScoreChange(setClassScore, e.target.value)}
-                      className="w-full px-3 py-2 mb-4 rounded-lg text-center font-nunito font-semibold text-white bg-white/10 border border-white/20 focus:outline-none focus:border-[#FFB703] transition-colors"
+                      className="w-full px-2.5 py-1.5 mb-3 rounded-lg text-center font-nunito font-semibold text-sm text-white bg-white/10 border border-white/20 focus:outline-none focus:border-[#FFB703] transition-colors"
                       placeholder="Enter 0-100"
                     />
 
                     {/* Genericness Container */}
                     <div
-                      className="w-full p-4"
+                      className="w-full p-3"
                       style={{
-                        borderRadius: '15px',
-                        border: '2px solid #171717',
+                        borderRadius: '12px',
+                        border: '1.5px solid #171717',
                         background: 'rgba(24, 24, 24, 0.15)'
                       }}
                     >
-                      <div className="flex items-center justify-between mb-2">
-                        <h5 className="text-white font-nunito text-sm font-semibold">
+                      <div className="flex items-center justify-between mb-1.5">
+                        <h5 className="text-white font-nunito text-xs font-semibold">
                           Genericness
                         </h5>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                          <polyline points="18 15 12 9 6 15"></polyline>
-                        </svg>
+                        <div className="transition-all duration-300">
+                          {classScore < 30 ? (
+                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#EF4444" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-all duration-300">
+                              <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                          ) : (
+                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-all duration-300">
+                              <polyline points="18 15 12 9 6 15"></polyline>
+                            </svg>
+                          )}
+                        </div>
                       </div>
-                      <p className="text-white/70 font-nunito text-xs leading-relaxed">
+                      <p className="text-white/70 font-nunito text-[10px] leading-snug">
                         Trademark uniqueness, existing conflicts, and overall legal eligibility.
                       </p>
                     </div>
@@ -440,32 +500,32 @@ export default function Dashboard() {
               <div className="lg:col-span-1 flex flex-col">
                 {/* Heading */}
                 <div
-                  className="flex items-center justify-center px-6 py-4 mb-4"
+                  className="flex items-center justify-center px-5 py-3 mb-3"
                   style={{
-                    borderRadius: '5px 5px 0 0',
+                    borderRadius: '4px 4px 0 0',
                     background: 'rgba(0, 0, 0, 0.26)'
                   }}
                 >
-                  <h3 className="text-white font-nunito text-lg md:text-xl font-semibold">
+                  <h3 className="text-white font-nunito text-base md:text-lg font-semibold">
                     Key Factors
                   </h3>
                 </div>
                 
                 {/* Content area - 5 Rows */}
-                <div className="flex flex-col flex-1 space-y-3">
+                <div className="flex flex-col flex-1 space-y-2.5">
                   {/* Row 1 - Brand Strength */}
                   <div
-                    className="p-3 flex items-center gap-3 flex-1"
+                    className="p-2.5 flex items-center gap-2.5 flex-1"
                     style={{
-                      borderRadius: '15px',
-                      border: '2px solid rgba(255, 255, 255, 0.15)',
+                      borderRadius: '12px',
+                      border: '1.5px solid rgba(255, 255, 255, 0.15)',
                       background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%)',
-                      backdropFilter: 'blur(16px)'
+                      backdropFilter: 'blur(13px)'
                     }}
                   >
                     {/* Icon */}
                     <div className="flex-shrink-0">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
                         <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
                         <path d="M2 17l10 5 10-5"></path>
                         <path d="M2 12l10 5 10-5"></path>
@@ -473,10 +533,10 @@ export default function Dashboard() {
                     </div>
                     {/* Content */}
                     <div className="flex-1">
-                      <h4 className="text-white font-nunito text-xs font-semibold mb-0.5">
+                      <h4 className="text-white font-nunito text-[10px] font-semibold mb-0.5">
                         Brand Strength
                       </h4>
-                      <p className="text-white/80 font-nunito text-[10px] leading-tight">
+                      <p className="text-white/80 font-nunito text-[8px] leading-tight">
                         Strong unique brand identity
                       </p>
                     </div>
@@ -484,26 +544,26 @@ export default function Dashboard() {
 
                   {/* Row 2 - Legal Risk */}
                   <div
-                    className="p-3 flex items-center gap-3 flex-1"
+                    className="p-2.5 flex items-center gap-2.5 flex-1"
                     style={{
-                      borderRadius: '15px',
-                      border: '2px solid rgba(255, 255, 255, 0.15)',
+                      borderRadius: '12px',
+                      border: '1.5px solid rgba(255, 255, 255, 0.15)',
                       background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%)',
-                      backdropFilter: 'blur(16px)'
+                      backdropFilter: 'blur(13px)'
                     }}
                   >
                     {/* Icon */}
                     <div className="flex-shrink-0">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
                         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                       </svg>
                     </div>
                     {/* Content */}
                     <div className="flex-1">
-                      <h4 className="text-white font-nunito text-xs font-semibold mb-0.5">
+                      <h4 className="text-white font-nunito text-[10px] font-semibold mb-0.5">
                         Legal Risk
                       </h4>
-                      <p className="text-white/80 font-nunito text-[10px] leading-tight">
+                      <p className="text-white/80 font-nunito text-[8px] leading-tight">
                         Low risk of legal conflicts
                       </p>
                     </div>
@@ -511,27 +571,27 @@ export default function Dashboard() {
 
                   {/* Row 3 - Market Position */}
                   <div
-                    className="p-3 flex items-center gap-3 flex-1"
+                    className="p-2.5 flex items-center gap-2.5 flex-1"
                     style={{
-                      borderRadius: '15px',
-                      border: '2px solid rgba(255, 255, 255, 0.15)',
+                      borderRadius: '12px',
+                      border: '1.5px solid rgba(255, 255, 255, 0.15)',
                       background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%)',
-                      backdropFilter: 'blur(16px)'
+                      backdropFilter: 'blur(13px)'
                     }}
                   >
                     {/* Icon */}
                     <div className="flex-shrink-0">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
                         <line x1="12" y1="1" x2="12" y2="23"></line>
                         <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
                       </svg>
                     </div>
                     {/* Content */}
                     <div className="flex-1">
-                      <h4 className="text-white font-nunito text-xs font-semibold mb-0.5">
+                      <h4 className="text-white font-nunito text-[10px] font-semibold mb-0.5">
                         Market Position
                       </h4>
-                      <p className="text-white/80 font-nunito text-[10px] leading-tight">
+                      <p className="text-white/80 font-nunito text-[8px] leading-tight">
                         Competitive advantage in market
                       </p>
                     </div>
@@ -539,27 +599,27 @@ export default function Dashboard() {
 
                   {/* Row 4 - Registration Speed */}
                   <div
-                    className="p-3 flex items-center gap-3 flex-1"
+                    className="p-2.5 flex items-center gap-2.5 flex-1"
                     style={{
-                      borderRadius: '15px',
-                      border: '2px solid rgba(255, 255, 255, 0.15)',
+                      borderRadius: '12px',
+                      border: '1.5px solid rgba(255, 255, 255, 0.15)',
                       background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%)',
-                      backdropFilter: 'blur(16px)'
+                      backdropFilter: 'blur(13px)'
                     }}
                   >
                     {/* Icon */}
                     <div className="flex-shrink-0">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
                         <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
                         <polyline points="17 6 23 6 23 12"></polyline>
                       </svg>
                     </div>
                     {/* Content */}
                     <div className="flex-1">
-                      <h4 className="text-white font-nunito text-xs font-semibold mb-0.5">
+                      <h4 className="text-white font-nunito text-[10px] font-semibold mb-0.5">
                         Registration Speed
                       </h4>
-                      <p className="text-white/80 font-nunito text-[10px] leading-tight">
+                      <p className="text-white/80 font-nunito text-[8px] leading-tight">
                         Fast approval process expected
                       </p>
                     </div>
@@ -567,27 +627,27 @@ export default function Dashboard() {
 
                   {/* Row 5 - Protection Level */}
                   <div
-                    className="p-3 flex items-center gap-3 flex-1"
+                    className="p-2.5 flex items-center gap-2.5 flex-1"
                     style={{
-                      borderRadius: '15px',
-                      border: '2px solid rgba(255, 255, 255, 0.15)',
+                      borderRadius: '12px',
+                      border: '1.5px solid rgba(255, 255, 255, 0.15)',
                       background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%)',
-                      backdropFilter: 'blur(16px)'
+                      backdropFilter: 'blur(13px)'
                     }}
                   >
                     {/* Icon */}
                     <div className="flex-shrink-0">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
                         <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
                         <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
                       </svg>
                     </div>
                     {/* Content */}
                     <div className="flex-1">
-                      <h4 className="text-white font-nunito text-xs font-semibold mb-0.5">
+                      <h4 className="text-white font-nunito text-[10px] font-semibold mb-0.5">
                         Protection Level
                       </h4>
-                      <p className="text-white/80 font-nunito text-[10px] leading-tight">
+                      <p className="text-white/80 font-nunito text-[8px] leading-tight">
                         Comprehensive brand protection coverage
                       </p>
                     </div>
@@ -599,17 +659,19 @@ export default function Dashboard() {
         </div>
 
         {/* Top Heading */}
-        <h1 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-12">
+        <h1 className="text-white font-nunito text-lg md:text-2xl lg:text-3xl font-bold text-center mb-10">
           Register Today and get your Trademark in <span style={{ color: '#FFB703' }}>9 months</span>
         </h1>
 
-        {/* Two Column Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start mb-16">
-          {/* Left Column */}
-          <div className="space-y-8">
+        {/* Main Content Layout */}
+        <div className="relative">
+          {/* Two Column Layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_425px] gap-6 lg:gap-10 items-start mb-12">
+            {/* Left Column */}
+            <div className="space-y-6">
             {/* Google Trust Rating Card */}
             <div
-              className="flex p-4 md:p-6 justify-center items-center rounded-[20px] border-2 border-white/[0.15] backdrop-blur-[16px]"
+              className="flex p-3 md:p-5 justify-center items-center rounded-[16px] border-2 border-white/[0.15] backdrop-blur-[13px]"
               style={{
                 background: 'linear-gradient(135deg, rgba(138, 56, 245, 0.25) 0%, rgba(255, 183, 3, 0.15) 50%, rgba(138, 56, 245, 0.25) 100%)',
               }}
@@ -684,8 +746,8 @@ export default function Dashboard() {
             </div>
 
             {/* Why Trademark with IPR Karo Section */}
-            <div className="space-y-6">
-              <h3 className="text-white font-nunito text-xl md:text-2xl font-medium">
+            <div className="space-y-5">
+              <h3 className="text-white font-nunito text-base md:text-xl font-medium">
                 Why Trademark with IPRKaro ?
               </h3>
 
@@ -698,7 +760,7 @@ export default function Dashboard() {
                     boxShadow: '0 0 20px 1px rgba(255, 255, 255, 0.10) inset'
                   }}
                 >
-                  <div className="grid grid-cols-2 grid-rows-3 gap-4">
+                  <div className="grid grid-cols-2 grid-rows-3 gap-3">
                     {features.map((feature, index) => (
                       <div
                         key={index}
@@ -718,14 +780,14 @@ export default function Dashboard() {
 
               {/* Desktop Layout */}
               <div className="hidden md:block">
-                <div className="grid grid-cols-3 gap-4">
+                <div className="grid grid-cols-3 gap-0">
                   {features.map((feature, index) => (
                     <div
                       key={index}
-                      className="flex items-center space-x-3 p-4"
+                      className="flex items-center space-x-2 p-2"
                     >
                       <div
-                        className="flex-shrink-0 text-white p-3"
+                        className="flex-shrink-0 text-white p-2"
                         style={{
                           borderRadius: '5px',
                           background: 'rgba(255, 255, 255, 0.25)'
@@ -743,22 +805,22 @@ export default function Dashboard() {
             </div>
 
             {/* Get a Guaranteed Trademark on Section */}
-            <div className="mt-16 mb-8">
-              <div className="flex flex-col lg:flex-row items-start gap-10">
+            <div className="mt-12 mb-6">
+              <div className="flex flex-col lg:flex-row items-start gap-8">
                 {/* Left Side - Circle and Line - Hidden on mobile, visible on desktop */}
                 <div className="hidden md:flex justify-center lg:justify-start">
                   <div className="relative">
                     {/* White outer circle */}
                     <div
-                      className="w-8 h-8 rounded-full flex items-center justify-center"
+                      className="w-6 h-6 rounded-full flex items-center justify-center"
                       style={{
                         background: 'rgba(255, 255, 255, 0.9)',
-                        border: '3px solid rgba(255, 255, 255, 0.8)'
+                        border: '2.5px solid rgba(255, 255, 255, 0.8)'
                       }}
                     >
                       {/* Golden inner circle */}
                       <div
-                        className="w-4 h-4 rounded-full"
+                        className="w-3 h-3 rounded-full"
                         style={{
                           background: '#FFD700'
                         }}
@@ -766,39 +828,39 @@ export default function Dashboard() {
                     </div>
 
                     {/* Curved line going down then right */}
-                    <div className="absolute top-9 left-11.5 transform -translate-x-1/2">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="62" height="119" viewBox="0 0 62 119" fill="none">
-                        <path d="M1 0V102C1 110.837 8.16344 118 17 118H61.5" stroke="white" strokeOpacity="0.7" strokeWidth="2"/>
+                    <div className="absolute top-7 left-9 transform -translate-x-1/2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="95" viewBox="0 0 62 119" fill="none">
+                        <path d="M1 0V102C1 110.837 8.16344 118 17 118H61.5" stroke="white" strokeOpacity="0.7" strokeWidth="1.5"/>
                       </svg>
                     </div>
                   </div>
                 </div>
 
                 {/* Right Side - Heading and Containers */}
-                <div className="flex-1 space-y-8">
+                <div className="flex-1 space-y-6">
                   {/* Heading */}
                   <div className="text-center lg:text-left">
-                    <h3 className="text-white font-nunito text-base md:text-xl lg:text-2xl font-medium">
+                    <h3 className="text-white font-nunito text-sm md:text-base lg:text-xl font-medium">
                       Get a Guaranteed Trademark on
                     </h3>
                   </div>
 
                   {/* Timeline Containers - Single Column, 2 Rows */}
-                  <div className="space-y-4 mt-13">
+                  <div className="space-y-3 mt-10">
                     {/* First Container - Filing Date */}
                     <div
-                      className="relative p-4 rounded-2xl w-full max-w-[500px]"
+                      className="relative p-3 rounded-xl w-full max-w-[400px]"
                       style={{
                         background: 'transparent',
-                        border: '2px solid rgba(128, 128, 128, 0.4)',
-                        borderRadius: '16px'
+                        border: '1.5px solid rgba(128, 128, 128, 0.4)',
+                        borderRadius: '13px'
                       }}
                     >
-                      <div className="flex items-center justify-between px-10">
-                        <div className="text-white font-nunito text-sm md:text-base font-medium">
+                      <div className="flex items-center justify-between px-8">
+                        <div className="text-white font-nunito text-xs md:text-sm font-medium">
                           Filing Date
                         </div>
-                        <div className="text-white font-nunito text-xs md:text-sm opacity-90">
+                        <div className="text-white font-nunito text-[10px] md:text-xs opacity-90">
                           Apr 12, 2025
                         </div>
                       </div>
@@ -806,18 +868,18 @@ export default function Dashboard() {
 
                     {/* Second Container - Trademark Estimated Date */}
                     <div
-                      className="relative p-4 rounded-2xl w-full max-w-[500px]"
+                      className="relative p-3 rounded-xl w-full max-w-[400px]"
                       style={{
                         background: 'transparent',
-                        border: '2px solid rgba(128, 128, 128, 0.4)',
-                        borderRadius: '16px'
+                        border: '1.5px solid rgba(128, 128, 128, 0.4)',
+                        borderRadius: '13px'
                       }}
                     >
-                      <div className="flex items-center justify-between px-10">
-                        <div className="text-white font-nunito text-sm md:text-base font-medium">
+                      <div className="flex items-center justify-between px-8">
+                        <div className="text-white font-nunito text-xs md:text-sm font-medium">
                           Trademark Estimated Date
                         </div>
-                        <div className="text-white font-nunito text-xs md:text-sm opacity-90">
+                        <div className="text-white font-nunito text-[10px] md:text-xs opacity-90">
                           Dec 12, 2025
                         </div>
                       </div>
@@ -828,27 +890,27 @@ export default function Dashboard() {
             </div>
 
             {/* Trademark Requirements Section */}
-            <div className="space-y-6">
-              <h3 className="text-white font-nunito text-xl md:text-2xl font-medium">
+            <div className="space-y-5">
+              <h3 className="text-white font-nunito text-base md:text-xl font-medium">
                 Trademark Requirements
               </h3>
 
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-3">
                 {trademarkRequirements.map((requirement, index) => (
                   <div
                     key={index}
-                    className="flex items-center space-x-3 p-4"
+                    className="flex items-center space-x-2.5 p-3"
                   >
                     <div
-                      className="flex-shrink-0 text-white p-3"
+                      className="flex-shrink-0 text-white p-2.5"
                       style={{
-                        borderRadius: '5px',
+                        borderRadius: '4px',
                         background: 'rgba(255, 255, 255, 0.25)'
                       }}
                     >
                       {requirement.icon}
                     </div>
-                    <span className="text-white font-nunito text-[10px] md:text-xs lg:text-sm font-medium">
+                    <span className="text-white font-nunito text-[8px] md:text-[10px] lg:text-xs font-medium">
                       {requirement.text}
                     </span>
                   </div>
@@ -857,8 +919,8 @@ export default function Dashboard() {
             </div>
 
             {/* Guidelines Section */}
-            <div className="space-y-6">
-              <h3 className="text-white font-nunito text-xl md:text-2xl font-medium">
+            <div className="space-y-5">
+              <h3 className="text-white font-nunito text-base md:text-xl font-medium">
                 We work with the Guidelines of
               </h3>
 
@@ -906,128 +968,128 @@ export default function Dashboard() {
               </div>
 
               {/* Desktop Guidelines Containers */}
-              <div className="hidden md:flex items-center justify-start gap-8 md:gap-10">
+              <div className="hidden md:flex items-center justify-start gap-6 md:gap-8">
                 <div
-                  className="flex items-center justify-center p-5 md:p-6"
+                  className="flex items-center justify-center p-4 md:p-5"
                   style={{
                     background: 'transparent',
                     border: '1px solid rgba(255, 255, 255, 0.2)',
-                    borderRadius: '20px',
-                    width: '140px',
-                    height: '140px',
-                    minWidth: '120px',
-                    minHeight: '120px'
+                    borderRadius: '16px',
+                    width: '112px',
+                    height: '112px',
+                    minWidth: '96px',
+                    minHeight: '96px'
                   }}
                 >
-                  <Image src="/serv1.svg" alt="Service 1" className="w-14 h-14 md:w-16 md:h-16" width={64} height={64} />
+                  <Image src="/serv1.svg" alt="Service 1" className="w-11 h-11 md:w-13 md:h-13" width={52} height={52} />
                 </div>
 
                 <div
-                  className="flex items-center justify-center p-5 md:p-6"
+                  className="flex items-center justify-center p-4 md:p-5"
                   style={{
                     background: 'transparent',
                     border: '1px solid rgba(255, 255, 255, 0.2)',
-                    borderRadius: '20px',
-                    width: '140px',
-                    height: '140px',
-                    minWidth: '120px',
-                    minHeight: '120px'
+                    borderRadius: '16px',
+                    width: '112px',
+                    height: '112px',
+                    minWidth: '96px',
+                    minHeight: '96px'
                   }}
                 >
-                  <Image src="/serv2.svg" alt="Service 2" className="w-14 h-14 md:w-16 md:h-16" width={64} height={64} />
+                  <Image src="/serv2.svg" alt="Service 2" className="w-11 h-11 md:w-13 md:h-13" width={52} height={52} />
                 </div>
 
                 <div
-                  className="flex items-center justify-center p-5 md:p-6"
+                  className="flex items-center justify-center p-4 md:p-5"
                   style={{
                     background: 'transparent',
                     border: '1px solid rgba(255, 255, 255, 0.2)',
-                    borderRadius: '20px',
-                    width: '140px',
-                    height: '140px',
-                    minWidth: '120px',
-                    minHeight: '120px'
+                    borderRadius: '16px',
+                    width: '112px',
+                    height: '112px',
+                    minWidth: '96px',
+                    minHeight: '96px'
                   }}
                 >
-                  <Image src="/serv3.svg" alt="Service 3" className="w-14 h-14 md:w-16 md:h-16" width={64} height={64} />
+                  <Image src="/serv3.svg" alt="Service 3" className="w-11 h-11 md:w-13 md:h-13" width={52} height={52} />
                 </div>
 
                 <div
-                  className="flex items-center justify-center p-5 md:p-6"
+                  className="flex items-center justify-center p-4 md:p-5"
                   style={{
                     background: 'transparent',
                     border: '1px solid rgba(255, 255, 255, 0.2)',
-                    borderRadius: '20px',
-                    width: '140px',
-                    height: '140px',
-                    minWidth: '120px',
-                    minHeight: '120px'
+                    borderRadius: '16px',
+                    width: '112px',
+                    height: '112px',
+                    minWidth: '96px',
+                    minHeight: '96px'
                   }}
                 >
-                  <Image src="/serv4.svg" alt="Service 4" className="w-14 h-14 md:w-16 md:h-16" width={64} height={64} />
+                  <Image src="/serv4.svg" alt="Service 4" className="w-11 h-11 md:w-13 md:h-13" width={52} height={52} />
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Right Column - Pricing Card */}
-          <div className="sticky top-24" style={{ zoom: 0.85 }}>
+            {/* Right Column - Pricing Card */}
+            <div className="hidden lg:block sticky top-24 ml-40" style={{ zoom: 0.68 }}>
             <div
-              className="relative flex flex-col p-5 md:p-6 lg:p-8 w-full max-w-full md:max-w-[532px] mx-auto"
+              className="relative flex flex-col p-4 md:p-5 lg:p-6 w-full max-w-full md:max-w-[425px] mx-auto"
               style={{
-                borderRadius: '30px',
+                borderRadius: '24px',
                 background: 'rgba(255, 255, 255, 0.10)',
-                boxShadow: '0 0 20px 0 rgba(0, 0, 0, 0.10) inset, 0 0 20px 6px rgba(255, 255, 255, 0.20) inset',
-                minHeight: '650px'
+                boxShadow: '0 0 16px 0 rgba(0, 0, 0, 0.10) inset, 0 0 16px 5px rgba(255, 255, 255, 0.20) inset',
+                minHeight: '520px'
               }}
             >
               {/* Heading Container */}
               <div
-                className="mb-6 p-5 rounded-[20px] text-center relative"
+                className="mb-5 p-4 rounded-[16px] text-center relative"
                 style={{
                   background: 'rgba(0, 0, 0, 0.26)'
                 }}
               >
-                <h3 className="text-white font-nunito font-medium text-xl md:text-2xl leading-[24px]">
+                <h3 className="text-white font-nunito font-medium text-base md:text-lg leading-[50px]">
                   Get Your Trademark Registered
                 </h3>
               </div>
 
               {/* Price Breakdown Section */}
               <div
-                className="mb-8 p-5 rounded-[20px] w-full"
+                className="mb-6 p-4 rounded-[16px] w-full"
                 style={{
                   background: 'transparent'
                 }}
               >
-                <h4 className="text-white font-nunito font-medium text-lg md:text-xl leading-[20px] mb-4 text-center">
+                <h4 className="text-white font-nunito font-medium text-base md:text-lg leading-[16px] mb-3 text-center">
                   Price Breakdown
                 </h4>
 
-                <div className="space-y-3">
-                  <div className="flex justify-between items-center py-2 border-b border-gray-400">
-                    <span className="text-white font-nunito text-base md:text-xl opacity-90">Government Fee</span>
-                    <span className="text-white font-nunito text-base md:text-xl">₹4,500</span>
+                <div className="space-y-2.5">
+                  <div className="flex justify-between items-center py-1.5 border-b border-gray-400">
+                    <span className="text-white font-nunito text-sm md:text-base opacity-90">Government Fee</span>
+                    <span className="text-white font-nunito text-sm md:text-base">₹4,500</span>
                   </div>
-                  <div className="flex justify-between items-center py-2 border-b border-gray-400">
-                    <span className="text-white font-nunito text-base md:text-xl opacity-90">Professional Fee</span>
-                    <span className="text-white font-nunito text-base md:text-xl">₹2,500</span>
+                  <div className="flex justify-between items-center py-1.5 border-b border-gray-400">
+                    <span className="text-white font-nunito text-sm md:text-base opacity-90">Professional Fee</span>
+                    <span className="text-white font-nunito text-sm md:text-base">₹2,500</span>
                   </div>
-                  <div className="flex justify-between items-center py-2 border-b border-gray-400">
-                    <span className="text-white font-nunito text-base md:text-xl opacity-90">GST (18%)</span>
-                    <span className="text-white font-nunito text-base md:text-xl">₹1,260</span>
+                  <div className="flex justify-between items-center py-1.5 border-b border-gray-400">
+                    <span className="text-white font-nunito text-sm md:text-base opacity-90">GST (18%)</span>
+                    <span className="text-white font-nunito text-sm md:text-base">₹1,260</span>
                   </div>
-                  <div className="flex justify-between items-center py-3 font-semibold">
-                    <span className="text-white font-nunito text-lg md:text-xl">Total</span>
-                    <span className="text-white font-nunito text-lg md:text-xl">₹8,260</span>
+                  <div className="flex justify-between items-center py-2.5 font-semibold">
+                    <span className="text-white font-nunito text-base md:text-lg">Total</span>
+                    <span className="text-white font-nunito text-base md:text-lg">₹8,260</span>
                   </div>
 
                   {/* Start Registration Button */}
                   <button
-                    className="w-full py-3 px-4 rounded-xl font-nunito font-semibold text-lg md:text-xl transition-all duration-300 hover:scale-105 mt-4"
+                    className="w-full py-2.5 px-3 rounded-lg font-nunito font-semibold text-base md:text-lg transition-all duration-300 hover:scale-105 mt-3"
                     style={{
                       background: '#FFB703',
-                      boxShadow: '0 0 20px 0 #000 inset',
+                      boxShadow: '0 0 16px 0 #000 inset',
                       color: '#0C002B'
                     }}
                   >
@@ -1037,27 +1099,27 @@ export default function Dashboard() {
               </div>
 
               {/* Our Plans Section */}
-              <div className="flex-1 space-y-4">
-                <h4 className="text-white font-nunito font-medium text-xl md:text-2xl leading-[24px] mb-6 text-center">
+              <div className="flex-1 space-y-3">
+                <h4 className="text-white font-nunito font-medium text-base md:text-lg leading-[20px] mb-5 text-center">
                   Our Plans
                 </h4>
 
                 {plans.map((plan) => (
-                  <div key={plan.id} className="mb-4">
+                  <div key={plan.id} className="mb-3">
                     {/* Plan Dropdown Header */}
                     <div
                       onClick={() => togglePlan(plan.id)}
-                      className="w-full p-3 rounded-xl text-white font-nunito font-medium text-base md:text-lg border-2 border-white/20 cursor-pointer hover:border-white/40 transition-all duration-300 flex items-center justify-between"
+                      className="w-full p-2.5 rounded-lg text-white font-nunito font-medium text-sm md:text-base border-2 border-white/20 cursor-pointer hover:border-white/40 transition-all duration-300 flex items-center justify-between"
                       style={{
                         background: 'rgba(255, 255, 255, 0.05)',
-                        backdropFilter: 'blur(10px)',
-                        WebkitBackdropFilter: 'blur(10px)'
+                        backdropFilter: 'blur(8px)',
+                        WebkitBackdropFilter: 'blur(8px)'
                       }}
                     >
-                      <span>{plan.name} - {plan.price}</span>
+                      <span className="text-xs md:text-sm">{plan.name} - {plan.price}</span>
                       <FontAwesomeIcon
                         icon={faChevronDown}
-                        className={`w-4 h-4 transition-transform duration-300 ${
+                        className={`w-3 h-3 transition-transform duration-300 ${
                           expandedPlan === plan.id ? 'rotate-180' : 'rotate-0'
                         }`}
                       />
@@ -1066,40 +1128,40 @@ export default function Dashboard() {
                     {/* Plan Card - Only visible when expanded */}
                     <div
                       className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                        expandedPlan === plan.id ? 'max-h-[1000px] opacity-100 mt-4' : 'max-h-0 opacity-0'
+                        expandedPlan === plan.id ? 'max-h-[800px] opacity-100 mt-3' : 'max-h-0 opacity-0'
                       }`}
                     >
                       <div
-                        className="relative p-6 rounded-2xl transition-all duration-300"
+                        className="relative p-5 rounded-xl transition-all duration-300"
                         style={{
                           background: 'rgba(255, 255, 255, 0.10)',
-                          backdropFilter: 'blur(16px)',
-                          WebkitBackdropFilter: 'blur(16px)',
-                          border: plan.highlighted ? '2px solid #1345C3' : 'none',
-                          boxShadow: '0 0 20px 0 rgba(0, 0, 0, 0.10) inset, inset 0 0 20px rgba(255, 255, 255, 0.1)'
+                          backdropFilter: 'blur(13px)',
+                          WebkitBackdropFilter: 'blur(13px)',
+                          border: plan.highlighted ? '1.5px solid #1345C3' : 'none',
+                          boxShadow: '0 0 16px 0 rgba(0, 0, 0, 0.10) inset, inset 0 0 16px rgba(255, 255, 255, 0.1)'
                         }}
                       >
                         {/* Plan Header */}
-                        <div className="text-center mb-6">
-                          <h3 className="text-white font-nunito text-lg md:text-xl font-semibold mb-2">
+                        <div className="text-center mb-5">
+                          <h3 className="text-white font-nunito text-base md:text-lg font-semibold mb-1.5">
                             {plan.name}
                           </h3>
-                          <div className="flex items-center justify-center gap-4 mb-4">
-                            <span className="text-white font-nunito text-sm md:text-base opacity-80">{plan.description}</span>
+                          <div className="flex items-center justify-center gap-3 mb-3">
+                            <span className="text-white font-nunito text-xs md:text-sm opacity-80">{plan.description}</span>
                           </div>
                           <div className="text-right">
-                            <span className="text-white font-nunito font-bold text-2xl md:text-3xl">
+                            <span className="text-white font-nunito font-bold text-xl md:text-2xl">
                               {plan.price}
                             </span>
                           </div>
                         </div>
 
                         {/* Plan Features */}
-                        <div className="space-y-3 mb-6">
+                        <div className="space-y-2.5 mb-5">
                           {plan.features.map((feature, index) => (
-                            <div key={index} className="flex items-start gap-3">
-                              <i className="fas fa-check text-green-400 mt-1 flex-shrink-0"></i>
-                              <span className="text-white font-nunito text-sm md:text-base leading-relaxed">
+                            <div key={index} className="flex items-start gap-2.5">
+                              <i className="fas fa-check text-green-400 mt-0.5 flex-shrink-0 text-xs"></i>
+                              <span className="text-white font-nunito text-xs md:text-sm leading-relaxed">
                                 {feature}
                               </span>
                             </div>
@@ -1108,10 +1170,10 @@ export default function Dashboard() {
 
                         {/* Action Button */}
                         <button
-                          className="w-full py-3 px-4 rounded-xl font-nunito font-semibold text-sm md:text-base transition-all duration-300 hover:scale-105"
+                          className="w-full py-2.5 px-3 rounded-lg font-nunito font-semibold text-xs md:text-sm transition-all duration-300 hover:scale-105"
                           style={{
                             background: '#1345C3',
-                            boxShadow: '0 0 20px 0 #000 inset',
+                            boxShadow: '0 0 16px 0 #000 inset',
                             color: '#FFFFFF'
                           }}
                         >
@@ -1119,8 +1181,8 @@ export default function Dashboard() {
                         </button>
 
                         {/* Plan Type Indicator */}
-                        <div className="mt-4 text-center">
-                          <span className="text-white font-nunito text-xs opacity-80">
+                        <div className="mt-3 text-center">
+                          <span className="text-white font-nunito text-[10px] opacity-80">
                             {plan.subtitle}
                           </span>
                         </div>
@@ -1135,7 +1197,109 @@ export default function Dashboard() {
       </div>
 
       {/* FAQ Section */}
-      <Faq />
+      <section className="py-12 relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-0 w-full h-full" style={{ background: 'linear-gradient(to right, #FFB70320, transparent)' }}></div>
+          <div className="absolute bottom-0 right-0 w-16 h-16 rounded-full blur-xl" style={{ background: 'linear-gradient(to left, #FFB70320, transparent)' }}></div>
+        </div>
+
+        <div className="container mx-auto px-4 lg:px-6 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-8 items-start">
+            
+            {/* Left Section - Questions */}
+            <div className="space-y-6 flex flex-col justify-start">
+              <div className="space-y-4">
+                <h2 className="text-white text-left font-nunito text-lg md:text-2xl font-medium leading-tight w-full">
+                  Have Question?
+                  <br />
+                  <span style={{ color: '#FFB703' }}>
+                    We've Got Answers.
+                  </span>
+                </h2>
+
+                <p className="text-white font-nunito text-xs md:text-sm font-medium">
+                  Still have questions? <span style={{ color: '#FFB703' }} className="font-medium">Contact us</span> anytime.
+                </p>
+              </div>
+
+              {/* AI Input */}
+              <form onSubmit={handleAiSubmit} className="relative">
+                <div className="relative bg-white/50 backdrop-blur-sm border border-purple-400/30 rounded-lg p-3 max-w-lg">
+                  <input
+                    type="text"
+                    value={aiQuestion}
+                    onChange={(e) => setAiQuestion(e.target.value)}
+                    placeholder="Smart AI, Ask me Anything...."
+                    className="bg-transparent text-white placeholder-white outline-none text-sm w-full"
+                  />
+                  <button
+                    type="submit"
+                    className="absolute right-3 top-1/2 transform -translate-y-1/2 transition-colors"
+                    style={{ color: '#FFB703' }}
+                    onMouseEnter={(e) => e.currentTarget.style.color = '#e6a503'}
+                    onMouseLeave={(e) => e.currentTarget.style.color = '#FFB703'}
+                  >
+                    <FontAwesomeIcon icon={faPaperPlane} className="w-4 h-4" />
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            {/* Right Section - FAQ Items */}
+            <div
+              className="space-y-3 p-4"
+              style={{
+                borderRadius: '12px',
+                background: 'linear-gradient(140deg, rgba(12, 0, 43, 0.10) 6.89%, rgba(255, 183, 3, 0.10) 101.84%)',
+                boxShadow: '2px 2px 14px 0 rgba(0, 0, 0, 0.15), 0 0 12px 0.5px rgba(255, 255, 255, 0.10) inset',
+                backdropFilter: 'blur(70px)'
+              }}
+            >
+              {faqs.map((faq, index) => (
+                <div key={index} className="relative">
+                  <div
+                    className="p-4 cursor-pointer transition-all duration-300 ease-in-out hover:scale-[1.02] transform"
+                    style={{
+                      borderRadius: '9px',
+                      background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%)',
+                      ...(openFaq === index ? { boxShadow: `0 0 0 1px #FFB70380` } : {})
+                    }}
+                    onClick={() => toggleFaq(index)}
+                  >
+
+                    <div className="flex justify-between items-center mb-2">
+                      <h3 className="text-white font-nunito text-xs md:text-sm lg:text-base font-semibold pr-3 leading-snug">
+                        {faq.question}
+                      </h3>
+                      <FontAwesomeIcon
+                        icon={faChevronDown}
+                        className={`w-4 h-4 transition-all duration-500 ease-in-out flex-shrink-0 ${
+                          openFaq === index ? 'rotate-180 scale-110' : 'rotate-0 scale-100'
+                        }`}
+                        style={{ color: '#000000' }}
+                      />
+                    </div>
+
+                    <div
+                      className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                        openFaq === index ? 'max-h-72 opacity-100 mt-0' : 'max-h-0 opacity-0 -mt-3'
+                      }`}
+                    >
+                      <div className="mt-3 pt-3 border-t border-black/20 transform transition-all duration-500 ease-in-out">
+                        <p className="text-white font-nunito text-[10px] md:text-xs font-medium leading-relaxed">
+                          {faq.answer}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
     </div>
   );
 }
