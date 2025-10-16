@@ -7,7 +7,7 @@ export default function ConditionalLayout({ children }: { children: React.ReactN
   const pathname = usePathname();
   
   // Pages where navbar and footer should not be shown
-  const excludedPaths = ['/form'];
+  const excludedPaths = ['/form', '/authority'];
   const shouldHideLayout = excludedPaths.some(path => pathname?.startsWith(path));
 
   if (shouldHideLayout) {
@@ -22,4 +22,5 @@ export default function ConditionalLayout({ children }: { children: React.ReactN
     </>
   );
 }
+
 

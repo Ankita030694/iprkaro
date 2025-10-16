@@ -332,12 +332,42 @@ export default function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trad
         status: 'new'
       });
 
-      // Redirect to thank you page
-      router.push('/thank-you');
+      // Call the trademark analysis API
+      const analysisResponse = await fetch('/api/analyze-trademark', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          trademarkName: formData.trademarkSearched,
+          classNumber: formData.class,
+        }),
+      });
 
-    } catch (error) {
+      if (!analysisResponse.ok) {
+        const errorData = await analysisResponse.json().catch(() => ({}));
+        console.error('API Error:', errorData);
+        
+        // Show detailed error message
+        const errorMessage = errorData.details || errorData.error || 'Failed to analyze trademark';
+        const errorStep = errorData.step || 'unknown';
+        
+        alert(`Error: ${errorMessage}\n\nStep: ${errorStep}\n\nPlease check the console for more details.`);
+        throw new Error(errorMessage);
+      }
+
+      // Redirect to dashboard with trademark data
+      const params = new URLSearchParams({
+        trademark: formData.trademarkSearched,
+        class: formData.class,
+      });
+      router.push(`/dashboard?${params.toString()}`);
+
+    } catch (error: any) {
       console.error('Error submitting form:', error);
-      alert('Something went wrong. Please try again.');
+      if (!error.message?.includes('Error:')) {
+        alert('Something went wrong. Please try again or check the server console for details.');
+      }
       setIsSubmitting(false);
     }
   };

@@ -31,6 +31,11 @@ export default function AuthorityLayout({
       icon: 'fa-users'
     },
     {
+      name: 'Search Results',
+      href: '/authority/search-results',
+      icon: 'fa-search'
+    },
+    {
       name: 'Blogs',
       href: '/authority/blogs',
       icon: 'fa-blog'

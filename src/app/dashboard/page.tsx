@@ -1,17 +1,106 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import { useSearchParams } from 'next/navigation';
+import { db } from '@/lib/firebase';
+import { collection, doc, getDoc } from 'firebase/firestore';
 
-export default function Dashboard() {
+interface AnalysisData {
+  trademarkName: string;
+  classNumber: string;
+  overallHealth: string;
+  registrabilityScore: number;
+  registrabilityReasoning: string;
+  similarityScore: number;
+  similarityReasoning: string;
+  classFitScore: number;
+  classFitReasoning: string;
+  genericnessAssessment: {
+    registrability: string;
+    similarity: string;
+    classFit: string;
+  };
+  keyFactors: {
+    brandStrength: string;
+    legalRisk: string;
+    marketPosition: string;
+    registrationSpeed: string;
+    protectionLevel: string;
+  };
+  alternativeClasses: string[];
+  overallRecommendation: {
+    status: string;
+    message: string;
+  };
+}
+
+function DashboardContent() {
+  const searchParams = useSearchParams();
   const [expandedPlan, setExpandedPlan] = useState<string | null>(null);
   const [registrabilityScore, setRegistrabilityScore] = useState(75);
   const [similarityScore, setSimilarityScore] = useState(50);
   const [classScore, setClassScore] = useState(90);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [aiQuestion, setAiQuestion] = useState('');
+  const [analysisData, setAnalysisData] = useState<AnalysisData | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [showMobilePopup, setShowMobilePopup] = useState(false);
+
+  // Calculate filing date (today) and estimated date (9 months from today)
+  const getFilingDate = () => {
+    const today = new Date();
+    return today.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+  };
+
+  const getEstimatedDate = () => {
+    const today = new Date();
+    const estimatedDate = new Date(today);
+    estimatedDate.setMonth(estimatedDate.getMonth() + 9);
+    return estimatedDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+  };
+
+  // Fetch analysis data from Firebase
+  useEffect(() => {
+    const fetchAnalysisData = async () => {
+      try {
+        const trademark = searchParams.get('trademark');
+        const classNumber = searchParams.get('class');
+
+        if (!trademark || !classNumber) {
+          setError('Missing trademark or class information');
+          setLoading(false);
+          return;
+        }
+
+        // Normalize document ID
+        const docId = `${trademark.toLowerCase().trim()}_${classNumber}`;
+        const searchResultsRef = collection(db, 'searchResults');
+        const docRef = doc(searchResultsRef, docId);
+        const docSnap = await getDoc(docRef);
+
+        if (docSnap.exists()) {
+          const data = docSnap.data() as AnalysisData;
+          setAnalysisData(data);
+          setRegistrabilityScore(data.registrabilityScore);
+          setSimilarityScore(data.similarityScore);
+          setClassScore(data.classFitScore);
+        } else {
+          setError('Analysis data not found. Please try searching again.');
+        }
+      } catch (err) {
+        console.error('Error fetching analysis data:', err);
+        setError('Failed to load analysis data');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchAnalysisData();
+  }, [searchParams]);
 
   const togglePlan = (planId: string) => {
     setExpandedPlan(expandedPlan === planId ? null : planId);
@@ -114,8 +203,8 @@ export default function Dashboard() {
     {
       text: "Personal Information",
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="28" viewBox="0 0 27 28" fill="none">
-          <path d="M1 26.5H26M9.33333 8.44444H10.7222M9.33333 14H10.7222M9.33333 19.5556H10.7222M16.2778 8.44444H17.6667M16.2778 14H17.6667M16.2778 19.5556H17.6667M3.77778 26.5V4.27778C3.77778 3.54107 4.07044 2.83453 4.59137 2.31359C5.1123 1.79266 5.81884 1.5 6.55556 1.5H20.4444C21.1812 1.5 21.8877 1.79266 22.4086 2.31359C22.9296 2.83453 23.2222 3.54107 23.2222 4.27778V26.5" stroke="#FFB703" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="28" viewBox="0 0 24 24" fill="none">
+          <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z" stroke="#FFB703" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
       )
     },
@@ -187,43 +276,94 @@ export default function Dashboard() {
     }
   ];
 
+  // Loading state
+  if (loading) {
+    return (
+      <div className="min-h-screen pt-20 flex items-center justify-center" style={{ 
+        background: '#0C002B',
+        backgroundImage: 'linear-gradient(to right top, #0c002b, #0c002b,rgb(25, 10, 60),rgb(80, 60, 124),rgb(79, 75, 75))',
+      }}>
+        <div className="text-center">
+          <i className="fas fa-spinner fa-spin text-white text-5xl mb-4"></i>
+          <p className="text-white font-nunito text-xl">Analyzing your trademark...</p>
+        </div>
+      </div>
+    );
+  }
+
+  // Error state
+  if (error || !analysisData) {
+    return (
+      <div className="min-h-screen pt-20 flex items-center justify-center" style={{ 
+        background: '#0C002B',
+        backgroundImage: 'linear-gradient(to right top, #0c002b, #0c002b,rgb(25, 10, 60),rgb(80, 60, 124),rgb(79, 75, 75))',
+      }}>
+        <div className="text-center max-w-md mx-auto px-4">
+          <i className="fas fa-exclamation-triangle text-yellow-500 text-5xl mb-4"></i>
+          <h2 className="text-white font-nunito text-2xl mb-4">{error || 'Data not found'}</h2>
+          <a href="/" className="bg-[#FFB703] text-black px-6 py-3 rounded-lg font-nunito font-semibold hover:bg-[#e6a602] transition-colors">
+            Return to Home
+          </a>
+        </div>
+      </div>
+    );
+  }
+
+  // Helper to get color based on health
+  const getHealthColor = (health: string) => {
+    switch (health.toLowerCase()) {
+      case 'excellent': return '#4ADE80';
+      case 'good': return '#10B981';
+      case 'fair': return '#F59E0B';
+      case 'poor': return '#EF4444';
+      default: return '#4ADE80';
+    }
+  };
+
   return (
-    <div className="min-h-screen pt-20" style={{ 
+    <div className="min-h-screen pt-20 pb-24 md:pb-0" style={{ 
       background: '#0C002B',
       backgroundImage: 'linear-gradient(to right top, #0c002b, #0c002b,rgb(25, 10, 60),rgb(80, 60, 124),rgb(79, 75, 75))',
       backgroundSize: '100% 100%',
       backgroundPosition: 'center top',
       backgroundRepeat: 'no-repeat'
     }}>
-      <div className="container mx-auto px-4 md:px-6 lg:px-8 py-8 lg:py-16">
+      <div className="ml-2 mr-2 md:mx-10 px-2 md:px-6 lg:px-8 py-8 lg:py-16">
         {/* Top Metrics Section */}
         <div className="mb-10">
-          {/* Metrics Heading */}
-          <div className="text-left mb-5">
-            <h4 className="text-white font-nunito text-xs md:text-sm lg:text-base font-medium mb-1.5">
-              Top/Primary Metrics
-            </h4>
-            <h1 className="text-white font-nunito text-lg md:text-2xl lg:text-3xl font-bold mb-1.5">
-              Your Trademark Health Score
+          {/* Metrics Heading - Desktop Only */}
+          <div className="hidden md:block text-left mb-5">
+           
+            <h1 className="text-white font-nunito text-lg md:text-2xl lg:text-3xl xl:text-2xl font-bold mb-1.5">
+              Your Trademark Health Score for "{analysisData.trademarkName}" - Class {analysisData.classNumber}
             </h1>
-            <p className="text-[#4ADE80] font-nunito text-base md:text-xl lg:text-2xl font-semibold">
-              Excellent
+            <p className="font-nunito text-base md:text-xl lg:text-2xl font-semibold" style={{ color: getHealthColor(analysisData.overallHealth) }}>
+              {analysisData.overallHealth}
             </p>
           </div>
 
-          {/* Metrics Container */}
+          {/* Mobile Heading */}
+          <div className="block md:hidden text-center mb-5">
+            <h1 className="text-white font-nunito text-lg font-bold mb-1.5">
+              Register Today and get your Trademark in <span style={{ color: '#FFB703' }}>9 months</span>
+            </h1>
+          </div>
+
+          {/* Metrics Container - Desktop Version */}
           <div
-            className="w-full px-5 md:px-6 lg:px-8 py-6 md:py-8 lg:py-10"
+            className="hidden md:block w-full px-5 md:px-6 lg:px-8 py-6 md:py-8 lg:py-5 relative"
             style={{
               borderRadius: '32px',
               background: 'rgba(255, 255, 255, 0.10)',
               boxShadow: '0 0 16px 0 rgba(0, 0, 0, 0.10) inset, 0 0 16px 5px rgba(255, 255, 255, 0.20) inset'
             }}
           >
+            {/* Asterisk in top right */}
+            <span className="absolute top-4 right-6 text-red-500 font-nunito text-xl font-bold">*</span>
             {/* Two Column Layout */}
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-5">
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-5 items-stretch">
               {/* First Container - 3/4 width */}
-              <div className="lg:col-span-3">
+              <div className="lg:col-span-3 flex flex-col">
                 {/* Heading */}
                 <div
                   className="flex items-center justify-between px-5 py-3 mb-3"
@@ -235,28 +375,31 @@ export default function Dashboard() {
                   <h3 className="text-white font-nunito text-base md:text-lg font-semibold">
                     Your Trademark Health Score
                   </h3>
-                  <span className="text-[#4ADE80] font-nunito text-base md:text-lg font-semibold">
-                    Excellent
+                  <span className="font-nunito text-base md:text-lg font-semibold" style={{ color: getHealthColor(analysisData.overallHealth) }}>
+                    {analysisData.overallHealth}
                   </span>
                 </div>
                 
                 {/* Content area - 3 Columns */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-5 flex-1 mt-2">
                   {/* Column 1 - Trademark Registrability */}
-                  <div className="flex flex-col items-center">
+                  <div className="flex flex-col items-center h-full">
                     <h4 className="text-white font-nunito text-sm md:text-base font-semibold mb-3">
                       Trademark Registrability
                     </h4>
                     
                     {/* Curved Gauge */}
-                    <div className="relative w-32 h-16 mb-3">
-                      <svg viewBox="0 0 200 100" className="w-full h-full">
+                    <div className="relative w-40 h-20 mb-4">
+                      <svg viewBox="0 0 200 100" className="w-full h-full drop-shadow-lg">
+                        {/* Outer glow circle */}
+                        <circle cx="100" cy="90" r="85" fill="none" stroke="rgba(255, 183, 3, 0.1)" strokeWidth="2" />
+                        
                         {/* Background arc */}
                         <path
                           d="M 20 90 A 80 80 0 0 1 180 90"
                           fill="none"
-                          stroke="rgba(255, 255, 255, 0.1)"
-                          strokeWidth="16"
+                          stroke="rgba(255, 255, 255, 0.15)"
+                          strokeWidth="20"
                           strokeLinecap="round"
                         />
                         {/* Gradient arc - Red to Orange to Green */}
@@ -266,165 +409,209 @@ export default function Dashboard() {
                             <stop offset="50%" stopColor="#F59E0B" />
                             <stop offset="100%" stopColor="#10B981" />
                           </linearGradient>
+                          <filter id="glow1">
+                            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                            <feMerge>
+                              <feMergeNode in="coloredBlur"/>
+                              <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                          </filter>
                         </defs>
                         <path
                           d="M 20 90 A 80 80 0 0 1 180 90"
                           fill="none"
                           stroke="url(#gaugeGradient1)"
-                          strokeWidth="16"
+                          strokeWidth="20"
                           strokeLinecap="round"
                           strokeDasharray="251.2"
                           strokeDashoffset={calculateDashOffset(registrabilityScore)}
-                          style={{ transition: 'stroke-dashoffset 0.5s ease-in-out' }}
+                          style={{ transition: 'stroke-dashoffset 0.5s ease-in-out', filter: 'url(#glow1)' }}
                         />
                         {/* Center text */}
-                        <text x="100" y="75" textAnchor="middle" fill="white" fontSize="20" fontWeight="bold">
+                        <text x="100" y="78" textAnchor="middle" fill="white" className="text-[32px] xl:text-[26px]" fontWeight="bold" style={{ textShadow: '0 0 10px rgba(255,255,255,0.5)' }}>
                           {registrabilityScore}
                         </text>
                       </svg>
                     </div>
 
-                    {/* Input Field */}
-                    <input
-                      type="number"
-                      min="0"
-                      max="100"
-                      value={registrabilityScore}
-                      onChange={(e) => handleScoreChange(setRegistrabilityScore, e.target.value)}
-                      className="w-full px-2.5 py-1.5 mb-3 rounded-lg text-center font-nunito font-semibold text-sm text-white bg-white/10 border border-white/20 focus:outline-none focus:border-[#FFB703] transition-colors"
-                      placeholder="Enter 0-100"
-                    />
-
-                    {/* Genericness Container */}
+                    {/* Assessment Container - Expanded */}
                     <div
-                      className="w-full p-3"
+                      className="w-full p-3 flex-1 flex flex-col"
                       style={{
                         borderRadius: '12px',
                         border: '1.5px solid #171717',
                         background: 'rgba(24, 24, 24, 0.15)'
                       }}
                     >
-                      <div className="flex items-center justify-between mb-1.5">
-                        <h5 className="text-white font-nunito text-xs font-semibold">
-                          Genericness
+                      <div className="flex items-center justify-between mb-2">
+                        <h5 className="text-white font-nunito text-md font-semibold">
+                        Remarks
                         </h5>
                         <div className="transition-all duration-300">
-                          {registrabilityScore < 30 ? (
-                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#EF4444" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-all duration-300">
+                          {registrabilityScore < 50 ? (
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#EF4444" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="transition-all duration-300 xl:w-4 xl:h-4">
                               <polyline points="6 9 12 15 18 9"></polyline>
                             </svg>
                           ) : (
-                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-all duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="transition-all duration-300 xl:w-4 xl:h-4">
                               <polyline points="18 15 12 9 6 15"></polyline>
                             </svg>
                           )}
                         </div>
                       </div>
-                      <p className="text-white/70 font-nunito text-[10px] leading-snug">
-                        Trademark uniqueness, existing conflicts, and overall legal eligibility.
+                      
+                      {/* Reasoning as bullet point */}
+                      <div className="mb-2 flex items-start">
+                        <span className="text-[#00D9FF] mr-2 mt-0.5 flex-shrink-0 text-base xl:text-md">•</span>
+                        <p className="font-nunito text-sm leading-relaxed" style={{ 
+                          background: 'linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 100%)',
+                          WebkitBackgroundClip: 'text',
+                          WebkitTextFillColor: 'transparent',
+                          backgroundClip: 'text'
+                        }}>
+                          {analysisData.registrabilityReasoning}
+                        </p>
+                      </div>
+
+                      {/* Assessment text as bullet point */}
+                      <div className="flex items-start">
+                        <span className="text-[#00D9FF] mr-2 mt-0.5 flex-shrink-0 text-base xl:text-sm">•</span>
+                        <p className="font-nunito text-sm leading-relaxed" style={{ 
+                          background: 'linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 100%)',
+                          WebkitBackgroundClip: 'text',
+                          WebkitTextFillColor: 'transparent',
+                          backgroundClip: 'text'
+                        }}>
+                        {analysisData.genericnessAssessment.registrability}
                       </p>
+                      </div>
                     </div>
                   </div>
 
                   {/* Column 2 - Similarity Rate */}
-                  <div className="flex flex-col items-center">
+                  <div className="flex flex-col items-center h-full">
                     <h4 className="text-white font-nunito text-sm md:text-base font-semibold mb-3">
                       Similarity Rate
                     </h4>
                     
                     {/* Curved Gauge */}
-                    <div className="relative w-32 h-16 mb-3">
-                      <svg viewBox="0 0 200 100" className="w-full h-full">
+                    <div className="relative w-40 h-20 mb-4">
+                      <svg viewBox="0 0 200 100" className="w-full h-full drop-shadow-lg">
+                        {/* Outer glow circle */}
+                        <circle cx="100" cy="90" r="85" fill="none" stroke="rgba(255, 183, 3, 0.1)" strokeWidth="2" />
+                        
                         {/* Background arc */}
                         <path
                           d="M 20 90 A 80 80 0 0 1 180 90"
                           fill="none"
-                          stroke="rgba(255, 255, 255, 0.1)"
-                          strokeWidth="16"
+                          stroke="rgba(255, 255, 255, 0.15)"
+                          strokeWidth="20"
                           strokeLinecap="round"
                         />
-                        {/* Gradient arc */}
+                        {/* Gradient arc - Reversed: Green to Red */}
                         <defs>
                           <linearGradient id="gaugeGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%" stopColor="#EF4444" />
+                            <stop offset="0%" stopColor="#10B981" />
                             <stop offset="50%" stopColor="#F59E0B" />
-                            <stop offset="100%" stopColor="#10B981" />
+                            <stop offset="100%" stopColor="#EF4444" />
                           </linearGradient>
+                          <filter id="glow2">
+                            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                            <feMerge>
+                              <feMergeNode in="coloredBlur"/>
+                              <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                          </filter>
                         </defs>
                         <path
                           d="M 20 90 A 80 80 0 0 1 180 90"
                           fill="none"
                           stroke="url(#gaugeGradient2)"
-                          strokeWidth="16"
+                          strokeWidth="20"
                           strokeLinecap="round"
                           strokeDasharray="251.2"
                           strokeDashoffset={calculateDashOffset(similarityScore)}
-                          style={{ transition: 'stroke-dashoffset 0.5s ease-in-out' }}
+                          style={{ transition: 'stroke-dashoffset 0.5s ease-in-out', filter: 'url(#glow2)' }}
                         />
                         {/* Center text */}
-                        <text x="100" y="75" textAnchor="middle" fill="white" fontSize="20" fontWeight="bold">
+                        <text x="100" y="78" textAnchor="middle" fill="white" className="text-[32px] xl:text-[26px]" fontWeight="bold" style={{ textShadow: '0 0 10px rgba(255,255,255,0.5)' }}>
                           {similarityScore}
                         </text>
                       </svg>
                     </div>
 
-                    {/* Input Field */}
-                    <input
-                      type="number"
-                      min="0"
-                      max="100"
-                      value={similarityScore}
-                      onChange={(e) => handleScoreChange(setSimilarityScore, e.target.value)}
-                      className="w-full px-2.5 py-1.5 mb-3 rounded-lg text-center font-nunito font-semibold text-sm text-white bg-white/10 border border-white/20 focus:outline-none focus:border-[#FFB703] transition-colors"
-                      placeholder="Enter 0-100"
-                    />
-
-                    {/* Genericness Container */}
+                    {/* Assessment Container - Expanded */}
                     <div
-                      className="w-full p-3"
+                      className="w-full p-3 flex-1 flex flex-col"
                       style={{
                         borderRadius: '12px',
                         border: '1.5px solid #171717',
                         background: 'rgba(24, 24, 24, 0.15)'
                       }}
                     >
-                      <div className="flex items-center justify-between mb-1.5">
-                        <h5 className="text-white font-nunito text-xs font-semibold">
-                          Genericness
+                      <div className="flex items-center justify-between mb-2">
+                        <h5 className="text-white font-nunito text-md font-semibold">
+                        Remarks
                         </h5>
                         <div className="transition-all duration-300">
-                          {similarityScore > 70 ? (
-                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#EF4444" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-all duration-300">
+                          {similarityScore > 50 ? (
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#EF4444" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="transition-all duration-300 xl:w-4 xl:h-4">
                               <polyline points="6 9 12 15 18 9"></polyline>
                             </svg>
                           ) : (
-                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-all duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="transition-all duration-300 xl:w-4 xl:h-4">
                               <polyline points="18 15 12 9 6 15"></polyline>
                             </svg>
                           )}
                         </div>
                       </div>
-                      <p className="text-white/70 font-nunito text-[10px] leading-snug">
-                        Trademark uniqueness, existing conflicts, and overall legal eligibility.
+                      
+                      {/* Reasoning as bullet point */}
+                      <div className="mb-2 flex items-start">
+                        <span className="text-[#00D9FF] mr-2 mt-0.5 flex-shrink-0 text-base xl:text-md">•</span>
+                        <p className="font-nunito text-sm leading-relaxed" style={{ 
+                          background: 'linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 100%)',
+                          WebkitBackgroundClip: 'text',
+                          WebkitTextFillColor: 'transparent',
+                          backgroundClip: 'text'
+                        }}>
+                          {analysisData.similarityReasoning}
+                        </p>
+                      </div>
+
+                      {/* Assessment text as bullet point */}
+                      <div className="flex items-start">
+                        <span className="text-[#00D9FF] mr-2 mt-0.5 flex-shrink-0 text-base xl:text-md">•</span>
+                        <p className="font-nunito text-sm leading-relaxed" style={{ 
+                          background: 'linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 100%)',
+                          WebkitBackgroundClip: 'text',
+                          WebkitTextFillColor: 'transparent',
+                          backgroundClip: 'text'
+                        }}>
+                        {analysisData.genericnessAssessment.similarity}
                       </p>
+                      </div>
                     </div>
                   </div>
 
                   {/* Column 3 - Class Probability */}
-                  <div className="flex flex-col items-center">
+                  <div className="flex flex-col items-center h-full">
                     <h4 className="text-white font-nunito text-sm md:text-base font-semibold mb-3">
                       Class Probability
                     </h4>
                     
                     {/* Curved Gauge */}
-                    <div className="relative w-32 h-16 mb-3">
-                      <svg viewBox="0 0 200 100" className="w-full h-full">
+                    <div className="relative w-40 h-20 mb-4">
+                      <svg viewBox="0 0 200 100" className="w-full h-full drop-shadow-lg">
+                        {/* Outer glow circle */}
+                        <circle cx="100" cy="90" r="85" fill="none" stroke="rgba(255, 183, 3, 0.1)" strokeWidth="2" />
+                        
                         {/* Background arc */}
                         <path
                           d="M 20 90 A 80 80 0 0 1 180 90"
                           fill="none"
-                          stroke="rgba(255, 255, 255, 0.1)"
-                          strokeWidth="16"
+                          stroke="rgba(255, 255, 255, 0.15)"
+                          strokeWidth="20"
                           strokeLinecap="round"
                         />
                         {/* Gradient arc */}
@@ -434,63 +621,82 @@ export default function Dashboard() {
                             <stop offset="50%" stopColor="#F59E0B" />
                             <stop offset="100%" stopColor="#10B981" />
                           </linearGradient>
+                          <filter id="glow3">
+                            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                            <feMerge>
+                              <feMergeNode in="coloredBlur"/>
+                              <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                          </filter>
                         </defs>
                         <path
                           d="M 20 90 A 80 80 0 0 1 180 90"
                           fill="none"
                           stroke="url(#gaugeGradient3)"
-                          strokeWidth="16"
+                          strokeWidth="20"
                           strokeLinecap="round"
                           strokeDasharray="251.2"
                           strokeDashoffset={calculateDashOffset(classScore)}
-                          style={{ transition: 'stroke-dashoffset 0.5s ease-in-out' }}
+                          style={{ transition: 'stroke-dashoffset 0.5s ease-in-out', filter: 'url(#glow3)' }}
                         />
                         {/* Center text */}
-                        <text x="100" y="75" textAnchor="middle" fill="white" fontSize="20" fontWeight="bold">
+                        <text x="100" y="78" textAnchor="middle" fill="white" className="text-[32px] xl:text-[26px]" fontWeight="bold" style={{ textShadow: '0 0 10px rgba(255,255,255,0.5)' }}>
                           {classScore}
                         </text>
                       </svg>
                     </div>
 
-                    {/* Input Field */}
-                    <input
-                      type="number"
-                      min="0"
-                      max="100"
-                      value={classScore}
-                      onChange={(e) => handleScoreChange(setClassScore, e.target.value)}
-                      className="w-full px-2.5 py-1.5 mb-3 rounded-lg text-center font-nunito font-semibold text-sm text-white bg-white/10 border border-white/20 focus:outline-none focus:border-[#FFB703] transition-colors"
-                      placeholder="Enter 0-100"
-                    />
-
-                    {/* Genericness Container */}
+                    {/* Assessment Container - Expanded */}
                     <div
-                      className="w-full p-3"
+                      className="w-full p-3 flex-1 flex flex-col"
                       style={{
                         borderRadius: '12px',
                         border: '1.5px solid #171717',
                         background: 'rgba(24, 24, 24, 0.15)'
                       }}
                     >
-                      <div className="flex items-center justify-between mb-1.5">
-                        <h5 className="text-white font-nunito text-xs font-semibold">
-                          Genericness
+                      <div className="flex items-center justify-between mb-2">
+                        <h5 className="text-white font-nunito text-md font-semibold">
+                          Remarks
                         </h5>
                         <div className="transition-all duration-300">
-                          {classScore < 30 ? (
-                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#EF4444" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-all duration-300">
+                          {classScore < 50 ? (
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#EF4444" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="transition-all duration-300 xl:w-4 xl:h-4">
                               <polyline points="6 9 12 15 18 9"></polyline>
                             </svg>
                           ) : (
-                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-all duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="transition-all duration-300 xl:w-4 xl:h-4">
                               <polyline points="18 15 12 9 6 15"></polyline>
                             </svg>
                           )}
                         </div>
                       </div>
-                      <p className="text-white/70 font-nunito text-[10px] leading-snug">
-                        Trademark uniqueness, existing conflicts, and overall legal eligibility.
+                      
+                      {/* Reasoning as bullet point */}
+                      <div className="mb-2 flex items-start">
+                        <span className="text-[#00D9FF] mr-2 mt-0.5 flex-shrink-0 text-base xl:text-md">•</span>
+                        <p className="font-nunito text-sm xl:text-md leading-relaxed xl:leading-snug" style={{ 
+                          background: 'linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 100%)',
+                          WebkitBackgroundClip: 'text',
+                          WebkitTextFillColor: 'transparent',
+                          backgroundClip: 'text'
+                        }}>
+                          {analysisData.classFitReasoning}
+                        </p>
+                      </div>
+
+                      {/* Assessment text as bullet point */}
+                      <div className="flex items-start">
+                        <span className="text-[#00D9FF] mr-2 mt-0.5 flex-shrink-0 text-base xl:text-md">•</span>
+                        <p className="font-nunito text-sm xl:text-md leading-relaxed xl:leading-snug" style={{ 
+                          background: 'linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 100%)',
+                          WebkitBackgroundClip: 'text',
+                          WebkitTextFillColor: 'transparent',
+                          backgroundClip: 'text'
+                        }}>
+                        {analysisData.genericnessAssessment.classFit}
                       </p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -506,7 +712,7 @@ export default function Dashboard() {
                     background: 'rgba(0, 0, 0, 0.26)'
                   }}
                 >
-                  <h3 className="text-white font-nunito text-base md:text-lg font-semibold">
+                  <h3 className="text-white font-nunito text-base md:text-lg xl:text-base font-semibold">
                     Key Factors
                   </h3>
                 </div>
@@ -519,13 +725,13 @@ export default function Dashboard() {
                     style={{
                       borderRadius: '12px',
                       border: '1.5px solid rgba(255, 255, 255, 0.15)',
-                      background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%)',
+                      background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.40) 0%, rgba(158, 143, 143, 0.4) 100%)',
                       backdropFilter: 'blur(13px)'
                     }}
                   >
                     {/* Icon */}
                     <div className="flex-shrink-0">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white xl:w-3 xl:h-3">
                         <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
                         <path d="M2 17l10 5 10-5"></path>
                         <path d="M2 12l10 5 10-5"></path>
@@ -533,11 +739,16 @@ export default function Dashboard() {
                     </div>
                     {/* Content */}
                     <div className="flex-1">
-                      <h4 className="text-white font-nunito text-[10px] font-semibold mb-0.5">
+                      <h4 className="text-white font-nunito text-xs font-semibold mb-0.5">
                         Brand Strength
                       </h4>
-                      <p className="text-white/80 font-nunito text-[8px] leading-tight">
-                        Strong unique brand identity
+                      <p className="font-nunito text-[11px] leading-snug" style={{ 
+                        background: 'linear-gradient(90deg,rgb(255, 255, 255) 0%,rgb(255, 255, 255) 100%)',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent',
+                        backgroundClip: 'text'  
+                      }}>
+                        {analysisData.keyFactors.brandStrength}
                       </p>
                     </div>
                   </div>
@@ -548,23 +759,28 @@ export default function Dashboard() {
                     style={{
                       borderRadius: '12px',
                       border: '1.5px solid rgba(255, 255, 255, 0.15)',
-                      background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%)',
+                      background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.40) 0%, rgba(158, 143, 143, 0.4) 100%)',
                       backdropFilter: 'blur(13px)'
                     }}
                   >
                     {/* Icon */}
                     <div className="flex-shrink-0">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white xl:w-3 xl:h-3">
                         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                       </svg>
                     </div>
                     {/* Content */}
                     <div className="flex-1">
-                      <h4 className="text-white font-nunito text-[10px] font-semibold mb-0.5">
+                        <h4 className="text-white font-nunito text-xs font-semibold mb-0.5">
                         Legal Risk
                       </h4>
-                      <p className="text-white/80 font-nunito text-[8px] leading-tight">
-                        Low risk of legal conflicts
+                      <p className="font-nunito text-[11px] leading-snug" style={{ 
+                        background: 'linear-gradient(90deg,rgb(255, 255, 255) 0%,rgb(255, 255, 255) 100%)',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent',
+                        backgroundClip: 'text'
+                      }}>
+                        {analysisData.keyFactors.legalRisk}
                       </p>
                     </div>
                   </div>
@@ -575,24 +791,31 @@ export default function Dashboard() {
                     style={{
                       borderRadius: '12px',
                       border: '1.5px solid rgba(255, 255, 255, 0.15)',
-                      background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%)',
-                      backdropFilter: 'blur(13px)'
+                      background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.40) 0%, rgba(158, 143, 143, 0.4) 100%)',
+                      backdropFilter: 'blur(13px)',
+                      minHeight: '60px',
+                      maxHeight: '80px'
                     }}
                   >
                     {/* Icon */}
                     <div className="flex-shrink-0">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white xl:w-3 xl:h-3">
                         <line x1="12" y1="1" x2="12" y2="23"></line>
                         <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
                       </svg>
                     </div>
                     {/* Content */}
                     <div className="flex-1">
-                      <h4 className="text-white font-nunito text-[10px] font-semibold mb-0.5">
+                      <h4 className="text-white font-nunito text-xs font-semibold mb-0.5">
                         Market Position
                       </h4>
-                      <p className="text-white/80 font-nunito text-[8px] leading-tight">
-                        Competitive advantage in market
+                      <p className="font-nunito text-[11px] leading-snug" style={{ 
+                        background: 'linear-gradient(90deg,rgb(255, 255, 255) 0%,rgb(255, 255, 255) 100%)',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent',
+                        backgroundClip: 'text'
+                      }}>
+                        {analysisData.keyFactors.marketPosition}
                       </p>
                     </div>
                   </div>
@@ -603,54 +826,367 @@ export default function Dashboard() {
                     style={{
                       borderRadius: '12px',
                       border: '1.5px solid rgba(255, 255, 255, 0.15)',
-                      background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%)',
+                      background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.40) 0%, rgba(158, 143, 143, 0.4) 100%)',
                       backdropFilter: 'blur(13px)'
                     }}
                   >
                     {/* Icon */}
                     <div className="flex-shrink-0">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white xl:w-3 xl:h-3">
                         <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
                         <polyline points="17 6 23 6 23 12"></polyline>
                       </svg>
                     </div>
                     {/* Content */}
                     <div className="flex-1">
-                      <h4 className="text-white font-nunito text-[10px] font-semibold mb-0.5">
+                      <h4 className="text-white font-nunito text-xs font-semibold mb-0.5">
                         Registration Speed
                       </h4>
-                      <p className="text-white/80 font-nunito text-[8px] leading-tight">
-                        Fast approval process expected
+                      <p className="font-nunito text-[11px] leading-snug" style={{ 
+                        background: 'linear-gradient(90deg,rgb(255, 255, 255) 0%,rgb(255, 255, 255) 100%)',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent',
+                        backgroundClip: 'text'
+                      }}>
+                        {analysisData.keyFactors.registrationSpeed}
                       </p>
                     </div>
                   </div>
 
-                  {/* Row 5 - Protection Level */}
-                  <div
-                    className="p-2.5 flex items-center gap-2.5 flex-1"
+                
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile: Your Trademark Health Score Heading */}
+          <div
+            className="block md:hidden w-full px-4 py-2.5 mb-3"
+            style={{
+              borderRadius: '5px',
+              background: 'rgba(0, 0, 0, 0.44)'
+            }}
+          >
+            <h3 className="text-white font-nunito text-sm font-semibold text-left">
+              Your Trademark Health Score
+            </h3>
+          </div>
+
+          {/* Metrics Container - Mobile Version */}
+          <div
+            className="block md:hidden w-full px-4 py-5 space-y-5 relative"
                     style={{
-                      borderRadius: '12px',
-                      border: '1.5px solid rgba(255, 255, 255, 0.15)',
-                      background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%)',
-                      backdropFilter: 'blur(13px)'
-                    }}
-                  >
-                    {/* Icon */}
+              borderRadius: '24px',
+              background: 'rgba(255, 255, 255, 0.10)',
+              boxShadow: '0 0 16px 0 rgba(0, 0, 0, 0.10) inset, 0 0 16px 5px rgba(255, 255, 255, 0.20) inset'
+            }}
+          >
+            {/* Asterisk in top right */}
+            <span className="absolute top-3 right-4 text-red-500 font-nunito text-lg font-bold">*</span>
+            {/* Mobile: Trademark Registrability */}
+            <div className="space-y-3">
+              <h4 className="text-white font-nunito text-sm font-semibold text-center">
+                Trademark Registrability
+              </h4>
+              <div className="grid grid-cols-2 gap-3">
+                {/* Gauge */}
+                <div className="flex items-center justify-center">
+                  <div className="relative w-28 h-14">
+                    <svg viewBox="0 0 200 100" className="w-full h-full drop-shadow-lg">
+                      <circle cx="100" cy="90" r="85" fill="none" stroke="rgba(255, 183, 3, 0.1)" strokeWidth="2" />
+                      <path d="M 20 90 A 80 80 0 0 1 180 90" fill="none" stroke="rgba(255, 255, 255, 0.15)" strokeWidth="20" strokeLinecap="round" />
+                      <defs>
+                        <linearGradient id="mobileGaugeGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+                          <stop offset="0%" stopColor="#EF4444" />
+                          <stop offset="50%" stopColor="#F59E0B" />
+                          <stop offset="100%" stopColor="#10B981" />
+                        </linearGradient>
+                        <filter id="mobileGlow1">
+                          <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                          <feMerge>
+                            <feMergeNode in="coloredBlur"/>
+                            <feMergeNode in="SourceGraphic"/>
+                          </feMerge>
+                        </filter>
+                      </defs>
+                      <path d="M 20 90 A 80 80 0 0 1 180 90" fill="none" stroke="url(#mobileGaugeGradient1)" strokeWidth="20" strokeLinecap="round" strokeDasharray="251.2" strokeDashoffset={calculateDashOffset(registrabilityScore)} style={{ transition: 'stroke-dashoffset 0.5s ease-in-out', filter: 'url(#mobileGlow1)' }} />
+                      <text x="100" y="78" textAnchor="middle" fill="white" fontSize="24" fontWeight="bold" style={{ textShadow: '0 0 10px rgba(255,255,255,0.5)' }}>
+                        {registrabilityScore}
+                      </text>
+                    </svg>
+                  </div>
+                </div>
+                {/* Assessment Container */}
+                <div className="p-2" style={{ borderRadius: '8px', border: '1.5px solid #171717', background: 'rgba(24, 24, 24, 0.15)' }}>
+                  <div className="flex items-center justify-between mb-1.5">
+                    <h5 className="text-white font-nunito text-[10px] font-semibold">Remarks</h5>
+                    <div>
+                      {registrabilityScore < 50 ? (
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#EF4444" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                          <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                      ) : (
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                          <polyline points="18 15 12 9 6 15"></polyline>
+                        </svg>
+                      )}
+                    </div>
+                  </div>
+                  <div className="space-y-1.5">
+                    <div className="flex items-start">
+                      <span className="text-[#00D9FF] mr-1 mt-0.5 flex-shrink-0 text-[10px]">•</span>
+                      <p className="font-nunito text-[9px] leading-tight" style={{ background: 'linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+                        {analysisData.registrabilityReasoning}
+                      </p>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="text-[#00D9FF] mr-1 mt-0.5 flex-shrink-0 text-[10px]">•</span>
+                      <p className="font-nunito text-[9px] leading-tight" style={{ background: 'linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+                        {analysisData.genericnessAssessment.registrability}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Mobile: Similarity Rate */}
+            <div className="space-y-3">
+              <h4 className="text-white font-nunito text-sm font-semibold text-center">
+                Similarity Rate
+              </h4>
+              <div className="grid grid-cols-2 gap-3">
+                {/* Gauge */}
+                <div className="flex items-center justify-center">
+                  <div className="relative w-28 h-14">
+                    <svg viewBox="0 0 200 100" className="w-full h-full drop-shadow-lg">
+                      <circle cx="100" cy="90" r="85" fill="none" stroke="rgba(255, 183, 3, 0.1)" strokeWidth="2" />
+                      <path d="M 20 90 A 80 80 0 0 1 180 90" fill="none" stroke="rgba(255, 255, 255, 0.15)" strokeWidth="20" strokeLinecap="round" />
+                      <defs>
+                        <linearGradient id="mobileGaugeGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+                          <stop offset="0%" stopColor="#10B981" />
+                          <stop offset="50%" stopColor="#F59E0B" />
+                          <stop offset="100%" stopColor="#EF4444" />
+                        </linearGradient>
+                        <filter id="mobileGlow2">
+                          <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                          <feMerge>
+                            <feMergeNode in="coloredBlur"/>
+                            <feMergeNode in="SourceGraphic"/>
+                          </feMerge>
+                        </filter>
+                      </defs>
+                      <path d="M 20 90 A 80 80 0 0 1 180 90" fill="none" stroke="url(#mobileGaugeGradient2)" strokeWidth="20" strokeLinecap="round" strokeDasharray="251.2" strokeDashoffset={calculateDashOffset(similarityScore)} style={{ transition: 'stroke-dashoffset 0.5s ease-in-out', filter: 'url(#mobileGlow2)' }} />
+                      <text x="100" y="78" textAnchor="middle" fill="white" fontSize="24" fontWeight="bold" style={{ textShadow: '0 0 10px rgba(255,255,255,0.5)' }}>
+                        {similarityScore}
+                      </text>
+                    </svg>
+                  </div>
+                </div>
+                {/* Assessment Container */}
+                <div className="p-2" style={{ borderRadius: '8px', border: '1.5px solid #171717', background: 'rgba(24, 24, 24, 0.15)' }}>
+                  <div className="flex items-center justify-between mb-1.5">
+                    <h5 className="text-white font-nunito text-[10px] font-semibold">Assessment</h5>
+                    <div>
+                      {similarityScore > 50 ? (
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#EF4444" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                          <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                      ) : (
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                          <polyline points="18 15 12 9 6 15"></polyline>
+                        </svg>
+                      )}
+                    </div>
+                  </div>
+                  <div className="space-y-1.5">
+                    <div className="flex items-start">
+                      <span className="text-[#00D9FF] mr-1 mt-0.5 flex-shrink-0 text-[10px]">•</span>
+                      <p className="font-nunito text-[9px] leading-tight" style={{ background: 'linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+                        {analysisData.similarityReasoning}
+                      </p>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="text-[#00D9FF] mr-1 mt-0.5 flex-shrink-0 text-[10px]">•</span>
+                      <p className="font-nunito text-[9px] leading-tight" style={{ background: 'linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+                        {analysisData.genericnessAssessment.similarity}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Mobile: Class Probability */}
+            <div className="space-y-3">
+              <h4 className="text-white font-nunito text-sm font-semibold text-center">
+                Class Probability
+              </h4>
+              <div className="grid grid-cols-2 gap-3">
+                {/* Gauge */}
+                <div className="flex items-center justify-center">
+                  <div className="relative w-28 h-14">
+                    <svg viewBox="0 0 200 100" className="w-full h-full drop-shadow-lg">
+                      <circle cx="100" cy="90" r="85" fill="none" stroke="rgba(255, 183, 3, 0.1)" strokeWidth="2" />
+                      <path d="M 20 90 A 80 80 0 0 1 180 90" fill="none" stroke="rgba(255, 255, 255, 0.15)" strokeWidth="20" strokeLinecap="round" />
+                      <defs>
+                        <linearGradient id="mobileGaugeGradient3" x1="0%" y1="0%" x2="100%" y2="0%">
+                          <stop offset="0%" stopColor="#EF4444" />
+                          <stop offset="50%" stopColor="#F59E0B" />
+                          <stop offset="100%" stopColor="#10B981" />
+                        </linearGradient>
+                        <filter id="mobileGlow3">
+                          <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                          <feMerge>
+                            <feMergeNode in="coloredBlur"/>
+                            <feMergeNode in="SourceGraphic"/>
+                          </feMerge>
+                        </filter>
+                      </defs>
+                      <path d="M 20 90 A 80 80 0 0 1 180 90" fill="none" stroke="url(#mobileGaugeGradient3)" strokeWidth="20" strokeLinecap="round" strokeDasharray="251.2" strokeDashoffset={calculateDashOffset(classScore)} style={{ transition: 'stroke-dashoffset 0.5s ease-in-out', filter: 'url(#mobileGlow3)' }} />
+                      <text x="100" y="78" textAnchor="middle" fill="white" fontSize="24" fontWeight="bold" style={{ textShadow: '0 0 10px rgba(255,255,255,0.5)' }}>
+                        {classScore}
+                      </text>
+                    </svg>
+                  </div>
+                </div>
+                {/* Assessment Container */}
+                <div className="p-2" style={{ borderRadius: '8px', border: '1.5px solid #171717', background: 'rgba(24, 24, 24, 0.15)' }}>
+                  <div className="flex items-center justify-between mb-1.5">
+                    <h5 className="text-white font-nunito text-[10px] font-semibold">Assessment</h5>
+                    <div>
+                      {classScore < 50 ? (
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#EF4444" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                          <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                      ) : (
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                          <polyline points="18 15 12 9 6 15"></polyline>
+                        </svg>
+                      )}
+                    </div>
+                  </div>
+                  <div className="space-y-1.5">
+                    <div className="flex items-start">
+                      <span className="text-[#00D9FF] mr-1 mt-0.5 flex-shrink-0 text-[10px]">•</span>
+                      <p className="font-nunito text-[9px] leading-tight" style={{ background: 'linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+                        {analysisData.classFitReasoning}
+                      </p>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="text-[#00D9FF] mr-1 mt-0.5 flex-shrink-0 text-[10px]">•</span>
+                      <p className="font-nunito text-[9px] leading-tight" style={{ background: 'linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+                        {analysisData.genericnessAssessment.classFit}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        {/* Mobile: Key Factors - Separate Container */}
+        <div className="mb-10 block md:hidden">
+          {/* Mobile: Key Factors Heading */}
+          <div
+            className="w-full px-4 py-2.5 mb-3"
+            style={{
+              borderRadius: '5px',
+              background: 'rgba(0, 0, 0, 0.44)'
+            }}
+          >
+            <h3 className="text-white font-nunito text-sm font-semibold text-left">
+              Key Factors
+            </h3>
+          </div>
+
+          <div
+            className="w-full px-4 py-5 relative"
+            style={{
+              borderRadius: '24px',
+              background: 'rgba(255, 255, 255, 0.10)',
+              boxShadow: '0 0 16px 0 rgba(0, 0, 0, 0.10) inset, 0 0 16px 5px rgba(255, 255, 255, 0.20) inset'
+            }}
+          >
+            {/* Asterisk in top right */}
+            <span className="absolute top-3 right-4 text-red-500 font-nunito text-lg font-bold">*</span>
+            
+            <div className="space-y-2">
+              {/* Brand Strength */}
+              <div className="flex items-start gap-2 p-2" style={{ borderRadius: '8px', border: '1.5px solid rgba(255, 255, 255, 0.15)', background: 'linear-gradient(90deg, rgba(224, 163, 10, 0.4) 0%, rgba(255, 255, 255, 0.40) 100%)', backdropFilter: 'blur(13px)' }}>
                     <div className="flex-shrink-0">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                    <path d="M2 17l10 5 10-5"></path>
+                    <path d="M2 12l10 5 10-5"></path>
+                  </svg>
+                </div>
+                <div className="flex-1">
+                  <h5 className="text-white font-nunito text-[10px] font-semibold mb-0.5">Brand Strength</h5>
+                  <p className="font-nunito text-[9px] leading-tight" style={{ background: 'linear-gradient(90deg,rgb(0, 0, 0) 0%,rgb(0, 0, 0) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+                    {analysisData.keyFactors.brandStrength}
+                  </p>
+                </div>
+              </div>
+              {/* Legal Risk */}
+              <div className="flex items-start gap-2 p-2" style={{ borderRadius: '8px', border: '1.5px solid rgba(255, 255, 255, 0.15)', background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%)', backdropFilter: 'blur(13px)' }}>
+                <div className="flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                </div>
+                <div className="flex-1">
+                  <h5 className="text-white font-nunito text-[10px] font-semibold mb-0.5">Legal Risk</h5>
+                  <p className="font-nunito text-[9px] leading-tight" style={{ background: 'linear-gradient(90deg,rgb(5, 5, 5) 0%,rgb(0, 0, 0) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+                    {analysisData.keyFactors.legalRisk}
+                  </p>
+                </div>
+              </div>
+              {/* Market Position */}
+              <div className="flex items-start gap-2 p-2" style={{ borderRadius: '8px', border: '1.5px solid rgba(255, 255, 255, 0.15)', background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%)', backdropFilter: 'blur(13px)' }}>
+                <div className="flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                    <line x1="12" y1="1" x2="12" y2="23"></line>
+                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                  </svg>
+                </div>
+                <div className="flex-1">
+                  <h5 className="text-white font-nunito text-[10px] font-semibold mb-0.5">Market Position</h5>
+                  <p className="font-nunito text-[9px] leading-tight" style={{ background: 'linear-gradient(90deg,rgb(0, 0, 0) 0%,rgb(0, 0, 0) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+                    {analysisData.keyFactors.marketPosition}
+                  </p>
+                </div>
+              </div>
+              {/* Registration Speed */}
+              <div className="flex items-start gap-2 p-2" style={{ borderRadius: '8px', border: '1.5px solid rgba(255, 255, 255, 0.15)', background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%)', backdropFilter: 'blur(13px)' }}>
+                <div className="flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                    <polyline points="17 6 23 6 23 12"></polyline>
+                  </svg>
+                </div>
+                <div className="flex-1">
+                  <h5 className="text-white font-nunito text-[10px] font-semibold mb-0.5">Registration Speed</h5>
+                  <p className="font-nunito text-[9px] leading-tight" style={{ background: 'linear-gradient(90deg,rgb(0, 0, 0) 0%,rgb(0, 0, 0) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+                    {analysisData.keyFactors.registrationSpeed}
+                  </p>
+                </div>
+              </div>
+              {/* Protection Level */}
+              <div className="flex items-start gap-2 p-2" style={{ borderRadius: '8px', border: '1.5px solid rgba(255, 255, 255, 0.15)', background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%)', backdropFilter: 'blur(13px)' }}>
+                <div className="flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
                         <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
                         <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
                       </svg>
                     </div>
-                    {/* Content */}
                     <div className="flex-1">
-                      <h4 className="text-white font-nunito text-[10px] font-semibold mb-0.5">
-                        Protection Level
-                      </h4>
-                      <p className="text-white/80 font-nunito text-[8px] leading-tight">
-                        Comprehensive brand protection coverage
+                  <h5 className="text-white font-nunito text-[10px] font-semibold mb-0.5">Protection Level</h5>
+                  <p className="font-nunito text-[9px] leading-tight" style={{ background: 'linear-gradient(90deg,rgb(0, 0, 0) 0%,rgb(6, 6, 6) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+                        {analysisData.keyFactors.protectionLevel}
                       </p>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -659,16 +1195,16 @@ export default function Dashboard() {
         </div>
 
         {/* Top Heading */}
-        <h1 className="text-white font-nunito text-lg md:text-2xl lg:text-3xl font-bold text-center mb-10">
+      <h1 className="hidden md:block text-white font-nunito text-lg md:text-2xl lg:text-3xl xl:text-2xl font-bold text-center mb-10">
           Register Today and get your Trademark in <span style={{ color: '#FFB703' }}>9 months</span>
         </h1>
 
         {/* Main Content Layout */}
-        <div className="relative">
+        <div className="relative flex justify-center">
           {/* Two Column Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_425px] gap-6 lg:gap-10 items-start mb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_425px] gap-0 md:gap-6 lg:gap-10 items-start mb-12 w-full max-w-7xl">
             {/* Left Column */}
-            <div className="space-y-6">
+            <div className="space-y-4 md:space-y-6 md:mx-auto w-full">
             {/* Google Trust Rating Card */}
             <div
               className="flex p-3 md:p-5 justify-center items-center rounded-[16px] border-2 border-white/[0.15] backdrop-blur-[13px]"
@@ -747,7 +1283,7 @@ export default function Dashboard() {
 
             {/* Why Trademark with IPR Karo Section */}
             <div className="space-y-5">
-              <h3 className="text-white font-nunito text-base md:text-xl font-medium">
+              <h3 className="text-white font-nunito text-base md:text-xl font-medium text-center md:text-left">
                 Why Trademark with IPRKaro ?
               </h3>
 
@@ -805,8 +1341,8 @@ export default function Dashboard() {
             </div>
 
             {/* Get a Guaranteed Trademark on Section */}
-            <div className="mt-12 mb-6">
-              <div className="flex flex-col lg:flex-row items-start gap-8">
+            <div className="mt-0 md:mt-12 mb-6 w-full">
+              <div className="flex flex-col lg:flex-row items-center md:items-start gap-0 md:gap-8">
                 {/* Left Side - Circle and Line - Hidden on mobile, visible on desktop */}
                 <div className="hidden md:flex justify-center lg:justify-start">
                   <div className="relative">
@@ -837,50 +1373,50 @@ export default function Dashboard() {
                 </div>
 
                 {/* Right Side - Heading and Containers */}
-                <div className="flex-1 space-y-6">
+                <div className="w-full md:flex-1 space-y-6">
                   {/* Heading */}
-                  <div className="text-center lg:text-left">
+                  <div className="text-center md:text-left">
                     <h3 className="text-white font-nunito text-sm md:text-base lg:text-xl font-medium">
-                      Get a Guaranteed Trademark on
+                      Get a Guaranteed Trademark on<span className="text-red-500">*</span>
                     </h3>
                   </div>
 
                   {/* Timeline Containers - Single Column, 2 Rows */}
-                  <div className="space-y-3 mt-10">
+                  <div className="space-y-3 mt-10 w-full flex flex-col">
                     {/* First Container - Filing Date */}
                     <div
-                      className="relative p-3 rounded-xl w-full max-w-[400px]"
+                      className="relative p-3 rounded-xl w-full md:max-w-[400px]"
                       style={{
                         background: 'transparent',
                         border: '1.5px solid rgba(128, 128, 128, 0.4)',
                         borderRadius: '13px'
                       }}
                     >
-                      <div className="flex items-center justify-between px-8">
+                      <div className="flex items-center justify-between px-4 md:px-8">
                         <div className="text-white font-nunito text-xs md:text-sm font-medium">
                           Filing Date
                         </div>
                         <div className="text-white font-nunito text-[10px] md:text-xs opacity-90">
-                          Apr 12, 2025
+                          {getFilingDate()}
                         </div>
                       </div>
                     </div>
 
                     {/* Second Container - Trademark Estimated Date */}
                     <div
-                      className="relative p-3 rounded-xl w-full max-w-[400px]"
+                      className="relative p-3 rounded-xl w-full md:max-w-[400px]"
                       style={{
                         background: 'transparent',
                         border: '1.5px solid rgba(128, 128, 128, 0.4)',
                         borderRadius: '13px'
                       }}
                     >
-                      <div className="flex items-center justify-between px-8">
+                      <div className="flex items-center justify-between px-4 md:px-8">
                         <div className="text-white font-nunito text-xs md:text-sm font-medium">
                           Trademark Estimated Date
                         </div>
                         <div className="text-white font-nunito text-[10px] md:text-xs opacity-90">
-                          Dec 12, 2025
+                          {getEstimatedDate()}
                         </div>
                       </div>
                     </div>
@@ -891,11 +1427,39 @@ export default function Dashboard() {
 
             {/* Trademark Requirements Section */}
             <div className="space-y-5">
-              <h3 className="text-white font-nunito text-base md:text-xl font-medium">
+              <h3 className="text-white font-nunito text-base md:text-xl font-medium text-center md:text-left">
                 Trademark Requirements
               </h3>
 
-              <div className="grid grid-cols-2 gap-3">
+              {/* Mobile Layout */}
+              <div className="md:hidden w-full">
+                <div
+                  className="w-full rounded-[5px] p-4"
+                  style={{
+                    background: 'linear-gradient(145deg, rgba(12, 0, 43, 0.20) 6.6%, rgba(255, 183, 3, 0.20) 120.24%), rgba(0, 0, 0, 0.78)',
+                    boxShadow: '0 0 20px 1px rgba(255, 255, 255, 0.10) inset'
+                  }}
+                >
+                  <div className="flex flex-col gap-3">
+                    {trademarkRequirements.map((requirement, index) => (
+                      <div
+                        key={index}
+                        className="flex items-center gap-3"
+                      >
+                        <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center opacity-60">
+                          {requirement.icon}
+                        </div>
+                        <h3 className="text-white font-nunito text-[14px] font-medium leading-[14px] break-words flex-1">
+                          {requirement.text}
+                        </h3>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Desktop Layout */}
+              <div className="hidden md:grid grid-cols-2 gap-3">
                 {trademarkRequirements.map((requirement, index) => (
                   <div
                     key={index}
@@ -920,7 +1484,7 @@ export default function Dashboard() {
 
             {/* Guidelines Section */}
             <div className="space-y-5">
-              <h3 className="text-white font-nunito text-base md:text-xl font-medium">
+              <h3 className="text-white font-nunito text-base md:text-xl font-medium text-center md:text-left">
                 We work with the Guidelines of
               </h3>
 
@@ -1035,7 +1599,7 @@ export default function Dashboard() {
             {/* Right Column - Pricing Card */}
             <div className="hidden lg:block sticky top-24 ml-40" style={{ zoom: 0.68 }}>
             <div
-              className="relative flex flex-col p-4 md:p-5 lg:p-6 w-full max-w-full md:max-w-[425px] mx-auto"
+              className="relative flex flex-col p-4 md:p-5 lg:p-6 w-full max-w-full md:max-w-[505px] mx-auto"
               style={{
                 borderRadius: '24px',
                 background: 'rgba(255, 255, 255, 0.10)',
@@ -1050,7 +1614,7 @@ export default function Dashboard() {
                   background: 'rgba(0, 0, 0, 0.26)'
                 }}
               >
-                <h3 className="text-white font-nunito font-medium text-base md:text-lg leading-[50px]">
+                <h3 className="text-white font-nunito font-medium text-base md:text-2xl leading-[50px]">
                   Get Your Trademark Registered
                 </h3>
               </div>
@@ -1062,31 +1626,31 @@ export default function Dashboard() {
                   background: 'transparent'
                 }}
               >
-                <h4 className="text-white font-nunito font-medium text-base md:text-lg leading-[16px] mb-3 text-center">
+                <h4 className="text-white font-nunito font-medium text-base md:text-2xl leading-[16px] mb-5 text-center">
                   Price Breakdown
                 </h4>
 
                 <div className="space-y-2.5">
                   <div className="flex justify-between items-center py-1.5 border-b border-gray-400">
-                    <span className="text-white font-nunito text-sm md:text-base opacity-90">Government Fee</span>
-                    <span className="text-white font-nunito text-sm md:text-base">₹4,500</span>
+                    <span className="text-white font-nunito text-sm md:text-xl opacity-90">Government Fee</span>
+                    <span className="text-white font-nunito text-sm md:text-xl">₹4,500</span>
                   </div>
                   <div className="flex justify-between items-center py-1.5 border-b border-gray-400">
-                    <span className="text-white font-nunito text-sm md:text-base opacity-90">Professional Fee</span>
-                    <span className="text-white font-nunito text-sm md:text-base">₹2,500</span>
+                    <span className="text-white font-nunito text-sm md:text-xl opacity-90">Professional Fee</span>
+                    <span className="text-white font-nunito text-sm md:text-xl">₹2,500</span>
                   </div>
                   <div className="flex justify-between items-center py-1.5 border-b border-gray-400">
-                    <span className="text-white font-nunito text-sm md:text-base opacity-90">GST (18%)</span>
-                    <span className="text-white font-nunito text-sm md:text-base">₹1,260</span>
+                    <span className="text-white font-nunito text-sm md:text-xl opacity-90">GST (18%)</span>
+                    <span className="text-white font-nunito text-sm md:text-xl">₹1,260</span>
                   </div>
                   <div className="flex justify-between items-center py-2.5 font-semibold">
-                    <span className="text-white font-nunito text-base md:text-lg">Total</span>
-                    <span className="text-white font-nunito text-base md:text-lg">₹8,260</span>
+                    <span className="text-white font-nunito text-base md:text-xl">Total</span>
+                    <span className="text-white font-nunito text-base md:text-xl">₹8,260</span>
                   </div>
 
                   {/* Start Registration Button */}
                   <button
-                    className="w-full py-2.5 px-3 rounded-lg font-nunito font-semibold text-base md:text-lg transition-all duration-300 hover:scale-105 mt-3"
+                    className="w-full py-2.5 px-3 rounded-lg font-nunito font-semibold text-base md:text-2xl transition-all duration-300 hover:scale-105 mt-3"
                     style={{
                       background: '#FFB703',
                       boxShadow: '0 0 16px 0 #000 inset',
@@ -1100,7 +1664,7 @@ export default function Dashboard() {
 
               {/* Our Plans Section */}
               <div className="flex-1 space-y-3">
-                <h4 className="text-white font-nunito font-medium text-base md:text-lg leading-[20px] mb-5 text-center">
+                <h4 className="text-white font-nunito font-medium text-base md:text-2xl leading-[20px] mb-5 text-center">
                   Our Plans
                 </h4>
 
@@ -1116,7 +1680,7 @@ export default function Dashboard() {
                         WebkitBackdropFilter: 'blur(8px)'
                       }}
                     >
-                      <span className="text-xs md:text-sm">{plan.name} - {plan.price}</span>
+                      <span className="text-xs md:text-lg">{plan.name} - {plan.price}</span>
                       <FontAwesomeIcon
                         icon={faChevronDown}
                         className={`w-3 h-3 transition-transform duration-300 ${
@@ -1143,14 +1707,14 @@ export default function Dashboard() {
                       >
                         {/* Plan Header */}
                         <div className="text-center mb-5">
-                          <h3 className="text-white font-nunito text-base md:text-lg font-semibold mb-1.5">
+                          <h3 className="text-white font-nunito text-base md:text-2xl font-semibold mb-1.5">
                             {plan.name}
                           </h3>
                           <div className="flex items-center justify-center gap-3 mb-3">
-                            <span className="text-white font-nunito text-xs md:text-sm opacity-80">{plan.description}</span>
+                            <span className="text-white font-nunito text-xs md:text-lg opacity-80">{plan.description}</span>
                           </div>
                           <div className="text-right">
-                            <span className="text-white font-nunito font-bold text-xl md:text-2xl">
+                            <span className="text-white font-nunito font-bold text-base md:text-2xl">
                               {plan.price}
                             </span>
                           </div>
@@ -1161,7 +1725,7 @@ export default function Dashboard() {
                           {plan.features.map((feature, index) => (
                             <div key={index} className="flex items-start gap-2.5">
                               <i className="fas fa-check text-green-400 mt-0.5 flex-shrink-0 text-xs"></i>
-                              <span className="text-white font-nunito text-xs md:text-sm leading-relaxed">
+                              <span className="text-white font-nunito text-xs md:text-lg leading-relaxed">
                                 {feature}
                               </span>
                             </div>
@@ -1170,7 +1734,7 @@ export default function Dashboard() {
 
                         {/* Action Button */}
                         <button
-                          className="w-full py-2.5 px-3 rounded-lg font-nunito font-semibold text-xs md:text-sm transition-all duration-300 hover:scale-105"
+                          className="w-full py-2.5 px-3 rounded-lg font-nunito font-semibold text-xs md:text-2xl transition-all duration-300 hover:scale-105"
                           style={{
                             background: '#1345C3',
                             boxShadow: '0 0 16px 0 #000 inset',
@@ -1205,7 +1769,7 @@ export default function Dashboard() {
         </div>
 
         <div className="container mx-auto px-4 lg:px-6 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-8 items-start">
+          <div className="grid lg:grid-cols-2 gap-8 items-start max-w-7xl mx-auto">
             
             {/* Left Section - Questions */}
             <div className="space-y-6 flex flex-col justify-start">
@@ -1299,8 +1863,363 @@ export default function Dashboard() {
           </div>
         </div>
       </section>
-    </div>
+
+      {/* Mobile Bottom Overlay - Only visible on mobile */}
+      <div
+        className="fixed bottom-0 left-0 right-0 z-50 md:hidden"
+        style={{
+          background: '#0C002B',
+          boxShadow: '0 0 12.8px 1px rgba(255, 255, 255, 0.13) inset'
+        }}
+      >
+        <div className="container mx-auto px-3 py-3">
+          <div className="flex items-center justify-between gap-3">
+            {/* Left Side - Pay Now Text */}
+            <div className="flex-1">
+              <span className="text-white font-nunito font-semibold text-base">
+                Pay Now ₹2,999
+              </span>
+            </div>
+
+            {/* Right Side - Start Registration Button */}
+            <div className="flex-1 flex justify-end">
+              <button
+                onClick={() => setShowMobilePopup(true)}
+                className="px-4 py-2 font-nunito font-semibold text-base text-[#0C002B] transition-all duration-300 hover:scale-105"
+                style={{
+                  borderRadius: '6px',
+                  background: '#FFB703'
+                }}
+              >
+                Start Registration
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Popup - Shows desktop right section content */}
+      {showMobilePopup && (
+        <div className="fixed inset-0 z-[60] md:hidden">
+          {/* Backdrop */}
+          <div
+            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+            onClick={() => setShowMobilePopup(false)}
+          />
+
+          {/* Popup Content */}
+          <div className="absolute bottom-0 left-0 right-0 bg-[#0C002B] rounded-t-xl max-h-[80vh] overflow-y-auto">
+            {/* Close Button */}
+            <div className="flex justify-center pt-2">
+              <button
+                onClick={() => setShowMobilePopup(false)}
+                className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center"
+              >
+                <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+
+            {/* Popup Content */}
+            <div className="px-3 py-2 space-y-3">
+              {/* Main Card Container */}
+              <div
+                className="relative flex flex-col p-3 w-full mx-auto"
+                style={{
+                  borderRadius: '16px',
+                  background: 'rgba(255, 255, 255, 0.10)',
+                  boxShadow: '0 0 20px 0 rgba(0, 0, 0, 0.10) inset, 0 0 20px 6px rgba(255, 255, 255, 0.20) inset',
+                  minHeight: 'auto'
+                }}
+              >
+                {/* "Get Your Trademark Registered" Heading Container */}
+                <div
+                  className="mb-3 p-2 rounded-[12px] text-center relative"
+                  style={{
+                    background: 'rgba(0, 0, 0, 0.26)'
+                  }}
+                >
+                  <h3
+                    className="text-white font-nunito font-medium text-sm"
+                  >
+                    Get Your Trademark Registered
+                  </h3>
+                </div>
+
+                {/* Price Breakdown Section */}
+                <div
+                  className="mb-4 p-2 rounded-[12px] w-full"
+                  style={{
+                    background: 'transparent'
+                  }}
+                >
+                  <h4
+                    className="text-white font-nunito font-medium text-xs mb-2 text-center"
+                  >
+                    Price Breakdown
+                  </h4>
+
+                  <div className="space-y-1.5">
+                    <div className="flex justify-between items-center py-1 border-b border-gray-400">
+                      <span className="text-white font-nunito text-[10px] opacity-90">Government Fee</span>
+                      <span className="text-white font-nunito text-[10px]">₹4,500</span>
+                    </div>
+                    <div className="flex justify-between items-center py-1 border-b border-gray-400">
+                      <span className="text-white font-nunito text-[10px] opacity-90">Professional Fee</span>
+                      <span className="text-white font-nunito text-[10px]">₹2,500</span>
+                    </div>
+                    <div className="flex justify-between items-center py-1 border-b border-gray-400">
+                      <span className="text-white font-nunito text-[10px] opacity-90">GST (18%)</span>
+                      <span className="text-white font-nunito text-[10px]">₹1,260</span>
+                    </div>
+                    <div className="flex justify-between items-center py-1.5 font-semibold">
+                      <span className="text-white font-nunito text-xs">Total</span>
+                      <span className="text-white font-nunito text-xs">₹8,260</span>
+                    </div>
+
+                    {/* Start Registration Button */}
+                    <button
+                      className="w-full py-2 px-3 rounded-lg font-nunito font-semibold text-xs transition-all duration-300 hover:scale-105 mt-2"
+                      style={{
+                        background: '#FFB703',
+                        boxShadow: '0 0 20px 0 #000 inset',
+                        color: '#0C002B'
+                      }}
+                    >
+                      Start Registration
+                    </button>
+                  </div>
+                </div>
+
+                {/* Our Plans Section - Expandable Dropdowns */}
+                <div className="flex-1 space-y-2">
+                  <h4
+                    className="text-white font-nunito font-medium text-xs mb-2 text-center"
+                  >
+                    Our Plans
+                  </h4>
+
+                  {/* Display all three plans as expandable dropdowns */}
+                  {plans.map((plan) => (
+                    <div key={plan.id} className="mb-2">
+                      {/* Plan Dropdown Header - Clickable */}
+                      <div
+                        onClick={() => togglePlan(plan.id)}
+                        className="w-full p-2 rounded-lg text-white font-nunito font-medium text-[10px] border border-white/20 cursor-pointer hover:border-white/40 transition-all duration-300 flex items-center justify-between"
+                        style={{
+                          background: 'rgba(255, 255, 255, 0.05)',
+                          backdropFilter: 'blur(10px)',
+                          WebkitBackdropFilter: 'blur(10px)'
+                        }}
+                      >
+                        <span className="text-[9px] leading-tight">{plan.name} - {plan.price}</span>
+                        <FontAwesomeIcon
+                          icon={faChevronDown}
+                          className={`w-2.5 h-2.5 transition-transform duration-300 flex-shrink-0 ml-1 ${
+                            expandedPlan === plan.id ? 'rotate-180' : 'rotate-0'
+                          }`}
+                        />
+                      </div>
+
+                      {/* Plan Card - Only visible when expanded */}
+                      <div
+                        className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                          expandedPlan === plan.id ? 'max-h-[1000px] opacity-100 mt-2' : 'max-h-0 opacity-0'
+                        }`}
+                      >
+                        <div
+                          className="relative p-2.5 rounded-lg transition-all duration-300"
+                          style={{
+                            background: 'rgba(255, 255, 255, 0.10)',
+                            backdropFilter: 'blur(16px)',
+                            WebkitBackdropFilter: 'blur(16px)',
+                            border: plan.highlighted ? '1px solid #1345C3' : 'none',
+                            boxShadow: '0 0 20px 0 rgba(0, 0, 0, 0.10) inset, inset 0 0 20px rgba(255, 255, 255, 0.1)'
+                          }}
+                        >
+                          {/* Plan Header */}
+                          <div className="text-center mb-2">
+                            <h3 className="text-white font-nunito text-[10px] font-semibold mb-0.5">
+                              {plan.name}
+                            </h3>
+                            <div className="flex items-center justify-center gap-1 mb-1">
+                              <span className="text-white font-nunito text-[9px] opacity-80">{plan.description}</span>
+                            </div>
+                            <div className="text-right">
+                              <span
+                                className="text-white font-nunito font-bold text-sm"
+                              >
+                                {plan.price}
+                              </span>
+                            </div>
+                          </div>
+
+                          {/* Plan Features */}
+                          <div className="space-y-1 mb-2">
+                            {plan.features.map((feature, index) => (
+                              <div key={index} className="flex items-start gap-1.5">
+                                <i className="fas fa-check text-green-400 mt-0.5 flex-shrink-0 text-[8px]"></i>
+                                <span className="text-white font-nunito text-[9px] leading-tight">
+                                  {feature}
+                                </span>
+                              </div>
+                            ))}
+                          </div>
+
+                          {/* Action Button */}
+                          <button
+                            className="w-full py-1.5 px-3 rounded-lg font-nunito font-semibold text-[10px] transition-all duration-300 hover:scale-105"
+                            style={{
+                              background: '#1345C3',
+                              boxShadow: '0 0 20px 0 #000 inset',
+                              color: '#FFFFFF'
+                            }}
+                          >
+                            Get Protected
+                          </button>
+
+                          {/* Plan Type Indicator */}
+                          <div className="mt-1.5 text-center">
+                            <span className="text-white font-nunito text-[8px] opacity-80">
+                              {plan.subtitle}
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+
+                  {/* Learn More Link */}
+                  <div className="mt-2 text-center">
+                    <a
+                      href="/services/trademark-registration"
+                      className="inline-flex items-center px-2 py-1 text-[9px] font-medium text-[#0C002B] bg-[#FFB703] rounded-md hover:bg-[#e6a503] transition-colors duration-300"
+                    >
+                      Learn More About Trademark Services
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Quick Insights Container */}
+              <div
+                className="relative flex flex-col p-3 w-full mx-auto"
+                style={{
+                  borderRadius: '16px',
+                  background: 'rgba(255, 255, 255, 0.10)',
+                  boxShadow: '0 0 20px 0 rgba(0, 0, 0, 0.10) inset, 0 0 20px 6px rgba(255, 255, 255, 0.20) inset'
+                }}
+              >
+                {/* Quick Insight's Heading */}
+                <div className="mb-2 text-center">
+                  <h3 className="text-white font-nunito text-xs font-medium">
+                    Quick Insight's
+                  </h3>
+                </div>
+
+                {/* Documents You'll Need Heading */}
+                <div className="mb-2 text-center">
+                  <h4 className="text-white font-nunito font-medium text-[10px]">
+                    Documents You'll Need
+                  </h4>
+                </div>
+
+                {/* Documents List with Special Styling */}
+                <div className="space-y-2">
+                  <div
+                    className="p-2 text-center"
+                    style={{
+                      borderRadius: '8px',
+                      border: '1px solid rgba(255, 255, 255, 0.15)',
+                      background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%)',
+                      backdropFilter: 'blur(16px)'
+                    }}
+                  >
+                    <span className="text-white font-nunito text-[9px] font-medium">
+                      Identity proof (PAN / Aadhaar / Passport)
+                    </span>
+                  </div>
+
+                  <div
+                    className="p-2 text-center"
+                    style={{
+                      borderRadius: '8px',
+                      border: '1px solid rgba(255, 255, 255, 0.15)',
+                      background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%)',
+                      backdropFilter: 'blur(16px)'
+                    }}
+                  >
+                    <span className="text-white font-nunito text-[9px] font-medium">
+                      Address proof (utility bill / bank statement)
+                    </span>
+                  </div>
+
+                  <div
+                    className="p-2 text-center"
+                    style={{
+                      borderRadius: '8px',
+                      border: '1px solid rgba(255, 255, 255, 0.15)',
+                      background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%)',
+                      backdropFilter: 'blur(16px)'
+                    }}
+                  >
+                    <span className="text-white font-nunito text-[9px] font-medium">
+                      Legal entity proof (if business, e.g. company registration certificate)
+                    </span>
+                  </div>
+
+                  <div
+                    className="p-2 text-center"
+                    style={{
+                      borderRadius: '8px',
+                      border: '1px solid rgba(255, 255, 255, 0.15)',
+                      background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%)',
+                      backdropFilter: 'blur(16px)'
+                    }}
+                  >
+                    <span className="text-white font-nunito text-[9px] font-medium">
+                      Trademark/logo/wordmark images
+                    </span>
+                  </div>
+
+                  <div
+                    className="p-2 text-center"
+                    style={{
+                      borderRadius: '8px',
+                      border: '1px solid rgba(255, 255, 255, 0.15)',
+                      background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%)',
+                      backdropFilter: 'blur(16px)'
+                    }}
+                  >
+                    <span className="text-white font-nunito text-[9px] font-medium">
+                      Power of Attorney (Form TM-48)
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
 
+export default function Dashboard() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen pt-20 flex items-center justify-center" style={{ 
+        background: '#0C002B',
+        backgroundImage: 'linear-gradient(to right top, #0c002b, #0c002b,rgb(25, 10, 60),rgb(80, 60, 124),rgb(79, 75, 75))',
+      }}>
+        <div className="text-center">
+          <i className="fas fa-spinner fa-spin text-white text-5xl mb-4"></i>
+          <p className="text-white font-nunito text-xl">Loading dashboard...</p>
+        </div>
+      </div>
+    }>
+      <DashboardContent />
+    </Suspense>
+  );
+}
