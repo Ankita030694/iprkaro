@@ -48,21 +48,21 @@ export async function POST(request: NextRequest) {
     console.log('Timestamp:', new Date().toISOString());
 
     // Step 1: Validate API Key
-    if (!process.env.OPENAI_API_KEY) {
-      console.error('❌ OPENAI_API_KEY is not configured in environment variables');
+    if (!process.env.HELLO_DROP_CHOO) {
+      console.error('❌ HELLO_DROP_CHOO is not configured in environment variables');
       return NextResponse.json(
         { 
           error: 'OpenAI API key not configured',
-          details: 'Please set OPENAI_API_KEY in your .env.local file',
+          details: 'Please set HELLO_DROP_CHOO in your .env.local file',
           step: 'configuration'
         },
         { status: 500 }
       );
     }
 
-    if (process.env.OPENAI_API_KEY === 'dummy-key-will-fail' || 
-        process.env.OPENAI_API_KEY === 'your_openai_api_key_here') {
-      console.error('❌ OPENAI_API_KEY is set to placeholder value');
+    if (process.env.HELLO_DROP_CHOO === 'dummy-key-will-fail' || 
+        process.env.HELLO_DROP_CHOO === 'your_HELLO_DROP_CHOO_here') {
+      console.error('❌ HELLO_DROP_CHOO is set to placeholder value');
       return NextResponse.json(
         { 
           error: 'OpenAI API key is placeholder',
