@@ -14,33 +14,35 @@ export default function ClientLogoSlider({ className = '', useWhiteLogos = false
   // Initialize logos
   useEffect(() => {
     const logoPaths = useWhiteLogos 
-      ? Array.from({ length: 10 }, (_, i) => `/clientlogos/white${i + 1}.png`)
-      : Array.from({ length: 10 }, (_, i) => `/clientlogos/${i + 1}.png`);
-    // Create duplicates for seamless infinite scroll
-    setLogos([...logoPaths, ...logoPaths]);
+      ? [1, 2, 3, 4, 6, 7, 8, 9].map(i => `/clientlogos/white${i}.png`) // Exclude white5 and white10
+      : [1, 2, 7, 8, 9].map(i => `/clientlogos/${i}.png`); // Exclude 5.png and 10.png
+    // Create multiple duplicates for seamless infinite scroll - enough to fill screen and beyond
+    setLogos([...logoPaths, ...logoPaths, ...logoPaths, ...logoPaths]);
   }, [useWhiteLogos]);
 
 
-  const logoCount = useWhiteLogos ? 10 : 8;
+  const logoCount = useWhiteLogos ? 8 : 4;
   const logoWidth = 128;
-  const gapSize = 16; // Reduced gap size for tighter spacing
-  const totalDistance = logoCount * (logoWidth + gapSize);
+  const gapSize = 16; // Gap between logos
+  // Calculate the exact distance to move one complete set of logos
+  // Subtract one gap to account for seamless looping (last logo's margin connects to first logo)
+  const totalDistance = logoCount * (logoWidth + gapSize) - gapSize;
 
   return (
-    <div className={`w-full overflow-visible h-full ${className}`}>
+    <div className={`w-full overflow-hidden h-full ${className}`}>
       <div className="relative h-full flex items-center">
         {/* Horizontal Logo Slider */}
-        <div className="w-full">
+        <div className="w-full overflow-hidden">
           <motion.div 
-            className="flex items-center gap-4"
+            className="flex items-center"
             animate={{
-              x: [0, -totalDistance] // Dynamic based on logo count
+              x: [0, -totalDistance]
             }}
             transition={{
               x: {
                 repeat: Infinity,
                 repeatType: "loop",
-                duration: useWhiteLogos ? 30 : 25, // Slower for more logos
+                duration: useWhiteLogos ? 30 : 20,
                 ease: "linear",
               },
             }}
@@ -55,8 +57,11 @@ export default function ClientLogoSlider({ className = '', useWhiteLogos = false
             } as React.CSSProperties}
           >
             {logos.map((logo, index) => {
-              const logoIndex = (index % logoCount) + 1;
-              const hasExtraPadding = logoIndex === 1 || logoIndex === 2;
+              // Calculate the actual logo number for alt text
+              const logoNumbers = useWhiteLogos 
+                ? [1, 2, 3, 4, 6, 7, 8, 9] 
+                : [6, 7, 8, 9];
+              const logoIndex = logoNumbers[index % logoCount];
               
               return (
                 <motion.div
@@ -68,15 +73,14 @@ export default function ClientLogoSlider({ className = '', useWhiteLogos = false
                   }}
                   transition={{ duration: 0.3 }}
                   style={{
+                    marginRight: `${gapSize}px`, // Consistent gap between all logos
                     willChange: 'transform',
                     transform: 'translate3d(0, 0, 0)',
                     WebkitTransform: 'translate3d(0, 0, 0)',
                     backfaceVisibility: 'hidden',
                     WebkitBackfaceVisibility: 'hidden',
                     perspective: 1000,
-                    WebkitPerspective: 1000,
-                    marginLeft: logoIndex === 1 ? '-12px' : '0',
-                    marginRight: logoIndex === 2 ? '-12px' : '0'
+                    WebkitPerspective: 1000
                   } as React.CSSProperties}
                 >
                   <img
