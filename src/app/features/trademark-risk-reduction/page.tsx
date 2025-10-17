@@ -44,8 +44,65 @@ export const metadata: Metadata = {
 };
 
 export default function TrademarkRiskReduction() {
+  // FAQ Schema for server-side rendering
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is trademark risk reduction?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Trademark risk reduction involves comprehensive risk assessment, advanced search methodologies, and expert legal analysis to identify potential conflicts, similarities, and opposition risks before filing your trademark application."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why do I need trademark risk assessment?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Trademark risk assessment helps identify potential conflicts early, calculate precise risk scores, and develop mitigation strategies. This maximizes your approval chances and reduces the likelihood of expensive opposition proceedings."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What search methodologies do you use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We use comprehensive database search, phonetic similarity analysis, visual similarity detection, common law search, domain name analysis, social media screening, international database check, and industry-specific research."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How accurate is your risk assessment?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our proprietary algorithm combined with expert legal review provides 94% first-time approval rate and resolves 87% of identified risk issues. We provide detailed risk scoring for each potential conflict found."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if risks are identified?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If risks are identified, our experts provide detailed mitigation strategies, alternative trademark suggestions, and legal arguments to strengthen your application. We help you navigate potential conflicts effectively."
+        }
+      }
+    ]
+  };
+
   return (
-    <div className="min-h-screen pb-16 px-2 lg:px-4 pt-32" style={{
+    <>
+      {/* Server-side FAQ Schema for Google Search Console */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema),
+        }}
+      />
+
+      <div className="min-h-screen pb-16 px-2 lg:px-4 pt-32" style={{
       background: '#0C002B',
       backgroundImage: 'linear-gradient(to right top, #0c002b, #0c002b,rgb(25, 10, 60),rgb(92, 75, 130), #ffffff)',
       backgroundSize: '100% 100%',
@@ -328,61 +385,9 @@ export default function TrademarkRiskReduction() {
           </div>
         </div>
 
-        {/* Schema Markup for FAQs */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              "mainEntity": [
-                {
-                  "@type": "Question",
-                  "name": "What is trademark risk reduction?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Trademark risk reduction involves comprehensive risk assessment, advanced search methodologies, and expert legal analysis to identify potential conflicts, similarities, and opposition risks before filing your trademark application."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Why do I need trademark risk assessment?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Trademark risk assessment helps identify potential conflicts early, calculate precise risk scores, and develop mitigation strategies. This maximizes your approval chances and reduces the likelihood of expensive opposition proceedings."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "What search methodologies do you use?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "We use comprehensive database search, phonetic similarity analysis, visual similarity detection, common law search, domain name analysis, social media screening, international database check, and industry-specific research."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "How accurate is your risk assessment?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Our proprietary algorithm combined with expert legal review provides 94% first-time approval rate and resolves 87% of identified risk issues. We provide detailed risk scoring for each potential conflict found."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "What happens if risks are identified?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "If risks are identified, our experts provide detailed mitigation strategies, alternative trademark suggestions, and legal arguments to strengthen your application. We help you navigate potential conflicts effectively."
-                  }
-                }
-              ]
-            })
-          }}
-        >
-        </script>
       </div>
       </div>
       </div>
+    </>
   );
 }

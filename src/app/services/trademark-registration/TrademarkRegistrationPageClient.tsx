@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
-export default function TrademarkRegistrationPage() {
+export default function TrademarkRegistrationPageClient() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [showMobilePopup, setShowMobilePopup] = useState(false);
   const [expandedPlan, setExpandedPlan] = useState<string | null>(null);

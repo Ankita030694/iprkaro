@@ -44,8 +44,65 @@ export const metadata: Metadata = {
 };
 
 export default function AIPoweredTrademarkSolutions() {
+  // FAQ Schema for server-side rendering
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How accurate is your AI-powered trademark search?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our AI-powered trademark search delivers 98.5% accuracy through advanced machine learning algorithms that analyze millions of trademark records across multiple databases for comprehensive conflict detection."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How fast does AI trademark search work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our AI-powered search provides instant results in 2-3 minutes compared to traditional methods that take 2-3 days. The system processes millions of records simultaneously for comprehensive analysis."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What makes AI trademark technology better?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AI technology detects phonetic and visual similarities that humans might miss, processes multiple databases simultaneously, and provides predictive risk scoring with 70% lower costs than traditional methods."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is AI trademark search legally reliable?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, our AI-powered results are reviewed by experienced trademark attorneys to ensure legal accuracy and compliance. The technology enhances but doesn't replace professional legal judgment."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can AI handle complex trademark searches?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely! Our AI handles complex searches including phonetic matching, visual similarity detection, international database screening, and industry-specific research for comprehensive protection."
+        }
+      }
+    ]
+  };
+
   return (
-    <div className="min-h-screen pb-14 px-2 lg:px-3.5 pt-28" style={{
+    <>
+      {/* Server-side FAQ Schema for Google Search Console */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema),
+        }}
+      />
+
+      <div className="min-h-screen pb-14 px-2 lg:px-3.5 pt-28" style={{
       background: '#0C002B',
       backgroundImage: 'linear-gradient(to right top, #0c002b, #0c002b,rgb(25, 10, 60),rgb(92, 75, 130), #ffffff)',
       backgroundSize: '100% 100%',
@@ -336,61 +393,9 @@ export default function AIPoweredTrademarkSolutions() {
           </div>
         </div>
 
-        {/* Schema Markup for FAQs */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              "mainEntity": [
-                {
-                  "@type": "Question",
-                  "name": "How accurate is your AI-powered trademark search?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Our AI-powered trademark search delivers 98.5% accuracy through advanced machine learning algorithms that analyze millions of trademark records across multiple databases for comprehensive conflict detection."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "How fast does AI trademark search work?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Our AI-powered search provides instant results in 2-3 minutes compared to traditional methods that take 2-3 days. The system processes millions of records simultaneously for comprehensive analysis."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "What makes AI trademark technology better?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "AI technology detects phonetic and visual similarities that humans might miss, processes multiple databases simultaneously, and provides predictive risk scoring with 70% lower costs than traditional methods."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Is AI trademark search legally reliable?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes, our AI-powered results are reviewed by experienced trademark attorneys to ensure legal accuracy and compliance. The technology enhances but doesn't replace professional legal judgment."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Can AI handle complex trademark searches?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Absolutely! Our AI handles complex searches including phonetic matching, visual similarity detection, international database screening, and industry-specific research for comprehensive protection."
-                  }
-                }   
-              ]
-            })
-          }}
-        >
-        </script>
       </div>
       </div>
       </div>
+    </>
   );
 }

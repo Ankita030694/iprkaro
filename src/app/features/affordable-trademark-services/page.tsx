@@ -44,8 +44,65 @@ export const metadata: Metadata = {
 };
 
 export default function AffordableTrademarkServices() {
+  // FAQ Schema for server-side rendering
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much do your trademark services cost in India?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our trademark services start from ₹1,999 for basic search packages, ₹2,999 for standard registration, and ₹3,999 for premium protection. We offer transparent pricing with no hidden fees and save you up to 88% compared to traditional law firms."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why are your trademark services more affordable?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We leverage technology integration, streamlined processes, and efficient workflows to provide premium trademark services at competitive prices. Our AI-powered tools and optimized operations reduce manual work while maintaining quality."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer money-back guarantee?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we offer a 100% money-back guarantee. If you're not satisfied with our trademark search or registration services, we'll refund your payment within 30 days - no questions asked."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are there any hidden fees in your pricing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely not! We believe in complete transparency. All our pricing is upfront with no hidden fees or surprise charges. You'll pay exactly what's quoted with no additional costs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer bulk discounts for multiple trademarks?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we offer special pricing for multiple trademarks and portfolio management. Contact our team to discuss bulk discounts and customized pricing for your specific requirements."
+        }
+      }
+    ]
+  };
+
   return (
-    <div className="min-h-screen pb-14 px-2 lg:px-3.5 pt-28" style={{
+    <>
+      {/* Server-side FAQ Schema for Google Search Console */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema),
+        }}
+      />
+
+      <div className="min-h-screen pb-14 px-2 lg:px-3.5 pt-28" style={{
       background: '#0C002B',
       backgroundImage: 'linear-gradient(to right top, #0c002b, #0c002b,rgb(25, 10, 60),rgb(92, 75, 130), #ffffff)',
       backgroundSize: '100% 100%',
@@ -319,61 +376,9 @@ export default function AffordableTrademarkServices() {
           </div>
         </div>
 
-        {/* Schema Markup for FAQs */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              "mainEntity": [
-                {
-                  "@type": "Question",
-                  "name": "How much do your trademark services cost in India?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Our trademark services start from ₹1,999 for basic search packages, ₹2,999 for standard registration, and ₹3,999 for premium protection. We offer transparent pricing with no hidden fees and save you up to 88% compared to traditional law firms."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Why are your trademark services more affordable?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "We leverage technology integration, streamlined processes, and efficient workflows to provide premium trademark services at competitive prices. Our AI-powered tools and optimized operations reduce manual work while maintaining quality."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Do you offer money-back guarantee?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes, we offer a 100% money-back guarantee. If you're not satisfied with our trademark search or registration services, we'll refund your payment within 30 days - no questions asked."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Are there any hidden fees in your pricing?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Absolutely not! We believe in complete transparency. All our pricing is upfront with no hidden fees or surprise charges. You'll pay exactly what's quoted with no additional costs."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Do you offer bulk discounts for multiple trademarks?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes, we offer special pricing for multiple trademarks and portfolio management. Contact our team to discuss bulk discounts and customized pricing for your specific requirements."
-                  }
-                }
-              ]
-            })
-          }}
-        >
-        </script>
       </div>
       </div>
       </div>
+    </>
   );
 }

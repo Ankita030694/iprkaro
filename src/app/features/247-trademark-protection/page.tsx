@@ -44,8 +44,65 @@ export const metadata: Metadata = {
 };
 
 export default function TwentyFourSevenTrademarkProtection() {
+  // FAQ Schema for server-side rendering
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is 24/7 trademark protection?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "24/7 trademark protection ensures your intellectual property is monitored and protected around the clock. With certified trademark agents available at all hours, potential infringements and threats are handled promptly regardless of when they occur."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What services are included in 24/7 protection?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our 24/7 services include continuous trademark monitoring, emergency response to infringement notices, immediate action on opposition filings, expert consultation for urgent matters, and automated maintenance alerts."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How quickly do you respond to emergencies?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We guarantee response times: < 30 minutes for emergency cases like opposition notices and infringement claims, < 2 hours for urgent matters like office actions, and < 4 hours for general support inquiries."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are your trademark agents certified?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, all our trademark agents are government certified, Bar Council registered, and hold trademark agent licenses. They have 15+ years of experience and have handled 1000+ cases across multiple jurisdictions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I contact you for urgent matters?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can reach us through our emergency hotline for urgent matters, live chat for immediate assistance, priority email for detailed legal matters, and video conferencing for in-depth consultations."
+        }
+      }
+    ]
+  };
+
   return (
-    <div className="min-h-screen pb-14 px-2 lg:px-3.5 pt-28" style={{
+    <>
+      {/* Server-side FAQ Schema for Google Search Console */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema),
+        }}
+      />
+
+      <div className="min-h-screen pb-14 px-2 lg:px-3.5 pt-28" style={{
       background: '#0C002B',
       backgroundImage: 'linear-gradient(to right top, #0c002b, #0c002b,rgb(25, 10, 60),rgb(92, 75, 130), #ffffff)',
       backgroundSize: '100% 100%',
@@ -320,61 +377,9 @@ export default function TwentyFourSevenTrademarkProtection() {
           </div>
         </div>
 
-        {/* Schema Markup for FAQs */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              "mainEntity": [
-                {
-                  "@type": "Question",
-                  "name": "What is 24/7 trademark protection?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "24/7 trademark protection ensures your intellectual property is monitored and protected around the clock. With certified trademark agents available at all hours, potential infringements and threats are handled promptly regardless of when they occur."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "What services are included in 24/7 protection?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Our 24/7 services include continuous trademark monitoring, emergency response to infringement notices, immediate action on opposition filings, expert consultation for urgent matters, and automated maintenance alerts."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "How quickly do you respond to emergencies?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "We guarantee response times: < 30 minutes for emergency cases like opposition notices and infringement claims, < 2 hours for urgent matters like office actions, and < 4 hours for general support inquiries."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Are your trademark agents certified?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes, all our trademark agents are government certified, Bar Council registered, and hold trademark agent licenses. They have 15+ years of experience and have handled 1000+ cases across multiple jurisdictions."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "How do I contact you for urgent matters?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "You can reach us through our emergency hotline for urgent matters, live chat for immediate assistance, priority email for detailed legal matters, and video conferencing for in-depth consultations."
-                  }
-                }
-              ]
-            })
-          }}
-        >
-        </script>
       </div>
       </div>
       </div>
+    </>
   );
 }

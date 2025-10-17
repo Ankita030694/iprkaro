@@ -44,8 +44,65 @@ export const metadata: Metadata = {
 };
 
 export default function ExpertTrademarkGuidance() {
+  // FAQ Schema for server-side rendering
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How quickly can I get expert trademark guidance?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our trademark experts typically respond within 2-4 hours for urgent matters and within 24 hours for standard inquiries. We offer 24/7 availability for critical trademark issues that require immediate attention."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What type of trademark guidance do you provide?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We provide comprehensive guidance on all trademark matters including search and analysis, application strategy, office action responses, opposition proceedings, international filing, license agreements, and enforcement actions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are consultations confidential?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, all consultations are completely confidential and protected by attorney-client privilege. Your trademark matters and business information remain secure and private."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you handle international trademark guidance?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, our experts have extensive experience with international trademark filing through Madrid Protocol and can provide guidance for trademark protection in multiple countries."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are your consultation channels?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We offer multiple consultation channels including phone support, email consultation, video conferencing, and live chat for immediate assistance with your trademark matters."
+        }
+      }
+    ]
+  };
+
   return (
-    <div className="min-h-screen pb-16 px-2 lg:px-4 pt-32" style={{
+    <>
+      {/* Server-side FAQ Schema for Google Search Console */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema),
+        }}
+      />
+
+      <div className="min-h-screen pb-16 px-2 lg:px-4 pt-32" style={{
       background: '#0C002B',
       backgroundImage: 'linear-gradient(to right top, #0c002b, #0c002b,rgb(25, 10, 60),rgb(92, 75, 130), #ffffff)',
       backgroundSize: '100% 100%',
@@ -291,61 +348,9 @@ export default function ExpertTrademarkGuidance() {
           </div>
         </div>
 
-        {/* Schema Markup for FAQs */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              "mainEntity": [
-                {
-                  "@type": "Question",
-                  "name": "How quickly can I get expert trademark guidance?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Our trademark experts typically respond within 2-4 hours for urgent matters and within 24 hours for standard inquiries. We offer 24/7 availability for critical trademark issues that require immediate attention."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "What type of trademark guidance do you provide?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "We provide comprehensive guidance on all trademark matters including search and analysis, application strategy, office action responses, opposition proceedings, international filing, license agreements, and enforcement actions."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Are consultations confidential?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes, all consultations are completely confidential and protected by attorney-client privilege. Your trademark matters and business information remain secure and private."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Do you handle international trademark guidance?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes, our experts have extensive experience with international trademark filing through Madrid Protocol and can provide guidance for trademark protection in multiple countries."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "What are your consultation channels?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "We offer multiple consultation channels including phone support, email consultation, video conferencing, and live chat for immediate assistance with your trademark matters."
-                  }
-                }
-              ]
-            })
-          }}
-        >
-        </script>
       </div>
       </div>
       </div>
+    </>
   );
 }

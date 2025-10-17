@@ -44,8 +44,65 @@ export const metadata: Metadata = {
 };
 
 export default function FastTrademarkRegistration() {
+  // FAQ Schema for server-side rendering
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How fast can I get my trademark registered in India?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "With our fast trademark registration service, you can typically get your trademark registered in 8-12 weeks total. This includes application preparation (1-2 days), initial review (2-3 weeks), publication period (30 days), and final registration processing."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What makes fast trademark registration different from regular filing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Fast trademark registration includes priority processing, dedicated attorney support, expedited document preparation, and immediate response to office actions. This ensures faster examination and reduces overall processing time significantly."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need a trademark attorney for fast registration?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, having an experienced trademark attorney is crucial for fast registration. They ensure proper documentation, handle legal complexities, and respond quickly to any trademark office queries that could delay your application."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What documents do I need for fast trademark registration?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You'll need your business registration certificate, logo/brand name details, applicant information, and proof of use if applicable. Our team will guide you through gathering all required documentation and prepare everything for submission."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I track my application status during fast registration?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely! You'll receive regular updates via email and our client portal. Your dedicated attorney will keep you informed of every development, from filing confirmation to final registration status."
+        }
+      }
+    ]
+  };
+
   return (
-    <div className="min-h-screen pb-14 px-2 lg:px-3.5 pt-28" style={{
+    <>
+      {/* Server-side FAQ Schema for Google Search Console */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema),
+        }}
+      />
+
+      <div className="min-h-screen pb-14 px-2 lg:px-3.5 pt-28" style={{
       background: '#0C002B',
       backgroundImage: 'linear-gradient(to right top, #0c002b, #0c002b,rgb(25, 10, 60),rgb(92, 75, 130), #ffffff)',
       backgroundSize: '100% 100%',
@@ -306,60 +363,9 @@ export default function FastTrademarkRegistration() {
           </div>
         </div>
 
-        {/* Schema Markup for FAQs */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              "mainEntity": [
-                {
-                  "@type": "Question",
-                  "name": "How fast can I get my trademark registered in India?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "With our fast trademark registration service, you can typically get your trademark registered in 8-12 weeks total. This includes application preparation (1-2 days), initial review (2-3 weeks), publication period (30 days), and final registration processing."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "What makes fast trademark registration different from regular filing?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Fast trademark registration includes priority processing, dedicated attorney support, expedited document preparation, and immediate response to office actions. This ensures faster examination and reduces overall processing time significantly."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Do I need a trademark attorney for fast registration?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes, having an experienced trademark attorney is crucial for fast registration. They ensure proper documentation, handle legal complexities, and respond quickly to any trademark office queries that could delay your application."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "What documents do I need for fast trademark registration?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "You'll need your business registration certificate, logo/brand name details, applicant information, and proof of use if applicable. Our team will guide you through gathering all required documentation and prepare everything for submission."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Can I track my application status during fast registration?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Absolutely! You'll receive regular updates via email and our client portal. Your dedicated attorney will keep you informed of every development, from filing confirmation to final registration status."
-                  }
-                }
-              ]
-            })
-          }}
-        />
       </div>
       </div>
       </div>
+    </>
   );
 }
