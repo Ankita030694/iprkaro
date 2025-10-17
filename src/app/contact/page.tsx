@@ -9,6 +9,7 @@ import OurHeadOffice from '@/components/OurHeadOffice';
 import { CitiesAndTerritories } from '@/components';
 import { db } from '@/lib/firebase';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import Script from 'next/script';
 
 export default function ContactPage() {
   const router = useRouter();
@@ -363,12 +364,14 @@ export default function ContactPage() {
 
       {/* FAQ Section */}
       <section className="py-[57.6px] relative overflow-hidden" style={{ backgroundColor: '#0C002B' }}>
-        {/* Schema Markup for SEO */}
-        <script
+        {/* Server-side FAQ Schema for Google Search Console */}
+        <Script
+          id="contact-faq-schema"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(faqSchema),
           }}
+          strategy="beforeInteractive"
         />
 
         {/* Background Pattern */}

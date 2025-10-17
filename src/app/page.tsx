@@ -1,5 +1,6 @@
 import { HeroSection, WhyTrademark, OurServices, SimplePlans, Faq } from "@/components";
 import { Metadata } from "next";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Trademark Registration India | IPR Karo - AI-Powered IP Protection",
@@ -58,11 +59,13 @@ export default function Home() {
   return (
     <>
       {/* Server-side rendered FAQ Schema for Google Search Console */}
-      <script
+      <Script
+        id="home-faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(faqSchema),
         }}
+        strategy="beforeInteractive"
       />
 
       <HeroSection />

@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import Script from 'next/script';
 
 export default function TrademarkRegistrationPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -1469,12 +1470,14 @@ Register your patent today with IPRKaro to safeguard your innovation, secure you
         </div>
       )}
 
-      {/* Schema Markup for SEO */}
-      <script
+      {/* Server-side FAQ Schema for Google Search Console */}
+      <Script
+        id="patent-services-faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(faqSchema),
         }}
+        strategy="beforeInteractive"
       />
 
       {/* We Provide Solutions In Section */}

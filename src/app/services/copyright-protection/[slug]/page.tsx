@@ -83,9 +83,70 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
-export default function CopyrightProtectionSlugPage({ params }: { params: { slug: string } }) {
-  const stateName = getStateName(params.slug);
+export default async function CopyrightProtectionSlugPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const stateName = getStateName(slug);
 
-  return <CopyrightProtectionClient stateName={stateName} />;
+  // State-specific FAQ Schema
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": `How can I register copyright in ${stateName}?`,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": `You can register copyright in ${stateName} online through IPRKaro. Our platform provides expert legal support for copyright registration of books, music, software, artistic works, and digital content with complete filing assistance for creators across ${stateName}.`
+        }
+      },
+      {
+        "@type": "Question",
+        "name": `What is the cost of copyright registration in ${stateName}?`,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": `Copyright registration costs in ${stateName} start from ₹1,999 including government fees, professional fees, and GST. IPRKaro offers transparent pricing with expert legal guidance for protecting your creative works throughout the registration process.`
+        }
+      },
+      {
+        "@type": "Question",
+        "name": `How long does copyright registration take in ${stateName}?`,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": `Copyright registration in ${stateName} typically takes 4-6 months from application filing to certificate issuance. IPRKaro's expert team ensures proper documentation and timely filing for creators and businesses in ${stateName}.`
+        }
+      },
+      {
+        "@type": "Question",
+        "name": `What types of works can be copyrighted in ${stateName}?`,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": `In ${stateName}, you can copyright literary works (books, articles), artistic works (paintings, photography), musical works, cinematographic films, sound recordings, and software. IPRKaro provides comprehensive copyright protection for all creative works under the Indian Copyright Act.`
+        }
+      },
+      {
+        "@type": "Question",
+        "name": `Is online copyright registration valid in ${stateName}?`,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": `Yes! Online copyright registration through IPRKaro is completely valid and legally recognized in ${stateName} and throughout India. Our digital platform provides the same legal protection as offline filing with added convenience and expert support.`
+        }
+      }
+    ]
+  };
+
+  return (
+    <>
+      {/* Server-side FAQ Schema for Google Search Console */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema),
+        }}
+      />
+      
+      <CopyrightProtectionClient stateName={stateName} />
+    </>
+  );
 }
 

@@ -88,6 +88,66 @@ export default async function PatentServicesSlugPage({ params }: { params: Promi
   const { slug } = await params;
   const stateName = getStateName(slug);
 
-  return <PatentServicesClient stateName={stateName} />;
+  // State-specific FAQ Schema
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": `How can I file a patent in ${stateName}?`,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": `You can file a patent in ${stateName} online through IPRKaro. Our AI-powered platform provides comprehensive patent search, professional specification drafting, and complete filing assistance with expert legal support for inventors and businesses across ${stateName}.`
+        }
+      },
+      {
+        "@type": "Question",
+        "name": `What is the cost of patent filing in ${stateName}?`,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": `Patent filing costs in ${stateName} start from ₹15,999 including government fees, professional drafting fees, and GST. IPRKaro offers transparent pricing with AI-powered prior art search and expert legal guidance throughout the patent application process.`
+        }
+      },
+      {
+        "@type": "Question",
+        "name": `How long does patent registration take in ${stateName}?`,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": `Patent registration in ${stateName} typically takes 3-5 years from filing to grant, depending on examination and objections. IPRKaro's AI-powered prior art search and expert specification drafting help minimize delays and improve grant success for inventors in ${stateName}.`
+        }
+      },
+      {
+        "@type": "Question",
+        "name": `What types of patents can be filed in ${stateName}?`,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": `In ${stateName}, you can file provisional patents, complete patents, utility patents, and design patents for inventions, processes, machines, and industrial designs. IPRKaro provides comprehensive patent services for all patentable subject matter under the Indian Patents Act.`
+        }
+      },
+      {
+        "@type": "Question",
+        "name": `Is online patent filing valid in ${stateName}?`,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": `Yes! Online patent filing through IPRKaro is completely valid and legally recognized in ${stateName} and throughout India. Our digital platform provides professional patent services with the same legal validity as offline filing, plus added convenience and expert support.`
+        }
+      }
+    ]
+  };
+
+  return (
+    <>
+      {/* Server-side FAQ Schema for Google Search Console */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema),
+        }}
+      />
+      
+      <PatentServicesClient stateName={stateName} />
+    </>
+  );
 }
 

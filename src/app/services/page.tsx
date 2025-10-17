@@ -6,6 +6,7 @@ import dynamic from 'next/dynamic';
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import Script from 'next/script';
 
 const SearchClient = dynamic(() => import('@/components/SearchClient'));
 
@@ -420,7 +421,7 @@ export default function ServicesPage() {
     }
   ];
 
-  // Schema markup for FAQPage
+  // Schema markup for FAQPage - defined outside to ensure SSR
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -436,18 +437,21 @@ export default function ServicesPage() {
 
   return (
     <>
+      {/* Server-side FAQ Schema for Google Search Console */}
+      <Script
+        id="services-faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema),
+        }}
+        strategy="beforeInteractive"
+      />
+      
       <ServicesHeroSection />
       <SimplePlans />
       
       {/* FAQ Section */}
       <section className="py-[57.6px] relative overflow-hidden" style={{ backgroundColor: '#0C002B' }}>
-        {/* Schema Markup for SEO */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(faqSchema),
-          }}
-        />
 
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">

@@ -5,6 +5,7 @@ import { db } from '../../../lib/firebase';
 import Link from 'next/link';
 import BlogTableOfContents from '@/components/blog/BlogTableOfContents';
 import BlogSidebarForm from '@/components/blog/BlogSidebarForm';
+import Script from 'next/script';
 
 // Define the Blog interface
 interface Blog {
@@ -544,35 +545,58 @@ const ArticleDetail = memo(function ArticleDetail({ slug }: BlogDetailProps) {
 
               {/* FAQs */}
         {faqs.length > 0 && (
-                <div className="mt-6 rounded-2xl p-6 backdrop-blur-xl border border-white/10 shadow-xl" style={{
-                  background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(12, 0, 43, 0.8) 100%)'
-                }}>
-                  <h2 className="text-white font-nunito font-bold text-2xl mb-6 flex items-center gap-2">
-                    <i className="fas fa-question-circle text-[#FFB703]" aria-hidden="true"></i>
-                    Frequently Asked Questions
-                  </h2>
-                  <div className="space-y-3">
-                {faqs.map((faq) => (
-                      <div 
-                        key={faq.id} 
-                        className="border border-white/10 rounded-lg overflow-hidden bg-white/5 hover:bg-white/10 transition-all"
-                      >
-                    <button
-                      onClick={() => toggleFaq(faq.id)}
-                          className="flex justify-between items-start w-full text-left p-4 font-medium text-white hover:text-[#FFB703] transition-colors"
+                <>
+                  {/* FAQ Schema for Google Search Console */}
+                  <Script
+                    id={`blog-faq-schema-${blog?.id || 'default'}`}
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                      __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "FAQPage",
+                        "mainEntity": faqs.map((faq) => ({
+                          "@type": "Question",
+                          "name": faq.question,
+                          "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": faq.answer
+                          }
+                        }))
+                      }),
+                    }}
+                    strategy="beforeInteractive"
+                  />
+                  
+                  <div className="mt-6 rounded-2xl p-6 backdrop-blur-xl border border-white/10 shadow-xl" style={{
+                    background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(12, 0, 43, 0.8) 100%)'
+                  }}>
+                    <h2 className="text-white font-nunito font-bold text-2xl mb-6 flex items-center gap-2">
+                      <i className="fas fa-question-circle text-[#FFB703]" aria-hidden="true"></i>
+                      Frequently Asked Questions
+                    </h2>
+                    <div className="space-y-3">
+                  {faqs.map((faq) => (
+                        <div 
+                          key={faq.id} 
+                          className="border border-white/10 rounded-lg overflow-hidden bg-white/5 hover:bg-white/10 transition-all"
                         >
-                          <span className="pr-4 text-sm font-nunito">{faq.question}</span>
-                          <i className={`fas fa-chevron-down text-[#FFB703] transition-transform ${expandedFaqs.includes(faq.id) ? 'rotate-180' : ''}`} aria-hidden="true"></i>
-                    </button>
-                    {expandedFaqs.includes(faq.id) && (
-                          <div className="px-4 pb-4 border-t border-white/10">
-                            <p className="text-white/80 text-sm leading-relaxed mt-3 font-nunito">{faq.answer}</p>
-                      </div>
-                    )}
-                  </div>
-                ))}
+                      <button
+                        onClick={() => toggleFaq(faq.id)}
+                            className="flex justify-between items-start w-full text-left p-4 font-medium text-white hover:text-[#FFB703] transition-colors"
+                          >
+                            <span className="pr-4 text-sm font-nunito">{faq.question}</span>
+                            <i className={`fas fa-chevron-down text-[#FFB703] transition-transform ${expandedFaqs.includes(faq.id) ? 'rotate-180' : ''}`} aria-hidden="true"></i>
+                      </button>
+                      {expandedFaqs.includes(faq.id) && (
+                            <div className="px-4 pb-4 border-t border-white/10">
+                              <p className="text-white/80 text-sm leading-relaxed mt-3 font-nunito">{faq.answer}</p>
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
+                </>
               )}
           </div>
 

@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import ClientLogoSlider from '@/components/ClientLogoSlider';
 import AboutBento from '@/components/AboutBento';
+import Script from 'next/script';
 
 export default function AboutPage() {
   // State for mobile card interactions
@@ -1459,12 +1460,14 @@ export default function AboutPage() {
 
         {/* FAQ Section */}
         <div className="py-[57.6px] relative overflow-hidden w-full">
-        {/* Schema Markup for SEO */}
-        <script
+        {/* Server-side FAQ Schema for Google Search Console */}
+        <Script
+          id="about-faq-schema"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(faqSchema),
           }}
+          strategy="beforeInteractive"
         />
 
         {/* Background Pattern */}
