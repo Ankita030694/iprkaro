@@ -393,7 +393,7 @@ export default function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trad
         </button>
 
       <div className="w-full h-screen relative overflow-hidden">
-        <div className="w-full h-full overflow-hidden relative">
+        <div className="w-full h-full overflow-y-auto lg:overflow-hidden relative">
 
         {/* Desktop Layout (hidden on mobile) */}
         <div className="hidden lg:flex flex-row gap-0 h-full overflow-hidden">
@@ -803,7 +803,7 @@ export default function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trad
           </div>
 
         {/* Mobile Layout (shown only on mobile) */}
-        <div className="lg:hidden w-full h-full overflow-y-auto">
+        <div className="lg:hidden w-full min-h-full">
           {/* Top Section - Gradient with Logo and Form */}
           <div 
             className="w-full p-6"
