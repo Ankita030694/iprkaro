@@ -1151,7 +1151,7 @@ function DashboardContent() {
                 </div>
                 <div className="flex-1">
                   <h5 className="text-white font-nunito text-[10px] font-semibold mb-0.5">Brand Strength</h5>
-                  <p className="font-nunito text-[9px] leading-tight" style={{ background: 'linear-gradient(90deg,rgb(0, 0, 0) 0%,rgb(0, 0, 0) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+                  <p className="font-nunito text-[9px] leading-tight" style={{ background: 'linear-gradient(90deg,rgb(255, 255, 255) 0%,rgb(255, 255, 255) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
                     {analysisData.keyFactors.brandStrength}
                   </p>
                 </div>
@@ -1165,7 +1165,7 @@ function DashboardContent() {
                 </div>
                 <div className="flex-1">
                   <h5 className="text-white font-nunito text-[10px] font-semibold mb-0.5">Legal Risk</h5>
-                  <p className="font-nunito text-[9px] leading-tight" style={{ background: 'linear-gradient(90deg,rgb(5, 5, 5) 0%,rgb(0, 0, 0) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+                  <p className="font-nunito text-[9px] leading-tight" style={{ background: 'linear-gradient(90deg,rgb(255, 255, 255) 0%,rgb(255, 255, 255) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
                     {analysisData.keyFactors.legalRisk}
                   </p>
                 </div>
@@ -1180,7 +1180,7 @@ function DashboardContent() {
                 </div>
                 <div className="flex-1">
                   <h5 className="text-white font-nunito text-[10px] font-semibold mb-0.5">Market Position</h5>
-                  <p className="font-nunito text-[9px] leading-tight" style={{ background: 'linear-gradient(90deg,rgb(0, 0, 0) 0%,rgb(0, 0, 0) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+                  <p className="font-nunito text-[9px] leading-tight" style={{ background: 'linear-gradient(90deg,rgb(255, 255, 255) 0%,rgb(255, 255, 255) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
                     {analysisData.keyFactors.marketPosition}
                   </p>
                 </div>
@@ -1195,7 +1195,7 @@ function DashboardContent() {
                 </div>
                 <div className="flex-1">
                   <h5 className="text-white font-nunito text-[10px] font-semibold mb-0.5">Registration Speed</h5>
-                  <p className="font-nunito text-[9px] leading-tight" style={{ background: 'linear-gradient(90deg,rgb(0, 0, 0) 0%,rgb(0, 0, 0) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+                  <p className="font-nunito text-[9px] leading-tight" style={{ background: 'linear-gradient(90deg,rgb(255, 255, 255) 0%,rgb(255, 255, 255) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
                     {analysisData.keyFactors.registrationSpeed}
                   </p>
                 </div>
@@ -1210,7 +1210,7 @@ function DashboardContent() {
                     </div>
                     <div className="flex-1">
                   <h5 className="text-white font-nunito text-[10px] font-semibold mb-0.5">Protection Level</h5>
-                  <p className="font-nunito text-[9px] leading-tight" style={{ background: 'linear-gradient(90deg,rgb(0, 0, 0) 0%,rgb(6, 6, 6) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+                  <p className="font-nunito text-[9px] leading-tight" style={{ background: 'linear-gradient(90deg,rgb(255, 255, 255) 0%,rgb(255, 255, 255) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
                         {analysisData.keyFactors.protectionLevel}
                       </p>
                   </div>
