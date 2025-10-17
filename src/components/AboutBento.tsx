@@ -262,7 +262,7 @@ const AboutBento = () => {
 
           {/* Column 3 - 1 row, 600px max height */}
           <div className="col-span-1">
-            <div className="bg-gradient-to-br from-zinc-900 via-zinc-900 to-zinc-950 rounded-xl p-3 border border-zinc-800 h-full max-h-[600px] flex flex-col overflow-y-auto custom-scrollbar">
+            <div className="bg-gradient-to-br from-zinc-900 via-zinc-900 to-zinc-950 rounded-xl p-3 border border-zinc-800 h-full max-h-[600px] flex flex-col overflow-hidden">
               {/* Yellow AI Icon */}
               <div className="mb-2 relative flex justify-center">
                 <div className="relative">

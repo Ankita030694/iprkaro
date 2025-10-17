@@ -10,7 +10,7 @@ export const metadata = {
 
 const PrivacyPolicy: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white pt-[100px]">
       <div className="max-w-4xl mx-auto px-4 py-12 lg:py-16">
         {/* Header */}
         <div className="mb-12">

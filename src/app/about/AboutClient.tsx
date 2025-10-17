@@ -12,49 +12,71 @@ export default function AboutClient() {
   const [activeCard, setActiveCard] = useState<number | null>(null);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [timelineProgress, setTimelineProgress] = useState(0);
-  const timelineRef = useRef<HTMLDivElement>(null);
+  const timelineDesktopRef = useRef<HTMLDivElement>(null);
+  const timelineMobileRef = useRef<HTMLDivElement>(null);
 
   const toggleFaq = (index: number) => {
     setOpenFaq(openFaq === index ? null : index);
   };
 
-  // Handle scroll progress for timeline - pixel by pixel
+  // Handle scroll progress for timeline - smooth pixel by pixel
   useEffect(() => {
+    let rafId: number | null = null;
+    
     const handleScroll = () => {
-      if (!timelineRef.current) return;
+      if (rafId) return; // Throttle using requestAnimationFrame
+      
+      rafId = requestAnimationFrame(() => {
+        // Determine which timeline is visible (desktop or mobile)
+        const timelineRef = window.innerWidth >= 1024 ? timelineDesktopRef : timelineMobileRef;
+        
+        if (!timelineRef.current) {
+          rafId = null;
+          return;
+        }
 
-      const rect = timelineRef.current.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-      const timelineTop = rect.top + window.scrollY;
-      const timelineHeight = rect.height;
-      const currentScroll = window.scrollY + windowHeight * 0.5; // Consider middle of viewport
-      
-      // Calculate the start and end points for the fill
-      // Start filling earlier when timeline comes into view
-      const fillStart = timelineTop - windowHeight * 0.3; // Start earlier
-      const fillEnd = timelineTop + timelineHeight * 0.85; // End a bit before the actual end
-      
-      let progress = 0;
-      
-      if (currentScroll >= fillStart && currentScroll <= fillEnd) {
-        // Calculate pixel-by-pixel progress
-        const scrolledIntoSection = currentScroll - fillStart;
-        const totalScrollDistance = fillEnd - fillStart;
-        progress = (scrolledIntoSection / totalScrollDistance) * 100;
-      } else if (currentScroll > fillEnd) {
-        progress = 100;
-      }
-      
-      // Clamp between 0 and 100
-      progress = Math.min(Math.max(progress, 0), 100);
-      
-      setTimelineProgress(progress);
+        const rect = timelineRef.current.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        const timelineTop = rect.top + window.scrollY;
+        const timelineHeight = rect.height;
+        
+        // Start filling when the timeline section enters the viewport (top of timeline hits bottom of viewport)
+        // End filling when the timeline section is about to leave the viewport
+        const fillStart = timelineTop - windowHeight + 200; // Start when timeline is just visible
+        const fillEnd = timelineTop + timelineHeight - 200; // End near the bottom of timeline
+        
+        const currentScroll = window.scrollY;
+        
+        let progress = 0;
+        
+        if (currentScroll >= fillStart && currentScroll <= fillEnd) {
+          // Calculate smooth pixel-by-pixel progress
+          const scrolledIntoSection = currentScroll - fillStart;
+          const totalScrollDistance = fillEnd - fillStart;
+          progress = (scrolledIntoSection / totalScrollDistance) * 100;
+        } else if (currentScroll > fillEnd) {
+          progress = 100;
+        } else {
+          progress = 0; // Before the timeline section
+        }
+        
+        // Clamp between 0 and 100
+        progress = Math.min(Math.max(progress, 0), 100);
+        
+        setTimelineProgress(progress);
+        rafId = null;
+      });
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('resize', handleScroll, { passive: true }); // Handle screen resize
     handleScroll(); // Initial calculation
 
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleScroll);
+      if (rafId) cancelAnimationFrame(rafId);
+    };
   }, []);
 
   const aboutFaqs = [
@@ -410,7 +432,7 @@ export default function AboutClient() {
         </div>
         
         {/* Desktop Timeline Section */}
-        <div className="hidden lg:block max-w-6xl mx-auto relative" ref={timelineRef}>
+        <div className="hidden lg:block max-w-6xl mx-auto relative" ref={timelineDesktopRef}>
 
           {/* Vertical Line */}
           <div
@@ -423,7 +445,7 @@ export default function AboutClient() {
 
           {/* Purple Progress Line - Fills up on scroll */}
           <div
-            className="absolute left-1/2 transform -translate-x-1/2 top-0 w-2 transition-all duration-75 ease-linear"
+            className="absolute left-1/2 transform -translate-x-1/2 top-0 w-2"
             style={{
               height: `${timelineProgress}%`,
               background: 'linear-gradient(to bottom, #8A38F5, #a855f7)',
@@ -664,7 +686,7 @@ export default function AboutClient() {
 
         {/* Mobile Timeline Section */}
         <div className="block lg:hidden">
-          <div className="max-w-4xl mx-auto relative" ref={timelineRef}>
+          <div className="max-w-4xl mx-auto relative" ref={timelineMobileRef}>
             {/* Decorative "Our Story" Text - Right Side for Mobile */}
            
 
@@ -679,7 +701,7 @@ export default function AboutClient() {
             
             {/* Purple Progress Line - Fills up on scroll */}
             <div
-              className="absolute left-7.5 top-0 w-2 transition-all duration-75 ease-linear"
+              className="absolute left-7.5 top-0 w-2"
               style={{
                 height: `${timelineProgress}%`,
                 background: 'linear-gradient(to bottom, #8A38F5, #a855f7)',
