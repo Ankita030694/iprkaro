@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Trademark Search - IPR Karo',
-  description: 'Search and verify trademark availability',
+  title: 'Dashboard - IPR Karo',
+  description: 'Trademark search dashboard',
   viewport: {
     width: 'device-width',
     initialScale: 1,
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function FormLayout({
+export default function DashboardLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -22,5 +22,4 @@ export default function FormLayout({
     </div>
   );
 }
-
 
