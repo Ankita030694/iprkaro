@@ -45,6 +45,8 @@ function DashboardContent() {
   const [classScore, setClassScore] = useState(90);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [aiQuestion, setAiQuestion] = useState('');
+  const [searchResult, setSearchResult] = useState<{question: string, answer: string} | null>(null);
+  const [showNoMatch, setShowNoMatch] = useState(false);
   const [analysisData, setAnalysisData] = useState<AnalysisData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -123,7 +125,31 @@ function DashboardContent() {
   const handleAiSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (aiQuestion.trim()) {
-      console.log('AI Question:', aiQuestion);
+      setSearchResult(null);
+      setShowNoMatch(false);
+      const query = aiQuestion.toLowerCase().trim();
+      const scoredFaqs = faqs.map(faq => {
+        const questionLower = faq.question.toLowerCase();
+        const answerLower = faq.answer.toLowerCase();
+        let score = 0;
+        const queryWords = query.split(' ').filter(word => word.length > 2);
+        queryWords.forEach(word => {
+          if (questionLower.includes(query)) score += 100;
+          if (questionLower.includes(word)) score += 10;
+          if (answerLower.includes(word)) score += 3;
+        });
+        return { faq, score };
+      });
+      const bestMatch = scoredFaqs.reduce((best, current) => current.score > best.score ? current : best);
+      setTimeout(() => {
+        if (bestMatch.score > 0) {
+          setSearchResult(bestMatch.faq);
+          setShowNoMatch(false);
+        } else {
+          setSearchResult(null);
+          setShowNoMatch(true);
+        }
+      }, 50);
       setAiQuestion('');
     }
   };
@@ -1808,6 +1834,25 @@ function DashboardContent() {
                   </button>
                 </div>
               </form>
+
+              {/* Search Result Display */}
+              {searchResult && (
+                <div key={searchResult.question} className="p-4 rounded-lg max-w-lg animate-fade-in-up" style={{background: 'linear-gradient(140deg, rgba(12, 0, 43, 0.10) 6.89%, rgba(255, 183, 3, 0.10) 101.84%)',boxShadow: '2.88px 2.88px 18.144px 0 rgba(0, 0, 0, 0.15), 0 0 14.4px 0.72px rgba(255, 255, 255, 0.10) inset',backdropFilter: 'blur(87.876px)'}}>
+                  <div className="flex justify-between items-start mb-2">
+                    <h4 className="text-white font-nunito text-sm md:text-base font-semibold leading-snug" style={{ color: '#FFB703' }}>{searchResult.question}</h4>
+                    <button onClick={() => setSearchResult(null)} className="text-white hover:text-gray-300 transition-colors ml-2 flex-shrink-0"><FontAwesomeIcon icon={faChevronDown} className="w-3 h-3 rotate-180" /></button>
+                  </div>
+                  <p className="text-white font-nunito text-xs md:text-sm font-medium leading-relaxed">{searchResult.answer}</p>
+                </div>
+              )}
+              {showNoMatch && (
+                <div className="p-4 rounded-lg max-w-lg animate-fade-in-up" style={{background: 'linear-gradient(140deg, rgba(12, 0, 43, 0.10) 6.89%, rgba(255, 183, 3, 0.10) 101.84%)',boxShadow: '2.88px 2.88px 18.144px 0 rgba(0, 0, 0, 0.15), 0 0 14.4px 0.72px rgba(255, 255, 255, 0.10) inset',backdropFilter: 'blur(87.876px)'}}>
+                  <div className="flex justify-between items-start">
+                    <p className="text-white font-nunito text-xs md:text-sm font-medium leading-relaxed">We're experiencing high traffic at the moment. Please try your search again in a few moments, or browse our FAQ section for answers.</p>
+                    <button onClick={() => setShowNoMatch(false)} className="text-white hover:text-gray-300 transition-colors ml-2 flex-shrink-0"><FontAwesomeIcon icon={faChevronDown} className="w-3 h-3 rotate-180" /></button>
+                  </div>
+                </div>
+              )}
             </div>
 
             {/* Right Section - FAQ Items */}

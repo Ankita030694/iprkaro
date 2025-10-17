@@ -9,6 +9,9 @@ export default function TrademarkRegistrationPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [showMobilePopup, setShowMobilePopup] = useState(false);
   const [expandedPlan, setExpandedPlan] = useState<string | null>(null);
+  const [aiQuestion, setAiQuestion] = useState('');
+  const [searchResult, setSearchResult] = useState<{question: string, answer: string} | null>(null);
+  const [showNoMatch, setShowNoMatch] = useState(false);
 
   const toggleFaq = (index: number) => {
     setOpenFaq(openFaq === index ? null : index);
@@ -65,6 +68,38 @@ export default function TrademarkRegistrationPage() {
       answer: "Copyright protection lasts for the lifetime of the author plus 60 years after their death. For works like films and sound recordings, it's 60 years from the date of publication."
     }
   ];
+
+  const handleAiSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (aiQuestion.trim()) {
+      setSearchResult(null);
+      setShowNoMatch(false);
+      const query = aiQuestion.toLowerCase().trim();
+      const scoredFaqs = trademarkFaqs.map(faq => {
+        const questionLower = faq.question.toLowerCase();
+        const answerLower = faq.answer.toLowerCase();
+        let score = 0;
+        const queryWords = query.split(' ').filter(word => word.length > 2);
+        queryWords.forEach(word => {
+          if (questionLower.includes(query)) score += 100;
+          if (questionLower.includes(word)) score += 10;
+          if (answerLower.includes(word)) score += 3;
+        });
+        return { faq, score };
+      });
+      const bestMatch = scoredFaqs.reduce((best, current) => current.score > best.score ? current : best);
+      setTimeout(() => {
+        if (bestMatch.score > 0) {
+          setSearchResult(bestMatch.faq);
+          setShowNoMatch(false);
+        } else {
+          setSearchResult(null);
+          setShowNoMatch(true);
+        }
+      }, 50);
+      setAiQuestion('');
+    }
+  };
 
   const features = [
     { text: "Cost Effective", icon: 0 },
@@ -1554,10 +1589,12 @@ Get your copyright registered today with IPRKaro to protect your creativity, mon
             </div>
 
             {/* AI Input */}
-            <form onSubmit={(e) => { e.preventDefault(); console.log('AI Question submitted'); }}>
+            <form onSubmit={handleAiSubmit}>
               <div className="relative bg-black/20 backdrop-blur-sm border border-purple-400/30 rounded-xl p-4">
                 <input
                   type="text"
+                  value={aiQuestion}
+                  onChange={(e) => setAiQuestion(e.target.value)}
                   placeholder="Ask about Trademark Registration...."
                   className="w-full bg-transparent text-white placeholder-purple-300 outline-none text-lg"
                 />
@@ -1572,6 +1609,25 @@ Get your copyright registered today with IPRKaro to protect your creativity, mon
                 </button>
               </div>
             </form>
+
+            {/* Search Result Display */}
+            {searchResult && (
+              <div key={searchResult.question} className="p-6 rounded-xl max-w-lg animate-fade-in-up mt-4" style={{background: 'linear-gradient(140deg, rgba(12, 0, 43, 0.10) 6.89%, rgba(255, 183, 3, 0.10) 101.84%)',boxShadow: '2.88px 2.88px 18.144px 0 rgba(0, 0, 0, 0.15), 0 0 14.4px 0.72px rgba(255, 255, 255, 0.10) inset',backdropFilter: 'blur(87.876px)'}}>
+                <div className="flex justify-between items-start mb-3">
+                  <h4 className="text-white font-nunito text-base md:text-lg font-semibold leading-snug" style={{ color: '#FFB703' }}>{searchResult.question}</h4>
+                  <button onClick={() => setSearchResult(null)} className="text-white hover:text-gray-300 transition-colors ml-3 flex-shrink-0"><FontAwesomeIcon icon={faChevronDown} className="w-5 h-5 rotate-180" /></button>
+                </div>
+                <p className="text-white font-nunito text-sm md:text-base font-medium leading-relaxed">{searchResult.answer}</p>
+              </div>
+            )}
+            {showNoMatch && (
+              <div className="p-6 rounded-xl max-w-lg animate-fade-in-up mt-4" style={{background: 'linear-gradient(140deg, rgba(12, 0, 43, 0.10) 6.89%, rgba(255, 183, 3, 0.10) 101.84%)',boxShadow: '2.88px 2.88px 18.144px 0 rgba(0, 0, 0, 0.15), 0 0 14.4px 0.72px rgba(255, 255, 255, 0.10) inset',backdropFilter: 'blur(87.876px)'}}>
+                <div className="flex justify-between items-start">
+                  <p className="text-white font-nunito text-sm md:text-base font-medium leading-relaxed">We're experiencing high traffic at the moment. Please try your search again in a few moments, or browse our FAQ section for answers.</p>
+                  <button onClick={() => setShowNoMatch(false)} className="text-white hover:text-gray-300 transition-colors ml-3 flex-shrink-0"><FontAwesomeIcon icon={faChevronDown} className="w-5 h-5 rotate-180" /></button>
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Right Section - FAQ Items */}

@@ -12,6 +12,9 @@ export default function AboutClient() {
   const [activeCard, setActiveCard] = useState<number | null>(null);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [timelineProgress, setTimelineProgress] = useState(0);
+  const [aiQuestion, setAiQuestion] = useState('');
+  const [searchResult, setSearchResult] = useState<{question: string, answer: string} | null>(null);
+  const [showNoMatch, setShowNoMatch] = useState(false);
   const timelineDesktopRef = useRef<HTMLDivElement>(null);
   const timelineMobileRef = useRef<HTMLDivElement>(null);
 
@@ -101,6 +104,54 @@ export default function AboutClient() {
       answer: "IPR Karo offers comprehensive IP protection services including AI-powered trademark search and registration, copyright protection for creative works, patent services for inventions, ongoing brand monitoring, and legal support for objections and renewals."
     }
   ];
+
+  const handleAiSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (aiQuestion.trim()) {
+      setSearchResult(null);
+      setShowNoMatch(false);
+      
+      const query = aiQuestion.toLowerCase().trim();
+      
+      const scoredFaqs = aboutFaqs.map(faq => {
+        const questionLower = faq.question.toLowerCase();
+        const answerLower = faq.answer.toLowerCase();
+        let score = 0;
+        
+        const queryWords = query.split(' ').filter(word => word.length > 2);
+        
+        queryWords.forEach(word => {
+          if (questionLower.includes(query)) {
+            score += 100;
+          }
+          if (questionLower.includes(word)) {
+            score += 10;
+          }
+          if (answerLower.includes(word)) {
+            score += 3;
+          }
+        });
+        
+        return { faq, score };
+      });
+      
+      const bestMatch = scoredFaqs.reduce((best, current) => 
+        current.score > best.score ? current : best
+      );
+      
+      setTimeout(() => {
+        if (bestMatch.score > 0) {
+          setSearchResult(bestMatch.faq);
+          setShowNoMatch(false);
+        } else {
+          setSearchResult(null);
+          setShowNoMatch(true);
+        }
+      }, 50);
+      
+      setAiQuestion('');
+    }
+  };
 
   return (
     <div
@@ -342,7 +393,7 @@ export default function AboutClient() {
         <div className="hidden lg:block">
         <div className="flex justify-center">
           <div className="grid grid-cols-5 gap-20 w-fit">
-            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((logoNumber) => (
+            {[1, 2, 3, 4, 5, 6, 7, 8, 13, 14].map((logoNumber) => (
             <div
               key={logoNumber}
               className="flex items-center justify-center rounded-lg"
@@ -964,10 +1015,10 @@ export default function AboutClient() {
       </div>
 
       {/* What makes IPR Karo Different Section */}
-      <div className="w-full py-20 mt-10">
-        <div className="text-center mb-16 px-6 sm:px-12 lg:px-24">
+      <div className="w-full py-[60px] mt-[30px] px-20">
+        <div className="text-center mb-[48px] px-[18px] sm:px-[36px] lg:px-[72px]">
           <h2
-            className="text-3xl sm:text-4xl lg:text-[42px] font-bold mb-4"
+            className="text-[18px] sm:text-[30px] lg:text-[31.5px] font-bold mb-[12px]"
             style={{
               color: '#FFF',
               fontFamily: 'Nunito',
@@ -978,7 +1029,7 @@ export default function AboutClient() {
             What makes IPR Karo Different
           </h2>
           <p 
-            className="text-base sm:text-lg max-w-3xl mx-auto"
+            className="text-[12px] sm:text-[13.5px] max-w-3xl mx-auto"
             style={{
               color: 'rgba(255, 255, 255, 0.7)',
               fontFamily: 'Nunito',
@@ -993,37 +1044,37 @@ export default function AboutClient() {
         {/* Cards Container */}
         <div className="w-full">
           {/* Main Grid - Full width layout */}
-          <div className="flex flex-col gap-6 lg:gap-8 px-6 sm:px-12 lg:px-24">
+          <div className="flex flex-col gap-[18px] lg:gap-[24px] px-[18px] sm:px-[36px] lg:px-[72px]">
             {/* Mobile Layout - Professional Card Design */}
-            <div className="block lg:hidden space-y-6">
+            <div className="block lg:hidden space-y-[18px]">
               {/* Card 1 - AI-Powered Trademark Search */}
               <div
                 className="relative group cursor-pointer overflow-hidden transition-all duration-300 hover:scale-[1.02]"
                 style={{
-                  borderRadius: '24px',
+                  borderRadius: '18px',
                   background: 'linear-gradient(135deg, rgba(255, 183, 3, 0.08) 0%, rgba(12, 0, 43, 0.4) 100%)',
                   border: '1px solid rgba(255, 183, 3, 0.2)',
-                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3), inset 0 0 24px rgba(255, 255, 255, 0.05)'
+                  boxShadow: '0 6px 24px rgba(0, 0, 0, 0.3), inset 0 0 18px rgba(255, 255, 255, 0.05)'
                 }}
                 onClick={() => setActiveCard(activeCard === 1 ? null : 1)}
               >
                 {/* Content */}
-                <div className="relative z-10 p-8">
-                  <h3 className="text-xl font-bold mb-3 text-white" style={{fontFamily: 'Nunito', fontWeight: 700}}>
+                <div className="relative z-10 p-[24px]">
+                  <h3 className="text-[15px] font-bold mb-[9px] text-white" style={{fontFamily: 'Nunito', fontWeight: 700}}>
                     AI-Powered Trademark Search
                   </h3>
-                  <p className="text-sm mb-6" style={{color: 'rgba(255, 255, 255, 0.85)', fontFamily: 'Nunito', lineHeight: '1.6'}}>
+                  <p className="text-[10.5px] mb-[18px]" style={{color: 'rgba(255, 255, 255, 0.85)', fontFamily: 'Nunito', lineHeight: '1.6'}}>
                     Instantly scan millions of records. Our AI-powered search report finds identical and confusingly similar marks so you can decide whether to register or tweak your brand.
                   </p>
                   
                   {/* Icon Container */}
-                  <div className="flex justify-center mt-4">
+                  <div className="flex justify-center mt-[12px]">
                     <Image
                       src="/figmacomp/searchabout.svg"
                       alt="Search Icon"
-                      width={280}
-                      height={80}
-                      className={`w-full max-w-[280px] h-auto object-contain transition-all duration-500 ${
+                      width={210}
+                      height={60}
+                      className={`w-full max-w-[210px] h-auto object-contain transition-all duration-500 ${
                         activeCard === 1 ? 'opacity-100 scale-110 brightness-[1.2] saturate-[1.5] hue-rotate-[-15deg]' : 'opacity-60'
                       }`}
                       style={{
@@ -1038,10 +1089,10 @@ export default function AboutClient() {
               <div
                 className="relative group cursor-pointer overflow-hidden transition-all duration-300 hover:scale-[1.02]"
                 style={{
-                  borderRadius: '24px',
+                  borderRadius: '18px',
                   background: 'linear-gradient(135deg, rgba(255, 183, 3, 0.08) 0%, rgba(12, 0, 43, 0.4) 100%)',
                   border: '1px solid rgba(255, 183, 3, 0.2)',
-                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3), inset 0 0 24px rgba(255, 255, 255, 0.05)'
+                  boxShadow: '0 6px 24px rgba(0, 0, 0, 0.3), inset 0 0 18px rgba(255, 255, 255, 0.05)'
                 }}
                 onClick={() => setActiveCard(activeCard === 2 ? null : 2)}
               >
@@ -1050,18 +1101,18 @@ export default function AboutClient() {
                   <Image
                     src="/figmacomp/expert-guidance.svg"
                     alt="Expert Guidance Icon"
-                    width={100}
-                    height={140}
-                    className="w-auto h-32 object-contain icon-hover-yellow opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"
+                    width={75}
+                    height={105}
+                    className="w-auto h-24 object-contain icon-hover-yellow opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"
                   />
                 </div>
 
                 {/* Content */}
-                <div className="relative z-10 p-8">
-                  <h3 className="text-xl font-bold mb-3 text-white" style={{fontFamily: 'Nunito', fontWeight: 700}}>
+                <div className="relative z-10 p-[24px]">
+                  <h3 className="text-[15px] font-bold mb-[9px] text-white" style={{fontFamily: 'Nunito', fontWeight: 700}}>
                     Expert-Led Guidance
                   </h3>
-                  <p className="text-sm max-w-[240px]" style={{color: 'rgba(255, 255, 255, 0.85)', fontFamily: 'Nunito', lineHeight: '1.6'}}>
+                  <p className="text-[10.5px] max-w-[180px]" style={{color: 'rgba(255, 255, 255, 0.85)', fontFamily: 'Nunito', lineHeight: '1.6'}}>
                     Certified IP lawyers review your AI report, advise on registrability, and prepare filing documents. Clear legal answers with no jargon.
                   </p>
                 </div>
@@ -1071,10 +1122,10 @@ export default function AboutClient() {
               <div
                 className="relative group cursor-pointer overflow-hidden transition-all duration-300 hover:scale-[1.02]"
                 style={{
-                  borderRadius: '24px',
+                  borderRadius: '18px',
                   background: 'linear-gradient(135deg, rgba(255, 183, 3, 0.08) 0%, rgba(12, 0, 43, 0.4) 100%)',
                   border: '1px solid rgba(255, 183, 3, 0.2)',
-                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3), inset 0 0 24px rgba(255, 255, 255, 0.05)'
+                  boxShadow: '0 6px 24px rgba(0, 0, 0, 0.3), inset 0 0 18px rgba(255, 255, 255, 0.05)'
                 }}
                 onClick={() => setActiveCard(activeCard === 3 ? null : 3)}
               >
@@ -1083,18 +1134,18 @@ export default function AboutClient() {
                   <Image
                     src="/figmacomp/fast-processing.svg"
                     alt="Fast Processing Icon"
-                    width={100}
-                    height={180}
-                    className="w-auto h-40 object-contain icon-hover-yellow opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"
+                    width={75}
+                    height={135}
+                    className="w-auto h-30 object-contain icon-hover-yellow opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"
                   />
                 </div>
 
                 {/* Content */}
-                <div className="relative z-10 p-8">
-                  <h3 className="text-xl font-bold mb-3 text-white" style={{fontFamily: 'Nunito', fontWeight: 700}}>
+                <div className="relative z-10 p-[24px]">
+                  <h3 className="text-[15px] font-bold mb-[9px] text-white" style={{fontFamily: 'Nunito', fontWeight: 700}}>
                     Fast Processing
                   </h3>
-                  <p className="text-sm max-w-[240px]" style={{color: 'rgba(255, 255, 255, 0.85)', fontFamily: 'Nunito', lineHeight: '1.6'}}>
+                  <p className="text-[10.5px] max-w-[180px]" style={{color: 'rgba(255, 255, 255, 0.85)', fontFamily: 'Nunito', lineHeight: '1.6'}}>
                     Optimised workflows cut filing time to get search results within minutes and an expert review within 24 to 48 hours.
                   </p>
                 </div>
@@ -1104,10 +1155,10 @@ export default function AboutClient() {
               <div
                 className="relative group cursor-pointer overflow-hidden transition-all duration-300 hover:scale-[1.02]"
                 style={{
-                  borderRadius: '24px',
+                  borderRadius: '18px',
                   background: 'linear-gradient(135deg, rgba(255, 183, 3, 0.08) 0%, rgba(12, 0, 43, 0.4) 100%)',
                   border: '1px solid rgba(255, 183, 3, 0.2)',
-                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3), inset 0 0 24px rgba(255, 255, 255, 0.05)'
+                  boxShadow: '0 6px 24px rgba(0, 0, 0, 0.3), inset 0 0 18px rgba(255, 255, 255, 0.05)'
                 }}
                 onClick={() => setActiveCard(activeCard === 4 ? null : 4)}
               >
@@ -1116,18 +1167,18 @@ export default function AboutClient() {
                   <Image
                     src="/figmacomp/affordable-pricing.svg"
                     alt="Affordable Pricing Icon"
-                    width={160}
-                    height={120}
-                    className="w-auto h-28 object-contain icon-hover-yellow opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"
+                    width={120}
+                    height={90}
+                    className="w-auto h-21 object-contain icon-hover-yellow opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"
                   />
                 </div>
 
                 {/* Content */}
-                <div className="relative z-10 p-8">
-                  <h3 className="text-xl font-bold mb-3 text-white" style={{fontFamily: 'Nunito', fontWeight: 700}}>
+                <div className="relative z-10 p-[24px]">
+                  <h3 className="text-[15px] font-bold mb-[9px] text-white" style={{fontFamily: 'Nunito', fontWeight: 700}}>
                     Affordable & Transparent Pricing
                   </h3>
-                  <p className="text-sm max-w-[240px]" style={{color: 'rgba(255, 255, 255, 0.85)', fontFamily: 'Nunito', lineHeight: '1.6'}}>
+                  <p className="text-[10.5px] max-w-[180px]" style={{color: 'rgba(255, 255, 255, 0.85)', fontFamily: 'Nunito', lineHeight: '1.6'}}>
                     No hidden fees. Choose a plan that fits your needs (search report, filing, or full legal package) with one-page invoices that explain every cost.
                   </p>
                 </div>
@@ -1137,42 +1188,42 @@ export default function AboutClient() {
               <div
                 className="relative group cursor-pointer overflow-hidden transition-all duration-300 hover:scale-[1.02]"
                 style={{
-                  borderRadius: '24px',
+                  borderRadius: '18px',
                   background: 'linear-gradient(135deg, rgba(255, 183, 3, 0.08) 0%, rgba(12, 0, 43, 0.4) 100%)',
                   border: '1px solid rgba(255, 183, 3, 0.2)',
-                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3), inset 0 0 24px rgba(255, 255, 255, 0.05)'
+                  boxShadow: '0 6px 24px rgba(0, 0, 0, 0.3), inset 0 0 18px rgba(255, 255, 255, 0.05)'
                 }}
                 onClick={() => setActiveCard(activeCard === 5 ? null : 5)}
               >
                 {/* Content */}
-                <div className="relative z-10 p-8">
-                  <h3 className="text-xl font-bold mb-3 text-white" style={{fontFamily: 'Nunito', fontWeight: 700}}>
+                <div className="relative z-10 p-[24px]">
+                  <h3 className="text-[15px] font-bold mb-[9px] text-white" style={{fontFamily: 'Nunito', fontWeight: 700}}>
                     End-to-End Support
                   </h3>
-                  <p className="text-sm mb-6" style={{color: 'rgba(255, 255, 255, 0.85)', fontFamily: 'Nunito', lineHeight: '1.6'}}>
+                  <p className="text-[10.5px] mb-[18px]" style={{color: 'rgba(255, 255, 255, 0.85)', fontFamily: 'Nunito', lineHeight: '1.6'}}>
                     From search to filing to post-registration monitoring, we handle filings, replies, and renewals so your brand stays protected.
                   </p>
 
                   {/* Process List */}
-                  <div className={`bg-white/10 backdrop-blur-sm rounded-2xl p-4 transition-all duration-500 ${
+                  <div className={`bg-white/10 backdrop-blur-sm rounded-2xl p-[12px] transition-all duration-500 ${
                     activeCard === 5 ? 'opacity-100 scale-100' : 'opacity-70 scale-95'
                   }`}>
-                    <div className="text-xs font-semibold mb-3 text-yellow-400" style={{fontFamily: 'Nunito'}}>Complete Process:</div>
-                    <ul className="space-y-2 text-xs">
+                    <div className="text-[9px] font-semibold mb-[9px] text-yellow-400" style={{fontFamily: 'Nunito'}}>Complete Process:</div>
+                    <ul className="space-y-[6px] text-[9px]">
                       <li className="flex items-start">
-                        <span className="w-2 h-2 bg-yellow-400 rounded-full mt-1 mr-2 flex-shrink-0"></span>
+                        <span className="w-[6px] h-[6px] bg-yellow-400 rounded-full mt-1 mr-[6px] flex-shrink-0"></span>
                         <span style={{color: 'rgba(255, 255, 255, 0.9)', fontFamily: 'Nunito'}}>AI-powered trademark search & analysis</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="w-2 h-2 bg-yellow-400 rounded-full mt-1 mr-2 flex-shrink-0"></span>
+                        <span className="w-[6px] h-[6px] bg-yellow-400 rounded-full mt-1 mr-[6px] flex-shrink-0"></span>
                         <span style={{color: 'rgba(255, 255, 255, 0.9)', fontFamily: 'Nunito'}}>Expert legal review & consultation</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="w-2 h-2 bg-yellow-400 rounded-full mt-1 mr-2 flex-shrink-0"></span>
+                        <span className="w-[6px] h-[6px] bg-yellow-400 rounded-full mt-1 mr-[6px] flex-shrink-0"></span>
                         <span style={{color: 'rgba(255, 255, 255, 0.9)', fontFamily: 'Nunito'}}>Complete filing & documentation</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="w-2 h-2 bg-yellow-400 rounded-full mt-1 mr-2 flex-shrink-0"></span>
+                        <span className="w-[6px] h-[6px] bg-yellow-400 rounded-full mt-1 mr-[6px] flex-shrink-0"></span>
                         <span style={{color: 'rgba(255, 255, 255, 0.9)', fontFamily: 'Nunito'}}>Post-registration monitoring & renewals</span>
                       </li>
                     </ul>
@@ -1181,23 +1232,23 @@ export default function AboutClient() {
               </div>
             </div>
             {/* Desktop Layout - Professional Grid Design */}
-            <div className="hidden lg:flex flex-row gap-8">
+            <div className="hidden lg:flex flex-row gap-[24px]">
               {/* Left Section - 2x2 Grid for Cards 1-4 */}
-              <div className="flex-1 grid grid-cols-2 gap-8">
+              <div className="flex-1 grid grid-cols-2 gap-[24px]">
                 {/* Card 1 - AI-Powered Trademark Search */}
                 <div
-                  className="relative text-center h-80 flex flex-col group cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+                  className="relative text-center h-60 flex flex-col group cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl"
                   style={{
-                    borderRadius: '24px',
+                    borderRadius: '18px',
                     background: 'linear-gradient(135deg, rgba(255, 183, 3, 0.08) 0%, rgba(12, 0, 43, 0.4) 100%)',
                     border: '1px solid rgba(255, 183, 3, 0.2)',
-                    boxShadow: '0 12px 48px rgba(0, 0, 0, 0.4), inset 0 0 32px rgba(255, 255, 255, 0.05)'
+                    boxShadow: '0 9px 36px rgba(0, 0, 0, 0.4), inset 0 0 24px rgba(255, 255, 255, 0.05)'
                   }}
                 >
                   {/* Content */}
-                  <div className="z-10 p-8 flex-1 flex flex-col">
+                  <div className="z-10 p-[24px] flex-1 flex flex-col">
                     <h3
-                      className="text-[22px] font-bold mb-4"
+                      className="text-[22px] font-bold mb-[12px]"
                       style={{
                         color: '#FFF',
                         fontFamily: 'Nunito',
@@ -1208,7 +1259,7 @@ export default function AboutClient() {
                       AI-Powered Trademark Search
                     </h3>
                     <p
-                      className="text-[15px] px-4 mb-6"
+                      className="text-[13px] px-[12px] mb-[18px]"
                       style={{
                         color: 'rgba(255, 255, 255, 0.85)',
                         fontFamily: 'Nunito',
@@ -1224,9 +1275,9 @@ export default function AboutClient() {
                       <Image
                         src="/figmacomp/searchabout.svg"
                         alt="Search Icon"
-                        width={350}
-                        height={100}
-                        className="w-full max-w-[300px] h-auto object-contain icon-hover-yellow group-hover:scale-110 opacity-70 group-hover:opacity-100"
+                        width={262}
+                        height={75}
+                        className="w-full max-w-[225px] h-auto object-contain icon-hover-yellow group-hover:scale-110 opacity-70 group-hover:opacity-100"
                       />
                     </div>
                   </div>
@@ -1234,12 +1285,12 @@ export default function AboutClient() {
 
                 {/* Card 2 - Expert-Led Guidance */}
                 <div
-                  className="relative h-80 group cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl overflow-hidden"
+                  className="relative h-60 group cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl overflow-hidden"
                   style={{
-                    borderRadius: '24px',
+                    borderRadius: '18px',
                     background: 'linear-gradient(135deg, rgba(255, 183, 3, 0.08) 0%, rgba(12, 0, 43, 0.4) 100%)',
                     border: '1px solid rgba(255, 183, 3, 0.2)',
-                    boxShadow: '0 12px 48px rgba(0, 0, 0, 0.4), inset 0 0 32px rgba(255, 255, 255, 0.05)'
+                    boxShadow: '0 9px 36px rgba(0, 0, 0, 0.4), inset 0 0 24px rgba(255, 255, 255, 0.05)'
                   }}
                 >
                   {/* Icon - top right */}
@@ -1247,16 +1298,16 @@ export default function AboutClient() {
                     <Image
                       src="/figmacomp/expert-guidance.svg"
                       alt="Expert Guidance Icon"
-                      width={120}
-                      height={180}
-                      className="w-auto h-44 object-contain icon-hover-yellow opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"
+                      width={90}
+                      height={135}
+                      className="w-auto h-33 object-contain icon-hover-yellow opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"
                     />
                   </div>
 
                   {/* Content */}
-                  <div className="relative z-10 p-8">
+                  <div className="relative z-10 p-[24px]">
                     <h3
-                      className="text-[20px] font-bold mb-3"
+                      className="text-[22px] font-bold mb-[9px]"
                       style={{
                         color: '#FFF',
                         fontFamily: 'Nunito',
@@ -1267,7 +1318,7 @@ export default function AboutClient() {
                       Expert-Led Guidance
                     </h3>
                     <p
-                      className="text-[14px] max-w-[200px]"
+                      className="text-[13px] max-w-[150px]"
                       style={{
                         color: 'rgba(255, 255, 255, 0.85)',
                         fontFamily: 'Nunito',
@@ -1282,12 +1333,12 @@ export default function AboutClient() {
 
                 {/* Card 3 - Fast Processing */}
                 <div
-                  className="relative h-80 group cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl overflow-hidden"
+                  className="relative h-60 group cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl overflow-hidden"
                   style={{
-                    borderRadius: '24px',
+                    borderRadius: '18px',
                     background: 'linear-gradient(135deg, rgba(255, 183, 3, 0.08) 0%, rgba(12, 0, 43, 0.4) 100%)',
                     border: '1px solid rgba(255, 183, 3, 0.2)',
-                    boxShadow: '0 12px 48px rgba(0, 0, 0, 0.4), inset 0 0 32px rgba(255, 255, 255, 0.05)'
+                    boxShadow: '0 9px 36px rgba(0, 0, 0, 0.4), inset 0 0 24px rgba(255, 255, 255, 0.05)'
                   }}
                 >
                   {/* Icon - top right */}
@@ -1295,16 +1346,16 @@ export default function AboutClient() {
                     <Image
                       src="/figmacomp/fast-processing.svg"
                       alt="Fast Processing Icon"
-                      width={120}
-                      height={240}
-                      className="w-auto h-48 object-contain icon-hover-yellow opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"
+                      width={90}
+                      height={180}
+                      className="w-auto h-36 object-contain icon-hover-yellow opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"
                     />
                   </div>
 
                   {/* Content */}
-                  <div className="relative z-10 p-8">
+                  <div className="relative z-10 p-[24px]">
                     <h3
-                      className="text-[20px] font-bold mb-3"
+                      className="text-[22px] font-bold mb-[9px]"
                       style={{
                         color: '#FFF',
                         fontFamily: 'Nunito',
@@ -1315,7 +1366,7 @@ export default function AboutClient() {
                       Fast Processing
                     </h3>
                     <p
-                      className="text-[14px] max-w-[200px]"
+                      className="text-[13px] max-w-[150px]"
                       style={{
                         color: 'rgba(255, 255, 255, 0.85)',
                         fontFamily: 'Nunito',
@@ -1330,12 +1381,12 @@ export default function AboutClient() {
 
                 {/* Card 4 - Affordable & Transparent Pricing */}
                 <div
-                  className="relative h-80 group cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl overflow-hidden"
+                  className="relative h-60 group cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl overflow-hidden"
                   style={{
-                    borderRadius: '24px',
+                    borderRadius: '18px',
                     background: 'linear-gradient(135deg, rgba(255, 183, 3, 0.08) 0%, rgba(12, 0, 43, 0.4) 100%)',
                     border: '1px solid rgba(255, 183, 3, 0.2)',
-                    boxShadow: '0 12px 48px rgba(0, 0, 0, 0.4), inset 0 0 32px rgba(255, 255, 255, 0.05)'
+                    boxShadow: '0 9px 36px rgba(0, 0, 0, 0.4), inset 0 0 24px rgba(255, 255, 255, 0.05)'
                   }}
                 >
                   {/* Icon - bottom right */}
@@ -1343,16 +1394,16 @@ export default function AboutClient() {
                     <Image
                       src="/figmacomp/affordable-pricing.svg"
                       alt="Affordable Pricing Icon"
-                      width={200}
-                      height={150}
-                      className="w-auto h-36 object-contain icon-hover-yellow opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"
+                      width={150}
+                      height={112}
+                      className="w-auto h-27 object-contain icon-hover-yellow opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"
                     />
                   </div>
 
                   {/* Content */}
-                  <div className="relative z-10 p-8">
+                  <div className="relative z-10 p-[24px]">
                     <h3
-                      className="text-[19px] font-bold mb-3"
+                      className="text-[22px] font-bold mb-[9px]"
                       style={{
                         color: '#FFF',
                         fontFamily: 'Nunito',
@@ -1363,7 +1414,7 @@ export default function AboutClient() {
                       Affordable & Transparent Pricing
                     </h3>
                     <p
-                      className="text-[14px] max-w-[200px]"
+                        className="text-[13px] max-w-[150px]"
                       style={{
                         color: 'rgba(255, 255, 255, 0.85)',
                         fontFamily: 'Nunito',
@@ -1378,20 +1429,20 @@ export default function AboutClient() {
               </div>
 
               {/* Right Section - Card 5 (End-to-End Support) */}
-              <div className="w-96 flex-shrink-0">
+              <div className="w-72 flex-shrink-0">
                 <div
-                  className="relative h-[41.5rem] group cursor-pointer overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+                  className="relative h-[31.125rem] group cursor-pointer overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl"
                   style={{
-                    borderRadius: '24px',
+                    borderRadius: '18px',
                     background: 'linear-gradient(135deg, rgba(255, 183, 3, 0.12) 0%, rgba(12, 0, 43, 0.5) 100%)',
                     border: '1px solid rgba(255, 183, 3, 0.3)',
-                    boxShadow: '0 12px 48px rgba(0, 0, 0, 0.4), inset 0 0 32px rgba(255, 255, 255, 0.05)'
+                    boxShadow: '0 9px 36px rgba(0, 0, 0, 0.4), inset 0 0 24px rgba(255, 255, 255, 0.05)'
                   }}
                 >
                   {/* Main content */}
-                  <div className="relative z-20 p-8 h-full flex flex-col">
+                  <div className="relative z-20 p-[24px] h-full flex flex-col">
                     <h3
-                      className="text-[24px] font-bold mb-4 text-center"
+                      className="text-[22px] font-bold mb-[12px] text-center"
                       style={{
                         color: '#FFF',
                         fontFamily: 'Nunito',
@@ -1402,7 +1453,7 @@ export default function AboutClient() {
                       End-to-End Support
                     </h3>
                     <p
-                      className="text-[16px] mb-8 text-center"
+                      className="text-[13px] mb-[24px] text-center"
                       style={{
                         color: 'rgba(255, 255, 255, 0.85)',
                         fontFamily: 'Nunito',
@@ -1414,32 +1465,32 @@ export default function AboutClient() {
                     </p>
 
                     {/* Process Steps - Always Visible */}
-                    <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-6 flex-1 flex flex-col justify-center">
-                      <div className="text-base font-bold mb-6 text-yellow-400 text-center" style={{fontFamily: 'Nunito'}}>Complete Process</div>
-                      <ul className="space-y-4">
+                    <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-[18px] flex-1 flex flex-col justify-center">
+                      <div className="text-[12px] font-bold mb-[18px] text-yellow-400 text-center" style={{fontFamily: 'Nunito'}}>Complete Process</div>
+                      <ul className="space-y-[12px]">
                         <li className="flex items-start group/item">
-                          <div className="w-8 h-8 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mt-0.5 mr-3 flex-shrink-0 group-hover/item:scale-110 transition-transform">
-                            <span className="text-white font-bold text-sm" style={{fontFamily: 'Nunito'}}>1</span>
+                          <div className="w-6 h-6 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mt-0.5 mr-[9px] flex-shrink-0 group-hover/item:scale-110 transition-transform">
+                            <span className="text-white font-bold text-[10.5px]" style={{fontFamily: 'Nunito'}}>1</span>
                           </div>
-                          <span className="text-sm leading-relaxed" style={{color: 'rgba(255, 255, 255, 0.9)', fontFamily: 'Nunito'}}>AI-powered trademark search & analysis</span>
+                          <span className="text-[10.5px] leading-relaxed" style={{color: 'rgba(255, 255, 255, 0.9)', fontFamily: 'Nunito'}}>AI-powered trademark search & analysis</span>
                         </li>
                         <li className="flex items-start group/item">
-                          <div className="w-8 h-8 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mt-0.5 mr-3 flex-shrink-0 group-hover/item:scale-110 transition-transform">
-                            <span className="text-white font-bold text-sm" style={{fontFamily: 'Nunito'}}>2</span>
+                          <div className="w-6 h-6 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mt-0.5 mr-[9px] flex-shrink-0 group-hover/item:scale-110 transition-transform">
+                            <span className="text-white font-bold text-[10.5px]" style={{fontFamily: 'Nunito'}}>2</span>
                           </div>
-                          <span className="text-sm leading-relaxed" style={{color: 'rgba(255, 255, 255, 0.9)', fontFamily: 'Nunito'}}>Expert legal review & consultation</span>
+                          <span className="text-[10.5px] leading-relaxed" style={{color: 'rgba(255, 255, 255, 0.9)', fontFamily: 'Nunito'}}>Expert legal review & consultation</span>
                         </li>
                         <li className="flex items-start group/item">
-                          <div className="w-8 h-8 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mt-0.5 mr-3 flex-shrink-0 group-hover/item:scale-110 transition-transform">
-                            <span className="text-white font-bold text-sm" style={{fontFamily: 'Nunito'}}>3</span>
+                          <div className="w-6 h-6 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mt-0.5 mr-[9px] flex-shrink-0 group-hover/item:scale-110 transition-transform">
+                            <span className="text-white font-bold text-[10.5px]" style={{fontFamily: 'Nunito'}}>3</span>
                           </div>
-                          <span className="text-sm leading-relaxed" style={{color: 'rgba(255, 255, 255, 0.9)', fontFamily: 'Nunito'}}>Complete filing & documentation</span>
+                          <span className="text-[10.5px] leading-relaxed" style={{color: 'rgba(255, 255, 255, 0.9)', fontFamily: 'Nunito'}}>Complete filing & documentation</span>
                         </li>
                         <li className="flex items-start group/item">
-                          <div className="w-8 h-8 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mt-0.5 mr-3 flex-shrink-0 group-hover/item:scale-110 transition-transform">
-                            <span className="text-white font-bold text-sm" style={{fontFamily: 'Nunito'}}>4</span>
+                          <div className="w-6 h-6 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mt-0.5 mr-[9px] flex-shrink-0 group-hover/item:scale-110 transition-transform">
+                            <span className="text-white font-bold text-[10.5px]" style={{fontFamily: 'Nunito'}}>4</span>
                           </div>
-                          <span className="text-sm leading-relaxed" style={{color: 'rgba(255, 255, 255, 0.9)', fontFamily: 'Nunito'}}>Post-registration monitoring & renewals</span>
+                          <span className="text-[10.5px] leading-relaxed" style={{color: 'rgba(255, 255, 255, 0.9)', fontFamily: 'Nunito'}}>Post-registration monitoring & renewals</span>
                         </li>
                       </ul>
                     </div>
@@ -1449,16 +1500,16 @@ export default function AboutClient() {
             </div>
           </div>
           {/* Trust & Proof line */}
-          <div className="w-full text-center mt-12 px-6">
+          <div className="w-full text-center mt-[36px] px-[18px]">
             <div 
-              className="inline-flex items-center gap-3 px-8 py-4 rounded-full"
+              className="inline-flex items-center gap-[9px] px-[24px] py-[12px] rounded-full"
               style={{
                 background: 'linear-gradient(135deg, rgba(255, 183, 3, 0.1) 0%, rgba(12, 0, 43, 0.3) 100%)',
                 border: '1px solid rgba(255, 183, 3, 0.2)',
-                boxShadow: '0 4px 16px rgba(0, 0, 0, 0.2)'
+                boxShadow: '0 3px 12px rgba(0, 0, 0, 0.2)'
               }}
             >
-              <span className="text-sm font-medium" style={{color: 'rgba(255, 255, 255, 0.9)', fontFamily: 'Nunito'}}>
+              <span className="text-[10.5px] font-medium" style={{color: 'rgba(255, 255, 255, 0.9)', fontFamily: 'Nunito'}}>
                 Trusted by 5,000+ entrepreneurs and startups with official filings, attorney review, and secure document handling.
               </span>
             </div>
@@ -1494,10 +1545,12 @@ export default function AboutClient() {
               </div>
 
               {/* AI Input */}
-              <form onSubmit={(e) => { e.preventDefault(); console.log('AI Question submitted'); }} className="relative">
+              <form onSubmit={handleAiSubmit} className="relative">
                 <div className="relative bg-white/50 backdrop-blur-sm border border-purple-400/30 rounded-[10.8px] p-[14.4px] max-w-lg">
                   <input
                     type="text"
+                    value={aiQuestion}
+                    onChange={(e) => setAiQuestion(e.target.value)}
                     placeholder="Smart AI, Ask me Anything...."
                     className="bg-transparent text-white placeholder-white outline-none text-[14.4px] w-full"
                   />
@@ -1512,6 +1565,58 @@ export default function AboutClient() {
                   </button>
                 </div>
               </form>
+
+              {/* Search Result Display */}
+              {searchResult && (
+                <div 
+                  key={searchResult.question}
+                  className="p-[18px] rounded-[10.8px] max-w-lg animate-fade-in-up"
+                  style={{
+                    background: 'linear-gradient(140deg, rgba(12, 0, 43, 0.10) 6.89%, rgba(255, 183, 3, 0.10) 101.84%)',
+                    boxShadow: '2.88px 2.88px 18.144px 0 rgba(0, 0, 0, 0.15), 0 0 14.4px 0.72px rgba(255, 255, 255, 0.10) inset',
+                    backdropFilter: 'blur(87.876px)'
+                  }}
+                >
+                  <div className="flex justify-between items-start mb-[10.8px]">
+                    <h4 className="text-white font-nunito text-[14.4px] md:text-[16.2px] font-semibold leading-snug" style={{ color: '#FFB703' }}>
+                      {searchResult.question}
+                    </h4>
+                    <button
+                      onClick={() => setSearchResult(null)}
+                      className="text-white hover:text-gray-300 transition-colors ml-[10.8px] flex-shrink-0"
+                    >
+                      <FontAwesomeIcon icon={faChevronDown} className="w-[14.4px] h-[14.4px] rotate-180" />
+                    </button>
+                  </div>
+                  <p className="text-white font-nunito text-[12.6px] md:text-[13.5px] font-medium leading-relaxed">
+                    {searchResult.answer}
+                  </p>
+                </div>
+              )}
+
+              {/* No Match Message */}
+              {showNoMatch && (
+                <div 
+                  className="p-[18px] rounded-[10.8px] max-w-lg animate-fade-in-up"
+                  style={{
+                    background: 'linear-gradient(140deg, rgba(12, 0, 43, 0.10) 6.89%, rgba(255, 183, 3, 0.10) 101.84%)',
+                    boxShadow: '2.88px 2.88px 18.144px 0 rgba(0, 0, 0, 0.15), 0 0 14.4px 0.72px rgba(255, 255, 255, 0.10) inset',
+                    backdropFilter: 'blur(87.876px)'
+                  }}
+                >
+                  <div className="flex justify-between items-start">
+                    <p className="text-white font-nunito text-[13.5px] md:text-[14.4px] font-medium leading-relaxed">
+                      We're experiencing high traffic at the moment. Please try your search again in a few moments, or browse our FAQ section for answers.
+                    </p>
+                    <button
+                      onClick={() => setShowNoMatch(false)}
+                      className="text-white hover:text-gray-300 transition-colors ml-[10.8px] flex-shrink-0"
+                    >
+                      <FontAwesomeIcon icon={faChevronDown} className="w-[14.4px] h-[14.4px] rotate-180" />
+                    </button>
+                  </div>
+                </div>
+              )}
             </div>
 
             {/* Right Section - FAQ Items */}

@@ -23,6 +23,9 @@ export default function ContactClient() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
+  const [aiQuestion, setAiQuestion] = useState('');
+  const [searchResult, setSearchResult] = useState<{question: string, answer: string} | null>(null);
+  const [showNoMatch, setShowNoMatch] = useState(false);
 
   const toggleFaq = (index: number) => {
     setOpenFaq(openFaq === index ? null : index);
@@ -50,6 +53,54 @@ export default function ContactClient() {
       answer: "Once you register with IPR Karo, you'll receive regular updates via email and SMS. You can also log into your dashboard to track your application status in real-time, view documents, and communicate directly with your assigned legal expert."
     }
   ];
+
+  const handleAiSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (aiQuestion.trim()) {
+      setSearchResult(null);
+      setShowNoMatch(false);
+      
+      const query = aiQuestion.toLowerCase().trim();
+      
+      const scoredFaqs = contactFaqs.map(faq => {
+        const questionLower = faq.question.toLowerCase();
+        const answerLower = faq.answer.toLowerCase();
+        let score = 0;
+        
+        const queryWords = query.split(' ').filter(word => word.length > 2);
+        
+        queryWords.forEach(word => {
+          if (questionLower.includes(query)) {
+            score += 100;
+          }
+          if (questionLower.includes(word)) {
+            score += 10;
+          }
+          if (answerLower.includes(word)) {
+            score += 3;
+          }
+        });
+        
+        return { faq, score };
+      });
+      
+      const bestMatch = scoredFaqs.reduce((best, current) => 
+        current.score > best.score ? current : best
+      );
+      
+      setTimeout(() => {
+        if (bestMatch.score > 0) {
+          setSearchResult(bestMatch.faq);
+          setShowNoMatch(false);
+        } else {
+          setSearchResult(null);
+          setShowNoMatch(true);
+        }
+      }, 50);
+      
+      setAiQuestion('');
+    }
+  };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -375,12 +426,14 @@ export default function ContactClient() {
               </div>
 
               {/* AI Input */}
-              <form onSubmit={(e) => { e.preventDefault(); console.log('AI Question submitted'); }} className="relative">
+              <form onSubmit={handleAiSubmit} className="relative">
                 <div className="relative bg-white/50 backdrop-blur-sm border border-purple-400/30 rounded-[10.8px] p-[14.4px] max-w-lg">
                   <input
                     type="text"
+                    value={aiQuestion}
+                    onChange={(e) => setAiQuestion(e.target.value)}
                     placeholder="Smart AI, Ask me Anything...."
-                    className="bg-transparent text-white placeholder-white outline-none text-[14.4px]"
+                    className="bg-transparent text-white placeholder-white outline-none text-[14.4px] w-full"
                   />
                   <button
                     type="submit"
@@ -393,6 +446,58 @@ export default function ContactClient() {
                   </button>
                 </div>
               </form>
+
+              {/* Search Result Display */}
+              {searchResult && (
+                <div 
+                  key={searchResult.question}
+                  className="p-[18px] rounded-[10.8px] max-w-lg animate-fade-in-up"
+                  style={{
+                    background: 'linear-gradient(140deg, rgba(12, 0, 43, 0.10) 6.89%, rgba(255, 183, 3, 0.10) 101.84%)',
+                    boxShadow: '2.88px 2.88px 18.144px 0 rgba(0, 0, 0, 0.15), 0 0 14.4px 0.72px rgba(255, 255, 255, 0.10) inset',
+                    backdropFilter: 'blur(87.876px)'
+                  }}
+                >
+                  <div className="flex justify-between items-start mb-[10.8px]">
+                    <h4 className="text-white font-nunito text-[14.4px] md:text-[16.2px] font-semibold leading-snug" style={{ color: '#FFB703' }}>
+                      {searchResult.question}
+                    </h4>
+                    <button
+                      onClick={() => setSearchResult(null)}
+                      className="text-white hover:text-gray-300 transition-colors ml-[10.8px] flex-shrink-0"
+                    >
+                      <FontAwesomeIcon icon={faChevronDown} className="w-[14.4px] h-[14.4px] rotate-180" />
+                    </button>
+                  </div>
+                  <p className="text-white font-nunito text-[12.6px] md:text-[13.5px] font-medium leading-relaxed">
+                    {searchResult.answer}
+                  </p>
+                </div>
+              )}
+
+              {/* No Match Message */}
+              {showNoMatch && (
+                <div 
+                  className="p-[18px] rounded-[10.8px] max-w-lg animate-fade-in-up"
+                  style={{
+                    background: 'linear-gradient(140deg, rgba(12, 0, 43, 0.10) 6.89%, rgba(255, 183, 3, 0.10) 101.84%)',
+                    boxShadow: '2.88px 2.88px 18.144px 0 rgba(0, 0, 0, 0.15), 0 0 14.4px 0.72px rgba(255, 255, 255, 0.10) inset',
+                    backdropFilter: 'blur(87.876px)'
+                  }}
+                >
+                  <div className="flex justify-between items-start">
+                    <p className="text-white font-nunito text-[13.5px] md:text-[14.4px] font-medium leading-relaxed">
+                      We're experiencing high traffic at the moment. Please try your search again in a few moments, or browse our FAQ section for answers.
+                    </p>
+                    <button
+                      onClick={() => setShowNoMatch(false)}
+                      className="text-white hover:text-gray-300 transition-colors ml-[10.8px] flex-shrink-0"
+                    >
+                      <FontAwesomeIcon icon={faChevronDown} className="w-[14.4px] h-[14.4px] rotate-180" />
+                    </button>
+                  </div>
+                </div>
+              )}
             </div>
 
             {/* Right Section - FAQ Items */}

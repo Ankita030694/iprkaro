@@ -10,8 +10,9 @@ export default function SearchClient() {
   const handleSearch = () => {
     if (searchTerm.trim()) {
       // Redirect to form page with URL parameters
+      // Convert trademark to lowercase for case-insensitive search
       const params = new URLSearchParams({
-        trademark: searchTerm.trim(),
+        trademark: searchTerm.trim().toLowerCase(),
         class: trademarkClass.trim()
       });
       router.push(`/form?${params.toString()}`);
