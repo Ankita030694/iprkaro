@@ -4,6 +4,12 @@ import { db } from '../../../lib/firebase';
 import ArticleDetail from './ArticleDetail';
 import { notFound } from 'next/navigation';
 
+interface FAQ {
+  id: string;
+  question: string;
+  answer: string;
+}
+
 interface Blog {
   id: string;
   title: string;
@@ -16,6 +22,7 @@ interface Blog {
   metaDescription?: string;
   slug: string;
   author?: string;
+  faqs?: FAQ[];
 }
 
 interface PageProps {
@@ -78,8 +85,38 @@ export default async function BlogPostPage({ params }: PageProps) {
       notFound();
     }
 
+    // Get blog data including FAQs for schema
+    const blogData = querySnapshot.docs[0].data() as Blog;
+    const faqs = blogData.faqs || [];
+
+    // Generate FAQ schema if FAQs exist
+    const faqSchema = faqs.length > 0 ? {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": faqs.map((faq) => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer
+        }
+      }))
+    } : null;
+
     // Render the client component with the slug
-    return <ArticleDetail slug={slug} />;
+    return (
+      <>
+        {faqSchema && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(faqSchema),
+            }}
+          />
+        )}
+        <ArticleDetail slug={slug} />
+      </>
+    );
   } catch (error) {
     console.error('Error fetching blog:', error);
     notFound();

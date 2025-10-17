@@ -290,41 +290,8 @@ const ArticleDetail = memo(function ArticleDetail({ slug }: BlogDetailProps) {
     );
   };
 
-  // Inject FAQ schema into document head for SEO
-  useEffect(() => {
-    if (faqs.length > 0 && typeof window !== 'undefined') {
-      // Remove existing FAQ schema if any
-      const existingSchema = document.getElementById('blog-faq-schema');
-      if (existingSchema) {
-        existingSchema.remove();
-      }
-
-      // Create and inject new FAQ schema
-      const script = document.createElement('script');
-      script.id = 'blog-faq-schema';
-      script.type = 'application/ld+json';
-      script.text = JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": faqs.map((faq) => ({
-          "@type": "Question",
-          "name": faq.question,
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": faq.answer
-          }
-        }))
-      });
-      document.head.appendChild(script);
-
-      return () => {
-        const schemaToRemove = document.getElementById('blog-faq-schema');
-        if (schemaToRemove) {
-          schemaToRemove.remove();
-        }
-      };
-    }
-  }, [faqs]);
+  // FAQ Schema is now rendered server-side in page.tsx for better SEO
+  // No client-side schema injection needed
 
   const handleShare = (platform: string) => {
     const currentUrl = typeof window !== 'undefined' ? window.location.href : '';
