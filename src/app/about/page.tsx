@@ -6,7 +6,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import ClientLogoSlider from '@/components/ClientLogoSlider';
 import AboutBento from '@/components/AboutBento';
-import Script from 'next/script';
 
 export default function AboutPage() {
   // State for mobile card interactions
@@ -81,19 +80,6 @@ export default function AboutPage() {
     }
   ];
 
-  // Schema markup for FAQPage
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": aboutFaqs.map((faq) => ({
-      "@type": "Question",
-      "name": faq.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.answer
-      }
-    }))
-  };
   return (
     <div
       className="min-h-screen relative overflow-x-hidden"
@@ -1460,16 +1446,6 @@ export default function AboutPage() {
 
         {/* FAQ Section */}
         <div className="py-[57.6px] relative overflow-hidden w-full">
-        {/* Server-side FAQ Schema for Google Search Console */}
-        <Script
-          id="about-faq-schema"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(faqSchema),
-          }}
-          strategy="beforeInteractive"
-        />
-
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-0 w-full h-full" style={{ background: 'linear-gradient(to right, #FFB70320, transparent)' }}></div>

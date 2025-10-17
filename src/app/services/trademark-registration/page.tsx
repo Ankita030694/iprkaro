@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
-import Script from 'next/script';
 
 export default function TrademarkRegistrationPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -66,20 +65,6 @@ export default function TrademarkRegistrationPage() {
       answer: "A registered trademark is valid for 10 years and can be renewed indefinitely every 10 years."
     }
   ];
-
-  // Schema markup for FAQPage
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": trademarkFaqs.map((faq, index) => ({
-      "@type": "Question",
-      "name": `Q${index + 1}. ${faq.question}`,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.answer
-      }
-    }))
-  };
 
   const features = [
     { text: "Cost Effective", icon: 0 },
@@ -1505,16 +1490,6 @@ Trademarks can include:
           </div>
         </div>
       )}
-
-      {/* Server-side FAQ Schema for Google Search Console */}
-      <Script
-        id="trademark-registration-faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqSchema),
-        }}
-        strategy="beforeInteractive"
-      />
 
       {/* We Provide Solutions In Section */}
       <section className="py-20 relative overflow-hidden" style={{ backgroundColor: '#0C002B' }}>

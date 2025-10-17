@@ -5,7 +5,6 @@ import { db } from '../../../lib/firebase';
 import Link from 'next/link';
 import BlogTableOfContents from '@/components/blog/BlogTableOfContents';
 import BlogSidebarForm from '@/components/blog/BlogSidebarForm';
-import Script from 'next/script';
 
 // Define the Blog interface
 interface Blog {
@@ -291,6 +290,42 @@ const ArticleDetail = memo(function ArticleDetail({ slug }: BlogDetailProps) {
     );
   };
 
+  // Inject FAQ schema into document head for SEO
+  useEffect(() => {
+    if (faqs.length > 0 && typeof window !== 'undefined') {
+      // Remove existing FAQ schema if any
+      const existingSchema = document.getElementById('blog-faq-schema');
+      if (existingSchema) {
+        existingSchema.remove();
+      }
+
+      // Create and inject new FAQ schema
+      const script = document.createElement('script');
+      script.id = 'blog-faq-schema';
+      script.type = 'application/ld+json';
+      script.text = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqs.map((faq) => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+          }
+        }))
+      });
+      document.head.appendChild(script);
+
+      return () => {
+        const schemaToRemove = document.getElementById('blog-faq-schema');
+        if (schemaToRemove) {
+          schemaToRemove.remove();
+        }
+      };
+    }
+  }, [faqs]);
+
   const handleShare = (platform: string) => {
     const currentUrl = typeof window !== 'undefined' ? window.location.href : '';
     const title = blog?.title || 'Check out this blog post';
@@ -545,28 +580,6 @@ const ArticleDetail = memo(function ArticleDetail({ slug }: BlogDetailProps) {
 
               {/* FAQs */}
         {faqs.length > 0 && (
-                <>
-                  {/* FAQ Schema for Google Search Console */}
-                  <Script
-                    id={`blog-faq-schema-${blog?.id || 'default'}`}
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{
-                      __html: JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "FAQPage",
-                        "mainEntity": faqs.map((faq) => ({
-                          "@type": "Question",
-                          "name": faq.question,
-                          "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": faq.answer
-                          }
-                        }))
-                      }),
-                    }}
-                    strategy="beforeInteractive"
-                  />
-                  
                   <div className="mt-6 rounded-2xl p-6 backdrop-blur-xl border border-white/10 shadow-xl" style={{
                     background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(12, 0, 43, 0.8) 100%)'
                   }}>
@@ -596,7 +609,6 @@ const ArticleDetail = memo(function ArticleDetail({ slug }: BlogDetailProps) {
                   ))}
                 </div>
               </div>
-                </>
               )}
           </div>
 

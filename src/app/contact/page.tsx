@@ -9,7 +9,6 @@ import OurHeadOffice from '@/components/OurHeadOffice';
 import { CitiesAndTerritories } from '@/components';
 import { db } from '@/lib/firebase';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
-import Script from 'next/script';
 
 export default function ContactPage() {
   const router = useRouter();
@@ -51,20 +50,6 @@ export default function ContactPage() {
       answer: "Once you register with IPR Karo, you'll receive regular updates via email and SMS. You can also log into your dashboard to track your application status in real-time, view documents, and communicate directly with your assigned legal expert."
     }
   ];
-
-  // Schema markup for FAQPage
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": contactFaqs.map((faq) => ({
-      "@type": "Question",
-      "name": faq.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.answer
-      }
-    }))
-  };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -364,16 +349,6 @@ export default function ContactPage() {
 
       {/* FAQ Section */}
       <section className="py-[57.6px] relative overflow-hidden" style={{ backgroundColor: '#0C002B' }}>
-        {/* Server-side FAQ Schema for Google Search Console */}
-        <Script
-          id="contact-faq-schema"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(faqSchema),
-          }}
-          strategy="beforeInteractive"
-        />
-
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-0 w-full h-full" style={{ background: 'linear-gradient(to right, #FFB70320, transparent)' }}></div>

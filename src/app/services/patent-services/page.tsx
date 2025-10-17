@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
-import Script from 'next/script';
 
 export default function TrademarkRegistrationPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -66,20 +65,6 @@ export default function TrademarkRegistrationPage() {
       answer: "A granted patent is valid for 20 years from the date of filing, after which it enters the public domain. Annual renewal fees must be paid to maintain the patent."
     }
   ];
-
-  // Schema markup for FAQPage
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": patentFaqs.map((faq, index) => ({
-      "@type": "Question",
-      "name": `Q${index + 1}. ${faq.question}`,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.answer
-      }
-    }))
-  };
 
   const features = [
     { text: "Cost Effective", icon: 0 },
@@ -1469,16 +1454,6 @@ Register your patent today with IPRKaro to safeguard your innovation, secure you
           </div>
         </div>
       )}
-
-      {/* Server-side FAQ Schema for Google Search Console */}
-      <Script
-        id="patent-services-faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqSchema),
-        }}
-        strategy="beforeInteractive"
-      />
 
       {/* We Provide Solutions In Section */}
       <section className="py-20 relative overflow-hidden" style={{ backgroundColor: '#0C002B' }}>

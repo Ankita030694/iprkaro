@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
-import Script from 'next/script';
 
 export default function TrademarkRegistrationPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -46,40 +45,26 @@ export default function TrademarkRegistrationPage() {
 
   const trademarkFaqs = [
     {
-      question: "What is a trademark, and why should I register it?",
-      answer: "A trademark is a unique symbol, word, name, or logo that identifies your goods or services. Registering it gives you exclusive legal rights to use it, prevents misuse by others, and enhances your brand's credibility."
+      question: "What is a copyright, and why should I register it?",
+      answer: "Copyright is a legal right that protects original creative works such as literary, artistic, musical, and digital content. Registering it provides legal proof of ownership and exclusive rights to reproduce, distribute, and license your work."
     },
     {
-      question: "How long does it take to register a trademark in India?",
-      answer: "The average time is 12 to 18 months, depending on objections or oppositions. With IPRKaro's AI-powered search reports, you can reduce risks of delay by identifying conflicts early."
+      question: "How long does it take to register copyright in India?",
+      answer: "Copyright registration in India typically takes 4-6 months from filing to certificate issuance. With IPRKaro's expert guidance, we ensure proper documentation for timely processing."
     },
     {
-      question: "What documents are required for trademark registration?",
-      answer: "Applicant's ID & Address Proof, Brand Logo / Wordmark (optional for wordmark filing), Incorporation Certificate (for companies), Power of Attorney (Form TM-48)"
+      question: "What documents are required for copyright registration?",
+      answer: "Identity proof (PAN/Aadhaar), Address proof, Work sample (manuscript, music file, software code, design), NOC from publisher/author (if applicable), Power of Attorney (if filed through attorney)"
     },
     {
-      question: "Can I register a trademark online in India?",
-      answer: "Yes. With IPRKaro, the entire process (from search to filing and objection handling) is managed 100% online with expert support."
+      question: "Can I register copyright online in India?",
+      answer: "Yes. With IPRKaro, the entire copyright registration process is managed 100% online with expert legal support for books, music, software, and all creative works."
     },
     {
-      question: "How long is a trademark valid in India?",
-      answer: "A registered trademark is valid for 10 years and can be renewed indefinitely every 10 years."
+      question: "How long is copyright protection valid in India?",
+      answer: "Copyright protection lasts for the lifetime of the author plus 60 years after their death. For works like films and sound recordings, it's 60 years from the date of publication."
     }
   ];
-
-  // Schema markup for FAQPage
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": trademarkFaqs.map((faq, index) => ({
-      "@type": "Question",
-      "name": `Q${index + 1}. ${faq.question}`,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.answer
-      }
-    }))
-  };
 
   const features = [
     { text: "Cost Effective", icon: 0 },
@@ -1485,16 +1470,6 @@ Get your copyright registered today with IPRKaro to protect your creativity, mon
           </div>
         </div>
       )}
-
-      {/* Server-side FAQ Schema for Google Search Console */}
-      <Script
-        id="copyright-protection-faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqSchema),
-        }}
-        strategy="beforeInteractive"
-      />
 
       {/* We Provide Solutions In Section */}
       <section className="py-20 relative overflow-hidden" style={{ backgroundColor: '#0C002B' }}>
