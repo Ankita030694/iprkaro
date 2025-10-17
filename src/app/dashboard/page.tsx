@@ -825,10 +825,7 @@ function DashboardContent() {
                   >
                     {/* Icon */}
                     <div className="flex-shrink-0">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white xl:w-3 xl:h-3">
-                        <line x1="12" y1="1" x2="12" y2="23"></line>
-                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                      </svg>
+                      <span className="text-white text-base xl:text-md" style={{ fontWeight: 300 }}>₹</span>
                     </div>
                     {/* Content */}
                     <div className="flex-1">
@@ -1173,10 +1170,7 @@ function DashboardContent() {
               {/* Market Position */}
               <div className="flex items-start gap-2 p-2" style={{ borderRadius: '8px', border: '1.5px solid rgba(255, 255, 255, 0.15)', background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%)', backdropFilter: 'blur(13px)' }}>
                 <div className="flex-shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
-                    <line x1="12" y1="1" x2="12" y2="23"></line>
-                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                  </svg>
+                  <span className="text-white text-md" style={{ fontWeight: 300 }}>₹</span>
                 </div>
                 <div className="flex-1">
                   <h5 className="text-white font-nunito text-[10px] font-semibold mb-0.5">Market Position</h5>
