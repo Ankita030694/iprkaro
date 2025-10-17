@@ -1405,14 +1405,12 @@ function DashboardContent() {
                   <div className="space-y-3 mt-10 w-full flex flex-col">
                     {/* First Container - Filing Date */}
                     <div
-                      className="relative p-3 rounded-xl w-full md:max-w-[400px]"
+                      className="flex p-3 md:p-3 justify-center items-center rounded-[16px] border-2 border-white/[0.15] backdrop-blur-[13px] w-full md:max-w-[400px]"
                       style={{
-                        background: 'transparent',
-                        border: '1.5px solid rgba(128, 128, 128, 0.4)',
-                        borderRadius: '13px'
+                        background: 'linear-gradient(135deg, rgba(138, 56, 245, 0.25) 0%, rgba(255, 183, 3, 0.15) 50%, rgba(138, 56, 245, 0.25) 100%)',
                       }}
                     >
-                      <div className="flex items-center justify-between px-4 md:px-8">
+                      <div className="flex items-center justify-between px-4 md:px-8 w-full">
                         <div className="text-white font-nunito text-xs md:text-sm font-medium">
                           Filing Date
                         </div>
@@ -1424,14 +1422,12 @@ function DashboardContent() {
 
                     {/* Second Container - Trademark Estimated Date */}
                     <div
-                      className="relative p-3 rounded-xl w-full md:max-w-[400px]"
+                      className="flex p-3 md:p-3 justify-center items-center rounded-[16px] border-2 border-white/[0.15] backdrop-blur-[13px] w-full md:max-w-[400px]"
                       style={{
-                        background: 'transparent',
-                        border: '1.5px solid rgba(128, 128, 128, 0.4)',
-                        borderRadius: '13px'
+                        background: 'linear-gradient(135deg, rgba(138, 56, 245, 0.25) 0%, rgba(255, 183, 3, 0.15) 50%, rgba(138, 56, 245, 0.25) 100%)',
                       }}
                     >
-                      <div className="flex items-center justify-between px-4 md:px-8">
+                      <div className="flex items-center justify-between px-4 md:px-8 w-full">
                         <div className="text-white font-nunito text-xs md:text-sm font-medium">
                           Trademark Estimated Date
                         </div>
