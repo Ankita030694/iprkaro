@@ -41,10 +41,25 @@ export async function GET() {
     '/blog',
     '/contact',
     '/dashboard',
+    '/form',
     '/services',
     '/services/trademark-registration',
+    '/services/trademark/rectification',
+    '/services/trademark/assignment',
+    '/services/trademark/watch',
+    '/services/trademark/objection',
+    '/services/trademark/opposition',
+    '/services/trademark/renewal',
     '/services/patent-services',
+    '/services/patent/filing',
+    '/services/patent/licensing',
+    '/services/patent/renewal',
+    '/services/patent/opposition',
     '/services/copyright-protection',
+    '/services/copyright/software',
+    '/services/copyright/renewal',
+    '/services/copyright/infringement',
+    '/services/copyright/transfer',
     '/trademark-registration-guide',
     '/features/247-trademark-protection',
     '/features/affordable-trademark-services',
@@ -54,7 +69,6 @@ export async function GET() {
     '/features/trademark-risk-reduction',
     '/privacy-policy',
     '/terms-and-conditions',
-    '/trademark-registration-guide',
   ];
 
   // Generate dynamic service pages
@@ -77,13 +91,18 @@ ${allPages.map((page) => {
     const url = `${baseUrl}${page}`;
     const priority = page === '' ? '1.0' : 
                     page === '/trademark-registration-guide' ? '0.95' :
-                    page.startsWith('/services/') && !page.includes('-in-') ? '0.9' :
+                    page === '/services' || page === '/services/trademark-registration' || 
+                    page === '/services/patent-services' || page === '/services/copyright-protection' ? '0.9' :
+                    page.startsWith('/services/') && !page.includes('-in-') ? '0.85' :
                     page.startsWith('/features/') ? '0.8' :
                     page === '/about' || page === '/contact' ? '0.7' :
+                    page === '/form' || page === '/thank-you' ? '0.6' :
                     page.includes('-in-') ? '0.6' : '0.5';
     
     const changefreq = page === '' ? 'daily' :
                       page === '/trademark-registration-guide' ? 'weekly' :
+                      page === '/services' || page === '/services/trademark-registration' || 
+                      page === '/services/patent-services' || page === '/services/copyright-protection' ? 'weekly' :
                       page.startsWith('/services/') && !page.includes('-in-') ? 'weekly' :
                       page.startsWith('/features/') ? 'weekly' :
                       page.includes('-in-') ? 'monthly' : 'monthly';
