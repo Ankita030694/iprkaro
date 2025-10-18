@@ -823,7 +823,7 @@ export default function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trad
                         value={formData.trademarkSearched}
                         onChange={handleInputChange}
                     className="w-full px-3 py-2 pr-8 border border-gray-600 rounded-lg text-white text-sm focus:outline-none focus:border-[#fbbf24] placeholder-gray-400 bg-transparent"
-                        readOnly
+                        placeholder="Enter trademark name"
                       />
                       <button
                         type="button"
@@ -1110,7 +1110,7 @@ export default function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trad
                     value={formData.trademarkSearched}
                     onChange={handleInputChange}
                     className="w-full px-3 py-2 pr-8 border border-gray-600 rounded-lg text-white text-sm focus:outline-none focus:border-[#fbbf24] placeholder-gray-400 bg-transparent"
-                    readOnly
+                    placeholder="Enter trademark name"
                   />
                   <button
                     type="button"

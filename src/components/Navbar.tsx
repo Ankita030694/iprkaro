@@ -7,6 +7,11 @@ import ContactFormPopup from './ContactFormPopup';
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isContactFormOpen, setIsContactFormOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
+  const [isTrademarkSubmenuOpen, setIsTrademarkSubmenuOpen] = useState(false);
+  const [isCopyrightSubmenuOpen, setIsCopyrightSubmenuOpen] = useState(false);
+  const [isPatentSubmenuOpen, setIsPatentSubmenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -15,6 +20,40 @@ export default function Navbar() {
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
   };
+
+  const trademarkServices = [
+    { name: 'Trademark Search & Availability Check', href: '/form' },
+    { name: 'Trademark Filing / Registration', href: '/services/trademark-registration' },
+    { name: 'Trademark Renewal & Restoration', href: '/services/trademark/renewal' },
+    { name: 'Trademark Opposition & Counter-Statement', href: '/services/trademark/opposition' },
+    { name: 'Trademark Objection Reply Drafting', href: '/services/trademark/objection' },
+    { name: 'Trademark Watch / Monitoring Services', href: '/services/trademark/watch' },
+    { name: 'Trademark Assignment & Licensing', href: '/services/trademark/assignment' },
+    { name: 'Trademark Rectification / Removal', href: '/services/trademark/rectification' },
+  ];
+
+  const copyrightServices = [
+    { name: 'Copyright Registration (Artistic, Literary, Musical, Software, Film)', href: '/services/copyright-protection' },
+    { name: 'Copyright Transfer / Assignment Agreements', href: '/services/copyright/transfer' },
+    { name: 'Infringement Notice Drafting & Legal Action', href: '/services/copyright/infringement' },
+    { name: 'Software Code Copyright & Protection', href: '/services/copyright/software' },
+    { name: 'Copyright Renewal / Update Services', href: '/services/copyright/renewal' },
+  ];
+
+  const patentServices = [
+    { name: 'Patent Search & Novelty Check (Prior Art Search)', href: '/services/patent-services' },
+    { name: 'Provisional & Complete Patent Drafting and Filing', href: '/services/patent/filing' },
+    { name: 'Patent Opposition & Revocation', href: '/services/patent/opposition' },
+    { name: 'Patent Renewal & Maintenance', href: '/services/patent/renewal' },
+    { name: 'Patent Licensing & Commercialization Support', href: '/services/patent/licensing' },
+  ];
+
+  const services = [
+    { name: 'Trademark', href: '/services/trademark-registration', hasSubmenu: true, submenuType: 'trademark' },
+    { name: 'Copyright', href: '/services/copyright-protection', hasSubmenu: true, submenuType: 'copyright' },
+    { name: 'Patent', href: '/services/patent-services', hasSubmenu: true, submenuType: 'patent' },
+    { name: 'AI Trademark Search', href: '/form' },
+  ];
 
   return (
     <>
@@ -48,12 +87,83 @@ export default function Navbar() {
                 <div className="absolute bottom-[-17px] left-1/2 transform -translate-x-1/2 w-[60px] h-0.5 bg-[#ffb703] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
             </Link>
-            <Link href="/services"> 
-              <div className="text-white text-[17px] font-normal leading-normal cursor-pointer relative group hover:text-[#ffb703] transition-colors duration-300">
-                Services
-                <div className="absolute bottom-[-17px] left-1/2 transform -translate-x-1/2 w-[60px] h-0.5 bg-[#ffb703] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </div>
-            </Link>
+            <div 
+              className="relative"
+              onMouseEnter={() => setIsServicesDropdownOpen(true)}
+              onMouseLeave={() => setIsServicesDropdownOpen(false)}
+            >
+              <Link href="/services"> 
+                <div className="text-white text-[17px] font-normal leading-normal cursor-pointer relative group hover:text-[#ffb703] transition-colors duration-300 flex items-center gap-1">
+                  Services
+                  <svg 
+                    className={`w-4 h-4 transition-transform duration-300 ${isServicesDropdownOpen ? 'rotate-180' : ''}`}
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                  <div className="absolute bottom-[-17px] left-1/2 transform -translate-x-1/2 w-[60px] h-0.5 bg-[#ffb703] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+              </Link>
+              {/* Services Dropdown */}
+              {isServicesDropdownOpen && (
+                <div className="absolute top-full left-1/2 transform -translate-x-1/2 pt-4 w-64">
+                  <div className="bg-[#0C002B]/95 backdrop-blur-xl border border-[rgba(255,255,255,0.1)] rounded-lg shadow-lg overflow-visible">
+                  {services.map((service, index) => (
+                    <div key={index} className="relative">
+                      {service.hasSubmenu ? (
+                        <div 
+                          className="relative group/submenu"
+                          onMouseEnter={() => {
+                            if (service.submenuType === 'trademark') setIsTrademarkSubmenuOpen(true);
+                            if (service.submenuType === 'copyright') setIsCopyrightSubmenuOpen(true);
+                            if (service.submenuType === 'patent') setIsPatentSubmenuOpen(true);
+                          }}
+                          onMouseLeave={() => {
+                            if (service.submenuType === 'trademark') setIsTrademarkSubmenuOpen(false);
+                            if (service.submenuType === 'copyright') setIsCopyrightSubmenuOpen(false);
+                            if (service.submenuType === 'patent') setIsPatentSubmenuOpen(false);
+                          }}
+                        >
+                          <Link href={service.href}>
+                            <div className="px-4 py-3 text-white text-[15px] hover:bg-[#ffb703]/20 hover:text-[#ffb703] transition-all duration-300 cursor-pointer border-b border-[rgba(255,255,255,0.05)] flex items-center justify-between">
+                              {service.name}
+                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                              </svg>
+                            </div>
+                          </Link>
+                          {/* Submenu */}
+                          {((service.submenuType === 'trademark' && isTrademarkSubmenuOpen) ||
+                            (service.submenuType === 'copyright' && isCopyrightSubmenuOpen) ||
+                            (service.submenuType === 'patent' && isPatentSubmenuOpen)) && (
+                            <div className="absolute left-full top-0 ml-1 w-72 bg-[#0C002B]/95 backdrop-blur-xl border border-[rgba(255,255,255,0.1)] rounded-lg shadow-lg overflow-hidden z-10">
+                              {(service.submenuType === 'trademark' ? trademarkServices :
+                                service.submenuType === 'copyright' ? copyrightServices :
+                                patentServices).map((subService, subIndex) => (
+                                <Link key={subIndex} href={subService.href}>
+                                  <div className="px-4 py-3 text-white text-[14px] hover:bg-[#ffb703]/20 hover:text-[#ffb703] transition-all duration-300 cursor-pointer border-b border-[rgba(255,255,255,0.05)] last:border-b-0">
+                                    {subService.name}
+                                  </div>
+                                </Link>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      ) : (
+                        <Link href={service.href}>
+                          <div className="px-4 py-3 text-white text-[15px] hover:bg-[#ffb703]/20 hover:text-[#ffb703] transition-all duration-300 cursor-pointer border-b border-[rgba(255,255,255,0.05)] last:border-b-0">
+                            {service.name}
+                          </div>
+                        </Link>
+                      )}
+                    </div>
+                  ))}
+                  </div>
+                </div>
+              )}
+            </div>
             <Link href="/blog "> 
               <div className="text-white text-[17px] font-normal leading-normal cursor-pointer relative group hover:text-[#ffb703] transition-colors duration-300">
                 Blogs
@@ -165,9 +275,12 @@ export default function Navbar() {
                   Blogs
                 </div>
               </Link>
-              <Link href="/services" onClick={closeMobileMenu}> 
+              
+              {/* Services with Dropdown for Mobile */}
+              <div>
                 <div 
-                  className="cursor-pointer relative group hover:text-[#ffb703] transition-all duration-300 mb-3"
+                  onClick={() => setIsServicesOpen(!isServicesOpen)}
+                  className="cursor-pointer relative group hover:text-[#ffb703] transition-all duration-300 mb-3 flex items-center gap-2"
                   style={{
                     color: 'rgba(255, 255, 255, 0.60)',
                     fontFamily: 'Nunito',
@@ -178,8 +291,99 @@ export default function Navbar() {
                   }}
                 >
                   Services
+                  <svg 
+                    className={`w-6 h-6 transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''}`} 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
                 </div>
-              </Link>
+                {isServicesOpen && (
+                  <div className="ml-6 space-y-4 mb-6">
+                    {services.map((service, index) => (
+                      <div key={index}>
+                        {service.hasSubmenu ? (
+                          <div>
+                            <div 
+                              onClick={() => {
+                                if (service.submenuType === 'trademark') setIsTrademarkSubmenuOpen(!isTrademarkSubmenuOpen);
+                                if (service.submenuType === 'copyright') setIsCopyrightSubmenuOpen(!isCopyrightSubmenuOpen);
+                                if (service.submenuType === 'patent') setIsPatentSubmenuOpen(!isPatentSubmenuOpen);
+                              }}
+                              className="cursor-pointer hover:text-[#ffb703] transition-all duration-300 flex items-center gap-2"
+                              style={{
+                                color: 'rgba(255, 255, 255, 0.50)',
+                                fontFamily: 'Nunito',
+                                fontSize: '28px',
+                                fontStyle: 'normal',
+                                fontWeight: '400',
+                                lineHeight: '32px'
+                              }}
+                            >
+                              {service.name}
+                              <svg 
+                                className={`w-5 h-5 transition-transform duration-300 ${
+                                  (service.submenuType === 'trademark' && isTrademarkSubmenuOpen) ||
+                                  (service.submenuType === 'copyright' && isCopyrightSubmenuOpen) ||
+                                  (service.submenuType === 'patent' && isPatentSubmenuOpen) ? 'rotate-180' : ''
+                                }`}
+                                fill="none" 
+                                stroke="currentColor" 
+                                viewBox="0 0 24 24"
+                              >
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                              </svg>
+                            </div>
+                            {((service.submenuType === 'trademark' && isTrademarkSubmenuOpen) ||
+                              (service.submenuType === 'copyright' && isCopyrightSubmenuOpen) ||
+                              (service.submenuType === 'patent' && isPatentSubmenuOpen)) && (
+                              <div className="ml-6 mt-3 space-y-3">
+                                {(service.submenuType === 'trademark' ? trademarkServices :
+                                  service.submenuType === 'copyright' ? copyrightServices :
+                                  patentServices).map((subService, subIndex) => (
+                                  <Link key={subIndex} href={subService.href} onClick={closeMobileMenu}>
+                                    <div 
+                                      className="cursor-pointer hover:text-[#ffb703] transition-all duration-300"
+                                      style={{
+                                        color: 'rgba(255, 255, 255, 0.40)',
+                                        fontFamily: 'Nunito',
+                                        fontSize: '22px',
+                                        fontStyle: 'normal',
+                                        fontWeight: '300',
+                                        lineHeight: '28px'
+                                      }}
+                                    >
+                                      {subService.name}
+                                    </div>
+                                  </Link>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+                        ) : (
+                          <Link href={service.href} onClick={closeMobileMenu}>
+                            <div 
+                              className="cursor-pointer hover:text-[#ffb703] transition-all duration-300"
+                              style={{
+                                color: 'rgba(255, 255, 255, 0.50)',
+                                fontFamily: 'Nunito',
+                                fontSize: '28px',
+                                fontStyle: 'normal',
+                                fontWeight: '400',
+                                lineHeight: '32px'
+                              }}
+                            >
+                              {service.name}
+                            </div>
+                          </Link>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
             
               <Link href="/contact" onClick={closeMobileMenu}> 
                 <div 
