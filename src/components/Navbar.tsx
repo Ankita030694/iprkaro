@@ -225,7 +225,7 @@ export default function Navbar() {
           }}
         >
           {/* Mobile Navigation Links */}
-          <div className="flex flex-col justify-start items-start h-full px-8 pt-32 space-y-8">
+          <div className="flex flex-col justify-start items-start h-full px-8 pt-32 pb-8 space-y-8 overflow-y-auto">
             {/* Main Navigation Links (matching desktop) */}
             <div className="space-y-10 text-left">
               <Link href="/" onClick={closeMobileMenu}>
