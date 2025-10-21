@@ -581,10 +581,10 @@ export default function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trad
 
             {/* Main Heading */}
             <div>
-              <h2 className="text-white text-sm sm:text-base lg:text-lg font-bold mb-1 font-nunito break-words">
+              <h2 className="text-white text-base sm:text-lg lg:text-xl font-bold mb-1 font-nunito break-words">
                 Trademark Check Results for "{searchTerm}"
               </h2>
-              <p className="text-gray-400 text-xs font-nunito hidden sm:block">
+              <p className="text-gray-400 text-sm font-nunito hidden sm:block">
                 Preliminary automated scan completed. Review quick insights below.
               </p>
               </div>
@@ -608,7 +608,7 @@ export default function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trad
                 }}
               >
                 <i className="fas fa-lightbulb text-white text-xs"></i>
-                <span className="text-white font-semibold font-nunito text-sm">Quick insights</span>
+                <span className="text-white font-semibold font-nunito text-base">Quick insights</span>
               </div>
               
               <div className="space-y-2">
@@ -616,13 +616,13 @@ export default function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trad
                   <>
                     <div className="flex items-start gap-2">
                       <i className="fas fa-tag text-white text-xs mt-0.5 flex-shrink-0"></i>
-                      <span className="text-white text-xs font-nunito break-words">
+                      <span className="text-white text-sm font-nunito break-words">
                         <span className="font-semibold">Class {searchResults.class.number} - {searchResults.class.name}:</span> {searchResults.class.description}
                       </span>
                     </div>
                     <div className="flex items-start gap-2">
                       <i className="fas fa-chart-line text-white text-xs mt-0.5 flex-shrink-0"></i>
-                      <span className="text-white text-xs font-nunito break-words">
+                      <span className="text-white text-sm font-nunito break-words">
                         AI Confidence Score: {searchResults.confidenceScore}% chance your brand may face an objection
                       </span>
                     </div>
@@ -630,7 +630,7 @@ export default function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trad
                 ) : (
                   <div className="flex items-start gap-2">
                     <i className="fas fa-info-circle text-white text-xs mt-0.5 flex-shrink-0"></i>
-                    <span className="text-white text-xs font-nunito break-words">
+                    <span className="text-white text-sm font-nunito break-words">
                       Please enter a trademark class to see detailed insights
                     </span>
                   </div>
@@ -678,18 +678,18 @@ export default function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trad
               </div>
               
               <div className="space-y-1">
-                <h4 className="text-[#FFB703] text-sm font-bold font-nunito tracking-wide">
+                <h4 className="text-[#FFB703] text-base font-bold font-nunito tracking-wide">
                   AI-POWERED INSIGHTS
                 </h4>
-                <p className="text-white text-xs font-nunito opacity-80">
+                <p className="text-white text-sm font-nunito opacity-80">
                   Intelligent trademark analysis at your fingertips
                 </p>
               </div>
             </div>
 
             <div className="text-center mb-4">
-              <h3 className="text-white text-xl font-bold mb-2 font-nunito">Create your account</h3>
-              <p className="text-gray-300 text-sm font-nunito">
+              <h3 className="text-white text-2xl font-bold mb-2 font-nunito">Create your account</h3>
+              <p className="text-gray-300 text-base font-nunito">
                 Sign up for free to unlock your complete trademark report.
               </p>
             </div>
@@ -697,7 +697,7 @@ export default function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trad
             <form onSubmit={handleSubmit} className="space-y-2.5">
                   {/* Name Field */}
                   <div>
-                <label className="text-white text-xs font-medium mb-1 block font-nunito text-left">
+                <label className="text-white text-sm font-medium mb-1 block font-nunito text-left">
                       Name <span className="text-red-400">*</span>
                     </label>
                     <input
@@ -705,18 +705,18 @@ export default function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trad
                       name="name"
                       value={formData.name}
                       onChange={handleInputChange}
-                  className={`w-full px-3 py-2 border rounded-lg text-white text-sm focus:outline-none focus:border-[#fbbf24] placeholder-gray-400 bg-transparent ${
+                  className={`w-full px-3 py-2 border rounded-lg text-white text-base focus:outline-none focus:border-[#fbbf24] placeholder-gray-400 bg-transparent ${
                         errors.name ? 'border-red-400' : 'border-gray-600'
                       }`}
                       placeholder="Enter your name"
                       required
                     />
-                    {errors.name && <p className="text-red-400 text-xs mt-0.5">{errors.name}</p>}
+                    {errors.name && <p className="text-red-400 text-sm mt-0.5">{errors.name}</p>}
                   </div>
 
                   {/* Phone Field */}
                   <div>
-                <label className="text-white text-xs font-medium mb-1 block font-nunito text-left">
+                <label className="text-white text-sm font-medium mb-1 block font-nunito text-left">
                       Phone No. <span className="text-red-400">*</span>
                     </label>
                     <input
@@ -725,17 +725,17 @@ export default function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trad
                       value={formData.phone}
                       onChange={handleInputChange}
                       placeholder="Enter 10-digit phone number"
-                  className={`w-full px-3 py-2 border rounded-lg text-white text-sm focus:outline-none focus:border-[#fbbf24] placeholder-gray-400 bg-transparent ${
+                  className={`w-full px-3 py-2 border rounded-lg text-white text-base focus:outline-none focus:border-[#fbbf24] placeholder-gray-400 bg-transparent ${
                         errors.phone ? 'border-red-400' : 'border-gray-600'
                       }`}
                       required
                     />
-                    {errors.phone && <p className="text-red-400 text-xs mt-0.5">{errors.phone}</p>}
+                    {errors.phone && <p className="text-red-400 text-sm mt-0.5">{errors.phone}</p>}
                   </div>
 
               {/* Email Field */}
               <div>
-                <label className="text-white text-xs font-medium mb-1 block font-nunito text-left">
+                <label className="text-white text-sm font-medium mb-1 block font-nunito text-left">
                   Email <span className="text-red-400">*</span>
                 </label>
                 <input
@@ -744,24 +744,24 @@ export default function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trad
                   value={formData.email}
                   onChange={handleInputChange}
                   placeholder="Enter your email address"
-                  className={`w-full px-3 py-2 border rounded-lg text-white text-sm focus:outline-none focus:border-[#fbbf24] placeholder-gray-400 bg-transparent ${
+                  className={`w-full px-3 py-2 border rounded-lg text-white text-base focus:outline-none focus:border-[#fbbf24] placeholder-gray-400 bg-transparent ${
                     errors.email ? 'border-red-400' : 'border-gray-600'
                   }`}
                   required
                 />
-                {errors.email && <p className="text-red-400 text-xs mt-0.5">{errors.email}</p>}
+                {errors.email && <p className="text-red-400 text-sm mt-0.5">{errors.email}</p>}
               </div>
 
                   {/* State Field */}
                   <div>
-                <label className="text-white text-xs font-medium mb-1 block font-nunito text-left">
+                <label className="text-white text-sm font-medium mb-1 block font-nunito text-left">
                       State <span className="text-red-400">*</span>
                     </label>
                     <select
                       name="state"
                       value={formData.state}
                       onChange={handleInputChange}
-                  className={`w-full px-3 py-2 border rounded-lg text-white text-sm focus:outline-none focus:border-[#fbbf24] bg-transparent ${
+                  className={`w-full px-3 py-2 border rounded-lg text-white text-base focus:outline-none focus:border-[#fbbf24] bg-transparent ${
                         errors.state ? 'border-red-400' : 'border-gray-600'
                       }`}
                       required
@@ -808,12 +808,12 @@ export default function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trad
                         <option value="Lakshadweep" className="bg-[#121212] text-white">Lakshadweep</option>
                         <option value="Puducherry" className="bg-[#121212] text-white">Puducherry</option>
                     </select>
-                    {errors.state && <p className="text-red-400 text-xs mt-0.5">{errors.state}</p>}
+                    {errors.state && <p className="text-red-400 text-sm mt-0.5">{errors.state}</p>}
                   </div>
 
                   {/* Trademark Searched Field */}
                   <div>
-                <label className="text-white text-xs font-medium mb-1 block font-nunito text-left">
+                <label className="text-white text-sm font-medium mb-1 block font-nunito text-left">
                       Trademark You Searched
                     </label>
                     <div className="relative">
@@ -822,7 +822,7 @@ export default function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trad
                         name="trademarkSearched"
                         value={formData.trademarkSearched}
                         onChange={handleInputChange}
-                    className="w-full px-3 py-2 pr-8 border border-gray-600 rounded-lg text-white text-sm focus:outline-none focus:border-[#fbbf24] placeholder-gray-400 bg-transparent"
+                    className="w-full px-3 py-2 pr-8 border border-gray-600 rounded-lg text-white text-base focus:outline-none focus:border-[#fbbf24] placeholder-gray-400 bg-transparent"
                         placeholder="Enter trademark name"
                       />
                       <button
@@ -848,7 +848,7 @@ export default function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trad
                       name="class"
                       value={formData.class}
                       onChange={handleInputChange}
-                  className={`w-full px-3 py-2 border rounded-lg text-white text-sm focus:outline-none focus:border-[#fbbf24] bg-transparent ${
+                  className={`w-full px-3 py-2 border rounded-lg text-white text-base focus:outline-none focus:border-[#fbbf24] bg-transparent ${
                         errors.class ? 'border-red-400' : 'border-gray-600'
                       }`}
                       required
@@ -900,14 +900,14 @@ export default function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trad
                       <option value="44" className="bg-[#121212] text-white">Class 44 - Medical & Veterinary Services</option>
                       <option value="45" className="bg-[#121212] text-white">Class 45 - Legal & Security Services</option>
                     </select>
-                    {errors.class && <p className="text-red-400 text-xs mt-0.5">{errors.class}</p>}
+                    {errors.class && <p className="text-red-400 text-sm mt-0.5">{errors.class}</p>}
                   </div>
 
               {/* Submit Button */}
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full font-semibold py-2.5 rounded-lg transition-colors duration-300 mt-3 text-sm ${
+                className={`w-full font-semibold py-2.5 rounded-lg transition-colors duration-300 mt-3 text-base ${
                   isSubmitting 
                     ? 'bg-gray-500 text-gray-300 cursor-not-allowed' 
                     : 'bg-[#fbbf24] hover:bg-[#e6a602] text-black'
@@ -964,18 +964,18 @@ export default function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trad
               </div>
               
               <div className="space-y-1">
-                <h4 className="text-[#FFB703] text-xs font-bold font-nunito tracking-wide">
+                <h4 className="text-[#FFB703] text-sm font-bold font-nunito tracking-wide">
                   AI-POWERED INSIGHTS
                 </h4>
-                <p className="text-white text-xs font-nunito opacity-80">
+                <p className="text-white text-sm font-nunito opacity-80">
                   Intelligent trademark analysis at your fingertips
                 </p>
               </div>
             </div>
 
             <div className="text-center mb-4">
-              <h3 className="text-white text-lg font-bold mb-2 font-nunito">Create your account</h3>
-              <p className="text-gray-300 text-sm font-nunito">
+              <h3 className="text-white text-xl font-bold mb-2 font-nunito">Create your account</h3>
+              <p className="text-gray-300 text-base font-nunito">
                 Sign up for free to unlock your complete trademark report.
               </p>
             </div>
@@ -984,7 +984,7 @@ export default function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trad
             <form onSubmit={handleSubmit} className="space-y-3">
               {/* Name Field */}
               <div>
-                <label className="text-white text-xs font-medium mb-1 block font-nunito text-left">
+                <label className="text-white text-sm font-medium mb-1 block font-nunito text-left">
                   Name <span className="text-red-400">*</span>
                 </label>
                 <input
@@ -992,18 +992,18 @@ export default function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trad
                   name="name"
                   value={formData.name}
                   onChange={handleInputChange}
-                  className={`w-full px-3 py-2 border rounded-lg text-white text-sm focus:outline-none focus:border-[#fbbf24] placeholder-gray-400 bg-transparent ${
+                  className={`w-full px-3 py-2 border rounded-lg text-white text-base focus:outline-none focus:border-[#fbbf24] placeholder-gray-400 bg-transparent ${
                     errors.name ? 'border-red-400' : 'border-gray-600'
                   }`}
                   placeholder="Enter your name"
                   required
                 />
-                {errors.name && <p className="text-red-400 text-xs mt-0.5">{errors.name}</p>}
+                {errors.name && <p className="text-red-400 text-sm mt-0.5">{errors.name}</p>}
               </div>
 
               {/* Phone Field */}
               <div>
-                <label className="text-white text-xs font-medium mb-1 block font-nunito text-left">
+                <label className="text-white text-sm font-medium mb-1 block font-nunito text-left">
                   Phone No. <span className="text-red-400">*</span>
                 </label>
                 <input
@@ -1012,17 +1012,17 @@ export default function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trad
                   value={formData.phone}
                   onChange={handleInputChange}
                   placeholder="Enter 10-digit phone number"
-                  className={`w-full px-3 py-2 border rounded-lg text-white text-sm focus:outline-none focus:border-[#fbbf24] placeholder-gray-400 bg-transparent ${
+                  className={`w-full px-3 py-2 border rounded-lg text-white text-base focus:outline-none focus:border-[#fbbf24] placeholder-gray-400 bg-transparent ${
                     errors.phone ? 'border-red-400' : 'border-gray-600'
                   }`}
                   required
                 />
-                {errors.phone && <p className="text-red-400 text-xs mt-0.5">{errors.phone}</p>}
+                {errors.phone && <p className="text-red-400 text-sm mt-0.5">{errors.phone}</p>}
               </div>
 
               {/* Email Field */}
               <div>
-                <label className="text-white text-xs font-medium mb-1 block font-nunito text-left">
+                <label className="text-white text-sm font-medium mb-1 block font-nunito text-left">
                   Email <span className="text-red-400">*</span>
                 </label>
                 <input
@@ -1031,24 +1031,24 @@ export default function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trad
                   value={formData.email}
                   onChange={handleInputChange}
                   placeholder="Enter your email address"
-                  className={`w-full px-3 py-2 border rounded-lg text-white text-sm focus:outline-none focus:border-[#fbbf24] placeholder-gray-400 bg-transparent ${
+                  className={`w-full px-3 py-2 border rounded-lg text-white text-base focus:outline-none focus:border-[#fbbf24] placeholder-gray-400 bg-transparent ${
                     errors.email ? 'border-red-400' : 'border-gray-600'
                   }`}
                   required
                 />
-                {errors.email && <p className="text-red-400 text-xs mt-0.5">{errors.email}</p>}
+                {errors.email && <p className="text-red-400 text-sm mt-0.5">{errors.email}</p>}
               </div>
 
               {/* State Field */}
               <div>
-                <label className="text-white text-xs font-medium mb-1 block font-nunito text-left">
+                <label className="text-white text-sm font-medium mb-1 block font-nunito text-left">
                   State <span className="text-red-400">*</span>
                 </label>
                 <select
                   name="state"
                   value={formData.state}
                   onChange={handleInputChange}
-                  className={`w-full px-3 py-2 border rounded-lg text-white text-sm focus:outline-none focus:border-[#fbbf24] bg-transparent ${
+                  className={`w-full px-3 py-2 border rounded-lg text-white text-base focus:outline-none focus:border-[#fbbf24] bg-transparent ${
                     errors.state ? 'border-red-400' : 'border-gray-600'
                   }`}
                   required
@@ -1095,12 +1095,12 @@ export default function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trad
                   <option value="Lakshadweep" className="bg-[#0C002B] text-white">Lakshadweep</option>
                   <option value="Puducherry" className="bg-[#0C002B] text-white">Puducherry</option>
                 </select>
-                {errors.state && <p className="text-red-400 text-xs mt-0.5">{errors.state}</p>}
+                {errors.state && <p className="text-red-400 text-sm mt-0.5">{errors.state}</p>}
               </div>
 
               {/* Trademark Searched Field */}
               <div>
-                <label className="text-white text-xs font-medium mb-1 block font-nunito text-left">
+                <label className="text-white text-sm font-medium mb-1 block font-nunito text-left">
                   Trademark You Searched
                 </label>
                 <div className="relative">
@@ -1109,7 +1109,7 @@ export default function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trad
                     name="trademarkSearched"
                     value={formData.trademarkSearched}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 pr-8 border border-gray-600 rounded-lg text-white text-sm focus:outline-none focus:border-[#fbbf24] placeholder-gray-400 bg-transparent"
+                    className="w-full px-3 py-2 pr-8 border border-gray-600 rounded-lg text-white text-base focus:outline-none focus:border-[#fbbf24] placeholder-gray-400 bg-transparent"
                     placeholder="Enter trademark name"
                   />
                   <button
@@ -1124,14 +1124,14 @@ export default function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trad
 
               {/* Class Field */}
               <div>
-                <label className="text-white text-xs font-medium mb-1 block font-nunito text-left">
+                <label className="text-white text-sm font-medium mb-1 block font-nunito text-left">
                   Class <span className="text-red-400">*</span>
                 </label>
                 <select
                   name="class"
                   value={formData.class}
                   onChange={handleInputChange}
-                  className={`w-full px-3 py-2 border rounded-lg text-white text-sm focus:outline-none focus:border-[#fbbf24] bg-transparent ${
+                  className={`w-full px-3 py-2 border rounded-lg text-white text-base focus:outline-none focus:border-[#fbbf24] bg-transparent ${
                     errors.class ? 'border-red-400' : 'border-gray-600'
                   }`}
                   required
@@ -1183,14 +1183,14 @@ export default function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trad
                   <option value="44" className="bg-[#0C002B] text-white">Class 44 - Medical & Veterinary Services</option>
                   <option value="45" className="bg-[#0C002B] text-white">Class 45 - Legal & Security Services</option>
                 </select>
-                {errors.class && <p className="text-red-400 text-xs mt-0.5">{errors.class}</p>}
+                {errors.class && <p className="text-red-400 text-sm mt-0.5">{errors.class}</p>}
               </div>
 
               {/* Submit Button */}
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full font-semibold py-2.5 rounded-lg transition-colors duration-300 text-sm ${
+                className={`w-full font-semibold py-2.5 rounded-lg transition-colors duration-300 text-base ${
                   isSubmitting 
                     ? 'bg-gray-500 text-gray-300 cursor-not-allowed' 
                     : 'bg-[#fbbf24] hover:bg-[#e6a602] text-black'
@@ -1246,10 +1246,10 @@ export default function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trad
 
               {/* Main Heading */}
               <div>
-                <h2 className="text-white text-base font-bold mb-1 font-nunito break-words">
+                <h2 className="text-white text-lg font-bold mb-1 font-nunito break-words">
                   Trademark Check Results for "{searchTerm}"
                 </h2>
-                <p className="text-gray-400 text-xs font-nunito">
+                <p className="text-gray-400 text-sm font-nunito">
                   Preliminary automated scan completed. Review quick insights below.
                 </p>
               </div>
@@ -1273,7 +1273,7 @@ export default function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trad
                 }}
               >
                 <i className="fas fa-lightbulb text-white text-xs"></i>
-                <span className="text-white font-semibold font-nunito text-sm">Quick insights</span>
+                <span className="text-white font-semibold font-nunito text-base">Quick insights</span>
               </div>
               
               <div className="space-y-2">
@@ -1281,13 +1281,13 @@ export default function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trad
                   <>
                     <div className="flex items-start gap-2">
                       <i className="fas fa-tag text-white text-xs mt-0.5 flex-shrink-0"></i>
-                      <span className="text-white text-xs font-nunito break-words">
+                      <span className="text-white text-sm font-nunito break-words">
                         <span className="font-semibold">Class {searchResults.class.number} - {searchResults.class.name}:</span> {searchResults.class.description}
                       </span>
                     </div>
                     <div className="flex items-start gap-2">
                       <i className="fas fa-chart-line text-white text-xs mt-0.5 flex-shrink-0"></i>
-                      <span className="text-white text-xs font-nunito break-words">
+                      <span className="text-white text-sm font-nunito break-words">
                         AI Confidence Score: {searchResults.confidenceScore}% chance your brand may face an objection
                       </span>
                     </div>
@@ -1295,7 +1295,7 @@ export default function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trad
                 ) : (
                   <div className="flex items-start gap-2">
                     <i className="fas fa-info-circle text-white text-xs mt-0.5 flex-shrink-0"></i>
-                    <span className="text-white text-xs font-nunito break-words">
+                    <span className="text-white text-sm font-nunito break-words">
                       Please enter a trademark class to see detailed insights
                     </span>
                   </div>

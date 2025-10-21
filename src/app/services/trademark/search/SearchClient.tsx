@@ -61,7 +61,7 @@ export default function SearchClient() {
                   style={{ background: '#FFB703', opacity: 0.4 }}
                 />
               </div>
-              <h1 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
+              <h1 className="text-white font-nunito text-3xl md:text-4xl lg:text-5xl font-bold">
                 Trademark Search & Availability Check Services in India
               </h1>
             </div>
@@ -74,10 +74,10 @@ export default function SearchClient() {
                 boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)'
               }}
             >
-              <p className="text-white/95 font-nunito text-sm lg:text-base leading-relaxed mb-3">
+              <p className="text-white/95 font-nunito text-base lg:text-lg leading-relaxed mb-3">
                 Before investing in trademark registration, ensure your brand is <span className="font-bold text-[#FFB703]">legally available and conflict-free</span>. Our comprehensive trademark search services analyze existing registrations, pending applications, and potential conflicts to give you confidence in your brand choice.
               </p>
-              <p className="text-white/95 font-nunito text-sm lg:text-base leading-relaxed">
+              <p className="text-white/95 font-nunito text-base lg:text-lg leading-relaxed">
                 Our expert trademark attorneys conduct thorough searches across multiple databases, providing detailed analysis and risk assessment. We help you make informed decisions about your trademark strategy and avoid costly registration rejections or legal disputes.
               </p>
             </div>
@@ -93,7 +93,7 @@ export default function SearchClient() {
                   boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
                 }}
               />
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-bold">
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
                 Types of Trademark Search Services
               </h2>
             </div>
@@ -116,24 +116,24 @@ export default function SearchClient() {
                 >
                   <div className="flex items-center gap-2 mb-3">
                     <i className="fas fa-search text-[#FFB703] text-xl" aria-hidden="true"></i>
-                    <h4 className="text-white font-nunito text-base font-semibold">Identical Search</h4>
+                    <h4 className="text-white font-nunito text-lg font-semibold">Identical Search</h4>
                   </div>
                   <ul className="space-y-2">
                     <li className="flex items-start gap-2">
                       <i className="fas fa-check-circle text-[#FFB703] text-xs mt-1" aria-hidden="true"></i>
-                      <span className="text-white/90 font-nunito text-xs">Exact word-for-word matches</span>
+                      <span className="text-white/90 font-nunito text-sm">Exact word-for-word matches</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <i className="fas fa-check-circle text-[#FFB703] text-xs mt-1" aria-hidden="true"></i>
-                      <span className="text-white/90 font-nunito text-xs">Same spelling and pronunciation</span>
+                      <span className="text-white/90 font-nunito text-sm">Same spelling and pronunciation</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <i className="fas fa-check-circle text-[#FFB703] text-xs mt-1" aria-hidden="true"></i>
-                      <span className="text-white/90 font-nunito text-xs">Identical logo designs</span>
+                      <span className="text-white/90 font-nunito text-sm">Identical logo designs</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <i className="fas fa-check-circle text-[#FFB703] text-xs mt-1" aria-hidden="true"></i>
-                      <span className="text-white/90 font-nunito text-xs">Quick preliminary check</span>
+                      <span className="text-white/90 font-nunito text-sm">Quick preliminary check</span>
                     </li>
                   </ul>
                 </div>
@@ -147,24 +147,24 @@ export default function SearchClient() {
                 >
                   <div className="flex items-center gap-2 mb-3">
                     <i className="fas fa-eye text-[#FFB703] text-xl" aria-hidden="true"></i>
-                    <h4 className="text-white font-nunito text-base font-semibold">Similarity Search</h4>
+                    <h4 className="text-white font-nunito text-lg font-semibold">Similarity Search</h4>
                   </div>
                   <ul className="space-y-2">
                     <li className="flex items-start gap-2">
                       <i className="fas fa-check-circle text-[#FFB703] text-xs mt-1" aria-hidden="true"></i>
-                      <span className="text-white/90 font-nunito text-xs">Phonetically similar marks</span>
+                      <span className="text-white/90 font-nunito text-sm">Phonetically similar marks</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <i className="fas fa-check-circle text-[#FFB703] text-xs mt-1" aria-hidden="true"></i>
-                      <span className="text-white/90 font-nunito text-xs">Visually similar designs</span>
+                      <span className="text-white/90 font-nunito text-sm">Visually similar designs</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <i className="fas fa-check-circle text-[#FFB703] text-xs mt-1" aria-hidden="true"></i>
-                      <span className="text-white/90 font-nunito text-xs">Conceptually related marks</span>
+                      <span className="text-white/90 font-nunito text-sm">Conceptually related marks</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <i className="fas fa-check-circle text-[#FFB703] text-xs mt-1" aria-hidden="true"></i>
-                      <span className="text-white/90 font-nunito text-xs">Risk assessment included</span>
+                      <span className="text-white/90 font-nunito text-sm">Risk assessment included</span>
                     </li>
                   </ul>
                 </div>
@@ -178,24 +178,24 @@ export default function SearchClient() {
                 >
                   <div className="flex items-center gap-2 mb-3">
                     <i className="fas fa-globe text-[#FFB703] text-xl" aria-hidden="true"></i>
-                    <h4 className="text-white font-nunito text-base font-semibold">Comprehensive Search</h4>
+                    <h4 className="text-white font-nunito text-lg font-semibold">Comprehensive Search</h4>
                   </div>
                   <ul className="space-y-2">
                     <li className="flex items-start gap-2">
                       <i className="fas fa-check-circle text-[#FFB703] text-xs mt-1" aria-hidden="true"></i>
-                      <span className="text-white/90 font-nunito text-xs">All variations and translations</span>
+                      <span className="text-white/90 font-nunito text-sm">All variations and translations</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <i className="fas fa-check-circle text-[#FFB703] text-xs mt-1" aria-hidden="true"></i>
-                      <span className="text-white/90 font-nunito text-xs">Multiple database coverage</span>
+                      <span className="text-white/90 font-nunito text-sm">Multiple database coverage</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <i className="fas fa-check-circle text-[#FFB703] text-xs mt-1" aria-hidden="true"></i>
-                      <span className="text-white/90 font-nunito text-xs">Detailed legal analysis</span>
+                      <span className="text-white/90 font-nunito text-sm">Detailed legal analysis</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <i className="fas fa-check-circle text-[#FFB703] text-xs mt-1" aria-hidden="true"></i>
-                      <span className="text-white/90 font-nunito text-xs">Registration recommendations</span>
+                      <span className="text-white/90 font-nunito text-sm">Registration recommendations</span>
                     </li>
                   </ul>
                 </div>
@@ -213,7 +213,7 @@ export default function SearchClient() {
                   boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
                 }}
               />
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-bold">
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
                 Our Trademark Search Process
               </h2>
             </div>
@@ -279,10 +279,10 @@ export default function SearchClient() {
                         border: '1px solid rgba(255, 255, 255, 0.1)'
                       }}
                     >
-                      <h4 className="text-white font-nunito text-sm font-semibold mb-1">
+                      <h4 className="text-white font-nunito text-base font-semibold mb-1">
                         {item.step}
                       </h4>
-                      <p className="text-white/90 font-nunito text-xs">
+                      <p className="text-white/90 font-nunito text-sm">
                         {item.description}
                       </p>
                     </div>
@@ -302,7 +302,7 @@ export default function SearchClient() {
                   boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
                 }}
               />
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-bold">
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
                 Benefits of Professional Trademark Search
               </h2>
             </div>
@@ -361,10 +361,10 @@ export default function SearchClient() {
                         <i className={`${benefit.icon} text-[#FFB703] text-base`} aria-hidden="true"></i>
                       </div>
                       <div>
-                        <h4 className="text-white font-nunito text-sm font-semibold mb-1">
+                        <h4 className="text-white font-nunito text-base font-semibold mb-1">
                           {benefit.title}
                         </h4>
-                        <p className="text-white/90 font-nunito text-xs">
+                        <p className="text-white/90 font-nunito text-sm">
                           {benefit.description}
                         </p>
                       </div>
@@ -396,19 +396,19 @@ export default function SearchClient() {
                   }}
                 >
                   <i className="fas fa-search text-[#FFB703] text-sm" aria-hidden="true"></i>
-                  <span className="text-white font-nunito text-sm font-semibold">Secure Your Brand Before Registration</span>
+                  <span className="text-white font-nunito text-base font-semibold">Secure Your Brand Before Registration</span>
                 </div>
 
-                <h3 className="text-white font-nunito text-xl lg:text-2xl font-bold mb-3">
+                <h3 className="text-white font-nunito text-2xl lg:text-3xl font-bold mb-3">
                   Get Professional Trademark Search & Analysis
                 </h3>
-                <p className="text-white/90 font-nunito text-sm max-w-2xl mx-auto mb-4">
+                <p className="text-white/90 font-nunito text-base max-w-2xl mx-auto mb-4">
                   Don't risk your trademark application. Our comprehensive search services provide detailed analysis and expert recommendations to ensure your brand is available and ready for successful registration.
                 </p>
 
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-nunito font-bold text-sm transition-all duration-300 hover:scale-105"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-nunito font-bold text-base transition-all duration-300 hover:scale-105"
                   style={{
                     background: 'linear-gradient(135deg, #FFB703, #FFA000)',
                     color: '#0C002B',
@@ -433,7 +433,7 @@ export default function SearchClient() {
                   boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
                 }}
               />
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-bold">
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
                 Frequently Asked Questions
               </h2>
             </div>
@@ -449,11 +449,11 @@ export default function SearchClient() {
                     boxShadow: '0 3px 14px rgba(0, 0, 0, 0.3)'
                   }}
                 >
-                  <h3 className="text-white font-nunito text-sm font-semibold mb-2 flex items-start gap-2">
+                  <h3 className="text-white font-nunito text-base font-semibold mb-2 flex items-start gap-2">
                     <i className="fas fa-question-circle text-[#FFB703] text-base mt-0.5" aria-hidden="true"></i>
                     {faq.question}
                   </h3>
-                  <p className="text-white/90 font-nunito text-xs leading-relaxed pl-6">
+                  <p className="text-white/90 font-nunito text-sm leading-relaxed pl-6">
                     {faq.answer}
                   </p>
                 </div>

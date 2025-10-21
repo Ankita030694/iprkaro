@@ -61,7 +61,7 @@ export default function OppositionClient() {
                   style={{ background: '#FFB703', opacity: 0.4 }}
                 />
               </div>
-              <h1 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
+              <h1 className="text-white font-nunito text-3xl md:text-4xl lg:text-5xl font-bold">
                 Patent Opposition & Revocation Services India
               </h1>
             </div>
@@ -74,10 +74,10 @@ export default function OppositionClient() {
                 boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)'
               }}
             >
-              <p className="text-white/95 font-nunito text-sm lg:text-base leading-relaxed mb-3">
+              <p className="text-white/95 font-nunito text-base lg:text-lg leading-relaxed mb-3">
                 Challenge invalid patents through <span className="font-bold text-[#FFB703]">expert patent opposition and revocation services</span>. Whether facing a conflicting patent application or seeking to invalidate a granted patent that blocks your technology, strategic legal action is essential to protect your freedom to operate.
               </p>
-              <p className="text-white/95 font-nunito text-sm lg:text-base leading-relaxed">
+              <p className="text-white/95 font-nunito text-base lg:text-lg leading-relaxed">
                 Our experienced patent attorneys provide comprehensive opposition and revocation services including prior art research, legal strategy, representation drafting, evidence compilation, and advocacy before the Patent Office and IPAB. We fight to invalidate weak patents and clear technology landscapes.
               </p>
             </div>
@@ -93,7 +93,7 @@ export default function OppositionClient() {
                   boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
                 }}
               />
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-bold">
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
                 Pre-Grant vs Post-Grant Opposition
               </h2>
             </div>
@@ -116,28 +116,28 @@ export default function OppositionClient() {
                 >
                   <div className="flex items-center gap-2 mb-3">
                     <i className="fas fa-stop-circle text-[#FFB703] text-xl" aria-hidden="true"></i>
-                    <h4 className="text-white font-nunito text-base font-semibold">Pre-Grant Opposition</h4>
+                    <h4 className="text-white font-nunito text-lg font-semibold">Pre-Grant Opposition</h4>
                   </div>
                   <ul className="space-y-2">
                     <li className="flex items-start gap-2">
                       <i className="fas fa-check-circle text-[#FFB703] text-xs mt-1" aria-hidden="true"></i>
-                      <span className="text-white/90 font-nunito text-xs">Filed after publication but before patent grant</span>
+                      <span className="text-white/90 font-nunito text-sm">Filed after publication but before patent grant</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <i className="fas fa-check-circle text-[#FFB703] text-xs mt-1" aria-hidden="true"></i>
-                      <span className="text-white/90 font-nunito text-xs">Any person can file - no standing requirement</span>
+                      <span className="text-white/90 font-nunito text-sm">Any person can file - no standing requirement</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <i className="fas fa-check-circle text-[#FFB703] text-xs mt-1" aria-hidden="true"></i>
-                      <span className="text-white/90 font-nunito text-xs">Prevents invalid patents from being granted</span>
+                      <span className="text-white/90 font-nunito text-sm">Prevents invalid patents from being granted</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <i className="fas fa-check-circle text-[#FFB703] text-xs mt-1" aria-hidden="true"></i>
-                      <span className="text-white/90 font-nunito text-xs">Lower cost than post-grant proceedings</span>
+                      <span className="text-white/90 font-nunito text-sm">Lower cost than post-grant proceedings</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <i className="fas fa-check-circle text-[#FFB703] text-xs mt-1" aria-hidden="true"></i>
-                      <span className="text-white/90 font-nunito text-xs">Controller considers during examination</span>
+                      <span className="text-white/90 font-nunito text-sm">Controller considers during examination</span>
                     </li>
                   </ul>
                 </div>
@@ -151,28 +151,28 @@ export default function OppositionClient() {
                 >
                   <div className="flex items-center gap-2 mb-3">
                     <i className="fas fa-ban text-[#FFB703] text-xl" aria-hidden="true"></i>
-                    <h4 className="text-white font-nunito text-base font-semibold">Post-Grant Opposition</h4>
+                    <h4 className="text-white font-nunito text-lg font-semibold">Post-Grant Opposition</h4>
                   </div>
                   <ul className="space-y-2">
                     <li className="flex items-start gap-2">
                       <i className="fas fa-check-circle text-[#FFB703] text-xs mt-1" aria-hidden="true"></i>
-                      <span className="text-white/90 font-nunito text-xs">Filed within 1 year of patent grant</span>
+                      <span className="text-white/90 font-nunito text-sm">Filed within 1 year of patent grant</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <i className="fas fa-check-circle text-[#FFB703] text-xs mt-1" aria-hidden="true"></i>
-                      <span className="text-white/90 font-nunito text-xs">Only 'interested persons' have standing</span>
+                      <span className="text-white/90 font-nunito text-sm">Only 'interested persons' have standing</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <i className="fas fa-check-circle text-[#FFB703] text-xs mt-1" aria-hidden="true"></i>
-                      <span className="text-white/90 font-nunito text-xs">Seeks revocation of granted patent</span>
+                      <span className="text-white/90 font-nunito text-sm">Seeks revocation of granted patent</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <i className="fas fa-check-circle text-[#FFB703] text-xs mt-1" aria-hidden="true"></i>
-                      <span className="text-white/90 font-nunito text-xs">Formal proceedings before IPAB</span>
+                      <span className="text-white/90 font-nunito text-sm">Formal proceedings before IPAB</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <i className="fas fa-check-circle text-[#FFB703] text-xs mt-1" aria-hidden="true"></i>
-                      <span className="text-white/90 font-nunito text-xs">Evidence rounds and oral hearings</span>
+                      <span className="text-white/90 font-nunito text-sm">Evidence rounds and oral hearings</span>
                     </li>
                   </ul>
                 </div>
@@ -190,7 +190,7 @@ export default function OppositionClient() {
                   boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
                 }}
               />
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-bold">
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
                 Common Grounds for Patent Opposition
               </h2>
             </div>
@@ -259,10 +259,10 @@ export default function OppositionClient() {
                         <i className={`${ground.icon} text-[#FFB703] text-base`} aria-hidden="true"></i>
                       </div>
                       <div>
-                        <h4 className="text-white font-nunito text-sm font-semibold mb-1">
+                        <h4 className="text-white font-nunito text-base font-semibold mb-1">
                           {ground.title}
                         </h4>
-                        <p className="text-white/90 font-nunito text-xs">
+                        <p className="text-white/90 font-nunito text-sm">
                           {ground.description}
                         </p>
                       </div>
@@ -283,7 +283,7 @@ export default function OppositionClient() {
                   boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
                 }}
               />
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-bold">
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
                 Patent Opposition Procedure
               </h2>
             </div>
@@ -349,10 +349,10 @@ export default function OppositionClient() {
                         border: '1px solid rgba(255, 255, 255, 0.1)'
                       }}
                     >
-                      <h4 className="text-white font-nunito text-sm font-semibold mb-1">
+                      <h4 className="text-white font-nunito text-base font-semibold mb-1">
                         {item.step}
                       </h4>
-                      <p className="text-white/90 font-nunito text-xs">
+                      <p className="text-white/90 font-nunito text-sm">
                         {item.description}
                       </p>
                     </div>
@@ -383,19 +383,19 @@ export default function OppositionClient() {
                   }}
                 >
                   <i className="fas fa-gavel text-[#FFB703] text-sm" aria-hidden="true"></i>
-                  <span className="text-white font-nunito text-sm font-semibold">Challenge Invalid Patents</span>
+                  <span className="text-white font-nunito text-base font-semibold">Challenge Invalid Patents</span>
                 </div>
 
-                <h3 className="text-white font-nunito text-xl lg:text-2xl font-bold mb-3">
+                <h3 className="text-white font-nunito text-2xl lg:text-3xl font-bold mb-3">
                   Expert Patent Opposition & Revocation Services
                 </h3>
-                <p className="text-white/90 font-nunito text-sm max-w-2xl mx-auto mb-4">
+                <p className="text-white/90 font-nunito text-base max-w-2xl mx-auto mb-4">
                   Protect your freedom to operate with strategic patent opposition. Our attorneys provide aggressive representation to invalidate weak patents blocking your technology.
                 </p>
 
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-nunito font-bold text-sm transition-all duration-300 hover:scale-105"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-nunito font-bold text-base transition-all duration-300 hover:scale-105"
                   style={{
                     background: 'linear-gradient(135deg, #FFB703, #FFA000)',
                     color: '#0C002B',
@@ -420,7 +420,7 @@ export default function OppositionClient() {
                   boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
                 }}
               />
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-bold">
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
                 Frequently Asked Questions
               </h2>
             </div>
@@ -436,11 +436,11 @@ export default function OppositionClient() {
                     boxShadow: '0 3px 14px rgba(0, 0, 0, 0.3)'
                   }}
                 >
-                  <h3 className="text-white font-nunito text-sm font-semibold mb-2 flex items-start gap-2">
+                  <h3 className="text-white font-nunito text-base font-semibold mb-2 flex items-start gap-2">
                     <i className="fas fa-question-circle text-[#FFB703] text-base mt-0.5" aria-hidden="true"></i>
                     {faq.question}
                   </h3>
-                  <p className="text-white/90 font-nunito text-xs leading-relaxed pl-6">
+                  <p className="text-white/90 font-nunito text-sm leading-relaxed pl-6">
                     {faq.answer}
                   </p>
                 </div>

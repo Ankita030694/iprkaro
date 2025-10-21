@@ -61,7 +61,7 @@ export default function TransferClient() {
                   style={{ background: '#FFB703', opacity: 0.4 }}
                 />
               </div>
-              <h1 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
+              <h1 className="text-white font-nunito text-3xl md:text-4xl lg:text-5xl font-bold">
                 Copyright Transfer & Assignment Agreement Services India
               </h1>
             </div>
@@ -74,10 +74,10 @@ export default function TransferClient() {
                 boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)'
               }}
             >
-              <p className="text-white/95 font-nunito text-sm lg:text-base leading-relaxed mb-3">
+              <p className="text-white/95 font-nunito text-base lg:text-lg leading-relaxed mb-3">
                 Legally transfer ownership of your creative works through <span className="font-bold text-[#FFB703]">professionally drafted copyright assignment agreements</span>. Whether you're an author selling book rights, artist transferring artwork ownership, software developer assigning code rights, or content creator licensing work, proper documentation is essential.
               </p>
-              <p className="text-white/95 font-nunito text-sm lg:text-base leading-relaxed">
+              <p className="text-white/95 font-nunito text-base lg:text-lg leading-relaxed">
                 Our expert IP attorneys provide comprehensive copyright transfer and assignment services including agreement drafting, due diligence, negotiation support, and registration with the Copyright Office. We ensure your rights are protected and transactions are legally sound.
               </p>
             </div>
@@ -93,7 +93,7 @@ export default function TransferClient() {
                   boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
                 }}
               />
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-bold">
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
                 Understanding Copyright Assignment
               </h2>
             </div>
@@ -106,7 +106,7 @@ export default function TransferClient() {
                 boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)'
               }}
             >
-              <p className="text-white/95 font-nunito text-sm leading-relaxed mb-4">
+              <p className="text-white/95 font-nunito text-base leading-relaxed mb-4">
                 Copyright assignment under the Copyright Act, 1957, allows the creator to transfer ownership of their creative work to another party. The assignee receives all or specified rights including reproduction, distribution, adaptation, public performance, and commercial exploitation rights. Assignment must be in writing to be legally valid.
               </p>
               
@@ -120,9 +120,9 @@ export default function TransferClient() {
                 >
                   <div className="flex items-center gap-2 mb-2">
                     <i className="fas fa-exchange-alt text-[#FFB703] text-lg" aria-hidden="true"></i>
-                    <h4 className="text-white font-nunito text-sm font-semibold">Complete Assignment</h4>
+                    <h4 className="text-white font-nunito text-base font-semibold">Complete Assignment</h4>
                   </div>
-                  <p className="text-white/90 font-nunito text-xs">
+                  <p className="text-white/90 font-nunito text-sm">
                     Transfer of all copyright rights permanently to the assignee, who becomes the new copyright owner with full control over the work.
                   </p>
                 </div>
@@ -136,9 +136,9 @@ export default function TransferClient() {
                 >
                   <div className="flex items-center gap-2 mb-2">
                     <i className="fas fa-layer-group text-[#FFB703] text-lg" aria-hidden="true"></i>
-                    <h4 className="text-white font-nunito text-sm font-semibold">Partial Assignment</h4>
+                    <h4 className="text-white font-nunito text-base font-semibold">Partial Assignment</h4>
                   </div>
-                  <p className="text-white/90 font-nunito text-xs">
+                  <p className="text-white/90 font-nunito text-sm">
                     Transfer of specific rights (e.g., only reproduction or distribution) while retaining other rights, limited by territory, duration, or medium.
                   </p>
                 </div>
@@ -156,7 +156,7 @@ export default function TransferClient() {
                   boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
                 }}
               />
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-bold">
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
                 Common Copyright Transfer Scenarios
               </h2>
             </div>
@@ -225,10 +225,10 @@ export default function TransferClient() {
                         <i className={`${scenario.icon} text-[#FFB703] text-base`} aria-hidden="true"></i>
                       </div>
                       <div>
-                        <h4 className="text-white font-nunito text-sm font-semibold mb-1">
+                        <h4 className="text-white font-nunito text-base font-semibold mb-1">
                           {scenario.title}
                         </h4>
-                        <p className="text-white/90 font-nunito text-xs">
+                        <p className="text-white/90 font-nunito text-sm">
                           {scenario.description}
                         </p>
                       </div>
@@ -249,7 +249,7 @@ export default function TransferClient() {
                   boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
                 }}
               />
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-bold">
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
                 Essential Elements of Copyright Assignment Deed
               </h2>
             </div>
@@ -297,11 +297,11 @@ export default function TransferClient() {
                       border: '1px solid rgba(255, 255, 255, 0.1)'
                     }}
                   >
-                    <h4 className="text-white font-nunito text-sm font-semibold mb-1 flex items-center gap-2">
+                    <h4 className="text-white font-nunito text-base font-semibold mb-1 flex items-center gap-2">
                       <i className="fas fa-file-contract text-[#FFB703] text-sm" aria-hidden="true"></i>
                       {item.element}
                     </h4>
-                    <p className="text-white/90 font-nunito text-xs pl-6">
+                    <p className="text-white/90 font-nunito text-sm pl-6">
                       {item.description}
                     </p>
                   </div>
@@ -331,19 +331,19 @@ export default function TransferClient() {
                   }}
                 >
                   <i className="fas fa-file-signature text-[#FFB703] text-sm" aria-hidden="true"></i>
-                  <span className="text-white font-nunito text-sm font-semibold">Professional Legal Documentation</span>
+                  <span className="text-white font-nunito text-base font-semibold">Professional Legal Documentation</span>
                 </div>
 
-                <h3 className="text-white font-nunito text-xl lg:text-2xl font-bold mb-3">
+                <h3 className="text-white font-nunito text-2xl lg:text-3xl font-bold mb-3">
                   Expert Copyright Assignment Agreement Services
                 </h3>
-                <p className="text-white/90 font-nunito text-sm max-w-2xl mx-auto mb-4">
+                <p className="text-white/90 font-nunito text-base max-w-2xl mx-auto mb-4">
                   Protect your interests with professionally drafted copyright transfer agreements. Our expert attorneys ensure legally sound documentation for all types of copyright assignments.
                 </p>
 
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-nunito font-bold text-sm transition-all duration-300 hover:scale-105"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-nunito font-bold text-base transition-all duration-300 hover:scale-105"
                   style={{
                     background: 'linear-gradient(135deg, #FFB703, #FFA000)',
                     color: '#0C002B',
@@ -368,7 +368,7 @@ export default function TransferClient() {
                   boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
                 }}
               />
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-bold">
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
                 Frequently Asked Questions
               </h2>
             </div>
@@ -384,11 +384,11 @@ export default function TransferClient() {
                     boxShadow: '0 3px 14px rgba(0, 0, 0, 0.3)'
                   }}
                 >
-                  <h3 className="text-white font-nunito text-sm font-semibold mb-2 flex items-start gap-2">
+                  <h3 className="text-white font-nunito text-base font-semibold mb-2 flex items-start gap-2">
                     <i className="fas fa-question-circle text-[#FFB703] text-base mt-0.5" aria-hidden="true"></i>
                     {faq.question}
                   </h3>
-                  <p className="text-white/90 font-nunito text-xs leading-relaxed pl-6">
+                  <p className="text-white/90 font-nunito text-sm leading-relaxed pl-6">
                     {faq.answer}
                   </p>
                 </div>

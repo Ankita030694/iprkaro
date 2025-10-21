@@ -61,7 +61,7 @@ export default function InfringementClient() {
                   style={{ background: '#FFB703', opacity: 0.4 }}
                 />
               </div>
-              <h1 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
+              <h1 className="text-white font-nunito text-3xl md:text-4xl lg:text-5xl font-bold">
                 Copyright Infringement Notice Drafting & Legal Action Services
               </h1>
             </div>
@@ -74,10 +74,10 @@ export default function InfringementClient() {
                 boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)'
               }}
             >
-              <p className="text-white/95 font-nunito text-sm lg:text-base leading-relaxed mb-3">
+              <p className="text-white/95 font-nunito text-base lg:text-lg leading-relaxed mb-3">
                 Protect your creative works from unauthorized use with <span className="font-bold text-[#FFB703]">aggressive copyright enforcement</span>. Whether facing plagiarism, piracy, or unauthorized commercial exploitation, swift legal action is essential to stop infringers and recover damages.
               </p>
-              <p className="text-white/95 font-nunito text-sm lg:text-base leading-relaxed">
+              <p className="text-white/95 font-nunito text-base lg:text-lg leading-relaxed">
                 Our expert IP litigation team provides comprehensive copyright infringement services including cease and desist notices, DMCA takedowns, injunction applications, civil litigation, criminal complaints, and damages recovery. We fight to protect your intellectual property rights with proven success.
               </p>
             </div>
@@ -93,7 +93,7 @@ export default function InfringementClient() {
                   boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
                 }}
               />
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-bold">
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
                 Common Types of Copyright Infringement
               </h2>
             </div>
@@ -162,10 +162,10 @@ export default function InfringementClient() {
                         <i className={`${type.icon} text-[#FFB703] text-base`} aria-hidden="true"></i>
                       </div>
                       <div>
-                        <h4 className="text-white font-nunito text-sm font-semibold mb-1">
+                        <h4 className="text-white font-nunito text-base font-semibold mb-1">
                           {type.title}
                         </h4>
-                        <p className="text-white/90 font-nunito text-xs">
+                        <p className="text-white/90 font-nunito text-sm">
                           {type.description}
                         </p>
                       </div>
@@ -186,7 +186,7 @@ export default function InfringementClient() {
                   boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
                 }}
               />
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-bold">
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
                 Legal Remedies for Copyright Infringement
               </h2>
             </div>
@@ -252,10 +252,10 @@ export default function InfringementClient() {
                         border: '1px solid rgba(255, 255, 255, 0.1)'
                       }}
                     >
-                      <h4 className="text-white font-nunito text-sm font-semibold mb-1">
+                      <h4 className="text-white font-nunito text-base font-semibold mb-1">
                         {item.step}
                       </h4>
-                      <p className="text-white/90 font-nunito text-xs">
+                      <p className="text-white/90 font-nunito text-sm">
                         {item.description}
                       </p>
                     </div>
@@ -286,19 +286,19 @@ export default function InfringementClient() {
                   }}
                 >
                   <i className="fas fa-gavel text-[#FFB703] text-sm" aria-hidden="true"></i>
-                  <span className="text-white font-nunito text-sm font-semibold">Stop Copyright Infringers</span>
+                  <span className="text-white font-nunito text-base font-semibold">Stop Copyright Infringers</span>
                 </div>
 
-                <h3 className="text-white font-nunito text-xl lg:text-2xl font-bold mb-3">
+                <h3 className="text-white font-nunito text-2xl lg:text-3xl font-bold mb-3">
                   Take Action Against Copyright Infringement
                 </h3>
-                <p className="text-white/90 font-nunito text-sm max-w-2xl mx-auto mb-4">
+                <p className="text-white/90 font-nunito text-base max-w-2xl mx-auto mb-4">
                   Don't let infringers profit from your creative work. Our aggressive legal team will enforce your copyright through cease and desist notices, litigation, and damages recovery.
                 </p>
 
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-nunito font-bold text-sm transition-all duration-300 hover:scale-105"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-nunito font-bold text-base transition-all duration-300 hover:scale-105"
                   style={{
                     background: 'linear-gradient(135deg, #FFB703, #FFA000)',
                     color: '#0C002B',
@@ -323,7 +323,7 @@ export default function InfringementClient() {
                   boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
                 }}
               />
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-bold">
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
                 Frequently Asked Questions
               </h2>
             </div>
@@ -339,11 +339,11 @@ export default function InfringementClient() {
                     boxShadow: '0 3px 14px rgba(0, 0, 0, 0.3)'
                   }}
                 >
-                  <h3 className="text-white font-nunito text-sm font-semibold mb-2 flex items-start gap-2">
+                  <h3 className="text-white font-nunito text-base font-semibold mb-2 flex items-start gap-2">
                     <i className="fas fa-question-circle text-[#FFB703] text-base mt-0.5" aria-hidden="true"></i>
                     {faq.question}
                   </h3>
-                  <p className="text-white/90 font-nunito text-xs leading-relaxed pl-6">
+                  <p className="text-white/90 font-nunito text-sm leading-relaxed pl-6">
                     {faq.answer}
                   </p>
                 </div>

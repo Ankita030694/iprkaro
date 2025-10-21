@@ -61,7 +61,7 @@ export default function RenewalClient() {
                   style={{ background: '#FFB703', opacity: 0.4 }}
                 />
               </div>
-              <h1 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
+              <h1 className="text-white font-nunito text-3xl md:text-4xl lg:text-5xl font-bold">
                 Trademark Renewal & Restoration Services in India
               </h1>
             </div>
@@ -74,10 +74,10 @@ export default function RenewalClient() {
                 boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)'
               }}
             >
-              <p className="text-white/95 font-nunito text-sm lg:text-base leading-relaxed mb-3">
+              <p className="text-white/95 font-nunito text-base lg:text-lg leading-relaxed mb-3">
                 Keep your trademark protection alive with timely renewal services. A registered trademark in India is valid for <span className="font-bold text-[#FFB703]">10 years from the date of application</span> and must be renewed to maintain exclusive rights. Missing renewal deadlines can result in loss of trademark rights, allowing competitors to register similar marks.
               </p>
-              <p className="text-white/95 font-nunito text-sm lg:text-base leading-relaxed">
+              <p className="text-white/95 font-nunito text-base lg:text-lg leading-relaxed">
                 Our expert team handles trademark renewal, restoration of removed trademarks, and ensures continuous protection of your brand identity across India. We send timely reminders before expiry and handle all compliance requirements seamlessly.
               </p>
             </div>
@@ -93,7 +93,7 @@ export default function RenewalClient() {
                   boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
                 }}
               />
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-bold">
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
                 What is Trademark Renewal?
               </h2>
             </div>
@@ -106,7 +106,7 @@ export default function RenewalClient() {
                 boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)'
               }}
             >
-              <p className="text-white/95 font-nunito text-sm leading-relaxed mb-4">
+              <p className="text-white/95 font-nunito text-base leading-relaxed mb-4">
                 Trademark renewal is the legal process of extending the validity of your registered trademark for another 10 years. Under the Trademarks Act, 1999, trademark registrations must be renewed every 10 years to maintain protection. Renewal ensures continuous exclusive rights and prevents your trademark from being removed from the register.
               </p>
               
@@ -120,9 +120,9 @@ export default function RenewalClient() {
                 >
                   <div className="flex items-center gap-2 mb-2">
                     <i className="fas fa-sync-alt text-[#FFB703] text-lg" aria-hidden="true"></i>
-                    <h4 className="text-white font-nunito text-sm font-semibold">Renewal Timeline</h4>
+                    <h4 className="text-white font-nunito text-base font-semibold">Renewal Timeline</h4>
                   </div>
-                  <p className="text-white/90 font-nunito text-xs">
+                  <p className="text-white/90 font-nunito text-sm">
                     File renewal 6 months before expiry or within 6 months after expiry with late fees. Process takes 2-4 months for approval.
                   </p>
                 </div>
@@ -136,9 +136,9 @@ export default function RenewalClient() {
                 >
                   <div className="flex items-center gap-2 mb-2">
                     <i className="fas fa-redo text-[#FFB703] text-lg" aria-hidden="true"></i>
-                    <h4 className="text-white font-nunito text-sm font-semibold">Restoration</h4>
+                    <h4 className="text-white font-nunito text-base font-semibold">Restoration</h4>
                   </div>
-                  <p className="text-white/90 font-nunito text-xs">
+                  <p className="text-white/90 font-nunito text-sm">
                     Removed trademarks can be restored within 1 year by filing Form TM-13 along with renewal and providing valid reasons for delay.
                   </p>
                 </div>
@@ -156,7 +156,7 @@ export default function RenewalClient() {
                   boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
                 }}
               />
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-bold">
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
                 Trademark Renewal Process
               </h2>
             </div>
@@ -218,10 +218,10 @@ export default function RenewalClient() {
                         border: '1px solid rgba(255, 255, 255, 0.1)'
                       }}
                     >
-                      <h4 className="text-white font-nunito text-sm font-semibold mb-1">
+                      <h4 className="text-white font-nunito text-base font-semibold mb-1">
                         {item.step}
                       </h4>
-                      <p className="text-white/90 font-nunito text-xs">
+                      <p className="text-white/90 font-nunito text-sm">
                         {item.description}
                       </p>
                     </div>
@@ -241,7 +241,7 @@ export default function RenewalClient() {
                   boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
                 }}
               />
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-bold">
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
                 Benefits of Timely Trademark Renewal
               </h2>
             </div>
@@ -300,10 +300,10 @@ export default function RenewalClient() {
                         <i className={`${benefit.icon} text-[#FFB703] text-base`} aria-hidden="true"></i>
                       </div>
                       <div>
-                        <h4 className="text-white font-nunito text-sm font-semibold mb-1">
+                        <h4 className="text-white font-nunito text-base font-semibold mb-1">
                           {benefit.title}
                         </h4>
-                        <p className="text-white/90 font-nunito text-xs">
+                        <p className="text-white/90 font-nunito text-sm">
                           {benefit.description}
                         </p>
                       </div>
@@ -335,19 +335,19 @@ export default function RenewalClient() {
                   }}
                 >
                   <i className="fas fa-clock text-[#FFB703] text-sm" aria-hidden="true"></i>
-                  <span className="text-white font-nunito text-sm font-semibold">Don't Let Your Trademark Expire</span>
+                  <span className="text-white font-nunito text-base font-semibold">Don't Let Your Trademark Expire</span>
                 </div>
 
-                <h3 className="text-white font-nunito text-xl lg:text-2xl font-bold mb-3">
+                <h3 className="text-white font-nunito text-2xl lg:text-3xl font-bold mb-3">
                   Renew Your Trademark with Expert Assistance
                 </h3>
-                <p className="text-white/90 font-nunito text-sm max-w-2xl mx-auto mb-4">
+                <p className="text-white/90 font-nunito text-base max-w-2xl mx-auto mb-4">
                   Our trademark renewal service ensures your brand protection never lapses. We handle timely filing, documentation, and follow-up with the Trademark Registry so you can focus on building your business.
                 </p>
 
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-nunito font-bold text-sm transition-all duration-300 hover:scale-105"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-nunito font-bold text-base transition-all duration-300 hover:scale-105"
                   style={{
                     background: 'linear-gradient(135deg, #FFB703, #FFA000)',
                     color: '#0C002B',
@@ -372,7 +372,7 @@ export default function RenewalClient() {
                   boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
                 }}
               />
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-bold">
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
                 Frequently Asked Questions
               </h2>
             </div>
@@ -388,11 +388,11 @@ export default function RenewalClient() {
                     boxShadow: '0 3px 14px rgba(0, 0, 0, 0.3)'
                   }}
                 >
-                  <h3 className="text-white font-nunito text-sm font-semibold mb-2 flex items-start gap-2">
+                  <h3 className="text-white font-nunito text-base font-semibold mb-2 flex items-start gap-2">
                     <i className="fas fa-question-circle text-[#FFB703] text-base mt-0.5" aria-hidden="true"></i>
                     {faq.question}
                   </h3>
-                  <p className="text-white/90 font-nunito text-xs leading-relaxed pl-6">
+                  <p className="text-white/90 font-nunito text-sm leading-relaxed pl-6">
                     {faq.answer}
                   </p>
                 </div>

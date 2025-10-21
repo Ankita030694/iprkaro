@@ -61,7 +61,7 @@ export default function OppositionClient() {
                   style={{ background: '#FFB703', opacity: 0.4 }}
                 />
               </div>
-              <h1 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
+              <h1 className="text-white font-nunito text-3xl md:text-4xl lg:text-5xl font-bold">
                 Trademark Opposition & Counter-Statement Services
               </h1>
             </div>
@@ -74,10 +74,10 @@ export default function OppositionClient() {
                 boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)'
               }}
             >
-              <p className="text-white/95 font-nunito text-sm lg:text-base leading-relaxed mb-3">
+              <p className="text-white/95 font-nunito text-base lg:text-lg leading-relaxed mb-3">
                 Trademark opposition allows you to <span className="font-bold text-[#FFB703]">challenge conflicting trademark applications</span> before they become registered. Whether you need to oppose a trademark that infringes on your rights or defend your application against opposition, expert legal assistance is crucial for success.
               </p>
-              <p className="text-white/95 font-nunito text-sm lg:text-base leading-relaxed">
+              <p className="text-white/95 font-nunito text-base lg:text-lg leading-relaxed">
                 Our experienced trademark attorneys provide comprehensive opposition and counter-statement services, including legal research, evidence compilation, strategic drafting, and representation at hearings before the Trademark Registry. We protect your brand rights with aggressive yet professional advocacy.
               </p>
             </div>
@@ -93,7 +93,7 @@ export default function OppositionClient() {
                   boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
                 }}
               />
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-bold">
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
                 Understanding Trademark Opposition
               </h2>
             </div>
@@ -106,7 +106,7 @@ export default function OppositionClient() {
                 boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)'
               }}
             >
-              <p className="text-white/95 font-nunito text-sm leading-relaxed mb-4">
+              <p className="text-white/95 font-nunito text-base leading-relaxed mb-4">
                 Trademark opposition is a formal legal proceeding under Section 21 of the Trademarks Act, 1999, where any interested party can challenge a trademark application after it has been examined and published in the Trademark Journal. The opposition must be filed within a strict 4-month window from the date of publication.
               </p>
               
@@ -120,9 +120,9 @@ export default function OppositionClient() {
                 >
                   <div className="flex items-center gap-2 mb-2">
                     <i className="fas fa-file-alt text-[#FFB703] text-lg" aria-hidden="true"></i>
-                    <h4 className="text-white font-nunito text-sm font-semibold">Filing Opposition</h4>
+                    <h4 className="text-white font-nunito text-base font-semibold">Filing Opposition</h4>
                   </div>
-                  <p className="text-white/90 font-nunito text-xs">
+                  <p className="text-white/90 font-nunito text-sm">
                     File Notice of Opposition (Form TM-O) within 4 months of trademark publication in the Journal, stating detailed grounds with supporting evidence.
                   </p>
                 </div>
@@ -136,9 +136,9 @@ export default function OppositionClient() {
                 >
                   <div className="flex items-center gap-2 mb-2">
                     <i className="fas fa-reply text-[#FFB703] text-lg" aria-hidden="true"></i>
-                    <h4 className="text-white font-nunito text-sm font-semibold">Counter-Statement</h4>
+                    <h4 className="text-white font-nunito text-base font-semibold">Counter-Statement</h4>
                   </div>
-                  <p className="text-white/90 font-nunito text-xs">
+                  <p className="text-white/90 font-nunito text-sm">
                     Applicant responds with counter-statement (Form TM-6) within 2 months, defending the application and addressing opposition grounds.
                   </p>
                 </div>
@@ -156,7 +156,7 @@ export default function OppositionClient() {
                   boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
                 }}
               />
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-bold">
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
                 Trademark Opposition Procedure
               </h2>
             </div>
@@ -226,10 +226,10 @@ export default function OppositionClient() {
                         border: '1px solid rgba(255, 255, 255, 0.1)'
                       }}
                     >
-                      <h4 className="text-white font-nunito text-sm font-semibold mb-1">
+                      <h4 className="text-white font-nunito text-base font-semibold mb-1">
                         {item.step}
                       </h4>
-                      <p className="text-white/90 font-nunito text-xs">
+                      <p className="text-white/90 font-nunito text-sm">
                         {item.description}
                       </p>
                     </div>
@@ -249,7 +249,7 @@ export default function OppositionClient() {
                   boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
                 }}
               />
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-bold">
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
                 Common Grounds for Opposition
               </h2>
             </div>
@@ -318,10 +318,10 @@ export default function OppositionClient() {
                         <i className={`${ground.icon} text-[#FFB703] text-base`} aria-hidden="true"></i>
                       </div>
                       <div>
-                        <h4 className="text-white font-nunito text-sm font-semibold mb-1">
+                        <h4 className="text-white font-nunito text-base font-semibold mb-1">
                           {ground.title}
                         </h4>
-                        <p className="text-white/90 font-nunito text-xs">
+                        <p className="text-white/90 font-nunito text-sm">
                           {ground.description}
                         </p>
                       </div>
@@ -353,19 +353,19 @@ export default function OppositionClient() {
                   }}
                 >
                   <i className="fas fa-gavel text-[#FFB703] text-sm" aria-hidden="true"></i>
-                  <span className="text-white font-nunito text-sm font-semibold">Protect Your Trademark Rights</span>
+                  <span className="text-white font-nunito text-base font-semibold">Protect Your Trademark Rights</span>
                 </div>
 
-                <h3 className="text-white font-nunito text-xl lg:text-2xl font-bold mb-3">
+                <h3 className="text-white font-nunito text-2xl lg:text-3xl font-bold mb-3">
                   Expert Opposition & Counter-Statement Services
                 </h3>
-                <p className="text-white/90 font-nunito text-sm max-w-2xl mx-auto mb-4">
+                <p className="text-white/90 font-nunito text-base max-w-2xl mx-auto mb-4">
                   Whether you need to oppose a conflicting trademark or defend your application, our experienced attorneys provide strategic legal representation with a proven track record of success.
                 </p>
 
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-nunito font-bold text-sm transition-all duration-300 hover:scale-105"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-nunito font-bold text-base transition-all duration-300 hover:scale-105"
                   style={{
                     background: 'linear-gradient(135deg, #FFB703, #FFA000)',
                     color: '#0C002B',
@@ -390,7 +390,7 @@ export default function OppositionClient() {
                   boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
                 }}
               />
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-bold">
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
                 Frequently Asked Questions
               </h2>
             </div>
@@ -406,11 +406,11 @@ export default function OppositionClient() {
                     boxShadow: '0 3px 14px rgba(0, 0, 0, 0.3)'
                   }}
                 >
-                  <h3 className="text-white font-nunito text-sm font-semibold mb-2 flex items-start gap-2">
+                  <h3 className="text-white font-nunito text-base font-semibold mb-2 flex items-start gap-2">
                     <i className="fas fa-question-circle text-[#FFB703] text-base mt-0.5" aria-hidden="true"></i>
                     {faq.question}
                   </h3>
-                  <p className="text-white/90 font-nunito text-xs leading-relaxed pl-6">
+                  <p className="text-white/90 font-nunito text-sm leading-relaxed pl-6">
                     {faq.answer}
                   </p>
                 </div>

@@ -87,9 +87,9 @@ export default function TableOfContents({ activeSection }: TableOfContentsProps)
                         }
                   }
                 >
-                  <i className={`${section.icon} text-[9px] sm:text-[10px]`} aria-hidden="true"></i>
+                  <i className={`${section.icon} text-[10px] sm:text-xs`} aria-hidden="true"></i>
                 </div>
-                <span className={`font-nunito text-[10px] sm:text-xs font-semibold ${activeSection === section.id ? 'text-[#0C002B]' : 'text-white'}`}>
+                <span className={`font-nunito text-xs sm:text-sm font-semibold ${activeSection === section.id ? 'text-[#0C002B]' : 'text-white'}`}>
                   {section.title}
                 </span>
               </button>

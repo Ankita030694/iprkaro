@@ -61,7 +61,7 @@ export default function SoftwareClient() {
                   style={{ background: '#FFB703', opacity: 0.4 }}
                 />
               </div>
-              <h1 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
+              <h1 className="text-white font-nunito text-3xl md:text-4xl lg:text-5xl font-bold">
                 Software Code Copyright Registration & Protection Services India
               </h1>
             </div>
@@ -74,10 +74,10 @@ export default function SoftwareClient() {
                 boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)'
               }}
             >
-              <p className="text-white/95 font-nunito text-sm lg:text-base leading-relaxed mb-3">
+              <p className="text-white/95 font-nunito text-base lg:text-lg leading-relaxed mb-3">
                 Protect your software innovations with <span className="font-bold text-[#FFB703]">comprehensive copyright registration</span>. Whether you've developed a mobile app, web platform, enterprise software, or SaaS solution, securing copyright protection is essential to prevent unauthorized copying, reverse engineering, and code theft.
               </p>
-              <p className="text-white/95 font-nunito text-sm lg:text-base leading-relaxed">
+              <p className="text-white/95 font-nunito text-base lg:text-lg leading-relaxed">
                 Our expert IP attorneys specialize in software copyright registration, source code protection, licensing agreements, and enforcement against infringement. We help developers, startups, and software companies protect their valuable code assets with proven legal strategies.
               </p>
             </div>
@@ -93,7 +93,7 @@ export default function SoftwareClient() {
                   boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
                 }}
               />
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-bold">
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
                 What Software Elements Are Protected?
               </h2>
             </div>
@@ -162,10 +162,10 @@ export default function SoftwareClient() {
                         <i className={`${item.icon} text-[#FFB703] text-base`} aria-hidden="true"></i>
                       </div>
                       <div>
-                        <h4 className="text-white font-nunito text-sm font-semibold mb-1">
+                        <h4 className="text-white font-nunito text-base font-semibold mb-1">
                           {item.title}
                         </h4>
-                        <p className="text-white/90 font-nunito text-xs">
+                        <p className="text-white/90 font-nunito text-sm">
                           {item.description}
                         </p>
                       </div>
@@ -186,7 +186,7 @@ export default function SoftwareClient() {
                   boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
                 }}
               />
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-bold">
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
                 Software Copyright Registration Process
               </h2>
             </div>
@@ -248,10 +248,10 @@ export default function SoftwareClient() {
                         border: '1px solid rgba(255, 255, 255, 0.1)'
                       }}
                     >
-                      <h4 className="text-white font-nunito text-sm font-semibold mb-1">
+                      <h4 className="text-white font-nunito text-base font-semibold mb-1">
                         {item.step}
                       </h4>
-                      <p className="text-white/90 font-nunito text-xs">
+                      <p className="text-white/90 font-nunito text-sm">
                         {item.description}
                       </p>
                     </div>
@@ -271,7 +271,7 @@ export default function SoftwareClient() {
                   boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
                 }}
               />
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-bold">
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
                 Benefits of Software Copyright Protection
               </h2>
             </div>
@@ -311,11 +311,11 @@ export default function SoftwareClient() {
                       border: '1px solid rgba(255, 255, 255, 0.1)'
                     }}
                   >
-                    <h4 className="text-white font-nunito text-sm font-semibold mb-1 flex items-center gap-2">
+                    <h4 className="text-white font-nunito text-base font-semibold mb-1 flex items-center gap-2">
                       <i className="fas fa-shield-alt text-[#FFB703] text-sm" aria-hidden="true"></i>
                       {benefit.title}
                     </h4>
-                    <p className="text-white/90 font-nunito text-xs pl-6">
+                    <p className="text-white/90 font-nunito text-sm pl-6">
                       {benefit.description}
                     </p>
                   </div>
@@ -345,19 +345,19 @@ export default function SoftwareClient() {
                   }}
                 >
                   <i className="fas fa-lock text-[#FFB703] text-sm" aria-hidden="true"></i>
-                  <span className="text-white font-nunito text-sm font-semibold">Protect Your Code</span>
+                  <span className="text-white font-nunito text-base font-semibold">Protect Your Code</span>
                 </div>
 
-                <h3 className="text-white font-nunito text-xl lg:text-2xl font-bold mb-3">
+                <h3 className="text-white font-nunito text-2xl lg:text-3xl font-bold mb-3">
                   Register Your Software Copyright Today
                 </h3>
-                <p className="text-white/90 font-nunito text-sm max-w-2xl mx-auto mb-4">
+                <p className="text-white/90 font-nunito text-base max-w-2xl mx-auto mb-4">
                   Secure legal protection for your software with expert copyright registration assistance. Protect your code from theft and unauthorized use.
                 </p>
 
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-nunito font-bold text-sm transition-all duration-300 hover:scale-105"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-nunito font-bold text-base transition-all duration-300 hover:scale-105"
                   style={{
                     background: 'linear-gradient(135deg, #FFB703, #FFA000)',
                     color: '#0C002B',
@@ -382,7 +382,7 @@ export default function SoftwareClient() {
                   boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
                 }}
               />
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-bold">
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
                 Frequently Asked Questions
               </h2>
             </div>
@@ -398,11 +398,11 @@ export default function SoftwareClient() {
                     boxShadow: '0 3px 14px rgba(0, 0, 0, 0.3)'
                   }}
                 >
-                  <h3 className="text-white font-nunito text-sm font-semibold mb-2 flex items-start gap-2">
+                  <h3 className="text-white font-nunito text-base font-semibold mb-2 flex items-start gap-2">
                     <i className="fas fa-question-circle text-[#FFB703] text-base mt-0.5" aria-hidden="true"></i>
                     {faq.question}
                   </h3>
-                  <p className="text-white/90 font-nunito text-xs leading-relaxed pl-6">
+                  <p className="text-white/90 font-nunito text-sm leading-relaxed pl-6">
                     {faq.answer}
                   </p>
                 </div>

@@ -61,7 +61,7 @@ export default function FilingClient() {
                   style={{ background: '#FFB703', opacity: 0.4 }}
                 />
               </div>
-              <h1 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
+              <h1 className="text-white font-nunito text-3xl md:text-4xl lg:text-5xl font-bold">
                 Provisional & Complete Patent Drafting and Filing Services India
               </h1>
             </div>
@@ -74,10 +74,10 @@ export default function FilingClient() {
                 boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)'
               }}
             >
-              <p className="text-white/95 font-nunito text-sm lg:text-base leading-relaxed mb-3">
+              <p className="text-white/95 font-nunito text-base lg:text-lg leading-relaxed mb-3">
                 Protect your innovations with <span className="font-bold text-[#FFB703]">expert patent drafting and filing services</span>. Whether you have a groundbreaking invention, innovative product, or novel process, securing patent protection is crucial for commercial success and preventing competitors from copying your technology.
               </p>
-              <p className="text-white/95 font-nunito text-sm lg:text-base leading-relaxed">
+              <p className="text-white/95 font-nunito text-base lg:text-lg leading-relaxed">
                 Our experienced patent attorneys and technical experts provide comprehensive patent drafting, prior art search, claim strategy, and filing services for provisional and complete specifications. We ensure strong, enforceable patents that maximize your intellectual property protection across India and globally.
               </p>
             </div>
@@ -93,7 +93,7 @@ export default function FilingClient() {
                   boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
                 }}
               />
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-bold">
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
                 Provisional vs Complete Patent Applications
               </h2>
             </div>
@@ -116,28 +116,28 @@ export default function FilingClient() {
                 >
                   <div className="flex items-center gap-2 mb-3">
                     <i className="fas fa-file-alt text-[#FFB703] text-xl" aria-hidden="true"></i>
-                    <h4 className="text-white font-nunito text-base font-semibold">Provisional Patent Application</h4>
+                    <h4 className="text-white font-nunito text-lg font-semibold">Provisional Patent Application</h4>
                   </div>
                   <ul className="space-y-2">
                     <li className="flex items-start gap-2">
                       <i className="fas fa-check-circle text-[#FFB703] text-xs mt-1" aria-hidden="true"></i>
-                      <span className="text-white/90 font-nunito text-xs">Establishes early filing date for priority</span>
+                      <span className="text-white/90 font-nunito text-sm">Establishes early filing date for priority</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <i className="fas fa-check-circle text-[#FFB703] text-xs mt-1" aria-hidden="true"></i>
-                      <span className="text-white/90 font-nunito text-xs">Gives 12 months to file complete specification</span>
+                      <span className="text-white/90 font-nunito text-sm">Gives 12 months to file complete specification</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <i className="fas fa-check-circle text-[#FFB703] text-xs mt-1" aria-hidden="true"></i>
-                      <span className="text-white/90 font-nunito text-xs">Lower cost and faster to prepare</span>
+                      <span className="text-white/90 font-nunito text-sm">Lower cost and faster to prepare</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <i className="fas fa-check-circle text-[#FFB703] text-xs mt-1" aria-hidden="true"></i>
-                      <span className="text-white/90 font-nunito text-xs">Requires description but no formal claims</span>
+                      <span className="text-white/90 font-nunito text-sm">Requires description but no formal claims</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <i className="fas fa-check-circle text-[#FFB703] text-xs mt-1" aria-hidden="true"></i>
-                      <span className="text-white/90 font-nunito text-xs">Allows time for market testing and refinement</span>
+                      <span className="text-white/90 font-nunito text-sm">Allows time for market testing and refinement</span>
                     </li>
                   </ul>
                 </div>
@@ -151,28 +151,28 @@ export default function FilingClient() {
                 >
                   <div className="flex items-center gap-2 mb-3">
                     <i className="fas fa-file-contract text-[#FFB703] text-xl" aria-hidden="true"></i>
-                    <h4 className="text-white font-nunito text-base font-semibold">Complete Patent Application</h4>
+                    <h4 className="text-white font-nunito text-lg font-semibold">Complete Patent Application</h4>
                   </div>
                   <ul className="space-y-2">
                     <li className="flex items-start gap-2">
                       <i className="fas fa-check-circle text-[#FFB703] text-xs mt-1" aria-hidden="true"></i>
-                      <span className="text-white/90 font-nunito text-xs">Detailed description with technical drawings</span>
+                      <span className="text-white/90 font-nunito text-sm">Detailed description with technical drawings</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <i className="fas fa-check-circle text-[#FFB703] text-xs mt-1" aria-hidden="true"></i>
-                      <span className="text-white/90 font-nunito text-xs">Precise claims defining scope of protection</span>
+                      <span className="text-white/90 font-nunito text-sm">Precise claims defining scope of protection</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <i className="fas fa-check-circle text-[#FFB703] text-xs mt-1" aria-hidden="true"></i>
-                      <span className="text-white/90 font-nunito text-xs">Required for patent examination and grant</span>
+                      <span className="text-white/90 font-nunito text-sm">Required for patent examination and grant</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <i className="fas fa-check-circle text-[#FFB703] text-xs mt-1" aria-hidden="true"></i>
-                      <span className="text-white/90 font-nunito text-xs">Abstract and background of invention</span>
+                      <span className="text-white/90 font-nunito text-sm">Abstract and background of invention</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <i className="fas fa-check-circle text-[#FFB703] text-xs mt-1" aria-hidden="true"></i>
-                      <span className="text-white/90 font-nunito text-xs">Can claim priority from provisional filing</span>
+                      <span className="text-white/90 font-nunito text-sm">Can claim priority from provisional filing</span>
                     </li>
                   </ul>
                 </div>
@@ -190,7 +190,7 @@ export default function FilingClient() {
                   boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
                 }}
               />
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-bold">
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
                 Patent Filing Process in India
               </h2>
             </div>
@@ -264,10 +264,10 @@ export default function FilingClient() {
                         border: '1px solid rgba(255, 255, 255, 0.1)'
                       }}
                     >
-                      <h4 className="text-white font-nunito text-sm font-semibold mb-1">
+                      <h4 className="text-white font-nunito text-base font-semibold mb-1">
                         {item.step}
                       </h4>
-                      <p className="text-white/90 font-nunito text-xs">
+                      <p className="text-white/90 font-nunito text-sm">
                         {item.description}
                       </p>
                     </div>
@@ -287,7 +287,7 @@ export default function FilingClient() {
                   boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
                 }}
               />
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-bold">
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
                 Essential Elements of Strong Patent Drafting
               </h2>
             </div>
@@ -346,10 +346,10 @@ export default function FilingClient() {
                         <i className={`${element.icon} text-[#FFB703] text-base`} aria-hidden="true"></i>
                       </div>
                       <div>
-                        <h4 className="text-white font-nunito text-sm font-semibold mb-1">
+                        <h4 className="text-white font-nunito text-base font-semibold mb-1">
                           {element.title}
                         </h4>
-                        <p className="text-white/90 font-nunito text-xs">
+                        <p className="text-white/90 font-nunito text-sm">
                           {element.description}
                         </p>
                       </div>
@@ -370,7 +370,7 @@ export default function FilingClient() {
                   boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
                 }}
               />
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-bold">
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
                 Three Essential Patentability Criteria
               </h2>
             </div>
@@ -383,7 +383,7 @@ export default function FilingClient() {
                 boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)'
               }}
             >
-              <p className="text-white/95 font-nunito text-sm leading-relaxed mb-4">
+              <p className="text-white/95 font-nunito text-base leading-relaxed mb-4">
                 For an invention to be patentable in India under the Patents Act, 1970, it must satisfy three fundamental requirements:
               </p>
               
@@ -432,7 +432,7 @@ export default function FilingClient() {
                       </div>
                       <div className="flex-1">
                         <div className="flex items-center justify-between flex-wrap gap-2 mb-1">
-                          <h4 className="text-white font-nunito text-sm font-semibold">
+                          <h4 className="text-white font-nunito text-base font-semibold">
                             {item.criteria}
                           </h4>
                           <span 
@@ -445,7 +445,7 @@ export default function FilingClient() {
                             {item.section}
                           </span>
                         </div>
-                        <p className="text-white/80 font-nunito text-xs mb-2">
+                        <p className="text-white/80 font-nunito text-sm mb-2">
                           {item.description}
                         </p>
                       </div>
@@ -461,8 +461,8 @@ export default function FilingClient() {
                       <div className="flex items-start gap-2">
                         <i className="fas fa-info-circle text-[#FFB703] text-xs mt-0.5 flex-shrink-0" aria-hidden="true"></i>
                         <div>
-                          <p className="text-white/70 font-nunito text-[9px] font-semibold mb-0.5">KEY REQUIREMENTS:</p>
-                          <p className="text-white/90 font-nunito text-xs">
+                          <p className="text-white/70 font-nunito text-xs font-semibold mb-0.5">KEY REQUIREMENTS:</p>
+                          <p className="text-white/90 font-nunito text-sm">
                             {item.requirements}
                           </p>
                         </div>
@@ -484,7 +484,7 @@ export default function FilingClient() {
                   boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
                 }}
               />
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-bold">
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
                 What Cannot Be Patented in India
               </h2>
             </div>
@@ -497,7 +497,7 @@ export default function FilingClient() {
                 boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)'
               }}
             >
-              <p className="text-white/95 font-nunito text-sm leading-relaxed mb-3">
+              <p className="text-white/95 font-nunito text-base leading-relaxed mb-3">
                 Sections 3 and 4 of the Patents Act exclude certain categories from patentability despite meeting novelty and inventive step criteria:
               </p>
               
@@ -536,11 +536,11 @@ export default function FilingClient() {
                       border: '1px solid rgba(255, 255, 255, 0.1)'
                     }}
                   >
-                    <h4 className="text-white font-nunito text-sm font-semibold mb-1 flex items-center gap-2">
+                    <h4 className="text-white font-nunito text-base font-semibold mb-1 flex items-center gap-2">
                       <i className="fas fa-ban text-[#FFB703] text-sm" aria-hidden="true"></i>
                       {item.category}
                     </h4>
-                    <p className="text-white/90 font-nunito text-xs pl-6">{item.examples}</p>
+                    <p className="text-white/90 font-nunito text-sm pl-6">{item.examples}</p>
                   </div>
                 ))}
               </div>
@@ -557,7 +557,7 @@ export default function FilingClient() {
                   boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
                 }}
               />
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-bold">
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
                 Benefits of Patent Protection
               </h2>
             </div>
@@ -612,10 +612,10 @@ export default function FilingClient() {
                         <i className={`${benefit.icon} text-[#FFB703] text-base`} aria-hidden="true"></i>
                       </div>
                       <div>
-                        <h4 className="text-white font-nunito text-sm font-semibold mb-1">
+                        <h4 className="text-white font-nunito text-base font-semibold mb-1">
                           {benefit.title}
                         </h4>
-                        <p className="text-white/90 font-nunito text-xs">
+                        <p className="text-white/90 font-nunito text-sm">
                           {benefit.description}
                         </p>
                       </div>
@@ -647,19 +647,19 @@ export default function FilingClient() {
                   }}
                 >
                   <i className="fas fa-certificate text-[#FFB703] text-sm" aria-hidden="true"></i>
-                  <span className="text-white font-nunito text-sm font-semibold">Protect Your Innovation</span>
+                  <span className="text-white font-nunito text-base font-semibold">Protect Your Innovation</span>
                 </div>
 
-                <h3 className="text-white font-nunito text-xl lg:text-2xl font-bold mb-3">
+                <h3 className="text-white font-nunito text-2xl lg:text-3xl font-bold mb-3">
                   Expert Patent Drafting & Filing Services
                 </h3>
-                <p className="text-white/90 font-nunito text-sm max-w-2xl mx-auto mb-4">
+                <p className="text-white/90 font-nunito text-base max-w-2xl mx-auto mb-4">
                   Secure strong patent protection with professional drafting by experienced patent attorneys and technical experts. Maximize your IP protection with strategic claims.
                 </p>
 
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-nunito font-bold text-sm transition-all duration-300 hover:scale-105"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-nunito font-bold text-base transition-all duration-300 hover:scale-105"
                   style={{
                     background: 'linear-gradient(135deg, #FFB703, #FFA000)',
                     color: '#0C002B',
@@ -684,7 +684,7 @@ export default function FilingClient() {
                   boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
                 }}
               />
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-bold">
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
                 Frequently Asked Questions
               </h2>
             </div>
@@ -700,11 +700,11 @@ export default function FilingClient() {
                     boxShadow: '0 3px 14px rgba(0, 0, 0, 0.3)'
                   }}
                 >
-                  <h3 className="text-white font-nunito text-sm font-semibold mb-2 flex items-start gap-2">
+                  <h3 className="text-white font-nunito text-base font-semibold mb-2 flex items-start gap-2">
                     <i className="fas fa-question-circle text-[#FFB703] text-base mt-0.5" aria-hidden="true"></i>
                     {faq.question}
                   </h3>
-                  <p className="text-white/90 font-nunito text-xs leading-relaxed pl-6">
+                  <p className="text-white/90 font-nunito text-sm leading-relaxed pl-6">
                     {faq.answer}
                   </p>
                 </div>

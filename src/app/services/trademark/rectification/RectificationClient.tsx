@@ -61,7 +61,7 @@ export default function RectificationClient() {
                   style={{ background: '#FFB703', opacity: 0.4 }}
                 />
               </div>
-              <h1 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
+              <h1 className="text-white font-nunito text-3xl md:text-4xl lg:text-5xl font-bold">
                 Trademark Rectification & Removal Services in India
               </h1>
             </div>
@@ -74,10 +74,10 @@ export default function RectificationClient() {
                 boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)'
               }}
             >
-              <p className="text-white/95 font-nunito text-sm lg:text-base leading-relaxed mb-3">
+              <p className="text-white/95 font-nunito text-base lg:text-lg leading-relaxed mb-3">
                 Challenge wrongful trademark registrations and protect your brand rights through <span className="font-bold text-[#FFB703]">trademark rectification proceedings</span>. Whether a conflicting mark was registered despite your prior rights, obtained fraudulently, or has not been used for years, rectification provides legal remedy to remove or correct trademark register entries.
               </p>
-              <p className="text-white/95 font-nunito text-sm lg:text-base leading-relaxed">
+              <p className="text-white/95 font-nunito text-base lg:text-lg leading-relaxed">
                 Our experienced IP litigation attorneys provide comprehensive rectification services including legal research, evidence compilation, petition drafting, and aggressive representation before the Intellectual Property Appellate Board (IPAB) and Trademark Registry. We fight to protect your legitimate trademark rights.
               </p>
             </div>
@@ -93,7 +93,7 @@ export default function RectificationClient() {
                   boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
                 }}
               />
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-bold">
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
                 What is Trademark Rectification?
               </h2>
             </div>
@@ -106,7 +106,7 @@ export default function RectificationClient() {
                 boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)'
               }}
             >
-              <p className="text-white/95 font-nunito text-sm leading-relaxed mb-4">
+              <p className="text-white/95 font-nunito text-base leading-relaxed mb-4">
                 Trademark rectification is a legal proceeding under Section 57 of the Trademarks Act, 1999, to remove, correct, or modify entries in the Trademark Register. It serves as a powerful remedy when trademark registrations are obtained improperly, violate existing rights, or when marks remain unused. Rectification proceedings can be filed before the Registrar or IPAB.
               </p>
               
@@ -120,9 +120,9 @@ export default function RectificationClient() {
                 >
                   <div className="flex items-center gap-2 mb-2">
                     <i className="fas fa-times-circle text-[#FFB703] text-lg" aria-hidden="true"></i>
-                    <h4 className="text-white font-nunito text-sm font-semibold">Cancellation/Removal</h4>
+                    <h4 className="text-white font-nunito text-base font-semibold">Cancellation/Removal</h4>
                   </div>
-                  <p className="text-white/90 font-nunito text-xs">
+                  <p className="text-white/90 font-nunito text-sm">
                     Complete removal of trademark registration from the register due to non-use, fraud, violation of law, or other valid legal grounds.
                   </p>
                 </div>
@@ -136,9 +136,9 @@ export default function RectificationClient() {
                 >
                   <div className="flex items-center gap-2 mb-2">
                     <i className="fas fa-edit text-[#FFB703] text-lg" aria-hidden="true"></i>
-                    <h4 className="text-white font-nunito text-sm font-semibold">Correction/Amendment</h4>
+                    <h4 className="text-white font-nunito text-base font-semibold">Correction/Amendment</h4>
                   </div>
-                  <p className="text-white/90 font-nunito text-xs">
+                  <p className="text-white/90 font-nunito text-sm">
                     Correction of errors, clerical mistakes, or inaccurate entries in the register such as wrong proprietor details, class descriptions, or dates.
                   </p>
                 </div>
@@ -156,7 +156,7 @@ export default function RectificationClient() {
                   boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
                 }}
               />
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-bold">
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
                 Common Grounds for Trademark Rectification
               </h2>
             </div>
@@ -226,7 +226,7 @@ export default function RectificationClient() {
                       </div>
                       <div className="flex-1">
                         <div className="flex items-center justify-between flex-wrap gap-2 mb-1">
-                          <h4 className="text-white font-nunito text-sm font-semibold">
+                          <h4 className="text-white font-nunito text-base font-semibold">
                             {item.ground}
                           </h4>
                           <span 
@@ -239,7 +239,7 @@ export default function RectificationClient() {
                             {item.section}
                           </span>
                         </div>
-                        <p className="text-white/80 font-nunito text-xs mb-2">
+                        <p className="text-white/80 font-nunito text-sm mb-2">
                           {item.description}
                         </p>
                       </div>
@@ -256,7 +256,7 @@ export default function RectificationClient() {
                         <i className="fas fa-check-circle text-[#FFB703] text-xs mt-0.5 flex-shrink-0" aria-hidden="true"></i>
                         <div>
                           <p className="text-white/70 font-nunito text-[9px] font-semibold mb-0.5">REMEDY:</p>
-                          <p className="text-white/90 font-nunito text-xs">
+                          <p className="text-white/90 font-nunito text-sm">
                             {item.remedy}
                           </p>
                         </div>
@@ -278,7 +278,7 @@ export default function RectificationClient() {
                   boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
                 }}
               />
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-bold">
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
                 Trademark Rectification Process
               </h2>
             </div>
@@ -348,10 +348,10 @@ export default function RectificationClient() {
                         border: '1px solid rgba(255, 255, 255, 0.1)'
                       }}
                     >
-                      <h4 className="text-white font-nunito text-sm font-semibold mb-1">
+                      <h4 className="text-white font-nunito text-base font-semibold mb-1">
                         {item.step}
                       </h4>
-                      <p className="text-white/90 font-nunito text-xs">
+                      <p className="text-white/90 font-nunito text-sm">
                         {item.description}
                       </p>
                     </div>
@@ -382,19 +382,19 @@ export default function RectificationClient() {
                   }}
                 >
                   <i className="fas fa-balance-scale text-[#FFB703] text-sm" aria-hidden="true"></i>
-                  <span className="text-white font-nunito text-sm font-semibold">Protect Your Trademark Rights</span>
+                  <span className="text-white font-nunito text-base font-semibold">Protect Your Trademark Rights</span>
                 </div>
 
-                <h3 className="text-white font-nunito text-xl lg:text-2xl font-bold mb-3">
+                <h3 className="text-white font-nunito text-2xl lg:text-3xl font-bold mb-3">
                   Challenge Wrongful Registrations with Expert Legal Support
                 </h3>
-                <p className="text-white/90 font-nunito text-sm max-w-2xl mx-auto mb-4">
+                <p className="text-white/90 font-nunito text-base max-w-2xl mx-auto mb-4">
                   Our experienced IP litigation attorneys provide aggressive representation in trademark rectification proceedings to protect your legitimate rights and remove conflicting marks.
                 </p>
 
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-nunito font-bold text-sm transition-all duration-300 hover:scale-105"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-nunito font-bold text-base transition-all duration-300 hover:scale-105"
                   style={{
                     background: 'linear-gradient(135deg, #FFB703, #FFA000)',
                     color: '#0C002B',
@@ -419,7 +419,7 @@ export default function RectificationClient() {
                   boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
                 }}
               />
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-bold">
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
                 Frequently Asked Questions
               </h2>
             </div>
@@ -435,11 +435,11 @@ export default function RectificationClient() {
                     boxShadow: '0 3px 14px rgba(0, 0, 0, 0.3)'
                   }}
                 >
-                  <h3 className="text-white font-nunito text-sm font-semibold mb-2 flex items-start gap-2">
+                  <h3 className="text-white font-nunito text-base font-semibold mb-2 flex items-start gap-2">
                     <i className="fas fa-question-circle text-[#FFB703] text-base mt-0.5" aria-hidden="true"></i>
                     {faq.question}
                   </h3>
-                  <p className="text-white/90 font-nunito text-xs leading-relaxed pl-6">
+                  <p className="text-white/90 font-nunito text-sm leading-relaxed pl-6">
                     {faq.answer}
                   </p>
                 </div>

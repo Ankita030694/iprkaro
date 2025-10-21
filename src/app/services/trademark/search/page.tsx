@@ -1,6 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
-import SearchClient from './SearchClient';
+import SearchClient from '@/app/services/trademark/search/SearchClient';
 
 export const metadata: Metadata = {
   title: 'Trademark Search & Availability Check Services India | Comprehensive Brand Analysis',

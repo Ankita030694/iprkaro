@@ -61,7 +61,7 @@ export default function ObjectionClient() {
                   style={{ background: '#FFB703', opacity: 0.4 }}
                 />
               </div>
-              <h1 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
+              <h1 className="text-white font-nunito text-3xl md:text-4xl lg:text-5xl font-bold">
                 Trademark Objection Reply Drafting Services India
               </h1>
             </div>
@@ -74,10 +74,10 @@ export default function ObjectionClient() {
                 boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)'
               }}
             >
-              <p className="text-white/95 font-nunito text-sm lg:text-base leading-relaxed mb-3">
+              <p className="text-white/95 font-nunito text-base lg:text-lg leading-relaxed mb-3">
                 Receiving a trademark objection is common—approximately <span className="font-bold text-[#FFB703]">60-70% of trademark applications</span> receive examination objections in India. A well-crafted objection reply can overcome most objections and secure your trademark registration successfully.
               </p>
-              <p className="text-white/95 font-nunito text-sm lg:text-base leading-relaxed">
+              <p className="text-white/95 font-nunito text-base lg:text-lg leading-relaxed">
                 Our experienced trademark attorneys specialize in drafting comprehensive objection replies with strong legal arguments, persuasive evidence, and relevant case law citations. We have successfully overcome thousands of objections with a high success rate, helping brands secure their trademark rights.
               </p>
             </div>
@@ -93,7 +93,7 @@ export default function ObjectionClient() {
                   boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
                 }}
               />
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-bold">
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
                 Understanding Trademark Objections
               </h2>
             </div>
@@ -106,7 +106,7 @@ export default function ObjectionClient() {
                 boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)'
               }}
             >
-              <p className="text-white/95 font-nunito text-sm leading-relaxed mb-4">
+              <p className="text-white/95 font-nunito text-base leading-relaxed mb-4">
                 When your trademark application is examined, the Examiner reviews it for compliance with the Trademarks Act, 1999. If any issues are found, an Examination Report is issued detailing specific objections. These objections must be addressed comprehensively to proceed toward registration.
               </p>
               
@@ -120,9 +120,9 @@ export default function ObjectionClient() {
                 >
                   <div className="flex items-center gap-2 mb-2">
                     <i className="fas fa-exclamation-triangle text-[#FFB703] text-lg" aria-hidden="true"></i>
-                    <h4 className="text-white font-nunito text-sm font-semibold">Absolute Grounds (Section 9)</h4>
+                    <h4 className="text-white font-nunito text-base font-semibold">Absolute Grounds (Section 9)</h4>
                   </div>
-                  <p className="text-white/90 font-nunito text-xs">
+                  <p className="text-white/90 font-nunito text-sm">
                     Objections based on lack of distinctiveness, descriptiveness, generic nature, geographical names, or prohibited matter.
                   </p>
                 </div>
@@ -136,9 +136,9 @@ export default function ObjectionClient() {
                 >
                   <div className="flex items-center gap-2 mb-2">
                     <i className="fas fa-clone text-[#FFB703] text-lg" aria-hidden="true"></i>
-                    <h4 className="text-white font-nunito text-sm font-semibold">Relative Grounds (Section 11)</h4>
+                    <h4 className="text-white font-nunito text-base font-semibold">Relative Grounds (Section 11)</h4>
                   </div>
-                  <p className="text-white/90 font-nunito text-xs">
+                  <p className="text-white/90 font-nunito text-sm">
                     Objections due to similarity or identity with existing registered or pending trademarks causing likelihood of confusion.
                   </p>
                 </div>
@@ -156,7 +156,7 @@ export default function ObjectionClient() {
                   boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
                 }}
               />
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-bold">
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
                 Common Types of Trademark Objections
               </h2>
             </div>
@@ -226,7 +226,7 @@ export default function ObjectionClient() {
                       </div>
                       <div className="flex-1">
                         <div className="flex items-center justify-between flex-wrap gap-2 mb-1">
-                          <h4 className="text-white font-nunito text-sm font-semibold">
+                          <h4 className="text-white font-nunito text-base font-semibold">
                             {objection.type}
                           </h4>
                           <span 
@@ -239,7 +239,7 @@ export default function ObjectionClient() {
                             {objection.ground}
                           </span>
                         </div>
-                        <p className="text-white/80 font-nunito text-xs mb-2">
+                        <p className="text-white/80 font-nunito text-sm mb-2">
                           {objection.description}
                         </p>
                       </div>
@@ -256,7 +256,7 @@ export default function ObjectionClient() {
                         <i className="fas fa-lightbulb text-[#FFB703] text-xs mt-0.5 flex-shrink-0" aria-hidden="true"></i>
                         <div>
                           <p className="text-white/70 font-nunito text-[9px] font-semibold mb-0.5">RESPONSE STRATEGY:</p>
-                          <p className="text-white/90 font-nunito text-xs">
+                          <p className="text-white/90 font-nunito text-sm">
                             {objection.strategy}
                           </p>
                         </div>
@@ -278,7 +278,7 @@ export default function ObjectionClient() {
                   boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
                 }}
               />
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-bold">
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
                 Our Objection Reply Process
               </h2>
             </div>
@@ -344,10 +344,10 @@ export default function ObjectionClient() {
                         border: '1px solid rgba(255, 255, 255, 0.1)'
                       }}
                     >
-                      <h4 className="text-white font-nunito text-sm font-semibold mb-1">
+                      <h4 className="text-white font-nunito text-base font-semibold mb-1">
                         {item.step}
                       </h4>
-                      <p className="text-white/90 font-nunito text-xs">
+                      <p className="text-white/90 font-nunito text-sm">
                         {item.description}
                       </p>
                     </div>
@@ -378,19 +378,19 @@ export default function ObjectionClient() {
                   }}
                 >
                   <i className="fas fa-clock text-[#FFB703] text-sm" aria-hidden="true"></i>
-                  <span className="text-white font-nunito text-sm font-semibold">Don't Let Your Application Be Abandoned</span>
+                  <span className="text-white font-nunito text-base font-semibold">Don't Let Your Application Be Abandoned</span>
                 </div>
 
-                <h3 className="text-white font-nunito text-xl lg:text-2xl font-bold mb-3">
+                <h3 className="text-white font-nunito text-2xl lg:text-3xl font-bold mb-3">
                   Overcome Trademark Objections with Expert Replies
                 </h3>
-                <p className="text-white/90 font-nunito text-sm max-w-2xl mx-auto mb-4">
+                <p className="text-white/90 font-nunito text-base max-w-2xl mx-auto mb-4">
                   Our trademark attorneys have successfully handled thousands of objection cases with a high success rate. Get professional legal assistance to draft a winning objection reply.
                 </p>
 
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-nunito font-bold text-sm transition-all duration-300 hover:scale-105"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-nunito font-bold text-base transition-all duration-300 hover:scale-105"
                   style={{
                     background: 'linear-gradient(135deg, #FFB703, #FFA000)',
                     color: '#0C002B',
@@ -415,7 +415,7 @@ export default function ObjectionClient() {
                   boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
                 }}
               />
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-bold">
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
                 Frequently Asked Questions
               </h2>
             </div>
@@ -431,11 +431,11 @@ export default function ObjectionClient() {
                     boxShadow: '0 3px 14px rgba(0, 0, 0, 0.3)'
                   }}
                 >
-                  <h3 className="text-white font-nunito text-sm font-semibold mb-2 flex items-start gap-2">
+                  <h3 className="text-white font-nunito text-base font-semibold mb-2 flex items-start gap-2">
                     <i className="fas fa-question-circle text-[#FFB703] text-base mt-0.5" aria-hidden="true"></i>
                     {faq.question}
                   </h3>
-                  <p className="text-white/90 font-nunito text-xs leading-relaxed pl-6">
+                  <p className="text-white/90 font-nunito text-sm leading-relaxed pl-6">
                     {faq.answer}
                   </p>
                 </div>

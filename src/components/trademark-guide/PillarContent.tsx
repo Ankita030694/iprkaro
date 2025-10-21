@@ -170,7 +170,7 @@ export default function PillarContent() {
                 style={{ background: '#FFB703', opacity: 0.4 }}
               />
             </div>
-            <h1 className="text-white font-nunito text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold">
+            <h1 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold">
               Complete Trademark Registration Guide India 2025
             </h1>
           </div>
@@ -183,10 +183,10 @@ export default function PillarContent() {
               boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)'
             }}
           >
-            <p className="text-white/95 font-nunito text-xs lg:text-sm leading-relaxed mb-2">
+            <p className="text-white/95 font-nunito text-sm lg:text-base leading-relaxed mb-2">
               Trademark registration is the cornerstone of brand protection in India's competitive marketplace. Whether you're a startup founder, established business owner, or individual entrepreneur, securing your trademark rights is crucial for long-term success. This comprehensive guide walks you through every aspect of trademark registration in India—from understanding what trademarks are to navigating the complete registration process in 2025.
             </p>
-            <p className="text-white/95 font-nunito text-xs lg:text-sm leading-relaxed">
+            <p className="text-white/95 font-nunito text-sm lg:text-base leading-relaxed">
               With over <span className="font-bold text-[#FFB703]">5 lakh+ trademark applications</span> filed annually in India, the importance of proper trademark protection cannot be overstated. This guide provides you with expert insights on processes, fees, documentation, class selection, objection handling, and timelines—everything you need to successfully register your trademark.
             </p>
           </div>
@@ -209,7 +209,7 @@ export default function PillarContent() {
                 style={{ background: '#FFB703', opacity: 0.4 }}
               />
             </div>
-            <h2 className="text-white font-nunito text-base md:text-lg lg:text-xl xl:text-2xl font-bold">
+            <h2 className="text-white font-nunito text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold">
               What is a Trademark?
             </h2>
           </div>
@@ -222,7 +222,7 @@ export default function PillarContent() {
               boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)'
             }}
           >
-            <p className="text-white/95 font-nunito text-xs lg:text-sm leading-relaxed mb-2">
+            <p className="text-white/95 font-nunito text-sm lg:text-base leading-relaxed mb-2">
               A trademark is any distinctive sign, symbol, word, phrase, logo, design, or combination thereof that identifies and distinguishes the source of goods or services of one party from those of others. Under the <span className="font-semibold text-[#FFB703]">Trademarks Act, 1999</span>, a trademark serves as a badge of origin that helps consumers identify products or services from a particular source.
             </p>
             
@@ -236,9 +236,9 @@ export default function PillarContent() {
               >
                 <div className="flex items-center gap-1.5 mb-1">
                   <i className="fas fa-trademark text-[#FFB703] text-sm" aria-hidden="true"></i>
-                  <h4 className="text-white font-nunito text-xs lg:text-sm font-semibold">Word Marks</h4>
+                  <h4 className="text-white font-nunito text-sm lg:text-base font-semibold">Word Marks</h4>
                 </div>
-                <p className="text-white/90 font-nunito text-[10px] lg:text-xs">
+                <p className="text-white/90 font-nunito text-xs lg:text-sm">
                   Text-based trademarks like "Google", "Tata", or "Infosys" that use distinctive words or phrases.
                 </p>
               </div>
@@ -252,9 +252,9 @@ export default function PillarContent() {
               >
                 <div className="flex items-center gap-1.5 mb-1">
                   <i className="fas fa-image text-[#FFB703] text-sm" aria-hidden="true"></i>
-                  <h4 className="text-white font-nunito text-xs lg:text-sm font-semibold">Logo Marks</h4>
+                  <h4 className="text-white font-nunito text-sm lg:text-base font-semibold">Logo Marks</h4>
                 </div>
-                <p className="text-white/90 font-nunito text-[10px] lg:text-xs">
+                <p className="text-white/90 font-nunito text-xs lg:text-sm">
                   Design-based trademarks featuring unique visual elements, symbols, or stylized logos.
                 </p>
               </div>
@@ -268,9 +268,9 @@ export default function PillarContent() {
               >
                 <div className="flex items-center gap-1.5 mb-1">
                   <i className="fas fa-layer-group text-[#FFB703] text-sm" aria-hidden="true"></i>
-                  <h4 className="text-white font-nunito text-xs lg:text-sm font-semibold">Composite Marks</h4>
+                  <h4 className="text-white font-nunito text-sm lg:text-base font-semibold">Composite Marks</h4>
                 </div>
-                <p className="text-white/90 font-nunito text-[10px] lg:text-xs">
+                <p className="text-white/90 font-nunito text-xs lg:text-sm">
                   Combination of words and designs creating a unified brand identity.
                 </p>
               </div>
@@ -284,9 +284,9 @@ export default function PillarContent() {
               >
                 <div className="flex items-center gap-1.5 mb-1">
                   <i className="fas fa-shapes text-[#FFB703] text-sm" aria-hidden="true"></i>
-                  <h4 className="text-white font-nunito text-xs lg:text-sm font-semibold">Non-Traditional Marks</h4>
+                  <h4 className="text-white font-nunito text-sm lg:text-base font-semibold">Non-Traditional Marks</h4>
                 </div>
-                <p className="text-white/90 font-nunito text-[10px] lg:text-xs">
+                <p className="text-white/90 font-nunito text-xs lg:text-sm">
                   Sounds, colors, 3D shapes, or other distinctive non-conventional identifiers.
                 </p>
               </div>
@@ -311,7 +311,7 @@ export default function PillarContent() {
                 style={{ background: '#FFB703', opacity: 0.4 }}
               />
             </div>
-            <h2 className="text-white font-nunito text-base md:text-lg lg:text-xl xl:text-2xl font-bold">
+            <h2 className="text-white font-nunito text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold">
               Why Register Your Trademark? Legal Benefits
             </h2>
           </div>
@@ -324,7 +324,7 @@ export default function PillarContent() {
               boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)'
             }}
           >
-            <p className="text-white/95 font-nunito text-xs lg:text-sm leading-relaxed mb-3">
+            <p className="text-white/95 font-nunito text-sm lg:text-base leading-relaxed mb-3">
               While using a trademark provides common law rights, <span className="font-semibold text-[#FFB703]">registration offers substantial legal advantages</span> that are crucial for business growth and brand protection. Here's why registration matters:
             </p>
 
@@ -347,10 +347,10 @@ export default function PillarContent() {
                     <i className="fas fa-shield-alt text-[#0C002B] text-xs" aria-hidden="true"></i>
                   </div>
                   <div>
-                    <h4 className="text-white font-nunito text-xs lg:text-sm font-semibold mb-1">
+                    <h4 className="text-white font-nunito text-sm lg:text-base font-semibold mb-1">
                       Exclusive Legal Rights & Nationwide Protection
                     </h4>
-                    <p className="text-white/90 font-nunito text-[10px] lg:text-xs leading-relaxed">
+                    <p className="text-white/90 font-nunito text-xs lg:text-sm leading-relaxed">
                       Registration grants you <strong>exclusive rights</strong> to use the trademark throughout India for the registered goods/services. You can prevent others from using identical or deceptively similar marks, giving you a competitive edge and market monopoly.
                     </p>
                   </div>
@@ -375,10 +375,10 @@ export default function PillarContent() {
                     <i className="fas fa-gavel text-[#FFB703] text-xs" aria-hidden="true"></i>
                   </div>
                   <div>
-                    <h4 className="text-white font-nunito text-xs lg:text-sm font-semibold mb-1">
+                    <h4 className="text-white font-nunito text-sm lg:text-base font-semibold mb-1">
                       Legal Presumption of Ownership & Validity
                     </h4>
-                    <p className="text-white/90 font-nunito text-[10px] lg:text-xs leading-relaxed">
+                    <p className="text-white/90 font-nunito text-xs lg:text-sm leading-relaxed">
                       A registered trademark serves as <strong>prima facie evidence</strong> of ownership. In infringement cases, the burden of proof shifts to the defendant, making litigation easier and more cost-effective for you.
                     </p>
                   </div>
@@ -403,10 +403,10 @@ export default function PillarContent() {
                     <i className="fas fa-globe-asia text-[#FFB703] text-xs" aria-hidden="true"></i>
                   </div>
                   <div>
-                    <h4 className="text-white font-nunito text-xs lg:text-sm font-semibold mb-1">
+                    <h4 className="text-white font-nunito text-sm lg:text-base font-semibold mb-1">
                       Enables International Expansion
                     </h4>
-                    <p className="text-white/90 font-nunito text-[10px] lg:text-xs leading-relaxed">
+                    <p className="text-white/90 font-nunito text-xs lg:text-sm leading-relaxed">
                       Indian trademark registration allows you to claim <strong>priority under the Paris Convention</strong> when filing in other countries. It's also essential for protection under the Madrid Protocol for international trademark registration.
                     </p>
                   </div>
@@ -431,10 +431,10 @@ export default function PillarContent() {
                     <i className="fas fa-chart-line text-[#FFB703] text-xs" aria-hidden="true"></i>
                   </div>
                   <div>
-                    <h4 className="text-white font-nunito text-xs lg:text-sm font-semibold mb-1">
+                    <h4 className="text-white font-nunito text-sm lg:text-base font-semibold mb-1">
                       Valuable Business Asset & Monetization
                     </h4>
-                    <p className="text-white/90 font-nunito text-[10px] lg:text-xs leading-relaxed">
+                    <p className="text-white/90 font-nunito text-xs lg:text-sm leading-relaxed">
                       Registered trademarks are <strong>intangible assets</strong> that can be licensed, franchised, sold, or used as collateral for loans. They increase your business valuation and attract investors.
                     </p>
                   </div>
@@ -459,10 +459,10 @@ export default function PillarContent() {
                     <i className="fas fa-ban text-[#FFB703] text-xs" aria-hidden="true"></i>
                   </div>
                   <div>
-                    <h4 className="text-white font-nunito text-xs lg:text-sm font-semibold mb-1">
+                    <h4 className="text-white font-nunito text-sm lg:text-base font-semibold mb-1">
                       Protection Against Domain Squatting & Online Infringement
                     </h4>
-                    <p className="text-white/90 font-nunito text-[10px] lg:text-xs leading-relaxed">
+                    <p className="text-white/90 font-nunito text-xs lg:text-sm leading-relaxed">
                       Registered trademarks help you reclaim infringing domain names through <strong>UDRP proceedings</strong> and take down counterfeit listings on e-commerce platforms quickly.
                     </p>
                   </div>
@@ -487,10 +487,10 @@ export default function PillarContent() {
                     <i className="fas fa-trophy text-[#FFB703] text-xs" aria-hidden="true"></i>
                   </div>
                   <div>
-                    <h4 className="text-white font-nunito text-xs lg:text-sm font-semibold mb-1">
+                    <h4 className="text-white font-nunito text-sm lg:text-base font-semibold mb-1">
                       Brand Credibility & Consumer Trust
                     </h4>
-                    <p className="text-white/90 font-nunito text-[10px] lg:text-xs leading-relaxed">
+                    <p className="text-white/90 font-nunito text-xs lg:text-sm leading-relaxed">
                       The ® symbol signals authenticity and quality to consumers, building <strong>brand trust and market reputation</strong>. It differentiates you from competitors and establishes market authority.
                     </p>
                   </div>
@@ -517,7 +517,7 @@ export default function PillarContent() {
                 style={{ background: '#FFB703', opacity: 0.4 }}
               />
             </div>
-            <h2 className="text-white font-nunito text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold">
+            <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold">
               Step-by-Step Trademark Registration Process in India
             </h2>
           </div>
@@ -530,7 +530,7 @@ export default function PillarContent() {
               boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)'
             }}
           >
-            <p className="text-white/95 font-nunito text-xs lg:text-sm leading-relaxed mb-3">
+            <p className="text-white/95 font-nunito text-sm lg:text-base leading-relaxed mb-3">
               The trademark registration process in India typically takes <span className="font-bold text-[#FFB703]">18-24 months</span> from application to registration. Here's a detailed breakdown of each stage:
             </p>
 
@@ -568,7 +568,7 @@ export default function PillarContent() {
                     }}
                   >
                     <div className="flex items-center justify-between flex-wrap gap-1.5 mb-1.5">
-                      <h4 className="text-white font-nunito text-xs lg:text-sm font-semibold">
+                      <h4 className="text-white font-nunito text-sm lg:text-base font-semibold">
                         {step.step}
                       </h4>
                       <span 
@@ -583,7 +583,7 @@ export default function PillarContent() {
                         {step.timeline}
                       </span>
                     </div>
-                    <p className="text-white/90 font-nunito text-[10px] lg:text-xs leading-relaxed">
+                    <p className="text-white/90 font-nunito text-xs lg:text-sm leading-relaxed">
                       {step.description}
                     </p>
                   </div>
@@ -601,8 +601,8 @@ export default function PillarContent() {
               <div className="flex items-start gap-2">
                 <i className="fas fa-info-circle text-[#FFB703] text-sm mt-0.5" aria-hidden="true"></i>
                 <div>
-                  <h5 className="text-white font-nunito text-xs font-semibold mb-1">Forms Used in Trademark Registration</h5>
-                  <p className="text-white/90 font-nunito text-[10px]">
+                  <h5 className="text-white font-nunito text-sm font-semibold mb-1">Forms Used in Trademark Registration</h5>
+                  <p className="text-white/90 font-nunito text-xs">
                     <strong>TM-A:</strong> Main application form for trademark registration<br/>
                     <strong>TM-9:</strong> Form for entering appearance in opposition<br/>
                     <strong>TM-O:</strong> Notice of opposition<br/>
@@ -631,7 +631,7 @@ export default function PillarContent() {
                 style={{ background: '#FFB703', opacity: 0.4 }}
               />
             </div>
-            <h2 className="text-white font-nunito text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold">
+            <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold">
               Trademark Registration Fees & Transparent Pricing
             </h2>
           </div>
@@ -644,7 +644,7 @@ export default function PillarContent() {
               boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)'
             }}
           >
-            <p className="text-white/95 font-nunito text-xs lg:text-sm leading-relaxed mb-3">
+            <p className="text-white/95 font-nunito text-sm lg:text-base leading-relaxed mb-3">
               Trademark registration fees in India consist of <strong>government fees</strong> and <strong>professional service fees</strong>. Here's a transparent breakdown:
             </p>
 
@@ -656,28 +656,28 @@ export default function PillarContent() {
                 border: '1px solid rgba(255, 183, 3, 0.2)'
               }}
             >
-              <h4 className="text-white font-nunito text-sm font-semibold mb-2 flex items-center gap-1.5">
-                <i className="fas fa-landmark text-[#FFB703] text-xs" aria-hidden="true"></i>
+              <h4 className="text-white font-nunito text-base font-semibold mb-2 flex items-center gap-1.5">
+                <i className="fas fa-landmark text-[#FFB703] text-sm" aria-hidden="true"></i>
                 Official Government Fees (Per Class)
               </h4>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
                 <div>
-                  <p className="text-white/70 font-nunito text-[10px] mb-0.5">Individual / Startup / Small Entity</p>
+                  <p className="text-white/70 font-nunito text-xs mb-0.5">Individual / Startup / Small Entity</p>
                   <p className="text-white font-nunito text-lg font-bold">₹4,500</p>
                 </div>
                 <div>
-                  <p className="text-white/70 font-nunito text-[10px] mb-0.5">Other Entities (Companies)</p>
+                  <p className="text-white/70 font-nunito text-xs mb-0.5">Other Entities (Companies)</p>
                   <p className="text-white font-nunito text-lg font-bold">₹9,000</p>
                 </div>
                 <div>
-                  <p className="text-white/70 font-nunito text-[10px] mb-0.5">Fast Track Filing (Priority)</p>
+                  <p className="text-white/70 font-nunito text-xs mb-0.5">Fast Track Filing (Priority)</p>
                   <p className="text-white font-nunito text-lg font-bold">₹20,000</p>
                 </div>
               </div>
             </div>
 
             {/* Service Packages */}
-            <h4 className="text-white font-nunito text-sm font-semibold mb-3">Our Service Packages</h4>
+            <h4 className="text-white font-nunito text-base font-semibold mb-3">Our Service Packages</h4>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-3">
               {feesStructure.map((pkg, index) => (
                 <div 
@@ -712,26 +712,26 @@ export default function PillarContent() {
                   )}
                   
                   <div className="text-center mb-3">
-                    <h5 className="text-white font-nunito text-sm font-semibold mb-1.5">
+                    <h5 className="text-white font-nunito text-base font-semibold mb-1.5">
                       {pkg.package}
                     </h5>
                     <div className="text-white font-nunito text-2xl font-bold">
                       {pkg.price}
                     </div>
-                    <p className="text-white/70 font-nunito text-[10px] mt-0.5">+ Government fees</p>
+                    <p className="text-white/70 font-nunito text-xs mt-0.5">+ Government fees</p>
                   </div>
 
                   <ul className="space-y-1.5 mb-3">
                     {pkg.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start gap-1.5">
                         <i className="fas fa-check-circle text-[#FFB703] text-xs mt-0.5 flex-shrink-0" aria-hidden="true"></i>
-                        <span className="text-white/90 font-nunito text-[10px]">{feature}</span>
+                        <span className="text-white/90 font-nunito text-xs">{feature}</span>
                       </li>
                     ))}
                   </ul>
 
                   <button 
-                    className="w-full py-2 rounded-md font-nunito font-bold text-xs transition-all duration-300 hover:scale-105"
+                    className="w-full py-2 rounded-md font-nunito font-bold text-sm transition-all duration-300 hover:scale-105"
                     style={
                       pkg.popular
                         ? {
@@ -771,7 +771,7 @@ export default function PillarContent() {
                 style={{ background: '#FFB703', opacity: 0.4 }}
               />
             </div>
-            <h2 className="text-white font-nunito text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold">
+            <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold">
               Documents Required for Trademark Registration
             </h2>
           </div>
@@ -784,7 +784,7 @@ export default function PillarContent() {
               boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)'
             }}
           >
-            <p className="text-white/95 font-nunito text-xs lg:text-sm leading-relaxed mb-3">
+            <p className="text-white/95 font-nunito text-sm lg:text-base leading-relaxed mb-3">
               Proper documentation is crucial for a smooth trademark registration process. Here's a comprehensive checklist:
             </p>
 
@@ -806,7 +806,7 @@ export default function PillarContent() {
                       boxShadow: '0 0 7px rgba(255, 183, 3, 0.5)'
                     }}
                   />
-                  <span className="text-white/95 font-nunito text-xs lg:text-sm">
+                  <span className="text-white/95 font-nunito text-sm lg:text-base">
                     {document}
                   </span>
                 </div>
@@ -823,8 +823,8 @@ export default function PillarContent() {
               <div className="flex items-start gap-2">
                 <i className="fas fa-lightbulb text-[#FFB703] text-sm mt-0.5" aria-hidden="true"></i>
                 <div>
-                  <h5 className="text-white font-nunito text-xs font-semibold mb-0.5">Pro Tip</h5>
-                  <p className="text-white/90 font-nunito text-[10px]">
+                  <h5 className="text-white font-nunito text-sm font-semibold mb-0.5">Pro Tip</h5>
+                  <p className="text-white/90 font-nunito text-xs">
                     Ensure your trademark logo is in <strong>JPG format</strong> with minimum dimensions of <strong>300x300 pixels</strong>. For best results, use a high-resolution vector format that can be converted to JPG without quality loss.
                   </p>
                 </div>
@@ -850,7 +850,7 @@ export default function PillarContent() {
                 style={{ background: '#FFB703', opacity: 0.4 }}
               />
             </div>
-            <h2 className="text-white font-nunito text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold">
+            <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold">
               Trademark Classes Explained: How to Choose
             </h2>
           </div>
@@ -863,7 +863,7 @@ export default function PillarContent() {
               boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)'
             }}
           >
-            <p className="text-white/95 font-nunito text-xs lg:text-sm leading-relaxed mb-3">
+            <p className="text-white/95 font-nunito text-sm lg:text-base leading-relaxed mb-3">
               India follows the <span className="font-bold text-[#FFB703]">Nice Classification</span> system, which divides all goods and services into <strong>45 classes</strong> (Classes 1-34 for goods, Classes 35-45 for services). Choosing the correct class is critical for proper protection.
             </p>
 
@@ -874,16 +874,16 @@ export default function PillarContent() {
                 border: '1px solid rgba(255, 183, 3, 0.2)'
               }}
             >
-              <h4 className="text-white font-nunito text-xs lg:text-sm font-semibold mb-1.5 flex items-center gap-1.5">
-                <i className="fas fa-exclamation-triangle text-[#FFB703] text-xs" aria-hidden="true"></i>
+              <h4 className="text-white font-nunito text-sm lg:text-base font-semibold mb-1.5 flex items-center gap-1.5">
+                <i className="fas fa-exclamation-triangle text-[#FFB703] text-sm" aria-hidden="true"></i>
                 Important: Class Selection Strategy
               </h4>
-              <p className="text-white/90 font-nunito text-[10px] lg:text-xs">
+              <p className="text-white/90 font-nunito text-xs lg:text-sm">
                 Your trademark protection is <strong>limited to the classes</strong> you register in. If you register in Class 25 (clothing) but not Class 9 (mobile apps), someone else can register the same mark for software. Consider your current business and <strong>future expansion plans</strong> when selecting classes.
               </p>
             </div>
 
-            <h4 className="text-white font-nunito text-sm font-semibold mb-2">Popular Trademark Classes:</h4>
+            <h4 className="text-white font-nunito text-base font-semibold mb-2">Popular Trademark Classes:</h4>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
               {trademarkClasses.map((item, index) => (
                 <div 
@@ -905,7 +905,7 @@ export default function PillarContent() {
                     >
                       {item.class}
                     </div>
-                    <span className="text-white/90 font-nunito text-xs lg:text-sm">
+                    <span className="text-white/90 font-nunito text-sm lg:text-base">
                       {item.description}
                     </span>
                   </div>
@@ -923,13 +923,13 @@ export default function PillarContent() {
               <div className="flex items-start gap-2">
                 <i className="fas fa-search text-[#FFB703] text-sm mt-0.5" aria-hidden="true"></i>
                 <div>
-                  <h5 className="text-white font-nunito text-xs font-semibold mb-1.5">Need Help Selecting Classes?</h5>
-                  <p className="text-white/90 font-nunito text-[10px] mb-2">
+                  <h5 className="text-white font-nunito text-sm font-semibold mb-1.5">Need Help Selecting Classes?</h5>
+                  <p className="text-white/90 font-nunito text-xs mb-2">
                     Class selection is complex and requires expertise. Our AI-powered trademark search tool analyzes your business and recommends appropriate classes automatically.
                   </p>
                   <Link 
                     href="/services/trademark-registration"
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md font-nunito font-semibold text-[10px] transition-all duration-300 hover:scale-105"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md font-nunito font-semibold text-xs transition-all duration-300 hover:scale-105"
                     style={{
                       background: 'linear-gradient(135deg, #FFB703, #FFA000)',
                       color: '#0C002B',
@@ -962,7 +962,7 @@ export default function PillarContent() {
                 style={{ background: '#FFB703', opacity: 0.4 }}
               />
             </div>
-            <h2 className="text-white font-nunito text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold">
+            <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold">
               Common Trademark Objections & How to Respond
             </h2>
           </div>
@@ -975,7 +975,7 @@ export default function PillarContent() {
               boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)'
             }}
           >
-            <p className="text-white/95 font-nunito text-xs lg:text-sm leading-relaxed mb-3">
+            <p className="text-white/95 font-nunito text-sm lg:text-base leading-relaxed mb-3">
               Approximately <span className="font-bold text-[#FFB703]">60-70% of trademark applications</span> receive examination objections. Understanding common objections and response strategies is crucial for successful registration.
             </p>
 
@@ -1005,10 +1005,10 @@ export default function PillarContent() {
                       <i className="fas fa-exclamation-circle text-[#FFB703] text-xs" aria-hidden="true"></i>
                     </div>
                     <div className="flex-1">
-                      <h4 className="text-white font-nunito text-xs lg:text-sm font-semibold mb-0.5">
+                      <h4 className="text-white font-nunito text-sm lg:text-base font-semibold mb-0.5">
                         {item.objection}
                       </h4>
-                      <p className="text-white/80 font-nunito text-[10px]">
+                      <p className="text-white/80 font-nunito text-xs">
                         {item.description}
                       </p>
                     </div>
@@ -1024,8 +1024,8 @@ export default function PillarContent() {
                     <div className="flex items-start gap-1.5">
                       <i className="fas fa-reply text-[#FFB703] text-xs mt-0.5 flex-shrink-0" aria-hidden="true"></i>
                       <div>
-                        <p className="text-white/70 font-nunito text-[9px] font-semibold mb-0.5">RESPONSE STRATEGY:</p>
-                        <p className="text-white/90 font-nunito text-[10px]">
+                        <p className="text-white/70 font-nunito text-xs font-semibold mb-0.5">RESPONSE STRATEGY:</p>
+                        <p className="text-white/90 font-nunito text-sm">
                           {item.response}
                         </p>
                       </div>
@@ -1045,15 +1045,15 @@ export default function PillarContent() {
               <div className="flex items-start gap-2">
                 <i className="fas fa-shield-alt text-[#FFB703] text-sm mt-0.5" aria-hidden="true"></i>
                 <div>
-                  <h5 className="text-white font-nunito text-xs lg:text-sm font-semibold mb-1.5">
+                  <h5 className="text-white font-nunito text-sm lg:text-base font-semibold mb-1.5">
                     Expert Objection Handling by IPRKaro
                   </h5>
-                  <p className="text-white/90 font-nunito text-[10px] lg:text-xs mb-2">
+                  <p className="text-white/90 font-nunito text-xs lg:text-sm mb-2">
                     Our experienced trademark attorneys have successfully handled <strong>1000+ objection cases</strong> with a high success rate. We draft comprehensive replies, gather supporting evidence, and represent you at hearings before the Trademark Registry.
                   </p>
                   <div className="flex flex-wrap gap-1.5">
                     <span 
-                      className="px-2 py-0.5 rounded-full text-[9px] font-semibold"
+                      className="px-2 py-0.5 rounded-full text-xs font-semibold"
                       style={{
                         background: 'rgba(255, 255, 255, 0.1)',
                         color: '#FFB703'
@@ -1063,7 +1063,7 @@ export default function PillarContent() {
                       90% Success Rate
                     </span>
                     <span 
-                      className="px-2 py-0.5 rounded-full text-[9px] font-semibold"
+                      className="px-2 py-0.5 rounded-full text-xs font-semibold"
                       style={{
                         background: 'rgba(255, 255, 255, 0.1)',
                         color: '#FFB703'
@@ -1073,7 +1073,7 @@ export default function PillarContent() {
                       Fast Response
                     </span>
                     <span 
-                      className="px-2 py-0.5 rounded-full text-[9px] font-semibold"
+                      className="px-2 py-0.5 rounded-full text-xs font-semibold"
                       style={{
                         background: 'rgba(255, 255, 255, 0.1)',
                         color: '#FFB703'
@@ -1112,20 +1112,20 @@ export default function PillarContent() {
               }}
             >
               <i className="fas fa-bolt text-[#FFB703] text-xs" aria-hidden="true"></i>
-              <span className="text-white font-nunito text-xs font-semibold">Start Your Trademark Journey Today</span>
+              <span className="text-white font-nunito text-sm font-semibold">Start Your Trademark Journey Today</span>
             </div>
 
-            <h3 className="text-white font-nunito text-lg lg:text-xl xl:text-2xl font-bold mb-3">
+            <h3 className="text-white font-nunito text-xl lg:text-2xl xl:text-3xl font-bold mb-3">
               Protect Your Brand with AI-Powered Trademark Search
             </h3>
-            <p className="text-white/90 font-nunito text-xs lg:text-sm max-w-2xl mx-auto mb-4">
+            <p className="text-white/90 font-nunito text-sm lg:text-base max-w-2xl mx-auto mb-4">
               Use our advanced AI trademark search tool to check availability, get instant reports, and start your registration process in minutes. Our intelligent system analyzes phonetic similarities, visual conflicts, and recommends the right classes for your business.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <Link
                 href="/services/trademark-registration"
-                className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-lg font-nunito font-bold text-xs transition-all duration-300 hover:scale-105"
+                className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-lg font-nunito font-bold text-sm transition-all duration-300 hover:scale-105"
                 style={{
                   background: 'linear-gradient(135deg, #FFB703, #FFA000)',
                   color: '#0C002B',
@@ -1139,7 +1139,7 @@ export default function PillarContent() {
 
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-lg font-nunito font-bold text-xs transition-all duration-300 hover:scale-105"
+                className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-lg font-nunito font-bold text-sm transition-all duration-300 hover:scale-105"
                 style={{
                   background: 'rgba(255, 255, 255, 0.1)',
                   border: '2px solid rgba(255, 255, 255, 0.2)',
@@ -1155,19 +1155,19 @@ export default function PillarContent() {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                 <div className="text-center">
                   <div className="text-white font-nunito text-lg lg:text-xl font-bold mb-0.5">10K+</div>
-                  <div className="text-white/70 font-nunito text-[9px] lg:text-[10px]">Trademarks Filed</div>
+                  <div className="text-white/70 font-nunito text-xs lg:text-sm">Trademarks Filed</div>
                 </div>
                 <div className="text-center">
                   <div className="text-white font-nunito text-lg lg:text-xl font-bold mb-0.5">95%</div>
-                  <div className="text-white/70 font-nunito text-[9px] lg:text-[10px]">Success Rate</div>
+                  <div className="text-white/70 font-nunito text-xs lg:text-sm">Success Rate</div>
                 </div>
                 <div className="text-center">
                   <div className="text-white font-nunito text-lg lg:text-xl font-bold mb-0.5">24/7</div>
-                  <div className="text-white/70 font-nunito text-[9px] lg:text-[10px]">Support Available</div>
+                  <div className="text-white/70 font-nunito text-xs lg:text-sm">Support Available</div>
                 </div>
                 <div className="text-center">
                   <div className="text-white font-nunito text-lg lg:text-xl font-bold mb-0.5">₹1,999</div>
-                  <div className="text-white/70 font-nunito text-[9px] lg:text-[10px]">Starting Price</div>
+                  <div className="text-white/70 font-nunito text-xs lg:text-sm">Starting Price</div>
                 </div>
               </div>
             </div>
@@ -1191,7 +1191,7 @@ export default function PillarContent() {
                 style={{ background: '#FFB703', opacity: 0.4 }}
               />
             </div>
-            <h2 className="text-white font-nunito text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold">
+            <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold">
               Related Resources & Guides
             </h2>
           </div>
@@ -1254,13 +1254,13 @@ export default function PillarContent() {
                 >
                   <i className={`${resource.icon} text-[#FFB703] text-sm`} aria-hidden="true"></i>
                 </div>
-                <h4 className="text-white font-nunito text-xs lg:text-sm font-semibold mb-1.5 group-hover:text-[#FFB703] transition-colors">
+                <h4 className="text-white font-nunito text-sm lg:text-base font-semibold mb-1.5 group-hover:text-[#FFB703] transition-colors">
                   {resource.title}
                 </h4>
-                <p className="text-white/80 font-nunito text-[10px] mb-2">
+                <p className="text-white/80 font-nunito text-xs mb-2">
                   {resource.description}
                 </p>
-                <span className="text-[#FFB703] font-nunito text-[10px] font-semibold inline-flex items-center gap-1.5">
+                <span className="text-[#FFB703] font-nunito text-xs font-semibold inline-flex items-center gap-1.5">
                   Read More
                   <i className="fas fa-arrow-right text-[8px] group-hover:translate-x-1 transition-transform" aria-hidden="true"></i>
                 </span>
@@ -1276,13 +1276,13 @@ export default function PillarContent() {
               border: '1px solid rgba(255, 183, 3, 0.2)'
             }}
           >
-            <h4 className="text-white font-nunito text-sm font-semibold mb-2">
+            <h4 className="text-white font-nunito text-base font-semibold mb-2">
               Explore Our IP Services
             </h4>
             <div className="flex flex-wrap gap-2">
               <Link
                 href="/services/trademark-registration"
-                className="px-3 py-1.5 rounded-md font-nunito text-xs font-semibold transition-all duration-300 hover:scale-105"
+                className="px-3 py-1.5 rounded-md font-nunito text-sm font-semibold transition-all duration-300 hover:scale-105"
                 style={{
                   background: 'rgba(255, 255, 255, 0.1)',
                   border: '1px solid rgba(255, 255, 255, 0.2)',
@@ -1293,7 +1293,7 @@ export default function PillarContent() {
               </Link>
               <Link
                 href="/services/patent-services"
-                className="px-3 py-1.5 rounded-md font-nunito text-xs font-semibold transition-all duration-300 hover:scale-105"
+                className="px-3 py-1.5 rounded-md font-nunito text-sm font-semibold transition-all duration-300 hover:scale-105"
                 style={{
                   background: 'rgba(255, 255, 255, 0.1)',
                   border: '1px solid rgba(255, 255, 255, 0.2)',
@@ -1304,7 +1304,7 @@ export default function PillarContent() {
               </Link>
               <Link
                 href="/services/copyright-protection"
-                className="px-3 py-1.5 rounded-md font-nunito text-xs font-semibold transition-all duration-300 hover:scale-105"
+                className="px-3 py-1.5 rounded-md font-nunito text-sm font-semibold transition-all duration-300 hover:scale-105"
                 style={{
                   background: 'rgba(255, 255, 255, 0.1)',
                   border: '1px solid rgba(255, 255, 255, 0.2)',

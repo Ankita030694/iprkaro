@@ -45,16 +45,16 @@ export default function LicensingClient() {
               <div className="w-3 h-3 rounded-full relative" style={{ background: 'linear-gradient(135deg, #FFB703, #FFA000)', boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)' }}>
                 <div className="absolute inset-0 rounded-full animate-ping" style={{ background: '#FFB703', opacity: 0.4 }} />
               </div>
-              <h1 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
+              <h1 className="text-white font-nunito text-3xl md:text-4xl lg:text-5xl font-bold">
                 Patent Licensing & Commercialization Support Services India
               </h1>
             </div>
             
             <div className="p-4 lg:p-5 rounded-lg backdrop-blur-sm" style={{ background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%)', border: '1px solid rgba(255, 255, 255, 0.1)', boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)' }}>
-              <p className="text-white/95 font-nunito text-sm lg:text-base leading-relaxed mb-3">
+              <p className="text-white/95 font-nunito text-base lg:text-lg leading-relaxed mb-3">
                 Monetize your patented inventions with <span className="font-bold text-[#FFB703]">strategic licensing and commercialization support</span>. Transform patents into revenue through licensing agreements, technology transfer, joint ventures, or outright sales. Professional guidance maximizes returns while protecting IP rights.
               </p>
-              <p className="text-white/95 font-nunito text-sm lg:text-base leading-relaxed">
+              <p className="text-white/95 font-nunito text-base lg:text-lg leading-relaxed">
                 Our patent commercialization experts provide comprehensive services including patent valuation, licensee identification, license agreement drafting, royalty negotiation, technology marketing, and commercialization strategy development for successful monetization.
               </p>
             </div>
@@ -64,7 +64,7 @@ export default function LicensingClient() {
           <section className="mb-8">
             <div className="flex items-center gap-2 mb-3">
               <div className="w-2 h-2 rounded-full" style={{ background: '#FFB703', boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)' }} />
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-bold">
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
                 Types of Patent Licensing
               </h2>
             </div>
@@ -109,8 +109,8 @@ export default function LicensingClient() {
                         <i className={`${type.icon} text-[#FFB703] text-base`} aria-hidden="true"></i>
                       </div>
                       <div>
-                        <h4 className="text-white font-nunito text-sm font-semibold mb-1">{type.title}</h4>
-                        <p className="text-white/90 font-nunito text-xs">{type.description}</p>
+                        <h4 className="text-white font-nunito text-base font-semibold mb-1">{type.title}</h4>
+                        <p className="text-white/90 font-nunito text-sm">{type.description}</p>
                       </div>
                     </div>
                   </div>
@@ -123,7 +123,7 @@ export default function LicensingClient() {
           <section className="mb-8">
             <div className="flex items-center gap-2 mb-3">
               <div className="w-2 h-2 rounded-full" style={{ background: '#FFB703', boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)' }} />
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-bold">
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
                 Patent Commercialization Strategies
               </h2>
             </div>
@@ -153,11 +153,11 @@ export default function LicensingClient() {
                   }
                 ].map((item, index) => (
                   <div key={index} className="p-3 rounded-md transition-all duration-300 hover:-translate-y-0.5" style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
-                    <h4 className="text-white font-nunito text-sm font-semibold mb-1 flex items-center gap-2">
+                    <h4 className="text-white font-nunito text-base font-semibold mb-1 flex items-center gap-2">
                       <i className="fas fa-lightbulb text-[#FFB703] text-sm" aria-hidden="true"></i>
                       {item.strategy}
                     </h4>
-                    <p className="text-white/90 font-nunito text-xs pl-6">{item.description}</p>
+                    <p className="text-white/90 font-nunito text-sm pl-6">{item.description}</p>
                   </div>
                 ))}
               </div>
@@ -173,17 +173,17 @@ export default function LicensingClient() {
               <div className="relative text-center">
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-3" style={{ background: 'rgba(255, 183, 3, 0.2)', border: '1px solid rgba(255, 183, 3, 0.4)' }}>
                   <i className="fas fa-handshake text-[#FFB703] text-sm" aria-hidden="true"></i>
-                  <span className="text-white font-nunito text-sm font-semibold">Monetize Your Patents</span>
+                  <span className="text-white font-nunito text-base font-semibold">Monetize Your Patents</span>
                 </div>
 
-                <h3 className="text-white font-nunito text-xl lg:text-2xl font-bold mb-3">
+                <h3 className="text-white font-nunito text-2xl lg:text-3xl font-bold mb-3">
                   Expert Patent Licensing & Commercialization
                 </h3>
-                <p className="text-white/90 font-nunito text-sm max-w-2xl mx-auto mb-4">
+                <p className="text-white/90 font-nunito text-base max-w-2xl mx-auto mb-4">
                   Transform your patents into revenue streams. Our experts help you license technology, negotiate royalties, and commercialize innovations successfully.
                 </p>
 
-                <Link href="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-nunito font-bold text-sm transition-all duration-300 hover:scale-105" style={{ background: 'linear-gradient(135deg, #FFB703, #FFA000)', color: '#0C002B', boxShadow: '0 6px 18px rgba(255, 183, 3, 0.4)' }}>
+                <Link href="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-nunito font-bold text-base transition-all duration-300 hover:scale-105" style={{ background: 'linear-gradient(135deg, #FFB703, #FFA000)', color: '#0C002B', boxShadow: '0 6px 18px rgba(255, 183, 3, 0.4)' }}>
                   <i className="fas fa-phone text-sm" aria-hidden="true"></i>
                   Explore Licensing Opportunities
                   <i className="fas fa-arrow-right text-xs" aria-hidden="true"></i>
@@ -195,17 +195,17 @@ export default function LicensingClient() {
           <section className="mb-8">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-2 h-2 rounded-full" style={{ background: '#FFB703', boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)' }} />
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-bold">Frequently Asked Questions</h2>
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">Frequently Asked Questions</h2>
             </div>
             
             <div className="space-y-3">
               {faqs.map((faq, index) => (
                 <div key={index} className="p-4 rounded-lg" style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)', boxShadow: '0 3px 14px rgba(0, 0, 0, 0.3)' }}>
-                  <h3 className="text-white font-nunito text-sm font-semibold mb-2 flex items-start gap-2">
+                  <h3 className="text-white font-nunito text-base font-semibold mb-2 flex items-start gap-2">
                     <i className="fas fa-question-circle text-[#FFB703] text-base mt-0.5" aria-hidden="true"></i>
                     {faq.question}
                   </h3>
-                  <p className="text-white/90 font-nunito text-xs leading-relaxed pl-6">{faq.answer}</p>
+                  <p className="text-white/90 font-nunito text-sm leading-relaxed pl-6">{faq.answer}</p>
                 </div>
               ))}
             </div>

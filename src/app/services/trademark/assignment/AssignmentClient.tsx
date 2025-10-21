@@ -61,7 +61,7 @@ export default function AssignmentClient() {
                   style={{ background: '#FFB703', opacity: 0.4 }}
                 />
               </div>
-              <h1 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
+              <h1 className="text-white font-nunito text-3xl md:text-4xl lg:text-5xl font-bold">
                 Trademark Assignment & Licensing Services in India
               </h1>
             </div>
@@ -74,10 +74,10 @@ export default function AssignmentClient() {
                 boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)'
               }}
             >
-              <p className="text-white/95 font-nunito text-sm lg:text-base leading-relaxed mb-3">
+              <p className="text-white/95 font-nunito text-base lg:text-lg leading-relaxed mb-3">
                 Maximize the commercial value of your trademarks through <span className="font-bold text-[#FFB703]">strategic assignment and licensing</span>. Whether you're transferring trademark ownership, franchising your brand, or monetizing intellectual property through licensing, proper legal documentation and Registry recordation are essential.
               </p>
-              <p className="text-white/95 font-nunito text-sm lg:text-base leading-relaxed">
+              <p className="text-white/95 font-nunito text-base lg:text-lg leading-relaxed">
                 Our expert IP attorneys provide comprehensive trademark assignment and licensing services including agreement drafting, due diligence, negotiation support, and filing with the Trademark Registry. We ensure your trademark transactions are legally sound, commercially viable, and protect your interests.
               </p>
             </div>
@@ -93,7 +93,7 @@ export default function AssignmentClient() {
                   boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
                 }}
               />
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-bold">
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
                 Trademark Assignment vs Licensing
               </h2>
             </div>
@@ -116,28 +116,28 @@ export default function AssignmentClient() {
                 >
                   <div className="flex items-center gap-2 mb-3">
                     <i className="fas fa-exchange-alt text-[#FFB703] text-xl" aria-hidden="true"></i>
-                    <h4 className="text-white font-nunito text-base font-semibold">Trademark Assignment</h4>
+                    <h4 className="text-white font-nunito text-lg font-semibold">Trademark Assignment</h4>
                   </div>
                   <ul className="space-y-2">
                     <li className="flex items-start gap-2">
                       <i className="fas fa-check-circle text-[#FFB703] text-xs mt-1" aria-hidden="true"></i>
-                      <span className="text-white/90 font-nunito text-xs">Complete and permanent transfer of ownership</span>
+                      <span className="text-white/90 font-nunito text-sm">Complete and permanent transfer of ownership</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <i className="fas fa-check-circle text-[#FFB703] text-xs mt-1" aria-hidden="true"></i>
-                      <span className="text-white/90 font-nunito text-xs">Assignee becomes the new registered proprietor</span>
+                      <span className="text-white/90 font-nunito text-sm">Assignee becomes the new registered proprietor</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <i className="fas fa-check-circle text-[#FFB703] text-xs mt-1" aria-hidden="true"></i>
-                      <span className="text-white/90 font-nunito text-xs">Usually involves one-time payment consideration</span>
+                      <span className="text-white/90 font-nunito text-sm">Usually involves one-time payment consideration</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <i className="fas fa-check-circle text-[#FFB703] text-xs mt-1" aria-hidden="true"></i>
-                      <span className="text-white/90 font-nunito text-xs">Can be with or without goodwill of business</span>
+                      <span className="text-white/90 font-nunito text-sm">Can be with or without goodwill of business</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <i className="fas fa-check-circle text-[#FFB703] text-xs mt-1" aria-hidden="true"></i>
-                      <span className="text-white/90 font-nunito text-xs">Recorded using Form TM-P at Trademark Registry</span>
+                      <span className="text-white/90 font-nunito text-sm">Recorded using Form TM-P at Trademark Registry</span>
                     </li>
                   </ul>
                 </div>
@@ -151,28 +151,28 @@ export default function AssignmentClient() {
                 >
                   <div className="flex items-center gap-2 mb-3">
                     <i className="fas fa-handshake text-[#FFB703] text-xl" aria-hidden="true"></i>
-                    <h4 className="text-white font-nunito text-base font-semibold">Trademark Licensing</h4>
+                    <h4 className="text-white font-nunito text-lg font-semibold">Trademark Licensing</h4>
                   </div>
                   <ul className="space-y-2">
                     <li className="flex items-start gap-2">
                       <i className="fas fa-check-circle text-[#FFB703] text-xs mt-1" aria-hidden="true"></i>
-                      <span className="text-white/90 font-nunito text-xs">Temporary permission to use the trademark</span>
+                      <span className="text-white/90 font-nunito text-sm">Temporary permission to use the trademark</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <i className="fas fa-check-circle text-[#FFB703] text-xs mt-1" aria-hidden="true"></i>
-                      <span className="text-white/90 font-nunito text-xs">Licensor retains ownership and control</span>
+                      <span className="text-white/90 font-nunito text-sm">Licensor retains ownership and control</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <i className="fas fa-check-circle text-[#FFB703] text-xs mt-1" aria-hidden="true"></i>
-                      <span className="text-white/90 font-nunito text-xs">Ongoing royalty or licensing fee payments</span>
+                      <span className="text-white/90 font-nunito text-sm">Ongoing royalty or licensing fee payments</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <i className="fas fa-check-circle text-[#FFB703] text-xs mt-1" aria-hidden="true"></i>
-                      <span className="text-white/90 font-nunito text-xs">Specifies territory, duration, quality standards</span>
+                      <span className="text-white/90 font-nunito text-sm">Specifies territory, duration, quality standards</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <i className="fas fa-check-circle text-[#FFB703] text-xs mt-1" aria-hidden="true"></i>
-                      <span className="text-white/90 font-nunito text-xs">Registered using Form TM-U (optional but recommended)</span>
+                      <span className="text-white/90 font-nunito text-sm">Registered using Form TM-U (optional but recommended)</span>
                     </li>
                   </ul>
                 </div>
@@ -190,7 +190,7 @@ export default function AssignmentClient() {
                   boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
                 }}
               />
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-bold">
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
                 Trademark Assignment Process
               </h2>
             </div>
@@ -256,10 +256,10 @@ export default function AssignmentClient() {
                         border: '1px solid rgba(255, 255, 255, 0.1)'
                       }}
                     >
-                      <h4 className="text-white font-nunito text-sm font-semibold mb-1">
+                      <h4 className="text-white font-nunito text-base font-semibold mb-1">
                         {item.step}
                       </h4>
-                      <p className="text-white/90 font-nunito text-xs">
+                      <p className="text-white/90 font-nunito text-sm">
                         {item.description}
                       </p>
                     </div>
@@ -279,7 +279,7 @@ export default function AssignmentClient() {
                   boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
                 }}
               />
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-bold">
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
                 Benefits of Trademark Licensing
               </h2>
             </div>
@@ -338,10 +338,10 @@ export default function AssignmentClient() {
                         <i className={`${benefit.icon} text-[#FFB703] text-base`} aria-hidden="true"></i>
                       </div>
                       <div>
-                        <h4 className="text-white font-nunito text-sm font-semibold mb-1">
+                        <h4 className="text-white font-nunito text-base font-semibold mb-1">
                           {benefit.title}
                         </h4>
-                        <p className="text-white/90 font-nunito text-xs">
+                        <p className="text-white/90 font-nunito text-sm">
                           {benefit.description}
                         </p>
                       </div>
@@ -373,19 +373,19 @@ export default function AssignmentClient() {
                   }}
                 >
                   <i className="fas fa-file-signature text-[#FFB703] text-sm" aria-hidden="true"></i>
-                  <span className="text-white font-nunito text-sm font-semibold">Expert Legal Documentation</span>
+                  <span className="text-white font-nunito text-base font-semibold">Expert Legal Documentation</span>
                 </div>
 
-                <h3 className="text-white font-nunito text-xl lg:text-2xl font-bold mb-3">
+                <h3 className="text-white font-nunito text-2xl lg:text-3xl font-bold mb-3">
                   Professional Assignment & Licensing Services
                 </h3>
-                <p className="text-white/90 font-nunito text-sm max-w-2xl mx-auto mb-4">
+                <p className="text-white/90 font-nunito text-base max-w-2xl mx-auto mb-4">
                   Whether you're buying, selling, or licensing trademarks, our expert attorneys ensure legally sound agreements and smooth Registry recordation.
                 </p>
 
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-nunito font-bold text-sm transition-all duration-300 hover:scale-105"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-nunito font-bold text-base transition-all duration-300 hover:scale-105"
                   style={{
                     background: 'linear-gradient(135deg, #FFB703, #FFA000)',
                     color: '#0C002B',
@@ -410,7 +410,7 @@ export default function AssignmentClient() {
                   boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
                 }}
               />
-              <h2 className="text-white font-nunito text-xl md:text-2xl lg:text-3xl font-bold">
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
                 Frequently Asked Questions
               </h2>
             </div>
@@ -426,11 +426,11 @@ export default function AssignmentClient() {
                     boxShadow: '0 3px 14px rgba(0, 0, 0, 0.3)'
                   }}
                 >
-                  <h3 className="text-white font-nunito text-sm font-semibold mb-2 flex items-start gap-2">
+                  <h3 className="text-white font-nunito text-base font-semibold mb-2 flex items-start gap-2">
                     <i className="fas fa-question-circle text-[#FFB703] text-base mt-0.5" aria-hidden="true"></i>
                     {faq.question}
                   </h3>
-                  <p className="text-white/90 font-nunito text-xs leading-relaxed pl-6">
+                  <p className="text-white/90 font-nunito text-sm leading-relaxed pl-6">
                     {faq.answer}
                   </p>
                 </div>
