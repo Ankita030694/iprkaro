@@ -794,6 +794,7 @@ export default function WhyTrademark() {
               <button
                 className="relative overflow-hidden border-2 border-[#FFB703] rounded-[10px] px-4 md:px-6 lg:px-4 py-1.5 md:py-2 lg:py-1.5 font-nunito font-semibold text-sm md:text-base lg:text-sm mt-2 group"
                 style={{ color: '#FFB703', background: 'transparent' }}
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               >
                 <span className="relative z-10 transition-colors duration-300 group-hover:text-white text-white">
                   Check Your Registrability Now &rarr;
@@ -942,6 +943,7 @@ export default function WhyTrademark() {
               <button
                 className="relative overflow-hidden border-2 border-[#FFB703] rounded-[10px] px-4 py-1.5 font-nunito font-semibold text-sm mt-2 group"
                 style={{ color: '#FFB703', background: 'transparent' }}
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               >
                 <span className="relative z-10 transition-colors duration-300 group-hover:text-white text-white">
                   Check Your Registrability Now &rarr;
