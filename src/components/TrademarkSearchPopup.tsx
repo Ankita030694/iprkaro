@@ -638,18 +638,429 @@ export default function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trad
               </div>
             </div>
 
-            {/* Report SVG */}
-            <div className="max-w-2xl mx-auto w-full">
-              <Image 
-                src="/report.svg" 
-                alt="Trademark Report" 
-                width={797}
-                height={335}
-                className="w-full h-auto max-h-[200px] sm:max-h-[250px] lg:max-h-[300px] object-contain"
-                priority
-                quality={100}
-              />
+            {/* Trademark Report with Key Factors */}
+            <div className="max-w-2xl mx-auto w-full relative">
+              {/* Unlock Text */}
+              <div className="absolute inset-0 flex items-center justify-center z-20">
+                <p className="text-white font-nunito text-xl font-semibold text-center">
+                  Sign up to unlock the full report
+                </p>
               </div>
+              
+              <div
+                className="w-full px-4 py-4 relative"
+                style={{
+                  borderRadius: '16px',
+                  background: 'rgba(255, 255, 255, 0.10)',
+                  boxShadow: '0 0 16px 0 rgba(0, 0, 0, 0.10) inset, 0 0 16px 5px rgba(255, 255, 255, 0.20) inset'
+                }}
+              >
+                {/* Blur Overlay */}
+                <div 
+                  className="absolute inset-0 z-10"
+                  style={{
+                    borderRadius: '16px',
+                    backdropFilter: 'blur(8px)',
+                    WebkitBackdropFilter: 'blur(8px)',
+                    background: 'rgba(0, 0, 0, 0.3)'
+                  }}
+                ></div>
+                {/* Asterisk in top right */}
+                <span className="absolute top-3 right-4 text-red-500 font-nunito text-lg font-bold z-20">*</span>
+                
+                {/* Heading */}
+                <div
+                  className="flex items-center justify-center px-3 py-2 mb-3"
+                  style={{
+                    borderRadius: '4px 4px 0 0',
+                    background: 'rgba(0, 0, 0, 0.26)'
+                  }}
+                >
+                  <h3 className="text-white font-nunito text-sm font-semibold">
+                    Your Trademark Health Score
+                  </h3>
+                </div>
+                
+                {/* Two Column Layout */}
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-3 items-stretch">
+                  {/* First Container - 3/4 width */}
+                  <div className="md:col-span-3 flex flex-col">
+                    {/* Content area - 3 Columns */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-3 flex-1">
+                      {/* Column 1 - Trademark Registrability */}
+                      <div className="flex flex-col items-center h-full">
+                        <h4 className="text-white font-nunito text-xs font-semibold mb-2">
+                          Trademark Registrability
+                        </h4>
+                        
+                        {/* Curved Gauge */}
+                        <div className="relative w-24 h-12 mb-3">
+                          <svg viewBox="0 0 200 100" className="w-full h-full drop-shadow-lg">
+                            {/* Background arc */}
+                            <path
+                              d="M 20 90 A 80 80 0 0 1 180 90"
+                              fill="none"
+                              stroke="rgba(255, 255, 255, 0.15)"
+                              strokeWidth="12"
+                              strokeLinecap="round"
+                            />
+                            {/* Gradient arc - Red to Orange to Green */}
+                            <defs>
+                              <linearGradient id="gaugeGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stopColor="#EF4444" />
+                                <stop offset="50%" stopColor="#F59E0B" />
+                                <stop offset="100%" stopColor="#10B981" />
+                              </linearGradient>
+                            </defs>
+                            <path
+                              d="M 20 90 A 80 80 0 0 1 180 90"
+                              fill="none"
+                              stroke="url(#gaugeGradient1)"
+                              strokeWidth="12"
+                              strokeLinecap="round"
+                              strokeDasharray="251.2"
+                              strokeDashoffset={251.2 * (1 - 75 / 100)}
+                              style={{ transition: 'stroke-dashoffset 0.5s ease-in-out' }}
+                            />
+                            {/* Center text */}
+                            <text x="100" y="78" textAnchor="middle" fill="white" className="text-lg" fontWeight="bold" style={{ textShadow: '0 0 10px rgba(255,255,255,0.5)' }}>
+                              75
+                            </text>
+                          </svg>
+              </div>
+
+                        {/* Assessment Container */}
+                        <div
+                          className="w-full p-2 flex-1 flex flex-col"
+                          style={{
+                            borderRadius: '8px',
+                            border: '1.5px solid #171717',
+                            background: 'rgba(24, 24, 24, 0.15)'
+                          }}
+                        >
+                          <div className="flex items-center justify-between mb-1">
+                            <h5 className="text-white font-nunito text-xs font-semibold">
+                              Remarks
+                            </h5>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                              <polyline points="18 15 12 9 6 15"></polyline>
+                            </svg>
+                          </div>
+                          
+                          <div className="flex items-start">
+                            <span className="text-[#00D9FF] mr-1 mt-0.5 flex-shrink-0 text-xs">•</span>
+                            <p className="font-nunito text-xs leading-relaxed" style={{ 
+                              background: 'linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 100%)',
+                              WebkitBackgroundClip: 'text',
+                              WebkitTextFillColor: 'transparent',
+                              backgroundClip: 'text'
+                            }}>
+                              Strong distinctive elements with good registrability potential
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Column 2 - Similarity Rate */}
+                      <div className="flex flex-col items-center h-full">
+                        <h4 className="text-white font-nunito text-xs font-semibold mb-2">
+                          Similarity Rate
+                        </h4>
+                        
+                        {/* Curved Gauge */}
+                        <div className="relative w-24 h-12 mb-3">
+                          <svg viewBox="0 0 200 100" className="w-full h-full drop-shadow-lg">
+                            {/* Background arc */}
+                            <path
+                              d="M 20 90 A 80 80 0 0 1 180 90"
+                              fill="none"
+                              stroke="rgba(255, 255, 255, 0.15)"
+                              strokeWidth="12"
+                              strokeLinecap="round"
+                            />
+                            {/* Gradient arc - Reversed: Green to Red */}
+                            <defs>
+                              <linearGradient id="gaugeGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stopColor="#10B981" />
+                                <stop offset="50%" stopColor="#F59E0B" />
+                                <stop offset="100%" stopColor="#EF4444" />
+                              </linearGradient>
+                            </defs>
+                            <path
+                              d="M 20 90 A 80 80 0 0 1 180 90"
+                              fill="none"
+                              stroke="url(#gaugeGradient2)"
+                              strokeWidth="12"
+                              strokeLinecap="round"
+                              strokeDasharray="251.2"
+                              strokeDashoffset={251.2 * (1 - 30 / 100)}
+                              style={{ transition: 'stroke-dashoffset 0.5s ease-in-out' }}
+                            />
+                            {/* Center text */}
+                            <text x="100" y="78" textAnchor="middle" fill="white" className="text-lg" fontWeight="bold" style={{ textShadow: '0 0 10px rgba(255,255,255,0.5)' }}>
+                              30
+                            </text>
+                          </svg>
+                        </div>
+
+                        {/* Assessment Container */}
+                        <div
+                          className="w-full p-2 flex-1 flex flex-col"
+                          style={{
+                            borderRadius: '8px',
+                            border: '1.5px solid #171717',
+                            background: 'rgba(24, 24, 24, 0.15)'
+                          }}
+                        >
+                          <div className="flex items-center justify-between mb-1">
+                            <h5 className="text-white font-nunito text-xs font-semibold">
+                              Remarks
+                            </h5>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                              <polyline points="18 15 12 9 6 15"></polyline>
+                            </svg>
+                          </div>
+                          
+                          <div className="flex items-start">
+                            <span className="text-[#00D9FF] mr-1 mt-0.5 flex-shrink-0 text-xs">•</span>
+                            <p className="font-nunito text-xs leading-relaxed" style={{ 
+                              background: 'linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 100%)',
+                              WebkitBackgroundClip: 'text',
+                              WebkitTextFillColor: 'transparent',
+                              backgroundClip: 'text'
+                            }}>
+                              Low similarity with existing trademarks
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Column 3 - Class Probability */}
+                      <div className="flex flex-col items-center h-full">
+                        <h4 className="text-white font-nunito text-xs font-semibold mb-2">
+                          Class Probability
+                        </h4>
+                        
+                        {/* Curved Gauge */}
+                        <div className="relative w-24 h-12 mb-3">
+                          <svg viewBox="0 0 200 100" className="w-full h-full drop-shadow-lg">
+                            {/* Background arc */}
+                            <path
+                              d="M 20 90 A 80 80 0 0 1 180 90"
+                              fill="none"
+                              stroke="rgba(255, 255, 255, 0.15)"
+                              strokeWidth="12"
+                              strokeLinecap="round"
+                            />
+                            {/* Gradient arc */}
+                            <defs>
+                              <linearGradient id="gaugeGradient3" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stopColor="#EF4444" />
+                                <stop offset="50%" stopColor="#F59E0B" />
+                                <stop offset="100%" stopColor="#10B981" />
+                              </linearGradient>
+                            </defs>
+                            <path
+                              d="M 20 90 A 80 80 0 0 1 180 90"
+                              fill="none"
+                              stroke="url(#gaugeGradient3)"
+                              strokeWidth="12"
+                              strokeLinecap="round"
+                              strokeDasharray="251.2"
+                              strokeDashoffset={251.2 * (1 - 85 / 100)}
+                              style={{ transition: 'stroke-dashoffset 0.5s ease-in-out' }}
+                            />
+                            {/* Center text */}
+                            <text x="100" y="78" textAnchor="middle" fill="white" className="text-lg" fontWeight="bold" style={{ textShadow: '0 0 10px rgba(255,255,255,0.5)' }}>
+                              85
+                            </text>
+                          </svg>
+                        </div>
+
+                        {/* Assessment Container */}
+                        <div
+                          className="w-full p-2 flex-1 flex flex-col"
+                          style={{
+                            borderRadius: '8px',
+                            border: '1.5px solid #171717',
+                            background: 'rgba(24, 24, 24, 0.15)'
+                          }}
+                        >
+                          <div className="flex items-center justify-between mb-1">
+                            <h5 className="text-white font-nunito text-xs font-semibold">
+                              Remarks
+                            </h5>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                              <polyline points="18 15 12 9 6 15"></polyline>
+                            </svg>
+                          </div>
+                          
+                          <div className="flex items-start">
+                            <span className="text-[#00D9FF] mr-1 mt-0.5 flex-shrink-0 text-xs">•</span>
+                            <p className="font-nunito text-xs leading-relaxed" style={{ 
+                              background: 'linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 100%)',
+                              WebkitBackgroundClip: 'text',
+                              WebkitTextFillColor: 'transparent',
+                              backgroundClip: 'text'
+                            }}>
+                              Excellent fit for selected class
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Second Container - 1/4 width */}
+                  <div className="md:col-span-1 flex flex-col">
+                    {/* Heading */}
+                    <div
+                      className="flex items-center justify-center px-2 py-2 mb-2"
+                      style={{
+                        borderRadius: '4px 4px 0 0',
+                        background: 'rgba(0, 0, 0, 0.26)'
+                      }}
+                    >
+                      <h3 className="text-white font-nunito text-xs font-semibold">
+                        Key Factors
+                      </h3>
+                    </div>
+                    
+                    {/* Content area - 4 Rows */}
+                    <div className="flex flex-col flex-1 space-y-1.5">
+                      {/* Row 1 - Brand Strength */}
+                      <div
+                        className="p-1.5 flex items-center gap-1.5 flex-1"
+                        style={{
+                          borderRadius: '8px',
+                          border: '1.5px solid rgba(255, 255, 255, 0.15)',
+                          background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.40) 0%, rgba(158, 143, 143, 0.4) 100%)',
+                          backdropFilter: 'blur(13px)'
+                        }}
+                      >
+                        {/* Icon */}
+                        <div className="flex-shrink-0">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                            <path d="M2 17l10 5 10-5"></path>
+                            <path d="M2 12l10 5 10-5"></path>
+                          </svg>
+                        </div>
+                        {/* Content */}
+                        <div className="flex-1">
+                          <h4 className="text-white font-nunito text-[8px] font-semibold mb-0.5">
+                            Brand Strength
+                          </h4>
+                          <p className="font-nunito text-[7px] leading-snug" style={{ 
+                            background: 'linear-gradient(90deg,rgb(255, 255, 255) 0%,rgb(255, 255, 255) 100%)',
+                            WebkitBackgroundClip: 'text',
+                            WebkitTextFillColor: 'transparent',
+                            backgroundClip: 'text'  
+                          }}>
+                            Strong market presence
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Row 2 - Legal Risk */}
+                      <div
+                        className="p-1.5 flex items-center gap-1.5 flex-1"
+                        style={{
+                          borderRadius: '8px',
+                          border: '1.5px solid rgba(255, 255, 255, 0.15)',
+                          background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.40) 0%, rgba(158, 143, 143, 0.4) 100%)',
+                          backdropFilter: 'blur(13px)'
+                        }}
+                      >
+                        {/* Icon */}
+                        <div className="flex-shrink-0">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                          </svg>
+                        </div>
+                        {/* Content */}
+                        <div className="flex-1">
+                          <h4 className="text-white font-nunito text-[8px] font-semibold mb-0.5">
+                            Legal Risk
+                          </h4>
+                          <p className="font-nunito text-[7px] leading-snug" style={{ 
+                            background: 'linear-gradient(90deg,rgb(255, 255, 255) 0%,rgb(255, 255, 255) 100%)',
+                            WebkitBackgroundClip: 'text',
+                            WebkitTextFillColor: 'transparent',
+                            backgroundClip: 'text'
+                          }}>
+                            Low conflict risk
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Row 3 - Market Position */}
+                      <div
+                        className="p-1.5 flex items-center gap-1.5 flex-1"
+                        style={{
+                          borderRadius: '8px',
+                          border: '1.5px solid rgba(255, 255, 255, 0.15)',
+                          background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.40) 0%, rgba(158, 143, 143, 0.4) 100%)',
+                          backdropFilter: 'blur(13px)'
+                        }}
+                      >
+                        {/* Icon */}
+                        <div className="flex-shrink-0">
+                          <span className="text-white text-xs" style={{ fontWeight: 300 }}>₹</span>
+                        </div>
+                        {/* Content */}
+                        <div className="flex-1">
+                          <h4 className="text-white font-nunito text-[8px] font-semibold mb-0.5">
+                            Market Position
+                          </h4>
+                          <p className="font-nunito text-[7px] leading-snug" style={{ 
+                            background: 'linear-gradient(90deg,rgb(255, 255, 255) 0%,rgb(255, 255, 255) 100%)',
+                            WebkitBackgroundClip: 'text',
+                            WebkitTextFillColor: 'transparent',
+                            backgroundClip: 'text'
+                          }}>
+                            Competitive advantage
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Row 4 - Registration Speed */}
+                      <div
+                        className="p-1.5 flex items-center gap-1.5 flex-1"
+                        style={{
+                          borderRadius: '8px',
+                          border: '1.5px solid rgba(255, 255, 255, 0.15)',
+                          background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.40) 0%, rgba(158, 143, 143, 0.4) 100%)',
+                          backdropFilter: 'blur(13px)'
+                        }}
+                      >
+                        {/* Icon */}
+                        <div className="flex-shrink-0">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                            <polyline points="17 6 23 6 23 12"></polyline>
+                          </svg>
+                        </div>
+                        {/* Content */}
+                        <div className="flex-1">
+                          <h4 className="text-white font-nunito text-[8px] font-semibold mb-0.5">
+                            Registration Speed
+                          </h4>
+                          <p className="font-nunito text-[7px] leading-snug" style={{ 
+                            background: 'linear-gradient(90deg,rgb(255, 255, 255) 0%,rgb(255, 255, 255) 100%)',
+                            WebkitBackgroundClip: 'text',
+                            WebkitTextFillColor: 'transparent',
+                            backgroundClip: 'text'
+                          }}>
+                            Fast processing
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
               </div>
               </div>
               
@@ -1303,17 +1714,428 @@ export default function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trad
               </div>
             </div>
 
-            {/* Report SVG */}
-            <div className="w-full">
-              <Image 
-                src="/report.svg" 
-                alt="Trademark Report" 
-                width={797}
-                height={335}
-                className="w-full h-auto object-contain"
-                priority
-                quality={100}
-              />
+            {/* Trademark Report with Key Factors */}
+            <div className="w-full relative">
+              {/* Unlock Text */}
+              <div className="absolute inset-0 flex items-center justify-center z-20">
+                <p className="text-white font-nunito text-xl font-semibold text-center">
+                  Sign up to unlock the full report
+                </p>
+              </div>
+              
+              <div
+                className="w-full px-4 py-4 relative"
+                style={{
+                  borderRadius: '16px',
+                  background: 'rgba(255, 255, 255, 0.10)',
+                  boxShadow: '0 0 16px 0 rgba(0, 0, 0, 0.10) inset, 0 0 16px 5px rgba(255, 255, 255, 0.20) inset'
+                }}
+              >
+                {/* Blur Overlay */}
+                <div 
+                  className="absolute inset-0 z-10"
+                  style={{
+                    borderRadius: '16px',
+                    backdropFilter: 'blur(8px)',
+                    WebkitBackdropFilter: 'blur(8px)',
+                    background: 'rgba(0, 0, 0, 0.3)'
+                  }}
+                ></div>
+                {/* Asterisk in top right */}
+                <span className="absolute top-3 right-4 text-red-500 font-nunito text-lg font-bold z-20">*</span>
+                
+                {/* Heading */}
+                <div
+                  className="flex items-center justify-center px-3 py-2 mb-3"
+                  style={{
+                    borderRadius: '4px 4px 0 0',
+                    background: 'rgba(0, 0, 0, 0.26)'
+                  }}
+                >
+                  <h3 className="text-white font-nunito text-sm font-semibold">
+                    Your Trademark Health Score
+                  </h3>
+                </div>
+                
+                {/* Two Column Layout */}
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-3 items-stretch">
+                  {/* First Container - 3/4 width */}
+                  <div className="md:col-span-3 flex flex-col">
+                    {/* Content area - 3 Columns */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-3 flex-1">
+                      {/* Column 1 - Trademark Registrability */}
+                      <div className="flex flex-col items-center h-full">
+                        <h4 className="text-white font-nunito text-xs font-semibold mb-2">
+                          Trademark Registrability
+                        </h4>
+                        
+                        {/* Curved Gauge */}
+                        <div className="relative w-24 h-12 mb-3">
+                          <svg viewBox="0 0 200 100" className="w-full h-full drop-shadow-lg">
+                            {/* Background arc */}
+                            <path
+                              d="M 20 90 A 80 80 0 0 1 180 90"
+                              fill="none"
+                              stroke="rgba(255, 255, 255, 0.15)"
+                              strokeWidth="12"
+                              strokeLinecap="round"
+                            />
+                            {/* Gradient arc - Red to Orange to Green */}
+                            <defs>
+                              <linearGradient id="gaugeGradient1b" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stopColor="#EF4444" />
+                                <stop offset="50%" stopColor="#F59E0B" />
+                                <stop offset="100%" stopColor="#10B981" />
+                              </linearGradient>
+                            </defs>
+                            <path
+                              d="M 20 90 A 80 80 0 0 1 180 90"
+                              fill="none"
+                              stroke="url(#gaugeGradient1b)"
+                              strokeWidth="12"
+                              strokeLinecap="round"
+                              strokeDasharray="251.2"
+                              strokeDashoffset={251.2 * (1 - 75 / 100)}
+                              style={{ transition: 'stroke-dashoffset 0.5s ease-in-out' }}
+                            />
+                            {/* Center text */}
+                            <text x="100" y="78" textAnchor="middle" fill="white" className="text-lg" fontWeight="bold" style={{ textShadow: '0 0 10px rgba(255,255,255,0.5)' }}>
+                              75
+                            </text>
+                          </svg>
+            </div>
+
+                        {/* Assessment Container */}
+                        <div
+                          className="w-full p-2 flex-1 flex flex-col"
+                          style={{
+                            borderRadius: '8px',
+                            border: '1.5px solid #171717',
+                            background: 'rgba(24, 24, 24, 0.15)'
+                          }}
+                        >
+                          <div className="flex items-center justify-between mb-1">
+                            <h5 className="text-white font-nunito text-xs font-semibold">
+                              Remarks
+                            </h5>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                              <polyline points="18 15 12 9 6 15"></polyline>
+                            </svg>
+          </div>
+                          
+                          <div className="flex items-start">
+                            <span className="text-[#00D9FF] mr-1 mt-0.5 flex-shrink-0 text-xs">•</span>
+                            <p className="font-nunito text-xs leading-relaxed" style={{ 
+                              background: 'linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 100%)',
+                              WebkitBackgroundClip: 'text',
+                              WebkitTextFillColor: 'transparent',
+                              backgroundClip: 'text'
+                            }}>
+                              Strong distinctive elements with good registrability potential
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Column 2 - Similarity Rate */}
+                      <div className="flex flex-col items-center h-full">
+                        <h4 className="text-white font-nunito text-xs font-semibold mb-2">
+                          Similarity Rate
+                        </h4>
+                        
+                        {/* Curved Gauge */}
+                        <div className="relative w-24 h-12 mb-3">
+                          <svg viewBox="0 0 200 100" className="w-full h-full drop-shadow-lg">
+                            {/* Background arc */}
+                            <path
+                              d="M 20 90 A 80 80 0 0 1 180 90"
+                              fill="none"
+                              stroke="rgba(255, 255, 255, 0.15)"
+                              strokeWidth="12"
+                              strokeLinecap="round"
+                            />
+                            {/* Gradient arc - Reversed: Green to Red */}
+                            <defs>
+                              <linearGradient id="gaugeGradient2b" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stopColor="#10B981" />
+                                <stop offset="50%" stopColor="#F59E0B" />
+                                <stop offset="100%" stopColor="#EF4444" />
+                              </linearGradient>
+                            </defs>
+                            <path
+                              d="M 20 90 A 80 80 0 0 1 180 90"
+                              fill="none"
+                              stroke="url(#gaugeGradient2b)"
+                              strokeWidth="12"
+                              strokeLinecap="round"
+                              strokeDasharray="251.2"
+                              strokeDashoffset={251.2 * (1 - 30 / 100)}
+                              style={{ transition: 'stroke-dashoffset 0.5s ease-in-out' }}
+                            />
+                            {/* Center text */}
+                            <text x="100" y="78" textAnchor="middle" fill="white" className="text-lg" fontWeight="bold" style={{ textShadow: '0 0 10px rgba(255,255,255,0.5)' }}>
+                              30
+                            </text>
+                          </svg>
+                        </div>
+
+                        {/* Assessment Container */}
+                        <div
+                          className="w-full p-2 flex-1 flex flex-col"
+                          style={{
+                            borderRadius: '8px',
+                            border: '1.5px solid #171717',
+                            background: 'rgba(24, 24, 24, 0.15)'
+                          }}
+                        >
+                          <div className="flex items-center justify-between mb-1">
+                            <h5 className="text-white font-nunito text-xs font-semibold">
+                              Remarks
+                            </h5>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                              <polyline points="18 15 12 9 6 15"></polyline>
+                            </svg>
+                          </div>
+                          
+                          <div className="flex items-start">
+                            <span className="text-[#00D9FF] mr-1 mt-0.5 flex-shrink-0 text-xs">•</span>
+                            <p className="font-nunito text-xs leading-relaxed" style={{ 
+                              background: 'linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 100%)',
+                              WebkitBackgroundClip: 'text',
+                              WebkitTextFillColor: 'transparent',
+                              backgroundClip: 'text'
+                            }}>
+                              Low similarity with existing trademarks
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Column 3 - Class Probability */}
+                      <div className="flex flex-col items-center h-full">
+                        <h4 className="text-white font-nunito text-xs font-semibold mb-2">
+                          Class Probability
+                        </h4>
+                        
+                        {/* Curved Gauge */}
+                        <div className="relative w-24 h-12 mb-3">
+                          <svg viewBox="0 0 200 100" className="w-full h-full drop-shadow-lg">
+                            {/* Background arc */}
+                            <path
+                              d="M 20 90 A 80 80 0 0 1 180 90"
+                              fill="none"
+                              stroke="rgba(255, 255, 255, 0.15)"
+                              strokeWidth="12"
+                              strokeLinecap="round"
+                            />
+                            {/* Gradient arc */}
+                            <defs>
+                              <linearGradient id="gaugeGradient3b" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stopColor="#EF4444" />
+                                <stop offset="50%" stopColor="#F59E0B" />
+                                <stop offset="100%" stopColor="#10B981" />
+                              </linearGradient>
+                            </defs>
+                            <path
+                              d="M 20 90 A 80 80 0 0 1 180 90"
+                              fill="none"
+                              stroke="url(#gaugeGradient3b)"
+                              strokeWidth="12"
+                              strokeLinecap="round"
+                              strokeDasharray="251.2"
+                              strokeDashoffset={251.2 * (1 - 85 / 100)}
+                              style={{ transition: 'stroke-dashoffset 0.5s ease-in-out' }}
+                            />
+                            {/* Center text */}
+                            <text x="100" y="78" textAnchor="middle" fill="white" className="text-lg" fontWeight="bold" style={{ textShadow: '0 0 10px rgba(255,255,255,0.5)' }}>
+                              85
+                            </text>
+                          </svg>
+                        </div>
+
+                        {/* Assessment Container */}
+                        <div
+                          className="w-full p-2 flex-1 flex flex-col"
+                          style={{
+                            borderRadius: '8px',
+                            border: '1.5px solid #171717',
+                            background: 'rgba(24, 24, 24, 0.15)'
+                          }}
+                        >
+                          <div className="flex items-center justify-between mb-1">
+                            <h5 className="text-white font-nunito text-xs font-semibold">
+                              Remarks
+                            </h5>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                              <polyline points="18 15 12 9 6 15"></polyline>
+                            </svg>
+                          </div>
+                          
+                          <div className="flex items-start">
+                            <span className="text-[#00D9FF] mr-1 mt-0.5 flex-shrink-0 text-xs">•</span>
+                            <p className="font-nunito text-xs leading-relaxed" style={{ 
+                              background: 'linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 100%)',
+                              WebkitBackgroundClip: 'text',
+                              WebkitTextFillColor: 'transparent',
+                              backgroundClip: 'text'
+                            }}>
+                              Excellent fit for selected class
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Second Container - 1/4 width */}
+                  <div className="md:col-span-1 flex flex-col">
+                    {/* Heading */}
+                    <div
+                      className="flex items-center justify-center px-2 py-2 mb-2"
+                      style={{
+                        borderRadius: '4px 4px 0 0',
+                        background: 'rgba(0, 0, 0, 0.26)'
+                      }}
+                    >
+                      <h3 className="text-white font-nunito text-xs font-semibold">
+                        Key Factors
+                      </h3>
+                    </div>
+                    
+                    {/* Content area - 4 Rows */}
+                    <div className="flex flex-col flex-1 space-y-1.5">
+                      {/* Row 1 - Brand Strength */}
+                      <div
+                        className="p-1.5 flex items-center gap-1.5 flex-1"
+                        style={{
+                          borderRadius: '8px',
+                          border: '1.5px solid rgba(255, 255, 255, 0.15)',
+                          background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.40) 0%, rgba(158, 143, 143, 0.4) 100%)',
+                          backdropFilter: 'blur(13px)'
+                        }}
+                      >
+                        {/* Icon */}
+                        <div className="flex-shrink-0">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                            <path d="M2 17l10 5 10-5"></path>
+                            <path d="M2 12l10 5 10-5"></path>
+                          </svg>
+                        </div>
+                        {/* Content */}
+                        <div className="flex-1">
+                          <h4 className="text-white font-nunito text-[8px] font-semibold mb-0.5">
+                            Brand Strength
+                          </h4>
+                          <p className="font-nunito text-[7px] leading-snug" style={{ 
+                            background: 'linear-gradient(90deg,rgb(255, 255, 255) 0%,rgb(255, 255, 255) 100%)',
+                            WebkitBackgroundClip: 'text',
+                            WebkitTextFillColor: 'transparent',
+                            backgroundClip: 'text'  
+                          }}>
+                            Strong market presence
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Row 2 - Legal Risk */}
+                      <div
+                        className="p-1.5 flex items-center gap-1.5 flex-1"
+                        style={{
+                          borderRadius: '8px',
+                          border: '1.5px solid rgba(255, 255, 255, 0.15)',
+                          background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.40) 0%, rgba(158, 143, 143, 0.4) 100%)',
+                          backdropFilter: 'blur(13px)'
+                        }}
+                      >
+                        {/* Icon */}
+                        <div className="flex-shrink-0">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                          </svg>
+                        </div>
+                        {/* Content */}
+                        <div className="flex-1">
+                          <h4 className="text-white font-nunito text-[8px] font-semibold mb-0.5">
+                            Legal Risk
+                          </h4>
+                          <p className="font-nunito text-[7px] leading-snug" style={{ 
+                            background: 'linear-gradient(90deg,rgb(255, 255, 255) 0%,rgb(255, 255, 255) 100%)',
+                            WebkitBackgroundClip: 'text',
+                            WebkitTextFillColor: 'transparent',
+                            backgroundClip: 'text'
+                          }}>
+                            Low conflict risk
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Row 3 - Market Position */}
+                      <div
+                        className="p-1.5 flex items-center gap-1.5 flex-1"
+                        style={{
+                          borderRadius: '8px',
+                          border: '1.5px solid rgba(255, 255, 255, 0.15)',
+                          background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.40) 0%, rgba(158, 143, 143, 0.4) 100%)',
+                          backdropFilter: 'blur(13px)'
+                        }}
+                      >
+                        {/* Icon */}
+                        <div className="flex-shrink-0">
+                          <span className="text-white text-xs" style={{ fontWeight: 300 }}>₹</span>
+                        </div>
+                        {/* Content */}
+                        <div className="flex-1">
+                          <h4 className="text-white font-nunito text-[8px] font-semibold mb-0.5">
+                            Market Position
+                          </h4>
+                          <p className="font-nunito text-[7px] leading-snug" style={{ 
+                            background: 'linear-gradient(90deg,rgb(255, 255, 255) 0%,rgb(255, 255, 255) 100%)',
+                            WebkitBackgroundClip: 'text',
+                            WebkitTextFillColor: 'transparent',
+                            backgroundClip: 'text'
+                          }}>
+                            Competitive advantage
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Row 4 - Registration Speed */}
+                      <div
+                        className="p-1.5 flex items-center gap-1.5 flex-1"
+                        style={{
+                          borderRadius: '8px',
+                          border: '1.5px solid rgba(255, 255, 255, 0.15)',
+                          background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.40) 0%, rgba(158, 143, 143, 0.4) 100%)',
+                          backdropFilter: 'blur(13px)'
+                        }}
+                      >
+                        {/* Icon */}
+                        <div className="flex-shrink-0">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                            <polyline points="17 6 23 6 23 12"></polyline>
+                          </svg>
+                        </div>
+                        {/* Content */}
+                        <div className="flex-1">
+                          <h4 className="text-white font-nunito text-[8px] font-semibold mb-0.5">
+                            Registration Speed
+                          </h4>
+                          <p className="font-nunito text-[7px] leading-snug" style={{ 
+                            background: 'linear-gradient(90deg,rgb(255, 255, 255) 0%,rgb(255, 255, 255) 100%)',
+                            WebkitBackgroundClip: 'text',
+                            WebkitTextFillColor: 'transparent',
+                            backgroundClip: 'text'
+                          }}>
+                            Fast processing
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
