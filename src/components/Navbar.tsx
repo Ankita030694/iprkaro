@@ -22,7 +22,7 @@ export default function Navbar() {
   };
 
   const trademarkServices = [
-    { name: 'Trademark Search & Availability Check', href: '/form' },
+    { name: 'Trademark Search & Availability Check', href: '/services/trademark/search' },
     { name: 'Trademark Filing / Registration', href: '/services/trademark-registration' },
     { name: 'Trademark Renewal & Restoration', href: '/services/trademark/renewal' },
     { name: 'Trademark Opposition & Counter-Statement', href: '/services/trademark/opposition' },
