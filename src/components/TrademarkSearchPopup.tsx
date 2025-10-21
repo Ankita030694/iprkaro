@@ -14,7 +14,7 @@ interface TrademarkSearchPopupProps {
   trademarkClass?: string;
 }
 
-export default function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = '' }: TrademarkSearchPopupProps) {
+function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = '' }: TrademarkSearchPopupProps) {
   const router = useRouter();
   const [formData, setFormData] = useState({
     name: '',
@@ -29,6 +29,7 @@ export default function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trad
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showLoader, setShowLoader] = useState(false);
   const [searchResults, setSearchResults] = useState<{class: {number: number, name: string, description: string}, confidenceScore: number} | null>(null);
+  const [isMounted, setIsMounted] = useState(false);
 
   // Get class description
   const getClassDescription = (classNumber: number): string => {
@@ -99,11 +100,15 @@ export default function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trad
     // Create unique key for this trademark-class combination
     const storageKey = `trademark_${trademark.toLowerCase().trim()}_class_${classNum}`;
     
-    // Try to get from localStorage first
+    // Try to get from localStorage first (with error handling for mobile browsers)
     if (typeof window !== 'undefined') {
-      const stored = localStorage.getItem(storageKey);
-      if (stored) {
-        return parseInt(stored);
+      try {
+        const stored = localStorage.getItem(storageKey);
+        if (stored) {
+          return parseInt(stored);
+        }
+      } catch (error) {
+        console.warn('localStorage not available:', error);
       }
     }
     
@@ -112,9 +117,13 @@ export default function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trad
     const hash = generateHash(combinedString);
     const confidenceScore = 45 + (hash % 41); // Range: 45-85%
     
-    // Store in localStorage for consistency
+    // Store in localStorage for consistency (with error handling)
     if (typeof window !== 'undefined') {
-      localStorage.setItem(storageKey, confidenceScore.toString());
+      try {
+        localStorage.setItem(storageKey, confidenceScore.toString());
+      } catch (error) {
+        console.warn('Could not save to localStorage:', error);
+      }
     }
     
     return confidenceScore;
@@ -192,6 +201,11 @@ export default function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trad
     // Return null if no class is provided
     return null;
   };
+
+  // Handle component mounting for mobile compatibility
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   // Initialize search results only once when trademarkClass changes
   useEffect(() => {
@@ -361,12 +375,18 @@ export default function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trad
       setShowLoader(true);
       
       setTimeout(() => {
-        // Redirect to dashboard with trademark data
-        const params = new URLSearchParams({
-          trademark: formData.trademarkSearched,
-          class: formData.class,
-        });
-        router.push(`/dashboard?${params.toString()}`);
+        try {
+          // Redirect to dashboard with trademark data
+          const params = new URLSearchParams({
+            trademark: formData.trademarkSearched,
+            class: formData.class,
+          });
+          router.push(`/dashboard?${params.toString()}`);
+        } catch (error) {
+          console.error('Navigation error:', error);
+          // Fallback: try window.location
+          window.location.href = `/dashboard?trademark=${encodeURIComponent(formData.trademarkSearched)}&class=${encodeURIComponent(formData.class)}`;
+        }
       }, 4000); // 4 seconds
 
     } catch (error: any) {
@@ -378,7 +398,8 @@ export default function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trad
     }
   };
 
-  if (!isOpen) return null;
+  // Don't render until component is mounted (prevents hydration issues on mobile)
+  if (!isMounted || !isOpen) return null;
 
   return (
     <>
@@ -2166,4 +2187,26 @@ export default function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trad
     )}
     </>
   );
+}
+
+// Export with error handling for mobile browsers
+export default function TrademarkSearchPopupWrapper(props: TrademarkSearchPopupProps) {
+  try {
+    return <TrademarkSearchPopup {...props} />;
+  } catch (error) {
+    console.error('TrademarkSearchPopup error:', error);
+    return (
+      <div className="fixed inset-0 bg-black flex items-center justify-center">
+        <div className="text-white text-center">
+          <div className="text-xl mb-4">Something went wrong</div>
+          <button 
+            onClick={() => window.location.href = '/'}
+            className="bg-yellow-500 text-black px-4 py-2 rounded"
+          >
+            Go Home
+          </button>
+        </div>
+      </div>
+    );
+  }
 }

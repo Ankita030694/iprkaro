@@ -52,7 +52,7 @@ export default function Navbar() {
     { name: 'Trademark', href: '/services/trademark-registration', hasSubmenu: true, submenuType: 'trademark' },
     { name: 'Copyright', href: '/services/copyright-protection', hasSubmenu: true, submenuType: 'copyright' },
     { name: 'Patent', href: '/services/patent-services', hasSubmenu: true, submenuType: 'patent' },
-    { name: 'AI Trademark Search', href: '/form' },
+    { name: 'AI Trademark Search', href: '/services/trademark/search' },
   ];
 
   return (
@@ -278,27 +278,38 @@ export default function Navbar() {
               
               {/* Services with Dropdown for Mobile */}
               <div>
-                <div 
-                  onClick={() => setIsServicesOpen(!isServicesOpen)}
-                  className="cursor-pointer relative group hover:text-[#ffb703] transition-all duration-300 mb-3 flex items-center gap-2"
-                  style={{
-                    color: 'rgba(255, 255, 255, 0.60)',
-                    fontFamily: 'Nunito',
-                    fontSize: '40px',
-                    fontStyle: 'normal',
-                    fontWeight: '500',
-                    lineHeight: '40px'
-                  }}
-                >
-                  Services
-                  <svg 
-                    className={`w-6 h-6 transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''}`} 
-                    fill="none" 
-                    stroke="currentColor" 
-                    viewBox="0 0 24 24"
+                <div className="relative group hover:text-[#ffb703] transition-all duration-300 mb-3 flex items-center gap-2">
+                  <Link href="/services" onClick={closeMobileMenu}>
+                    <div
+                      className="cursor-pointer"
+                      style={{
+                        color: 'rgba(255, 255, 255, 0.60)',
+                        fontFamily: 'Nunito',
+                        fontSize: '40px',
+                        fontStyle: 'normal',
+                        fontWeight: '500',
+                        lineHeight: '40px'
+                      }}
+                    >
+                      Services
+                    </div>
+                  </Link>
+                  <div 
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setIsServicesOpen(!isServicesOpen);
+                    }}
+                    className="cursor-pointer"
                   >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
+                    <svg 
+                      className={`w-6 h-6 transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''}`} 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </div>
                 </div>
                 {isServicesOpen && (
                   <div className="ml-6 space-y-4 mb-6">
@@ -306,35 +317,44 @@ export default function Navbar() {
                       <div key={index}>
                         {service.hasSubmenu ? (
                           <div>
-                            <div 
-                              onClick={() => {
-                                if (service.submenuType === 'trademark') setIsTrademarkSubmenuOpen(!isTrademarkSubmenuOpen);
-                                if (service.submenuType === 'copyright') setIsCopyrightSubmenuOpen(!isCopyrightSubmenuOpen);
-                                if (service.submenuType === 'patent') setIsPatentSubmenuOpen(!isPatentSubmenuOpen);
-                              }}
-                              className="cursor-pointer hover:text-[#ffb703] transition-all duration-300 flex items-center gap-2"
-                              style={{
-                                color: 'rgba(255, 255, 255, 0.50)',
-                                fontFamily: 'Nunito',
-                                fontSize: '28px',
-                                fontStyle: 'normal',
-                                fontWeight: '400',
-                                lineHeight: '32px'
-                              }}
-                            >
-                              {service.name}
-                              <svg 
-                                className={`w-5 h-5 transition-transform duration-300 ${
-                                  (service.submenuType === 'trademark' && isTrademarkSubmenuOpen) ||
-                                  (service.submenuType === 'copyright' && isCopyrightSubmenuOpen) ||
-                                  (service.submenuType === 'patent' && isPatentSubmenuOpen) ? 'rotate-180' : ''
-                                }`}
-                                fill="none" 
-                                stroke="currentColor" 
-                                viewBox="0 0 24 24"
+                            <div className="hover:text-[#ffb703] transition-all duration-300 flex items-center gap-2">
+                              <Link href={service.href} onClick={closeMobileMenu}>
+                                <div
+                                  className="cursor-pointer"
+                                  style={{
+                                    color: 'rgba(255, 255, 255, 0.50)',
+                                    fontFamily: 'Nunito',
+                                    fontSize: '28px',
+                                    fontStyle: 'normal',
+                                    fontWeight: '400',
+                                    lineHeight: '32px'
+                                  }}
+                                >
+                                  {service.name}
+                                </div>
+                              </Link>
+                              <div 
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  if (service.submenuType === 'trademark') setIsTrademarkSubmenuOpen(!isTrademarkSubmenuOpen);
+                                  if (service.submenuType === 'copyright') setIsCopyrightSubmenuOpen(!isCopyrightSubmenuOpen);
+                                  if (service.submenuType === 'patent') setIsPatentSubmenuOpen(!isPatentSubmenuOpen);
+                                }}
+                                className="cursor-pointer"
                               >
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                              </svg>
+                                <svg 
+                                  className={`w-5 h-5 transition-transform duration-300 ${
+                                    (service.submenuType === 'trademark' && isTrademarkSubmenuOpen) ||
+                                    (service.submenuType === 'copyright' && isCopyrightSubmenuOpen) ||
+                                    (service.submenuType === 'patent' && isPatentSubmenuOpen) ? 'rotate-180' : ''
+                                  }`}
+                                  fill="none" 
+                                  stroke="currentColor" 
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                </svg>
+                              </div>
                             </div>
                             {((service.submenuType === 'trademark' && isTrademarkSubmenuOpen) ||
                               (service.submenuType === 'copyright' && isCopyrightSubmenuOpen) ||

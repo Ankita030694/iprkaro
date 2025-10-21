@@ -1015,10 +1015,10 @@ export default function AboutClient() {
       </div>
 
       {/* What makes IPR Karo Different Section */}
-      <div className="w-full py-[60px] mt-[30px] px-20">
-        <div className="text-center mb-[48px] px-[18px] sm:px-[36px] lg:px-[72px]">
+      <div className="w-full py-[30px] sm:py-[45px] lg:py-[60px] mt-[15px] sm:mt-[20px] lg:mt-[30px] px-4 sm:px-8 lg:px-20">
+        <div className="text-center mb-[24px] sm:mb-[36px] lg:mb-[48px] px-[12px] sm:px-[18px] lg:px-[72px]">
           <h2
-            className="text-[18px] sm:text-[30px] lg:text-[31.5px] font-bold mb-[12px]"
+            className="text-[18px] sm:text-[30px] lg:text-[31.5px] font-bold mb-[8px] sm:mb-[10px] lg:mb-[12px]"
             style={{
               color: '#FFF',
               fontFamily: 'Nunito',
@@ -1044,9 +1044,9 @@ export default function AboutClient() {
         {/* Cards Container */}
         <div className="w-full">
           {/* Main Grid - Full width layout */}
-          <div className="flex flex-col gap-[18px] lg:gap-[24px] px-[18px] sm:px-[36px] lg:px-[72px]">
+          <div className="flex flex-col gap-[12px] sm:gap-[15px] lg:gap-[24px] px-[12px] sm:px-[24px] lg:px-[72px]">
             {/* Mobile Layout - Professional Card Design */}
-            <div className="block lg:hidden space-y-[18px]">
+            <div className="block lg:hidden space-y-[12px]">
               {/* Card 1 - AI-Powered Trademark Search */}
               <div
                 className="relative group cursor-pointer overflow-hidden transition-all duration-300 hover:scale-[1.02]"
@@ -1059,11 +1059,11 @@ export default function AboutClient() {
                 onClick={() => setActiveCard(activeCard === 1 ? null : 1)}
               >
                 {/* Content */}
-                <div className="relative z-10 p-[24px]">
-                  <h3 className="text-[15px] font-bold mb-[9px] text-white" style={{fontFamily: 'Nunito', fontWeight: 700}}>
+                <div className="relative z-10 p-[16px] sm:p-[20px] lg:p-[24px]">
+                  <h3 className="text-[15px] font-bold mb-[6px] sm:mb-[8px] lg:mb-[9px] text-white" style={{fontFamily: 'Nunito', fontWeight: 700}}>
                     AI-Powered Trademark Search
                   </h3>
-                  <p className="text-[10.5px] mb-[18px]" style={{color: 'rgba(255, 255, 255, 0.85)', fontFamily: 'Nunito', lineHeight: '1.6'}}>
+                  <p className="text-[10.5px] mb-[12px] sm:mb-[15px] lg:mb-[18px]" style={{color: 'rgba(255, 255, 255, 0.85)', fontFamily: 'Nunito', lineHeight: '1.6'}}>
                     Instantly scan millions of records. Our AI-powered search report finds identical and confusingly similar marks so you can decide whether to register or tweak your brand.
                   </p>
                   
@@ -1108,8 +1108,8 @@ export default function AboutClient() {
                 </div>
 
                 {/* Content */}
-                <div className="relative z-10 p-[24px]">
-                  <h3 className="text-[15px] font-bold mb-[9px] text-white" style={{fontFamily: 'Nunito', fontWeight: 700}}>
+                <div className="relative z-10 p-[16px] sm:p-[20px] lg:p-[24px]">
+                  <h3 className="text-[15px] font-bold mb-[6px] sm:mb-[8px] lg:mb-[9px] text-white" style={{fontFamily: 'Nunito', fontWeight: 700}}>
                     Expert-Led Guidance
                   </h3>
                   <p className="text-[10.5px] max-w-[180px]" style={{color: 'rgba(255, 255, 255, 0.85)', fontFamily: 'Nunito', lineHeight: '1.6'}}>
@@ -1141,8 +1141,8 @@ export default function AboutClient() {
                 </div>
 
                 {/* Content */}
-                <div className="relative z-10 p-[24px]">
-                  <h3 className="text-[15px] font-bold mb-[9px] text-white" style={{fontFamily: 'Nunito', fontWeight: 700}}>
+                <div className="relative z-10 p-[16px] sm:p-[20px] lg:p-[24px]">
+                  <h3 className="text-[15px] font-bold mb-[6px] sm:mb-[8px] lg:mb-[9px] text-white" style={{fontFamily: 'Nunito', fontWeight: 700}}>
                     Fast Processing
                   </h3>
                   <p className="text-[10.5px] max-w-[180px]" style={{color: 'rgba(255, 255, 255, 0.85)', fontFamily: 'Nunito', lineHeight: '1.6'}}>
@@ -1174,8 +1174,8 @@ export default function AboutClient() {
                 </div>
 
                 {/* Content */}
-                <div className="relative z-10 p-[24px]">
-                  <h3 className="text-[15px] font-bold mb-[9px] text-white" style={{fontFamily: 'Nunito', fontWeight: 700}}>
+                <div className="relative z-10 p-[16px] sm:p-[20px] lg:p-[24px]">
+                  <h3 className="text-[15px] font-bold mb-[6px] sm:mb-[8px] lg:mb-[9px] text-white" style={{fontFamily: 'Nunito', fontWeight: 700}}>
                     Affordable & Transparent Pricing
                   </h3>
                   <p className="text-[10.5px] max-w-[180px]" style={{color: 'rgba(255, 255, 255, 0.85)', fontFamily: 'Nunito', lineHeight: '1.6'}}>
@@ -1196,35 +1196,35 @@ export default function AboutClient() {
                 onClick={() => setActiveCard(activeCard === 5 ? null : 5)}
               >
                 {/* Content */}
-                <div className="relative z-10 p-[24px]">
-                  <h3 className="text-[15px] font-bold mb-[9px] text-white" style={{fontFamily: 'Nunito', fontWeight: 700}}>
+                <div className="relative z-10 p-[16px] sm:p-[20px] lg:p-[24px]">
+                  <h3 className="text-[15px] font-bold mb-[6px] sm:mb-[8px] lg:mb-[9px] text-white" style={{fontFamily: 'Nunito', fontWeight: 700}}>
                     End-to-End Support
                   </h3>
-                  <p className="text-[10.5px] mb-[18px]" style={{color: 'rgba(255, 255, 255, 0.85)', fontFamily: 'Nunito', lineHeight: '1.6'}}>
+                  <p className="text-[10.5px] mb-[12px] sm:mb-[15px] lg:mb-[18px]" style={{color: 'rgba(255, 255, 255, 0.85)', fontFamily: 'Nunito', lineHeight: '1.6'}}>
                     From search to filing to post-registration monitoring, we handle filings, replies, and renewals so your brand stays protected.
                   </p>
 
                   {/* Process List */}
-                  <div className={`bg-white/10 backdrop-blur-sm rounded-2xl p-[12px] transition-all duration-500 ${
+                  <div className={`bg-white/10 backdrop-blur-sm rounded-2xl p-[12px] sm:p-[14px] lg:p-[16px] transition-all duration-500 ${
                     activeCard === 5 ? 'opacity-100 scale-100' : 'opacity-70 scale-95'
                   }`}>
-                    <div className="text-[9px] font-semibold mb-[9px] text-yellow-400" style={{fontFamily: 'Nunito'}}>Complete Process:</div>
-                    <ul className="space-y-[6px] text-[9px]">
+                    <div className="text-[10px] sm:text-[11px] lg:text-[12px] font-semibold mb-[8px] sm:mb-[10px] lg:mb-[12px] text-yellow-400" style={{fontFamily: 'Nunito'}}>Complete Process:</div>
+                    <ul className="space-y-[6px] sm:space-y-[7px] lg:space-y-[8px] text-[9px] sm:text-[10px] lg:text-[11px]">
                       <li className="flex items-start">
-                        <span className="w-[6px] h-[6px] bg-yellow-400 rounded-full mt-1 mr-[6px] flex-shrink-0"></span>
-                        <span style={{color: 'rgba(255, 255, 255, 0.9)', fontFamily: 'Nunito'}}>AI-powered trademark search & analysis</span>
+                        <span className="w-[6px] h-[6px] bg-yellow-400 rounded-full mt-1.5 mr-[12px] flex-shrink-0"></span>
+                        <span style={{color: 'rgba(255, 255, 255, 0.9)', fontFamily: 'Nunito', lineHeight: '1.4'}}>AI-powered trademark search & analysis</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="w-[6px] h-[6px] bg-yellow-400 rounded-full mt-1 mr-[6px] flex-shrink-0"></span>
-                        <span style={{color: 'rgba(255, 255, 255, 0.9)', fontFamily: 'Nunito'}}>Expert legal review & consultation</span>
+                        <span className="w-[6px] h-[6px] bg-yellow-400 rounded-full mt-1.5 mr-[12px] flex-shrink-0"></span>
+                        <span style={{color: 'rgba(255, 255, 255, 0.9)', fontFamily: 'Nunito', lineHeight: '1.4'}}>Expert legal review & consultation</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="w-[6px] h-[6px] bg-yellow-400 rounded-full mt-1 mr-[6px] flex-shrink-0"></span>
-                        <span style={{color: 'rgba(255, 255, 255, 0.9)', fontFamily: 'Nunito'}}>Complete filing & documentation</span>
+                        <span className="w-[6px] h-[6px] bg-yellow-400 rounded-full mt-1.5 mr-[12px] flex-shrink-0"></span>
+                        <span style={{color: 'rgba(255, 255, 255, 0.9)', fontFamily: 'Nunito', lineHeight: '1.4'}}>Complete filing & documentation</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="w-[6px] h-[6px] bg-yellow-400 rounded-full mt-1 mr-[6px] flex-shrink-0"></span>
-                        <span style={{color: 'rgba(255, 255, 255, 0.9)', fontFamily: 'Nunito'}}>Post-registration monitoring & renewals</span>
+                        <span className="w-[6px] h-[6px] bg-yellow-400 rounded-full mt-1.5 mr-[12px] flex-shrink-0"></span>
+                        <span style={{color: 'rgba(255, 255, 255, 0.9)', fontFamily: 'Nunito', lineHeight: '1.4'}}>Post-registration monitoring & renewals</span>
                       </li>
                     </ul>
                   </div>
@@ -1500,16 +1500,16 @@ export default function AboutClient() {
             </div>
           </div>
           {/* Trust & Proof line */}
-          <div className="w-full text-center mt-[36px] px-[18px]">
+          <div className="w-full text-center mt-[24px] sm:mt-[32px] lg:mt-[40px] px-[16px] sm:px-[20px] lg:px-[24px]">
             <div 
-              className="inline-flex items-center gap-[9px] px-[24px] py-[12px] rounded-full"
+              className="inline-flex items-center gap-[8px] sm:gap-[10px] lg:gap-[12px] px-[20px] sm:px-[24px] lg:px-[28px] py-[12px] sm:py-[14px] lg:py-[16px] rounded-full max-w-4xl"
               style={{
                 background: 'linear-gradient(135deg, rgba(255, 183, 3, 0.1) 0%, rgba(12, 0, 43, 0.3) 100%)',
                 border: '1px solid rgba(255, 183, 3, 0.2)',
                 boxShadow: '0 3px 12px rgba(0, 0, 0, 0.2)'
               }}
             >
-              <span className="text-[10.5px] font-medium" style={{color: 'rgba(255, 255, 255, 0.9)', fontFamily: 'Nunito'}}>
+              <span className="text-[10px] sm:text-[11px] lg:text-[12px] font-medium leading-relaxed" style={{color: 'rgba(255, 255, 255, 0.9)', fontFamily: 'Nunito', lineHeight: '1.5'}}>
                 Trusted by 5,000+ entrepreneurs and startups with official filings, attorney review, and secure document handling.
               </span>
             </div>

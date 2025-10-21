@@ -1,8 +1,10 @@
 'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function SimplePlans() {
+  const router = useRouter();
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
   const [activeCardIndex, setActiveCardIndex] = useState(1); // Start with middle card (most popular)
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -131,6 +133,10 @@ export default function SimplePlans() {
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleGetProtected = () => {
+    router.push('/contact');
   };
 
   return (
@@ -309,6 +315,7 @@ export default function SimplePlans() {
                       {/* Get Protected Button - Fixed at bottom */}
                       <div className="flex-shrink-0 mt-auto">
                         <button
+                          onClick={handleGetProtected}
                           className="w-full text-center py-3 px-5 transition-all duration-300 hover:scale-105"
                           style={{
                             borderRadius: '11.88px',
