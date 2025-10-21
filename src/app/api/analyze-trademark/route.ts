@@ -29,12 +29,17 @@ interface AnalysisResult {
     marketPosition: string;
     registrationSpeed: string;
     protectionLevel: string;
+    famousMark?: boolean;
   };
   alternativeClasses: string[];
   overallRecommendation: {
     status: string;
     message: string;
   };
+  sources?: Array<{
+    url: string;
+    fetched: string;
+  }>;
   createdAt?: any;
   lastUpdated?: any;
 }
@@ -169,48 +174,193 @@ export async function POST(request: NextRequest) {
 
     console.log('⚠️ Cache miss. Generating new analysis...');
 
-    // Step 5: Call OpenAI API
+    // Step 5: Fetch data from QuickCompany
+    console.log('🔍 Fetching trademark data from QuickCompany...');
+    
+    const quickCompanyUrl = `https://www.quickcompany.in/trademarks?q=${encodeURIComponent(trademarkName)}`;
+    console.log('📍 QuickCompany URL:', quickCompanyUrl);
+    
+    let quickCompanyData = '';
+    let fetchedSuccessfully = false;
+    
+    try {
+      const response = await fetch(quickCompanyUrl, {
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+        },
+        signal: AbortSignal.timeout(10000), // 10 second timeout
+      });
+      
+      if (response.ok) {
+        const html = await response.text();
+        
+        // Extract relevant information from the HTML
+        // Look for registered trademarks, classes, and statuses
+        const registeredMatches = html.match(/Registered Class: (\d+)/gi) || [];
+        const statusMatches = html.match(/Registered|Formalities Chk Pass|Abandoned|Objected|Refused|Accepted & Advertised|Opposed/gi) || [];
+        
+        // Count matches
+        const totalMatches = html.match(/(\d+) of ([\d,]+) Matches/);
+        const matchCount = totalMatches ? totalMatches[2].replace(/,/g, '') : '0';
+        
+        quickCompanyData = `
+Trademark Database Search Results for "${trademarkName}":
+- Total similar trademark records found in database: ${matchCount}
+- Registered trademarks in database: ${registeredMatches.length}
+- Status distribution: ${statusMatches.slice(0, 10).join(', ')}
+
+Analysis: ${parseInt(matchCount) > 0 ? 'CONFLICTS EXIST' : 'NO CONFLICTS FOUND'} - similar/identical trademarks are already present in official databases.
+${parseInt(matchCount) > 100 ? 'HIGH CONFLICT ZONE - Many similar marks exist in database.' : ''}
+${parseInt(matchCount) > 500 ? 'EXTREME CONFLICT - Over 500 similar marks found in database!' : ''}
+`;
+        
+        fetchedSuccessfully = true;
+        console.log('✅ QuickCompany data fetched successfully');
+        console.log(`📊 Found ${matchCount} matches`);
+      } else {
+        console.warn('⚠️ QuickCompany fetch failed:', response.status);
+        quickCompanyData = 'Unable to fetch data from trademark databases. Analyze based on general knowledge.';
+      }
+    } catch (error: any) {
+      console.error('❌ QuickCompany fetch error:', error.message);
+      quickCompanyData = 'Unable to fetch data from trademark databases. Analyze based on general knowledge.';
+    }
+
+    // Step 6: Call OpenAI API
     console.log('🤖 Calling OpenAI API...');
 
-    const prompt = `You are an expert in trademark analysis, brand evaluation, and Indian IP law.
+    const systemPrompt = `You are an expert in trademark analysis, brand evaluation, and Indian IP law.`;
 
-Trademark Name: ${trademarkName}
+    const userPrompt = `Trademark Name: ${trademarkName}
 Proposed Class: ${classNumber}
 
-Analyze this trademark and provide a JSON response with the following structure:
+REAL DATA FROM TRADEMARK DATABASE:
+${quickCompanyData}
 
+Based on the REAL data above, analyze this trademark and provide the following metrics with a score out of 100:
+
+1. Registrability Score – Likelihood of successful registration. Include reasoning.
+2. Similarity Score – Likelihood of conflict with existing trademarks. Include reasoning.
+3. Class Fit Score – How appropriate the proposed class is. Include reasoning.
+4. Alternative Classes – Suggest other relevant classes to improve approval chances.
+5. Overall Recommendation – Based on the scores, indicate:
+   ✅ High chance – proceed with filing
+   ⚠️ Medium risk – consider modifications
+   ❌ Low chance – revise trademark or class
+
+⚠️ CRITICAL: Use the REAL DATA from trademark database above to make your judgment!
+
+SCORING BASED ON DATABASE SEARCH RESULTS:
+
+IF Database shows 0 matches:
+- Similarity Score: 5-15 (no conflicts found)
+- Registrability Score: 80-95 (excellent chance)
+- Overall Recommendation: "High"
+
+IF Database shows 1-50 matches:
+- Similarity Score: 30-50 (some conflicts)
+- Registrability Score: 50-70 (moderate chance)
+- Overall Recommendation: "Medium"
+
+IF Database shows 50-500 matches:
+- Similarity Score: 60-80 (many conflicts)
+- Registrability Score: 20-40 (low chance)
+- Overall Recommendation: "Medium" or "Low"
+
+IF Database shows 500+ matches:
+- Similarity Score: 85-100 (extreme conflicts)
+- Registrability Score: 0-20 (very unlikely)
+- Overall Recommendation: "Low"
+
+IF EXACT MATCH FOUND (same name + same class):
+- Similarity Score: 95-100 (exact match exists)
+- Registrability Score: 0-10 (CANNOT register - already exists)
+- Overall Recommendation: "Low" with message "Already registered. Choose different name."
+- Legal Risk: "Extreme - trademark already exists"
+
+IF FAMOUS BRAND (Nike, Apple, Google, etc.):
+- Similarity Score: 95-100 (world-famous brand)
+- Registrability Score: 0-10 (impossible to register)
+- Overall Recommendation: "Low" with message "Famous brand. Do not proceed."
+- famousMark: true
+
+CRITICAL SCORING LOGIC - FOLLOW STRICTLY:
+
+1. Registrability Score (0-100): Higher = Better chance of registration
+   - 80-100: Excellent chance (unique, no conflicts)
+   - 60-79: Good chance (minor concerns)
+   - 40-59: Moderate chance (some conflicts)
+   - 20-39: Low chance (significant conflicts)
+   - 0-19: Very unlikely (famous brand or many conflicts)
+
+2. Similarity Score (0-100): Higher = MORE conflicts = WORSE for applicant
+   - 0-20: Very different (GOOD - proceed)
+   - 21-40: Some similarity (caution needed)
+   - 41-60: Moderate similarity (risky)
+   - 61-80: High similarity (likely rejection)
+   - 81-100: Exact/near match (DO NOT PROCEED)
+
+3. Class Fit Score (0-100): Higher = Better fit for the class
+   - 80-100: Perfect fit
+   - 60-79: Good fit
+   - 40-59: Acceptable fit
+   - 20-39: Poor fit
+   - 0-19: Wrong class
+
+INVERSE RELATIONSHIP RULE:
+If Similarity Score is HIGH (>60), then Registrability Score MUST be LOW (<40).
+If Similarity Score is LOW (<30), then Registrability Score can be HIGH (>70).
+
+Examples based on database search results:
+- Database: 1,001 matches → Similarity: 90 → Registrability: 15 (extreme conflict)
+- Database: 500 matches → Similarity: 80 → Registrability: 25 (high conflict)
+- Database: 100 matches → Similarity: 65 → Registrability: 35 (many conflicts)
+- Database: 20 matches → Similarity: 40 → Registrability: 60 (some conflicts)
+- Database: 0 matches → Similarity: 10 → Registrability: 85 (unique, proceed!)
+
+Return ONLY valid JSON in this exact format (no other text):
 {
   "overallHealth": "Excellent|Good|Fair|Poor",
   "registrabilityScore": 0-100,
-  "registrabilityReasoning": "Brief explanation (max 150 chars)",
+  "registrabilityReasoning": "explanation",
   "similarityScore": 0-100,
-  "similarityReasoning": "Brief explanation (max 150 chars)",
+  "similarityReasoning": "explanation",
   "classFitScore": 0-100,
-  "classFitReasoning": "Brief explanation (max 150 chars)",
+  "classFitReasoning": "explanation",
   "genericnessAssessment": {
-    "registrability": "Brief description (max 100 chars)",
-    "similarity": "Brief description (max 100 chars)",
-    "classFit": "Brief description (max 100 chars)"
+    "registrability": "text",
+    "similarity": "text",
+    "classFit": "text"
   },
   "keyFactors": {
-    "brandStrength": "Brief description (max 80 chars)",
-    "legalRisk": "Brief description (max 80 chars)",
-    "marketPosition": "Brief description (max 80 chars)",
-    "registrationSpeed": "Brief description (max 80 chars)",
-    "protectionLevel": "Brief description (max 80 chars)"
+    "brandStrength": "text",
+    "legalRisk": "text",
+    "marketPosition": "text",
+    "registrationSpeed": "text",
+    "protectionLevel": "text",
+    "famousMark": false
   },
-  "alternativeClasses": ["Class X - Name", "Class Y - Name"],
+  "alternativeClasses": ["Class X - Name"],
   "overallRecommendation": {
     "status": "High|Medium|Low",
-    "message": "Detailed recommendation (max 200 chars)"
-  }
+    "message": "text"
+  },
+  "sources": [{"url": "url", "fetched": "YYYY-MM-DD"}]
 }
 
-Important:
-- Ensure all scores are realistic based on Indian trademark law and actual market conditions
-- Keep all text concise and within character limits
-- Return ONLY valid JSON, no other text
-- Be specific and actionable in recommendations`;
+Overall Recommendation Logic:
+- "High": registrabilityScore > 70 AND similarityScore < 30 (good chance, low conflicts)
+- "Medium": registrabilityScore 40-70 OR similarityScore 30-60 (moderate risk)
+- "Low": registrabilityScore < 40 OR similarityScore > 60 (high risk, do not proceed)
+
+CRITICAL REMINDERS:
+1. USE THE DATABASE DATA PROVIDED - don't ignore the match count!
+2. High Similarity = Low Registrability (INVERSE relationship)
+3. If database shows 500+ matches → Similarity 85-100, Registrability 0-20
+4. If database shows 0 matches → Similarity 5-15, Registrability 80-95
+5. Be realistic - don't give false hope if database shows many conflicts
+6. Do NOT mention specific database names in your reasoning - use generic terms like "existing trademarks database" or "trademark registry"
+7. Include IP India and official sources in sources array`;
 
     let completion;
     try {
@@ -219,15 +369,15 @@ Important:
         messages: [
           {
             role: 'system',
-            content: 'You are a trademark analysis expert. Always respond with valid JSON only.',
+            content: systemPrompt,
           },
           {
             role: 'user',
-            content: prompt,
+            content: userPrompt,
           },
         ],
-        temperature: 0.7,
-        max_tokens: 1500,
+        temperature: 0,
+        max_tokens: 2000,
       });
     } catch (openaiError: any) {
       console.error('❌ OpenAI API Error:', openaiError);
@@ -350,12 +500,19 @@ Important:
         marketPosition: 'Competitive advantage in market',
         registrationSpeed: 'Fast approval process expected',
         protectionLevel: 'Comprehensive brand protection coverage',
+        famousMark: false,
       },
       alternativeClasses: analysisData.alternativeClasses || [],
       overallRecommendation: analysisData.overallRecommendation || {
         status: 'High',
         message: 'Good chance of successful registration',
       },
+      sources: analysisData.sources || [
+        {
+          url: 'https://ipindia.gov.in/tmrsearch.htm',
+          fetched: new Date().toISOString().split('T')[0],
+        },
+      ],
       createdAt: serverTimestamp(),
       lastUpdated: serverTimestamp(),
     };

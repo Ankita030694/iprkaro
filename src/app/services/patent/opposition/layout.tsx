@@ -8,3 +8,4 @@ export default function PatentOppositionLayout({
   return <>{children}</>;
 }
 
+
