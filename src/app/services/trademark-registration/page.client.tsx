@@ -2,10 +2,12 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 export default function TrademarkRegistrationPage() {
+  const router = useRouter();
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [showMobilePopup, setShowMobilePopup] = useState(false);
   const [expandedPlan, setExpandedPlan] = useState<string | null>(null);
@@ -19,6 +21,10 @@ export default function TrademarkRegistrationPage() {
 
   const togglePlan = (planId: string) => {
     setExpandedPlan(expandedPlan === planId ? null : planId);
+  };
+
+  const handleRedirectToContact = () => {
+    router.push('/contact');
   };
 
   // Function to generate state-specific slug URL
@@ -936,6 +942,7 @@ Trademarks can include:
 
                   {/* Start Registration Button */}
                   <button
+                    onClick={handleRedirectToContact}
                     className="w-full py-3 px-4 rounded-xl font-nunito font-semibold text-xl md:text-xl transition-all duration-300 hover:scale-105 mt-4"
                     style={{
                       background: '#FFB703',
@@ -1029,6 +1036,7 @@ Trademarks can include:
 
                         {/* Action Button */}
                         <button
+                          onClick={handleRedirectToContact}
                           className="w-full py-3 px-4 rounded-xl font-nunito font-semibold text-sm md:text-base transition-all duration-300 hover:scale-105"
                           style={{
                             background: '#1345C3',
@@ -1190,7 +1198,7 @@ Trademarks can include:
             {/* Right Side - Start Registration Button */}
             <div className="flex-1 flex justify-end">
               <button
-                onClick={() => setShowMobilePopup(true)}
+                onClick={handleRedirectToContact}
                 className="px-6 py-3 font-nunito font-semibold text-lg text-[#0C002B] transition-all duration-300 hover:scale-105"
                 style={{
                   borderRadius: '8px',
@@ -1294,6 +1302,7 @@ Trademarks can include:
 
                     {/* Start Registration Button */}
                     <button
+                      onClick={handleRedirectToContact}
                       className="w-full py-3 px-4 rounded-lg font-nunito font-semibold text-sm transition-all duration-300 hover:scale-105 mt-3"
                       style={{
                         background: '#FFB703',
@@ -1388,6 +1397,7 @@ Trademarks can include:
 
                           {/* Action Button */}
                           <button
+                            onClick={handleRedirectToContact}
                             className="w-full py-2.5 px-4 rounded-lg font-nunito font-semibold text-sm transition-all duration-300 hover:scale-105"
                             style={{
                               background: '#1345C3',

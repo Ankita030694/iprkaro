@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import TableOfContents from '@/components/copyright-protection/TableOfContents';
 import CompactContactForm from '@/components/copyright-protection/CompactContactForm';
 import DynamicContent from '@/components/copyright-protection/DynamicContent';
@@ -10,9 +11,14 @@ interface CopyrightProtectionClientProps {
 }
 
 export default function CopyrightProtectionClient({ stateName }: CopyrightProtectionClientProps) {
+  const router = useRouter();
   const [activeSection, setActiveSection] = useState('overview');
   const [sidebarsFixed, setSidebarsFixed] = useState(true);
   const [isLoaded, setIsLoaded] = useState(false);
+
+  const handleRedirectToContact = () => {
+    router.push('/contact');
+  };
 
   useEffect(() => {
     // Mark as loaded for progressive enhancement
@@ -178,6 +184,7 @@ export default function CopyrightProtectionClient({ stateName }: CopyrightProtec
             {/* CTA Button */}
             <div className="flex items-center justify-center gap-3">
               <button 
+                onClick={handleRedirectToContact}
                 className="group px-6 py-2 lg:px-8 lg:py-3 rounded-lg font-nunito font-bold text-xs lg:text-sm transition-all duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden"
                 style={{
                   background: 'linear-gradient(135deg, #FFB703 0%, #FFA000 100%)',
