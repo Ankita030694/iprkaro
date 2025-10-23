@@ -318,7 +318,7 @@ export default function AboutClient() {
         </div>
 
         {/* Desktop Layout - Keep original */}
-        <div className="hidden lg:flex items-center justify-center gap-4">
+        <div className="hidden lg:flex items-center justify-center gap-4 -mt-50">
           {/* Vertical IPR Karo Text - Flipped */}
           <div className="flex flex-col items-center">
             <div 

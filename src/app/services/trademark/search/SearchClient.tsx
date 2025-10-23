@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import SearchClientComponent from '@/components/SearchClient';
 
 export default function SearchClient() {
   const faqs = [
@@ -48,22 +49,9 @@ export default function SearchClient() {
           
           {/* Hero Section */}
           <section className="mb-8">
-            <div className="flex items-center gap-2 mb-4">
-              <div 
-                className="w-3 h-3 rounded-full relative"
-                style={{
-                  background: 'linear-gradient(135deg, #FFB703, #FFA000)',
-                  boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
-                }}
-              >
-                <div 
-                  className="absolute inset-0 rounded-full animate-ping"
-                  style={{ background: '#FFB703', opacity: 0.4 }}
-                />
-              </div>
-              <h1 className="text-white font-nunito text-3xl md:text-4xl lg:text-5xl font-bold">
-                Trademark Search & Availability Check Services in India
-              </h1>
+            <h1 className="text-white font-nunito text-3xl md:text-4xl lg:text-5xl font-bold text-center">Trademark Search & Availability Check Services in India</h1>
+            <div className="flex items-center gap-2 mb-4 mt-2 justify-center">
+            <SearchClientComponent />
             </div>
             
             <div 

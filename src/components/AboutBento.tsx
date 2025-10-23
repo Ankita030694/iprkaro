@@ -27,7 +27,7 @@ const AboutBento = () => {
           
           {/* Column 1 - Dashboard Preview Snippet */}
           <div className="col-span-1">
-            <div className="bg-gradient-to-br from-zinc-900 to-zinc-950 rounded-xl p-3 border border-zinc-800 h-full max-h-[600px] flex flex-col overflow-y-auto custom-scrollbar">
+            <div className="bg-gradient-to-br from-zinc-900 to-zinc-950 rounded-xl p-3 border border-zinc-800 h-full max-h-[600px] flex flex-col overflow-y-auto custom-scrollbar hover:border-yellow-500/50 hover:shadow-lg hover:shadow-yellow-500/20 transition-all duration-300 cursor-pointer">
               {/* Header */}
               <div className="mb-2">
                 <div className="flex items-center gap-2">
@@ -184,7 +184,7 @@ const AboutBento = () => {
           {/* Column 2 - 2 rows: 1st row 200px, 2nd row 400px */}
           <div className="col-span-1 space-y-4">
             {/* Row 1 - 200px - Our Services */}
-            <div className="bg-gradient-to-br from-zinc-900 to-zinc-950 rounded-xl p-3 border border-zinc-800 h-[200px] flex flex-col justify-center overflow-hidden">
+            <div className="bg-gradient-to-br from-zinc-900 to-zinc-950 rounded-xl p-3 border border-zinc-800 h-[200px] flex flex-col justify-center overflow-hidden hover:border-cyan-500/50 hover:shadow-lg hover:shadow-cyan-500/20 transition-all duration-300 cursor-pointer">
               <h4 className="text-white font-medium text-xs mb-2">Our Services</h4>
               <div className="space-y-1.5">
                 <div className="flex items-center gap-2 p-1.5 bg-zinc-800/50 rounded-lg hover:bg-zinc-800/70 transition-colors cursor-pointer">
@@ -212,7 +212,7 @@ const AboutBento = () => {
             </div>
 
             {/* Row 2 - 400px - SEO Optimized Blogs Section */}
-            <div className="bg-gradient-to-br from-purple-950/50 via-indigo-950/50 to-purple-950/50 rounded-xl p-3 border border-purple-900/50 h-[400px] flex flex-col overflow-hidden">
+            <div className="bg-gradient-to-br from-purple-950/50 via-indigo-950/50 to-purple-950/50 rounded-xl p-3 border border-purple-900/50 h-[400px] flex flex-col overflow-hidden hover:border-purple-500/50 hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300 cursor-pointer">
               <div className="mb-2 flex-shrink-0">
                 <span className="text-purple-300 text-[10px]">IPR Resources</span>
                 <h3 className="text-white font-semibold text-xs mt-0.5">Knowledge Hub</h3>
@@ -262,7 +262,7 @@ const AboutBento = () => {
 
           {/* Column 3 - 1 row, 600px max height */}
           <div className="col-span-1">
-            <div className="bg-gradient-to-br from-zinc-900 via-zinc-900 to-zinc-950 rounded-xl p-3 border border-zinc-800 h-full max-h-[600px] flex flex-col overflow-hidden">
+            <div className="bg-gradient-to-br from-zinc-900 via-zinc-900 to-zinc-950 rounded-xl p-3 border border-zinc-800 h-full max-h-[600px] flex flex-col overflow-hidden hover:border-cyan-500/50 hover:shadow-lg hover:shadow-cyan-500/20 transition-all duration-300 cursor-pointer">
               {/* Yellow AI Icon */}
               <div className="mb-2 relative flex justify-center">
                 <div className="relative">
@@ -399,7 +399,7 @@ const AboutBento = () => {
           {/* Column 4 - 2 rows: 1st row 400px, 2nd row 200px */}
           <div className="col-span-1 space-y-4">
             {/* Row 1 - 400px - Why Choose Us */}
-            <div className="bg-gradient-to-br from-zinc-900 to-zinc-950 rounded-xl p-3 border border-zinc-800 h-[400px] flex flex-col overflow-y-auto custom-scrollbar">
+            <div className="bg-gradient-to-br from-zinc-900 to-zinc-950 rounded-xl p-3 border border-zinc-800 h-[400px] flex flex-col overflow-y-auto custom-scrollbar hover:border-green-500/50 hover:shadow-lg hover:shadow-green-500/20 transition-all duration-300 cursor-pointer">
               <div className="mb-2 flex-shrink-0">
                 <h4 className="text-white font-medium text-xs mb-2 flex items-center gap-1.5">
                   <i className="fas fa-star text-yellow-500 text-[10px]"></i>
@@ -457,7 +457,7 @@ const AboutBento = () => {
             </div>
 
             {/* Row 2 - 200px - Testimonial */}
-            <div className="bg-gradient-to-br from-zinc-900 to-zinc-950 rounded-xl p-3 border border-zinc-800 h-[200px] flex flex-col justify-between overflow-hidden">
+            <div className="bg-gradient-to-br from-zinc-900 to-zinc-950 rounded-xl p-3 border border-zinc-800 h-[200px] flex flex-col justify-between overflow-hidden hover:border-yellow-500/50 hover:shadow-lg hover:shadow-yellow-500/20 transition-all duration-300 cursor-pointer">
               <div>
                 <div className="flex items-center gap-1 mb-2">
                   <div className="flex text-yellow-500">
@@ -513,7 +513,7 @@ const AboutBento = () => {
           <div className="grid grid-cols-2 grid-rows-3 gap-2 h-full">
           
             {/* Cell 1 - Dashboard Stats (Row 1, Col 1) */}
-            <div className="bg-gradient-to-br from-zinc-900 to-zinc-950 rounded-lg p-3 border border-zinc-800 flex flex-col justify-center">
+            <div className="bg-gradient-to-br from-zinc-900 to-zinc-950 rounded-lg p-3 border border-zinc-800 flex flex-col justify-center hover:border-yellow-500/50 hover:shadow-lg hover:shadow-yellow-500/20 transition-all duration-300 cursor-pointer">
               <div className="flex items-center gap-2 mb-2">
                 <div className="w-5 h-5 bg-yellow-500 rounded-full flex items-center justify-center">
                   <i className="fas fa-chart-line text-black text-[10px]"></i>
@@ -537,7 +537,7 @@ const AboutBento = () => {
             </div>
 
             {/* Cell 2 - AI Section (Row 1, Col 2 - Spans 2 rows) */}
-            <div className="row-span-2 bg-gradient-to-br from-zinc-900 via-zinc-900 to-zinc-950 rounded-lg p-3 border border-zinc-800 flex flex-col justify-center items-center">
+            <div className="row-span-2 bg-gradient-to-br from-zinc-900 via-zinc-900 to-zinc-950 rounded-lg p-3 border border-zinc-800 flex flex-col justify-center items-center hover:border-cyan-500/50 hover:shadow-lg hover:shadow-cyan-500/20 transition-all duration-300 cursor-pointer">
               <div className="relative mb-2">
                 <svg width="35" height="35" viewBox="0 0 100 100" className="text-yellow-500">
                   <path d="M20 50 L35 20 L50 35 L40 50 L50 65 L35 80 Z" fill="currentColor" />
@@ -565,7 +565,7 @@ const AboutBento = () => {
             </div>
 
             {/* Cell 3 - Services (Row 2, Col 1) */}
-            <div className="bg-gradient-to-br from-zinc-900 to-zinc-950 rounded-lg p-3 border border-zinc-800 flex flex-col justify-center">
+            <div className="bg-gradient-to-br from-zinc-900 to-zinc-950 rounded-lg p-3 border border-zinc-800 flex flex-col justify-center hover:border-cyan-500/50 hover:shadow-lg hover:shadow-cyan-500/20 transition-all duration-300 cursor-pointer">
               <h4 className="text-white font-semibold text-xs mb-2">Our Services</h4>
               <div className="space-y-1.5">
                 <div className="flex items-center gap-2 bg-zinc-800/50 rounded p-1.5">
@@ -584,7 +584,7 @@ const AboutBento = () => {
             </div>
 
             {/* Cell 4 - Knowledge Hub (Row 3, Col 1) */}
-            <div className="bg-gradient-to-br from-purple-950/50 via-indigo-950/50 to-purple-950/50 rounded-lg p-3 border border-purple-900/50 flex flex-col">
+            <div className="bg-gradient-to-br from-purple-950/50 via-indigo-950/50 to-purple-950/50 rounded-lg p-3 border border-purple-900/50 flex flex-col hover:border-purple-500/50 hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300 cursor-pointer">
               <div className="mb-2">
                 <span className="text-purple-300 text-[8px]">IPR Resources</span>
                 <h3 className="text-white font-semibold text-xs">Knowledge Hub</h3>
@@ -609,7 +609,7 @@ const AboutBento = () => {
             </div>
 
             {/* Cell 5 - Why Choose Us (Row 3, Col 2) */}
-            <div className="bg-gradient-to-br from-zinc-900 to-zinc-950 rounded-lg p-3 border border-zinc-800 flex flex-col">
+            <div className="bg-gradient-to-br from-zinc-900 to-zinc-950 rounded-lg p-3 border border-zinc-800 flex flex-col hover:border-green-500/50 hover:shadow-lg hover:shadow-green-500/20 transition-all duration-300 cursor-pointer">
               <h4 className="text-white font-semibold text-xs mb-2 flex items-center gap-1">
                 <i className="fas fa-star text-yellow-500 text-[10px]"></i>
                 Why IPR Karo
