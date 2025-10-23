@@ -89,11 +89,13 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${nunito.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${nunito.variable} antialiased overflow-x-hidden`}
       >
-        <ConditionalLayout>
-          {children}
-        </ConditionalLayout>
+        <div className="w-full overflow-x-hidden">
+          <ConditionalLayout>
+            {children}
+          </ConditionalLayout>
+        </div>
       </body>
     </html>
   );

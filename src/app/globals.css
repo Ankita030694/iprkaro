@@ -53,7 +53,7 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
   /* Performance optimizations for smoother scrolling */
-  overflow-x: visible;
+  overflow-x: hidden;
   /* Remove will-change from body for better cross-browser performance */
 }
 

@@ -162,13 +162,13 @@ export default function SimplePlans() {
         }
         @media (min-width: 1024px) {
           .mobile-scroll-container {
-            scale: 0.86;
+            scale: 1;
           }
         }
         
           @media (max-width: 1024px) {
           .mobile-scroll-container {
-            scale: 1.1;
+            scale: 1;
           
         }
       `}</style>
@@ -181,10 +181,10 @@ export default function SimplePlans() {
         <div className="max-w-8xl mx-auto">
           {/* Section Heading with Gradient Text */}
           <div className="text-center mb-6 md:mb-10">
-            <h2 className="text-white text-center font-nunito text-[23.4px] md:text-[36px] lg:text-[32.4px] font-medium leading-[27px] md:leading-[39.6px] lg:leading-[36px] w-full mb-3">
+            <h2 className="text-white text-center font-nunito text-[26px] md:text-[40px] lg:text-[36px] font-medium leading-[30px] md:leading-[44px] lg:leading-[40px] w-full mb-3">
             Trademark Registration Packages with AI-Powered Search Report
             </h2>
-            <p className="text-white font-nunito text-[10.8px] md:text-[12.6px] lg:text-[12.15px] xl:text-[14.4px] font-medium text-center">
+            <p className="text-white font-nunito text-[12px] md:text-[14px] lg:text-[14px] xl:text-[16px] font-medium text-center">
               Search, File, Secure.
             </p>
           </div>
@@ -240,7 +240,7 @@ export default function SimplePlans() {
                     {/* Most Popular Badge - Only for middle card */}
                     {index === 1 && (
                       <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-20">
-                        <span className="animated-gradient text-lg font-bold">
+                        <span className="animated-gradient text-xl font-bold">
                           Most Popular
                         </span>
                       </div>
@@ -269,7 +269,7 @@ export default function SimplePlans() {
                     >
                       {/* Plan Name Header - Now inside the card */}
                       <div className="w-full text-center mb-4">
-                        <h3 className="text-white font-nunito text-[13.5px] md:text-[16.2px] lg:text-[20px] font-semibold leading-snug">
+                        <h3 className="text-white font-nunito text-[15px] md:text-[18px] lg:text-[22px] font-semibold leading-snug">
                           {plan.name}
                         </h3>
                       </div>
@@ -278,9 +278,9 @@ export default function SimplePlans() {
                       <div className="flex items-start justify-end mb-4">
                         {/* Right Side Price */}
                         <div
-                          className="text-white font-nunito font-bold flex-shrink-0 text-[13.5px] md:text-[16.2px] lg:text-[25px]"
+                          className="text-white font-nunito font-bold flex-shrink-0 text-[15px] md:text-[18px] lg:text-[27px]"
                           style={{
-                            lineHeight: '25.2px',
+                            lineHeight: '27px',
                             fontWeight: 700
                           }}
                         >
@@ -289,12 +289,12 @@ export default function SimplePlans() {
                       </div>
 
                       {/* Description Text */}
-                      <p className="text-white font-nunito text-[9.9px] md:text-[10.8px] lg:text-[12px] xl:text-[15px] font-medium mb-4 leading-relaxed">
+                      <p className="text-white font-nunito text-[11px] md:text-[12px] lg:text-[14px] xl:text-[16px] font-medium mb-4 leading-relaxed">
                         {plan.description}
                       </p>
 
                       {/* Content Text */}
-                      <p className="text-white font-nunito text-[9.9px] md:text-[10.8px] lg:text-[10.53px] xl:text-[15px] font-medium mb-6 leading-relaxed">
+                      <p className="text-white font-nunito text-[11px] md:text-[12px] lg:text-[12px] xl:text-[16px] font-medium mb-6 leading-relaxed">
                         {plan.content}
                       </p>
 
@@ -304,7 +304,7 @@ export default function SimplePlans() {
                           <div key={featIndex} className="flex items-start">
                             <i className="fas fa-check text-green-400 mr-3 mt-1 flex-shrink-0 text-sm"></i>
                             <span
-                              className="text-white font-nunito leading-relaxed text-[9.9px] md:text-[10.8px] lg:text-[12px] xl:text-[13px]"
+                              className="text-white font-nunito leading-relaxed text-[11px] md:text-[12px] lg:text-[13px] xl:text-[14px]"
                             >
                               {feature}
                             </span>
@@ -324,10 +324,10 @@ export default function SimplePlans() {
                           }}
                         >
                           <span
-                            className="font-nunito font-semibold text-[15.84px] md:text-[21.78px]"
+                            className="font-nunito font-semibold text-[17px] md:text-[23px]"
                             style={{
                               color: '#0C002B',
-                              lineHeight: '21.78px',
+                              lineHeight: '23px',
                               fontWeight: 600
                             }}
                           >

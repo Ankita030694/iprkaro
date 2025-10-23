@@ -3,10 +3,10 @@ import React from 'react';
 export default function HowItWorks() {
   return (
     <section className="w-full min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-purple-900 to-black p-8">
-      <div className="flex items-center gap-8 max-w-7xl w-full">
+      <div className="flex flex-col lg:flex-row items-center gap-8 max-w-7xl w-full">
         
         {/* Left Side: Main Credentials Card */}
-        <div className="w-[487px] rounded-[25px] border-[6px] border-white/10 bg-gradient-to-br from-[rgba(0,0,0,0.88)] via-[rgba(138,56,245,0.25)] to-[rgba(255,183,3,0.25)] shadow-[0_0_50px_rgba(255,255,255,0.15)_inset] backdrop-blur-[32px] p-8">
+        <div className="w-full max-w-[487px] rounded-[25px] border-[6px] border-white/10 bg-gradient-to-br from-[rgba(0,0,0,0.88)] via-[rgba(138,56,245,0.25)] to-[rgba(255,183,3,0.25)] shadow-[0_0_50px_rgba(255,255,255,0.15)_inset] backdrop-blur-[32px] p-8">
           <div className="flex flex-col gap-[30px]">
             
             {/* Rating Section */}
@@ -81,7 +81,7 @@ export default function HowItWorks() {
         </div>
         
         {/* Right Side: Registrability Chances Meter */}
-        <div className="w-[300px] h-[200px] rounded-[20px] border-[6px] border-white/10 bg-gradient-to-br from-[rgba(0,0,0,0.88)] via-[rgba(138,56,245,0.25)] to-[rgba(255,183,3,0.25)] shadow-[0_0_50px_rgba(255,255,255,0.15)_inset] backdrop-blur-[32px] flex flex-col items-center justify-center p-6">
+        <div className="w-full max-w-[300px] h-[200px] rounded-[20px] border-[6px] border-white/10 bg-gradient-to-br from-[rgba(0,0,0,0.88)] via-[rgba(138,56,245,0.25)] to-[rgba(255,183,3,0.25)] shadow-[0_0_50px_rgba(255,255,255,0.15)_inset] backdrop-blur-[32px] flex flex-col items-center justify-center p-6">
           <h3 className="text-white font-nunito text-[18px] font-medium mb-6 text-center">
             Registrability Chances
           </h3>
@@ -132,7 +132,7 @@ export default function HowItWorks() {
       
       {/* New Two-Column Section with hiwleft.svg */}
       <div className="w-full max-w-7xl mx-auto mt-16">
-        <div className="grid grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Left Column */}
           <div className="flex items-center justify-center">
             <img 

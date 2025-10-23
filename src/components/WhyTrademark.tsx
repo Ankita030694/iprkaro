@@ -687,7 +687,7 @@ export default function WhyTrademark() {
       </div>
 
       {/* How It Works? */}
-      <div className="w-full relative z-10 px-8 md:px-20 lg:px-20 min-h-fit mt-30 mb-30" style={{scale:1.1}}>
+      <div className="w-full relative z-10 px-8 md:px-20 lg:px-20 min-h-fit mt-30 mb-30">
         <h2 className="text-white text-center font-nunito text-[28px] md:text-[45px] lg:text-[38px] font-medium leading-[32px] md:leading-[45px] lg:leading-[42px] w-full my-8 md:my-20 lg:my-16">
           How It Works
         </h2>

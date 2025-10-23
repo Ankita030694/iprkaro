@@ -4,7 +4,7 @@ import React, { useState, useEffect, Suspense } from 'react';
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
-import { useSearchParams } from 'next/navigation';
+import { useSearchParams, useRouter } from 'next/navigation';
 import { db } from '@/lib/firebase';
 import { collection, doc, getDoc } from 'firebase/firestore';
 
@@ -39,6 +39,7 @@ interface AnalysisData {
 
 function DashboardContent() {
   const searchParams = useSearchParams();
+  const router = useRouter();
   const [expandedPlan, setExpandedPlan] = useState<string | null>(null);
   const [registrabilityScore, setRegistrabilityScore] = useState(75);
   const [similarityScore, setSimilarityScore] = useState(50);
@@ -311,7 +312,7 @@ function DashboardContent() {
       }}>
         <div className="text-center">
           <i className="fas fa-spinner fa-spin text-white text-5xl mb-4"></i>
-          <p className="text-white font-nunito text-xl">Analyzing your trademark...</p>
+          <p className="text-white font-nunito text-2xl">Analyzing your trademark...</p>
         </div>
       </div>
     );
@@ -326,7 +327,7 @@ function DashboardContent() {
       }}>
         <div className="text-center max-w-md mx-auto px-4">
           <i className="fas fa-exclamation-triangle text-yellow-500 text-5xl mb-4"></i>
-          <h2 className="text-white font-nunito text-2xl mb-4">{error || 'Data not found'}</h2>
+          <h2 className="text-white font-nunito text-3xl mb-4">{error || 'Data not found'}</h2>
           <a href="/" className="bg-[#FFB703] text-black px-6 py-3 rounded-lg font-nunito font-semibold hover:bg-[#e6a602] transition-colors">
             Return to Home
           </a>
@@ -360,17 +361,17 @@ function DashboardContent() {
           {/* Metrics Heading - Desktop Only */}
           <div className="hidden md:block text-left mb-5">
            
-            <h1 className="text-white font-nunito text-lg md:text-2xl lg:text-3xl xl:text-2xl font-bold mb-1.5">
+            <h1 className="text-white font-nunito text-xl md:text-3xl lg:text-4xl xl:text-3xl font-bold mb-1.5">
               Your Trademark Health Score for "{analysisData.trademarkName}" - Class {analysisData.classNumber}
             </h1>
-            <p className="font-nunito text-base md:text-xl lg:text-2xl font-semibold" style={{ color: getHealthColor(analysisData.overallHealth) }}>
+            <p className="font-nunito text-lg md:text-2xl lg:text-3xl font-semibold" style={{ color: getHealthColor(analysisData.overallHealth) }}>
               {analysisData.overallHealth}
             </p>
           </div>
 
           {/* Mobile Heading */}
           <div className="block md:hidden text-center mb-5">
-            <h1 className="text-white font-nunito text-lg font-bold mb-1.5">
+            <h1 className="text-white font-nunito text-xl font-bold mb-1.5">
               Register Today and get your Trademark in <span style={{ color: '#FFB703' }}>9 months</span>
             </h1>
           </div>
@@ -385,7 +386,7 @@ function DashboardContent() {
             }}
           >
             {/* Asterisk in top right */}
-            <span className="absolute top-4 right-6 text-red-500 font-nunito text-xl font-bold">*</span>
+            <span className="absolute top-4 right-6 text-red-500 font-nunito text-2xl font-bold">*</span>
             {/* Two Column Layout */}
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-5 items-stretch">
               {/* First Container - 3/4 width */}
@@ -398,10 +399,10 @@ function DashboardContent() {
                     background: 'rgba(0, 0, 0, 0.26)'
                   }}
                 >
-                  <h3 className="text-white font-nunito text-base md:text-lg font-semibold">
+                  <h3 className="text-white font-nunito text-lg md:text-xl font-semibold">
                     Your Trademark Health Score
                   </h3>
-                  <span className="font-nunito text-base md:text-lg font-semibold" style={{ color: getHealthColor(analysisData.overallHealth) }}>
+                  <span className="font-nunito text-lg md:text-xl font-semibold" style={{ color: getHealthColor(analysisData.overallHealth) }}>
                     {analysisData.overallHealth}
                   </span>
                 </div>
@@ -410,7 +411,7 @@ function DashboardContent() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-5 flex-1 mt-2">
                   {/* Column 1 - Trademark Registrability */}
                   <div className="flex flex-col items-center h-full">
-                    <h4 className="text-white font-nunito text-sm md:text-base font-semibold mb-3">
+                    <h4 className="text-white font-nunito text-base md:text-lg font-semibold mb-3">
                       Trademark Registrability
                     </h4>
                     
@@ -488,8 +489,8 @@ function DashboardContent() {
                       
                       {/* Reasoning as bullet point */}
                       <div className="mb-2 flex items-start">
-                        <span className="text-[#00D9FF] mr-2 mt-0.5 flex-shrink-0 text-base xl:text-md">•</span>
-                        <p className="font-nunito text-sm leading-relaxed" style={{ 
+                        <span className="text-[#00D9FF] mr-2 mt-0.5 flex-shrink-0 text-lg xl:text-lg">•</span>
+                        <p className="font-nunito text-base leading-relaxed" style={{ 
                           background: 'linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 100%)',
                           WebkitBackgroundClip: 'text',
                           WebkitTextFillColor: 'transparent',
@@ -501,8 +502,8 @@ function DashboardContent() {
 
                       {/* Assessment text as bullet point */}
                       <div className="flex items-start">
-                        <span className="text-[#00D9FF] mr-2 mt-0.5 flex-shrink-0 text-base xl:text-sm">•</span>
-                        <p className="font-nunito text-sm leading-relaxed" style={{ 
+                        <span className="text-[#00D9FF] mr-2 mt-0.5 flex-shrink-0 text-lg xl:text-base">•</span>
+                        <p className="font-nunito text-base leading-relaxed" style={{ 
                           background: 'linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 100%)',
                           WebkitBackgroundClip: 'text',
                           WebkitTextFillColor: 'transparent',
@@ -516,7 +517,7 @@ function DashboardContent() {
 
                   {/* Column 2 - Similarity Rate */}
                   <div className="flex flex-col items-center h-full">
-                    <h4 className="text-white font-nunito text-sm md:text-base font-semibold mb-3">
+                    <h4 className="text-white font-nunito text-base md:text-lg font-semibold mb-3">
                       Similarity Rate
                     </h4>
                     
@@ -594,8 +595,8 @@ function DashboardContent() {
                       
                       {/* Reasoning as bullet point */}
                       <div className="mb-2 flex items-start">
-                        <span className="text-[#00D9FF] mr-2 mt-0.5 flex-shrink-0 text-base xl:text-md">•</span>
-                        <p className="font-nunito text-sm leading-relaxed" style={{ 
+                        <span className="text-[#00D9FF] mr-2 mt-0.5 flex-shrink-0 text-lg xl:text-lg">•</span>
+                        <p className="font-nunito text-base leading-relaxed" style={{ 
                           background: 'linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 100%)',
                           WebkitBackgroundClip: 'text',
                           WebkitTextFillColor: 'transparent',
@@ -607,8 +608,8 @@ function DashboardContent() {
 
                       {/* Assessment text as bullet point */}
                       <div className="flex items-start">
-                        <span className="text-[#00D9FF] mr-2 mt-0.5 flex-shrink-0 text-base xl:text-md">•</span>
-                        <p className="font-nunito text-sm leading-relaxed" style={{ 
+                        <span className="text-[#00D9FF] mr-2 mt-0.5 flex-shrink-0 text-lg xl:text-lg">•</span>
+                        <p className="font-nunito text-base leading-relaxed" style={{ 
                           background: 'linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 100%)',
                           WebkitBackgroundClip: 'text',
                           WebkitTextFillColor: 'transparent',
@@ -622,7 +623,7 @@ function DashboardContent() {
 
                   {/* Column 3 - Class Probability */}
                   <div className="flex flex-col items-center h-full">
-                    <h4 className="text-white font-nunito text-sm md:text-base font-semibold mb-3">
+                    <h4 className="text-white font-nunito text-base md:text-lg font-semibold mb-3">
                       Class Probability
                     </h4>
                     
@@ -700,8 +701,8 @@ function DashboardContent() {
                       
                       {/* Reasoning as bullet point */}
                       <div className="mb-2 flex items-start">
-                        <span className="text-[#00D9FF] mr-2 mt-0.5 flex-shrink-0 text-base xl:text-md">•</span>
-                        <p className="font-nunito text-sm xl:text-md leading-relaxed xl:leading-snug" style={{ 
+                        <span className="text-[#00D9FF] mr-2 mt-0.5 flex-shrink-0 text-lg xl:text-lg">•</span>
+                        <p className="font-nunito text-base xl:text-lg leading-relaxed xl:leading-snug" style={{ 
                           background: 'linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 100%)',
                           WebkitBackgroundClip: 'text',
                           WebkitTextFillColor: 'transparent',
@@ -713,8 +714,8 @@ function DashboardContent() {
 
                       {/* Assessment text as bullet point */}
                       <div className="flex items-start">
-                        <span className="text-[#00D9FF] mr-2 mt-0.5 flex-shrink-0 text-base xl:text-md">•</span>
-                        <p className="font-nunito text-sm xl:text-md leading-relaxed xl:leading-snug" style={{ 
+                        <span className="text-[#00D9FF] mr-2 mt-0.5 flex-shrink-0 text-lg xl:text-lg">•</span>
+                        <p className="font-nunito text-base xl:text-lg leading-relaxed xl:leading-snug" style={{ 
                           background: 'linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 100%)',
                           WebkitBackgroundClip: 'text',
                           WebkitTextFillColor: 'transparent',
@@ -738,7 +739,7 @@ function DashboardContent() {
                     background: 'rgba(0, 0, 0, 0.26)'
                   }}
                 >
-                  <h3 className="text-white font-nunito text-base md:text-lg xl:text-base font-semibold">
+                  <h3 className="text-white font-nunito text-lg md:text-xl xl:text-lg font-semibold">
                     Key Factors
                   </h3>
                 </div>
@@ -765,10 +766,10 @@ function DashboardContent() {
                     </div>
                     {/* Content */}
                     <div className="flex-1">
-                      <h4 className="text-white font-nunito text-xs font-semibold mb-0.5">
+                      <h4 className="text-white font-nunito text-sm font-semibold mb-0.5">
                         Brand Strength
                       </h4>
-                      <p className="font-nunito text-[11px] leading-snug" style={{ 
+                      <p className="font-nunito text-[12px] leading-snug" style={{ 
                         background: 'linear-gradient(90deg,rgb(255, 255, 255) 0%,rgb(255, 255, 255) 100%)',
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent',
@@ -797,10 +798,10 @@ function DashboardContent() {
                     </div>
                     {/* Content */}
                     <div className="flex-1">
-                        <h4 className="text-white font-nunito text-xs font-semibold mb-0.5">
+                        <h4 className="text-white font-nunito text-sm font-semibold mb-0.5">
                         Legal Risk
                       </h4>
-                      <p className="font-nunito text-[11px] leading-snug" style={{ 
+                      <p className="font-nunito text-[12px] leading-snug" style={{ 
                         background: 'linear-gradient(90deg,rgb(255, 255, 255) 0%,rgb(255, 255, 255) 100%)',
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent',
@@ -825,14 +826,14 @@ function DashboardContent() {
                   >
                     {/* Icon */}
                     <div className="flex-shrink-0">
-                      <span className="text-white text-base xl:text-md" style={{ fontWeight: 300 }}>₹</span>
+                      <span className="text-white text-lg xl:text-lg" style={{ fontWeight: 300 }}>₹</span>
                     </div>
                     {/* Content */}
                     <div className="flex-1">
-                      <h4 className="text-white font-nunito text-xs font-semibold mb-0.5">
+                      <h4 className="text-white font-nunito text-sm font-semibold mb-0.5">
                         Market Position
                       </h4>
-                      <p className="font-nunito text-[11px] leading-snug" style={{ 
+                      <p className="font-nunito text-[12px] leading-snug" style={{ 
                         background: 'linear-gradient(90deg,rgb(255, 255, 255) 0%,rgb(255, 255, 255) 100%)',
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent',
@@ -862,10 +863,10 @@ function DashboardContent() {
                     </div>
                     {/* Content */}
                     <div className="flex-1">
-                      <h4 className="text-white font-nunito text-xs font-semibold mb-0.5">
+                      <h4 className="text-white font-nunito text-sm font-semibold mb-0.5">
                         Registration Speed
                       </h4>
-                      <p className="font-nunito text-[11px] leading-snug" style={{ 
+                      <p className="font-nunito text-[12px] leading-snug" style={{ 
                         background: 'linear-gradient(90deg,rgb(255, 255, 255) 0%,rgb(255, 255, 255) 100%)',
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent',
@@ -890,7 +891,7 @@ function DashboardContent() {
               background: 'rgba(0, 0, 0, 0.44)'
             }}
           >
-            <h3 className="text-white font-nunito text-sm font-semibold text-left">
+            <h3 className="text-white font-nunito text-base font-semibold text-left">
               Your Trademark Health Score
             </h3>
           </div>
@@ -908,7 +909,7 @@ function DashboardContent() {
             <span className="absolute top-3 right-4 text-red-500 font-nunito text-lg font-bold">*</span>
             {/* Mobile: Trademark Registrability */}
             <div className="space-y-3">
-              <h4 className="text-white font-nunito text-sm font-semibold text-center">
+              <h4 className="text-white font-nunito text-base font-semibold text-center">
                 Trademark Registrability
               </h4>
               <div className="grid grid-cols-2 gap-3">
@@ -975,7 +976,7 @@ function DashboardContent() {
 
             {/* Mobile: Similarity Rate */}
             <div className="space-y-3">
-              <h4 className="text-white font-nunito text-sm font-semibold text-center">
+              <h4 className="text-white font-nunito text-base font-semibold text-center">
                 Similarity Rate
               </h4>
               <div className="grid grid-cols-2 gap-3">
@@ -1042,7 +1043,7 @@ function DashboardContent() {
 
             {/* Mobile: Class Probability */}
             <div className="space-y-3">
-              <h4 className="text-white font-nunito text-sm font-semibold text-center">
+              <h4 className="text-white font-nunito text-base font-semibold text-center">
                 Class Probability
               </h4>
               <div className="grid grid-cols-2 gap-3">
@@ -1120,7 +1121,7 @@ function DashboardContent() {
               background: 'rgba(0, 0, 0, 0.44)'
             }}
           >
-            <h3 className="text-white font-nunito text-sm font-semibold text-left">
+            <h3 className="text-white font-nunito text-base font-semibold text-left">
               Key Factors
             </h3>
           </div>
@@ -1148,7 +1149,7 @@ function DashboardContent() {
                 </div>
                 <div className="flex-1">
                   <h5 className="text-white font-nunito text-[10px] font-semibold mb-0.5">Brand Strength</h5>
-                  <p className="font-nunito text-[9px] leading-tight" style={{ background: 'linear-gradient(90deg,rgb(255, 255, 255) 0%,rgb(255, 255, 255) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+                  <p className="font-nunito text-[11px] leading-tight" style={{ background: 'linear-gradient(90deg,rgb(255, 255, 255) 0%,rgb(255, 255, 255) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
                     {analysisData.keyFactors.brandStrength}
                   </p>
                 </div>
@@ -1215,7 +1216,7 @@ function DashboardContent() {
         </div>
 
         {/* Top Heading */}
-      <h1 className="hidden md:block text-white font-nunito text-lg md:text-2xl lg:text-3xl xl:text-2xl font-bold text-center mb-10">
+      <h1 className="hidden md:block text-white font-nunito text-xl md:text-3xl lg:text-4xl xl:text-3xl font-bold text-center mb-10">
           Register Today and get your Trademark in <span style={{ color: '#FFB703' }}>9 months</span>
         </h1>
 
@@ -1303,7 +1304,7 @@ function DashboardContent() {
 
             {/* Why Trademark with IPR Karo Section */}
             <div className="space-y-5">
-              <h3 className="text-white font-nunito text-base md:text-xl font-medium text-center md:text-left">
+              <h3 className="text-white font-nunito text-lg md:text-2xl font-medium text-center md:text-left">
                 Why Trademark with IPRKaro ?
               </h3>
 
@@ -1351,7 +1352,7 @@ function DashboardContent() {
                       >
                         {mobileCardIcons[feature.icon]}
                       </div>
-                      <span className="text-white font-nunito text-xs lg:text-sm font-medium">
+                      <span className="text-white font-nunito text-sm lg:text-base font-medium">
                         {feature.text}
                       </span>
                     </div>
@@ -1396,7 +1397,7 @@ function DashboardContent() {
                 <div className="w-full md:flex-1 space-y-6">
                   {/* Heading */}
                   <div className="text-center md:text-left">
-                    <h3 className="text-white font-nunito text-sm md:text-base lg:text-xl font-medium">
+                    <h3 className="text-white font-nunito text-base md:text-lg lg:text-2xl font-medium">
                       Get a Guaranteed Trademark on<span className="text-red-500">*</span>
                     </h3>
                   </div>
@@ -1411,10 +1412,10 @@ function DashboardContent() {
                       }}
                     >
                       <div className="flex items-center justify-between px-4 md:px-8 w-full">
-                        <div className="text-white font-nunito text-xs md:text-sm font-medium">
+                        <div className="text-white font-nunito text-sm md:text-base font-medium">
                           Filing Date
                         </div>
-                        <div className="text-white font-nunito text-[10px] md:text-xs opacity-90">
+                        <div className="text-white font-nunito text-xs md:text-sm opacity-90">
                           {getFilingDate()}
                         </div>
                       </div>
@@ -1428,10 +1429,10 @@ function DashboardContent() {
                       }}
                     >
                       <div className="flex items-center justify-between px-4 md:px-8 w-full">
-                        <div className="text-white font-nunito text-xs md:text-sm font-medium">
+                        <div className="text-white font-nunito text-sm md:text-base font-medium">
                           Trademark Estimated Date
                         </div>
-                        <div className="text-white font-nunito text-[10px] md:text-xs opacity-90">
+                        <div className="text-white font-nunito text-xs md:text-sm opacity-90">
                           {getEstimatedDate()}
                         </div>
                       </div>
@@ -1443,7 +1444,7 @@ function DashboardContent() {
 
             {/* Trademark Requirements Section */}
             <div className="space-y-5">
-              <h3 className="text-white font-nunito text-base md:text-xl font-medium text-center md:text-left">
+              <h3 className="text-white font-nunito text-lg md:text-2xl font-medium text-center md:text-left">
                 Trademark Requirements
               </h3>
 
@@ -1500,7 +1501,7 @@ function DashboardContent() {
 
             {/* Guidelines Section */}
             <div className="space-y-5">
-              <h3 className="text-white font-nunito text-base md:text-xl font-medium text-center md:text-left">
+              <h3 className="text-white font-nunito text-lg md:text-2xl font-medium text-center md:text-left">
                 We work with the Guidelines of
               </h3>
 
@@ -1510,9 +1511,9 @@ function DashboardContent() {
                   <Image
                     src="/clientlogos/white9.png"
                     alt="Service 1"
-                    className="w-full h-auto object-contain max-w-[80px]"
-                    width={80}
-                    height={60}
+                    className="w-full h-auto object-contain max-w-[120px]"
+                    width={120}
+                    height={90}
                   />
                 </div>
 
@@ -1520,9 +1521,9 @@ function DashboardContent() {
                   <Image
                     src="/clientlogos/white10.png"
                     alt="Service 2"
-                    className="w-full h-auto object-contain max-w-[80px]"
-                    width={80}
-                    height={60}
+                    className="w-full h-auto object-contain max-w-[120px]"
+                    width={120}
+                    height={90}
                   />
                 </div>
 
@@ -1530,9 +1531,9 @@ function DashboardContent() {
                   <Image
                     src="/clientlogos/white11.png"
                     alt="Service 3"
-                    className="w-full h-auto object-contain max-w-[80px]"
-                    width={80}
-                    height={60}
+                    className="w-full h-auto object-contain max-w-[120px]"
+                    width={120}
+                    height={90}
                   />
                 </div>
 
@@ -1540,9 +1541,9 @@ function DashboardContent() {
                   <Image
                     src="/clientlogos/white12.png"
                     alt="Service 4"
-                    className="w-full h-auto object-contain max-w-[80px]"
-                    width={80}
-                    height={60}
+                    className="w-full h-auto object-contain max-w-[120px]"
+                    width={120}
+                    height={90}
                   />
                 </div>
               </div>
@@ -1555,13 +1556,13 @@ function DashboardContent() {
                     background: 'transparent',
                     border: '1px solid rgba(255, 255, 255, 0.2)',
                     borderRadius: '16px',
-                    width: '112px',
-                    height: '112px',
-                    minWidth: '96px',
-                    minHeight: '96px'
+                    width: '140px',
+                    height: '140px',
+                    minWidth: '120px',
+                    minHeight: '120px'
                   }}
                 >
-                  <Image src="/serv1.svg" alt="Service 1" className="w-11 h-11 md:w-13 md:h-13" width={52} height={52} />
+                  <Image src="/serv1.svg" alt="Service 1" className="w-14 h-14 md:w-16 md:h-16" width={64} height={64} />
                 </div>
 
                 <div
@@ -1570,13 +1571,13 @@ function DashboardContent() {
                     background: 'transparent',
                     border: '1px solid rgba(255, 255, 255, 0.2)',
                     borderRadius: '16px',
-                    width: '112px',
-                    height: '112px',
-                    minWidth: '96px',
-                    minHeight: '96px'
+                    width: '140px',
+                    height: '140px',
+                    minWidth: '120px',
+                    minHeight: '120px'
                   }}
                 >
-                  <Image src="/serv2.svg" alt="Service 2" className="w-11 h-11 md:w-13 md:h-13" width={52} height={52} />
+                  <Image src="/serv2.svg" alt="Service 2" className="w-14 h-14 md:w-16 md:h-16" width={64} height={64} />
                 </div>
 
                 <div
@@ -1585,13 +1586,13 @@ function DashboardContent() {
                     background: 'transparent',
                     border: '1px solid rgba(255, 255, 255, 0.2)',
                     borderRadius: '16px',
-                    width: '112px',
-                    height: '112px',
-                    minWidth: '96px',
-                    minHeight: '96px'
+                    width: '140px',
+                    height: '140px',
+                    minWidth: '120px',
+                    minHeight: '120px'
                   }}
                 >
-                  <Image src="/serv3.svg" alt="Service 3" className="w-11 h-11 md:w-13 md:h-13" width={52} height={52} />
+                  <Image src="/serv3.svg" alt="Service 3" className="w-14 h-14 md:w-16 md:h-16" width={64} height={64} />
                 </div>
 
                 <div
@@ -1600,13 +1601,13 @@ function DashboardContent() {
                     background: 'transparent',
                     border: '1px solid rgba(255, 255, 255, 0.2)',
                     borderRadius: '16px',
-                    width: '112px',
-                    height: '112px',
-                    minWidth: '96px',
-                    minHeight: '96px'
+                    width: '140px',
+                    height: '140px',
+                    minWidth: '120px',
+                    minHeight: '120px'
                   }}
                 >
-                  <Image src="/serv4.svg" alt="Service 4" className="w-11 h-11 md:w-13 md:h-13" width={52} height={52} />
+                  <Image src="/serv4.svg" alt="Service 4" className="w-14 h-14 md:w-16 md:h-16" width={64} height={64} />
                 </div>
               </div>
             </div>
@@ -1630,7 +1631,7 @@ function DashboardContent() {
                   background: 'rgba(0, 0, 0, 0.26)'
                 }}
               >
-                <h3 className="text-white font-nunito font-medium text-base md:text-2xl leading-[50px]">
+                <h3 className="text-white font-nunito font-medium text-lg md:text-3xl leading-[50px]">
                   Get Your Trademark Registered
                 </h3>
               </div>
@@ -1642,31 +1643,32 @@ function DashboardContent() {
                   background: 'transparent'
                 }}
               >
-                <h4 className="text-white font-nunito font-medium text-base md:text-2xl leading-[16px] mb-5 text-center">
+                <h4 className="text-white font-nunito font-medium text-lg md:text-3xl leading-[16px] mb-5 text-center">
                   Price Breakdown
                 </h4>
 
                 <div className="space-y-2.5">
                   <div className="flex justify-between items-center py-1.5 border-b border-gray-400">
-                    <span className="text-white font-nunito text-sm md:text-xl opacity-90">Government Fee</span>
-                    <span className="text-white font-nunito text-sm md:text-xl">₹4,500</span>
+                    <span className="text-white font-nunito text-base md:text-2xl opacity-90">Government Fee</span>
+                    <span className="text-white font-nunito text-base md:text-2xl">₹4,500</span>
                   </div>
                   <div className="flex justify-between items-center py-1.5 border-b border-gray-400">
-                    <span className="text-white font-nunito text-sm md:text-xl opacity-90">Professional Fee</span>
-                    <span className="text-white font-nunito text-sm md:text-xl">₹2,500</span>
+                    <span className="text-white font-nunito text-base md:text-2xl opacity-90">Professional Fee</span>
+                    <span className="text-white font-nunito text-base md:text-2xl">₹2,500</span>
                   </div>
                   <div className="flex justify-between items-center py-1.5 border-b border-gray-400">
-                    <span className="text-white font-nunito text-sm md:text-xl opacity-90">GST (18%)</span>
-                    <span className="text-white font-nunito text-sm md:text-xl">₹1,260</span>
+                    <span className="text-white font-nunito text-base md:text-2xl opacity-90">GST (18%)</span>
+                    <span className="text-white font-nunito text-base md:text-2xl">₹1,260</span>
                   </div>
                   <div className="flex justify-between items-center py-2.5 font-semibold">
-                    <span className="text-white font-nunito text-base md:text-xl">Total</span>
-                    <span className="text-white font-nunito text-base md:text-xl">₹8,260</span>
+                    <span className="text-white font-nunito text-lg md:text-2xl">Total</span>
+                    <span className="text-white font-nunito text-lg md:text-2xl">₹8,260</span>
                   </div>
 
                   {/* Start Registration Button */}
                   <button
-                    className="w-full py-2.5 px-3 rounded-lg font-nunito font-semibold text-base md:text-2xl transition-all duration-300 hover:scale-105 mt-3"
+                    onClick={() => router.push('/thank-you')}
+                    className="w-full py-2.5 px-3 rounded-lg font-nunito font-semibold text-lg md:text-3xl transition-all duration-300 hover:scale-105 mt-3"
                     style={{
                       background: '#FFB703',
                       boxShadow: '0 0 16px 0 #000 inset',
@@ -1680,7 +1682,7 @@ function DashboardContent() {
 
               {/* Our Plans Section */}
               <div className="flex-1 space-y-3">
-                <h4 className="text-white font-nunito font-medium text-base md:text-2xl leading-[20px] mb-5 text-center">
+                <h4 className="text-white font-nunito font-medium text-lg md:text-3xl leading-[20px] mb-5 text-center">
                   Our Plans
                 </h4>
 
@@ -1689,14 +1691,14 @@ function DashboardContent() {
                     {/* Plan Dropdown Header */}
                     <div
                       onClick={() => togglePlan(plan.id)}
-                      className="w-full p-2.5 rounded-lg text-white font-nunito font-medium text-sm md:text-base border-2 border-white/20 cursor-pointer hover:border-white/40 transition-all duration-300 flex items-center justify-between"
+                      className="w-full p-2.5 rounded-lg text-white font-nunito font-medium text-base md:text-lg border-2 border-white/20 cursor-pointer hover:border-white/40 transition-all duration-300 flex items-center justify-between"
                       style={{
                         background: 'rgba(255, 255, 255, 0.05)',
                         backdropFilter: 'blur(8px)',
                         WebkitBackdropFilter: 'blur(8px)'
                       }}
                     >
-                      <span className="text-xs md:text-lg">{plan.name} - {plan.price}</span>
+                      <span className="text-sm md:text-xl">{plan.name} - {plan.price}</span>
                       <FontAwesomeIcon
                         icon={faChevronDown}
                         className={`w-3 h-3 transition-transform duration-300 ${
@@ -1723,14 +1725,14 @@ function DashboardContent() {
                       >
                         {/* Plan Header */}
                         <div className="text-center mb-5">
-                          <h3 className="text-white font-nunito text-base md:text-2xl font-semibold mb-1.5">
+                          <h3 className="text-white font-nunito text-lg md:text-3xl font-semibold mb-1.5">
                             {plan.name}
                           </h3>
                           <div className="flex items-center justify-center gap-3 mb-3">
-                            <span className="text-white font-nunito text-xs md:text-lg opacity-80">{plan.description}</span>
+                            <span className="text-white font-nunito text-sm md:text-xl opacity-80">{plan.description}</span>
                           </div>
                           <div className="text-right">
-                            <span className="text-white font-nunito font-bold text-base md:text-2xl">
+                            <span className="text-white font-nunito font-bold text-lg md:text-3xl">
                               {plan.price}
                             </span>
                           </div>
@@ -1741,7 +1743,7 @@ function DashboardContent() {
                           {plan.features.map((feature, index) => (
                             <div key={index} className="flex items-start gap-2.5">
                               <i className="fas fa-check text-green-400 mt-0.5 flex-shrink-0 text-xs"></i>
-                              <span className="text-white font-nunito text-xs md:text-lg leading-relaxed">
+                              <span className="text-white font-nunito text-sm md:text-xl leading-relaxed">
                                 {feature}
                               </span>
                             </div>
@@ -1750,7 +1752,8 @@ function DashboardContent() {
 
                         {/* Action Button */}
                         <button
-                          className="w-full py-2.5 px-3 rounded-lg font-nunito font-semibold text-xs md:text-2xl transition-all duration-300 hover:scale-105"
+                          onClick={() => router.push('/thank-you')}
+                          className="w-full py-2.5 px-3 rounded-lg font-nunito font-semibold text-sm md:text-3xl transition-all duration-300 hover:scale-105"
                           style={{
                             background: '#1345C3',
                             boxShadow: '0 0 16px 0 #000 inset',
@@ -1790,7 +1793,7 @@ function DashboardContent() {
             {/* Left Section - Questions */}
             <div className="space-y-6 flex flex-col justify-start">
               <div className="space-y-4">
-                <h2 className="text-white text-left font-nunito text-lg md:text-2xl font-medium leading-tight w-full">
+                <h2 className="text-white text-left font-nunito text-xl md:text-3xl font-medium leading-tight w-full">
                   Have Question?
                   <br />
                   <span style={{ color: '#FFB703' }}>
@@ -1798,7 +1801,7 @@ function DashboardContent() {
                   </span>
                 </h2>
 
-                <p className="text-white font-nunito text-xs md:text-sm font-medium">
+                <p className="text-white font-nunito text-sm md:text-base font-medium">
                   Still have questions? <span style={{ color: '#FFB703' }} className="font-medium">Contact us</span> anytime.
                 </p>
               </div>
@@ -1811,7 +1814,7 @@ function DashboardContent() {
                     value={aiQuestion}
                     onChange={(e) => setAiQuestion(e.target.value)}
                     placeholder="Smart AI, Ask me Anything...."
-                    className="bg-transparent text-white placeholder-white outline-none text-sm w-full"
+                    className="bg-transparent text-white placeholder-white outline-none text-base w-full"
                   />
                   <button
                     type="submit"
@@ -1829,16 +1832,16 @@ function DashboardContent() {
               {searchResult && (
                 <div key={searchResult.question} className="p-4 rounded-lg max-w-lg animate-fade-in-up" style={{background: 'linear-gradient(140deg, rgba(12, 0, 43, 0.10) 6.89%, rgba(255, 183, 3, 0.10) 101.84%)',boxShadow: '2.88px 2.88px 18.144px 0 rgba(0, 0, 0, 0.15), 0 0 14.4px 0.72px rgba(255, 255, 255, 0.10) inset',backdropFilter: 'blur(87.876px)'}}>
                   <div className="flex justify-between items-start mb-2">
-                    <h4 className="text-white font-nunito text-sm md:text-base font-semibold leading-snug" style={{ color: '#FFB703' }}>{searchResult.question}</h4>
+                    <h4 className="text-white font-nunito text-base md:text-lg font-semibold leading-snug" style={{ color: '#FFB703' }}>{searchResult.question}</h4>
                     <button onClick={() => setSearchResult(null)} className="text-white hover:text-gray-300 transition-colors ml-2 flex-shrink-0"><FontAwesomeIcon icon={faChevronDown} className="w-3 h-3 rotate-180" /></button>
                   </div>
-                  <p className="text-white font-nunito text-xs md:text-sm font-medium leading-relaxed">{searchResult.answer}</p>
+                  <p className="text-white font-nunito text-sm md:text-base font-medium leading-relaxed">{searchResult.answer}</p>
                 </div>
               )}
               {showNoMatch && (
                 <div className="p-4 rounded-lg max-w-lg animate-fade-in-up" style={{background: 'linear-gradient(140deg, rgba(12, 0, 43, 0.10) 6.89%, rgba(255, 183, 3, 0.10) 101.84%)',boxShadow: '2.88px 2.88px 18.144px 0 rgba(0, 0, 0, 0.15), 0 0 14.4px 0.72px rgba(255, 255, 255, 0.10) inset',backdropFilter: 'blur(87.876px)'}}>
                   <div className="flex justify-between items-start">
-                    <p className="text-white font-nunito text-xs md:text-sm font-medium leading-relaxed">We're experiencing high traffic at the moment. Please try your search again in a few moments, or browse our FAQ section for answers.</p>
+                    <p className="text-white font-nunito text-sm md:text-base font-medium leading-relaxed">We're experiencing high traffic at the moment. Please try your search again in a few moments, or browse our FAQ section for answers.</p>
                     <button onClick={() => setShowNoMatch(false)} className="text-white hover:text-gray-300 transition-colors ml-2 flex-shrink-0"><FontAwesomeIcon icon={faChevronDown} className="w-3 h-3 rotate-180" /></button>
                   </div>
                 </div>
@@ -1868,7 +1871,7 @@ function DashboardContent() {
                   >
 
                     <div className="flex justify-between items-center mb-2">
-                      <h3 className="text-white font-nunito text-xs md:text-sm lg:text-base font-semibold pr-3 leading-snug">
+                      <h3 className="text-white font-nunito text-sm md:text-base lg:text-lg font-semibold pr-3 leading-snug">
                         {faq.question}
                       </h3>
                       <FontAwesomeIcon
@@ -1886,7 +1889,7 @@ function DashboardContent() {
                       }`}
                     >
                       <div className="mt-3 pt-3 border-t border-black/20 transform transition-all duration-500 ease-in-out">
-                        <p className="text-white font-nunito text-[10px] md:text-xs font-medium leading-relaxed">
+                        <p className="text-white font-nunito text-xs md:text-sm font-medium leading-relaxed">
                           {faq.answer}
                         </p>
                       </div>
@@ -1911,7 +1914,7 @@ function DashboardContent() {
           <div className="flex items-center justify-between gap-3">
             {/* Left Side - Pay Now Text */}
             <div className="flex-1">
-              <span className="text-white font-nunito font-semibold text-base">
+              <span className="text-white font-nunito font-semibold text-lg">
                 Pay Now ₹2,999
               </span>
             </div>
@@ -1919,8 +1922,8 @@ function DashboardContent() {
             {/* Right Side - Start Registration Button */}
             <div className="flex-1 flex justify-end">
               <button
-                onClick={() => setShowMobilePopup(true)}
-                className="px-4 py-2 font-nunito font-semibold text-base text-[#0C002B] transition-all duration-300 hover:scale-105"
+                onClick={() => router.push('/thank-you')}
+                className="px-4 py-2 font-nunito font-semibold text-lg text-[#0C002B] transition-all duration-300 hover:scale-105"
                 style={{
                   borderRadius: '6px',
                   background: '#FFB703'
@@ -1976,7 +1979,7 @@ function DashboardContent() {
                   }}
                 >
                   <h3
-                    className="text-white font-nunito font-medium text-sm"
+                    className="text-white font-nunito font-medium text-base"
                   >
                     Get Your Trademark Registered
                   </h3>
@@ -1990,7 +1993,7 @@ function DashboardContent() {
                   }}
                 >
                   <h4
-                    className="text-white font-nunito font-medium text-xs mb-2 text-center"
+                    className="text-white font-nunito font-medium text-sm mb-2 text-center"
                   >
                     Price Breakdown
                   </h4>
@@ -2009,13 +2012,14 @@ function DashboardContent() {
                       <span className="text-white font-nunito text-[10px]">₹1,260</span>
                     </div>
                     <div className="flex justify-between items-center py-1.5 font-semibold">
-                      <span className="text-white font-nunito text-xs">Total</span>
-                      <span className="text-white font-nunito text-xs">₹8,260</span>
+                      <span className="text-white font-nunito text-sm">Total</span>
+                      <span className="text-white font-nunito text-sm">₹8,260</span>
                     </div>
 
                     {/* Start Registration Button */}
                     <button
-                      className="w-full py-2 px-3 rounded-lg font-nunito font-semibold text-xs transition-all duration-300 hover:scale-105 mt-2"
+                      onClick={() => router.push('/thank-you')}
+                      className="w-full py-2 px-3 rounded-lg font-nunito font-semibold text-sm transition-all duration-300 hover:scale-105 mt-2"
                       style={{
                         background: '#FFB703',
                         boxShadow: '0 0 20px 0 #000 inset',
@@ -2030,7 +2034,7 @@ function DashboardContent() {
                 {/* Our Plans Section - Expandable Dropdowns */}
                 <div className="flex-1 space-y-2">
                   <h4
-                    className="text-white font-nunito font-medium text-xs mb-2 text-center"
+                    className="text-white font-nunito font-medium text-sm mb-2 text-center"
                   >
                     Our Plans
                   </h4>
@@ -2104,6 +2108,7 @@ function DashboardContent() {
 
                           {/* Action Button */}
                           <button
+                            onClick={() => router.push('/thank-you')}
                             className="w-full py-1.5 px-3 rounded-lg font-nunito font-semibold text-[10px] transition-all duration-300 hover:scale-105"
                             style={{
                               background: '#1345C3',

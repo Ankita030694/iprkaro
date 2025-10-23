@@ -23,7 +23,7 @@ export default function Navbar() {
 
   const trademarkServices = [
     { name: 'Trademark Search & Availability Check', href: '/services/trademark/search' },
-    { name: 'Trademark Filing / Registration', href: '/services/trademark-registration' },
+
     { name: 'Trademark Renewal & Restoration', href: '/services/trademark/renewal' },
     { name: 'Trademark Opposition & Counter-Statement', href: '/services/trademark/opposition' },
     { name: 'Trademark Objection Reply Drafting', href: '/services/trademark/objection' },
@@ -33,7 +33,7 @@ export default function Navbar() {
   ];
 
   const copyrightServices = [
-    { name: 'Copyright Registration (Artistic, Literary, Musical, Software, Film)', href: '/services/copyright-protection' },
+
     { name: 'Copyright Transfer / Assignment Agreements', href: '/services/copyright/transfer' },
     { name: 'Infringement Notice Drafting & Legal Action', href: '/services/copyright/infringement' },
     { name: 'Software Code Copyright & Protection', href: '/services/copyright/software' },
@@ -41,7 +41,7 @@ export default function Navbar() {
   ];
 
   const patentServices = [
-    { name: 'Patent Search & Novelty Check (Prior Art Search)', href: '/services/patent-services' },
+    
     { name: 'Provisional & Complete Patent Drafting and Filing', href: '/services/patent/filing' },
     { name: 'Patent Opposition & Revocation', href: '/services/patent/opposition' },
     { name: 'Patent Renewal & Maintenance', href: '/services/patent/renewal' },
