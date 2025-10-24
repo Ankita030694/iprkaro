@@ -22,8 +22,8 @@ export default function ClientLogoSlider({ className = '', useWhiteLogos = false
 
 
   const logoCount = useWhiteLogos ? 8 : 4;
-  const logoWidth = 128;
-  const gapSize = 16; // Gap between logos
+  const logoWidth = 80; // Reduced from 128 to 80
+  const gapSize = 12; // Reduced gap between logos
   // Calculate the exact distance to move one complete set of logos
   // Subtract one gap to account for seamless looping (last logo's margin connects to first logo)
   const totalDistance = logoCount * (logoWidth + gapSize) - gapSize;
@@ -66,7 +66,7 @@ export default function ClientLogoSlider({ className = '', useWhiteLogos = false
               return (
                 <motion.div
                   key={`${logo}-${index}`}
-                  className="flex-shrink-0 h-16 w-32 flex items-center justify-center"
+                  className="flex-shrink-0 h-10 w-20 flex items-center justify-center"
                   whileHover={{ 
                     scale: 1.05,
                     y: -2
@@ -92,12 +92,12 @@ export default function ClientLogoSlider({ className = '', useWhiteLogos = false
                     style={{ 
                       filter: 'none',
                       backgroundColor: 'transparent',
-                      imageRendering: '-webkit-optimize-contrast',
+                      imageRendering: 'crisp-edges',
                       transform: 'translate3d(0, 0, 0)',
                       WebkitTransform: 'translate3d(0, 0, 0)',
                       backfaceVisibility: 'hidden',
                       WebkitBackfaceVisibility: 'hidden',
-                      WebkitFontSmoothing: 'subpixel-antialiased',
+                      WebkitFontSmoothing: 'antialiased',
                       perspective: 1000,
                       WebkitPerspective: 1000
                     }}

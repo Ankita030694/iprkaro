@@ -318,7 +318,7 @@ export default function AboutClient() {
         </div>
 
         {/* Desktop Layout - Keep original */}
-        <div className="hidden lg:flex items-center justify-center gap-4 -mt-50">
+        <div className="hidden lg:flex items-center justify-center gap-4 -mt-40">
           {/* Vertical IPR Karo Text - Flipped */}
           <div className="flex flex-col items-center">
             <div 
@@ -392,16 +392,16 @@ export default function AboutClient() {
         {/* Desktop: Client Logos Grid - 2x5 */}
         <div className="hidden lg:block">
         <div className="flex justify-center">
-          <div className="grid grid-cols-5 gap-20 w-fit">
+          <div className="grid grid-cols-5 gap-12 w-fit">
             {[1, 2, 3, 4, 5, 6, 7, 8, 13, 14].map((logoNumber) => (
             <div
               key={logoNumber}
               className="flex items-center justify-center rounded-lg"
               style={{
                 display: 'flex',
-                width: '200px',
-                height: '200px',
-                padding: '0 25px',
+                width: '140px',
+                height: '140px',
+                padding: '0 20px',
                 justifyContent: 'center',
                 alignItems: 'center',
                 aspectRatio: '1/1',
@@ -413,9 +413,13 @@ export default function AboutClient() {
               <Image
                 src={`/clientlogos/white${logoNumber}.png`}
                 alt={`Client Logo ${logoNumber}`}
-                width={100}
-                height={100}
+                width={70}
+                height={70}
                 className="max-w-full h-auto object-contain opacity-90"
+                style={{
+                  imageRendering: 'crisp-edges',
+                  WebkitFontSmoothing: 'antialiased'
+                }}
               />
             </div>
           ))}
