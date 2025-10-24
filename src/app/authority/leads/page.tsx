@@ -87,6 +87,20 @@ export default function LeadsPage() {
     return interest;
   };
 
+  // Extract trademark name from message
+  const extractTrademarkName = (message: string) => {
+    if (!message) return null;
+    const match = message.match(/Trademark Search:\s*(.+?)(?:\n|$)/i);
+    return match ? match[1].trim() : null;
+  };
+
+  // Handle trademark name click to redirect to search results
+  const handleTrademarkClick = (trademarkName: string) => {
+    // Store the trademark name in sessionStorage for the search results page
+    sessionStorage.setItem('searchTrademarkName', trademarkName);
+    router.push('/authority/search-results');
+  };
+
   // Filter leads based on search, interest filter, and date range
   const filteredLeads = leads.filter(lead => {
     const matchesSearch = 
@@ -255,6 +269,9 @@ export default function LeadsPage() {
                       <i className="fas fa-tag mr-1.5 text-xs"></i>Interest
                     </th>
                     <th className="px-4 py-3 text-left text-gray-700 font-nunito font-semibold text-xs">
+                      <i className="fas fa-trademark mr-1.5 text-xs"></i>Trademark Name
+                    </th>
+                    <th className="px-4 py-3 text-left text-gray-700 font-nunito font-semibold text-xs">
                       <i className="fas fa-comment mr-1.5 text-xs"></i>Message
                     </th>
                   </tr>
@@ -283,6 +300,20 @@ export default function LeadsPage() {
                         <span className="inline-block px-2 py-0.5 rounded-full text-xs font-nunito bg-gray-100 text-gray-900 border border-gray-300">
                           {lead.interest}
                         </span>
+                      </td>
+                      <td className="px-4 py-3">
+                        {extractTrademarkName(lead.message) ? (
+                          <button
+                            onClick={() => handleTrademarkClick(extractTrademarkName(lead.message)!)}
+                            className="inline-block px-2 py-0.5 rounded-full text-xs font-nunito bg-blue-100 text-blue-900 border border-blue-300 hover:bg-blue-200 transition-colors cursor-pointer whitespace-nowrap"
+                            title={extractTrademarkName(lead.message) || undefined}
+                          >
+                            <i className="fas fa-trademark mr-1"></i>
+                            {extractTrademarkName(lead.message)}
+                          </button>
+                        ) : (
+                          <span className="text-gray-400 font-nunito text-xs">-</span>
+                        )}
                       </td>
                       <td className="px-4 py-3 text-gray-600 font-nunito text-xs max-w-xs truncate">
                         {lead.message || 'No message'}

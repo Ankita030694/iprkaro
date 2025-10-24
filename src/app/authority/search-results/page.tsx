@@ -57,6 +57,14 @@ export default function SearchResultsPage() {
       } else {
         setUser(currentUser);
         fetchSearchResults();
+        
+        // Check for trademark name from sessionStorage (from leads page)
+        const trademarkFromLeads = sessionStorage.getItem('searchTrademarkName');
+        if (trademarkFromLeads) {
+          setSearchTerm(trademarkFromLeads);
+          // Clear the sessionStorage after setting the search term
+          sessionStorage.removeItem('searchTrademarkName');
+        }
       }
     });
 
@@ -115,6 +123,13 @@ export default function SearchResultsPage() {
     if (score >= 80) return 'text-green-600';
     if (score >= 60) return 'text-yellow-600';
     return 'text-red-600';
+  };
+
+  const getSimilarityScoreColor = (score: number) => {
+    // For similarity scores, high values mean higher risk (existing similar trademarks)
+    if (score >= 80) return 'text-red-600';
+    if (score >= 60) return 'text-yellow-600';
+    return 'text-green-600';
   };
 
   // Get unique classes for filter
@@ -347,7 +362,7 @@ export default function SearchResultsPage() {
                           </div>
                           <div className="flex items-center justify-between">
                             <span className="text-xs text-gray-600 font-nunito">Similarity:</span>
-                            <span className={`text-xs font-bold font-nunito ${getScoreColor(result.similarityScore)}`}>
+                            <span className={`text-xs font-bold font-nunito ${getSimilarityScoreColor(result.similarityScore)}`}>
                               {result.similarityScore}/100
                             </span>
                           </div>
@@ -431,7 +446,7 @@ export default function SearchResultsPage() {
                 </div>
                 <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
                   <h4 className="text-xs font-bold text-gray-700 font-nunito mb-1">Similarity Score</h4>
-                  <p className={`text-2xl font-bold font-nunito ${getScoreColor(selectedResult.similarityScore)}`}>
+                  <p className={`text-2xl font-bold font-nunito ${getSimilarityScoreColor(selectedResult.similarityScore)}`}>
                     {selectedResult.similarityScore}/100
                   </p>
                   <p className="text-xs text-gray-600 font-nunito mt-2">{selectedResult.similarityReasoning}</p>
