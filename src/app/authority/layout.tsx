@@ -46,7 +46,7 @@ export default function AuthorityLayout({
     <div className="min-h-screen flex">
       {/* Sidebar for desktop */}
       <aside 
-        className="hidden lg:flex lg:flex-col lg:w-64 lg:fixed lg:inset-y-0"
+        className="hidden lg:flex lg:flex-col lg:w-48 lg:fixed lg:inset-y-0"
         style={{
           background: 'linear-gradient(to bottom, #0c002b, rgb(25, 10, 60))',
           borderRight: '1px solid rgba(255, 183, 3, 0.2)'
@@ -54,9 +54,9 @@ export default function AuthorityLayout({
       >
         <div className="flex flex-col flex-1 overflow-y-auto">
           {/* Logo */}
-          <div className="flex items-center justify-center py-6 px-4 border-b border-white/10">
-            <Link href="/" className="flex flex-col items-center gap-2">
-              <div className="w-20 h-20 relative">
+          <div className="flex items-center justify-center py-4 px-3 border-b border-white/10">
+            <Link href="/" className="flex flex-col items-center gap-1.5">
+              <div className="w-16 h-16 relative">
                 <Image
                   src="/logo/iprlogo.svg"
                   alt="IPR Karo Logo"
@@ -64,46 +64,46 @@ export default function AuthorityLayout({
                   className="object-contain"
                 />
               </div>
-              <span className="text-white font-nunito font-semibold text-sm">Authority Panel</span>
+              <span className="text-white font-nunito font-semibold text-xs">Authority Panel</span>
             </Link>
           </div>
 
           {/* Navigation */}
-          <nav className="flex-1 px-4 py-6 space-y-2">
+          <nav className="flex-1 px-3 py-4 space-y-1.5">
             {navItems.map((item) => {
               const isActive = pathname === item.href;
               return (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-all font-nunito ${
+                  className={`flex items-center gap-2 px-3 py-2 rounded-lg transition-all font-nunito ${
                     isActive
                       ? 'bg-[#FFB703] text-[#0C002B] font-semibold'
                       : 'text-white/70 hover:bg-white/10 hover:text-white'
                   }`}
                 >
-                  <i className={`fas ${item.icon} text-lg`}></i>
-                  <span>{item.name}</span>
+                  <i className={`fas ${item.icon} text-sm`}></i>
+                  <span className="text-sm">{item.name}</span>
                 </Link>
               );
             })}
           </nav>
 
           {/* Bottom Section */}
-          <div className="p-4 border-t border-white/10 space-y-2">
+          <div className="p-3 border-t border-white/10 space-y-1.5">
             <Link
               href="/"
-              className="flex items-center gap-3 px-4 py-3 rounded-lg text-white/70 hover:bg-white/10 hover:text-white transition-all font-nunito"
+              className="flex items-center gap-2 px-3 py-2 rounded-lg text-white/70 hover:bg-white/10 hover:text-white transition-all font-nunito"
             >
-              <i className="fas fa-home text-lg"></i>
-              <span>Home</span>
+              <i className="fas fa-home text-sm"></i>
+              <span className="text-sm">Home</span>
             </Link>
             <button
               onClick={handleLogout}
-              className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-red-400 hover:bg-red-500/20 transition-all font-nunito"
+              className="w-full flex items-center gap-2 px-3 py-2 rounded-lg text-red-400 hover:bg-red-500/20 transition-all font-nunito"
             >
-              <i className="fas fa-sign-out-alt text-lg"></i>
-              <span>Logout</span>
+              <i className="fas fa-sign-out-alt text-sm"></i>
+              <span className="text-sm">Logout</span>
             </button>
           </div>
         </div>
@@ -196,7 +196,7 @@ export default function AuthorityLayout({
       </div>
 
       {/* Main content */}
-      <div className="flex-1 lg:pl-64">
+      <div className="flex-1 lg:pl-48">
         {/* Mobile header */}
         <div className="lg:hidden sticky top-0 z-40 flex items-center justify-between px-4 py-4" style={{ background: '#0c002b' }}>
           <button

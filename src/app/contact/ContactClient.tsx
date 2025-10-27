@@ -16,6 +16,7 @@ export default function ContactClient() {
     name: '',
     email: '',
     phone: '',
+    state: '',
     interest: '',
     message: ''
   });
@@ -102,7 +103,7 @@ export default function ContactClient() {
     }
   };
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
@@ -303,6 +304,66 @@ export default function ContactClient() {
                           className="w-full h-full px-3 sm:px-4 rounded-lg bg-transparent text-white placeholder-[rgba(255,255,255,0.6)] border-0 outline-0 font-nunito text-sm sm:text-base"
                           placeholder="Enter your phone number"
                         />
+                      </div>
+                    </div>
+
+                    {/* State Field */}
+                    <div className="space-y-1 sm:space-y-1.5">
+                      <label className="block text-white font-nunito text-base sm:text-lg font-normal">
+                        State
+                      </label>
+                      <div 
+                        className="h-10 sm:h-12 rounded-lg"
+                        style={{ background: 'rgba(255, 255, 255, 0.15)' }}
+                      >
+                        <select
+                          name="state"
+                          value={formData.state}
+                          onChange={handleInputChange}
+                          className="w-full h-full px-3 sm:px-4 rounded-lg bg-transparent text-white border-0 outline-0 font-nunito text-sm sm:text-base appearance-none cursor-pointer"
+                        >
+                          <option value="" className="bg-[#0C002B] text-white">Select State</option>
+                          
+                          {/* States */}
+                          <option value="Andhra Pradesh" className="bg-[#0C002B] text-white">Andhra Pradesh</option>
+                          <option value="Arunachal Pradesh" className="bg-[#0C002B] text-white">Arunachal Pradesh</option>
+                          <option value="Assam" className="bg-[#0C002B] text-white">Assam</option>
+                          <option value="Bihar" className="bg-[#0C002B] text-white">Bihar</option>
+                          <option value="Chhattisgarh" className="bg-[#0C002B] text-white">Chhattisgarh</option>
+                          <option value="Goa" className="bg-[#0C002B] text-white">Goa</option>
+                          <option value="Gujarat" className="bg-[#0C002B] text-white">Gujarat</option>
+                          <option value="Haryana" className="bg-[#0C002B] text-white">Haryana</option>
+                          <option value="Himachal Pradesh" className="bg-[#0C002B] text-white">Himachal Pradesh</option>
+                          <option value="Jharkhand" className="bg-[#0C002B] text-white">Jharkhand</option>
+                          <option value="Karnataka" className="bg-[#0C002B] text-white">Karnataka</option>
+                          <option value="Kerala" className="bg-[#0C002B] text-white">Kerala</option>
+                          <option value="Madhya Pradesh" className="bg-[#0C002B] text-white">Madhya Pradesh</option>
+                          <option value="Maharashtra" className="bg-[#0C002B] text-white">Maharashtra</option>
+                          <option value="Manipur" className="bg-[#0C002B] text-white">Manipur</option>
+                          <option value="Meghalaya" className="bg-[#0C002B] text-white">Meghalaya</option>
+                          <option value="Mizoram" className="bg-[#0C002B] text-white">Mizoram</option>
+                          <option value="Nagaland" className="bg-[#0C002B] text-white">Nagaland</option>
+                          <option value="Odisha" className="bg-[#0C002B] text-white">Odisha</option>
+                          <option value="Punjab" className="bg-[#0C002B] text-white">Punjab</option>
+                          <option value="Rajasthan" className="bg-[#0C002B] text-white">Rajasthan</option>
+                          <option value="Sikkim" className="bg-[#0C002B] text-white">Sikkim</option>
+                          <option value="Tamil Nadu" className="bg-[#0C002B] text-white">Tamil Nadu</option>
+                          <option value="Telangana" className="bg-[#0C002B] text-white">Telangana</option>
+                          <option value="Tripura" className="bg-[#0C002B] text-white">Tripura</option>
+                          <option value="Uttar Pradesh" className="bg-[#0C002B] text-white">Uttar Pradesh</option>
+                          <option value="Uttarakhand" className="bg-[#0C002B] text-white">Uttarakhand</option>
+                          <option value="West Bengal" className="bg-[#0C002B] text-white">West Bengal</option>
+                          
+                          {/* Union Territories */}
+                          <option value="Andaman and Nicobar Islands" className="bg-[#0C002B] text-white">Andaman and Nicobar Islands</option>
+                          <option value="Chandigarh" className="bg-[#0C002B] text-white">Chandigarh</option>
+                          <option value="Dadra and Nagar Haveli and Daman and Diu" className="bg-[#0C002B] text-white">Dadra and Nagar Haveli and Daman and Diu</option>
+                          <option value="Delhi" className="bg-[#0C002B] text-white">Delhi</option>
+                          <option value="Jammu and Kashmir" className="bg-[#0C002B] text-white">Jammu and Kashmir</option>
+                          <option value="Ladakh" className="bg-[#0C002B] text-white">Ladakh</option>
+                          <option value="Lakshadweep" className="bg-[#0C002B] text-white">Lakshadweep</option>
+                          <option value="Puducherry" className="bg-[#0C002B] text-white">Puducherry</option>
+                        </select>
                       </div>
                     </div>
                   </div>

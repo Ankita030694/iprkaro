@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { onAuthStateChanged } from 'firebase/auth';
-import { collection, query, orderBy, getDocs, Timestamp } from 'firebase/firestore';
+import { collection, query, orderBy, getDocs, Timestamp, deleteDoc, doc } from 'firebase/firestore';
 import { auth, db } from '@/lib/firebase';
 
 interface Lead {
@@ -11,6 +11,7 @@ interface Lead {
   name: string;
   email: string;
   phone: string;
+  state: string;
   interest: string;
   message: string;
   createdAt: Timestamp;
@@ -25,6 +26,7 @@ export default function LeadsPage() {
   const [filterInterest, setFilterInterest] = useState('all');
   const [fromDate, setFromDate] = useState('');
   const [toDate, setToDate] = useState('');
+  const [deletingLeadId, setDeletingLeadId] = useState<string | null>(null);
 
   useEffect(() => {
     // Check authentication
@@ -66,17 +68,42 @@ export default function LeadsPage() {
     }
   };
 
+  const deleteLead = async (leadId: string) => {
+    if (!confirm('Are you sure you want to delete this lead? This action cannot be undone.')) {
+      return;
+    }
+
+    try {
+      setDeletingLeadId(leadId);
+      await deleteDoc(doc(db, 'leads', leadId));
+      
+      // Update the leads state by removing the deleted lead
+      setLeads(prevLeads => prevLeads.filter(lead => lead.id !== leadId));
+      
+      console.log('Lead deleted successfully');
+    } catch (error) {
+      console.error('Error deleting lead:', error);
+      alert('Failed to delete lead. Please try again.');
+    } finally {
+      setDeletingLeadId(null);
+    }
+  };
+
   const formatDate = (timestamp: Timestamp) => {
-    if (!timestamp) return 'N/A';
+    if (!timestamp) return { date: 'N/A', time: '' };
     const date = timestamp.toDate();
-    return new Intl.DateTimeFormat('en-IN', {
+    const dateStr = new Intl.DateTimeFormat('en-IN', {
       year: 'numeric',
       month: 'short',
       day: 'numeric',
+      timeZone: 'Asia/Kolkata'
+    }).format(date);
+    const timeStr = new Intl.DateTimeFormat('en-IN', {
       hour: '2-digit',
       minute: '2-digit',
       timeZone: 'Asia/Kolkata'
     }).format(date);
+    return { date: dateStr, time: timeStr };
   };
 
   // Normalize interest to handle variations like "Trademark Registration - Class 14"
@@ -106,7 +133,8 @@ export default function LeadsPage() {
     const matchesSearch = 
       lead.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       lead.email.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      lead.phone.includes(searchTerm);
+      lead.phone.includes(searchTerm) ||
+      (lead.state && lead.state.toLowerCase().includes(searchTerm.toLowerCase()));
     
     const matchesFilter = filterInterest === 'all' || normalizeInterest(lead.interest) === filterInterest;
     
@@ -187,7 +215,7 @@ export default function LeadsPage() {
                 type="text"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                placeholder="Search by name, email, or phone..."
+                placeholder="Search by name, email, phone, or state..."
                 className="w-full px-3 py-2 text-sm rounded-lg bg-gray-50 border border-gray-300 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent font-nunito transition-all"
               />
             </div>
@@ -253,26 +281,32 @@ export default function LeadsPage() {
               <table className="w-full">
                 <thead>
                   <tr className="border-b border-gray-200 bg-gray-50">
-                    <th className="px-4 py-3 text-left text-gray-700 font-nunito font-semibold text-xs">
-                      <i className="fas fa-calendar mr-1.5 text-xs"></i>Date
+                    <th className="px-2 py-2 text-left text-gray-700 font-nunito font-semibold text-xs">
+                      <i className="fas fa-calendar mr-1 text-xs"></i>Date
                     </th>
-                    <th className="px-4 py-3 text-left text-gray-700 font-nunito font-semibold text-xs">
-                      <i className="fas fa-user mr-1.5 text-xs"></i>Name
+                    <th className="px-2 py-2 text-left text-gray-700 font-nunito font-semibold text-xs">
+                      <i className="fas fa-user mr-1 text-xs"></i>Name
                     </th>
-                    <th className="px-4 py-3 text-left text-gray-700 font-nunito font-semibold text-xs">
-                      <i className="fas fa-phone mr-1.5 text-xs"></i>Phone
+                    <th className="px-2 py-2 text-left text-gray-700 font-nunito font-semibold text-xs">
+                      <i className="fas fa-phone mr-1 text-xs"></i>Phone
                     </th>
-                    <th className="px-4 py-3 text-left text-gray-700 font-nunito font-semibold text-xs">
-                      <i className="fas fa-envelope mr-1.5 text-xs"></i>Email
+                    <th className="px-2 py-2 text-left text-gray-700 font-nunito font-semibold text-xs">
+                      <i className="fas fa-envelope mr-1 text-xs"></i>Email
                     </th>
-                    <th className="px-4 py-3 text-left text-gray-700 font-nunito font-semibold text-xs">
-                      <i className="fas fa-tag mr-1.5 text-xs"></i>Interest
+                    <th className="px-2 py-2 text-left text-gray-700 font-nunito font-semibold text-xs">
+                      <i className="fas fa-map-marker-alt mr-1 text-xs"></i>State
                     </th>
-                    <th className="px-4 py-3 text-left text-gray-700 font-nunito font-semibold text-xs">
-                      <i className="fas fa-trademark mr-1.5 text-xs"></i>Trademark Name
+                    <th className="px-2 py-2 text-left text-gray-700 font-nunito font-semibold text-xs">
+                      <i className="fas fa-tag mr-1 text-xs"></i>Interest
                     </th>
-                    <th className="px-4 py-3 text-left text-gray-700 font-nunito font-semibold text-xs">
-                      <i className="fas fa-comment mr-1.5 text-xs"></i>Message
+                    <th className="px-2 py-2 text-left text-gray-700 font-nunito font-semibold text-xs">
+                      <i className="fas fa-trademark mr-1 text-xs"></i>Trademark Name
+                    </th>
+                    <th className="px-2 py-2 text-left text-gray-700 font-nunito font-semibold text-xs">
+                      <i className="fas fa-comment mr-1 text-xs"></i>Message
+                    </th>
+                    <th className="px-2 py-2 text-left text-gray-700 font-nunito font-semibold text-xs">
+                      <i className="fas fa-cog mr-1 text-xs"></i>Actions
                     </th>
                   </tr>
                 </thead>
@@ -284,28 +318,34 @@ export default function LeadsPage() {
                         index % 2 === 0 ? 'bg-gray-50/50' : ''
                       }`}
                     >
-                      <td className="px-4 py-3 text-gray-600 font-nunito text-xs whitespace-nowrap">
-                        {formatDate(lead.createdAt)}
+                      <td className="px-2 py-2 text-gray-600 font-nunito text-xs">
+                        <div className="leading-tight">
+                          <div>{formatDate(lead.createdAt).date}</div>
+                          <div className="text-gray-500">{formatDate(lead.createdAt).time}</div>
+                        </div>
                       </td>
-                      <td className="px-4 py-3 text-gray-900 font-nunito text-xs">
+                      <td className="px-2 py-2 text-gray-900 font-nunito text-xs">
                         {lead.name}
                       </td>
-                      <td className="px-4 py-3 text-gray-700 font-nunito text-xs">
+                      <td className="px-2 py-2 text-gray-700 font-nunito text-xs">
                         {lead.phone}
                       </td>
-                      <td className="px-4 py-3 text-gray-700 font-nunito text-xs">
+                      <td className="px-2 py-2 text-gray-700 font-nunito text-xs">
                         {lead.email}
                       </td>
-                      <td className="px-4 py-3">
-                        <span className="inline-block px-2 py-0.5 rounded-full text-xs font-nunito bg-gray-100 text-gray-900 border border-gray-300">
+                      <td className="px-2 py-2 text-gray-700 font-nunito text-xs">
+                        {lead.state || '-'}
+                      </td>
+                      <td className="px-2 py-2">
+                        <span className="inline-block px-1.5 py-0.5 rounded-full text-xs font-nunito bg-gray-100 text-gray-900 border border-gray-300">
                           {lead.interest}
                         </span>
                       </td>
-                      <td className="px-4 py-3">
+                      <td className="px-2 py-2">
                         {extractTrademarkName(lead.message) ? (
                           <button
                             onClick={() => handleTrademarkClick(extractTrademarkName(lead.message)!)}
-                            className="inline-block px-2 py-0.5 rounded-full text-xs font-nunito bg-blue-100 text-blue-900 border border-blue-300 hover:bg-blue-200 transition-colors cursor-pointer whitespace-nowrap"
+                            className="inline-block px-1.5 py-0.5 rounded-full text-xs font-nunito bg-blue-100 text-blue-900 border border-blue-300 hover:bg-blue-200 transition-colors cursor-pointer whitespace-nowrap"
                             title={extractTrademarkName(lead.message) || undefined}
                           >
                             <i className="fas fa-trademark mr-1"></i>
@@ -315,8 +355,28 @@ export default function LeadsPage() {
                           <span className="text-gray-400 font-nunito text-xs">-</span>
                         )}
                       </td>
-                      <td className="px-4 py-3 text-gray-600 font-nunito text-xs max-w-xs truncate">
+                      <td className="px-2 py-2 text-gray-600 font-nunito text-xs max-w-xs truncate">
                         {lead.message || 'No message'}
+                      </td>
+                      <td className="px-2 py-2">
+                        <button
+                          onClick={() => deleteLead(lead.id)}
+                          disabled={deletingLeadId === lead.id}
+                          className="inline-flex items-center px-1.5 py-0.5 text-xs font-nunito bg-red-100 text-red-700 border border-red-300 rounded-lg hover:bg-red-200 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                          title="Delete lead"
+                        >
+                          {deletingLeadId === lead.id ? (
+                            <>
+                              <i className="fas fa-spinner fa-spin mr-1"></i>
+                              Deleting...
+                            </>
+                          ) : (
+                            <>
+                              <i className="fas fa-trash mr-1"></i>
+                              Delete
+                            </>
+                          )}
+                        </button>
                       </td>
                     </tr>
                   ))}
