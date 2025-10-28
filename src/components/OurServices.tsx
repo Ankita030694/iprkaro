@@ -18,13 +18,15 @@ export default function OurServices() {
         'Secure your brand identity with expert trademark protection'
       ],
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
-          <path d="M23.4375 41.25V33.125M23.4375 33.125V20.625H31.875C33.8625 20.625 37.5 20.625 37.5 27.5C37.5 34.375 33.8625 34.375 31.875 34.375M23.4375 33.125H31.875M31.875 34.375L37.5 41.25" stroke="url(#paint0_linear_trademark)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M30 58.75C45.8883 58.75 58.75 45.8883 58.75 30C58.75 14.1117 45.8883 1.25 30 1.25C14.1117 1.25 1.25 14.1117 1.25 30C1.25 45.8883 14.1117 58.75 30 58.75Z" stroke="url(#paint1_linear_trademark)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none" role="img" aria-label="Trademark Registered">
+          {/* Outer Circle */}
+          <circle cx="30" cy="30" r="28.75" stroke="url(#paint1_linear_trademark)" strokeWidth="3" />
+          {/* Centered R */}
+          <text x="30" y="30" fontFamily="Nunito, Arial, sans-serif" fontWeight="800" fontSize="28" textAnchor="middle" dominantBaseline="central" fill="url(#paint0_linear_trademark)">R</text>
           <defs>
-            <linearGradient id="paint0_linear_trademark" x1="23.4375" y1="35" x2="37.5536" y2="35.3571" gradientUnits="userSpaceOnUse">
+            <linearGradient id="paint0_linear_trademark" x1="20" y1="30" x2="40" y2="30" gradientUnits="userSpaceOnUse">
               <stop stopColor="white"/>
-              <stop offset="0.490385" stopColor="#8A38F5"/>
+              <stop offset="0.5" stopColor="#8A38F5"/>
               <stop offset="0.88" stopColor="#FFB703"/>
             </linearGradient>
             <linearGradient id="paint1_linear_trademark" x1="1.25" y1="40" x2="58.9184" y2="40.8929" gradientUnits="userSpaceOnUse">
