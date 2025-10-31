@@ -14,16 +14,16 @@ export default function ClientLogoSlider({ className = '', useWhiteLogos = false
   // Initialize logos
   useEffect(() => {
     const logoPaths = useWhiteLogos 
-      ? [1, 2, 3, 4, 6, 7, 8, 9].map(i => `/clientlogos/white${i}.png`) // Exclude white5 and white10
-      : [1, 2, 7, 8, 9].map(i => `/clientlogos/${i}.png`); // Exclude 5.png and 10.png
+      ? [1, 2, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14].map(i => `/clientlogos/white${i}.png`)
+      : [1, 2, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16].map(i => `/clientlogos/${i}.png`);
     // Create multiple duplicates for seamless infinite scroll - enough to fill screen and beyond
     setLogos([...logoPaths, ...logoPaths, ...logoPaths, ...logoPaths]);
   }, [useWhiteLogos]);
 
 
-  const logoCount = useWhiteLogos ? 8 : 4;
+  const logoCount = useWhiteLogos ? 12 : 14;
   const logoWidth = 80; // Reduced from 128 to 80
-  const gapSize = 12; // Reduced gap between logos
+  const gapSize = 30; // Gap between logos
   // Calculate the exact distance to move one complete set of logos
   // Subtract one gap to account for seamless looping (last logo's margin connects to first logo)
   const totalDistance = logoCount * (logoWidth + gapSize) - gapSize;
@@ -42,7 +42,7 @@ export default function ClientLogoSlider({ className = '', useWhiteLogos = false
               x: {
                 repeat: Infinity,
                 repeatType: "loop",
-                duration: useWhiteLogos ? 30 : 20,
+                duration: useWhiteLogos ? 50 : 40,
                 ease: "linear",
               },
             }}
@@ -59,8 +59,8 @@ export default function ClientLogoSlider({ className = '', useWhiteLogos = false
             {logos.map((logo, index) => {
               // Calculate the actual logo number for alt text
               const logoNumbers = useWhiteLogos 
-                ? [1, 2, 3, 4, 6, 7, 8, 9] 
-                : [6, 7, 8, 9];
+                ? [1, 2, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                : [1, 2, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
               const logoIndex = logoNumbers[index % logoCount];
               
               return (
@@ -73,7 +73,7 @@ export default function ClientLogoSlider({ className = '', useWhiteLogos = false
                   }}
                   transition={{ duration: 0.3 }}
                   style={{
-                    marginRight: `${gapSize}px`, // Consistent gap between all logos
+                    marginRight: `${gapSize}px`,
                     willChange: 'transform',
                     transform: 'translate3d(0, 0, 0)',
                     WebkitTransform: 'translate3d(0, 0, 0)',
@@ -86,7 +86,7 @@ export default function ClientLogoSlider({ className = '', useWhiteLogos = false
                   <img
                     src={logo}
                     alt={`Client Logo ${logoIndex}`}
-                    className="object-contain filter-none w-full h-full"
+                    className="w-full h-full object-contain filter-none"
                     loading="eager"
                     decoding="sync"
                     style={{ 
