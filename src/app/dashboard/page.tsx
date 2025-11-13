@@ -369,6 +369,11 @@ function DashboardContent() {
             </p>
           </div>
 
+          {/* Asterisk - Desktop */}
+          <div className="hidden md:block text-right">
+            <span className="text-red-500 font-nunito text-2xl font-bold">*</span>
+          </div>
+
           {/* Mobile Heading */}
           <div className="block md:hidden text-center mb-5">
             <h1 className="text-white font-nunito text-xl font-bold mb-1.5">
@@ -385,8 +390,6 @@ function DashboardContent() {
               boxShadow: '0 0 16px 0 rgba(0, 0, 0, 0.10) inset, 0 0 16px 5px rgba(255, 255, 255, 0.20) inset'
             }}
           >
-            {/* Asterisk in top right */}
-            <span className="absolute top-4 right-6 text-red-500 font-nunito text-2xl font-bold">*</span>
             {/* Two Column Layout */}
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-5 items-stretch">
               {/* First Container - 3/4 width */}
@@ -896,6 +899,11 @@ function DashboardContent() {
             </h3>
           </div>
 
+          {/* Asterisk */}
+          <div className="block md:hidden text-left mb-2 px-4">
+            <span className="text-red-500 font-nunito text-lg font-bold">*</span>
+          </div>
+
           {/* Metrics Container - Mobile Version */}
           <div
             className="block md:hidden w-full px-4 py-5 space-y-5 relative"
@@ -905,8 +913,6 @@ function DashboardContent() {
               boxShadow: '0 0 16px 0 rgba(0, 0, 0, 0.10) inset, 0 0 16px 5px rgba(255, 255, 255, 0.20) inset'
             }}
           >
-            {/* Asterisk in top right */}
-            <span className="absolute top-3 right-4 text-red-500 font-nunito text-lg font-bold">*</span>
             {/* Mobile: Trademark Registrability */}
             <div className="space-y-3">
               <h4 className="text-white font-nunito text-base font-semibold text-center">

@@ -6,22 +6,44 @@ export default function SearchClient() {
   const router = useRouter();
   const [searchTerm, setSearchTerm] = useState('');
   const [trademarkClass, setTrademarkClass] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSearch = () => {
-    if (searchTerm.trim()) {
-      // Redirect to form page with URL parameters
-      // Convert trademark to lowercase for case-insensitive search
+  const handleSearch = async () => {
+    const normalizedTrademark = searchTerm.trim();
+    const normalizedClass = trademarkClass.trim();
+
+    if (!normalizedTrademark) {
+      setError('Enter a trademark name to analyze.');
+      return;
+    }
+
+    if (!normalizedClass) {
+      setError('Select a trademark class to continue.');
+      return;
+    }
+
+    try {
+      setIsSubmitting(true);
+      setError(null);
+
       const params = new URLSearchParams({
-        trademark: searchTerm.trim().toLowerCase(),
-        class: trademarkClass.trim()
+        trademark: normalizedTrademark.toLowerCase(),
+        class: normalizedClass
       });
+
       router.push(`/form?${params.toString()}`);
+    } catch (err) {
+      console.error('Error redirecting to form', err);
+      setError('Something went wrong while redirecting. Please try again.');
+      setIsSubmitting(false);
     }
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter') {
-      handleSearch();
+      e.preventDefault();
+      void handleSearch();
     }
   };
 
@@ -40,9 +62,10 @@ export default function SearchClient() {
               type="text"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              onKeyPress={handleKeyPress}
+              onKeyDown={handleKeyPress}
               placeholder="Enter trademark name"
               className="w-full px-4 lg:px-6 py-3 rounded-[15px] bg-[rgba(255,255,255,0.2)] backdrop-blur-sm border border-[rgba(255,255,255,0.2)] text-[#F8F9FA] placeholder-[rgba(248,249,250,0.6)] focus:outline-none focus:ring-2 focus:ring-[#FFB703] focus:border-[#FFB703] transition-all duration-300 text-[14px] lg:text-[16px] font-nunito"
+              disabled={isSubmitting}
             />
           </div>
 
@@ -52,6 +75,7 @@ export default function SearchClient() {
               value={trademarkClass}
               onChange={handleClassChange}
               className="w-full px-4 lg:px-6 py-3 rounded-[15px] bg-[rgba(255,255,255,0.2)] backdrop-blur-sm border border-[rgba(255,255,255,0.2)] text-[#F8F9FA] focus:outline-none focus:ring-2 focus:ring-[#FFB703] focus:border-[#FFB703] transition-all duration-300 text-[14px] lg:text-[16px] font-nunito appearance-none cursor-pointer"
+              disabled={isSubmitting}
               style={{
                 backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23F8F9FA' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e")`,
                 backgroundPosition: 'right 12px center',
@@ -110,12 +134,30 @@ export default function SearchClient() {
 
           {/* Search Button */}
           <button
-            onClick={handleSearch}
-            className="px-6 lg:px-10 py-3 rounded-[15px] bg-[#FFB703] hover:bg-[#e6a602] transition-colors duration-300 text-[#170154] font-nunito font-semibold text-sm lg:text-base whitespace-nowrap"
+            onClick={() => void handleSearch()}
+            disabled={isSubmitting}
+            className={`px-6 lg:px-10 py-3 rounded-[15px] transition-colors duration-300 text-[#170154] font-nunito font-semibold text-sm lg:text-base whitespace-nowrap ${
+              isSubmitting
+                ? 'bg-[#e6a602] opacity-70 cursor-not-allowed'
+                : 'bg-[#FFB703] hover:bg-[#e6a602]'
+            }`}
           >
-            Search
+            {isSubmitting ? (
+              <span className="flex items-center gap-2">
+                <i className="fa-solid fa-spinner fa-spin text-xs"></i>
+                Generating...
+              </span>
+            ) : (
+              'Search'
+            )}
           </button>
         </div>
+
+        {error && (
+          <p className="mt-3 text-sm text-red-200 font-nunito" role="alert">
+            {error}
+          </p>
+        )}
       </div>
 
       {/* Trademark Counter */}

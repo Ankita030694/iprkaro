@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import OpenAI from 'openai';
 import { db } from '@/lib/firebase';
-import { collection, doc, getDoc, setDoc, serverTimestamp } from 'firebase/firestore';
+import { collection, doc, getDoc, setDoc, serverTimestamp, updateDoc, arrayUnion } from 'firebase/firestore';
+import { auth } from '@clerk/nextjs/server';
 
 // Initialize OpenAI - will be validated in POST handler
 const openai = new OpenAI({
@@ -40,6 +41,9 @@ interface AnalysisResult {
     url: string;
     fetched: string;
   }>;
+  userId?: string;
+  userIds?: string[];
+  userPhoneNumbers?: Record<string, string>;
   createdAt?: any;
   lastUpdated?: any;
 }
@@ -96,7 +100,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const { trademarkName, classNumber } = requestBody;
+    const { trademarkName, classNumber, phoneNumber } = requestBody;
 
     if (!trademarkName || !classNumber) {
       console.error('❌ Missing required fields:', { trademarkName, classNumber });
@@ -138,7 +142,65 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    console.log('✅ Request validated:', { trademarkName, classNumber });
+    let normalizedPhone: string | null = null;
+    if (phoneNumber !== undefined) {
+      if (typeof phoneNumber !== 'string') {
+        console.error('❌ Invalid phone number type:', typeof phoneNumber);
+        return NextResponse.json(
+          {
+            error: 'Invalid phone number',
+            details: 'Phone number must be a string value',
+            step: 'validation'
+          },
+          { status: 400 }
+        );
+      }
+
+      const trimmedPhone = phoneNumber.trim();
+      if (trimmedPhone.length === 0) {
+        console.error('❌ Empty phone number string received');
+        return NextResponse.json(
+          {
+            error: 'Invalid phone number',
+            details: 'Phone number cannot be empty when provided',
+            step: 'validation'
+          },
+          { status: 400 }
+        );
+      }
+
+      const phonePattern = /^\+?[1-9]\d{9,14}$/;
+      if (!phonePattern.test(trimmedPhone)) {
+        console.error('❌ Phone number failed validation:', trimmedPhone);
+        return NextResponse.json(
+          {
+            error: 'Invalid phone number',
+            details: 'Provide a valid international phone number (10-15 digits, optional leading +)',
+            step: 'validation'
+          },
+          { status: 400 }
+        );
+      }
+
+      normalizedPhone = trimmedPhone;
+    }
+
+    console.log('✅ Request validated:', { trademarkName, classNumber, phoneIncluded: !!normalizedPhone });
+
+    // Step 2.5: Get userId from Clerk auth (if authenticated)
+    let userId: string | null = null;
+    try {
+      const authResult = await auth();
+      userId = authResult.userId;
+      if (userId) {
+        console.log('✅ Authenticated user:', userId);
+      } else {
+        console.log('ℹ️ Public search (no authentication)');
+      }
+    } catch (authError) {
+      // User is not authenticated (public search), this is okay
+      console.log('ℹ️ Public search (no authentication)');
+    }
 
     // Step 3: Normalize the document ID
     docId = `${trademarkName.toLowerCase().trim()}_${classNumber}`;
@@ -166,7 +228,71 @@ export async function POST(request: NextRequest) {
     }
 
     if (docSnap.exists()) {
-      const cachedData = docSnap.data();
+      const cachedData = docSnap.data() as AnalysisResult & { userIds?: string[]; userPhoneNumbers?: Record<string, string> };
+
+      // Ensure userPhoneNumbers is an object
+      const userPhoneNumbers = (cachedData.userPhoneNumbers && typeof cachedData.userPhoneNumbers === 'object')
+        ? { ...cachedData.userPhoneNumbers }
+        : {};
+
+      if (normalizedPhone) {
+        const existingPhoneEntry = Object.entries(userPhoneNumbers).find(
+          ([storedUserId, storedPhone]) => storedPhone === normalizedPhone && storedUserId !== (userId || 'public')
+        );
+
+        if (existingPhoneEntry && existingPhoneEntry[0] !== userId) {
+          console.error('❌ Phone number already associated with another user:', existingPhoneEntry[0]);
+          return NextResponse.json(
+            {
+              error: 'Phone number already in use',
+              details: 'This phone number is already linked to another user',
+              step: 'validation_conflict'
+            },
+            { status: 409 }
+          );
+        }
+      }
+
+      if (userId && normalizedPhone && userPhoneNumbers[userId] !== normalizedPhone) {
+        userPhoneNumbers[userId] = normalizedPhone;
+        try {
+          await updateDoc(docRef, {
+            [`userPhoneNumbers.${userId}`]: normalizedPhone,
+            lastUpdated: serverTimestamp(),
+          });
+        } catch (updateError) {
+          console.error('❌ Failed to update userPhoneNumbers map:', updateError);
+        }
+        cachedData.userPhoneNumbers = userPhoneNumbers;
+      } else if (!cachedData.userPhoneNumbers && Object.keys(userPhoneNumbers).length > 0) {
+        cachedData.userPhoneNumbers = userPhoneNumbers;
+      }
+
+      const existingUserIds = Array.isArray(cachedData.userIds) ? cachedData.userIds : [];
+      const idsToAdd = new Set<string>();
+
+      if (cachedData.userId && !existingUserIds.includes(cachedData.userId)) {
+        idsToAdd.add(cachedData.userId);
+      }
+
+      if (userId && !existingUserIds.includes(userId)) {
+        idsToAdd.add(userId);
+      }
+
+      const idsArray = Array.from(idsToAdd);
+
+      if (idsArray.length > 0) {
+        try {
+          await updateDoc(docRef, { userIds: arrayUnion(...idsArray) });
+          cachedData.userIds = Array.from(new Set([...existingUserIds, ...idsArray]));
+        } catch (updateError) {
+          console.error('❌ Failed to update userIds array:', updateError);
+          cachedData.userIds = Array.from(new Set([...existingUserIds, ...idsArray]));
+        }
+      } else if (!Array.isArray(cachedData.userIds)) {
+        cachedData.userIds = existingUserIds;
+      }
+
       console.log('✅ Cache hit! Returning cached result');
       console.log('⏱️ Total time:', Date.now() - startTime, 'ms');
       return NextResponse.json(cachedData);
@@ -479,6 +605,9 @@ CRITICAL REMINDERS:
 
     // Step 7: Create the final result object with fallbacks
     console.log('📦 Building result object...');
+    const initialUserPhoneNumbers =
+      userId && normalizedPhone ? { [userId]: normalizedPhone } : {};
+
     const result: AnalysisResult = {
       trademarkName,
       classNumber,
@@ -513,6 +642,9 @@ CRITICAL REMINDERS:
           fetched: new Date().toISOString().split('T')[0],
         },
       ],
+      ...(userId && { userId }),
+      userIds: userId ? [userId] : [],
+      userPhoneNumbers: initialUserPhoneNumbers,
       createdAt: serverTimestamp(),
       lastUpdated: serverTimestamp(),
     };
