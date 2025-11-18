@@ -142,3 +142,7 @@ service cloud.firestore {
 **Note:** This implementation uses client-side filtering. Security rules would provide an additional layer of protection at the database level.
 
 
+
+
+
+

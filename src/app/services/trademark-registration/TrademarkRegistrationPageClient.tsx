@@ -27,8 +27,23 @@ export default function TrademarkRegistrationPageClient() {
     router.push('/contact');
   };
 
+  // Mapping of state/UT names to their folder names
+  const stateFolderMap: { [key: string]: string } = {
+    'Delhi': 'delhi',
+    'Karnataka': 'karnataka',
+    'Telangana': 'telangana',
+    'Uttar Pradesh': 'uttar-pradesh',
+    'Maharashtra': 'maharashtra'
+  };
+
   // Function to generate state-specific slug URL
   const generateStateSlug = (stateName: string) => {
+    // Check if there's a direct folder mapping
+    if (stateFolderMap[stateName]) {
+      return stateFolderMap[stateName];
+    }
+    
+    // Otherwise, generate slug for states/UTs without dedicated folders
     const slug = stateName.toLowerCase()
       .replace(/[^a-z0-9\s]/g, '') // Remove special characters
       .replace(/\s+/g, '-') // Replace spaces with hyphens
