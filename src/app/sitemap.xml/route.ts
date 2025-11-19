@@ -54,6 +54,7 @@ export async function GET() {
     '/services/trademark-registration/punjab',
     '/services/trademark-registration/rajasthan',
     '/services/trademark-registration/west-bengal',
+    '/services/trademark-registration/gujarat',
     '/services/trademark/rectification',
     '/services/trademark/assignment',
     '/services/trademark/watch',

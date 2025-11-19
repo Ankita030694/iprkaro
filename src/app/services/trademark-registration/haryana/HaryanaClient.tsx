@@ -674,8 +674,7 @@ export default function HaryanaClient() {
 
         </div>
       </div>
-      
-      <Footer />
+
     </div>
   );
 }

@@ -1,12 +1,10 @@
 import React from 'react';
 
-export default function UttarPradeshLayout({
+export default function GujaratLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return <>{children}</>;
 }
-
-
 
