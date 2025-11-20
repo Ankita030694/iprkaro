@@ -1,4 +1,5 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import TrademarkRegistrationClient from './TrademarkRegistrationClient';
 
 // Convert slug to proper state name
@@ -8,6 +9,18 @@ function getStateName(slug: string): string {
     .split('-')
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ');
+}
+
+// Generate metadata for the page to ensure canonical URL is set
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const canonicalUrl = `https://iprkaro.com/services/trademark-registration/${slug}`;
+  
+  return {
+    alternates: {
+      canonical: canonicalUrl,
+    },
+  };
 }
 
 export default async function TrademarkRegistrationSlugPage({ params }: { params: Promise<{ slug: string }> }) {

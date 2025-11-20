@@ -8,3 +8,6 @@ export default function GujaratLayout({
   return <>{children}</>;
 }
 
+
+
+

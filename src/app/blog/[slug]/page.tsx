@@ -70,6 +70,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: 'Blog Article - AMA Legal Solutions',
     description: 'Read the latest legal insights and articles from AMA Legal Solutions',
+    alternates: {
+      canonical: `https://iprkaro.com/blog/${slug}`,
+    },
   };
 }
 
@@ -85,9 +88,74 @@ export default async function BlogPostPage({ params }: PageProps) {
       notFound();
     }
 
-    // Get blog data including FAQs for schema
-    const blogData = querySnapshot.docs[0].data() as Blog;
-    const faqs = blogData.faqs || [];
+    // Get blog data
+    const blogDoc = querySnapshot.docs[0];
+    const blogId = blogDoc.id;
+    const blogData = blogDoc.data() as Blog;
+
+    // Fetch FAQs from subcollection
+    let faqs: FAQ[] = [];
+    try {
+      const faqsCollection = collection(db, 'blogs', blogId, 'faqs');
+      const faqsSnapshot = await getDocs(faqsCollection);
+      faqs = faqsSnapshot.docs.map(doc => ({
+        id: doc.id,
+        question: doc.data().question || '',
+        answer: doc.data().answer || ''
+      }));
+    } catch (error) {
+      console.error('Error fetching FAQs:', error);
+      // Fallback to faqs array if it exists on blog document
+      faqs = blogData.faqs || [];
+    }
+
+    // Helper function to format date to ISO 8601
+    const formatDate = (dateValue: string | number | undefined): string => {
+      if (!dateValue) return new Date().toISOString();
+      if (typeof dateValue === 'number') {
+        return new Date(dateValue).toISOString();
+      }
+      // Try to parse the date string
+      const parsed = new Date(dateValue);
+      return isNaN(parsed.getTime()) ? new Date().toISOString() : parsed.toISOString();
+    };
+
+    // Ensure image URL is absolute
+    const getAbsoluteImageUrl = (imageUrl: string | undefined): string[] => {
+      if (!imageUrl) return [];
+      if (imageUrl.startsWith('http://') || imageUrl.startsWith('https://')) {
+        return [imageUrl];
+      }
+      // If relative URL, make it absolute
+      return [`https://iprkaro.com${imageUrl.startsWith('/') ? imageUrl : '/' + imageUrl}`];
+    };
+
+    // Generate Article schema
+    const articleSchema = {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": blogData.title,
+      "description": blogData.metaDescription || blogData.subtitle || blogData.description?.substring(0, 160) || '',
+      "image": getAbsoluteImageUrl(blogData.image),
+      "author": {
+        "@type": blogData.author ? "Person" : "Organization",
+        "name": blogData.author || "IPRKaro"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "IPRKaro",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://iprkaro.com/logo/iprlogo.svg"
+        }
+      },
+      "datePublished": formatDate(blogData.date || blogData.created),
+      "dateModified": formatDate(blogData.date || blogData.created),
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": `https://iprkaro.com/blog/${slug}`
+      }
+    };
 
     // Generate FAQ schema if FAQs exist
     const faqSchema = faqs.length > 0 ? {
@@ -106,6 +174,14 @@ export default async function BlogPostPage({ params }: PageProps) {
     // Render the client component with the slug
     return (
       <>
+        {/* Article Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(articleSchema),
+          }}
+        />
+        {/* FAQ Schema */}
         {faqSchema && (
           <script
             type="application/ld+json"

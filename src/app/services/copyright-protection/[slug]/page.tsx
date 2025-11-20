@@ -60,7 +60,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       images: ['/figmacomp/iprhero.svg'],
     },
     alternates: {
-      canonical: `/services/copyright-protection/${slug}`,
+      canonical: `https://iprkaro.com/services/copyright-protection/${slug}`,
     },
     robots: {
       index: true,

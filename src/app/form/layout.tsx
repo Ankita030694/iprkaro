@@ -3,6 +3,9 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Trademark Search - IPR Karo',
   description: 'Search and verify trademark availability',
+  alternates: {
+    canonical: 'https://iprkaro.com/form',
+  },
   viewport: {
     width: 'device-width',
     initialScale: 1,

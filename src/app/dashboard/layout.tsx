@@ -3,6 +3,9 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Dashboard - IPR Karo',
   description: 'Trademark search dashboard',
+  alternates: {
+    canonical: 'https://iprkaro.com/dashboard',
+  },
   viewport: {
     width: 'device-width',
     initialScale: 1,
