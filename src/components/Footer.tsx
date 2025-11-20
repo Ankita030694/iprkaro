@@ -128,8 +128,8 @@ const Footer: React.FC = () => {
                 </a>
               </li>
               <li>
-                <a href="/resources" className="text-sm hover:text-cyan-300 transition-colors">
-                  Resources
+                <a href="/blog" className="text-sm hover:text-cyan-300 transition-colors">
+                  Blogs
                 </a>
               </li>
               <li>
