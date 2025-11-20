@@ -30,6 +30,22 @@ const Faq = () => {
     {
       question: "How does AI help in trademark protection?",
       answer: "AI instantly scans trademark databases, detects similarities and conflicts, generates registerability scores, and guides users through every step to maximize the success of trademark registration."
+    },
+    {
+      question: "How long does trademark registration take in India?",
+      answer: "Trademark registration in India typically takes 12-18 months from application to final registration. The process includes application filing, examination, publication, and registration stages. IPR Karo streamlines this process with AI-powered pre-filing searches to reduce objections and expedite approval."
+    },
+    {
+      question: "What documents are required for trademark registration?",
+      answer: "You need your trademark logo/image (if applicable), applicant's identity proof, address proof, business registration certificate (for companies), and a signed authorization form. IPR Karo provides a complete checklist and helps you prepare all necessary documents for seamless filing."
+    },
+    {
+      question: "What happens if my trademark application is rejected?",
+      answer: "If your trademark application faces objections or opposition, IPR Karo's legal experts help you respond with proper documentation and arguments. Our AI-powered search reduces rejection risks by identifying conflicts before filing, and our attorneys provide expert guidance throughout the process."
+    },
+    {
+      question: "Can I register a trademark for multiple classes?",
+      answer: "Yes, you can register your trademark across multiple classes under the Nice Classification system. Each class requires a separate application fee. IPR Karo helps you identify the relevant classes for your business and provides cost-effective multi-class registration services."
     }
   ];
 
