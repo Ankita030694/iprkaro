@@ -2,8 +2,29 @@ import React from 'react';
 import type { Metadata } from 'next';
 import TrademarkRegistrationClient from './TrademarkRegistrationClient';
 
+// Mapping of folder names to state/UT names (reverse lookup)
+const folderToStateMap: { [key: string]: string } = {
+  'delhi': 'Delhi',
+  'gujarat': 'Gujarat',
+  'haryana': 'Haryana',
+  'karnataka': 'Karnataka',
+  'kerala': 'Kerala',
+  'maharashtra': 'Maharashtra',
+  'punjab': 'Punjab',
+  'rajasthan': 'Rajasthan',
+  'telangana': 'Telangana',
+  'uttar-pradesh': 'Uttar Pradesh',
+  'west-bengal': 'West Bengal'
+};
+
 // Convert slug to proper state name
 function getStateName(slug: string): string {
+  // Check if it's a direct folder name (states with dedicated folders)
+  if (folderToStateMap[slug]) {
+    return folderToStateMap[slug];
+  }
+  
+  // Otherwise, handle the trademark-registration-in-[state-name] format
   const stateSlug = slug.replace('trademark-registration-in-', '');
   return stateSlug
     .split('-')

@@ -24,8 +24,29 @@ export async function GET() {
   // Combine all locations
   const allLocations = [...states, ...unionTerritories];
 
+  // Mapping of state/UT names to their folder names
+  const stateFolderMap: { [key: string]: string } = {
+    'Delhi': 'delhi',
+    'Gujarat': 'gujarat',
+    'Haryana': 'haryana',
+    'Karnataka': 'karnataka',
+    'Kerala': 'kerala',
+    'Maharashtra': 'maharashtra',
+    'Punjab': 'punjab',
+    'Rajasthan': 'rajasthan',
+    'Telangana': 'telangana',
+    'Uttar Pradesh': 'uttar-pradesh',
+    'West Bengal': 'west-bengal'
+  };
+
   // Function to generate state-specific slug URL
   const generateStateSlug = (stateName: string) => {
+    // Check if there's a direct folder mapping
+    if (stateFolderMap[stateName]) {
+      return stateFolderMap[stateName];
+    }
+    
+    // Otherwise, generate slug for states/UTs without dedicated folders
     const slug = stateName.toLowerCase()
       .replace(/[^a-z0-9\s]/g, '') // Remove special characters
       .replace(/\s+/g, '-') // Replace spaces with hyphens
@@ -87,7 +108,13 @@ export async function GET() {
   
   allLocations.forEach((location) => {
     const slug = generateStateSlug(location);
-    dynamicPages.push(`/services/trademark-registration/trademark-registration-in-${slug}`);
+    // Check if state has a dedicated folder (uses folder name directly)
+    if (stateFolderMap[location]) {
+      dynamicPages.push(`/services/trademark-registration/${slug}`);
+    } else {
+      // States without dedicated folders use the long format
+      dynamicPages.push(`/services/trademark-registration/trademark-registration-in-${slug}`);
+    }
     dynamicPages.push(`/services/patent-services/patent-services-in-${slug}`);
     dynamicPages.push(`/services/copyright-protection/copyright-protection-in-${slug}`);
   });

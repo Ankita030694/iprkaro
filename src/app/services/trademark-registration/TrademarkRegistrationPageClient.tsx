@@ -30,10 +30,16 @@ export default function TrademarkRegistrationPageClient() {
   // Mapping of state/UT names to their folder names
   const stateFolderMap: { [key: string]: string } = {
     'Delhi': 'delhi',
+    'Gujarat': 'gujarat',
+    'Haryana': 'haryana',
     'Karnataka': 'karnataka',
+    'Kerala': 'kerala',
+    'Maharashtra': 'maharashtra',
+    'Punjab': 'punjab',
+    'Rajasthan': 'rajasthan',
     'Telangana': 'telangana',
     'Uttar Pradesh': 'uttar-pradesh',
-    'Maharashtra': 'maharashtra'
+    'West Bengal': 'west-bengal'
   };
 
   // Function to generate state-specific slug URL
