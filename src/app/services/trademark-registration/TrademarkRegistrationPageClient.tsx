@@ -29,16 +29,34 @@ export default function TrademarkRegistrationPageClient() {
 
   // Mapping of state/UT names to their folder names
   const stateFolderMap: { [key: string]: string } = {
+    'Andhra Pradesh': 'andhra-pradesh',
+    'Arunachal Pradesh': 'arunachal-pradesh',
+    'Assam': 'assam',
+    'Bihar': 'bihar',
+    'Chandigarh': 'chandigarh',
+    'Chhattisgarh': 'chhattisgarh',
     'Delhi': 'delhi',
+    'Goa': 'goa',
     'Gujarat': 'gujarat',
     'Haryana': 'haryana',
+    'Jammu and Kashmir': 'jammu-and-kashmir',
+    'Jharkhand': 'jharkhand',
     'Karnataka': 'karnataka',
     'Kerala': 'kerala',
+    'Ladakh': 'ladakh',
+    'Madhya Pradesh': 'madhya-pradesh',
     'Maharashtra': 'maharashtra',
+    'Manipur': 'manipur',
+    'Odisha': 'odisha',
+    'Puducherry': 'puducherry',
     'Punjab': 'punjab',
     'Rajasthan': 'rajasthan',
+    'Sikkim': 'sikkim',
+    'Tamil Nadu': 'tamil-nadu',
     'Telangana': 'telangana',
+    'Tripura': 'tripura',
     'Uttar Pradesh': 'uttar-pradesh',
+    'Uttarakhand': 'uttarakhand',
     'West Bengal': 'west-bengal'
   };
 
@@ -61,16 +79,16 @@ export default function TrademarkRegistrationPageClient() {
   // List of all states and union territories
   const states = [
     'Andhra Pradesh', 'Arunachal Pradesh', 'Assam', 'Bihar', 'Chhattisgarh',
-    'Goa', 'Gujarat', 'Haryana', 'Himachal Pradesh', 'Jharkhand', 'Karnataka',
-    'Kerala', 'Madhya Pradesh', 'Maharashtra', 'Manipur', 'Meghalaya',
-    'Mizoram', 'Nagaland', 'Odisha', 'Punjab', 'Rajasthan', 'Sikkim',
-    'Tamil Nadu', 'Telangana', 'Tripura', 'Uttar Pradesh', 'Uttarakhand'
+    'Goa', 'Gujarat', 'Haryana', 'Jharkhand', 'Karnataka',
+    'Kerala', 'Madhya Pradesh', 'Maharashtra', 'Manipur',
+    'Odisha', 'Punjab', 'Rajasthan', 'Sikkim',
+    'Tamil Nadu', 'Telangana', 'Tripura', 'Uttar Pradesh', 'Uttarakhand',
+    'West Bengal'
   ];
 
   const unionTerritories = [
-    'Andaman and Nicobar Islands', 'Chandigarh',
-    'Dadra and Nagar Haveli and Daman and Diu', 'Delhi',
-    'Jammu and Kashmir', 'Ladakh', 'Lakshadweep', 'Puducherry'
+    'Chandigarh', 'Delhi',
+    'Jammu and Kashmir', 'Ladakh', 'Puducherry'
   ];
 
   const trademarkFaqs = [
