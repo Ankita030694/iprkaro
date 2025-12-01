@@ -4,28 +4,24 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import BlogTableOfContents from '@/components/blog/BlogTableOfContents';
-import FaqSection from './FaqSection';
 
 interface TOCSection {
   id: string;
   title: string;
 }
 
-export default function AssamClient() {
-  const [activeSection, setActiveSection] = useState('');
+export default function HimachalPradeshTrademarkClient() {
+  const [activeSection, setActiveSection] = useState('overview');
   const [tocSections, setTocSections] = useState<TOCSection[]>([]);
 
   useEffect(() => {
     const sections: TOCSection[] = [
-      { id: 'overview', title: 'Trademark Registration in Assam' },
-      { id: 'why-register', title: 'Why Register in Assam?' },
-      { id: 'industries', title: 'Key Sectors: Tea, Oil & More' },
+      { id: 'overview', title: 'Trademark Registration in Himachal' },
+      { id: 'why-register', title: 'Why Register in Himachal?' },
+      { id: 'industries', title: 'Key Sectors: Tourism & Pharma' },
       { id: 'benefits', title: 'Business Benefits' },
-      { id: 'eligibility', title: 'Who Can Apply?' },
       { id: 'process', title: 'Registration Process' },
       { id: 'documents', title: 'Required Documents' },
-      { id: 'search', title: 'Trademark Search' },
-      { id: 'classes', title: 'Relevant Classes' },
       { id: 'faq', title: 'FAQs' }
     ];
     setTocSections(sections);
@@ -56,13 +52,11 @@ export default function AssamClient() {
     <div style={{ backgroundColor: '#0C002B' }}>
       <Navbar />
       
-      {tocSections.length > 0 && (
-        <BlogTableOfContents 
-          activeSection={activeSection} 
-          blogTitle="Trademark Registration in Assam"
-          sections={tocSections}
-        />
-      )}
+      <BlogTableOfContents 
+        activeSection={activeSection} 
+        blogTitle="Trademark Registration in Himachal Pradesh"
+        sections={tocSections}
+      />
       
       <div className="pb-16 pt-[180px]" style={{ 
         background: '#0C002B',
@@ -80,7 +74,9 @@ export default function AssamClient() {
               <i className="fas fa-chevron-right text-xs text-white/50"></i>
               <Link href="/services" className="hover:text-[#FFB703] transition-colors">Services</Link>
               <i className="fas fa-chevron-right text-xs text-white/50"></i>
-              <span className="text-[#FFB703] font-medium">Assam</span>
+              <Link href="/services/trademark-registration" className="hover:text-[#FFB703] transition-colors">Trademark</Link>
+              <i className="fas fa-chevron-right text-xs text-white/50"></i>
+              <span className="text-[#FFB703] font-medium">Himachal Pradesh</span>
             </div>
           </section>
 
@@ -91,16 +87,16 @@ export default function AssamClient() {
                 <div className="absolute inset-0 rounded-full animate-ping bg-[#FFB703] opacity-40" />
               </div>
               <h1 className="text-white font-nunito text-3xl md:text-4xl lg:text-5xl font-bold">
-                Trademark Registration in Assam
+                Trademark Registration in Himachal Pradesh
               </h1>
             </div>
             
             <div className="p-4 lg:p-5 rounded-lg backdrop-blur-sm bg-gradient-to-br from-white/10 to-white/5 border border-white/10 shadow-xl">
               <p className="text-white/95 font-nunito text-base lg:text-lg leading-relaxed mb-3">
-                Assam is the economic engine of Northeast India. From the historic tea gardens of Upper Assam to the bustling commercial hub of Guwahati, the state offers immense business potential. Protecting your brand here is not just about legal compliance; it's about securing your identity in a market rich with heritage and innovation.
+                Himachal Pradesh is more than just a tourist paradise; it is Asia's largest pharmaceutical hub and a major producer of apples and stone fruits. From Baddi's industrial belt to Shimla's orchards, protecting brand identity is crucial.
               </p>
               <p className="text-white/95 font-nunito text-base lg:text-lg leading-relaxed">
-                We help Assam's tea planters, oil ancillary units, handloom weavers, and new-age startups secure their trademarks efficiently.
+                Secure your hotel brand, pharma company name, or agri-product logo with a registered trademark.
               </p>
             </div>
           </section>
@@ -113,10 +109,7 @@ export default function AssamClient() {
             </div>
             <div className="p-4 rounded-lg bg-white/5 border border-white/10 shadow-xl">
               <p className="text-white/90 font-nunito text-base leading-relaxed mb-3">
-                Businesses in Assam fall under the jurisdiction of the **Kolkata Trademark Registry**. While the physical office is in Salt Lake, Kolkata, the entire filing and prosecution process is digital.
-              </p>
-              <p className="text-white/90 font-nunito text-base leading-relaxed">
-                This means an entrepreneur in Dibrugarh or Silchar can file for a trademark just as easily as someone in a metro city. IPRKaro facilitates this online process, ensuring your application is error-free and filed promptly.
+                Himachal Pradesh falls under the jurisdiction of the **Delhi Trademark Registry**. Businesses in Shimla, Manali, Dharamshala, and Baddi can file applications online without visiting Delhi.
               </p>
             </div>
           </section>
@@ -125,65 +118,35 @@ export default function AssamClient() {
           <section id="industries" className="mb-8 scroll-mt-32">
             <div className="flex items-center gap-2 mb-3">
               <div className="w-2 h-2 rounded-full bg-[#FFB703] shadow-[0_0_14px_rgba(255,183,3,0.6)]" />
-              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">Key Sectors in Assam</h2>
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">Key Sectors</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="p-4 rounded-md bg-white/5 border border-white/10">
-                <h3 className="text-[#FFB703] font-bold text-lg mb-2"><i className="fas fa-leaf mr-2"></i>Tea Industry</h3>
+                <h3 className="text-[#FFB703] font-bold text-lg mb-2"><i className="fas fa-pills mr-2"></i>Pharmaceuticals</h3>
                 <p className="text-white/90 text-sm">
-                  While 'Assam Tea' is a GI, individual tea estates and packaging brands need their own trademarks (Class 30) to build brand loyalty and export value.
+                  Baddi is a pharma hub. Trademarks (Class 5) are essential to protect medicine brand names from look-alikes.
                 </p>
               </div>
               <div className="p-4 rounded-md bg-white/5 border border-white/10">
-                <h3 className="text-[#FFB703] font-bold text-lg mb-2"><i className="fas fa-oil-can mr-2"></i>Oil & Gas Ancillaries</h3>
+                <h3 className="text-[#FFB703] font-bold text-lg mb-2"><i className="fas fa-hotel mr-2"></i>Tourism & Hospitality</h3>
                 <p className="text-white/90 text-sm">
-                  With major refineries in Digboi and Numaligarh, ancillary service providers need to protect their trade names (Class 35, 37) for vendor contracts.
+                  Hotels and travel agencies in Shimla/Manali need service marks (Class 43, 39) to protect their reputation online.
                 </p>
               </div>
               <div className="p-4 rounded-md bg-white/5 border border-white/10">
-                <h3 className="text-[#FFB703] font-bold text-lg mb-2"><i className="fas fa-tshirt mr-2"></i>Handloom & Silk</h3>
+                <h3 className="text-[#FFB703] font-bold text-lg mb-2"><i className="fas fa-apple-alt mr-2"></i>Horticulture</h3>
                 <p className="text-white/90 text-sm">
-                  Sualkuchi's Muga and Eri silk weavers face stiff competition from imitations. Trademarks (Class 24, 25) help distinguish authentic Assamese handlooms.
-                </p>
-              </div>
-              <div className="p-4 rounded-md bg-white/5 border border-white/10">
-                <h3 className="text-[#FFB703] font-bold text-lg mb-2"><i className="fas fa-mountain mr-2"></i>Tourism</h3>
-                <p className="text-white/90 text-sm">
-                  Resorts near Kaziranga and river cruise operators on the Brahmaputra need service marks (Class 39, 43) to protect their reputation in the travel market.
+                  Apple growers and fruit processing units need trademarks (Class 31, 29, 32) for jams, juices, and packaged fruits.
                 </p>
               </div>
             </div>
           </section>
-
-          {/* Classes */}
-          <section id="classes" className="mb-8 scroll-mt-32">
-            <div className="flex items-center gap-2 mb-3">
-              <div className="w-2 h-2 rounded-full bg-[#FFB703] shadow-[0_0_14px_rgba(255,183,3,0.6)]" />
-              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">Relevant Classes</h2>
-            </div>
-            <div className="p-4 rounded-lg bg-white/5 border border-white/10">
-              <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                <li className="bg-white/5 p-3 rounded border border-white/10 text-white/90 text-sm"><strong>Class 30:</strong> Tea, Rice, Spices</li>
-                <li className="bg-white/5 p-3 rounded border border-white/10 text-white/90 text-sm"><strong>Class 24:</strong> Textiles (Muga Silk)</li>
-                <li className="bg-white/5 p-3 rounded border border-white/10 text-white/90 text-sm"><strong>Class 31:</strong> Agricultural Products</li>
-                <li className="bg-white/5 p-3 rounded border border-white/10 text-white/90 text-sm"><strong>Class 35:</strong> Retail & Trading</li>
-                <li className="bg-white/5 p-3 rounded border border-white/10 text-white/90 text-sm"><strong>Class 39:</strong> Transport & Tourism</li>
-                <li className="bg-white/5 p-3 rounded border border-white/10 text-white/90 text-sm"><strong>Class 43:</strong> Hotels & Restaurants</li>
-              </ul>
-            </div>
-          </section>
-
-          {/* FAQ */}
-          <FaqSection />
 
           {/* CTA */}
           <section className="mb-8">
             <div className="relative overflow-hidden p-6 rounded-xl bg-gradient-to-br from-white/10 to-white/5 border border-white/20">
               <div className="relative text-center">
-                <h3 className="text-white font-nunito text-2xl font-bold mb-3">Secure Your Brand in Assam</h3>
-                <p className="text-white/90 font-nunito text-sm max-w-2xl mx-auto mb-6">
-                  From Guwahati to Tinsukia, we help businesses across Assam secure their intellectual property.
-                </p>
+                <h3 className="text-white font-nunito text-2xl font-bold mb-3">Secure Your Brand in the Hills</h3>
                 <Link href="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-bold text-sm transition-all duration-300 hover:scale-105 bg-gradient-to-r from-[#FFB703] to-[#FFA000] text-[#0C002B]">
                   <i className="fas fa-phone"></i> Get Expert Assistance
                 </Link>
@@ -196,3 +159,4 @@ export default function AssamClient() {
     </div>
   );
 }
+
