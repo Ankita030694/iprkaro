@@ -26,8 +26,8 @@ const PrivacyPolicy: React.FC = () => {
             <p><strong>Registered Office:</strong> Gurugram, India-122001</p>
             <p>
               <strong>Contact:</strong>{' '}
-              <a href="mailto:support@iprkaro.com" className="text-cyan-600 hover:text-cyan-700">
-                support@iprkaro.com
+              <a href="mailto:info@iprkaro.com" className="text-cyan-600 hover:text-cyan-700">
+                info@iprkaro.com
               </a>{' '}
               |{' '}
               <a href="tel:+919289707648" className="text-cyan-600 hover:text-cyan-700">
@@ -123,8 +123,8 @@ const PrivacyPolicy: React.FC = () => {
                 </h2>
                 <p className="text-gray-700 leading-relaxed">
                   You can access, correct, request erasure, or withdraw consent for your personal data. Contact{' '}
-                  <a href="mailto:support@iprkaro.com" className="text-cyan-600 hover:text-cyan-700 underline">
-                    support@iprkaro.com
+                  <a href="mailto:info@iprkaro.com" className="text-cyan-600 hover:text-cyan-700 underline">
+                    info@iprkaro.com
                   </a>{' '}
                   to exercise these rights.
                 </p>
@@ -163,8 +163,8 @@ const PrivacyPolicy: React.FC = () => {
                 </h2>
                 <p className="text-gray-700 leading-relaxed">
                   For any privacy-related questions or concerns, please contact us at:{' '}
-                  <a href="mailto:support@iprkaro.com" className="text-cyan-600 hover:text-cyan-700 underline">
-                    support@iprkaro.com
+                  <a href="mailto:info@iprkaro.com" className="text-cyan-600 hover:text-cyan-700 underline">
+                    info@iprkaro.com
                   </a>
                 </p>
               </div>
@@ -184,8 +184,8 @@ const PrivacyPolicy: React.FC = () => {
             <p className="text-gray-700">
               <i className="fas fa-envelope mr-2 text-cyan-600"></i>
               <strong>Email:</strong>{' '}
-              <a href="mailto:support@iprkaro.com" className="text-cyan-600 hover:text-cyan-700 underline">
-                support@iprkaro.com
+              <a href="mailto:info@iprkaro.com" className="text-cyan-600 hover:text-cyan-700 underline">
+                info@iprkaro.com
               </a>
             </p>
             <p className="text-gray-700">

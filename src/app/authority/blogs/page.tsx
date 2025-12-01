@@ -77,7 +77,7 @@ const BlogsDashboard = () => {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (!user) {
-        router.push('/login');
+        router.push('/nullify');
       }
     });
     return () => unsubscribe();
@@ -87,7 +87,7 @@ const BlogsDashboard = () => {
   const handleLogout = async () => {
     try {
       await signOut(auth);
-      router.push('/login');
+      router.push('/nullify');
     } catch (error) {
       console.error('Error logging out:', error);
     }
@@ -96,15 +96,15 @@ const BlogsDashboard = () => {
   // Navigation handler: Redirect for Blogs and Articles
   const handleNavigation = (itemId: string) => {
     if (itemId === 'blogs') {
-      router.push('/admin/blogs');
+      router.push('/authority/blogs');
     } else if (itemId === 'articles') {
-      router.push('/admin/articles');
+      router.push('/authority/blogs'); // Articles are likely part of blogs
     } else if (itemId === 'home') {
-      router.push('/admin/dashboard');
+      router.push('/authority/leads');
     } else if (itemId === 'users') {
-      router.push('/admin/users');
+      router.push('/authority/user-management');
     } else if (itemId === 'amalive') {
-      router.push('/admin/amalive');
+      router.push('/authority/leads'); // Defaulting to leads
     } else {
       setActiveTab(itemId);
     }

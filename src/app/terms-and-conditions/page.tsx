@@ -26,8 +26,8 @@ const TermsAndConditions: React.FC = () => {
             <p><strong>Registered Office:</strong> Gurugram, India-122001</p>
             <p>
               <strong>Contact:</strong>{' '}
-              <a href="mailto:support@iprkaro.com" className="text-cyan-600 hover:text-cyan-700">
-                support@iprkaro.com
+              <a href="mailto:info@iprkaro.com" className="text-cyan-600 hover:text-cyan-700">
+                info@iprkaro.com
               </a>{' '}
               |{' '}
               <a href="tel:+919289707648" className="text-cyan-600 hover:text-cyan-700">
@@ -242,8 +242,8 @@ const TermsAndConditions: React.FC = () => {
                 <ul className="list-disc pl-6 space-y-2 text-gray-700">
                   <li>
                     Email:{' '}
-                    <a href="mailto:support@iprkaro.com" className="text-cyan-600 hover:text-cyan-700 underline">
-                      support@iprkaro.com
+                    <a href="mailto:info@iprkaro.com" className="text-cyan-600 hover:text-cyan-700 underline">
+                      info@iprkaro.com
                     </a>{' '}
                     with subject "Refund Request – [Your Registered Phone Number]".
                   </li>
@@ -259,8 +259,8 @@ const TermsAndConditions: React.FC = () => {
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
                   Email{' '}
-                  <a href="mailto:support@iprkaro.com" className="text-cyan-600 hover:text-cyan-700 underline">
-                    support@iprkaro.com
+                  <a href="mailto:info@iprkaro.com" className="text-cyan-600 hover:text-cyan-700 underline">
+                    info@iprkaro.com
                   </a>{' '}
                   within <strong>7 days</strong> of service delivery detailing the issue. We may offer corrective action, re-work, or partial/full refund in line with consumer protection obligations.
                 </p>
@@ -381,8 +381,8 @@ const TermsAndConditions: React.FC = () => {
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
                   You can access, correct, request erasure, or withdraw consent for your personal data. Contact{' '}
-                  <a href="mailto:support@iprkaro.com" className="text-cyan-600 hover:text-cyan-700 underline">
-                    support@iprkaro.com
+                  <a href="mailto:info@iprkaro.com" className="text-cyan-600 hover:text-cyan-700 underline">
+                    info@iprkaro.com
                   </a>{' '}
                   to exercise these rights.
                 </p>
@@ -394,8 +394,8 @@ const TermsAndConditions: React.FC = () => {
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
                   Email:{' '}
-                  <a href="mailto:support@iprkaro.com" className="text-cyan-600 hover:text-cyan-700 underline">
-                    support@iprkaro.com
+                  <a href="mailto:info@iprkaro.com" className="text-cyan-600 hover:text-cyan-700 underline">
+                    info@iprkaro.com
                   </a>
                 </p>
               </div>
@@ -470,8 +470,8 @@ const TermsAndConditions: React.FC = () => {
             <p className="text-gray-700">
               <i className="fas fa-envelope mr-2 text-cyan-600"></i>
               <strong>Email:</strong>{' '}
-              <a href="mailto:support@iprkaro.com" className="text-cyan-600 hover:text-cyan-700 underline">
-                support@iprkaro.com
+              <a href="mailto:info@iprkaro.com" className="text-cyan-600 hover:text-cyan-700 underline">
+                info@iprkaro.com
               </a>
             </p>
             <p className="text-gray-700">
