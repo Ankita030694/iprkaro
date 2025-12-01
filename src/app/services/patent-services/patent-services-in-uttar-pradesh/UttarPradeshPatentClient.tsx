@@ -25,7 +25,14 @@ export default function UttarPradeshPatentClient() {
       if (!ticking) {
         requestAnimationFrame(() => {
           updateSidebarPosition();
-          const sections = ['overview', 'criteria', 'documents', 'process', 'validity', 'support'];
+          const sections = [
+            { id: 'overview', title: 'Overview' },
+            { id: 'criteria', title: 'Criteria' },
+            { id: 'documents', title: 'Documents' },
+            { id: 'process', title: 'Process' },
+            { id: 'validity', title: 'Validity' },
+            { id: 'support', title: 'Support' }
+          ];
           const scrollPosition = window.scrollY + 100;
           for (const section of sections) {
             const element = document.getElementById(section.id);
