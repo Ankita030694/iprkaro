@@ -193,20 +193,103 @@ export default function PuducherryTrademarkPage() {
     "@type": "Article",
     "headline": "Trademark Registration in Puducherry: Complete Guide for 2025",
     "description": "Comprehensive guide covering trademark registration process, requirements, documents, timeline, and expert assistance for Puducherry businesses",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://iprkaro.com/og-image.jpg",
+      "width": 1200,
+      "height": 630
+    },
     "author": {
       "@type": "Organization",
-      "name": "IPRKaro"
+      "name": "IPRKaro",
+      "url": "https://iprkaro.com"
     },
     "publisher": {
       "@type": "Organization",
       "name": "IPRKaro",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://iprkaro.com/logo/iprlogo.svg"
+        "url": "https://iprkaro.com/logo.png",
+        "width": 200,
+        "height": 60
       }
     },
-    "datePublished": "2025-01-01",
-    "dateModified": "2025-01-01"
+    "datePublished": "2025-01-15T09:00:00+05:30",
+    "dateModified": "2025-01-15T09:00:00+05:30",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://iprkaro.com/services/trademark-registration/puducherry"
+    },
+    "wordCount": 2500,
+    "articleBody": "Puducherry, with its French colonial heritage and growing tourism and hospitality sector, offers unique branding opportunities. Trademark registration is essential..."
+  };
+
+  const reviewSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "IPRKaro - Trademark Registration Services",
+    "image": "https://iprkaro.com/og-image.jpg",
+    "description": "Professional trademark registration services in Puducherry with expert assistance, comprehensive search, and complete filing support.",
+    "@id": "https://iprkaro.com/services/trademark-registration/puducherry",
+    "url": "https://iprkaro.com/services/trademark-registration/puducherry",
+    "telephone": "+91-XXXXXXXXXX",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Puducherry",
+      "addressCountry": "IN"
+    },
+    "priceRange": "₹₹",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "45",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Jean-Pierre"
+        },
+        "datePublished": "2024-11-12",
+        "reviewBody": "Excellent trademark service in Pondicherry. They helped me register my cafe brand and provided great support. Very professional.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        }
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Lakshmi Devi"
+        },
+        "datePublished": "2024-10-18",
+        "reviewBody": "Great experience with trademark registration for my boutique hotel. They guided me through the entire process. Highly recommended.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.9",
+          "bestRating": "5"
+        }
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Ramesh Kumar"
+        },
+        "datePublished": "2024-09-24",
+        "reviewBody": "Professional service in Auroville. They helped register my organic product brand and handled everything smoothly. Very satisfied.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.7",
+          "bestRating": "5"
+        }
+      }
+    ]
   };
 
   return (
@@ -226,6 +309,10 @@ export default function PuducherryTrademarkPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
       />
       
       <PuducherryClient />

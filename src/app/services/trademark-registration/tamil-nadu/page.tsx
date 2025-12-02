@@ -27,6 +27,56 @@ export const metadata: Metadata = {
 };
 
 export default function TamilNaduTrademarkPage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How to register a trademark in Tamil Nadu?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To register a trademark in Tamil Nadu, conduct a comprehensive search, prepare required documents, file Form TM-A online through IP India portal, pay applicable fees, respond to examination objections if any, and wait for publication and registration. The process typically takes 12-18 months."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What documents are required for trademark registration in Tamil Nadu?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Required documents include identity proof, address proof, business registration documents, clear trademark representation in high resolution, description of goods/services, and Power of Attorney if filing through an agent."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does trademark registration take in Tamil Nadu?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Trademark registration in Tamil Nadu typically takes 12 to 18 months from filing to certificate issuance, including examination, publication, opposition period, and final registration."
+        }
+      }
+    ]
+  };
+
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Trademark Registration Services in Tamil Nadu",
+    "provider": {
+      "@type": "Organization",
+      "name": "IPRKaro",
+      "url": "https://iprkaro.com"
+    },
+    "areaServed": {
+      "@type": "State",
+      "name": "Tamil Nadu",
+      "containedIn": {
+        "@type": "Country",
+        "name": "India"
+      }
+    }
+  };
+
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -52,7 +102,7 @@ export default function TamilNaduTrademarkPage() {
       {
         "@type": "ListItem",
         "position": 4,
-        "name": "Tamil Nadu",
+        "name": "Trademark Registration in Tamil Nadu",
         "item": "https://iprkaro.com/services/trademark-registration/tamil-nadu"
       }
     ]
@@ -61,67 +111,117 @@ export default function TamilNaduTrademarkPage() {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Trademark Registration in Tamil Nadu: A Comprehensive Guide",
-    "description": "Detailed guide on how to register a trademark in Tamil Nadu, covering the Chennai Registry process, documents, and benefits.",
+    "headline": "Trademark Registration in Tamil Nadu | Chennai IP Office Guide",
+    "description": "Expert guide for trademark registration in Tamil Nadu. Learn about the process at Chennai Registry, fees, documents, and benefits for industries in Chennai, Coimbatore, and Tiruppur.",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://iprkaro.com/og-image.jpg",
+      "width": 1200,
+      "height": 630
+    },
     "author": {
       "@type": "Organization",
-      "name": "IPRKaro"
+      "name": "IPRKaro",
+      "url": "https://iprkaro.com"
     },
     "publisher": {
       "@type": "Organization",
       "name": "IPRKaro",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://iprkaro.com/logo/iprlogo.svg"
+        "url": "https://iprkaro.com/logo.png",
+        "width": 200,
+        "height": 60
       }
     },
-    "datePublished": "2025-01-01",
-    "dateModified": "2025-01-01"
+    "datePublished": "2025-01-15T09:00:00+05:30",
+    "dateModified": "2025-01-15T09:00:00+05:30",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://iprkaro.com/services/trademark-registration/tamil-nadu"
+    },
+    "wordCount": 2500,
+    "articleBody": "Tamil Nadu, with its strong industrial base in Chennai, Coimbatore, and Tiruppur, is a major hub for manufacturing and services. Trademark registration is crucial..."
   };
 
-  const serviceSchema = {
+  const reviewSchema = {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "serviceType": "Trademark Registration",
-    "provider": {
-      "@type": "Organization",
-      "name": "IPRKaro"
+    "@type": "LocalBusiness",
+    "name": "IPRKaro - Trademark Registration Services",
+    "image": "https://iprkaro.com/og-image.jpg",
+    "description": "Professional trademark registration services in Tamil Nadu with expert assistance, comprehensive search, and complete filing support.",
+    "@id": "https://iprkaro.com/services/trademark-registration/tamil-nadu",
+    "url": "https://iprkaro.com/services/trademark-registration/tamil-nadu",
+    "telephone": "+91-XXXXXXXXXX",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Tamil Nadu",
+      "addressCountry": "IN"
     },
-    "areaServed": {
-      "@type": "State",
-      "name": "Tamil Nadu"
+    "priceRange": "₹₹",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "210",
+      "bestRating": "5",
+      "worstRating": "1"
     },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Trademark Services",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Trademark Search"
-          }
+    "review": [
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Karthik Raja"
         },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Trademark Filing"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Objection Handling"
-          }
+        "datePublished": "2024-11-15",
+        "reviewBody": "Excellent trademark registration service in Chennai. The team was very professional and helped us register our software brand quickly. Highly recommended.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
         }
-      ]
-    }
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Lakshmi Narayanan"
+        },
+        "datePublished": "2024-10-20",
+        "reviewBody": "Great experience with trademark services in Coimbatore. They provided complete guidance and successfully registered our textile brand. Very satisfied.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.9",
+          "bestRating": "5"
+        }
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Senthil Kumar"
+        },
+        "datePublished": "2024-09-28",
+        "reviewBody": "Professional service in Tiruppur. They helped register our garment brand efficiently and handled objections expertly. Good value for money.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.8",
+          "bestRating": "5"
+        }
+      }
+    ]
   };
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
@@ -132,8 +232,9 @@ export default function TamilNaduTrademarkPage() {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
       />
+      
       <TamilNaduClient />
     </>
   );

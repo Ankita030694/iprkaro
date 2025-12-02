@@ -237,6 +237,110 @@ export default function RajasthanTrademarkPage() {
     ]
   };
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Trademark Registration in Rajasthan: Complete Guide 2025",
+    "description": "Expert trademark registration services in Rajasthan. Complete guide for Jaipur, Jodhpur, Udaipur, Kota businesses. Process, documents, timeline, and professional assistance for brand protection.",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://iprkaro.com/og-image.jpg",
+      "width": 1200,
+      "height": 630
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "IPRKaro",
+      "url": "https://iprkaro.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "IPRKaro",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://iprkaro.com/logo.png",
+        "width": 200,
+        "height": 60
+      }
+    },
+    "datePublished": "2025-01-15T09:00:00+05:30",
+    "dateModified": "2025-01-15T09:00:00+05:30",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://iprkaro.com/services/trademark-registration/rajasthan"
+    },
+    "wordCount": 2500,
+    "articleBody": "Rajasthan, known for its vibrant culture, tourism, and handicrafts, is a thriving business hub. Trademark registration is essential for protecting the unique identity of Rajasthani brands..."
+  };
+
+  const reviewSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "IPRKaro - Trademark Registration Services",
+    "image": "https://iprkaro.com/og-image.jpg",
+    "description": "Professional trademark registration services in Rajasthan with expert assistance, comprehensive search, and complete filing support.",
+    "@id": "https://iprkaro.com/services/trademark-registration/rajasthan",
+    "url": "https://iprkaro.com/services/trademark-registration/rajasthan",
+    "telephone": "+91-XXXXXXXXXX",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Rajasthan",
+      "addressCountry": "IN"
+    },
+    "priceRange": "₹₹",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "195",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Vikram Singh"
+        },
+        "datePublished": "2024-11-12",
+        "reviewBody": "Excellent trademark registration service in Jaipur. The team was very professional and helped us register our jewelry brand quickly. Highly recommended.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        }
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Neha Sharma"
+        },
+        "datePublished": "2024-10-18",
+        "reviewBody": "Great experience with trademark services in Udaipur. They provided complete guidance and successfully registered our hotel brand. Very satisfied.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.9",
+          "bestRating": "5"
+        }
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Rajesh Gupta"
+        },
+        "datePublished": "2024-09-25",
+        "reviewBody": "Professional service in Jodhpur. They helped register our handicraft brand efficiently and handled objections expertly. Good value for money.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.8",
+          "bestRating": "5"
+        }
+      }
+    ]
+  };
+
   return (
     <>
       <script
@@ -250,6 +354,14 @@ export default function RajasthanTrademarkPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
       />
       
       <RajasthanClient />

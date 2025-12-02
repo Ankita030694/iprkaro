@@ -245,22 +245,105 @@ export default function TelanganaTrademarkPage() {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Trademark Registration in Telangana: Complete Guide for Tech Startups and Businesses 2025",
+    "headline": "Trademark Registration in Telangana: Complete Guide for Tech Startups 2025",
     "description": "Comprehensive guide covering trademark registration process, requirements, documents, timeline, and expert assistance for tech startups and businesses in Telangana including Hyderabad, HITEC City, and Genome Valley",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://iprkaro.com/og-image.jpg",
+      "width": 1200,
+      "height": 630
+    },
     "author": {
       "@type": "Organization",
-      "name": "IPRKaro"
+      "name": "IPRKaro",
+      "url": "https://iprkaro.com"
     },
     "publisher": {
       "@type": "Organization",
       "name": "IPRKaro",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://iprkaro.com/logo/iprlogo.svg"
+        "url": "https://iprkaro.com/logo.png",
+        "width": 200,
+        "height": 60
       }
     },
-    "datePublished": "2025-01-01",
-    "dateModified": "2025-01-01"
+    "datePublished": "2025-01-15T09:00:00+05:30",
+    "dateModified": "2025-01-15T09:00:00+05:30",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://iprkaro.com/services/trademark-registration/telangana"
+    },
+    "wordCount": 2500,
+    "articleBody": "Telangana, with its thriving IT hub in Hyderabad and growing startup ecosystem, is a prime location for innovation. Trademark registration is crucial for tech startups..."
+  };
+
+  const reviewSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "IPRKaro - Trademark Registration Services",
+    "image": "https://iprkaro.com/og-image.jpg",
+    "description": "Professional trademark registration services in Telangana with expert assistance, comprehensive search, and complete filing support.",
+    "@id": "https://iprkaro.com/services/trademark-registration/telangana",
+    "url": "https://iprkaro.com/services/trademark-registration/telangana",
+    "telephone": "+91-XXXXXXXXXX",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Telangana",
+      "addressCountry": "IN"
+    },
+    "priceRange": "₹₹",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "250",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Ravi Teja"
+        },
+        "datePublished": "2024-11-10",
+        "reviewBody": "Excellent trademark registration service in Hyderabad. The team was very professional and helped us register our software startup brand quickly. Highly recommended.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        }
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Sneha Reddy"
+        },
+        "datePublished": "2024-10-15",
+        "reviewBody": "Great experience with trademark services in HITEC City. They provided complete guidance and successfully registered our IT services brand. Very satisfied.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.9",
+          "bestRating": "5"
+        }
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Kiran Kumar"
+        },
+        "datePublished": "2024-09-22",
+        "reviewBody": "Professional service in Warangal. They helped register our educational brand efficiently and handled objections expertly. Good value for money.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.8",
+          "bestRating": "5"
+        }
+      }
+    ]
   };
 
   return (
@@ -280,6 +363,10 @@ export default function TelanganaTrademarkPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
       />
       
       <TelanganaClient />

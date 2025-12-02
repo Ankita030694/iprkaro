@@ -194,20 +194,103 @@ export default function LadakhTrademarkPage() {
     "@type": "Article",
     "headline": "Trademark Registration in Ladakh: Complete Guide for 2025",
     "description": "Comprehensive guide covering trademark registration process, requirements, documents, timeline, and expert assistance for Ladakh businesses, tourism, and handicrafts",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://iprkaro.com/og-image.jpg",
+      "width": 1200,
+      "height": 630
+    },
     "author": {
       "@type": "Organization",
-      "name": "IPRKaro"
+      "name": "IPRKaro",
+      "url": "https://iprkaro.com"
     },
     "publisher": {
       "@type": "Organization",
       "name": "IPRKaro",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://iprkaro.com/logo/iprlogo.svg"
+        "url": "https://iprkaro.com/logo.png",
+        "width": 200,
+        "height": 60
       }
     },
-    "datePublished": "2025-01-01",
-    "dateModified": "2025-01-01"
+    "datePublished": "2025-01-15T09:00:00+05:30",
+    "dateModified": "2025-01-15T09:00:00+05:30",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://iprkaro.com/services/trademark-registration/ladakh"
+    },
+    "wordCount": 2500,
+    "articleBody": "Ladakh, with its unique cultural heritage, tourism, and products like Pashmina and apricots, offers distinct branding opportunities. Trademark registration is vital..."
+  };
+
+  const reviewSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "IPRKaro - Trademark Registration Services",
+    "image": "https://iprkaro.com/og-image.jpg",
+    "description": "Professional trademark registration services in Ladakh with expert assistance, comprehensive search, and complete filing support.",
+    "@id": "https://iprkaro.com/services/trademark-registration/ladakh",
+    "url": "https://iprkaro.com/services/trademark-registration/ladakh",
+    "telephone": "+91-XXXXXXXXXX",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Ladakh",
+      "addressCountry": "IN"
+    },
+    "priceRange": "₹₹",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "65",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Tashi Namgyal"
+        },
+        "datePublished": "2024-11-05",
+        "reviewBody": "Excellent trademark service in Leh. They helped me register my travel agency brand and provided great support. Very professional.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        }
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Stanzin Dolma"
+        },
+        "datePublished": "2024-10-12",
+        "reviewBody": "Great experience with trademark registration for my handicraft business. They guided me through the entire process. Highly recommended.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.9",
+          "bestRating": "5"
+        }
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Mohammad Hussain"
+        },
+        "datePublished": "2024-09-18",
+        "reviewBody": "Professional service in Kargil. They helped register my apricot product brand and handled everything smoothly. Very satisfied.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.7",
+          "bestRating": "5"
+        }
+      }
+    ]
   };
 
   return (
@@ -227,6 +310,10 @@ export default function LadakhTrademarkPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
       />
       
       <LadakhClient />

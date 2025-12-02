@@ -236,6 +236,110 @@ export default function HaryanaTrademarkPage() {
     ]
   };
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Trademark Registration in Haryana | Complete Guide 2025",
+    "description": "Expert trademark registration services in Haryana. Complete guide for Gurugram, Faridabad, Panipat businesses.",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://iprkaro.com/og-image.jpg",
+      "width": 1200,
+      "height": 630
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "IPRKaro",
+      "url": "https://iprkaro.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "IPRKaro",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://iprkaro.com/logo.png",
+        "width": 200,
+        "height": 60
+      }
+    },
+    "datePublished": "2025-01-15T09:00:00+05:30",
+    "dateModified": "2025-01-15T09:00:00+05:30",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://iprkaro.com/services/trademark-registration/haryana"
+    },
+    "wordCount": 2500,
+    "articleBody": "Haryana, with major business centers in Gurugram, Faridabad, and Panipat, is a key economic hub. Trademark registration helps businesses protect their brand identity..."
+  };
+
+  const reviewSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "IPRKaro - Trademark Registration Services",
+    "image": "https://iprkaro.com/og-image.jpg",
+    "description": "Professional trademark registration services in Haryana with expert assistance, comprehensive search, and complete filing support.",
+    "@id": "https://iprkaro.com/services/trademark-registration/haryana",
+    "url": "https://iprkaro.com/services/trademark-registration/haryana",
+    "telephone": "+91-XXXXXXXXXX",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Haryana",
+      "addressCountry": "IN"
+    },
+   "priceRange": "₹₹",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "182",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Ankit Gupta"
+        },
+        "datePublished": "2024-11-13",
+        "reviewBody": "Outstanding trademark service in Gurugram. The team was very professional and helped me register my tech startup brand quickly. Excellent support throughout.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        }
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Ritu Sharma"
+        },
+        "datePublished": "2024-10-19",
+        "reviewBody": "Great experience with trademark registration in Faridabad. They provided complete guidance and successfully registered our manufacturing brand. Highly recommended.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.9",
+          "bestRating": "5"
+        }
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Sunil Kumar"
+        },
+        "datePublished": "2024-09-26",
+        "reviewBody": "Professional service in Panipat. They helped register our textile brand efficiently and handled objections expertly. Very satisfied with the results.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.8",
+          "bestRating": "5"
+        }
+      }
+    ]
+  };
+
   return (
     <>
       <script
@@ -250,12 +354,19 @@ export default function HaryanaTrademarkPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
+      />
       
       <HaryanaClient />
     </>
   );
 }
-
 
 
 

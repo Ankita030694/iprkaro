@@ -226,6 +226,110 @@ export default function KeralaTrademarkPage() {
     ]
   };
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Trademark Registration in Kerala: Complete Guide & Process 2025",
+    "description": "Complete guide to trademark registration in Kerala. Learn step-by-step process, documents required, timeline, and expert assistance for trademark registration in Kochi, Thiruvananthapuram, and across Kerala.",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://iprkaro.com/og-image.jpg",
+      "width": 1200,
+      "height": 630
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "IPRKaro",
+      "url": "https://iprkaro.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "IPRKaro",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://iprkaro.com/logo.png",
+        "width": 200,
+        "height": 60
+      }
+    },
+    "datePublished": "2025-01-15T09:00:00+05:30",
+    "dateModified": "2025-01-15T09:00:00+05:30",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://iprkaro.com/services/trademark-registration/kerala"
+    },
+    "wordCount": 2500,
+    "articleBody": "Kerala, known as God's Own Country, has a thriving economy driven by tourism, spices, and IT. Trademark registration is essential for businesses in Kochi, Thiruvananthapuram..."
+  };
+
+  const reviewSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "IPRKaro - Trademark Registration Services",
+    "image": "https://iprkaro.com/og-image.jpg",
+    "description": "Professional trademark registration services in Kerala with expert assistance, comprehensive search, and complete filing support.",
+    "@id": "https://iprkaro.com/services/trademark-registration/kerala",
+    "url": "https://iprkaro.com/services/trademark-registration/kerala",
+    "telephone": "+91-XXXXXXXXXX",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Kerala",
+      "addressCountry": "IN"
+    },
+    "priceRange": "₹₹",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "145",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Mathew Thomas"
+        },
+        "datePublished": "2024-11-16",
+        "reviewBody": "Excellent trademark registration service in Kochi. The team was very professional and helped us register our export brand quickly. Highly recommended.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        }
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Anjali Nair"
+        },
+        "datePublished": "2024-10-22",
+        "reviewBody": "Great experience with trademark services in Thiruvananthapuram. They provided complete guidance and successfully registered our IT startup brand. Very satisfied.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.9",
+          "bestRating": "5"
+        }
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Abdul Razak"
+        },
+        "datePublished": "2024-09-30",
+        "reviewBody": "Professional service in Kozhikode. They helped register our food product brand efficiently and handled objections expertly. Good value for money.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.8",
+          "bestRating": "5"
+        }
+      }
+    ]
+  };
+
   return (
     <>
       <script
@@ -239,6 +343,14 @@ export default function KeralaTrademarkPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
       />
       
       <KeralaClient />

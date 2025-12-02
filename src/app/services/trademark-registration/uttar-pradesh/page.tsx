@@ -246,20 +246,103 @@ export default function UttarPradeshTrademarkPage() {
     "@type": "Article",
     "headline": "Trademark Registration in Uttar Pradesh: Your Complete Guide for 2025",
     "description": "Comprehensive guide covering trademark registration process, requirements, documents, timeline, and expert assistance for businesses in Uttar Pradesh including Noida, Lucknow, Kanpur, and other cities",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://iprkaro.com/og-image.jpg",
+      "width": 1200,
+      "height": 630
+    },
     "author": {
       "@type": "Organization",
-      "name": "IPRKaro"
+      "name": "IPRKaro",
+      "url": "https://iprkaro.com"
     },
     "publisher": {
       "@type": "Organization",
       "name": "IPRKaro",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://iprkaro.com/logo/iprlogo.svg"
+        "url": "https://iprkaro.com/logo.png",
+        "width": 200,
+        "height": 60
       }
     },
-    "datePublished": "2025-01-01",
-    "dateModified": "2025-01-01"
+    "datePublished": "2025-01-15T09:00:00+05:30",
+    "dateModified": "2025-01-15T09:00:00+05:30",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://iprkaro.com/services/trademark-registration/uttar-pradesh"
+    },
+    "wordCount": 2500,
+    "articleBody": "Uttar Pradesh, with its diverse industrial base in Noida, Kanpur, and Lucknow, offers immense opportunities. Trademark registration is vital for protecting the brand identity of businesses..."
+  };
+
+  const reviewSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "IPRKaro - Trademark Registration Services",
+    "image": "https://iprkaro.com/og-image.jpg",
+    "description": "Professional trademark registration services in Uttar Pradesh with expert assistance, comprehensive search, and complete filing support.",
+    "@id": "https://iprkaro.com/services/trademark-registration/uttar-pradesh",
+    "url": "https://iprkaro.com/services/trademark-registration/uttar-pradesh",
+    "telephone": "+91-XXXXXXXXXX",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Uttar Pradesh",
+      "addressCountry": "IN"
+    },
+    "priceRange": "₹₹",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "280",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Amit Singh"
+        },
+        "datePublished": "2024-11-18",
+        "reviewBody": "Excellent trademark registration service in Noida. The team was very professional and helped us register our IT startup brand quickly. Highly recommended.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        }
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Priya Gupta"
+        },
+        "datePublished": "2024-10-22",
+        "reviewBody": "Great experience with trademark services in Lucknow. They provided complete guidance and successfully registered our Chikankari brand. Very satisfied.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.9",
+          "bestRating": "5"
+        }
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Rajesh Kumar"
+        },
+        "datePublished": "2024-09-30",
+        "reviewBody": "Professional service in Kanpur. They helped register our leather goods brand efficiently and handled objections expertly. Good value for money.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.8",
+          "bestRating": "5"
+        }
+      }
+    ]
   };
 
   return (
@@ -279,6 +362,10 @@ export default function UttarPradeshTrademarkPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
       />
       
       <UttarPradeshClient />

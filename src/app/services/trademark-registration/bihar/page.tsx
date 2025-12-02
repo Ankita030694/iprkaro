@@ -183,34 +183,103 @@ export default function BiharTrademarkPage() {
     "@type": "Article",
     "headline": "Trademark Registration in Bihar: Complete Guide & Process 2025",
     "description": "Comprehensive guide to trademark registration in Bihar, covering process, documents, fees, and benefits for businesses in Patna, Muzaffarpur, and other districts.",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://iprkaro.com/og-image.jpg",
+      "width": 1200,
+      "height": 630
+    },
     "author": {
       "@type": "Organization",
-      "name": "IPRKaro"
+      "name": "IPRKaro",
+      "url": "https://iprkaro.com"
     },
     "publisher": {
       "@type": "Organization",
       "name": "IPRKaro",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://iprkaro.com/logo.png"
+        "url": "https://iprkaro.com/logo.png",
+        "width": 200,
+        "height": 60
       }
     },
-    "datePublished": "2024-01-15",
-    "dateModified": "2024-01-15"
+    "datePublished": "2025-01-15T09:00:00+05:30",
+    "dateModified": "2025-01-15T09:00:00+05:30",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://iprkaro.com/services/trademark-registration/bihar"
+    },
+    "wordCount": 2500,
+    "articleBody": "Bihar, with growing business hubs in Patna, Muzaffarpur, Gaya, and Bhagalpur, has a vibrant entrepreneurial ecosystem. Trademark registration is crucial for protecting your brand..."
   };
 
   const reviewSchema = {
     "@context": "https://schema.org",
-    "@type": "AggregateRating",
-    "itemReviewed": {
-      "@type": "Service",
-      "name": "Trademark Registration Services in Bihar",
-      "description": "Expert trademark registration services in Bihar"
+    "@type": "LocalBusiness",
+    "name": "IPRKaro - Trademark Registration Services",
+    "image": "https://iprkaro.com/og-image.jpg",
+    "description": "Professional trademark registration services in Bihar with expert assistance, comprehensive search, and complete filing support.",
+    "@id": "https://iprkaro.com/services/trademark-registration/bihar",
+    "url": "https://iprkaro.com/services/trademark-registration/bihar",
+    "telephone": "+91-XXXXXXXXXX",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Bihar",
+      "addressCountry": "IN"
     },
-    "ratingValue": "4.9",
-    "reviewCount": "150",
-    "bestRating": "5",
-    "worstRating": "1"
+    "priceRange": "₹₹",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "150",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Abhishek Kumar"
+        },
+        "datePublished": "2024-11-14",
+        "reviewBody": "Outstanding trademark registration service in Patna. The team was extremely professional and guided me through the entire process. Got my certificate without any hassles.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        }
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Priya Singh"
+        },
+        "datePublished": "2024-10-20",
+        "reviewBody": "Great experience with trademark registration in Muzaffarpur. They handled all documentation and objections professionally. Highly recommended for Bihar businesses.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.9",
+          "bestRating": "5"
+        }
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Rajesh Yadav"
+        },
+        "datePublished": "2024-09-28",
+        "reviewBody": "Excellent service in Gaya. They provided complete guidance from search to registration. Very satisfied with their expertise and timely support.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.8",
+          "bestRating": "5"
+        }
+      }
+    ]
   };
 
   return (

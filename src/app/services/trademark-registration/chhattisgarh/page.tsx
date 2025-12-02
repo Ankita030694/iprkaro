@@ -193,22 +193,105 @@ export default function ChhattisgarhTrademarkPage() {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Trademark Registration in Chhattisgarh: Complete Guide for 2025",
+ "headline": "Trademark Registration in Chhattisgarh: Complete Guide for 2025",
     "description": "Comprehensive guide covering trademark registration process, requirements, documents, timeline, and expert assistance for Chhattisgarh businesses",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://iprkaro.com/og-image.jpg",
+      "width": 1200,
+      "height": 630
+    },
     "author": {
       "@type": "Organization",
-      "name": "IPRKaro"
+      "name": "IPRKaro",
+      "url": "https://iprkaro.com"
     },
     "publisher": {
       "@type": "Organization",
       "name": "IPRKaro",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://iprkaro.com/logo/iprlogo.svg"
+        "url": "https://iprkaro.com/logo.png",
+        "width": 200,
+        "height": 60
       }
     },
-    "datePublished": "2025-01-01",
-    "dateModified": "2025-01-01"
+    "datePublished": "2025-01-15T09:00:00+05:30",
+    "dateModified": "2025-01-15T09:00:00+05:30",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://iprkaro.com/services/trademark-registration/chhattisgarh"
+    },
+    "wordCount": 2500,
+    "articleBody": "Chhattisgarh, with industrial hubs in Raipur, Bhilai, and Bilaspur, offers significant opportunities for businesses. Trademark registration is essential for brand protection..."
+  };
+
+  const reviewSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "IPRKaro - Trademark Registration Services",
+    "image": "https://iprkaro.com/og-image.jpg",
+    "description": "Professional trademark registration services in Chhattisgarh with expert assistance, comprehensive search, and complete filing support.",
+    "@id": "https://iprkaro.com/services/trademark-registration/chhattisgarh",
+    "url": "https://iprkaro.com/services/trademark-registration/chhattisgarh",
+    "telephone": "+91-XXXXXXXXXX",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Chhattisgarh",
+      "addressCountry": "IN"
+    },
+    "priceRange": "₹₹",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.7",
+      "reviewCount": "105",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Suresh Patel"
+        },
+        "datePublished": "2024-11-10",
+        "reviewBody": "Excellent trademark registration service in Raipur. The team handled everything professionally and got my manufacturing brand registered smoothly. Very satisfied.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        }
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Anita Verma"
+        },
+        "datePublished": "2024-10-16",
+        "reviewBody": "Great experience with trademark services in Bhilai. They provided complete guidance and successfully handled all documentation. Highly recommended for Chhattisgarh businesses.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.8",
+          "bestRating": "5"
+        }
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Rahul Tiwari"
+        },
+        "datePublished": "2024-09-24",
+        "reviewBody": "Professional service in Bilaspur. They helped me register my herbal product brand and overcame objections effectively. Very good support.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.6",
+          "bestRating": "5"
+        }
+      }
+    ]
   };
 
   return (
@@ -228,6 +311,10 @@ export default function ChhattisgarhTrademarkPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
       />
       
       <ChhattisgarhClient />

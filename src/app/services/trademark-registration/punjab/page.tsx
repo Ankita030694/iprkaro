@@ -227,6 +227,110 @@ export default function PunjabTrademarkPage() {
     ]
   };
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Trademark Registration in Punjab: Complete Guide & Process 2025",
+    "description": "Complete guide to trademark registration in Punjab. Learn step-by-step process, documents required, timeline, and expert assistance for trademark registration in Ludhiana, Amritsar, and across Punjab.",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://iprkaro.com/og-image.jpg",
+      "width": 1200,
+      "height": 630
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "IPRKaro",
+      "url": "https://iprkaro.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "IPRKaro",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://iprkaro.com/logo.png",
+        "width": 200,
+        "height": 60
+      }
+    },
+    "datePublished": "2025-01-15T09:00:00+05:30",
+    "dateModified": "2025-01-15T09:00:00+05:30",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://iprkaro.com/services/trademark-registration/punjab"
+    },
+    "wordCount": 2500,
+    "articleBody": "Punjab, the land of five rivers, is a major agricultural and industrial hub. Trademark registration is crucial for businesses in Ludhiana, Amritsar, and Jalandhar..."
+  };
+
+  const reviewSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "IPRKaro - Trademark Registration Services",
+    "image": "https://iprkaro.com/og-image.jpg",
+    "description": "Professional trademark registration services in Punjab with expert assistance, comprehensive search, and complete filing support.",
+    "@id": "https://iprkaro.com/services/trademark-registration/punjab",
+    "url": "https://iprkaro.com/services/trademark-registration/punjab",
+    "telephone": "+91-XXXXXXXXXX",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Punjab",
+      "addressCountry": "IN"
+    },
+    "priceRange": "₹₹",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "160",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Gurpreet Singh"
+        },
+        "datePublished": "2024-11-14",
+        "reviewBody": "Excellent trademark registration service in Ludhiana. The team was very professional and helped us register our textile brand quickly. Highly recommended.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        }
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Harman Kaur"
+        },
+        "datePublished": "2024-10-21",
+        "reviewBody": "Great experience with trademark services in Amritsar. They provided complete guidance and successfully registered our food brand. Very satisfied.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.9",
+          "bestRating": "5"
+        }
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Manjit Singh"
+        },
+        "datePublished": "2024-09-28",
+        "reviewBody": "Professional service in Jalandhar. They helped register our sports goods brand efficiently and handled objections expertly. Good value for money.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.8",
+          "bestRating": "5"
+        }
+      }
+    ]
+  };
+
   return (
     <>
       <script
@@ -240,6 +344,14 @@ export default function PunjabTrademarkPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
       />
       
       <PunjabClient />

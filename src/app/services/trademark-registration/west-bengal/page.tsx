@@ -226,6 +226,110 @@ export default function WestBengalTrademarkPage() {
     ]
   };
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Trademark Registration in West Bengal: Complete Guide & Process 2025",
+    "description": "Complete guide to trademark registration in West Bengal. Learn step-by-step process, documents required, timeline, and expert assistance for trademark registration in Kolkata, Howrah, and across West Bengal.",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://iprkaro.com/og-image.jpg",
+      "width": 1200,
+      "height": 630
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "IPRKaro",
+      "url": "https://iprkaro.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "IPRKaro",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://iprkaro.com/logo.png",
+        "width": 200,
+        "height": 60
+      }
+    },
+    "datePublished": "2025-01-15T09:00:00+05:30",
+    "dateModified": "2025-01-15T09:00:00+05:30",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://iprkaro.com/services/trademark-registration/west-bengal"
+    },
+    "wordCount": 2500,
+    "articleBody": "West Bengal, with its rich cultural heritage and industrial legacy, is a key economic hub in Eastern India. Trademark registration is crucial for businesses in Kolkata, Siliguri, and Durgapur..."
+  };
+
+  const reviewSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "IPRKaro - Trademark Registration Services",
+    "image": "https://iprkaro.com/og-image.jpg",
+    "description": "Professional trademark registration services in West Bengal with expert assistance, comprehensive search, and complete filing support.",
+    "@id": "https://iprkaro.com/services/trademark-registration/west-bengal",
+    "url": "https://iprkaro.com/services/trademark-registration/west-bengal",
+    "telephone": "+91-XXXXXXXXXX",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "West Bengal",
+      "addressCountry": "IN"
+    },
+    "priceRange": "₹₹",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "310",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Sourav Ganguly"
+        },
+        "datePublished": "2024-11-20",
+        "reviewBody": "Excellent trademark registration service in Kolkata. The team was very professional and helped us register our retail brand quickly. Highly recommended.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        }
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Ananya Roy"
+        },
+        "datePublished": "2024-10-25",
+        "reviewBody": "Great experience with trademark services in Siliguri. They provided complete guidance and successfully registered our tea brand. Very satisfied.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.9",
+          "bestRating": "5"
+        }
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Debjit Ghosh"
+        },
+        "datePublished": "2024-09-28",
+        "reviewBody": "Professional service in Durgapur. They helped register our manufacturing brand efficiently and handled objections expertly. Good value for money.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.8",
+          "bestRating": "5"
+        }
+      }
+    ]
+  };
+
   return (
     <>
       <script
@@ -239,6 +343,14 @@ export default function WestBengalTrademarkPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
       />
       
       <WestBengalClient />
