@@ -5,154 +5,136 @@ export async function GET() {
   // Make sure to set up 301 redirects from www to non-www (or vice versa) in your hosting config
   const baseUrl = 'https://iprkaro.com'; // Use 'https://www.iprkaro.com' if you prefer www
 
-  // List of all states
-  const states = [
-    'Andhra Pradesh', 'Arunachal Pradesh', 'Assam', 'Bihar', 'Chhattisgarh',
-    'Goa', 'Gujarat', 'Haryana', 'Jharkhand', 'Karnataka',
-    'Kerala', 'Madhya Pradesh', 'Maharashtra', 'Manipur',
-    'Odisha', 'Punjab', 'Rajasthan', 'Sikkim',
-    'Tamil Nadu', 'Telangana', 'Tripura', 'Uttar Pradesh', 'Uttarakhand',
-    'West Bengal'
-  ];
-
-  // List of all union territories
-  const unionTerritories = [
-    'Chandigarh', 'Delhi',
-    'Jammu and Kashmir', 'Ladakh', 'Puducherry'
-  ];
-
-  // Combine all locations
-  const allLocations = [...states, ...unionTerritories];
-
-  // Mapping of state/UT names to their folder names
-  const stateFolderMap: { [key: string]: string } = {
-    'Andhra Pradesh': 'andhra-pradesh',
-    'Arunachal Pradesh': 'arunachal-pradesh',
-    'Assam': 'assam',
-    'Bihar': 'bihar',
-    'Chandigarh': 'chandigarh',
-    'Chhattisgarh': 'chhattisgarh',
-    'Delhi': 'delhi',
-    'Goa': 'goa',
-    'Gujarat': 'gujarat',
-    'Haryana': 'haryana',
-    'Jammu and Kashmir': 'jammu-and-kashmir',
-    'Jharkhand': 'jharkhand',
-    'Karnataka': 'karnataka',
-    'Kerala': 'kerala',
-    'Ladakh': 'ladakh',
-    'Madhya Pradesh': 'madhya-pradesh',
-    'Maharashtra': 'maharashtra',
-    'Manipur': 'manipur',
-    'Odisha': 'odisha',
-    'Puducherry': 'puducherry',
-    'Punjab': 'punjab',
-    'Rajasthan': 'rajasthan',
-    'Sikkim': 'sikkim',
-    'Tamil Nadu': 'tamil-nadu',
-    'Telangana': 'telangana',
-    'Tripura': 'tripura',
-    'Uttar Pradesh': 'uttar-pradesh',
-    'Uttarakhand': 'uttarakhand',
-    'West Bengal': 'west-bengal'
-  };
-
-  // Function to generate state-specific slug URL
-  const generateStateSlug = (stateName: string) => {
-    // Check if there's a direct folder mapping
-    if (stateFolderMap[stateName]) {
-      return stateFolderMap[stateName];
-    }
-    
-    // Otherwise, generate slug for states/UTs without dedicated folders
-    const slug = stateName.toLowerCase()
-      .replace(/[^a-z0-9\s]/g, '') // Remove special characters
-      .replace(/\s+/g, '-') // Replace spaces with hyphens
-      .replace(/&/g, 'and') // Replace & with 'and'
-      .trim();
-    return slug;
-  };
-
-  // Static pages
-  const staticPages = [
+  // All static pages that exist in the project
+  const allPages = [
+    // Root pages
     '',
     '/about',
     '/blog',
     '/contact',
-    '/dashboard',
     '/form',
-    '/services',
-    '/services/trademark-registration',
-    // State pages are now dynamically generated below
-    '/services/trademark/rectification',
-    '/services/trademark/assignment',
-    '/services/trademark/watch',
-    '/services/trademark/objection',
-    '/services/trademark/opposition',
-    '/services/trademark/renewal',
-    '/services/patent-services',
-    '/services/patent/filing',
-    '/services/patent/licensing',
-    '/services/patent/renewal',
-    '/services/patent/opposition',
-    '/services/copyright-protection',
-    '/services/copyright/software',
-    '/services/copyright/renewal',
-    '/services/copyright/infringement',
-    '/services/copyright/transfer',
+    '/privacy-policy',
+    '/terms-and-conditions',
     '/trademark-registration-guide',
+
+    // Features pages
     '/features/247-trademark-protection',
     '/features/affordable-trademark-services',
     '/features/ai-powered-trademark-solutions',
     '/features/expert-trademark-guidance',
     '/features/fast-trademark-registration',
     '/features/trademark-risk-reduction',
-    '/privacy-policy',
-    '/terms-and-conditions',
+
+    // Services main pages
+    '/services',
+    '/services/trademark-registration',
+    '/services/patent-services',
+    '/services/copyright-protection',
+
+    // Trademark sub-services
+    '/services/trademark/rectification',
+    '/services/trademark/assignment',
+    '/services/trademark/watch',
+    '/services/trademark/search',
+    '/services/trademark/objection',
+    '/services/trademark/opposition',
+    '/services/trademark/renewal',
+
+    // Patent sub-services
+    '/services/patent/filing',
+    '/services/patent/licensing',
+    '/services/patent/renewal',
+    '/services/patent/opposition',
+
+    // Copyright sub-services
+    '/services/copyright/software',
+    '/services/copyright/renewal',
+    '/services/copyright/infringement',
+    '/services/copyright/transfer',
+
+    // Trademark Registration - State Pages
+    '/services/trademark-registration/andhra-pradesh',
+    '/services/trademark-registration/arunachal-pradesh',
+    '/services/trademark-registration/assam',
+    '/services/trademark-registration/bihar',
+    '/services/trademark-registration/chandigarh',
+    '/services/trademark-registration/chhattisgarh',
+    '/services/trademark-registration/delhi',
+    '/services/trademark-registration/goa',
+    '/services/trademark-registration/gujarat',
+    '/services/trademark-registration/haryana',
+    '/services/trademark-registration/himachal-pradesh',
+    '/services/trademark-registration/jammu-and-kashmir',
+    '/services/trademark-registration/jharkhand',
+    '/services/trademark-registration/karnataka',
+    '/services/trademark-registration/kerala',
+    '/services/trademark-registration/ladakh',
+    '/services/trademark-registration/madhya-pradesh',
+    '/services/trademark-registration/maharashtra',
+    '/services/trademark-registration/manipur',
+    '/services/trademark-registration/meghalaya',
+    '/services/trademark-registration/odisha',
+    '/services/trademark-registration/puducherry',
+    '/services/trademark-registration/punjab',
+    '/services/trademark-registration/rajasthan',
+    '/services/trademark-registration/sikkim',
+    '/services/trademark-registration/tamil-nadu',
+    '/services/trademark-registration/telangana',
+    '/services/trademark-registration/tripura',
+    '/services/trademark-registration/uttar-pradesh',
+    '/services/trademark-registration/uttarakhand',
+    '/services/trademark-registration/west-bengal',
+
+    // Patent Services - State Pages
+    '/services/patent-services/patent-services-in-andaman-and-nicobar-islands',
+    '/services/patent-services/patent-services-in-bihar',
+    '/services/patent-services/patent-services-in-chhattisgarh',
+    '/services/patent-services/patent-services-in-dadra-and-nagar-haveli',
+    '/services/patent-services/patent-services-in-delhi',
+    '/services/patent-services/patent-services-in-himachal-pradesh',
+    '/services/patent-services/patent-services-in-jammu-and-kashmir',
+    '/services/patent-services/patent-services-in-jharkhand',
+    '/services/patent-services/patent-services-in-karnataka',
+    '/services/patent-services/patent-services-in-kerala',
+    '/services/patent-services/patent-services-in-manipur',
+    '/services/patent-services/patent-services-in-mizoram',
+    '/services/patent-services/patent-services-in-nagaland',
+    '/services/patent-services/patent-services-in-puducherry',
+    '/services/patent-services/patent-services-in-punjab',
+    '/services/patent-services/patent-services-in-rajasthan',
+    '/services/patent-services/patent-services-in-sikkim',
+    '/services/patent-services/patent-services-in-tamil-nadu',
+    '/services/patent-services/patent-services-in-tripura',
+    '/services/patent-services/patent-services-in-uttar-pradesh',
+    '/services/patent-services/patent-services-in-uttarakhand',
+
+    // Copyright Protection - State Pages
+    '/services/copyright-protection/copyright-protection-in-haryana',
   ];
-
-  // Generate dynamic service pages
-  const dynamicPages: string[] = [];
-  
-  allLocations.forEach((location) => {
-    const slug = generateStateSlug(location);
-    // Check if state has a dedicated folder (uses folder name directly)
-    if (stateFolderMap[location]) {
-      dynamicPages.push(`/services/trademark-registration/${slug}`);
-    } else {
-      // States without dedicated folders use the long format
-      dynamicPages.push(`/services/trademark-registration/trademark-registration-in-${slug}`);
-    }
-    dynamicPages.push(`/services/patent-services/patent-services-in-${slug}`);
-    dynamicPages.push(`/services/copyright-protection/copyright-protection-in-${slug}`);
-  });
-
-  // Combine all pages
-  const allPages = [...staticPages, ...dynamicPages];
 
   // Create sitemap XML
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${allPages.map((page) => {
     const url = `${baseUrl}${page}`;
-    const priority = page === '' ? '1.0' : 
-                    page === '/trademark-registration-guide' ? '0.95' :
-                    page === '/services' || page === '/services/trademark-registration' || 
-                    page === '/services/patent-services' || page === '/services/copyright-protection' ? '0.9' :
-                    page.startsWith('/services/') && !page.includes('-in-') ? '0.85' :
-                    page.startsWith('/features/') ? '0.8' :
-                    page === '/about' || page === '/contact' ? '0.7' :
-                    page === '/form' || page === '/thank-you' ? '0.6' :
-                    page.includes('-in-') ? '0.6' : '0.5';
-    
+    const priority = page === '' ? '1.0' :
+      page === '/trademark-registration-guide' ? '0.95' :
+        page === '/services' || page === '/services/trademark-registration' ||
+          page === '/services/patent-services' || page === '/services/copyright-protection' ? '0.9' :
+          page.startsWith('/services/') && !page.includes('-in-') ? '0.85' :
+            page.startsWith('/features/') ? '0.8' :
+              page === '/about' || page === '/contact' ? '0.7' :
+                page === '/form' || page === '/thank-you' ? '0.6' :
+                  page.includes('-in-') ? '0.6' : '0.5';
+
     const changefreq = page === '' ? 'daily' :
-                      page === '/trademark-registration-guide' ? 'weekly' :
-                      page === '/services' || page === '/services/trademark-registration' || 
-                      page === '/services/patent-services' || page === '/services/copyright-protection' ? 'weekly' :
-                      page.startsWith('/services/') && !page.includes('-in-') ? 'weekly' :
-                      page.startsWith('/features/') ? 'weekly' :
-                      page.includes('-in-') ? 'monthly' : 'monthly';
-    
+      page === '/trademark-registration-guide' ? 'weekly' :
+        page === '/services' || page === '/services/trademark-registration' ||
+          page === '/services/patent-services' || page === '/services/copyright-protection' ? 'weekly' :
+          page.startsWith('/services/') && !page.includes('-in-') ? 'weekly' :
+            page.startsWith('/features/') ? 'weekly' :
+              page.includes('-in-') ? 'monthly' : 'monthly';
+
     return `  <url>
     <loc>${url}</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
