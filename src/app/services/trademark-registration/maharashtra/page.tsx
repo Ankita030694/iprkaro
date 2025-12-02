@@ -234,7 +234,12 @@ export default function MaharashtraTrademarkPage() {
     "@type": "Article",
     "headline": "Trademark Registration in Maharashtra: Complete Guide & Process 2025",
     "description": "Complete guide to trademark registration in Maharashtra. Learn step-by-step process, fees, documents required, timeline, and expert assistance for trademark registration in Maharashtra, India.",
-    "image": "https://iprkaro.com/og-image.jpg",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://iprkaro.com/og-image.jpg",
+      "width": 1200,
+      "height": 630
+    },
     "author": {
       "@type": "Organization",
       "name": "IPRKaro",
@@ -245,28 +250,36 @@ export default function MaharashtraTrademarkPage() {
       "name": "IPRKaro",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://iprkaro.com/logo.png"
+        "url": "https://iprkaro.com/logo.png",
+        "width": 200,
+        "height": 60
       }
     },
-    "datePublished": "2025-01-15",
-    "dateModified": "2025-01-15",
+    "datePublished": "2025-01-15T09:00:00+05:30",
+    "dateModified": "2025-01-15T09:00:00+05:30",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://iprkaro.com/services/trademark-registration/maharashtra"
-    }
+    },
+    "wordCount": 2500,
+    "articleBody": "Maharashtra, being one of India's most industrialized states with major business hubs like Mumbai, Pune, Nagpur, and Nashik, sees thousands of trademark registrations annually..."
   };
 
   const reviewSchema = {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Trademark Registration Services in Maharashtra",
+    "@type": "LocalBusiness",
+    "name": "IPRKaro - Trademark Registration Services",
     "image": "https://iprkaro.com/og-image.jpg",
     "description": "Professional trademark registration services in Maharashtra with expert assistance, comprehensive search, and complete filing support.",
-    "provider": {
-      "@type": "Organization",
-      "name": "IPRKaro"
+    "@id": "https://iprkaro.com/services/trademark-registration/maharashtra",
+    "url": "https://iprkaro.com/services/trademark-registration/maharashtra",
+    "telephone": "+91-XXXXXXXXXX",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Maharashtra",
+      "addressCountry": "IN"
     },
-    "areaServed": "Maharashtra, India",
+    "priceRange": "₹₹",
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.8",
