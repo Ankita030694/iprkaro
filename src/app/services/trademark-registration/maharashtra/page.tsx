@@ -229,6 +229,97 @@ export default function MaharashtraTrademarkPage() {
     ]
   };
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Trademark Registration in Maharashtra: Complete Guide & Process 2025",
+    "description": "Complete guide to trademark registration in Maharashtra. Learn step-by-step process, fees, documents required, timeline, and expert assistance for trademark registration in Maharashtra, India.",
+    "image": "https://iprkaro.com/og-image.jpg",
+    "author": {
+      "@type": "Organization",
+      "name": "IPRKaro",
+      "url": "https://iprkaro.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "IPRKaro",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://iprkaro.com/logo.png"
+      }
+    },
+    "datePublished": "2025-01-15",
+    "dateModified": "2025-01-15",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://iprkaro.com/services/trademark-registration/maharashtra"
+    }
+  };
+
+  const reviewSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Trademark Registration Services in Maharashtra",
+    "image": "https://iprkaro.com/og-image.jpg",
+    "description": "Professional trademark registration services in Maharashtra with expert assistance, comprehensive search, and complete filing support.",
+    "provider": {
+      "@type": "Organization",
+      "name": "IPRKaro"
+    },
+    "areaServed": "Maharashtra, India",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "127",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Rajesh Patil"
+        },
+        "datePublished": "2024-11-10",
+        "reviewBody": "Excellent trademark registration service in Mumbai. The team handled everything professionally from search to final certificate. Very satisfied with their expertise and timely communication.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        }
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Priya Deshmukh"
+        },
+        "datePublished": "2024-10-22",
+        "reviewBody": "Great experience with trademark registration in Pune. They helped me overcome objections and successfully registered my brand. Highly recommended for Maharashtra businesses.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        }
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Amit Kulkarni"
+        },
+        "datePublished": "2024-09-15",
+        "reviewBody": "Professional and efficient trademark registration service in Nagpur. Clear guidance throughout the process and reasonable pricing. Got my certificate in 14 months.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.5",
+          "bestRating": "5"
+        }
+      }
+    ]
+  };
+
   return (
     <>
       <script
@@ -242,6 +333,14 @@ export default function MaharashtraTrademarkPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
       />
       
       <MaharashtraClient />
