@@ -1,4 +1,11 @@
 import CopyrightProtectionPageClient from './CopyrightProtectionPageClient';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: '/services/copyright-protection',
+  },
+};
 
 export default function CopyrightProtectionPage() {
   // FAQ Schema for server-side rendering

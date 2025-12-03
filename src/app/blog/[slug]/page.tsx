@@ -59,7 +59,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
           images: blogData.image ? [blogData.image] : [],
         },
         alternates: {
-          canonical: `https://iprkaro.com/blog/${slug}`,
+          canonical: `/blog/${slug}`,
         },
       };
     }
@@ -71,7 +71,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: 'Blog Article - AMA Legal Solutions',
     description: 'Read the latest legal insights and articles from AMA Legal Solutions',
     alternates: {
-      canonical: `https://iprkaro.com/blog/${slug}`,
+      canonical: `/blog/${slug}`,
     },
   };
 }

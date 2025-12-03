@@ -3,7 +3,7 @@ import { MetadataRoute } from 'next';
 export async function GET() {
   // Configure your domain here (without www is recommended for modern websites)
   // Make sure to set up 301 redirects from www to non-www (or vice versa) in your hosting config
-  const baseUrl = 'https://iprkaro.com'; // Use 'https://www.iprkaro.com' if you prefer www
+  const baseUrl = 'https://www.iprkaro.com'; // Use 'https://www.iprkaro.com' if you prefer www
 
   // All static pages that exist in the project
   const allPages = [
@@ -86,30 +86,11 @@ export async function GET() {
     '/services/trademark-registration/west-bengal',
 
     // Patent Services - State Pages
-    '/services/patent-services/patent-services-in-andaman-and-nicobar-islands',
-    '/services/patent-services/patent-services-in-bihar',
-    '/services/patent-services/patent-services-in-chhattisgarh',
-    '/services/patent-services/patent-services-in-dadra-and-nagar-haveli',
-    '/services/patent-services/patent-services-in-delhi',
-    '/services/patent-services/patent-services-in-himachal-pradesh',
-    '/services/patent-services/patent-services-in-jammu-and-kashmir',
-    '/services/patent-services/patent-services-in-jharkhand',
-    '/services/patent-services/patent-services-in-karnataka',
-    '/services/patent-services/patent-services-in-kerala',
-    '/services/patent-services/patent-services-in-manipur',
-    '/services/patent-services/patent-services-in-mizoram',
-    '/services/patent-services/patent-services-in-nagaland',
-    '/services/patent-services/patent-services-in-puducherry',
-    '/services/patent-services/patent-services-in-punjab',
-    '/services/patent-services/patent-services-in-rajasthan',
-    '/services/patent-services/patent-services-in-sikkim',
-    '/services/patent-services/patent-services-in-tamil-nadu',
-    '/services/patent-services/patent-services-in-tripura',
-    '/services/patent-services/patent-services-in-uttar-pradesh',
-    '/services/patent-services/patent-services-in-uttarakhand',
+    // These should be dynamically generated or updated to new structure if they exist
+    // For now, removing hardcoded old patterns to fix SEO redirect issues
 
     // Copyright Protection - State Pages
-    '/services/copyright-protection/copyright-protection-in-haryana',
+    // Removing hardcoded old pattern
   ];
 
   // Create sitemap XML

@@ -1,4 +1,11 @@
 import BlogListingClient from './BlogListingClient';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: '/blog',
+  },
+};
 
 export default function BlogPage() {
   // FAQ Schema for server-side rendering

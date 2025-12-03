@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     description: 'Get expert trademark guidance from experienced attorneys in India. 24/7 consultation, legal support, and professional advice for trademark registration, opposition handling, and comprehensive brand protection strategies.',
   },
   alternates: {
-    canonical: 'https://iprkaro.com/features/expert-trademark-guidance',
+    canonical: '/features/expert-trademark-guidance',
   },
   robots: {
     index: true,

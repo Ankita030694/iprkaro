@@ -1,4 +1,11 @@
 import ServicesClient from './ServicesClient';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: '/services',
+  },
+};
 
 export default function ServicesPage() {
   // FAQ Schema for server-side rendering

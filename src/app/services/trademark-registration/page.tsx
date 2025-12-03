@@ -1,4 +1,11 @@
 import TrademarkRegistrationPageClient from './TrademarkRegistrationPageClient';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: '/services/trademark-registration',
+  },
+};
 
 export default function TrademarkRegistrationPage() {
   // FAQ Schema for server-side rendering

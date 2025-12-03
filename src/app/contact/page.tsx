@@ -1,4 +1,11 @@
 import ContactClient from './ContactClient';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: '/contact',
+  },
+};
 
 export default function ContactPage() {
   // FAQ Schema for server-side rendering
