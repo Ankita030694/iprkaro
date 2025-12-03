@@ -1,6 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import PatentServicesClient from './PatentServicesClient';
+import { redirect } from 'next/navigation';
 
 // Convert slug to proper state name
 function getStateName(slug: string): string {
@@ -86,6 +87,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function PatentServicesSlugPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
+
+  // Redirect legacy URLs to new structure
+  if (slug.startsWith('patent-services-in-')) {
+    const cleanSlug = slug.replace('patent-services-in-', '');
+    redirect(`/services/patent-services/${cleanSlug}`);
+  }
+
   const stateName = getStateName(slug);
 
   // State-specific FAQ Schema

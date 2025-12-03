@@ -70,6 +70,30 @@ const nextConfig: NextConfig = {
         destination: '/contact',
         permanent: true, // 301 redirect
       },
+      // Redirect for moved patent service pages (patent-services-in-state -> state)
+      {
+        source: '/services/patent-services/patent-services-in-:state',
+        destination: '/services/patent-services/:state',
+        permanent: true,
+      },
+      // Redirect for moved trademark registration pages (trademark-registration-in-state -> state)
+      {
+        source: '/services/trademark-registration/trademark-registration-in-:state',
+        destination: '/services/trademark-registration/:state',
+        permanent: true,
+      },
+      // Redirect for moved copyright protection pages (copyright-protection-in-state -> state)
+      {
+        source: '/services/copyright-protection/copyright-protection-in-:state',
+        destination: '/services/copyright-protection/:state',
+        permanent: true,
+      },
+      // Redirect for Indore trademark page to Madhya Pradesh
+      {
+        source: '/services/trademark-registration/trademark-registration-in-indore',
+        destination: '/services/trademark-registration/madhya-pradesh',
+        permanent: true,
+      },
     ];
   },
   /* config options here */

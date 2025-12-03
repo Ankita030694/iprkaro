@@ -1,6 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import CopyrightProtectionClient from './CopyrightProtectionClient';
+import { redirect } from 'next/navigation';
 
 // Convert slug to proper state name
 function getStateName(slug: string): string {
@@ -85,6 +86,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function CopyrightProtectionSlugPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
+
+  // Redirect legacy URLs to new structure
+  if (slug.startsWith('copyright-protection-in-')) {
+    const cleanSlug = slug.replace('copyright-protection-in-', '');
+    redirect(`/services/copyright-protection/${cleanSlug}`);
+  }
+
   const stateName = getStateName(slug);
 
   // State-specific FAQ Schema
