@@ -15,20 +15,21 @@ export default function DelhiClient() {
   const [tocSections, setTocSections] = useState<TOCSection[]>([]);
 
   useEffect(() => {
-    // Define sections for TOC
     const sections: TOCSection[] = [
-      { id: 'overview', title: 'Trademark Registration in Delhi NCR' },
-      { id: 'why-register', title: 'Why Delhi Businesses Need IP Protection' },
-      { id: 'benefits', title: 'Key Benefits for Local Businesses' },
-      { id: 'eligibility', title: 'Eligibility Criteria' },
-      { id: 'registration-process', title: 'Registration Process' },
-      { id: 'required-documents', title: 'Required Documents' },
-      { id: 'trademark-search', title: 'Trademark Search Process' },
-      { id: 'classes', title: 'Trademark Classes Guide' },
-      { id: 'timeline', title: 'Registration Timeline' },
-      { id: 'post-registration', title: 'Post-Registration Steps' },
-      { id: 'common-mistakes', title: 'Common Mistakes to Avoid' },
-      { id: 'faq', title: 'FAQs' }
+      { id: 'overview', title: 'Trademark Registration in Delhi NCR: An Overview' },
+      { id: 'importance', title: 'Why Trademark Registration is Vital for Delhi Businesses' },
+      { id: 'benefits', title: 'Strategic Benefits of Brand Protection' },
+      { id: 'eligibility', title: 'Who Can Apply for a Trademark in Delhi?' },
+      { id: 'process', title: 'Step-by-Step Registration Process' },
+      { id: 'documents', title: 'Required Documents for Filing' },
+      { id: 'search', title: 'The Critical Role of Trademark Search' },
+      { id: 'classes', title: 'Key Trademark Classes for Delhi Industries' },
+      { id: 'objections', title: 'Handling Objections and Oppositions' },
+      { id: 'renewal', title: 'Trademark Renewal and Maintenance' },
+      { id: 'assignment', title: 'Trademark Assignment and Licensing' },
+      { id: 'why-choose-us', title: 'Why Choose IPRKaro?' },
+      { id: 'testimonials', title: 'Client Testimonials' },
+      { id: 'faq', title: 'Frequently Asked Questions' }
     ];
     setTocSections(sections);
     if (sections.length > 0) {
@@ -39,8 +40,6 @@ export default function DelhiClient() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 250;
-      
-      // Check each section to see which one is currently in view
       for (const section of tocSections) {
         const element = document.getElementById(section.id);
         if (element) {
@@ -52,7 +51,6 @@ export default function DelhiClient() {
         }
       }
     };
-
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, [tocSections]);
@@ -104,7 +102,6 @@ export default function DelhiClient() {
     <div style={{ backgroundColor: '#0C002B' }}>
       <Navbar />
       
-      {/* Table of Contents */}
       {tocSections.length > 0 && (
         <BlogTableOfContents 
           activeSection={activeSection} 
@@ -153,7 +150,7 @@ export default function DelhiClient() {
                 />
               </div>
               <h1 className="text-white font-nunito text-3xl md:text-4xl lg:text-5xl font-bold">
-                Trademark Registration in Delhi: NCR's Premier IP Guide
+                Trademark Registration in Delhi: Securing Brands in the National Capital
               </h1>
             </div>
             
@@ -166,10 +163,10 @@ export default function DelhiClient() {
               }}
             >
               <p className="text-white/95 font-nunito text-base lg:text-lg leading-relaxed mb-3">
-                From the tech hubs of Nehru Place and Okhla to the commercial centers of Connaught Place and Karol Bagh, Delhi is the heartbeat of Indian business. In this hyper-competitive market, your brand identity is your most valuable asset. Trademark registration in Delhi is not just a legal formality; it's a strategic necessity to protect your market share in the National Capital Region.
+                Delhi, the political and commercial heart of India, is a thriving ecosystem for businesses ranging from centuries old family firms in Chandni Chowk to cutting edge tech startups in Okhla and Nehru Place. In this hyper competitive market, your brand identity is your most valuable asset. Trademark registration in Delhi is not just a legal formality; it is a strategic necessity to protect your market share and reputation in the National Capital Region (NCR).
               </p>
               <p className="text-white/95 font-nunito text-base lg:text-lg leading-relaxed">
-                Whether you are a startup in Hauz Khas, a manufacturer in Bawana or Naraina, or a service provider in Dwarka, this guide covers everything about securing your intellectual property at the Delhi Trademark Registry (Baudhik Sampada Bhawan).
+                Whether you are a fashion designer in Hauz Khas, a manufacturer in Bawana, or a service provider in Dwarka, securing your intellectual property rights ensures that your hard earned goodwill remains exclusively yours. This comprehensive guide details everything you need to know about registering a trademark in Delhi, from the process at the local registry to the strategic benefits for your business.
               </p>
             </div>
           </section>
@@ -177,123 +174,110 @@ export default function DelhiClient() {
           {/* Overview Section */}
           <section id="overview" className="mb-8 scroll-mt-32">
             <div className="flex items-center gap-2 mb-3">
-              <div 
-                className="w-2 h-2 rounded-full"
-                style={{
-                  background: '#FFB703',
-                  boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
-                }}
-              />
+              <div className="w-2 h-2 rounded-full" style={{ background: '#FFB703', boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)' }} />
               <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
-                Trademark Registration in Delhi NCR
+                Trademark Registration in Delhi NCR: An Overview
               </h2>
             </div>
             
-            <div 
-              className="p-4 rounded-lg"
-              style={{ 
-                background: 'rgba(255, 255, 255, 0.03)',
-                border: '1px solid rgba(255, 255, 255, 0.1)',
-                boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)'
-              }}
-            >
+            <div className="p-4 rounded-lg" style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)', boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)' }}>
               <p className="text-white/90 font-nunito text-base leading-relaxed mb-3">
-                The <strong>Trade Marks Registry, Delhi</strong> acts as the nodal office for all trademark activities in North India. Located in Dwarka, it processes applications from Delhi, Haryana, Punjab, Himachal Pradesh, J&K, and Chandigarh.
+                A trademark is a distinctive sign that identifies certain goods or services as those produced or provided by a specific person or enterprise. It can be a name, logo, slogan, sound, or even a smell. In India, the **Trade Marks Act, 1999** governs the registration and protection of trademarks.
+              </p>
+              <h3 className="text-white font-nunito text-xl font-semibold mb-2 mt-4">Jurisdiction: The Delhi Registry</h3>
+              <p className="text-white/90 font-nunito text-base leading-relaxed mb-3">
+                The Trade Marks Registry in India is divided into five zones. Delhi is home to one of the most active registries in the country.
               </p>
               <p className="text-white/90 font-nunito text-base leading-relaxed mb-3">
-                For Delhi businesses, filing a trademark application ensures that your brand name, logo, or slogan cannot be copied by competitors in local markets like Sadar Bazar or Chandni Chowk, or by digital competitors online. It gives you the legal standing to file infringement suits at the <strong>Delhi High Court</strong>, which has a dedicated Intellectual Property Division (IPD) known for speedy disposal of IP cases.
+                **Address of the Appropriate Office:**<br />
+                Trade Marks Registry,<br />
+                Boudhik Sampada Bhawan,<br />
+                Plot No. 32, Sector 14, Dwarka,<br />
+                New Delhi – 110075.
+              </p>
+              <p className="text-white/90 font-nunito text-base leading-relaxed mb-3">
+                **Jurisdiction:** This office handles applications from Delhi, Haryana, Punjab, Himachal Pradesh, Jammu & Kashmir, Chandigarh, and Uttarakhand.
+              </p>
+              <p className="text-white/90 font-nunito text-base leading-relaxed mb-3">
+                **Digital Advantage:** While the physical office is in Dwarka, the entire process is digitized. You can file your application (Form TM-A), respond to examination reports, and even attend hearings via video conferencing without visiting the office. This makes the process efficient and accessible for businesses across the NCR region.
+              </p>
+              <p className="text-white/90 font-nunito text-base leading-relaxed">
+                A registered trademark is valid for **10 years** and can be renewed indefinitely, making it a perpetual asset for your business.
               </p>
             </div>
           </section>
 
-          {/* Why Register in Delhi */}
-          <section id="why-register" className="mb-8 scroll-mt-32">
+          {/* Importance Section */}
+          <section id="importance" className="mb-8 scroll-mt-32">
             <div className="flex items-center gap-2 mb-3">
-              <div 
-                className="w-2 h-2 rounded-full"
-                style={{
-                  background: '#FFB703',
-                  boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
-                }}
-              />
+              <div className="w-2 h-2 rounded-full" style={{ background: '#FFB703', boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)' }} />
               <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
-                Why Delhi Businesses Need IP Protection
+                Why Trademark Registration is Vital for Delhi Businesses
               </h2>
             </div>
             
-            <div 
-              className="p-4 rounded-lg"
-              style={{ 
-                background: 'rgba(255, 255, 255, 0.03)',
-                border: '1px solid rgba(255, 255, 255, 0.1)',
-                boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)'
-              }}
-            >
-              <div className="space-y-3 mb-4">
-                <div className="p-3 rounded-md" style={{ background: 'rgba(255, 183, 3, 0.08)', border: '1px solid rgba(255, 183, 3, 0.2)' }}>
-                  <h4 className="text-white font-nunito text-base font-semibold mb-2 flex items-center gap-2">
-                    <i className="fas fa-building text-[#FFB703]" aria-hidden="true"></i>
-                    Combating Counterfeits in NCR
-                  </h4>
-                  <p className="text-white/90 font-nunito text-sm leading-relaxed">
-                    Delhi NCR is unfortunately a hub for counterfeit goods. From electronics in Nehru Place to auto parts in Kashmere Gate, copycats are rampant. A registered trademark is your primary weapon to conduct raids and seize counterfeit goods with police assistance.
+            <div className="p-4 rounded-lg" style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)', boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)' }}>
+              <p className="text-white/90 font-nunito text-base leading-relaxed mb-4">
+                Delhi's market is dynamic and crowded. Here is why trademark protection is essential for key sectors in the capital:
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="p-4 rounded-md" style={{ background: 'rgba(255, 183, 3, 0.08)', border: '1px solid rgba(255, 183, 3, 0.2)' }}>
+                  <h3 className="text-white font-nunito text-lg font-semibold mb-2">Retail & E-commerce</h3>
+                  <p className="text-white/90 font-nunito text-sm">
+                    For sellers in wholesale hubs like Sadar Bazar or retailers in malls like Select Citywalk, a trademark protects against counterfeits. It is also mandatory for Brand Registry on platforms like Amazon and Flipkart.
                   </p>
                 </div>
-
-                <div className="p-3 rounded-md" style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
-                  <h4 className="text-white font-nunito text-base font-semibold mb-2 flex items-center gap-2">
-                    <i className="fas fa-rocket text-[#FFB703]" aria-hidden="true"></i>
-                    Valuation for Startups
-                  </h4>
-                  <p className="text-white/90 font-nunito text-sm leading-relaxed">
-                    For fintech and edtech startups in Gurugram and Noida, IP valuation is critical for funding rounds. Investors check if your brand name and software product names are trademarked to ensure their investment is safe.
+                <div className="p-4 rounded-md" style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
+                  <h3 className="text-white font-nunito text-lg font-semibold mb-2">Startups & Tech</h3>
+                  <p className="text-white/90 font-nunito text-sm">
+                    Delhi NCR is a startup hub. Investors in Okhla and Gurugram look for secured IP assets before funding. Protecting your app name or software brand is crucial for valuation.
+                  </p>
+                </div>
+                <div className="p-4 rounded-md" style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
+                  <h3 className="text-white font-nunito text-lg font-semibold mb-2">Manufacturing & Exports</h3>
+                  <p className="text-white/90 font-nunito text-sm">
+                    Industrial units in Bawana, Narela, and Okhla need trademarks to build trust in export markets. A registered mark is proof of origin and quality for international buyers.
+                  </p>
+                </div>
+                <div className="p-4 rounded-md" style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
+                  <h3 className="text-white font-nunito text-lg font-semibold mb-2">Hospitality & Services</h3>
+                  <p className="text-white/90 font-nunito text-sm">
+                    Restaurants in Connaught Place and boutique hotels in South Delhi rely heavily on their brand reputation. A trademark prevents others from opening copycat outlets with similar names.
                   </p>
                 </div>
               </div>
             </div>
           </section>
 
-          {/* Benefits Section - kept mostly same but ensured structure matches */}
+          {/* Benefits Section */}
           <section id="benefits" className="mb-8 scroll-mt-32">
-             <div className="flex items-center gap-2 mb-3">
+            <div className="flex items-center gap-2 mb-3">
               <div className="w-2 h-2 rounded-full" style={{ background: '#FFB703', boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)' }} />
               <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
-                Key Benefits for Local Businesses
+                Strategic Benefits of Brand Protection
               </h2>
             </div>
+            
             <div className="p-4 rounded-lg" style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)', boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)' }}>
+              <p className="text-white/90 font-nunito text-base leading-relaxed mb-4">
+                Registering your trademark is a strategic move that offers long term advantages:
+              </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                 {[
-                  {
-                    icon: "fas fa-certificate",
-                    title: "Exclusive Ownership Rights",
-                    description: "Registration grants you exclusive nationwide rights to use your trademark for specified goods or services. No other entity can legally use an identical or deceptively similar mark within the same class, providing complete monopoly over your brand identity."
-                  },
-                  {
-                    icon: "fas fa-shield-alt",
-                    title: "Strong Legal Protection",
-                    description: "Registered trademarks receive stronger legal protection compared to unregistered marks. You can file infringement suits, seek statutory damages, obtain injunctions, and enforce rights more effectively through civil and criminal remedies available under the Trademarks Act."
-                  },
-                  {
-                    icon: "fas fa-chart-line",
-                    title: "Enhanced Brand Value",
-                    description: "A registered trademark adds tangible value to your business as an intangible asset. It enhances brand credibility, builds customer trust, differentiates you from competitors, and contributes significantly to overall business valuation for funding, mergers, or acquisition purposes."
-                  },
-                  {
-                    icon: "fas fa-handshake",
-                    title: "Licensing Revenue Streams",
-                    description: "Registered trademarks can be licensed to other businesses, creating additional revenue streams without operational involvement. Franchising opportunities also expand significantly with registered trademarks, as franchisees gain confidence from protected intellectual property."
-                  }
-                ].map((benefit, index) => (
-                  <div key={index} className="p-4 rounded-md hover:-translate-y-0.5 transition-all duration-300" style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
-                    <div className="flex items-start gap-3">
-                      <div className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: 'rgba(255, 183, 3, 0.15)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
-                        <i className={`${benefit.icon} text-[#FFB703] text-base`} aria-hidden="true"></i>
-                      </div>
-                      <div>
-                        <h4 className="text-white font-nunito text-base font-semibold mb-2">{benefit.title}</h4>
-                        <p className="text-white/90 font-nunito text-sm leading-relaxed">{benefit.description}</p>
-                      </div>
+                {[
+                  { title: "Exclusive Rights", icon: "fas fa-gavel", desc: "You get the sole right to use the mark across India. You can take legal action against anyone using a confusingly similar mark." },
+                  { title: "Trust & Reputation", icon: "fas fa-handshake", desc: "A registered trademark signals that your business is established and follows legal norms, building trust with customers and partners." },
+                  { title: "Intangible Asset", icon: "fas fa-coins", desc: "Your trademark is an asset that appreciates over time. It can be sold, franchised, or used as collateral for loans." },
+                  { title: "Deterrent to Copycats", icon: "fas fa-shield-alt", desc: "The public record of your registration warns potential infringers to stay away from your brand name." },
+                  { title: "Global Expansion", icon: "fas fa-globe", desc: "Your Indian registration can be the basis for filing international trademark applications under the Madrid Protocol." },
+                  { title: "Use of ® Symbol", icon: "fas fa-registered", desc: "You can legally use the ® symbol, which adds a layer of professionalism and prestige to your brand." }
+                ].map((item, idx) => (
+                  <div key={idx} className="flex items-start gap-3 p-3 rounded-md" style={{ background: 'rgba(255, 255, 255, 0.02)', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
+                    <div className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: 'rgba(255, 183, 3, 0.15)', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+                      <i className={`${item.icon} text-[#FFB703] text-base`}></i>
+                    </div>
+                    <div>
+                      <h4 className="text-white font-nunito text-base font-semibold mb-1">{item.title}</h4>
+                      <p className="text-white/90 font-nunito text-sm">{item.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -301,45 +285,447 @@ export default function DelhiClient() {
             </div>
           </section>
 
-          {/* Remaining sections (Eligibility, Process, etc.) kept from original file structure but truncated for brevity in this specific edit as they are generally standard legal processes, but the Introduction and Overview are the key differentiators I injected. I will include the rest of the component to ensure file integrity. */}
-          
           {/* Eligibility Section */}
           <section id="eligibility" className="mb-8 scroll-mt-32">
-             <div className="flex items-center gap-2 mb-3">
+            <div className="flex items-center gap-2 mb-3">
               <div className="w-2 h-2 rounded-full" style={{ background: '#FFB703', boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)' }} />
-              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">Eligibility Criteria</h2>
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
+                Who Can Apply for a Trademark in Delhi?
+              </h2>
             </div>
-            <div className="p-4 rounded-lg" style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
-               <p className="text-white/90 font-nunito text-base leading-relaxed mb-4">
-                Any individual, startup, or company claiming to be the proprietor of a trademark can apply. This includes Private Limited Companies in Okhla, Sole Proprietorships in Karol Bagh, or LLPs in Gurugram.
+            <div className="p-4 rounded-lg" style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)', boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)' }}>
+              <p className="text-white/90 font-nunito text-base leading-relaxed mb-4">
+                The eligibility is broad, covering various types of entities operating in the capital:
               </p>
+              <ul className="space-y-3 text-white/90 font-nunito text-sm">
+                <li className="flex items-start gap-2">
+                  <i className="fas fa-user text-[#FFB703] mt-1"></i>
+                  <div>
+                    <strong>Individuals & Sole Proprietors:</strong>
+                    <p className="text-xs text-white/70 mt-1">Designers, consultants, shop owners, and freelancers.</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-2">
+                  <i className="fas fa-building text-[#FFB703] mt-1"></i>
+                  <div>
+                    <strong>Private Limited Companies:</strong>
+                    <p className="text-xs text-white/70 mt-1">Startups and established corporate houses.</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-2">
+                  <i className="fas fa-users text-[#FFB703] mt-1"></i>
+                  <div>
+                    <strong>Partnership Firms & LLPs:</strong>
+                    <p className="text-xs text-white/70 mt-1">Professional firms (lawyers, CAs) and trading partnerships.</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-2">
+                  <i className="fas fa-university text-[#FFB703] mt-1"></i>
+                  <div>
+                    <strong>NGOs and Trusts:</strong>
+                    <p className="text-xs text-white/70 mt-1">Charitable organizations and educational institutions.</p>
+                  </div>
+                </li>
+              </ul>
             </div>
           </section>
 
           {/* Process Section */}
-          <section id="registration-process" className="mb-8 scroll-mt-32">
+          <section id="process" className="mb-8 scroll-mt-32">
             <div className="flex items-center gap-2 mb-3">
               <div className="w-2 h-2 rounded-full" style={{ background: '#FFB703', boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)' }} />
-              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">Registration Process</h2>
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
+                Step-by-Step Registration Process
+              </h2>
             </div>
-            <div className="p-4 rounded-lg" style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
-              <p className="text-white/90 font-nunito text-base leading-relaxed">
-                The process involves: 1. Search, 2. Application (Form TM-A), 3. Examination, 4. Publication, 5. Registration. Our Delhi-based team handles physical hearing attendance at the Dwarka Registry if required.
+            <div className="p-4 rounded-lg" style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)', boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)' }}>
+              <p className="text-white/90 font-nunito text-base leading-relaxed mb-6">
+                The process is streamlined but requires attention to detail. Here is how it works:
               </p>
+              <div className="relative space-y-8">
+                <div className="absolute left-4 top-0 bottom-0 w-0.5" style={{ background: 'rgba(255, 183, 3, 0.3)', opacity: 0.5 }} />
+                
+                <div className="relative flex gap-4">
+                  <div className="relative z-10 flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-nunito font-bold text-sm" style={{ background: 'linear-gradient(135deg, #FFB703, #FFA000)', color: '#0C002B', boxShadow: '0 3px 10px rgba(255, 183, 3, 0.4)' }}>1</div>
+                  <div className="flex-1">
+                    <h4 className="text-white font-nunito text-lg font-semibold mb-2">Trademark Search</h4>
+                    <p className="text-white/90 font-nunito text-sm leading-relaxed">
+                      Before filing, we conduct a thorough search on the IP India database to ensure your proposed mark is not identical or similar to existing marks. This step is crucial to avoid objections.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="relative flex gap-4">
+                  <div className="relative z-10 flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-nunito font-bold text-sm" style={{ background: 'linear-gradient(135deg, #FFB703, #FFA000)', color: '#0C002B', boxShadow: '0 3px 10px rgba(255, 183, 3, 0.4)' }}>2</div>
+                  <div className="flex-1">
+                    <h4 className="text-white font-nunito text-lg font-semibold mb-2">Application Filing (Form TM-A)</h4>
+                    <p className="text-white/90 font-nunito text-sm leading-relaxed">
+                      We prepare and file the application online. This includes details of the applicant, the mark, the class of goods/services, and the user date (date of first use). An application number is generated immediately.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="relative flex gap-4">
+                  <div className="relative z-10 flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-nunito font-bold text-sm" style={{ background: 'linear-gradient(135deg, #FFB703, #FFA000)', color: '#0C002B', boxShadow: '0 3px 10px rgba(255, 183, 3, 0.4)' }}>3</div>
+                  <div className="flex-1">
+                    <h4 className="text-white font-nunito text-lg font-semibold mb-2">Examination</h4>
+                    <p className="text-white/90 font-nunito text-sm leading-relaxed">
+                      The Registrar examines the application for compliance with the Act. They check for distinctiveness and conflicts with other marks. If there are issues, an Examination Report is issued, which must be replied to within 30 days.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="relative flex gap-4">
+                  <div className="relative z-10 flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-nunito font-bold text-sm" style={{ background: 'linear-gradient(135deg, #FFB703, #FFA000)', color: '#0C002B', boxShadow: '0 3px 10px rgba(255, 183, 3, 0.4)' }}>4</div>
+                  <div className="flex-1">
+                    <h4 className="text-white font-nunito text-lg font-semibold mb-2">Publication</h4>
+                    <p className="text-white/90 font-nunito text-sm leading-relaxed">
+                      If the application is accepted, it is published in the Trademark Journal. This gives the public an opportunity (4 months) to oppose the registration if they believe it infringes on their rights.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="relative flex gap-4">
+                  <div className="relative z-10 flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-nunito font-bold text-sm" style={{ background: 'linear-gradient(135deg, #FFB703, #FFA000)', color: '#0C002B', boxShadow: '0 3px 10px rgba(255, 183, 3, 0.4)' }}>5</div>
+                  <div className="flex-1">
+                    <h4 className="text-white font-nunito text-lg font-semibold mb-2">Registration</h4>
+                    <p className="text-white/90 font-nunito text-sm leading-relaxed">
+                      If there is no opposition, or if the opposition is decided in your favor, the Registrar issues the Registration Certificate. The mark is now registered for 10 years.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Documents Section */}
+          <section id="documents" className="mb-8 scroll-mt-32">
+            <div className="flex items-center gap-2 mb-3">
+              <div className="w-2 h-2 rounded-full" style={{ background: '#FFB703', boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)' }} />
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
+                Required Documents for Filing
+              </h2>
+            </div>
+            <div className="p-4 rounded-lg" style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)', boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)' }}>
+              <p className="text-white/90 font-nunito text-base leading-relaxed mb-4">
+                Having the right documents ready speeds up the process:
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="p-5 rounded-md" style={{ background: 'rgba(255, 255, 255, 0.02)', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
+                  <h4 className="text-white font-nunito text-lg font-semibold mb-3 text-[#FFB703] border-b border-white/10 pb-2">Individual / Sole Proprietor</h4>
+                  <ul className="space-y-3 text-white/90 font-nunito text-sm">
+                    <li className="flex items-start gap-2">• <strong>Logo/Mark:</strong> Soft copy of the logo (JPEG) or word mark.</li>
+                    <li className="flex items-start gap-2">• <strong>Identity Proof:</strong> PAN Card, Aadhaar Card, or Passport.</li>
+                    <li className="flex items-start gap-2">• <strong>Address Proof:</strong> Recent utility bill or bank statement.</li>
+                    <li className="flex items-start gap-2">• <strong>Form-48:</strong> Signed Power of Attorney.</li>
+                    <li className="flex items-start gap-2">• <strong>User Affidavit:</strong> If claiming prior usage.</li>
+                  </ul>
+                </div>
+                <div className="p-5 rounded-md" style={{ background: 'rgba(255, 255, 255, 0.02)', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
+                  <h4 className="text-white font-nunito text-lg font-semibold mb-3 text-[#FFB703] border-b border-white/10 pb-2">Company / LLP / Startup</h4>
+                  <ul className="space-y-3 text-white/90 font-nunito text-sm">
+                    <li className="flex items-start gap-2">• <strong>Incorporation Certificate:</strong> Or Partnership Deed.</li>
+                    <li className="flex items-start gap-2">• <strong>Udyam/Startup Certificate:</strong> Mandatory for 50% fee rebate.</li>
+                    <li className="flex items-start gap-2">• <strong>Signatory's ID:</strong> ID and address proof of the Director/Partner.</li>
+                    <li className="flex items-start gap-2">• <strong>Board Resolution:</strong> Authorizing the signatory.</li>
+                    <li className="flex items-start gap-2">• <strong>Form-48:</strong> Power of Attorney signed by the authorized signatory.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Search Section */}
+          <section id="search" className="mb-8 scroll-mt-32">
+            <div className="flex items-center gap-2 mb-3">
+              <div className="w-2 h-2 rounded-full" style={{ background: '#FFB703', boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)' }} />
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
+                The Critical Role of Trademark Search
+              </h2>
+            </div>
+            <div className="p-4 rounded-lg" style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)', boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)' }}>
+              <p className="text-white/90 font-nunito text-base leading-relaxed mb-3">
+                A trademark search is the foundation of a successful application. It involves checking the registry for identical or phonetically similar marks that are already registered or pending.
+              </p>
+              <p className="text-white/90 font-nunito text-base leading-relaxed mb-3">
+                **Why is it important?**
+              </p>
+              <ul className="list-disc list-inside space-y-2 text-white/90 font-nunito text-sm ml-4 mb-4">
+                <li>**Avoids Rejection:** Helps you identify potential conflicts before spending money on filing fees.</li>
+                <li>**Saves Time:** Prevents months of delay caused by objections based on similarity.</li>
+                <li>**Legal Safety:** Ensures you don't inadvertently infringe on someone else's rights.</li>
+              </ul>
+              <p className="text-white/90 font-nunito text-base leading-relaxed">
+                Our team uses advanced search tools to provide a comprehensive report on the registrability of your mark.
+              </p>
+            </div>
+          </section>
+
+          {/* Classes Section */}
+          <section id="classes" className="mb-8 scroll-mt-32">
+            <div className="flex items-center gap-2 mb-3">
+              <div className="w-2 h-2 rounded-full" style={{ background: '#FFB703', boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)' }} />
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
+                Key Trademark Classes for Delhi Industries
+              </h2>
+            </div>
+            <div className="p-4 rounded-lg" style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)', boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)' }}>
+              <p className="text-white/90 font-nunito text-base leading-relaxed mb-4">
+                Choosing the right class is vital. Here are the most relevant classes for businesses in Delhi:
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                {[
+                  { class: "Class 25", desc: "Clothing, footwear, headgear. Vital for fashion brands in Karol Bagh and Lajpat Nagar." },
+                  { class: "Class 9", desc: "Software, electronics, and apps. Key for tech startups in Okhla and Nehru Place." },
+                  { class: "Class 35", desc: "Advertising, business management, and retail services. For shops, malls, and consultants." },
+                  { class: "Class 43", desc: "Services for providing food and drink. For restaurants and cafes in CP and Hauz Khas." },
+                  { class: "Class 41", desc: "Education and entertainment. For coaching centers and event management companies." },
+                  { class: "Class 42", desc: "Scientific and technological services. For IT companies and software developers." },
+                  { class: "Class 3", desc: "Cosmetics and cleaning preparations. For beauty brands." },
+                  { class: "Class 5", desc: "Pharmaceuticals. For healthcare companies." },
+                  { class: "Class 36", desc: "Insurance and financial affairs. For fintech and consultancy firms." }
+                ].map((item, idx) => (
+                  <div key={idx} className="p-3 rounded-md" style={{ background: 'rgba(255, 183, 3, 0.05)', border: '1px solid rgba(255, 183, 3, 0.1)' }}>
+                    <h5 className="text-[#FFB703] font-bold text-sm mb-1">{item.class}</h5>
+                    <p className="text-white/80 text-xs">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Objections Section */}
+          <section id="objections" className="mb-8 scroll-mt-32">
+            <div className="flex items-center gap-2 mb-3">
+              <div className="w-2 h-2 rounded-full" style={{ background: '#FFB703', boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)' }} />
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
+                Handling Objections and Oppositions
+              </h2>
+            </div>
+            <div className="p-4 rounded-lg" style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)', boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)' }}>
+              <p className="text-white/90 font-nunito text-base leading-relaxed mb-3">
+                Challenges can arise during the registration process.
+              </p>
+              
+              <h4 className="text-white font-nunito text-lg font-semibold mb-2 mt-4">Trademark Objection</h4>
+              <p className="text-white/90 font-nunito text-base leading-relaxed mb-3">
+                This is raised by the Registry if the mark violates the Trade Marks Act (e.g., it is descriptive or similar to an existing mark). You must file a legal reply justifying why your mark should be registered.
+              </p>
+
+              <h4 className="text-white font-nunito text-lg font-semibold mb-2 mt-4">Trademark Opposition</h4>
+              <p className="text-white/90 font-nunito text-base leading-relaxed mb-3">
+                This is filed by a third party (competitor or brand owner) who feels your mark damages their rights. This leads to a legal proceeding where both sides present evidence.
+              </p>
+              <p className="text-white/90 font-nunito text-base leading-relaxed">
+                Professional legal assistance is highly recommended to navigate these hurdles successfully.
+              </p>
+            </div>
+          </section>
+
+          {/* Renewal Section */}
+          <section id="renewal" className="mb-8 scroll-mt-32">
+            <div className="flex items-center gap-2 mb-3">
+              <div className="w-2 h-2 rounded-full" style={{ background: '#FFB703', boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)' }} />
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
+                Trademark Renewal and Maintenance
+              </h2>
+            </div>
+            <div className="p-4 rounded-lg" style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)', boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)' }}>
+              <p className="text-white/90 font-nunito text-base leading-relaxed mb-3">
+                To keep your rights alive, you must renew your trademark.
+              </p>
+              <ul className="list-disc list-inside space-y-2 text-white/90 font-nunito text-sm ml-4">
+                <li>**Validity:** 10 years from the date of application.</li>
+                <li>**Renewal:** Can be done every 10 years indefinitely.</li>
+                <li>**Window:** You can file for renewal 1 year before the expiry date.</li>
+                <li>**Consequence:** Failure to renew leads to the removal of the mark from the register.</li>
+              </ul>
+            </div>
+          </section>
+
+          {/* Assignment Section */}
+          <section id="assignment" className="mb-8 scroll-mt-32">
+            <div className="flex items-center gap-2 mb-3">
+              <div className="w-2 h-2 rounded-full" style={{ background: '#FFB703', boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)' }} />
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
+                Trademark Assignment and Licensing
+              </h2>
+            </div>
+            <div className="p-4 rounded-lg" style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)', boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)' }}>
+              <p className="text-white/90 font-nunito text-base leading-relaxed mb-3">
+                Trademarks are transferable assets.
+              </p>
+              <ul className="list-disc list-inside space-y-2 text-white/90 font-nunito text-sm ml-4">
+                <li>**Assignment:** You can sell your trademark to another party. This is common during business acquisitions.</li>
+                <li>**Licensing:** You can allow others to use your mark (e.g., franchising) in exchange for royalties.</li>
+              </ul>
+              <p className="text-white/90 font-nunito text-base leading-relaxed mt-3">
+                These agreements must be recorded with the Registry to be legally binding on third parties.
+              </p>
+            </div>
+          </section>
+
+          {/* Why Choose IPRKaro */}
+          <section id="why-choose-us" className="mb-8 scroll-mt-32">
+            <div className="flex items-center gap-2 mb-3">
+              <div 
+                className="w-2 h-2 rounded-full"
+                style={{
+                  background: '#FFB703',
+                  boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
+                }}
+              />
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
+                Why Choose IPRKaro for Trademark Registration in Delhi?
+              </h2>
+            </div>
+            
+            <div 
+              className="p-4 rounded-lg"
+              style={{ 
+                background: 'rgba(255, 255, 255, 0.03)',
+                border: '1px solid rgba(255, 255, 255, 0.1)',
+                boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)'
+              }}
+            >
+              <p className="text-white/90 font-nunito text-base leading-relaxed mb-4">
+                We simplify the complex legal process for you.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {[
+                  { title: "Expert Guidance", desc: "Our team understands the specific needs of Delhi's diverse industries, from retail to tech." },
+                  { title: "Transparent Pricing", desc: "No hidden costs. We offer affordable packages suitable for startups and SMEs." },
+                  { title: "Comprehensive Support", desc: "We handle everything: search, filing, objection replies, and renewal." },
+                  { title: "Digital Convenience", desc: "Complete the entire process online without visiting the Dwarka office." },
+                  { title: "High Success Rate", desc: "Our thorough search and accurate filing minimize the chances of rejection." },
+                  { title: "Dedicated Manager", desc: "Get a dedicated relationship manager to keep you updated on your application status." }
+                ].map((item, index) => (
+                  <div key={index} className="p-3 rounded-md bg-white/5 border border-white/10">
+                    <h4 className="text-[#FFB703] font-bold text-sm mb-1">{item.title}</h4>
+                    <p className="text-white/80 text-xs">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Client Testimonials */}
+          <section id="testimonials" className="mb-8 scroll-mt-32">
+            <div className="flex items-center gap-2 mb-3">
+              <div 
+                className="w-2 h-2 rounded-full"
+                style={{
+                  background: '#FFB703',
+                  boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
+                }}
+              />
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
+                What Our Clients Say
+              </h2>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {[
+                {
+                  name: "Arjun Sharma",
+                  location: "Connaught Place",
+                  rating: 5,
+                  text: "Outstanding trademark registration service in Delhi. The team was very knowledgeable and helped me navigate through the entire process smoothly. My trademark got registered without any issues."
+                },
+                {
+                  name: "Neha Gupta",
+                  location: "Okhla",
+                  rating: 5,
+                  text: "Excellent service for startups in Delhi. They provided complete guidance on Startup India benefits and handled the entire application professionally. Highly recommended for Delhi NCR businesses."
+                },
+                {
+                  name: "Vikram Singh",
+                  location: "Dwarka",
+                  rating: 5,
+                  text: "Very professional trademark registration service. They successfully handled objections and got my brand registered. Great experience overall."
+                }
+              ].map((review, index) => (
+                <div 
+                  key={index}
+                  className="p-4 rounded-lg flex flex-col h-full"
+                  style={{ 
+                    background: 'rgba(255, 255, 255, 0.03)',
+                    border: '1px solid rgba(255, 255, 255, 0.1)',
+                    boxShadow: '0 4px 15px rgba(0, 0, 0, 0.2)'
+                  }}
+                >
+                  <div className="flex items-center gap-1 mb-2">
+                    {[...Array(5)].map((_, i) => (
+                      <i key={i} className={`fas fa-star text-xs ${i < Math.floor(review.rating) ? 'text-[#FFB703]' : 'text-gray-600'}`}></i>
+                    ))}
+                  </div>
+                  <p className="text-white/90 font-nunito text-sm italic mb-4 flex-grow">
+                    "{review.text}"
+                  </p>
+                  <div className="mt-auto">
+                    <h4 className="text-white font-bold text-sm">{review.name}</h4>
+                    <p className="text-white/60 text-xs">{review.location}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </section>
 
           {/* CTA Section */}
           <section className="mb-8">
-            <div className="relative overflow-hidden p-5 lg:p-6 rounded-xl" style={{ background: 'linear-gradient(135deg, rgba(255, 183, 3, 0.15) 0%, rgba(255, 183, 3, 0.05) 100%)', border: '2px solid rgba(255, 183, 3, 0.3)' }}>
+            <div 
+              className="relative overflow-hidden p-5 lg:p-6 rounded-xl"
+              style={{ 
+                background: 'linear-gradient(135deg, rgba(255, 183, 3, 0.15) 0%, rgba(255, 183, 3, 0.05) 100%)',
+                border: '2px solid rgba(255, 183, 3, 0.3)',
+                boxShadow: '0 8px 32px rgba(255, 183, 3, 0.3)'
+              }}
+            >
+              <div className="absolute top-0 right-0 w-32 h-32 rounded-full bg-[#FFB703] opacity-10 blur-3xl" />
+              <div className="absolute bottom-0 left-0 w-32 h-32 rounded-full bg-[#FFB703] opacity-10 blur-3xl" />
+              
               <div className="relative text-center">
-                <h3 className="text-white font-nunito text-2xl lg:text-3xl font-bold mb-3">Secure Your Brand in Delhi NCR</h3>
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-3"
+                  style={{
+                    background: 'rgba(255, 183, 3, 0.2)',
+                    border: '1px solid rgba(255, 183, 3, 0.4)'
+                  }}
+                >
+                  <i className="fas fa-shield-alt text-[#FFB703] text-sm" aria-hidden="true"></i>
+                  <span className="text-white font-nunito text-base font-semibold">Protect Your Brand in Delhi NCR</span>
+                </div>
+
+                <h3 className="text-white font-nunito text-2xl lg:text-3xl font-bold mb-3">
+                  Ready to Secure Your Intellectual Property?
+                </h3>
                 <p className="text-white/90 font-nunito text-base max-w-2xl mx-auto mb-4">
-                  Protect your business identity with professional trademark registration services tailored for Delhi's competitive market.
+                  Don't leave your brand vulnerable. Our experts in Delhi specialize in trademark registration and can guide you through every step of the process.
                 </p>
+
                 <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
-                  <Link href="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-nunito font-bold text-base transition-all duration-300 hover:scale-105" style={{ background: 'linear-gradient(135deg, #FFB703, #FFA000)', color: '#0C002B' }}>
-                    <i className="fas fa-phone text-sm" aria-hidden="true"></i> Get Professional Help
+                  <a
+                    href="tel:+919289707648"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-nunito font-bold text-base transition-all duration-300 hover:scale-105"
+                    style={{
+                      background: 'linear-gradient(135deg, #FFB703, #FFA000)',
+                      color: '#0C002B',
+                      boxShadow: '0 6px 18px rgba(255, 183, 3, 0.4)'
+                    }}
+                  >
+                    <i className="fas fa-phone text-sm" aria-hidden="true"></i>
+                    +91-9289707648
+                  </a>
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-nunito font-semibold text-base transition-all duration-300 hover:scale-105"
+                    style={{
+                      background: 'rgba(255, 255, 255, 0.1)',
+                      color: '#FFFFFF',
+                      border: '1px solid rgba(255, 255, 255, 0.3)'
+                    }}
+                  >
+                    <i className="fas fa-envelope text-sm" aria-hidden="true"></i>
+                    Contact Us
                   </Link>
                 </div>
               </div>
@@ -348,18 +734,39 @@ export default function DelhiClient() {
 
           {/* FAQ Section */}
           <section id="faq" className="mb-8 scroll-mt-32">
-            <div className="flex items-center gap-2 mb-4">
+            <div className="flex items-center gap-2 mb-8">
               <div className="w-2 h-2 rounded-full" style={{ background: '#FFB703', boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)' }} />
-              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">FAQs</h2>
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
+                Frequently Asked Questions (FAQs)
+              </h2>
             </div>
-            <div className="space-y-3">
-              {faqs.map((faq, index) => (
-                <div key={index} className="p-4 rounded-lg" style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
-                  <h3 className="text-white font-nunito text-base font-semibold mb-2 flex items-start gap-2">
-                    <i className="fas fa-question-circle text-[#FFB703] text-base mt-0.5" aria-hidden="true"></i>
-                    {faq.question}
-                  </h3>
-                  <p className="text-white/90 font-nunito text-sm leading-relaxed pl-6">{faq.answer}</p>
+            <div className="grid gap-4">
+              {faqs.map((item, index) => (
+                <div 
+                  key={index}
+                  className="rounded-lg overflow-hidden transition-all duration-300 hover:transform hover:scale-[1.01]"
+                  style={{ 
+                    background: 'rgba(255, 255, 255, 0.03)', 
+                    border: '1px solid rgba(255, 255, 255, 0.1)',
+                    boxShadow: '0 4px 15px rgba(0, 0, 0, 0.2)'
+                  }}
+                >
+                  <details className="group">
+                    <summary className="flex justify-between items-center p-5 cursor-pointer list-none">
+                      <span className="text-white font-nunito text-base md:text-lg font-semibold pr-4">
+                        {item.question}
+                      </span>
+                      <span className="transition-transform duration-300 group-open:rotate-180">
+                        <i className="fas fa-chevron-down text-[#FFB703]"></i>
+                      </span>
+                    </summary>
+                    <div className="px-5 pb-5 pt-0">
+                      <div className="h-px w-full bg-white/10 mb-4"></div>
+                      <p className="text-white/80 font-nunito text-sm md:text-base leading-relaxed whitespace-pre-line">
+                        {item.answer}
+                      </p>
+                    </div>
+                  </details>
                 </div>
               ))}
             </div>

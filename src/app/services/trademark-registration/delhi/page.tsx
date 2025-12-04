@@ -281,7 +281,7 @@ export default function DelhiTrademarkPage() {
     "description": "Professional trademark registration services in Delhi with expert assistance, comprehensive search, and complete filing support.",
     "@id": "https://iprkaro.com/services/trademark-registration/delhi",
     "url": "https://iprkaro.com/services/trademark-registration/delhi",
-    "telephone": "+91-XXXXXXXXXX",
+    "telephone": "+91-9289707648",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Delhi",

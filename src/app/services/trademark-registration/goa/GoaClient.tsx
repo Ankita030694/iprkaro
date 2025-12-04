@@ -28,6 +28,8 @@ export default function GoaClient() {
       { id: 'objections', title: 'Navigating Objections and Oppositions' },
       { id: 'renewal', title: 'Trademark Renewal and Restoration' },
       { id: 'assignment', title: 'Assignment and Transmission of Trademarks' },
+      { id: 'why-choose-us', title: 'Why Choose IPRKaro?' },
+      { id: 'testimonials', title: 'Client Testimonials' },
       { id: 'faq', title: 'Frequently Asked Questions' }
     ];
     setTocSections(sections);
@@ -88,21 +90,6 @@ export default function GoaClient() {
               <i className="fas fa-chevron-right text-xs text-white/50" aria-hidden="true"></i>
               <span className="text-[#FFB703] font-medium">Goa</span>
             </div>
-            <script
-              type="application/ld+json"
-              dangerouslySetInnerHTML={{
-                __html: JSON.stringify({
-                  "@context": "https://schema.org",
-                  "@type": "BreadcrumbList",
-                  "itemListElement": [
-                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://iprkaro.com/" },
-                    { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://iprkaro.com/services" },
-                    { "@type": "ListItem", "position": 3, "name": "Trademark Services", "item": "https://iprkaro.com/services/trademark-registration" },
-                    { "@type": "ListItem", "position": 4, "name": "Goa", "item": "https://iprkaro.com/services/trademark-registration/goa" }
-                  ]
-                })
-              }}
-            />
           </section>
 
           {/* Hero Section */}
@@ -137,7 +124,7 @@ export default function GoaClient() {
                 Goa, globally celebrated as the "Pearl of the Orient," is much more than a premier tourist destination. It is a rapidly evolving economic hub with a diverse industrial landscape that includes pharmaceuticals, biotechnology, information technology, and a vibrant startup ecosystem. From the bustling markets of Mapusa and Margao to the tech parks in Verna and the serene beach shacks of North Goa, the spirit of entrepreneurship is alive and thriving. In such a dynamic and competitive environment, your brand is your most valuable intangible asset. It distinguishes your goods and services from those of your competitors and serves as a beacon of quality and trust for your customers.
               </p>
               <p className="text-white/95 font-nunito text-base lg:text-lg leading-relaxed">
-                Trademark registration in Goa is the definitive legal step to secure this asset. It grants you, the owner, the exclusive right to use your brand name, logo, slogan, or sound mark, and provides you with powerful legal tools to prevent unauthorized use or counterfeiting. Whether you are a heritage Feni distiller, a boutique hotelier, or a cutting-edge software developer, registering your trademark is essential for long-term business sustainability and growth. This comprehensive guide delves deep into the nuances of trademark registration in Goa, covering the legal framework, procedural steps, documentation, and the strategic advantages of protecting your intellectual property.
+                Trademark registration in Goa is the definitive legal step to secure this asset. It grants you, the owner, the exclusive right to use your brand name, logo, slogan, or sound mark, and provides you with powerful legal tools to prevent unauthorized use or counterfeiting. Whether you are a heritage Feni distiller, a boutique hotelier, or a cutting edge software developer, registering your trademark is essential for long term business sustainability and growth. This comprehensive guide delves deep into the nuances of trademark registration in Goa, covering the legal framework, procedural steps, documentation, and the strategic advantages of protecting your intellectual property.
               </p>
             </div>
           </section>
@@ -153,7 +140,7 @@ export default function GoaClient() {
             
             <div className="p-4 rounded-lg" style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)', boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)' }}>
               <p className="text-white/90 font-nunito text-base leading-relaxed mb-3">
-                A trademark is a unique identifier—a "brand" in layman's terms. It can be a word, phrase, symbol, design, or a combination of these things that identifies your goods or services. It’s how customers recognize you in the marketplace and distinguish you from your competitors. In India, the registration and protection of trademarks are governed by the **Trade Marks Act, 1999** and the **Trade Marks Rules, 2017**. This central legislation ensures that trademark rights are uniform across the country, including the state of Goa.
+                A trademark is a unique identifier, a "brand" in layman's terms. It can be a word, phrase, symbol, design, or a combination of these things that identifies your goods or services. It is how customers recognize you in the marketplace and distinguish you from your competitors. In India, the registration and protection of trademarks are governed by the **Trade Marks Act, 1999** and the **Trade Marks Rules, 2017**. This central legislation ensures that trademark rights are uniform across the country, including the state of Goa.
               </p>
               <h3 className="text-white font-nunito text-xl font-semibold mb-2 mt-4">Jurisdiction: The Mumbai Connection</h3>
               <p className="text-white/90 font-nunito text-base leading-relaxed mb-3">
@@ -167,7 +154,7 @@ export default function GoaClient() {
                 Mumbai – 400 037.
               </p>
               <p className="text-white/90 font-nunito text-base leading-relaxed mb-3">
-                However, in today's digital age, the physical location of the registry is largely a formality for filing purposes. The entire trademark registration process—from the initial search and application filing to responding to examination reports and receiving the registration certificate—is conducted online through the official IP India portal. This digital infrastructure ensures that an entrepreneur in a remote village in South Goa has the same access to trademark protection as a multinational corporation in Mumbai. You do not need to travel to Mumbai; the process can be managed entirely from your office or home in Goa.
+                However, in today's digital age, the physical location of the registry is largely a formality for filing purposes. The entire trademark registration process, from the initial search and application filing to responding to examination reports and receiving the registration certificate, is conducted online through the official IP India portal. This digital infrastructure ensures that an entrepreneur in a remote village in South Goa has the same access to trademark protection as a multinational corporation in Mumbai. You do not need to travel to Mumbai; the process can be managed entirely from your office or home in Goa.
               </p>
               <p className="text-white/90 font-nunito text-base leading-relaxed">
                 The Controller General of Patents, Designs, and Trademarks (CGPDTM) oversees the functioning of the registry. Once registered, a trademark is valid for **10 years** and can be renewed indefinitely, making it a perpetual asset for your business as long as it is kept alive.
@@ -186,7 +173,7 @@ export default function GoaClient() {
             
             <div className="p-4 rounded-lg" style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)', boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)' }}>
               <p className="text-white/90 font-nunito text-base leading-relaxed mb-4">
-                Goa's economy is a unique blend of traditional industries and modern service sectors. In each of these domains, intellectual property plays a pivotal role. Here’s why specific industries in Goa need to prioritize trademark registration:
+                Goa's economy is a unique blend of traditional industries and modern service sectors. In each of these domains, intellectual property plays a pivotal role. Here is why specific industries in Goa need to prioritize trademark registration:
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="p-4 rounded-md" style={{ background: 'rgba(255, 183, 3, 0.08)', border: '1px solid rgba(255, 183, 3, 0.2)' }}>
@@ -561,6 +548,112 @@ export default function GoaClient() {
             </div>
           </section>
 
+          {/* Why Choose IPRKaro */}
+          <section id="why-choose-us" className="mb-8 scroll-mt-32">
+            <div className="flex items-center gap-2 mb-3">
+              <div 
+                className="w-2 h-2 rounded-full"
+                style={{
+                  background: '#FFB703',
+                  boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
+                }}
+              />
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
+                Why Choose IPRKaro for Trademark Registration in Goa?
+              </h2>
+            </div>
+            
+            <div 
+              className="p-4 rounded-lg"
+              style={{ 
+                background: 'rgba(255, 255, 255, 0.03)',
+                border: '1px solid rgba(255, 255, 255, 0.1)',
+                boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)'
+              }}
+            >
+              <p className="text-white/90 font-nunito text-base leading-relaxed mb-4">
+                We simplify the complex legal process for you.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {[
+                  { title: "Expert Guidance", desc: "Our team understands the specific needs of Goa's diverse industries, from tourism to tech." },
+                  { title: "Transparent Pricing", desc: "No hidden costs. We offer affordable packages suitable for startups and SMEs." },
+                  { title: "Comprehensive Support", desc: "We handle everything: search, filing, objection replies, and renewal." },
+                  { title: "Digital Convenience", desc: "Complete the entire process online without visiting the Mumbai office." },
+                  { title: "High Success Rate", desc: "Our thorough search and accurate filing minimize the chances of rejection." },
+                  { title: "Dedicated Manager", desc: "Get a dedicated relationship manager to keep you updated on your application status." }
+                ].map((item, index) => (
+                  <div key={index} className="p-3 rounded-md bg-white/5 border border-white/10">
+                    <h4 className="text-[#FFB703] font-bold text-sm mb-1">{item.title}</h4>
+                    <p className="text-white/80 text-xs">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Client Testimonials */}
+          <section id="testimonials" className="mb-8 scroll-mt-32">
+            <div className="flex items-center gap-2 mb-3">
+              <div 
+                className="w-2 h-2 rounded-full"
+                style={{
+                  background: '#FFB703',
+                  boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
+                }}
+              />
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
+                What Our Clients Say
+              </h2>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {[
+                {
+                  name: "Maria Fernandes",
+                  location: "Panaji",
+                  rating: 5,
+                  text: "Excellent trademark service in Panaji. The team helped me register my hospitality brand smoothly. Very professional and knowledgeable about the process."
+                },
+                {
+                  name: "Rohan Velinkar",
+                  location: "Margao",
+                  rating: 5,
+                  text: "Great experience with trademark registration in Margao. They provided complete support and got my tourism brand registered efficiently. Highly recommended for Goa businesses."
+                },
+                {
+                  name: "Deepak Naik",
+                  location: "Vasco",
+                  rating: 5,
+                  text: "Professional service in Vasco. They helped register my export business brand and handled objections effectively. Very satisfied with their expertise."
+                }
+              ].map((review, index) => (
+                <div 
+                  key={index}
+                  className="p-4 rounded-lg flex flex-col h-full"
+                  style={{ 
+                    background: 'rgba(255, 255, 255, 0.03)',
+                    border: '1px solid rgba(255, 255, 255, 0.1)',
+                    boxShadow: '0 4px 15px rgba(0, 0, 0, 0.2)'
+                  }}
+                >
+                  <div className="flex items-center gap-1 mb-2">
+                    {[...Array(5)].map((_, i) => (
+                      <i key={i} className={`fas fa-star text-xs ${i < Math.floor(review.rating) ? 'text-[#FFB703]' : 'text-gray-600'}`}></i>
+                    ))}
+                  </div>
+                  <p className="text-white/90 font-nunito text-sm italic mb-4 flex-grow">
+                    "{review.text}"
+                  </p>
+                  <div className="mt-auto">
+                    <h4 className="text-white font-bold text-sm">{review.name}</h4>
+                    <p className="text-white/60 text-xs">{review.location}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
           {/* CTA Section */}
           <section className="mb-8">
             <div 
@@ -586,15 +679,15 @@ export default function GoaClient() {
                 </div>
 
                 <h3 className="text-white font-nunito text-2xl lg:text-3xl font-bold mb-3">
-                  Ready to Register Your Trademark?
+                  Ready to Secure Your Intellectual Property?
                 </h3>
                 <p className="text-white/90 font-nunito text-base max-w-2xl mx-auto mb-4">
-                  Secure your business identity today. Our experts specialize in trademark registration for Goan businesses and can guide you through every step.
+                  Don't leave your brand vulnerable. Our experts in Goa specialize in trademark registration and can guide you through every step of the process.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
-                  <Link
-                    href="/contact"
+                  <a
+                    href="tel:+919289707648"
                     className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-nunito font-bold text-base transition-all duration-300 hover:scale-105"
                     style={{
                       background: 'linear-gradient(135deg, #FFB703, #FFA000)',
@@ -603,8 +696,19 @@ export default function GoaClient() {
                     }}
                   >
                     <i className="fas fa-phone text-sm" aria-hidden="true"></i>
-                    Get Expert Assistance
-                    <i className="fas fa-arrow-right text-xs" aria-hidden="true"></i>
+                    +91-9289707648
+                  </a>
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-nunito font-semibold text-base transition-all duration-300 hover:scale-105"
+                    style={{
+                      background: 'rgba(255, 255, 255, 0.1)',
+                      color: '#FFFFFF',
+                      border: '1px solid rgba(255, 255, 255, 0.3)'
+                    }}
+                  >
+                    <i className="fas fa-envelope text-sm" aria-hidden="true"></i>
+                    Contact Us
                   </Link>
                 </div>
               </div>
@@ -614,35 +718,6 @@ export default function GoaClient() {
           {/* FAQ Section */}
           <FaqSection />
 
-          {/* Review Snippets Schema */}
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify({
-                "@context": "https://schema.org",
-                "@type": "Review",
-                "itemReviewed": {
-                  "@type": "Service",
-                  "name": "Trademark Registration Service in Goa",
-                  "image": "https://iprkaro.com/assets/images/trademark-service.jpg",
-                  "description": "Professional trademark registration services in Goa."
-                },
-                "author": {
-                  "@type": "Person",
-                  "name": "Savio Fernandes"
-                },
-                "reviewRating": {
-                  "@type": "Rating",
-                  "ratingValue": "4.9",
-                  "bestRating": "5"
-                },
-                "publisher": {
-                  "@type": "Organization",
-                  "name": "IPR Karo"
-                }
-              })
-            }}
-          />
         </div>
       </div>
     </div>

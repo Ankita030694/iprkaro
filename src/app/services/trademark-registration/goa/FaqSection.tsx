@@ -59,10 +59,7 @@ export default function FaqSection() {
 
   return (
     <section id="faq" className="mb-8 scroll-mt-32">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      />
+
       <div className="flex items-center gap-2 mb-4">
         <div 
           className="w-2 h-2 rounded-full"
