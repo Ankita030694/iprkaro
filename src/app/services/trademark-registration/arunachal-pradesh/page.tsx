@@ -28,37 +28,6 @@ export const metadata: Metadata = {
 };
 
 export default function ArunachalPradeshPage() {
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How to register a trademark in Arunachal Pradesh?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "To register a trademark in Arunachal Pradesh, conduct a comprehensive search, prepare required documents, file Form TM-A online through IP India portal, pay applicable fees, respond to examination objections if any, and wait for publication and registration. The process typically takes 12-18 months."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What documents are required for trademark registration in Arunachal Pradesh?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Required documents include identity proof, address proof, business registration documents, clear trademark representation in high resolution, description of goods/services, and Power of Attorney if filing through an agent."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How long does trademark registration take in Arunachal Pradesh?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Trademark registration in Arunachal Pradesh typically takes 12 to 18 months from filing to certificate issuance, including examination, publication, opposition period, and final registration."
-        }
-      }
-    ]
-  };
-
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -153,7 +122,7 @@ export default function ArunachalPradeshPage() {
     "description": "Professional trademark registration services in Arunachal Pradesh with expert assistance, comprehensive search, and complete filing support.",
     "@id": "https://iprkaro.com/services/trademark-registration/arunachal-pradesh",
     "url": "https://iprkaro.com/services/trademark-registration/arunachal-pradesh",
-    "telephone": "+91-XXXXXXXXXX",
+    "telephone": "+91-9289707648",
     "address": {
       "@type": "PostalAddress",
       "addressRegion": "Arunachal Pradesh",
@@ -217,10 +186,6 @@ export default function ArunachalPradeshPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <script
-        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <script
@@ -235,7 +200,6 @@ export default function ArunachalPradeshPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
       />
-      
       <ArunachalPradeshClient />
     </>
   );
