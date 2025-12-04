@@ -28,6 +28,8 @@ export default function ChandigarhClient() {
       { id: 'objections', title: 'Handling Objections and Oppositions' },
       { id: 'renewal', title: 'Trademark Renewal and Maintenance' },
       { id: 'assignment', title: 'Trademark Assignment and Licensing' },
+      { id: 'why-choose-us', title: 'Why Choose IPRKaro?' },
+      { id: 'testimonials', title: 'Client Testimonials' },
       { id: 'faq', title: 'Frequently Asked Questions' }
     ];
     setTocSections(sections);
@@ -88,21 +90,6 @@ export default function ChandigarhClient() {
               <i className="fas fa-chevron-right text-xs text-white/50" aria-hidden="true"></i>
               <span className="text-[#FFB703] font-medium">Chandigarh</span>
             </div>
-            <script
-              type="application/ld+json"
-              dangerouslySetInnerHTML={{
-                __html: JSON.stringify({
-                  "@context": "https://schema.org",
-                  "@type": "BreadcrumbList",
-                  "itemListElement": [
-                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://iprkaro.com/" },
-                    { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://iprkaro.com/services" },
-                    { "@type": "ListItem", "position": 3, "name": "Trademark Services", "item": "https://iprkaro.com/services/trademark-registration" },
-                    { "@type": "ListItem", "position": 4, "name": "Chandigarh", "item": "https://iprkaro.com/services/trademark-registration/chandigarh" }
-                  ]
-                })
-              }}
-            />
           </section>
 
           {/* Hero Section */}
@@ -134,7 +121,7 @@ export default function ChandigarhClient() {
               }}
             >
               <p className="text-white/95 font-nunito text-base lg:text-lg leading-relaxed mb-3">
-                Chandigarh, renowned as "The City Beautiful," is a unique urban experiment that serves as the capital for both Punjab and Haryana while being a Union Territory itself. Beyond its architectural marvels and planned infrastructure, Chandigarh has emerged as a robust economic powerhouse in North India. With the Rajiv Gandhi Chandigarh Technology Park (RGCTP) driving the IT revolution and the Industrial Area Phase I & II hosting a myriad of manufacturing units, the city is a melting pot of traditional businesses and modern startups. In such a thriving commercial ecosystem, establishing a distinct brand identity is not just an option—it is a necessity.
+                Chandigarh, renowned as "The City Beautiful," is a unique urban experiment that serves as the capital for both Punjab and Haryana while being a Union Territory itself. Beyond its architectural marvels and planned infrastructure, Chandigarh has emerged as a robust economic powerhouse in North India. With the Rajiv Gandhi Chandigarh Technology Park (RGCTP) driving the IT revolution and the Industrial Area Phase I & II hosting a myriad of manufacturing units, the city is a melting pot of traditional businesses and modern startups. In such a thriving commercial ecosystem, establishing a distinct brand identity is not just an option, it is a necessity.
               </p>
               <p className="text-white/95 font-nunito text-base lg:text-lg leading-relaxed">
                 Trademark registration in Chandigarh is the legal fortress that guards your brand against infringement and counterfeiting. Whether you are a tech startup in the IT Park, a boutique in Sector 17, or a manufacturer in the Industrial Area, securing your intellectual property rights is the first step towards building a sustainable business legacy. This comprehensive guide explores the intricacies of trademark registration in Chandigarh, detailing the process, legal framework, and the immense value it adds to your business assets.
@@ -153,7 +140,7 @@ export default function ChandigarhClient() {
             
             <div className="p-4 rounded-lg" style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)', boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)' }}>
               <p className="text-white/90 font-nunito text-base leading-relaxed mb-3">
-                A trademark is a visual symbol—which may be a word, name, device, label, or numeral—used by a business to distinguish its goods or services from other similar goods or services originating from a different business. In India, the **Trade Marks Act, 1999** governs the registration and protection of trademarks. This central act ensures that a trademark registered in Chandigarh is valid and enforceable across the entire country.
+                A trademark is a visual symbol, which may be a word, name, device, label, or numeral, used by a business to distinguish its goods or services from other similar goods or services originating from a different business. In India, the **Trade Marks Act, 1999** governs the registration and protection of trademarks. This central act ensures that a trademark registered in Chandigarh is valid and enforceable across the entire country.
               </p>
               <h3 className="text-white font-nunito text-xl font-semibold mb-2 mt-4">Jurisdiction: The Delhi Connection</h3>
               <p className="text-white/90 font-nunito text-base leading-relaxed mb-3">
@@ -167,7 +154,7 @@ export default function ChandigarhClient() {
                 New Delhi – 110078.
               </p>
               <p className="text-white/90 font-nunito text-base leading-relaxed mb-3">
-                **Digital Transformation:** While the physical registry is in Delhi, the entire registration process is digital. The Controller General of Patents, Designs, and Trademarks (CGPDTM) has established a robust online filing system. This means entrepreneurs in Chandigarh can file applications, reply to examination reports, and receive certificates without ever visiting Delhi. The digital process is efficient, transparent, and time-saving.
+                **Digital Transformation:** While the physical registry is in Delhi, the entire registration process is digital. The Controller General of Patents, Designs, and Trademarks (CGPDTM) has established a robust online filing system. This means entrepreneurs in Chandigarh can file applications, reply to examination reports, and receive certificates without ever visiting Delhi. The digital process is efficient, transparent, and time saving.
               </p>
               <p className="text-white/90 font-nunito text-base leading-relaxed">
                 Once registered, a trademark is valid for **10 years** and can be renewed indefinitely. It becomes an intangible asset that adds valuation to your company's balance sheet.
@@ -186,7 +173,7 @@ export default function ChandigarhClient() {
             
             <div className="p-4 rounded-lg" style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)', boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)' }}>
               <p className="text-white/90 font-nunito text-base leading-relaxed mb-4">
-                Chandigarh boasts the highest per capita income in the country and a highly literate population. The consumer base here is brand-conscious and quality-oriented. Here’s why specific sectors in Chandigarh need trademark protection:
+                Chandigarh boasts the highest per capita income in the country and a highly literate population. The consumer base here is brand conscious and quality oriented. Here’s why specific sectors in Chandigarh need trademark protection:
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="p-4 rounded-md" style={{ background: 'rgba(255, 183, 3, 0.08)', border: '1px solid rgba(255, 183, 3, 0.2)' }}>
@@ -549,6 +536,112 @@ export default function ChandigarhClient() {
             </div>
           </section>
 
+          {/* Why Choose IPRKaro */}
+          <section id="why-choose-us" className="mb-8 scroll-mt-32">
+            <div className="flex items-center gap-2 mb-3">
+              <div 
+                className="w-2 h-2 rounded-full"
+                style={{
+                  background: '#FFB703',
+                  boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
+                }}
+              />
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
+                Why Choose IPRKaro for Trademark Registration in Chandigarh?
+              </h2>
+            </div>
+            
+            <div 
+              className="p-4 rounded-lg"
+              style={{ 
+                background: 'rgba(255, 255, 255, 0.03)',
+                border: '1px solid rgba(255, 255, 255, 0.1)',
+                boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)'
+              }}
+            >
+              <p className="text-white/90 font-nunito text-base leading-relaxed mb-4">
+                Navigating the legal intricacies of trademark registration can be challenging. IPRKaro offers a seamless, technology driven solution tailored for businesses in Chandigarh.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {[
+                  { title: "Expert Team", desc: "Our team comprises experienced trademark attorneys and agents who understand the nuances of IP law." },
+                  { title: "Affordable Pricing", desc: "We offer transparent and competitive pricing with no hidden charges, suitable for startups and MSMEs." },
+                  { title: "End-to-End Support", desc: "From the initial search to final registration and renewal, we handle everything." },
+                  { title: "High Success Rate", desc: "Our thorough search and meticulous filing process ensure a high probability of registration." },
+                  { title: "Personalized Service", desc: "We understand that every business is unique and provide tailored advice." },
+                  { title: "Digital Process", desc: "Complete the entire process from the comfort of your home or office in Chandigarh." }
+                ].map((item, index) => (
+                  <div key={index} className="p-3 rounded-md bg-white/5 border border-white/10">
+                    <h4 className="text-[#FFB703] font-bold text-sm mb-1">{item.title}</h4>
+                    <p className="text-white/80 text-xs">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Client Testimonials */}
+          <section id="testimonials" className="mb-8 scroll-mt-32">
+            <div className="flex items-center gap-2 mb-3">
+              <div 
+                className="w-2 h-2 rounded-full"
+                style={{
+                  background: '#FFB703',
+                  boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
+                }}
+              />
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
+                What Our Clients Say
+              </h2>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {[
+                {
+                  name: "Manish Kapoor",
+                  location: "Chandigarh",
+                  rating: 5,
+                  text: "Excellent trademark service in Chandigarh. The team was very professional and helped me register my startup brand quickly. Great support throughout the process."
+                },
+                {
+                  name: "Simran Kaur",
+                  location: "Mohali",
+                  rating: 5,
+                  text: "Great experience with trademark registration. They handled everything professionally and got my brand registered without any issues. Highly recommended for Chandigarh businesses."
+                },
+                {
+                  name: "Rohit Verma",
+                  location: "Panchkula",
+                  rating: 5,
+                  text: "Professional and efficient service. They guided me through the entire trademark registration process and successfully handled objections. Very satisfied."
+                }
+              ].map((review, index) => (
+                <div 
+                  key={index}
+                  className="p-4 rounded-lg flex flex-col h-full"
+                  style={{ 
+                    background: 'rgba(255, 255, 255, 0.03)',
+                    border: '1px solid rgba(255, 255, 255, 0.1)',
+                    boxShadow: '0 4px 15px rgba(0, 0, 0, 0.2)'
+                  }}
+                >
+                  <div className="flex items-center gap-1 mb-2">
+                    {[...Array(5)].map((_, i) => (
+                      <i key={i} className={`fas fa-star text-xs ${i < Math.floor(review.rating) ? 'text-[#FFB703]' : 'text-gray-600'}`}></i>
+                    ))}
+                  </div>
+                  <p className="text-white/90 font-nunito text-sm italic mb-4 flex-grow">
+                    "{review.text}"
+                  </p>
+                  <div className="mt-auto">
+                    <h4 className="text-white font-bold text-sm">{review.name}</h4>
+                    <p className="text-white/60 text-xs">{review.location}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
           {/* CTA Section */}
           <section className="mb-8">
             <div 
@@ -581,8 +674,8 @@ export default function ChandigarhClient() {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
-                  <Link
-                    href="/contact"
+                  <a
+                    href="tel:+919289707648"
                     className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-nunito font-bold text-base transition-all duration-300 hover:scale-105"
                     style={{
                       background: 'linear-gradient(135deg, #FFB703, #FFA000)',
@@ -591,8 +684,19 @@ export default function ChandigarhClient() {
                     }}
                   >
                     <i className="fas fa-phone text-sm" aria-hidden="true"></i>
-                    Get Expert Assistance
-                    <i className="fas fa-arrow-right text-xs" aria-hidden="true"></i>
+                    +91-9289707648
+                  </a>
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-nunito font-semibold text-base transition-all duration-300 hover:scale-105"
+                    style={{
+                      background: 'rgba(255, 255, 255, 0.1)',
+                      color: '#FFFFFF',
+                      border: '1px solid rgba(255, 255, 255, 0.3)'
+                    }}
+                  >
+                    <i className="fas fa-envelope text-sm" aria-hidden="true"></i>
+                    Contact Us
                   </Link>
                 </div>
               </div>
@@ -600,37 +704,10 @@ export default function ChandigarhClient() {
           </section>
 
           {/* FAQ Section */}
-          <FaqSection />
+          <section id="faq" className="mb-8 scroll-mt-32">
+            <FaqSection />
+          </section>
 
-          {/* Review Snippets Schema */}
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify({
-                "@context": "https://schema.org",
-                "@type": "Review",
-                "itemReviewed": {
-                  "@type": "Service",
-                  "name": "Trademark Registration Service in Chandigarh",
-                  "image": "https://iprkaro.com/assets/images/trademark-service.jpg",
-                  "description": "Professional trademark registration services in Chandigarh."
-                },
-                "author": {
-                  "@type": "Person",
-                  "name": "Rajesh Kumar"
-                },
-                "reviewRating": {
-                  "@type": "Rating",
-                  "ratingValue": "4.8",
-                  "bestRating": "5"
-                },
-                "publisher": {
-                  "@type": "Organization",
-                  "name": "IPR Karo"
-                }
-              })
-            }}
-          />
         </div>
       </div>
     </div>
