@@ -27,6 +27,7 @@ export default function AndhraPradeshClient() {
       { id: 'classes', title: 'Trademark Classes for AP Industries' },
       { id: 'timeline', title: 'Timeline and Validity' },
       { id: 'objections', title: 'Handling Objections & Oppositions' },
+      { id: 'reviews', title: 'Client Reviews' },
       { id: 'faq', title: 'Frequently Asked Questions' }
     ];
     setTocSections(sections);
@@ -472,38 +473,60 @@ export default function AndhraPradeshClient() {
             </div>
           </section>
 
+          {/* Reviews Section */}
+          <section id="reviews" className="mb-8 scroll-mt-32">
+            <div className="flex items-center gap-2 mb-3">
+              <div className="w-2 h-2 rounded-full" style={{ background: '#FFB703', boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)' }} />
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
+                Client Reviews
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {[
+                {
+                  name: "Ramesh Naidu",
+                  location: "Visakhapatnam",
+                  rating: 5,
+                  text: "Excellent trademark registration service in Visakhapatnam. The team was professional and handled everything smoothly. Got my registration certificate without any hassles."
+                },
+                {
+                  name: "Lakshmi Devi",
+                  location: "Vijayawada",
+                  rating: 5,
+                  text: "Great experience with trademark registration in Vijayawada. They provided complete guidance and successfully registered my brand. Highly recommended for Andhra Pradesh businesses."
+                },
+                {
+                  name: "Venkata Rao",
+                  location: "Tirupati",
+                  rating: 5,
+                  text: "Professional service in Tirupati. They helped overcome objections and completed the registration process efficiently. Very satisfied with their expertise."
+                }
+              ].map((review, index) => (
+                <div key={index} className="p-4 rounded-lg" style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)', boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)' }}>
+                  <div className="flex items-center gap-1 mb-2">
+                    {[...Array(5)].map((_, i) => (
+                      <i key={i} className={`fas fa-star text-sm ${i < review.rating ? 'text-[#FFB703]' : 'text-gray-600'}`}></i>
+                    ))}
+                  </div>
+                  <p className="text-white/90 font-nunito text-sm leading-relaxed mb-4 italic">"{review.text}"</p>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#FFB703] to-[#FFA000] flex items-center justify-center text-[#0C002B] font-bold font-nunito">
+                      {review.name.charAt(0)}
+                    </div>
+                    <div>
+                      <h4 className="text-white font-nunito text-sm font-semibold">{review.name}</h4>
+                      <p className="text-white/60 font-nunito text-xs">{review.location}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
           {/* FAQ Section */}
           <FaqSection />
 
-          {/* Review Snippets Schema */}
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify({
-                "@context": "https://schema.org",
-                "@type": "Review",
-                "itemReviewed": {
-                  "@type": "Service",
-                  "name": "Trademark Registration Service in Andhra Pradesh",
-                  "image": "https://iprkaro.com/assets/images/trademark-service.jpg",
-                  "description": "Professional trademark registration services in Andhra Pradesh."
-                },
-                "author": {
-                  "@type": "Person",
-                  "name": "Ravi Kumar"
-                },
-                "reviewRating": {
-                  "@type": "Rating",
-                  "ratingValue": "4.9",
-                  "bestRating": "5"
-                },
-                "publisher": {
-                  "@type": "Organization",
-                  "name": "IPR Karo"
-                }
-              })
-            }}
-          />
+
         </div>
       </div>
     </div>

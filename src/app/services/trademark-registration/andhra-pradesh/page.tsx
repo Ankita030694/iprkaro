@@ -153,7 +153,7 @@ export default function AndhraPradeshPage() {
     "description": "Professional trademark registration services in Andhra Pradesh with expert assistance, comprehensive search, and complete filing support.",
     "@id": "https://iprkaro.com/services/trademark-registration/andhra-pradesh",
     "url": "https://iprkaro.com/services/trademark-registration/andhra-pradesh",
-    "telephone": "+91-XXXXXXXXXX",
+    "telephone": "+91-9289707648",
     "address": {
       "@type": "PostalAddress",
       "addressRegion": "Andhra Pradesh",
