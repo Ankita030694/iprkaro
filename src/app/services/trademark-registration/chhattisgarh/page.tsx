@@ -234,7 +234,7 @@ export default function ChhattisgarhTrademarkPage() {
     "description": "Professional trademark registration services in Chhattisgarh with expert assistance, comprehensive search, and complete filing support.",
     "@id": "https://iprkaro.com/services/trademark-registration/chhattisgarh",
     "url": "https://iprkaro.com/services/trademark-registration/chhattisgarh",
-    "telephone": "+91-XXXXXXXXXX",
+    "telephone": "+91-9289707648",
     "address": {
       "@type": "PostalAddress",
       "addressRegion": "Chhattisgarh",
