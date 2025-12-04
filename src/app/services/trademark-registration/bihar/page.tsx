@@ -222,7 +222,7 @@ export default function BiharTrademarkPage() {
     "description": "Professional trademark registration services in Bihar with expert assistance, comprehensive search, and complete filing support.",
     "@id": "https://iprkaro.com/services/trademark-registration/bihar",
     "url": "https://iprkaro.com/services/trademark-registration/bihar",
-    "telephone": "+91-XXXXXXXXXX",
+    "telephone": "+91-9289707648",
     "address": {
       "@type": "PostalAddress",
       "addressRegion": "Bihar",
