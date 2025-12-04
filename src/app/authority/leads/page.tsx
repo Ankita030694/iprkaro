@@ -27,6 +27,7 @@ export default function LeadsPage() {
   const [fromDate, setFromDate] = useState('');
   const [toDate, setToDate] = useState('');
   const [deletingLeadId, setDeletingLeadId] = useState<string | null>(null);
+  const [viewingRemarksId, setViewingRemarksId] = useState<string | null>(null);
 
   useEffect(() => {
     // Check authentication
@@ -303,7 +304,7 @@ export default function LeadsPage() {
                       <i className="fas fa-trademark mr-1 text-xs"></i>Trademark Name
                     </th>
                     <th className="px-2 py-2 text-left text-gray-700 font-nunito font-semibold text-xs">
-                      <i className="fas fa-comment mr-1 text-xs"></i>Message
+                      <i className="fas fa-comment mr-1 text-xs"></i>Remarks
                     </th>
                     <th className="px-2 py-2 text-left text-gray-700 font-nunito font-semibold text-xs">
                       <i className="fas fa-cog mr-1 text-xs"></i>Actions
@@ -355,8 +356,22 @@ export default function LeadsPage() {
                           <span className="text-gray-400 font-nunito text-xs">-</span>
                         )}
                       </td>
-                      <td className="px-2 py-2 text-gray-600 font-nunito text-xs max-w-xs truncate">
-                        {lead.message || 'No message'}
+                      <td className="px-2 py-2">
+                        <div className="flex items-center gap-2">
+                          <span className="text-gray-600 font-nunito text-xs max-w-xs truncate">
+                            {lead.message || 'No message'}
+                          </span>
+                          {lead.message && (
+                            <button
+                              onClick={() => setViewingRemarksId(lead.id)}
+                              className="inline-flex items-center px-1.5 py-0.5 text-xs font-nunito bg-blue-100 text-blue-700 border border-blue-300 rounded-lg hover:bg-blue-200 transition-colors whitespace-nowrap"
+                              title="View full remarks"
+                            >
+                              <i className="fas fa-eye mr-1"></i>
+                              View
+                            </button>
+                          )}
+                        </div>
                       </td>
                       <td className="px-2 py-2">
                         <button
@@ -386,6 +401,64 @@ export default function LeadsPage() {
           )}
         </div>
       </div>
+
+      {/* Remarks View Modal */}
+      {viewingRemarksId && (() => {
+        const lead = leads.find(l => l.id === viewingRemarksId);
+        if (!lead) return null;
+        
+        return (
+          <div 
+            className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4"
+            onClick={() => setViewingRemarksId(null)}
+          >
+            <div 
+              className="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[80vh] overflow-hidden"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="flex items-center justify-between p-4 border-b border-gray-200">
+                <h2 className="text-lg font-bold text-gray-900 font-nunito">
+                  <i className="fas fa-comment mr-2 text-blue-600"></i>
+                  Full Remarks
+                </h2>
+                <button
+                  onClick={() => setViewingRemarksId(null)}
+                  className="text-gray-400 hover:text-gray-600 transition-colors"
+                  title="Close"
+                >
+                  <i className="fas fa-times text-xl"></i>
+                </button>
+              </div>
+              <div className="p-4 overflow-y-auto max-h-[calc(80vh-80px)]">
+                <div className="space-y-3">
+                  <div>
+                    <p className="text-sm font-semibold text-gray-700 font-nunito mb-1">Lead Information:</p>
+                    <p className="text-sm text-gray-900 font-nunito"><strong>Name:</strong> {lead.name}</p>
+                    <p className="text-sm text-gray-900 font-nunito"><strong>Email:</strong> {lead.email}</p>
+                    <p className="text-sm text-gray-900 font-nunito"><strong>Phone:</strong> {lead.phone}</p>
+                  </div>
+                  <div className="border-t border-gray-200 pt-3">
+                    <p className="text-sm font-semibold text-gray-700 font-nunito mb-2">Remarks:</p>
+                    <div className="bg-gray-50 rounded-lg p-3 border border-gray-200">
+                      <p className="text-sm text-gray-900 font-nunito whitespace-pre-wrap">
+                        {lead.message || 'No remarks available'}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="flex justify-end p-4 border-t border-gray-200">
+                <button
+                  onClick={() => setViewingRemarksId(null)}
+                  className="px-4 py-2 text-sm font-nunito bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        );
+      })()}
 
       {/* FontAwesome icons */}
       <link

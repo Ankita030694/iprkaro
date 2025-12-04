@@ -153,7 +153,7 @@ export default function JammuAndKashmirPage() {
     "description": "Professional trademark registration services in Jammu and Kashmir with expert assistance, comprehensive search, and complete filing support.",
     "@id": "https://iprkaro.com/services/trademark-registration/jammu-and-kashmir",
     "url": "https://iprkaro.com/services/trademark-registration/jammu-and-kashmir",
-    "telephone": "+91-XXXXXXXXXX",
+    "telephone": "+91-9289707648",
     "address": {
       "@type": "PostalAddress",
       "addressRegion": "Jammu and Kashmir",
