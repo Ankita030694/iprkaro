@@ -1,6 +1,14 @@
 import React from 'react';
-import { Metadata } from 'next';
+import { Metadata, Viewport } from 'next';
 import MaharashtraClient from './MaharashtraClient';
+
+export const viewport: Viewport = {
+  themeColor: '#0C002B',
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
 
 export const metadata: Metadata = {
   title: 'Trademark Registration in Maharashtra | Complete Guide & Process 2025 | IPRKaro',
@@ -273,7 +281,7 @@ export default function MaharashtraTrademarkPage() {
     "description": "Professional trademark registration services in Maharashtra with expert assistance, comprehensive search, and complete filing support.",
     "@id": "https://iprkaro.com/services/trademark-registration/maharashtra",
     "url": "https://iprkaro.com/services/trademark-registration/maharashtra",
-    "telephone": "+91-XXXXXXXXXX",
+    "telephone": "+91-9289707648",
     "address": {
       "@type": "PostalAddress",
       "addressRegion": "Maharashtra",

@@ -196,7 +196,7 @@ const Footer: React.FC = () => {
         {/* Copyright */}
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
           <p className="text-sm text-gray-400">
-            © 2025 reserved by IPR KARO
+            © 2024 reserved by IPR KARO
           </p>
         </div>
       </div>

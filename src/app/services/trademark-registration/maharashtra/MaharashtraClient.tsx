@@ -25,6 +25,7 @@ export default function MaharashtraClient() {
       { id: 'documents-required', title: 'Documents Required' },
       { id: 'timeline', title: 'Registration Timeline' },
       { id: 'trademark-classes', title: 'Trademark Classes' },
+      { id: 'client-reviews', title: 'Client Reviews' },
       { id: 'faq', title: 'FAQs' }
     ];
     setTocSections(sections);
@@ -791,6 +792,88 @@ export default function MaharashtraClient() {
                   </Link>
                 </div>
               </div>
+            </div>
+          </section>
+
+          {/* Client Reviews */}
+          <section id="client-reviews" className="mb-8 scroll-mt-32">
+            <div className="flex items-center gap-2 mb-4">
+              <div 
+                className="w-2 h-2 rounded-full"
+                style={{
+                  background: '#FFB703',
+                  boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
+                }}
+              />
+              <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">
+                Client Reviews
+              </h2>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {[
+                {
+                  name: "Rajesh Patil",
+                  location: "Mumbai",
+                  date: "November 10, 2024",
+                  rating: 5,
+                  text: "Excellent trademark registration service in Mumbai. The team handled everything professionally from search to final certificate. Very satisfied with their expertise and timely communication."
+                },
+                {
+                  name: "Priya Deshmukh",
+                  location: "Pune",
+                  date: "October 22, 2024",
+                  rating: 5,
+                  text: "Great experience with trademark registration in Pune. They helped me overcome objections and successfully registered my brand. Highly recommended for Maharashtra businesses."
+                },
+                {
+                  name: "Amit Kulkarni",
+                  location: "Nagpur",
+                  date: "September 15, 2024",
+                  rating: 4.5,
+                  text: "Professional and efficient trademark registration service in Nagpur. Clear guidance throughout the process and reasonable pricing. Got my certificate in 14 months."
+                }
+              ].map((review, index) => (
+                <div 
+                  key={index}
+                  className="p-4 rounded-lg flex flex-col h-full"
+                  style={{ 
+                    background: 'rgba(255, 255, 255, 0.03)',
+                    border: '1px solid rgba(255, 255, 255, 0.1)',
+                    boxShadow: '0 3px 14px rgba(0, 0, 0, 0.3)'
+                  }}
+                >
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex items-center gap-2">
+                      <div 
+                        className="w-8 h-8 rounded-full flex items-center justify-center font-bold text-[#0C002B]"
+                        style={{ background: '#FFB703' }}
+                      >
+                        {review.name.charAt(0)}
+                      </div>
+                      <div>
+                        <h4 className="text-white font-nunito text-sm font-semibold">{review.name}</h4>
+                        <p className="text-white/60 text-xs">{review.location}</p>
+                      </div>
+                    </div>
+                    <div className="flex text-[#FFB703] text-xs">
+                      {[...Array(5)].map((_, i) => (
+                        <i 
+                          key={i} 
+                          className={`fas fa-star ${i < Math.floor(review.rating) ? '' : i < review.rating ? 'fa-star-half-alt' : 'text-white/20'}`} 
+                          aria-hidden="true"
+                        />
+                      ))}
+                    </div>
+                  </div>
+                  <p className="text-white/90 font-nunito text-sm leading-relaxed mb-3 flex-grow">
+                    "{review.text}"
+                  </p>
+                  <div className="text-white/40 text-xs font-nunito mt-auto">
+                    {review.date}
+                  </div>
+                </div>
+              ))}
             </div>
           </section>
 
