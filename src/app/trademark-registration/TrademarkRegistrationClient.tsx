@@ -119,10 +119,10 @@ export default function TrademarkRegistrationClient() {
               }}
             >
               <p className="text-white/95 font-nunito text-base lg:text-lg leading-relaxed mb-3">
-                In today's competitive digital marketplace, securing your brand identity is more critical than ever. <strong>Trademark registration</strong> is the legal shield that protects your brand name, logo, and business reputation from infringement and misuse. Whether you are a startup looking to <strong>register a trademark</strong> for your innovative product or an established enterprise seeking <strong>global brand protection strategy</strong>, understanding the nuances of <strong>trademark filing</strong> is essential.
+                In today's competitive digital marketplace, securing your brand identity matters more than ever. Trademark registration protects your brand name, logo, and business reputation from infringement and misuse. Whether you're a startup registering a trademark for your product or an established enterprise seeking global brand protection, understanding trademark filing is key.
               </p>
               <p className="text-white/95 font-nunito text-base lg:text-lg leading-relaxed">
-                This comprehensive guide covers everything you need to know about <strong>online trademark application</strong>, from <strong>trademark registration cost</strong> and <strong>filing fees 2025</strong> to the <strong>step-by-step trademark registration process</strong>. We also explore emerging topics like <strong>trademark for digital assets (NFTs)</strong> and <strong>AI trademark infringement</strong>, ensuring you are well-equipped to navigate the modern IP landscape.
+                This guide covers everything you need to know about online trademark applications, from registration costs and filing fees to the step-by-step registration process. We also explore emerging topics like trademarks for digital assets and AI trademark infringement, so you're prepared to navigate the modern IP landscape.
               </p>
             </div>
           </section>
@@ -135,13 +135,13 @@ export default function TrademarkRegistrationClient() {
             </div>
             <div className="p-4 rounded-lg" style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
               <p className="text-white/90 font-nunito text-base leading-relaxed mb-3">
-                A trademark is a unique identifier—such as a word, phrase, symbol, design, or a combination of these—that distinguishes your goods or services from those of other entities. <strong>Brand name registration</strong> or <strong>logo trademark</strong> registration grants you exclusive rights to use that mark, preventing others from using a confusingly similar mark.
+                A trademark is a unique identifier such as a word, phrase, symbol, design, or a combination of these that distinguishes your goods or services from those of other entities. Brand name registration or logo trademark registration grants you exclusive rights to use that mark, preventing others from using a confusingly similar mark.
               </p>
               <p className="text-white/90 font-nunito text-base leading-relaxed mb-3">
-                <strong>Business name trademark</strong> protection is vital for building brand loyalty and trust. When you <strong>file trademark online</strong>, you are essentially creating an intangible asset that can appreciate in value over time. It allows you to take legal action against counterfeiters and is a prerequisite for programs like the <strong>Amazon Brand Registry trademark</strong>, which offers enhanced protection for e-commerce sellers.
+                Business name trademark protection helps build brand loyalty and trust. When you file a trademark online, you're creating an intangible asset that can grow in value over time. It lets you take legal action against counterfeiters and is required for programs like Amazon Brand Registry, which offers enhanced protection for e-commerce sellers.
               </p>
               <p className="text-white/90 font-nunito text-base leading-relaxed">
-                The governing body for trademarks in India is the Controller General of Patents, Designs, and Trademarks (CGPDTM). The <strong>Trademark registration services</strong> provided by the government allow for both physical and online filing, with the latter being the preferred method due to its efficiency and lower cost.
+                The governing body for trademarks in India is the Controller General of Patents, Designs, and Trademarks (CGPDTM). Government trademark registration services allow both physical and online filing, with online filing being the preferred method because it's more efficient and costs less.
               </p>
             </div>
           </section>
@@ -154,16 +154,16 @@ export default function TrademarkRegistrationClient() {
             </div>
             <div className="p-4 rounded-lg" style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
               <p className="text-white/90 font-nunito text-base leading-relaxed mb-4">
-                Registering your trademark offers numerous advantages that go beyond just legal protection. It is a strategic business move that enhances your market position.
+                Registering your trademark offers many advantages beyond legal protection. It's a strategic business move that strengthens your market position.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {[
-                  { title: "Legal Protection", desc: "Exclusive right to use the mark and sue for infringement. It provides a solid legal foundation to stop copycats." },
-                  { title: "Brand Asset", desc: "Builds value; can be sold, licensed, or franchised. A registered trademark is a valuable intangible asset on your balance sheet." },
-                  { title: "Amazon Brand Registry", desc: "Unlock powerful tools to protect your brand on Amazon. This is crucial for e-commerce sellers to prevent listing hijacking." },
-                  { title: "Global Expansion", desc: "Basis for International trademark registration (Madrid Protocol). It simplifies the process of registering your mark in other countries." },
-                  { title: "Deterrence", desc: "Public notice of ownership prevents others from using your mark. The ® symbol acts as a warning to potential infringers." },
-                  { title: "Trust & Credibility", desc: "Enhances professional image and customer confidence. Customers are more likely to trust a registered brand." }
+                  { title: "Legal Protection", desc: "You get exclusive rights to use the mark and can sue for infringement. This gives you a solid legal foundation to stop copycats." },
+                  { title: "Brand Asset", desc: "Builds value over time and can be sold, licensed, or franchised. A registered trademark is a valuable intangible asset on your balance sheet." },
+                  { title: "Amazon Brand Registry", desc: "Unlocks powerful tools to protect your brand on Amazon. Essential for e-commerce sellers to prevent listing hijacking." },
+                  { title: "Global Expansion", desc: "Forms the basis for international trademark registration through the Madrid Protocol. Simplifies registering your mark in other countries." },
+                  { title: "Deterrence", desc: "Public notice of ownership prevents others from using your mark. The ® symbol warns potential infringers." },
+                  { title: "Trust & Credibility", desc: "Boosts your professional image and customer confidence. Customers trust registered brands more." }
                 ].map((item, idx) => (
                   <div key={idx} className="p-4 rounded-md" style={{ background: 'rgba(255, 255, 255, 0.02)', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
                     <h3 className="text-[#FFB703] font-bold mb-2">{item.title}</h3>
@@ -182,7 +182,7 @@ export default function TrademarkRegistrationClient() {
             </div>
             <div className="p-4 rounded-lg" style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
               <p className="text-white/90 font-nunito text-base leading-relaxed mb-4">
-                Many business owners confuse these two forms of IP. <strong>Copyright vs trademark</strong> is a common query. Here's the difference:
+                Many business owners confuse these two forms of IP. Here's the difference:
               </p>
               <div className="overflow-x-auto">
                 <table className="w-full text-left text-white/90 border-collapse">
@@ -213,7 +213,7 @@ export default function TrademarkRegistrationClient() {
                 </table>
               </div>
               <p className="mt-4 text-white/80 text-sm">
-                For a clothing brand, you might need both: <strong>Trademark vs copyright for clothing brand</strong>? Trademark protects the brand name/logo on the tag, while copyright might protect a unique graphic design printed on the shirt.
+                For a clothing brand, you might need both. Trademark protects the brand name and logo on the tag, while copyright might protect a unique graphic design printed on the shirt.
               </p>
             </div>
           </section>
@@ -226,15 +226,15 @@ export default function TrademarkRegistrationClient() {
             </div>
             <div className="p-4 rounded-lg" style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
               <p className="text-white/90 font-nunito text-base leading-relaxed mb-4">
-                The <strong>Trademark registration process step-by-step</strong> involves several stages. Understanding these can help you navigate the system more effectively.
+                The trademark registration process involves several stages. Understanding these helps you navigate the system more effectively.
               </p>
               <div className="space-y-4">
                 {[
-                  { step: "1. Trademark Search", desc: "Conduct a comprehensive Trademark search or USPTO trademark search (for US) to ensure your mark is unique. This avoids rejection later. A thorough search includes checking for phonetic similarities and similar meanings." },
-                  { step: "2. Application Filing", desc: "File trademark online using Form TM-A (in India). Include applicant details, mark representation, and goods/services description. Ensure you select the correct class to avoid delays." },
-                  { step: "3. Examination", desc: "The registry examines the application. If there are objections, you must file a reply. This is where 'Trademark office action help' is crucial. The examiner checks for distinctiveness and conflicts." },
-                  { step: "4. Publication", desc: "If accepted, the mark is published in the Trademark Journal for 4 months, allowing third parties to oppose. This is a critical window for brand owners to monitor for conflicting marks." },
-                  { step: "5. Registration", desc: "If no opposition (or if won), the registration certificate is issued. Valid for 10 years. You can then use the ® symbol next to your trademark." }
+                  { step: "1. Trademark Search", desc: "Conduct a comprehensive trademark search or USPTO trademark search (for US) to ensure your mark is unique. This helps avoid rejection later. A thorough search includes checking for phonetic similarities and similar meanings." },
+                  { step: "2. Application Filing", desc: "File your trademark online using Form TM-A (in India). Include applicant details, mark representation, and goods/services description. Make sure you select the correct class to avoid delays." },
+                  { step: "3. Examination", desc: "The registry examines the application. If there are objections, you must file a reply. The examiner checks for distinctiveness and conflicts with existing marks." },
+                  { step: "4. Publication", desc: "If accepted, the mark is published in the Trademark Journal for 4 months, allowing third parties to oppose. This is an important window for brand owners to monitor for conflicting marks." },
+                  { step: "5. Registration", desc: "If no opposition (or if you win), the registration certificate is issued. Valid for 10 years. You can then use the ® symbol next to your trademark." }
                 ].map((s, i) => (
                   <div key={i} className="flex gap-4 p-3 rounded-md" style={{ background: 'rgba(255, 255, 255, 0.02)' }}>
                     <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#FFB703] text-[#0C002B] flex items-center justify-center font-bold">{i+1}</div>
@@ -256,7 +256,7 @@ export default function TrademarkRegistrationClient() {
             </div>
             <div className="p-4 rounded-lg" style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
               <p className="text-white/90 font-nunito text-base leading-relaxed mb-4">
-                To <strong>file trademark online</strong>, you need to have the following documents ready. Missing documents can lead to office actions and delays.
+                To file a trademark online, you need to have the following documents ready. Missing documents can lead to office actions and delays.
               </p>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-white/90">
                 <li className="flex items-center gap-2"><i className="fas fa-check text-[#FFB703]"></i> Applicant's Identity Proof (ID, Address)</li>
@@ -277,7 +277,7 @@ export default function TrademarkRegistrationClient() {
             </div>
             <div className="p-4 rounded-lg" style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
               <p className="text-white/90 mb-4">
-                Understanding <strong>Trademark registration cost</strong> is vital. Costs vary by applicant type and mode of filing. Here is a breakdown of <strong>Trademark filing fees 2025</strong>:
+                Understanding trademark registration costs is important. Costs vary by applicant type and mode of filing. Here's a breakdown of trademark filing fees for 2025:
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="p-4 rounded-md border border-[#FFB703]/30 bg-[#FFB703]/10">
@@ -294,7 +294,7 @@ export default function TrademarkRegistrationClient() {
                 </div>
               </div>
               <p className="mt-4 text-white/80 text-sm">
-                <strong>Trademark lawyer fees</strong> or professional charges are additional but recommended. <strong>Affordable trademark filing</strong> services often bundle search, filing, and basic advisory. <strong>Trademark renewal cost</strong> is generally ₹9,000 per class every 10 years.
+                Trademark lawyer fees or professional charges are additional but recommended. Affordable trademark filing services often bundle search, filing, and basic advisory. Trademark renewal costs are generally ₹9,000 per class every 10 years.
               </p>
             </div>
           </section>
@@ -307,7 +307,7 @@ export default function TrademarkRegistrationClient() {
             </div>
             <div className="p-4 rounded-lg" style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
               <p className="text-white/90 font-nunito text-base leading-relaxed">
-                The standard timeline is <strong>12 to 18 months</strong>. However, with <strong>Fast trademark registration</strong> (expedited processing), this can be reduced, though it incurs significantly higher government fees.
+                The standard timeline is 12 to 18 months. However, with fast trademark registration (expedited processing), this can be reduced, though it incurs significantly higher government fees.
               </p>
               <ul className="mt-3 space-y-2 text-white/80 text-sm">
                 <li>• Filing to Examination: 1-3 months</li>
@@ -325,7 +325,7 @@ export default function TrademarkRegistrationClient() {
               <h2 className="text-white font-nunito text-2xl md:text-3xl lg:text-4xl font-bold">Trademark Classes</h2>
             </div>
             <div className="p-4 rounded-lg" style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
-              <p className="text-white/90 mb-3">"<strong>What class should I trademark in?</strong>" is a critical question. There are 45 classes (1-34 for goods, 35-45 for services).</p>
+              <p className="text-white/90 mb-3">Choosing the right trademark class is important. There are 45 classes (1-34 for goods, 35-45 for services).</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                 <div className="bg-white/5 p-3 rounded border border-white/10">
                   <span className="text-[#FFB703] font-bold">Class 9</span>
@@ -363,7 +363,7 @@ export default function TrademarkRegistrationClient() {
             </div>
             <div className="p-4 rounded-lg" style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
               <p className="text-white/90 font-nunito text-base leading-relaxed mb-4">
-                Understanding <strong>Common trademark rejection reasons</strong> can save you time and money. The Trademark Registry often refuses applications on the following grounds:
+                Understanding common trademark rejection reasons can save you time and money. The Trademark Registry often refuses applications on the following grounds:
               </p>
               <ul className="space-y-3 text-white/90">
                 <li className="flex items-start gap-2">
@@ -402,19 +402,19 @@ export default function TrademarkRegistrationClient() {
             </div>
             <div className="p-4 rounded-lg" style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
               <p className="text-white/90 font-nunito text-base leading-relaxed mb-3">
-                It is crucial to distinguish between an objection and an opposition.
+                It's important to distinguish between an objection and an opposition.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="p-4 rounded-md bg-white/5 border border-white/10">
                   <h3 className="text-[#FFB703] font-bold mb-2">Trademark Objection</h3>
                   <p className="text-white/80 text-sm">
-                    Raised by the <strong>Trademark Examiner</strong> during the examination stage. It usually concerns the mark's distinctiveness or similarity to existing marks. You must file a reply to the examination report.
+                    Raised by the trademark examiner during the examination stage. It usually concerns the mark's distinctiveness or similarity to existing marks. You must file a reply to the examination report.
                   </p>
                 </div>
                 <div className="p-4 rounded-md bg-white/5 border border-white/10">
                   <h3 className="text-[#FFB703] font-bold mb-2">Trademark Opposition</h3>
                   <p className="text-white/80 text-sm">
-                    Filed by a <strong>third party</strong> (competitor or public) after the mark is published in the Trademark Journal. The <strong>Trademark opposition process</strong> involves filing a counter-statement, evidence, and hearings.
+                    Filed by a third party (competitor or public) after the mark is published in the Trademark Journal. The trademark opposition process involves filing a counter-statement, evidence, and hearings.
                   </p>
                 </div>
               </div>
@@ -429,7 +429,7 @@ export default function TrademarkRegistrationClient() {
             </div>
             <div className="p-4 rounded-lg" style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
               <p className="text-white/90 font-nunito text-base leading-relaxed mb-3">
-                If you plan to expand your business globally, <strong>International trademark registration (Madrid Protocol)</strong> is the most efficient route. It allows you to file a single application to register your trademark in multiple member countries (over 120 countries).
+                If you plan to expand your business globally, international trademark registration through the Madrid Protocol is the most efficient route. It lets you file a single application to register your trademark in multiple member countries (over 120 countries).
               </p>
               <p className="text-white/90 font-nunito text-base leading-relaxed">
                 To use the Madrid Protocol, you must first have a basic application or registration in your home country (e.g., India). This serves as the foundation for your international application. This centralized process saves time and reduces the cost of hiring separate attorneys in each country.
@@ -445,10 +445,10 @@ export default function TrademarkRegistrationClient() {
             </div>
             <div className="p-4 rounded-lg" style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
               <p className="text-white/90 font-nunito text-base leading-relaxed mb-3">
-                A trademark is valid for 10 years from the date of filing. To keep it active, you must pay the <strong>Trademark renewal cost</strong> every 10 years. You can file for renewal 6 months before the expiry date.
+                A trademark is valid for 10 years from the date of filing. To keep it active, you must pay the trademark renewal cost every 10 years. You can file for renewal 6 months before the expiry date.
               </p>
               <p className="text-white/90 font-nunito text-base leading-relaxed">
-                <strong>Trademark monitoring services</strong> are also essential to ensure no one else registers a similar mark. Regular monitoring helps you identify potential infringements early and take timely legal action to protect your brand integrity.
+                Trademark monitoring services are also important to ensure no one else registers a similar mark. Regular monitoring helps you identify potential infringements early and take timely legal action to protect your brand.
               </p>
             </div>
           </section>
@@ -461,10 +461,10 @@ export default function TrademarkRegistrationClient() {
             </div>
             <div className="p-4 rounded-lg" style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
               <p className="text-white/90 font-nunito text-base leading-relaxed mb-3">
-                The IP landscape is evolving. <strong>Trademark for digital assets (NFTs)</strong> is now a reality, with brands registering marks for virtual goods in the metaverse. Similarly, <strong>AI trademark infringement</strong> is a growing concern, requiring robust monitoring.
+                The IP landscape is evolving. Trademarks for digital assets like NFTs are now a reality, with brands registering marks for virtual goods in the metaverse. Similarly, AI trademark infringement is a growing concern that requires robust monitoring.
               </p>
               <p className="text-white/90 font-nunito text-base leading-relaxed">
-                Creators should also consider <strong>Trademark for podcast name</strong> (Class 41) and <strong>Register trademark for social media handle</strong> to prevent impersonation. <strong>E-commerce trademark protection</strong> is essential for online sellers to combat counterfeits.
+                Creators should also consider trademarking podcast names (Class 41) and registering trademarks for social media handles to prevent impersonation. E-commerce trademark protection is important for online sellers to combat counterfeits.
               </p>
             </div>
           </section>
@@ -477,11 +477,11 @@ export default function TrademarkRegistrationClient() {
             </div>
             <div className="space-y-4">
               {[
-                { q: "How to register a trademark for free?", a: "You cannot register a trademark for free. Government fees are mandatory. However, you can save on professional fees by filing it yourself, though this increases the risk of errors and rejection." },
-                { q: "Do I need a lawyer to trademark?", a: "It is not legally required, but highly recommended. A 'Best trademark attorney' can help navigate complex objections, 'Trademark opposition process', and ensure proper class selection." },
-                { q: "Can I trademark a slogan?", a: "Yes, slogans can be trademarked if they are distinctive and identify the source of goods/services. Generic phrases usually cannot be trademarked." },
-                { q: "What are common trademark rejection reasons?", a: "Common reasons include: likelihood of confusion with existing marks, descriptive or generic terms, offensive content, or incorrect class selection." },
-                { q: "How to protect my business name?", a: "Registering it as a trademark is the strongest protection. Registering a company name with the ROC or buying a domain name does not grant trademark rights." }
+                { q: "How to register a trademark for free?", a: "You can't register a trademark for free. Government fees are mandatory. However, you can save on professional fees by filing it yourself, though this increases the risk of errors and rejection." },
+                { q: "Do I need a lawyer to trademark?", a: "It's not legally required, but highly recommended. A good trademark attorney can help navigate complex objections, the trademark opposition process, and ensure proper class selection." },
+                { q: "Can I trademark a slogan?", a: "Yes, slogans can be trademarked if they're distinctive and identify the source of goods or services. Generic phrases usually can't be trademarked." },
+                { q: "What are common trademark rejection reasons?", a: "Common reasons include likelihood of confusion with existing marks, descriptive or generic terms, offensive content, or incorrect class selection." },
+                { q: "How to protect my business name?", a: "Registering it as a trademark is the strongest protection. Registering a company name with the ROC or buying a domain name doesn't grant trademark rights." }
               ].map((faq, i) => (
                 <div key={i} className="p-4 rounded-lg" style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
                   <h3 className="text-[#FFB703] font-bold mb-2">{faq.q}</h3>
@@ -500,7 +500,7 @@ export default function TrademarkRegistrationClient() {
             }}>
               <h3 className="text-white font-nunito text-2xl lg:text-3xl font-bold mb-3">Ready to Protect Your Brand?</h3>
               <p className="text-white/90 mb-6 max-w-2xl mx-auto">
-                Secure your business identity today with our <strong>Trademark registration services</strong>. We offer <strong>Affordable trademark filing</strong> with expert guidance.
+                Secure your business identity today with our trademark registration services. We offer affordable trademark filing with expert guidance.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link href="/contact" className="px-6 py-3 rounded-lg font-bold text-[#0C002B] bg-gradient-to-r from-[#FFB703] to-[#FFA000] hover:scale-105 transition-transform">
@@ -515,7 +515,6 @@ export default function TrademarkRegistrationClient() {
 
         </div>
       </div>
-      <Footer />
     </div>
   );
 }
