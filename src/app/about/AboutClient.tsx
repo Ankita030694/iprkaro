@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import ClientLogoSlider from '@/components/ClientLogoSlider';
 import AboutBento from '@/components/AboutBento';
+import { motion } from 'framer-motion';
 
 export default function AboutClient() {
   // State for mobile card interactions
@@ -389,42 +390,72 @@ export default function AboutClient() {
           <ClientLogoSlider useWhiteLogos={true} />
         </div>
 
-        {/* Desktop: Client Logos Grid - 2x5 */}
-        <div className="hidden lg:block">
-        <div className="flex justify-center">
-          <div className="grid grid-cols-5 gap-12 w-fit">
-            {[1, 2, 3, 4, 5, 6, 7, 8, 13, 14].map((logoNumber) => (
-            <div
-              key={logoNumber}
-              className="flex items-center justify-center rounded-lg"
+        {/* Desktop: Client Logos Carousel */}
+        <div className="hidden lg:block w-full overflow-hidden">
+          <div className="flex relative overflow-hidden">
+             {/* Gradient Masks for smooth fade effect */}
+            <div className="absolute left-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-[#0c002b] to-transparent pointer-events-none" />
+            <div className="absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-l from-[#0c002b] to-transparent pointer-events-none" />
+            
+            <motion.div
+              className="flex gap-12"
+              animate={{
+                x: ["0%", "-50%"]
+              }}
+              transition={{
+                x: {
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  duration: 40,
+                  ease: "linear",
+                },
+              }}
               style={{
-                display: 'flex',
-                width: '140px',
-                height: '140px',
-                padding: '0 20px',
-                justifyContent: 'center',
-                alignItems: 'center',
-                aspectRatio: '1/1',
-                borderRadius: '15px',
-                background: 'linear-gradient(145deg, rgba(12, 0, 43, 0.20) 6.6%, rgba(255, 183, 3, 0.20) 120.24%), rgba(0, 0, 0, 0.20)',
-                boxShadow: '0 0 20px 1px rgba(255, 255, 255, 0.10) inset'
+                width: "fit-content",
               }}
             >
-              <Image
-                src={`/clientlogos/white${logoNumber}.png`}
-                alt={`Client Logo ${logoNumber}`}
-                width={70}
-                height={70}
-                className="max-w-full h-auto object-contain opacity-90"
-                style={{
-                  imageRendering: 'crisp-edges',
-                  WebkitFontSmoothing: 'antialiased'
-                }}
-              />
-            </div>
-          ))}
+              {[
+                ...[1, 2, 3, 4, 5, 6, 7, 8, 13, 14].map(n => `/clientlogos/white${n}.png`),
+                '/partner1.jpeg',
+                '/partner2.jpeg',
+                '/partner3.png',
+                // Duplicate for infinite loop
+                ...[1, 2, 3, 4, 5, 6, 7, 8, 13, 14].map(n => `/clientlogos/white${n}.png`),
+                '/partner1.jpeg',
+                '/partner2.jpeg',
+                '/partner3.png'
+              ].map((logo, index) => (
+                <div
+                  key={index}
+                  className="flex items-center justify-center rounded-lg flex-shrink-0"
+                  style={{
+                    display: 'flex',
+                    width: '140px',
+                    height: '140px',
+                    padding: '0 20px',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    aspectRatio: '1/1',
+                    borderRadius: '15px',
+                    background: 'linear-gradient(145deg, rgba(12, 0, 43, 0.20) 6.6%, rgba(255, 183, 3, 0.20) 120.24%), rgba(0, 0, 0, 0.20)',
+                    boxShadow: '0 0 20px 1px rgba(255, 255, 255, 0.10) inset'
+                  }}
+                >
+                  <Image
+                    src={logo}
+                    alt={`Client Logo ${index}`}
+                    width={70}
+                    height={70}
+                    className="max-w-full h-auto object-contain opacity-90"
+                    style={{
+                      imageRendering: 'crisp-edges',
+                      WebkitFontSmoothing: 'antialiased'
+                    }}
+                  />
+                </div>
+              ))}
+            </motion.div>
           </div>
-        </div>
         </div>
       </div>
 

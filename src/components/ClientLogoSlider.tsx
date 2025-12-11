@@ -13,20 +13,24 @@ export default function ClientLogoSlider({ className = '', useWhiteLogos = false
 
   // Initialize logos
   useEffect(() => {
-    const logoPaths = useWhiteLogos 
+    const baseLogos = useWhiteLogos 
       ? [1, 2, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14].map(i => `/clientlogos/white${i}.png`)
       : [1, 2, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16].map(i => `/clientlogos/${i}.png`);
+    
+    const partnerLogos = ['/partner1.jpeg', '/partner2.jpeg', '/partner3.png'];
+    const logoPaths = [...baseLogos, ...partnerLogos];
+
     // Create multiple duplicates for seamless infinite scroll - enough to fill screen and beyond
     setLogos([...logoPaths, ...logoPaths, ...logoPaths, ...logoPaths]);
   }, [useWhiteLogos]);
 
 
-  const logoCount = useWhiteLogos ? 12 : 14;
+  const logoCount = (useWhiteLogos ? 12 : 14) + 3;
   const logoWidth = 80; // Reduced from 128 to 80
   const gapSize = 30; // Gap between logos
   // Calculate the exact distance to move one complete set of logos
   // Subtract one gap to account for seamless looping (last logo's margin connects to first logo)
-  const totalDistance = logoCount * (logoWidth + gapSize) - gapSize;
+  const totalDistance = logoCount * (logoWidth + gapSize);
 
   return (
     <div className={`w-full overflow-hidden h-full ${className}`}>
@@ -57,10 +61,9 @@ export default function ClientLogoSlider({ className = '', useWhiteLogos = false
             } as React.CSSProperties}
           >
             {logos.map((logo, index) => {
-              // Calculate the actual logo number for alt text
               const logoNumbers = useWhiteLogos 
-                ? [1, 2, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14]
-                : [1, 2, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
+                ? [1, 2, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 'Partner 1', 'Partner 2', 'Partner 3']
+                : [1, 2, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 'Partner 1', 'Partner 2', 'Partner 3'];
               const logoIndex = logoNumbers[index % logoCount];
               
               return (
