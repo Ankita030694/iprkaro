@@ -81,6 +81,54 @@ export default function OnlineTrademarkRegistrationClient() {
     "dateModified": "2025-01-15"
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.iprkaro.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Trademark Registration",
+        "item": "https://www.iprkaro.com/trademark-registration"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Online Trademark Registration",
+        "item": "https://www.iprkaro.com/online-trademark-registration"
+      }
+    ]
+  };
+
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Online Trademark Registration Services",
+    "provider": {
+      "@type": "Organization",
+      "name": "IPR Karo",
+      "url": "https://www.iprkaro.com/"
+    },
+    "description": "Expert online trademark registration services in India. Secure your brand with our seamless, digital filing process.",
+    "areaServed": {
+      "@type": "Country",
+      "name": "India"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "500",
+      "bestRating": "5",
+      "worstRating": "1"
+    }
+  };
+
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -135,6 +183,14 @@ export default function OnlineTrademarkRegistrationClient() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <script
         type="application/ld+json"
