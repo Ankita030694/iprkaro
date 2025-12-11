@@ -106,19 +106,15 @@ export default function OnlineTrademarkRegistrationClient() {
     ]
   };
 
-  const serviceSchema = {
+  const productSchema = {
     "@context": "https://schema.org",
-    "@type": "Service",
+    "@type": "Product",
     "name": "Online Trademark Registration Services",
-    "provider": {
-      "@type": "Organization",
-      "name": "IPR Karo",
-      "url": "https://www.iprkaro.com/"
-    },
+    "image": "https://www.iprkaro.com/logo.png",
     "description": "Expert online trademark registration services in India. Secure your brand with our seamless, digital filing process.",
-    "areaServed": {
-      "@type": "Country",
-      "name": "India"
+    "brand": {
+      "@type": "Brand",
+      "name": "IPR Karo"
     },
     "aggregateRating": {
       "@type": "AggregateRating",
@@ -190,7 +186,7 @@ export default function OnlineTrademarkRegistrationClient() {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
       />
       <script
         type="application/ld+json"

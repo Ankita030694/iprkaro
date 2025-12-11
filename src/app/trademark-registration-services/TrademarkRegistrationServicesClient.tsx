@@ -103,19 +103,15 @@ export default function TrademarkRegistrationServicesClient() {
     ]
   };
 
-  const serviceSchema = {
+  const productSchema = {
     "@context": "https://schema.org",
-    "@type": "Service",
+    "@type": "Product",
     "name": "Trademark Registration Services",
-    "provider": {
-      "@type": "Organization",
-      "name": "IPR Karo",
-      "url": "https://www.iprkaro.com/"
-    },
+    "image": "https://www.iprkaro.com/logo.png",
     "description": "Comprehensive trademark registration services including search, filing, objection handling, and litigation support.",
-    "areaServed": {
-      "@type": "Country",
-      "name": "India"
+    "brand": {
+      "@type": "Brand",
+      "name": "IPR Karo"
     },
     "aggregateRating": {
       "@type": "AggregateRating",
@@ -187,7 +183,7 @@ export default function TrademarkRegistrationServicesClient() {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
       />
       <script
         type="application/ld+json"
