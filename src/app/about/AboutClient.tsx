@@ -441,16 +441,18 @@ export default function AboutClient() {
                     boxShadow: '0 0 20px 1px rgba(255, 255, 255, 0.10) inset'
                   }}
                 >
-                  <Image
+                  <img
                     src={logo}
                     alt={`Client Logo ${index}`}
-                    width={70}
-                    height={70}
                     className="max-w-full h-auto object-contain opacity-90"
                     style={{
                       imageRendering: 'crisp-edges',
-                      WebkitFontSmoothing: 'antialiased'
+                      WebkitFontSmoothing: 'antialiased',
+                      width: '70px',
+                      height: '70px'
                     }}
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
               ))}
