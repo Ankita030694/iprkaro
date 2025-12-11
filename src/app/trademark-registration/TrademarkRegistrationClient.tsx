@@ -523,6 +523,9 @@ export default function TrademarkRegistrationClient() {
               <Link href="/trademark-registration-services" className="text-[#FFB703] hover:text-white transition-colors underline decoration-dotted underline-offset-4">
                 Trademark Registration Services
               </Link>
+              <Link href="/register-trademark-online" className="text-[#FFB703] hover:text-white transition-colors underline decoration-dotted underline-offset-4">
+                Register Trademark Online
+              </Link>
             </div>
           </section>
 
