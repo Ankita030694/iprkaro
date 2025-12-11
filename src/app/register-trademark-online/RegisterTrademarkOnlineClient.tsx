@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
 import BlogTableOfContents from '@/components/blog/BlogTableOfContents';
 
 interface TOCSection {
@@ -19,8 +18,10 @@ export default function RegisterTrademarkOnlineClient() {
     const sections: TOCSection[] = [
       { id: 'introduction', title: 'Introduction' },
       { id: 'why-register-online', title: 'Why Register Trademark Online?' },
+      { id: 'dsc-deep-dive', title: 'Digital Signature Certificate (DSC)' },
       { id: 'pre-filing-checklist', title: 'Pre-Filing Checklist' },
       { id: 'step-by-step-guide', title: 'Step-by-Step Registration Guide' },
+      { id: 'trademark-statuses', title: 'Understanding Trademark Statuses' },
       { id: 'common-mistakes', title: 'Common Mistakes to Avoid' },
       { id: 'documents-required', title: 'Documents Required' },
       { id: 'trademark-classes', title: 'Choosing the Right Class' },
@@ -273,10 +274,13 @@ export default function RegisterTrademarkOnlineClient() {
                 <h2 className="text-white font-nunito text-2xl md:text-3xl font-bold mb-4">Introduction</h2>
                 <div className="text-white/90 font-nunito text-base leading-relaxed space-y-4">
                   <p>
-                    A trademark is a unique symbol, word, or design that represents your company or product. It distinguishes your goods or services from those of your competitors. In India, the Controller General of Patents, Designs, and Trademarks (CGPDTM) oversees the registration process.
+                    A trademark is a unique symbol, word, or design that represents your company or product. It distinguishes your goods or services from those of your competitors. In India, the Controller General of Patents, Designs, and Trademarks (CGPDTM) oversees the registration process. The advent of the internet has revolutionized how businesses interact with government services, and trademark registration is no exception.
                   </p>
                   <p>
-                    Gone are the days of lengthy paperwork and physical queues. The online trademark registration system allows you to file applications from the comfort of your office. However, ease of access does not mean the legal requirements are any less stringent. A successful registration requires careful planning, accurate classification, and precise documentation.
+                    Gone are the days of lengthy paperwork, physical queues at the trademark registry offices in Mumbai, Delhi, Kolkata, Chennai, or Ahmedabad, and the uncertainty of manual filing. The online trademark registration system allows you to file applications from the comfort of your office or home. This digital transformation has democratized access to intellectual property protection, making it accessible to startups, SMEs, and large corporations alike.
+                  </p>
+                  <p>
+                    However, ease of access does not mean the legal requirements are any less stringent. A successful registration requires careful planning, accurate classification, and precise documentation. The online portal is a powerful tool, but it requires a skilled hand to navigate. From creating a user account to uploading documents in the correct format and responding to examination reports, every step must be executed with precision to avoid objections and delays. This comprehensive guide will walk you through every nuance of the online registration process, empowering you to secure your brand's future.
                   </p>
                 </div>
               </section>
@@ -286,26 +290,50 @@ export default function RegisterTrademarkOnlineClient() {
                 <h2 className="text-white font-nunito text-2xl md:text-3xl font-bold mb-4">Why Register Trademark Online?</h2>
                 <div className="text-white/90 font-nunito text-base leading-relaxed space-y-4">
                   <p>
-                    Choosing to <strong>register a trademark online</strong> offers several distinct benefits over the traditional offline method:
+                    Choosing to <strong>register a trademark online</strong> offers several distinct benefits over the traditional offline method. It is not just about convenience; it is about efficiency, cost-effectiveness, and transparency.
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
                     <div className="p-5 rounded-lg bg-white/5 border border-white/10">
                       <h3 className="text-[#FFB703] font-bold text-lg mb-2">Instant Acknowledgement</h3>
-                      <p>You receive an application number immediately upon filing, allowing you to start using the "TM" symbol right away.</p>
+                      <p>One of the biggest advantages is the immediate generation of the filing receipt. You receive an application number immediately upon filing, allowing you to start using the "TM" symbol right away. In the physical process, this could take days.</p>
                     </div>
                     <div className="p-5 rounded-lg bg-white/5 border border-white/10">
                       <h3 className="text-[#FFB703] font-bold text-lg mb-2">Reduced Fees</h3>
-                      <p>The government incentivizes digital filing by offering a 10% rebate on the filing fees compared to physical applications.</p>
+                      <p>The government actively incentivizes digital filing. The official fee for online filing is significantly lower (approx. 10% less) than physical filing. For individuals and startups, this saving is substantial.</p>
                     </div>
                     <div className="p-5 rounded-lg bg-white/5 border border-white/10">
                       <h3 className="text-[#FFB703] font-bold text-lg mb-2">Real-Time Tracking</h3>
-                      <p>The online portal provides a transparent status tracking system, so you always know where your application stands.</p>
+                      <p>The online portal provides a transparent status tracking system. You can check the status of your application 24/7, view examination reports the moment they are issued, and track opposition proceedings without waiting for physical mail.</p>
                     </div>
                     <div className="p-5 rounded-lg bg-white/5 border border-white/10">
                       <h3 className="text-[#FFB703] font-bold text-lg mb-2">Error Reduction</h3>
-                      <p>Online forms have built-in validation checks that minimize the risk of clerical errors that could delay your application.</p>
+                      <p>Online forms have built-in validation checks. They prevent you from leaving mandatory fields blank or entering invalid data formats, thereby minimizing the risk of clerical errors that could otherwise delay your application by months.</p>
                     </div>
                   </div>
+                </div>
+              </section>
+
+              {/* DSC Deep Dive */}
+              <section id="dsc-deep-dive" className="mb-12 scroll-mt-32">
+                <h2 className="text-white font-nunito text-2xl md:text-3xl font-bold mb-4">Digital Signature Certificate (DSC): The Key to Online Filing</h2>
+                <div className="text-white/90 font-nunito text-base leading-relaxed space-y-4">
+                  <p>
+                    Before you can even access the trademark filing forms, you need a Digital Signature Certificate (DSC). This is often a stumbling block for first-time applicants. A DSC is the digital equivalent of a physical signature, ensuring the authenticity and integrity of the documents you submit.
+                  </p>
+                  <h3 className="text-xl font-bold text-white mt-4">Why is it Mandatory?</h3>
+                  <p>
+                    The IP India portal requires a <strong>Class 3 DSC</strong> for all e-filing activities. This is the highest level of security for a digital signature. It validates the identity of the user and encrypts the data being transmitted, making the online process legally binding and secure.
+                  </p>
+                  <h3 className="text-xl font-bold text-white mt-4">How to Obtain a DSC?</h3>
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li><strong>Certifying Authorities:</strong> You must purchase a DSC from a licensed Certifying Authority (CA) such as eMudhra, Sify, or nCode.</li>
+                    <li><strong>Documents Needed:</strong> You will need to submit identity proof (PAN, Aadhaar) and address proof. Video verification is often required.</li>
+                    <li><strong>USB Token:</strong> The DSC is typically issued on a FIPS-compliant USB token (looks like a pen drive). You must plug this into your computer to sign documents.</li>
+                    <li><strong>System Configuration:</strong> You will need to install specific drivers and a signing utility on your computer to allow the browser to communicate with the USB token.</li>
+                  </ul>
+                  <p className="mt-4 p-4 bg-blue-900/30 border border-blue-500/30 rounded-lg">
+                    <strong>Pro Tip:</strong> Ensure your DSC is valid and not expired. DSCs usually have a validity of 1 to 3 years. If you are an attorney or agent, you need a DSC in your own name. If you are a business owner filing directly, the DSC must be in the name of the authorized signatory (Director, Partner, or Proprietor).
+                  </p>
                 </div>
               </section>
 
@@ -358,41 +386,66 @@ export default function RegisterTrademarkOnlineClient() {
                   <div className="space-y-8">
                     <div className="relative pl-8 border-l-2 border-[#FFB703]">
                       <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-[#FFB703]"></div>
-                      <h3 className="text-xl font-bold text-white mb-2">Step 1: Public Search</h3>
+                      <h3 className="text-xl font-bold text-white mb-2">Step 1: Comprehensive Public Search</h3>
                       <p className="text-white/80">
-                        Visit the IP India Public Search portal. Enter your proposed trademark and the relevant class. Analyze the results for phonetically or visually similar marks. If you find identical marks in the same class, consider rebranding to avoid rejection.
+                        Before you even think about logging in, visit the IP India Public Search portal. This is the most critical step. Do not just search for the exact name. Search for:
+                      </p>
+                      <ul className="list-disc pl-6 mt-2 text-white/80">
+                        <li><strong>Phonetic Similarities:</strong> "Kwik" vs "Quick".</li>
+                        <li><strong>Visual Similarities:</strong> Logos that look alike.</li>
+                        <li><strong>Similar Meanings:</strong> "Surya" vs "Sun".</li>
+                      </ul>
+                      <p className="text-white/80 mt-2">
+                        Enter your proposed trademark and the relevant class. Analyze the results carefully. If you find identical or deceptively similar marks in the same or related classes, you should strongly consider rebranding. Proceeding with a similar mark is a recipe for rejection and legal battles.
                       </p>
                     </div>
                     
                     <div className="relative pl-8 border-l-2 border-[#FFB703]">
                       <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-[#FFB703]"></div>
-                      <h3 className="text-xl font-bold text-white mb-2">Step 2: Create an Account</h3>
+                      <h3 className="text-xl font-bold text-white mb-2">Step 2: User Registration & Account Creation</h3>
                       <p className="text-white/80">
-                        Go to the IP India e-filing portal. Register as a new user. You will need to select your user type (Proprietor, Agent, Attorney) and map your Digital Signature Certificate (DSC) to the account.
+                        Go to the IP India e-filing portal. You cannot file as a guest. You must register as a new user.
+                      </p>
+                      <ul className="list-disc pl-6 mt-2 text-white/80">
+                        <li><strong>Select User Type:</strong> Choose 'Proprietor' if you are filing for your own business, or 'Agent/Attorney' if you are a professional.</li>
+                        <li><strong>Enter Details:</strong> Fill in the full legal name, address, email, and mobile number.</li>
+                        <li><strong>Map DSC:</strong> This is where your Digital Signature Certificate comes in. You must plug in your token and 'map' it to your user account. This links your digital identity to your login credentials.</li>
+                      </ul>
+                    </div>
+
+                    <div className="relative pl-8 border-l-2 border-[#FFB703]">
+                      <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-[#FFB703]"></div>
+                      <h3 className="text-xl font-bold text-white mb-2">Step 3: Filing Form TM-A</h3>
+                      <p className="text-white/80">
+                        Once logged in, navigate to 'New Application'. Select 'File TM-A'. This is the primary application form.
+                      </p>
+                      <ul className="list-disc pl-6 mt-2 text-white/80">
+                        <li><strong>Applicant Details:</strong> Select the category (Individual, Startup, Small Enterprise, or Others). Note that Startups and SMEs get a 50% fee concession but must upload a valid certificate (DIPP or Udyam).</li>
+                        <li><strong>Trademark Details:</strong> Upload your logo (JPEG format, specific dimensions). If it is a wordmark, type it in.</li>
+                        <li><strong>Goods/Services Description:</strong> Be precise. Do not just write "Electronics". Write "Electronic circuit boards, mobile phones, and accessories" as per the NICE classification.</li>
+                        <li><strong>User Date:</strong> If you have been using the mark, enter the date of first use. You MUST upload a 'User Affidavit' as proof. If not, select 'Proposed to be used'.</li>
+                      </ul>
+                    </div>
+
+                    <div className="relative pl-8 border-l-2 border-[#FFB703]">
+                      <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-[#FFB703]"></div>
+                      <h3 className="text-xl font-bold text-white mb-2">Step 4: Document Upload & Payment</h3>
+                      <p className="text-white/80">
+                        After filling the form, you must upload the supporting documents. Ensure they are in PDF format and within the size limits.
+                      </p>
+                      <p className="text-white/80 mt-2">
+                        Review the application draft carefully. Once satisfied, proceed to payment. The portal accepts net banking, credit cards, and debit cards. Upon successful payment, the system generates an acknowledgement slip containing your <strong>Application Number</strong>. Save this! It is your reference for all future tracking.
                       </p>
                     </div>
 
                     <div className="relative pl-8 border-l-2 border-[#FFB703]">
                       <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-[#FFB703]"></div>
-                      <h3 className="text-xl font-bold text-white mb-2">Step 3: File Form TM-A</h3>
+                      <h3 className="text-xl font-bold text-white mb-2">Step 5: Examination & Response</h3>
                       <p className="text-white/80">
-                        Log in and select 'New Application'. Choose Form TM-A. Enter the applicant details, upload the trademark image, and describe the goods/services. If you have been using the mark before filing, enter the 'User Date' and upload a usage affidavit.
+                        Your job isn't done yet. The Registrar will examine your application, typically within 1-3 months. They check for formalities and substantive grounds for refusal (Section 9 and 11 of the Act).
                       </p>
-                    </div>
-
-                    <div className="relative pl-8 border-l-2 border-[#FFB703]">
-                      <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-[#FFB703]"></div>
-                      <h3 className="text-xl font-bold text-white mb-2">Step 4: Payment</h3>
-                      <p className="text-white/80">
-                        Review the application draft. Once satisfied, proceed to payment. You can pay via net banking, credit card, or debit card. Upon success, an acknowledgement slip with the Application Number is generated.
-                      </p>
-                    </div>
-
-                    <div className="relative pl-8 border-l-2 border-[#FFB703]">
-                      <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-[#FFB703]"></div>
-                      <h3 className="text-xl font-bold text-white mb-2">Step 5: Examination</h3>
-                      <p className="text-white/80">
-                        The Registrar will examine your application. This can take 1-3 months. They check for formalities and substantive grounds for refusal. You can track the status online (e.g., 'Sent for Examination', 'Examined').
+                      <p className="text-white/80 mt-2">
+                        If they find issues, they will issue an <strong>Examination Report</strong> with objections. You have 30 days to file a comprehensive legal reply. Failure to do so will lead to abandonment.
                       </p>
                     </div>
 
@@ -400,8 +453,44 @@ export default function RegisterTrademarkOnlineClient() {
                       <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-[#FFB703]"></div>
                       <h3 className="text-xl font-bold text-white mb-2">Step 6: Publication & Registration</h3>
                       <p className="text-white/80">
-                        If accepted, the mark is published in the Trademark Journal. If no opposition is filed within 4 months, the Registration Certificate is issued.
+                        If your reply is accepted (or if there were no objections), the mark is published in the Trademark Journal. This is a public notice inviting oppositions. If no third party opposes your mark within 4 months, the Registrar will issue the <strong>Registration Certificate</strong>. This certificate is valid for 10 years.
                       </p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              {/* Trademark Statuses */}
+              <section id="trademark-statuses" className="mb-12 scroll-mt-32">
+                <h2 className="text-white font-nunito text-2xl md:text-3xl font-bold mb-4">Understanding Trademark Statuses</h2>
+                <div className="text-white/90 font-nunito text-base leading-relaxed space-y-4">
+                  <p>
+                    When you track your application online, you will see various status updates. Understanding these is crucial to knowing what action to take next:
+                  </p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                    <div className="p-4 bg-white/5 rounded border border-white/10">
+                      <h4 className="text-[#FFB703] font-bold mb-2">Send to Vienna Codification</h4>
+                      <p className="text-sm text-white/80">Applicable for logos. The registry assigns a Vienna Code to the design elements for indexing.</p>
+                    </div>
+                    <div className="p-4 bg-white/5 rounded border border-white/10">
+                      <h4 className="text-[#FFB703] font-bold mb-2">Formalities Chk Pass/Fail</h4>
+                      <p className="text-sm text-white/80">Checks if basic documents are correct. If 'Fail', you must rectify the clerical errors immediately.</p>
+                    </div>
+                    <div className="p-4 bg-white/5 rounded border border-white/10">
+                      <h4 className="text-[#FFB703] font-bold mb-2">Marked for Exam</h4>
+                      <p className="text-sm text-white/80">The application has been assigned to an examiner for a detailed legal review.</p>
+                    </div>
+                    <div className="p-4 bg-white/5 rounded border border-white/10">
+                      <h4 className="text-[#FFB703] font-bold mb-2">Objected</h4>
+                      <p className="text-sm text-white/80">The examiner has raised objections. You must file a reply within 30 days.</p>
+                    </div>
+                    <div className="p-4 bg-white/5 rounded border border-white/10">
+                      <h4 className="text-[#FFB703] font-bold mb-2">Exam Report Issued</h4>
+                      <p className="text-sm text-white/80">The report is generated and available for download. Check it immediately.</p>
+                    </div>
+                    <div className="p-4 bg-white/5 rounded border border-white/10">
+                      <h4 className="text-[#FFB703] font-bold mb-2">Opposed</h4>
+                      <p className="text-sm text-white/80">A third party has filed an opposition against your mark. Legal proceedings will follow.</p>
                     </div>
                   </div>
                 </div>
@@ -437,32 +526,36 @@ export default function RegisterTrademarkOnlineClient() {
 
               {/* Documents Required */}
               <section id="documents-required" className="mb-12 scroll-mt-32">
-                <h2 className="text-white font-nunito text-2xl md:text-3xl font-bold mb-4">Documents Required</h2>
+                <h2 className="text-white font-nunito text-2xl md:text-3xl font-bold mb-4">Documents Required for Online Registration</h2>
                 <div className="text-white/90 font-nunito text-base leading-relaxed mb-4">
                   <p>
-                    Keep digital copies of these documents ready (JPEG/PDF formats as specified by the portal):
+                    The documentation required varies slightly depending on the type of applicant (Individual, Company, LLP, etc.). Having these ready in the correct digital format is essential for a smooth filing process.
                   </p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   <div className="p-4 bg-white/5 rounded border border-white/10">
                     <h4 className="text-[#FFB703] font-bold mb-2">Identity Proof</h4>
-                    <p className="text-sm text-white/80">PAN Card or Aadhaar Card of the applicant.</p>
+                    <p className="text-sm text-white/80">For Individuals/Sole Proprietors: PAN Card or Aadhaar Card. For Companies: Certificate of Incorporation.</p>
+                  </div>
+                  <div className="p-4 bg-white/5 rounded border border-white/10">
+                    <h4 className="text-[#FFB703] font-bold mb-2">Address Proof</h4>
+                    <p className="text-sm text-white/80">Recent utility bill, bank statement, or GST registration certificate showing the principal place of business.</p>
                   </div>
                   <div className="p-4 bg-white/5 rounded border border-white/10">
                     <h4 className="text-[#FFB703] font-bold mb-2">Business Proof</h4>
-                    <p className="text-sm text-white/80">GST Certificate, COI, or MSME Certificate (for fee concession).</p>
+                    <p className="text-sm text-white/80">GST Certificate, Udyam Registration (for MSME concession), or Start-up India Certificate (for Startup concession).</p>
                   </div>
                   <div className="p-4 bg-white/5 rounded border border-white/10">
-                    <h4 className="text-[#FFB703] font-bold mb-2">Logo Image</h4>
-                    <p className="text-sm text-white/80">High-resolution JPEG of the logo (if not a wordmark).</p>
+                    <h4 className="text-[#FFB703] font-bold mb-2">Logo/Brand Image</h4>
+                    <p className="text-sm text-white/80">High-resolution JPEG of the logo. If it's a wordmark, just the text is needed. Dimensions should be 8x8 cm.</p>
                   </div>
                   <div className="p-4 bg-white/5 rounded border border-white/10">
-                    <h4 className="text-[#FFB703] font-bold mb-2">Power of Attorney</h4>
-                    <p className="text-sm text-white/80">Form TM-48 if filing through an attorney.</p>
+                    <h4 className="text-[#FFB703] font-bold mb-2">Power of Attorney (TM-48)</h4>
+                    <p className="text-sm text-white/80">Required if you are filing through an attorney or agent. It must be signed and stamped on stamp paper.</p>
                   </div>
                   <div className="p-4 bg-white/5 rounded border border-white/10">
                     <h4 className="text-[#FFB703] font-bold mb-2">User Affidavit</h4>
-                    <p className="text-sm text-white/80">Required only if claiming prior usage date.</p>
+                    <p className="text-sm text-white/80">Mandatory if claiming a prior user date. It must be notarized and detail the history of usage with evidence.</p>
                   </div>
                 </div>
               </section>
@@ -578,7 +671,6 @@ export default function RegisterTrademarkOnlineClient() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

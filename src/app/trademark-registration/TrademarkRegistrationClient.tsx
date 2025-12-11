@@ -526,6 +526,9 @@ export default function TrademarkRegistrationClient() {
               <Link href="/register-trademark-online" className="text-[#FFB703] hover:text-white transition-colors underline decoration-dotted underline-offset-4">
                 Register Trademark Online
               </Link>
+              <Link href="/best-trademark-attorneys" className="text-[#FFB703] hover:text-white transition-colors underline decoration-dotted underline-offset-4">
+                Best Trademark Attorneys
+              </Link>
             </div>
           </section>
 
