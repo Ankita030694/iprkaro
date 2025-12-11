@@ -513,6 +513,16 @@ export default function TrademarkRegistrationClient() {
             </div>
           </section>
 
+          {/* Related Resources */}
+          <section className="mb-8 border-t border-white/10 pt-8">
+            <h3 className="text-white font-nunito text-xl font-bold mb-4">Related Resources</h3>
+            <div className="flex flex-wrap gap-4">
+              <Link href="/online-trademark-registration" className="text-[#FFB703] hover:text-white transition-colors underline decoration-dotted underline-offset-4">
+                Online Trademark Registration Guide
+              </Link>
+            </div>
+          </section>
+
         </div>
       </div>
     </div>

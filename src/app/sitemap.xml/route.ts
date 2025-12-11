@@ -17,6 +17,7 @@ export async function GET() {
     '/terms-and-conditions',
     '/trademark-registration-guide',
     '/trademark-registration',
+    '/online-trademark-registration',
 
     // Features pages
     '/features/247-trademark-protection',
