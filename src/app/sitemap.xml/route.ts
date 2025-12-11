@@ -18,6 +18,10 @@ export async function GET() {
     '/trademark-registration-guide',
     '/trademark-registration',
     '/online-trademark-registration',
+    '/trademark-registration-services',
+    '/register-trademark-online',
+    '/best-trademark-attorneys',
+    '/cheap-trademark-registration',
 
     // Features pages
     '/features/247-trademark-protection',
@@ -116,7 +120,10 @@ ${allPages.map((page) => {
           page === '/services/patent-services' || page === '/services/copyright-protection' ? 'weekly' :
           page.startsWith('/services/') && !page.includes('-in-') ? 'weekly' :
             page.startsWith('/features/') ? 'weekly' :
-              page.includes('-in-') ? 'monthly' : 'monthly';
+              page === '/cheap-trademark-registration' ? 'weekly' : // Added specific rule for cheap-trademark-registration
+                page.startsWith('/services/') && !page.includes('-in-') ? 'weekly' :
+                  page.startsWith('/features/') ? 'weekly' :
+                    page.includes('-in-') ? 'monthly' : 'monthly';
 
     return `  <url>
     <loc>${url}</loc>
