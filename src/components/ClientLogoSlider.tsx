@@ -17,7 +17,7 @@ export default function ClientLogoSlider({ className = '', useWhiteLogos = false
       ? [1, 2, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14].map(i => `/clientlogos/white${i}.png`)
       : [1, 2, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16].map(i => `/clientlogos/${i}.png`);
     
-    const partnerLogos = ['/partner1.jpeg', '/partner2.jpeg', '/partner3.png'];
+    const partnerLogos = ['/partner1.jpeg', '/partner2.jpeg'];
     const logoPaths = [...baseLogos, ...partnerLogos];
 
     // Create multiple duplicates for seamless infinite scroll - enough to fill screen and beyond
@@ -25,7 +25,7 @@ export default function ClientLogoSlider({ className = '', useWhiteLogos = false
   }, [useWhiteLogos]);
 
 
-  const logoCount = (useWhiteLogos ? 12 : 14) + 3;
+  const logoCount = (useWhiteLogos ? 12 : 14) + 2;
   const logoWidth = 80; // Reduced from 128 to 80
   const gapSize = 30; // Gap between logos
   // Calculate the exact distance to move one complete set of logos
@@ -62,8 +62,8 @@ export default function ClientLogoSlider({ className = '', useWhiteLogos = false
           >
             {logos.map((logo, index) => {
               const logoNumbers = useWhiteLogos 
-                ? [1, 2, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 'Partner 1', 'Partner 2', 'Partner 3']
-                : [1, 2, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 'Partner 1', 'Partner 2', 'Partner 3'];
+                ? [1, 2, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 'Partner 1', 'Partner 2']
+                : [1, 2, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 'Partner 1', 'Partner 2'];
               const logoIndex = logoNumbers[index % logoCount];
               
               return (

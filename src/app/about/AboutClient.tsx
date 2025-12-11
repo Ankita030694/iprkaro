@@ -418,12 +418,10 @@ export default function AboutClient() {
                 ...[1, 2, 3, 4, 5, 6, 7, 8, 13, 14].map(n => `/clientlogos/white${n}.png`),
                 '/partner1.jpeg',
                 '/partner2.jpeg',
-                '/partner3.png',
                 // Duplicate for infinite loop
                 ...[1, 2, 3, 4, 5, 6, 7, 8, 13, 14].map(n => `/clientlogos/white${n}.png`),
                 '/partner1.jpeg',
-                '/partner2.jpeg',
-                '/partner3.png'
+                '/partner2.jpeg'
               ].map((logo, index) => (
                 <div
                   key={index}
