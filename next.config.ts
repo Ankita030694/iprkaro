@@ -56,6 +56,16 @@ const nextConfig: NextConfig = {
           },
         ],
       },
+      {
+        // Force indexing for all pages to override any platform defaults
+        source: '/:path*',
+        headers: [
+          {
+            key: 'X-Robots-Tag',
+            value: 'index, follow',
+          },
+        ],
+      },
     ];
   },
   async redirects() {

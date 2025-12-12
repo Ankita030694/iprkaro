@@ -3,7 +3,7 @@ import { MetadataRoute } from 'next';
 export async function GET() {
   // Configure your domain here (without www is recommended for modern websites)
   // Make sure to set up 301 redirects from www to non-www (or vice versa) in your hosting config
-  const baseUrl = 'https://www.iprkaro.com'; // Use 'https://www.iprkaro.com' if you prefer www
+  const baseUrl = 'https://iprkaro.com'; // Use 'https://www.iprkaro.com' if you prefer www
 
   // All static pages that exist in the project
   const allPages = [
