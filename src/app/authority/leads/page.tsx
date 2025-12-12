@@ -3,8 +3,13 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { onAuthStateChanged } from 'firebase/auth';
-import { collection, query, orderBy, getDocs, Timestamp, deleteDoc, doc } from 'firebase/firestore';
+import { collection, query, orderBy, getDocs, Timestamp, deleteDoc, doc, updateDoc, arrayUnion } from 'firebase/firestore';
 import { auth, db } from '@/lib/firebase';
+
+interface Remark {
+  text: string;
+  createdAt: Timestamp;
+}
 
 interface Lead {
   id: string;
@@ -15,6 +20,7 @@ interface Lead {
   interest: string;
   message: string;
   createdAt: Timestamp;
+  history?: Remark[];
 }
 
 export default function LeadsPage() {
@@ -28,6 +34,9 @@ export default function LeadsPage() {
   const [toDate, setToDate] = useState('');
   const [deletingLeadId, setDeletingLeadId] = useState<string | null>(null);
   const [viewingRemarksId, setViewingRemarksId] = useState<string | null>(null);
+  const [viewingHistoryId, setViewingHistoryId] = useState<string | null>(null);
+  const [remarksInput, setRemarksInput] = useState<{[key: string]: string}>({});
+  const [savingRemarkId, setSavingRemarkId] = useState<string | null>(null);
 
   useEffect(() => {
     // Check authentication
@@ -53,15 +62,27 @@ export default function LeadsPage() {
       
       const querySnapshot = await getDocs(leadsQuery);
       const leadsData: Lead[] = [];
+      const initialRemarks: {[key: string]: string} = {};
       
       querySnapshot.forEach((doc) => {
-        leadsData.push({
+        const data = doc.data();
+        const lead = {
           id: doc.id,
-          ...doc.data()
-        } as Lead);
+          ...data
+        } as Lead;
+        
+        leadsData.push(lead);
+        
+        // Initialize remarks input with the latest remark if available
+        if (lead.history && lead.history.length > 0) {
+          // Sort history by date descending to get the latest
+          const sortedHistory = [...lead.history].sort((a, b) => b.createdAt.toMillis() - a.createdAt.toMillis());
+          initialRemarks[lead.id] = sortedHistory[0].text;
+        }
       });
       
       setLeads(leadsData);
+      setRemarksInput(initialRemarks);
     } catch (error) {
       console.error('Error fetching leads:', error);
     } finally {
@@ -90,15 +111,58 @@ export default function LeadsPage() {
     }
   };
 
+  const handleRemarkChange = (leadId: string, value: string) => {
+    setRemarksInput(prev => ({ ...prev, [leadId]: value }));
+  };
+
+  const saveRemark = async (leadId: string) => {
+    const remarkText = remarksInput[leadId]?.trim();
+    if (!remarkText) return;
+
+    try {
+      setSavingRemarkId(leadId);
+      const newRemark = {
+        text: remarkText,
+        createdAt: Timestamp.now()
+      };
+
+      const leadRef = doc(db, 'leads', leadId);
+      await updateDoc(leadRef, {
+        history: arrayUnion(newRemark)
+      });
+
+      // Update local state
+      setLeads(prevLeads => prevLeads.map(lead => {
+        if (lead.id === leadId) {
+          return {
+            ...lead,
+            history: [...(lead.history || []), newRemark]
+          };
+        }
+        return lead;
+      }));
+
+      // Keep the input text as is (don't clear it) so it shows the latest remark
+      // setRemarksInput(prev => ({ ...prev, [leadId]: '' }));
+      
+    } catch (error) {
+      console.error('Error saving remark:', error);
+      alert('Failed to save remark. Please try again.');
+    } finally {
+      setSavingRemarkId(null);
+    }
+  };
+
   const formatDate = (timestamp: Timestamp) => {
     if (!timestamp) return { date: 'N/A', time: '' };
     const date = timestamp.toDate();
-    const dateStr = new Intl.DateTimeFormat('en-IN', {
-      year: 'numeric',
-      month: 'short',
-      day: 'numeric',
-      timeZone: 'Asia/Kolkata'
-    }).format(date);
+    
+    // Format as DD/MM/YY
+    const day = String(date.getDate()).padStart(2, '0');
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const year = String(date.getFullYear()).slice(-2);
+    const dateStr = `${day}/${month}/${year}`;
+    
     const timeStr = new Intl.DateTimeFormat('en-IN', {
       hour: '2-digit',
       minute: '2-digit',
@@ -162,6 +226,29 @@ export default function LeadsPage() {
   });
 
   const interests = ['all', 'Trademark Registration', 'Copyright Protection', 'Patent Services'];
+  
+  // Get abbreviation for interest type with class number if applicable
+  const getInterestAbbr = (interest: string) => {
+    const normalized = normalizeInterest(interest);
+    
+    // Extract class number for Trademark Registration
+    if (normalized === 'Trademark Registration') {
+      const classMatch = interest.match(/Class\s+(\d+)/i);
+      if (classMatch) {
+        return `TM-${classMatch[1]}`;
+      }
+      return 'TM';
+    }
+    
+    switch (normalized) {
+      case 'Copyright Protection':
+        return 'CR';
+      case 'Patent Services':
+        return 'PT';
+      default:
+        return interest;
+    }
+  };
 
   if (loading) {
     return (
@@ -191,12 +278,13 @@ export default function LeadsPage() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
           {interests.slice(1).map((interest) => {
             const count = leads.filter(lead => normalizeInterest(lead.interest) === interest).length;
+            const abbr = getInterestAbbr(interest);
             return (
               <div
                 key={interest}
                 className="rounded-lg p-3 bg-white border border-gray-200 shadow-sm"
               >
-                <p className="text-gray-600 font-nunito text-xs mb-1">{interest}</p>
+                <p className="text-gray-600 font-nunito text-xs mb-1">{abbr}</p>
                 <p className="text-lg font-bold text-gray-900 font-nunito">{count}</p>
               </div>
             );
@@ -282,7 +370,7 @@ export default function LeadsPage() {
               <table className="w-full">
                 <thead>
                   <tr className="border-b border-gray-200 bg-gray-50">
-                    <th className="px-2 py-2 text-left text-gray-700 font-nunito font-semibold text-xs">
+                    <th className="px-3 py-2 text-left text-gray-700 font-nunito font-semibold text-xs w-32">
                       <i className="fas fa-calendar mr-1 text-xs"></i>Date
                     </th>
                     <th className="px-2 py-2 text-left text-gray-700 font-nunito font-semibold text-xs">
@@ -291,20 +379,23 @@ export default function LeadsPage() {
                     <th className="px-2 py-2 text-left text-gray-700 font-nunito font-semibold text-xs">
                       <i className="fas fa-phone mr-1 text-xs"></i>Phone
                     </th>
-                    <th className="px-2 py-2 text-left text-gray-700 font-nunito font-semibold text-xs">
+                    <th className="px-2 py-2 text-left text-gray-700 font-nunito font-semibold text-xs w-40">
                       <i className="fas fa-envelope mr-1 text-xs"></i>Email
                     </th>
                     <th className="px-2 py-2 text-left text-gray-700 font-nunito font-semibold text-xs">
                       <i className="fas fa-map-marker-alt mr-1 text-xs"></i>State
                     </th>
                     <th className="px-2 py-2 text-left text-gray-700 font-nunito font-semibold text-xs">
-                      <i className="fas fa-tag mr-1 text-xs"></i>Interest
+                      <i className="fas fa-tag mr-1 text-xs"></i>Type
                     </th>
                     <th className="px-2 py-2 text-left text-gray-700 font-nunito font-semibold text-xs">
-                      <i className="fas fa-trademark mr-1 text-xs"></i>Trademark Name
+                      <i className="fas fa-trademark mr-1 text-xs"></i>TM Name
                     </th>
                     <th className="px-2 py-2 text-left text-gray-700 font-nunito font-semibold text-xs">
-                      <i className="fas fa-comment mr-1 text-xs"></i>Remarks
+                      <i className="fas fa-comment mr-1 text-xs"></i>Message
+                    </th>
+                    <th className="px-2 py-2 text-left text-gray-700 font-nunito font-semibold text-xs w-64">
+                      <i className="fas fa-sticky-note mr-1 text-xs"></i>Remarks
                     </th>
                     <th className="px-2 py-2 text-left text-gray-700 font-nunito font-semibold text-xs">
                       <i className="fas fa-cog mr-1 text-xs"></i>Actions
@@ -319,34 +410,38 @@ export default function LeadsPage() {
                         index % 2 === 0 ? 'bg-gray-50/50' : ''
                       }`}
                     >
-                      <td className="px-2 py-2 text-gray-600 font-nunito text-xs">
+                      <td className="px-3 py-2 text-gray-600 font-nunito text-xs w-32">
                         <div className="leading-tight">
-                          <div>{formatDate(lead.createdAt).date}</div>
-                          <div className="text-gray-500">{formatDate(lead.createdAt).time}</div>
+                          <div className="font-medium">{formatDate(lead.createdAt).date}</div>
+                          <div className="text-gray-500 text-[11px]">{formatDate(lead.createdAt).time}</div>
                         </div>
                       </td>
                       <td className="px-2 py-2 text-gray-900 font-nunito text-xs">
                         {lead.name}
                       </td>
-                      <td className="px-2 py-2 text-gray-700 font-nunito text-xs">
+                      <td className="px-2 py-2 text-gray-700 font-nunito text-xs whitespace-nowrap">
                         {lead.phone}
                       </td>
-                      <td className="px-2 py-2 text-gray-700 font-nunito text-xs">
-                        {lead.email}
+                      <td className="px-2 py-2 text-gray-700 font-nunito text-xs w-40">
+                        <div className="overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
+                          <div className="whitespace-nowrap">
+                            {lead.email}
+                          </div>
+                        </div>
                       </td>
                       <td className="px-2 py-2 text-gray-700 font-nunito text-xs">
                         {lead.state || '-'}
                       </td>
                       <td className="px-2 py-2">
-                        <span className="inline-block px-1.5 py-0.5 rounded-full text-xs font-nunito bg-gray-100 text-gray-900 border border-gray-300">
-                          {lead.interest}
+                        <span className="inline-block px-2 py-1 rounded text-[11px] font-nunito font-semibold bg-gray-100 text-gray-900 border border-gray-300">
+                          {getInterestAbbr(lead.interest)}
                         </span>
                       </td>
                       <td className="px-2 py-2">
                         {extractTrademarkName(lead.message) ? (
                           <button
                             onClick={() => handleTrademarkClick(extractTrademarkName(lead.message)!)}
-                            className="inline-block px-1.5 py-0.5 rounded-full text-xs font-nunito bg-blue-100 text-blue-900 border border-blue-300 hover:bg-blue-200 transition-colors cursor-pointer whitespace-nowrap"
+                            className="inline-block px-2 py-1 rounded text-[11px] font-nunito font-medium bg-blue-100 text-blue-900 border border-blue-300 hover:bg-blue-200 transition-colors cursor-pointer whitespace-nowrap"
                             title={extractTrademarkName(lead.message) || undefined}
                           >
                             <i className="fas fa-trademark mr-1"></i>
@@ -357,38 +452,73 @@ export default function LeadsPage() {
                         )}
                       </td>
                       <td className="px-2 py-2">
-                        <div className="flex items-center gap-2">
-                          <span className="text-gray-600 font-nunito text-xs max-w-xs truncate">
-                            {lead.message || 'No message'}
+                        <div className="flex items-center gap-1.5">
+                          <span className="text-gray-600 font-nunito text-xs max-w-[120px] truncate" title={lead.message}>
+                            {lead.message || '-'}
                           </span>
                           {lead.message && (
                             <button
                               onClick={() => setViewingRemarksId(lead.id)}
-                              className="inline-flex items-center px-1.5 py-0.5 text-xs font-nunito bg-blue-100 text-blue-700 border border-blue-300 rounded-lg hover:bg-blue-200 transition-colors whitespace-nowrap"
-                              title="View full remarks"
+                              className="inline-flex items-center px-1.5 py-0.5 text-[11px] font-nunito bg-blue-50 text-blue-700 border border-blue-200 rounded hover:bg-blue-100 transition-colors whitespace-nowrap"
+                              title="View full message"
                             >
-                              <i className="fas fa-eye mr-1"></i>
-                              View
+                              <i className="fas fa-eye text-[10px]"></i>
                             </button>
                           )}
+                        </div>
+                      </td>
+                      <td className="px-2 py-2 w-64">
+                        <div className="space-y-1.5">
+                          <textarea
+                            value={remarksInput[lead.id] || ''}
+                            onChange={(e) => handleRemarkChange(lead.id, e.target.value)}
+                            placeholder="Add remarks..."
+                            className="w-full px-2 py-1.5 text-xs rounded border border-gray-300 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 font-nunito resize-none"
+                            rows={2}
+                          />
+                          <div className="flex gap-1.5">
+                            <button
+                              onClick={() => saveRemark(lead.id)}
+                              disabled={savingRemarkId === lead.id || !remarksInput[lead.id]?.trim()}
+                              className="flex-1 inline-flex items-center justify-center px-2 py-1 text-[11px] font-nunito font-medium bg-green-100 text-green-700 border border-green-300 rounded hover:bg-green-200 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                              title="Save remarks"
+                            >
+                              {savingRemarkId === lead.id ? (
+                                <i className="fas fa-spinner fa-spin text-[10px]"></i>
+                              ) : (
+                                <>
+                                  <i className="fas fa-save mr-1 text-[10px]"></i>
+                                  Save
+                                </>
+                              )}
+                            </button>
+                            <button
+                              onClick={() => setViewingHistoryId(lead.id)}
+                              className="flex-1 inline-flex items-center justify-center px-2 py-1 text-[11px] font-nunito font-medium bg-purple-100 text-purple-700 border border-purple-300 rounded hover:bg-purple-200 transition-colors"
+                              title="View history"
+                            >
+                              <i className="fas fa-history mr-1 text-[10px]"></i>
+                              History
+                            </button>
+                          </div>
                         </div>
                       </td>
                       <td className="px-2 py-2">
                         <button
                           onClick={() => deleteLead(lead.id)}
                           disabled={deletingLeadId === lead.id}
-                          className="inline-flex items-center px-1.5 py-0.5 text-xs font-nunito bg-red-100 text-red-700 border border-red-300 rounded-lg hover:bg-red-200 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                          className="inline-flex items-center px-2 py-1 text-[11px] font-nunito font-medium bg-red-100 text-red-700 border border-red-300 rounded hover:bg-red-200 transition-colors disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
                           title="Delete lead"
                         >
                           {deletingLeadId === lead.id ? (
                             <>
-                              <i className="fas fa-spinner fa-spin mr-1"></i>
-                              Deleting...
+                              <i className="fas fa-spinner fa-spin mr-1 text-[10px]"></i>
+                              <span className="hidden sm:inline">Deleting...</span>
                             </>
                           ) : (
                             <>
-                              <i className="fas fa-trash mr-1"></i>
-                              Delete
+                              <i className="fas fa-trash mr-1 text-[10px]"></i>
+                              <span className="hidden sm:inline">Delete</span>
                             </>
                           )}
                         </button>
@@ -450,6 +580,75 @@ export default function LeadsPage() {
               <div className="flex justify-end p-4 border-t border-gray-200">
                 <button
                   onClick={() => setViewingRemarksId(null)}
+                  className="px-4 py-2 text-sm font-nunito bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        );
+      })()}
+
+      {/* History View Modal */}
+      {viewingHistoryId && (() => {
+        const lead = leads.find(l => l.id === viewingHistoryId);
+        if (!lead) return null;
+        
+        const sortedHistory = [...(lead.history || [])].sort((a, b) => b.createdAt.toMillis() - a.createdAt.toMillis());
+        
+        return (
+          <div 
+            className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4"
+            onClick={() => setViewingHistoryId(null)}
+          >
+            <div 
+              className="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[80vh] overflow-hidden"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="flex items-center justify-between p-4 border-b border-gray-200">
+                <h2 className="text-lg font-bold text-gray-900 font-nunito">
+                  <i className="fas fa-history mr-2 text-purple-600"></i>
+                  Remarks History
+                </h2>
+                <button
+                  onClick={() => setViewingHistoryId(null)}
+                  className="text-gray-400 hover:text-gray-600 transition-colors"
+                  title="Close"
+                >
+                  <i className="fas fa-times text-xl"></i>
+                </button>
+              </div>
+              <div className="p-4 overflow-y-auto max-h-[calc(80vh-80px)]">
+                <div className="mb-4">
+                  <p className="text-sm font-semibold text-gray-700 font-nunito mb-1">Lead:</p>
+                  <p className="text-sm text-gray-900 font-nunito">{lead.name} ({lead.email})</p>
+                </div>
+                
+                <div className="space-y-3">
+                  {sortedHistory.length === 0 ? (
+                    <div className="text-center py-8 text-gray-500 font-nunito">
+                      No remarks history available.
+                    </div>
+                  ) : (
+                    sortedHistory.map((remark, index) => (
+                      <div key={index} className="bg-gray-50 rounded-lg p-3 border border-gray-200">
+                        <div className="flex justify-between items-start mb-1">
+                          <span className="text-xs font-semibold text-gray-500 font-nunito">
+                            {formatDate(remark.createdAt).date} at {formatDate(remark.createdAt).time}
+                          </span>
+                        </div>
+                        <p className="text-sm text-gray-900 font-nunito whitespace-pre-wrap">
+                          {remark.text}
+                        </p>
+                      </div>
+                    ))
+                  )}
+                </div>
+              </div>
+              <div className="flex justify-end p-4 border-t border-gray-200">
+                <button
+                  onClick={() => setViewingHistoryId(null)}
                   className="px-4 py-2 text-sm font-nunito bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors"
                 >
                   Close
