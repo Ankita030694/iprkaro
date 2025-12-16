@@ -10,6 +10,14 @@ interface FAQ {
   answer: string;
 }
 
+interface Review {
+  id: string;
+  name: string;
+  rating: number;
+  review: string;
+  date: string;
+}
+
 interface Blog {
   id: string;
   title: string;
@@ -23,6 +31,7 @@ interface Blog {
   slug: string;
   author?: string;
   faqs?: FAQ[];
+  reviews?: Review[];
 }
 
 interface PageProps {
@@ -109,6 +118,23 @@ export default async function BlogPostPage({ params }: PageProps) {
       faqs = blogData.faqs || [];
     }
 
+    // Fetch Reviews from subcollection
+    let reviews: Review[] = [];
+    try {
+      const reviewsCollection = collection(db, 'blogs', blogId, 'reviews');
+      const reviewsSnapshot = await getDocs(reviewsCollection);
+      reviews = reviewsSnapshot.docs.map(doc => ({
+        id: doc.id,
+        name: doc.data().name || '',
+        rating: doc.data().rating || 5,
+        review: doc.data().review || '',
+        date: doc.data().date || ''
+      }));
+    } catch (error) {
+      console.error('Error fetching Reviews:', error);
+      reviews = blogData.reviews || [];
+    }
+
     // Helper function to format date to ISO 8601
     const formatDate = (dateValue: string | number | undefined): string => {
       if (!dateValue) return new Date().toISOString();
@@ -129,6 +155,15 @@ export default async function BlogPostPage({ params }: PageProps) {
       // If relative URL, make it absolute
       return [`https://iprkaro.com${imageUrl.startsWith('/') ? imageUrl : '/' + imageUrl}`];
     };
+
+    // Calculate aggregate rating
+    const aggregateRating = reviews.length > 0 ? {
+      "@type": "AggregateRating",
+      "ratingValue": (reviews.reduce((acc, review) => acc + review.rating, 0) / reviews.length).toFixed(1),
+      "reviewCount": reviews.length,
+      "bestRating": "5",
+      "worstRating": "1"
+    } : undefined;
 
     // Generate Article schema
     const articleSchema = {
@@ -154,7 +189,8 @@ export default async function BlogPostPage({ params }: PageProps) {
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": `https://iprkaro.com/blog/${slug}`
-      }
+      },
+      ...(aggregateRating && { "aggregateRating": aggregateRating })
     };
 
     // Generate FAQ schema if FAQs exist
@@ -170,6 +206,32 @@ export default async function BlogPostPage({ params }: PageProps) {
         }
       }))
     } : null;
+
+    // Generate BreadcrumbList schema
+    const breadcrumbSchema = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://iprkaro.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://iprkaro.com/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": blogData.title,
+          "item": `https://iprkaro.com/blog/${slug}`
+        }
+      ]
+    };
 
     // Render the client component with the slug
     return (
@@ -190,7 +252,14 @@ export default async function BlogPostPage({ params }: PageProps) {
             }}
           />
         )}
-        <ArticleDetail slug={slug} />
+        {/* Breadcrumb Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(breadcrumbSchema),
+          }}
+        />
+        <ArticleDetail slug={slug} initialReviews={reviews} />
       </>
     );
   } catch (error) {

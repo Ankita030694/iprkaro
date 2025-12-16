@@ -23,6 +23,15 @@ interface FAQ {
   answer: string;
 }
 
+// Define Review interface
+interface Review {
+  id?: string;
+  name: string;
+  rating: number; // 1-5
+  review: string;
+  date?: string;
+}
+
 // Define Blog interface with updated structure
 interface Blog {
   id?: string;
@@ -36,6 +45,7 @@ interface Blog {
   metaDescription?: string;
   slug: string; // New slug field for URLs
   faqs?: FAQ[]; // New field for FAQs
+  reviews?: Review[]; // New field for Reviews
   author: string; // New author field
 }
 
@@ -55,6 +65,7 @@ const BlogsDashboard = () => {
     metaDescription: '',
     slug: '', // Initialize the slug field
     faqs: [], // Initialize empty FAQs array
+    reviews: [], // Initialize empty Reviews array
     author: 'Anuj Anand Malik' // Default author changed from 'Team AMA'
   });
   const [uploading, setUploading] = useState(false);
@@ -129,6 +140,7 @@ const BlogsDashboard = () => {
             metaDescription: docData.metaDescription || '',
             slug: docData.slug || '',
             faqs: docData.faqs || [],
+            reviews: docData.reviews || [],
             author: docData.author || 'Anuj Anand Malik'
           };
         });
@@ -227,6 +239,37 @@ const BlogsDashboard = () => {
       return {
         ...prevState,
         faqs: updatedFaqs
+      };
+    });
+  };
+
+  // Add Review to the blog
+  const addReview = () => {
+    setNewBlog(prevState => ({
+      ...prevState,
+      reviews: [...(prevState.reviews || []), { name: '', rating: 5, review: '', date: new Date().toISOString().split('T')[0] }]
+    }));
+  };
+
+  // Remove Review from the blog
+  const removeReview = (index: number) => {
+    setNewBlog(prevState => ({
+      ...prevState,
+      reviews: (prevState.reviews || []).filter((_, i) => i !== index)
+    }));
+  };
+
+  // Handle Review input changes
+  const handleReviewChange = (index: number, field: keyof Review, value: string | number) => {
+    setNewBlog(prevState => {
+      const updatedReviews = [...(prevState.reviews || [])];
+      updatedReviews[index] = { 
+        ...updatedReviews[index], 
+        [field]: value 
+      };
+      return {
+        ...prevState,
+        reviews: updatedReviews
       };
     });
   };
@@ -381,8 +424,8 @@ const BlogsDashboard = () => {
         date: new Date(newBlog.date).toISOString().split('T')[0] // Ensure date is in YYYY-MM-DD format
       };
       
-      // Remove faqs from the main document since we'll store them in a subcollection
-      const { faqs, ...blogData } = blogWithMetadata;
+      // Remove faqs and reviews from the main document since we'll store them in subcollections
+      const { faqs, reviews, ...blogData } = blogWithMetadata;
       
       let blogId = newBlog.id;
       
@@ -416,6 +459,27 @@ const BlogsDashboard = () => {
           });
         }
       }
+
+      // Add Reviews to subcollection
+      if (blogId && reviews && reviews.length > 0) {
+        // First delete existing Reviews if updating
+        if (formMode === 'edit') {
+          const reviewsSnapshot = await getDocs(collection(db, 'blogs', blogId, 'reviews'));
+          for (const doc of reviewsSnapshot.docs) {
+            await deleteDoc(doc.ref);
+          }
+        }
+        
+        // Add all Reviews to subcollection
+        for (const review of reviews) {
+          await addDoc(collection(db, 'blogs', blogId, 'reviews'), {
+            name: review.name,
+            rating: Number(review.rating),
+            review: review.review,
+            date: review.date || new Date().toISOString().split('T')[0]
+          });
+        }
+      }
       
       // Reset form and show table
       resetForm();
@@ -436,6 +500,7 @@ const BlogsDashboard = () => {
           metaDescription: docData.metaDescription || '',
           slug: docData.slug || '', // Get the slug from database
           faqs: [], // Initialize empty faqs array
+          reviews: [], // Initialize empty reviews array
           author: docData.author || 'Anuj Anand Malik' // Default author changed from 'Team AMA'
         };
       });
@@ -446,7 +511,7 @@ const BlogsDashboard = () => {
     }
   };
 
-  // Handle blog edit - needs to also fetch FAQs from subcollection
+  // Handle blog edit - needs to also fetch FAQs and Reviews from subcollections
   const handleEdit = async (blog: Blog) => {
     try {
       // Fetch FAQs for this blog
@@ -456,12 +521,22 @@ const BlogsDashboard = () => {
         question: doc.data().question || '',
         answer: doc.data().answer || ''
       }));
+
+      // Fetch Reviews for this blog
+      const reviewsSnapshot = await getDocs(collection(db, 'blogs', blog.id!, 'reviews'));
+      const reviews = reviewsSnapshot.docs.map(doc => ({
+        id: doc.id,
+        name: doc.data().name || '',
+        rating: doc.data().rating || 5,
+        review: doc.data().review || '',
+        date: doc.data().date || ''
+      }));
       
-      setNewBlog({...blog, faqs});
+      setNewBlog({...blog, faqs, reviews});
       setFormMode('edit');
       setShowBlogForm(true);
     } catch (error) {
-      console.error("Error fetching FAQs:", error);
+      console.error("Error fetching subcollections:", error);
       setNewBlog(blog);
       setFormMode('edit');
       setShowBlogForm(true); 
@@ -536,6 +611,7 @@ const BlogsDashboard = () => {
       metaDescription: '',
       slug: '', // Reset slug field
       faqs: [], // Reset FAQs array
+      reviews: [], // Reset Reviews array
       author: 'Anuj Anand Malik' // Default author changed from 'Team AMA'
     });
     setFormMode('add');
@@ -847,61 +923,143 @@ const BlogsDashboard = () => {
                       </select>
                     </div>
                   </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">FAQs</label>
-                    <div className="border border-gray-300 rounded-lg p-4 bg-gray-50">
-                      {/* Display existing FAQs */}
-                      {(newBlog.faqs || []).map((faq, index) => (
-                        <div key={index} className="mb-4 p-4 bg-white rounded-lg shadow-sm border border-gray-200">
-                          <div className="flex justify-between items-center mb-3">
-                            <h3 className="text-sm font-semibold text-gray-900">FAQ #{index + 1}</h3>
-                            <motion.button
-                              type="button"
-                              onClick={() => removeFaq(index)}
-                              whileHover={{ scale: 1.05 }}
-                              whileTap={{ scale: 0.95 }}
-                              className="px-3 py-1 bg-red-600 hover:bg-red-700 text-white text-xs rounded-md transition-all"
-                            >
-                              Remove
-                            </motion.button>
-                          </div>
-                          <div className="mb-3">
-                            <label className="block text-xs font-medium text-gray-700 mb-1">Question</label>
-                            <input
-                              type="text"
-                              value={faq.question}
-                              onChange={(e) => handleFaqChange(index, 'question', e.target.value)}
-                              className="w-full px-3 py-2 text-sm bg-gray-50 border border-gray-300 text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-all"
-                              placeholder="Enter FAQ question"
-                            />
-                          </div>
-                          <div>
-                            <label className="block text-xs font-medium text-gray-700 mb-1">Answer</label>
-                            <textarea
-                              value={faq.answer}
-                              onChange={(e) => handleFaqChange(index, 'answer', e.target.value)}
-                              rows={3}
-                              className="w-full px-3 py-2 text-sm bg-gray-50 border border-gray-300 text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-all"
-                              placeholder="Enter FAQ answer"
-                            />
-                          </div>
-                        </div>
-                      ))}
-                      
-                      {/* Add FAQ button */}
+                  {/* FAQs Section */}
+                  <div className="border-t pt-6 mt-6">
+                    <div className="flex justify-between items-center mb-4">
+                      <h3 className="text-lg font-medium text-gray-900">Frequently Asked Questions</h3>
                       <motion.button
                         type="button"
                         onClick={addFaq}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="mt-2 px-5 py-2.5 bg-gray-900 hover:bg-gray-800 text-white rounded-lg text-sm font-semibold flex items-center shadow-md transition-all"
+                        className="px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-lg text-sm font-medium transition-colors flex items-center"
                       >
                         <FontAwesomeIcon icon={faPlus} className="mr-2" />
                         Add FAQ
                       </motion.button>
-                      <p className="mt-2 text-xs text-gray-500">Add frequently asked questions related to this blog post.</p>
                     </div>
+                    
+                    {newBlog.faqs && newBlog.faqs.length > 0 ? (
+                      <div className="space-y-4">
+                        {newBlog.faqs.map((faq, index) => (
+                          <div key={index} className="bg-gray-50 p-4 rounded-lg border border-gray-200 relative">
+                            <button
+                              type="button"
+                              onClick={() => removeFaq(index)}
+                              className="absolute top-2 right-2 text-red-500 hover:text-red-700"
+                              title="Remove FAQ"
+                            >
+                              <FontAwesomeIcon icon={faTrash} />
+                            </button>
+                            
+                            <div className="mb-3">
+                              <label className="block text-xs font-medium text-gray-500 mb-1">Question</label>
+                              <input
+                                type="text"
+                                value={faq.question}
+                                onChange={(e) => handleFaqChange(index, 'question', e.target.value)}
+                                className="w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-gray-500"
+                                placeholder="Enter question"
+                              />
+                            </div>
+                            
+                            <div>
+                              <label className="block text-xs font-medium text-gray-500 mb-1">Answer</label>
+                              <textarea
+                                value={faq.answer}
+                                onChange={(e) => handleFaqChange(index, 'answer', e.target.value)}
+                                rows={3}
+                                className="w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-gray-500"
+                                placeholder="Enter answer"
+                              />
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    ) : (
+                      <p className="text-sm text-gray-500 italic">No FAQs added yet.</p>
+                    )}
+                  </div>
+
+                  {/* Reviews Section */}
+                  <div className="border-t pt-6 mt-6">
+                    <div className="flex justify-between items-center mb-4">
+                      <h3 className="text-lg font-medium text-gray-900">Review Snippets</h3>
+                      <motion.button
+                        type="button"
+                        onClick={addReview}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-lg text-sm font-medium transition-colors flex items-center"
+                      >
+                        <FontAwesomeIcon icon={faPlus} className="mr-2" />
+                        Add Review
+                      </motion.button>
+                    </div>
+                    
+                    {newBlog.reviews && newBlog.reviews.length > 0 ? (
+                      <div className="space-y-4">
+                        {newBlog.reviews.map((review, index) => (
+                          <div key={index} className="bg-gray-50 p-4 rounded-lg border border-gray-200 relative">
+                            <button
+                              type="button"
+                              onClick={() => removeReview(index)}
+                              className="absolute top-2 right-2 text-red-500 hover:text-red-700"
+                              title="Remove Review"
+                            >
+                              <FontAwesomeIcon icon={faTrash} />
+                            </button>
+                            
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-3">
+                              <div>
+                                <label className="block text-xs font-medium text-gray-500 mb-1">Reviewer Name</label>
+                                <input
+                                  type="text"
+                                  value={review.name}
+                                  onChange={(e) => handleReviewChange(index, 'name', e.target.value)}
+                                  className="w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-gray-500"
+                                  placeholder="Enter reviewer name"
+                                />
+                              </div>
+                              <div>
+                                <label className="block text-xs font-medium text-gray-500 mb-1">Rating (1-5)</label>
+                                <input
+                                  type="number"
+                                  min="1"
+                                  max="5"
+                                  value={review.rating}
+                                  onChange={(e) => handleReviewChange(index, 'rating', Number(e.target.value))}
+                                  className="w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-gray-500"
+                                />
+                              </div>
+                            </div>
+                            
+                            <div className="mb-3">
+                              <label className="block text-xs font-medium text-gray-500 mb-1">Review Date</label>
+                              <input
+                                type="date"
+                                value={review.date || ''}
+                                onChange={(e) => handleReviewChange(index, 'date', e.target.value)}
+                                className="w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-gray-500"
+                              />
+                            </div>
+
+                            <div>
+                              <label className="block text-xs font-medium text-gray-500 mb-1">Review Text</label>
+                              <textarea
+                                value={review.review}
+                                onChange={(e) => handleReviewChange(index, 'review', e.target.value)}
+                                rows={3}
+                                className="w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-gray-500"
+                                placeholder="Enter review text"
+                              />
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    ) : (
+                      <p className="text-sm text-gray-500 italic">No reviews added yet.</p>
+                    )}
                   </div>
                   
                   <div>

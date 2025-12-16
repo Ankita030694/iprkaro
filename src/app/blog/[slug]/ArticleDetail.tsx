@@ -29,10 +29,22 @@ interface FAQ {
   answer: string;
 }
 
+// Add Review interface
+interface Review {
+  id: string;
+  name: string;
+  rating: number;
+  review: string;
+  date: string;
+}
+
 // Add this interface for props
 interface BlogDetailProps {
   slug: string;
+  initialReviews?: Review[];
 }
+
+
 
 interface TOCSection {
   id: string;
@@ -164,10 +176,28 @@ const fetchFAQs = async (blogId: string): Promise<FAQ[]> => {
   }
 };
 
-const ArticleDetail = memo(function ArticleDetail({ slug }: BlogDetailProps) {
+// Optimized function to fetch Reviews
+const fetchReviews = async (blogId: string): Promise<Review[]> => {
+  try {
+    const reviewsSnapshot = await getDocs(collection(db, 'blogs', blogId, 'reviews'));
+    return reviewsSnapshot.docs.map(doc => ({
+      id: doc.id,
+      name: doc.data().name || '',
+      rating: doc.data().rating || 5,
+      review: doc.data().review || '',
+      date: doc.data().date || ''
+    }));
+  } catch (error) {
+    console.error("Error fetching Reviews:", error);
+    return [];
+  }
+};
+
+const ArticleDetail = memo(function ArticleDetail({ slug, initialReviews = [] }: BlogDetailProps) {
   const [blog, setBlog] = useState<Blog | null>(null);
   const [loading, setLoading] = useState(true);
   const [faqs, setFaqs] = useState<FAQ[]>([]);
+  const [reviews, setReviews] = useState<Review[]>(initialReviews);
   const [expandedFaqs, setExpandedFaqs] = useState<string[]>([]);
   const [relatedBlogs, setRelatedBlogs] = useState<Blog[]>([]);
   const [activeSection, setActiveSection] = useState('');
@@ -211,13 +241,15 @@ const ArticleDetail = memo(function ArticleDetail({ slug }: BlogDetailProps) {
             setActiveSection(sections[0].id);
           }
           
-          const [relatedBlogsData, faqsData] = await Promise.all([
+          const [relatedBlogsData, faqsData, reviewsData] = await Promise.all([
             fetchRelatedBlogs(blogData.id),
-            fetchFAQs(blogData.id)
+            fetchFAQs(blogData.id),
+            fetchReviews(blogData.id)
           ]);
           
           setRelatedBlogs(relatedBlogsData);
           setFaqs(faqsData);
+          setReviews(reviewsData);
         }
         
         setLoading(false);
@@ -545,6 +577,12 @@ const ArticleDetail = memo(function ArticleDetail({ slug }: BlogDetailProps) {
               </div>
             )}
 
+
+
+  // ... (existing code)
+
+  return (
+    // ... (existing JSX)
               {/* FAQs */}
         {faqs.length > 0 && (
                   <div className="mt-6 rounded-2xl p-6 backdrop-blur-xl border border-white/10 shadow-xl" style={{
@@ -576,6 +614,40 @@ const ArticleDetail = memo(function ArticleDetail({ slug }: BlogDetailProps) {
                   ))}
                 </div>
               </div>
+              )}
+
+              {/* Reviews Section */}
+              {reviews.length > 0 && (
+                <div className="mt-6 rounded-2xl p-6 backdrop-blur-xl border border-white/10 shadow-xl" style={{
+                  background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(12, 0, 43, 0.8) 100%)'
+                }}>
+                  <h2 className="text-white font-nunito font-bold text-2xl mb-6 flex items-center gap-2">
+                    <i className="fas fa-star text-[#FFB703]" aria-hidden="true"></i>
+                    Client Reviews
+                  </h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {reviews.map((review) => (
+                      <div key={review.id} className="bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-white/10 transition-all">
+                        <div className="flex justify-between items-start mb-3">
+                          <div>
+                            <h3 className="text-white font-bold font-nunito">{review.name}</h3>
+                            <span className="text-white/60 text-xs font-nunito">{review.date}</span>
+                          </div>
+                          <div className="flex gap-1">
+                            {[...Array(5)].map((_, i) => (
+                              <i 
+                                key={i} 
+                                className={`fas fa-star text-xs ${i < review.rating ? 'text-[#FFB703]' : 'text-white/20'}`}
+                                aria-hidden="true"
+                              ></i>
+                            ))}
+                          </div>
+                        </div>
+                        <p className="text-white/80 text-sm font-nunito italic">"{review.review}"</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               )}
           </div>
 
