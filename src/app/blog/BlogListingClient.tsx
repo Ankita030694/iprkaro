@@ -1,11 +1,11 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { Faq } from '@/components';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
+
 
 interface Blog {
   id: string;
@@ -166,12 +166,11 @@ export default function BlogListingClient() {
                     <div className="relative rounded-[20px] md:rounded-[25px] overflow-hidden glass-card border border-[#16a34a]/20 p-4 md:p-8 hover:border-[#FFB400]/40 transition-all duration-300">
                       {/* Blog image */}
                       <div className="w-full h-48 md:h-64 bg-[#1f1310] rounded-lg flex items-center justify-center overflow-hidden">
-                        <Image
+                        <img
                           src={featuredBlog.image}
                           alt={featuredBlog.title}
-                          width={600}
-                          height={400}
                           className="w-full h-full object-cover rounded-lg"
+                          loading="eager"
                         />
                       </div>
                     </div>
@@ -274,12 +273,11 @@ export default function BlogListingClient() {
                     {/* Blog Image */}
                     <div className="relative mb-3 md:mb-4 overflow-hidden rounded-lg md:rounded-[15px] border border-[#16a34a]/20 hover:border-[#FFB400]/40 transition-all duration-300">
                       <div className="aspect-video bg-[#1f1310] flex items-center justify-center overflow-hidden">
-                        <Image
+                        <img
                           src={post.image}
                           alt={post.title}
-                          width={400}
-                          height={250}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          loading="lazy"
                         />
                       </div>
                     </div>
