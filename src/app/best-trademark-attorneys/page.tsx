@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: 'Secure your brand with the best trademark attorneys in India. Comprehensive legal services for registration, enforcement, and portfolio management.',
   },
   alternates: {
-    canonical: 'https://www.iprkaro.com/best-trademark-attorneys',
+    canonical: '/best-trademark-attorneys',
   },
 };
 

@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     images: ['https://iprkaro.com/og-image.jpg'],
   },
   alternates: {
-    canonical: 'https://iprkaro.com/trademark-registration',
+    canonical: '/trademark-registration',
   },
   robots: {
     index: true,

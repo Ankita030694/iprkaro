@@ -4,7 +4,7 @@ export const metadata = {
   title: 'Terms & Conditions | IPRKaro',
   description: 'Review IPRKaro.com\'s complete terms and conditions, including terms of use, service agreements, cancellation policy, and refund guidelines. Understand your rights and obligations when using our trademark registration, copyright protection, and patent filing services in India.',
   alternates: {
-    canonical: 'https://iprkaro.com/terms-and-conditions',
+    canonical: '/terms-and-conditions',
   },
 };
 
