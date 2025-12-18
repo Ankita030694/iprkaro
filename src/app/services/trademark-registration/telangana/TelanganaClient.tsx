@@ -151,7 +151,7 @@ export default function TelanganaClient() {
                 />
               </div>
               <h1 className="text-white font-nunito text-3xl md:text-4xl lg:text-5xl font-bold">
-                Trademark Registration in Telangana: Complete Guide for Tech Startups and Businesses 2025
+                Trademark Registration in Telangana: Guide for Tech Startups
               </h1>
             </div>
             

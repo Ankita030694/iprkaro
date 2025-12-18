@@ -108,7 +108,7 @@ export default function JammuAndKashmirClient() {
                 />
               </div>
               <h1 className="text-white font-nunito text-3xl md:text-4xl lg:text-5xl font-bold">
-                Trademark Registration in Jammu and Kashmir: Secure Your Brand Identity
+                Trademark Registration in J&K: Secure Your Brand Identity
               </h1>
             </div>
             

@@ -121,7 +121,7 @@ export default function AndhraPradeshClient() {
                 />
               </div>
               <h1 className="text-white font-nunito text-3xl md:text-4xl lg:text-5xl font-bold">
-                Trademark Registration in Andhra Pradesh: Secure Your Business Identity
+                Trademark Registration in AP: Secure Your Business Identity
               </h1>
             </div>
             

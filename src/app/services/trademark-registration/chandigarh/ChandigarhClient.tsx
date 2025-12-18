@@ -108,7 +108,7 @@ export default function ChandigarhClient() {
                 />
               </div>
               <h1 className="text-white font-nunito text-3xl md:text-4xl lg:text-5xl font-bold">
-                Trademark Registration in Chandigarh: Protecting Innovation in The City Beautiful
+                Trademark Registration in Chandigarh: Protect Your Innovation
               </h1>
             </div>
             

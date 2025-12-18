@@ -121,7 +121,7 @@ export default function SikkimClient() {
                 />
               </div>
               <h1 className="text-white font-nunito text-3xl md:text-4xl lg:text-5xl font-bold">
-                Trademark Registration in Sikkim: Securing Your Brand in the Organic State
+                Trademark Registration in Sikkim: Secure Your Brand
               </h1>
             </div>
             

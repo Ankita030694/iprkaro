@@ -121,7 +121,7 @@ export default function TripuraClient() {
                 />
               </div>
               <h1 className="text-white font-nunito text-3xl md:text-4xl lg:text-5xl font-bold">
-                Trademark Registration in Tripura: Securing Your Brand in the Land of Bamboo and Heritage
+                Trademark Registration in Tripura: Secure Your Brand Online
               </h1>
             </div>
             
