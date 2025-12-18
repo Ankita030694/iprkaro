@@ -1,9 +1,20 @@
-import { MetadataRoute } from 'next';
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from '@/lib/firebase';
 
 export async function GET() {
   // Configure your domain here (without www is recommended for modern websites)
   // Make sure to set up 301 redirects from www to non-www (or vice versa) in your hosting config
   const baseUrl = 'https://iprkaro.com'; // Use 'https://www.iprkaro.com' if you prefer www
+
+  // Fetch all blog posts from Firestore
+  let blogUrls: string[] = [];
+  try {
+    const blogsCollection = collection(db, 'blogs');
+    const blogSnapshot = await getDocs(blogsCollection);
+    blogUrls = blogSnapshot.docs.map(doc => `/blog/${doc.data().slug}`);
+  } catch (error) {
+    console.error('Error fetching blogs for sitemap:', error);
+  }
 
   // All static pages that exist in the project
   const allPages = [
@@ -92,11 +103,33 @@ export async function GET() {
     '/services/trademark-registration/west-bengal',
 
     // Patent Services - State Pages
-    // These should be dynamically generated or updated to new structure if they exist
-    // For now, removing hardcoded old patterns to fix SEO redirect issues
+    '/services/patent-services/andaman-and-nicobar-islands',
+    '/services/patent-services/bihar',
+    '/services/patent-services/chhattisgarh',
+    '/services/patent-services/dadra-and-nagar-haveli',
+    '/services/patent-services/delhi',
+    '/services/patent-services/himachal-pradesh',
+    '/services/patent-services/jammu-and-kashmir',
+    '/services/patent-services/jharkhand',
+    '/services/patent-services/karnataka',
+    '/services/patent-services/kerala',
+    '/services/patent-services/manipur',
+    '/services/patent-services/mizoram',
+    '/services/patent-services/nagaland',
+    '/services/patent-services/puducherry',
+    '/services/patent-services/punjab',
+    '/services/patent-services/rajasthan',
+    '/services/patent-services/sikkim',
+    '/services/patent-services/tamil-nadu',
+    '/services/patent-services/tripura',
+    '/services/patent-services/uttar-pradesh',
+    '/services/patent-services/uttarakhand',
 
     // Copyright Protection - State Pages
-    // Removing hardcoded old pattern
+    '/services/copyright-protection/haryana',
+
+    // Add blog URLs
+    ...blogUrls,
   ];
 
   // Create sitemap XML
