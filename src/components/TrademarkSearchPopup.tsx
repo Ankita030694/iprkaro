@@ -30,6 +30,8 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
   const [showLoader, setShowLoader] = useState(false);
   const [searchResults, setSearchResults] = useState<{class: {number: number, name: string, description: string}, confidenceScore: number} | null>(null);
   const [isMounted, setIsMounted] = useState(false);
+  const [showError, setShowError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
   // Get class description
   const getClassDescription = (classNumber: number): string => {
@@ -356,6 +358,7 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
         body: JSON.stringify({
           trademarkName: formData.trademarkSearched,
           classNumber: formData.class,
+          phoneNumber: formData.phone,
         }),
       });
 
@@ -364,11 +367,18 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
         console.error('API Error:', errorData);
         
         // Show detailed error message
-        const errorMessage = errorData.details || errorData.error || 'Failed to analyze trademark';
-        const errorStep = errorData.step || 'unknown';
+        const msg = errorData.details || errorData.error || 'Failed to analyze trademark';
         
-        alert(`Error: ${errorMessage}\n\nStep: ${errorStep}\n\nPlease check the console for more details.`);
-        throw new Error(errorMessage);
+        if (analysisResponse.status === 403) {
+          setErrorMessage(msg);
+          setShowError(true);
+          setIsSubmitting(false);
+          return;
+        }
+        
+        const errorStep = errorData.step || 'unknown';
+        alert(`Error: ${msg}\n\nStep: ${errorStep}\n\nPlease check the console for more details.`);
+        throw new Error(msg);
       }
 
       // Show loader for 4 seconds before redirecting
@@ -536,6 +546,29 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
         >
           <i className="fas fa-xmark text-lg lg:text-xl"></i>
         </button>
+
+        {/* Error Popup */}
+        {showError && (
+          <div className="fixed inset-0 z-[70] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+            <div className="bg-white rounded-2xl p-6 max-w-sm w-full shadow-2xl transform transition-all scale-100 animate-in fade-in zoom-in duration-200">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <i className="fas fa-ban text-red-600 text-2xl"></i>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Access Denied</h3>
+                <p className="text-gray-600 mb-6 text-sm">
+                  {errorMessage || "You are not authorized to perform this action."}
+                </p>
+                <button
+                  onClick={() => setShowError(false)}
+                  className="w-full py-3 px-4 bg-gray-900 hover:bg-gray-800 text-white rounded-xl font-semibold transition-colors"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
 
       <div className="w-full h-screen relative overflow-hidden">
         <div className="w-full h-full overflow-y-auto lg:overflow-hidden relative">

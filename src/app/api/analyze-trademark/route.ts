@@ -51,7 +51,7 @@ interface AnalysisResult {
 export async function POST(request: NextRequest) {
   const startTime = Date.now();
   let docId = '';
-  
+
   try {
     console.log('=== Trademark Analysis API Called ===');
     console.log('Timestamp:', new Date().toISOString());
@@ -60,7 +60,7 @@ export async function POST(request: NextRequest) {
     if (!process.env.HELLO_DROP_CHOO) {
       console.error('❌ HELLO_DROP_CHOO is not configured in environment variables');
       return NextResponse.json(
-        { 
+        {
           error: 'OpenAI API key not configured',
           details: 'Please set HELLO_DROP_CHOO in your .env.local file',
           step: 'configuration'
@@ -69,11 +69,11 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    if (process.env.HELLO_DROP_CHOO === 'dummy-key-will-fail' || 
-        process.env.HELLO_DROP_CHOO === 'your_HELLO_DROP_CHOO_here') {
+    if (process.env.HELLO_DROP_CHOO === 'dummy-key-will-fail' ||
+      process.env.HELLO_DROP_CHOO === 'your_HELLO_DROP_CHOO_here') {
       console.error('❌ HELLO_DROP_CHOO is set to placeholder value');
       return NextResponse.json(
-        { 
+        {
           error: 'OpenAI API key is placeholder',
           details: 'Please replace the placeholder in .env.local with your actual OpenAI API key',
           step: 'configuration'
@@ -91,7 +91,7 @@ export async function POST(request: NextRequest) {
     } catch (parseError) {
       console.error('❌ Failed to parse request body:', parseError);
       return NextResponse.json(
-        { 
+        {
           error: 'Invalid request format',
           details: 'Request body must be valid JSON',
           step: 'request_parsing'
@@ -105,7 +105,7 @@ export async function POST(request: NextRequest) {
     if (!trademarkName || !classNumber) {
       console.error('❌ Missing required fields:', { trademarkName, classNumber });
       return NextResponse.json(
-        { 
+        {
           error: 'Missing required fields',
           details: 'Both trademarkName and classNumber are required',
           received: { trademarkName: !!trademarkName, classNumber: !!classNumber },
@@ -119,7 +119,7 @@ export async function POST(request: NextRequest) {
     if (typeof trademarkName !== 'string' || trademarkName.trim().length === 0) {
       console.error('❌ Invalid trademark name:', trademarkName);
       return NextResponse.json(
-        { 
+        {
           error: 'Invalid trademark name',
           details: 'Trademark name must be a non-empty string',
           step: 'validation'
@@ -133,7 +133,7 @@ export async function POST(request: NextRequest) {
     if (isNaN(classNum) || classNum < 1 || classNum > 45) {
       console.error('❌ Invalid class number:', classNumber);
       return NextResponse.json(
-        { 
+        {
           error: 'Invalid class number',
           details: 'Class number must be between 1 and 45',
           step: 'validation'
@@ -182,10 +182,11 @@ export async function POST(request: NextRequest) {
         );
       }
 
-      normalizedPhone = trimmedPhone;
+      // Normalize: remove all spaces
+      normalizedPhone = trimmedPhone.replace(/\s+/g, '');
     }
 
-    console.log('✅ Request validated:', { trademarkName, classNumber, phoneIncluded: !!normalizedPhone });
+    console.log('✅ Request validated:', { trademarkName, classNumber, phoneIncluded: !!normalizedPhone, normalizedPhone });
 
     // Step 2.5: Get userId from Clerk auth (if authenticated)
     let userId: string | null = null;
@@ -202,6 +203,33 @@ export async function POST(request: NextRequest) {
       console.log('ℹ️ Public search (no authentication)');
     }
 
+    // Step 2.6: Check if the user is banned (if phone number is provided)
+    if (normalizedPhone) {
+      console.log('🚫 Checking if user is banned:', normalizedPhone);
+      const bannedRef = doc(db, 'banned_users', normalizedPhone);
+      const bannedSnap = await getDoc(bannedRef);
+
+      console.log('🚫 Ban check result:', {
+        phone: normalizedPhone,
+        exists: bannedSnap.exists(),
+        path: bannedRef.path
+      });
+
+      if (bannedSnap.exists()) {
+        console.warn('⛔️ BLOCKED: User is banned:', normalizedPhone);
+        return NextResponse.json(
+          {
+            error: 'Access Denied',
+            details: 'You are not authorized to perform this action.',
+            step: 'authorization'
+          },
+          { status: 403 }
+        );
+      }
+    } else {
+      console.log('⚠️ No phone number provided in request, skipping ban check.');
+    }
+
     // Step 3: Normalize the document ID
     docId = `${trademarkName.toLowerCase().trim()}_${classNumber}`;
     console.log('📝 Document ID:', docId);
@@ -210,14 +238,14 @@ export async function POST(request: NextRequest) {
     console.log('🔍 Checking Firebase cache...');
     const searchResultsRef = collection(db, 'searchResults');
     const docRef = doc(searchResultsRef, docId);
-    
+
     let docSnap;
     try {
       docSnap = await getDoc(docRef);
     } catch (firebaseError: any) {
       console.error('❌ Firebase read error:', firebaseError);
       return NextResponse.json(
-        { 
+        {
           error: 'Database connection error',
           details: 'Failed to check cached results in Firebase',
           firebaseError: firebaseError.message,
@@ -302,13 +330,13 @@ export async function POST(request: NextRequest) {
 
     // Step 5: Fetch data from QuickCompany
     console.log('🔍 Fetching trademark data from QuickCompany...');
-    
+
     const quickCompanyUrl = `https://www.quickcompany.in/trademarks?q=${encodeURIComponent(trademarkName)}`;
     console.log('📍 QuickCompany URL:', quickCompanyUrl);
-    
+
     let quickCompanyData = '';
     let fetchedSuccessfully = false;
-    
+
     try {
       const response = await fetch(quickCompanyUrl, {
         headers: {
@@ -316,19 +344,19 @@ export async function POST(request: NextRequest) {
         },
         signal: AbortSignal.timeout(10000), // 10 second timeout
       });
-      
+
       if (response.ok) {
         const html = await response.text();
-        
+
         // Extract relevant information from the HTML
         // Look for registered trademarks, classes, and statuses
         const registeredMatches = html.match(/Registered Class: (\d+)/gi) || [];
         const statusMatches = html.match(/Registered|Formalities Chk Pass|Abandoned|Objected|Refused|Accepted & Advertised|Opposed/gi) || [];
-        
+
         // Count matches
         const totalMatches = html.match(/(\d+) of ([\d,]+) Matches/);
         const matchCount = totalMatches ? totalMatches[2].replace(/,/g, '') : '0';
-        
+
         quickCompanyData = `
 Trademark Database Search Results for "${trademarkName}":
 - Total similar trademark records found in database: ${matchCount}
@@ -339,7 +367,7 @@ Analysis: ${parseInt(matchCount) > 0 ? 'CONFLICTS EXIST' : 'NO CONFLICTS FOUND'}
 ${parseInt(matchCount) > 100 ? 'HIGH CONFLICT ZONE - Many similar marks exist in database.' : ''}
 ${parseInt(matchCount) > 500 ? 'EXTREME CONFLICT - Over 500 similar marks found in database!' : ''}
 `;
-        
+
         fetchedSuccessfully = true;
         console.log('✅ QuickCompany data fetched successfully');
         console.log(`📊 Found ${matchCount} matches`);
@@ -507,11 +535,11 @@ CRITICAL REMINDERS:
       });
     } catch (openaiError: any) {
       console.error('❌ OpenAI API Error:', openaiError);
-      
+
       // Handle specific OpenAI errors
       if (openaiError.status === 401) {
         return NextResponse.json(
-          { 
+          {
             error: 'Invalid OpenAI API key',
             details: 'The API key is invalid or has been revoked. Please check your .env.local file',
             step: 'openai_auth'
@@ -519,10 +547,10 @@ CRITICAL REMINDERS:
           { status: 500 }
         );
       }
-      
+
       if (openaiError.status === 429) {
         return NextResponse.json(
-          { 
+          {
             error: 'OpenAI rate limit exceeded',
             details: 'Too many requests. Please try again in a few moments',
             step: 'openai_rate_limit'
@@ -530,10 +558,10 @@ CRITICAL REMINDERS:
           { status: 429 }
         );
       }
-      
+
       if (openaiError.status === 402) {
         return NextResponse.json(
-          { 
+          {
             error: 'OpenAI quota exceeded',
             details: 'Your OpenAI account has insufficient credits. Please add credits at platform.openai.com/account/billing',
             step: 'openai_quota'
@@ -544,7 +572,7 @@ CRITICAL REMINDERS:
 
       if (openaiError.code === 'ECONNREFUSED' || openaiError.code === 'ETIMEDOUT') {
         return NextResponse.json(
-          { 
+          {
             error: 'Network error',
             details: 'Could not connect to OpenAI API. Please check your internet connection',
             step: 'openai_network'
@@ -552,9 +580,9 @@ CRITICAL REMINDERS:
           { status: 500 }
         );
       }
-      
+
       return NextResponse.json(
-        { 
+        {
           error: 'OpenAI API error',
           details: openaiError.message || 'Unknown error from OpenAI',
           status: openaiError.status,
@@ -571,7 +599,7 @@ CRITICAL REMINDERS:
     if (!responseText) {
       console.error('❌ Empty response from OpenAI');
       return NextResponse.json(
-        { 
+        {
           error: 'Empty AI response',
           details: 'OpenAI returned an empty response. Please try again',
           step: 'openai_empty_response'
@@ -592,7 +620,7 @@ CRITICAL REMINDERS:
       console.error('❌ Failed to parse OpenAI response as JSON');
       console.error('Response text:', responseText.substring(0, 500));
       return NextResponse.json(
-        { 
+        {
           error: 'Invalid AI response format',
           details: 'AI returned invalid JSON. This is an AI model issue, please try again',
           parseError: parseError.message,
@@ -681,7 +709,7 @@ CRITICAL REMINDERS:
     console.error('Document ID:', docId);
     console.error('⏱️ Failed after:', totalTime, 'ms');
     console.error('=== End of Failed Analysis ===\n');
-    
+
     return NextResponse.json(
       {
         error: 'Unexpected server error',

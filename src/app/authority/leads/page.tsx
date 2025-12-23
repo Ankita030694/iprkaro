@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { onAuthStateChanged } from 'firebase/auth';
-import { collection, query, orderBy, getDocs, Timestamp, deleteDoc, doc, updateDoc, arrayUnion } from 'firebase/firestore';
+import { collection, query, orderBy, getDocs, Timestamp, deleteDoc, doc, updateDoc, arrayUnion, setDoc } from 'firebase/firestore';
 import { auth, db } from '@/lib/firebase';
 
 interface Remark {
@@ -33,10 +33,12 @@ export default function LeadsPage() {
   const [fromDate, setFromDate] = useState('');
   const [toDate, setToDate] = useState('');
   const [deletingLeadId, setDeletingLeadId] = useState<string | null>(null);
+  const [banningLeadId, setBanningLeadId] = useState<string | null>(null);
   const [viewingRemarksId, setViewingRemarksId] = useState<string | null>(null);
   const [viewingHistoryId, setViewingHistoryId] = useState<string | null>(null);
   const [remarksInput, setRemarksInput] = useState<{[key: string]: string}>({});
   const [savingRemarkId, setSavingRemarkId] = useState<string | null>(null);
+  const [bannedPhones, setBannedPhones] = useState<Set<string>>(new Set());
 
   useEffect(() => {
     // Check authentication
@@ -55,16 +57,26 @@ export default function LeadsPage() {
   const fetchLeads = async () => {
     try {
       setLoading(true);
+      
+      // Fetch leads
       const leadsQuery = query(
         collection(db, 'leads'),
         orderBy('createdAt', 'desc')
       );
       
-      const querySnapshot = await getDocs(leadsQuery);
+      // Fetch banned users
+      const bannedQuery = query(collection(db, 'banned_users'));
+      
+      const [leadsSnapshot, bannedSnapshot] = await Promise.all([
+        getDocs(leadsQuery),
+        getDocs(bannedQuery)
+      ]);
+      
+      // Process leads
       const leadsData: Lead[] = [];
       const initialRemarks: {[key: string]: string} = {};
       
-      querySnapshot.forEach((doc) => {
+      leadsSnapshot.forEach((doc) => {
         const data = doc.data();
         const lead = {
           id: doc.id,
@@ -73,18 +85,23 @@ export default function LeadsPage() {
         
         leadsData.push(lead);
         
-        // Initialize remarks input with the latest remark if available
         if (lead.history && lead.history.length > 0) {
-          // Sort history by date descending to get the latest
           const sortedHistory = [...lead.history].sort((a, b) => b.createdAt.toMillis() - a.createdAt.toMillis());
           initialRemarks[lead.id] = sortedHistory[0].text;
         }
       });
       
+      // Process banned users
+      const bannedSet = new Set<string>();
+      bannedSnapshot.forEach((doc) => {
+        bannedSet.add(doc.id);
+      });
+      
       setLeads(leadsData);
       setRemarksInput(initialRemarks);
+      setBannedPhones(bannedSet);
     } catch (error) {
-      console.error('Error fetching leads:', error);
+      console.error('Error fetching data:', error);
     } finally {
       setLoading(false);
     }
@@ -108,6 +125,80 @@ export default function LeadsPage() {
       alert('Failed to delete lead. Please try again.');
     } finally {
       setDeletingLeadId(null);
+    }
+  };
+
+  const banLead = async (lead: Lead) => {
+    if (!lead.phone) {
+      alert('Cannot ban lead without a phone number.');
+      return;
+    }
+
+    if (!confirm(`Are you sure you want to BAN this lead (${lead.phone})? They will be blocked from performing trademark searches.`)) {
+      return;
+    }
+
+    try {
+      setBanningLeadId(lead.id);
+      
+      // Normalize phone
+      const phoneId = lead.phone.replace(/\s+/g, '').trim();
+      console.log('Banning phone:', phoneId);
+      
+      await setDoc(doc(db, 'banned_users', phoneId), {
+        bannedAt: Timestamp.now(),
+        reason: 'Banned by admin from Leads Dashboard',
+        leadId: lead.id,
+        leadName: lead.name,
+        bannedBy: user?.email || 'admin'
+      });
+      
+      // Update local state
+      setBannedPhones(prev => new Set(prev).add(phoneId));
+      
+      alert(`Lead ${lead.name} (${lead.phone}) has been BANNED successfully.`);
+      
+    } catch (error) {
+      console.error('Error banning lead:', error);
+      alert('Failed to ban lead. Please try again.');
+    } finally {
+      setBanningLeadId(null);
+    }
+  };
+
+  const unbanLead = async (lead: Lead) => {
+    if (!lead.phone) {
+      alert('Cannot unban lead without a phone number.');
+      return;
+    }
+
+    if (!confirm(`Are you sure you want to UNBAN this lead (${lead.phone})?`)) {
+      return;
+    }
+
+    try {
+      setBanningLeadId(lead.id);
+      
+      // Normalize phone
+      const phoneId = lead.phone.replace(/\s+/g, '').trim();
+      console.log('Unbanning phone:', phoneId);
+      
+      await deleteDoc(doc(db, 'banned_users', phoneId));
+      
+      // Update local state
+      setBannedPhones(prev => {
+        const newSet = new Set(prev);
+        newSet.delete(phoneId);
+        return newSet;
+      });
+      
+      alert(`Lead ${lead.name} (${lead.phone}) has been UNBANNED successfully.`);
+      
+    } catch (error) {
+      console.error('Error unbanning lead:', error);
+      alert('Failed to unban lead. Please try again.');
+    } finally {
+      setBanningLeadId(null);
     }
   };
 
@@ -504,24 +595,53 @@ export default function LeadsPage() {
                         </div>
                       </td>
                       <td className="px-2 py-2">
-                        <button
-                          onClick={() => deleteLead(lead.id)}
-                          disabled={deletingLeadId === lead.id}
-                          className="inline-flex items-center px-2 py-1 text-[11px] font-nunito font-medium bg-red-100 text-red-700 border border-red-300 rounded hover:bg-red-200 transition-colors disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
-                          title="Delete lead"
-                        >
-                          {deletingLeadId === lead.id ? (
-                            <>
-                              <i className="fas fa-spinner fa-spin mr-1 text-[10px]"></i>
-                              <span className="hidden sm:inline">Deleting...</span>
-                            </>
-                          ) : (
-                            <>
-                              <i className="fas fa-trash mr-1 text-[10px]"></i>
-                              <span className="hidden sm:inline">Delete</span>
-                            </>
-                          )}
-                        </button>
+                        <div className="flex gap-1.5">
+                          {(() => {
+                            const isBanned = lead.phone && bannedPhones.has(lead.phone.replace(/\s+/g, '').trim());
+                            return (
+                              <button
+                                onClick={() => isBanned ? unbanLead(lead) : banLead(lead)}
+                                disabled={banningLeadId === lead.id}
+                                className={`inline-flex items-center px-2 py-1 text-[11px] font-nunito font-medium border rounded transition-colors disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap ${
+                                  isBanned 
+                                    ? 'bg-orange-100 text-orange-700 border-orange-300 hover:bg-orange-200' 
+                                    : 'bg-gray-800 text-white border-gray-900 hover:bg-gray-700'
+                                }`}
+                                title={isBanned ? "Unban lead" : "Ban lead from searching"}
+                              >
+                                {banningLeadId === lead.id ? (
+                                  <>
+                                    <i className="fas fa-spinner fa-spin mr-1 text-[10px]"></i>
+                                    <span className="hidden sm:inline">{isBanned ? 'Unbanning...' : 'Banning...'}</span>
+                                  </>
+                                ) : (
+                                  <>
+                                    <i className={`fas ${isBanned ? 'fa-unlock' : 'fa-ban'} mr-1 text-[10px]`}></i>
+                                    <span className="hidden sm:inline">{isBanned ? 'Unban' : 'Ban'}</span>
+                                  </>
+                                )}
+                              </button>
+                            );
+                          })()}
+                          <button
+                            onClick={() => deleteLead(lead.id)}
+                            disabled={deletingLeadId === lead.id}
+                            className="inline-flex items-center px-2 py-1 text-[11px] font-nunito font-medium bg-red-100 text-red-700 border border-red-300 rounded hover:bg-red-200 transition-colors disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
+                            title="Delete lead"
+                          >
+                            {deletingLeadId === lead.id ? (
+                              <>
+                                <i className="fas fa-spinner fa-spin mr-1 text-[10px]"></i>
+                                <span className="hidden sm:inline">Deleting...</span>
+                              </>
+                            ) : (
+                              <>
+                                <i className="fas fa-trash mr-1 text-[10px]"></i>
+                                <span className="hidden sm:inline">Delete</span>
+                              </>
+                            )}
+                          </button>
+                        </div>
                       </td>
                     </tr>
                   ))}
