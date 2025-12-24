@@ -117,12 +117,30 @@ export default function ContactClient() {
     setIsSubmitting(true);
     setSubmitStatus(null);
 
+    // Helper to get cookie by name
+    const getCookie = (name: string) => {
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`);
+      if (parts.length === 2) return parts.pop()?.split(';').shift();
+      return null;
+    };
+
     try {
+      // Capture Facebook cookies
+      const fbp = getCookie('_fbp');
+      const fbc = getCookie('_fbc');
+
       // Add the lead to Firestore
       await addDoc(collection(db, 'leads'), {
         ...formData,
         createdAt: serverTimestamp(),
-        status: 'new'
+        status: 'new',
+        meta: {
+          fbp: fbp || null,
+          fbc: fbc || null,
+          userAgent: navigator.userAgent,
+          pageUrl: window.location.href
+        }
       });
 
       // Redirect to thank you page

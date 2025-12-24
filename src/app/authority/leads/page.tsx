@@ -21,6 +21,13 @@ interface Lead {
   message: string;
   createdAt: Timestamp;
   history?: Remark[];
+  meta?: {
+    fbp?: string;
+    fbc?: string;
+    userAgent?: string;
+    ip?: string;
+    pageUrl?: string;
+  };
 }
 
 export default function LeadsPage() {
@@ -39,6 +46,9 @@ export default function LeadsPage() {
   const [remarksInput, setRemarksInput] = useState<{[key: string]: string}>({});
   const [savingRemarkId, setSavingRemarkId] = useState<string | null>(null);
   const [bannedPhones, setBannedPhones] = useState<Set<string>>(new Set());
+  const [markingSoldId, setMarkingSoldId] = useState<string | null>(null);
+  const [saleAmountInput, setSaleAmountInput] = useState('0');
+  const [testEventCodeInput, setTestEventCodeInput] = useState('');
 
   useEffect(() => {
     // Check authentication
@@ -641,6 +651,17 @@ export default function LeadsPage() {
                               </>
                             )}
                           </button>
+                          <button
+                            onClick={() => {
+                              setMarkingSoldId(lead.id);
+                              setSaleAmountInput('0');
+                            }}
+                            className="inline-flex items-center px-2 py-1 text-[11px] font-nunito font-medium bg-green-100 text-green-700 border border-green-300 rounded hover:bg-green-200 transition-colors whitespace-nowrap"
+                            title="Mark as Sold"
+                          >
+                            <i className="fas fa-check-circle mr-1 text-[10px]"></i>
+                            <span className="hidden sm:inline">Sold</span>
+                          </button>
                         </div>
                       </td>
                     </tr>
@@ -773,6 +794,132 @@ export default function LeadsPage() {
                 >
                   Close
                 </button>
+              </div>
+            </div>
+          </div>
+        );
+      })()}
+
+      {/* Sale Confirmation Modal */}
+      {markingSoldId && (() => {
+        const lead = leads.find(l => l.id === markingSoldId);
+        if (!lead) return null;
+
+        return (
+          <div 
+            className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4"
+            onClick={() => setMarkingSoldId(null)}
+          >
+            <div 
+              className="bg-white rounded-lg shadow-xl max-w-md w-full overflow-hidden"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="flex items-center justify-between p-4 border-b border-gray-200 bg-green-50">
+                <h2 className="text-lg font-bold text-green-800 font-nunito">
+                  <i className="fas fa-check-circle mr-2"></i>
+                  Mark as Sold
+                </h2>
+                <button
+                  onClick={() => setMarkingSoldId(null)}
+                  className="text-gray-400 hover:text-gray-600 transition-colors"
+                  title="Close"
+                >
+                  <i className="fas fa-times text-xl"></i>
+                </button>
+              </div>
+              
+              <div className="p-6">
+                <p className="text-gray-600 font-nunito mb-4">
+                  You are marking <strong>{lead.name}</strong> as sold. This will update the status and trigger a conversion event to Facebook.
+                </p>
+                
+                <div className="mb-4">
+                  <label className="block text-gray-700 font-nunito text-sm font-bold mb-2">
+                    Sale Amount (INR)
+                  </label>
+                  <input
+                    type="number"
+                    value={saleAmountInput}
+                    onChange={(e) => setSaleAmountInput(e.target.value)}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 font-nunito"
+                    placeholder="Enter amount"
+                    min="0"
+                  />
+                </div>
+
+                <div className="mb-4">
+                  <label className="block text-gray-700 font-nunito text-sm font-bold mb-2">
+                    Test Event Code (Optional)
+                  </label>
+                  <input
+                    type="text"
+                    value={testEventCodeInput}
+                    onChange={(e) => setTestEventCodeInput(e.target.value)}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 font-nunito"
+                    placeholder="e.g. TEST12345"
+                  />
+                  <p className="text-[10px] text-gray-500 mt-1">
+                    Find this in Meta Events Manager &gt; Test Events tab
+                  </p>
+                </div>
+
+                <div className="flex justify-end gap-3">
+                  <button
+                    onClick={() => setMarkingSoldId(null)}
+                    className="px-4 py-2 text-sm font-nunito bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    onClick={async () => {
+                      const amount = parseFloat(saleAmountInput);
+                      if (isNaN(amount) || amount < 0) {
+                        alert('Please enter a valid amount');
+                        return;
+                      }
+
+                      try {
+                        // 1. Update Firestore (Client Side)
+                        const leadRef = doc(db, 'leads', lead.id);
+                        await updateDoc(leadRef, {
+                          status: 'sold',
+                          saleAmount: amount,
+                          soldAt: Timestamp.now()
+                        });
+
+                        // 2. Send CAPI Event (Server Side)
+                        const { sendPurchaseEvent } = await import('@/app/actions/leads');
+                        const result = await sendPurchaseEvent({
+                          email: lead.email,
+                          phone: lead.phone,
+                          userAgent: lead.meta?.userAgent || navigator.userAgent,
+                          ip: lead.meta?.ip || '0.0.0.0',
+                          url: lead.meta?.pageUrl || window.location.href,
+                          fbp: lead.meta?.fbp,
+                          fbc: lead.meta?.fbc,
+                          amount: amount,
+                          leadId: lead.id,
+                          testEventCode: testEventCodeInput
+                        });
+
+                        if (result.success) {
+                          alert('Lead marked as SOLD and event sent to Facebook!');
+                          setLeads(prev => prev.map(l => l.id === lead.id ? { ...l, status: 'sold' } : l));
+                          setMarkingSoldId(null);
+                        } else {
+                          alert('Saved to DB, but failed to send to Facebook: ' + result.error);
+                          setMarkingSoldId(null);
+                        }
+                      } catch (err) {
+                        console.error(err);
+                        alert('Failed to update lead: ' + (err as Error).message);
+                      }
+                    }}
+                    className="px-4 py-2 text-sm font-nunito font-bold bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors shadow-sm"
+                  >
+                    Confirm Sale
+                  </button>
+                </div>
               </div>
             </div>
           </div>
