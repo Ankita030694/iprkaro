@@ -334,6 +334,11 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
         '45': 'Legal & Security Services'
       };
 
+      // Capture Facebook cookies and metadata
+      const cookies = typeof document !== 'undefined' ? document.cookie.split('; ') : [];
+      const fbp = cookies.find(row => row.startsWith('_fbp='))?.split('=')[1];
+      const fbc = cookies.find(row => row.startsWith('_fbc='))?.split('=')[1];
+
       // Add the lead to Firestore
       await addDoc(collection(db, 'leads'), {
         name: formData.name,
@@ -346,7 +351,13 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
         className: trademarkClasses[formData.class] || formData.class,
         classNumber: formData.class,
         createdAt: serverTimestamp(),
-        status: 'new'
+        status: 'new',
+        meta: {
+          fbp: fbp || null,
+          fbc: fbc || null,
+          userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
+          pageUrl: typeof window !== 'undefined' ? window.location.href : 'unknown'
+        }
       });
 
       // Call the trademark analysis API
