@@ -841,27 +841,13 @@ export default function LeadsPage() {
                     type="number"
                     value={saleAmountInput}
                     onChange={(e) => setSaleAmountInput(e.target.value)}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 font-nunito"
+                    className="w-full px-3 py-2 text-black border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 font-nunito"
                     placeholder="Enter amount"
                     min="0"
                   />
                 </div>
 
-                <div className="mb-4">
-                  <label className="block text-gray-700 font-nunito text-sm font-bold mb-2">
-                    Test Event Code (Optional)
-                  </label>
-                  <input
-                    type="text"
-                    value={testEventCodeInput}
-                    onChange={(e) => setTestEventCodeInput(e.target.value)}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 font-nunito"
-                    placeholder="e.g. TEST12345"
-                  />
-                  <p className="text-[10px] text-gray-500 mt-1">
-                    Find this in Meta Events Manager &gt; Test Events tab
-                  </p>
-                </div>
+              
 
                 <div className="flex justify-end gap-3">
                   <button
