@@ -156,14 +156,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       return [`https://iprkaro.com${imageUrl.startsWith('/') ? imageUrl : '/' + imageUrl}`];
     };
 
-    // Calculate aggregate rating
-    const aggregateRating = reviews.length > 0 ? {
-      "@type": "AggregateRating",
-      "ratingValue": (reviews.reduce((acc, review) => acc + review.rating, 0) / reviews.length).toFixed(1),
-      "reviewCount": reviews.length,
-      "bestRating": "5",
-      "worstRating": "1"
-    } : undefined;
+
 
     // Generate Article schema
     const articleSchema = {
@@ -190,7 +183,7 @@ export default async function BlogPostPage({ params }: PageProps) {
         "@type": "WebPage",
         "@id": `https://iprkaro.com/blog/${slug}`
       },
-      ...(aggregateRating && { "aggregateRating": aggregateRating })
+
     };
 
     // Generate FAQ schema if FAQs exist
