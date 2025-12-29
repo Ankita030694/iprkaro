@@ -158,6 +158,15 @@ export default async function BlogPostPage({ params }: PageProps) {
 
 
 
+    // Calculate aggregate rating
+    const aggregateRating = reviews.length > 0 ? {
+      "@type": "AggregateRating",
+      "ratingValue": (reviews.reduce((acc, review) => acc + review.rating, 0) / reviews.length).toFixed(1),
+      "reviewCount": reviews.length,
+      "bestRating": "5",
+      "worstRating": "1"
+    } : undefined;
+
     // Generate Article schema
     const articleSchema = {
       "@context": "https://schema.org",
@@ -226,6 +235,32 @@ export default async function BlogPostPage({ params }: PageProps) {
       ]
     };
 
+    // Generate Product schema for Review Snippets
+    // We use Product schema as it supports review snippets which Article does not
+    const productSchema = reviews.length > 0 ? {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": blogData.title,
+      "description": blogData.metaDescription || blogData.subtitle || blogData.description?.substring(0, 160) || '',
+      "image": getAbsoluteImageUrl(blogData.image),
+      "aggregateRating": aggregateRating,
+      "review": reviews.map(review => ({
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": review.rating,
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "author": {
+          "@type": "Person",
+          "name": review.name
+        },
+        "datePublished": formatDate(review.date),
+        "reviewBody": review.review
+      }))
+    } : null;
+
     // Render the client component with the slug
     return (
       <>
@@ -252,6 +287,15 @@ export default async function BlogPostPage({ params }: PageProps) {
             __html: JSON.stringify(breadcrumbSchema),
           }}
         />
+        {/* Product Schema for Reviews */}
+        {productSchema && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(productSchema),
+            }}
+          />
+        )}
         <ArticleDetail slug={slug} initialReviews={reviews} />
       </>
     );
