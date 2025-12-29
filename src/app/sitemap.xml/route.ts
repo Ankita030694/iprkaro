@@ -1,54 +1,68 @@
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 
+interface RouteConfig {
+  path: string;
+  priority: string;
+  changefreq: 'daily' | 'weekly' | 'monthly' | 'yearly';
+}
+
 export async function GET() {
-  // Configure your domain here (without www is recommended for modern websites)
-  // Make sure to set up 301 redirects from www to non-www (or vice versa) in your hosting config
-  const baseUrl = 'https://iprkaro.com'; // Use 'https://www.iprkaro.com' if you prefer www
+  const baseUrl = 'https://www.iprkaro.com';
+  const currentDate = new Date().toISOString();
 
-  // Fetch all blog posts from Firestore
-  let blogUrls: string[] = [];
-  try {
-    const blogsCollection = collection(db, 'blogs');
-    const blogSnapshot = await getDocs(blogsCollection);
-    blogUrls = blogSnapshot.docs.map(doc => `/blog/${doc.data().slug}`);
-  } catch (error) {
-    console.error('Error fetching blogs for sitemap:', error);
-  }
+  // 1. Root & High Priority Pages
+  const rootPages: RouteConfig[] = [
+    { path: '', priority: '1.0', changefreq: 'daily' },
+    { path: '/trademark-registration-guide', priority: '0.95', changefreq: 'weekly' },
+  ];
 
-  // All static pages that exist in the project
-  const allPages = [
-    // Root pages
-    '',
-    '/about',
-    '/blog',
-    '/contact',
-    '/form',
-    '/privacy-policy',
-    '/terms-and-conditions',
-    '/trademark-registration-guide',
-    '/trademark-registration',
-    '/online-trademark-registration',
-    '/trademark-registration-services',
-    '/register-trademark-online',
-    '/best-trademark-attorneys',
-    '/cheap-trademark-registration',
+  // 2. Main Service Pages
+  const mainServices: RouteConfig[] = [
+    { path: '/services', priority: '0.9', changefreq: 'weekly' },
+    { path: '/services/trademark-registration', priority: '0.9', changefreq: 'weekly' },
+    { path: '/services/patent-services', priority: '0.9', changefreq: 'weekly' },
+    { path: '/services/copyright-protection', priority: '0.9', changefreq: 'weekly' },
+  ];
 
-    // Features pages
+  // 3. Lead Capture & Info Pages
+  const standardPages: RouteConfig[] = [
+    { path: '/blog', priority: '0.9', changefreq: 'daily' }, // Blog index changes often
+    { path: '/about', priority: '0.7', changefreq: 'monthly' },
+    { path: '/contact', priority: '0.7', changefreq: 'monthly' },
+    { path: '/form', priority: '0.6', changefreq: 'monthly' },
+    { path: '/thank-you', priority: '0.6', changefreq: 'monthly' },
+    { path: '/privacy-policy', priority: '0.5', changefreq: 'yearly' },
+    { path: '/terms-and-conditions', priority: '0.5', changefreq: 'yearly' },
+  ];
+
+  // 4. Marketing / Landing Pages
+  const landingPages: RouteConfig[] = [
+    { path: '/trademark-registration', priority: '0.85', changefreq: 'weekly' },
+    { path: '/online-trademark-registration', priority: '0.85', changefreq: 'weekly' },
+    { path: '/trademark-registration-services', priority: '0.85', changefreq: 'weekly' },
+    { path: '/register-trademark-online', priority: '0.85', changefreq: 'weekly' },
+    { path: '/best-trademark-attorneys', priority: '0.5', changefreq: 'monthly' },
+    { path: '/cheap-trademark-registration', priority: '0.5', changefreq: 'weekly' },
+  ];
+
+  // 5. Tools
+  const tools: RouteConfig[] = [
+    { path: '/partners/tm-search', priority: '0.8', changefreq: 'weekly' },
+  ];
+
+  // 6. Features
+  const features = [
     '/features/247-trademark-protection',
     '/features/affordable-trademark-services',
     '/features/ai-powered-trademark-solutions',
     '/features/expert-trademark-guidance',
     '/features/fast-trademark-registration',
     '/features/trademark-risk-reduction',
+  ].map(path => ({ path, priority: '0.8', changefreq: 'weekly' } as RouteConfig));
 
-    // Services main pages
-    '/services',
-    '/services/trademark-registration',
-    '/services/patent-services',
-    '/services/copyright-protection',
-
-    // Trademark sub-services
+  // 7. Sub-Services (Trademark)
+  const trademarkServices = [
     '/services/trademark/rectification',
     '/services/trademark/assignment',
     '/services/trademark/watch',
@@ -56,20 +70,26 @@ export async function GET() {
     '/services/trademark/objection',
     '/services/trademark/opposition',
     '/services/trademark/renewal',
+  ].map(path => ({ path, priority: '0.85', changefreq: 'weekly' } as RouteConfig));
 
-    // Patent sub-services
+  // 8. Sub-Services (Patent)
+  const patentServices = [
     '/services/patent/filing',
     '/services/patent/licensing',
     '/services/patent/renewal',
     '/services/patent/opposition',
+  ].map(path => ({ path, priority: '0.85', changefreq: 'weekly' } as RouteConfig));
 
-    // Copyright sub-services
+  // 9. Sub-Services (Copyright)
+  const copyrightServices = [
     '/services/copyright/software',
     '/services/copyright/renewal',
     '/services/copyright/infringement',
     '/services/copyright/transfer',
+  ].map(path => ({ path, priority: '0.85', changefreq: 'weekly' } as RouteConfig));
 
-    // Trademark Registration - State Pages
+  // 10. State Pages - Trademark
+  const trademarkStatePages = [
     '/services/trademark-registration/andaman-and-nicobar-islands',
     '/services/trademark-registration/andhra-pradesh',
     '/services/trademark-registration/arunachal-pradesh',
@@ -106,8 +126,10 @@ export async function GET() {
     '/services/trademark-registration/uttar-pradesh',
     '/services/trademark-registration/uttarakhand',
     '/services/trademark-registration/west-bengal',
+  ].map(path => ({ path, priority: '0.85', changefreq: 'weekly' } as RouteConfig));
 
-    // Patent Services - State Pages
+  // 11. State Pages - Patent
+  const patentStatePages = [
     '/services/patent-services/andaman-and-nicobar-islands',
     '/services/patent-services/bihar',
     '/services/patent-services/chhattisgarh',
@@ -129,47 +151,54 @@ export async function GET() {
     '/services/patent-services/tripura',
     '/services/patent-services/uttar-pradesh',
     '/services/patent-services/uttarakhand',
+  ].map(path => ({ path, priority: '0.85', changefreq: 'weekly' } as RouteConfig));
 
-    // Copyright Protection - State Pages
+  // 12. State Pages - Copyright
+  const copyrightStatePages = [
     '/services/copyright-protection/haryana',
+  ].map(path => ({ path, priority: '0.85', changefreq: 'weekly' } as RouteConfig));
 
-    // Add blog URLs
-    ...blogUrls,
+
+  // Fetch Dynamic Blog Posts
+  let blogRoutes: RouteConfig[] = [];
+  try {
+    const blogsCollection = collection(db, 'blogs');
+    const blogSnapshot = await getDocs(blogsCollection);
+    blogRoutes = blogSnapshot.docs.map(doc => ({
+      path: `/blog/${doc.data().slug}`,
+      priority: '0.8',
+      changefreq: 'monthly'
+    }));
+  } catch (error) {
+    console.error('Error fetching blogs for sitemap:', error);
+  }
+
+  // Combine all routes
+  const allRoutes = [
+    ...rootPages,
+    ...mainServices,
+    ...standardPages,
+    ...landingPages,
+    ...tools,
+    ...features,
+    ...trademarkServices,
+    ...patentServices,
+    ...copyrightServices,
+    ...trademarkStatePages,
+    ...patentStatePages,
+    ...copyrightStatePages,
+    ...blogRoutes
   ];
 
-  // Create sitemap XML
+  // Generate XML
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${allPages.map((page) => {
-    const url = `${baseUrl}${page}`;
-    const priority = page === '' ? '1.0' :
-      page === '/trademark-registration-guide' ? '0.95' :
-        page === '/services' || page === '/services/trademark-registration' ||
-          page === '/services/patent-services' || page === '/services/copyright-protection' ? '0.9' :
-          page.startsWith('/services/') && !page.includes('-in-') ? '0.85' :
-            page.startsWith('/features/') ? '0.8' :
-              page === '/about' || page === '/contact' ? '0.7' :
-                page === '/form' || page === '/thank-you' ? '0.6' :
-                  page.includes('-in-') ? '0.6' : '0.5';
-
-    const changefreq = page === '' ? 'daily' :
-      page === '/trademark-registration-guide' ? 'weekly' :
-        page === '/services' || page === '/services/trademark-registration' ||
-          page === '/services/patent-services' || page === '/services/copyright-protection' ? 'weekly' :
-          page.startsWith('/services/') && !page.includes('-in-') ? 'weekly' :
-            page.startsWith('/features/') ? 'weekly' :
-              page === '/cheap-trademark-registration' ? 'weekly' : // Added specific rule for cheap-trademark-registration
-                page.startsWith('/services/') && !page.includes('-in-') ? 'weekly' :
-                  page.startsWith('/features/') ? 'weekly' :
-                    page.includes('-in-') ? 'monthly' : 'monthly';
-
-    return `  <url>
-    <loc>${url}</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>${changefreq}</changefreq>
-    <priority>${priority}</priority>
-  </url>`;
-  }).join('\n')}
+${allRoutes.map(route => `  <url>
+    <loc>${baseUrl}${route.path}</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>${route.changefreq}</changefreq>
+    <priority>${route.priority}</priority>
+  </url>`).join('\n')}
 </urlset>`;
 
   return new Response(sitemap, {
