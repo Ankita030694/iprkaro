@@ -5,6 +5,7 @@ import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 import { Navbar, Footer, CitiesAndTerritories } from "@/components";
 import ConditionalLayout from "./ConditionalLayout";
+import WhatsAppWidget from "@/components/WhatsAppWidget";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -137,6 +138,7 @@ export default function RootLayout({
           <ConditionalLayout>
             {children}
           </ConditionalLayout>
+          <WhatsAppWidget />
         </div>
       </body>
     </html>

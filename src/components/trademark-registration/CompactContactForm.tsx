@@ -13,6 +13,21 @@ export default function CompactContactForm() {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
+
+    if (name === 'name') {
+      if (value === '' || /^[A-Za-z\s]+$/.test(value)) {
+        setFormData(prev => ({ ...prev, [name]: value }));
+      }
+      return;
+    }
+
+    if (name === 'phone') {
+      if (value === '' || (/^\d+$/.test(value) && value.length <= 10)) {
+        setFormData(prev => ({ ...prev, [name]: value }));
+      }
+      return;
+    }
+
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
@@ -20,9 +35,37 @@ export default function CompactContactForm() {
     setFormData(prev => ({ ...prev, interest: value }));
   };
 
+  const [errors, setErrors] = useState<{ [key: string]: string }>({});
+
+  const validateForm = () => {
+    const newErrors: { [key: string]: string } = {};
+
+    if (!/^[A-Za-z\s]+$/.test(formData.name)) {
+      newErrors.name = 'Alphabets only';
+    }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = 'Invalid email';
+    }
+
+    if (!/^\d{10}$/.test(formData.phone)) {
+      newErrors.phone = '10 digits only';
+    }
+
+    if (!formData.interest) {
+      newErrors.interest = 'Required';
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    if (validateForm()) {
+      console.log('Form submitted:', formData);
+      // Process submission
+    }
   };
 
   const interestOptions = [
@@ -81,6 +124,7 @@ export default function CompactContactForm() {
             }}
             placeholder="Enter your full name"
           />
+          {errors.name && <p className="text-red-400 text-[10px] mt-0.5 font-nunito">{errors.name}</p>}
         </div>
 
         {/* Email Field */}
@@ -99,6 +143,7 @@ export default function CompactContactForm() {
             }}
             placeholder="your.email@example.com"
           />
+          {errors.email && <p className="text-red-400 text-[10px] mt-0.5 font-nunito">{errors.email}</p>}
         </div>
 
         {/* Phone Field */}
@@ -117,6 +162,7 @@ export default function CompactContactForm() {
             }}
             placeholder="+91 XXXXX XXXXX"
           />
+          {errors.phone && <p className="text-red-400 text-[10px] mt-0.5 font-nunito">{errors.phone}</p>}
         </div>
 
         {/* Interest Radio Buttons */}
@@ -168,6 +214,7 @@ export default function CompactContactForm() {
               </div>
             ))}
           </div>
+          {errors.interest && <p className="text-red-400 text-[10px] mt-0.5 font-nunito">{errors.interest}</p>}
         </div>
 
         {/* Submit Button */}

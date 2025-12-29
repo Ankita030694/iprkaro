@@ -20,6 +20,21 @@ export default function ContactFormPopup({ isOpen, onClose }: ContactFormPopupPr
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
+
+    if (name === 'name') {
+      if (value === '' || /^[A-Za-z\s]+$/.test(value)) {
+        setFormData(prev => ({ ...prev, [name]: value }));
+      }
+      return;
+    }
+
+    if (name === 'phone') {
+      if (value === '' || (/^\d+$/.test(value) && value.length <= 10)) {
+        setFormData(prev => ({ ...prev, [name]: value }));
+      }
+      return;
+    }
+
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
@@ -27,18 +42,45 @@ export default function ContactFormPopup({ isOpen, onClose }: ContactFormPopupPr
     setFormData(prev => ({ ...prev, interest: value }));
   };
 
+  const [errors, setErrors] = useState<{ [key: string]: string }>({});
+
+  const validateForm = () => {
+    const newErrors: { [key: string]: string } = {};
+
+    if (!/^[A-Za-z\s]+$/.test(formData.name)) {
+      newErrors.name = 'Alphabets only';
+    }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = 'Invalid email';
+    }
+
+    if (!/^\d{10}$/.test(formData.phone)) {
+      newErrors.phone = '10 digits only';
+    }
+
+    if (!formData.interest) {
+      newErrors.interest = 'Required';
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      interest: '',
-      message: ''
-    });
-    onClose();
+    if (validateForm()) {
+      console.log('Form submitted:', formData);
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        interest: '',
+        message: ''
+      });
+      onClose();
+    }
   };
 
   const interestOptions = [
@@ -105,6 +147,7 @@ export default function ContactFormPopup({ isOpen, onClose }: ContactFormPopupPr
                     placeholder="Enter your name"
                   />
                 </div>
+                {errors.name && <p className="text-red-400 text-xs mt-1 font-nunito">{errors.name}</p>}
               </div>
 
               {/* Email Field */}
@@ -126,6 +169,7 @@ export default function ContactFormPopup({ isOpen, onClose }: ContactFormPopupPr
                     placeholder="Enter your email"
                   />
                 </div>
+                {errors.email && <p className="text-red-400 text-xs mt-1 font-nunito">{errors.email}</p>}
               </div>
 
               {/* Phone Field */}
@@ -147,6 +191,7 @@ export default function ContactFormPopup({ isOpen, onClose }: ContactFormPopupPr
                     placeholder="Enter your phone number"
                   />
                 </div>
+                {errors.phone && <p className="text-red-400 text-xs mt-1 font-nunito">{errors.phone}</p>}
               </div>
             </div>
 
@@ -178,6 +223,7 @@ export default function ContactFormPopup({ isOpen, onClose }: ContactFormPopupPr
                   </div>
                 ))}
               </div>
+              {errors.interest && <p className="text-red-400 text-xs mt-1 font-nunito">{errors.interest}</p>}
             </div>
 
             {/* Message Field */}

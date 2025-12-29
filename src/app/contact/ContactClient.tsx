@@ -105,6 +105,23 @@ export default function ContactClient() {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
+
+    // Name restriction: Alphabets and spaces only
+    if (name === 'name') {
+      if (value === '' || /^[A-Za-z\s]+$/.test(value)) {
+        setFormData(prev => ({ ...prev, [name]: value }));
+      }
+      return;
+    }
+
+    // Phone restriction: Numbers only, max 10 digits
+    if (name === 'phone') {
+      if (value === '' || (/^\d+$/.test(value) && value.length <= 10)) {
+        setFormData(prev => ({ ...prev, [name]: value }));
+      }
+      return;
+    }
+
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
@@ -112,8 +129,42 @@ export default function ContactClient() {
     setFormData(prev => ({ ...prev, interest: value }));
   };
 
+  const [errors, setErrors] = useState<{ [key: string]: string }>({});
+
+  const validateForm = () => {
+    const newErrors: { [key: string]: string } = {};
+
+    // Name validation: alphabets only
+    if (!/^[A-Za-z\s]+$/.test(formData.name)) {
+      newErrors.name = 'Name should only contain alphabets';
+    }
+
+    // Email validation
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = 'Please enter a valid email address';
+    }
+
+    // Phone validation: 10 digits only
+    if (!/^\d{10}$/.test(formData.phone)) {
+      newErrors.phone = 'Phone number must be exactly 10 digits';
+    }
+
+    // Interest validation
+    if (!formData.interest) {
+      newErrors.interest = 'Please select an option';
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (!validateForm()) {
+      return;
+    }
+
     setIsSubmitting(true);
     setSubmitStatus(null);
 
@@ -283,6 +334,7 @@ export default function ContactClient() {
                           placeholder="Enter your name"
                         />
                       </div>
+                      {errors.name && <p className="text-red-400 text-xs mt-1 font-nunito">{errors.name}</p>}
                     </div>
 
                     {/* Email Field */}
@@ -303,6 +355,7 @@ export default function ContactClient() {
                           placeholder="Enter your email"
                         />
                       </div>
+                      {errors.email && <p className="text-red-400 text-xs mt-1 font-nunito">{errors.email}</p>}
                     </div>
 
                     {/* Phone Field */}
@@ -323,6 +376,7 @@ export default function ContactClient() {
                           placeholder="Enter your phone number"
                         />
                       </div>
+                      {errors.phone && <p className="text-red-400 text-xs mt-1 font-nunito">{errors.phone}</p>}
                     </div>
 
                     {/* State Field */}
@@ -414,6 +468,7 @@ export default function ContactClient() {
                         </div>
                       ))}
                     </div>
+                    {errors.interest && <p className="text-red-400 text-xs mt-1 font-nunito">{errors.interest}</p>}
                   </div>
 
                   {/* Message Field */}

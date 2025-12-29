@@ -10,16 +10,55 @@ export default function BlogSidebarForm() {
     message: ''
   });
 
+  const [errors, setErrors] = useState<{ [key: string]: string }>({});
+
+  const validateForm = () => {
+    const newErrors: { [key: string]: string } = {};
+
+    if (!/^[A-Za-z\s]+$/.test(formData.name)) {
+      newErrors.name = 'Alphabets only';
+    }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = 'Invalid email';
+    }
+
+    if (!/^\d{10}$/.test(formData.phone)) {
+      newErrors.phone = '10 digits only';
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
+    if (validateForm()) {
+      // Handle form submission
+      console.log('Form submitted:', formData);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+
+    if (name === 'name') {
+      if (value === '' || /^[A-Za-z\s]+$/.test(value)) {
+        setFormData({ ...formData, [name]: value });
+      }
+      return;
+    }
+
+    if (name === 'phone') {
+      if (value === '' || (/^\d+$/.test(value) && value.length <= 10)) {
+        setFormData({ ...formData, [name]: value });
+      }
+      return;
+    }
+
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [name]: value
     });
   };
 
@@ -59,6 +98,7 @@ export default function BlogSidebarForm() {
             className="w-full px-4 py-2.5 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/40 font-nunito text-sm focus:outline-none focus:border-[#FFB703] focus:bg-white/15 transition-all"
             placeholder="Enter your name"
           />
+          {errors.name && <p className="text-red-400 text-xs mt-1 font-nunito">{errors.name}</p>}
         </div>
 
         <div>
@@ -75,6 +115,7 @@ export default function BlogSidebarForm() {
             className="w-full px-4 py-2.5 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/40 font-nunito text-sm focus:outline-none focus:border-[#FFB703] focus:bg-white/15 transition-all"
             placeholder="your@email.com"
           />
+          {errors.email && <p className="text-red-400 text-xs mt-1 font-nunito">{errors.email}</p>}
         </div>
 
         <div>
@@ -91,6 +132,7 @@ export default function BlogSidebarForm() {
             className="w-full px-4 py-2.5 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/40 font-nunito text-sm focus:outline-none focus:border-[#FFB703] focus:bg-white/15 transition-all"
             placeholder="+91 XXXXX XXXXX"
           />
+          {errors.phone && <p className="text-red-400 text-xs mt-1 font-nunito">{errors.phone}</p>}
         </div>
 
         <div>

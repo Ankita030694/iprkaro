@@ -233,18 +233,20 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
     
     if (!formData.name.trim()) {
       newErrors.name = 'Name is required';
+    } else if (!/^[A-Za-z\s]+$/.test(formData.name)) {
+      newErrors.name = 'Alphabets only';
     }
     
     if (!formData.phone.trim()) {
       newErrors.phone = 'Phone number is required';
-    } else if (!/^\d{10}$/.test(formData.phone.replace(/\D/g, ''))) {
-      newErrors.phone = 'Please enter a valid 10-digit phone number';
+    } else if (!/^\d{10}$/.test(formData.phone)) {
+      newErrors.phone = '10 digits only';
     }
     
     if (!formData.email.trim()) {
       newErrors.email = 'Email is required';
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = 'Please enter a valid email address';
+      newErrors.email = 'Invalid email';
     }
     
     if (!formData.state.trim()) {
@@ -261,10 +263,21 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
+
+    if (name === 'name') {
+      if (value === '' || /^[A-Za-z\s]+$/.test(value)) {
+        setFormData(prev => ({ ...prev, [name]: value }));
+      }
+    } else if (name === 'phone') {
+      if (value === '' || (/^\d+$/.test(value) && value.length <= 10)) {
+        setFormData(prev => ({ ...prev, [name]: value }));
+      }
+    } else {
+      setFormData(prev => ({
+        ...prev,
+        [name]: value
+      }));
+    }
     
     // Clear error when user starts typing
     if (errors[name]) {
@@ -1187,7 +1200,7 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
                       placeholder="Enter your name"
                       required
                     />
-                    {errors.name && <p className="text-red-400 text-sm mt-0.5">{errors.name}</p>}
+                    {errors.name && <p className="text-red-400 text-xs mt-1 font-nunito">{errors.name}</p>}
                   </div>
 
                   {/* Phone Field */}
@@ -1206,7 +1219,7 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
                       }`}
                       required
                     />
-                    {errors.phone && <p className="text-red-400 text-sm mt-0.5">{errors.phone}</p>}
+                    {errors.phone && <p className="text-red-400 text-xs mt-1 font-nunito">{errors.phone}</p>}
                   </div>
 
               {/* Email Field */}
@@ -1225,7 +1238,7 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
                   }`}
                   required
                 />
-                {errors.email && <p className="text-red-400 text-sm mt-0.5">{errors.email}</p>}
+                {errors.email && <p className="text-red-400 text-xs mt-1 font-nunito">{errors.email}</p>}
               </div>
 
                   {/* State Field */}
@@ -1284,7 +1297,7 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
                         <option value="Lakshadweep" className="bg-[#121212] text-white">Lakshadweep</option>
                         <option value="Puducherry" className="bg-[#121212] text-white">Puducherry</option>
                     </select>
-                    {errors.state && <p className="text-red-400 text-sm mt-0.5">{errors.state}</p>}
+                    {errors.state && <p className="text-red-400 text-xs mt-1 font-nunito">{errors.state}</p>}
                   </div>
 
                   {/* Trademark Searched Field */}
@@ -1376,7 +1389,7 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
                       <option value="44" className="bg-[#121212] text-white">Class 44 - Medical & Veterinary Services</option>
                       <option value="45" className="bg-[#121212] text-white">Class 45 - Legal & Security Services</option>
                     </select>
-                    {errors.class && <p className="text-red-400 text-sm mt-0.5">{errors.class}</p>}
+                    {errors.class && <p className="text-red-400 text-xs mt-1 font-nunito">{errors.class}</p>}
                   </div>
 
               {/* Submit Button */}
@@ -1474,7 +1487,7 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
                   placeholder="Enter your name"
                   required
                 />
-                {errors.name && <p className="text-red-400 text-sm mt-0.5">{errors.name}</p>}
+                {errors.name && <p className="text-red-400 text-xs mt-1 font-nunito">{errors.name}</p>}
               </div>
 
               {/* Phone Field */}
@@ -1493,7 +1506,7 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
                   }`}
                   required
                 />
-                {errors.phone && <p className="text-red-400 text-sm mt-0.5">{errors.phone}</p>}
+                {errors.phone && <p className="text-red-400 text-xs mt-1 font-nunito">{errors.phone}</p>}
               </div>
 
               {/* Email Field */}
@@ -1512,7 +1525,7 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
                   }`}
                   required
                 />
-                {errors.email && <p className="text-red-400 text-sm mt-0.5">{errors.email}</p>}
+                {errors.email && <p className="text-red-400 text-xs mt-1 font-nunito">{errors.email}</p>}
               </div>
 
               {/* State Field */}
@@ -1571,7 +1584,7 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
                   <option value="Lakshadweep" className="bg-[#0C002B] text-white">Lakshadweep</option>
                   <option value="Puducherry" className="bg-[#0C002B] text-white">Puducherry</option>
                 </select>
-                {errors.state && <p className="text-red-400 text-sm mt-0.5">{errors.state}</p>}
+                {errors.state && <p className="text-red-400 text-xs mt-1 font-nunito">{errors.state}</p>}
               </div>
 
               {/* Trademark Searched Field */}
@@ -1659,7 +1672,7 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
                   <option value="44" className="bg-[#0C002B] text-white">Class 44 - Medical & Veterinary Services</option>
                   <option value="45" className="bg-[#0C002B] text-white">Class 45 - Legal & Security Services</option>
                 </select>
-                {errors.class && <p className="text-red-400 text-sm mt-0.5">{errors.class}</p>}
+                {errors.class && <p className="text-red-400 text-xs mt-1 font-nunito">{errors.class}</p>}
               </div>
 
               {/* Submit Button */}
