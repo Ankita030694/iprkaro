@@ -26,9 +26,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.iprkaro.com'),
   title: "Trademark Registration India | IPR Karo",
   description: "Instant trademark search, risk checks, and online registration. Register your trademark with AI-powered reports for fast, secure brand protection. Start in under 60 seconds with IPR Karo.",
-  alternates: {
-    canonical: "/",
-  },
+
   robots: {
     index: true,
     follow: true,
