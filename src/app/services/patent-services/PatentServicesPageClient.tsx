@@ -1151,6 +1151,7 @@ Register your patent today with IPRKaro to safeguard your innovation, secure you
                   </span>
                 </div>
               </div>
+              </div>
             </div>
           </div>
         </div>
