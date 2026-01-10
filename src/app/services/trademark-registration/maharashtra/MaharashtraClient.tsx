@@ -203,6 +203,21 @@ export default function MaharashtraClient() {
               <p className="text-white/90 font-nunito text-base leading-relaxed">
                 Trademark registration provides legal recognition of your brand, prevents others from using similar marks, and establishes your ownership rights. This is particularly important in Maharashtra's competitive business environment, where brand differentiation and protection are essential for market success.
               </p>
+
+              {/* Unique Maharashtra Content: Mumbai Head Office */}
+              <div className="mt-6 p-5 rounded-md border border-[#FFB703]/30 bg-[#FFB703]/5">
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-full bg-[#FFB703]/20 text-[#FFB703]">
+                    <i className="fas fa-building text-xl"></i>
+                  </div>
+                  <div>
+                    <h3 className="text-white font-nunito text-lg font-bold mb-2">The Mumbai Registry Advantage</h3>
+                    <p className="text-white/90 font-nunito text-sm leading-relaxed">
+                      <strong>Did you know?</strong> Mumbai is home to the <strong>Head Office of the Trade Marks Registry</strong> in India. Located at Antop Hill, this office not only handles applications for Maharashtra, Goa, and Madhya Pradesh but also serves as the central hub for trademark policy and administration nationwide. Filing your application in Maharashtra places you at the very heart of India's intellectual property ecosystem.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
 

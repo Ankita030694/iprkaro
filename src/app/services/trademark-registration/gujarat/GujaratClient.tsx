@@ -206,6 +206,21 @@ export default function GujaratClient() {
               <p className="text-white/90 font-nunito text-base leading-relaxed">
                 In Gujarat's diverse industrial landscape, from the diamond polishing units of Surat to the pharmaceutical companies of Vadodara, trademark registration serves as a critical tool for brand protection. It helps businesses establish their unique identity in crowded markets and provides legal recourse against infringement, which is essential for maintaining competitive advantage in Gujarat's thriving economy.
               </p>
+
+              {/* Unique Gujarat Content: Industrial Hub & Ahmedabad Registry */}
+              <div className="mt-6 p-5 rounded-md border border-[#FFB703]/30 bg-[#FFB703]/5">
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-full bg-[#FFB703]/20 text-[#FFB703]">
+                    <i className="fas fa-industry text-xl"></i>
+                  </div>
+                  <div>
+                    <h3 className="text-white font-nunito text-lg font-bold mb-2">IP for Manufacturing Leaders</h3>
+                    <p className="text-white/90 font-nunito text-sm leading-relaxed">
+                      <strong>Did you know?</strong> Gujarat is unique because its businesses heavily rely on <strong>Class 24 (Textiles)</strong>, <strong>Class 5 (Pharmaceuticals)</strong>, and <strong>Class 1 (Chemicals)</strong>. The <strong>Trade Marks Registry in Ahmedabad</strong> is specially equipped to handle these industrial applications, serving not just Gujarat but also Rajasthan. For MSMEs in GIDC zones, a registered trademark is often the first step toward global exports.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
 

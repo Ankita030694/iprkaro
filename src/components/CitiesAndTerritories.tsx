@@ -1,7 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
 
-const CitiesAndTerritories: React.FC = () => {
+interface CitiesAndTerritoriesProps {
+  serviceType?: 'trademark' | 'patent' | 'copyright';
+}
+
+const CitiesAndTerritories: React.FC<CitiesAndTerritoriesProps> = ({ serviceType = 'trademark' }) => {
   // List of all major Indian cities and locations (35 total)
   const allLocations = [
     'Andhra Pradesh',
@@ -49,8 +53,33 @@ const CitiesAndTerritories: React.FC = () => {
       .replace(/\s+/g, '-') // Replace spaces with hyphens
       .replace(/&/g, 'and') // Replace & with 'and'
       .trim();
-    return `trademark-registration-in-${slug}`;
+    return slug;
   };
+
+  const getServicePath = (type: string) => {
+    switch (type) {
+      case 'patent':
+        return 'patent-services';
+      case 'copyright':
+        return 'copyright-protection';
+      default:
+        return 'trademark-registration';
+    }
+  };
+
+  const getServiceTitle = (type: string) => {
+    switch (type) {
+      case 'patent':
+        return 'Patent Registration';
+      case 'copyright':
+        return 'Copyright Registration';
+      default:
+        return 'Trademark Registration';
+    }
+  };
+
+  const basePath = getServicePath(serviceType);
+  const serviceTitle = getServiceTitle(serviceType);
 
   return (
     <section className="bg-[#0C002B] py-16 sm:py-20 md:py-24">
@@ -58,10 +87,10 @@ const CitiesAndTerritories: React.FC = () => {
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-white font-nunito font-semibold text-2xl sm:text-3xl md:text-4xl mb-4 sm:mb-6">
-            Nationwide Trademark Registration Coverage
+            Nationwide {serviceTitle} Coverage
           </h2>
           <p className="text-[rgba(255,255,255,0.8)] font-nunito text-base sm:text-lg max-w-3xl mx-auto">
-            IPR Karo provides comprehensive trademark registration services across all major cities and union territories of India
+            IPR Karo provides comprehensive {serviceTitle.toLowerCase()} services across all major cities and union territories of India
           </p>
         </div>
 
@@ -75,7 +104,7 @@ const CitiesAndTerritories: React.FC = () => {
             {allLocations.map((location, index) => (
               <Link
                 key={`location-${index}`}
-                href={`/services/trademark-registration/${generateLocationSlug(location)}`}
+                href={`/services/${basePath}/${generateLocationSlug(location)}`}
                 className="group cursor-pointer"
               >
                 {/* Minimal Card Design */}
@@ -95,11 +124,11 @@ const CitiesAndTerritories: React.FC = () => {
         <div className="mt-12 sm:mt-16 text-center">
           <div className="bg-gradient-to-r from-[rgba(255,183,3,0.1)] to-[rgba(6,154,129,0.1)] rounded-xl p-6 sm:p-8 border border-[rgba(255,183,3,0.2)]">
             <h4 className="text-white font-nunito font-semibold text-lg sm:text-xl mb-4">
-              Complete India Coverage for Trademark Registration
+              Complete India Coverage for {serviceTitle}
             </h4>
             <p className="text-[rgba(255,255,255,0.8)] font-nunito text-sm sm:text-base leading-relaxed max-w-4xl mx-auto">
               From bustling metropolitan cities like Mumbai, Delhi, Bangalore, and Chennai to union territories like Chandigarh, Jammu & Kashmir, and Lakshadweep,
-              IPR Karo ensures seamless trademark registration services across every corner of India. Our AI-powered platform and expert legal team
+              IPR Karo ensures seamless {serviceTitle.toLowerCase()} services across every corner of India. Our AI-powered platform and expert legal team
               provide comprehensive coverage for startups, SMEs, and enterprises nationwide, covering all 35 major locations.
             </p>
           </div>

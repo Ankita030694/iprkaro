@@ -206,6 +206,21 @@ export default function WestBengalClient() {
               <p className="text-white/90 font-nunito text-base leading-relaxed">
                 Trademark registration creates a public record of your ownership, making it easier to enforce your rights against infringers. It also serves as a valuable business asset that can appreciate over time, contribute to your company's valuation, and be licensed or transferred to others. In West Bengal's evolving business environment, where startups and established businesses coexist, having a registered trademark provides a competitive advantage and legal security.
               </p>
+
+              {/* Unique West Bengal Content: Heritage Brands & Tea Industry */}
+              <div className="mt-6 p-5 rounded-md border border-[#FFB703]/30 bg-[#FFB703]/5">
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-full bg-[#FFB703]/20 text-[#FFB703]">
+                    <i className="fas fa-leaf text-xl"></i>
+                  </div>
+                  <div>
+                    <h3 className="text-white font-nunito text-lg font-bold mb-2">Protecting Bengal's Legacy</h3>
+                    <p className="text-white/90 font-nunito text-sm leading-relaxed">
+                      <strong>Did you know?</strong> West Bengal is home to India's first Geographical Indication (GI) – <strong>Darjeeling Tea</strong>. This legacy of IP protection extends to Kolkata's iconic sweet shops, textile houses, and publishing firms. The <strong>Kolkata Trade Marks Registry</strong> (Salt Lake) handles applications for the entire East and North-East region. For heritage brands, securing "continuous prior use" status is often key to winning trademark battles.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
 

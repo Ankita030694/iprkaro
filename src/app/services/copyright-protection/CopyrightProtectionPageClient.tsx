@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import CitiesAndTerritories from '@/components/CitiesAndTerritories';
 
 export default function CopyrightProtectionPageClient() {
   const router = useRouter();
@@ -1730,6 +1731,9 @@ Get your copyright registered today with IPRKaro to protect your creativity, mon
                 </div>
               </div>
             ))}
+
+            {/* Add CitiesAndTerritories for Internal Linking */}
+            <CitiesAndTerritories serviceType="copyright" />
           </div>
         </div>
       </div>

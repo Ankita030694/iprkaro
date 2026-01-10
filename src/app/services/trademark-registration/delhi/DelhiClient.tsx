@@ -246,6 +246,21 @@ export default function DelhiClient() {
                   </p>
                 </div>
               </div>
+
+              {/* Unique Delhi Content: IPD */}
+              <div className="mt-6 p-5 rounded-md border border-[#FFB703]/30 bg-[#FFB703]/5">
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-full bg-[#FFB703]/20 text-[#FFB703]">
+                    <i className="fas fa-balance-scale text-xl"></i>
+                  </div>
+                  <div>
+                    <h3 className="text-white font-nunito text-lg font-bold mb-2">The Delhi High Court Advantage</h3>
+                    <p className="text-white/90 font-nunito text-sm leading-relaxed">
+                      <strong>Did you know?</strong> Delhi is arguably the best jurisdiction for IP owners in India. The <strong>Delhi High Court</strong> was the first in the country to establish a dedicated <strong>Intellectual Property Division (IPD)</strong>. This means if your trademark is ever infringed, your case is heard by specialized judges with deep domain expertise, ensuring faster and more effective justice compared to regular commercial courts.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
 

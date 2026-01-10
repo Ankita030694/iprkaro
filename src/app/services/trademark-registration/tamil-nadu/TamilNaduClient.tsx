@@ -165,6 +165,21 @@ export default function TamilNaduClient() {
                 </p>
               </div>
             </div>
+
+            {/* Unique Tamil Nadu Content: Chennai IP Hub & GI Registry */}
+            <div className="mt-6 p-5 rounded-xl border border-[#FFB703]/30 bg-[#FFB703]/5">
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-full bg-[#FFB703]/20 text-[#FFB703]">
+                  <i className="fas fa-landmark text-xl"></i>
+                </div>
+                <div>
+                  <h3 className="text-white font-nunito text-lg font-bold mb-2">The IP Capital of the South</h3>
+                  <p className="text-white/90 font-nunito text-sm leading-relaxed">
+                    <strong>Did you know?</strong> Chennai is often called the "Intellectual Property Capital of South India." It houses the <strong>Head Office of the Geographical Indications (GI) Registry</strong> for the entire country. Tamil Nadu leads India in GI tags (e.g., Kancheepuram Silk, Thanjavur Paintings). This rich culture of IP protection makes the <strong>Chennai Trademark Registry</strong> one of the most efficient and active offices in the nation.
+                  </p>
+                </div>
+              </div>
+            </div>
           </section>
 
           {/* Benefits */}

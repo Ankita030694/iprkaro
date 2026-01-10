@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import CitiesAndTerritories from '@/components/CitiesAndTerritories';
 
 export default function PatentServicesPageClient() {
   const router = useRouter();
@@ -1146,11 +1147,10 @@ Register your patent today with IPRKaro to safeguard your innovation, secure you
                   }}
                 >
                   <span className="text-white font-nunito text-xs md:text-lg font-medium">
-                    Power of Attorney (Form-1 authorization)
+                     Power of Attorney (Form-1 authorization)
                   </span>
                 </div>
               </div>
-            </div>
             </div>
           </div>
         </div>
