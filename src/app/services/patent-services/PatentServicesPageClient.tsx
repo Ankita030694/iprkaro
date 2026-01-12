@@ -1718,6 +1718,8 @@ Register your patent today with IPRKaro to safeguard your innovation, secure you
         </div>
       </div>
     </section>
+
+    <CitiesAndTerritories serviceType="patent" />
       </div>
     </div>
   );
