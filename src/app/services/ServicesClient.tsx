@@ -311,7 +311,7 @@ function ServicesHeroSection() {
               </Link>
 
               {/* Service 3 - Patent Services */}
-              <Link href="/services/patent-services">
+              <Link href="/services/patent-filing">
                 <div
                   className="p-3 md:p-6 text-center space-y-3 md:space-y-5 relative group transition-all duration-300 hover:scale-105 cursor-pointer"
                   style={{
@@ -634,4 +634,3 @@ export default function ServicesClient() {
     </>
   );
 }
-

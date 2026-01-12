@@ -73,7 +73,7 @@ export default function OurServices() {
       id: 'patent',
       title: 'Patent Services',
       subtitle: 'Protect inventions with AI-optimized patent search and application file quickly, stay ahead of the competition.',
-      link: '/services/patent-services',
+      link: '/services/patent-filing',
       items: [
         'Patent registration for inventions with AI-powered search and risk analysis',
         'How to file a patent: Quick patent search, filing, and legal compliance in India',

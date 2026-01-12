@@ -1,18 +1,15 @@
-import type { Metadata } from "next";
+import { Metadata } from 'next';
+import { ReactNode } from 'react';
 
 export const metadata: Metadata = {
-  title: "IP Protection Services India | IPR Karo",
-  description: "Comprehensive intellectual property services including trademark registration, copyright protection, and patent filing. AI-powered solutions with expert legal support.",
-  alternates: {
-    canonical: "https://iprkaro.com/services",
-  },
+  title: 'Legal Services | IPR Karo',
+  description: 'Explore our comprehensive legal services including trademark registration, patent filing, copyright protection, and more.',
 };
 
-export default function ServicesLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return <>{children}</>;
+export default function ServicesLayout({ children }: { children: ReactNode }) {
+  return (
+    <div className="w-full">
+      {children}
+    </div>
+  );
 }
-

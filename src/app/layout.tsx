@@ -132,7 +132,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${nunito.variable} antialiased overflow-x-hidden`}
       >
-        <div className="w-full overflow-x-hidden">
+        <div className="w-full">
           <ConditionalLayout>
             {children}
           </ConditionalLayout>

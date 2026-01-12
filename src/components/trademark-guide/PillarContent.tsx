@@ -1292,7 +1292,7 @@ export default function PillarContent() {
                 Trademark Registration
               </Link>
               <Link
-                href="/services/patent-services"
+                href="/services/patent-filing"
                 className="px-3 py-1.5 rounded-md font-nunito text-sm font-semibold transition-all duration-300 hover:scale-105"
                 style={{
                   background: 'rgba(255, 255, 255, 0.1)',

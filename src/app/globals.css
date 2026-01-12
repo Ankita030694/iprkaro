@@ -258,6 +258,18 @@ img, svg, picture {
   display: none;  /* Safari and Chrome */
 }
 
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgb(110, 94, 147);
+  border-radius: 20px;
+}
+
 /* Prevent horizontal overflow */
 .overflow-x-hidden {
   overflow-x: hidden;

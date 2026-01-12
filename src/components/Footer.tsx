@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="text-white" style={{ backgroundColor: '#202020' }}>
       <div className="max-w-8xl px-4 lg:px-24 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-6 gap-8 lg:gap-16">
           {/* Logo and Email Signup Section */}
           <div className="lg:col-span-2">
             {/* Logo */}
@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Mobile Layout: Quick Links and About side by side */}
+          {/* Mobile Layout: Quick Links, Services and About */}
           <div className="lg:hidden grid grid-cols-2 gap-8">
             {/* Quick Links */}
             <div>
@@ -62,11 +62,7 @@ const Footer: React.FC = () => {
                     About Us
                   </a>
                 </li>
-                <li>
-                  <a href="/services" className="text-sm hover:text-cyan-300 transition-colors">
-                     Services
-                  </a>
-                </li>
+
                 <li>
                   <a href="/blog" className="text-sm hover:text-cyan-300 transition-colors">
                     Blogs
@@ -80,21 +76,34 @@ const Footer: React.FC = () => {
               </ul>
             </div>
 
-            {/* About */}
+            {/* Services - Mobile */}
             <div>
-              <h3 className="text-sm font-semibold mb-4 uppercase">About</h3>
+              <h3 className="text-sm font-semibold mb-4 uppercase">Our Services</h3>
               <ul className="space-y-2">
-              <li>
-                  <a href="/trademark-registration" className="text-sm hover:text-cyan-300 transition-colors">
-                    Trademark Registration 
-                  </a>
-                </li>
-              <li>
-                  <a href="/trademark-registration-guide" className="text-sm hover:text-cyan-300 transition-colors">
-                    Trademark Registration Guide
+                <li>
+                  <a href="/services/trademark-registration" className="text-sm hover:text-cyan-300 transition-colors">
+                    Trademark Registration
                   </a>
                 </li>
                 <li>
+                  <a href="/services/copyright-protection" className="text-sm hover:text-cyan-300 transition-colors">
+                    Copyright Protection
+                  </a>
+                </li>
+                <li>
+                  <a href="/services/patent-filing" className="text-sm hover:text-cyan-300 transition-colors">
+                    Patent Filing
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* About */}
+            <div className="col-span-2 sm:col-span-1">
+              <h3 className="text-sm font-semibold mb-4 uppercase">About</h3>
+              <ul className="space-y-2">
+
+              <li>
                   <a href="/contact" className="text-sm hover:text-cyan-300 transition-colors">
                     Contact Us
                   </a>
@@ -132,6 +141,7 @@ const Footer: React.FC = () => {
                   Services
                 </a>
               </li>
+
               <li>
                 <a href="/blog" className="text-sm hover:text-cyan-300 transition-colors">
                   Blogs
@@ -145,20 +155,33 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Desktop Layout: About */}
+          {/* Desktop Layout: Services */}
           <div className="hidden lg:block lg:col-span-1">
-            <h3 className="text-sm font-semibold mb-4 uppercase">About</h3>
+            <h3 className="text-sm font-semibold mb-4 uppercase">Our Services</h3>
             <ul className="space-y-2">
               <li>
-                <a href="/trademark-registration" className="text-sm hover:text-cyan-300 transition-colors">
+                <a href="/services/trademark-registration" className="text-sm hover:text-cyan-300 transition-colors">
                   Trademark Registration
                 </a>
               </li>
               <li>
-                <a href="/trademark-registration-guide" className="text-sm hover:text-cyan-300 transition-colors">
-                  Trademark Registration Guide
+                <a href="/services/copyright-protection" className="text-sm hover:text-cyan-300 transition-colors">
+                  Copyright Protection
                 </a>
               </li>
+              <li>
+                <a href="/services/patent-filing" className="text-sm hover:text-cyan-300 transition-colors">
+                  Patent Filing
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Desktop Layout: About */}
+          <div className="hidden lg:block lg:col-span-1">
+            <h3 className="text-sm font-semibold mb-4 uppercase">About</h3>
+            <ul className="space-y-2">
+
               <li>
                 <a href="/privacy-policy" className="text-sm hover:text-cyan-300 transition-colors">
                   Privacy Policy
@@ -169,11 +192,7 @@ const Footer: React.FC = () => {
                   Terms & Conditions
                 </a>
               </li>
-              <li>
-                <a href="/contact" className="text-sm hover:text-cyan-300 transition-colors">
-                  Contact Us
-                </a>
-              </li>
+              
               
             </ul>
           </div>
