@@ -76,7 +76,7 @@ const authorBios = {
   "Anuj Anand Malik": {
     name: "Anuj Anand Malik",
     description: "Anuj Anand Malik, Founder of AMA Legal Solutions, is a trusted advocate, loan settlement expert, legal advisor, and banking lawyer. With over a decade of experience in loan settlement, corporate law, financial disputes, and compliance, he leads a result-driven law firm based in India that helps individuals, startups, and businesses achieve legal and financial stability.",
-    image: "/anujbhiya.svg",
+    image: "/anujbhiya.png",
     linkedInUrl: "https://www.linkedin.com/in/iamanujmalik/"
   },
   "Shrey Arora": {
@@ -372,12 +372,12 @@ const ArticleDetail = memo(function ArticleDetail({ slug, initialReviews = [] }:
           <i className="fas fa-book-open text-[#FFB703] text-6xl mb-6" aria-hidden="true"></i>
           <h1 className="text-3xl font-bold text-white mb-4 font-nunito">Article Not Found</h1>
           <p className="text-white/70 mb-8 font-nunito">We couldn't find the blog post you're looking for.</p>
-          <Link href="/blog" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-nunito font-bold text-sm transition-all duration-300 hover:scale-105" style={{
+          <Link href="/resources" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-nunito font-bold text-sm transition-all duration-300 hover:scale-105" style={{
             background: 'linear-gradient(135deg, #FFB703 0%, #FFA000 100%)',
             color: '#0C002B'
           }}>
             <i className="fas fa-arrow-left text-xs" aria-hidden="true"></i>
-            Return to Blog
+            Return to Resources
           </Link>
         </div>
       </div>
@@ -431,7 +431,7 @@ const ArticleDetail = memo(function ArticleDetail({ slug, initialReviews = [] }:
             <div className="flex items-center justify-center gap-1.5 mb-3 text-[10px] lg:text-xs">
               <span className="text-white/60 font-nunito">Home</span>
               <i className="fas fa-chevron-right text-white/40 text-[8px]" aria-hidden="true"></i>
-              <span className="text-white/60 font-nunito">Blog</span>
+              <span className="text-white/60 font-nunito">Resources</span>
               <i className="fas fa-chevron-right text-white/40 text-[8px]" aria-hidden="true"></i>
               <span className="text-[#FFB703] font-nunito font-medium">Article</span>
             </div>
@@ -669,7 +669,7 @@ const ArticleDetail = memo(function ArticleDetail({ slug, initialReviews = [] }:
                     </h3>
                     <div className="space-y-4">
                   {relatedBlogs.map((article) => (
-                    <Link key={article.id} href={`/blog/${article.slug}`} prefetch={true}>
+                    <Link key={article.id} href={`/resources/${article.slug}`} prefetch={true}>
                           <div className="group rounded-xl overflow-hidden border border-white/10 hover:border-[#FFB703]/50 transition-all bg-white/5 hover:bg-white/10">
                             {article.image && (
                               <div className="relative h-32 overflow-hidden">

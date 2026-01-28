@@ -9,7 +9,7 @@ export default function OurServices() {
       id: 'trademark',
       title: 'Trademark Registration',
       subtitle: 'Register your trademark online start with our AI trademark search, review your report, and file instantly.',
-      link: '/services/trademark-registration',
+      link: '/service/trademark-registration',
       items: [
         'AI-powered trademark search for instant conflict detection and brand availability',
         'Register trademark online with a fast, step-by-step guided application',
@@ -42,7 +42,7 @@ export default function OurServices() {
       id: 'copyright',
       title: 'Copyright Protection',
       subtitle: 'Secure creative works digitally AI copyright search and seamless online application keep your assets protected.',
-      link: '/services/copyright-protection',
+      link: '/service/copyright-protection',
       items: [
         'Online copyright registration for digital content and creative works',
         'AI copyright search for originality and infringement checks',
@@ -73,7 +73,7 @@ export default function OurServices() {
       id: 'patent',
       title: 'Patent Services',
       subtitle: 'Protect inventions with AI-optimized patent search and application file quickly, stay ahead of the competition.',
-      link: '/services/patent-filing',
+      link: '/service/patent-filing',
       items: [
         'Patent registration for inventions with AI-powered search and risk analysis',
         'How to file a patent: Quick patent search, filing, and legal compliance in India',
@@ -190,7 +190,7 @@ export default function OurServices() {
           <p className="text-white/80 font-nunito text-[12px] md:text-[14px] mb-4">
             Need help choosing the right service? Our experts are here to guide you.
           </p>
-          <Link href="/contact">
+          <Link href="/contact-us">
             <button 
               className="px-6 py-3 rounded-[10px] font-nunito font-semibold text-[14px] lg:text-[15px] border-2 transition-all duration-300 hover:scale-105 hover:bg-[#FFB703]/10"
               style={{

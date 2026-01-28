@@ -184,7 +184,7 @@ export default function TrademarkRiskReduction() {
              <h2 className="text-xl md:text-2xl font-light text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
                Registration is just the start. <span className="text-white font-medium">Protect your brand</span> from infringement, <span className="text-white font-medium">mitigate legal liability</span>, and bulletproof your <span className="text-white font-medium">IP portfolio</span> against future threats.
              </h2>
-             <Link href="/contact">
+             <Link href="/contact-us">
                <button className="bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-3 px-8 rounded-full transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(110,94,147,0.3)] text-lg">
                  Get A Risk Audit
                </button>
@@ -532,7 +532,7 @@ export default function TrademarkRiskReduction() {
                       Don't leave your brand's safety to chance. Identify risks, mitigate threats, and build a fortress around your intellectual property with our expert strategies.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
-                      <Link href="/contact">
+                      <Link href="/contact-us">
                         <button className="bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-4 px-8 md:px-12 rounded-full transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(110,94,147,0.4)] text-lg w-full sm:w-auto">
                           Start Risk Free
                         </button>
@@ -558,7 +558,7 @@ export default function TrademarkRiskReduction() {
                   <p className="text-sm opacity-90 mb-6 leading-relaxed">
                     Unsure about your brand's safety? Get a quick consultation with our risk analysts.
                   </p>
-                  <Link href="/contact" className="block w-full">
+                  <Link href="/contact-us" className="block w-full">
                     <button className="w-full bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-3 px-4 rounded-lg transition-all shadow-md text-sm">
                       Check My Brand Risk
                     </button>

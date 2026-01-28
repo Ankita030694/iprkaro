@@ -165,7 +165,7 @@ function ServicesHeroSection() {
           <div className="w-full">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 max-w-6xl mx-auto">
               {/* Service 1 - Trademark Registration */}
-              <Link href="/services/trademark-registration">
+              <Link href="/service/trademark-registration">
                 <div
                   className="p-3 md:p-6 text-center space-y-3 md:space-y-5 relative group transition-all duration-300 hover:scale-105 cursor-pointer"
                   style={{
@@ -238,7 +238,7 @@ function ServicesHeroSection() {
               </Link>
 
               {/* Service 2 - Copyright Protection */}
-              <Link href="/services/copyright-protection">
+              <Link href="/service/copyright-protection">
                 <div
                   className="p-3 md:p-6 text-center space-y-3 md:space-y-5 relative group transition-all duration-300 hover:scale-105 cursor-pointer"
                   style={{
@@ -311,7 +311,7 @@ function ServicesHeroSection() {
               </Link>
 
               {/* Service 3 - Patent Services */}
-              <Link href="/services/patent-filing">
+              <Link href="/service/patent-filing">
                 <div
                   className="p-3 md:p-6 text-center space-y-3 md:space-y-5 relative group transition-all duration-300 hover:scale-105 cursor-pointer"
                   style={{

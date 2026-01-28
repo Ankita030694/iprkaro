@@ -112,7 +112,7 @@ export default function ThankYouPage() {
             </Link>
             
             <Link
-              href="/services/trademark-registration"
+              href="/service/trademark-registration"
               className="inline-flex items-center justify-center px-6 py-2.5 rounded-lg border-2 border-white/30 hover:border-white/50 transition-colors cursor-pointer"
             >
               <span className="text-white font-nunito text-sm sm:text-base font-medium">

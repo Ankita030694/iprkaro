@@ -104,7 +104,7 @@ const CitiesAndTerritories: React.FC<CitiesAndTerritoriesProps> = ({ serviceType
             {allLocations.map((location, index) => (
               <Link
                 key={`location-${index}`}
-                href={`/services/${basePath}/${generateLocationSlug(location)}`}
+                href={`/service/${basePath}/${generateLocationSlug(location)}`}
                 className="group cursor-pointer"
               >
                 {/* Minimal Card Design */}

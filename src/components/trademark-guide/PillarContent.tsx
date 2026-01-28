@@ -928,7 +928,7 @@ export default function PillarContent() {
                     Class selection is complex and requires expertise. Our AI-powered trademark search tool analyzes your business and recommends appropriate classes automatically.
                   </p>
                   <Link 
-                    href="/services/trademark-registration"
+                    href="/service/trademark-registration"
                     className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md font-nunito font-semibold text-xs transition-all duration-300 hover:scale-105"
                     style={{
                       background: 'linear-gradient(135deg, #FFB703, #FFA000)',
@@ -1124,7 +1124,7 @@ export default function PillarContent() {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <Link
-                href="/services/trademark-registration"
+                href="/service/trademark-registration"
                 className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-lg font-nunito font-bold text-sm transition-all duration-300 hover:scale-105"
                 style={{
                   background: 'linear-gradient(135deg, #FFB703, #FFA000)',
@@ -1138,7 +1138,7 @@ export default function PillarContent() {
               </Link>
 
               <Link
-                href="/contact"
+                href="/contact-us"
                 className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-lg font-nunito font-bold text-sm transition-all duration-300 hover:scale-105"
                 style={{
                   background: 'rgba(255, 255, 255, 0.1)',
@@ -1202,37 +1202,37 @@ export default function PillarContent() {
                 title: "How to Choose the Right Trademark Class",
                 description: "Complete guide to Nice Classification and class selection strategy",
                 icon: "fas fa-layer-group",
-                link: "/blog/trademark-class-selection"
+                link: "/resources/trademark-class-selection"
               },
               {
                 title: "Trademark vs Copyright: Key Differences",
                 description: "Understand which intellectual property protection you need",
                 icon: "fas fa-balance-scale",
-                link: "/blog/trademark-vs-copyright"
+                link: "/resources/trademark-vs-copyright"
               },
               {
                 title: "Top 10 Trademark Rejection Reasons",
                 description: "Common mistakes to avoid in your trademark application",
                 icon: "fas fa-exclamation-triangle",
-                link: "/blog/trademark-rejection-reasons"
+                link: "/resources/trademark-rejection-reasons"
               },
               {
                 title: "Trademark Objection Reply Guide",
                 description: "Step-by-step guide to responding to examination reports",
                 icon: "fas fa-reply-all",
-                link: "/blog/trademark-objection-reply"
+                link: "/resources/trademark-objection-reply"
               },
               {
                 title: "International Trademark Registration",
                 description: "Madrid Protocol and multi-country trademark protection",
                 icon: "fas fa-globe",
-                link: "/blog/international-trademark"
+                link: "/resources/international-trademark"
               },
               {
                 title: "Trademark Renewal Process",
                 description: "Keep your trademark alive with timely renewals",
                 icon: "fas fa-sync-alt",
-                link: "/blog/trademark-renewal"
+                link: "/resources/trademark-renewal"
               }
             ].map((resource, index) => (
               <Link
@@ -1281,7 +1281,7 @@ export default function PillarContent() {
             </h4>
             <div className="flex flex-wrap gap-2">
               <Link
-                href="/services/trademark-registration"
+                href="/service/trademark-registration"
                 className="px-3 py-1.5 rounded-md font-nunito text-sm font-semibold transition-all duration-300 hover:scale-105"
                 style={{
                   background: 'rgba(255, 255, 255, 0.1)',
@@ -1292,7 +1292,7 @@ export default function PillarContent() {
                 Trademark Registration
               </Link>
               <Link
-                href="/services/patent-filing"
+                href="/service/patent-filing"
                 className="px-3 py-1.5 rounded-md font-nunito text-sm font-semibold transition-all duration-300 hover:scale-105"
                 style={{
                   background: 'rgba(255, 255, 255, 0.1)',
@@ -1303,7 +1303,7 @@ export default function PillarContent() {
                 Patent Services
               </Link>
               <Link
-                href="/services/copyright-protection"
+                href="/service/copyright-protection"
                 className="px-3 py-1.5 rounded-md font-nunito text-sm font-semibold transition-all duration-300 hover:scale-105"
                 style={{
                   background: 'rgba(255, 255, 255, 0.1)',

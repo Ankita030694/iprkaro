@@ -76,7 +76,7 @@ export default function BlogListingClient() {
     title: blogs[0].title,
     excerpt: blogs[0].subtitle || blogs[0].metaDescription || '',
     date: new Date(blogs[0].date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
-    tags: ['Blog', 'Article'],
+    tags: ['Resource', 'Article'],
     image: blogs[0].image,
     slug: blogs[0].slug
   } : null;
@@ -134,7 +134,7 @@ export default function BlogListingClient() {
             <div className="flex items-center gap-3 mb-6">
               <div className="w-2 h-2 rounded-full bg-[#FFB400]"></div>
               <span className="text-[rgba(255,255,255,0.8)] font-nunito text-[11px] md:text-[13px] lg:text-[13px] font-normal tracking-wider uppercase">
-                Blogs
+                 Resources
               </span>
             </div>
 
@@ -159,13 +159,13 @@ export default function BlogListingClient() {
                 </div>
               </div>
             ) : featuredBlog ? (
-              <Link href={`/blog/${featuredBlog.slug}`}>
+              <Link href={`/resources/${featuredBlog.slug}`}>
                 <div className="grid lg:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-16 lg:mb-12 cursor-pointer group">
                   {/* Featured Image */}
                   <div className="relative">
                     <div className="relative rounded-[20px] md:rounded-[25px] overflow-hidden glass-card border border-[#16a34a]/20 p-4 md:p-8 hover:border-[#FFB400]/40 transition-all duration-300">
                       {/* Blog image */}
-                      <div className="w-full h-48 md:h-64 bg-[#1f1310] rounded-lg flex items-center justify-center overflow-hidden">
+                      <div className="w-full h-48 md:h-72 bg-[#1f1310] rounded-lg flex items-center justify-center overflow-hidden">
                         <img
                           src={featuredBlog.image}
                           alt={featuredBlog.title}
@@ -214,7 +214,7 @@ export default function BlogListingClient() {
               </Link>
             ) : (
               <div className="text-center text-white py-12">
-                <p className="text-[rgba(255,255,255,0.8)] font-nunito text-[13px]">No blogs available at the moment.</p>
+                <p className="text-[rgba(255,255,255,0.8)] font-nunito text-[13px]">No resources available at the moment.</p>
               </div>
             )}
           </div>
@@ -268,7 +268,7 @@ export default function BlogListingClient() {
               ))
             ) : blogPosts.length > 0 ? (
               blogPosts.map((post) => (
-                <Link href={`/blog/${post.slug}`} key={post.id}>
+                <Link href={`/resources/${post.slug}`} key={post.id}>
                   <div className="group cursor-pointer">
                     {/* Blog Image */}
                     <div className="relative mb-3 md:mb-4 overflow-hidden rounded-lg md:rounded-[15px] border border-[#16a34a]/20 hover:border-[#FFB400]/40 transition-all duration-300">
@@ -302,7 +302,7 @@ export default function BlogListingClient() {
               ))
             ) : (
               <div className="col-span-full text-center text-white py-12">
-                <p className="text-[rgba(255,255,255,0.8)] font-nunito text-[13px]">No blog posts available.</p>
+                <p className="text-[rgba(255,255,255,0.8)] font-nunito text-[13px]">No resources available.</p>
               </div>
             )}
           </div>

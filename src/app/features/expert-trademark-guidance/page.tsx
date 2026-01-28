@@ -177,7 +177,7 @@ export default function ExpertTrademarkGuidance() {
              <h2 className="text-xl md:text-2xl font-light text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
                Navigate the complexities of intellectual property with confidence. From seamless <span className="text-white font-medium">trademark registration</span> to complex <span className="text-white font-medium">patent services</span> and robust <span className="text-white font-medium">copyright protection</span>, we are your strategic legal partners.
              </h2>
-             <Link href="/contact">
+             <Link href="/contact-us">
                <button className="bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-3 px-8 rounded-full transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(110,94,147,0.3)] text-lg">
                  Consult an Expert
                </button>
@@ -421,7 +421,7 @@ export default function ExpertTrademarkGuidance() {
                       Don't leave your brand, inventions, and creative works vulnerable. Partner with India's top IP experts for robust protection and peace of mind.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
-                      <Link href="/contact">
+                      <Link href="/contact-us">
                         <button className="bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-4 px-8 md:px-12 rounded-full transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(110,94,147,0.4)] text-lg w-full sm:w-auto">
                           Get Free Consultation
                         </button>
@@ -447,7 +447,7 @@ export default function ExpertTrademarkGuidance() {
                   <p className="text-sm opacity-90 mb-6 leading-relaxed">
                     Connect with senior attorneys for personalized trademark, patent, and copyright guidance.
                   </p>
-                  <Link href="/contact" className="block w-full">
+                  <Link href="/contact-us" className="block w-full">
                     <button className="w-full bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-3 px-4 rounded-lg transition-all shadow-md text-sm">
                       Speak to an Expert
                     </button>

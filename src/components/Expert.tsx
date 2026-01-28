@@ -233,7 +233,7 @@ export default function Expert() {
                           
                           {/* Learn More Button */}
                           <div className="mt-4 pt-3 border-t border-white/10">
-                            <Link href={`/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`}>
+                            <Link href={`/service/${service.title.toLowerCase().replace(/\s+/g, '-')}`}>
                               <div 
                                 className="inline-flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 hover:opacity-80"
                                 style={{

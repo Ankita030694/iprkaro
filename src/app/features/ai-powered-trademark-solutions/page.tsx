@@ -173,7 +173,7 @@ export default function AiPoweredTrademarkSolutions() {
              <h2 className="text-xl md:text-2xl font-medium text-gray-300 mb-8 max-w-3xl mx-auto">
                Leveraging advanced algorithms for smarter trademark registration, robust patent services, and impenetrable copyright protection. Zero errors. Maximum speed.
              </h2>
-             <Link href="/contact">
+             <Link href="/contact-us">
                <button className="bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-3 px-8 rounded-full transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(110,94,147,0.3)] text-lg">
                  Experience The Future
                </button>
@@ -499,7 +499,7 @@ export default function AiPoweredTrademarkSolutions() {
                       Don't let outdated methods slow you down. Secure your brand with the precision of Artificial Intelligence and the assurance of expert legal counsel.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
-                      <Link href="/contact">
+                      <Link href="/contact-us">
                         <button className="bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-4 px-8 md:px-12 rounded-full transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(110,94,147,0.4)] text-lg w-full sm:w-auto">
                           Get Started Now
                         </button>
@@ -525,7 +525,7 @@ export default function AiPoweredTrademarkSolutions() {
                   <p className="text-sm opacity-90 mb-6 leading-relaxed">
                     Speak with our trademark attorneys today. Get a free consultation and secure your brand.
                   </p>
-                  <Link href="/contact" className="block w-full">
+                  <Link href="/contact-us" className="block w-full">
                     <button className="w-full bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-3 px-4 rounded-lg transition-all shadow-md text-sm">
                       Get Free Consultation
                     </button>

@@ -18,9 +18,9 @@ export async function GET() {
 
   // 3. Lead Capture & Info Pages
   const standardPages: RouteConfig[] = [
-    { path: '/blog', priority: '0.9', changefreq: 'daily' }, // Blog index changes often
-    { path: '/about', priority: '0.7', changefreq: 'monthly' },
-    { path: '/contact', priority: '0.7', changefreq: 'monthly' },
+    { path: '/resources', priority: '0.9', changefreq: 'daily' }, // Resources index changes often
+    { path: '/about-us', priority: '0.7', changefreq: 'monthly' },
+    { path: '/contact-us', priority: '0.7', changefreq: 'monthly' },
     { path: '/form', priority: '0.6', changefreq: 'monthly' },
     { path: '/thank-you', priority: '0.6', changefreq: 'monthly' },
     { path: '/privacy-policy', priority: '0.5', changefreq: 'yearly' },
@@ -34,10 +34,10 @@ export async function GET() {
 
   // 6. Features and Services
   const staticUrls = [
-    '/services',
-    '/services/trademark-registration',
-    '/services/patent-filing',
-    '/services/copyright-protection',
+    '/service',
+    '/service/trademark-registration',
+    '/service/patent-filing',
+    '/service/copyright-protection',
     '/features/247-trademark-protection',
     '/features/affordable-trademark-services',
     '/features/ai-powered-trademark-solutions',
@@ -53,7 +53,7 @@ export async function GET() {
     const blogsCollection = collection(db, 'blogs');
     const blogSnapshot = await getDocs(blogsCollection);
     blogRoutes = blogSnapshot.docs.map(doc => ({
-      path: `/blog/${doc.data().slug}`,
+      path: `/resources/${doc.data().slug}`,
       priority: '0.8',
       changefreq: 'monthly'
     }));

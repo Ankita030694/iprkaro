@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Copyright Registration in India (2025) | Protect Your Creativity',
     description: 'Own your content legally. Comprehensive copyright filing for Authors, Artists, Musicians, and Developers. 60-Year Protection.',
-    url: 'https://iprkaro.com/services/copyright-protection',
+    url: 'https://iprkaro.com/service/copyright-protection',
     type: 'article',
     images: [
       {
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://iprkaro.com/services/copyright-protection',
+    canonical: 'https://iprkaro.com/service/copyright-protection',
   },
 };
 
@@ -125,8 +125,8 @@ const faqs = [
 
 export default function CopyrightPage() {
   const breadcrumbItems = [
-    { label: "Services", href: "/services" },
-    { label: "Copyright Protection", href: "/services/copyright-protection" },
+    { label: "Services", href: "/service" },
+    { label: "Copyright Protection", href: "/service/copyright-protection" },
   ];
 
   const faqSchema = {
@@ -210,7 +210,7 @@ export default function CopyrightPage() {
              <p className="text-sm md:text-xl mb-6 md:mb-8 max-w-3xl mx-auto text-gray-300 px-2 leading-relaxed">
                Online Copyright Registration for Authors, Artists, Musicians & Developers. Secure legal ownership, prevent theft, and monetize your original work for 60+ years.
              </p>
-             <Link href="/contact">
+             <Link href="/contact-us">
                <button className="bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-2.5 px-6 md:py-3 md:px-8 rounded-full transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(110,94,147,0.3)] text-base md:text-lg">
                  Register Copyright Now
                </button>
@@ -686,7 +686,7 @@ export default function CopyrightPage() {
                       Don't let others profit from your hard work. File your Copyright Application today.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
-                      <Link href="/contact">
+                      <Link href="/contact-us">
                         <button className="bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-3 px-8 md:py-4 md:px-12 rounded-full transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(110,94,147,0.4)] text-base md:text-lg w-full sm:w-auto">
                           File Copyright
                         </button>
@@ -713,7 +713,7 @@ export default function CopyrightPage() {
                   <p className="text-sm opacity-90 mb-6 leading-relaxed">
                     Not sure if you need Copyright, Patent, or Trademark? Our experts can guide you.
                   </p>
-                  <Link href="/contact" className="block w-full">
+                  <Link href="/contact-us" className="block w-full">
                     <button className="w-full bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-3 px-4 rounded-lg transition-all shadow-md text-sm">
                       Get Free Advice
                     </button>
@@ -732,14 +732,14 @@ export default function CopyrightPage() {
                   <h3 className="text-lg font-bold text-gray-900 mb-4">Explore More</h3>
                   <ul className="space-y-3 text-sm">
                     <li>
-                      <Link href="/services/trademark-registration" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center group">
+                      <Link href="/service/trademark-registration" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center group">
                         <span className="mr-2 text-gray-400 group-hover:text-[rgb(110,94,147)]">
                           <FontAwesomeIcon icon={faChevronRight} className="w-2 h-2" />
                         </span> Trademark Registration
                       </Link>
                     </li>
                     <li>
-                      <Link href="/services/patent-filing" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center group">
+                      <Link href="/service/patent-filing" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center group">
                          <span className="mr-2 text-gray-400 group-hover:text-[rgb(110,94,147)]">
                            <FontAwesomeIcon icon={faChevronRight} className="w-2 h-2" />
                          </span> Patent Filing

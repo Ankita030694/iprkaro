@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Patent Registration in India (2025) | Secure Your Tech',
     description: 'Turn your invention into a valuable asset. Comprehensive patent filing, drafting, and prosecution services. 80% Fee Rebate for Startups/MSMEs.',
-    url: 'https://iprkaro.com/services/patent-filing',
+    url: 'https://iprkaro.com/service/patent-filing',
     type: 'article',
     images: [
       {
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://iprkaro.com/services/patent-filing',
+    canonical: 'https://iprkaro.com/service/patent-filing',
   },
 };
 
@@ -119,8 +119,8 @@ const faqs = [
 
 export default function PatentFilingPage() {
   const breadcrumbItems = [
-    { label: "Services", href: "/services" },
-    { label: "Patent Filing", href: "/services/patent-filing" },
+    { label: "Services", href: "/service" },
+    { label: "Patent Filing", href: "/service/patent-filing" },
   ];
 
   const faqSchema = {
@@ -204,7 +204,7 @@ export default function PatentFilingPage() {
              <p className="text-sm md:text-xl mb-6 md:mb-8 max-w-3xl mx-auto text-gray-300 px-2 leading-relaxed">
                Expert Patent Drafting & Filing Services in India. Secure your technology, block competitors, and unlock licensing revenue. From Provisional to Grant, we are your R&D partners.
              </p>
-             <Link href="/contact">
+             <Link href="/contact-us">
                <button className="bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-2.5 px-6 md:py-3 md:px-8 rounded-full transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(110,94,147,0.3)] text-base md:text-lg">
                  Book Patent Consultation
                </button>
@@ -685,7 +685,7 @@ export default function PatentFilingPage() {
                       Don't disclose your idea before filing. Talk to our patent experts today and secure your priority date.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
-                      <Link href="/contact">
+                      <Link href="/contact-us">
                         <button className="bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-3 px-8 md:py-4 md:px-12 rounded-full transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(110,94,147,0.4)] text-base md:text-lg w-full sm:w-auto">
                           File Patent Now
                         </button>
@@ -712,7 +712,7 @@ export default function PatentFilingPage() {
                   <p className="text-sm opacity-90 mb-6 leading-relaxed">
                     Not sure if your idea is patentable? Get a free 15-minute preliminary opinion.
                   </p>
-                  <Link href="/contact" className="block w-full">
+                  <Link href="/contact-us" className="block w-full">
                     <button className="w-full bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-3 px-4 rounded-lg transition-all shadow-md text-sm">
                       Check Patentability
                     </button>
@@ -731,14 +731,14 @@ export default function PatentFilingPage() {
                   <h3 className="text-lg font-bold text-gray-900 mb-4">Explore More</h3>
                   <ul className="space-y-3 text-sm">
                     <li>
-                      <Link href="/services/trademark-registration" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center group">
+                      <Link href="/service/trademark-registration" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center group">
                         <span className="mr-2 text-gray-400 group-hover:text-[rgb(110,94,147)]">
                           <FontAwesomeIcon icon={faChevronRight} className="w-2 h-2" />
                         </span> Trademark Registration
                       </Link>
                     </li>
                     <li>
-                      <Link href="/services/copyright-protection" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center group">
+                      <Link href="/service/copyright-protection" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center group">
                          <span className="mr-2 text-gray-400 group-hover:text-[rgb(110,94,147)]">
                            <FontAwesomeIcon icon={faChevronRight} className="w-2 h-2" />
                          </span> Copyright Protection

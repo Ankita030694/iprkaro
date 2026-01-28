@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Online Trademark Registration in India | Secure Your Brand',
     description: 'Fast, affordable, and expert-assisted trademark registration services in India. Protect your brand identity today.',
-    url: 'https://iprkaro.com/services/trademark-registration',
+    url: 'https://iprkaro.com/service/trademark-registration',
     type: 'article',
     images: [
       {
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://iprkaro.com/services/trademark-registration',
+    canonical: 'https://iprkaro.com/service/trademark-registration',
   },
 };
 
@@ -120,8 +120,8 @@ const faqs = [
 
 export default function TrademarkRegistrationPage() {
   const breadcrumbItems = [
-    { label: "Services", href: "/services" },
-    { label: "Trademark Registration", href: "/services/trademark-registration" },
+    { label: "Services", href: "/service" },
+    { label: "Trademark Registration", href: "/service/trademark-registration" },
   ];
 
   const faqSchema = {
@@ -208,7 +208,7 @@ export default function TrademarkRegistrationPage() {
              <p className="text-sm md:text-xl mb-6 md:mb-8 max-w-3xl mx-auto text-gray-300 px-2 leading-relaxed">
                Don't let copycats steal your hard work. File your trademark application today with India's most trusted IP legal team. 100% Online process with same-day filing capability.
              </p>
-             <Link href="/contact">
+             <Link href="/contact-us">
                <button className="bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-2.5 px-6 md:py-3 md:px-8 rounded-full transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(110,94,147,0.3)] text-base md:text-lg">
                  Start Registration Now
                </button>
@@ -722,7 +722,7 @@ export default function TrademarkRegistrationPage() {
                       Don't leave your brand unprotected. The sooner you file, the sooner you own your mark. Get professional assistance from India's leading IP experts.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
-                      <Link href="/contact">
+                      <Link href="/contact-us">
                         <button className="bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-3 px-8 md:py-4 md:px-12 rounded-full transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(110,94,147,0.4)] text-base md:text-lg w-full sm:w-auto">
                           Register Now
                         </button>
@@ -749,7 +749,7 @@ export default function TrademarkRegistrationPage() {
                   <p className="text-sm opacity-90 mb-6 leading-relaxed">
                     Check if your brand name is available. Get a free search report today.
                   </p>
-                  <Link href="/contact" className="block w-full">
+                  <Link href="/contact-us" className="block w-full">
                     <button className="w-full bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-3 px-4 rounded-lg transition-all shadow-md text-sm">
                       Get Free Search
                     </button>
@@ -775,14 +775,14 @@ export default function TrademarkRegistrationPage() {
                       </Link>
                     </li>
                     <li>
-                      <Link href="/services/patent-filing" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center group">
+                      <Link href="/service/patent-filing" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center group">
                          <span className="mr-2 text-gray-400 group-hover:text-[rgb(110,94,147)]">
                            <FontAwesomeIcon icon={faChevronRight} className="w-2 h-2" />
                          </span> Patent Services
                       </Link>
                     </li>
                     <li>
-                      <Link href="/services/copyright-protection" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center group">
+                      <Link href="/service/copyright-protection" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center group">
                          <span className="mr-2 text-gray-400 group-hover:text-[rgb(110,94,147)]">
                            <FontAwesomeIcon icon={faChevronRight} className="w-2 h-2" />
                          </span> Copyright Protection

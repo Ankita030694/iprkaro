@@ -58,18 +58,18 @@ const Footer: React.FC = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="/about" className="text-sm hover:text-cyan-300 transition-colors">
+                  <a href="/about-us" className="text-sm hover:text-cyan-300 transition-colors">
                     About Us
                   </a>
                 </li>
 
                 <li>
-                  <a href="/blog" className="text-sm hover:text-cyan-300 transition-colors">
-                    Blogs
+                  <a href="/resources" className="text-sm hover:text-cyan-300 transition-colors">
+                    Resources
                   </a>
                 </li>
                 <li>
-                  <a href="/contact" className="text-sm hover:text-cyan-300 transition-colors">
+                  <a href="/contact-us" className="text-sm hover:text-cyan-300 transition-colors">
                     Contact Us
                   </a>
                 </li>
@@ -81,17 +81,17 @@ const Footer: React.FC = () => {
               <h3 className="text-sm font-semibold mb-4 uppercase">Our Services</h3>
               <ul className="space-y-2">
                 <li>
-                  <a href="/services/trademark-registration" className="text-sm hover:text-cyan-300 transition-colors">
+                  <a href="/service/trademark-registration" className="text-sm hover:text-cyan-300 transition-colors">
                     Trademark Registration
                   </a>
                 </li>
                 <li>
-                  <a href="/services/copyright-protection" className="text-sm hover:text-cyan-300 transition-colors">
+                  <a href="/service/copyright-protection" className="text-sm hover:text-cyan-300 transition-colors">
                     Copyright Protection
                   </a>
                 </li>
                 <li>
-                  <a href="/services/patent-filing" className="text-sm hover:text-cyan-300 transition-colors">
+                  <a href="/service/patent-filing" className="text-sm hover:text-cyan-300 transition-colors">
                     Patent Filing
                   </a>
                 </li>
@@ -104,7 +104,7 @@ const Footer: React.FC = () => {
               <ul className="space-y-2">
 
               <li>
-                  <a href="/contact" className="text-sm hover:text-cyan-300 transition-colors">
+                  <a href="/contact-us" className="text-sm hover:text-cyan-300 transition-colors">
                     Contact Us
                   </a>
                 </li>
@@ -132,23 +132,23 @@ const Footer: React.FC = () => {
                 </a>
               </li>
               <li>
-                <a href="/about" className="text-sm hover:text-cyan-300 transition-colors">
+                <a href="/about-us" className="text-sm hover:text-cyan-300 transition-colors">
                   About Us
                 </a>
               </li>
               <li>
-                <a href="/services" className="text-sm hover:text-cyan-300 transition-colors">
+                <a href="/service" className="text-sm hover:text-cyan-300 transition-colors">
                   Services
                 </a>
               </li>
 
               <li>
-                <a href="/blog" className="text-sm hover:text-cyan-300 transition-colors">
-                  Blogs
+                <a href="/resources" className="text-sm hover:text-cyan-300 transition-colors">
+                  Resources
                 </a>
               </li>
               <li>
-                <a href="/contact" className="text-sm hover:text-cyan-300 transition-colors">
+                <a href="/contact-us" className="text-sm hover:text-cyan-300 transition-colors">
                   Contact Us
                 </a>
               </li>
@@ -160,17 +160,17 @@ const Footer: React.FC = () => {
             <h3 className="text-sm font-semibold mb-4 uppercase">Our Services</h3>
             <ul className="space-y-2">
               <li>
-                <a href="/services/trademark-registration" className="text-sm hover:text-cyan-300 transition-colors">
+                <a href="/service/trademark-registration" className="text-sm hover:text-cyan-300 transition-colors">
                   Trademark Registration
                 </a>
               </li>
               <li>
-                <a href="/services/copyright-protection" className="text-sm hover:text-cyan-300 transition-colors">
+                <a href="/service/copyright-protection" className="text-sm hover:text-cyan-300 transition-colors">
                   Copyright Protection
                 </a>
               </li>
               <li>
-                <a href="/services/patent-filing" className="text-sm hover:text-cyan-300 transition-colors">
+                <a href="/service/patent-filing" className="text-sm hover:text-cyan-300 transition-colors">
                   Patent Filing
                 </a>
               </li>

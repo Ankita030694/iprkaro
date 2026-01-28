@@ -22,33 +22,33 @@ export default function Navbar() {
   };
 
   const trademarkServices = [
-    { name: 'Trademark Search & Availability Check', href: '/services/trademark-registration#registration-process-detailed' },
-    { name: 'Trademark Renewal & Restoration', href: '/services/trademark-registration#renewal-restoration' },
-    { name: 'Trademark Opposition & Counter-Statement', href: '/services/trademark-registration#opposition-proceedings' },
-    { name: 'Trademark Objection Reply Drafting', href: '/services/trademark-registration#objection-handling-mastery' },
+    { name: 'Trademark Search & Availability Check', href: '/service/trademark-registration#registration-process-detailed' },
+    { name: 'Trademark Renewal & Restoration', href: '/service/trademark-registration#renewal-restoration' },
+    { name: 'Trademark Opposition & Counter-Statement', href: '/service/trademark-registration#opposition-proceedings' },
+    { name: 'Trademark Objection Reply Drafting', href: '/service/trademark-registration#objection-handling-mastery' },
     { name: 'Trademark Watch / Monitoring Services', href: '/features/247-trademark-protection' },
-    { name: 'Trademark Assignment & Licensing', href: '/services/trademark-registration#assignment-licensing' },
-    { name: 'Trademark Rectification / Removal', href: '/services/trademark-registration' },
+    { name: 'Trademark Assignment & Licensing', href: '/service/trademark-registration#assignment-licensing' },
+    { name: 'Trademark Rectification / Removal', href: '/service/trademark-registration' },
   ];
 
   const copyrightServices = [
-    { name: 'Copyright Transfer / Assignment Agreements', href: '/services/copyright-protection#owner-rights' },
-    { name: 'Infringement Notice Drafting & Legal Action', href: '/services/copyright-protection#infringement-remedies' },
-    { name: 'Software Code Copyright & Protection', href: '/services/copyright-protection#software-copyright' },
-    { name: 'Copyright Renewal / Update Services', href: '/services/copyright-protection' },
+    { name: 'Copyright Transfer / Assignment Agreements', href: '/service/copyright-protection#owner-rights' },
+    { name: 'Infringement Notice Drafting & Legal Action', href: '/service/copyright-protection#infringement-remedies' },
+    { name: 'Software Code Copyright & Protection', href: '/service/copyright-protection#software-copyright' },
+    { name: 'Copyright Renewal / Update Services', href: '/service/copyright-protection' },
   ];
 
   const patentServices = [
-    { name: 'Provisional & Complete Patent Drafting and Filing', href: '/services/patent-filing#filing-process-roadmap' },
-    { name: 'Patent Opposition & Revocation', href: '/services/patent-filing#patent-examination' },
-    { name: 'Patent Renewal & Maintenance', href: '/services/patent-filing' },
-    { name: 'Patent Licensing & Commercialization Support', href: '/services/patent-filing#commercialization' },
+    { name: 'Provisional & Complete Patent Drafting and Filing', href: '/service/patent-filing#filing-process-roadmap' },
+    { name: 'Patent Opposition & Revocation', href: '/service/patent-filing#patent-examination' },
+    { name: 'Patent Renewal & Maintenance', href: '/service/patent-filing' },
+    { name: 'Patent Licensing & Commercialization Support', href: '/service/patent-filing#commercialization' },
   ];
 
   const services = [
-    { name: 'Trademark Registration', href: '/services/trademark-registration' },
-    { name: 'Copyright Protection', href: '/services/copyright-protection' },
-    { name: 'Patent Filing', href: '/services/patent-filing' },
+    { name: 'Trademark Registration', href: '/service/trademark-registration' },
+    { name: 'Copyright Protection', href: '/service/copyright-protection' },
+    { name: 'Patent Filing', href: '/service/patent-filing' },
   ];
 
   return (
@@ -77,7 +77,7 @@ export default function Navbar() {
                 <div className="absolute bottom-[-17px] left-1/2 transform -translate-x-1/2 w-[60px] h-0.5 bg-[#ffb703] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>  
               </div>
             </Link>
-            <Link href="/about"> 
+            <Link href="/about-us">  
               <div className="text-white text-[17px] font-normal leading-normal cursor-pointer relative group hover:text-[#ffb703] transition-colors duration-300">
                 About Us
                 <div className="absolute bottom-[-17px] left-1/2 transform -translate-x-1/2 w-[60px] h-0.5 bg-[#ffb703] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -85,19 +85,21 @@ export default function Navbar() {
             </Link>
 
             {/* Services Dropdown */}
-            <Link href="/services">
+
             <div 
               className="relative group h-full flex items-center"
               onMouseEnter={() => setIsServicesDropdownOpen(true)}
               onMouseLeave={() => setIsServicesDropdownOpen(false)}
             >
-              <div className="text-white text-[17px] font-normal leading-normal cursor-pointer relative group-hover:text-[#ffb703] transition-colors duration-300 flex items-center gap-1">
-                Services
-                <svg className={`w-4 h-4 transition-transform duration-300 ${isServicesDropdownOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-                <div className="absolute bottom-[-17px] left-1/2 transform -translate-x-1/2 w-[60px] h-0.5 bg-[#ffb703] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </div>
+              <Link href="/service">
+                <div className="text-white text-[17px] font-normal leading-normal cursor-pointer relative group-hover:text-[#ffb703] transition-colors duration-300 flex items-center gap-1">
+                  Services
+                  <svg className={`w-4 h-4 transition-transform duration-300 ${isServicesDropdownOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                  <div className="absolute bottom-[-17px] left-1/2 transform -translate-x-1/2 w-[60px] h-0.5 bg-[#ffb703] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+              </Link>
 
               {/* Dropdown Menu */}
               <div 
@@ -114,16 +116,15 @@ export default function Navbar() {
                 </div>
               </div>
             </div>
-</Link>
-            <Link href="/blog"> 
+            <Link href="/resources"> 
               <div className="text-white text-[17px] font-normal leading-normal cursor-pointer relative group hover:text-[#ffb703] transition-colors duration-300">
-                Blogs
+                Resources
                 <div className="absolute bottom-[-17px] left-1/2 transform -translate-x-1/2 w-[60px] h-0.5 bg-[#ffb703] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
             </Link>
           
             
-            <Link href="/contact"> 
+            <Link href="/contact-us"> 
               <div className="text-white text-[17px] font-normal leading-normal cursor-pointer relative group hover:text-[#ffb703] transition-colors duration-300">
                 Contact Us
                 <div className="absolute bottom-[-17px] left-1/2 transform -translate-x-1/2 w-[60px] h-0.5 bg-[#ffb703] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -195,7 +196,7 @@ export default function Navbar() {
                 </div>
               </Link>
                
-              <Link href="/about" onClick={closeMobileMenu}> 
+              <Link href="/about-us" onClick={closeMobileMenu}> 
                 <div 
                   className="cursor-pointer relative group hover:text-[#ffb703] transition-all duration-300 mb-3"
                   style={{
@@ -252,7 +253,7 @@ export default function Navbar() {
                 </div>
               </div>
 
-              <Link href="/blog" onClick={closeMobileMenu}> 
+              <Link href="/resources" onClick={closeMobileMenu}> 
                 <div 
                   className="cursor-pointer relative group hover:text-[#ffb703] transition-all duration-300 mb-3"
                   style={{
@@ -264,11 +265,11 @@ export default function Navbar() {
                     lineHeight: '40px'
                   }}
                 >
-                  Blogs
+                  Resources
                 </div>
               </Link>
               
-              <Link href="/contact" onClick={closeMobileMenu}> 
+              <Link href="/contact-us" onClick={closeMobileMenu}> 
                 <div 
                   className="cursor-pointer relative group hover:text-[#ffb703] transition-all duration-300 mb-3"
                   style={{

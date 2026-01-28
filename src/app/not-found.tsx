@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen flex items-center justify-center relative overflow-hidden" style={{ backgroundColor: '#0C002B' }}>
+    <div className="min-h-screen flex items-center justify-center relative overflow-hidden mt-20" style={{ backgroundColor: '#0C002B' }}>
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-full h-full" style={{ background: 'linear-gradient(to right, #FFB70320, transparent)' }}></div>
@@ -77,7 +77,7 @@ export default function NotFound() {
           </Link>
 
           <Link 
-            href="/services/trademark-registration"
+            href="/service/trademark-registration"
             className="group relative px-8 py-4 rounded-lg font-nunito font-semibold text-base md:text-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center hover:bg-[rgba(255,183,3,0.1)]"
             style={{
               background: 'transparent',
@@ -95,28 +95,28 @@ export default function NotFound() {
           <p className="text-white/60 font-nunito text-sm mb-4">You might be looking for:</p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link 
-              href="/about" 
+              href="/about-us" 
               className="text-white/70 hover:text-[#FFB703] font-nunito text-sm transition-colors duration-300"
             >
               About Us
             </Link>
             <span className="text-white/30">•</span>
             <Link 
-              href="/blog" 
+              href="/resources" 
               className="text-white/70 hover:text-[#FFB703] font-nunito text-sm transition-colors duration-300"
             >
-              Blog
+              Resources
             </Link>
             <span className="text-white/30">•</span>
             <Link 
-              href="/contact" 
+              href="/contact-us" 
               className="text-white/70 hover:text-[#FFB703] font-nunito text-sm transition-colors duration-300"
             >
               Contact
             </Link>
             <span className="text-white/30">•</span>
             <Link 
-              href="/services/trademark-registration" 
+              href="/service/trademark-registration" 
               className="text-white/70 hover:text-[#FFB703] font-nunito text-sm transition-colors duration-300"
             >
               Services

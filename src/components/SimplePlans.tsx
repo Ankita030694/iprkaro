@@ -136,7 +136,7 @@ export default function SimplePlans() {
   };
 
   const handleGetProtected = () => {
-    router.push('/contact');
+    router.push('/contact-us');
   };
 
   return (
