@@ -8,6 +8,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 const SearchClient = dynamic(() => import('@/components/SearchClient'));
+import ServicesContentExpanded from './ServicesContentExpanded';
+import { ReviewSnippets } from '@/components';
 
 // Create a Services Hero Component similar to HeroSection
 function ServicesHeroSection() {
@@ -474,6 +476,8 @@ export default function ServicesClient() {
   return (
     <>
       <ServicesHeroSection />
+      <ServicesContentExpanded />
+      <ReviewSnippets />
       <SimplePlans />
       
       {/* FAQ Section */}

@@ -1,4 +1,4 @@
-import { HeroSection, WhyTrademark, OurServices, SimplePlans, Faq } from "@/components";
+import { HeroSection, WhyTrademark, OurServices, SimplePlans, Faq, ReviewSnippets } from "@/components";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -66,6 +66,70 @@ export default function Home() {
     }))
   };
 
+  // Review Schema
+  const reviewSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "IPR Karo - Legal Services",
+    "image": "https://iprkaro.com/logo.png",
+    "description": "AI-powered trademark registration and intellectual property protection services in India.",
+    "brand": {
+      "@type": "Brand",
+      "name": "IPR Karo"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "6",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Rajesh Kumar" },
+        "datePublished": "2024-01-15",
+        "reviewBody": "I was worried about the trademark process for my software company. IPR Karo's AI search was instant, and their team handled the objection so smoothly.",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5" }
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Anita Desai" },
+        "datePublished": "2023-11-20",
+        "reviewBody": "Copyrighting our ad campaigns used to be a headache. With IPR Karo, it's just a few clicks. The dashboard is super intuitive and the legal support is top-notch.",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5" }
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Vikram Singh" },
+        "datePublished": "2023-12-05",
+        "reviewBody": "We needed to protect our brand across multiple categories. The team guided us on the right classifications and saved us money. Professional, transparent, and very effective service.",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5" }
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Dr. A. Mehra" },
+        "datePublished": "2024-02-10",
+        "reviewBody": "Filing a patent in India is complex. IPR Karo's patent agents understood my technical invention quickly and drafted a strong application.",
+        "reviewRating": { "@type": "Rating", "ratingValue": "4" }
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Organization", "name": "A Prominent Incubator" },
+        "datePublished": "2024-01-30",
+        "reviewBody": "We recommend IPR Karo to all our portfolio startups. Their automated watch services and startup-friendly pricing make them the best IP partner in the ecosystem.",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5" }
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Amit Verma" },
+        "datePublished": "2024-02-15",
+        "reviewBody": "The trademark monitoring service is a lifesaver. We were alerted about a similar brand filing within days and could take action immediately. Highly proactive team!",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5" }
+      }
+    ]
+  };
+
   return (
     <>
       {/* Server-side rendered FAQ Schema for Google Search Console */}
@@ -75,6 +139,12 @@ export default function Home() {
           __html: JSON.stringify(faqSchema),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+            __html: JSON.stringify(reviewSchema),
+        }}
+      />
 
       <HeroSection />
       <WhyTrademark />
@@ -82,6 +152,7 @@ export default function Home() {
       <OurServices />
 
       </div>
+      <ReviewSnippets />
       <SimplePlans />
       <Faq />
     </>

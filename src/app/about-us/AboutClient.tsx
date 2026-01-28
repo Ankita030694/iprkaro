@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import ClientLogoSlider from '@/components/ClientLogoSlider';
 import AboutBento from '@/components/AboutBento';
+import AboutContentExpanded from './AboutContentExpanded';
 import { motion } from 'framer-motion';
 
 export default function AboutClient() {
@@ -1551,6 +1552,8 @@ export default function AboutClient() {
           </div>
         </div>
       </div>
+
+      <AboutContentExpanded />
 
         {/* FAQ Section */}
         <div className="py-[57.6px] relative overflow-hidden w-full">
