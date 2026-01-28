@@ -1,5 +1,5 @@
-import { collection, getDocs } from 'firebase/firestore';
-import { db } from '@/lib/firebase';
+
+import { type Firestore } from 'firebase/firestore';
 
 interface RouteConfig {
   path: string;
@@ -18,26 +18,22 @@ export async function GET() {
 
   // 3. Lead Capture & Info Pages
   const standardPages: RouteConfig[] = [
-    { path: '/resources', priority: '0.9', changefreq: 'daily' }, // Resources index changes often
+    { path: '/resources', priority: '0.9', changefreq: 'daily' },
     { path: '/about-us', priority: '0.7', changefreq: 'monthly' },
     { path: '/contact-us', priority: '0.7', changefreq: 'monthly' },
     { path: '/form', priority: '0.6', changefreq: 'monthly' },
-    { path: '/thank-you', priority: '0.6', changefreq: 'monthly' },
     { path: '/privacy-policy', priority: '0.5', changefreq: 'yearly' },
     { path: '/terms-and-conditions', priority: '0.5', changefreq: 'yearly' },
   ];
 
-  // 5. Tools
-  const tools: RouteConfig[] = [
-    { path: '/partners/tm-search', priority: '0.8', changefreq: 'weekly' },
-  ];
 
   // 6. Features and Services
   const staticUrls = [
-    '/service',
-    '/service/trademark-registration',
-    '/service/patent-filing',
-    '/service/copyright-protection',
+    '/our-services',
+    '/our-services/trademark-registration',
+    '/our-services/patent-registration',
+    '/our-services/copyright-registration',
+    '/features',
     '/features/247-trademark-protection',
     '/features/affordable-trademark-services',
     '/features/ai-powered-trademark-solutions',
@@ -46,26 +42,39 @@ export async function GET() {
     '/features/trademark-risk-reduction',
   ].map(path => ({ path, priority: '0.8', changefreq: 'weekly' } as RouteConfig));
 
-
   // Fetch Dynamic Blog Posts
   let blogRoutes: RouteConfig[] = [];
   try {
-    const blogsCollection = collection(db, 'blogs');
-    const blogSnapshot = await getDocs(blogsCollection);
-    blogRoutes = blogSnapshot.docs.map(doc => ({
-      path: `/resources/${doc.data().slug}`,
-      priority: '0.8',
-      changefreq: 'monthly'
-    }));
+    // Dynamic imports to avoid server crashes if Firebase is misconfigured or unreachable
+    const { db } = await import('@/lib/firebase');
+    const { collection, getDocs } = await import('firebase/firestore');
+
+    // Check if db is initialized (it might be undefined if window check failed in lib/firebase.js, 
+    // although lib/firebase.js usually returns strict exports. 
+    // But checking ensures safety.)
+    if (db) {
+      // We know standard firebase SDK returns Firestore instance, but it might be untyped in JS.
+      // We cast/assume it works.
+      const blogsCollection = collection(db as Firestore, 'blogs');
+      // Add timeout explicitly? getDocs doesn't support signal easily in v9 without implementing it.
+      // We hope it doesn't hang.
+      const blogSnapshot = await getDocs(blogsCollection);
+
+      blogRoutes = blogSnapshot.docs.map(doc => ({
+        path: `/resources/${doc.data().slug}`,
+        priority: '0.8',
+        changefreq: 'monthly'
+      }));
+    }
   } catch (error) {
     console.error('Error fetching blogs for sitemap:', error);
+    // Continue without blogs, do not crash
   }
 
   // Combine all routes
   const allRoutes = [
     ...rootPages,
     ...standardPages,
-    ...tools,
     ...staticUrls,
     ...blogRoutes
   ];
