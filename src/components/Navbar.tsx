@@ -22,33 +22,33 @@ export default function Navbar() {
   };
 
   const trademarkServices = [
-    { name: 'Trademark Search & Availability Check', href: '/service/trademark-registration#registration-process-detailed' },
-    { name: 'Trademark Renewal & Restoration', href: '/service/trademark-registration#renewal-restoration' },
-    { name: 'Trademark Opposition & Counter-Statement', href: '/service/trademark-registration#opposition-proceedings' },
-    { name: 'Trademark Objection Reply Drafting', href: '/service/trademark-registration#objection-handling-mastery' },
+    { name: 'Trademark Search & Availability Check', href: '/our-services/trademark-registration#registration-process-detailed' },
+    { name: 'Trademark Renewal & Restoration', href: '/our-services/trademark-registration#renewal-restoration' },
+    { name: 'Trademark Opposition & Counter-Statement', href: '/our-services/trademark-registration#opposition-proceedings' },
+    { name: 'Trademark Objection Reply Drafting', href: '/our-services/trademark-registration#objection-handling-mastery' },
     { name: 'Trademark Watch / Monitoring Services', href: '/features/247-trademark-protection' },
-    { name: 'Trademark Assignment & Licensing', href: '/service/trademark-registration#assignment-licensing' },
-    { name: 'Trademark Rectification / Removal', href: '/service/trademark-registration' },
+    { name: 'Trademark Assignment & Licensing', href: '/our-services/trademark-registration#assignment-licensing' },
+    { name: 'Trademark Rectification / Removal', href: '/our-services/trademark-registration' },
   ];
 
   const copyrightServices = [
-    { name: 'Copyright Transfer / Assignment Agreements', href: '/service/copyright-protection#owner-rights' },
-    { name: 'Infringement Notice Drafting & Legal Action', href: '/service/copyright-protection#infringement-remedies' },
-    { name: 'Software Code Copyright & Protection', href: '/service/copyright-protection#software-copyright' },
-    { name: 'Copyright Renewal / Update Services', href: '/service/copyright-protection' },
+    { name: 'Copyright Transfer / Assignment Agreements', href: '/our-services/copyright-registration#owner-rights' },
+    { name: 'Infringement Notice Drafting & Legal Action', href: '/our-services/copyright-registration#infringement-remedies' },
+    { name: 'Software Code Copyright & Protection', href: '/our-services/copyright-registration#software-copyright' },
+    { name: 'Copyright Renewal / Update Services', href: '/our-services/copyright-registration' },
   ];
 
   const patentServices = [
-    { name: 'Provisional & Complete Patent Drafting and Filing', href: '/service/patent-filing#filing-process-roadmap' },
-    { name: 'Patent Opposition & Revocation', href: '/service/patent-filing#patent-examination' },
-    { name: 'Patent Renewal & Maintenance', href: '/service/patent-filing' },
-    { name: 'Patent Licensing & Commercialization Support', href: '/service/patent-filing#commercialization' },
+    { name: 'Provisional & Complete Patent Drafting and Filing', href: '/our-services/patent-registration#filing-process-roadmap' },
+    { name: 'Patent Opposition & Revocation', href: '/our-services/patent-registration#patent-examination' },
+    { name: 'Patent Renewal & Maintenance', href: '/our-services/patent-registration' },
+    { name: 'Patent Licensing & Commercialization Support', href: '/our-services/patent-registration#commercialization' },
   ];
 
   const services = [
-    { name: 'Trademark Registration', href: '/service/trademark-registration' },
-    { name: 'Copyright Protection', href: '/service/copyright-protection' },
-    { name: 'Patent Filing', href: '/service/patent-filing' },
+    { name: 'Trademark Registration', href: '/our-services/trademark-registration' },
+    { name: 'Copyright Protection', href: '/our-services/copyright-registration' },
+    { name: 'Patent Filing', href: '/our-services/patent-registration' },
   ];
 
   return (
@@ -91,7 +91,7 @@ export default function Navbar() {
               onMouseEnter={() => setIsServicesDropdownOpen(true)}
               onMouseLeave={() => setIsServicesDropdownOpen(false)}
             >
-              <Link href="/service">
+              <Link href="/our-services">
                 <div className="text-white text-[17px] font-normal leading-normal cursor-pointer relative group-hover:text-[#ffb703] transition-colors duration-300 flex items-center gap-1">
                   Services
                   <svg className={`w-4 h-4 transition-transform duration-300 ${isServicesDropdownOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -77,7 +77,7 @@ export default function NotFound() {
           </Link>
 
           <Link 
-            href="/service/trademark-registration"
+            href="/our-services/trademark-registration"
             className="group relative px-8 py-4 rounded-lg font-nunito font-semibold text-base md:text-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center hover:bg-[rgba(255,183,3,0.1)]"
             style={{
               background: 'transparent',
@@ -116,7 +116,7 @@ export default function NotFound() {
             </Link>
             <span className="text-white/30">•</span>
             <Link 
-              href="/service/trademark-registration" 
+              href="/our-services/trademark-registration"  
               className="text-white/70 hover:text-[#FFB703] font-nunito text-sm transition-colors duration-300"
             >
               Services

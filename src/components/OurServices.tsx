@@ -9,7 +9,7 @@ export default function OurServices() {
       id: 'trademark',
       title: 'Trademark Registration',
       subtitle: 'Register your trademark online start with our AI trademark search, review your report, and file instantly.',
-      link: '/service/trademark-registration',
+      link: '/our-services/trademark-registration',
       items: [
         'AI-powered trademark search for instant conflict detection and brand availability',
         'Register trademark online with a fast, step-by-step guided application',
@@ -42,7 +42,7 @@ export default function OurServices() {
       id: 'copyright',
       title: 'Copyright Protection',
       subtitle: 'Secure creative works digitally AI copyright search and seamless online application keep your assets protected.',
-      link: '/service/copyright-protection',
+      link: '/our-services/copyright-registration',
       items: [
         'Online copyright registration for digital content and creative works',
         'AI copyright search for originality and infringement checks',
@@ -73,7 +73,7 @@ export default function OurServices() {
       id: 'patent',
       title: 'Patent Services',
       subtitle: 'Protect inventions with AI-optimized patent search and application file quickly, stay ahead of the competition.',
-      link: '/service/patent-filing',
+      link: '/our-services/patent-registration',
       items: [
         'Patent registration for inventions with AI-powered search and risk analysis',
         'How to file a patent: Quick patent search, filing, and legal compliance in India',

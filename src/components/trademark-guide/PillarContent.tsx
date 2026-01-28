@@ -928,7 +928,7 @@ export default function PillarContent() {
                     Class selection is complex and requires expertise. Our AI-powered trademark search tool analyzes your business and recommends appropriate classes automatically.
                   </p>
                   <Link 
-                    href="/service/trademark-registration"
+                    href="/our-services/trademark-registration"
                     className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md font-nunito font-semibold text-xs transition-all duration-300 hover:scale-105"
                     style={{
                       background: 'linear-gradient(135deg, #FFB703, #FFA000)',
@@ -1124,7 +1124,7 @@ export default function PillarContent() {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <Link
-                href="/service/trademark-registration"
+                href="/our-services/trademark-registration"
                 className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-lg font-nunito font-bold text-sm transition-all duration-300 hover:scale-105"
                 style={{
                   background: 'linear-gradient(135deg, #FFB703, #FFA000)',
@@ -1281,7 +1281,7 @@ export default function PillarContent() {
             </h4>
             <div className="flex flex-wrap gap-2">
               <Link
-                href="/service/trademark-registration"
+                href="/our-services/trademark-registration"
                 className="px-3 py-1.5 rounded-md font-nunito text-sm font-semibold transition-all duration-300 hover:scale-105"
                 style={{
                   background: 'rgba(255, 255, 255, 0.1)',
@@ -1292,7 +1292,7 @@ export default function PillarContent() {
                 Trademark Registration
               </Link>
               <Link
-                href="/service/patent-filing"
+                href="/our-services/patent-registration"
                 className="px-3 py-1.5 rounded-md font-nunito text-sm font-semibold transition-all duration-300 hover:scale-105"
                 style={{
                   background: 'rgba(255, 255, 255, 0.1)',
@@ -1303,7 +1303,7 @@ export default function PillarContent() {
                 Patent Services
               </Link>
               <Link
-                href="/service/copyright-protection"
+                href="/our-services/copyright-registration"
                 className="px-3 py-1.5 rounded-md font-nunito text-sm font-semibold transition-all duration-300 hover:scale-105"
                 style={{
                   background: 'rgba(255, 255, 255, 0.1)',

@@ -18,6 +18,7 @@ export default function Expert() {
       icon: "fa-trademark",
       color: "from-yellow-400 to-yellow-600",
       accentColor: "#FFB400",
+      href: "/our-services/trademark-registration",
       items: [
         "AI-powered trademark search for instant conflict detection and brand availability.",
         "Register trademark online with a fast, step-by-step guided application.",
@@ -33,6 +34,7 @@ export default function Expert() {
       icon: "fa-copyright",
       color: "from-green-400 to-green-600",
       accentColor: "#16a34a",
+      href: "/our-services/copyright-registration",
       items: [
         "Online copyright registration for digital content and creative works.",
         "AI copyright search for originality and infringement checks.",
@@ -47,6 +49,7 @@ export default function Expert() {
       icon: "fa-lightbulb",
       color: "from-yellow-300 to-green-500",
       accentColor: "#86efac",
+      href: "/our-services/patent-registration",
       items: [
         "Patent registration for inventions with AI-powered search and risk analysis.",
         "How to file a patent: Quick patent search, filing, and legal compliance in India.",
@@ -233,7 +236,7 @@ export default function Expert() {
                           
                           {/* Learn More Button */}
                           <div className="mt-4 pt-3 border-t border-white/10">
-                            <Link href={`/service/${service.title.toLowerCase().replace(/\s+/g, '-')}`}>
+                            <Link href={service.href}>
                               <div 
                                 className="inline-flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 hover:opacity-80"
                                 style={{

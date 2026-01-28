@@ -529,7 +529,6 @@ export default function ContactClient() {
         </div>
       </div>
       <OurHeadOffice />
-      <CitiesAndTerritories />
    
 
       {/* FAQ Section */}

@@ -59,9 +59,9 @@ const CitiesAndTerritories: React.FC<CitiesAndTerritoriesProps> = ({ serviceType
   const getServicePath = (type: string) => {
     switch (type) {
       case 'patent':
-        return 'patent-services';
+        return 'patent-registration';
       case 'copyright':
-        return 'copyright-protection';
+        return 'copyright-registration';
       default:
         return 'trademark-registration';
     }
@@ -103,8 +103,7 @@ const CitiesAndTerritories: React.FC<CitiesAndTerritoriesProps> = ({ serviceType
           <div className="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-5 lg:grid-cols-7 xl:grid-cols-7 gap-2 sm:gap-3">
             {allLocations.map((location, index) => (
               <Link
-                key={`location-${index}`}
-                href={`/service/${basePath}/${generateLocationSlug(location)}`}
+                href={`/our-services/${basePath}?location=${generateLocationSlug(location)}`}
                 className="group cursor-pointer"
               >
                 {/* Minimal Card Design */}

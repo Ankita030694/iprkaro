@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Online Trademark Registration in India | Secure Your Brand',
     description: 'Fast, affordable, and expert-assisted trademark registration services in India. Protect your brand identity today.',
-    url: 'https://iprkaro.com/service/trademark-registration',
+    url: 'https://iprkaro.com/our-services/trademark-registration',
     type: 'article',
     images: [
       {
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://iprkaro.com/service/trademark-registration',
+    canonical: 'https://iprkaro.com/our-services/trademark-registration',
   },
 };
 
@@ -120,8 +120,8 @@ const faqs = [
 
 export default function TrademarkRegistrationPage() {
   const breadcrumbItems = [
-    { label: "Services", href: "/service" },
-    { label: "Trademark Registration", href: "/service/trademark-registration" },
+    { label: "Services", href: "/our-services" },
+    { label: "Trademark Registration", href: "/our-services/trademark-registration" },
   ];
 
   const faqSchema = {
@@ -775,14 +775,14 @@ export default function TrademarkRegistrationPage() {
                       </Link>
                     </li>
                     <li>
-                      <Link href="/service/patent-filing" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center group">
+                      <Link href="/our-services/patent-registration" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center group">
                          <span className="mr-2 text-gray-400 group-hover:text-[rgb(110,94,147)]">
                            <FontAwesomeIcon icon={faChevronRight} className="w-2 h-2" />
                          </span> Patent Services
                       </Link>
                     </li>
                     <li>
-                      <Link href="/service/copyright-protection" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center group">
+                      <Link href="/our-services/copyright-registration" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center group">
                          <span className="mr-2 text-gray-400 group-hover:text-[rgb(110,94,147)]">
                            <FontAwesomeIcon icon={faChevronRight} className="w-2 h-2" />
                          </span> Copyright Protection
