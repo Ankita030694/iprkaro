@@ -1,6 +1,5 @@
 User-agent: *
+Allow: /
 Disallow: /authority/
 Disallow: /nullify/
-Allow: /
-Allow: /blog/
 Sitemap: https://www.iprkaro.com/sitemap.xml
