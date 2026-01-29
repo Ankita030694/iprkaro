@@ -26,30 +26,7 @@ const nextConfig: NextConfig = {
         destination: '/contact',
         permanent: true, // 301 redirect
       },
-      // Redirect for moved patent service pages (patent-services-in-state -> state)
-      {
-        source: '/service/patent-services/patent-services-in-:state',
-        destination: '/service/patent-services/:state',
-        permanent: true,
-      },
-      // Redirect for moved trademark registration pages (trademark-registration-in-state -> state)
-      {
-        source: '/service/trademark-registration/trademark-registration-in-:state',
-        destination: '/service/trademark-registration/:state',
-        permanent: true,
-      },
-      // Redirect for moved copyright protection pages (copyright-protection-in-state -> state)
-      {
-        source: '/service/copyright-protection/copyright-protection-in-:state',
-        destination: '/service/copyright-protection/:state',
-        permanent: true,
-      },
-      // Redirect for Indore trademark page to Madhya Pradesh
-      {
-        source: '/service/trademark-registration/trademark-registration-in-indore',
-        destination: '/service/trademark-registration/madhya-pradesh',
-        permanent: true,
-      },
+
     ];
   },
   /* config options here */
