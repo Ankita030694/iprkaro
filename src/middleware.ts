@@ -15,13 +15,15 @@ const isPublicRoute = createRouteMatcher([
 export default clerkMiddleware(async (auth, req) => {
   // Skip Clerk auth for public routes
   if (isPublicRoute(req)) {
-    return NextResponse.next()
+    const res = NextResponse.next()
+    res.headers.delete('X-Robots-Tag')
+    return res
   }
 
   // Protect partner routes - redirect to login if not authenticated
   if (isPartnerRoute(req)) {
     const { userId } = await auth()
-    
+
     if (!userId) {
       const loginUrl = new URL('/partner/login', req.url)
       loginUrl.searchParams.set('redirect_url', req.url)
@@ -29,8 +31,10 @@ export default clerkMiddleware(async (auth, req) => {
     }
   }
 
-  // Allow all other routes
-  return NextResponse.next()
+  const res = NextResponse.next()
+  res.headers.delete('X-Robots-Tag')
+  return res
+
 })
 
 export const config = {
