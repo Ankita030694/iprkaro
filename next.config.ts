@@ -14,20 +14,6 @@ const nextConfig: NextConfig = {
     ],
     formats: ['image/webp', 'image/avif'],
   },
-  async headers() {
-    return [
-      {
-        // Force indexing for all pages to override any platform defaults
-        source: '/:path*',
-        headers: [
-          {
-            key: 'X-Robots-Tag',
-            value: 'index, follow',
-          },
-        ],
-      },
-    ];
-  },
   async redirects() {
     return [
       {
