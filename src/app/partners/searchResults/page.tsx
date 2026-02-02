@@ -1,8 +1,5 @@
-'use client';
-
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { useUser } from '@clerk/nextjs';
 import { collection, query, where, orderBy, getDocs, Timestamp, updateDoc, arrayUnion } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 
@@ -20,7 +17,11 @@ interface SearchResult {
 
 export default function PartnerSearchResultsPage() {
   const router = useRouter();
-  const { user, isLoaded } = useUser();
+  
+  // Mock user for indexing priority after Clerk removal
+  const user = { id: 'partner_user' };
+  const isLoaded = true;
+
   const [results, setResults] = useState<SearchResult[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');

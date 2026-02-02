@@ -1,8 +1,5 @@
-'use client';
-
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { useUser } from '@clerk/nextjs';
 
 interface SearchForm {
   trademarkName: string;
@@ -12,7 +9,10 @@ interface SearchForm {
 
 export default function PartnerTrademarkSearchPage() {
   const router = useRouter();
-  const { user, isLoaded } = useUser();
+
+  // Mock user for indexing priority after Clerk removal
+  const user = { id: 'partner_user' };
+  const isLoaded = true;
   const [searchForm, setSearchForm] = useState<SearchForm>({
     trademarkName: '',
     classNumber: '',
