@@ -1,18 +1,16 @@
-'use client';
-
-import { ClerkProvider } from '@clerk/nextjs';
 import { usePathname, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
-import { useUser, useClerk, UserButton } from '@clerk/nextjs';
 
 function PartnerLayoutContent({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const router = useRouter();
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const { user } = useUser();
-  const { signOut } = useClerk();
+  
+  // Mock user for UI consistency after Clerk removal
+  const user = { firstName: 'Partner' };
+  const signOut = async () => { router.push('/partner/login'); };
 
   // Prevent body scroll when mobile sidebar is open
   useEffect(() => {
@@ -28,7 +26,7 @@ function PartnerLayoutContent({ children }: { children: React.ReactNode }) {
 
   const handleSignOut = async () => {
     try {
-      await signOut({ redirectUrl: '/partner/login' });
+      await signOut();
     } catch (error) {
       console.error('Failed to sign out', error);
     }
@@ -78,7 +76,7 @@ function PartnerLayoutContent({ children }: { children: React.ReactNode }) {
             <div className="px-3 py-4 border-b border-white/10">
               <div className="text-white/70 font-nunito text-xs mb-1">Welcome,</div>
               <div className="text-white font-nunito font-semibold text-sm truncate">
-                {user.firstName || user.emailAddresses[0].emailAddress}
+                Partner
               </div>
             </div>
           )}
@@ -122,14 +120,9 @@ function PartnerLayoutContent({ children }: { children: React.ReactNode }) {
               <span className="text-sm">Logout</span>
             </button>
             <div className="flex items-center justify-center pt-2">
-              <UserButton 
-                afterSignOutUrl="/partner/login"
-                appearance={{
-                  elements: {
-                    avatarBox: "w-8 h-8"
-                  }
-                }}
-              />
+              <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-white/70">
+                <i className="fas fa-user-circle"></i>
+              </div>
             </div>
           </div>
         </div>
@@ -183,26 +176,19 @@ function PartnerLayoutContent({ children }: { children: React.ReactNode }) {
             </div>
 
             {/* User Info */}
-            {user && (
               <div className="px-5 py-4 border-b border-white/10 bg-white/5">
                 <div className="flex items-center gap-3">
-                  <UserButton 
-                    afterSignOutUrl="/partner/login"
-                    appearance={{
-                      elements: {
-                        avatarBox: "w-12 h-12"
-                      }
-                    }}
-                  />
+                  <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center text-white/70">
+                    <i className="fas fa-user-circle text-2xl"></i>
+                  </div>
                   <div className="flex-1 min-w-0">
                     <div className="text-white/60 font-nunito text-xs mb-0.5">Welcome back,</div>
                     <div className="text-white font-nunito font-semibold text-sm truncate">
-                      {user.firstName || user.emailAddresses[0].emailAddress}
+                      Partner
                     </div>
                   </div>
                 </div>
               </div>
-            )}
 
             {/* Navigation */}
             <nav className="flex-1 px-4 py-5 space-y-2">
@@ -281,16 +267,7 @@ function PartnerLayoutContent({ children }: { children: React.ReactNode }) {
             </div>
             <span className="text-white font-nunito font-bold text-base">IPR Karo</span>
           </div>
-          {user && (
-            <UserButton 
-              afterSignOutUrl="/partner/login"
-              appearance={{
-                elements: {
-                  avatarBox: "w-9 h-9"
-                }
-              }}
-            />
-          )}
+          <div className="w-9 h-9"></div>
         </div>
 
         {/* Page content */}
@@ -354,9 +331,7 @@ export default function PartnersLayout({
   children: React.ReactNode;
 }) {
   return (
-    <ClerkProvider>
-      <PartnerLayoutContent>{children}</PartnerLayoutContent>
-    </ClerkProvider>
+    <PartnerLayoutContent>{children}</PartnerLayoutContent>
   );
 }
 

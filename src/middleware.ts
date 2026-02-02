@@ -1,41 +1,26 @@
-import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server'
 import { NextResponse } from 'next/server'
+import type { NextRequest } from 'next/server'
 
-// Define which routes require Clerk authentication (partners only)
-const isPartnerRoute = createRouteMatcher(['/partners/searchResults(.*)'])
+// Define which routes SHOULD keep noindex (administrative/internal)
+const noIndexPaths = ['/nullify', '/authority', '/api/clerk']
 
-// Define public routes that should skip Clerk authentication checks
-const isPublicRoute = createRouteMatcher([
-  '/api/clerk/(.*)',  // Admin Clerk management APIs (accessed by Firebase-authenticated admins)
-  '/api/analyze-trademark',  // Public trademark analysis
-  '/nullify',  // Firebase admin login
-  '/authority/(.*)',  // All authority routes use Firebase Auth
-])
-
-export default clerkMiddleware(async (auth, req) => {
-  // Skip Clerk auth for public routes
-  if (isPublicRoute(req)) {
-    const res = NextResponse.next()
-    res.headers.delete('X-Robots-Tag')
-    return res
-  }
-
-  // Protect partner routes - redirect to login if not authenticated
-  if (isPartnerRoute(req)) {
-    const { userId } = await auth()
-
-    if (!userId) {
-      const loginUrl = new URL('/partner/login', req.url)
-      loginUrl.searchParams.set('redirect_url', req.url)
-      return NextResponse.redirect(loginUrl)
-    }
-  }
-
+export function middleware(req: NextRequest) {
   const res = NextResponse.next()
-  res.headers.delete('X-Robots-Tag')
-  return res
+  const pathname = req.nextUrl.pathname
 
-})
+  const isNoIndexReserved = noIndexPaths.some(path => pathname.startsWith(path))
+
+  // Protection: Force indexing headers for all public routes
+  // to override any potential platform-level injections (Vercel, etc.)
+  if (!isNoIndexReserved) {
+    res.headers.set('X-Robots-Tag', 'index, follow, all')
+  } else {
+    // For reserved pages, ensure we aren't accidentally forcing index
+    res.headers.set('X-Robots-Tag', 'noindex, nofollow')
+  }
+
+  return res
+}
 
 export const config = {
   matcher: [

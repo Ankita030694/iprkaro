@@ -2,7 +2,6 @@ import { NextRequest, NextResponse } from 'next/server';
 import OpenAI from 'openai';
 import { db } from '@/lib/firebase';
 import { collection, doc, getDoc, setDoc, serverTimestamp, updateDoc, arrayUnion } from 'firebase/firestore';
-import { auth } from '@clerk/nextjs/server';
 
 // Initialize OpenAI - will be validated in POST handler
 const openai = new OpenAI({
@@ -188,20 +187,9 @@ export async function POST(request: NextRequest) {
 
     console.log('✅ Request validated:', { trademarkName, classNumber, phoneIncluded: !!normalizedPhone, normalizedPhone });
 
-    // Step 2.5: Get userId from Clerk auth (if authenticated)
+    // Auth removed for indexing priority
     let userId: string | null = null;
-    try {
-      const authResult = await auth();
-      userId = authResult.userId;
-      if (userId) {
-        console.log('✅ Authenticated user:', userId);
-      } else {
-        console.log('ℹ️ Public search (no authentication)');
-      }
-    } catch (authError) {
-      // User is not authenticated (public search), this is okay
-      console.log('ℹ️ Public search (no authentication)');
-    }
+    console.log('ℹ️ Public search (no authentication)');
 
     // Step 2.6: Check if the user is banned (if phone number is provided)
     if (normalizedPhone) {
@@ -670,7 +658,7 @@ CRITICAL REMINDERS:
           fetched: new Date().toISOString().split('T')[0],
         },
       ],
-      ...(userId && { userId }),
+      ...(userId ? { userId } : {}),
       userIds: userId ? [userId] : [],
       userPhoneNumbers: initialUserPhoneNumbers,
       createdAt: serverTimestamp(),
