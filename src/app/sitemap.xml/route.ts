@@ -39,6 +39,9 @@ export async function GET() {
     '/features/expert-trademark-guidance',
     '/features/fast-trademark-registration',
     '/features/trademark-risk-reduction',
+    '/how-to-register-trademark',
+    '/want-to-register-trademark-for-startup',
+    '/trademark-register-kese-karte-hai',
   ].map(path => ({ path, priority: '0.8', changefreq: 'weekly' } as RouteConfig));
 
   // Fetch Dynamic Blog Posts

@@ -220,7 +220,21 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-
+        {/* Queries Row */}
+        <div className="border-t border-gray-700 mt-12 pt-8">
+          <h3 className="text-sm font-semibold mb-4 uppercase text-gray-400">Queries</h3>
+          <div className="flex flex-wrap gap-x-8 gap-y-2">
+            <a href="/trademark-register-kese-karte-hai" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">
+              Trademark Register Kaise Karte Hai
+            </a>
+            <a href="/how-to-register-trademark" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">
+              How to Register Trademark
+            </a>
+            <a href="/want-to-register-trademark-for-startup" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">
+              Register Trademark for Startup
+            </a>
+          </div>
+        </div>
 
         {/* Copyright */}
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">

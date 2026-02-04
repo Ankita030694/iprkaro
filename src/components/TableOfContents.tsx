@@ -125,27 +125,30 @@ export default function TableOfContents({ sections, orientation = "horizontal", 
 
   if (orientation === "vertical") {
     return (
-    <nav 
-        ref={scrollContainerRef}
-        className={`flex flex-col space-y-1 max-h-[calc(100vh-120px)] overflow-y-auto custom-scrollbar pr-2 relative ${className}`}
-      >
-        {sections.map((section) => (
-          <button
-            key={section.id}
-            ref={(el) => {
-              buttonRefs.current[section.id] = el;
-            }}
-            onClick={() => scrollToSection(section.id)}
-            className={`text-left px-4 py-3 text-sm font-medium rounded-r-lg transition-all duration-200 border-l-4 flex-shrink-0 ${
-              activeSection === section.id
-                ? "bg-gray-50 border-[rgb(110,94,147)] text-[rgb(110,94,147)]"
-                : "border-transparent text-gray-600 hover:bg-gray-50 hover:text-gray-900"
-            }`}
+    <aside className={`sticky top-28 bg-gray-50 p-5 rounded-xl border border-gray-100 shadow-sm overflow-y-auto transform scale-[0.9] origin-top ${className}`} style={{ maxHeight: 'calc(85vh - 100px)' }}>
+        <h3 className="font-bold text-[#0C002B] mb-4 text-lg border-b pb-2">Guide Sections</h3>
+        <nav 
+            ref={scrollContainerRef}
+            className="flex flex-col space-y-3"
           >
-            {section.title}
-          </button>
-        ))}
-      </nav>
+            {sections.map((section) => (
+              <button
+                key={section.id}
+                ref={(el) => {
+                  buttonRefs.current[section.id] = el;
+                }}
+                onClick={() => scrollToSection(section.id)}
+                className={`text-left text-sm transition-all duration-200 font-semibold ${
+                  activeSection === section.id
+                    ? "text-[#6E5E93] translate-x-1"
+                    : "text-gray-600 hover:text-[#6E5E93]"
+                }`}
+              >
+                {section.title}
+              </button>
+            ))}
+          </nav>
+      </aside>
     );
   }
 
