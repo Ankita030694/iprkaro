@@ -23,11 +23,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Fast Trademark Registration India | Speed & Security Combined',
     description: 'Don\'t let delays risk your brand. Get the fastest trademark registration, patent services, and copyright protection in India with IPR Karo.',
-    url: 'https://iprkaro.com/features/fast-trademark-registration',
+    url: 'https://www.iprkaro.com/features/fast-trademark-registration',
     type: 'article',
     images: [
       {
-        url: 'https://iprkaro.com/assets/fast-trademark-og.jpg',
+        url: 'https://www.iprkaro.com/assets/fast-trademark-og.jpg',
         width: 1200,
         height: 630,
         alt: 'Fast Trademark Registration Services',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://iprkaro.com/features/fast-trademark-registration',
+    canonical: 'https://www.iprkaro.com/features/fast-trademark-registration',
   },
 };
 
@@ -144,7 +144,7 @@ export default function FastTrademarkRegistration() {
       "name": "IPR Karo",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://iprkaro.com/logo.png"
+        "url": "https://www.iprkaro.com/logo.png"
       }
     }
   };

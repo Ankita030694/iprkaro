@@ -17,6 +17,11 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: '/service',
+        destination: '/our-services',
+        permanent: true,
+      },
+      {
         source: '/terms',
         destination: '/terms-and-conditions',
         permanent: true, // 301 redirect

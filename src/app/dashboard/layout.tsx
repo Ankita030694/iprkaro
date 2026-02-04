@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: 'Dashboard - IPR Karo',
   description: 'Trademark search dashboard',
   alternates: {
-    canonical: 'https://iprkaro.com/dashboard',
+    canonical: 'https://www.iprkaro.com/dashboard',
   },
   viewport: {
     width: 'device-width',

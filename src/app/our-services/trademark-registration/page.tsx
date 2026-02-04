@@ -44,11 +44,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Online Trademark Registration in India | Secure Your Brand',
     description: 'Fast, affordable, and expert-assisted trademark registration services in India. Protect your brand identity today.',
-    url: 'https://iprkaro.com/our-services/trademark-registration',
+    url: 'https://www.iprkaro.com/our-services/trademark-registration',
     type: 'article',
     images: [
       {
-        url: 'https://iprkaro.com/assets/trademark-registration-og.jpg',
+        url: 'https://www.iprkaro.com/assets/trademark-registration-og.jpg',
         width: 1200,
         height: 630,
         alt: 'Trademark Registration Services',
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://iprkaro.com/our-services/trademark-registration',
+    canonical: 'https://www.iprkaro.com/our-services/trademark-registration',
   },
 };
 
@@ -151,7 +151,7 @@ export default function TrademarkRegistrationPage() {
       "name": "IPR Karo",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://iprkaro.com/logo.png"
+        "url": "https://www.iprkaro.com/logo.png"
       }
     }
   };
@@ -164,7 +164,7 @@ export default function TrademarkRegistrationPage() {
         "@context": "https://schema.org",
         "@type": "Product",
         "name": "Trademark Registration Services",
-        "image": "https://iprkaro.com/assets/trademark-registration-og.jpg",
+        "image": "https://www.iprkaro.com/assets/trademark-registration-og.jpg",
         "description": "Professional trademark registration services in India.",
         "brand": {
           "@type": "Brand",

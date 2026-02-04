@@ -23,11 +23,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'AI Powered Trademark Solutions India | Future of IP Protection',
     description: 'Revolutionizing trademark registration and IP protection with advanced Artificial Intelligence. Faster searches, higher accuracy, and zero human error.',
-    url: 'https://iprkaro.com/features/ai-powered-trademark-solutions',
+    url: 'https://www.iprkaro.com/features/ai-powered-trademark-solutions',
     type: 'article',
     images: [
       {
-        url: 'https://iprkaro.com/assets/ai-trademark-og.jpg',
+        url: 'https://www.iprkaro.com/assets/ai-trademark-og.jpg',
         width: 1200,
         height: 630,
         alt: 'AI Powered Trademark Solutions',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://iprkaro.com/features/ai-powered-trademark-solutions',
+    canonical: 'https://www.iprkaro.com/features/ai-powered-trademark-solutions',
   },
 };
 
@@ -117,7 +117,7 @@ export default function AiPoweredTrademarkSolutions() {
       "name": "IPR Karo",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://iprkaro.com/logo.png"
+        "url": "https://www.iprkaro.com/logo.png"
       }
     }
   };

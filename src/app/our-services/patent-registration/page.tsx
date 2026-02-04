@@ -44,11 +44,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Patent Registration in India (2025) | Secure Your Tech',
     description: 'Turn your invention into a valuable asset. Comprehensive patent filing, drafting, and prosecution services. 80% Fee Rebate for Startups/MSMEs.',
-    url: 'https://iprkaro.com/our-services/patent-registration',
+    url: 'https://www.iprkaro.com/our-services/patent-registration',
     type: 'article',
     images: [
       {
-        url: 'https://iprkaro.com/assets/patent-registration-og.jpg',
+        url: 'https://www.iprkaro.com/assets/patent-registration-og.jpg',
         width: 1200,
         height: 630,
         alt: 'Patent Filing Services India',
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://iprkaro.com/our-services/patent-registration',
+    canonical: 'https://www.iprkaro.com/our-services/patent-registration',
   },
 };
 
@@ -161,13 +161,13 @@ export default function PatentFilingPage() {
         "headline": "Patent Registration in India (2025) | Cost, Process & Filing",
         "description": "File your Patent in India with IPR Karo. Expert Patent Agents for Provisional/Complete specifications, Patent Search, and Expedited Examination.",
         "author": { "@type": "Organization", "name": "IPR Karo" },
-        "publisher": { "@type": "Organization", "name": "IPR Karo", "logo": { "@type": "ImageObject", "url": "https://iprkaro.com/logo.png" } }
+        "publisher": { "@type": "Organization", "name": "IPR Karo", "logo": { "@type": "ImageObject", "url": "https://www.iprkaro.com/logo.png" } }
       })}} />
       <Script id="review-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Product",
         "name": "Patent Filing Services",
-        "image": "https://iprkaro.com/assets/patent-registration-og.jpg",
+        "image": "https://www.iprkaro.com/assets/patent-registration-og.jpg",
         "description": "Professional patent filing and prosecution services in India.",
         "brand": { "@type": "Brand", "name": "IPR Karo" },
         "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "620" },

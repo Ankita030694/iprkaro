@@ -23,11 +23,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Expert Trademark Guidance India | Registration, Patent & Copyright Services',
     description: 'Get expert guidance for trademark registration, patent services, and copyright protection. Secure your IP assets with India\'s leading attorneys.',
-    url: 'https://iprkaro.com/features/expert-trademark-guidance',
+    url: 'https://www.iprkaro.com/features/expert-trademark-guidance',
     type: 'article',
     images: [
       {
-        url: 'https://iprkaro.com/assets/expert-trademark-guidance-og.jpg',
+        url: 'https://www.iprkaro.com/assets/expert-trademark-guidance-og.jpg',
         width: 1200,
         height: 630,
         alt: 'Expert Trademark Guidance Services',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://iprkaro.com/features/expert-trademark-guidance',
+    canonical: 'https://www.iprkaro.com/features/expert-trademark-guidance',
   },
 };
 
@@ -120,7 +120,7 @@ export default function ExpertTrademarkGuidance() {
       "name": "IPR Karo",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://iprkaro.com/logo.png"
+        "url": "https://www.iprkaro.com/logo.png"
       }
     }
   };

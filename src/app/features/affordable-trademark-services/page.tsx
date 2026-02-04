@@ -23,11 +23,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Affordable Trademark Services India | Save 60% on IP Protection',
     description: 'Professional trademark services that fit your budget. Expert attorneys, AI-driven efficiency, and complete transparency. Start protecting your brand today.',
-    url: 'https://iprkaro.com/features/affordable-trademark-services',
+    url: 'https://www.iprkaro.com/features/affordable-trademark-services',
     type: 'article',
     images: [
       {
-        url: 'https://iprkaro.com/assets/affordable-trademark-og.jpg',
+        url: 'https://www.iprkaro.com/assets/affordable-trademark-og.jpg',
         width: 1200,
         height: 630,
         alt: 'Affordable Trademark Services India',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://iprkaro.com/features/affordable-trademark-services',
+    canonical: 'https://www.iprkaro.com/features/affordable-trademark-services',
   },
 };
 
@@ -123,7 +123,7 @@ export default function AffordableTrademarkServices() {
       "name": "IPR Karo",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://iprkaro.com/logo.png"
+        "url": "https://www.iprkaro.com/logo.png"
       }
     }
   };
@@ -133,7 +133,7 @@ export default function AffordableTrademarkServices() {
     "@type": "Product",
     "name": "Affordable Trademark Registration Service",
     "description": "Professional trademark filing and protection service optimized for startups and SMEs.",
-    "image": "https://iprkaro.com/assets/affordable-trademark-og.jpg",
+    "image": "https://www.iprkaro.com/assets/affordable-trademark-og.jpg",
     "brand": {
       "@type": "Brand",
       "name": "IPR Karo"

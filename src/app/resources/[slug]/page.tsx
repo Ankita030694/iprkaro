@@ -153,7 +153,7 @@ export default async function BlogPostPage({ params }: PageProps) {
         return [imageUrl];
       }
       // If relative URL, make it absolute
-      return [`https://iprkaro.com${imageUrl.startsWith('/') ? imageUrl : '/' + imageUrl}`];
+      return [`https://www.iprkaro.com${imageUrl.startsWith('/') ? imageUrl : '/' + imageUrl}`];
     };
 
 
@@ -183,14 +183,14 @@ export default async function BlogPostPage({ params }: PageProps) {
         "name": "IPRKaro",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://iprkaro.com/logo/iprlogo.svg"
+          "url": "https://www.iprkaro.com/logo/iprlogo.svg"
         }
       },
       "datePublished": formatDate(blogData.date || blogData.created),
       "dateModified": formatDate(blogData.date || blogData.created),
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": `https://iprkaro.com/blog/${slug}`
+        "@id": `https://www.iprkaro.com/blog/${slug}`
       },
 
     };
@@ -218,19 +218,19 @@ export default async function BlogPostPage({ params }: PageProps) {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://iprkaro.com"
+          "item": "https://www.iprkaro.com"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Blog",
-          "item": "https://iprkaro.com/blog"
+          "item": "https://www.iprkaro.com/blog"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": blogData.title,
-          "item": `https://iprkaro.com/blog/${slug}`
+          "item": `https://www.iprkaro.com/blog/${slug}`
         }
       ]
     };

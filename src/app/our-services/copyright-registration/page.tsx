@@ -49,11 +49,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Copyright Registration in India (2025) | Protect Your Creativity',
     description: 'Own your content legally. Comprehensive copyright filing for Authors, Artists, Musicians, and Developers. 60-Year Protection.',
-    url: 'https://iprkaro.com/our-services/copyright-registration',
+    url: 'https://www.iprkaro.com/our-services/copyright-registration',
     type: 'article',
     images: [
       {
-        url: 'https://iprkaro.com/assets/copyright-registration-og.jpg',
+        url: 'https://www.iprkaro.com/assets/copyright-registration-og.jpg',
         width: 1200,
         height: 630,
         alt: 'Copyright Registration Services India',
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://iprkaro.com/our-services/copyright-registration',
+    canonical: 'https://www.iprkaro.com/our-services/copyright-registration',
   },
 };
 
@@ -167,13 +167,13 @@ export default function CopyrightPage() {
         "headline": "Copyright Registration in India (2025) | Fees, Process & Online Filing",
         "description": "Secure your creative work with Online Copyright Registration in India. Protect Books, Music, Software (Source Code), Movies & Art.",
         "author": { "@type": "Organization", "name": "IPR Karo" },
-        "publisher": { "@type": "Organization", "name": "IPR Karo", "logo": { "@type": "ImageObject", "url": "https://iprkaro.com/logo.png" } }
+        "publisher": { "@type": "Organization", "name": "IPR Karo", "logo": { "@type": "ImageObject", "url": "https://www.iprkaro.com/logo.png" } }
       })}} />
       <Script id="review-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Product",
         "name": "Copyright Registration Services",
-        "image": "https://iprkaro.com/assets/copyright-registration-og.jpg",
+        "image": "https://www.iprkaro.com/assets/copyright-registration-og.jpg",
         "description": "Professional copyright registration services in India.",
         "brand": { "@type": "Brand", "name": "IPR Karo" },
         "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "850" },

@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: '/service',
+    canonical: '/our-services',
   },
 };
 
@@ -62,7 +62,7 @@ export default function ServicesPage() {
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "IPR Karo - Professional IP Services",
-    "image": "https://iprkaro.com/logo.png",
+    "image": "https://www.iprkaro.com/logo.png",
     "description": "Comprehensive trademark, copyright, and patent registration services in India with AI-powered search.",
     "brand": {
       "@type": "Brand",

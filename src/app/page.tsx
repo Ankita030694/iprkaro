@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Trademark Registration India | IPR Karo",
     description: "AI-powered trademark registration, patent services, and copyright protection in India.",
-    url: "https://iprkaro.com",
+    url: "https://www.iprkaro.com",
     siteName: "IPR Karo",
     locale: "en_IN",
     type: "website",
@@ -71,7 +71,7 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "IPR Karo - Legal Services",
-    "image": "https://iprkaro.com/logo.png",
+    "image": "https://www.iprkaro.com/logo.png",
     "description": "AI-powered trademark registration and intellectual property protection services in India.",
     "brand": {
       "@type": "Brand",

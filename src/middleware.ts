@@ -5,8 +5,15 @@ import type { NextRequest } from 'next/server'
 const noIndexPaths = ['/nullify', '/authority', '/api/clerk']
 
 export function middleware(req: NextRequest) {
-  const res = NextResponse.next()
   const pathname = req.nextUrl.pathname
+  const host = req.headers.get('host')
+
+  // Force non-www to www redirect for SEO consistency
+  if (host === 'iprkaro.com') {
+    return NextResponse.redirect(`https://www.iprkaro.com${pathname}`, 301)
+  }
+
+  const res = NextResponse.next()
 
   const isNoIndexReserved = noIndexPaths.some(path => pathname.startsWith(path))
 

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://iprkaro.com/thank-you',
+    canonical: 'https://www.iprkaro.com/thank-you',
   },
   robots: {
     index: false, // Don't index thank you pages

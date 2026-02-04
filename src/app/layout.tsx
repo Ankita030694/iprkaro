@@ -56,8 +56,8 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "IPR Karo",
-    "url": "https://iprkaro.com",
-    "logo": "https://iprkaro.com/logo/iprlogo.svg",
+    "url": "https://www.iprkaro.com",
+    "logo": "https://www.iprkaro.com/logo/iprlogo.svg",
     "description": "Turn Ideas Into Assets - IPR Karo. AI-powered trademark registration, patent services, and copyright protection in India.",
     "sameAs": [
       "https://www.linkedin.com/company/iprkaro/",

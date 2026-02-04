@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: 'Trademark Search - IPR Karo',
   description: 'Search and verify trademark availability',
   alternates: {
-    canonical: 'https://iprkaro.com/form',
+    canonical: 'https://www.iprkaro.com/form',
   },
   viewport: {
     width: 'device-width',

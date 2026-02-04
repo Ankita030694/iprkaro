@@ -23,11 +23,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Trademark Risk Reduction | Secure Your Brand Future',
     description: 'Don\'t gamble with your brand. Comprehensive trademark risk assessment and mitigation strategies by IPR Karo.',
-    url: 'https://iprkaro.com/features/trademark-risk-reduction',
+    url: 'https://www.iprkaro.com/features/trademark-risk-reduction',
     type: 'article',
     images: [
       {
-        url: 'https://iprkaro.com/assets/risk-reduction-og.jpg',
+        url: 'https://www.iprkaro.com/assets/risk-reduction-og.jpg',
         width: 1200,
         height: 630,
         alt: 'Trademark Risk Reduction Services',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://iprkaro.com/features/trademark-risk-reduction',
+    canonical: 'https://www.iprkaro.com/features/trademark-risk-reduction',
   },
 };
 
@@ -127,7 +127,7 @@ export default function TrademarkRiskReduction() {
       "name": "IPR Karo",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://iprkaro.com/logo.png"
+        "url": "https://www.iprkaro.com/logo.png"
       }
     }
   };

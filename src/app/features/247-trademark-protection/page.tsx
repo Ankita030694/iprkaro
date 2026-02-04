@@ -24,11 +24,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: '24/7 Trademark Protection India | Complete Brand, Logo & IP Monitoring',
     description: 'Secure your brand with our 24/7 trademark protection services in India. Comprehensive monitoring and expert legal support.',
-    url: 'https://iprkaro.com/features/247-trademark-protection',
+    url: 'https://www.iprkaro.com/features/247-trademark-protection',
     type: 'article',
     images: [
       {
-        url: 'https://iprkaro.com/assets/trademark-protection-og.jpg',
+        url: 'https://www.iprkaro.com/assets/trademark-protection-og.jpg',
         width: 1200,
         height: 630,
         alt: '24/7 Trademark Protection Services',
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://iprkaro.com/features/247-trademark-protection',
+    canonical: 'https://www.iprkaro.com/features/247-trademark-protection',
   },
 };
 
@@ -121,7 +121,7 @@ export default function TwentyFourSevenTrademarkProtection() {
       "name": "IPR Karo",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://iprkaro.com/logo.png"
+        "url": "https://www.iprkaro.com/logo.png"
       }
     }
   };

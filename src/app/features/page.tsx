@@ -21,11 +21,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Comprehensive IP Services India | The IPR Karo Ecosystem',
     description: 'Explore our integrated IP protection suite. Fast registration, risk reduction, AI monitoring, and expert legal guidance under one roof.',
-    url: 'https://iprkaro.com/features',
+    url: 'https://www.iprkaro.com/features',
     type: 'article',
     images: [
       {
-        url: 'https://iprkaro.com/assets/features-og.jpg',
+        url: 'https://www.iprkaro.com/assets/features-og.jpg',
         width: 1200,
         height: 630,
         alt: 'IPR Karo Features Suite',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://iprkaro.com/features',
+    canonical: 'https://www.iprkaro.com/features',
   },
 };
 
@@ -126,7 +126,7 @@ export default function FeaturesIndex() {
       "name": "IPR Karo",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://iprkaro.com/logo.png"
+        "url": "https://www.iprkaro.com/logo.png"
       }
     }
   };
