@@ -30,6 +30,54 @@ interface Lead {
   };
 }
 
+const TM_CLASSES: {[key: string]: string} = {
+  '1': 'Chemicals',
+  '2': 'Paints',
+  '3': 'Cosmetics & Cleaning',
+  '4': 'Fuels & Industrial Oils',
+  '5': 'Pharmaceuticals',
+  '6': 'Metals & Metal Goods',
+  '7': 'Machinery',
+  '8': 'Hand Tools',
+  '9': 'Electronics & Software',
+  '10': 'Medical Instruments',
+  '11': 'Appliances',
+  '12': 'Vehicles',
+  '13': 'Firearms',
+  '14': 'Jewelry',
+  '15': 'Musical Instruments',
+  '16': 'Paper & Stationery',
+  '17': 'Rubber & Plastics',
+  '18': 'Leather Goods',
+  '19': 'Building Materials',
+  '20': 'Furniture',
+  '21': 'Household Utensils',
+  '22': 'Ropes, Nets & Sacks',
+  '23': 'Yarns & Threads',
+  '24': 'Fabrics & Textiles',
+  '25': 'Clothing & Footwear',
+  '26': 'Lace & Embroidery',
+  '27': 'Carpets',
+  '28': 'Toys & Games',
+  '29': 'Foodstuffs (Meat, Fish)',
+  '30': 'Foodstuffs (Staples)',
+  '31': 'Agricultural Products',
+  '32': 'Beers & Non-Alcoholic',
+  '33': 'Alcoholic Beverages',
+  '34': 'Tobacco',
+  '35': 'Business Services',
+  '36': 'Financial Services',
+  '37': 'Construction & Repair',
+  '38': 'Telecommunications',
+  '39': 'Transport & Storage',
+  '40': 'Treatment of Materials',
+  '41': 'Education & Training',
+  '42': 'Scientific & IT Services',
+  '43': 'Hospitality',
+  '44': 'Medical Services',
+  '45': 'Legal & Security'
+};
+
 export default function LeadsPage() {
   const router = useRouter();
   const [leads, setLeads] = useState<Lead[]>([]);
@@ -329,14 +377,18 @@ export default function LeadsPage() {
   const interests = ['all', 'Trademark Registration', 'Copyright Protection', 'Patent Services'];
   
   // Get abbreviation for interest type with class number if applicable
-  const getInterestAbbr = (interest: string) => {
+  const getInterestAbbr = (interest: string, showDetail = false) => {
     const normalized = normalizeInterest(interest);
     
     // Extract class number for Trademark Registration
     if (normalized === 'Trademark Registration') {
       const classMatch = interest.match(/Class\s+(\d+)/i);
       if (classMatch) {
-        return `TM-${classMatch[1]}`;
+        const classNum = classMatch[1];
+        if (showDetail && TM_CLASSES[classNum]) {
+          return `TM-${classNum} (${TM_CLASSES[classNum]})`;
+        }
+        return `TM-${classNum}`;
       }
       return 'TM';
     }
@@ -364,7 +416,7 @@ export default function LeadsPage() {
 
   return (
     <div className="min-h-screen px-3 py-6 bg-gray-50">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-8xl mx-auto">
         {/* Header */}
         <div className="mb-6">
           <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-1.5 font-nunito">
@@ -467,7 +519,7 @@ export default function LeadsPage() {
               <p className="text-gray-600 font-nunito text-sm">No leads found</p>
             </div>
           ) : (
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto max-w-full">
               <table className="w-full">
                 <thead>
                   <tr className="border-b border-gray-200 bg-gray-50">
@@ -534,8 +586,8 @@ export default function LeadsPage() {
                         {lead.state || '-'}
                       </td>
                       <td className="px-2 py-2">
-                        <span className="inline-block px-2 py-1 rounded text-[11px] font-nunito font-semibold bg-gray-100 text-gray-900 border border-gray-300">
-                          {getInterestAbbr(lead.interest)}
+                        <span className="inline-block px-2 py-1 rounded text-[11px] font-nunito font-semibold bg-gray-100 text-gray-900 border border-gray-300 whitespace-nowrap">
+                          {getInterestAbbr(lead.interest, true)}
                         </span>
                       </td>
                       <td className="px-2 py-2">

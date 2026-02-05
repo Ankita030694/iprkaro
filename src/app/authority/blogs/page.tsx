@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faUsers, faChartLine, faClipboardList, faCog, faPlus, faEdit, faTrash, faUpload } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faUsers, faChartLine, faClipboardList, faCog, faPlus, faEdit, faTrash, faUpload, faMagic } from '@fortawesome/free-solid-svg-icons';
 import { collection, getDocs, addDoc, updateDoc, deleteDoc, doc, getDoc } from 'firebase/firestore';
 import { ref, uploadBytes, getDownloadURL, deleteObject } from 'firebase/storage';
 import { signOut, onAuthStateChanged } from 'firebase/auth';
@@ -77,6 +77,11 @@ const BlogsDashboard = () => {
   const itemsPerPage = 10; // Set the number of items per page
   const [rssDebugInfo, setRssDebugInfo] = useState<string>('');
   const [isLoadingRss, setIsLoadingRss] = useState(false);
+
+  // AI Generation state
+  const [primaryKeyword, setPrimaryKeyword] = useState('');
+  const [secondaryKeyword, setSecondaryKeyword] = useState('');
+  const [isGenerating, setIsGenerating] = useState(false);
 
   // Calculate the total number of pages
   const totalPages = Math.ceil(blogs.length / itemsPerPage);
@@ -342,6 +347,50 @@ const BlogsDashboard = () => {
       alert(`Failed to upload image: ${error instanceof Error ? error.message : "Please check your internet connection and try again."}`);
     } finally {
       setUploading(false);
+    }
+  };
+
+  // Handle AI generation
+  const handleGenerate = async () => {
+    if (!primaryKeyword.trim()) {
+      alert('Please enter a primary keyword.');
+      return;
+    }
+
+    try {
+      setIsGenerating(true);
+      const response = await fetch('/api/generate-article', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ primaryKeyword, secondaryKeyword }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to generate blog');
+      }
+
+      const generatedData = await response.json();
+
+      setNewBlog(prevState => ({
+        ...prevState,
+        title: generatedData.title || prevState.title,
+        subtitle: generatedData.subtitle || prevState.subtitle,
+        description: generatedData.description || prevState.description, // HTML content
+        metaTitle: generatedData.metaTitle || prevState.metaTitle,
+        metaDescription: generatedData.metaDescription || prevState.metaDescription,
+        slug: generatedData.slug || (generatedData.title ? generateSlug(generatedData.title) : prevState.slug),
+        faqs: generatedData.faqs || prevState.faqs,
+        reviews: generatedData.reviews || prevState.reviews,
+      }));
+      
+      alert('Blog generated successfully! Please review and add an image.');
+    } catch (error) {
+      console.error('Error generating blog:', error);
+      alert('Failed to generate blog. Please try again.');
+    } finally {
+      setIsGenerating(false);
     }
   };
   
@@ -614,6 +663,8 @@ const BlogsDashboard = () => {
       reviews: [], // Reset Reviews array
       author: 'Anuj Anand Malik' // Default author changed from 'Team AMA'
     });
+    setPrimaryKeyword('');
+    setSecondaryKeyword('');
     setFormMode('add');
     setShowBlogForm(false);
   };
@@ -763,6 +814,59 @@ const BlogsDashboard = () => {
                   onSubmit={handleSubmitBlog}
                   className="space-y-6"
                 >
+                  {/* AI Generator Section */}
+                  <div className="bg-indigo-50 p-6 rounded-2xl border border-indigo-100 mb-8">
+                    <h3 className="text-indigo-900 font-bold mb-4 flex items-center text-lg">
+                      <FontAwesomeIcon icon={faMagic} className="mr-3 text-indigo-600" />
+                      AI Magic Generator
+                    </h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                      <div>
+                          <label className="block text-sm font-semibold text-indigo-900 mb-2">Primary Keyword (Must be specific)</label>
+                          <input
+                            type="text"
+                            value={primaryKeyword}
+                            onChange={(e) => setPrimaryKeyword(e.target.value)}
+                            placeholder="e.g., 'Trademark Registration in India'"
+                            className="w-full px-4 py-3 bg-white border border-indigo-200 text-indigo-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+                            disabled={isGenerating}
+                          />
+                      </div>
+                      <div>
+                          <label className="block text-sm font-semibold text-indigo-900 mb-2">Secondary Keyword (Optional)</label>
+                          <input
+                            type="text"
+                            value={secondaryKeyword}
+                            onChange={(e) => setSecondaryKeyword(e.target.value)}
+                            placeholder="e.g., 'step by step guide'"
+                            className="w-full px-4 py-3 bg-white border border-indigo-200 text-indigo-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+                            disabled={isGenerating}
+                          />
+                      </div>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={handleGenerate}
+                      disabled={isGenerating}
+                      className="mt-6 w-full bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-bold shadow-lg shadow-indigo-200 transition-all flex items-center justify-center disabled:opacity-70"
+                    >
+                      {isGenerating ? (
+                        <>
+                          <div className="animate-spin rounded-full h-5 w-5 border-2 border-white border-t-transparent mr-3"></div>
+                          Generating Your Masterpiece...
+                        </>
+                      ) : (
+                        <>
+                          <FontAwesomeIcon icon={faMagic} className="mr-3" />
+                          Generate SEO-Optimized Blog
+                        </>
+                      )}
+                    </button>
+                    <p className="text-xs text-indigo-600 mt-4 font-medium italic">
+                      ✨ This will automatically craft a high-converting title, content, meta tags, FAQs, and realistic reviews.
+                    </p>
+                  </div>
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="title" className="block text-sm font-medium text-gray-700 mb-2">Blog Title</label>
@@ -958,7 +1062,7 @@ const BlogsDashboard = () => {
                                 type="text"
                                 value={faq.question}
                                 onChange={(e) => handleFaqChange(index, 'question', e.target.value)}
-                                className="w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-gray-500"
+                                className="w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-gray-500 text-black"
                                 placeholder="Enter question"
                               />
                             </div>
@@ -969,7 +1073,7 @@ const BlogsDashboard = () => {
                                 value={faq.answer}
                                 onChange={(e) => handleFaqChange(index, 'answer', e.target.value)}
                                 rows={3}
-                                className="w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-gray-500"
+                                className="w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-gray-500 text-black"
                                 placeholder="Enter answer"
                               />
                             </div>
@@ -1017,7 +1121,7 @@ const BlogsDashboard = () => {
                                   type="text"
                                   value={review.name}
                                   onChange={(e) => handleReviewChange(index, 'name', e.target.value)}
-                                  className="w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-gray-500"
+                                  className="w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-gray-500 text-black"
                                   placeholder="Enter reviewer name"
                                 />
                               </div>
@@ -1029,7 +1133,7 @@ const BlogsDashboard = () => {
                                   max="5"
                                   value={review.rating}
                                   onChange={(e) => handleReviewChange(index, 'rating', Number(e.target.value))}
-                                  className="w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-gray-500"
+                                  className="w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-gray-500 text-black"
                                 />
                               </div>
                             </div>
@@ -1040,7 +1144,7 @@ const BlogsDashboard = () => {
                                 type="date"
                                 value={review.date || ''}
                                 onChange={(e) => handleReviewChange(index, 'date', e.target.value)}
-                                className="w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-gray-500"
+                                className="w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-gray-500 text-black"
                               />
                             </div>
 
@@ -1050,7 +1154,7 @@ const BlogsDashboard = () => {
                                 value={review.review}
                                 onChange={(e) => handleReviewChange(index, 'review', e.target.value)}
                                 rows={3}
-                                className="w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-gray-500"
+                                className="w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-gray-500 text-black"
                                 placeholder="Enter review text"
                               />
                             </div>
