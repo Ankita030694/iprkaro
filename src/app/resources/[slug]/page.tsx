@@ -51,15 +51,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       const blogData = querySnapshot.docs[0].data() as Blog;
       
       return {
-        title: blogData.metaTitle || `${blogData.title} - AMA Legal Solutions`,
-        description: blogData.metaDescription || blogData.description?.substring(0, 160) || 'Read the latest legal insights and articles from AMA Legal Solutions',
+        title: blogData.metaTitle || `${blogData.title} - IPR Karo`,
+        description: blogData.metaDescription || blogData.description?.substring(0, 160) || 'Read the latest legal insights and articles from IPR Karo',
         openGraph: {
           title: blogData.metaTitle || blogData.title,
           description: blogData.metaDescription || blogData.description?.substring(0, 160),
           images: blogData.image ? [blogData.image] : [],
           type: 'article',
           publishedTime: blogData.date,
-          authors: blogData.author ? [blogData.author] : ['AMA Legal Solutions'],
+          authors: ['Team IPRKaro'],
         },
         twitter: {
           card: 'summary_large_image',
@@ -77,8 +77,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return {
-    title: 'Blog Article - AMA Legal Solutions',
-    description: 'Read the latest legal insights and articles from AMA Legal Solutions',
+    title: 'Blog Article - IPR Karo',
+    description: 'Read the latest legal insights and articles from IPR Karo',
     alternates: {
       canonical: `/blog/${slug}`,
     },
@@ -175,8 +175,8 @@ export default async function BlogPostPage({ params }: PageProps) {
       "description": blogData.metaDescription || blogData.subtitle || blogData.description?.substring(0, 160) || '',
       "image": getAbsoluteImageUrl(blogData.image),
       "author": {
-        "@type": blogData.author ? "Person" : "Organization",
-        "name": blogData.author || "IPRKaro"
+        "@type": "Organization",
+        "name": "Team IPRKaro"
       },
       "publisher": {
         "@type": "Organization",

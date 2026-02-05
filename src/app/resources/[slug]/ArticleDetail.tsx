@@ -75,7 +75,7 @@ const shuffleArray = (array: Blog[]) => {
 const authorBios = {
   "Anuj Anand Malik": {
     name: "Anuj Anand Malik",
-    description: "Anuj Anand Malik, Founder of AMA Legal Solutions, is a trusted advocate, loan settlement expert, legal advisor, and banking lawyer. With over a decade of experience in loan settlement, corporate law, financial disputes, and compliance, he leads a result-driven law firm based in India that helps individuals, startups, and businesses achieve legal and financial stability.",
+    description: "Anuj Anand Malik, Founder of IPR Karo, is a trusted advocate, loan settlement expert, legal advisor, and banking lawyer. With over a decade of experience in loan settlement, corporate law, financial disputes, and compliance, he leads a result-driven law firm based in India that helps individuals, startups, and businesses achieve legal and financial stability.",
     image: "/anujbhiya.png",
     linkedInUrl: "https://www.linkedin.com/in/iamanujmalik/"
   },
@@ -84,6 +84,12 @@ const authorBios = {
     description: "Legal professional specializing in corporate law and regulatory compliance. Brings a strategic approach to legal advisory with extensive experience in contract negotiation and business law.",
     image: "/shreychad.svg",
     linkedInUrl: "https://www.linkedin.com/in/shrey-arora-b0487b67/"
+  },
+  "Team IPRKaro": {
+    name: "Team IPRKaro",
+    description: "The dedicated legal and research team at IPR Karo, committed to providing the most accurate and up-to-date information on intellectual property rights, loan settlements, and legal compliance in India.",
+    image: "/logo/iprlogo.svg",
+    linkedInUrl: "#"
   }
 };
 
@@ -473,12 +479,10 @@ const ArticleDetail = memo(function ArticleDetail({ slug, initialReviews = [] }:
                 <i className="fas fa-calendar text-[#FFB703] text-xs" aria-hidden="true"></i>
                 <span className="text-white text-[10px] lg:text-xs font-nunito">{blog.date}</span>
               </div>
-              {blog.author && (
                 <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 backdrop-blur-sm border border-white/10">
                   <i className="fas fa-user text-[#FFB703] text-xs" aria-hidden="true"></i>
-                  <span className="text-white text-[10px] lg:text-xs font-nunito">{blog.author}</span>
+                  <span className="text-white text-[10px] lg:text-xs font-nunito">Team IPRKaro</span>
                 </div>
-              )}
               </div>
               
             {/* Featured Image */}
@@ -547,35 +551,31 @@ const ArticleDetail = memo(function ArticleDetail({ slug, initialReviews = [] }:
             </div>
           </div>
           
-              {/* Author Bio */}
-            {blog.author && authorBios[blog.author as keyof typeof authorBios] && (
-                <div className="mt-6 rounded-2xl p-6 backdrop-blur-xl border border-white/10 shadow-xl" style={{
-                  background: 'linear-gradient(135deg, rgba(255, 183, 3, 0.1) 0%, rgba(12, 0, 43, 0.9) 100%)'
-                }}>
-                  <div className="flex flex-col sm:flex-row gap-4">
-                    <img 
-                      src={authorBios[blog.author as keyof typeof authorBios].image}
-                        alt={blog.author}
-                      className="w-20 h-20 rounded-xl border-2 border-[#FFB703]/30 shadow-lg"
-                    />
-                    <div className="flex-1">
-                      <h3 className="text-white font-nunito font-bold text-lg mb-1">{blog.author}</h3>
-                      <p className="text-white/70 font-nunito text-sm mb-3 leading-relaxed">
-                        {authorBios[blog.author as keyof typeof authorBios].description.substring(0, 200) + "..."}
-                      </p>
-                      <a 
-                        href={authorBios[blog.author as keyof typeof authorBios].linkedInUrl}
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                        className="inline-flex items-center gap-2 text-[#FFB703] hover:text-[#FFC93D] font-nunito font-medium text-sm transition-colors"
-                    >
-                        <i className="fab fa-linkedin" aria-hidden="true"></i>
-                      Connect on LinkedIn
-                    </a>
+            {/* Author Bio */}
+            {(() => {
+                const bio = authorBios["Team IPRKaro"];
+                return (
+                  <div className="mt-6 rounded-2xl p-6 backdrop-blur-xl border border-white/10 shadow-xl" style={{
+                    background: 'linear-gradient(135deg, rgba(255, 183, 3, 0.1) 0%, rgba(12, 0, 43, 0.9) 100%)'
+                  }}>
+                    <div className="flex flex-col sm:flex-row gap-4">
+                      <div className="w-20 h-20 rounded-xl border-2 border-[#FFB703]/30 shadow-lg bg-white/10 flex items-center justify-center overflow-hidden p-2">
+                        <img 
+                          src={bio.image}
+                          alt={bio.name}
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-white font-nunito font-bold text-lg mb-1">{bio.name}</h3>
+                        <p className="text-white/70 font-nunito text-sm mb-3 leading-relaxed">
+                          {bio.description}
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            )}
+                );
+            })()}
 
 
 
