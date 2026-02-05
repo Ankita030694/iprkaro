@@ -84,6 +84,8 @@ const BlogsDashboard = () => {
   const [isGenerating, setIsGenerating] = useState(false);
   const [imagePrompt, setImagePrompt] = useState('');
   const [isGeneratingImage, setIsGeneratingImage] = useState(false);
+  const [expansionSubtopics, setExpansionSubtopics] = useState('');
+  const [isExpanding, setIsExpanding] = useState(false);
 
   // Calculate the total number of pages
   const totalPages = Math.ceil(blogs.length / itemsPerPage);
@@ -165,6 +167,70 @@ const BlogsDashboard = () => {
 
     fetchBlogs();
   }, []);
+
+  // --- Draft Persistence Logic ---
+  const DRAFT_STORAGE_KEY = 'blog_draft';
+
+  // Load draft on mount (only for 'add' mode)
+  useEffect(() => {
+    const savedDraft = localStorage.getItem(DRAFT_STORAGE_KEY);
+    if (savedDraft) {
+      try {
+        const { blog, primary, secondary, image } = JSON.parse(savedDraft);
+        if (blog) {
+          // We don't automatically set the form because we might be in 'edit' mode.
+          // Drafts are intended for NEW blogs.
+          console.log('Draft found in storage');
+        }
+      } catch (e) {
+        console.error('Error parsing draft:', e);
+      }
+    }
+  }, []);
+
+  // Auto-save draft when form changes
+  useEffect(() => {
+    // Only save draft if in 'add' mode and form is visible and has content
+    if (showBlogForm && formMode === 'add') {
+      const hasContent = newBlog.title || newBlog.description || primaryKeyword || imagePrompt;
+      if (hasContent) {
+        const draft = {
+          blog: newBlog,
+          primary: primaryKeyword,
+          secondary: secondaryKeyword,
+          image: imagePrompt,
+          expansion: expansionSubtopics
+        };
+        localStorage.setItem(DRAFT_STORAGE_KEY, JSON.stringify(draft));
+      }
+    }
+  }, [newBlog, primaryKeyword, secondaryKeyword, imagePrompt, expansionSubtopics, showBlogForm, formMode]);
+
+  const loadDraft = () => {
+    const savedDraft = localStorage.getItem(DRAFT_STORAGE_KEY);
+    if (savedDraft) {
+      try {
+        const { blog, primary, secondary, image, expansion } = JSON.parse(savedDraft);
+        setNewBlog(blog);
+        setPrimaryKeyword(primary || '');
+        setSecondaryKeyword(secondary || '');
+        setImagePrompt(image || '');
+        setExpansionSubtopics(expansion || '');
+        if (blog.image) {
+          setImagePreview(blog.image);
+        }
+        return true;
+      } catch (e) {
+        console.error('Error loading draft:', e);
+      }
+    }
+    return false;
+  };
+
+  const clearDraft = () => {
+    localStorage.removeItem(DRAFT_STORAGE_KEY);
+  };
+  // --- End Draft Persistence Logic ---
 
   // Handle animation sequence
   // useEffect(() => {
@@ -433,6 +499,52 @@ const BlogsDashboard = () => {
       setIsGeneratingImage(false);
     }
   };
+
+  // Handle Description Expansion
+  const handleExpandDescription = async () => {
+    if (!expansionSubtopics.trim()) {
+      alert('Please enter subtopics or instructions for expansion.');
+      return;
+    }
+
+    if (!newBlog.description.trim()) {
+      alert('Cannot expand an empty description. Please generate or write something first.');
+      return;
+    }
+
+    try {
+      setIsExpanding(true);
+      const response = await fetch('/api/expand-description', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ 
+          currentDescription: newBlog.description, 
+          expansionSubtopics, 
+          primaryKeyword 
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to expand description');
+      }
+
+      const { expandedDescription } = await response.json();
+      
+      setNewBlog(prevState => ({
+        ...prevState,
+        description: expandedDescription
+      }));
+      
+      alert('Description expanded successfully!');
+    } catch (error) {
+      console.error('Error expanding description:', error);
+      alert('Failed to expand description. Please try again.');
+    } finally {
+      setIsExpanding(false);
+    }
+  };
   
   // Helper function to compress images
   const compressImage = (file: File): Promise<File> => {
@@ -595,6 +707,11 @@ const BlogsDashboard = () => {
       });
       setBlogs(updatedBlogs);
       
+      // Clear draft on success
+      if (formMode === 'add') {
+        clearDraft();
+      }
+      
     } catch (error) {
       console.error("Error processing blog:", error);
     }
@@ -706,13 +823,16 @@ const BlogsDashboard = () => {
     setPrimaryKeyword('');
     setSecondaryKeyword('');
     setImagePrompt('');
+    setExpansionSubtopics('');
     setFormMode('add');
     setShowBlogForm(false);
+    clearDraft();
   };
 
   // Cancel form handler
   const handleCancelForm = () => {
     resetForm();
+    clearDraft();
   };
 
   // Handle pagination
@@ -831,7 +951,11 @@ const BlogsDashboard = () => {
                     resetForm();
                   } else {
                     setFormMode('add');
+                    const draftLoaded = loadDraft();
                     setShowBlogForm(true);
+                    if (draftLoaded) {
+                      alert('Restored draft from previous session.');
+                    }
                   }
                 }}
                 whileHover={{ scale: 1.05 }}
@@ -947,6 +1071,48 @@ const BlogsDashboard = () => {
                     </button>
                     <p className="text-xs text-emerald-600 mt-4 font-medium italic">
                       📸 Powered by DALL-E 3. Describe exactly what you want to see!
+                    </p>
+                  </div>
+
+                  {/* AI Description Expander Section */}
+                  <div className="bg-amber-50 p-6 rounded-2xl border border-amber-100 mb-8">
+                    <h3 className="text-amber-900 font-bold mb-4 flex items-center text-lg">
+                      <FontAwesomeIcon icon={faMagic} className="mr-3 text-amber-600" />
+                      AI Description Expander
+                    </h3>
+                    <div className="flex flex-col gap-4">
+                      <div>
+                          <label className="block text-sm font-semibold text-amber-900 mb-2">Topics/Sections to Add or Expand</label>
+                          <textarea
+                            value={expansionSubtopics}
+                            onChange={(e) => setExpansionSubtopics(e.target.value)}
+                            placeholder="e.g., 'Add a detailed table on copyright fees' or 'Expand on the difference between music recording and lyrical copyright'"
+                            rows={3}
+                            className="w-full px-4 py-3 bg-white border border-amber-200 text-amber-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
+                            disabled={isExpanding}
+                          />
+                      </div>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={handleExpandDescription}
+                      disabled={isExpanding || !newBlog.description}
+                      className="mt-6 w-full bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-lg font-bold shadow-lg shadow-amber-200 transition-all flex items-center justify-center disabled:opacity-70"
+                    >
+                      {isExpanding ? (
+                        <>
+                          <div className="animate-spin rounded-full h-5 w-5 border-2 border-white border-t-transparent mr-3"></div>
+                          Expanding Content Knowledge...
+                        </>
+                      ) : (
+                        <>
+                          <FontAwesomeIcon icon={faMagic} className="mr-3" />
+                          Expand Blog Description
+                        </>
+                      )}
+                    </button>
+                    <p className="text-xs text-amber-600 mt-4 font-medium italic">
+                      🚀 Use this to add more depth, tables, and specific sections to your blog!
                     </p>
                   </div>
 
