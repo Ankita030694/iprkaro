@@ -27,7 +27,7 @@ export async function POST(request: NextRequest) {
        - H3/H4: Subtopics, examples, step-by-step guidance, and case studies. Include primary/secondary keywords naturally.
     2. Introduction: 2–3 paragraphs mentioning the primary keyword at least twice, hooking the reader, and explaining the topic.
     3. Content: 
-       - 3000+ words of structured, high-quality content. Professional, authoritative, human tone.
+       - 4000+ words of structured, high-quality content. Professional, authoritative, human tone.
        - Include actionable legal advice, examples, case references, and statistics where relevant.
        - Use bullet points, numbered lists, and tables for clarity.
        - Include internal links to these pages naturally within the content where relevant:
@@ -47,6 +47,10 @@ export async function POST(request: NextRequest) {
        - Meta Description (150–160 characters) with primary keyword.
     7. AEO Optimization: Clear answers to user intent suitable for Google snippets. Structured content for featured answers and easy readability.
     8. Additional Elements: Suggest infographics, tables, or visual aids to enhance readability and engagement.
+    9. STRONGLY IMPORTANT: 
+       - Return ONLY pure HTML tags for the description field.
+       - DO NOT include the "FAQs" or "Frequently Asked Questions" section within the 'description' (HTML) field. FAQs must ONLY be provided in the 'faqs' JSON array.
+       - The 'description' must be extremely comprehensive, aiming for 4000+ words of deep legal insight and analysis. Split the content into many detailed H2, H3, and H4 subsections to reach this length.
 
     The response must be in JSON format and include:
     - title: The H1 title.
@@ -63,10 +67,10 @@ export async function POST(request: NextRequest) {
         const userPrompt = `Primary Keyword: ${primaryKeyword}
     Secondary Keyword: ${secondaryKeyword || 'None provided'}
     
-    Please generate a high-quality blog post.`;
+    Please generate a high-quality blog post with 4000+ words.`;
 
         const completion = await openai.chat.completions.create({
-            model: 'gpt-4o', // Using gpt-4o for better quality
+            model: 'gpt-4o',
             messages: [
                 { role: 'system', content: systemPrompt },
                 { role: 'user', content: userPrompt },
@@ -75,15 +79,23 @@ export async function POST(request: NextRequest) {
             temperature: 0.7,
         });
 
-        const content = completion.choices[0].message.content;
+        const rawContent = completion.choices[0].message.content;
 
-        if (!content) {
+        if (!rawContent) {
             throw new Error('No content returned from OpenAI');
         }
 
-        return new NextResponse(content, {
-            headers: { 'Content-Type': 'application/json' },
-        });
+        const data = JSON.parse(rawContent);
+
+        // Sanitize description: Strip markdown code blocks if present
+        if (data.description) {
+            data.description = data.description.replace(/^```html\s*/i, '').replace(/\s*```$/i, '').trim();
+            if (data.description.startsWith('```') && data.description.endsWith('```')) {
+                data.description = data.description.substring(3, data.description.length - 3).trim();
+            }
+        }
+
+        return NextResponse.json(data);
     } catch (error: any) {
         console.error('Error in generate-article API:', error);
         return NextResponse.json({ error: error.message || 'Failed to generate blog content' }, { status: 500 });
