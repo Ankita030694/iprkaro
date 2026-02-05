@@ -578,11 +578,6 @@ const ArticleDetail = memo(function ArticleDetail({ slug, initialReviews = [] }:
             })()}
 
 
-
-  // ... (existing code)
-
-  return (
-    // ... (existing JSX)
               {/* FAQs */}
         {faqs.length > 0 && (
                   <div className="mt-6 rounded-2xl p-6 backdrop-blur-xl border border-white/10 shadow-xl" style={{
