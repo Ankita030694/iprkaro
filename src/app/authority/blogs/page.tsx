@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faUsers, faChartLine, faClipboardList, faCog, faPlus, faEdit, faTrash, faUpload, faMagic } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faUsers, faChartLine, faClipboardList, faCog, faPlus, faEdit, faTrash, faUpload, faMagic, faImage } from '@fortawesome/free-solid-svg-icons';
 import { collection, getDocs, addDoc, updateDoc, deleteDoc, doc, getDoc } from 'firebase/firestore';
 import { ref, uploadBytes, getDownloadURL, deleteObject } from 'firebase/storage';
 import { signOut, onAuthStateChanged } from 'firebase/auth';
@@ -82,6 +82,8 @@ const BlogsDashboard = () => {
   const [primaryKeyword, setPrimaryKeyword] = useState('');
   const [secondaryKeyword, setSecondaryKeyword] = useState('');
   const [isGenerating, setIsGenerating] = useState(false);
+  const [imagePrompt, setImagePrompt] = useState('');
+  const [isGeneratingImage, setIsGeneratingImage] = useState(false);
 
   // Calculate the total number of pages
   const totalPages = Math.ceil(blogs.length / itemsPerPage);
@@ -393,6 +395,44 @@ const BlogsDashboard = () => {
       setIsGenerating(false);
     }
   };
+
+  // Handle AI image generation
+  const handleGenerateImage = async () => {
+    if (!imagePrompt.trim()) {
+      alert('Please enter an image prompt.');
+      return;
+    }
+
+    try {
+      setIsGeneratingImage(true);
+      const response = await fetch('/api/generate-image', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ prompt: imagePrompt }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to generate image');
+      }
+
+      const { imageUrl } = await response.json();
+      
+      setNewBlog(prevState => ({
+        ...prevState,
+        image: imageUrl
+      }));
+      
+      setImagePreview(imageUrl);
+      alert('AI image generated successfully!');
+    } catch (error) {
+      console.error('Error generating image:', error);
+      alert('Failed to generate image. Please try again.');
+    } finally {
+      setIsGeneratingImage(false);
+    }
+  };
   
   // Helper function to compress images
   const compressImage = (file: File): Promise<File> => {
@@ -665,6 +705,7 @@ const BlogsDashboard = () => {
     });
     setPrimaryKeyword('');
     setSecondaryKeyword('');
+    setImagePrompt('');
     setFormMode('add');
     setShowBlogForm(false);
   };
@@ -864,6 +905,48 @@ const BlogsDashboard = () => {
                     </button>
                     <p className="text-xs text-indigo-600 mt-4 font-medium italic">
                       ✨ This will automatically craft a high-converting title, content, meta tags, FAQs, and realistic reviews.
+                    </p>
+                  </div>
+
+                  {/* AI Image Generator Section */}
+                  <div className="bg-emerald-50 p-6 rounded-2xl border border-emerald-100 mb-8">
+                    <h3 className="text-emerald-900 font-bold mb-4 flex items-center text-lg">
+                      <FontAwesomeIcon icon={faImage} className="mr-3 text-emerald-600" />
+                      AI Image Generator
+                    </h3>
+                    <div className="flex flex-col gap-4">
+                      <div>
+                          <label className="block text-sm font-semibold text-emerald-900 mb-2">Image Style/Description</label>
+                          <textarea
+                            value={imagePrompt}
+                            onChange={(e) => setImagePrompt(e.target.value)}
+                            placeholder="Describe the image you want (e.g., 'A modern professional law office with a blue and gold theme, high quality cinematic lighting')"
+                            rows={2}
+                            className="w-full px-4 py-3 bg-white border border-emerald-200 text-emerald-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
+                            disabled={isGeneratingImage}
+                          />
+                      </div>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={handleGenerateImage}
+                      disabled={isGeneratingImage}
+                      className="mt-6 w-full bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-lg font-bold shadow-lg shadow-emerald-200 transition-all flex items-center justify-center disabled:opacity-70"
+                    >
+                      {isGeneratingImage ? (
+                        <>
+                          <div className="animate-spin rounded-full h-5 w-5 border-2 border-white border-t-transparent mr-3"></div>
+                          Visualizing Your Ideas...
+                        </>
+                      ) : (
+                        <>
+                          <FontAwesomeIcon icon={faImage} className="mr-3" />
+                          Generate Custom AI Header Image
+                        </>
+                      )}
+                    </button>
+                    <p className="text-xs text-emerald-600 mt-4 font-medium italic">
+                      📸 Powered by DALL-E 3. Describe exactly what you want to see!
                     </p>
                   </div>
 
