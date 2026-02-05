@@ -597,10 +597,10 @@ export default function TrademarkRegisterKeseKarteHaiPage() {
                           Start Registration Now
                         </button>
                       </Link>
-                      <a href="tel:+918700343611">
+                      <a href="tel:+919289707648">
                          <button className="bg-white/10 hover:bg-white/20 text-white border-2 border-white/30 font-bold py-4 px-12 rounded-full transition-all text-xl backdrop-blur-md flex items-center justify-center">
                           <FontAwesomeIcon icon={faPhone} className="w-4 h-4 mr-3" />
-                          Call: +91-8700343611
+                          Call: +91-9289707648
                         </button>
                       </a>
                     </div>
@@ -628,10 +628,10 @@ export default function TrademarkRegisterKeseKarteHaiPage() {
                     </button>
                   </Link>
                   <div className="mt-4 pt-4 border-t border-white/10">
-                    <a href="tel:+918700343611" className="text-sm font-semibold hover:text-[rgb(110,94,147)] transition-colors flex items-center justify-center">
+                    <a href="tel:+919289707648" className="text-sm font-semibold hover:text-[rgb(110,94,147)] transition-colors flex items-center justify-center">
                       <span className="mr-2">
                         <FontAwesomeIcon icon={faPhone} className="w-4 h-4" />
-                      </span> +91-8700343611
+                      </span> +91-9289707648
                     </a>
                   </div>
                 </div>

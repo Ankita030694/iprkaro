@@ -556,9 +556,9 @@ export default function TwentyFourSevenTrademarkProtection() {
                           Get Free Consultation
                         </button>
                       </Link>
-                      <a href="tel:+918700343611">
+                      <a href="tel:+919289707648">
                          <button className="bg-transparent border-2 border-white/30 hover:bg-white hover:text-gray-900 text-white font-bold py-4 px-8 md:px-12 rounded-full transition-all text-lg w-full sm:w-auto backdrop-blur-sm">
-                          Call: +91-8700343611
+                          Call: +91-9289707648
                         </button>
                       </a>
                     </div>

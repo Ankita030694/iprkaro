@@ -796,7 +796,7 @@ export default function HowToRegisterTrademarkPage() {
                           Start Registration Now
                         </button>
                       </Link>
-                      <a href="tel:+92">
+                      <a href="tel:+919289707648">
                          <button className="bg-transparent border-2 border-white/50 hover:bg-white hover:text-[#0C002B] text-white font-bold py-3 px-10 rounded-full transition-all text-base flex items-center justify-center">
                           <FontAwesomeIcon icon={faPhone} className="mr-2.5" />
                           Call: +91-9289707648
@@ -824,10 +824,10 @@ export default function HowToRegisterTrademarkPage() {
                     </button>
                   </Link>
                   <div className="mt-4 pt-4 border-t border-white/10">
-                    <a href="tel:+918700343611" className="text-sm font-semibold hover:text-[rgb(110,94,147)] transition-colors flex items-center justify-center">
+                    <a href="tel:+919289707648" className="text-sm font-semibold hover:text-[rgb(110,94,147)] transition-colors flex items-center justify-center">
                       <span className="mr-2">
                         <FontAwesomeIcon icon={faPhone} className="w-4 h-4" />
-                      </span> +91-8700343611
+                      </span> +91-9289707648
                     </a>
                   </div>
                 </div>

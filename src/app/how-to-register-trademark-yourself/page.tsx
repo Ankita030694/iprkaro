@@ -711,10 +711,10 @@ export default function RegisterTrademarkYourselfPage() {
                           Get Expert Assistance
                         </button>
                       </Link>
-                      <a href="tel:+918700343611">
+                      <a href="tel:+919289707648">
                          <button className="bg-transparent border-2 border-white/30 hover:bg-white hover:text-gray-900 text-white font-bold py-4 px-12 rounded-full transition-all text-lg w-full sm:w-auto backdrop-blur-sm flex items-center justify-center">
                           <FontAwesomeIcon icon={faPhone} className="mr-3 w-5 h-5" />
-                          Call: +91-8700343611
+                          Call: +91-9289707648
                         </button>
                       </a>
                     </div>
@@ -740,8 +740,8 @@ export default function RegisterTrademarkYourselfPage() {
                   </Link>
                   <div className="mt-6 pt-6 border-t border-white/10">
                     <p className="text-xs text-gray-400 mb-2 uppercase tracking-widest font-bold">Talk to our Experts</p>
-                    <a href="tel:+918700343611" className="text-lg font-bold hover:text-[rgb(110,94,147)] transition-colors flex items-center justify-center">
-                       <FontAwesomeIcon icon={faPhone} className="mr-3 text-sm" /> +91-8700343611
+                    <a href="tel:+919289707648" className="text-lg font-bold hover:text-[rgb(110,94,147)] transition-colors flex items-center justify-center">
+                       <FontAwesomeIcon icon={faPhone} className="mr-3 text-sm" /> +91-9289707648
                     </a>
                   </div>
                </div>
