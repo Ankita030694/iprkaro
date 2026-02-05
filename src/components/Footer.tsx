@@ -233,6 +233,12 @@ const Footer: React.FC = () => {
             <a href="/want-to-register-trademark-for-startup" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">
               Register Trademark for Startup
             </a>
+            <a href="/gst-required-for-trademark" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">
+              GST Required for Trademark
+            </a>
+            <a href="/how-to-register-trademark-yourself" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">
+              How to Register Trademark Yourself
+            </a>
           </div>
         </div>
 

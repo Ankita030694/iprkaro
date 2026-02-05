@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import OpenAI from 'openai';
+import { storage } from '@/lib/firebase';
+import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 
 // Initialize OpenAI
 const openai = new OpenAI({
@@ -26,15 +28,34 @@ export async function POST(request: NextRequest) {
             quality: "standard",
         });
 
-        const imageUrl = response.data?.[0]?.url;
+        const tempImageUrl = response.data?.[0]?.url;
 
-        if (!imageUrl) {
+        if (!tempImageUrl) {
             throw new Error('No image URL returned from OpenAI');
         }
+
+        // Fetch the image from OpenAI URL
+        const imageResponse = await fetch(tempImageUrl);
+        if (!imageResponse.ok) {
+            throw new Error('Failed to fetch image from OpenAI storage');
+        }
+
+        const imageBuffer = await imageResponse.arrayBuffer();
+
+        // Upload to Firebase Storage
+        const filename = `ai_generated_${Date.now()}.png`;
+        const storageRef = ref(storage, `blog-images/${filename}`);
+
+        const snapshot = await uploadBytes(storageRef, new Uint8Array(imageBuffer), {
+            contentType: 'image/png'
+        });
+
+        // Get permanent download URL
+        const imageUrl = await getDownloadURL(snapshot.ref);
 
         return NextResponse.json({ imageUrl });
     } catch (error: any) {
         console.error('Error in generate-image API:', error);
-        return NextResponse.json({ error: error.message || 'Failed to generate image' }, { status: 500 });
+        return NextResponse.json({ error: error.message || 'Failed to generate and store image' }, { status: 500 });
     }
 }
