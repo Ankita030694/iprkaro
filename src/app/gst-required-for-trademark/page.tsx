@@ -158,7 +158,7 @@ export default function GstRequiredForTrademarkPage() {
         "url": "https://www.iprkaro.com/logo.png"
       }
     },
-    "datePublished": "2024-02-05",
+    "datePublished": "2026-02-05",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://www.iprkaro.com/gst-required-for-trademark"

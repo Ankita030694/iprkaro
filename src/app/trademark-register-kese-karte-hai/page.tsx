@@ -32,7 +32,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-  title: 'Trademark Register Kaise Karte Hai (2024 Guide) | Online Process & Fees',
+  title: 'Trademark Register Kaise Karte Hai (2026 Guide) | Online Process & Fees',
   description: 'Bharat mein trademark register kaise karte hai? Janiye step-by-step registration process, documents list, government fees, aur expert tips. Get 100% success with IPR Karo.',
   keywords: [
     'trademark register kese karte hai',
@@ -157,7 +157,7 @@ export default function TrademarkRegisterKeseKarteHaiPage() {
         "url": "https://www.iprkaro.com/logo.png"
       }
     },
-    "datePublished": "2024-02-04",
+    "datePublished": "2026-02-04",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://www.iprkaro.com/trademark-register-kese-karte-hai"
@@ -456,7 +456,7 @@ export default function TrademarkRegisterKeseKarteHaiPage() {
                 </section>
 
                 <section id="government-fees" className="mb-12 scroll-mt-24 md:scroll-mt-32">
-                  <h2 className="text-2xl md:text-3xl font-bold text-[#0C002B] mb-6">Government Fees Breakdown (Latest 2024 Updates)</h2>
+                  <h2 className="text-2xl md:text-3xl font-bold text-[#0C002B] mb-6">Government Fees Breakdown (Latest 2026 Updates)</h2>
                   <p className="mb-8 leading-relaxed text-lg">
                     Trademark office ki fees fix hoti hai lekin ye applicant ke category par depend karti hai. Hum humesha 'E-filing' recommend karte hai kyunki ye sasti aur fast hoti hai.
                   </p>

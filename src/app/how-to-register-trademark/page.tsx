@@ -33,8 +33,8 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-  title: 'How to Register Trademark in India (2024 Guide) | Step-by-Step Process',
-  description: 'Learn how to register a trademark in India with our comprehensive 2024 guide. Step-by-step process, documents required, government fees, and expert tips for 100% success.',
+  title: 'How to Register Trademark in India (2026 Guide) | Step-by-Step Process',
+  description: 'Learn how to register a trademark in India with our comprehensive 2026 guide. Step-by-step process, documents required, government fees, and expert tips for 100% success.',
   keywords: [
     'how to register trademark',
     'trademark registration process',
@@ -144,7 +144,7 @@ export default function HowToRegisterTrademarkPage() {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "How to Register Trademark in India: The Ultimate 2024 Guide",
+    "headline": "How to Register Trademark in India: The Ultimate 2026 Guide",
     "description": "Step-by-step guide on how to register a trademark in India. Detailed process, costs, documents, and expert legal advice for brand protection.",
     "author": {
       "@type": "Organization",
@@ -158,7 +158,7 @@ export default function HowToRegisterTrademarkPage() {
         "url": "https://www.iprkaro.com/logo.png"
       }
     },
-    "datePublished": "2024-02-04",
+    "datePublished": "2026-02-04",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://www.iprkaro.com/how-to-register-trademark"
@@ -195,7 +195,7 @@ export default function HowToRegisterTrademarkPage() {
           
           <div className="container mx-auto px-4 py-12 lg:py-32 relative z-10 text-center">
              <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-snug md:leading-tight mt-20 md:mt-10 text-white">
-               How to Register a <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'rgb(110, 94, 147)' }}>Trademark in India</span> (2024 Guide)
+               How to Register a <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'rgb(110, 94, 147)' }}>Trademark in India</span> (2026 Guide)
              </h1>
              <p className="text-sm md:text-xl mb-6 md:mb-8 max-w-3xl mx-auto text-gray-300 px-2 leading-relaxed">
                Protect your brand identity from imitators. Our comprehensive guide covers the entire trademark filing process, costs, and legal requirements to secure your brand for 10 years.
@@ -517,7 +517,7 @@ export default function HowToRegisterTrademarkPage() {
                 </section>
 
                 <section id="government-fees" className="mb-12 scroll-mt-24 md:scroll-mt-32">
-                  <h2 className="text-2xl md:text-3xl font-bold text-[#0C002B] mb-4">Breakdown of Government Fees and Costs for 2024</h2>
+                  <h2 className="text-2xl md:text-3xl font-bold text-[#0C002B] mb-4">Breakdown of Government Fees and Costs for 2026</h2>
                   <p className="mb-4 leading-relaxed text-base">
                     Cost is a major concern for small businesses and independent creators. Fortunately, the Indian government provides significant fee rebates for startups and small enterprises to encourage trademark filings and formalize the economy.
                   </p>

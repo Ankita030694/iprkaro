@@ -32,7 +32,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-  title: 'Want to Register Trademark for Startup in India? (2024 Guide)',
+  title: 'Want to Register Trademark for Startup in India? (2026 Guide)',
   description: 'Learn how to register a trademark for your startup in India. Get a 50% discount on government fees, fast-track processing, and expert brand protection strategies.',
   keywords: [
     'want to register trademark for startup',
@@ -155,7 +155,7 @@ export default function StartupTrademarkPage() {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Want to Register a Trademark for Your Startup? The 2024 Legal Guide",
+    "headline": "Want to Register a Trademark for Your Startup? The 2026 Legal Guide",
     "description": "Exhaustive guide for startups on trademark registration. Cover fees, DPIIT benefits, legal processes, and brand strategy for long-term growth.",
     "author": {
       "@type": "Organization",
@@ -169,7 +169,7 @@ export default function StartupTrademarkPage() {
         "url": "https://www.iprkaro.com/logo.png"
       }
     },
-    "datePublished": "2024-02-04",
+    "datePublished": "2026-02-04",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://www.iprkaro.com/want-to-register-trademark-for-startup"
@@ -392,7 +392,7 @@ export default function StartupTrademarkPage() {
                 <section id="industry-classification" className="mb-12 scroll-mt-24 md:scroll-mt-32">
                    <h2 className="text-2xl md:text-3xl font-bold text-[#0C002B] mb-4">Industry-Specific Classification Guide</h2>
                    <p className="mb-4 leading-relaxed text-base">
-                     For a startup, choosing the right class is as important as the name itself. Here is a breakdown for key startup sectors in the 2024 economy.
+                     For a startup, choosing the right class is as important as the name itself. Here is a breakdown for key startup sectors in the 2026 economy.
                    </p>
                    <div className="grid md:grid-cols-3 gap-4 my-8">
                       <div className="p-5 bg-white rounded-2xl border border-gray-100 shadow-sm text-center">
@@ -469,7 +469,7 @@ export default function StartupTrademarkPage() {
                 <section id="future-of-ip" className="mb-12 scroll-mt-24 md:scroll-mt-32">
                    <h2 className="text-2xl md:text-3xl font-bold text-[#0C002B] mb-4">The Future of Brand Protection: AI and IP</h2>
                    <p className="mb-4 leading-relaxed text-base">
-                     In 2024, the intersection of AI and IP is redefining brand protection. From AI searches to blockchain verification, we help you stay ahead.
+                     In 2026, the intersection of AI and IP is redefining brand protection. From AI searches to blockchain verification, we help you stay ahead.
                    </p>
                    <div className="bg-amber-50 p-8 rounded-2xl border border-amber-100 shadow-sm my-8">
                       <h4 className="text-lg font-bold text-amber-900 mb-4 uppercase tracking-widest text-center">Founder's Masterclass</h4>
