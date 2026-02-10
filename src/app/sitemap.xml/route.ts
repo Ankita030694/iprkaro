@@ -44,6 +44,10 @@ export async function GET() {
     '/trademark-register-kese-karte-hai',
     '/gst-required-for-trademark',
     '/how-to-register-trademark-yourself',
+    '/types-of-trademark-classes',
+    '/how-to-check-trademark-availability',
+    '/trademark-application-status',
+    '/e-filing-trademark',
   ].map(path => ({ path, priority: '0.8', changefreq: 'weekly' } as RouteConfig));
 
   // Fetch Dynamic Blog Posts

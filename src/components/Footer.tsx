@@ -230,6 +230,9 @@ const Footer: React.FC = () => {
             <a href="/how-to-register-trademark" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">
               How to Register Trademark
             </a>
+            <a href="/trademark-application-status" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">
+              Trademark Application Status
+            </a>
             <a href="/want-to-register-trademark-for-startup" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">
               Register Trademark for Startup
             </a>
@@ -239,8 +242,18 @@ const Footer: React.FC = () => {
             <a href="/how-to-register-trademark-yourself" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">
               How to Register Trademark Yourself
             </a>
+            <a href="/types-of-trademark-classes" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">
+              Types of Trademark Classes
+            </a>
+            <a href="/how-to-check-trademark-availability" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">
+              How to Check Trademark Availability
+            </a>
+            <a href="/e-filing-trademark" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">
+              E-filing Trademark India
+            </a>
           </div>
         </div>
+
 
         {/* Copyright */}
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
