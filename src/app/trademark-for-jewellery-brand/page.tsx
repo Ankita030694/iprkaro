@@ -119,11 +119,27 @@ const faqs = [
 
 export default function TrademarkForJewelleryBrandPage() {
   const breadcrumbItems = [
-    { label: "Home", href: "/" },
-    { label: "Services", href: "/our-services" },
-    { label: "Trademark Registration", href: "/our-services/trademark-registration" },
-    { label: "For Jewellery Brand", href: "/trademark-for-jewellery-brand" },
+    { label: "Trademark for Jewellery Brand", href: "/trademark-for-jewellery-brand" },
   ];
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.iprkaro.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Trademark for Jewellery Brand",
+        "item": "https://www.iprkaro.com/trademark-for-jewellery-brand"
+      }
+    ]
+  };
 
   const faqSchema = {
     "@context": "https://schema.org",
@@ -153,6 +169,7 @@ export default function TrademarkForJewelleryBrandPage() {
     <>
       <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Script id="article-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Script id="review-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Product",
@@ -358,7 +375,7 @@ export default function TrademarkForJewelleryBrandPage() {
                        <div className="bg-white p-3 md:p-5 rounded-lg border border-gray-100 shadow-sm flex-1 hover:shadow-md transition-all">
                           <h3 className="text-base md:text-lg font-bold text-[#312e81] mb-1.5 md:mb-2 flex items-center">
                              <span className="md:hidden bg-indigo-600 text-white w-5 h-5 rounded-full flex items-center justify-center mr-2 text-[10px]">1</span>
-                             <FontAwesomeIcon icon={faSearch} className="mr-2 text-indigo-600 w-5 h-5" />
+                             <FontAwesomeIcon icon={faSearch} className="w-12 h-12 text-indigo-600 mr-2" />
                              The Precision Brand Search
                           </h3>
                           <p className="text-xs md:text-sm text-gray-700">
@@ -376,7 +393,7 @@ export default function TrademarkForJewelleryBrandPage() {
                        <div className="bg-white p-3 md:p-5 rounded-lg border border-gray-100 shadow-sm flex-1 hover:shadow-md transition-all">
                           <h3 className="text-base md:text-lg font-bold text-[#312e81] mb-1.5 md:mb-2 flex items-center">
                              <span className="md:hidden bg-indigo-600 text-white w-5 h-5 rounded-full flex items-center justify-center mr-2 text-[10px]">2</span>
-                             <FontAwesomeIcon icon={faFileContract} className="mr-2 text-indigo-600 w-5 h-5" />
+                             <FontAwesomeIcon icon={faFileContract} className="w-12 h-12 text-indigo-600 mr-2" />
                              Statutory Drafting & Same-Day Filing
                           </h3>
                           <p className="text-xs md:text-sm text-gray-700">
@@ -394,7 +411,7 @@ export default function TrademarkForJewelleryBrandPage() {
                        <div className="bg-white p-3 md:p-5 rounded-lg border border-gray-100 shadow-sm flex-1 hover:shadow-md transition-all">
                           <h3 className="text-base md:text-lg font-bold text-[#312e81] mb-1.5 md:mb-2 flex items-center">
                              <span className="md:hidden bg-indigo-600 text-white w-5 h-5 rounded-full flex items-center justify-center mr-2 text-[10px]">3</span>
-                             <FontAwesomeIcon icon={faFileSignature} className="mr-2 text-indigo-600 w-5 h-5" />
+                             <FontAwesomeIcon icon={faFileSignature} className="w-12 h-12 text-indigo-600 mr-2" />
                              The Examination Response
                           </h3>
                           <p className="text-xs md:text-sm text-gray-700">
@@ -412,7 +429,7 @@ export default function TrademarkForJewelleryBrandPage() {
                        <div className="bg-white p-3 md:p-5 rounded-lg border border-gray-100 shadow-sm flex-1 hover:shadow-md transition-all">
                           <h3 className="text-base md:text-lg font-bold text-[#312e81] mb-1.5 md:mb-2 flex items-center">
                              <span className="md:hidden bg-indigo-600 text-white w-5 h-5 rounded-full flex items-center justify-center mr-2 text-[10px]">4</span>
-                             <FontAwesomeIcon icon={faGlobe} className="mr-2 text-indigo-600 w-5 h-5" />
+                             <FontAwesomeIcon icon={faGlobe} className="w-12 h-12 text-indigo-600 mr-2" />
                              Journal Advertisement & Vigilance
                           </h3>
                           <p className="text-xs md:text-sm text-gray-700">
@@ -429,7 +446,7 @@ export default function TrademarkForJewelleryBrandPage() {
                        <div className="bg-white p-3 md:p-5 rounded-lg border border-gray-100 shadow-sm flex-1 hover:shadow-md transition-all">
                           <h3 className="text-base md:text-lg font-bold text-[#312e81] mb-1.5 md:mb-2 flex items-center">
                              <span className="md:hidden bg-indigo-600 text-white w-5 h-5 rounded-full flex items-center justify-center mr-2 text-[10px]">5</span>
-                             <FontAwesomeIcon icon={faCertificate} className="mr-2 text-indigo-600 w-5 h-5" />
+                             <FontAwesomeIcon icon={faCertificate} className="w-12 h-12 text-indigo-600 mr-2" />
                              The Registration Certificate (R)
                           </h3>
                           <p className="text-xs md:text-sm text-gray-700">

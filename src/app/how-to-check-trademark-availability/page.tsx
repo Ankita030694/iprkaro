@@ -51,9 +51,27 @@ export const metadata: Metadata = {
 
 export default function TrademarkAvailabilityPage() {
   const breadcrumbItems = [
-    { label: "Home", href: "/" },
     { label: "Check Trademark Availability", href: "/how-to-check-trademark-availability" },
   ];
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.iprkaro.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Check Trademark Availability",
+        "item": "https://www.iprkaro.com/how-to-check-trademark-availability"
+      }
+    ]
+  };
 
   const faqSchema = {
     "@context": "https://schema.org",
@@ -96,6 +114,7 @@ export default function TrademarkAvailabilityPage() {
     <>
       <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Script id="article-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Script id="review-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Product",

@@ -135,7 +135,6 @@ const faqs = [
 
 export default function StartupTrademarkPage() {
   const breadcrumbItems = [
-    { label: "Home", href: "/" },
     { label: "Register Trademark for Startup", href: "/want-to-register-trademark-for-startup" },
   ];
 

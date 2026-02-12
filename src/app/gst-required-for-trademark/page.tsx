@@ -124,7 +124,6 @@ const faqs = [
 
 export default function GstRequiredForTrademarkPage() {
   const breadcrumbItems = [
-    { label: "Home", href: "/" },
     { label: "GST Required for Trademark", href: "/gst-required-for-trademark" },
   ];
 
@@ -182,23 +181,19 @@ export default function GstRequiredForTrademarkPage() {
     }
   };
 
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": breadcrumbItems.map((item, index) => ({
-      "@type": "ListItem",
-      "position": index + 1,
-      "name": item.label,
-      "item": `https://www.iprkaro.com${item.href}`
-    }))
-  };
-
   return (
     <>
       <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Script id="article-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <Script id="review-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.iprkaro.com/" },
+          { "@type": "ListItem", "position": 2, "name": "GST Required for Trademark", "item": "https://www.iprkaro.com/gst-required-for-trademark" }
+        ]
+      }) }} />
 
       <div className="bg-white min-h-screen">
         {/* Hero Section */}

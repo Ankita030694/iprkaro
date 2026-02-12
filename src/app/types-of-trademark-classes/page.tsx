@@ -109,9 +109,27 @@ const faqs = [
 
 export default function TrademarkClassesPage() {
   const breadcrumbItems = [
-    { label: "Home", href: "/" },
     { label: "Types of Trademark Classes", href: "/types-of-trademark-classes" },
   ];
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.iprkaro.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Types of Trademark Classes",
+        "item": "https://www.iprkaro.com/types-of-trademark-classes"
+      }
+    ]
+  };
 
   const faqSchema = {
     "@context": "https://schema.org",
@@ -149,6 +167,7 @@ export default function TrademarkClassesPage() {
     <>
       <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Script id="article-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Script id="review-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Product",

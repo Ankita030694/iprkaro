@@ -257,6 +257,12 @@ const Footer: React.FC = () => {
             <a href="/trademark-for-jewellery-brand" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">
               Trademark for Jewellery Brand
             </a>
+            <a href="/trademark-for-restaurant" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">
+              Trademark for Restaurant
+            </a>
+            <a href="/trademark-for-business" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">
+              Trademark for Business
+            </a>
           </div>
         </div>
 

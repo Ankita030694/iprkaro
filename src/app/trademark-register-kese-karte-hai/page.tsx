@@ -123,9 +123,27 @@ const faqs = [
 
 export default function TrademarkRegisterKeseKarteHaiPage() {
   const breadcrumbItems = [
-    { label: "Home", href: "/" },
-    { label: "Trademark Register Kaise Kare", href: "/trademark-register-kese-karte-hai" },
+    { label: "Trademark Register Kaise Karte Hai", href: "/trademark-register-kese-karte-hai" },
   ];
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.iprkaro.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Trademark Register Kaise Karte Hai",
+        "item": "https://www.iprkaro.com/trademark-register-kese-karte-hai"
+      }
+    ]
+  };
 
   const faqSchema = {
     "@context": "https://schema.org",
@@ -185,6 +203,7 @@ export default function TrademarkRegisterKeseKarteHaiPage() {
     <>
       <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Script id="article-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Script id="review-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
 
       <div className="bg-white min-h-screen">

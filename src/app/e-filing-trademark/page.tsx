@@ -111,8 +111,6 @@ const faqs = [
 
 export default function EFilingTrademarkPage() {
   const breadcrumbItems = [
-    { label: "Home", href: "/" },
-    { label: "Services", href: "/our-services" },
     { label: "E-filing Trademark", href: "/e-filing-trademark" },
   ];
 
@@ -157,13 +155,11 @@ export default function EFilingTrademarkPage() {
       <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
-        "itemListElement": breadcrumbItems.map((item, index) => ({
-          "@type": "ListItem",
-          "position": index + 1,
-          "name": item.label,
-          "item": `https://www.iprkaro.com${item.href}`
-        }))
-      })}} />
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.iprkaro.com/" },
+          { "@type": "ListItem", "position": 2, "name": "E-filing Trademark", "item": "https://www.iprkaro.com/e-filing-trademark" }
+        ]
+      }) }} />
       <Script id="review-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Product",

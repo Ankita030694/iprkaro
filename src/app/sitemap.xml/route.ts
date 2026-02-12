@@ -50,6 +50,8 @@ export async function GET() {
     '/e-filing-trademark',
     '/trademark-for-clothing-brand',
     '/trademark-for-jewellery-brand',
+    '/trademark-for-restaurant',
+    '/trademark-for-business',
   ].map(path => ({ path, priority: '0.8', changefreq: 'weekly' } as RouteConfig));
 
   // Fetch Dynamic Blog Posts

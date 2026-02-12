@@ -116,11 +116,27 @@ const faqs = [
 
 export default function TrademarkForClothingBrandPage() {
   const breadcrumbItems = [
-    { label: "Home", href: "/" },
-    { label: "Our Services", href: "/our-services" },
-    { label: "Trademark Registration", href: "/our-services/trademark-registration" },
-    { label: "For Clothing Brand", href: "/trademark-for-clothing-brand" },
+    { label: "Trademark for Clothing Brand", href: "/trademark-for-clothing-brand" },
   ];
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.iprkaro.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Trademark for Clothing Brand",
+        "item": "https://www.iprkaro.com/trademark-for-clothing-brand"
+      }
+    ]
+  };
 
   const faqSchema = {
     "@context": "https://schema.org",
@@ -150,6 +166,7 @@ export default function TrademarkForClothingBrandPage() {
     <>
       <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Script id="article-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Script id="review-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Product",

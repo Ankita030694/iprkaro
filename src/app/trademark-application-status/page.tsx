@@ -131,7 +131,6 @@ const faqs = [
 
 export default function TrademarkApplicationStatusPage() {
   const breadcrumbItems = [
-    { label: "Resources", href: "/resources" },
     { label: "Trademark Application Status", href: "/trademark-application-status" },
   ];
 
@@ -178,10 +177,9 @@ export default function TrademarkApplicationStatusPage() {
         "@type": "BreadcrumbList",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.iprkaro.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://www.iprkaro.com/resources" },
-          { "@type": "ListItem", "position": 3, "name": "Trademark Application Status", "item": "https://www.iprkaro.com/trademark-application-status" }
+          { "@type": "ListItem", "position": 2, "name": "Trademark Application Status", "item": "https://www.iprkaro.com/trademark-application-status" }
         ]
-      })}} />
+      }) }} />
       <Script id="review-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Product",
