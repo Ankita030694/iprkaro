@@ -200,7 +200,7 @@ export default function TrademarkClassesPage() {
         <div className="container mx-auto px-3 max-w-[1600px] py-4 md:py-8">
           <Breadcrumbs items={breadcrumbItems} />
 
-          <div className="grid grid-cols-1 lg:grid-cols-[220px_1fr_280px] gap-4 md:gap-8 items-start mt-8">
+          <div className="grid grid-cols-1 lg:grid-cols-[220px_1fr_300px] gap-4 md:gap-12 items-start mt-8">
             
             {/* Left Sidebar - TOC (Desktop) */}
             <div className="hidden lg:block sticky top-32">
@@ -210,7 +210,7 @@ export default function TrademarkClassesPage() {
             {/* Main Content Area */}
             <div className="min-w-0">
                {/* TOC (Mobile) */}
-               <div className="lg:hidden mb-4 sticky top-25 z-10">
+               <div className="lg:hidden mb-4 sticky top-[72px] z-20">
                 <TableOfContents sections={tocSections} orientation="horizontal" />
               </div>
 
@@ -219,8 +219,8 @@ export default function TrademarkClassesPage() {
               <article className="prose prose-lg max-w-none text-gray-700 leading-relaxed">
                 
                 <section id="introduction" className="mb-20 scroll-mt-28">
-                  <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-8 flex items-center">
-                    <FontAwesomeIcon icon={faLightbulb} className="text-[#6E5E93] mr-4 w-12 h-12" />
+                  <h2 className="text-2xl md:text-4xl font-black text-gray-900 mb-8 flex items-center">
+                    <FontAwesomeIcon icon={faLightbulb} className="text-[#6E5E93] mr-4 w-10 h-10 md:w-12 md:h-12" />
                     Introduction to Trademark Classes in India
                   </h2>
                   <p className="mb-6">
@@ -237,8 +237,8 @@ export default function TrademarkClassesPage() {
                 </section>
 
                 <section id="why-classification-matters" className="mb-20 scroll-mt-28">
-                  <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-8 flex items-center">
-                    <FontAwesomeIcon icon={faScaleBalanced} className="text-[#6E5E93] mr-4 w-12 h-12" />
+                  <h2 className="text-2xl md:text-4xl font-black text-gray-900 mb-8 flex items-center">
+                    <FontAwesomeIcon icon={faScaleBalanced} className="text-[#6E5E93] mr-4 w-10 h-10 md:w-12 md:h-12" />
                     Why Proper Classification Matters
                   </h2>
                   <p className="mb-6">
@@ -264,8 +264,8 @@ export default function TrademarkClassesPage() {
                 </section>
 
                 <section id="nice-classification-overview" className="mb-20 scroll-mt-28">
-                  <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-8 flex items-center">
-                    <FontAwesomeIcon icon={faShieldAlt} className="text-[#6E5E93] mr-4 w-12 h-12" />
+                  <h2 className="text-2xl md:text-4xl font-black text-gray-900 mb-8 flex items-center">
+                    <FontAwesomeIcon icon={faShieldAlt} className="text-[#6E5E93] mr-4 w-10 h-10 md:w-12 md:h-12" />
                     The Nice Classification System: A Global Standard
                   </h2>
                   <p className="mb-6">
@@ -277,8 +277,8 @@ export default function TrademarkClassesPage() {
                 </section>
 
                 <section id="goods-classes-1-34" className="mb-20 scroll-mt-28">
-                  <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-8 flex items-center">
-                    <FontAwesomeIcon icon={faBriefcase} className="text-[#6E5E93] mr-4 w-12 h-12" />
+                  <h2 className="text-2xl md:text-4xl font-black text-gray-900 mb-8 flex items-center">
+                    <FontAwesomeIcon icon={faBriefcase} className="text-[#6E5E93] mr-4 w-10 h-10 md:w-12 md:h-12" />
                     Detailed Breakdown of Goods Classes (1 to 34)
                   </h2>
                   <p className="mb-8">
@@ -660,8 +660,8 @@ export default function TrademarkClassesPage() {
                 </section>
 
                 <section id="service-classes-35-45" className="mb-20 scroll-mt-28">
-                  <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-8 flex items-center">
-                    <FontAwesomeIcon icon={faBriefcase} className="text-[#6E5E93] mr-4 w-12 h-12" />
+                  <h2 className="text-2xl md:text-4xl font-black text-gray-900 mb-8 flex items-center">
+                    <FontAwesomeIcon icon={faBriefcase} className="text-[#6E5E93] mr-4 w-10 h-10 md:w-12 md:h-12" />
                     Detailed Breakdown of Service Classes (35 to 45)
                   </h2>
                   <p className="mb-8">
@@ -772,8 +772,8 @@ export default function TrademarkClassesPage() {
                 </section>
 
                 <section id="business-case-studies" className="mb-20 scroll-mt-28">
-                  <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-8 flex items-center">
-                    <FontAwesomeIcon icon={faLightbulb} className="text-[#6E5E93] mr-4 w-12 h-12" />
+                  <h2 className="text-2xl md:text-4xl font-black text-gray-900 mb-8 flex items-center">
+                    <FontAwesomeIcon icon={faLightbulb} className="text-[#6E5E93] mr-4 w-10 h-10 md:w-12 md:h-12" />
                     Sectoral Case Studies: Choosing Classes Like a Pro
                   </h2>
                   <div className="grid md:grid-cols-2 gap-8">
@@ -1060,70 +1060,53 @@ export default function TrademarkClassesPage() {
             </div>
             {/* End of Main Content Area */}
 
-            {/* Right Sidebar */}
-            <aside className="hidden xl:block">
-              <div className="sticky top-32 space-y-8">
-                
-                {/* CTA Container */}
-                <div className="bg-gradient-to-br from-[#0C002B] to-[#1a0033] p-8 rounded-3xl shadow-2xl border border-white/5 text-white">
-                  <div className="w-16 h-16 bg-[#6E5E93]/20 rounded-2xl flex items-center justify-center mb-6 border border-white/10">
-                    <FontAwesomeIcon icon={faRocket} className="text-[#6E5E93] text-2xl w-12 h-12" />
-                  </div>
-                  <h3 className="text-2xl font-bold mb-4">Fast-Track Your Trademark</h3>
-                  <p className="text-gray-400 mb-8 leading-relaxed">
-                    Get same-day filing for your trademark application. Our experts ensure it is filed in the most optimal classes to avoid future legal hurdles.
-                  </p>
-                  <Link href="/contact-us" className="block w-full">
-                    <button className="w-full bg-[#6E5E93] hover:bg-[#5a4a7d] text-white font-bold py-4 px-6 rounded-xl transition-all shadow-lg text-lg">
-                      Start Filing Now
-                    </button>
-                  </Link>
-                  <div className="mt-6 pt-6 border-t border-white/10 text-center">
-                    <p className="text-sm text-gray-500 mb-2 uppercase tracking-widest font-bold">Or Call Us Directly</p>
-                    <a href="tel:+919289707648" className="text-xl font-bold hover:text-[#6E5E93] transition-colors flex items-center justify-center">
-                      <FontAwesomeIcon icon={faPhone} className="mr-3 text-sm" /> +91-9289707648
-                    </a>
-                  </div>
+            {/* Right Column - Sidebar Widgets */}
+            <aside className="hidden lg:block space-y-10 sticky top-32">
+              
+              {/* Sidebar CTA Box */}
+              <div className="bg-[#0C002B] p-8 rounded-3xl shadow-xl border border-gray-800 text-white relative overflow-hidden group">
+                <div className="absolute -top-10 -right-10 w-32 h-32 bg-[#6E5E93] rounded-full blur-[60px] opacity-20 group-hover:opacity-40 transition-opacity"></div>
+                <h3 className="text-2xl font-bold mb-4 relative z-10">Protect Your Brand Now</h3>
+                <p className="text-sm opacity-80 mb-8 leading-relaxed relative z-10">
+                  Don't let copycats profit from your hard work. Secure your trademark today with India's most trusted legal team.
+                </p>
+                <Link href="/contact-us" className="block relative z-10">
+                  <button className="w-full bg-[#6E5E93] hover:bg-[#8A7AB5] text-white font-extrabold py-4 px-4 rounded-xl transition-all shadow-lg transform hover:-translate-y-1">
+                    Book Free TM Search
+                  </button>
+                </Link>
+                <div className="mt-6 pt-6 border-t border-white/10 relative z-10 text-center">
+                  <a href="tel:+919289707648" className="text-indigo-300 font-bold hover:text-white transition-colors flex items-center justify-center">
+                    <FontAwesomeIcon icon={faPhone} className="w-6 h-6 mr-3" /> +91-9289707648
+                  </a>
                 </div>
-
-                {/* Related Pages Container */}
-                <div className="bg-white p-8 rounded-3xl shadow-[0_10px_40px_rgba(0,0,0,0.04)] border border-gray-100">
-                  <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
-                    <FontAwesomeIcon icon={faBriefcase} className="mr-3 text-[#6E5E93] w-12 h-12" />
-                    Related Guides
-                  </h3>
-                  <ul className="space-y-4">
-                    {[
-                      { name: "Trademark Register Kaise Karte Hai", href: "/trademark-register-kese-karte-hai" },
-                      { name: "How to Register Trademark", href: "/how-to-register-trademark" },
-                      { name: "Register Trademark for Startup", href: "/want-to-register-trademark-for-startup" },
-                      { name: "GST Required for Trademark", href: "/gst-required-for-trademark" },
-                      { name: "Register Trademark Yourself", href: "/how-to-register-trademark-yourself" }
-                    ].map((link, idx) => (
-                      <li key={idx}>
-                        <Link href={link.href} className="flex items-center group text-gray-600 hover:text-[#6E5E93] transition-all">
-                          <span className="w-8 h-8 rounded-lg bg-gray-50 flex items-center justify-center mr-4 group-hover:bg-[#6E5E93]/10 transition-all">
-                            <FontAwesomeIcon icon={faChevronRight} className="text-[10px]" />
-                          </span>
-                          <span className="text-sm font-semibold">{link.name}</span>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Trusted By Container */}
-                <div className="bg-gray-50 p-6 rounded-3xl border border-gray-100 text-center">
-                  <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Trusted By Businesses Across India</p>
-                  <div className="flex justify-center items-center opacity-40 grayscale space-x-4">
-                    <FontAwesomeIcon icon={faCertificate} className="text-2xl w-12 h-12" />
-                    <FontAwesomeIcon icon={faGavel} className="text-2xl w-12 h-12" />
-                    <FontAwesomeIcon icon={faShieldAlt} className="text-2xl w-12 h-12" />
-                    <FontAwesomeIcon icon={faScaleBalanced} className="text-2xl w-12 h-12" />
-                  </div>
-                </div>
-
               </div>
+
+              {/* Related Pages Widget */}
+              <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
+                <h3 className="text-xl font-bold text-[#0C002B] mb-6 border-b pb-4">Related Topics</h3>
+                <ul className="space-y-4">
+                  <li>
+                    <Link href="/our-services/trademark-registration" className="group flex items-center text-gray-700 hover:text-[#6E5E93] transition-all">
+                      <div className="w-2 h-2 bg-gray-300 rounded-full mr-4 group-hover:bg-[#6E5E93] transition-all"></div>
+                      <span className="font-medium">Registration Services</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/gst-required-for-trademark" className="group flex items-center text-gray-700 hover:text-[#6E5E93] transition-all">
+                      <div className="w-2 h-2 bg-gray-300 rounded-full mr-4 group-hover:bg-[#6E5E93] transition-all"></div>
+                      <span className="font-medium">GST & Trademarks</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/how-to-register-trademark" className="group flex items-center text-gray-700 hover:text-[#6E5E93] transition-all">
+                      <div className="w-2 h-2 bg-gray-300 rounded-full mr-4 group-hover:bg-[#6E5E93] transition-all"></div>
+                      <span className="font-medium">TM Registration Guide</span>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+
             </aside>
 
           </div>

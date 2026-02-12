@@ -222,8 +222,8 @@ const Footer: React.FC = () => {
         </div>
         {/* Queries Row */}
         <div className="border-t border-gray-700 mt-12 pt-8">
-          <h3 className="text-sm font-semibold mb-4 uppercase text-gray-400">Queries</h3>
-          <div className="flex flex-wrap gap-x-8 gap-y-2">
+          <h3 className="text-sm font-semibold mb-6 uppercase text-gray-400">Queries</h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-8 gap-y-4">
             <a href="/trademark-register-kese-karte-hai" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">
               Trademark Register Kaise Karte Hai
             </a>
@@ -250,6 +250,12 @@ const Footer: React.FC = () => {
             </a>
             <a href="/e-filing-trademark" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">
               E-filing Trademark India
+            </a>
+            <a href="/trademark-for-clothing-brand" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">
+              Trademark for Clothing Brand
+            </a>
+            <a href="/trademark-for-jewellery-brand" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">
+              Trademark for Jewellery Brand
             </a>
           </div>
         </div>

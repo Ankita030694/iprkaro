@@ -209,10 +209,10 @@ export default function TrademarkRegisterKeseKarteHaiPage() {
           </div>
         </div>
 
-        <div className="container mx-auto px-4 max-w-8xl py-4 md:py-6">
+        <div className="container mx-auto px-4 max-w-[1600px] py-4 md:py-8">
           <Breadcrumbs items={breadcrumbItems} />
 
-          <div className="grid grid-cols-1 lg:grid-cols-[220px_1fr_280px] gap-4 md:gap-8 mt-8 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-[220px_1fr_300px] gap-4 md:gap-12 mt-8 items-start">
             
             {/* Left Column: Table of Contents */}
             <div className="hidden lg:block sticky top-32">
@@ -222,7 +222,7 @@ export default function TrademarkRegisterKeseKarteHaiPage() {
             {/* Middle Column: Main Content */}
             <div className="min-w-0">
               {/* Mobile TOC */}
-              <div className="lg:hidden mb-6 sticky top-24 z-20">
+              <div className="lg:hidden mb-6 sticky top-[72px] z-20">
                   <TableOfContents sections={tocSections} orientation="horizontal" />
               </div>
 
@@ -254,28 +254,36 @@ export default function TrademarkRegisterKeseKarteHaiPage() {
                   <div className="grid md:grid-cols-2 gap-6 my-10">
                     <div className="p-6 bg-gray-50 rounded-2xl border border-gray-200 hover:shadow-md transition-shadow">
                       <h4 className="font-bold text-[#0C002B] text-xl mb-3 flex items-center">
-                        <FontAwesomeIcon icon={faLightbulb} className="w-4 h-4 mr-3 text-[#6E5E93]" />
+                        <div className="w-8 h-8 md:w-10 md:h-10 flex-shrink-0 flex items-center justify-center mr-3">
+                          <FontAwesomeIcon icon={faLightbulb} className="w-6 h-6 md:w-8 md:h-8 text-[#6E5E93]" />
+                        </div>
                         Word Marks
                       </h4>
                       <p className="text-gray-600">Ye brand name ko protect karta hai. Chahe aap kisi bhi font ya style mein likhe, naam safe rehta hai (Example: Google, Tata).</p>
                     </div>
                     <div className="p-6 bg-gray-50 rounded-2xl border border-gray-200 hover:shadow-md transition-shadow">
                       <h4 className="font-bold text-[#0C002B] text-xl mb-3 flex items-center">
-                        <FontAwesomeIcon icon={faBuilding} className="w-4 h-4 mr-3 text-[#6E5E93]" />
+                        <div className="w-8 h-8 md:w-10 md:h-10 flex-shrink-0 flex items-center justify-center mr-3">
+                          <FontAwesomeIcon icon={faBuilding} className="w-6 h-6 md:w-8 md:h-8 text-[#6E5E93]" />
+                        </div>
                         Device Marks (Logo)
                       </h4>
                       <p className="text-gray-600">Ye aapke brand ke visual design ya logo ko protect karta hai. Isme colors aur shapes ka mahatva hota hai (Example: Nike ka Swish).</p>
                     </div>
                     <div className="p-6 bg-gray-50 rounded-2xl border border-gray-200 hover:shadow-md transition-shadow">
                       <h4 className="font-bold text-[#0C002B] text-xl mb-3 flex items-center">
-                        <FontAwesomeIcon icon={faHandshake} className="w-4 h-4 mr-3 text-[#6E5E93]" />
+                        <div className="w-8 h-8 md:w-10 md:h-10 flex-shrink-0 flex items-center justify-center mr-3">
+                          <FontAwesomeIcon icon={faHandshake} className="w-6 h-6 md:w-8 md:h-8 text-[#6E5E93]" />
+                        </div>
                         Taglines/Slogans
                       </h4>
                       <p className="text-gray-600">Unique phrases jaise "Just Do It" ya "Thanda Matlab Coca-Cola" bhi trademark kiye ja sakte hai.</p>
                     </div>
                     <div className="p-6 bg-gray-50 rounded-2xl border border-gray-200 hover:shadow-md transition-shadow">
                       <h4 className="font-bold text-[#0C002B] text-xl mb-3 flex items-center">
-                        <FontAwesomeIcon icon={faCheck} className="w-4 h-4 mr-3 text-[#6E5E93]" />
+                        <div className="w-8 h-8 md:w-10 md:h-10 flex-shrink-0 flex items-center justify-center mr-3">
+                          <FontAwesomeIcon icon={faCheck} className="w-6 h-6 md:w-8 md:h-8 text-[#6E5E93]" />
+                        </div>
                         Shape Marks
                       </h4>
                       <p className="text-gray-600">Product ka unique shape ya packaging bhi register ho sakta hai (Example: Toblerone bar ka shape).</p>
@@ -293,8 +301,8 @@ export default function TrademarkRegisterKeseKarteHaiPage() {
                   </p>
                   <ul className="space-y-6 my-10 list-none p-0">
                     <li className="flex gap-4 p-6 bg-green-50 rounded-2xl border border-green-100 shadow-sm border-l-[10px] border-l-green-500">
-                      <div className="w-14 h-14 flex-shrink-0 flex items-center justify-center bg-white rounded-full">
-                        <FontAwesomeIcon icon={faShieldAlt} className="w-4 h-4 text-green-600 text-2xl" />
+                      <div className="w-10 h-10 md:w-14 md:h-14 flex-shrink-0 flex items-center justify-center bg-white rounded-full">
+                        <FontAwesomeIcon icon={faShieldAlt} className="w-6 h-6 md:w-8 md:h-8 text-green-600" />
                       </div>
                       <div>
                         <h4 className="font-bold text-green-900 text-xl mb-2">Legal Monopoly (Akela Adhikar)</h4>
@@ -302,8 +310,8 @@ export default function TrademarkRegisterKeseKarteHaiPage() {
                       </div>
                     </li>
                     <li className="flex gap-4 p-6 bg-green-50 rounded-2xl border border-green-100 shadow-sm border-l-[10px] border-l-green-500">
-                      <div className="w-14 h-14 flex-shrink-0 flex items-center justify-center bg-white rounded-full">
-                        <FontAwesomeIcon icon={faHandHoldingUsd} className="w-4 h-4 text-green-600 text-2xl" />
+                      <div className="w-10 h-10 md:w-14 md:h-14 flex-shrink-0 flex items-center justify-center bg-white rounded-full">
+                        <FontAwesomeIcon icon={faHandHoldingUsd} className="w-6 h-6 md:w-8 md:h-8 text-green-600" />
                       </div>
                       <div>
                         <h4 className="font-bold text-green-900 text-xl mb-2">Asset Valuation (Sampatti Ka Mulya)</h4>
@@ -311,8 +319,8 @@ export default function TrademarkRegisterKeseKarteHaiPage() {
                       </div>
                     </li>
                     <li className="flex gap-4 p-6 bg-green-50 rounded-2xl border border-green-100 shadow-sm border-l-[10px] border-l-green-500">
-                      <div className="w-14 h-14 flex-shrink-0 flex items-center justify-center bg-white rounded-full">
-                        <FontAwesomeIcon icon={faGlobe} className="w-4 h-4 text-green-600 text-2xl" />
+                      <div className="w-10 h-10 md:w-14 md:h-14 flex-shrink-0 flex items-center justify-center bg-white rounded-full">
+                        <FontAwesomeIcon icon={faGlobe} className="w-6 h-6 md:w-8 md:h-8 text-green-600" />
                       </div>
                       <div>
                         <h4 className="font-bold text-green-900 text-xl mb-2">Global Protection (Duniya Bhar Mein Suraksha)</h4>
@@ -357,41 +365,41 @@ export default function TrademarkRegisterKeseKarteHaiPage() {
                   </p>
                   <div className="space-y-10 my-12">
                     <div className="flex gap-6 relative">
-                       <div className="w-16 h-16 bg-[#6E5E93] text-white rounded-full flex items-center justify-center font-bold text-2xl flex-shrink-0 shadow-lg z-10">1</div>
-                       <div className="absolute left-8 top-16 w-1 h-20 bg-gray-100 -z-0 hidden md:block"></div>
+                       <div className="w-10 h-10 md:w-16 md:h-16 bg-[#6E5E93] text-white rounded-full flex items-center justify-center font-bold text-base md:text-2xl flex-shrink-0 shadow-lg z-10">1</div>
+                       <div className="absolute left-5 md:left-8 top-10 md:top-16 w-1 h-20 bg-gray-100 -z-0 hidden md:block"></div>
                        <div>
-                          <h4 className="font-bold text-[#0C002B] text-2xl mb-2">Application Filing (Form TM-A)</h4>
+                          <h4 className="font-bold text-[#0C002B] text-xl md:text-2xl mb-2">Application Filing (Form TM-A)</h4>
                           <p className="leading-relaxed text-lg">Hum aapke bi-half par online portal par Form TM-A file karte hai. Iske liye humein class details aur user date ki zarurat hoti hai. Jaise hi application submit hoti hai, aapko ek application number mil jata hai aur aap TM symbol use kar sakte hai.</p>
                        </div>
                     </div>
                     <div className="flex gap-6 relative">
-                       <div className="w-16 h-16 bg-[#6E5E93] text-white rounded-full flex items-center justify-center font-bold text-2xl flex-shrink-0 shadow-lg z-10">2</div>
-                       <div className="absolute left-8 top-16 w-1 h-20 bg-gray-100 -z-0 hidden md:block"></div>
+                       <div className="w-10 h-10 md:w-16 md:h-16 bg-[#6E5E93] text-white rounded-full flex items-center justify-center font-bold text-base md:text-2xl flex-shrink-0 shadow-lg z-10">2</div>
+                       <div className="absolute left-5 md:left-8 top-10 md:top-16 w-1 h-20 bg-gray-100 -z-0 hidden md:block"></div>
                        <div>
-                          <h4 className="font-bold text-[#0C002B] text-2xl mb-2">Formalities Check Pass</h4>
+                          <h4 className="font-bold text-[#0C002B] text-xl md:text-2xl mb-2">Formalities Check Pass</h4>
                           <p className="leading-relaxed text-lg">Department check karta hai ki kya sabhi zaruri documents (jaise MSME certificate, POA) sahi se attach kiye gaye hai. Agar sab sahi hai toh status 'Marked for Exam' ho jata hai.</p>
                        </div>
                     </div>
                     <div className="flex gap-6 relative">
-                       <div className="w-16 h-16 bg-[#6E5E93] text-white rounded-full flex items-center justify-center font-bold text-2xl flex-shrink-0 shadow-lg z-10">3</div>
-                       <div className="absolute left-8 top-16 w-1 h-20 bg-gray-100 -z-0 hidden md:block"></div>
+                       <div className="w-10 h-10 md:w-16 md:h-16 bg-[#6E5E93] text-white rounded-full flex items-center justify-center font-bold text-base md:text-2xl flex-shrink-0 shadow-lg z-10">3</div>
+                       <div className="absolute left-5 md:left-8 top-10 md:top-16 w-1 h-20 bg-gray-100 -z-0 hidden md:block"></div>
                        <div>
-                          <h4 className="font-bold text-[#0C002B] text-2xl mb-2">Examination & Examination Report</h4>
+                          <h4 className="font-bold text-[#0C002B] text-xl md:text-2xl mb-2">Examination & Examination Report</h4>
                           <p className="leading-relaxed text-lg">Ek government officer aapke mark ko analyze karta hai. Agar koi similarity ya descriptive grounds milti hai, toh 'Examination Report' issue ki jati hai. Humein iska legal reply 30 din mein dena anivarya hai.</p>
                        </div>
                     </div>
                     <div className="flex gap-6 relative">
-                       <div className="w-16 h-16 bg-[#6E5E93] text-white rounded-full flex items-center justify-center font-bold text-2xl flex-shrink-0 shadow-lg z-10">4</div>
-                       <div className="absolute left-8 top-16 w-1 h-20 bg-gray-100 -z-0 hidden md:block"></div>
+                       <div className="w-10 h-10 md:w-16 md:h-16 bg-[#6E5E93] text-white rounded-full flex items-center justify-center font-bold text-base md:text-2xl flex-shrink-0 shadow-lg z-10">4</div>
+                       <div className="absolute left-5 md:left-8 top-10 md:top-16 w-1 h-20 bg-gray-100 -z-0 hidden md:block"></div>
                        <div>
-                          <h4 className="font-bold text-[#0C002B] text-2xl mb-2">Publication In Journal</h4>
+                          <h4 className="font-bold text-[#0C002B] text-xl md:text-2xl mb-2">Publication In Journal</h4>
                           <p className="leading-relaxed text-lg">Agar examination pass ho jata hai, toh mark 'Trademark Journal' mein dikhaya jata hai. Ye 120 dinon ke liye advertisemen ki tarah hota hai taaki janta (public) dekh sake.</p>
                        </div>
                     </div>
                     <div className="flex gap-6 relative">
-                       <div className="w-16 h-16 bg-[#6E5E93] text-white rounded-full flex items-center justify-center font-bold text-2xl flex-shrink-0 shadow-lg z-10">5</div>
+                       <div className="w-10 h-10 md:w-16 md:h-16 bg-[#6E5E93] text-white rounded-full flex items-center justify-center font-bold text-base md:text-2xl flex-shrink-0 shadow-lg z-10">5</div>
                        <div>
-                          <h4 className="font-bold text-[#0C002B] text-2xl mb-2">Registration Certificate Issue</h4>
+                          <h4 className="font-bold text-[#0C002B] text-xl md:text-2xl mb-2">Registration Certificate Issue</h4>
                           <p className="leading-relaxed text-lg">Jab 4 mahine tak koi third-party objection nahi aata, toh registrar seal maarkar 'Registration Certificate' issue kar dete hai. Ab aap legally Registered (®) ho gaye hai.</p>
                        </div>
                     </div>
@@ -613,64 +621,66 @@ export default function TrademarkRegisterKeseKarteHaiPage() {
               </div>
             </div>
 
-            {/* Right Sidebar */}
-             <div className="hidden lg:block space-y-8 sticky top-32">
-                
-                {/* Sidebar CTA */}
-                <div className="bg-gradient-to-br from-[#0C002B] to-[#1a0033] p-6 rounded-xl shadow-lg border border-gray-800 text-white text-center">
-                  <h3 className="text-xl font-bold mb-3">Trademark Enquiry</h3>
-                  <p className="text-sm opacity-90 mb-6 leading-relaxed">
-                    Check if your brand name is available. Get a free search report today.
-                  </p>
-                  <Link href="/contact-us" className="block w-full">
-                    <button className="w-full bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-3 px-4 rounded-lg transition-all shadow-md text-sm">
-                      Get Free Search
-                    </button>
-                  </Link>
-                  <div className="mt-4 pt-4 border-t border-white/10">
-                    <a href="tel:+919289707648" className="text-sm font-semibold hover:text-[rgb(110,94,147)] transition-colors flex items-center justify-center">
-                      <span className="mr-2">
-                        <FontAwesomeIcon icon={faPhone} className="w-4 h-4" />
-                      </span> +91-9289707648
-                    </a>
-                  </div>
+            {/* Right Column - Sidebar Widgets */}
+            <aside className="hidden lg:block space-y-10 sticky top-32">
+              
+              {/* Sidebar CTA Box */}
+              <div className="bg-[#0C002B] p-8 rounded-3xl shadow-xl border border-gray-800 text-white relative overflow-hidden group">
+                <div className="absolute -top-10 -right-10 w-32 h-32 bg-[#6E5E93] rounded-full blur-[60px] opacity-20 group-hover:opacity-40 transition-opacity"></div>
+                <h3 className="text-2xl font-bold mb-4 relative z-10">Brand Availability?</h3>
+                <p className="text-sm opacity-80 mb-8 leading-relaxed relative z-10">
+                  Don't start printing labels until you know the name is yours. Get a **Free Comprehensive Search Report** in 1 hour.
+                </p>
+                <Link href="/contact-us" className="block relative z-10">
+                  <button className="w-full bg-[#6E5E93] hover:bg-[#8A7AB5] text-white font-extrabold py-4 px-4 rounded-xl transition-all shadow-lg transform hover:-translate-y-1">
+                    Check Name Availability
+                  </button>
+                </Link>
+                <div className="mt-6 pt-6 border-t border-white/10 relative z-10 text-center">
+                  <a href="tel:+919289707648" className="text-indigo-300 font-bold hover:text-white transition-colors flex items-center justify-center">
+                    <FontAwesomeIcon icon={faPhone} className="w-6 h-6 mr-3" /> +91-9289707648
+                  </a>
                 </div>
+              </div>
 
-                {/* Related Features */}
-                <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                  <h3 className="text-lg font-bold text-gray-900 mb-4">Explore More</h3>
-                  <ul className="space-y-3 text-sm">
-                    <li>
-                      <Link href="/features/trademark-risk-reduction" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center group">
-                        <span className="mr-2 text-gray-400 group-hover:text-[rgb(110,94,147)]">
-                          <FontAwesomeIcon icon={faChevronRight} className="w-2 h-2" />
-                        </span> Risk Reduction
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/our-services/patent-registration" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center group">
-                         <span className="mr-2 text-gray-400 group-hover:text-[rgb(110,94,147)]">
-                           <FontAwesomeIcon icon={faChevronRight} className="w-2 h-2" />
-                         </span> Patent Services
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/our-services/copyright-registration" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center group">
-                         <span className="mr-2 text-gray-400 group-hover:text-[rgb(110,94,147)]">
-                           <FontAwesomeIcon icon={faChevronRight} className="w-2 h-2" />
-                         </span> Copyright Protection
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/features/expert-trademark-guidance" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center group">
-                         <span className="mr-2 text-gray-400 group-hover:text-[rgb(110,94,147)]">
-                           <FontAwesomeIcon icon={faChevronRight} className="w-2 h-2" />
-                         </span> Expert Guidance
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-            </div>
+              {/* Related Pages Widget */}
+              <div className="bg-gray-50 p-8 rounded-3xl shadow-sm border border-gray-100">
+                <h3 className="text-xl font-bold text-[#0C002B] mb-6 border-b pb-4">Related Services</h3>
+                <ul className="space-y-4">
+                  <li>
+                    <Link href="/our-services/trademark-registration" className="group flex items-center text-gray-700 hover:text-[#6E5E93] transition-all">
+                      <div className="w-2 h-2 bg-gray-300 rounded-full mr-4 group-hover:bg-[#6E5E93] transition-all"></div>
+                      <span className="font-medium">General Trademark</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/our-services/patent-registration" className="group flex items-center text-gray-700 hover:text-[#6E5E93] transition-all">
+                      <div className="w-2 h-2 bg-gray-300 rounded-full mr-4 group-hover:bg-[#6E5E93] transition-all"></div>
+                      <span className="font-medium">Patent Filing</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/our-services/copyright-registration" className="group flex items-center text-gray-700 hover:text-[#6E5E93] transition-all">
+                      <div className="w-2 h-2 bg-gray-300 rounded-full mr-4 group-hover:bg-[#6E5E93] transition-all"></div>
+                      <span className="font-medium">Copyright Protection</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/features/trademark-risk-reduction" className="group flex items-center text-gray-700 hover:text-[#6E5E93] transition-all">
+                      <div className="w-2 h-2 bg-gray-300 rounded-full mr-4 group-hover:bg-[#6E5E93] transition-all"></div>
+                      <span className="font-medium">Risk Reduction</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/features/expert-trademark-guidance" className="group flex items-center text-gray-700 hover:text-[#6E5E93] transition-all">
+                      <div className="w-2 h-2 bg-gray-300 rounded-full mr-4 group-hover:bg-[#6E5E93] transition-all"></div>
+                      <span className="font-medium">Expert Guidance</span>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+
+            </aside>
 
           </div>
         </div>

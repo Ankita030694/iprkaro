@@ -191,17 +191,17 @@ export default function EFilingTrademarkPage() {
              style={{
                background: 'linear-gradient(to bottom, #0C002B 0%, #160049 45%, #6E5E93 80%, #E8E8E8 100%)'
              }}>
-          <div className="container mx-auto px-4 py-16 lg:py-32 relative z-10 text-center">
-             <h1 className="text-3xl md:text-5xl lg:text-7xl font-black mb-6 leading-tight text-white max-w-4xl mx-auto">
-               Master the Art of <span className="text-[#8A7AB5]">E-Filing Trademark</span> in India
+          <div className="container mx-auto px-4 py-12 lg:py-32 relative z-10 text-center">
+             <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-snug md:leading-tight mt-20 md:mt-10 text-white">
+               Master the Art of <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'rgb(110, 94, 147)' }}>E-Filing Trademark</span> in India
              </h1>
-             <p className="text-lg md:text-2xl mb-10 max-w-3xl mx-auto text-gray-300 font-light leading-relaxed px-4">
+             <p className="text-sm md:text-xl mb-6 md:mb-8 max-w-3xl mx-auto text-gray-300 px-2 leading-relaxed">
                A definitive 5000+ word strategic guide for startups, corporations, and legal practitioners. Protect your brand identity with precision through the digital ecosystem of IP India.
              </p>
              <Link href="/contact-us">
-               <button className="bg-[rgb(110,94,147)] hover:bg-[rgb(130,114,167)] text-white font-black py-3 px-10 md:py-5 md:px-14 rounded-full transition-all transform hover:scale-105 shadow-[0_0_40px_rgba(110,94,147,0.5)] text-base md:text-xl uppercase tracking-wider">
-                 Secure Your Brand Now
-               </button>
+                <button className="bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-2.5 px-6 md:py-3 md:px-8 rounded-full transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(110,94,147,0.3)] text-base md:text-lg text-center">
+                  Secure Your Brand Now
+                </button>
              </Link>
           </div>
         </div>
@@ -209,21 +209,25 @@ export default function EFilingTrademarkPage() {
         <div className="container mx-auto px-4 max-w-[1700px] py-12">
           <Breadcrumbs items={breadcrumbItems} />
 
-          <div className="flex flex-col lg:grid lg:grid-cols-[260px_1fr_340px] gap-12 items-start mt-8">
+          <div className="grid grid-cols-1 lg:grid-cols-[220px_1fr_300px] gap-4 md:gap-12 items-start mt-8">
             
-            {/* Left Column: Table of Contents (Sticky) */}
-            <aside className="hidden lg:block sticky top-32 self-start min-w-[260px]">
-              <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-2">
+            {/* Left Sidebar - TOC (Desktop) */}
+            <div className="hidden lg:block sticky top-32">
+              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                <h2 className="text-lg font-bold text-gray-900 mb-6 flex items-center">
+                  <FontAwesomeIcon icon={faShieldAlt} className="mr-3 text-[#6E5E93] w-12 h-12" />
+                  Contents
+                </h2>
                 <TableOfContents sections={tocSections} orientation="vertical" />
               </div>
-            </aside>
+            </div>
 
             {/* Middle Column: Main Content Area */}
             <main className="min-w-0 bg-white p-5 md:p-16 rounded-3xl shadow-sm border border-gray-100">
-               {/* Mobile TOC */}
-               <div className="lg:hidden mb-12">
-                 <TableOfContents sections={tocSections} orientation="horizontal" />
-               </div>
+               {/* TOC (Mobile) */}
+               <div className="lg:hidden mb-4 sticky top-[72px] z-20">
+                <TableOfContents sections={tocSections} orientation="horizontal" />
+              </div>
 
                <article className="prose prose-lg max-w-none text-gray-700 leading-relaxed">
                  
@@ -490,107 +494,53 @@ export default function EFilingTrademarkPage() {
                </article>
             </main>
 
-            {/* Right Column: Sidebar Widgets (Sticky) */}
-            <aside className="w-full lg:w-[340px] space-y-12 sticky top-32 self-start">
-               
-               {/* CTA Container 1 */}
-               <div className="bg-gradient-to-br from-[#0C002B] to-[#1a0033] p-8 rounded-2xl shadow-2xl border border-gray-800 text-white group overflow-hidden relative">
-                  <div className="absolute -right-8 -top-8 w-32 h-32 bg-[rgb(110,94,147)] opacity-10 rounded-full blur-3xl transition-all group-hover:opacity-30"></div>
-                  <FontAwesomeIcon icon={faShieldAlt} className="text-4xl text-[rgb(110,94,147)] mb-6 w-10 h-10" />
-                  <h3 className="text-xl font-black mb-4 uppercase tracking-tight">Free TM Search</h3>
-                  <p className="text-sm opacity-80 mb-10 leading-relaxed min-h-[80px]">
-                    Check if your brand name is available before you spend on filing. We provide a detailed 10-page clearance report.
-                  </p>
-                  <Link href="/contact-us" className="block">
-                    <button className="w-full bg-[rgb(110,94,147)] hover:bg-[rgb(130,114,167)] text-white font-black py-4 rounded-2xl transition-all shadow-xl text-base uppercase tracking-widest">
-                      Get Free Search
-                    </button>
-                  </Link>
-                  <div className="mt-8 pt-8 border-t border-white/10 flex items-center justify-center">
-                    <a href="tel:+919289707648" className="text-lg font-bold flex items-center hover:text-[rgb(110,94,147)] transition-colors">
-                      <FontAwesomeIcon icon={faPhone} className="mr-3 w-5 h-5 text-[rgb(110,94,147)]" />
-                      +91-9289707648
-                    </a>
-                  </div>
-               </div>
-
-               {/* Related Pages Container */}
-               <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 relative group overflow-hidden">
-                  <div className="absolute -right-4 top-0 w-24 h-24 bg-gray-50 opacity-50 rounded-full blur-2xl group-hover:scale-150 transition-all duration-500"></div>
-                  <h3 className="text-lg font-black text-gray-900 mb-6 border-b border-gray-50 pb-4 flex items-center">
-                    <FontAwesomeIcon icon={faInfoCircle} className="mr-3 text-[rgb(110,94,147)] w-5 h-5" />
-                    Growth Resources
-                  </h3>
-                  <ul className="space-y-6">
-                    <li>
-                      <Link href="/trademark-application-status" className="group flex items-center text-base font-bold text-gray-600 hover:text-[rgb(110,94,147)] transition-all">
-                        <span className="w-8 h-8 rounded-lg bg-gray-50 flex items-center justify-center mr-4 group-hover:bg-[rgb(110,94,147)]/10 transition-colors">
-                          <FontAwesomeIcon icon={faSync} className="text-xs w-5 h-5" />
-                        </span>
-                        Track Status Online
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/types-of-trademark-classes" className="group flex items-center text-base font-bold text-gray-600 hover:text-[rgb(110,94,147)] transition-all">
-                        <span className="w-8 h-8 rounded-lg bg-gray-50 flex items-center justify-center mr-4 group-hover:bg-[rgb(110,94,147)]/10 transition-colors">
-                          <FontAwesomeIcon icon={faInfoCircle} className="text-xs w-5 h-5" />
-                        </span>
-                        Class Selection Guide
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/gst-required-for-trademark" className="group flex items-center text-base font-bold text-gray-600 hover:text-[rgb(110,94,147)] transition-all">
-                        <span className="w-8 h-8 rounded-lg bg-gray-50 flex items-center justify-center mr-4 group-hover:bg-[rgb(110,94,147)]/10 transition-colors">
-                          <FontAwesomeIcon icon={faFileInvoice} className="text-xs w-5 h-5" />
-                        </span>
-                        GST & Trademark Laws
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/want-to-register-trademark-for-startup" className="group flex items-center text-base font-bold text-gray-600 hover:text-[rgb(110,94,147)] transition-all">
-                        <span className="w-8 h-8 rounded-lg bg-gray-50 flex items-center justify-center mr-4 group-hover:bg-[rgb(110,94,147)]/10 transition-colors">
-                          <FontAwesomeIcon icon={faRocket} className="text-xs w-5 h-5" />
-                        </span>
-                        Startup Special Benefits
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/how-to-check-trademark-availability" className="group flex items-center text-base font-bold text-gray-600 hover:text-[rgb(110,94,147)] transition-all">
-                        <span className="w-8 h-8 rounded-lg bg-gray-50 flex items-center justify-center mr-4 group-hover:bg-[rgb(110,94,147)]/10 transition-colors">
-                          <FontAwesomeIcon icon={faSearch} className="text-xs w-5 h-5" />
-                        </span>
-                        Brand Availability Check
-                      </Link>
-                    </li>
-                  </ul>
-               </div>
-
-               {/* Trust Widget */}
-               <div className="bg-gray-900 border border-gray-800 p-6 rounded-2xl text-white">
-                  <div className="flex items-center mb-8">
-                    <div className="flex -space-x-3">
-                       {[...Array(4)].map((_, i) => (
-                         <div key={i} className="w-12 h-12 rounded-full border-4 border-gray-900 bg-gray-800 flex items-center justify-center text-[10px] font-black uppercase">
-                           TM
-                         </div>
-                       ))}
-                    </div>
-                    <div className="ml-6">
-                       <p className="text-sm font-black text-[#8A7AB5] uppercase tracking-tighter">1540+ Registrations</p>
-                       <div className="flex text-yellow-500 text-xs mt-1">
-                          {'★★★★★'.split('').map((s, i) => <span key={i}>{s}</span>)}
-                       </div>
-                    </div>
-                  </div>
-                  <h4 className="text-lg font-black mb-3 uppercase">98% Success Rate</h4>
-                  <p className="text-xs text-gray-400 leading-relaxed mb-10">
-                    Our success in overcoming Section 9 & 11 objections is driven by precision in e-filing and deep legal research.
-                  </p>
-                  <a href="https://wa.me/919289707648" className="bg-[#25D366] hover:bg-[#128C7E] text-white font-black py-4 px-6 rounded-2xl block text-center text-sm transition-all flex items-center justify-center uppercase tracking-widest shadow-lg">
-                    <i className="fab fa-whatsapp mr-2 text-xl"></i>
-                    WhatsApp Experts
+            {/* Right Column - Sidebar Widgets */}
+            <aside className="hidden lg:block space-y-10 sticky top-32">
+              
+              {/* Sidebar CTA Box */}
+              <div className="bg-[#0C002B] p-8 rounded-3xl shadow-xl border border-gray-800 text-white relative overflow-hidden group">
+                <div className="absolute -top-10 -right-10 w-32 h-32 bg-[#6E5E93] rounded-full blur-[60px] opacity-20 group-hover:opacity-40 transition-opacity"></div>
+                <h3 className="text-2xl font-bold mb-4 relative z-10">Protect Your Brand Now</h3>
+                <p className="text-sm opacity-80 mb-8 leading-relaxed relative z-10">
+                  Don't let copycats profit from your hard work. Secure your trademark today with India's most trusted legal team.
+                </p>
+                <Link href="/contact-us" className="block relative z-10">
+                  <button className="w-full bg-[#6E5E93] hover:bg-[#8A7AB5] text-white font-extrabold py-4 px-4 rounded-xl transition-all shadow-lg transform hover:-translate-y-1">
+                    Book Free TM Search
+                  </button>
+                </Link>
+                <div className="mt-6 pt-6 border-t border-white/10 relative z-10 text-center">
+                  <a href="tel:+919289707648" className="text-indigo-300 font-bold hover:text-white transition-colors flex items-center justify-center">
+                    <FontAwesomeIcon icon={faPhone} className="w-6 h-6 mr-3" /> +91-9289707648
                   </a>
-               </div>
+                </div>
+              </div>
+
+              {/* Related Pages Widget */}
+              <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
+                <h3 className="text-xl font-bold text-[#0C002B] mb-6 border-b pb-4">Related Topics</h3>
+                <ul className="space-y-4">
+                  <li>
+                    <Link href="/our-services/trademark-registration" className="group flex items-center text-gray-700 hover:text-[#6E5E93] transition-all">
+                      <div className="w-2 h-2 bg-gray-300 rounded-full mr-4 group-hover:bg-[#6E5E93] transition-all"></div>
+                      <span className="font-medium">Registration Services</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/gst-required-for-trademark" className="group flex items-center text-gray-700 hover:text-[#6E5E93] transition-all">
+                      <div className="w-2 h-2 bg-gray-300 rounded-full mr-4 group-hover:bg-[#6E5E93] transition-all"></div>
+                      <span className="font-medium">GST & Trademarks</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/how-to-register-trademark" className="group flex items-center text-gray-700 hover:text-[#6E5E93] transition-all">
+                      <div className="w-2 h-2 bg-gray-300 rounded-full mr-4 group-hover:bg-[#6E5E93] transition-all"></div>
+                      <span className="font-medium">TM Registration Guide</span>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+
             </aside>
 
           </div>

@@ -48,6 +48,8 @@ export async function GET() {
     '/how-to-check-trademark-availability',
     '/trademark-application-status',
     '/e-filing-trademark',
+    '/trademark-for-clothing-brand',
+    '/trademark-for-jewellery-brand',
   ].map(path => ({ path, priority: '0.8', changefreq: 'weekly' } as RouteConfig));
 
   // Fetch Dynamic Blog Posts

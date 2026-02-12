@@ -222,10 +222,10 @@ export default function GstRequiredForTrademarkPage() {
           </div>
         </div>
 
-        <div className="container mx-auto px-4 max-w-8xl py-4 md:py-6">
+        <div className="container mx-auto px-4 max-w-[1600px] py-4 md:py-8">
           <Breadcrumbs items={breadcrumbItems} />
 
-          <div className="grid grid-cols-1 lg:grid-cols-[250px_1fr_300px] gap-4 md:gap-8 mt-8 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-[220px_1fr_300px] gap-4 md:gap-12 mt-8 items-start">
             
             {/* Left Column: Table of Contents */}
             <div className="hidden lg:block sticky top-32">
@@ -468,39 +468,39 @@ export default function GstRequiredForTrademarkPage() {
                   </p>
                   <div className="space-y-10 my-12">
                     <div className="flex gap-6 relative">
-                       <div className="w-14 h-14 bg-[#6E5E93] text-white rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0 shadow-lg z-10">1</div>
-                       <div className="absolute left-7 top-14 w-1 h-20 bg-gray-100 -z-0 hidden md:block"></div>
+                       <div className="w-12 h-12 md:w-14 md:h-14 bg-[#6E5E93] text-white rounded-full flex items-center justify-center font-bold text-lg md:text-xl flex-shrink-0 shadow-lg z-10">1</div>
+                       <div className="absolute left-6 md:left-7 top-14 w-1 h-20 bg-gray-100 -z-0 hidden md:block"></div>
                        <div>
                           <h4 className="font-bold text-[#0C002B] text-xl mb-1">Pre-Filing: Clearance Search</h4>
                           <p className="leading-relaxed">We use artificial intelligence and legal expertise to search for conflicting marks. At this stage, we collect your GST and MSME details to generate the correct billing structure and prepare for the 50 percent fee waiver if eligible.</p>
                        </div>
                     </div>
                     <div className="flex gap-6 relative">
-                       <div className="w-14 h-14 bg-[#6E5E93] text-white rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0 shadow-lg z-10">2</div>
-                       <div className="absolute left-7 top-14 w-1 h-20 bg-gray-100 -z-0 hidden md:block"></div>
+                       <div className="w-12 h-12 md:w-14 md:h-14 bg-[#6E5E93] text-white rounded-full flex items-center justify-center font-bold text-lg md:text-xl flex-shrink-0 shadow-lg z-10">2</div>
+                       <div className="absolute left-6 md:left-7 top-14 w-1 h-20 bg-gray-100 -z-0 hidden md:block"></div>
                        <div>
                           <h4 className="font-bold text-[#0C002B] text-xl mb-1">Filing Section: Form TM-A</h4>
                           <p className="leading-relaxed">We upload the application digitally to the IP India portal. The government portal generates a receipt. If we used your MSME details, the receipt will show 4,500 rupees. We then issue you a tax invoice for the inclusive amounts, enabling your tax credit claim.</p>
                        </div>
                     </div>
                     <div className="flex gap-6 relative">
-                       <div className="w-14 h-14 bg-[#6E5E93] text-white rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0 shadow-lg z-10">3</div>
-                       <div className="absolute left-7 top-14 w-1 h-20 bg-gray-100 -z-0 hidden md:block"></div>
+                       <div className="w-12 h-12 md:w-14 md:h-14 bg-[#6E5E93] text-white rounded-full flex items-center justify-center font-bold text-lg md:text-xl flex-shrink-0 shadow-lg z-10">3</div>
+                       <div className="absolute left-6 md:left-7 top-14 w-1 h-20 bg-gray-100 -z-0 hidden md:block"></div>
                        <div>
                           <h4 className="font-bold text-[#0C002B] text-xl mb-1">Examination Phase</h4>
                           <p className="leading-relaxed">A government examiner reviews the application. If they raise an objection regarding the distinctiveness of the mark, we draft a robust response. Here, your GST records are often used as exhibits to prove the 'continuity and extent' of your business presence.</p>
                        </div>
                     </div>
                     <div className="flex gap-6 relative">
-                       <div className="w-14 h-14 bg-[#6E5E93] text-white rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0 shadow-lg z-10">4</div>
-                       <div className="absolute left-7 top-14 w-1 h-20 bg-gray-100 -z-0 hidden md:block"></div>
+                       <div className="w-12 h-12 md:w-14 md:h-14 bg-[#6E5E93] text-white rounded-full flex items-center justify-center font-bold text-lg md:text-xl flex-shrink-0 shadow-lg z-10">4</div>
+                       <div className="absolute left-6 md:left-7 top-14 w-1 h-20 bg-gray-100 -z-0 hidden md:block"></div>
                        <div>
                           <h4 className="font-bold text-[#0C002B] text-xl mb-1">Journal Publication</h4>
                           <p className="leading-relaxed">Once accepted, your brand is published in the Trade Marks Journal for four months. This is the public notice period. If no third party opposes the registration, the path to certification is clear.</p>
                        </div>
                     </div>
                     <div className="flex gap-6 relative">
-                       <div className="w-14 h-14 bg-[#6E5E93] text-white rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0 shadow-lg z-10">5</div>
+                       <div className="w-12 h-12 md:w-14 md:h-14 bg-[#6E5E93] text-white rounded-full flex items-center justify-center font-bold text-lg md:text-xl flex-shrink-0 shadow-lg z-10">5</div>
                        <div>
                           <h4 className="font-bold text-[#0C002B] text-xl mb-1">Registration Certificate</h4>
                           <p className="leading-relaxed">The final digital certificate is issued. You can now use the circle-R symbol. At this stage, your trademark becomes a fully recognized intangible asset on your business balance sheet.</p>

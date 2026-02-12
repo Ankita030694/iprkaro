@@ -239,10 +239,10 @@ export default function StartupTrademarkPage() {
           </div>
         </div>
 
-        <div className="container mx-auto px-4 py-8 md:py-12 max-w-8xl">
+        <div className="container mx-auto px-4 max-w-[1600px] py-4 md:py-8">
           <Breadcrumbs items={breadcrumbItems} />
 
-          <div className="grid grid-cols-1 lg:grid-cols-[220px_1fr_280px] gap-4 md:gap-8 mt-8 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-[220px_1fr_300px] gap-4 md:gap-12 mt-8 items-start">
             {/* Table of Contents Column */}
             <div className="hidden lg:block sticky top-32">
               <TableOfContents sections={tocSections} orientation="vertical" />
@@ -250,10 +250,10 @@ export default function StartupTrademarkPage() {
 
             {/* Main Content Column */}
             <div className="min-w-0">
-               {/* Mobile TOC */}
-               <div className="lg:hidden mb-6 sticky top-24 z-20">
-                   <TableOfContents sections={tocSections} orientation="horizontal" />
-               </div>
+              {/* Mobile TOC */}
+              <div className="lg:hidden mb-6 sticky top-[72px] z-20">
+                  <TableOfContents sections={tocSections} orientation="horizontal" />
+              </div>
 
               <div className="bg-white p-4 md:p-12 rounded-xl md:rounded-2xl shadow-sm border border-gray-100 prose prose-lg max-w-none text-gray-800 font-nunito">
                 
@@ -311,35 +311,35 @@ export default function StartupTrademarkPage() {
                   <h2 className="text-2xl md:text-3xl font-bold text-[#0C002B] mb-4">The Step-by-Step Registration Journey</h2>
                   <div className="space-y-6 my-10">
                     <div className="flex gap-4">
-                       <div className="w-10 h-10 bg-[#FFB703] text-[#0C002B] rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0 shadow-md">1</div>
+                       <div className="w-10 h-10 md:w-12 md:h-12 bg-[#FFB703] text-[#0C002B] rounded-full flex items-center justify-center font-bold text-base md:text-lg flex-shrink-0 shadow-md">1</div>
                        <div>
                           <h4 className="font-bold text-[#0C002B] text-lg mb-1">Advanced AI Search</h4>
                           <p className="leading-relaxed text-sm">We crawl the IP India database, including phonetic and Vienna Code matches, to ensure your name is unique and registrable.</p>
                        </div>
                     </div>
                     <div className="flex gap-4">
-                       <div className="w-10 h-10 bg-[#FFB703] text-[#0C002B] rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0 shadow-md">2</div>
+                       <div className="w-10 h-10 md:w-12 md:h-12 bg-[#FFB703] text-[#0C002B] rounded-full flex items-center justify-center font-bold text-base md:text-lg flex-shrink-0 shadow-md">2</div>
                        <div>
                           <h4 className="font-bold text-[#0C002B] text-lg mb-1">E-Filing (Within 24 Hours)</h4>
                           <p className="leading-relaxed text-sm">Once the search is clear, we file Form TM-A electronically. You receive your application number on the same day.</p>
                        </div>
                     </div>
                     <div className="flex gap-4">
-                       <div className="w-10 h-10 bg-[#FFB703] text-[#0C002B] rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0 shadow-md">3</div>
+                       <div className="w-10 h-10 md:w-12 md:h-12 bg-[#FFB703] text-[#0C002B] rounded-full flex items-center justify-center font-bold text-base md:text-lg flex-shrink-0 shadow-md">3</div>
                        <div>
                           <h4 className="font-bold text-[#0C002B] text-lg mb-1">Examination & Objections</h4>
                           <p className="leading-relaxed text-sm">A government examiner reviews the mark. If any objections (Section 9/11) are raised, our legal team drafts a persuasive response.</p>
                        </div>
                     </div>
                     <div className="flex gap-4">
-                       <div className="w-10 h-10 bg-[#FFB703] text-[#0C002B] rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0 shadow-md">4</div>
+                       <div className="w-10 h-10 md:w-12 md:h-12 bg-[#FFB703] text-[#0C002B] rounded-full flex items-center justify-center font-bold text-base md:text-lg flex-shrink-0 shadow-md">4</div>
                        <div>
                           <h4 className="font-bold text-[#0C002B] text-lg mb-1">Journal Publication</h4>
                           <p className="leading-relaxed text-sm">Your mark is published in the TM Journal for 4 months. This is the 'Opposition Period' where the public can view your claim.</p>
                        </div>
                     </div>
                     <div className="flex gap-4">
-                       <div className="w-10 h-10 bg-[#FFB703] text-[#0C002B] rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0 shadow-md">5</div>
+                       <div className="w-10 h-10 md:w-12 md:h-12 bg-[#FFB703] text-[#0C002B] rounded-full flex items-center justify-center font-bold text-base md:text-lg flex-shrink-0 shadow-md">5</div>
                        <div>
                           <h4 className="font-bold text-[#0C002B] text-lg mb-1">Final Registration</h4>
                           <p className="leading-relaxed text-sm">If no one opposes, you receive your Digital Registration Certificate. You can now use the ® symbol with pride.</p>
@@ -502,66 +502,48 @@ export default function StartupTrademarkPage() {
               </div>
             </div>
 
-            {/* Right Sidebar */}
-            <div className="hidden lg:block space-y-8 sticky top-32">
-                
-                {/* CTA Container */}
-                <div className="bg-[#0C002B] p-6 rounded-2xl shadow-2xl border border-gray-800 text-white text-center transform hover:scale-[1.02] transition-transform">
-                  <div className="w-12 h-12 bg-[#FFB703] rounded-xl flex items-center justify-center mx-auto mb-4 rotate-3">
-                    <FontAwesomeIcon icon={faRocket} className="text-[#0C002B] text-2xl w-4 h-4" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-3">Fast Filing</h3>
-                  <p className="text-xs opacity-80 mb-6 leading-relaxed">
-                    Get your startup trademark application filed within 24 hours. Start using ™ today!
-                  </p>
-                  <Link href="/contact-us" className="block w-full">
-                    <button className="w-full bg-[#FFB703] hover:bg-[#FFA000] text-[#0C002B] font-bold py-3 px-4 rounded-xl transition-all shadow-lg text-sm">
-                      Apply Now
-                    </button>
-                  </Link>
-                  <div className="mt-4 pt-4 border-t border-white/10">
-                     <p className="text-[10px] text-gray-400 mb-1.5 uppercase tracking-widest font-bold">Expert Support</p>
-                     <a href="tel:+919289707648" className="text-base font-bold hover:text-[#FFB703] transition-colors flex items-center justify-center">
-                        <FontAwesomeIcon icon={faPhone} className="mr-2 text-xs w-4 h-4" /> +91-9289707648
-                     </a>
-                  </div>
+            {/* Right Column - Sidebar Widgets */}
+            <aside className="hidden lg:block space-y-10 sticky top-32">
+              
+              {/* Sidebar CTA Box */}
+              <div className="bg-[#0C002B] p-8 rounded-3xl shadow-xl border border-gray-800 text-white relative overflow-hidden group">
+                <div className="absolute -top-10 -right-10 w-32 h-32 bg-[#6E5E93] rounded-full blur-[60px] opacity-20 group-hover:opacity-40 transition-opacity"></div>
+                <h3 className="text-2xl font-bold mb-4 relative z-10">Fast Filing</h3>
+                <p className="text-sm opacity-80 mb-8 leading-relaxed relative z-10">
+                  Get your startup trademark application filed within **24 hours**. Start using ™ today!
+                </p>
+                <Link href="/contact-us" className="block relative z-10">
+                  <button className="w-full bg-[#6E5E93] hover:bg-[#8A7AB5] text-white font-extrabold py-4 px-4 rounded-xl transition-all shadow-lg transform hover:-translate-y-1">
+                    Apply Now
+                  </button>
+                </Link>
+                <div className="mt-6 pt-6 border-t border-white/10 relative z-10 text-center">
+                  <a href="tel:+919289707648" className="text-indigo-300 font-bold hover:text-white transition-colors flex items-center justify-center">
+                    <FontAwesomeIcon icon={faPhone} className="w-6 h-6 mr-3" /> +91-9289707648
+                  </a>
                 </div>
+              </div>
 
-                {/* Related Pages Container */}
-                <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
-                  <h3 className="text-xl font-bold text-[#0C002B] mb-6 flex items-center">
-                    <FontAwesomeIcon icon={faLightbulb} className="mr-3 text-[#FFB703] w-4 h-4" />
-                    Related Guides
-                  </h3>
-                  <ul className="space-y-4">
-                    <li>
-                      <Link href="/how-to-register-trademark" className="text-gray-600 hover:text-[#0C002B] flex items-center group font-medium text-sm">
-                        <span className="w-2 h-2 rounded-full bg-gray-300 mr-3 group-hover:bg-[#FFB703]"></span>
-                        How to Register TM
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/our-services/trademark-registration" className="text-gray-600 hover:text-[#0C002B] flex items-center group font-medium text-sm">
-                        <span className="w-2 h-2 rounded-full bg-gray-300 mr-3 group-hover:bg-[#FFB703]"></span>
-                        Trademark Filing
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
+              {/* Related Pages Widget */}
+              <div className="bg-gray-50 p-8 rounded-3xl shadow-sm border border-gray-100">
+                <h3 className="text-xl font-bold text-[#0C002B] mb-6 border-b pb-4">Related Services</h3>
+                <ul className="space-y-4">
+                  <li>
+                    <Link href="/how-to-register-trademark" className="group flex items-center text-gray-700 hover:text-[#6E5E93] transition-all">
+                      <div className="w-2 h-2 bg-gray-300 rounded-full mr-4 group-hover:bg-[#6E5E93] transition-all"></div>
+                      <span className="font-medium">How to Register TM</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/our-services/trademark-registration" className="group flex items-center text-gray-700 hover:text-[#6E5E93] transition-all">
+                      <div className="w-2 h-2 bg-gray-300 rounded-full mr-4 group-hover:bg-[#6E5E93] transition-all"></div>
+                      <span className="font-medium">Trademark Filing</span>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
 
-                {/* Trust Badges */}
-                <div className="grid grid-cols-2 gap-4">
-                   <div className="bg-gray-50 p-4 rounded-2xl text-center border border-gray-100">
-                      <FontAwesomeIcon icon={faShieldAlt} className="text-[#0C002B] mb-2 w-4 h-4" />
-                      <p className="text-[10px] font-bold uppercase text-gray-500">100% Secure</p>
-                   </div>
-                   <div className="bg-gray-50 p-4 rounded-2xl text-center border border-gray-100">
-                      <FontAwesomeIcon icon={faCertificate} className="text-[#0C002B] mb-2 w-4 h-4" />
-                      <p className="text-[10px] font-bold uppercase text-gray-500">Certified</p>
-                   </div>
-                </div>
-
-            </div>
+            </aside>
             
           </div>
           

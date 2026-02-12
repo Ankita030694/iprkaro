@@ -235,7 +235,7 @@ export default function RegisterTrademarkYourselfPage() {
         <div className="container mx-auto px-3 max-w-[1600px] py-4 md:py-8">
           <Breadcrumbs items={breadcrumbItems} />
 
-          <div className="grid grid-cols-1 lg:grid-cols-[220px_1fr_280px] gap-4 md:gap-8 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-[220px_1fr_300px] gap-4 md:gap-12 mt-8 items-start">
             
             {/* Left Column: Table of Contents */}
             <div className="hidden lg:block sticky top-32 max-h-[calc(100vh-160px)] overflow-y-auto">
@@ -273,40 +273,40 @@ export default function RegisterTrademarkYourselfPage() {
 
                 <section id="why-self-register" className="scroll-mt-24 md:scroll-mt-32">
                   <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-6 md:mb-8">Why Every Business Owner Should Consider Self-Registration</h2>
-                  <div className="grid md:grid-cols-2 gap-8">
-                    <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-all">
-                      <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mb-6 shadow-sm">
-                        <FontAwesomeIcon icon={faMoneyBillWave} className="text-green-500 text-xl" />
+                  <div className="grid md:grid-cols-2 gap-6 md:gap-8">
+                    <div className="bg-gray-50 p-6 md:p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-all">
+                      <div className="w-10 h-10 md:w-12 md:h-12 bg-white rounded-full flex items-center justify-center mb-6 shadow-sm">
+                        <FontAwesomeIcon icon={faMoneyBillWave} className="text-green-500 text-lg md:text-xl" />
                       </div>
-                      <h3 className="text-xl font-bold mb-4 text-gray-900">Significant Cost Savings</h3>
-                      <p className="text-gray-600 text-sm leading-relaxed">
+                      <h3 className="text-lg md:text-xl font-bold mb-4 text-gray-900">Significant Cost Savings</h3>
+                      <p className="text-gray-600 text-xs md:text-sm leading-relaxed">
                         Professional fees for trademark registration can range from ₹3,000 to ₹15,000 per class. By doing it yourself, you only pay the government fee of ₹4,500 (for Individuals/Startups/MSMEs). For a business needing protection in multiple classes, this translates to savings of over ₹50,000.
                       </p>
                     </div>
-                    <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-all">
-                      <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mb-6 shadow-sm">
-                        <FontAwesomeIcon icon={faBookOpen} className="text-blue-500 text-xl" />
+                    <div className="bg-gray-50 p-6 md:p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-all">
+                      <div className="w-10 h-10 md:w-12 md:h-12 bg-white rounded-full flex items-center justify-center mb-6 shadow-sm">
+                        <FontAwesomeIcon icon={faBookOpen} className="text-blue-500 text-lg md:text-xl" />
                       </div>
-                      <h3 className="text-xl font-bold mb-4 text-gray-900">Empowerment & Knowledge</h3>
-                      <p className="text-gray-600 text-sm leading-relaxed">
+                      <h3 className="text-lg md:text-xl font-bold mb-4 text-gray-900">Empowerment & Knowledge</h3>
+                      <p className="text-gray-600 text-xs md:text-sm leading-relaxed">
                         Understanding the 'Nice Classification' and 'Public Search' results gives you a strategic advantage. You will know exactly where your brand stands in the market and who your closest competitors are in terms of IP. This knowledge is invaluable during brand expansion.
                       </p>
                     </div>
-                    <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-all">
-                      <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mb-6 shadow-sm">
-                        <FontAwesomeIcon icon={faClock} className="text-orange-500 text-xl" />
+                    <div className="bg-gray-50 p-6 md:p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-all">
+                      <div className="w-10 h-10 md:w-12 md:h-12 bg-white rounded-full flex items-center justify-center mb-6 shadow-sm">
+                        <FontAwesomeIcon icon={faClock} className="text-orange-500 text-lg md:text-xl" />
                       </div>
-                      <h3 className="text-xl font-bold mb-4 text-gray-900">Full Control Over Timeline</h3>
-                      <p className="text-gray-600 text-sm leading-relaxed">
+                      <h3 className="text-lg md:text-xl font-bold mb-4 text-gray-900">Full Control Over Timeline</h3>
+                      <p className="text-gray-600 text-xs md:text-sm leading-relaxed">
                         When you file yourself, you don't wait for an attorney's schedule. You can file at 2 AM or on a Sunday. Same-day filing is crucial in the 'First to File' race that determines ownership in many contested cases.
                       </p>
                     </div>
-                    <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-all">
-                      <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mb-6 shadow-sm">
-                        <FontAwesomeIcon icon={faBriefcase} className="text-purple-500 text-xl" />
+                    <div className="bg-gray-50 p-6 md:p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-all">
+                      <div className="w-10 h-10 md:w-12 md:h-12 bg-white rounded-full flex items-center justify-center mb-6 shadow-sm">
+                        <FontAwesomeIcon icon={faBriefcase} className="text-purple-500 text-lg md:text-xl" />
                       </div>
-                      <h3 className="text-xl font-bold mb-4 text-gray-900">Direct Communication</h3>
-                      <p className="text-gray-600 text-sm leading-relaxed">
+                      <h3 className="text-lg md:text-xl font-bold mb-4 text-gray-900">Direct Communication</h3>
+                      <p className="text-gray-600 text-xs md:text-sm leading-relaxed">
                         Receive all legal notices, examination reports, and journal notifications directly in your inbox. No more missed deadlines because an agent failed to check the portal or inform you in time.
                       </p>
                     </div>
@@ -724,71 +724,54 @@ export default function RegisterTrademarkYourselfPage() {
               </div>
             </div>
 
-            {/* Right Column: CTA & Related Pages */}
-            <div className="hidden lg:block space-y-8 sticky top-32">
-               
-               {/* Fixed CTA Container */}
-               <div className="bg-gradient-to-br from-[#0C002B] to-[#1a0033] p-8 rounded-2xl shadow-xl border border-gray-800 text-white text-center">
-                  <h3 className="text-2xl font-bold mb-4">Protect Your Brand Now</h3>
-                  <p className="text-sm opacity-80 mb-8 leading-relaxed">
-                    Don't let copycats profit from your hard work. Secure your trademark today with India's most trusted legal team.
-                  </p>
-                  <Link href="/contact-us" className="block w-full">
-                    <button className="w-full bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-4 px-4 rounded-xl transition-all shadow-md text-sm uppercase tracking-wider">
-                      Book Free TM Search
-                    </button>
-                  </Link>
-                  <div className="mt-6 pt-6 border-t border-white/10">
-                    <p className="text-xs text-gray-400 mb-2 uppercase tracking-widest font-bold">Talk to our Experts</p>
-                    <a href="tel:+919289707648" className="text-lg font-bold hover:text-[rgb(110,94,147)] transition-colors flex items-center justify-center">
-                       <FontAwesomeIcon icon={faPhone} className="mr-3 text-sm" /> +91-9289707648
-                    </a>
-                  </div>
-               </div>
+            {/* Right Column - Sidebar Widgets */}
+            <aside className="hidden lg:block space-y-10 sticky top-32">
+              
+              {/* Sidebar CTA Box */}
+              <div className="bg-[#0C002B] p-8 rounded-3xl shadow-xl border border-gray-800 text-white relative overflow-hidden group">
+                <div className="absolute -top-10 -right-10 w-32 h-32 bg-[#6E5E93] rounded-full blur-[60px] opacity-20 group-hover:opacity-40 transition-opacity"></div>
+                <h3 className="text-2xl font-bold mb-4 relative z-10">Protect Your Brand Now</h3>
+                <p className="text-sm opacity-80 mb-8 leading-relaxed relative z-10">
+                  Don't let copycats profit from your hard work. Secure your trademark today with India's most trusted legal team.
+                </p>
+                <Link href="/contact-us" className="block relative z-10">
+                  <button className="w-full bg-[#6E5E93] hover:bg-[#8A7AB5] text-white font-extrabold py-4 px-4 rounded-xl transition-all shadow-lg transform hover:-translate-y-1">
+                    Book Free TM Search
+                  </button>
+                </Link>
+                <div className="mt-6 pt-6 border-t border-white/10 relative z-10 text-center">
+                  <a href="tel:+919289707648" className="text-indigo-300 font-bold hover:text-white transition-colors flex items-center justify-center">
+                    <FontAwesomeIcon icon={faPhone} className="w-6 h-6 mr-3" /> +91-9289707648
+                  </a>
+                </div>
+              </div>
 
-               {/* Related Pages Container */}
-               <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-                  <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
-                    <FontAwesomeIcon icon={faCheckCircle} className="mr-3 text-[rgb(110,94,147)]" />
-                    Related Topics
-                  </h3>
-                  <nav>
-                    <ul className="space-y-4">
-                      <li>
-                        <Link href="/our-services/trademark-registration" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center group font-medium transition-colors">
-                          <FontAwesomeIcon icon={faChevronRight} className="mr-3 text-[10px] text-gray-300 group-hover:text-[rgb(110,94,147)] transition-colors" />
-                          Registration Services
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/gst-required-for-trademark" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center group font-medium transition-colors">
-                          <FontAwesomeIcon icon={faChevronRight} className="mr-3 text-[10px] text-gray-300 group-hover:text-[rgb(110,94,147)] transition-colors" />
-                          GST & Trademarks
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/how-to-register-trademark" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center group font-medium transition-colors">
-                          <FontAwesomeIcon icon={faChevronRight} className="mr-3 text-[10px] text-gray-300 group-hover:text-[rgb(110,94,147)] transition-colors" />
-                          TM Registration Guide
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/want-to-register-trademark-for-startup" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center group font-medium transition-colors">
-                          <FontAwesomeIcon icon={faChevronRight} className="mr-3 text-[10px] text-gray-300 group-hover:text-[rgb(110,94,147)] transition-colors" />
-                          Startups TM Guide
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/trademark-register-kese-karte-hai" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center group font-medium transition-colors">
-                          <FontAwesomeIcon icon={faChevronRight} className="mr-3 text-[10px] text-gray-300 group-hover:text-[rgb(110,94,147)] transition-colors" />
-                          Guide in Hindi
-                        </Link>
-                      </li>
-                    </ul>
-                  </nav>
-               </div>
+              {/* Related Pages Widget */}
+              <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
+                <h3 className="text-xl font-bold text-[#0C002B] mb-6 border-b pb-4">Related Topics</h3>
+                <ul className="space-y-4">
+                  <li>
+                    <Link href="/our-services/trademark-registration" className="group flex items-center text-gray-700 hover:text-[#6E5E93] transition-all">
+                      <div className="w-2 h-2 bg-gray-300 rounded-full mr-4 group-hover:bg-[#6E5E93] transition-all"></div>
+                      <span className="font-medium">Registration Services</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/gst-required-for-trademark" className="group flex items-center text-gray-700 hover:text-[#6E5E93] transition-all">
+                      <div className="w-2 h-2 bg-gray-300 rounded-full mr-4 group-hover:bg-[#6E5E93] transition-all"></div>
+                      <span className="font-medium">GST & Trademarks</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/how-to-register-trademark" className="group flex items-center text-gray-700 hover:text-[#6E5E93] transition-all">
+                      <div className="w-2 h-2 bg-gray-300 rounded-full mr-4 group-hover:bg-[#6E5E93] transition-all"></div>
+                      <span className="font-medium">TM Registration Guide</span>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
 
-            </div>
+            </aside>
 
           </div>
         </div>

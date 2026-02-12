@@ -195,44 +195,41 @@ export default function TrademarkApplicationStatusPage() {
 
       <div className="bg-gray-50 min-h-screen font-sans text-gray-800">
         
-        {/* Header Hero Section */}
         <div className="relative w-full overflow-hidden" 
              style={{
                background: 'linear-gradient(to bottom, #0C002B 0%, #160049 45%, #6E5E93 80%, #E8E8E8 100%)'
              }}>
           
-          <div className="container mx-auto px-4 py-16 lg:py-32 relative z-10 text-center">
-             <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight mt-10 text-white">
+          <div className="container mx-auto px-4 py-12 lg:py-32 relative z-10 text-center">
+             <h1 className="text-2xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6 leading-snug md:leading-tight mt-20 md:mt-10 text-white">
                Track Your <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'rgb(110, 94, 147)' }}>Trademark Application Status</span> with Precision
              </h1>
-             <p className="text-lg md:text-2xl mb-10 max-w-4xl mx-auto text-gray-300 font-light leading-relaxed">
+             <p className="text-sm md:text-2xl mb-6 md:mb-10 max-w-4xl mx-auto text-gray-300 font-light leading-relaxed px-2">
                Monitoring your trademark status is as critical as filing it. Don't let a missed deadline lead to an abandoned mark. Use our expert guide to navigate the IP India portal like a pro.
              </p>
              <Link href="/contact-us">
-               <button className="bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-4 px-10 rounded-full transition-all transform hover:scale-105 shadow-[0_0_25px_rgba(110,94,147,0.4)] text-lg">
+               <button className="bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-2.5 px-6 md:py-4 md:px-10 rounded-full transition-all transform hover:scale-105 shadow-[0_0_25px_rgba(110,94,147,0.4)] text-base md:text-lg">
                  Get Expert TM Assistance
                </button>
              </Link>
           </div>
         </div>
 
-        <div className="container mx-auto px-4 max-w-[1700px] py-8">
+        <div className="container mx-auto px-4 max-w-[1600px] py-4 md:py-8">
           <Breadcrumbs items={breadcrumbItems} />
 
-          <div className="flex flex-col lg:flex-row gap-8 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-[220px_1fr_300px] gap-4 md:gap-12 mt-8 items-start">
             
-            {/* Left Sidebar - TOC (Sticky) */}
-            <aside className="hidden lg:block w-[240px] sticky top-32 flex-shrink-0">
-              <div className="bg-white rounded-xl shadow-sm p-2">
+            {/* Left Column: Table of Contents */}
+            <div className="hidden lg:block sticky top-32">
                 <TableOfContents sections={tocSections} orientation="vertical" />
-              </div>
-            </aside>
+            </div>
 
-            {/* Middle Main Content Area */}
-            <main className="flex-grow min-w-0">
-               {/* Mobile TOC */}
-               <div className="lg:hidden mb-6 sticky top-20 z-20">
-                <TableOfContents sections={tocSections} orientation="horizontal" />
+            {/* Middle Column: Main Content */}
+            <div className="min-w-0">
+              {/* Mobile TOC */}
+              <div className="lg:hidden mb-6 sticky top-[72px] z-20">
+                  <TableOfContents sections={tocSections} orientation="horizontal" />
               </div>
 
               <div className="bg-white p-6 md:p-16 rounded-2xl shadow-sm space-y-12 md:space-y-20 border border-gray-100">
@@ -250,10 +247,12 @@ export default function TrademarkApplicationStatusPage() {
                   </p>
                 </section>
 
-                <section id="how-to-check" className="scroll-mt-32 bg-gray-50 p-8 rounded-2xl">
+                <section id="how-to-check" className="scroll-mt-32 bg-gray-50 p-6 md:p-8 rounded-2xl border border-gray-100">
                   <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center">
-                    <FontAwesomeIcon icon={faSearch} className="mr-4 text-[rgb(110,94,147)] w-12 h-12" />
-                    Step-by-Step Guide to Check Trademark Status Online
+                    <div className="w-10 h-10 md:w-14 md:h-14 flex-shrink-0 flex items-center justify-center mr-4">
+                      <FontAwesomeIcon icon={faSearch} className="w-6 h-6 md:w-10 md:h-10 text-[rgb(110,94,147)]" />
+                    </div>
+                    Step-by-Step Guide
                   </h2>
                   <p className="text-lg leading-relaxed mb-8 text-gray-700">
                     Checking your status is a simple but vital habit. Follow these steps to access the most up-to-date information directly from the government database.
@@ -288,9 +287,9 @@ export default function TrademarkApplicationStatusPage() {
                   
                   <div className="space-y-6">
                     {/* NEW APPLICATION */}
-                    <div className="flex flex-col md:flex-row gap-6 p-6 border border-gray-100 rounded-xl hover:shadow-md transition-shadow bg-white">
-                      <div className="flex-shrink-0 text-[rgb(110,94,147)] pt-1">
-                        <FontAwesomeIcon icon={faRocket} size="2x" className="w-10 h-10" />
+                    <div className="flex flex-col md:flex-row gap-6 p-6 border border-gray-100 rounded-xl hover:shadow-md transition-shadow bg-white items-start">
+                      <div className="w-10 h-10 md:w-12 md:h-12 flex-shrink-0 flex items-center justify-center text-[rgb(110,94,147)] mt-1">
+                        <FontAwesomeIcon icon={faRocket} className="w-6 h-6 md:w-8 md:h-8" />
                       </div>
                       <div>
                         <h3 className="text-xl font-bold text-gray-900 mb-2">New Application</h3>
@@ -302,9 +301,9 @@ export default function TrademarkApplicationStatusPage() {
                     </div>
 
                     {/* SEND TO VIENNA CODIFICATION */}
-                    <div className="flex flex-col md:flex-row gap-6 p-6 border border-gray-100 rounded-xl hover:shadow-md transition-shadow bg-white">
-                      <div className="flex-shrink-0 text-[rgb(110,94,147)] pt-1">
-                        <FontAwesomeIcon icon={faGlobe} size="2x" className="w-10 h-10" />
+                    <div className="flex flex-col md:flex-row gap-6 p-6 border border-gray-100 rounded-xl hover:shadow-md transition-shadow bg-white items-start">
+                      <div className="w-10 h-10 md:w-12 md:h-12 flex-shrink-0 flex items-center justify-center text-[rgb(110,94,147)] mt-1">
+                        <FontAwesomeIcon icon={faGlobe} className="w-6 h-6 md:w-8 md:h-8" />
                       </div>
                       <div>
                         <h3 className="text-xl font-bold text-gray-900 mb-2">Send to Vienna Codification</h3>
@@ -316,9 +315,9 @@ export default function TrademarkApplicationStatusPage() {
                     </div>
 
                     {/* FORMALITIES CHK PASS */}
-                    <div className="flex flex-col md:flex-row gap-6 p-6 border border-gray-100 rounded-xl hover:shadow-md transition-shadow bg-green-50/30">
-                      <div className="flex-shrink-0 text-green-600 pt-1">
-                        <FontAwesomeIcon icon={faCheckCircle} size="2x" className="w-10 h-10" />
+                    <div className="flex flex-col md:flex-row gap-6 p-6 border border-gray-100 rounded-xl hover:shadow-md transition-shadow bg-green-50/30 items-start">
+                      <div className="w-10 h-10 md:w-12 md:h-12 flex-shrink-0 flex items-center justify-center text-green-600 mt-1">
+                        <FontAwesomeIcon icon={faCheckCircle} className="w-6 h-6 md:w-8 md:h-8" />
                       </div>
                       <div>
                         <h3 className="text-xl font-bold text-gray-900 mb-2">Formalities Chk Pass</h3>
@@ -330,9 +329,9 @@ export default function TrademarkApplicationStatusPage() {
                     </div>
 
                     {/* FORMALITIES CHK FAIL */}
-                    <div className="flex flex-col md:flex-row gap-6 p-6 border border-red-100 rounded-xl hover:shadow-md transition-shadow bg-red-50/30">
-                      <div className="flex-shrink-0 text-red-600 pt-1">
-                        <FontAwesomeIcon icon={faBan} size="2x" className="w-10 h-10" />
+                    <div className="flex flex-col md:flex-row gap-6 p-6 border border-red-100 rounded-xl hover:shadow-md transition-shadow bg-red-50/30 items-start">
+                      <div className="w-10 h-10 md:w-12 md:h-12 flex-shrink-0 flex items-center justify-center text-red-600 mt-1">
+                        <FontAwesomeIcon icon={faBan} className="w-6 h-6 md:w-8 md:h-8" />
                       </div>
                       <div>
                         <h3 className="text-xl font-bold text-gray-900 mb-2">Formalities Chk Fail</h3>
@@ -344,9 +343,9 @@ export default function TrademarkApplicationStatusPage() {
                     </div>
 
                     {/* MARKED FOR EXAM */}
-                    <div className="flex flex-col md:flex-row gap-6 p-6 border border-gray-100 rounded-xl hover:shadow-md transition-shadow bg-white">
-                      <div className="flex-shrink-0 text-[rgb(110,94,147)] pt-1">
-                        <FontAwesomeIcon icon={faSearch} size="2x" className="w-10 h-10" />
+                    <div className="flex flex-col md:flex-row gap-6 p-6 border border-gray-100 rounded-xl hover:shadow-md transition-shadow bg-white items-start">
+                      <div className="w-10 h-10 md:w-12 md:h-12 flex-shrink-0 flex items-center justify-center text-[rgb(110,94,147)] mt-1">
+                        <FontAwesomeIcon icon={faSearch} className="w-6 h-6 md:w-8 md:h-8" />
                       </div>
                       <div>
                         <h3 className="text-xl font-bold text-gray-900 mb-2">Marked for Exam</h3>
@@ -674,97 +673,62 @@ export default function TrademarkApplicationStatusPage() {
                     </div>
                   </div>
                 </section>
-
               </div>
-            </main>
+            </div>
 
-            {/* Right Sidebar - Sticky CTA & Related */}
-            <aside className="w-full lg:w-[320px] space-y-8 sticky top-32 flex-shrink-0">
-               
-               {/* Primary Widget */}
-               <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-                  <div className="text-[rgb(110,94,147)] mb-4 bg-[rgb(110,94,147)]/10 w-16 h-16 rounded-2xl flex items-center justify-center">
-                    <FontAwesomeIcon icon={faShieldAlt} size="2x" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Objection Recovery</h3>
-                  <p className="text-sm text-gray-600 mb-6 leading-relaxed">
-                    Received an 'Objected' status? Our attorneys have a 98% success rate in overcoming Section 9 & 11 objections. Get a free case review today.
-                  </p>
-                  <Link href="/contact-us" className="block">
-                    <button className="w-full bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-4 rounded-xl transition-all shadow-md text-sm">
-                      Reply to Objection
-                    </button>
-                  </Link>
-               </div>
-
-               {/* Related Pages Widget */}
-               <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-                  <h3 className="text-lg font-bold text-gray-900 mb-6 border-b border-gray-50 pb-4 flex items-center">
-                    <FontAwesomeIcon icon={faInfoCircle} className="mr-2 text-[rgb(110,94,147)]" />
-                    Related Guides
-                  </h3>
-                  <ul className="space-y-4">
-                     <li>
-                        <Link href="/our-services/trademark-registration" className="group flex items-start text-sm">
-                           <span className="text-[rgb(110,94,147)] mr-2 mt-1 opacity-0 group-hover:opacity-100 transition-all">
-                              <FontAwesomeIcon icon={faChevronRight} className="text-[10px]" />
-                           </span>
-                           <span className="text-gray-600 group-hover:text-[rgb(110,94,147)] transition-colors">How to Register Trademark</span>
-                        </Link>
-                     </li>
-                     <li>
-                        <Link href="/how-to-check-trademark-availability" className="group flex items-start text-sm font-medium">
-                           <span className="text-[rgb(110,94,147)] mr-2 mt-1 opacity-0 group-hover:opacity-100 transition-all">
-                              <FontAwesomeIcon icon={faChevronRight} className="text-[10px]" />
-                           </span>
-                           <span className="text-gray-900 group-hover:text-[rgb(110,94,147)] transition-colors">Check TM Availability</span>
-                        </Link>
-                     </li>
-                     <li>
-                        <Link href="/gst-required-for-trademark" className="group flex items-start text-sm">
-                           <span className="text-[rgb(110,94,147)] mr-2 mt-1 opacity-0 group-hover:opacity-100 transition-all">
-                              <FontAwesomeIcon icon={faChevronRight} className="text-[10px]" />
-                           </span>
-                           <span className="text-gray-600 group-hover:text-[rgb(110,94,147)] transition-colors">GST for Trademark Guide</span>
-                        </Link>
-                     </li>
-                     <li>
-                        <Link href="/types-of-trademark-classes" className="group flex items-start text-sm">
-                           <span className="text-[rgb(110,94,147)] mr-2 mt-1 opacity-0 group-hover:opacity-100 transition-all">
-                              <FontAwesomeIcon icon={faChevronRight} className="text-[10px]" />
-                           </span>
-                           <span className="text-gray-600 group-hover:text-[rgb(110,94,147)] transition-colors">Trademark Classes Deep Dive</span>
-                        </Link>
-                     </li>
-                  </ul>
-               </div>
-
-               {/* Trust Widget */}
-               <div className="bg-gradient-to-br from-gray-900 to-black p-8 rounded-2xl text-white shadow-xl">
-                  <div className="flex items-center mb-6">
-                    <div className="flex -space-x-3">
-                       {[1,2,3].map(i => (
-                         <div key={i} className="w-10 h-10 rounded-full border-2 border-gray-900 bg-gray-800 flex items-center justify-center text-[10px] font-bold">
-                           U{i}
-                         </div>
-                       ))}
-                    </div>
-                    <div className="ml-4">
-                       <p className="text-xs font-bold text-[#8A7AB5]">840+ Clients</p>
-                       <div className="flex text-yellow-500 text-[10px]">
-                          {'★★★★★'.split('').map((s, i) => <span key={i}>{s}</span>)}
-                       </div>
-                    </div>
-                  </div>
-                  <h4 className="text-sm font-bold mb-2">Expert Human Support</h4>
-                  <p className="text-xs text-gray-400 leading-relaxed mb-6">
-                    Tired of automated bots? Talk to a real legal expert who understands the nuances of Indian IP law.
-                  </p>
-                  <a href="https://wa.me/919289707648" className="bg-[#25D366] hover:bg-[#128C7E] text-white font-bold py-3 px-4 rounded-xl block text-center text-xs transition-all flex items-center justify-center">
-                    <i className="fab fa-whatsapp mr-2 text-lg"></i>
-                    Message on WhatsApp
+            {/* Right Column - Sidebar Widgets */}
+            <aside className="hidden lg:block space-y-10 sticky top-32">
+              
+              {/* Sidebar CTA Box */}
+              <div className="bg-[#0C002B] p-8 rounded-3xl shadow-xl border border-gray-800 text-white relative overflow-hidden group">
+                <div className="absolute -top-10 -right-10 w-32 h-32 bg-[#6E5E93] rounded-full blur-[60px] opacity-20 group-hover:opacity-40 transition-opacity"></div>
+                <h3 className="text-2xl font-bold mb-4 relative z-10">Objection Recovery</h3>
+                <p className="text-sm opacity-80 mb-8 leading-relaxed relative z-10">
+                  Received an 'Objected' status? Our attorneys have a **98% success rate** in overcoming Section 9 & 11 objections.
+                </p>
+                <Link href="/contact-us" className="block relative z-10">
+                  <button className="w-full bg-[#6E5E93] hover:bg-[#8A7AB5] text-white font-extrabold py-4 px-4 rounded-xl transition-all shadow-lg transform hover:-translate-y-1">
+                    Reply to Objection
+                  </button>
+                </Link>
+                <div className="mt-6 pt-6 border-t border-white/10 relative z-10 text-center">
+                  <a href="tel:+919289707648" className="text-indigo-300 font-bold hover:text-white transition-colors flex items-center justify-center">
+                    <FontAwesomeIcon icon={faPhone} className="w-6 h-6 mr-3" /> +91-9289707648
                   </a>
-               </div>
+                </div>
+              </div>
+
+              {/* Related Pages Widget */}
+              <div className="bg-gray-50 p-8 rounded-3xl shadow-sm border border-gray-100">
+                <h3 className="text-xl font-bold text-[#0C002B] mb-6 border-b pb-4">Related Services</h3>
+                <ul className="space-y-4">
+                  <li>
+                    <Link href="/our-services/trademark-registration" className="group flex items-center text-gray-700 hover:text-[#6E5E93] transition-all">
+                      <div className="w-2 h-2 bg-gray-300 rounded-full mr-4 group-hover:bg-[#6E5E93] transition-all"></div>
+                      <span className="font-medium">How to Register Trademark</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/how-to-check-trademark-availability" className="group flex items-center text-gray-700 hover:text-[#6E5E93] transition-all">
+                      <div className="w-2 h-2 bg-gray-300 rounded-full mr-4 group-hover:bg-[#6E5E93] transition-all"></div>
+                      <span className="font-medium">Check TM Availability</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/gst-required-for-trademark" className="group flex items-center text-gray-700 hover:text-[#6E5E93] transition-all">
+                      <div className="w-2 h-2 bg-gray-300 rounded-full mr-4 group-hover:bg-[#6E5E93] transition-all"></div>
+                      <span className="font-medium">GST for Trademark</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/types-of-trademark-classes" className="group flex items-center text-gray-700 hover:text-[#6E5E93] transition-all">
+                      <div className="w-2 h-2 bg-gray-300 rounded-full mr-4 group-hover:bg-[#6E5E93] transition-all"></div>
+                      <span className="font-medium">Trademark Classes Guide</span>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+
             </aside>
 
           </div>
