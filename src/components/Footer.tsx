@@ -263,6 +263,24 @@ const Footer: React.FC = () => {
             <a href="/trademark-for-business" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">
               Trademark for Business
             </a>
+            <a href="/trademark-for-stationary" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">
+              Trademark for Stationary
+            </a>
+            <a href="/trademark-for-furniture-shop" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">
+              Trademark for Furniture Shop
+            </a>
+            <a href="/trademark-for-legal-services" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">
+              Trademark for Legal Services
+            </a>
+            <a href="/trademark-for-toys-sports-services" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">
+              Trademark for Toys & Sports Services
+            </a>
+            <a href="/trademark-for-musical-instruments" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">
+              Trademark for Musical Instruments
+            </a>
+            <a href="/trademark-for-financial-services" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">
+              Trademark for Financial Services
+            </a>
           </div>
         </div>
 
