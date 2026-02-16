@@ -7,6 +7,7 @@ import { Navbar, Footer, CitiesAndTerritories } from "@/components";
 import ConditionalLayout from "./ConditionalLayout";
 import WhatsAppWidget from "@/components/WhatsAppWidget";
 import { Analytics } from "@vercel/analytics/next"
+import GlobalPopupForm from "@/components/common/GlobalPopupForm";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -138,6 +139,7 @@ export default function RootLayout({
             {children}
           </ConditionalLayout>
           <WhatsAppWidget />
+          <GlobalPopupForm />
         </div>
         <Analytics />
       </body>
