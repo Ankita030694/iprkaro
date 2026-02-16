@@ -13,8 +13,8 @@ export default function GlobalPopupForm() {
   const pathname = usePathname();
 
   useEffect(() => {
-    // Don't show on contact-us page
-    if (pathname === '/contact-us') {
+    // Don't show on contact-us page or any page in the authority folder
+    if (pathname === '/contact-us' || pathname.startsWith('/authority')) {
       setIsOpen(false);
       return;
     }
@@ -28,7 +28,7 @@ export default function GlobalPopupForm() {
 
     // 5 second delay
     const timer = setTimeout(() => {
-      if (!hasBeenDismissed && pathname !== '/contact-us') {
+      if (!hasBeenDismissed && pathname !== '/contact-us' && !pathname.startsWith('/authority')) {
         setIsOpen(true);
       }
     }, 5000);
