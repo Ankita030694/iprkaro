@@ -58,6 +58,8 @@ export async function GET() {
     '/trademark-for-toys-sports-services',
     '/trademark-for-musical-instruments',
     '/trademark-for-financial-services',
+    '/trademark-for-telecommunication-services',
+    '/trademark-for-medical-services',
   ].map(path => ({ path, priority: '0.8', changefreq: 'weekly' } as RouteConfig));
 
   // Fetch Dynamic Blog Posts
