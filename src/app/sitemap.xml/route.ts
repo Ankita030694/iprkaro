@@ -60,6 +60,9 @@ export async function GET() {
     '/trademark-for-financial-services',
     '/trademark-for-telecommunication-services',
     '/trademark-for-medical-services',
+    '/trademark-for-ecommerce',
+    '/fast-track-trademark-registration',
+    '/trademark-class-finder',
   ].map(path => ({ path, priority: '0.8', changefreq: 'weekly' } as RouteConfig));
 
   // Fetch Dynamic Blog Posts

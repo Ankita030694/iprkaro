@@ -287,6 +287,15 @@ const Footer: React.FC = () => {
             <a href="/trademark-for-medical-services" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">
               Trademark for Medical Services
             </a>
+            <a href="/trademark-for-ecommerce" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">
+              Trademark for Ecommerce
+            </a>
+            <a href="/fast-track-trademark-registration" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">
+              Fast-Track Trademark Registration
+            </a>
+            <a href="/trademark-class-finder" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">
+              Trademark Class Finder
+            </a>
           </div>
         </div>
 
