@@ -86,6 +86,18 @@ const Footer: React.FC = () => {
                   </a>
                 </li>
                 <li>
+                  <a href="/trademark-registration-in-delhi" className="text-sm hover:text-cyan-300 transition-colors">Trademark in Delhi</a>
+                </li>
+                <li>
+                  <a href="/trademark-registration-in-gurgaon" className="text-sm hover:text-cyan-300 transition-colors">Trademark in Gurgaon</a>
+                </li>
+                <li>
+                  <a href="/trademark-registration-in-noida" className="text-sm hover:text-cyan-300 transition-colors">Trademark in Noida</a>
+                </li>
+                <li>
+                  <a href="/legal-services-in-noida" className="text-sm hover:text-cyan-300 transition-colors">Legal Services Noida</a>
+                </li>
+                <li>
                   <a href="/our-services/copyright-registration" className="text-sm hover:text-cyan-300 transition-colors">
                     Copyright Protection
                   </a>
@@ -295,6 +307,12 @@ const Footer: React.FC = () => {
             </a>
             <a href="/trademark-class-finder" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">
               Trademark Class Finder
+            </a>
+            <a href="/trademark-registration-in-noida" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">
+              Trademark Registration in Noida
+            </a>
+            <a href="/trademark-registration-in-delhi" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">
+              Trademark Registration in Delhi
             </a>
           </div>
         </div>
