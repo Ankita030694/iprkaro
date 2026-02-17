@@ -314,6 +314,9 @@ const Footer: React.FC = () => {
             <a href="/trademark-registration-in-delhi" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">
               Trademark Registration in Delhi
             </a>
+            <a href="/trademark-registration-in-gurgaon" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">
+              Trademark Registration in Gurgaon
+            </a>
           </div>
         </div>
 
