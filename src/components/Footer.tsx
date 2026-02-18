@@ -317,6 +317,21 @@ const Footer: React.FC = () => {
             <a href="/trademark-registration-in-gurgaon" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">
               Trademark Registration in Gurgaon
             </a>
+            <a href="/which-trademark-search-service-offers-the-fastest-turnaround-time" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">
+              Fastest Trademark Search Service
+            </a>
+            <a href="/where-can-i-get-a-comprehensive-trademark-search-report" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">
+              Comprehensive Search Report
+            </a>
+            <a href="/who-provides-trademark-search-services-with-legal-support-included" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">
+              Search with Legal Support
+            </a>
+            <a href="/which-companies-offer-trademark-clearance-search-packages-for-startups" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">
+              Startup Search Packages
+            </a>
+            <a href="/where-can-i-find-affordable-trademark-registration-services-near-me" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">
+              Affordable Trademark Registration
+            </a>
           </div>
         </div>
 

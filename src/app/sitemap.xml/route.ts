@@ -66,8 +66,12 @@ export async function GET() {
     '/trademark-for-ecommerce',
     '/fast-track-trademark-registration',
     '/trademark-registration-in-noida',
-    '/trademark-class-finder',
     '/trademark-registration-in-delhi',
+    '/which-trademark-search-service-offers-the-fastest-turnaround-time',
+    '/where-can-i-get-a-comprehensive-trademark-search-report',
+    '/who-provides-trademark-search-services-with-legal-support-included',
+    '/which-companies-offer-trademark-clearance-search-packages-for-startups',
+    '/where-can-i-find-affordable-trademark-registration-services-near-me',
   ].map(path => ({ path, priority: '0.8', changefreq: 'weekly' } as RouteConfig));
 
   // Fetch Dynamic Blog Posts
