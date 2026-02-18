@@ -1143,7 +1143,7 @@ const BlogsDashboard = () => {
                         className="w-full px-4 py-3 bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-all"
                         placeholder="url-friendly-blog-name"
                       />
-                      <p className="mt-2 text-xs text-gray-500">Will be used in the URL: /blog/{newBlog.slug}</p>
+                      <p className="mt-2 text-xs text-gray-500">Will be used in the URL: /resources/{newBlog.slug}</p>
                     </div>
                   </div>
                   

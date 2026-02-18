@@ -95,7 +95,7 @@ const Footer: React.FC = () => {
                   <a href="/trademark-registration-in-noida" className="text-sm hover:text-cyan-300 transition-colors">Trademark in Noida</a>
                 </li>
                 <li>
-                  <a href="/legal-services-in-noida" className="text-sm hover:text-cyan-300 transition-colors">Legal Services Noida</a>
+                  <a href="/trademark-registration-in-noida" className="text-sm hover:text-cyan-300 transition-colors">Legal Services Noida</a>
                 </li>
                 <li>
                   <a href="/our-services/copyright-registration" className="text-sm hover:text-cyan-300 transition-colors">

@@ -746,7 +746,7 @@ export default function CopyrightPage() {
                       </Link>
                     </li>
                     <li>
-                      <Link href="/features/trademark-objection" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center group">
+                      <Link href="/our-services/trademark-registration#objection-handling-mastery" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center group">
                          <span className="mr-2 text-gray-400 group-hover:text-[rgb(110,94,147)]">
                            <FontAwesomeIcon icon={faChevronRight} className="w-2 h-2" />
                          </span> Objection Reply

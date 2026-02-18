@@ -31,6 +31,11 @@ const nextConfig: NextConfig = {
         destination: '/contact',
         permanent: true, // 301 redirect
       },
+      {
+        source: '/blog/:slug*',
+        destination: '/resources/:slug*',
+        permanent: true,
+      },
 
     ];
   },

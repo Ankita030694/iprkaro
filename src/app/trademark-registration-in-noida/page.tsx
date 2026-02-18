@@ -673,7 +673,7 @@ export default function TrademarkInNoidaPage() {
                       </Link>
                     </li>
                     <li>
-                      <Link href="/legal-services-in-noida" className="text-sm font-bold text-gray-600 hover:text-[rgb(110,94,147)] flex items-center group transition-colors">
+                      <Link href="/trademark-registration-in-noida" className="text-sm font-bold text-gray-600 hover:text-[rgb(110,94,147)] flex items-center group transition-colors">
                         <FontAwesomeIcon icon={faGavel} className="mr-3 text-gray-300 group-hover:text-indigo-500 w-4 h-4" />
                         Legal Services in Noida
                       </Link>

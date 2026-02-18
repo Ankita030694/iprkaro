@@ -1143,10 +1143,10 @@ export default function TrademarkForLegalServicesPage() {
                        At IPR Karo, we are more than just IP filers. We are the custodians of your professional heritage. Let us help you build a brand that is as resilient as the law, as enduring as justice, and as unique as your own professional story.
                     </p>
                     <div className="flex flex-col xl:flex-row gap-8 items-center">
-                       <Link href="/contact" className="bg-[rgb(110,94,147)] text-white px-16 py-7 rounded-[2rem] font-black text-2xl text-center hover:bg-black transition-all shadow-2xl hover:shadow-[0_0_50px_rgba(110,94,147,0.5)] transform hover:-translate-y-2 uppercase">
+                       <Link href="/contact-us" className="bg-[rgb(110,94,147)] text-white px-16 py-7 rounded-[2rem] font-black text-2xl text-center hover:bg-black transition-all shadow-2xl hover:shadow-[0_0_50px_rgba(110,94,147,0.5)] transform hover:-translate-y-2 uppercase">
                           Secure Your Legal Name Now
                        </Link>
-                       <Link href="/trademark-search" className="border-4 border-[rgb(110,94,147)] text-[rgb(110,94,147)] px-16 py-7 rounded-[2rem] font-black text-2xl text-center hover:bg-[rgb(110,94,147)] hover:text-white transition-all transform hover:-translate-y-2">
+                       <Link href="/how-to-check-trademark-availability" className="border-4 border-[rgb(110,94,147)] text-[rgb(110,94,147)] px-16 py-7 rounded-[2rem] font-black text-2xl text-center hover:bg-[rgb(110,94,147)] hover:text-white transition-all transform hover:-translate-y-2">
                           Identity Health Audit
                        </Link>
                     </div>
