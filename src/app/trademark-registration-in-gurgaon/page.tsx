@@ -26,7 +26,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata: Metadata = {
-  title: "Online Trademark Registration in Gurgaon | Secure Your Brand Today",
+  title: "Trademark Registration in Gurgaon | IPR Karo",
   description: "Register your trademark in Gurgaon with IPR Karo. Expert legal filing, tech-startup focused IP protection, and expedited processing at the Delhi Registry (Dwarka) from ₹1499.",
   keywords: [
     "trademark registration in gurgaon",

@@ -2,6 +2,8 @@ import ServicesClient from './ServicesClient';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  title: 'Trademark, Copyright & Patent Services in India | IPR Karo',
+  description: 'Explore IPR Karo\'s full range of IP services — trademark registration, copyright filing, and patent applications in India. Expert legal support from ₹1499.',
   alternates: {
     canonical: '/our-services',
   },

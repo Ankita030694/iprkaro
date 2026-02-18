@@ -29,7 +29,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-  title: 'Trademark Registration for Legal Services in India | Protect Your Law Firm Brand',
+  title: 'Trademark for Legal Services | Protect Law Firm Brand',
   description: 'Comprehensive guide to trademark registration for legal services, law firms, and independent practitioners in India. Secure your intellectual property under Class 45 today.',
   keywords: [
     'trademark for legal services',

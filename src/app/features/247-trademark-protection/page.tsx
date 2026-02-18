@@ -7,7 +7,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import CitiesAndTerritories from '@/components/CitiesAndTerritories';
 
 export const metadata: Metadata = {
-  title: '24/7 Trademark Protection India | Complete Brand, Logo & IP Monitoring',
+  title: '24/7 Trademark Protection | IPR Karo',
   description: 'Unrelenting 24/7 trademark protection services in India. Secure your brand identity with continuous monitoring, rapid legal enforcement, and expert objection handling.',
   keywords: [
     '24/7 trademark protection',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     'IPR Karo protection'
   ],
   openGraph: {
-    title: '24/7 Trademark Protection India | Complete Brand, Logo & IP Monitoring',
+    title: '24/7 Trademark Protection | IPR Karo',
     description: 'Secure your brand with our 24/7 trademark protection services in India. Comprehensive monitoring and expert legal support.',
     url: 'https://www.iprkaro.com/features/247-trademark-protection',
     type: 'article',

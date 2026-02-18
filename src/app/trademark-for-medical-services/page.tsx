@@ -34,7 +34,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-  title: 'Trademark for Medical Services | Class 44 Registration India',
+  title: 'Trademark for Medical Services | Protect Clinic Brand',
   description: 'Comprehensive guide to trademark registration for hospitals, clinics, diagnostic centers, and healthcare professionals. Secure your medical brand under Class 44.',
   keywords: [
     'trademark for medical services',

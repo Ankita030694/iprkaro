@@ -30,7 +30,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-  title: 'Trademark Registration for Stationery Brand in India | Class 16 Guide',
+  title: 'Trademark for Stationery Brand | Class 16 Guide',
   description: 'Comprehensive guide to trademark registration for stationery, paper goods, and printed matter in India. Secure your brand name and logo under Class 16 today.',
   keywords: [
     'trademark for stationary',

@@ -35,7 +35,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-  title: 'Trademark Application Status India | Track Your TM Online',
+  title: 'Trademark Application Status | IPR Karo',
   description: 'How to check trademark application status online in India. Detailed guide on meanings of statuses like Objected, Exam Report Issued, Advertised and Registered. Track TM status now.',
   keywords: [
     'trademark application status',

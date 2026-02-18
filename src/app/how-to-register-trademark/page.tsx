@@ -33,7 +33,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-  title: 'How to Register Trademark in India (2026 Guide) | Step-by-Step Process',
+  title: 'How to Register Trademark in India | 2026 Step-by-Step',
   description: 'Learn how to register a trademark in India with our comprehensive 2026 guide. Step-by-step process, documents required, government fees, and expert tips for 100% success.',
   keywords: [
     'how to register trademark',

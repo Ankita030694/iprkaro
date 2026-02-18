@@ -32,7 +32,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-  title: 'Trademark Register Kaise Karte Hai (2026 Guide) | Online Process & Fees',
+  title: 'Trademark Register Kaise Karte Hai | Online Process',
   description: 'Bharat mein trademark register kaise karte hai? Janiye step-by-step registration process, documents list, government fees, aur expert tips. Get 100% success with IPR Karo.',
   keywords: [
     'trademark register kese karte hai',

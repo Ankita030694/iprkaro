@@ -32,7 +32,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-  title: 'Trademark for Telecommunication Services | Class 38 Registration India',
+  title: 'Trademark for Telecom Services | Class 38 Registration',
   description: 'Exhaustive guide to trademark registration for telecommunications. Secure 5G, Satellite, ISP, and Streaming identities. Expert Class 38 legal filing in India.',
   keywords: [
     'trademark for telecommunication services',

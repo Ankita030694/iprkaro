@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const metadata = {
-  title: 'Terms & Conditions | IPRKaro',
+  title: 'Terms & Conditions | Refund & Cancellation Policy | IPR Karo',
   description: 'Review IPRKaro.com\'s complete terms and conditions, including terms of use, service agreements, cancellation policy, and refund guidelines. Understand your rights and obligations when using our trademark registration, copyright protection, and patent filing services in India.',
   alternates: {
     canonical: '/terms-and-conditions',

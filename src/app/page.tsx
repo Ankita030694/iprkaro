@@ -2,7 +2,7 @@ import { HeroSection, WhyTrademark, OurServices, SimplePlans, Faq, ReviewSnippet
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Trademark Registration India | IPR Karo - AI-Powered IP Protection",
+  title: "Trademark Registration India | IPR Karo AI Protection",
   description: "Instant trademark search, risk checks, and online registration. Register your trademark with AI-powered reports for fast, secure brand protection. Start in under 60 seconds with IPR Karo.",
   alternates: {
     canonical: "/",

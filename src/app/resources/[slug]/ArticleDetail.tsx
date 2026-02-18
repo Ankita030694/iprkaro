@@ -42,6 +42,8 @@ interface Review {
 interface BlogDetailProps {
   slug: string;
   initialReviews?: Review[];
+  initialBlog?: Blog;
+  initialFaqs?: FAQ[];
 }
 
 
@@ -199,10 +201,10 @@ const fetchReviews = async (blogId: string): Promise<Review[]> => {
   }
 };
 
-const ArticleDetail = memo(function ArticleDetail({ slug, initialReviews = [] }: BlogDetailProps) {
-  const [blog, setBlog] = useState<Blog | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [faqs, setFaqs] = useState<FAQ[]>([]);
+const ArticleDetail = memo(function ArticleDetail({ slug, initialReviews = [], initialBlog, initialFaqs = [] }: BlogDetailProps) {
+  const [blog, setBlog] = useState<Blog | null>(initialBlog || null);
+  const [loading, setLoading] = useState(!initialBlog);
+  const [faqs, setFaqs] = useState<FAQ[]>(initialFaqs);
   const [reviews, setReviews] = useState<Review[]>(initialReviews);
   const [expandedFaqs, setExpandedFaqs] = useState<string[]>([]);
   const [relatedBlogs, setRelatedBlogs] = useState<Blog[]>([]);
@@ -210,7 +212,8 @@ const ArticleDetail = memo(function ArticleDetail({ slug, initialReviews = [] }:
   const [tocSections, setTocSections] = useState<TOCSection[]>([]);
   const [sidebarsFixed, setSidebarsFixed] = useState(true);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [processedDescription, setProcessedDescription] = useState('');
+  // Pre-process description server-side data on first render (no DOMParser needed for initial paint)
+  const [processedDescription, setProcessedDescription] = useState(initialBlog?.description || '');
 
   useEffect(() => {
     setIsLoaded(true);
@@ -221,18 +224,19 @@ const ArticleDetail = memo(function ArticleDetail({ slug, initialReviews = [] }:
     
     const loadBlogData = async () => {
       try {
-        setLoading(true);
-        const blogData = await fetchBlogBySlug(slug);
+        // If we already have the blog from the server, skip fetching it again
+        const blogData = initialBlog || await fetchBlogBySlug(slug);
         
         if (blogData) {
-          setBlog(blogData);
+          if (!initialBlog) {
+            setBlog(blogData);
+          }
           
-          // Extract H2 headings and add IDs
+          // Extract H2 headings and add IDs (client-side for TOC interactivity)
           const sections = extractH2Headings(blogData.description);
           setTocSections(sections);
           
-          // Add IDs to H2 elements in the description
-          let modifiedDescription = blogData.description;
+          // Add IDs to H2 elements in the description for TOC scroll tracking
           const parser = new DOMParser();
           const doc = parser.parseFromString(blogData.description, 'text/html');
           const h2Elements = doc.querySelectorAll('h2');
@@ -240,17 +244,19 @@ const ArticleDetail = memo(function ArticleDetail({ slug, initialReviews = [] }:
             const id = `section-${index}`;
             h2.id = id;
           });
-          modifiedDescription = doc.body.innerHTML;
+          const modifiedDescription = doc.body.innerHTML;
           setProcessedDescription(modifiedDescription);
           
           if (sections.length > 0) {
             setActiveSection(sections[0].id);
           }
           
+          // Fetch related articles (always client-side for freshness)
+          // FAQs and reviews are already passed from server if available
           const [relatedBlogsData, faqsData, reviewsData] = await Promise.all([
             fetchRelatedBlogs(blogData.id),
-            fetchFAQs(blogData.id),
-            fetchReviews(blogData.id)
+            initialFaqs.length > 0 ? Promise.resolve(initialFaqs) : fetchFAQs(blogData.id),
+            initialReviews.length > 0 ? Promise.resolve(initialReviews) : fetchReviews(blogData.id)
           ]);
           
           setRelatedBlogs(relatedBlogsData);
@@ -274,6 +280,7 @@ const ArticleDetail = memo(function ArticleDetail({ slug, initialReviews = [] }:
         window.history.scrollRestoration = 'auto';
       }
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [slug]);
 
   useEffect(() => {

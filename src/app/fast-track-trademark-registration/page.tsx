@@ -29,7 +29,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-  title: 'Fast Track Trademark Registration India | Priority TM Filing & Examination',
+  title: 'Fast Track Trademark Registration India | Priority TM',
   description: 'Accelerate your brand protection with fast track trademark registration in India. Get your trademark examined in 3-5 months under Rule 34. Expert legal assistance for expedited filing.',
   keywords: [
     'fast track trademark registration',

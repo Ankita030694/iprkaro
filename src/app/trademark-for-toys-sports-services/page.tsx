@@ -31,7 +31,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-  title: 'Trademark for Toys & Sports Services in India | Brand Registration',
+  title: 'Trademark for Toys & Sports | Brand Registration India',
   description: 'Register your trademark for toys, games, and sports services in India. Class 28 & 41 legal protection for sporting goods, academies, and recreational brands.',
   keywords: [
     'trademark registration for toys',

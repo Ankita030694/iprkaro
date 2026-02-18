@@ -28,7 +28,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-  title: 'Trademark Registration for Restaurant in India | Protect Your Food Brand',
+  title: 'Trademark for Restaurant | Protect Your Food Brand',
   description: 'Exhaustive guide to trademark registration for restaurants, cafes, and cloud kitchens in India. Secure your brand name, logo, and menu under Class 43 today.',
   keywords: [
     'trademark for restaurant',

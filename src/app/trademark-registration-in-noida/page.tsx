@@ -26,7 +26,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata: Metadata = {
-  title: "Online Trademark Registration in Noida | Expert IP Protection Services",
+  title: "Trademark Registration in Noida | IPR Karo",
   description: "Secure your brand with expert trademark registration in Noida. Fast-track filing for startups, IT firms, and manufacturing hubs at the Delhi Registry (Dwarka) from ₹1499.",
   keywords: [
     "trademark registration in noida",

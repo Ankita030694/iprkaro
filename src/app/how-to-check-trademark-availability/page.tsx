@@ -30,7 +30,7 @@ import {
 import { tocSections, faqs } from './pageData';
 
 export const metadata: Metadata = {
-  title: 'How to Check Trademark Availability in India | Free Search Guide 2026',
+  title: 'How to Check Trademark Availability in India | Guide',
   description: 'Learn how to check trademark availability in India using the official IP India portal. Step-by-step guide for wordmark, phonetic, and Vienna code searches to secure your brand.',
   keywords: [
     'how to check trademark availability',

@@ -32,7 +32,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-  title: 'Copyright Registration in India (2025) | Fees, Process & Online Filing',
+  title: 'Copyright Registration in India | IPR Karo',
   description: 'Secure your creative work with Online Copyright Registration in India. Protect Books, Music, Software (Source Code), Movies & Art. Affordable fees & Expert Legal Process.',
   keywords: [
     'copyright registration india',
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     'online copyright filing'
   ],
   openGraph: {
-    title: 'Copyright Registration in India (2025) | Protect Your Creativity',
+    title: 'Copyright Registration in India | IPR Karo',
     description: 'Own your content legally. Comprehensive copyright filing for Authors, Artists, Musicians, and Developers. 60-Year Protection.',
     url: 'https://www.iprkaro.com/our-services/copyright-registration',
     type: 'article',

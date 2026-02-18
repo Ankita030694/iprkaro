@@ -30,7 +30,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-  title: 'Trademark Registration for Furniture Shop in India | Protect Class 20 Brand',
+  title: 'Trademark Registration for Furniture Shop in India',
   description: 'Complete guide to trademark registration for furniture businesses, showrooms, and carpenters in India. Secure your Class 20 & 35 brand identity today. Expert legal filing.',
   keywords: [
     'trademark for furniture shop',

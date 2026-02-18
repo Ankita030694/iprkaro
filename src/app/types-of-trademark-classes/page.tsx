@@ -27,7 +27,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-  title: 'Types of Trademark Classes in India | Complete Guide (Classes 1-45)',
+  title: 'Types of Trademark Classes | IPR Karo',
   description: 'Understand the 45 types of trademark classes in India. Comprehensive list of goods and service classes for SEO-optimized trademark registration. Protect your brand correctly.',
   keywords: [
     'types of trademark classes',

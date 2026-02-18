@@ -37,7 +37,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-  title: 'Trademark Registration for Business in India | Complete Brand Security',
+  title: 'Trademark Registration for Business in India',
   description: 'Comprehensive 5000+ word guide to trademark registration for businesses in India. Secure your company name, logo, and brand identity under relevant trademark classes.',
   keywords: [
     'trademark for business',

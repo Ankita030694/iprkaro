@@ -296,7 +296,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             }}
           />
         )}
-        <ArticleDetail slug={slug} initialReviews={reviews} />
+        <ArticleDetail slug={slug} initialReviews={reviews} initialBlog={blogData} initialFaqs={faqs} />
       </>
     );
   } catch (error) {

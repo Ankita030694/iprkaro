@@ -32,7 +32,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-  title: 'Trademark Registration for Clothing Brands in India | Fast Online Filing',
+  title: 'Trademark Registration for Clothing Brands in India',
   description: 'Apply for trademark registration for your clothing brand online. Expert guidance on Class 25 filing, logo protection, and brand name security for fashion businesses from ₹3,000.',
   keywords: [
     'trademark for clothing brand',

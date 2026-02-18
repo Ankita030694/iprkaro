@@ -30,7 +30,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-  title: 'Trademark for Ecommerce | Protect Your Online Brand in India',
+  title: 'Trademark for Ecommerce | Protect Your Online Brand',
   description: 'Complete guide to trademark registration for e-commerce businesses. Secure your online store, marketplace, or D2C brand under Class 35 and 42. Expert legal filing from ₹1499.',
   keywords: [
     'trademark for ecommerce',

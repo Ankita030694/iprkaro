@@ -42,7 +42,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-  title: 'Trademark Registration for Financial Services | Class 36 & Fintech',
+  title: 'Trademark Registration for Financial Services | Class 36',
   description: 'Exhaustive guide to financial brand protection. Covering Banking, Fintech, NBFCs, Crypto, and SEBI/RBI compliance. Secure your trust capital with India\'s elite IP team.',
   keywords: [
     'trademark for financial services',

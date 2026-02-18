@@ -26,7 +26,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-  title: 'Online Trademark Registration in India | File TM Application Today',
+  title: 'Trademark Registration in India | IPR Karo',
   description: 'Register your trademark online in India with IPR Karo. Expert legal filing, expedited processing, and comprehensive objection handling from ₹1499. Secure your brand now.',
   keywords: [
     'trademark registration',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     'madrid protocol registration'
   ],
   openGraph: {
-    title: 'Online Trademark Registration in India | Secure Your Brand',
+    title: 'Trademark Registration in India | IPR Karo',
     description: 'Fast, affordable, and expert-assisted trademark registration services in India. Protect your brand identity today.',
     url: 'https://www.iprkaro.com/our-services/trademark-registration',
     type: 'article',

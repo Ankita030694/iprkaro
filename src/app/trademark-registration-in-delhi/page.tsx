@@ -27,7 +27,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-  title: 'Online Trademark Registration in Delhi | File TM Application Today',
+  title: 'Trademark Registration in Delhi | IPR Karo',
   description: 'Register your trademark online in Delhi with IPR Karo. Expert legal filing, expedited processing at Delhi TM Registry (Dwarka), and comprehensive protection from ₹1499.',
   keywords: [
     'trademark registration in delhi',

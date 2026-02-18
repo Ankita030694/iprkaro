@@ -6,7 +6,7 @@ import TableOfContents from '@/components/TableOfContents';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Expert Trademark Guidance India | Registration, Patent & Copyright Services',
+  title: 'Expert Trademark Guidance | IPR Karo',
   description: 'Unparalleled trademark registration, patent services, and copyright protection in India. Get expert legal guidance, comprehensive IP management, and 24/7 support from IPR Karo.',
   keywords: [
     'expert trademark guidance',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     'intellectual property rights'
   ],
   openGraph: {
-    title: 'Expert Trademark Guidance India | Registration, Patent & Copyright Services',
+    title: 'Expert Trademark Guidance | IPR Karo',
     description: 'Get expert guidance for trademark registration, patent services, and copyright protection. Secure your IP assets with India\'s leading attorneys.',
     url: 'https://www.iprkaro.com/features/expert-trademark-guidance',
     type: 'article',

@@ -33,7 +33,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-  title: 'Trademark for Musical Instruments | Protect Your Sound Brand in India',
+  title: 'Trademark for Musical Instruments | Protect Sound Brand',
   description: 'Comprehensive guide to trademark registration for musical instruments, audio gear, and music stores. Secure your brand in Class 15 & 9. Expert filing.',
   keywords: [
     'trademark for musical instruments',

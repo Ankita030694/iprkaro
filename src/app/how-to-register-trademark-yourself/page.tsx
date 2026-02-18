@@ -50,7 +50,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-  title: 'How to Register a Trademark Yourself in India | Step-by-Step 2026 Guide',
+  title: 'How to Register Trademark Yourself in India | 2026 Guide',
   description: 'Learn how to register a trademark yourself in India. A comprehensive 5000+ word guide on online TM-A filing, class selection, user dates, and overcoming objections.',
   keywords: [
     'how to register trademark yourself',
