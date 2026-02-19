@@ -335,6 +335,9 @@ const Footer: React.FC = () => {
             <a href="/what-is-trademark-registration" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">
               How Often to Renew Trademark
             </a>
+            <a href="/steps-to-file-trademark-application-online-india" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">
+              Steps to File Trademark Online
+            </a>
           </div>
         </div>
 

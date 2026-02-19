@@ -73,6 +73,7 @@ export async function GET() {
     '/which-companies-offer-trademark-clearance-search-packages-for-startups',
     '/where-can-i-find-affordable-trademark-registration-services-near-me',
     '/what-is-trademark-registration',
+    '/steps-to-file-trademark-application-online-india',
   ].map(path => ({ path, priority: '0.8', changefreq: 'weekly' } as RouteConfig));
 
   // Fetch Dynamic Blog Posts
