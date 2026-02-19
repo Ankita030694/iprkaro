@@ -332,6 +332,9 @@ const Footer: React.FC = () => {
             <a href="/where-can-i-find-affordable-trademark-registration-services-near-me" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">
               Affordable Trademark Registration
             </a>
+            <a href="/what-is-trademark-registration" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">
+              How Often to Renew Trademark
+            </a>
           </div>
         </div>
 
