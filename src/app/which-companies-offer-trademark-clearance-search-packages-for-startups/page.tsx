@@ -25,7 +25,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-  title: 'Which Companies Offer Trademark Clearance Search Packages for Startups? (2025 India Guide)',
+  title: 'Trademark Clearance Search Packages for Startups India',
   description: 'Identify the top companies offering trademark clearance search packages for startups in India. Detailed comparison of IPR Karo, Vakilsearch, and elite law firms for legal brand protection and VC due diligence.',
   keywords: [
     'trademark clearance search for startups india',

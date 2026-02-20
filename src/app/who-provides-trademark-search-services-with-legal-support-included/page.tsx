@@ -22,7 +22,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-  title: 'Trademark Search Services with Legal Support Included in India (2025)',
+  title: 'Trademark Search with Legal Support India | IPR Karo',
   description: 'Who provides trademark search with legal support in India? Compare top IP firms like IPR Karo and traditional firms for comprehensive search, risk analysis, and attorney opinions.',
   keywords: [
     'trademark search with legal support india',

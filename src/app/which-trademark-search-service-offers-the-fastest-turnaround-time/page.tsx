@@ -27,7 +27,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-  title: 'Which Trademark Search Service Offers the Fastest Turnaround Time? (2025)',
+  title: 'Fastest Trademark Search Service | Turnaround Time',
   description: 'Discover the fastest trademark search services in 2025. Compare turnaround times for Markify, LegalZoom, IPR Karo, and more. Get AI-powered results now.',
   keywords: [
     'fastest trademark search service',

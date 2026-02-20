@@ -32,7 +32,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Trademark Search India | Free Online Brand Availability Check 2026',
+    title: 'Trademark Search India | Free Brand Availability Check',
     description: 'Perform a free trademark search on the official IP India database. Check brand name availability, phonetic similarities, and get expert legal reports instantly.',
     keywords: [
         'trademark search',

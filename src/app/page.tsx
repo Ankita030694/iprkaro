@@ -2,7 +2,7 @@ import { HeroSection, WhyTrademark, OurServices, SimplePlans, Faq, ReviewSnippet
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Trademark Registration Online India | AI Trademark Search & Filing – IPR Karo",
+  title: "Trademark Registration India | AI Trademark Search – IPR Karo",
   description: "Start your trademark registration online in India with IPR Karo. AI-powered trademark search, brand name availability search, trademark availability check, and complete filing support. Know the trademark registration cost in India, govt fees, documents required, and the step-by-step trademark registration process. Serving Delhi, Noida, Gurgaon & PAN India.",
   alternates: {
     canonical: "/",

@@ -32,7 +32,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Trade Mark Registration India | Expert Legal Brand Protection 2026',
+    title: 'Trade Mark Registration India | Expert Brand Protection',
     description: 'Secure your corporate identity with expert trade mark registration in India. A comprehensive guide to legal filings, government fees, and protection strategies for Bharat.',
     keywords: [
         'trade mark registration',

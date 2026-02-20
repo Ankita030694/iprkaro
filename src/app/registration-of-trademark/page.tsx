@@ -33,7 +33,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-  title: 'Registration of Trademark in India | Comprehensive Online Guide 2026',
+  title: 'Registration of Trademark in India | Complete Guide',
   description: 'Master the registration of trademark process in Bharat. Get step-by-step guidance on filing, documents, fees, and legal protection. Secure your brand today with IPR Karo.',
   keywords: [
     'registration of trademark',

@@ -27,7 +27,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-  title: 'Where Can I Get a Comprehensive Trademark Search Report in India? (2025)',
+  title: 'Comprehensive Trademark Search Report India | IPR Karo',
   description: 'Need a comprehensive trademark search report in India? Compare top IP India search providers for federal, common law, and phonetic searches. Secure your brand now.',
   keywords: [
     'comprehensive trademark search report india',
