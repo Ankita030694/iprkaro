@@ -5,14 +5,14 @@ import { Metadata } from 'next';
 import TableOfContents from '@/components/TableOfContents';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { 
-  faSearch, 
-  faCheck, 
-  faGavel, 
-  faGlobe, 
-  faShieldAlt, 
-  faScaleBalanced, 
-  faRocket, 
+import {
+  faSearch,
+  faCheck,
+  faGavel,
+  faGlobe,
+  faShieldAlt,
+  faScaleBalanced,
+  faRocket,
   faFileContract,
   faLightbulb,
   faExclamationCircle,
@@ -115,65 +115,67 @@ export default function TrademarkAvailabilityPage() {
       <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Script id="article-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <Script id="review-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Product",
-        "name": "Trademark Availability Search Service",
-        "image": "https://www.iprkaro.com/logo.png",
-        "description": "Expert assistance in conducting trademark availability searches and risk assessments.",
-        "brand": {
-          "@type": "Brand",
-          "name": "IPR Karo"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "reviewCount": "1850"
-        },
-        "review": [
-          {
-            "@type": "Review",
-            "author": { "@type": "Person", "name": "Vikram Singh" },
-            "datePublished": "2025-12-01",
-            "reviewBody": "The search guide helped me avoid a major legal conflict. Their team identified a phonetic match I would have never found myself.",
-            "reviewRating": { "@type": "Rating", "ratingValue": "5" }
+      <Script id="review-schema" type="application/ld+json" dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "name": "Trademark Availability Search Service",
+          "image": "https://www.iprkaro.com/logo.png",
+          "description": "Expert assistance in conducting trademark availability searches and risk assessments.",
+          "brand": {
+            "@type": "Brand",
+            "name": "IPR Karo"
           },
-          {
-            "@type": "Review",
-            "author": { "@type": "Person", "name": "Rahul Verma" },
-            "datePublished": "2026-01-15",
-            "reviewBody": "The trademark availability search by IPR Karo was eye-opening. They found conflicts we missed in our own search.",
-            "reviewRating": { "@type": "Rating", "ratingValue": "5" }
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "1850"
           },
-          {
-            "@type": "Review",
-            "author": { "@type": "Person", "name": "Ananya Iyer" },
-            "datePublished": "2026-02-05",
-            "reviewBody": "Professional, fast, and extremely thorough. The risk assessment report gave us the confidence we needed to file our trademark.",
-            "reviewRating": { "@type": "Rating", "ratingValue": "5" }
-          }
-        ]
-      })}} />
+          "review": [
+            {
+              "@type": "Review",
+              "author": { "@type": "Person", "name": "Vikram Singh" },
+              "datePublished": "2025-12-01",
+              "reviewBody": "The search guide helped me avoid a major legal conflict. Their team identified a phonetic match I would have never found myself.",
+              "reviewRating": { "@type": "Rating", "ratingValue": "5" }
+            },
+            {
+              "@type": "Review",
+              "author": { "@type": "Person", "name": "Rahul Verma" },
+              "datePublished": "2026-01-15",
+              "reviewBody": "The trademark availability search by IPR Karo was eye-opening. They found conflicts we missed in our own search.",
+              "reviewRating": { "@type": "Rating", "ratingValue": "5" }
+            },
+            {
+              "@type": "Review",
+              "author": { "@type": "Person", "name": "Ananya Iyer" },
+              "datePublished": "2026-02-05",
+              "reviewBody": "Professional, fast, and extremely thorough. The risk assessment report gave us the confidence we needed to file our trademark.",
+              "reviewRating": { "@type": "Rating", "ratingValue": "5" }
+            }
+          ]
+        })
+      }} />
 
       <div className="bg-gray-50 min-h-screen font-sans text-gray-800">
-        
+
         {/* Hero Section */}
-        <div className="relative w-full overflow-hidden" 
-             style={{
-               background: 'linear-gradient(to bottom, #0C002B 0%, #160049 45%, #6E5E93 80%, #E8E8E8 100%)'
-             }}>
+        <div className="relative w-full overflow-hidden"
+          style={{
+            background: 'linear-gradient(to bottom, #0C002B 0%, #160049 45%, #6E5E93 80%, #E8E8E8 100%)'
+          }}>
           <div className="container mx-auto px-4 py-12 lg:py-32 relative z-10 text-center">
-             <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-snug md:leading-tight mt-20 md:mt-10 text-white">
-               How to Check <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'rgb(110, 94, 147)' }}>Trademark Availability</span> for Brand Protection
-             </h1>
-             <p className="text-sm md:text-xl mb-6 md:mb-8 max-w-3xl mx-auto text-gray-300 px-2 leading-relaxed">
-               Your brand is your most valuable asset. ensure its uniqueness before you launch. Our high-precision guide helps you navigate the official IP India registry like a pro, preventing costly rejections and future legal battles.
-             </p>
-             <Link href="/contact-us">
-                <button className="bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-2.5 px-6 md:py-3 md:px-8 rounded-full transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(110,94,147,0.3)] text-base md:text-lg text-center">
-                  Verify Your Brand Name Now
-                </button>
-             </Link>
+            <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-snug md:leading-tight mt-20 md:mt-10 text-white">
+              How to Check <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'rgb(110, 94, 147)' }}>Trademark Availability</span> for Brand Protection
+            </h1>
+            <p className="text-sm md:text-xl mb-6 md:mb-8 max-w-3xl mx-auto text-gray-300 px-2 leading-relaxed">
+              Your brand is your most valuable asset. ensure its uniqueness before you launch. Our high-precision guide helps you navigate the official IP India registry like a pro, preventing costly rejections and future legal battles.
+            </p>
+            <Link href="/contact-us">
+              <button className="bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-2.5 px-6 md:py-3 md:px-8 rounded-full transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(110,94,147,0.3)] text-base md:text-lg text-center">
+                Verify Your Brand Name Now
+              </button>
+            </Link>
           </div>
         </div>
 
@@ -183,7 +185,7 @@ export default function TrademarkAvailabilityPage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-[220px_1fr_300px] gap-4 md:gap-12 items-start mt-8">
-            
+
             {/* Left Sidebar - TOC (Desktop) */}
             <div className="hidden lg:block sticky top-32">
               <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
@@ -197,22 +199,22 @@ export default function TrademarkAvailabilityPage() {
 
             {/* Middle Column - Main Content Area */}
             <div className="flex-1 min-w-0">
-               {/* TOC (Mobile) */}
-               <div className="lg:hidden mb-4 sticky top-[72px] z-20">
+              {/* TOC (Mobile) */}
+              <div className="lg:hidden mb-4 sticky top-[100px] z-20">
                 <TableOfContents sections={tocSections} orientation="horizontal" />
               </div>
 
               <div className="bg-white p-6 md:p-16 rounded-2xl md:rounded-3xl shadow-sm border border-gray-100">
-                
+
                 <article className="prose prose-xl max-w-none text-gray-700 leading-relaxed">
-                  
+
                   <section id="introduction" className="mb-20 scroll-mt-28">
                     <h2 className="text-2xl md:text-4xl font-black text-gray-900 mb-8 flex items-center">
                       <FontAwesomeIcon icon={faLightbulb} className="text-[#6E5E93] mr-4 w-10 h-10 md:w-12 md:h-12" />
                       Introduction: The Foundation of Brand Ownership
                     </h2>
                     <p className="text-xl md:text-2xl font-light text-gray-500 mb-8 italic border-l-4 border-[#6E5E93] pl-6 py-2">
-                       "In the arena of business, a name is not just a label; it's a fortress. Before you build it, you must ensure the ground is entirely yours."
+                      "In the arena of business, a name is not just a label; it's a fortress. Before you build it, you must ensure the ground is entirely yours."
                     </p>
                     <p className="mb-8">
                       Entering the Indian market without verifying <strong>trademark availability</strong> is like sailing into unknown waters without a compass. Every successful enterprise, from the smallest home-grown D2C brand to multi-billion dollar conglomerates like TATA or Reliance, begins its journey with a rigorous availability search. Why? Because the Trade Marks Act, 1999, provides exclusive rights to those who register first, and any similarity (even unintentional) can lead to catastrophic legal and financial consequences.
@@ -228,46 +230,46 @@ export default function TrademarkAvailabilityPage() {
                       Why a Comprehensive Search is Non-Negotiable
                     </h2>
                     <div className="grid md:grid-cols-2 gap-10 mb-12">
-                       <div className="bg-gray-50 p-8 rounded-3xl border border-gray-100 hover:shadow-xl transition-all">
-                          <FontAwesomeIcon icon={faShieldAlt} className="text-[#6E5E93] h-12 w-12 mb-6" />
-                          <h3 className="text-2xl font-bold text-gray-900 mb-4">Eliminating Rejection Risks</h3>
-                          <p className="text-lg">Section 11 of the Trade Marks Act prevents the registration of marks that are identical or confusingly similar to earlier marks. A search helps you clear this hurdle before you even file.</p>
-                       </div>
-                       <div className="bg-gray-50 p-8 rounded-3xl border border-gray-100 hover:shadow-xl transition-all">
-                          <FontAwesomeIcon icon={faChartLine} className="text-[#6E5E93] h-12 w-12 mb-6" />
-                          <h3 className="text-2xl font-bold text-gray-900 mb-4">Protecting Marketing Spend</h3>
-                          <p className="text-lg">Launching an unavailable name means every marketing rupee is spent building a house on rented land. If you lose the name, your entire brand equity vanishes instantly.</p>
-                       </div>
-                       <div className="bg-gray-50 p-8 rounded-3xl border border-gray-100 hover:shadow-xl transition-all">
-                          <FontAwesomeIcon icon={faGavel} className="text-[#6E5E93] h-12 w-12 mb-6" />
-                          <h3 className="text-2xl font-bold text-gray-900 mb-4">Avoiding 'Passing Off' Claims</h3>
-                          <p className="text-lg">Even if the other brand isn't registered, they can sue you for 'Passing Off' under common law if their brand is older and similar. Knowledge is your best defense.</p>
-                       </div>
-                       <div className="bg-gray-50 p-8 rounded-3xl border border-gray-100 hover:shadow-xl transition-all">
-                          <FontAwesomeIcon icon={faHandshakeAngle} className="text-[#6E5E93] h-12 w-12 mb-6" />
-                          <h3 className="text-2xl font-bold text-gray-900 mb-4">Attracting Investment</h3>
-                          <p className="text-lg">Investors and VCs perform deep due diligence. A brand with a clean, searchable, and registrable trademark is significantly more attractive to potential partners.</p>
-                       </div>
+                      <div className="bg-gray-50 p-8 rounded-3xl border border-gray-100 hover:shadow-xl transition-all">
+                        <FontAwesomeIcon icon={faShieldAlt} className="text-[#6E5E93] h-12 w-12 mb-6" />
+                        <h3 className="text-2xl font-bold text-gray-900 mb-4">Eliminating Rejection Risks</h3>
+                        <p className="text-lg">Section 11 of the Trade Marks Act prevents the registration of marks that are identical or confusingly similar to earlier marks. A search helps you clear this hurdle before you even file.</p>
+                      </div>
+                      <div className="bg-gray-50 p-8 rounded-3xl border border-gray-100 hover:shadow-xl transition-all">
+                        <FontAwesomeIcon icon={faChartLine} className="text-[#6E5E93] h-12 w-12 mb-6" />
+                        <h3 className="text-2xl font-bold text-gray-900 mb-4">Protecting Marketing Spend</h3>
+                        <p className="text-lg">Launching an unavailable name means every marketing rupee is spent building a house on rented land. If you lose the name, your entire brand equity vanishes instantly.</p>
+                      </div>
+                      <div className="bg-gray-50 p-8 rounded-3xl border border-gray-100 hover:shadow-xl transition-all">
+                        <FontAwesomeIcon icon={faGavel} className="text-[#6E5E93] h-12 w-12 mb-6" />
+                        <h3 className="text-2xl font-bold text-gray-900 mb-4">Avoiding 'Passing Off' Claims</h3>
+                        <p className="text-lg">Even if the other brand isn't registered, they can sue you for 'Passing Off' under common law if their brand is older and similar. Knowledge is your best defense.</p>
+                      </div>
+                      <div className="bg-gray-50 p-8 rounded-3xl border border-gray-100 hover:shadow-xl transition-all">
+                        <FontAwesomeIcon icon={faHandshakeAngle} className="text-[#6E5E93] h-12 w-12 mb-6" />
+                        <h3 className="text-2xl font-bold text-gray-900 mb-4">Attracting Investment</h3>
+                        <p className="text-lg">Investors and VCs perform deep due diligence. A brand with a clean, searchable, and registrable trademark is significantly more attractive to potential partners.</p>
+                      </div>
                     </div>
                   </section>
 
                   <section id="ip-india-portal" className="mb-24 scroll-mt-32">
                     <div className="bg-black text-white p-10 md:p-16 rounded-3xl mb-12 relative overflow-hidden">
-                       <div className="absolute top-0 right-0 w-64 h-64 bg-[#6E5E93]/20 blur-3xl rounded-full translate-x-1/2 -translate-y-1/2"></div>
-                       <h2 className="text-3xl md:text-5xl font-black mb-8 relative z-10">The Gateway: IP India Public Search Portal</h2>
-                       <p className="text-xl opacity-90 mb-10 relative z-10 leading-relaxed">
-                         The official IP India gateway is the single source of truth for trademark data in India. It contains millions of records, and knowing how to navigate it is the difference between a surface-level scan and a deep structural audit.
-                       </p>
-                       <div className="flex flex-col md:flex-row gap-6 relative z-10">
-                          <div className="flex-1 bg-white/5 border border-white/10 p-6 rounded-2xl backdrop-blur-sm">
-                             <h4 className="font-bold text-[#FFD700] mb-2 uppercase tracking-widest text-sm">Official URL</h4>
-                             <p className="text-xl font-mono">ipindiaonline.gov.in/tmrpublicsearch</p>
-                          </div>
-                          <div className="flex-1 bg-white/5 border border-white/10 p-6 rounded-2xl backdrop-blur-sm">
-                             <h4 className="font-bold text-[#FFD700] mb-2 uppercase tracking-widest text-sm">Data Scope</h4>
-                             <p className="text-xl">All Classes (1-45) & Registered/Pending/Opposed Marks</p>
-                          </div>
-                       </div>
+                      <div className="absolute top-0 right-0 w-64 h-64 bg-[#6E5E93]/20 blur-3xl rounded-full translate-x-1/2 -translate-y-1/2"></div>
+                      <h2 className="text-3xl md:text-5xl font-black mb-8 relative z-10">The Gateway: IP India Public Search Portal</h2>
+                      <p className="text-xl opacity-90 mb-10 relative z-10 leading-relaxed">
+                        The official IP India gateway is the single source of truth for trademark data in India. It contains millions of records, and knowing how to navigate it is the difference between a surface-level scan and a deep structural audit.
+                      </p>
+                      <div className="flex flex-col md:flex-row gap-6 relative z-10">
+                        <div className="flex-1 bg-white/5 border border-white/10 p-6 rounded-2xl backdrop-blur-sm">
+                          <h4 className="font-bold text-[#FFD700] mb-2 uppercase tracking-widest text-sm">Official URL</h4>
+                          <p className="text-xl font-mono">ipindiaonline.gov.in/tmrpublicsearch</p>
+                        </div>
+                        <div className="flex-1 bg-white/5 border border-white/10 p-6 rounded-2xl backdrop-blur-sm">
+                          <h4 className="font-bold text-[#FFD700] mb-2 uppercase tracking-widest text-sm">Data Scope</h4>
+                          <p className="text-xl">All Classes (1-45) & Registered/Pending/Opposed Marks</p>
+                        </div>
+                      </div>
                     </div>
                   </section>
 
@@ -280,44 +282,44 @@ export default function TrademarkAvailabilityPage() {
                       A professional search isn't just about typing your name and hitting enter. It requires a tiered strategy to uncover hidden risks.
                     </p>
                     <div className="space-y-12">
-                       <div className="flex gap-6">
-                         <div className="flex-shrink-0 w-16 h-16 bg-[#6E5E93] text-white rounded-2xl flex items-center justify-center font-bold text-2xl shadow-lg">1</div>
-                         <div>
-                            <h3 className="text-2xl font-bold mb-4">Exact Wordmark Analysis</h3>
-                            <p className="text-lg">Check for absolute identity. If your name is 'LUMINA', and a 'LUMINA' exists in your class, the path is blocked. We always use the 'Contains' filter to see if 'LUMINA' is part of a larger mark like 'LUMINA LIGHTS' or 'LUMINA TECH', which can still be problematic.</p>
-                         </div>
-                       </div>
-                       <div className="flex gap-6">
-                         <div className="flex-shrink-0 w-16 h-16 bg-[#6E5E93] text-white rounded-2xl flex items-center justify-center font-bold text-2xl shadow-lg">2</div>
-                         <div>
-                            <h3 className="text-2xl font-bold mb-4">Prefix and Suffix Variation</h3>
-                            <p className="text-lg">Trademarks often differ by just a few letters. Searching for 'LUM-' or '-MINA' ensures you find variations that the registrar might consider 'Deceptively Similar'. This is a proactive step to prevent Section 11 objections.</p>
-                         </div>
-                       </div>
-                       <div className="flex gap-6">
-                         <div className="flex-shrink-0 w-16 h-16 bg-[#6E5E93] text-white rounded-2xl flex items-center justify-center font-bold text-2xl shadow-lg">3</div>
-                         <div>
-                            <h3 className="text-2xl font-bold mb-4">Cross-Class Sector Analysis</h3>
-                            <p className="text-lg">If you are a 'Beauty Product' selling online, you must search Class 3 (Products) and Class 35 (Retail and E-commerce). Overlooking the service class is a leading cause of legal failure for modern D2C founders.</p>
-                         </div>
-                       </div>
+                      <div className="flex gap-6">
+                        <div className="flex-shrink-0 w-16 h-16 bg-[#6E5E93] text-white rounded-2xl flex items-center justify-center font-bold text-2xl shadow-lg">1</div>
+                        <div>
+                          <h3 className="text-2xl font-bold mb-4">Exact Wordmark Analysis</h3>
+                          <p className="text-lg">Check for absolute identity. If your name is 'LUMINA', and a 'LUMINA' exists in your class, the path is blocked. We always use the 'Contains' filter to see if 'LUMINA' is part of a larger mark like 'LUMINA LIGHTS' or 'LUMINA TECH', which can still be problematic.</p>
+                        </div>
+                      </div>
+                      <div className="flex gap-6">
+                        <div className="flex-shrink-0 w-16 h-16 bg-[#6E5E93] text-white rounded-2xl flex items-center justify-center font-bold text-2xl shadow-lg">2</div>
+                        <div>
+                          <h3 className="text-2xl font-bold mb-4">Prefix and Suffix Variation</h3>
+                          <p className="text-lg">Trademarks often differ by just a few letters. Searching for 'LUM-' or '-MINA' ensures you find variations that the registrar might consider 'Deceptively Similar'. This is a proactive step to prevent Section 11 objections.</p>
+                        </div>
+                      </div>
+                      <div className="flex gap-6">
+                        <div className="flex-shrink-0 w-16 h-16 bg-[#6E5E93] text-white rounded-2xl flex items-center justify-center font-bold text-2xl shadow-lg">3</div>
+                        <div>
+                          <h3 className="text-2xl font-bold mb-4">Cross-Class Sector Analysis</h3>
+                          <p className="text-lg">If you are a 'Beauty Product' selling online, you must search Class 3 (Products) and Class 35 (Retail and E-commerce). Overlooking the service class is a leading cause of legal failure for modern D2C founders.</p>
+                        </div>
+                      </div>
                     </div>
                   </section>
 
                   {/* Continuing content expansion inline */}
                   <section id="phonetic-search" className="mb-24 scroll-mt-32 bg-purple-50 p-10 md:p-16 rounded-3xl">
                     <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-8">
-                       <FontAwesomeIcon icon={faShieldAlt} className="mr-4 text-[#6E5E93] h-12 w-12" />
-                       The Power of Phonetic Search
+                      <FontAwesomeIcon icon={faShieldAlt} className="mr-4 text-[#6E5E93] h-12 w-12" />
+                      The Power of Phonetic Search
                     </h2>
                     <p className="text-xl mb-8 leading-relaxed">
                       In India, phonetically similar marks are treated almost identically to visually similar marks. The registry doesn't care if you spell it 'KASH' or 'CASH'; if they sound the same, they conflict.
                     </p>
                     <div className="bg-white p-8 rounded-2xl border border-purple-100 shadow-sm italic text-lg text-purple-900 mb-8">
-                       "Legal Precedent: The Indian courts often apply the 'Average consumer with imperfect recollection' test. If a customer might confuse two brands by their sound, the similarity is established."
+                      "Legal Precedent: The Indian courts often apply the 'Average consumer with imperfect recollection' test. If a customer might confuse two brands by their sound, the similarity is established."
                     </div>
                     <p className="text-lg">
-                       Using the 'Phonetic' search dropdown on the IP India portal is mandatory. It uses a series of algorithms to match sound patterns. Always check multiple variations of your name's pronunciation.
+                      Using the 'Phonetic' search dropdown on the IP India portal is mandatory. It uses a series of algorithms to match sound patterns. Always check multiple variations of your name's pronunciation.
                     </p>
                   </section>
 
@@ -330,81 +332,81 @@ export default function TrademarkAvailabilityPage() {
                       If your trademark includes a logo, an image, or even a specific font styling (Device Mark), you must use the Vienna Classification system. This is an international standard for figurative elements.
                     </p>
                     <div className="grid md:grid-cols-3 gap-6">
-                       <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
-                          <h4 className="font-bold mb-2">Identify Element</h4>
-                          <p className="text-sm">Identify if your logo has an animal, a star, a human figure, etc.</p>
-                       </div>
-                       <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
-                          <h4 className="font-bold mb-2">Find Vienna Code</h4>
-                          <p className="text-sm">Locate the specific code (e.g., 03.01.01 for Cats) in the Vienna directory.</p>
-                       </div>
-                       <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
-                          <h4 className="font-bold mb-2">Filter Search</h4>
-                          <p className="text-sm">Filter the registry by class + Vienna code to see all logos with similar visuals.</p>
-                       </div>
+                      <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
+                        <h4 className="font-bold mb-2">Identify Element</h4>
+                        <p className="text-sm">Identify if your logo has an animal, a star, a human figure, etc.</p>
+                      </div>
+                      <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
+                        <h4 className="font-bold mb-2">Find Vienna Code</h4>
+                        <p className="text-sm">Locate the specific code (e.g., 03.01.01 for Cats) in the Vienna directory.</p>
+                      </div>
+                      <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
+                        <h4 className="font-bold mb-2">Filter Search</h4>
+                        <p className="text-sm">Filter the registry by class + Vienna code to see all logos with similar visuals.</p>
+                      </div>
                     </div>
                   </section>
 
                   <section id="nice-classification" className="mb-24 scroll-mt-32">
                     <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-10">
-                       <FontAwesomeIcon icon={faSitemap} className="mr-4 text-[#6E5E93] h-12 w-12" />
-                       Navigating the 45 Nice Classes
+                      <FontAwesomeIcon icon={faSitemap} className="mr-4 text-[#6E5E93] h-12 w-12" />
+                      Navigating the 45 Nice Classes
                     </h2>
                     <p className="text-xl mb-10">
                       The accuracy of your search depends entirely on selecting the right class. A search in Class 25 while you sell Software (Class 42) is useless.
                     </p>
                     <div className="bg-[#6E5E93]/5 p-8 rounded-3xl border border-[#6E5E93]/20">
-                       <table className="w-full text-left border-collapse border-spacing-0 text-base md:text-lg">
-                         <thead>
-                           <tr className="border-b-2 border-[#6E5E93]/30">
-                             <th className="py-4 px-4 font-bold">Category</th>
-                             <th className="py-4 px-4 font-bold">Classes</th>
-                             <th className="py-4 px-4 font-bold">Top Sectors</th>
-                           </tr>
-                         </thead>
-                         <tbody className="divide-y divide-gray-200">
-                           <tr>
-                             <td className="py-4 px-4">Goods</td>
-                             <td className="py-4 px-4">1 to 34</td>
-                             <td className="py-4 px-4">FMCG, Pharma, Tech Hardware, Fashion</td>
-                           </tr>
-                           <tr>
-                             <td className="py-4 px-4">Services</td>
-                             <td className="py-4 px-4">35 to 45</td>
-                             <td className="py-4 px-4">E-commerce, IT, Real Estate, Education</td>
-                           </tr>
-                         </tbody>
-                       </table>
+                      <table className="w-full text-left border-collapse border-spacing-0 text-base md:text-lg">
+                        <thead>
+                          <tr className="border-b-2 border-[#6E5E93]/30">
+                            <th className="py-4 px-4 font-bold">Category</th>
+                            <th className="py-4 px-4 font-bold">Classes</th>
+                            <th className="py-4 px-4 font-bold">Top Sectors</th>
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-gray-200">
+                          <tr>
+                            <td className="py-4 px-4">Goods</td>
+                            <td className="py-4 px-4">1 to 34</td>
+                            <td className="py-4 px-4">FMCG, Pharma, Tech Hardware, Fashion</td>
+                          </tr>
+                          <tr>
+                            <td className="py-4 px-4">Services</td>
+                            <td className="py-4 px-4">35 to 45</td>
+                            <td className="py-4 px-4">E-commerce, IT, Real Estate, Education</td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
                   </section>
 
                   <section id="common-mistakes" className="mb-24 scroll-mt-32">
                     <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-10">
-                       <FontAwesomeIcon icon={faExclamationCircle} className="mr-4 text-red-500 h-12 w-12" strokeWidth={2}/>
-                       Common Search Pitfalls to Avoid
+                      <FontAwesomeIcon icon={faExclamationCircle} className="mr-4 text-red-500 h-12 w-12" strokeWidth={2} />
+                      Common Search Pitfalls to Avoid
                     </h2>
                     <div className="space-y-6">
-                       <div className="bg-red-50 p-8 rounded-3xl border border-red-100 flex items-start gap-6">
-                          <FontAwesomeIcon icon={faQuoteLeft} className="text-red-200 h-12 w-12 mt-2" />
-                          <div>
-                            <h4 className="text-xl font-bold text-red-900 mb-2 italic">"I only searched for the exact name."</h4>
-                            <p className="text-gray-700">Similarity exists beyond identity. Variations in spelling, sound, and meaning are all assessed by the examiner.</p>
-                          </div>
-                       </div>
-                       <div className="bg-red-50 p-8 rounded-3xl border border-red-100 flex items-start gap-6">
-                          <FontAwesomeIcon icon={faQuoteLeft} className="text-red-200 h-12 w-12 mt-2" />
-                          <div>
-                            <h4 className="text-xl font-bold text-red-900 mb-2 italic">"I didn't check the status of existing applications."</h4>
-                            <p className="text-gray-700">A mark that is 'Opposed' or 'Objected' still holds priority over yours. Never ignore a mark simply because it hasn't received a certificate yet.</p>
-                          </div>
-                       </div>
-                       <div className="bg-red-50 p-8 rounded-3xl border border-red-100 flex items-start gap-6">
-                          <FontAwesomeIcon icon={faQuoteLeft} className="text-red-200 h-12 w-12 mt-2" />
-                          <div>
-                            <h4 className="text-xl font-bold text-red-900 mb-2 italic">"I only searched one class."</h4>
-                            <p className="text-gray-700">In the digital age, businesses are multi-disciplinary. A cross-class search is essential to ensure no overlapping rights exist.</p>
-                          </div>
-                       </div>
+                      <div className="bg-red-50 p-8 rounded-3xl border border-red-100 flex items-start gap-6">
+                        <FontAwesomeIcon icon={faQuoteLeft} className="text-red-200 h-12 w-12 mt-2" />
+                        <div>
+                          <h4 className="text-xl font-bold text-red-900 mb-2 italic">"I only searched for the exact name."</h4>
+                          <p className="text-gray-700">Similarity exists beyond identity. Variations in spelling, sound, and meaning are all assessed by the examiner.</p>
+                        </div>
+                      </div>
+                      <div className="bg-red-50 p-8 rounded-3xl border border-red-100 flex items-start gap-6">
+                        <FontAwesomeIcon icon={faQuoteLeft} className="text-red-200 h-12 w-12 mt-2" />
+                        <div>
+                          <h4 className="text-xl font-bold text-red-900 mb-2 italic">"I didn't check the status of existing applications."</h4>
+                          <p className="text-gray-700">A mark that is 'Opposed' or 'Objected' still holds priority over yours. Never ignore a mark simply because it hasn't received a certificate yet.</p>
+                        </div>
+                      </div>
+                      <div className="bg-red-50 p-8 rounded-3xl border border-red-100 flex items-start gap-6">
+                        <FontAwesomeIcon icon={faQuoteLeft} className="text-red-200 h-12 w-12 mt-2" />
+                        <div>
+                          <h4 className="text-xl font-bold text-red-900 mb-2 italic">"I only searched one class."</h4>
+                          <p className="text-gray-700">In the digital age, businesses are multi-disciplinary. A cross-class search is essential to ensure no overlapping rights exist.</p>
+                        </div>
+                      </div>
                     </div>
                   </section>
 
@@ -414,67 +416,67 @@ export default function TrademarkAvailabilityPage() {
                       Advanced Strategies: Pro-Level Brand Auditing
                     </h2>
                     <p className="text-xl mb-8">
-                       To ensure your brand ranks #1 and is 100% secure, we implement these high-level strategies:
+                      To ensure your brand ranks #1 and is 100% secure, we implement these high-level strategies:
                     </p>
                     <ul className="list-none p-0 space-y-6">
-                       <li className="flex items-start bg-gray-50 p-6 rounded-2xl border border-gray-100">
-                          <FontAwesomeIcon icon={faGlobe} className="text-[#6E5E93] h-12 w-12 mr-6 mt-1" />
-                          <p className="text-lg m-0"><strong>WIPO Global Search:</strong> We check international registries for well-known marks that might not be registered in India yet but carry global protection rights.</p>
-                       </li>
-                       <li className="flex items-start bg-gray-50 p-6 rounded-2xl border border-gray-100">
-                          <FontAwesomeIcon icon={faInfoCircle} className="text-[#6E5E93] h-12 w-12 mr-6 mt-1" />
-                          <p className="text-lg m-0"><strong>Common Law Rights Check:</strong> We perform manual web searches (Google, LinkedIn, Social Media) to find businesses using the name without registration to prevent future 'prior user' disputes.</p>
-                       </li>
-                       <li className="flex items-start bg-gray-50 p-6 rounded-2xl border border-gray-100">
-                          <FontAwesomeIcon icon={faClock} className="text-[#6E5E93] h-12 w-12 mr-6 mt-1" />
-                          <p className="text-lg m-0"><strong>Registration Timeline Audit:</strong> We analyze the dates of existing marks to see if any are expiring or abandoned, which might open up a window for your brand.</p>
-                       </li>
+                      <li className="flex items-start bg-gray-50 p-6 rounded-2xl border border-gray-100">
+                        <FontAwesomeIcon icon={faGlobe} className="text-[#6E5E93] h-12 w-12 mr-6 mt-1" />
+                        <p className="text-lg m-0"><strong>WIPO Global Search:</strong> We check international registries for well-known marks that might not be registered in India yet but carry global protection rights.</p>
+                      </li>
+                      <li className="flex items-start bg-gray-50 p-6 rounded-2xl border border-gray-100">
+                        <FontAwesomeIcon icon={faInfoCircle} className="text-[#6E5E93] h-12 w-12 mr-6 mt-1" />
+                        <p className="text-lg m-0"><strong>Common Law Rights Check:</strong> We perform manual web searches (Google, LinkedIn, Social Media) to find businesses using the name without registration to prevent future 'prior user' disputes.</p>
+                      </li>
+                      <li className="flex items-start bg-gray-50 p-6 rounded-2xl border border-gray-100">
+                        <FontAwesomeIcon icon={faClock} className="text-[#6E5E93] h-12 w-12 mr-6 mt-1" />
+                        <p className="text-lg m-0"><strong>Registration Timeline Audit:</strong> We analyze the dates of existing marks to see if any are expiring or abandoned, which might open up a window for your brand.</p>
+                      </li>
                     </ul>
                   </section>
 
                   <section id="expert-assistance" className="mb-24 scroll-mt-32 border-t-2 border-gray-100 pt-20">
                     <div className="flex flex-col md:flex-row gap-12 items-center">
-                       <div className="flex-1">
-                          <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-6">Why You Need a Legal Partner</h2>
-                          <p className="text-xl mb-8">
-                             Searching is an art as much as a science. While the portal is public, the <strong>Risk Assessment</strong> is where the value lies. Our legal experts provide a comprehensive report that interprets the search data into actionable business advice.
-                          </p>
-                          <div className="flex flex-col gap-4">
-                             <div className="flex items-center text-lg font-bold text-[#6E5E93]">
-                                <FontAwesomeIcon icon={faCheck} className="mr-3 h-12 w-12" />
-                                99.9% Search Accuracy
-                             </div>
-                             <div className="flex items-center text-lg font-bold text-[#6E5E93]">
-                                <FontAwesomeIcon icon={faCheck} className="mr-3 h-12 w-12" />
-                                Detailed Risk Probability Score
-                             </div>
-                             <div className="flex items-center text-lg font-bold text-[#6E5E93]">
-                                <FontAwesomeIcon icon={faCheck} className="mr-3" />
-                                Strategic Alternate Name Suggestions
-                             </div>
+                      <div className="flex-1">
+                        <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-6">Why You Need a Legal Partner</h2>
+                        <p className="text-xl mb-8">
+                          Searching is an art as much as a science. While the portal is public, the <strong>Risk Assessment</strong> is where the value lies. Our legal experts provide a comprehensive report that interprets the search data into actionable business advice.
+                        </p>
+                        <div className="flex flex-col gap-4">
+                          <div className="flex items-center text-lg font-bold text-[#6E5E93]">
+                            <FontAwesomeIcon icon={faCheck} className="mr-3 h-12 w-12" />
+                            99.9% Search Accuracy
                           </div>
-                       </div>
-                       <div className="w-full md:w-[400px] bg-gradient-to-br from-[#0C002B] to-[#1a0033] p-10 rounded-3xl text-white text-center shadow-2xl">
-                          <FontAwesomeIcon icon={faAward} className="text-[#FFD700] h-12 w-12 mb-6 shadow-glow" />
-                          <h3 className="text-2xl font-bold mb-4">Certified Search Report</h3>
-                          <p className="text-lg opacity-80 mb-10 leading-relaxed">
-                             Get a professionally vetted availability report within 24 hours. Sign off on your brand name with absolute confidence.
-                          </p>
-                          <Link href="/contact-us">
-                             <button className="w-full bg-white text-[#160049] font-black py-4 rounded-xl hover:bg-gray-100 transition-colors text-lg tracking-tight">
-                               Request Official Search
-                             </button>
-                          </Link>
-                       </div>
+                          <div className="flex items-center text-lg font-bold text-[#6E5E93]">
+                            <FontAwesomeIcon icon={faCheck} className="mr-3 h-12 w-12" />
+                            Detailed Risk Probability Score
+                          </div>
+                          <div className="flex items-center text-lg font-bold text-[#6E5E93]">
+                            <FontAwesomeIcon icon={faCheck} className="mr-3" />
+                            Strategic Alternate Name Suggestions
+                          </div>
+                        </div>
+                      </div>
+                      <div className="w-full md:w-[400px] bg-gradient-to-br from-[#0C002B] to-[#1a0033] p-10 rounded-3xl text-white text-center shadow-2xl">
+                        <FontAwesomeIcon icon={faAward} className="text-[#FFD700] h-12 w-12 mb-6 shadow-glow" />
+                        <h3 className="text-2xl font-bold mb-4">Certified Search Report</h3>
+                        <p className="text-lg opacity-80 mb-10 leading-relaxed">
+                          Get a professionally vetted availability report within 24 hours. Sign off on your brand name with absolute confidence.
+                        </p>
+                        <Link href="/contact-us">
+                          <button className="w-full bg-white text-[#160049] font-black py-4 rounded-xl hover:bg-gray-100 transition-colors text-lg tracking-tight">
+                            Request Official Search
+                          </button>
+                        </Link>
+                      </div>
                     </div>
                   </section>
 
                   <section id="faqs" className="mb-24 scroll-mt-32">
                     <div className="flex items-center mb-12">
-                       <div className="w-12 h-12 bg-[#6E5E93]/10 rounded-full flex items-center justify-center mr-4">
-                         <span className="text-[#6E5E93] font-black text-2xl">?</span>
-                       </div>
-                       <h2 className="text-3xl md:text-5xl font-black text-gray-900 m-0">Frequently Asked Questions</h2>
+                      <div className="w-12 h-12 bg-[#6E5E93]/10 rounded-full flex items-center justify-center mr-4">
+                        <span className="text-[#6E5E93] font-black text-2xl">?</span>
+                      </div>
+                      <h2 className="text-3xl md:text-5xl font-black text-gray-900 m-0">Frequently Asked Questions</h2>
                     </div>
                     <div className="space-y-8">
                       {faqs.map((faq, index) => (
@@ -497,20 +499,20 @@ export default function TrademarkAvailabilityPage() {
                   <section className="mb-24 scroll-mt-32">
                     <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-8 underline decoration-[#6E5E93]/30 underline-offset-8">The Evolution of Trademark Law and Public Access in India</h2>
                     <p className="mb-8">
-                       To truly understand why trademark availability is so pivotal, one must look at the legislative intent behind the Trade Marks Act of 1999. Prior to this, India operated under the Trade and Merchandise Marks Act, 1958. The 1999 Act brought India into compliance with the TRIPS (Trade-Related Aspects of Intellectual Property Rights) agreement, managed by the WTO. This shift wasn't just administrative; it was a revolution in how brand property is verified and protected.
+                      To truly understand why trademark availability is so pivotal, one must look at the legislative intent behind the Trade Marks Act of 1999. Prior to this, India operated under the Trade and Merchandise Marks Act, 1958. The 1999 Act brought India into compliance with the TRIPS (Trade-Related Aspects of Intellectual Property Rights) agreement, managed by the WTO. This shift wasn't just administrative; it was a revolution in how brand property is verified and protected.
                     </p>
                     <p className="mb-12 font-bold text-gray-900">
-                       The Move to Digital Transparency
+                      The Move to Digital Transparency
                     </p>
                     <p className="mb-12">
-                       Before the mid-2000s, checking trademark availability required physical trips to the Trademark Registry offices in Delhi, Mumbai, Kolkata, Chennai, or Ahmedabad. Today, the digitization of the registry through the Comprehensive e-Filing and Search system has democratized access. This level of transparency means that "ignorance of an existing mark" is no longer a valid legal defense. If a mark is in the public registry, the entire business world is deemed to have 'Constructive Notice' of its existence. This is precisely why the search is the most critical step in your due diligence process.
+                      Before the mid-2000s, checking trademark availability required physical trips to the Trademark Registry offices in Delhi, Mumbai, Kolkata, Chennai, or Ahmedabad. Today, the digitization of the registry through the Comprehensive e-Filing and Search system has democratized access. This level of transparency means that "ignorance of an existing mark" is no longer a valid legal defense. If a mark is in the public registry, the entire business world is deemed to have 'Constructive Notice' of its existence. This is precisely why the search is the most critical step in your due diligence process.
                     </p>
 
                     <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-8">Deep Dive into Sector-Specific Search Strategies</h2>
                     <p className="mb-8">
                       Different industries face different trademark challenges. A search for a pharmaceutical brand is fundamentally different from a search for a tech startup.
                     </p>
-                    
+
                     <h3 className="text-2xl font-bold mb-4">1. Pharmaceuticals (Class 5)</h3>
                     <p className="mb-8">
                       In the pharma sector, the standard of similarity is even higher. Confusion between medicines can be life-threatening. The Registrar often applies a 'special standard' for Class 5, where even minor phonetic overlap can lead to absolute refusal. If you are searching for a pharma brand, you must look for phonetic masks, chemical name prefixes, and global INN (International Non-proprietary Names) lists.
@@ -565,19 +567,19 @@ export default function TrademarkAvailabilityPage() {
 
                     <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-8">Long-Term Brand Strategy: Beyond the Registration</h2>
                     <p className="mb-8">
-                       Registration is only the beginning. A truly strong brand continuously monitors the registry. Our 'Trademark Watch' service ensures that once you are registered, no one else can even apply for a similar name in the future. By maintaining vigilance, you preserve the strength of your trademark and prevent its dilution into a generic term.
+                      Registration is only the beginning. A truly strong brand continuously monitors the registry. Our 'Trademark Watch' service ensures that once you are registered, no one else can even apply for a similar name in the future. By maintaining vigilance, you preserve the strength of your trademark and prevent its dilution into a generic term.
                     </p>
                     <p className="mb-8">
                       Dilution occurs when a trademark's uniqueness is weakened by other similar marks. For example, if "Lumina" allows "Luminate" and "Luminar" to coexist in its direct market, the original "Lumina" brand loses its distinctiveness. Rigorous availability checking isn't just for you; it's to ensure you don't become a dilutor of others' rights.
                     </p>
-                    </section>
+                  </section>
 
-                   <section id="reviews" className="mb-24 scroll-mt-32">
+                  <section id="reviews" className="mb-24 scroll-mt-32">
                     <div className="flex items-center mb-12">
-                       <div className="w-12 h-12 bg-[#6E5E93]/10 rounded-full flex items-center justify-center mr-4">
-                         <FontAwesomeIcon icon={faStar} className="text-[#6E5E93] h-12 w-12" />
-                       </div>
-                       <h2 className="text-3xl md:text-5xl font-black text-gray-900 m-0">What Our Clients Say</h2>
+                      <div className="w-12 h-12 bg-[#6E5E93]/10 rounded-full flex items-center justify-center mr-4">
+                        <FontAwesomeIcon icon={faStar} className="text-[#6E5E93] h-12 w-12" />
+                      </div>
+                      <h2 className="text-3xl md:text-5xl font-black text-gray-900 m-0">What Our Clients Say</h2>
                     </div>
                     <div className="grid md:grid-cols-2 gap-8">
                       {[
@@ -619,18 +621,18 @@ export default function TrademarkAvailabilityPage() {
                   <section className="mb-24 scroll-mt-32">
                     <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-8 underline decoration-[#6E5E93]/30 underline-offset-8">Geographical Indications vs. Trademarks: A Crucial Distinction</h2>
                     <p className="mb-8">
-                       While conducting your availability search, you may encounter names that are protected under the Geographical Indications (GI) of Goods (Registration and Protection) Act, 1999. It is vital to understand that a GI is NOT a trademark. Examples include 'Darjeeling Tea', 'Kanchipuram Silk', or 'Alphonso Mango'.
+                      While conducting your availability search, you may encounter names that are protected under the Geographical Indications (GI) of Goods (Registration and Protection) Act, 1999. It is vital to understand that a GI is NOT a trademark. Examples include 'Darjeeling Tea', 'Kanchipuram Silk', or 'Alphonso Mango'.
                     </p>
                     <p className="mb-8">
-                       You cannot register a trademark that is identical or deceptively similar to a protected GI if your goods originate from outside that specific territory. Searching for GI conflicts is a specialized part of our 'Full Spectrum Availability Audit' at IPR Karo. Overlooking a GI can lead to absolute refusal under Section 9, as it is considered descriptive of the origin of the goods.
+                      You cannot register a trademark that is identical or deceptively similar to a protected GI if your goods originate from outside that specific territory. Searching for GI conflicts is a specialized part of our 'Full Spectrum Availability Audit' at IPR Karo. Overlooking a GI can lead to absolute refusal under Section 9, as it is considered descriptive of the origin of the goods.
                     </p>
-                    
+
                     <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-8">Conflict Resolution: What if Your Name is (Partially) Taken?</h2>
                     <p className="mb-8">
-                       Many founders panic when they see one similar result. However, trademark law is nuanced. If the existing mark is for 'Pipes' and you are selling 'Professional Software', the likelihood of confusion (and thus the risk of rejection) is significantly lower. We use the 'Doctrine of Honest Concurrent User' to help our clients navigate these situations. If you have been using your name for years without conflict, you may actually have a path to registration even if a similar mark exists.
+                      Many founders panic when they see one similar result. However, trademark law is nuanced. If the existing mark is for 'Pipes' and you are selling 'Professional Software', the likelihood of confusion (and thus the risk of rejection) is significantly lower. We use the 'Doctrine of Honest Concurrent User' to help our clients navigate these situations. If you have been using your name for years without conflict, you may actually have a path to registration even if a similar mark exists.
                     </p>
                     <p className="mb-8">
-                       Our legal team analyzes the 'Trade Channels' of both marks. If the products are sold in different markets, to different sets of customers, through different distribution networks, we can often craft a winning legal argument for your brand's uniqueness.
+                      Our legal team analyzes the 'Trade Channels' of both marks. If the products are sold in different markets, to different sets of customers, through different distribution networks, we can often craft a winning legal argument for your brand's uniqueness.
                     </p>
                   </section>
 
@@ -641,7 +643,7 @@ export default function TrademarkAvailabilityPage() {
                       In the age of interconnected global commerce, your brand identity is more than just a logo; it is a promise of quality and trust to your customers. Investing time and expertise into a trademark search is not just a legal formality; it is a strategic business decision that pays dividends in brand equity and peace of mind.
                     </p>
                     <p className="mb-8">
-                       The process of checking trademark availability in India is a journey through legal nuance, phonetic complexity, and competitive analysis. While the IP India portal provides the data, the true value lies in the interpretation of that data. Founders who take this step seriously are the ones who build enduring legacies, free from the shadow of litigation and rebranding.
+                      The process of checking trademark availability in India is a journey through legal nuance, phonetic complexity, and competitive analysis. While the IP India portal provides the data, the true value lies in the interpretation of that data. Founders who take this step seriously are the ones who build enduring legacies, free from the shadow of litigation and rebranding.
                     </p>
                     <p className="mb-12">
                       At IPR Karo, we believe that every Indian entrepreneur deserves a brand that is legally secure and visually distinct. We invite you to use our free guide, leverage our search tools, and reach out to our legal team when you are ready to take the next step towards national and international recognition.
@@ -651,8 +653,8 @@ export default function TrademarkAvailabilityPage() {
 
                 {/* Final CTA */}
                 <section className="bg-gradient-to-r from-[#0C002B] via-[#160049] to-[#0C002B] rounded-3xl md:rounded-[40px] p-8 md:p-24 text-center text-white relative overflow-hidden mt-16 shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
-                   <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
-                   <div className="relative z-10 max-w-4xl mx-auto">
+                  <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
+                  <div className="relative z-10 max-w-4xl mx-auto">
                     <h2 className="text-3xl md:text-6xl font-black mb-8 leading-tight">Don't Leave Your Brand to <span className="text-[#6E5E93]">Chance</span></h2>
                     <p className="text-lg md:text-2xl opacity-90 mb-12 leading-relaxed font-light">
                       A few minutes of verification today can save you years of litigation tomorrow. Get a professional-grade availability report and secure your brand's future with IPR Karo's expert legal team.
@@ -664,7 +666,7 @@ export default function TrademarkAvailabilityPage() {
                         </button>
                       </Link>
                       <a href="tel:+919289707648" className="w-full sm:w-auto">
-                         <button className="bg-transparent border-2 border-white/20 hover:border-white/50 text-white font-bold py-4 px-12 md:py-6 md:px-16 rounded-full transition-all text-xl w-full flex items-center justify-center backdrop-blur-lg">
+                        <button className="bg-transparent border-2 border-white/20 hover:border-white/50 text-white font-bold py-4 px-12 md:py-6 md:px-16 rounded-full transition-all text-xl w-full flex items-center justify-center backdrop-blur-lg">
                           <FontAwesomeIcon icon={faPhone} className="mr-3 h-12 w-12" />
                           +91 9289707648
                         </button>
@@ -676,7 +678,7 @@ export default function TrademarkAvailabilityPage() {
                 <section className="mt-24 space-y-12">
                   <h2 className="text-3xl md:text-5xl font-black text-gray-900 border-b-4 border-[#6E5E93] pb-4 inline-block">The Intellectual Property Glossary for Founders</h2>
                   <p className="text-xl text-gray-600">To master trademark availability, you must speak the language of the registry. Here is a curated glossary of essential terms.</p>
-                  
+
                   <div className="grid md:grid-cols-2 gap-8">
                     <div className="p-8 bg-white rounded-3xl border border-gray-100 shadow-sm">
                       <h4 className="font-bold text-xl mb-4 text-[#6E5E93]">Abandoned Mark</h4>
@@ -747,7 +749,7 @@ export default function TrademarkAvailabilityPage() {
 
             {/* Right Column - Sidebar Widgets */}
             <aside className="hidden lg:block space-y-10 sticky top-32">
-              
+
               {/* Sidebar CTA Box */}
               <div className="bg-[#0C002B] p-8 rounded-3xl shadow-xl border border-gray-800 text-white relative overflow-hidden group">
                 <div className="absolute -top-10 -right-10 w-32 h-32 bg-[#6E5E93] rounded-full blur-[60px] opacity-20 group-hover:opacity-40 transition-opacity"></div>

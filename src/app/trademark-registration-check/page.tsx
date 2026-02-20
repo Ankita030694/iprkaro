@@ -63,16 +63,14 @@ export const metadata: Metadata = {
 const tocSections = [
     { id: 'introduction', title: 'The Importance of a Trademark Registration Check' },
     { id: 'tracking-methods', title: 'Methods to Track Your Trademark Status' },
-    { id: 'e-register-guide', title: 'Using the IP India E-Register Portal' },
     { id: 'status-definitions', title: 'Decoding Trademark Statuses: What They Mean' },
+    { id: 'status-velocity', title: 'Status Velocity: Understanding Registry Lead Times' },
     { id: 'objection-alert', title: 'The Critical Importance of "Objected" Status' },
     { id: 'journal-monitoring', title: 'Monitoring the Trademark Journal for Opposition' },
-    { id: 'renewal-check', title: 'Checking for Trademark Renewal Deadlines' },
-    { id: 'common-law-check', title: 'Beyond the Registry: Common Law Usage Checks' },
-    { id: 'status-update-frequency', title: 'How Often Should You Check Your Status?' },
-    { id: 'handling-delays', title: 'What to Do if Your Application is Stalled?' },
-    { id: 'automated-checks', title: 'The Power of Automated Monitoring Tools' },
+    { id: 'zombie-tm-monitoring', title: 'Zombie TM Monitoring: Protecting Against Expired Risks' },
+    { id: 'madrid-protocol', title: 'Madrid Protocol: Tracking International Designations' },
     { id: 'verification-cert', title: 'Verifying the Authenticity of a TM Certificate' },
+    { id: 'handling-delays', title: 'What to Do if Your Application is Stalled?' },
     { id: 'why-iprkaro-check', title: 'Why IPR Karo for Your Brand Monitoring?' },
     { id: 'faqs', title: 'Frequently Asked Questions' },
     { id: 'reviews', title: 'Client Reviews' },
@@ -241,7 +239,7 @@ export default function TrademarkRegistrationCheckPage() {
 
                         {/* Middle Column: Main Content */}
                         <div className="min-w-0">
-                            <div className="lg:hidden mb-6 sticky top-[72px] z-20">
+                            <div className="lg:hidden mb-6 sticky top-[100px] z-20">
                                 <TableOfContents sections={tocSections} orientation="horizontal" />
                             </div>
 
@@ -348,6 +346,21 @@ export default function TrademarkRegistrationCheckPage() {
                                     </div>
                                 </section>
 
+                                <section id="status-velocity" className="mb-12 scroll-mt-24 md:scroll-mt-32">
+                                    <h2 className="text-2xl md:text-3xl font-bold text-[#0C002B] mb-6">Status Velocity: Understanding Registry Lead Times</h2>
+                                    <p className="mb-4 leading-relaxed text-lg text-gray-800">
+                                        When performing a <strong>trademark registration check</strong>, "Status Velocity" refers to the speed at which your application moves from one stage to the next. In the Indian registry, this velocity is highly variable based on the jurisdictional branch (Mumbai, Delhi, Chennai, Kolkata, Ahmedabad).
+                                    </p>
+                                    <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200 shadow-sm my-6">
+                                        <h4 className="font-bold text-[#0C002B] mb-3">Benchmark Velocities:</h4>
+                                        <ul className="grid md:grid-cols-2 gap-4 text-sm text-gray-700 list-disc pl-5">
+                                            <li><strong>Filing to Examination:</strong> 3 to 12 months.</li>
+                                            <li><strong>Objection to Hearing:</strong> 12 to 24 months (if reply is not accepted).</li>
+                                            <li><strong>Publication to Registration:</strong> Exactly 4 months (if no opposition).</li>
+                                        </ul>
+                                    </div>
+                                </section>
+
                                 <section id="objection-alert" className="mb-12 scroll-mt-24 md:scroll-mt-32">
                                     <h2 className="text-2xl md:text-3xl font-bold text-[#0C002B] mb-6">The Critical Importance of the 'Objected' Status</h2>
                                     <p className="mb-4 leading-relaxed text-lg text-gray-800">
@@ -358,6 +371,26 @@ export default function TrademarkRegistrationCheckPage() {
                                         <p className="text-red-800 leading-relaxed text-lg">
                                             Once the 'Examination Report' is uploaded, you have exactly **30 days** to file a legal rebuttal. If this deadline is missed, the status will automatically change to 'Abandoned', and you will lose all filing fees and priority. This is why weekly status checks are essential during the first 6 months.
                                         </p>
+                                    </div>
+                                </section>
+
+                                <section id="zombie-tm-monitoring" className="mb-12 scroll-mt-24 md:scroll-mt-32">
+                                    <h2 className="text-2xl md:text-3xl font-bold text-[#0C002B] mb-6">Zombie TM Monitoring: Protecting Against Expired Risks</h2>
+                                    <p className="mb-4 leading-relaxed text-lg text-gray-800">
+                                        A "Zombie Trademark" is a registration that has expired in the registry (status: Removed) but the owner continues to use it in the market, or the registry has not yet officially purged it from the e-register.
+                                    </p>
+                                    <p className="mb-4 leading-relaxed text-lg text-gray-800">
+                                        During a <strong>trademark registration check</strong>, we look for marks that are nearing their 10-year renewal deadline. If a competitor misses their renewal, their mark becomes a "Zombie". However, caution is required—if the owner files for restoration within 1 year, the mark can "come back to life", potentially killing your new application.
+                                    </p>
+                                </section>
+
+                                <section id="madrid-protocol" className="mb-12 scroll-mt-24 md:scroll-mt-32">
+                                    <h2 className="text-2xl md:text-3xl font-bold text-[#0C002B] mb-6">Madrid Protocol: Tracking International Designations</h2>
+                                    <p className="mb-4 leading-relaxed text-lg text-gray-800">
+                                        If you are checking a trademark for a global brand, you must look at the <strong>Madrid Protocol</strong> International Registrations. These marks are filed via the World Intellectual Property Organization (WIPO) and designate India for protection.
+                                    </p>
+                                    <div className="bg-indigo-50 p-6 rounded-2xl border border-indigo-100 my-6">
+                                        <p className="leading-relaxed"><strong>Forensic Note:</strong> International designations often have a different status tracking series (starting with 'IR'). They follow a strict 18-month refusal window. If the Indian registry does not refuse an IR application within 18 months, it is deemed registered by default.</p>
                                     </div>
                                 </section>
 

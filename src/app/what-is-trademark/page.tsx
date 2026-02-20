@@ -241,7 +241,7 @@ export default function WhatIsTrademarkPage() {
 
                         {/* Middle Column: Main Content */}
                         <div className="min-w-0">
-                            <div className="lg:hidden mb-6 sticky top-[72px] z-20">
+                            <div className="lg:hidden mb-6 sticky top-[100px] z-20">
                                 <TableOfContents sections={tocSections} orientation="horizontal" />
                             </div>
 

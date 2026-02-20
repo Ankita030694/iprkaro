@@ -24,7 +24,7 @@
 //                 Turn Ideas Into Assets - <span className="text-cyan-300">IPR Karo</span>.
 //               </p>
 //             </div>
-            
+
 //             {/* Social Media - Mobile Only */}
 //             <div className="lg:hidden">
 //               <h3 className="text-sm font-semibold mb-4 uppercase">Follow us on</h3>
@@ -33,7 +33,7 @@
 //               <a href="https://www.linkedin.com/company/iprkaro/" className="text-white hover:text-blue-500 transition-colors">
 //                 <i className="fab fa-linkedin-in text-xl"></i>
 //               </a>
-                
+
 //               {/* Instagram */}
 //               <a href="https://www.instagram.com/iprkaro" className="text-pink-500 hover:text-pink-400 transition-colors">
 //                 <i className="fab fa-instagram text-xl"></i>
@@ -204,8 +204,8 @@
 //                   Terms & Conditions
 //                 </a>
 //               </li>
-              
-              
+
+
 //             </ul>
 //           </div>
 
@@ -217,7 +217,7 @@
 //               <a href="https://www.linkedin.com/company/iprkaro/" className="text-white hover:text-blue-500 transition-colors">
 //                 <i className="fab fa-linkedin-in text-xl"></i>
 //               </a>
-                
+
 //               {/* Instagram */}
 //               <a href="https://www.instagram.com/iprkaro" className="text-pink-500 hover:text-pink-400 transition-colors">
 //                 <i className="fab fa-instagram text-xl"></i>
@@ -226,9 +226,9 @@
 //               <a href="https://www.facebook.com/profile.php?id=61580675227718" className="text-blue-600 hover:text-blue-500 transition-colors">
 //                 <i className="fab fa-facebook-f text-xl"></i>
 //               </a>
-            
-              
-             
+
+
+
 //             </div>
 //           </div>
 //         </div>
@@ -349,8 +349,8 @@
 //           </p>
 //         </div>
 //       </div>
-      
-      
+
+
 //     </footer>
 //   );
 // };
@@ -641,6 +641,20 @@ const Footer: React.FC = () => {
             <a href="/which-companies-offer-trademark-clearance-search-packages-for-startups" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Startup Search Packages</a>
             <a href="/where-can-i-find-affordable-trademark-registration-services-near-me" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Affordable Trademark Registration</a>
             <a href="/steps-to-file-trademark-application-online-india" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Steps to File Trademark Online</a>
+            <a href="/in-india-the-trademark-registration-should-be-renewed-every" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Trademark Renewal Period</a>
+            <a href="/ipindia-trademark-status" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">IP India Status Meaning</a>
+            <a href="/mca-company-name-check" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">MCA Company Name Check</a>
+            <a href="/leave-and-license-agreement" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Leave and License Agreement</a>
+            <a href="/udyam-registration-agreement" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Udyam Registration</a>
+            <a href="/trademark-search-public" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Public Trademark Search</a>
+            <a href="/format-for-no-objection-certificate" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">NOC Formats</a>
+            <a href="/trademark-and-copyright-difference" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Trademark vs Copyright</a>
+            <a href="/indian-patent-office-search" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Patent Search</a>
+            <a href="/return-filling-online" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Income Tax & GST Filing</a>
+            <a href="/non-disclosure-agreement-format" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">NDA Formats</a>
+            <a href="/small-company-definition" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Small Company Status</a>
+            <a href="/registration-of-pharmacist-in-up" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Pharmacist Registration (UP)</a>
+            <a href="/trademark-status" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Trademark Status Guide</a>
           </div>
         </div>
 

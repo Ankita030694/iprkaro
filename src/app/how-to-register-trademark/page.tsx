@@ -5,17 +5,17 @@ import { Metadata } from 'next';
 import TableOfContents from '@/components/TableOfContents';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { 
-  faCheck, 
-  faSearch, 
-  faFileContract, 
-  faGavel, 
-  faGlobe, 
-  faShieldAlt, 
-  faBalanceScale, 
-  faRocket, 
-  faMoneyBillWave, 
-  faCertificate, 
+import {
+  faCheck,
+  faSearch,
+  faFileContract,
+  faGavel,
+  faGlobe,
+  faShieldAlt,
+  faBalanceScale,
+  faRocket,
+  faMoneyBillWave,
+  faCertificate,
   faFileSignature,
   faPhone,
   faChevronRight,
@@ -207,23 +207,23 @@ export default function HowToRegisterTrademarkPage() {
 
       <div className="bg-white min-h-screen text-black md:text-inherit">
         {/* Hero Section */}
-        <div className="relative w-full overflow-hidden" 
-             style={{
-               background: 'linear-gradient(to bottom, #0C002B 0%, #160049 45%, #6E5E93 80%, #E8E8E8 100%)'
-             }}>
-          
+        <div className="relative w-full overflow-hidden"
+          style={{
+            background: 'linear-gradient(to bottom, #0C002B 0%, #160049 45%, #6E5E93 80%, #E8E8E8 100%)'
+          }}>
+
           <div className="container mx-auto px-4 py-12 lg:py-32 relative z-10 text-center">
-             <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-snug md:leading-tight mt-20 md:mt-10 text-white">
-               How to Register a <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'rgb(110, 94, 147)' }}>Trademark in India</span> (2026 Guide)
-             </h1>
-             <p className="text-sm md:text-xl mb-6 md:mb-8 max-w-3xl mx-auto text-gray-300 px-2 leading-relaxed">
-               Protect your brand identity from imitators. Our comprehensive guide covers the entire trademark filing process, costs, and legal requirements to secure your brand for 10 years.
-             </p>
-             <Link href="/contact-us">
-               <button className="bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-2.5 px-6 md:py-3 md:px-8 rounded-full transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(110,94,147,0.3)] text-base md:text-lg">
-                 Start Registration Now
-               </button>
-             </Link>
+            <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-snug md:leading-tight mt-20 md:mt-10 text-white">
+              How to Register a <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'rgb(110, 94, 147)' }}>Trademark in India</span> (2026 Guide)
+            </h1>
+            <p className="text-sm md:text-xl mb-6 md:mb-8 max-w-3xl mx-auto text-gray-300 px-2 leading-relaxed">
+              Protect your brand identity from imitators. Our comprehensive guide covers the entire trademark filing process, costs, and legal requirements to secure your brand for 10 years.
+            </p>
+            <Link href="/contact-us">
+              <button className="bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-2.5 px-6 md:py-3 md:px-8 rounded-full transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(110,94,147,0.3)] text-base md:text-lg">
+                Start Registration Now
+              </button>
+            </Link>
           </div>
         </div>
 
@@ -231,7 +231,7 @@ export default function HowToRegisterTrademarkPage() {
           <Breadcrumbs items={breadcrumbItems} />
 
           <div className="grid grid-cols-1 lg:grid-cols-[220px_1fr_300px] gap-4 md:gap-12 items-start mt-8">
-            
+
             {/* Left Sidebar - TOC (Desktop) */}
             <div className="hidden lg:block sticky top-32">
               <TableOfContents sections={tocSections} orientation="vertical" />
@@ -239,17 +239,17 @@ export default function HowToRegisterTrademarkPage() {
 
             {/* Main Content Area */}
             <div className="min-w-0">
-               {/* TOC (Mobile) */}
-               <div className="lg:hidden mb-4 sticky top-[72px] z-20">
+              {/* TOC (Mobile) */}
+              <div className="lg:hidden mb-4 sticky top-[100px] z-20">
                 <TableOfContents sections={tocSections} orientation="horizontal" />
               </div>
 
               <div className="bg-white p-4 md:p-12 rounded-xl md:rounded-2xl shadow-sm space-y-8 md:space-y-16">
-                
+
                 <section id="introduction" className="mb-12 scroll-mt-24 md:scroll-mt-32">
                   <h2 className="text-2xl md:text-3xl font-bold text-black md:text-[#0C002B] mb-4">Introduction to Brand Protection in India</h2>
                   <p className="mb-4 leading-relaxed text-base text-black md:text-inherit">
-                    In the fast paced world of modern business, your brand is more than just a name or a logo. It represents your reputation, your hard work, and the trust your customers place in your services. Knowing how to register a trademark is the first and most critical step for any entrepreneur who wants to build a lasting legacy. Every day, thousands of new products hit the market, and without legal protection, your unique brand identity is vulnerable to theft and imitation. 
+                    In the fast paced world of modern business, your brand is more than just a name or a logo. It represents your reputation, your hard work, and the trust your customers place in your services. Knowing how to register a trademark is the first and most critical step for any entrepreneur who wants to build a lasting legacy. Every day, thousands of new products hit the market, and without legal protection, your unique brand identity is vulnerable to theft and imitation.
                   </p>
                   <p className="mb-4 leading-relaxed text-base text-black md:text-inherit">
                     The concept of trademarking in India has evolved significantly since the early colonial era. The current legal framework, established under the Trade Marks Act of 1999, which came into effect in 2003, aligns with international standards such as the TRIPS (Trade Related Aspects of Intellectual Property Rights) agreement. This evolution reflects India's transition into a global economic powerhouse where intellectual property is considered a primary driver of innovation and market competition. Before the 1999 Act, the laws were governed by the Trade and Merchandise Marks Act of 1958, and even earlier by the Trade Marks Act of 1940. Each iteration has brought more clarity and stronger protection for creators.
@@ -399,39 +399,39 @@ export default function HowToRegisterTrademarkPage() {
                   </p>
                   <div className="space-y-8 my-10">
                     <div className="flex gap-4">
-                       <div className="w-8 h-8 md:w-12 md:h-12 bg-[#FFB703] text-[#0C002B] rounded-full flex items-center justify-center font-bold text-base md:text-xl flex-shrink-0 shadow-lg">1</div>
-                       <div>
-                          <h4 className="font-bold text-[#0C002B] text-lg md:text-xl mb-1.5">Filing the Application (Form TM-A)</h4>
-                          <p className="leading-relaxed text-sm">Once we have confirmed the name is available, we file the TM-A form online via the e-filing portal. This form requires the applicant's details, the mark itself, the class, and a 'Description of Goods and Services.' If you have already been using the mark, we must file a 'User Affidavit' to prove the date of first use. This immediately gives you an application number and allows you to use the TM symbol.</p>
-                       </div>
+                      <div className="w-8 h-8 md:w-12 md:h-12 bg-[#FFB703] text-[#0C002B] rounded-full flex items-center justify-center font-bold text-base md:text-xl flex-shrink-0 shadow-lg">1</div>
+                      <div>
+                        <h4 className="font-bold text-[#0C002B] text-lg md:text-xl mb-1.5">Filing the Application (Form TM-A)</h4>
+                        <p className="leading-relaxed text-sm">Once we have confirmed the name is available, we file the TM-A form online via the e-filing portal. This form requires the applicant's details, the mark itself, the class, and a 'Description of Goods and Services.' If you have already been using the mark, we must file a 'User Affidavit' to prove the date of first use. This immediately gives you an application number and allows you to use the TM symbol.</p>
+                      </div>
                     </div>
                     <div className="flex gap-4">
-                       <div className="w-8 h-8 md:w-12 md:h-12 bg-[#FFB703] text-[#0C002B] rounded-full flex items-center justify-center font-bold text-base md:text-xl flex-shrink-0 shadow-lg">2</div>
-                       <div>
-                          <h4 className="font-bold text-[#0C002B] text-lg md:text-xl mb-1.5">Formalities Check and Examination</h4>
-                          <p className="leading-relaxed text-sm">The first internal stage is the 'Formalities Check.' The office ensures that everything has been filed correctly. Once this is passed, the status becomes 'Marked for Exam.' A government examiner then reviews your application for 'Absolute Grounds' (is it descriptive?) and 'Relative Grounds' (is it similar to others?). If any issues are found, they issue an 'Examination Report' detailing the objections.</p>
-                       </div>
+                      <div className="w-8 h-8 md:w-12 md:h-12 bg-[#FFB703] text-[#0C002B] rounded-full flex items-center justify-center font-bold text-base md:text-xl flex-shrink-0 shadow-lg">2</div>
+                      <div>
+                        <h4 className="font-bold text-[#0C002B] text-lg md:text-xl mb-1.5">Formalities Check and Examination</h4>
+                        <p className="leading-relaxed text-sm">The first internal stage is the 'Formalities Check.' The office ensures that everything has been filed correctly. Once this is passed, the status becomes 'Marked for Exam.' A government examiner then reviews your application for 'Absolute Grounds' (is it descriptive?) and 'Relative Grounds' (is it similar to others?). If any issues are found, they issue an 'Examination Report' detailing the objections.</p>
+                      </div>
                     </div>
                     <div className="flex gap-4">
-                       <div className="w-8 h-8 md:w-12 md:h-12 bg-[#FFB703] text-[#0C002B] rounded-full flex items-center justify-center font-bold text-base md:text-xl flex-shrink-0 shadow-lg">3</div>
-                       <div>
-                          <h4 className="font-bold text-[#0C002B] text-lg md:text-xl mb-1.5">Replying to Objections and Hearing</h4>
-                          <p className="leading-relaxed text-sm">If objections are raised, we have exactly 30 days to file a legal response. This response must be drafted with precision, citing case laws and evidence of distinctiveness. If the response is not persuasive, the Registrar may call for a 'Show Cause Hearing.' This is a personal meeting with the official to argue your case. Our legal experts handle this entire process, ensuring your voice is heard.</p>
-                       </div>
+                      <div className="w-8 h-8 md:w-12 md:h-12 bg-[#FFB703] text-[#0C002B] rounded-full flex items-center justify-center font-bold text-base md:text-xl flex-shrink-0 shadow-lg">3</div>
+                      <div>
+                        <h4 className="font-bold text-[#0C002B] text-lg md:text-xl mb-1.5">Replying to Objections and Hearing</h4>
+                        <p className="leading-relaxed text-sm">If objections are raised, we have exactly 30 days to file a legal response. This response must be drafted with precision, citing case laws and evidence of distinctiveness. If the response is not persuasive, the Registrar may call for a 'Show Cause Hearing.' This is a personal meeting with the official to argue your case. Our legal experts handle this entire process, ensuring your voice is heard.</p>
+                      </div>
                     </div>
                     <div className="flex gap-4">
-                       <div className="w-8 h-8 md:w-12 md:h-12 bg-[#FFB703] text-[#0C002B] rounded-full flex items-center justify-center font-bold text-base md:text-xl flex-shrink-0 shadow-lg">4</div>
-                       <div>
-                          <h4 className="font-bold text-[#0C002B] text-lg md:text-xl mb-1.5">Journal Publication and Public Notice</h4>
-                          <p className="leading-relaxed text-sm">If the examiner is satisfied, the mark is 'Accepted and Advertised' in the Trademark Journal. This is a weekly publication available for public review. For a mandatory period of 4 months, any person can file a 'Notice of Opposition' if they believe the mark should not be registered. This acts as a final filter to ensure that only unique, non-infringing marks are registered.</p>
-                       </div>
+                      <div className="w-8 h-8 md:w-12 md:h-12 bg-[#FFB703] text-[#0C002B] rounded-full flex items-center justify-center font-bold text-base md:text-xl flex-shrink-0 shadow-lg">4</div>
+                      <div>
+                        <h4 className="font-bold text-[#0C002B] text-lg md:text-xl mb-1.5">Journal Publication and Public Notice</h4>
+                        <p className="leading-relaxed text-sm">If the examiner is satisfied, the mark is 'Accepted and Advertised' in the Trademark Journal. This is a weekly publication available for public review. For a mandatory period of 4 months, any person can file a 'Notice of Opposition' if they believe the mark should not be registered. This acts as a final filter to ensure that only unique, non-infringing marks are registered.</p>
+                      </div>
                     </div>
                     <div className="flex gap-4">
-                       <div className="w-8 h-8 md:w-12 md:h-12 bg-[#FFB703] text-[#0C002B] rounded-full flex items-center justify-center font-bold text-base md:text-xl flex-shrink-0 shadow-lg">5</div>
-                       <div>
-                          <h4 className="font-bold text-[#0C002B] text-lg md:text-xl mb-1.5">Registration and Digital Certification</h4>
-                          <p className="leading-relaxed text-sm">If no opposition is filed (or if we win the opposition hearing), the Registrar issues the Registration Certificate digitally. You can now use the R symbol (®) with pride. This certificate is valid for 10 years and can be renewed indefinitely. It serves as conclusive evidence of your ownership in any court of law across India.</p>
-                       </div>
+                      <div className="w-8 h-8 md:w-12 md:h-12 bg-[#FFB703] text-[#0C002B] rounded-full flex items-center justify-center font-bold text-base md:text-xl flex-shrink-0 shadow-lg">5</div>
+                      <div>
+                        <h4 className="font-bold text-[#0C002B] text-lg md:text-xl mb-1.5">Registration and Digital Certification</h4>
+                        <p className="leading-relaxed text-sm">If no opposition is filed (or if we win the opposition hearing), the Registrar issues the Registration Certificate digitally. You can now use the R symbol (®) with pride. This certificate is valid for 10 years and can be renewed indefinitely. It serves as conclusive evidence of your ownership in any court of law across India.</p>
+                      </div>
                     </div>
                   </div>
                 </section>
@@ -564,16 +564,16 @@ export default function HowToRegisterTrademarkPage() {
                   </p>
                   <div className="space-y-6 my-8">
                     <div className="p-6 bg-gray-50 rounded-2xl border-l-[8px] border-[#0C002B] shadow-sm">
-                       <h4 className="font-bold text-[#0C002B] text-xl mb-3">Section 9 Objections: Absolute Grounds</h4>
-                       <p className="mb-3 leading-relaxed text-sm">This is raised when the examiner thinks the mark is descriptive, lacks distinctiveness, or is a common surname or geographical location. For example, if you try to trademark 'Tasty Mango' for fruit juice or 'Delhi Law' for a law firm.</p>
-                       <p className="font-bold text-[#0C002B] text-sm">Our Comprehensive Solution:</p>
-                       <p className="leading-relaxed text-gray-700 text-xs">We provide evidence of 'Acquired Distinctiveness' through long term usage. We present sales invoices, marketing spend, and media coverage to prove to the Registrar that while the mark might have been descriptive once, the public now identifies this name solely with your specific business. This is known as a secondary meaning defense.</p>
+                      <h4 className="font-bold text-[#0C002B] text-xl mb-3">Section 9 Objections: Absolute Grounds</h4>
+                      <p className="mb-3 leading-relaxed text-sm">This is raised when the examiner thinks the mark is descriptive, lacks distinctiveness, or is a common surname or geographical location. For example, if you try to trademark 'Tasty Mango' for fruit juice or 'Delhi Law' for a law firm.</p>
+                      <p className="font-bold text-[#0C002B] text-sm">Our Comprehensive Solution:</p>
+                      <p className="leading-relaxed text-gray-700 text-xs">We provide evidence of 'Acquired Distinctiveness' through long term usage. We present sales invoices, marketing spend, and media coverage to prove to the Registrar that while the mark might have been descriptive once, the public now identifies this name solely with your specific business. This is known as a secondary meaning defense.</p>
                     </div>
                     <div className="p-6 bg-gray-50 rounded-2xl border-l-[8px] border-[#FFB703] shadow-sm">
-                       <h4 className="font-bold text-[#0C002B] text-xl mb-3">Section 11 Objections: Relative Grounds</h4>
-                       <p className="mb-3 leading-relaxed text-sm">This is raised when the examiner finds a similar mark already on the register or a pending application that might cause confusion. This is often a battle of phonetics, visual design, and market overlap.</p>
-                       <p className="font-bold text-[#0C002B] text-sm">Our Comprehensive Solution:</p>
-                       <p className="leading-relaxed text-gray-700 text-xs">We perform a detailed side by side comparison of the marks. We highlight differences in the 'Rule of Whole,' proving that the marks when viewed in their entirety are distinct. We also argue based on the 'Target Audience' indicating that the products are sold in different price brackets or channels, thus eliminating any risk of confusion in the mind of a consumer with average intelligence.</p>
+                      <h4 className="font-bold text-[#0C002B] text-xl mb-3">Section 11 Objections: Relative Grounds</h4>
+                      <p className="mb-3 leading-relaxed text-sm">This is raised when the examiner finds a similar mark already on the register or a pending application that might cause confusion. This is often a battle of phonetics, visual design, and market overlap.</p>
+                      <p className="font-bold text-[#0C002B] text-sm">Our Comprehensive Solution:</p>
+                      <p className="leading-relaxed text-gray-700 text-xs">We perform a detailed side by side comparison of the marks. We highlight differences in the 'Rule of Whole,' proving that the marks when viewed in their entirety are distinct. We also argue based on the 'Target Audience' indicating that the products are sold in different price brackets or channels, thus eliminating any risk of confusion in the mind of a consumer with average intelligence.</p>
                     </div>
                   </div>
                   <p className="mb-4 leading-relaxed text-base">
@@ -611,31 +611,31 @@ export default function HowToRegisterTrademarkPage() {
                 </section>
 
                 <section id="msme-startup-benefits" className="mb-12 scroll-mt-24 md:scroll-mt-32">
-                   <h2 className="text-2xl md:text-3xl font-bold text-[#0C002B] mb-4">Unlocking Special Benefits for MSMEs and Startups</h2>
-                   <p className="mb-4 leading-relaxed text-base">
-                     The Government of India recognizes that intellectual property is the backbone of the New India economy. If you are a recognized startup or have a valid MSME (Micro, Small, and Medium Enterprise) registration, the doors to several benefits open up:
-                   </p>
-                   <ul className="grid md:grid-cols-2 gap-4 my-8 list-none p-0">
-                     <li className="p-5 bg-purple-50 rounded-2xl border border-purple-100 shadow-sm flex flex-col justify-center text-center">
+                  <h2 className="text-2xl md:text-3xl font-bold text-[#0C002B] mb-4">Unlocking Special Benefits for MSMEs and Startups</h2>
+                  <p className="mb-4 leading-relaxed text-base">
+                    The Government of India recognizes that intellectual property is the backbone of the New India economy. If you are a recognized startup or have a valid MSME (Micro, Small, and Medium Enterprise) registration, the doors to several benefits open up:
+                  </p>
+                  <ul className="grid md:grid-cols-2 gap-4 my-8 list-none p-0">
+                    <li className="p-5 bg-purple-50 rounded-2xl border border-purple-100 shadow-sm flex flex-col justify-center text-center">
 
-                        <p className="font-bold text-purple-800 text-sm">Discount on Govt. Filing Fees</p>
-                     </li>
-                     <li className="p-5 bg-purple-50 rounded-2xl border border-purple-100 shadow-sm flex flex-col justify-center text-center">
-                        
-                        <p className="font-bold text-purple-800 text-sm">Fast Track Examination for Startups</p>
-                     </li>
-                     <li className="p-5 bg-purple-50 rounded-2xl border border-purple-100 shadow-sm flex flex-col justify-center text-center">
-                      
-                        <p className="font-bold text-purple-800 text-sm">Free Expert Facilitator Support</p>
-                     </li>
-                     <li className="p-4 bg-purple-50 rounded-2xl border border-purple-100 shadow-sm flex flex-col justify-center text-center">
-                        
-                        <p className="font-bold text-purple-800 text-sm">Stronger Protection Against Counterfeits</p>
-                     </li>
-                   </ul>
-                   <p className="mb-4 leading-relaxed text-base">
-                     To avail these benefits, you must ensure your Udyam certificate is up to date and specifically mentions the activities related to your trademark application. For startups, the DPIIT recognition certificate is mandatory. IPR Karo assists businesses in obtaining these registrations before we file the trademark, potentially saving you thousands of rupees in the process.
-                   </p>
+                      <p className="font-bold text-purple-800 text-sm">Discount on Govt. Filing Fees</p>
+                    </li>
+                    <li className="p-5 bg-purple-50 rounded-2xl border border-purple-100 shadow-sm flex flex-col justify-center text-center">
+
+                      <p className="font-bold text-purple-800 text-sm">Fast Track Examination for Startups</p>
+                    </li>
+                    <li className="p-5 bg-purple-50 rounded-2xl border border-purple-100 shadow-sm flex flex-col justify-center text-center">
+
+                      <p className="font-bold text-purple-800 text-sm">Free Expert Facilitator Support</p>
+                    </li>
+                    <li className="p-4 bg-purple-50 rounded-2xl border border-purple-100 shadow-sm flex flex-col justify-center text-center">
+
+                      <p className="font-bold text-purple-800 text-sm">Stronger Protection Against Counterfeits</p>
+                    </li>
+                  </ul>
+                  <p className="mb-4 leading-relaxed text-base">
+                    To avail these benefits, you must ensure your Udyam certificate is up to date and specifically mentions the activities related to your trademark application. For startups, the DPIIT recognition certificate is mandatory. IPR Karo assists businesses in obtaining these registrations before we file the trademark, potentially saving you thousands of rupees in the process.
+                  </p>
                 </section>
 
                 <section id="global-protection" className="mb-12 scroll-mt-24 md:scroll-mt-32">
@@ -729,44 +729,44 @@ export default function HowToRegisterTrademarkPage() {
                   </p>
                   <div className="grid md:grid-cols-2 gap-4 my-8">
                     <div className="p-5 bg-gray-50 rounded-2xl border border-gray-100 flex gap-3">
-                       <div className="w-8 h-8 bg-[#FFB703] rounded-full flex items-center justify-center font-bold flex-shrink-0 text-[#0C002B] text-xs">1</div>
-                       <p className="text-xs leading-relaxed text-black md:text-gray-700"><strong>Selecting Descriptive Names:</strong> Trying to trademark 'Cold Milk' for dairy products.</p>
+                      <div className="w-8 h-8 bg-[#FFB703] rounded-full flex items-center justify-center font-bold flex-shrink-0 text-[#0C002B] text-xs">1</div>
+                      <p className="text-xs leading-relaxed text-black md:text-gray-700"><strong>Selecting Descriptive Names:</strong> Trying to trademark 'Cold Milk' for dairy products.</p>
                     </div>
                     <div className="p-5 bg-gray-50 rounded-2xl border border-gray-100 flex gap-3">
-                       <div className="w-8 h-8 bg-[#FFB703] rounded-full flex items-center justify-center font-bold flex-shrink-0 text-[#0C002B] text-xs">2</div>
-                       <p className="text-xs leading-relaxed text-black md:text-gray-700"><strong>Skipping the Phonetic Search:</strong> A name like 'Cora' might be blocked by 'Kora'.</p>
+                      <div className="w-8 h-8 bg-[#FFB703] rounded-full flex items-center justify-center font-bold flex-shrink-0 text-[#0C002B] text-xs">2</div>
+                      <p className="text-xs leading-relaxed text-black md:text-gray-700"><strong>Skipping the Phonetic Search:</strong> A name like 'Cora' might be blocked by 'Kora'.</p>
                     </div>
                     <div className="p-5 bg-gray-50 rounded-2xl border border-gray-100 flex gap-3">
-                       <div className="w-8 h-8 bg-[#FFB703] rounded-full flex items-center justify-center font-bold flex-shrink-0 text-[#0C002B] text-xs">3</div>
-                       <p className="text-xs leading-relaxed text-black md:text-gray-700"><strong>Wrong Applicant Name:</strong> Filing in the name of an employee instead of the business.</p>
+                      <div className="w-8 h-8 bg-[#FFB703] rounded-full flex items-center justify-center font-bold flex-shrink-0 text-[#0C002B] text-xs">3</div>
+                      <p className="text-xs leading-relaxed text-black md:text-gray-700"><strong>Wrong Applicant Name:</strong> Filing in the name of an employee instead of the business.</p>
                     </div>
                     <div className="p-5 bg-gray-50 rounded-2xl border border-gray-100 flex gap-3">
-                       <div className="w-8 h-8 bg-[#FFB703] rounded-full flex items-center justify-center font-bold flex-shrink-0 text-[#0C002B] text-xs">4</div>
-                       <p className="text-xs leading-relaxed text-black md:text-gray-700"><strong>Using the R Symbol Prematurely:</strong> Using ® before getting the certificate is an offence.</p>
+                      <div className="w-8 h-8 bg-[#FFB703] rounded-full flex items-center justify-center font-bold flex-shrink-0 text-[#0C002B] text-xs">4</div>
+                      <p className="text-xs leading-relaxed text-black md:text-gray-700"><strong>Using the R Symbol Prematurely:</strong> Using ® before getting the certificate is an offence.</p>
                     </div>
                     <div className="p-5 bg-gray-50 rounded-2xl border border-gray-100 flex gap-3">
-                       <div className="w-8 h-8 bg-[#FFB703] rounded-full flex items-center justify-center font-bold flex-shrink-0 text-[#0C002B] text-xs">5</div>
-                       <p className="text-xs leading-relaxed text-black md:text-gray-700"><strong>Ignoring the 30-Day Deadline:</strong> Failure to reply to an examination report leads to abandonment.</p>
+                      <div className="w-8 h-8 bg-[#FFB703] rounded-full flex items-center justify-center font-bold flex-shrink-0 text-[#0C002B] text-xs">5</div>
+                      <p className="text-xs leading-relaxed text-black md:text-gray-700"><strong>Ignoring the 30-Day Deadline:</strong> Failure to reply to an examination report leads to abandonment.</p>
                     </div>
                     <div className="p-5 bg-gray-50 rounded-2xl border border-gray-100 flex gap-3">
-                       <div className="w-8 h-8 bg-[#FFB703] rounded-full flex items-center justify-center font-bold flex-shrink-0 text-[#0C002B] text-xs">6</div>
-                       <p className="text-xs leading-relaxed text-black md:text-gray-700"><strong>Incorrect Class Classification:</strong> Filing in Class 35 when you are actually Class 25.</p>
+                      <div className="w-8 h-8 bg-[#FFB703] rounded-full flex items-center justify-center font-bold flex-shrink-0 text-[#0C002B] text-xs">6</div>
+                      <p className="text-xs leading-relaxed text-black md:text-gray-700"><strong>Incorrect Class Classification:</strong> Filing in Class 35 when you are actually Class 25.</p>
                     </div>
                     <div className="p-5 bg-gray-50 rounded-2xl border border-gray-100 flex gap-3">
-                       <div className="w-8 h-8 bg-[#FFB703] rounded-full flex items-center justify-center font-bold flex-shrink-0 text-[#0C002B] text-xs">7</div>
-                       <p className="text-xs leading-relaxed text-black md:text-gray-700"><strong>Filing via Amateur Agents:</strong> Many cheap services don't represent you at hearings.</p>
+                      <div className="w-8 h-8 bg-[#FFB703] rounded-full flex items-center justify-center font-bold flex-shrink-0 text-[#0C002B] text-xs">7</div>
+                      <p className="text-xs leading-relaxed text-black md:text-gray-700"><strong>Filing via Amateur Agents:</strong> Many cheap services don't represent you at hearings.</p>
                     </div>
                     <div className="p-5 bg-gray-50 rounded-2xl border border-gray-100 flex gap-3">
-                       <div className="w-8 h-8 bg-[#FFB703] rounded-full flex items-center justify-center font-bold flex-shrink-0 text-[#0C002B] text-xs">8</div>
-                       <p className="text-xs leading-relaxed text-black md:text-gray-700"><strong>Vague Description of Goods:</strong> Being too general instead of specific can lead to objections.</p>
+                      <div className="w-8 h-8 bg-[#FFB703] rounded-full flex items-center justify-center font-bold flex-shrink-0 text-[#0C002B] text-xs">8</div>
+                      <p className="text-xs leading-relaxed text-black md:text-gray-700"><strong>Vague Description of Goods:</strong> Being too general instead of specific can lead to objections.</p>
                     </div>
                     <div className="p-5 bg-gray-50 rounded-2xl border border-gray-100 flex gap-3">
-                       <div className="w-8 h-8 bg-[#FFB703] rounded-full flex items-center justify-center font-bold flex-shrink-0 text-[#0C002B] text-xs">9</div>
-                       <p className="text-xs leading-relaxed text-black md:text-gray-700"><strong>Not Filing a User Affidavit:</strong> Losing priority rights by not documenting prior use.</p>
+                      <div className="w-8 h-8 bg-[#FFB703] rounded-full flex items-center justify-center font-bold flex-shrink-0 text-[#0C002B] text-xs">9</div>
+                      <p className="text-xs leading-relaxed text-black md:text-gray-700"><strong>Not Filing a User Affidavit:</strong> Losing priority rights by not documenting prior use.</p>
                     </div>
                     <div className="p-5 bg-gray-50 rounded-2xl border border-gray-100 flex gap-3">
-                       <div className="w-8 h-8 bg-[#FFB703] rounded-full flex items-center justify-center font-bold flex-shrink-0 text-[#0C002B] text-xs">10</div>
-                       <p className="text-xs leading-relaxed text-black md:text-gray-700"><strong>Missing Renewal Deadlines:</strong> Assuming the trademark is for life. It's only for 10 years.</p>
+                      <div className="w-8 h-8 bg-[#FFB703] rounded-full flex items-center justify-center font-bold flex-shrink-0 text-[#0C002B] text-xs">10</div>
+                      <p className="text-xs leading-relaxed text-black md:text-gray-700"><strong>Missing Renewal Deadlines:</strong> Assuming the trademark is for life. It's only for 10 years.</p>
                     </div>
                   </div>
                 </section>
@@ -804,7 +804,7 @@ export default function HowToRegisterTrademarkPage() {
 
                 {/* Final CTA Container */}
                 <div className="bg-gradient-to-br from-[#0C002B] to-[#1a0033] rounded-3xl p-8 md:p-12 text-center text-white relative overflow-hidden mt-16">
-                   <div className="relative z-10">
+                  <div className="relative z-10">
                     <h2 className="text-2xl md:text-4xl font-bold mb-4">Ready to Protect Your Brand?</h2>
                     <p className="text-lg opacity-90 mb-8 max-w-xl mx-auto leading-relaxed">
                       Join 5000+ businesses who secured their brand with IPR Karo. Get expert assistance and same-day filing.
@@ -816,7 +816,7 @@ export default function HowToRegisterTrademarkPage() {
                         </button>
                       </Link>
                       <a href="tel:+919289707648">
-                         <button className="bg-transparent border-2 border-white/50 hover:bg-white hover:text-[#0C002B] text-white font-bold py-3 px-10 rounded-full transition-all text-base flex items-center justify-center">
+                        <button className="bg-transparent border-2 border-white/50 hover:bg-white hover:text-[#0C002B] text-white font-bold py-3 px-10 rounded-full transition-all text-base flex items-center justify-center">
                           <FontAwesomeIcon icon={faPhone} className="mr-2.5" />
                           Call: +91-9289707648
                         </button>
@@ -830,7 +830,7 @@ export default function HowToRegisterTrademarkPage() {
 
             {/* Right Column - Sidebar Widgets */}
             <aside className="hidden lg:block space-y-10 sticky top-32">
-              
+
               {/* Sidebar CTA Box */}
               <div className="bg-[#0C002B] p-8 rounded-3xl shadow-xl border border-gray-800 text-white relative overflow-hidden group">
                 <div className="absolute -top-10 -right-10 w-32 h-32 bg-[#6E5E93] rounded-full blur-[60px] opacity-20 group-hover:opacity-40 transition-opacity"></div>

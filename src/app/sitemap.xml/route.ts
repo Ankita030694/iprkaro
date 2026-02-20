@@ -83,6 +83,20 @@ export async function GET() {
     '/trademark-registration-search',
     '/trademark-search',
     '/what-is-trademark',
+    '/in-india-the-trademark-registration-should-be-renewed-every',
+    '/ipindia-trademark-status',
+    '/mca-company-name-check',
+    '/leave-and-license-agreement',
+    '/udyam-registration-agreement',
+    '/trademark-search-public',
+    '/format-for-no-objection-certificate',
+    '/trademark-and-copyright-difference',
+    '/indian-patent-office-search',
+    '/return-filling-online',
+    '/non-disclosure-agreement-format',
+    '/small-company-definition',
+    '/registration-of-pharmacist-in-up',
+    '/trademark-status',
   ].map(path => ({ path, priority: '0.8', changefreq: 'weekly' } as RouteConfig));
 
   // Fetch Dynamic Blog Posts

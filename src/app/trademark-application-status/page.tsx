@@ -5,17 +5,17 @@ import { Metadata } from 'next';
 import TableOfContents from '@/components/TableOfContents';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { 
-  faCheck, 
-  faSearch, 
-  faFileContract, 
-  faGavel, 
-  faGlobe, 
-  faShieldAlt, 
-  faBalanceScale, 
-  faRocket, 
-  faMoneyBillWave, 
-  faCertificate, 
+import {
+  faCheck,
+  faSearch,
+  faFileContract,
+  faGavel,
+  faGlobe,
+  faShieldAlt,
+  faBalanceScale,
+  faRocket,
+  faMoneyBillWave,
+  faCertificate,
   faFileSignature,
   faPhone,
   faChevronRight,
@@ -172,44 +172,48 @@ export default function TrademarkApplicationStatusPage() {
     <>
       <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Script id="article-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.iprkaro.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Trademark Application Status", "item": "https://www.iprkaro.com/trademark-application-status" }
-        ]
-      }) }} />
-      <Script id="review-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Product",
-        "name": "Trademark Status Monitoring Services",
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "reviewCount": "840"
-        }
-      })}} />
+      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.iprkaro.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Trademark Application Status", "item": "https://www.iprkaro.com/trademark-application-status" }
+          ]
+        })
+      }} />
+      <Script id="review-schema" type="application/ld+json" dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "name": "Trademark Status Monitoring Services",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "840"
+          }
+        })
+      }} />
 
       <div className="bg-gray-50 min-h-screen font-sans text-gray-800">
-        
-        <div className="relative w-full overflow-hidden" 
-             style={{
-               background: 'linear-gradient(to bottom, #0C002B 0%, #160049 45%, #6E5E93 80%, #E8E8E8 100%)'
-             }}>
-          
+
+        <div className="relative w-full overflow-hidden"
+          style={{
+            background: 'linear-gradient(to bottom, #0C002B 0%, #160049 45%, #6E5E93 80%, #E8E8E8 100%)'
+          }}>
+
           <div className="container mx-auto px-4 py-12 lg:py-32 relative z-10 text-center">
-             <h1 className="text-2xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6 leading-snug md:leading-tight mt-20 md:mt-10 text-white">
-               Track Your <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'rgb(110, 94, 147)' }}>Trademark Application Status</span> with Precision
-             </h1>
-             <p className="text-sm md:text-2xl mb-6 md:mb-10 max-w-4xl mx-auto text-gray-300 font-light leading-relaxed px-2">
-               Monitoring your trademark status is as critical as filing it. Don't let a missed deadline lead to an abandoned mark. Use our expert guide to navigate the IP India portal like a pro.
-             </p>
-             <Link href="/contact-us">
-               <button className="bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-2.5 px-6 md:py-4 md:px-10 rounded-full transition-all transform hover:scale-105 shadow-[0_0_25px_rgba(110,94,147,0.4)] text-base md:text-lg">
-                 Get Expert TM Assistance
-               </button>
-             </Link>
+            <h1 className="text-2xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6 leading-snug md:leading-tight mt-20 md:mt-10 text-white">
+              Track Your <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'rgb(110, 94, 147)' }}>Trademark Application Status</span> with Precision
+            </h1>
+            <p className="text-sm md:text-2xl mb-6 md:mb-10 max-w-4xl mx-auto text-gray-300 font-light leading-relaxed px-2">
+              Monitoring your trademark status is as critical as filing it. Don't let a missed deadline lead to an abandoned mark. Use our expert guide to navigate the IP India portal like a pro.
+            </p>
+            <Link href="/contact-us">
+              <button className="bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-2.5 px-6 md:py-4 md:px-10 rounded-full transition-all transform hover:scale-105 shadow-[0_0_25px_rgba(110,94,147,0.4)] text-base md:text-lg">
+                Get Expert TM Assistance
+              </button>
+            </Link>
           </div>
         </div>
 
@@ -217,21 +221,21 @@ export default function TrademarkApplicationStatusPage() {
           <Breadcrumbs items={breadcrumbItems} />
 
           <div className="grid grid-cols-1 lg:grid-cols-[220px_1fr_300px] gap-4 md:gap-12 mt-8 items-start">
-            
+
             {/* Left Column: Table of Contents */}
             <div className="hidden lg:block sticky top-32">
-                <TableOfContents sections={tocSections} orientation="vertical" />
+              <TableOfContents sections={tocSections} orientation="vertical" />
             </div>
 
             {/* Middle Column: Main Content */}
             <div className="min-w-0">
               {/* Mobile TOC */}
-              <div className="lg:hidden mb-6 sticky top-[72px] z-20">
-                  <TableOfContents sections={tocSections} orientation="horizontal" />
+              <div className="lg:hidden mb-6 sticky top-[100px] z-20">
+                <TableOfContents sections={tocSections} orientation="horizontal" />
               </div>
 
               <div className="bg-white p-6 md:p-16 rounded-2xl shadow-sm space-y-12 md:space-y-20 border border-gray-100">
-                
+
                 <section id="introduction" className="scroll-mt-32">
                   <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Introduction to Trademark Tracking</h2>
                   <p className="text-lg leading-relaxed mb-6 text-gray-700">
@@ -282,7 +286,7 @@ export default function TrademarkApplicationStatusPage() {
                   <p className="text-lg leading-relaxed mb-10 text-gray-700">
                     When you view your application profile, the "Status" field is the most important piece of data. Here is a deep dive into what each term means and what action is required.
                   </p>
-                  
+
                   <div className="space-y-6">
                     {/* NEW APPLICATION */}
                     <div className="flex flex-col md:flex-row gap-6 p-6 border border-gray-100 rounded-xl hover:shadow-md transition-shadow bg-white items-start">
@@ -357,22 +361,22 @@ export default function TrademarkApplicationStatusPage() {
                 </section>
 
                 <section id="pre-examination" className="scroll-mt-32">
-                   <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Navigating Pre-Examination Stages</h2>
-                   <p className="text-lg leading-relaxed mb-6 text-gray-700">
-                     The Pre-Examination phase is essentially an administrative filter. The goal of the Trademark Registry during these stages is to ensure that the data entering the system is accurate and that the application complies with the formal rules of the Trade Marks Act, 1999.
-                   </p>
-                   <div className="bg-purple-50 p-6 md:p-8 rounded-2xl border border-purple-100 shadow-sm">
-                      <h3 className="text-xl font-bold mb-4 text-purple-900">Why 'Formalities' Matter</h3>
-                      <p className="text-gray-700 mb-4">
-                        Many applicants underestimate this stage. If you file as a "Small Entity" to save fees but fail to upload a valid MSME/Udyam certificate, your status will quickly turn to <strong>Formalities Chk Fail</strong>. Similarly, if your logo contains non-English words without a translation/transliteration, the registry will halt the process.
-                      </p>
-                      <ul className="grid md:grid-cols-2 gap-4 text-sm text-purple-800">
-                        <li className="flex items-center"><FontAwesomeIcon icon={faCheck} className="mr-2 w-4 h-4" /> Correct Applicant Category</li>
-                        <li className="flex items-center"><FontAwesomeIcon icon={faCheck} className="mr-2 w-4 h-4" /> Valid Power of Attorney</li>
-                        <li className="flex items-center"><FontAwesomeIcon icon={faCheck} className="mr-2 w-4 h-4" /> Accurate Description of Goods</li>
-                        <li className="flex items-center"><FontAwesomeIcon icon={faCheck} className="mr-2 w-4 h-4" /> Clear Graphical Representation</li>
-                      </ul>
-                   </div>
+                  <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Navigating Pre-Examination Stages</h2>
+                  <p className="text-lg leading-relaxed mb-6 text-gray-700">
+                    The Pre-Examination phase is essentially an administrative filter. The goal of the Trademark Registry during these stages is to ensure that the data entering the system is accurate and that the application complies with the formal rules of the Trade Marks Act, 1999.
+                  </p>
+                  <div className="bg-purple-50 p-6 md:p-8 rounded-2xl border border-purple-100 shadow-sm">
+                    <h3 className="text-xl font-bold mb-4 text-purple-900">Why 'Formalities' Matter</h3>
+                    <p className="text-gray-700 mb-4">
+                      Many applicants underestimate this stage. If you file as a "Small Entity" to save fees but fail to upload a valid MSME/Udyam certificate, your status will quickly turn to <strong>Formalities Chk Fail</strong>. Similarly, if your logo contains non-English words without a translation/transliteration, the registry will halt the process.
+                    </p>
+                    <ul className="grid md:grid-cols-2 gap-4 text-sm text-purple-800">
+                      <li className="flex items-center"><FontAwesomeIcon icon={faCheck} className="mr-2 w-4 h-4" /> Correct Applicant Category</li>
+                      <li className="flex items-center"><FontAwesomeIcon icon={faCheck} className="mr-2 w-4 h-4" /> Valid Power of Attorney</li>
+                      <li className="flex items-center"><FontAwesomeIcon icon={faCheck} className="mr-2 w-4 h-4" /> Accurate Description of Goods</li>
+                      <li className="flex items-center"><FontAwesomeIcon icon={faCheck} className="mr-2 w-4 h-4" /> Clear Graphical Representation</li>
+                    </ul>
+                  </div>
                 </section>
 
                 <section id="objection-stages" className="scroll-mt-32">
@@ -415,22 +419,22 @@ export default function TrademarkApplicationStatusPage() {
                 </section>
 
                 <section id="publication-opposition" className="scroll-mt-32">
-                   <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Journal Publication & Public Opposition</h2>
-                   <p className="text-lg leading-relaxed mb-6 text-gray-700">
-                     When your status changes to <strong>Accepted and Advertised</strong>, your mark is published in the weekly Trademark Journal. This is the "Speak now or forever hold your peace" phase of the registration.
-                   </p>
-                   <div className="grid md:grid-cols-2 gap-8">
-                     <div className="p-8 border border-gray-100 rounded-2xl shadow-sm hover:border-[rgb(110,94,147)]/30 transition-all">
-                        <div className="text-[rgb(110,94,147)] mb-4"><FontAwesomeIcon icon={faGlobe} size="2x" className="w-10" /></div>
-                        <h4 className="text-xl font-bold mb-3">The 4-Month Window</h4>
-                        <p className="text-gray-600">The mark remains in the journal for precisely four months. Any third party who believes your mark infringes on their existing rights can file an opposition during this time.</p>
-                     </div>
-                     <div className="p-8 border border-gray-100 rounded-2xl shadow-sm hover:border-red-500/30 transition-all">
-                        <div className="text-red-500 mb-4"><FontAwesomeIcon icon={faGavel} size="2x" className="w-10" /></div>
-                        <h4 className="text-xl font-bold mb-3">Status: Opposed</h4>
-                        <p className="text-gray-600">If challenged, your status changes to 'Opposed'. This initiates a quasi-judicial proceeding. You must file a counter-statement within 2 months or your mark is abandoned automatically.</p>
-                     </div>
-                   </div>
+                  <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Journal Publication & Public Opposition</h2>
+                  <p className="text-lg leading-relaxed mb-6 text-gray-700">
+                    When your status changes to <strong>Accepted and Advertised</strong>, your mark is published in the weekly Trademark Journal. This is the "Speak now or forever hold your peace" phase of the registration.
+                  </p>
+                  <div className="grid md:grid-cols-2 gap-8">
+                    <div className="p-8 border border-gray-100 rounded-2xl shadow-sm hover:border-[rgb(110,94,147)]/30 transition-all">
+                      <div className="text-[rgb(110,94,147)] mb-4"><FontAwesomeIcon icon={faGlobe} size="2x" className="w-10" /></div>
+                      <h4 className="text-xl font-bold mb-3">The 4-Month Window</h4>
+                      <p className="text-gray-600">The mark remains in the journal for precisely four months. Any third party who believes your mark infringes on their existing rights can file an opposition during this time.</p>
+                    </div>
+                    <div className="p-8 border border-gray-100 rounded-2xl shadow-sm hover:border-red-500/30 transition-all">
+                      <div className="text-red-500 mb-4"><FontAwesomeIcon icon={faGavel} size="2x" className="w-10" /></div>
+                      <h4 className="text-xl font-bold mb-3">Status: Opposed</h4>
+                      <p className="text-gray-600">If challenged, your status changes to 'Opposed'. This initiates a quasi-judicial proceeding. You must file a counter-statement within 2 months or your mark is abandoned automatically.</p>
+                    </div>
+                  </div>
                 </section>
 
                 <section id="final-stages" className="scroll-mt-32">
@@ -438,7 +442,7 @@ export default function TrademarkApplicationStatusPage() {
                   <p className="text-lg leading-relaxed mb-8 text-gray-700">
                     The final destination of a positive application is the "Registered" status. However, registration is not the end; it is the beginning of a 10-year cycle of maintenance and enforcement.
                   </p>
-                  
+
                   <div className="grid md:grid-cols-3 gap-6">
                     <div className="bg-gray-900 text-white p-8 rounded-2xl">
                       <h4 className="text-xl font-bold mb-4 text-[#8A7AB5]">Registered</h4>
@@ -460,52 +464,52 @@ export default function TrademarkApplicationStatusPage() {
                       Beyond the primary statuses, you might also encounter specialized entries like <strong>Abandoned</strong>, <strong>Withdrawn</strong>, and <strong>Refused</strong>.
                     </p>
                     <div className="grid md:grid-cols-2 gap-8">
-                       <div className="p-6 bg-white border border-gray-100 rounded-xl">
-                          <h4 className="font-bold text-gray-900 mb-2">Abandoned Status</h4>
-                          <p className="text-sm text-gray-600">The most common reason for this is a missed deadline. If you do not reply to an Examination Report within 30 days or fail to attend a hearing, the registry assumes you are no longer interested in the mark. Reversing an abandonment is exceptionally difficult and usually requires a high court petition if the delay was due to the registry's fault.</p>
-                       </div>
-                       <div className="p-6 bg-white border border-gray-100 rounded-xl">
-                          <h4 className="font-bold text-gray-900 mb-2">Withdrawn Status</h4>
-                          <p className="text-sm text-gray-600">This occurs when the applicant voluntarily files a request to cancel their current application. This often happens as part of a settlement agreement where a senior user demands you stop using a similar name in exchange for not pursuing damages.</p>
-                       </div>
-                       <div className="p-6 bg-white border border-gray-100 rounded-xl">
-                          <h4 className="font-bold text-gray-900 mb-2">Refused Status</h4>
-                          <p className="text-sm text-gray-600">A final refusal by the Registrar after a hearing. This means the legal arguments provided did not satisfy the requirements of the Trade Marks Act. You can appeal this decision before the High Court within 3 months, but the success rate depends on the factual distinctiveness of your mark.</p>
-                       </div>
-                       <div className="p-6 bg-white border border-gray-100 rounded-xl">
-                          <h4 className="font-bold text-gray-900 mb-2">Rectification Filed</h4>
-                          <p className="text-sm text-gray-600">This status appears even on registered marks. It means a third party has challenged your registration on grounds of non-use or that it was registered in bad faith. You must defend your registration certificate in court or the registry will cancel it.</p>
-                       </div>
+                      <div className="p-6 bg-white border border-gray-100 rounded-xl">
+                        <h4 className="font-bold text-gray-900 mb-2">Abandoned Status</h4>
+                        <p className="text-sm text-gray-600">The most common reason for this is a missed deadline. If you do not reply to an Examination Report within 30 days or fail to attend a hearing, the registry assumes you are no longer interested in the mark. Reversing an abandonment is exceptionally difficult and usually requires a high court petition if the delay was due to the registry's fault.</p>
+                      </div>
+                      <div className="p-6 bg-white border border-gray-100 rounded-xl">
+                        <h4 className="font-bold text-gray-900 mb-2">Withdrawn Status</h4>
+                        <p className="text-sm text-gray-600">This occurs when the applicant voluntarily files a request to cancel their current application. This often happens as part of a settlement agreement where a senior user demands you stop using a similar name in exchange for not pursuing damages.</p>
+                      </div>
+                      <div className="p-6 bg-white border border-gray-100 rounded-xl">
+                        <h4 className="font-bold text-gray-900 mb-2">Refused Status</h4>
+                        <p className="text-sm text-gray-600">A final refusal by the Registrar after a hearing. This means the legal arguments provided did not satisfy the requirements of the Trade Marks Act. You can appeal this decision before the High Court within 3 months, but the success rate depends on the factual distinctiveness of your mark.</p>
+                      </div>
+                      <div className="p-6 bg-white border border-gray-100 rounded-xl">
+                        <h4 className="font-bold text-gray-900 mb-2">Rectification Filed</h4>
+                        <p className="text-sm text-gray-600">This status appears even on registered marks. It means a third party has challenged your registration on grounds of non-use or that it was registered in bad faith. You must defend your registration certificate in court or the registry will cancel it.</p>
+                      </div>
                     </div>
                   </div>
                 </section>
 
                 <section id="common-pitfalls" className="scroll-mt-32">
-                   <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center">
+                  <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center">
                     <FontAwesomeIcon icon={faExclamationTriangle} className="mr-4 text-red-500 w-10 h-10" />
                     Common Monitoring Mistakes to Avoid
                   </h2>
-                   <p className="text-lg leading-relaxed mb-8 text-gray-700">
-                     A trademark application fails more often due to negligence in monitoring than due to legal weakness. Avoid these five common pitfalls to ensure your brand remains safe.
-                   </p>
-                   <div className="space-y-4">
-                      <div className="p-6 bg-white rounded-xl border-l-4 border-red-500 shadow-sm">
-                        <h4 className="font-bold text-gray-900 mb-2">Check-Once-A-Year Syndrome</h4>
-                        <p className="text-sm text-gray-600">Objection responses are due in 30 days. If you only check once a year, you will almost certainly miss multiple deadlines, leading to permanent abandonment.</p>
-                      </div>
-                      <div className="p-6 bg-white rounded-xl border-l-4 border-red-500 shadow-sm">
-                        <h4 className="font-bold text-gray-900 mb-2">Misinterpreting 'Objected' as 'Refused'</h4>
-                        <p className="text-gray-900 text-sm">'Objected' is a common hurdle, not a dead end. Many businesses panic and stop working on the mark, when they could have simply filed a legal reply to overcome the issue.</p>
-                      </div>
-                      <div className="p-6 bg-white rounded-xl border-l-4 border-red-500 shadow-sm">
-                        <h4 className="font-bold text-gray-900 mb-2">Ignoring Email Alerts</h4>
-                        <p className="text-sm text-gray-600">The IP India server sends automated emails. Often these land in spam or are ignored by busy entrepreneurs. Relying solely on emails is a recipe for disaster; always check the portal manually.</p>
-                      </div>
-                      <div className="p-6 bg-white rounded-xl border-l-4 border-red-500 shadow-sm">
-                        <h4 className="font-bold text-gray-900 mb-2">Inaccurate Search Data</h4>
-                        <p className="text-sm text-gray-600">Entering the wrong application number or missing a digit while checking status can lead to viewing the wrong file. Always double check your Form TM-A acknowledgment copy.</p>
-                      </div>
-                   </div>
+                  <p className="text-lg leading-relaxed mb-8 text-gray-700">
+                    A trademark application fails more often due to negligence in monitoring than due to legal weakness. Avoid these five common pitfalls to ensure your brand remains safe.
+                  </p>
+                  <div className="space-y-4">
+                    <div className="p-6 bg-white rounded-xl border-l-4 border-red-500 shadow-sm">
+                      <h4 className="font-bold text-gray-900 mb-2">Check-Once-A-Year Syndrome</h4>
+                      <p className="text-sm text-gray-600">Objection responses are due in 30 days. If you only check once a year, you will almost certainly miss multiple deadlines, leading to permanent abandonment.</p>
+                    </div>
+                    <div className="p-6 bg-white rounded-xl border-l-4 border-red-500 shadow-sm">
+                      <h4 className="font-bold text-gray-900 mb-2">Misinterpreting 'Objected' as 'Refused'</h4>
+                      <p className="text-gray-900 text-sm">'Objected' is a common hurdle, not a dead end. Many businesses panic and stop working on the mark, when they could have simply filed a legal reply to overcome the issue.</p>
+                    </div>
+                    <div className="p-6 bg-white rounded-xl border-l-4 border-red-500 shadow-sm">
+                      <h4 className="font-bold text-gray-900 mb-2">Ignoring Email Alerts</h4>
+                      <p className="text-sm text-gray-600">The IP India server sends automated emails. Often these land in spam or are ignored by busy entrepreneurs. Relying solely on emails is a recipe for disaster; always check the portal manually.</p>
+                    </div>
+                    <div className="p-6 bg-white rounded-xl border-l-4 border-red-500 shadow-sm">
+                      <h4 className="font-bold text-gray-900 mb-2">Inaccurate Search Data</h4>
+                      <p className="text-sm text-gray-600">Entering the wrong application number or missing a digit while checking status can lead to viewing the wrong file. Always double check your Form TM-A acknowledgment copy.</p>
+                    </div>
+                  </div>
                 </section>
 
                 <section id="strategic-advice" className="scroll-mt-32">
@@ -530,25 +534,25 @@ export default function TrademarkApplicationStatusPage() {
                 </section>
 
                 <section id="litigation-perspective" className="scroll-mt-32">
-                   <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">The Litigation Perspective: Why Tracking Saves Millions</h2>
-                   <p className="text-lg leading-relaxed mb-6 text-gray-700">
-                     From a legal standpoint, a registered trademark is a "chose in action"; it is a property right that can be enforced in court. However, your ability to enforce that right is directly tied to the status of your mark.
-                   </p>
-                   <div className="space-y-6">
-                     <p className="text-lg text-gray-700 font-medium italic">"Registration is proof of ownership. Status is proof of validity and enforceability."</p>
-                     <p className="text-gray-700 leading-relaxed">
-                        In an infringement suit, the first thing a judge checks is the Trademark Certificate. If your status has been 'Removed' due to non-renewal, you lose the statutory power to sue for 'Infringement' and must fall back on 'Passing Off' (common law remedy), which is significantly harder and more expensive to prove in a court of law.
-                     </p>
-                     <p className="text-gray-700 leading-relaxed">
-                        Continuous status monitoring also allows you to spot "Conflicting Marks" being filed by competitors. If you see a similar mark reach the 'Accepted' status, you can file an opposition and stop the threat immediately for a small administrative cost. If you miss that window and the competitor gets registered, you will have to file a 'Rectification' or 'Cancellation' petition, which can cost significantly more in legal fees and take years to conclude in the High Court.
-                     </p>
-                     <p className="text-gray-700 leading-relaxed">
-                       Furthermore, the status of your mark impacts your ability to obtain interlocutory injunctions. A court is much more likely to grant an 'Ex-Parte' injunction if your mark shows a clean, 'Registered' status without any pending rectifications or challenges. If your status shows 'Objected' or 'Opposed', getting an immediate stay against an infringer becomes an uphill battle.
-                     </p>
-                     <p className="text-gray-700 leading-relaxed">
-                       Global expansion also depends on your local status. Under the Madrid Protocol, your international trademark application is tethered to your 'Basic Application' in India for five years. If your Indian status turns to 'Abandoned' or 'Refused' during this period, your entire global portfolio of international registrations will also collapse. This 'Central Attack' mechanism makes local status monitoring the foundation of global brand security.
-                     </p>
-                   </div>
+                  <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">The Litigation Perspective: Why Tracking Saves Millions</h2>
+                  <p className="text-lg leading-relaxed mb-6 text-gray-700">
+                    From a legal standpoint, a registered trademark is a "chose in action"; it is a property right that can be enforced in court. However, your ability to enforce that right is directly tied to the status of your mark.
+                  </p>
+                  <div className="space-y-6">
+                    <p className="text-lg text-gray-700 font-medium italic">"Registration is proof of ownership. Status is proof of validity and enforceability."</p>
+                    <p className="text-gray-700 leading-relaxed">
+                      In an infringement suit, the first thing a judge checks is the Trademark Certificate. If your status has been 'Removed' due to non-renewal, you lose the statutory power to sue for 'Infringement' and must fall back on 'Passing Off' (common law remedy), which is significantly harder and more expensive to prove in a court of law.
+                    </p>
+                    <p className="text-gray-700 leading-relaxed">
+                      Continuous status monitoring also allows you to spot "Conflicting Marks" being filed by competitors. If you see a similar mark reach the 'Accepted' status, you can file an opposition and stop the threat immediately for a small administrative cost. If you miss that window and the competitor gets registered, you will have to file a 'Rectification' or 'Cancellation' petition, which can cost significantly more in legal fees and take years to conclude in the High Court.
+                    </p>
+                    <p className="text-gray-700 leading-relaxed">
+                      Furthermore, the status of your mark impacts your ability to obtain interlocutory injunctions. A court is much more likely to grant an 'Ex-Parte' injunction if your mark shows a clean, 'Registered' status without any pending rectifications or challenges. If your status shows 'Objected' or 'Opposed', getting an immediate stay against an infringer becomes an uphill battle.
+                    </p>
+                    <p className="text-gray-700 leading-relaxed">
+                      Global expansion also depends on your local status. Under the Madrid Protocol, your international trademark application is tethered to your 'Basic Application' in India for five years. If your Indian status turns to 'Abandoned' or 'Refused' during this period, your entire global portfolio of international registrations will also collapse. This 'Central Attack' mechanism makes local status monitoring the foundation of global brand security.
+                    </p>
+                  </div>
                 </section>
 
                 <section id="restoration-process" className="scroll-mt-32">
@@ -559,7 +563,7 @@ export default function TrademarkApplicationStatusPage() {
                   <div className="bg-white border border-gray-100 p-8 rounded-2xl shadow-sm">
                     <h3 className="text-xl font-bold mb-4">How Restoration Works</h3>
                     <p className="text-gray-600 mb-6">
-                      You can file for restoration between six months and one year after the expiration date of the mark. This requires filing Form TM-R along with the prescribed restoration fee and the renewal fee. The Registrar has the discretion to restore the mark if they are satisfied that the omission was unintentional and that no third-party rights will be unfairly prejudiced. 
+                      You can file for restoration between six months and one year after the expiration date of the mark. This requires filing Form TM-R along with the prescribed restoration fee and the renewal fee. The Registrar has the discretion to restore the mark if they are satisfied that the omission was unintentional and that no third-party rights will be unfairly prejudiced.
                     </p>
                     <p className="text-gray-600 mb-6">
                       However, once the one-year mark has passed since removal, the status becomes permanent. At that point, the mark is legally "Dead" and anyone else can apply for it. This is why automated status monitoring is significantly cheaper than the legal costs of a restoration petition.
@@ -571,23 +575,23 @@ export default function TrademarkApplicationStatusPage() {
                 </section>
 
                 <section id="enforcement-tools" className="scroll-mt-32">
-                   <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Modern Tools for Trademark Enforcement</h2>
-                   <p className="text-lg leading-relaxed mb-6 text-gray-700">
-                     In the digital era, manual tracking is becoming obsolete. Sophisticated brand owners now use <strong>Trademark Watch Services</strong>. These services do not just check your status; they scan the weekly Trademark Journal for every single mark that might be phonetically or visually similar to yours.
-                   </p>
-                   <div className="grid md:grid-cols-2 gap-8">
-                      <div className="p-6 bg-gray-50 rounded-xl">
-                         <h4 className="font-bold text-gray-900 mb-2">Automated Journal Scanning</h4>
-                         <p className="text-sm text-gray-600">Every Sunday, the IP India registry releases thousands of marks in the journal. A watch service uses optical character recognition and phonetic algorithms to flag any mark that could potentially infringe on your territory, giving you the full 4-month window to file an opposition.</p>
-                      </div>
-                      <div className="p-6 bg-gray-50 rounded-xl">
-                         <h4 className="font-bold text-gray-900 mb-2">Domain Name Monitoring</h4>
-                         <p className="text-sm text-gray-600">Trademark infringement often starts with a domain name. By monitoring the WHOIS database for your brand keywords, you can block cybersquatters before they even launch a competing website, protecting your online reputation alongside your legal trademark status.</p>
-                      </div>
-                   </div>
-                   <p className="mt-8 text-gray-700 leading-relaxed">
-                     At IPR Karo, we combine these high-tech tools with the deep legal expertise of our attorneys. We ensure that your trademark application status is not just a number on a screen, but a robust shield that protects your business from the moment of filing to the day you become a household name.
-                   </p>
+                  <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Modern Tools for Trademark Enforcement</h2>
+                  <p className="text-lg leading-relaxed mb-6 text-gray-700">
+                    In the digital era, manual tracking is becoming obsolete. Sophisticated brand owners now use <strong>Trademark Watch Services</strong>. These services do not just check your status; they scan the weekly Trademark Journal for every single mark that might be phonetically or visually similar to yours.
+                  </p>
+                  <div className="grid md:grid-cols-2 gap-8">
+                    <div className="p-6 bg-gray-50 rounded-xl">
+                      <h4 className="font-bold text-gray-900 mb-2">Automated Journal Scanning</h4>
+                      <p className="text-sm text-gray-600">Every Sunday, the IP India registry releases thousands of marks in the journal. A watch service uses optical character recognition and phonetic algorithms to flag any mark that could potentially infringe on your territory, giving you the full 4-month window to file an opposition.</p>
+                    </div>
+                    <div className="p-6 bg-gray-50 rounded-xl">
+                      <h4 className="font-bold text-gray-900 mb-2">Domain Name Monitoring</h4>
+                      <p className="text-sm text-gray-600">Trademark infringement often starts with a domain name. By monitoring the WHOIS database for your brand keywords, you can block cybersquatters before they even launch a competing website, protecting your online reputation alongside your legal trademark status.</p>
+                    </div>
+                  </div>
+                  <p className="mt-8 text-gray-700 leading-relaxed">
+                    At IPR Karo, we combine these high-tech tools with the deep legal expertise of our attorneys. We ensure that your trademark application status is not just a number on a screen, but a robust shield that protects your business from the moment of filing to the day you become a household name.
+                  </p>
                 </section>
 
                 <section id="client-success-stories" className="scroll-mt-32">
@@ -604,7 +608,7 @@ export default function TrademarkApplicationStatusPage() {
                           <p className="font-bold text-gray-900 text-lg">Ankit Sharma</p>
                           <p className="text-sm text-gray-500">Retail Brand Owner</p>
                           <div className="flex text-yellow-500 text-xs mt-1">
-                             {'★★★★★'.split('').map((s, i) => <span key={i}>{s}</span>)}
+                            {'★★★★★'.split('').map((s, i) => <span key={i}>{s}</span>)}
                           </div>
                         </div>
                       </div>
@@ -621,7 +625,7 @@ export default function TrademarkApplicationStatusPage() {
                           <p className="font-bold text-gray-900 text-lg">Sneha Reddy</p>
                           <p className="text-sm text-gray-500">Fintech Founder</p>
                           <div className="flex text-yellow-500 text-xs mt-1">
-                             {'★★★★★'.split('').map((s, i) => <span key={i}>{s}</span>)}
+                            {'★★★★★'.split('').map((s, i) => <span key={i}>{s}</span>)}
                           </div>
                         </div>
                       </div>
@@ -648,10 +652,10 @@ export default function TrademarkApplicationStatusPage() {
 
                 {/* Final CTA Section */}
                 <section className="bg-gradient-to-br from-[#0C002B] via-[#160049] to-[#0C002B] rounded-3xl p-10 md:p-20 text-center text-white relative overflow-hidden">
-                   <div className="absolute top-0 right-0 w-80 h-80 bg-[rgb(110,94,147)] opacity-20 rounded-full blur-[100px]"></div>
-                   <div className="absolute bottom-0 left-0 w-80 h-80 bg-[rgb(110,94,147)] opacity-20 rounded-full blur-[100px]"></div>
-                   
-                   <div className="relative z-10">
+                  <div className="absolute top-0 right-0 w-80 h-80 bg-[rgb(110,94,147)] opacity-20 rounded-full blur-[100px]"></div>
+                  <div className="absolute bottom-0 left-0 w-80 h-80 bg-[rgb(110,94,147)] opacity-20 rounded-full blur-[100px]"></div>
+
+                  <div className="relative z-10">
                     <h2 className="text-3xl md:text-5xl font-bold mb-8">Don't Leave Your Brand's Status to Chance</h2>
                     <p className="text-xl md:text-2xl opacity-90 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
                       Whether you are facing a Section 9/11 objection or a third-party opposition, our team of former examiners and IP attorneys are ready to defend your brand.
@@ -663,7 +667,7 @@ export default function TrademarkApplicationStatusPage() {
                         </button>
                       </Link>
                       <a href="tel:+919289707648" className="w-full sm:w-auto">
-                         <button className="w-full bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white hover:text-gray-900 text-white font-bold py-5 px-12 rounded-full transition-all text-lg flex items-center justify-center">
+                        <button className="w-full bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white hover:text-gray-900 text-white font-bold py-5 px-12 rounded-full transition-all text-lg flex items-center justify-center">
                           <FontAwesomeIcon icon={faPhone} className="mr-3 w-5 h-5" />
                           Call: +91-9289707648
                         </button>
@@ -676,7 +680,7 @@ export default function TrademarkApplicationStatusPage() {
 
             {/* Right Column - Sidebar Widgets */}
             <aside className="hidden lg:block space-y-10 sticky top-32">
-              
+
               {/* Sidebar CTA Box */}
               <div className="bg-[#0C002B] p-8 rounded-3xl shadow-xl border border-gray-800 text-white relative overflow-hidden group">
                 <div className="absolute -top-10 -right-10 w-32 h-32 bg-[#6E5E93] rounded-full blur-[60px] opacity-20 group-hover:opacity-40 transition-opacity"></div>

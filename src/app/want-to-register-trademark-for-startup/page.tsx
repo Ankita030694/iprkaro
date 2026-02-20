@@ -5,17 +5,17 @@ import { Metadata } from 'next';
 import TableOfContents from '@/components/TableOfContents';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { 
-  faCheck, 
-  faSearch, 
-  faFileContract, 
-  faGavel, 
-  faGlobe, 
-  faShieldAlt, 
-  faBalanceScale, 
-  faRocket, 
-  faMoneyBillWave, 
-  faCertificate, 
+import {
+  faCheck,
+  faSearch,
+  faFileContract,
+  faGavel,
+  faGlobe,
+  faShieldAlt,
+  faBalanceScale,
+  faRocket,
+  faMoneyBillWave,
+  faCertificate,
   faFileSignature,
   faPhone,
   faChevronRight,
@@ -218,23 +218,23 @@ export default function StartupTrademarkPage() {
 
       <div className="bg-white min-h-screen">
         {/* Hero Section */}
-        <div className="relative w-full overflow-hidden" 
-             style={{
-               background: 'linear-gradient(to bottom, #0C002B 0%, #160049 45%, #6E5E93 80%, #E8E8E8 100%)'
-             }}>
-          
+        <div className="relative w-full overflow-hidden"
+          style={{
+            background: 'linear-gradient(to bottom, #0C002B 0%, #160049 45%, #6E5E93 80%, #E8E8E8 100%)'
+          }}>
+
           <div className="container mx-auto px-4 py-12 lg:py-32 relative z-10 text-center">
-             <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-snug md:leading-tight mt-20 md:mt-10 text-white">
-               Want to Register <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'rgb(110, 94, 147)' }}>Trademark for Startup?</span>
-             </h1>
-             <p className="text-sm md:text-xl mb-6 md:mb-8 max-w-3xl mx-auto text-gray-300 px-2 leading-relaxed">
-               Secure your brand identity and unlock government benefits. Join 1500+ startups that have protected their logo and name with IPR Karo's expert legal guidance.
-             </p>
-             <Link href="/contact-us">
-               <button className="bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-2.5 px-6 md:py-3 md:px-8 rounded-full transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(110,94,147,0.3)] text-base md:text-lg">
-                 Start Registration Now
-               </button>
-             </Link>
+            <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-snug md:leading-tight mt-20 md:mt-10 text-white">
+              Want to Register <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'rgb(110, 94, 147)' }}>Trademark for Startup?</span>
+            </h1>
+            <p className="text-sm md:text-xl mb-6 md:mb-8 max-w-3xl mx-auto text-gray-300 px-2 leading-relaxed">
+              Secure your brand identity and unlock government benefits. Join 1500+ startups that have protected their logo and name with IPR Karo's expert legal guidance.
+            </p>
+            <Link href="/contact-us">
+              <button className="bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-2.5 px-6 md:py-3 md:px-8 rounded-full transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(110,94,147,0.3)] text-base md:text-lg">
+                Start Registration Now
+              </button>
+            </Link>
           </div>
         </div>
 
@@ -250,12 +250,12 @@ export default function StartupTrademarkPage() {
             {/* Main Content Column */}
             <div className="min-w-0">
               {/* Mobile TOC */}
-              <div className="lg:hidden mb-6 sticky top-[72px] z-20">
-                  <TableOfContents sections={tocSections} orientation="horizontal" />
+              <div className="lg:hidden mb-6 sticky top-[100px] z-20">
+                <TableOfContents sections={tocSections} orientation="horizontal" />
               </div>
 
               <div className="bg-white p-4 md:p-12 rounded-xl md:rounded-2xl shadow-sm border border-gray-100 prose prose-lg max-w-none text-gray-800 font-nunito">
-                
+
                 <section id="introduction" className="mb-20 scroll-mt-24 md:scroll-mt-32">
                   <h2 className="text-3xl md:text-5xl font-extrabold text-[#0C002B] mb-8 border-b-4 border-[#FFB703] pb-4 inline-block">Why Startups Need Trademark Protection Early</h2>
                   <p className="mb-8 leading-relaxed text-xl">
@@ -280,25 +280,25 @@ export default function StartupTrademarkPage() {
                 </section>
 
                 <section id="startup-benefits" className="mb-12 scroll-mt-24 md:scroll-mt-32">
-                   <h2 className="text-2xl md:text-3xl font-bold text-[#0C002B] mb-4">Unlocking Government Benefits: 50% Fee Subsidy</h2>
-                   <p className="mb-4 leading-relaxed text-base">
-                      Recognizing the importance of IP in the digital economy, the Government of India offers massive incentives for startups. Under the 'Startup India' initiative, recognized entities (DPIIT) are eligible for a 50% discount on the official government filing fee.
-                   </p>
-                   <div className="grid md:grid-cols-2 gap-4 my-8">
-                      <div className="p-5 bg-purple-50 rounded-2xl border border-purple-100 shadow-sm flex flex-col justify-center text-center">
-                         <h4 className="font-bold text-purple-900 text-lg mb-1">Fee Rebate</h4>
-                         <p className="text-purple-800 text-xs">₹4,500 instead of ₹9,000 for online filing if you have a DPIIT Recognition or MSME certificate.</p>
-                      </div>
-                      <div className="p-5 bg-purple-50 rounded-2xl border border-purple-100 shadow-sm flex flex-col justify-center text-center">
-                         <h4 className="font-bold text-purple-900 text-lg mb-1">Fast-Track</h4>
-                         <p className="text-purple-800 text-xs">Eligible for 'Expedited Examination' to get your mark processed faster than standard applications.</p>
-                      </div>
-                   </div>
-                   <h3 className="text-3xl font-bold text-[#160049] mb-6">The SIPP Scheme (Scheme for IPR Protection)</h3>
-                   <p className="mb-8 leading-relaxed text-lg">
-                     Under the Startup Intellectual Property Protection (SIPP) scheme, the government facilitates free legal assistance. Recognized startups can work with empaneled 'facilitators' who will handle the search, drafting, and filing of your trademark application. While the government pays the professional fees of these facilitators, the startup only needs to pay the statutory government fee.
-                   </p>
-                   <div className="bg-red-50 p-12 rounded-[2rem] border-l-[16px] border-red-600 my-12 shadow-inner">
+                  <h2 className="text-2xl md:text-3xl font-bold text-[#0C002B] mb-4">Unlocking Government Benefits: 50% Fee Subsidy</h2>
+                  <p className="mb-4 leading-relaxed text-base">
+                    Recognizing the importance of IP in the digital economy, the Government of India offers massive incentives for startups. Under the 'Startup India' initiative, recognized entities (DPIIT) are eligible for a 50% discount on the official government filing fee.
+                  </p>
+                  <div className="grid md:grid-cols-2 gap-4 my-8">
+                    <div className="p-5 bg-purple-50 rounded-2xl border border-purple-100 shadow-sm flex flex-col justify-center text-center">
+                      <h4 className="font-bold text-purple-900 text-lg mb-1">Fee Rebate</h4>
+                      <p className="text-purple-800 text-xs">₹4,500 instead of ₹9,000 for online filing if you have a DPIIT Recognition or MSME certificate.</p>
+                    </div>
+                    <div className="p-5 bg-purple-50 rounded-2xl border border-purple-100 shadow-sm flex flex-col justify-center text-center">
+                      <h4 className="font-bold text-purple-900 text-lg mb-1">Fast-Track</h4>
+                      <p className="text-purple-800 text-xs">Eligible for 'Expedited Examination' to get your mark processed faster than standard applications.</p>
+                    </div>
+                  </div>
+                  <h3 className="text-3xl font-bold text-[#160049] mb-6">The SIPP Scheme (Scheme for IPR Protection)</h3>
+                  <p className="mb-8 leading-relaxed text-lg">
+                    Under the Startup Intellectual Property Protection (SIPP) scheme, the government facilitates free legal assistance. Recognized startups can work with empaneled 'facilitators' who will handle the search, drafting, and filing of your trademark application. While the government pays the professional fees of these facilitators, the startup only needs to pay the statutory government fee.
+                  </p>
+                  <div className="bg-red-50 p-12 rounded-[2rem] border-l-[16px] border-red-600 my-12 shadow-inner">
                     <h4 className="text-red-900 font-bold text-2xl mb-4 uppercase tracking-tighter">Immediate Action Required</h4>
                     <p className="text-red-800 leading-relaxed text-lg italic">
                       To avail these benefits, you must possess a valid DPIIT Recognition Certificate. The registration must be done through the Startup India portal (startupindia.gov.in). If you don't have this recognition yet, IPR Karo can assist you in obtaining it before we proceed.
@@ -310,39 +310,39 @@ export default function StartupTrademarkPage() {
                   <h2 className="text-2xl md:text-3xl font-bold text-[#0C002B] mb-4">The Step-by-Step Registration Journey</h2>
                   <div className="space-y-6 my-10">
                     <div className="flex gap-4">
-                       <div className="w-10 h-10 md:w-12 md:h-12 bg-[#FFB703] text-[#0C002B] rounded-full flex items-center justify-center font-bold text-base md:text-lg flex-shrink-0 shadow-md">1</div>
-                       <div>
-                          <h4 className="font-bold text-[#0C002B] text-lg mb-1">Advanced AI Search</h4>
-                          <p className="leading-relaxed text-sm">We crawl the IP India database, including phonetic and Vienna Code matches, to ensure your name is unique and registrable.</p>
-                       </div>
+                      <div className="w-10 h-10 md:w-12 md:h-12 bg-[#FFB703] text-[#0C002B] rounded-full flex items-center justify-center font-bold text-base md:text-lg flex-shrink-0 shadow-md">1</div>
+                      <div>
+                        <h4 className="font-bold text-[#0C002B] text-lg mb-1">Advanced AI Search</h4>
+                        <p className="leading-relaxed text-sm">We crawl the IP India database, including phonetic and Vienna Code matches, to ensure your name is unique and registrable.</p>
+                      </div>
                     </div>
                     <div className="flex gap-4">
-                       <div className="w-10 h-10 md:w-12 md:h-12 bg-[#FFB703] text-[#0C002B] rounded-full flex items-center justify-center font-bold text-base md:text-lg flex-shrink-0 shadow-md">2</div>
-                       <div>
-                          <h4 className="font-bold text-[#0C002B] text-lg mb-1">E-Filing (Within 24 Hours)</h4>
-                          <p className="leading-relaxed text-sm">Once the search is clear, we file Form TM-A electronically. You receive your application number on the same day.</p>
-                       </div>
+                      <div className="w-10 h-10 md:w-12 md:h-12 bg-[#FFB703] text-[#0C002B] rounded-full flex items-center justify-center font-bold text-base md:text-lg flex-shrink-0 shadow-md">2</div>
+                      <div>
+                        <h4 className="font-bold text-[#0C002B] text-lg mb-1">E-Filing (Within 24 Hours)</h4>
+                        <p className="leading-relaxed text-sm">Once the search is clear, we file Form TM-A electronically. You receive your application number on the same day.</p>
+                      </div>
                     </div>
                     <div className="flex gap-4">
-                       <div className="w-10 h-10 md:w-12 md:h-12 bg-[#FFB703] text-[#0C002B] rounded-full flex items-center justify-center font-bold text-base md:text-lg flex-shrink-0 shadow-md">3</div>
-                       <div>
-                          <h4 className="font-bold text-[#0C002B] text-lg mb-1">Examination & Objections</h4>
-                          <p className="leading-relaxed text-sm">A government examiner reviews the mark. If any objections (Section 9/11) are raised, our legal team drafts a persuasive response.</p>
-                       </div>
+                      <div className="w-10 h-10 md:w-12 md:h-12 bg-[#FFB703] text-[#0C002B] rounded-full flex items-center justify-center font-bold text-base md:text-lg flex-shrink-0 shadow-md">3</div>
+                      <div>
+                        <h4 className="font-bold text-[#0C002B] text-lg mb-1">Examination & Objections</h4>
+                        <p className="leading-relaxed text-sm">A government examiner reviews the mark. If any objections (Section 9/11) are raised, our legal team drafts a persuasive response.</p>
+                      </div>
                     </div>
                     <div className="flex gap-4">
-                       <div className="w-10 h-10 md:w-12 md:h-12 bg-[#FFB703] text-[#0C002B] rounded-full flex items-center justify-center font-bold text-base md:text-lg flex-shrink-0 shadow-md">4</div>
-                       <div>
-                          <h4 className="font-bold text-[#0C002B] text-lg mb-1">Journal Publication</h4>
-                          <p className="leading-relaxed text-sm">Your mark is published in the TM Journal for 4 months. This is the 'Opposition Period' where the public can view your claim.</p>
-                       </div>
+                      <div className="w-10 h-10 md:w-12 md:h-12 bg-[#FFB703] text-[#0C002B] rounded-full flex items-center justify-center font-bold text-base md:text-lg flex-shrink-0 shadow-md">4</div>
+                      <div>
+                        <h4 className="font-bold text-[#0C002B] text-lg mb-1">Journal Publication</h4>
+                        <p className="leading-relaxed text-sm">Your mark is published in the TM Journal for 4 months. This is the 'Opposition Period' where the public can view your claim.</p>
+                      </div>
                     </div>
                     <div className="flex gap-4">
-                       <div className="w-10 h-10 md:w-12 md:h-12 bg-[#FFB703] text-[#0C002B] rounded-full flex items-center justify-center font-bold text-base md:text-lg flex-shrink-0 shadow-md">5</div>
-                       <div>
-                          <h4 className="font-bold text-[#0C002B] text-lg mb-1">Final Registration</h4>
-                          <p className="leading-relaxed text-sm">If no one opposes, you receive your Digital Registration Certificate. You can now use the ® symbol with pride.</p>
-                       </div>
+                      <div className="w-10 h-10 md:w-12 md:h-12 bg-[#FFB703] text-[#0C002B] rounded-full flex items-center justify-center font-bold text-base md:text-lg flex-shrink-0 shadow-md">5</div>
+                      <div>
+                        <h4 className="font-bold text-[#0C002B] text-lg mb-1">Final Registration</h4>
+                        <p className="leading-relaxed text-sm">If no one opposes, you receive your Digital Registration Certificate. You can now use the ® symbol with pride.</p>
+                      </div>
                     </div>
                   </div>
                 </section>
@@ -372,138 +372,138 @@ export default function StartupTrademarkPage() {
                 </section>
 
                 <section id="naming-strategy" className="mb-12 scroll-mt-24 md:scroll-mt-32">
-                   <h2 className="text-2xl md:text-3xl font-bold text-[#0C002B] mb-4">Naming & Class Strategy: The Power of Distinctiveness</h2>
-                   <p className="mb-4 leading-relaxed text-base">
-                     Not every name is protectable. In the legal world, trademarks exist on a 'Spectrum of Strength'.
-                   </p>
-                   <div className="grid md:grid-cols-2 gap-4 my-8">
-                     <div className="p-5 bg-purple-50 rounded-2xl border border-purple-100 shadow-sm">
-                        <h4 className="font-bold text-[#0C002B] text-lg mb-1">Coined Marks</h4>
-                        <p className="text-gray-600 text-xs italic">Words like 'Zomato' that have no dictionary meaning. These are the strongest assets because they are inherently unique.</p>
-                     </div>
-                     <div className="p-5 bg-blue-50 rounded-2xl border border-blue-100 shadow-sm">
-                        <h4 className="font-bold text-[#0C002B] text-lg mb-1">Arbitrary Marks</h4>
-                        <p className="text-gray-600 text-xs italic">Common words in an uncommon context, like 'Apple' for computers. Highly distinctive and easy to enforce.</p>
-                     </div>
-                   </div>
+                  <h2 className="text-2xl md:text-3xl font-bold text-[#0C002B] mb-4">Naming & Class Strategy: The Power of Distinctiveness</h2>
+                  <p className="mb-4 leading-relaxed text-base">
+                    Not every name is protectable. In the legal world, trademarks exist on a 'Spectrum of Strength'.
+                  </p>
+                  <div className="grid md:grid-cols-2 gap-4 my-8">
+                    <div className="p-5 bg-purple-50 rounded-2xl border border-purple-100 shadow-sm">
+                      <h4 className="font-bold text-[#0C002B] text-lg mb-1">Coined Marks</h4>
+                      <p className="text-gray-600 text-xs italic">Words like 'Zomato' that have no dictionary meaning. These are the strongest assets because they are inherently unique.</p>
+                    </div>
+                    <div className="p-5 bg-blue-50 rounded-2xl border border-blue-100 shadow-sm">
+                      <h4 className="font-bold text-[#0C002B] text-lg mb-1">Arbitrary Marks</h4>
+                      <p className="text-gray-600 text-xs italic">Common words in an uncommon context, like 'Apple' for computers. Highly distinctive and easy to enforce.</p>
+                    </div>
+                  </div>
                 </section>
 
                 <section id="industry-classification" className="mb-12 scroll-mt-24 md:scroll-mt-32">
-                   <h2 className="text-2xl md:text-3xl font-bold text-[#0C002B] mb-4">Industry-Specific Classification Guide</h2>
-                   <p className="mb-4 leading-relaxed text-base">
-                     For a startup, choosing the right class is as important as the name itself. Here is a breakdown for key startup sectors in the 2026 economy.
-                   </p>
-                   <div className="grid md:grid-cols-3 gap-4 my-8">
-                      <div className="p-5 bg-white rounded-2xl border border-gray-100 shadow-sm text-center">
-                         <h4 className="font-bold text-[#0C002B] text-lg mb-1">FinTech</h4>
-                         <p className="text-gray-600 text-xs">Class 36 (Finance) + Class 9 (Payments app) + Class 42 (Encryption Software)</p>
-                      </div>
-                      <div className="p-5 bg-white rounded-2xl border border-gray-100 shadow-sm text-center">
-                         <h4 className="font-bold text-[#0C002B] text-lg mb-1">EdTech</h4>
-                         <p className="text-gray-600 text-xs">Class 41 (Education) + Class 38 (Streaming) + Class 9 (Course Materials)</p>
-                      </div>
-                      <div className="p-5 bg-white rounded-2xl border border-gray-100 shadow-sm text-center">
-                         <h4 className="font-bold text-[#0C002B] text-lg mb-1">D2C</h4>
-                         <p className="text-gray-600 text-xs">Class 35 (Retail platform) + Class 25 (Apparel) + Class 3 (Skincare)</p>
-                      </div>
-                   </div>
-                   <p className="mb-8 leading-relaxed text-lg">
-                     Failure to file in secondary classes (like Class 35 for a manufacturer) is a common gateway for 'Trademark Trolls' to occupy your digital space. Our Multi-Class Audit ensures you own the entire ecosystem around your name.
-                   </p>
+                  <h2 className="text-2xl md:text-3xl font-bold text-[#0C002B] mb-4">Industry-Specific Classification Guide</h2>
+                  <p className="mb-4 leading-relaxed text-base">
+                    For a startup, choosing the right class is as important as the name itself. Here is a breakdown for key startup sectors in the 2026 economy.
+                  </p>
+                  <div className="grid md:grid-cols-3 gap-4 my-8">
+                    <div className="p-5 bg-white rounded-2xl border border-gray-100 shadow-sm text-center">
+                      <h4 className="font-bold text-[#0C002B] text-lg mb-1">FinTech</h4>
+                      <p className="text-gray-600 text-xs">Class 36 (Finance) + Class 9 (Payments app) + Class 42 (Encryption Software)</p>
+                    </div>
+                    <div className="p-5 bg-white rounded-2xl border border-gray-100 shadow-sm text-center">
+                      <h4 className="font-bold text-[#0C002B] text-lg mb-1">EdTech</h4>
+                      <p className="text-gray-600 text-xs">Class 41 (Education) + Class 38 (Streaming) + Class 9 (Course Materials)</p>
+                    </div>
+                    <div className="p-5 bg-white rounded-2xl border border-gray-100 shadow-sm text-center">
+                      <h4 className="font-bold text-[#0C002B] text-lg mb-1">D2C</h4>
+                      <p className="text-gray-600 text-xs">Class 35 (Retail platform) + Class 25 (Apparel) + Class 3 (Skincare)</p>
+                    </div>
+                  </div>
+                  <p className="mb-8 leading-relaxed text-lg">
+                    Failure to file in secondary classes (like Class 35 for a manufacturer) is a common gateway for 'Trademark Trolls' to occupy your digital space. Our Multi-Class Audit ensures you own the entire ecosystem around your name.
+                  </p>
                 </section>
 
                 <section id="global-protection" className="mb-12 scroll-mt-24 md:scroll-mt-32">
-                   <h2 className="text-2xl md:text-3xl font-bold text-[#0C002B] mb-4">Global Brand Protection: Madrid Protocol</h2>
-                   <p className="mb-4 leading-relaxed text-base">
-                     Indian startups are global from Day 1. The Madrid Protocol allows you to use your Indian application as a 'Base' to apply in up to 130 countries with a single application.
-                   </p>
-                   <div className="bg-[#160049] p-8 rounded-2xl text-white shadow-xl my-8">
-                      <h4 className="text-xl font-bold mb-4">The Madrid Advantage</h4>
-                      <ul className="space-y-3 text-sm">
-                        <li className="flex gap-3"><FontAwesomeIcon icon={faGlobe} className="text-[#FFB703] mt-1 w-4 h-4" /> One application in one language (English)</li>
-                        <li className="flex gap-3"><FontAwesomeIcon icon={faShieldAlt} className="text-[#FFB703] mt-1 w-4 h-4" /> Protected across 130+ countries</li>
-                        <li className="flex gap-3"><FontAwesomeIcon icon={faSync} className="text-[#FFB703] mt-1 w-4 h-4" /> Centralized management of renewals</li>
-                      </ul>
-                   </div>
+                  <h2 className="text-2xl md:text-3xl font-bold text-[#0C002B] mb-4">Global Brand Protection: Madrid Protocol</h2>
+                  <p className="mb-4 leading-relaxed text-base">
+                    Indian startups are global from Day 1. The Madrid Protocol allows you to use your Indian application as a 'Base' to apply in up to 130 countries with a single application.
+                  </p>
+                  <div className="bg-[#160049] p-8 rounded-2xl text-white shadow-xl my-8">
+                    <h4 className="text-xl font-bold mb-4">The Madrid Advantage</h4>
+                    <ul className="space-y-3 text-sm">
+                      <li className="flex gap-3"><FontAwesomeIcon icon={faGlobe} className="text-[#FFB703] mt-1 w-4 h-4" /> One application in one language (English)</li>
+                      <li className="flex gap-3"><FontAwesomeIcon icon={faShieldAlt} className="text-[#FFB703] mt-1 w-4 h-4" /> Protected across 130+ countries</li>
+                      <li className="flex gap-3"><FontAwesomeIcon icon={faSync} className="text-[#FFB703] mt-1 w-4 h-4" /> Centralized management of renewals</li>
+                    </ul>
+                  </div>
                 </section>
 
                 <section id="legal-enforcement" className="mb-12 scroll-mt-24 md:scroll-mt-32">
-                   <h2 className="text-2xl md:text-3xl font-bold text-[#0C002B] mb-4">Enforcement & Litigation: Protecting Your Moat</h2>
-                   <p className="mb-4 leading-relaxed text-base">
-                     A trademark is value-less if not enforced. For a startup, this means active monitoring of domains, social handles, and app stores.
-                   </p>
-                   <div className="grid md:grid-cols-2 gap-4 my-8">
-                      <div className="p-5 bg-white rounded-2xl border border-gray-100 shadow-sm">
-                         <h5 className="font-bold text-[#0C002B] text-lg mb-1">Notice & Takedown</h5>
-                         <p className="text-gray-600 text-xs">Reclaiming domains from cybersquatters via UDRP/INDRP and social media handle transfers.</p>
-                      </div>
-                      <div className="p-5 bg-white rounded-2xl border border-gray-100 shadow-sm">
-                         <h5 className="font-bold text-[#0C002B] text-lg mb-1">Cease & Desist</h5>
-                         <p className="text-gray-600 text-xs">Sending formal legal notices to competitors using similar marks in bad faith.</p>
-                      </div>
-                   </div>
+                  <h2 className="text-2xl md:text-3xl font-bold text-[#0C002B] mb-4">Enforcement & Litigation: Protecting Your Moat</h2>
+                  <p className="mb-4 leading-relaxed text-base">
+                    A trademark is value-less if not enforced. For a startup, this means active monitoring of domains, social handles, and app stores.
+                  </p>
+                  <div className="grid md:grid-cols-2 gap-4 my-8">
+                    <div className="p-5 bg-white rounded-2xl border border-gray-100 shadow-sm">
+                      <h5 className="font-bold text-[#0C002B] text-lg mb-1">Notice & Takedown</h5>
+                      <p className="text-gray-600 text-xs">Reclaiming domains from cybersquatters via UDRP/INDRP and social media handle transfers.</p>
+                    </div>
+                    <div className="p-5 bg-white rounded-2xl border border-gray-100 shadow-sm">
+                      <h5 className="font-bold text-[#0C002B] text-lg mb-1">Cease & Desist</h5>
+                      <p className="text-gray-600 text-xs">Sending formal legal notices to competitors using similar marks in bad faith.</p>
+                    </div>
+                  </div>
                 </section>
 
                 <section id="assignment-licensing" className="mb-12 scroll-mt-24 md:scroll-mt-32">
-                   <h2 className="text-2xl md:text-3xl font-bold text-[#0C002B] mb-4">IP Monetization: Assignment and Licensing</h2>
-                   <p className="mb-4 leading-relaxed text-base">
-                     As your startup grows, your trademark becomes an asset. Assignment is common when transferring rights to the company, and licensing is key for franchise models.
-                   </p>
+                  <h2 className="text-2xl md:text-3xl font-bold text-[#0C002B] mb-4">IP Monetization: Assignment and Licensing</h2>
+                  <p className="mb-4 leading-relaxed text-base">
+                    As your startup grows, your trademark becomes an asset. Assignment is common when transferring rights to the company, and licensing is key for franchise models.
+                  </p>
                 </section>
 
                 <section id="common-mistakes" className="mb-12 scroll-mt-24 md:scroll-mt-32">
-                   <h2 className="text-2xl md:text-3xl font-bold text-[#0C002B] mb-4">Navigating the Minefield: Pitfalls to Avoid</h2>
-                   <p className="mb-4 leading-relaxed text-base">
-                     Avoid factors like waiting too long to file, ignoring phonetic results, and filing as an individual instead of the corporate entity.
-                   </p>
+                  <h2 className="text-2xl md:text-3xl font-bold text-[#0C002B] mb-4">Navigating the Minefield: Pitfalls to Avoid</h2>
+                  <p className="mb-4 leading-relaxed text-base">
+                    Avoid factors like waiting too long to file, ignoring phonetic results, and filing as an individual instead of the corporate entity.
+                  </p>
                 </section>
 
                 <section id="funding-and-ip" className="mb-12 scroll-mt-24 md:scroll-mt-32">
-                   <h2 className="text-2xl md:text-3xl font-bold text-[#0C002B] mb-4">IP & Investor Readiness</h2>
-                   <p className="mb-4 leading-relaxed text-base">
-                     Investors valuation increases by 20-30% for startups with clean, registered IP. A clear chain of title is a major trust signal.
-                   </p>
+                  <h2 className="text-2xl md:text-3xl font-bold text-[#0C002B] mb-4">IP & Investor Readiness</h2>
+                  <p className="mb-4 leading-relaxed text-base">
+                    Investors valuation increases by 20-30% for startups with clean, registered IP. A clear chain of title is a major trust signal.
+                  </p>
                 </section>
 
                 <section id="future-of-ip" className="mb-12 scroll-mt-24 md:scroll-mt-32">
-                   <h2 className="text-2xl md:text-3xl font-bold text-[#0C002B] mb-4">The Future of Brand Protection: AI and IP</h2>
-                   <p className="mb-4 leading-relaxed text-base">
-                     In 2026, the intersection of AI and IP is redefining brand protection. From AI searches to blockchain verification, we help you stay ahead.
-                   </p>
-                   <div className="bg-amber-50 p-8 rounded-2xl border border-amber-100 shadow-sm my-8">
-                      <h4 className="text-lg font-bold text-amber-900 mb-4 uppercase tracking-widest text-center">Founder's Masterclass</h4>
-                      <div className="grid md:grid-cols-2 gap-4">
-                         <div className="p-4 bg-white rounded-xl shadow-sm border border-amber-50">
-                            <h5 className="font-bold text-base mb-1 text-[#0C002B]">Active Monitoring</h5>
-                            <p className="text-gray-600 text-xs">Don't just register; watch. Use automated tools to monitor whenever a similar name is used.</p>
-                         </div>
-                         <div className="p-4 bg-white rounded-xl shadow-sm border border-amber-50">
-                            <h5 className="font-bold text-base mb-1 text-[#0C002B]">Defensive Filing</h5>
-                            <p className="text-gray-600 text-xs">Register secondary names and domains that a competitor might use.</p>
-                         </div>
+                  <h2 className="text-2xl md:text-3xl font-bold text-[#0C002B] mb-4">The Future of Brand Protection: AI and IP</h2>
+                  <p className="mb-4 leading-relaxed text-base">
+                    In 2026, the intersection of AI and IP is redefining brand protection. From AI searches to blockchain verification, we help you stay ahead.
+                  </p>
+                  <div className="bg-amber-50 p-8 rounded-2xl border border-amber-100 shadow-sm my-8">
+                    <h4 className="text-lg font-bold text-amber-900 mb-4 uppercase tracking-widest text-center">Founder's Masterclass</h4>
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div className="p-4 bg-white rounded-xl shadow-sm border border-amber-50">
+                        <h5 className="font-bold text-base mb-1 text-[#0C002B]">Active Monitoring</h5>
+                        <p className="text-gray-600 text-xs">Don't just register; watch. Use automated tools to monitor whenever a similar name is used.</p>
                       </div>
-                   </div>
+                      <div className="p-4 bg-white rounded-xl shadow-sm border border-amber-50">
+                        <h5 className="font-bold text-base mb-1 text-[#0C002B]">Defensive Filing</h5>
+                        <p className="text-gray-600 text-xs">Register secondary names and domains that a competitor might use.</p>
+                      </div>
+                    </div>
+                  </div>
                 </section>
-  {/* FAQ Section */}
+                {/* FAQ Section */}
                 <section id="faqs" className="bg-gray-50 py-16 mt-16 scroll-mt-24 md:scroll-mt-32">
-          <div className="container mx-auto px-4 max-w-4xl">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#0C002B] mb-10 text-center">Frequently Asked Questions</h2>
-            <div className="space-y-6">
-              {faqs.map((faq, index) => (
-                <div key={index} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-                  <h3 className="text-lg font-bold text-[#160049] mb-3">{faq.question}</h3>
-                  <p className="text-gray-600 leading-relaxed text-base">{faq.answer}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+                  <div className="container mx-auto px-4 max-w-4xl">
+                    <h2 className="text-2xl md:text-3xl font-bold text-[#0C002B] mb-10 text-center">Frequently Asked Questions</h2>
+                    <div className="space-y-6">
+                      {faqs.map((faq, index) => (
+                        <div key={index} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                          <h3 className="text-lg font-bold text-[#160049] mb-3">{faq.question}</h3>
+                          <p className="text-gray-600 leading-relaxed text-base">{faq.answer}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </section>
               </div>
             </div>
 
             {/* Right Column - Sidebar Widgets */}
             <aside className="hidden lg:block space-y-10 sticky top-32">
-              
+
               {/* Sidebar CTA Box */}
               <div className="bg-[#0C002B] p-8 rounded-3xl shadow-xl border border-gray-800 text-white relative overflow-hidden group">
                 <div className="absolute -top-10 -right-10 w-32 h-32 bg-[#6E5E93] rounded-full blur-[60px] opacity-20 group-hover:opacity-40 transition-opacity"></div>
@@ -543,17 +543,17 @@ export default function StartupTrademarkPage() {
               </div>
 
             </aside>
-            
+
           </div>
-          
+
         </div>
 
-      
+
 
         {/* Final CTA Container */}
         <div className="container mx-auto px-4 max-w-6xl py-16">
           <div className="bg-gradient-to-br from-[#0C002B] to-[#1a0033] rounded-3xl p-8 md:p-12 text-center text-white relative overflow-hidden">
-             <div className="relative z-10">
+            <div className="relative z-10">
               <h2 className="text-2xl md:text-4xl font-bold mb-4">Ready to Protect Your Brand?</h2>
               <p className="text-lg opacity-90 mb-8 max-w-xl mx-auto leading-relaxed">
                 Join 1500+ startups who secured their brand with IPR Karo. Get expert assistance and same-day filing.
@@ -565,7 +565,7 @@ export default function StartupTrademarkPage() {
                   </button>
                 </Link>
                 <a href="tel:+919289707648">
-                   <button className="bg-transparent border-2 border-white/50 hover:bg-white hover:text-[#0C002B] text-white font-bold py-3 px-10 rounded-full transition-all text-base flex items-center justify-center">
+                  <button className="bg-transparent border-2 border-white/50 hover:bg-white hover:text-[#0C002B] text-white font-bold py-3 px-10 rounded-full transition-all text-base flex items-center justify-center">
                     <FontAwesomeIcon icon={faPhone} className="mr-2.5 w-4 h-4" />
                     Call Experts
                   </button>

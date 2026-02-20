@@ -5,17 +5,17 @@ import { Metadata } from 'next';
 import TableOfContents from '@/components/TableOfContents';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { 
-  faCheck, 
-  faSearch, 
-  faFileContract, 
-  faGavel, 
-  faGlobe, 
-  faShieldAlt, 
-  faBalanceScale, 
-  faRocket, 
-  faMoneyBillWave, 
-  faCertificate, 
+import {
+  faCheck,
+  faSearch,
+  faFileContract,
+  faGavel,
+  faGlobe,
+  faShieldAlt,
+  faBalanceScale,
+  faRocket,
+  faMoneyBillWave,
+  faCertificate,
   faFileSignature,
   faPhone,
   faChevronRight,
@@ -177,8 +177,8 @@ export default function TrademarkRegisterKeseKarteHaiPage() {
     },
     "datePublished": "2026-02-04",
     "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://www.iprkaro.com/trademark-register-kese-karte-hai"
+      "@type": "WebPage",
+      "@id": "https://www.iprkaro.com/trademark-register-kese-karte-hai"
     }
   };
 
@@ -208,23 +208,23 @@ export default function TrademarkRegisterKeseKarteHaiPage() {
 
       <div className="bg-white min-h-screen">
         {/* Hero Section */}
-        <div className="relative w-full overflow-hidden" 
-             style={{
-               background: 'linear-gradient(to bottom, #0C002B 0%, #160049 45%, #6E5E93 80%, #E8E8E8 100%)'
-             }}>
-          
+        <div className="relative w-full overflow-hidden"
+          style={{
+            background: 'linear-gradient(to bottom, #0C002B 0%, #160049 45%, #6E5E93 80%, #E8E8E8 100%)'
+          }}>
+
           <div className="container mx-auto px-4 py-12 lg:py-32 relative z-10 text-center">
-             <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-snug md:leading-tight mt-20 md:mt-10 text-white">
-               Trademark <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'rgb(110, 94, 147)' }}>Register Kaise Karte Hai?</span> (Puri Jankari)
-             </h1>
-             <p className="text-sm md:text-xl mb-6 md:mb-8 max-w-3xl mx-auto text-gray-300 px-2 leading-relaxed">
-               Apne brand name aur logo ko copy hone se bachayein. Hamari guide se janiye trademark filing ki step-by-step process, fees aur zaruri documents ke baare mein.
-             </p>
-             <Link href="/contact-us">
-               <button className="bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-2.5 px-6 md:py-3 md:px-8 rounded-full transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(110,94,147,0.3)] text-base md:text-lg">
-                 Abhi Apply Karein
-               </button>
-             </Link>
+            <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-snug md:leading-tight mt-20 md:mt-10 text-white">
+              Trademark <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'rgb(110, 94, 147)' }}>Register Kaise Karte Hai?</span> (Puri Jankari)
+            </h1>
+            <p className="text-sm md:text-xl mb-6 md:mb-8 max-w-3xl mx-auto text-gray-300 px-2 leading-relaxed">
+              Apne brand name aur logo ko copy hone se bachayein. Hamari guide se janiye trademark filing ki step-by-step process, fees aur zaruri documents ke baare mein.
+            </p>
+            <Link href="/contact-us">
+              <button className="bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-2.5 px-6 md:py-3 md:px-8 rounded-full transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(110,94,147,0.3)] text-base md:text-lg">
+                Abhi Apply Karein
+              </button>
+            </Link>
           </div>
         </div>
 
@@ -232,7 +232,7 @@ export default function TrademarkRegisterKeseKarteHaiPage() {
           <Breadcrumbs items={breadcrumbItems} />
 
           <div className="grid grid-cols-1 lg:grid-cols-[220px_1fr_300px] gap-4 md:gap-12 mt-8 items-start">
-            
+
             {/* Left Column: Table of Contents */}
             <div className="hidden lg:block sticky top-32">
               <TableOfContents sections={tocSections} orientation="vertical" />
@@ -241,12 +241,12 @@ export default function TrademarkRegisterKeseKarteHaiPage() {
             {/* Middle Column: Main Content */}
             <div className="min-w-0">
               {/* Mobile TOC */}
-              <div className="lg:hidden mb-6 sticky top-[72px] z-20">
-                  <TableOfContents sections={tocSections} orientation="horizontal" />
+              <div className="lg:hidden mb-6 sticky top-[100px] z-20">
+                <TableOfContents sections={tocSections} orientation="horizontal" />
               </div>
 
               <div className="bg-white p-4 md:p-12 rounded-xl md:rounded-2xl shadow-sm border border-gray-100 prose prose-lg max-w-none text-gray-800 font-sans">
-                
+
                 <section id="introduction" className="mb-12 scroll-mt-24 md:scroll-mt-32">
                   <h2 className="text-2xl md:text-4xl font-bold text-[#0C002B] mb-6">Prastavana: Bharat Mein Brand Registration Ka Safar</h2>
                   <p className="mb-4 leading-relaxed text-lg">
@@ -384,43 +384,43 @@ export default function TrademarkRegisterKeseKarteHaiPage() {
                   </p>
                   <div className="space-y-10 my-12">
                     <div className="flex gap-6 relative">
-                       <div className="w-10 h-10 md:w-16 md:h-16 bg-[#6E5E93] text-white rounded-full flex items-center justify-center font-bold text-base md:text-2xl flex-shrink-0 shadow-lg z-10">1</div>
-                       <div className="absolute left-5 md:left-8 top-10 md:top-16 w-1 h-20 bg-gray-100 -z-0 hidden md:block"></div>
-                       <div>
-                          <h4 className="font-bold text-[#0C002B] text-xl md:text-2xl mb-2">Application Filing (Form TM-A)</h4>
-                          <p className="leading-relaxed text-lg">Hum aapke bi-half par online portal par Form TM-A file karte hai. Iske liye humein class details aur user date ki zarurat hoti hai. Jaise hi application submit hoti hai, aapko ek application number mil jata hai aur aap TM symbol use kar sakte hai.</p>
-                       </div>
+                      <div className="w-10 h-10 md:w-16 md:h-16 bg-[#6E5E93] text-white rounded-full flex items-center justify-center font-bold text-base md:text-2xl flex-shrink-0 shadow-lg z-10">1</div>
+                      <div className="absolute left-5 md:left-8 top-10 md:top-16 w-1 h-20 bg-gray-100 -z-0 hidden md:block"></div>
+                      <div>
+                        <h4 className="font-bold text-[#0C002B] text-xl md:text-2xl mb-2">Application Filing (Form TM-A)</h4>
+                        <p className="leading-relaxed text-lg">Hum aapke bi-half par online portal par Form TM-A file karte hai. Iske liye humein class details aur user date ki zarurat hoti hai. Jaise hi application submit hoti hai, aapko ek application number mil jata hai aur aap TM symbol use kar sakte hai.</p>
+                      </div>
                     </div>
                     <div className="flex gap-6 relative">
-                       <div className="w-10 h-10 md:w-16 md:h-16 bg-[#6E5E93] text-white rounded-full flex items-center justify-center font-bold text-base md:text-2xl flex-shrink-0 shadow-lg z-10">2</div>
-                       <div className="absolute left-5 md:left-8 top-10 md:top-16 w-1 h-20 bg-gray-100 -z-0 hidden md:block"></div>
-                       <div>
-                          <h4 className="font-bold text-[#0C002B] text-xl md:text-2xl mb-2">Formalities Check Pass</h4>
-                          <p className="leading-relaxed text-lg">Department check karta hai ki kya sabhi zaruri documents (jaise MSME certificate, POA) sahi se attach kiye gaye hai. Agar sab sahi hai toh status 'Marked for Exam' ho jata hai.</p>
-                       </div>
+                      <div className="w-10 h-10 md:w-16 md:h-16 bg-[#6E5E93] text-white rounded-full flex items-center justify-center font-bold text-base md:text-2xl flex-shrink-0 shadow-lg z-10">2</div>
+                      <div className="absolute left-5 md:left-8 top-10 md:top-16 w-1 h-20 bg-gray-100 -z-0 hidden md:block"></div>
+                      <div>
+                        <h4 className="font-bold text-[#0C002B] text-xl md:text-2xl mb-2">Formalities Check Pass</h4>
+                        <p className="leading-relaxed text-lg">Department check karta hai ki kya sabhi zaruri documents (jaise MSME certificate, POA) sahi se attach kiye gaye hai. Agar sab sahi hai toh status 'Marked for Exam' ho jata hai.</p>
+                      </div>
                     </div>
                     <div className="flex gap-6 relative">
-                       <div className="w-10 h-10 md:w-16 md:h-16 bg-[#6E5E93] text-white rounded-full flex items-center justify-center font-bold text-base md:text-2xl flex-shrink-0 shadow-lg z-10">3</div>
-                       <div className="absolute left-5 md:left-8 top-10 md:top-16 w-1 h-20 bg-gray-100 -z-0 hidden md:block"></div>
-                       <div>
-                          <h4 className="font-bold text-[#0C002B] text-xl md:text-2xl mb-2">Examination & Examination Report</h4>
-                          <p className="leading-relaxed text-lg">Ek government officer aapke mark ko analyze karta hai. Agar koi similarity ya descriptive grounds milti hai, toh 'Examination Report' issue ki jati hai. Humein iska legal reply 30 din mein dena anivarya hai.</p>
-                       </div>
+                      <div className="w-10 h-10 md:w-16 md:h-16 bg-[#6E5E93] text-white rounded-full flex items-center justify-center font-bold text-base md:text-2xl flex-shrink-0 shadow-lg z-10">3</div>
+                      <div className="absolute left-5 md:left-8 top-10 md:top-16 w-1 h-20 bg-gray-100 -z-0 hidden md:block"></div>
+                      <div>
+                        <h4 className="font-bold text-[#0C002B] text-xl md:text-2xl mb-2">Examination & Examination Report</h4>
+                        <p className="leading-relaxed text-lg">Ek government officer aapke mark ko analyze karta hai. Agar koi similarity ya descriptive grounds milti hai, toh 'Examination Report' issue ki jati hai. Humein iska legal reply 30 din mein dena anivarya hai.</p>
+                      </div>
                     </div>
                     <div className="flex gap-6 relative">
-                       <div className="w-10 h-10 md:w-16 md:h-16 bg-[#6E5E93] text-white rounded-full flex items-center justify-center font-bold text-base md:text-2xl flex-shrink-0 shadow-lg z-10">4</div>
-                       <div className="absolute left-5 md:left-8 top-10 md:top-16 w-1 h-20 bg-gray-100 -z-0 hidden md:block"></div>
-                       <div>
-                          <h4 className="font-bold text-[#0C002B] text-xl md:text-2xl mb-2">Publication In Journal</h4>
-                          <p className="leading-relaxed text-lg">Agar examination pass ho jata hai, toh mark 'Trademark Journal' mein dikhaya jata hai. Ye 120 dinon ke liye advertisemen ki tarah hota hai taaki janta (public) dekh sake.</p>
-                       </div>
+                      <div className="w-10 h-10 md:w-16 md:h-16 bg-[#6E5E93] text-white rounded-full flex items-center justify-center font-bold text-base md:text-2xl flex-shrink-0 shadow-lg z-10">4</div>
+                      <div className="absolute left-5 md:left-8 top-10 md:top-16 w-1 h-20 bg-gray-100 -z-0 hidden md:block"></div>
+                      <div>
+                        <h4 className="font-bold text-[#0C002B] text-xl md:text-2xl mb-2">Publication In Journal</h4>
+                        <p className="leading-relaxed text-lg">Agar examination pass ho jata hai, toh mark 'Trademark Journal' mein dikhaya jata hai. Ye 120 dinon ke liye advertisemen ki tarah hota hai taaki janta (public) dekh sake.</p>
+                      </div>
                     </div>
                     <div className="flex gap-6 relative">
-                       <div className="w-10 h-10 md:w-16 md:h-16 bg-[#6E5E93] text-white rounded-full flex items-center justify-center font-bold text-base md:text-2xl flex-shrink-0 shadow-lg z-10">5</div>
-                       <div>
-                          <h4 className="font-bold text-[#0C002B] text-xl md:text-2xl mb-2">Registration Certificate Issue</h4>
-                          <p className="leading-relaxed text-lg">Jab 4 mahine tak koi third-party objection nahi aata, toh registrar seal maarkar 'Registration Certificate' issue kar dete hai. Ab aap legally Registered (®) ho gaye hai.</p>
-                       </div>
+                      <div className="w-10 h-10 md:w-16 md:h-16 bg-[#6E5E93] text-white rounded-full flex items-center justify-center font-bold text-base md:text-2xl flex-shrink-0 shadow-lg z-10">5</div>
+                      <div>
+                        <h4 className="font-bold text-[#0C002B] text-xl md:text-2xl mb-2">Registration Certificate Issue</h4>
+                        <p className="leading-relaxed text-lg">Jab 4 mahine tak koi third-party objection nahi aata, toh registrar seal maarkar 'Registration Certificate' issue kar dete hai. Ab aap legally Registered (®) ho gaye hai.</p>
+                      </div>
                     </div>
                   </div>
                 </section>
@@ -458,7 +458,7 @@ export default function TrademarkRegisterKeseKarteHaiPage() {
                 <section id="trademark-classes" className="mb-12 scroll-mt-24 md:scroll-mt-32">
                   <h2 className="text-2xl md:text-3xl font-bold text-[#0C002B] mb-6">Trademark Classes: Sahi Chunav Kaise Karein?</h2>
                   <p className="mb-6 leading-relaxed text-lg">
-                    Bharat mein Nice Classification ka istemal kiya jata hai, jisme puri duniya ki goods aur services ko 45 categories (Classes) mein banta gaya hai. Galat class mein file karna yani brand ko insecurity mein dalna. 
+                    Bharat mein Nice Classification ka istemal kiya jata hai, jisme puri duniya ki goods aur services ko 45 categories (Classes) mein banta gaya hai. Galat class mein file karna yani brand ko insecurity mein dalna.
                   </p>
                   <div className="overflow-x-auto my-10 rounded-2xl border border-gray-200">
                     <table className="w-full text-left bg-white border-collapse">
@@ -508,22 +508,22 @@ export default function TrademarkRegisterKeseKarteHaiPage() {
                   </p>
                   <div className="space-y-8 my-10">
                     <div className="p-8 bg-white rounded-3xl border-l-[10px] border-l-[#0C002B] shadow-xl">
-                       <h4 className="font-bold text-[#0C002B] text-2xl mb-4 flex items-center">
-                         <FontAwesomeIcon icon={faBalanceScale} className="w-4 h-4 mr-3 text-[#6E5E93]" />
-                         Section 9 (Absolute Grounds)
-                       </h4>
-                       <p className="mb-4 text-gray-700 leading-relaxed">Jab examiner ko lagta hai ki aapka naam 'Generic' hai (e.g., 'Sweet Mango' for juice) ya koi 'Good Quality' jaisa descriptio hai. </p>
-                       <p className="font-bold text-[#6E5E93]">Solving Strategy:</p>
-                       <p className="text-gray-600 italic">Hum 'Acquired Distinctiveness' ke proofs dete hai, yani proof karte ki lambe samay se use karne se logo ke dhimag mein ye naam sirf aapke business se juda hai.</p>
+                      <h4 className="font-bold text-[#0C002B] text-2xl mb-4 flex items-center">
+                        <FontAwesomeIcon icon={faBalanceScale} className="w-4 h-4 mr-3 text-[#6E5E93]" />
+                        Section 9 (Absolute Grounds)
+                      </h4>
+                      <p className="mb-4 text-gray-700 leading-relaxed">Jab examiner ko lagta hai ki aapka naam 'Generic' hai (e.g., 'Sweet Mango' for juice) ya koi 'Good Quality' jaisa descriptio hai. </p>
+                      <p className="font-bold text-[#6E5E93]">Solving Strategy:</p>
+                      <p className="text-gray-600 italic">Hum 'Acquired Distinctiveness' ke proofs dete hai, yani proof karte ki lambe samay se use karne se logo ke dhimag mein ye naam sirf aapke business se juda hai.</p>
                     </div>
                     <div className="p-8 bg-white rounded-3xl border-l-[10px] border-l-[#6E5E93] shadow-xl">
-                       <h4 className="font-bold text-[#0C002B] text-2xl mb-4 flex items-center">
-                         <FontAwesomeIcon icon={faScaleBalanced} className="w-4 h-4 mr-3 text-[#6E5E93]" />
-                         Section 11 (Relative Grounds)
-                       </h4>
-                       <p className="mb-4 text-gray-700 leading-relaxed">Jab koi bilkul milta-julta naam pehle se registered find hota hai. Isme confusion hone ka khatra bataya jata hai.</p>
-                       <p className="font-bold text-[#6E5E93]">Solving Strategy:</p>
-                       <p className="text-gray-600 italic">Hum dono brands ke market, price point, audience aur visual difference ko argue karte hai taaki siddh (prove) ho sake ki koi confusion nahi hoga.</p>
+                      <h4 className="font-bold text-[#0C002B] text-2xl mb-4 flex items-center">
+                        <FontAwesomeIcon icon={faScaleBalanced} className="w-4 h-4 mr-3 text-[#6E5E93]" />
+                        Section 11 (Relative Grounds)
+                      </h4>
+                      <p className="mb-4 text-gray-700 leading-relaxed">Jab koi bilkul milta-julta naam pehle se registered find hota hai. Isme confusion hone ka khatra bataya jata hai.</p>
+                      <p className="font-bold text-[#6E5E93]">Solving Strategy:</p>
+                      <p className="text-gray-600 italic">Hum dono brands ke market, price point, audience aur visual difference ko argue karte hai taaki siddh (prove) ho sake ki koi confusion nahi hoga.</p>
                     </div>
                   </div>
                   <p className="mb-4 leading-relaxed text-lg text-red-600 font-bold">
@@ -532,38 +532,38 @@ export default function TrademarkRegisterKeseKarteHaiPage() {
                 </section>
 
                 <section id="msme-startup-benefits" className="mb-12 scroll-mt-24 md:scroll-mt-32">
-                   <h2 className="text-2xl md:text-3xl font-bold text-[#0C002B] mb-6">Startups Ke Liye Vishesh Suvidhayein Aur Chhutein</h2>
-                   <p className="mb-8 leading-relaxed text-lg">
-                     DPIIT Recognized Startups ke liye Bharat sarkar ne 'Fast Track Examination' ka rasta khola hai. Jahan aam logo ko mahino lagte hai, startups ke liye examination 30 se 60 dinon mein ho sakta hai. 
-                   </p>
-                   <div className="grid md:grid-cols-2 gap-6 my-10 list-none p-0">
-                     <div className="p-6 bg-purple-100/50 rounded-2xl border border-purple-200 text-center">
-                        <div className="text-3xl mb-2">💰</div>
-                        <h5 className="font-bold text-lg mb-1">50% Fee Rebate</h5>
-                        <p className="text-sm">Seedha 4500 rupaye ki bachat.</p>
-                     </div>
-                     <div className="p-6 bg-purple-100/50 rounded-2xl border border-purple-200 text-center">
-                        <div className="text-3xl mb-2">⚡</div>
-                        <h5 className="font-bold text-lg mb-1">Priority Processing</h5>
-                        <p className="text-sm">Examiner pehle aapki file dekhenge.</p>
-                     </div>
-                     <div className="p-6 bg-purple-100/50 rounded-2xl border border-purple-200 text-center">
-                        <div className="text-3xl mb-2">⚖️</div>
-                        <h5 className="font-bold text-lg mb-1">Free Facilitators</h5>
-                        <p className="text-sm">Sarkar ke empanelled vakilon ki madad.</p>
-                     </div>
-                     <div className="p-6 bg-purple-100/50 rounded-2xl border border-purple-200 text-center">
-                        <div className="text-3xl mb-2">🛡️</div>
-                        <h5 className="font-bold text-lg mb-1">Stronger Defense</h5>
-                        <p className="text-sm">Startup support se application ka wajan badhta hai.</p>
-                     </div>
-                   </div>
+                  <h2 className="text-2xl md:text-3xl font-bold text-[#0C002B] mb-6">Startups Ke Liye Vishesh Suvidhayein Aur Chhutein</h2>
+                  <p className="mb-8 leading-relaxed text-lg">
+                    DPIIT Recognized Startups ke liye Bharat sarkar ne 'Fast Track Examination' ka rasta khola hai. Jahan aam logo ko mahino lagte hai, startups ke liye examination 30 se 60 dinon mein ho sakta hai.
+                  </p>
+                  <div className="grid md:grid-cols-2 gap-6 my-10 list-none p-0">
+                    <div className="p-6 bg-purple-100/50 rounded-2xl border border-purple-200 text-center">
+                      <div className="text-3xl mb-2">💰</div>
+                      <h5 className="font-bold text-lg mb-1">50% Fee Rebate</h5>
+                      <p className="text-sm">Seedha 4500 rupaye ki bachat.</p>
+                    </div>
+                    <div className="p-6 bg-purple-100/50 rounded-2xl border border-purple-200 text-center">
+                      <div className="text-3xl mb-2">⚡</div>
+                      <h5 className="font-bold text-lg mb-1">Priority Processing</h5>
+                      <p className="text-sm">Examiner pehle aapki file dekhenge.</p>
+                    </div>
+                    <div className="p-6 bg-purple-100/50 rounded-2xl border border-purple-200 text-center">
+                      <div className="text-3xl mb-2">⚖️</div>
+                      <h5 className="font-bold text-lg mb-1">Free Facilitators</h5>
+                      <p className="text-sm">Sarkar ke empanelled vakilon ki madad.</p>
+                    </div>
+                    <div className="p-6 bg-purple-100/50 rounded-2xl border border-purple-200 text-center">
+                      <div className="text-3xl mb-2">🛡️</div>
+                      <h5 className="font-bold text-lg mb-1">Stronger Defense</h5>
+                      <p className="text-sm">Startup support se application ka wajan badhta hai.</p>
+                    </div>
+                  </div>
                 </section>
 
                 <section id="legal-enforcement" className="mb-12 scroll-mt-24 md:scroll-mt-32">
                   <h2 className="text-2xl md:text-3xl font-bold text-[#0C002B] mb-6">Infringement Se Ladai: Kab Aur Kaise Action Lein?</h2>
                   <p className="mb-6 leading-relaxed text-lg">
-                    Maatra certificate lena kafi nahi hai, use use karna aur defend karna asli dharam hai. Agar aapko koi imitator dikhta hai toh: 
+                    Maatra certificate lena kafi nahi hai, use use karna aur defend karna asli dharam hai. Agar aapko koi imitator dikhta hai toh:
                   </p>
                   <h3 className="text-xl font-bold text-[#160049] mb-3 flex items-center">
                     <FontAwesomeIcon icon={faGavel} className="w-4 h-4 mr-3 text-red-600" />
@@ -583,7 +583,7 @@ export default function TrademarkRegisterKeseKarteHaiPage() {
                 <section id="conclusion" className="mb-12 scroll-mt-24 md:scroll-mt-32">
                   <h2 className="text-2xl md:text-4xl font-bold text-[#0C002B] mb-6">Nishkarsh: Apne Brand Ko Bharat Ki Shaan Banayein</h2>
                   <p className="mb-4 leading-relaxed text-xl">
-                    Humein umeed hai ki is vishu-guide (comprehensive guide) se aap samajh gaye honge ki <strong>trademark register kaise karte hai</strong>. Ye sirf ek kanooni prakriya nahi hai, balki ye ek sapne ko haquikat mein badalne ka suraksha kavach hai. 
+                    Humein umeed hai ki is vishu-guide (comprehensive guide) se aap samajh gaye honge ki <strong>trademark register kaise karte hai</strong>. Ye sirf ek kanooni prakriya nahi hai, balki ye ek sapne ko haquikat mein badalne ka suraksha kavach hai.
                   </p>
                   <p className="mb-4 leading-relaxed text-xl">
                     Ek chota sa kadam aaj aapke business ko aane wale 100 saalon tak ek pehchan dilwa sakta hai. IPR Karo ke saath judkar aap nishchint (worry-free) hokar apne core business par dhyan de sakte hai, jabki hum aapke brand ki safety ka dhyan rakhenge. Same-day filing, expert drafting aur 100% transparency ke sath humne hazaro startups ko unka malikana haq dilwaya hai.
@@ -613,7 +613,7 @@ export default function TrademarkRegisterKeseKarteHaiPage() {
 
                 {/* Final CTA Strip */}
                 <div className="bg-gradient-to-br from-[#0C002B] to-[#1a0033] rounded-[40px] p-10 md:p-20 text-center text-white relative overflow-hidden mt-20 shadow-2xl">
-                   <div className="relative z-10">
+                  <div className="relative z-10">
                     <h2 className="text-3xl md:text-5xl font-bold mb-6">Aaj Hi Apna Brand Safe Karein</h2>
                     <p className="text-xl opacity-90 mb-10 max-w-2xl mx-auto leading-relaxed">
                       5000+ businesses ne hum par bharosa kiya hai. Experts se baat karein aur same-day filing report payein.
@@ -625,7 +625,7 @@ export default function TrademarkRegisterKeseKarteHaiPage() {
                         </button>
                       </Link>
                       <a href="tel:+919289707648">
-                         <button className="bg-white/10 hover:bg-white/20 text-white border-2 border-white/30 font-bold py-4 px-12 rounded-full transition-all text-xl backdrop-blur-md flex items-center justify-center">
+                        <button className="bg-white/10 hover:bg-white/20 text-white border-2 border-white/30 font-bold py-4 px-12 rounded-full transition-all text-xl backdrop-blur-md flex items-center justify-center">
                           <FontAwesomeIcon icon={faPhone} className="w-4 h-4 mr-3" />
                           Call: +91-9289707648
                         </button>
@@ -642,7 +642,7 @@ export default function TrademarkRegisterKeseKarteHaiPage() {
 
             {/* Right Column - Sidebar Widgets */}
             <aside className="hidden lg:block space-y-10 sticky top-32">
-              
+
               {/* Sidebar CTA Box */}
               <div className="bg-[#0C002B] p-8 rounded-3xl shadow-xl border border-gray-800 text-white relative overflow-hidden group">
                 <div className="absolute -top-10 -right-10 w-32 h-32 bg-[#6E5E93] rounded-full blur-[60px] opacity-20 group-hover:opacity-40 transition-opacity"></div>
