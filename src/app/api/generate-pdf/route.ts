@@ -18,7 +18,7 @@ export async function GET(request: NextRequest) {
     // In development, use 127.0.0.1 instead of localhost for better compatibility
     const isDev = process.env.NODE_ENV === 'development';
     const protocol = isDev ? 'http' : (request.headers.get('x-forwarded-proto') || 'https');
-    
+
     // Use the host from the request, or default to localhost/127.0.0.1
     let host = request.headers.get('host');
     if (!host) {
@@ -27,14 +27,14 @@ export async function GET(request: NextRequest) {
       // Replace localhost with 127.0.0.1 in dev for Puppeteer compatibility
       host = host.replace('localhost', '127.0.0.1');
     }
-    
+
     const baseUrl = `${protocol}://${host}`;
 
     console.log('Generating PDF for:', { trademark, classNumber, baseUrl });
 
     // Construct the PDF-specific dashboard URL (only shows MetricsSection in desktop layout)
     const dashboardUrl = `${baseUrl}/dashboard/pdf?trademark=${encodeURIComponent(trademark)}&class=${encodeURIComponent(classNumber)}`;
-    
+
     console.log('PDF Dashboard URL:', dashboardUrl);
 
     // Launch Puppeteer
@@ -64,7 +64,7 @@ export async function GET(request: NextRequest) {
         name: launchError.name,
       });
       return NextResponse.json(
-        { 
+        {
           error: 'Failed to launch browser',
           details: launchError.message || 'Puppeteer launch failed. Make sure Chromium is installed. Try running: npx puppeteer browsers install chrome'
         },
@@ -104,7 +104,7 @@ export async function GET(request: NextRequest) {
         console.error('Navigation error:', navigationError);
         await browser.close();
         return NextResponse.json(
-          { 
+          {
             error: 'Failed to load dashboard page',
             details: navigationError.message || 'Page navigation timeout or error',
             url: dashboardUrl
@@ -115,7 +115,7 @@ export async function GET(request: NextRequest) {
 
       // Wait for PDF-specific content to be fully rendered
       console.log('Waiting for PDF content...');
-      
+
       // Wait for the main heading, metric cards, and logo
       try {
         await page.waitForSelector('h1', { timeout: 10000 });
@@ -143,7 +143,7 @@ export async function GET(request: NextRequest) {
 
       // Additional wait to ensure all content is fully rendered
       await new Promise(resolve => setTimeout(resolve, 2000));
-      
+
       // Inject Poppins font from Google Fonts using link tag
       await page.evaluate(() => {
         const link = document.createElement('link');
@@ -203,10 +203,10 @@ export async function GET(request: NextRequest) {
           }
         `
       });
-      
+
       // Wait for styles to apply
       await new Promise(resolve => setTimeout(resolve, 500));
-      
+
       // Verify content is loaded
       const contentCheck = await page.evaluate(() => {
         const heading = document.querySelector('h1');
@@ -219,7 +219,7 @@ export async function GET(request: NextRequest) {
           viewportWidth: window.innerWidth,
         };
       });
-      
+
       console.log('Content check:', contentCheck);
       console.log('Content rendering complete');
 
@@ -259,7 +259,7 @@ export async function GET(request: NextRequest) {
     console.error('Error generating PDF:', error);
     console.error('Error stack:', error.stack);
     return NextResponse.json(
-      { 
+      {
         error: 'Failed to generate PDF',
         details: error.message || 'Unknown error',
         stack: process.env.NODE_ENV === 'development' ? error.stack : undefined

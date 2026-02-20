@@ -5,10 +5,12 @@ import { Navbar, Footer } from '@/components';
 
 export default function ConditionalLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  
+
   // Pages where navbar and footer should not be shown
   const excludedPaths = ['/form', '/authority', '/dashboard/pdf'];
-  const shouldHideLayout = excludedPaths.some(path => pathname?.startsWith(path));
+  const shouldHideLayout = excludedPaths.some(path =>
+    pathname === path || pathname?.startsWith(`${path}/`)
+  );
 
   if (shouldHideLayout) {
     return <>{children}</>;
