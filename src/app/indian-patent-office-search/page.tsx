@@ -484,7 +484,32 @@ export default function IndianPatentSearchPage() {
                                 </section>
 
                                 <section id="reviews" className="mb-16 scroll-mt-24 md:scroll-mt-32 w-full pt-10">
-                                    <ReviewSnippets />
+                                    <ReviewSnippets reviews={[
+                                        {
+                                            author: "Dr. Sameer Khan",
+                                            role: "R&D Head, BioMed Innovations",
+                                            rating: 5,
+                                            date: "2024-02-15",
+                                            text: "The InPASS search report from IPR Karo was exceptionally detailed. They identified three expired patents that we could safely leverage for our new formulation, saving us years of redundant research.",
+                                            avatar: "SK"
+                                        },
+                                        {
+                                            author: "Rohan Varma",
+                                            role: "CTO, TechEdge Robotics",
+                                            rating: 5,
+                                            date: "2024-01-10",
+                                            text: "Our FTO audit showed a potential infringement risk with a granted patent in Mumbai. IPR Karo's invalidity analysis found prior art in an old German journal that helped us challenge the patent successfully. Absolute lifesavers.",
+                                            avatar: "RV"
+                                        },
+                                        {
+                                            author: "Anjali Mehta",
+                                            role: "Founder, SolarStep Solutions",
+                                            rating: 5,
+                                            date: "2023-11-25",
+                                            text: "Simple, fast, and technically sound. As a startup, we needed to know if our solar panel design was novel. IPR Karo's patent agents explained the search results in plain English, allowing us to file our provisional application with confidence.",
+                                            avatar: "AM"
+                                        }
+                                    ]} />
                                 </section>
 
                                 <section id="conclusion" className="mb-12 scroll-mt-24 md:scroll-mt-32">

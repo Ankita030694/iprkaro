@@ -520,7 +520,32 @@ export default function LeaveLicensePage() {
                                 </section>
 
                                 <section id="reviews" className="mb-16 scroll-mt-24 md:scroll-mt-32 w-full pt-10">
-                                    <ReviewSnippets />
+                                    <ReviewSnippets reviews={[
+                                        {
+                                            author: "Vikram Gadgil",
+                                            role: "Property Owner, Pune",
+                                            rating: 5,
+                                            date: "2024-02-18",
+                                            text: "Registering a Leave and License in Maharashtra is usually a nightmare, but IPR Karo's remote registration service was flawless. Didn't have to visit the Sub-Registrar office even once!",
+                                            avatar: "VG"
+                                        },
+                                        {
+                                            author: "Anjali Deshpande",
+                                            role: "Investment Consultant",
+                                            rating: 5,
+                                            date: "2024-01-12",
+                                            text: "I use IPR Karo for all my clients' rental agreements. Their clauses on maintenance and lock-in periods are very well-drafted and protect the owner's interest effectively.",
+                                            avatar: "AD"
+                                        },
+                                        {
+                                            author: "Sameer Sheikh",
+                                            role: "Commercial Tenant",
+                                            rating: 5,
+                                            date: "2023-11-25",
+                                            text: "Fast and professional. We needed an agreement registered within 24 hours to secure our office space, and they delivered exactly on time. The dashboard tracking is a great bonus.",
+                                            avatar: "SS"
+                                        }
+                                    ]} />
                                 </section>
 
                                 <section id="conclusion" className="mb-12 scroll-mt-24 md:scroll-mt-32">

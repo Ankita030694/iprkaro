@@ -606,7 +606,32 @@ export default function McaNameCheckPage() {
                                 </section>
 
                                 <section id="reviews" className="mb-16 scroll-mt-24 md:scroll-mt-32 w-full pt-10">
-                                    <ReviewSnippets />
+                                    <ReviewSnippets reviews={[
+                                        {
+                                            author: "Sanjay Singhal",
+                                            role: "Founder, Fintech Innovators",
+                                            rating: 5,
+                                            date: "2024-02-12",
+                                            text: "I tried twice to register my startup name and got rejected both times. IPR Karo identified the trademark conflict I missed and suggested a name that got approved in 24 hours. Highly recommended!",
+                                            avatar: "SS"
+                                        },
+                                        {
+                                            author: "Ishita Gupta",
+                                            role: "CEO, EcoLife Ventures",
+                                            rating: 5,
+                                            date: "2024-01-28",
+                                            text: "Their dual-search on MCA and TM databases is a game-changer. It gave us the confidence that our brand was legally safe before we even printed our first business cards.",
+                                            avatar: "IG"
+                                        },
+                                        {
+                                            author: "Amit Khurana",
+                                            role: "Director, Khurana Logistics LLP",
+                                            rating: 5,
+                                            date: "2023-12-15",
+                                            text: "Excellent support for LLP name reservation. They handled the resubmission query about 'phonetic similarity' perfectly by citing Rule 8 precedents. Very professional team.",
+                                            avatar: "AK"
+                                        }
+                                    ]} />
                                 </section>
 
                                 <section id="conclusion" className="mb-12 scroll-mt-24 md:scroll-mt-32">

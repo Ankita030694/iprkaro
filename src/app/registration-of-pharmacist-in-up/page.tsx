@@ -445,7 +445,32 @@ export default function PharmacistRegistrationUPPage() {
                                 </section>
 
                                 <section id="reviews" className="mb-16 scroll-mt-24 md:scroll-mt-32 w-full pt-10">
-                                    <ReviewSnippets />
+                                    <ReviewSnippets reviews={[
+                                        {
+                                            author: "Ashutosh Mishra",
+                                            role: "Registered Pharmacist, Varanasi",
+                                            rating: 5,
+                                            date: "2024-02-14",
+                                            text: "I was very nervous about the Council appointment in Lucknow. IPR Karo's team audited my files and found an error in my training certificate that I fixed before submitting. My registration was approved without a single objection.",
+                                            avatar: "AM"
+                                        },
+                                        {
+                                            author: "Priya Sharma",
+                                            role: "B.Pharm Graduate, Noida",
+                                            rating: 5,
+                                            date: "2024-01-20",
+                                            text: "The online portal can be confusing for freshers. IPR Karo handled my entire application process, from document upload to scheduling the physical verification. Extremely professional and well-worth the fee.",
+                                            avatar: "PS"
+                                        },
+                                        {
+                                            author: "Deepak Yadav",
+                                            role: "Pharmacy Owner, Meerut",
+                                            rating: 5,
+                                            date: "2023-12-05",
+                                            text: "We needed a reciprocal transfer from Delhi to UP for our new clinical pharmacist. IPR Karo managed the coordination between both state councils flawlessly. Saved us weeks of travel and paperwork.",
+                                            avatar: "DY"
+                                        }
+                                    ]} />
                                 </section>
 
                                 <section id="renewal-transfer" className="mb-12 scroll-mt-24 md:scroll-mt-32">

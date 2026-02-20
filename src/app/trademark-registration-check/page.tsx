@@ -4,6 +4,7 @@ import Script from 'next/script';
 import { Metadata } from 'next';
 import TableOfContents from '@/components/TableOfContents';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import ReviewSnippets from '@/components/ReviewSnippets';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faCheck,
@@ -455,40 +456,33 @@ export default function TrademarkRegistrationCheckPage() {
                                     </div>
                                 </section>
 
-                                <section id="reviews" className="mb-16 scroll-mt-24 md:scroll-mt-32">
-                                    <div className="py-16 bg-[#0C002B] rounded-3xl relative overflow-hidden">
-                                        <div className="absolute top-[20%] right-[-10%] w-[40%] h-[40%] bg-purple-900/10 rounded-full blur-[100px]" />
-                                        <div className="max-w-6xl mx-auto px-6">
-                                            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center">What <span className="text-[#FFB703]">Applicants Say</span> About Status Tracking</h2>
-                                            <p className="text-white/70 max-w-2xl mx-auto text-center mb-12">See how IPR Karo helped clients track their applications and resolve registry issues promptly.</p>
-                                            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                                                <div className="p-6 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm">
-                                                    <div className="flex items-center gap-4 mb-4">
-                                                        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#FFB703] to-orange-500 flex items-center justify-center text-black font-bold">NK</div>
-                                                        <div><h3 className="text-white font-bold">Nikhil Kapoor</h3><p className="text-white/50 text-xs">Owner, Premium Tea Brand</p></div>
-                                                    </div>
-                                                    <div className="mb-3 text-[#FFB703] text-sm flex gap-1">★★★★★</div>
-                                                    <p className="text-white/80 text-sm italic">&quot;My trademark status was stuck on &apos;Objected&apos; for 6 months and I had no idea what to do. IPR Karo explained the examination report, drafted a strong reply, and got our status changed to Accepted within weeks!&quot;</p>
-                                                </div>
-                                                <div className="p-6 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm">
-                                                    <div className="flex items-center gap-4 mb-4">
-                                                        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#FFB703] to-orange-500 flex items-center justify-center text-black font-bold">DW</div>
-                                                        <div><h3 className="text-white font-bold">Divya Wadhwa</h3><p className="text-white/50 text-xs">Co-Founder, Kids Clothing Line</p></div>
-                                                    </div>
-                                                    <div className="mb-3 text-[#FFB703] text-sm flex gap-1">★★★★★</div>
-                                                    <p className="text-white/80 text-sm italic">&quot;IPR Karo set up automated status alerts for our 4 trademark applications. Every time the status changed on IP India, we got an instant notification. No more manual checking needed!&quot;</p>
-                                                </div>
-                                                <div className="p-6 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm">
-                                                    <div className="flex items-center gap-4 mb-4">
-                                                        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#FFB703] to-orange-500 flex items-center justify-center text-black font-bold">RN</div>
-                                                        <div><h3 className="text-white font-bold">Raj Narang</h3><p className="text-white/50 text-xs">Founder, Artisanal Bakery Chain</p></div>
-                                                    </div>
-                                                    <div className="mb-3 text-[#FFB703] text-sm flex gap-1">★★★★★</div>
-                                                    <p className="text-white/80 text-sm italic">&quot;The verification certificate service from IPR Karo was invaluable. When our registration check showed &apos;Registered&apos;, they immediately obtained the official certificate for our bank loan application!&quot;</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <section id="reviews" className="mb-16 scroll-mt-24 md:scroll-mt-32 w-full pt-10">
+                                    <ReviewSnippets reviews={[
+                                        {
+                                            author: "Nikhil Kapoor",
+                                            role: "Owner, Premium Tea Brand",
+                                            rating: 5,
+                                            date: "2024-02-15",
+                                            text: "My trademark status was stuck on 'Objected' for 6 months and I had no idea what to do. IPR Karo explained the examination report, drafted a strong reply, and got our status changed to Accepted within weeks!",
+                                            avatar: "NK"
+                                        },
+                                        {
+                                            author: "Divya Wadhwa",
+                                            role: "Co-Founder, Kids Clothing Line",
+                                            rating: 5,
+                                            date: "2024-01-20",
+                                            text: "IPR Karo set up automated status alerts for our 4 trademark applications. Every time the status changed on IP India, we got an instant notification. No more manual checking needed!",
+                                            avatar: "DW"
+                                        },
+                                        {
+                                            author: "Raj Narang",
+                                            role: "Founder, Artisanal Bakery Chain",
+                                            rating: 5,
+                                            date: "2023-11-05",
+                                            text: "The verification certificate service from IPR Karo was invaluable. When our registration check showed 'Registered', they immediately obtained the official certificate for our bank loan application!",
+                                            avatar: "RN"
+                                        }
+                                    ]} />
                                 </section>
 
                                 <section id="conclusion" className="mb-12 scroll-mt-24 md:scroll-mt-32 text-gray-800">

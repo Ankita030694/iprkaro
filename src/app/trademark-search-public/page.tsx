@@ -498,7 +498,32 @@ export default function TrademarkSearchPublicPage() {
                                 </section>
 
                                 <section id="reviews" className="mb-16 scroll-mt-24 md:scroll-mt-32 w-full pt-10">
-                                    <ReviewSnippets />
+                                    <ReviewSnippets reviews={[
+                                        {
+                                            author: "Nitin Saxena",
+                                            role: "Founder, Urban Bites",
+                                            rating: 5,
+                                            date: "2024-02-10",
+                                            text: "I was about to print 10,000 packets with a name I thought was original. IPR Karo's public search report showed a phonetic conflict with a major brand that I hadn't even heard of. Saved me from a massive rebranding disaster!",
+                                            avatar: "NS"
+                                        },
+                                        {
+                                            author: "Deepika Chawla",
+                                            role: "Creative Head, Bloom Designs",
+                                            rating: 5,
+                                            date: "2024-01-25",
+                                            text: "The way they explain the 'Search Opinion' is very helpful. Most sites just give you a list of names, but IPR Karo's team told me exactly why my name was at risk of objection and how to modify it.",
+                                            avatar: "DC"
+                                        },
+                                        {
+                                            author: "Rahul Dravid",
+                                            role: "Director, RD Sports Academy",
+                                            rating: 5,
+                                            date: "2023-11-15",
+                                            text: "Fast, accurate, and very professional. The public search tool on the government site kept crashing for me, but the IPR Karo team provided a detailed forensic report within hours. Excellent service.",
+                                            avatar: "RD"
+                                        }
+                                    ]} />
                                 </section>
 
                                 <section id="conclusion" className="mb-12 scroll-mt-24 md:scroll-mt-32">

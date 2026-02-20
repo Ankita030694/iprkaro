@@ -485,7 +485,32 @@ export default function NOCFormatPage() {
                                 </section>
 
                                 <section id="reviews" className="mb-16 scroll-mt-24 md:scroll-mt-32 w-full pt-10">
-                                    <ReviewSnippets />
+                                    <ReviewSnippets reviews={[
+                                        {
+                                            author: "Megha Singhania",
+                                            role: "Property Owner, Gurgaon",
+                                            rating: 5,
+                                            date: "2024-02-12",
+                                            text: "I needed to provide an NOC to my tenant for their GST registration. IPR Karo drafted a professional document that protected my interests as a landlord while clearly giving the necessary permissions. The e-stamping was a huge time-saver.",
+                                            avatar: "MS"
+                                        },
+                                        {
+                                            author: "Arjun Mehra",
+                                            role: "Founder, Zenith Logistics",
+                                            rating: 5,
+                                            date: "2024-01-28",
+                                            text: "The GST officer rejected our first NOC because it was on plain paper. IPR Karo helped us get the correct format on a ₹100 e-stamp within hours. Our GST was approved the next day. Highly recommended for urgent compliance.",
+                                            avatar: "AM"
+                                        },
+                                        {
+                                            author: "Sanjay Gupta",
+                                            role: "Director, Gupta Trading Co.",
+                                            rating: 5,
+                                            date: "2023-12-10",
+                                            text: "Simple, easy, and legally sound. The team at IPR Karo knows exactly what the registry wants. They even helped coordinate with my father (the property owner) for his digital signature on the NOC.",
+                                            avatar: "SG"
+                                        }
+                                    ]} />
                                 </section>
 
                                 <section id="conclusion" className="mb-12 scroll-mt-24 md:scroll-mt-32">

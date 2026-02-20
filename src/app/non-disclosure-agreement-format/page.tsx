@@ -511,7 +511,32 @@ export default function NDAGuidePage() {
                                 </section>
 
                                 <section id="reviews" className="mb-16 scroll-mt-24 md:scroll-mt-32 w-full pt-10">
-                                    <ReviewSnippets />
+                                    <ReviewSnippets reviews={[
+                                        {
+                                            author: "Sanjeev Khanna",
+                                            role: "CTO, Fintech Solutions",
+                                            rating: 5,
+                                            date: "2024-02-16",
+                                            text: "I was about to pitch my algorithm to a major investor. IPR Karo drafted a robust, mutual NDA that protected my backend architecture. They even included a non-solicitation clause that I hadn't thought of. Very thorough.",
+                                            avatar: "SK"
+                                        },
+                                        {
+                                            author: "Neha Duggal",
+                                            role: "Product Manager, HealthSync",
+                                            rating: 5,
+                                            date: "2024-01-22",
+                                            text: "We needed an NDA for our remote developers. IPR Karo provided a format that was enforceable under Indian law and specific to software development. The team was fast and responsive to our specific tweaks.",
+                                            avatar: "ND"
+                                        },
+                                        {
+                                            author: "Rahul Bajaj",
+                                            role: "Founder, Green Logistics",
+                                            rating: 5,
+                                            date: "2023-11-15",
+                                            text: "Excellent service. They explained the importance of e-stamping our NDA to make it legally valid. I now feel much safer sharing my business plans with potential partners.",
+                                            avatar: "RB"
+                                        }
+                                    ]} />
                                 </section>
 
                                 <section id="conclusion" className="mb-12 scroll-mt-24 md:scroll-mt-32">

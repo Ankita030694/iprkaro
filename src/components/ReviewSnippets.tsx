@@ -55,35 +55,50 @@ export const REVIEWS_DATA = [
   }
 ];
 
-export default function ReviewSnippets() {
+interface Review {
+  author: string;
+  role: string;
+  rating: number;
+  date: string;
+  text: string;
+  avatar: string;
+}
+
+interface ReviewSnippetsProps {
+  reviews?: Review[];
+}
+
+export default function ReviewSnippets({ reviews }: ReviewSnippetsProps) {
+  const displayReviews = reviews || REVIEWS_DATA;
+
   return (
     <section className="py-20 relative overflow-hidden bg-[#0C002B]">
-       {/* Background Ambience */}
+      {/* Background Ambience */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
-          <div className="absolute top-[20%] right-[-10%] w-[40%] h-[40%] bg-purple-900/10 rounded-full blur-[100px]" />
-          <div className="absolute bottom-[10%] left-[-10%] w-[30%] h-[30%] bg-[#FFB703]/5 rounded-full blur-[80px]" />
+        <div className="absolute top-[20%] right-[-10%] w-[40%] h-[40%] bg-purple-900/10 rounded-full blur-[100px]" />
+        <div className="absolute bottom-[10%] left-[-10%] w-[30%] h-[30%] bg-[#FFB703]/5 rounded-full blur-[80px]" />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
-           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-nunito">
-             Trusted by <span className="text-[#FFB703]">Innovators & Businesses</span>
-           </h2>
-           <p className="text-white/70 max-w-2xl mx-auto">
-             Don't just take our word for it. Here is what business owners, founders, and creators have to say about securing their IP with us.
-           </p>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-nunito">
+            Trusted by <span className="text-[#FFB703]">Innovators & Businesses</span>
+          </h2>
+          <p className="text-white/70 max-w-2xl mx-auto">
+            Don't just take our word for it. Here is what business owners, founders, and creators have to say about securing their IP with us.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {REVIEWS_DATA.map((review, idx) => (
-            <div 
-              key={idx} 
+          {displayReviews.map((review, idx) => (
+            <div
+              key={idx}
               className="p-6 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm relative group hover:border-[#FFB703]/50 transition-all duration-300 hover:transform hover:-translate-y-1"
             >
               <div className="absolute top-6 right-6 text-white/10 group-hover:text-[#FFB703]/20 transition-colors">
                 <FontAwesomeIcon icon={faQuoteLeft} size="2x" />
               </div>
-              
+
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#FFB703] to-orange-500 flex items-center justify-center text-black font-bold text-lg">
                   {review.avatar}
@@ -96,10 +111,10 @@ export default function ReviewSnippets() {
 
               <div className="mb-4 text-[#FFB703] text-sm flex gap-1">
                 {[...Array(5)].map((_, i) => (
-                  <FontAwesomeIcon 
-                    key={i} 
-                    icon={faStar} 
-                    className={i < review.rating ? "text-[#FFB703]" : "text-gray-600"} 
+                  <FontAwesomeIcon
+                    key={i}
+                    icon={faStar}
+                    className={i < review.rating ? "text-[#FFB703]" : "text-gray-600"}
                   />
                 ))}
               </div>
@@ -107,7 +122,7 @@ export default function ReviewSnippets() {
               <p className="text-white/80 text-sm leading-relaxed italic">
                 "{review.text}"
               </p>
-              
+
               {/* Date hidden visually but good for potential expansion/metadata */}
               {/* <meta itemProp="datePublished" content={review.date} /> */}
             </div>

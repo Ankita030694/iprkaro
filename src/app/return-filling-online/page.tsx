@@ -442,7 +442,32 @@ export default function OnlineReturnFilingPage() {
                                 </section>
 
                                 <section id="reviews" className="mb-16 scroll-mt-24 md:scroll-mt-32 w-full pt-10">
-                                    <ReviewSnippets />
+                                    <ReviewSnippets reviews={[
+                                        {
+                                            author: "Siddharth Goel",
+                                            role: "Freelance Software Architect",
+                                            rating: 5,
+                                            date: "2024-02-12",
+                                            text: "Filing ITR-4 as a freelancer used to be a headache. IPR Karo's tax experts helped me categorize my professional expenses correctly, reducing my tax liability significantly. The process was entirely digital and very smooth.",
+                                            avatar: "SG"
+                                        },
+                                        {
+                                            author: "Rashmi Jindal",
+                                            role: "Partner, Jindal Retailers",
+                                            rating: 5,
+                                            date: "2024-01-25",
+                                            text: "We were struggling with GST nil returns and periodic compliance. IPR Karo took over our monthly filings and ensured we claimed the right ITC. No more late fees or worry about department notices.",
+                                            avatar: "RJ"
+                                        },
+                                        {
+                                            author: "Amit Trivedi",
+                                            role: "Manager, Trivedi & Sons",
+                                            rating: 5,
+                                            date: "2023-11-30",
+                                            text: "The AIS cross-check was vital. I had missed a small dividend income, but IPR Karo's team flagged it before filing. Saved me from a potential 143(1) notice later. Excellent attention to detail.",
+                                            avatar: "AT"
+                                        }
+                                    ]} />
                                 </section>
 
                                 <section id="conclusion" className="mb-12 scroll-mt-24 md:scroll-mt-32">

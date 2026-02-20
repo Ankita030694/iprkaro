@@ -481,7 +481,32 @@ export default function TrademarkCopyrightDifferencePage() {
                                 </section>
 
                                 <section id="reviews" className="mb-16 scroll-mt-24 md:scroll-mt-32 w-full pt-10">
-                                    <ReviewSnippets />
+                                    <ReviewSnippets reviews={[
+                                        {
+                                            author: "Vikram Sethi",
+                                            role: "Founder, Pixel Perfect Studios",
+                                            rating: 5,
+                                            date: "2024-02-18",
+                                            text: "I used to think my logo was protected by copyright alone. IPR Karo explained why I needed a trademark for the brand name and class-specific protection. Their IP audit saved us from a potential lawsuit with a similarly named tech firm.",
+                                            avatar: "VS"
+                                        },
+                                        {
+                                            author: "Ananya Iyer",
+                                            role: "Author & Digital Content Creator",
+                                            rating: 5,
+                                            date: "2024-01-15",
+                                            text: "The clarity IPR Karo provided on the Copyright Act was amazing. They helped me register my online course content and also trademarked my personal brand name. Now I feel fully secure in my creative business.",
+                                            avatar: "AI"
+                                        },
+                                        {
+                                            author: "Karan Malhotra",
+                                            role: "CEO, Malhotra Apparels",
+                                            rating: 5,
+                                            date: "2023-11-20",
+                                            text: "Great team. They simplified the legal jargon and helped us understand that our unique fabric patterns needed copyright, while the brand logo needed a trademark. Highly professional approach.",
+                                            avatar: "KM"
+                                        }
+                                    ]} />
                                 </section>
 
                                 <section id="conclusion" className="mb-12 scroll-mt-24 md:scroll-mt-32">

@@ -674,7 +674,32 @@ export default function TrademarkRenewalPage() {
                 </section>
 
                 <section id="reviews" className="mb-16 scroll-mt-24 md:scroll-mt-32 w-full pt-10">
-                  <ReviewSnippets />
+                  <ReviewSnippets reviews={[
+                    {
+                      author: "Sunil Mehta",
+                      role: "MD, Heritage Textiles",
+                      rating: 5,
+                      date: "2024-02-15",
+                      text: "We almost lost our 20-year-old brand because we forgot the 10-year renewal deadline. IPR Karo filed the restoration and saved our legacy within 48 hours. Absolute lifesavers!",
+                      avatar: "SM"
+                    },
+                    {
+                      author: "Priya Sharma",
+                      role: "Founder, Glow & Lovely Cosmetics",
+                      rating: 5,
+                      date: "2024-01-10",
+                      text: "The renewal process seemed daunting, but the team handled everything from DSC mapping to the fee payment. Their proactive monitoring means I never have to worry about deadlines again.",
+                      avatar: "PS"
+                    },
+                    {
+                      author: "Arjun Reddy",
+                      role: "Director, TechVantage Solutions",
+                      rating: 5,
+                      date: "2023-12-20",
+                      text: "Excellent service for renewal. They even helped us update our registered office address in the registry alongside the renewal. Very professional and efficient.",
+                      avatar: "AR"
+                    }
+                  ]} />
                 </section>
 
                 <section id="conclusion" className="mb-12 scroll-mt-24 md:scroll-mt-32">

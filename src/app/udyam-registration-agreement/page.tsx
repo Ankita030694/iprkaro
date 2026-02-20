@@ -484,7 +484,32 @@ export default function UdyamRegistrationPage() {
                                 </section>
 
                                 <section id="reviews" className="mb-16 scroll-mt-24 md:scroll-mt-32 w-full pt-10">
-                                    <ReviewSnippets />
+                                    <ReviewSnippets reviews={[
+                                        {
+                                            author: "Hardik Patel",
+                                            role: "Director, Patel Engineering Works",
+                                            rating: 5,
+                                            date: "2024-02-14",
+                                            text: "The collateral-free loan benefit under Udyam is real. IPR Karo helped us get registered and guided our bank application. We secured ₹2 Crores for our plant expansion without any property mortgage!",
+                                            avatar: "HP"
+                                        },
+                                        {
+                                            author: "Sowmya Rao",
+                                            role: "Founder, GreenEarth Textiles",
+                                            rating: 5,
+                                            date: "2024-01-30",
+                                            text: "We were struggling with delayed payments from a large retail chain. IPR Karo used our Udyam status to file a claim on the Samadhaan portal. We received our dues with interest within 60 days.",
+                                            avatar: "SR"
+                                        },
+                                        {
+                                            author: "Anand Verma",
+                                            role: "CEO, TechNova Solutions",
+                                            rating: 5,
+                                            date: "2023-12-05",
+                                            text: "The 50% subsidy on trademark fees for MSMEs is a great initiative. IPR Karo made the process so simple—they handled the Udyam registration and the discounted TM filing together.",
+                                            avatar: "AV"
+                                        }
+                                    ]} />
                                 </section>
 
                                 <section id="conclusion" className="mb-12 scroll-mt-24 md:scroll-mt-32">

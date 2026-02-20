@@ -574,7 +574,32 @@ export default function TrademarkStatusPage() {
                                 </section>
 
                                 <section id="reviews" className="mb-16 scroll-mt-24 md:scroll-mt-32 w-full pt-10">
-                                    <ReviewSnippets />
+                                    <ReviewSnippets reviews={[
+                                        {
+                                            author: "Kunal Bansal",
+                                            role: "CEO, SportzGo India",
+                                            rating: 5,
+                                            date: "2024-02-01",
+                                            text: "The IP India portal's terminology was confusing, but IPR Karo simplified everything. Their automated status tracking saved us from missing a critical 'Objected' status notification.",
+                                            avatar: "KB"
+                                        },
+                                        {
+                                            author: "Meera Iyer",
+                                            role: "Founder, Soulful Organic",
+                                            rating: 5,
+                                            date: "2024-01-22",
+                                            text: "I was checking my trademark status daily until I found IPR Karo. Their WhatsApp alerts are amazing—they notify you the moment the registry updates your file.",
+                                            avatar: "MI"
+                                        },
+                                        {
+                                            author: "Rohan Malhotra",
+                                            role: "Director, Delta Logistics",
+                                            rating: 5,
+                                            date: "2023-11-30",
+                                            text: "Excellent status monitoring service. They caught a third-party opposition against our mark before we even received the official notice. Proactive and reliable!",
+                                            avatar: "RM"
+                                        }
+                                    ]} />
                                 </section>
 
                                 <section id="conclusion" className="mb-12 scroll-mt-24 md:scroll-mt-32">

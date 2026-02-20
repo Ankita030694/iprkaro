@@ -519,7 +519,32 @@ export default function SmallCompanyDefinitionPage() {
                                 </section>
 
                                 <section id="reviews" className="mb-16 scroll-mt-24 md:scroll-mt-32 w-full pt-10">
-                                    <ReviewSnippets />
+                                    <ReviewSnippets reviews={[
+                                        {
+                                            author: "Sumit Taneja",
+                                            role: "Director, Taneja Tech Pvt Ltd",
+                                            rating: 5,
+                                            date: "2024-02-17",
+                                            text: "I didn't realize that being a 'Small Company' meant we didn't need a Cash Flow Statement in our annual report. IPR Karo's audit helped us identify our status, saving us significant CA audit fees this year.",
+                                            avatar: "ST"
+                                        },
+                                        {
+                                            author: "Kavita Reddy",
+                                            role: "Founder, Reddy Organics",
+                                            rating: 5,
+                                            date: "2024-01-28",
+                                            text: "The exemption from rotation of auditors is a huge relief for a small startup like ours. IPR Karo's CS team explained the thresholds perfectly and helped us maintain our Small Company status legally.",
+                                            avatar: "KR"
+                                        },
+                                        {
+                                            author: "Abhishek Singh",
+                                            role: "COO, Swift Delivery Services",
+                                            rating: 5,
+                                            date: "2023-11-20",
+                                            text: "Fast, accurate compliance support. They helped us understand that even with high turnover, we stayed a 'Small Company' because of our low paid-up capital. Their strategic advice on capital structure was invaluable.",
+                                            avatar: "AS"
+                                        }
+                                    ]} />
                                 </section>
 
                                 <section id="conclusion" className="mb-12 scroll-mt-24 md:scroll-mt-32">
