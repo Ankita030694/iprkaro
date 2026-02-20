@@ -358,27 +358,27 @@ export default function WhyTrademark() {
   const featureCards = [
     {
       title: "Fast Trademark Registration",
-      description: "Rapid, professional trademark filing handled by experienced attorneys for swift brand protection."
+      description: "Quick trademark registration process in India handled by experienced attorneys. Complete e-filing with govt fees starting at ₹4,500 for swift brand protection."
     },
     {
       title: "Expert Trademark Guidance",
-      description: "Quick responses and expert support for every step of your trademark application, ensuring legal compliance."
+      description: "Learn how to register a trademark step-by-step. Expert support for trademark registration documents required, trademark registration symbol ® usage, and legal compliance."
     },
     {
-      title: "Affordable Trademark Services",
-      description: "Cost-effective and transparent trademark search and registration to maximize value and minimize risk."
+      title: "Affordable Trademark Registration Price",
+      description: "Transparent trademark registration cost in India with no hidden charges. Affordable trademark registration govt fees and professional service plans for every budget."
     },
     {
-      title: "AI-Powered Trademark Solutions",
-      description: "Intelligent AI-driven search and reporting for complete assistance, from trademark search to registration."
+      title: "AI-Powered Trademark Search",
+      description: "Comprehensive trademark search public database scan, trademark search by name and class, brand name availability search, and trademark availability check — all powered by AI."
     },
     {
       title: "Trademark Risk Reduction",
-      description: "Robust trademark risk assessment with advanced search, lowering the chances of conflicts and rejections."
+      description: "Advanced trademark search register analysis lowers the chances of conflicts, objections, and rejections. Includes international trademark search and WIPO trademark search support."
     },
     {
-      title: "24/7 Trademark Protection",
-      description: "Round-the-clock accessibility with certified trademark agents recognized by official authorities."
+      title: "Trademark Registration Delhi & PAN India",
+      description: "Complete trademark registration Delhi, Noida, Gurgaon & across India. Government-certified agents with 24/7 accessibility for the trademark registration mark process nationwide."
     }
   ];
 
@@ -404,7 +404,7 @@ export default function WhyTrademark() {
                           className="font-nunito font-bold text-[28px] md:text-[44px] lg:text-[37px]"
                          
                         >
-                         Why Register Your Trademark with IPRKaro?
+                         Why Choose IPRKaro for Trademark Registration in India?
                         </span>
       
         </h2>
@@ -458,7 +458,7 @@ export default function WhyTrademark() {
                     Trusted by Over 1.25 Lakh Clients
                   </div>
                   <div className="text-white font-nunito text-[8.4px] lg:text-[11px] italic font-normal leading-[10px] lg:leading-[12px]">
-                    Rated 4.7/5 stars for reliable trademark registration across India, startups, and enterprises.
+                    Rated 4.7/5 stars for reliable trademark registration across India – trusted by startups, enterprises, and trademark registration Delhi clients.
                   </div>
                 </div>
               </div>
@@ -493,7 +493,7 @@ export default function WhyTrademark() {
                     Trusted by Over 1.25 Lakh Clients
                   </div>
                   <div className="text-white font-nunito text-[12px] lg:text-[11px] italic font-normal leading-[14px] lg:leading-[12px]">
-                    Rated 4.7/5 stars for reliable trademark registration across India, startups, and enterprises.
+                    Rated 4.7/5 stars for reliable trademark registration across India – trusted by startups, enterprises, and trademark registration Delhi clients.
                   </div>
                 </div>
               </div>
@@ -689,7 +689,7 @@ export default function WhyTrademark() {
       {/* How It Works? */}
       <div className="w-full relative z-10 px-8 md:px-20 lg:px-20 min-h-fit mt-30 mb-30">
         <h2 className="text-white text-center font-nunito text-[28px] md:text-[45px] lg:text-[38px] font-medium leading-[32px] md:leading-[45px] lg:leading-[42px] w-full my-8 md:my-20 lg:my-16">
-          How It Works
+          How Trademark Registration Works
         </h2>
         {/* Desktop Layout */}
         <div className="hidden md:flex flex-row w-full gap-4 lg:gap-3">
@@ -718,7 +718,7 @@ export default function WhyTrademark() {
                     Instant AI-Powered Trademark Search
                   </h3>
                   <p className="text-white font-nunito text-[10px] md:text-[10px] lg:text-[13px] font-medium leading-snug m-0 break-words">
-                    Enter your brand name or logo to instantly access a comprehensive AI-driven trademark database scan. Receive instant insights on potential conflicts, similarities, and risks with no manual searching needed.
+                    Enter your brand name for a comprehensive trademark search across the trademark search public database. Our AI performs a trademark search by name and class, runs a brand name availability search, and checks trademark availability instantly — no manual searching needed.
                   </p>
                 </div>
                 {/* Search SVG - Bottom Left */}
@@ -750,7 +750,7 @@ export default function WhyTrademark() {
                       Comprehensive Trademark Search Report
                     </h3>
                     <p className="text-white font-nunito text-[10px] md:text-xs lg:text-[13px] font-medium leading-snug m-0 break-words">
-                      Get a detailed trademark search report generated by AI, complete with conflict analysis, phonetic matching, and a registerability score to help you make informed filing decisions.
+                      Get a detailed trademark search report with conflict analysis, phonetic matching, and a registerability score. The report covers trademark search by class, trademark search name analysis, and helps you understand how to register a trademark successfully.
                     </p>
                   </div>
                 </div>
@@ -767,10 +767,10 @@ export default function WhyTrademark() {
                 <div className="relative z-10 flex flex-col h-full">
                   <div className="flex flex-col justify-start px-3 md:px-4 lg:px-5 py-3 md:py-4 lg:py-4 items-start">
                     <h3 className="text-white font-nunito text-[18px] md:text-[22px] lg:text-[20px] font-semibold leading-tight mb-1 md:mb-2 lg:mb-1.5 break-words mt-6 md:mt-8 lg:mt-6">
-                      Know Your Approval Chances
+                      Know Your Trademark Registration Chances
                     </h3>
                     <p className="text-white font-nunito text-[10px] md:text-xs lg:text-[13px] font-medium leading-snug m-0 break-words">
-                      Understand your brand's approval likelihood with a clear risk score and suggested trademark classes to increase registration success and reduce rejections.
+                      Understand your trademark registration approval likelihood with a clear risk score, suggested trademark classes, and the trademark registration price estimate. Maximize your success in the trademark registration process in India.
                     </p>
                   </div>
                 </div>
@@ -786,10 +786,10 @@ export default function WhyTrademark() {
               }}
             >
               <h3 className="text-white font-nunito text-[20px] md:text-[24px] lg:text-[20px] font-semibold leading-tight mb-2 lg:mb-1.5 text-center -mt-20">
-                Check Your Registrability Now
+                Start Your Trademark Registration Now
               </h3>
               <p className="text-white font-nunito text-[12px] md:text-[14px] lg:text-[13px] font-medium leading-snug m-0 mb-4 lg:mb-3 text-center">
-                Use our AI-powered tool to check your trademark eligibility instantly and secure your brand with confidence.
+                Use our AI-powered trademark search to check trademark availability instantly, know the trademark registration cost in India, and begin the trademark registration process with confidence.
               </p>
               <button
                 className="relative overflow-hidden border-2 border-[#FFB703] rounded-[10px] px-4 md:px-6 lg:px-4 py-1.5 md:py-2 lg:py-1.5 font-nunito font-semibold text-sm md:text-base lg:text-sm mt-2 group"
@@ -870,7 +870,7 @@ export default function WhyTrademark() {
                     Instant AI-Powered Trademark Search
                   </h3>
                   <p className="text-white font-nunito text-[10px] font-medium leading-snug m-0 break-words">
-                    Enter your brand name or logo to instantly access a comprehensive AI-driven trademark database scan. Receive instant insights on potential conflicts, similarities, and risks with no manual searching needed.
+                    Enter your brand name for a comprehensive trademark search across the trademark search public database. Our AI runs a brand name availability search and checks trademark availability instantly — no manual searching needed.
                   </p>
                 </div>
                 {/* Search SVG - Bottom Left */}
@@ -900,7 +900,7 @@ export default function WhyTrademark() {
                     Comprehensive Trademark Search Report
                   </h3>
                   <p className="text-white font-nunito text-[10px] font-medium leading-snug m-0 break-words">
-                    Get a detailed trademark search report generated by AI, complete with conflict analysis, phonetic matching, and a registerability score to help you make informed filing decisions.
+                    Get a detailed trademark search report with conflict analysis, phonetic matching, and a registerability score. Covers trademark search by class, trademark search name analysis, and helps you understand how to register a trademark.
                   </p>
                 </div>
               </div>
@@ -917,10 +917,10 @@ export default function WhyTrademark() {
               <div className="relative z-10 flex flex-col h-full">
                 <div className="flex flex-col justify-start px-3 py-3 items-start">
                   <h3 className="text-white font-nunito text-[16px] font-semibold leading-tight mb-1 break-words mt-4">
-                    Know Your Approval Chances
+                    Know Your Trademark Registration Chances
                   </h3>
                   <p className="text-white font-nunito text-[10px] font-medium leading-snug m-0 break-words">
-                    Understand your brand’s approval likelihood with a clear risk score and suggested trademark classes to increase registration success and reduce rejections.
+                    Understand your trademark registration approval likelihood with a clear risk score, suggested trademark classes, and the trademark registration price estimate to maximize success.
                   </p>
                 </div>
               </div>
@@ -935,10 +935,10 @@ export default function WhyTrademark() {
               }}
             >
               <h3 className="text-white font-nunito text-[18px] font-semibold leading-tight mb-2 text-center">
-                Check Your Registrability Now
+                Start Your Trademark Registration Now
               </h3>
               <p className="text-white font-nunito text-[11px] font-medium leading-snug m-0 mb-4 text-center">
-                Use our AI-powered tool to check your trademark eligibility instantly and secure your brand with confidence.
+                Use our AI-powered trademark search to check trademark availability instantly and begin the trademark registration process with confidence.
               </p>
               <button
                 className="relative overflow-hidden border-2 border-[#FFB703] rounded-[10px] px-4 py-1.5 font-nunito font-semibold text-sm mt-2 group"

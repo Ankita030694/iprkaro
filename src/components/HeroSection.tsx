@@ -74,13 +74,13 @@ export default function HeroSection() {
           <div className="flex flex-col items-center gap-2 text-center max-w-sm">
             {/* Main Heading */}
             <h2 className="text-[#F8F9FA] font-nunito text-[20px] font-bold leading-[26px]">
-            Trademark Registration Made Easy: Fast, Accurate, and Powered by AI <span className="animated-gradient text-[20px] font-bold">- Start in 60 Seconds</span>
+            Trademark Registration Online India: AI Trademark Search & Filing <span className="animated-gradient text-[20px] font-bold">- Start in 60 Seconds</span>
             </h2>
 
             {/* Subtitle */}
             <p className="text-[rgba(255,255,255,0.77)] font-nunito text-[11px] font-normal leading-[13px]">
-              AI-powered search, risk check & filing all in one place. Protect your brand name
-              in minutes with iprkaro.com.
+              AI-powered trademark search, brand name availability search & complete trademark registration in India.
+              Check trademark availability and register your trademark mark in minutes with iprkaro.com.
             </p>
 
             {/* Search Bar */}
@@ -116,12 +116,12 @@ export default function HeroSection() {
           <div className="flex flex-col items-start gap-3 text-left">
             {/* Main Heading */}
             <h1 className="w-full text-[#F8F9FA] font-nunito text-[32px] font-bold leading-[40px]">
-            Fast AI-Powered Trademark Registration India <span className="animated-gradient text-[32px] font-bold">- Start in 60 Seconds</span>
+            Trademark Registration India – AI-Powered Trademark Search & Online Filing <span className="animated-gradient text-[32px] font-bold">- Start in 60 Seconds</span>
             </h1>
 
             {/* Subtitle */}
             <p className="w-full text-[rgba(255,255,255,0.77)] font-nunito text-[13px] font-normal leading-[15.6px] max-w-lg">
-            AI-powered reports ensure your trademark is unique and legally secure before you apply.
+            Instant brand name availability search, trademark availability check, and AI-powered trademark search reports. Know how to register a trademark in India – from documents required to govt fees. Serving Delhi, Noida, Gurgaon & PAN India.
             </p>
           </div>
 

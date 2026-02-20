@@ -12,40 +12,40 @@ const Faq = () => {
 
   const faqs = [
     {
-      question: "What is IPR Karo?",
-      answer: "IPR Karo is a platform to search, register, and protect trademarks online using AI-powered search reports and expert legal support, making trademark registration fast and secure."
+      question: "What is trademark registration and why is it important?",
+      answer: "Trademark registration is the legal process of securing exclusive rights to your brand name, logo, or trademark registration symbol (®) in India. It protects your trademark registration mark from infringement, establishes ownership, and builds brand trust. IPR Karo simplifies the entire trademark registration process in India with AI-powered tools."
     },
     {
-      question: "Who can use IPR Karo?",
-      answer: "Startups, businesses, creative professionals, and entrepreneurs seeking hassle-free trademark registration, copyright filing, or patent protection online in India can use IPR Karo."
+      question: "How to register a trademark in India with IPR Karo?",
+      answer: "To register a trademark, start with our AI-powered trademark search to check trademark availability. Review the brand name availability search report for conflicts, prepare the trademark registration documents required, pay the trademark registration govt fees, and submit your application online. IPR Karo guides you through every step of the trademark registration process in India."
     },
     {
-      question: "Is IPR Karo backed by legal experts?",
-      answer: "Yes, all trademark and IP services with IPR Karo are reviewed by experienced attorneys to ensure complete legal compliance and robust intellectual property protection."
-    },
-    {
-      question: "Why choose IPR Karo over traditional methods?",
-      answer: "IPR Karo offers AI-driven trademark search, instant conflict checks, risk assessment reports, and seamless online filings, delivering faster results and more accurate protection than manual, offline methods."
-    },
-    {
-      question: "How does AI help in trademark protection?",
-      answer: "AI instantly scans trademark databases, detects similarities and conflicts, generates registerability scores, and guides users through every step to maximize the success of trademark registration."
-    },
-    {
-      question: "How long does trademark registration take in India?",
-      answer: "Trademark registration in India typically takes 12-18 months from application to final registration. The process includes application filing, examination, publication, and registration stages. IPR Karo streamlines this process with AI-powered pre-filing searches to reduce objections and expedite approval."
+      question: "What is the trademark registration cost in India?",
+      answer: "The trademark registration price varies by applicant type and class count. Trademark registration govt fees for individuals and startups start at ₹4,500 per class, while companies pay ₹9,000 per class. IPR Karo offers transparent trademark registration pricing with no hidden costs, making it affordable for all budgets."
     },
     {
       question: "What documents are required for trademark registration?",
-      answer: "You need your trademark logo/image (if applicable), applicant's identity proof, address proof, business registration certificate (for companies), and a signed authorization form. IPR Karo provides a complete checklist and helps you prepare all necessary documents for seamless filing."
+      answer: "The trademark registration documents required include: your brand logo or word mark, identity proof (Aadhaar/PAN), address proof, business registration certificate, MSME/Udyam certificate (if applicable), and a signed Form TM-48 (authorization). IPR Karo provides a complete document checklist and helps prepare everything for seamless filing."
     },
     {
-      question: "What happens if my trademark application is rejected?",
-      answer: "If your trademark application faces objections or opposition, IPR Karo's legal experts help you respond with proper documentation and arguments. Our AI-powered search reduces rejection risks by identifying conflicts before filing, and our attorneys provide expert guidance throughout the process."
+      question: "How does the AI trademark search work at IPR Karo?",
+      answer: "Our AI-powered trademark search scans the trademark search public database instantly, performing a comprehensive trademark search by name, trademark search by class, and phonetic similarity analysis. It checks trademark availability, runs a brand name availability search, and generates a detailed report with a registerability score — helping you make informed decisions before filing."
+    },
+    {
+      question: "How long does trademark registration take in India?",
+      answer: "Trademark registration in India typically takes 12-18 months from application to final registration. The trademark registration process includes filing, examination, publication in the Trademark Journal, and registration stages. IPR Karo's AI-powered pre-filing trademark search reduces objections and helps expedite approval."
+    },
+    {
+      question: "Can I get trademark registration in Delhi and other cities?",
+      answer: "Yes! IPR Karo offers trademark registration Delhi, Noida, Gurgaon, Mumbai, Bangalore, and PAN India coverage. Our fully online trademark registration process means you can register your trademark from anywhere in India. We also support trademark search international and trademark search WIPO for global brand protection."
+    },
+    {
+      question: "What happens if my trademark application faces an objection?",
+      answer: "If your trademark application faces objections or opposition, IPR Karo's legal experts help you respond with proper documentation and arguments. Our AI-powered trademark search reduces rejection risks by identifying trademark availability conflicts before filing, and our attorneys provide expert guidance throughout the trademark registration process."
     },
     {
       question: "Can I register a trademark for multiple classes?",
-      answer: "Yes, you can register your trademark across multiple classes under the Nice Classification system. Each class requires a separate application fee. IPR Karo helps you identify the relevant classes for your business and provides cost-effective multi-class registration services."
+      answer: "Yes, you can register your trademark registration mark across multiple classes under the Nice Classification system. Use our trademark search by class tool to identify the right categories. Each class requires separate trademark registration govt fees. IPR Karo helps you select the relevant classes and offers cost-effective multi-class trademark registration."
     }
   ];
 

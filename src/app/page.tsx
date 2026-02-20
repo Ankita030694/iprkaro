@@ -2,14 +2,14 @@ import { HeroSection, WhyTrademark, OurServices, SimplePlans, Faq, ReviewSnippet
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Trademark Registration India | IPR Karo AI Protection",
-  description: "Instant trademark search, risk checks, and online registration. Register your trademark with AI-powered reports for fast, secure brand protection. Start in under 60 seconds with IPR Karo.",
+  title: "Trademark Registration Online India | AI Trademark Search & Filing – IPR Karo",
+  description: "Start your trademark registration online in India with IPR Karo. AI-powered trademark search, brand name availability search, trademark availability check, and complete filing support. Know the trademark registration cost in India, govt fees, documents required, and the step-by-step trademark registration process. Serving Delhi, Noida, Gurgaon & PAN India.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Trademark Registration India | IPR Karo",
-    description: "AI-powered trademark registration, patent services, and copyright protection in India.",
+    title: "Trademark Registration India | AI Trademark Search – IPR Karo",
+    description: "AI-powered trademark registration, trademark search, brand name availability search, patent services, and copyright protection in India. Check trademark availability and register your trademark online.",
     url: "https://www.iprkaro.com",
     siteName: "IPR Karo",
     locale: "en_IN",
@@ -33,23 +33,23 @@ export default function Home() {
   const faqs = [
     {
       question: "What is IPR Karo?",
-      answer: "IPR Karo is a platform to search, register, and protect trademarks online using AI-powered search reports and expert legal support, making trademark registration fast and secure."
+      answer: "IPR Karo is an AI-powered platform for trademark registration, trademark search, and brand name availability search in India. We help you check trademark availability, conduct a public trademark search by name or class, and complete the entire trademark registration process online — fast and secure."
     },
     {
-      question: "Who can use IPR Karo?",
-      answer: "Startups, businesses, creative professionals, and entrepreneurs seeking hassle-free trademark registration, copyright filing, or patent protection online in India can use IPR Karo."
+      question: "How to register a trademark with IPR Karo?",
+      answer: "To register a trademark, simply enter your brand name for an instant trademark search, review the AI-generated report for conflicts, and proceed with online filing. IPR Karo guides you through the complete trademark registration process in India — from document preparation to govt fee payment and e-filing."
     },
     {
-      question: "Is IPR Karo backed by legal experts?",
-      answer: "Yes, all trademark and IP services with IPR Karo are reviewed by experienced attorneys to ensure complete legal compliance and robust intellectual property protection."
+      question: "What is the trademark registration cost in India?",
+      answer: "The trademark registration price depends on the applicant type and number of classes. Trademark registration govt fees for individuals and startups start at ₹4,500 per class, while for companies it is ₹9,000 per class. IPR Karo offers affordable, transparent trademark registration pricing with no hidden costs."
     },
     {
-      question: "Why choose IPR Karo over traditional methods?",
-      answer: "IPR Karo offers AI-driven trademark search, instant conflict checks, risk assessment reports, and seamless online filings, delivering faster results and more accurate protection than manual, offline methods."
+      question: "What documents are required for trademark registration?",
+      answer: "The trademark registration documents required include: your trademark logo or word mark, applicant identity proof (Aadhaar/PAN), address proof, business registration certificate, and a signed Form TM-48 (authorization). IPR Karo provides a complete checklist and helps prepare all documents for seamless filing."
     },
     {
-      question: "How does AI help in trademark protection?",
-      answer: "AI instantly scans trademark databases, detects similarities and conflicts, generates registerability scores, and guides users through every step to maximize the success of trademark registration."
+      question: "How does AI help in trademark search and registration?",
+      answer: "AI instantly scans trademark databases worldwide, detects similarities and conflicts, checks trademark availability, runs a brand name availability search, generates registerability scores, and guides users through every step — from trademark search to final registration. It also supports trademark search by class and international trademark search."
     }
   ];
 

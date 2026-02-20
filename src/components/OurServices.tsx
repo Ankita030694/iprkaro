@@ -8,14 +8,14 @@ export default function OurServices() {
     {
       id: 'trademark',
       title: 'Trademark Registration',
-      subtitle: 'Register your trademark online start with our AI trademark search, review your report, and file instantly.',
+      subtitle: 'Complete trademark registration online in India – start with our AI trademark search for brand name availability, review your trademark search report, and file instantly. Know the trademark registration cost in India and govt fees upfront.',
       link: '/our-services/trademark-registration',
       items: [
-        'AI-powered trademark search for instant conflict detection and brand availability',
-        'Register trademark online with a fast, step-by-step guided application',
-        'How to register a trademark in India: Complete filing and legal support',
-        'Get your trademark search report with AI to maximize registerability',
-        'Secure your brand identity with expert trademark protection'
+        'AI-powered trademark search public database scan for instant conflict detection and trademark availability check',
+        'Register trademark online with a fast, step-by-step guided trademark registration process in India',
+        'How to register a trademark in India: complete filing, documents required, and legal support',
+        'Brand name availability search with AI-generated trademark search report to maximize registerability',
+        'Protect your trademark registration symbol ® and trademark registration mark with expert guidance'
       ],
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none" role="img" aria-label="Trademark Registered">
@@ -108,7 +108,7 @@ export default function OurServices() {
         {/* Section Header */}
         <div className="text-center mb-8 lg:mb-12">
           <h2 className="text-white font-nunito text-[28px] md:text-[36px] lg:text-[38px] font-medium leading-[32px] md:leading-[39.6px] lg:leading-[42px] mb-3">
-          IPR Services in India – Protect Your Brand, Patent, and Creative Work Hassle-Free
+          IPR Services in India – Trademark Registration, Trademark Search & IP Protection Made Simple
           </h2>
           <p className="text-white font-nunito text-[10.8px] md:text-[12.6px] lg:text-[14px] font-medium opacity-90">
             AI-Powered Protection for Your Intellectual Property

@@ -61,6 +61,7 @@ export default function GlobalPopupForm() {
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.9, opacity: 0, y: 20 }}
             className="relative w-full max-w-md bg-transparent"
+            style={{ transform: 'scaleY(0.8)', transformOrigin: 'center' }}
           >
             {/* Close Button */}
             <button
