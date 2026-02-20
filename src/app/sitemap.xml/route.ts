@@ -74,6 +74,15 @@ export async function GET() {
     '/where-can-i-find-affordable-trademark-registration-services-near-me',
     '/what-is-trademark-registration',
     '/steps-to-file-trademark-application-online-india',
+    '/online-trademark-registration',
+    '/registration-of-trademark',
+    '/trade-mark-registration',
+    '/trademark-india',
+    '/trademark-registration-check',
+    '/trademark-registration-india',
+    '/trademark-registration-search',
+    '/trademark-search',
+    '/what-is-trademark',
   ].map(path => ({ path, priority: '0.8', changefreq: 'weekly' } as RouteConfig));
 
   // Fetch Dynamic Blog Posts
