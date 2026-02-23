@@ -60,9 +60,9 @@ const faqs = [
 ];
 
 const reviews = [
-    { author: "Animesh J.", position: "Muzaffarpur Food CEO", content: "Securing our snack brand was seamless. They cleared the Kolkata Registry objections within days and helped us understand MSME fee waivers. Fast service for Bihar's manufacturers!", rating: 5 },
-    { author: "Priya M.", position: "Patna Ed-Tech Founder", content: "AI search was a lifesaver. We identified a conflict early and saved massive rebranding costs. They handled the Kolkata filing 100% online. Best IP partner in Bihar!", rating: 5 },
-    { author: "Sanjay K.", position: "Begusarai Industrialist", content: "Excellent support for our factory. They secured our mechanical brand across three classes flawlessly and provided a detailed renewal watch service.", rating: 5 }
+    { author: "Animesh J.", position: "CEO", content: "Securing our snack brand was seamless. They cleared the Kolkata Registry objections within days and helped us understand MSME fee waivers. Fast service for Bihar's manufacturers!", rating: 5 },
+    { author: "Priya M.", position: "Founder", content: "AI search was a lifesaver. We identified a conflict early and saved massive rebranding costs. They handled the Kolkata filing 100% online. Best IP partner in Bihar!", rating: 5 },
+    { author: "Sanjay K.", position: "Industrialist", content: "Excellent support for our factory. They secured our mechanical brand across three classes flawlessly and provided a detailed renewal watch service.", rating: 5 }
 ];
 
 const tocSections = [
