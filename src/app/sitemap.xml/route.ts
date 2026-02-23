@@ -121,6 +121,7 @@ export async function GET() {
     '/trademark-registration-in-himachal-pradesh',
     '/trademark-registration-in-west-bengal',
     '/trademark-registration-in-jharkhand',
+    '/trademark-registration-in-odisha',
   ].map(path => ({ path, priority: '0.8', changefreq: 'weekly' } as RouteConfig));
 
   // Fetch Dynamic Blog Posts
