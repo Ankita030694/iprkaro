@@ -97,9 +97,62 @@ export default function HaryanaPage() {
         }))
     };
 
+    const articleSchema = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Trademark Registration in Haryana: India's Industrial Gateway",
+        "description": "Expert trademark registration in Haryana. Secure your brand in Gurugram, Faridabad, and Panipat with IPR Karo.",
+        "image": "https://www.iprkaro.com/assets/haryana-trademark-og.jpg",
+        "datePublished": "2024-03-22T08:00:00+05:30",
+        "dateModified": new Date().toISOString(),
+        "author": {
+            "@type": "Organization",
+            "name": "IPR Karo"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "IPR Karo",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.iprkaro.com/logo.png"
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.iprkaro.com/trademark-registration-in-haryana"
+        }
+    };
+
+    const productSchema = {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Trademark Registration Haryana",
+        "image": "https://www.iprkaro.com/assets/haryana-trademark-og.jpg",
+        "description": "Professional trademark registration services for Haryana businesses.",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": averageRating.toString(),
+            "reviewCount": reviewsCount.toString()
+        },
+        "review": reviews.map(r => ({
+            "@type": "Review",
+            "author": {
+                "@type": "Person",
+                "name": r.author
+            },
+            "reviewBody": r.content,
+            "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": r.rating.toString()
+            }
+        }))
+    };
+
     return (
         <>
             <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+            <Script id="article-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+            <Script id="product-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
 
             <div className="relative w-full overflow-hidden"
                 style={{
