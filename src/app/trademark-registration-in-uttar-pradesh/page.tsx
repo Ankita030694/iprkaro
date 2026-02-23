@@ -132,11 +132,31 @@ export default function UttarPradeshPage() {
         }))
     };
 
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.iprkaro.com"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Trademark Registration in Uttar Pradesh",
+                "item": "https://www.iprkaro.com/trademark-registration-in-uttar-pradesh"
+            }
+        ]
+    };
+
     return (
         <>
             <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
             <Script id="article-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
             <Script id="product-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
+            <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
             <div className="relative w-full overflow-hidden"
                 style={{
