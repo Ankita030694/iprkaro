@@ -97,6 +97,8 @@ export async function GET() {
     '/small-company-definition',
     '/registration-of-pharmacist-in-up',
     '/trademark-status',
+    '/trademark-registration-in-bengaluru',
+    '/trademark-registration-in-hyderabad',
   ].map(path => ({ path, priority: '0.8', changefreq: 'weekly' } as RouteConfig));
 
   // Fetch Dynamic Blog Posts
