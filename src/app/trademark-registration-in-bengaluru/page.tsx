@@ -73,9 +73,9 @@ const faqs = [
 ];
 
 const reviews = [
-    { author: "Anitha R.", position: "Founder, Koramangala Tech", content: "IPR Karo's AI search was a lifesaver. We found a potential conflict early and saved months of legal headache. Best IP partner in Bangalore.", rating: 5 },
-    { author: "Vikram K.", position: "CEO, Whitefield Solutions", content: "The 4-hour filing is real. Got our TM number by lunch. Professional, fast, and transparent. Highly recommended for Bengaluru startups.", rating: 5 },
-    { author: "Sneha M.", position: "Owner, Indiranagar Brews", content: "Protected our cafe's logo and tagline. The team understood the retail landscape of Karnataka perfectly. Seamless experience!", rating: 5 }
+    { author: "Anitha R.", position: "Founder", content: "The AI search was a lifesaver. We found a potential conflict early and saved months of legal headache. Best IP partner in Bangalore.", rating: 5 },
+    { author: "Vikram K.", position: "CEO", content: "The 4-hour filing is real. Got our TM number by lunch. Professional, fast, and transparent. Highly recommended for Bengaluru startups.", rating: 5 },
+    { author: "Sneha M.", position: "Owner", content: "Protected our cafe's logo and tagline. The team understood the retail landscape of Karnataka perfectly. Seamless experience!", rating: 5 }
 ];
 
 const tocSections = [
@@ -99,10 +99,78 @@ const tocSections = [
 ];
 
 export default function BengaluruPage() {
+    const averageRating = 5.0;
+    const reviewsCount = reviews.length;
+
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqs.map(faq => ({
+            "@type": "Question",
+            "name": faq.question,
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+            }
+        }))
+    };
+
+    const articleSchema = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Trademark Registration in Bengaluru: Elite Brand Protection",
+        "description": "Expert guidance on trademark registration in Bengaluru. Reach out to IPR Karo for tech-first legal protection.",
+        "image": "https://www.iprkaro.com/assets/bangalore-trademark-og.jpg",
+        "datePublished": "2024-03-20T08:00:00+05:30",
+        "dateModified": new Date().toISOString(),
+        "author": {
+            "@type": "Organization",
+            "name": "IPR Karo"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "IPR Karo",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.iprkaro.com/logo.png"
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.iprkaro.com/trademark-registration-in-bengaluru"
+        }
+    };
+
+    const productSchema = {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Trademark Registration Bengaluru",
+        "image": "https://www.iprkaro.com/assets/bangalore-trademark-og.jpg",
+        "description": "Professional trademark registration services in Bengaluru.",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": averageRating,
+            "reviewCount": reviewsCount.toString()
+        },
+        "review": reviews.map(r => ({
+            "@type": "Review",
+            "author": {
+                "@type": "Person",
+                "name": r.author
+            },
+            "reviewBody": r.content,
+            "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": r.rating
+            }
+        }))
+    };
+
     return (
         <>
-            <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.question, "acceptedAnswer": { "@type": "Answer", "text": f.answer } })) }) }} />
-            <Script id="article-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Article", "headline": "Trademark Registration in Bengaluru: Elite Brand Protection", "description": "Expert guidance on trademark registration in Bengaluru.", "author": { "@type": "Organization", "name": "IPR Karo" }, "publisher": { "@type": "Organization", "name": "IPR Karo" }, "datePublished": new Date().toISOString() }) }} />
+            <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+            <Script id="article-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+            <Script id="product-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
 
             <div className="relative w-full overflow-hidden"
                 style={{

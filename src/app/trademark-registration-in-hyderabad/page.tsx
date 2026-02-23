@@ -73,9 +73,9 @@ const faqs = [
 ];
 
 const reviews = [
-    { author: "Rajesh V.", position: "Director, Genome Labs Hyderabad", content: "IPR Karo understood the high stakes of our Class 5 filing. The search report was incredibly detailed and accurate. Best IP firm in Telangana.", rating: 5 },
-    { author: "Priya S.", position: "Founder, Cyberabad Tech", content: "Seamless experience for our SaaS brand. Got our TM acknowledgment number within hours. Highly recommended for HITEC city startups!", rating: 5 },
-    { author: "Kiran M.", position: "Producer, Banjara Productions", content: "Protected our movie titles and production house logo. Professional team that understands the media landscape of Tollywood. Excellent!", rating: 5 }
+    { author: "Rajesh V.", position: "Director", content: "The team understood the high stakes of our Class 5 filing. The search report was incredibly detailed and accurate. Best IP firm in Telangana.", rating: 5 },
+    { author: "Priya S.", position: "Founder", content: "Seamless experience for our SaaS brand. Got our TM acknowledgment number within hours. Highly recommended for HITEC city startups!", rating: 5 },
+    { author: "Kiran M.", position: "Producer", content: "Protected our movie titles and production house logo. Professional team that understands the media landscape of Tollywood. Excellent!", rating: 5 }
 ];
 
 const tocSections = [
@@ -101,10 +101,78 @@ const tocSections = [
 ];
 
 export default function HyderabadPage() {
+    const averageRating = 5.0;
+    const reviewsCount = reviews.length;
+
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqs.map(faq => ({
+            "@type": "Question",
+            "name": faq.question,
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+            }
+        }))
+    };
+
+    const articleSchema = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Trademark Registration in Hyderabad: Elite Brand Protection",
+        "description": "Expert guidance on trademark registration in Hyderabad. Reach out to IPR Karo for tech-first legal protection.",
+        "image": "https://www.iprkaro.com/assets/hyderabad-trademark-og.jpg",
+        "datePublished": "2024-03-20T08:00:00+05:30",
+        "dateModified": new Date().toISOString(),
+        "author": {
+            "@type": "Organization",
+            "name": "IPR Karo"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "IPR Karo",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.iprkaro.com/logo.png"
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.iprkaro.com/trademark-registration-in-hyderabad"
+        }
+    };
+
+    const productSchema = {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Trademark Registration Hyderabad",
+        "image": "https://www.iprkaro.com/assets/hyderabad-trademark-og.jpg",
+        "description": "Professional trademark registration services in Hyderabad.",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": averageRating,
+            "reviewCount": reviewsCount.toString()
+        },
+        "review": reviews.map(r => ({
+            "@type": "Review",
+            "author": {
+                "@type": "Person",
+                "name": r.author
+            },
+            "reviewBody": r.content,
+            "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": r.rating
+            }
+        }))
+    };
+
     return (
         <>
-            <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.question, "acceptedAnswer": { "@type": "Answer", "text": f.answer } })) }) }} />
-            <Script id="article-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Article", "headline": "Trademark Registration in Hyderabad: Elite Brand Protection", "description": "Expert guidance on trademark registration in Hyderabad.", "author": { "@type": "Organization", "name": "IPR Karo" }, "publisher": { "@type": "Organization", "name": "IPR Karo" }, "datePublished": new Date().toISOString() }) }} />
+            <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+            <Script id="article-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+            <Script id="product-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
 
             <div className="relative w-full overflow-hidden"
                 style={{
