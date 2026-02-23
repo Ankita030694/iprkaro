@@ -94,7 +94,7 @@ export default function ContactFormPopup({ isOpen, onClose }: ContactFormPopupPr
   return (
     <div className="fixed inset-0 z-[200] flex items-center justify-center p-4">
       {/* Backdrop */}
-      <div 
+      <div
         className="absolute inset-0 bg-black/60 backdrop-blur-sm"
         onClick={onClose}
       ></div>
@@ -104,15 +104,15 @@ export default function ContactFormPopup({ isOpen, onClose }: ContactFormPopupPr
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute -top-8 right-0 w-8 h-8 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors z-10"
+          className="absolute top-2 right-2 w-7 h-7 flex items-center justify-center rounded-full bg-black/20 hover:bg-black/40 transition-colors z-[210]"
           aria-label="Close form"
         >
-          <FontAwesomeIcon icon={faTimes} className="text-white w-5 h-5" />
+          <FontAwesomeIcon icon={faTimes} className="text-white w-4 h-4" />
         </button>
 
         {/* Glassmorphism Container */}
         <div
-          className="rounded-2xl p-5"
+          className="rounded-2xl p-4 max-h-[calc(100vh-40px)] overflow-y-auto"
           style={{
             background: `linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), linear-gradient(145deg, rgba(12, 0, 43, 0.40) 6.6%, rgba(255, 183, 3, 0.40) 120.24%), rgba(0, 0, 0, 0.50)`,
             boxShadow: '0 0 20px 0 rgba(255, 255, 255, 0.31) inset',
@@ -121,7 +121,7 @@ export default function ContactFormPopup({ isOpen, onClose }: ContactFormPopupPr
           }}
         >
           {/* Form Title */}
-          <h2 className="text-white font-nunito text-xl font-semibold mb-4 text-center">
+          <h2 className="text-white font-nunito text-lg font-semibold mb-3 text-center">
             Get Started with <span className="text-[#FFB703]">IPR Karo</span>
           </h2>
 
@@ -129,12 +129,12 @@ export default function ContactFormPopup({ isOpen, onClose }: ContactFormPopupPr
             {/* Basic Input Fields */}
             <div className="space-y-2">
               {/* Name Field */}
-              <div className="space-y-1">
-                <label className="block text-white font-nunito text-sm font-normal">
+              <div className="space-y-0.5">
+                <label className="block text-white font-nunito text-xs font-normal">
                   Name
                 </label>
-                <div 
-                  className="h-9 rounded-lg"
+                <div
+                  className="h-8 rounded-lg"
                   style={{ background: 'rgba(255, 255, 255, 0.15)' }}
                 >
                   <input
@@ -143,7 +143,7 @@ export default function ContactFormPopup({ isOpen, onClose }: ContactFormPopupPr
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full h-full px-3 rounded-lg bg-transparent text-white placeholder-[rgba(255,255,255,0.6)] border-0 outline-0 font-nunito text-sm"
+                    className="w-full h-full px-3 rounded-lg bg-transparent text-white placeholder-[rgba(255,255,255,0.6)] border-0 outline-0 font-nunito text-xs"
                     placeholder="Enter your name"
                   />
                 </div>
@@ -151,12 +151,12 @@ export default function ContactFormPopup({ isOpen, onClose }: ContactFormPopupPr
               </div>
 
               {/* Email Field */}
-              <div className="space-y-1">
-                <label className="block text-white font-nunito text-sm font-normal">
+              <div className="space-y-0.5">
+                <label className="block text-white font-nunito text-xs font-normal">
                   Email
                 </label>
-                <div 
-                  className="h-9 rounded-lg"
+                <div
+                  className="h-8 rounded-lg"
                   style={{ background: 'rgba(255, 255, 255, 0.15)' }}
                 >
                   <input
@@ -165,7 +165,7 @@ export default function ContactFormPopup({ isOpen, onClose }: ContactFormPopupPr
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full h-full px-3 rounded-lg bg-transparent text-white placeholder-[rgba(255,255,255,0.6)] border-0 outline-0 font-nunito text-sm"
+                    className="w-full h-full px-3 rounded-lg bg-transparent text-white placeholder-[rgba(255,255,255,0.6)] border-0 outline-0 font-nunito text-xs"
                     placeholder="Enter your email"
                   />
                 </div>
@@ -173,12 +173,12 @@ export default function ContactFormPopup({ isOpen, onClose }: ContactFormPopupPr
               </div>
 
               {/* Phone Field */}
-              <div className="space-y-1">
-                <label className="block text-white font-nunito text-sm font-normal">
+              <div className="space-y-0.5">
+                <label className="block text-white font-nunito text-xs font-normal">
                   Phone No.
                 </label>
-                <div 
-                  className="h-9 rounded-lg"
+                <div
+                  className="h-8 rounded-lg"
                   style={{ background: 'rgba(255, 255, 255, 0.15)' }}
                 >
                   <input
@@ -187,7 +187,7 @@ export default function ContactFormPopup({ isOpen, onClose }: ContactFormPopupPr
                     value={formData.phone}
                     onChange={handleInputChange}
                     required
-                    className="w-full h-full px-3 rounded-lg bg-transparent text-white placeholder-[rgba(255,255,255,0.6)] border-0 outline-0 font-nunito text-sm"
+                    className="w-full h-full px-3 rounded-lg bg-transparent text-white placeholder-[rgba(255,255,255,0.6)] border-0 outline-0 font-nunito text-xs"
                     placeholder="Enter your phone number"
                   />
                 </div>
@@ -196,17 +196,17 @@ export default function ContactFormPopup({ isOpen, onClose }: ContactFormPopupPr
             </div>
 
             {/* Interest Section */}
-            <div className="space-y-1.5">
-              <div className="text-white font-nunito text-sm font-normal">
+            <div className="space-y-1">
+              <div className="text-white font-nunito text-xs font-normal">
                 What are you Interested in? <span className="text-red-500">*</span>
               </div>
-              
+
               {/* Radio Options */}
               <div className="space-y-0.5">
                 {interestOptions.map((option, index) => (
-                  <div 
-                    key={index} 
-                    className="flex items-center gap-2 cursor-pointer hover:bg-white/5 p-1.5 rounded-lg transition-colors" 
+                  <div
+                    key={index}
+                    className="flex items-center gap-2 cursor-pointer hover:bg-white/5 p-1.5 rounded-lg transition-colors"
                     onClick={() => handleRadioChange(option)}
                   >
                     <div className="relative flex-shrink-0">
@@ -231,7 +231,7 @@ export default function ContactFormPopup({ isOpen, onClose }: ContactFormPopupPr
               <label className="block text-white font-nunito text-sm font-normal">
                 Write a message
               </label>
-              <div 
+              <div
                 className="rounded-lg"
                 style={{ background: 'rgba(255, 255, 255, 0.15)' }}
               >

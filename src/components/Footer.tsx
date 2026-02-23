@@ -591,6 +591,26 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
+        {/* Services in Locations Row */}
+        <div className="border-t border-gray-700 mt-12 pt-8">
+          <h3 className="text-sm font-semibold mb-6 uppercase text-gray-400">We provide our services in</h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-8 gap-y-4">
+            <a href="/trademark-registration-in-delhi" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Delhi</a>
+            <a href="/trademark-registration-in-noida" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Noida</a>
+            <a href="/trademark-registration-in-gurgaon" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Gurgaon</a>
+            <a href="/trademark-registration-in-bengaluru" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Bengaluru</a>
+            <a href="/trademark-registration-in-hyderabad" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Hyderabad</a>
+            <a href="/trademark-registration-in-chennai" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Chennai</a>
+            <a href="/trademark-registration-in-ghaziabad" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Ghaziabad</a>
+            <a href="/trademark-registration-in-faridabad" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Faridabad</a>
+            <a href="/trademark-registration-in-indore" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Indore</a>
+            <a href="/trademark-registration-in-mumbai" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Mumbai</a>
+            <a href="/trademark-registration-in-ahmedabad" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Ahmedabad</a>
+            <a href="/trademark-registration-in-uttar-pradesh" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Uttar Pradesh</a>
+            <a href="/trademark-registration-in-maharashtra" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Maharashtra</a>
+          </div>
+        </div>
+
         {/* Queries Row */}
         <div className="border-t border-gray-700 mt-12 pt-8">
           <h3 className="text-sm font-semibold mb-6 uppercase text-gray-400">Queries</h3>

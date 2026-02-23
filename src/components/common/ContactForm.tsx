@@ -86,7 +86,7 @@ export default function ContactForm({ isPopup = false, onSuccess }: ContactFormP
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!validateForm()) {
       return;
     }
@@ -143,7 +143,7 @@ export default function ContactForm({ isPopup = false, onSuccess }: ContactFormP
     >
       {/* Glassmorphism Container */}
       <div
-        className="rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-7 w-full"
+        className={`rounded-xl sm:rounded-2xl w-full ${isPopup ? 'p-3 sm:p-5' : 'p-3 sm:p-4 md:p-7'}`}
         style={{
           background: `linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), linear-gradient(145deg, rgba(12, 0, 43, 0.40) 6.6%, rgba(255, 183, 3, 0.40) 120.24%), rgba(0, 0, 0, 0.50)`,
           boxShadow: '0 0 20px 0 rgba(255, 255, 255, 0.31) inset',
@@ -152,20 +152,20 @@ export default function ContactForm({ isPopup = false, onSuccess }: ContactFormP
         }}
       >
         {isPopup && (
-            <h2 className="text-white text-xl sm:text-2xl font-nunito font-bold mb-4 text-center">
-                Get <span className="text-[#FFB703]">Free Expert</span> Advice
-            </h2>
+          <h2 className="text-white text-lg sm:text-2xl font-nunito font-bold mb-3 text-center">
+            Get <span className="text-[#FFB703]">Free Expert</span> Advice
+          </h2>
         )}
-        <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-3.5 md:space-y-4">
+        <form onSubmit={handleSubmit} className={`space-y-2.5 sm:space-y-4 ${isPopup ? 'md:space-y-3' : 'md:space-y-4'}`}>
           {/* Basic Input Fields */}
           <div className="space-y-2 sm:space-y-2.5">
             {/* Name Field */}
-            <div className="space-y-1 sm:space-y-1.5">
-              <label className="block text-white font-nunito text-base sm:text-lg font-normal">
+            <div className="space-y-0.5 sm:space-y-1">
+              <label className={`block text-white font-nunito font-normal ${isPopup ? 'text-sm sm:text-base' : 'text-base sm:text-lg'}`}>
                 Name
               </label>
-              <div 
-                className="h-10 sm:h-12 rounded-lg"
+              <div
+                className={`rounded-lg ${isPopup ? 'h-9 sm:h-11' : 'h-10 sm:h-12'}`}
                 style={{ background: 'rgba(255, 255, 255, 0.15)' }}
               >
                 <input
@@ -181,12 +181,12 @@ export default function ContactForm({ isPopup = false, onSuccess }: ContactFormP
             </div>
 
             {/* Email Field */}
-            <div className="space-y-1 sm:space-y-1.5">
-              <label className="block text-white font-nunito text-base sm:text-lg font-normal">
+            <div className="space-y-0.5 sm:space-y-1">
+              <label className={`block text-white font-nunito font-normal ${isPopup ? 'text-sm sm:text-base' : 'text-base sm:text-lg'}`}>
                 Email
               </label>
-              <div 
-                className="h-10 sm:h-12 rounded-lg"
+              <div
+                className={`rounded-lg ${isPopup ? 'h-9 sm:h-11' : 'h-10 sm:h-12'}`}
                 style={{ background: 'rgba(255, 255, 255, 0.15)' }}
               >
                 <input
@@ -202,12 +202,12 @@ export default function ContactForm({ isPopup = false, onSuccess }: ContactFormP
             </div>
 
             {/* Phone Field */}
-            <div className="space-y-1 sm:space-y-1.5">
-              <label className="block text-white font-nunito text-base sm:text-lg font-normal">
+            <div className="space-y-0.5 sm:space-y-1">
+              <label className={`block text-white font-nunito font-normal ${isPopup ? 'text-sm sm:text-base' : 'text-base sm:text-lg'}`}>
                 Phone No.
               </label>
-              <div 
-                className="h-10 sm:h-12 rounded-lg"
+              <div
+                className={`rounded-lg ${isPopup ? 'h-9 sm:h-11' : 'h-10 sm:h-12'}`}
                 style={{ background: 'rgba(255, 255, 255, 0.15)' }}
               >
                 <input
@@ -223,12 +223,12 @@ export default function ContactForm({ isPopup = false, onSuccess }: ContactFormP
             </div>
 
             {/* State Field */}
-            <div className="space-y-1 sm:space-y-1.5">
-              <label className="block text-white font-nunito text-base sm:text-lg font-normal">
+            <div className="space-y-0.5 sm:space-y-1">
+              <label className={`block text-white font-nunito font-normal ${isPopup ? 'text-sm sm:text-base' : 'text-base sm:text-lg'}`}>
                 State
               </label>
-              <div 
-                className="h-10 sm:h-12 rounded-lg"
+              <div
+                className={`rounded-lg ${isPopup ? 'h-9 sm:h-11' : 'h-10 sm:h-12'}`}
                 style={{ background: 'rgba(255, 255, 255, 0.15)' }}
               >
                 <select
@@ -238,7 +238,7 @@ export default function ContactForm({ isPopup = false, onSuccess }: ContactFormP
                   className="w-full h-full px-3 sm:px-4 rounded-lg bg-transparent text-white border-0 outline-0 font-nunito text-sm sm:text-base appearance-none cursor-pointer"
                 >
                   <option value="" className="bg-[#0C002B] text-white">Select State</option>
-                  
+
                   {/* States */}
                   <option value="Andhra Pradesh" className="bg-[#0C002B] text-white">Andhra Pradesh</option>
                   <option value="Arunachal Pradesh" className="bg-[#0C002B] text-white">Arunachal Pradesh</option>
@@ -268,7 +268,7 @@ export default function ContactForm({ isPopup = false, onSuccess }: ContactFormP
                   <option value="Uttar Pradesh" className="bg-[#0C002B] text-white">Uttar Pradesh</option>
                   <option value="Uttarakhand" className="bg-[#0C002B] text-white">Uttarakhand</option>
                   <option value="West Bengal" className="bg-[#0C002B] text-white">West Bengal</option>
-                  
+
                   {/* Union Territories */}
                   <option value="Andaman and Nicobar Islands" className="bg-[#0C002B] text-white">Andaman and Nicobar Islands</option>
                   <option value="Chandigarh" className="bg-[#0C002B] text-white">Chandigarh</option>
@@ -284,17 +284,17 @@ export default function ContactForm({ isPopup = false, onSuccess }: ContactFormP
           </div>
 
           {/* Interest Section */}
-          <div className="space-y-2 sm:space-y-2.5">
-            <div className="text-white font-nunito text-base sm:text-lg font-normal">
+          <div className="space-y-1 sm:space-y-2">
+            <div className={`text-white font-nunito font-normal ${isPopup ? 'text-sm sm:text-base' : 'text-base sm:text-lg'}`}>
               What are you Interested in? <span className="text-red-500">*</span>
             </div>
-            
+
             {/* Radio Options */}
             <div className="space-y-1">
               {interestOptions.map((option, index) => (
-                <div 
-                  key={index} 
-                  className="flex items-center gap-2 sm:gap-3 cursor-pointer hover:bg-white/5 p-1.5 sm:p-2 rounded-lg transition-colors" 
+                <div
+                  key={index}
+                  className="flex items-center gap-2 sm:gap-3 cursor-pointer hover:bg-white/5 p-1.5 sm:p-2 rounded-lg transition-colors"
                   onClick={() => handleRadioChange(option)}
                 >
                   <div className="relative flex-shrink-0">
@@ -315,11 +315,11 @@ export default function ContactForm({ isPopup = false, onSuccess }: ContactFormP
           </div>
 
           {/* Message Field */}
-          <div className="space-y-1 sm:space-y-1.5">
-            <label className="block text-white font-nunito text-base sm:text-lg font-normal">
+          <div className="space-y-0.5 sm:space-y-1">
+            <label className={`block text-white font-nunito font-normal ${isPopup ? 'text-sm sm:text-base' : 'text-base sm:text-lg'}`}>
               Write a message
             </label>
-            <div 
+            <div
               className="rounded-lg"
               style={{ background: 'rgba(255, 255, 255, 0.15)' }}
             >
@@ -336,16 +336,14 @@ export default function ContactForm({ isPopup = false, onSuccess }: ContactFormP
 
           {/* Status Message */}
           {submitStatus && (
-            <div 
-              className={`p-3 rounded-lg ${
-                submitStatus.type === 'success' 
-                  ? 'bg-green-500/20 border border-green-500/30' 
+            <div
+              className={`p-3 rounded-lg ${submitStatus.type === 'success'
+                  ? 'bg-green-500/20 border border-green-500/30'
                   : 'bg-red-500/20 border border-red-500/30'
-              }`}
+                }`}
             >
-              <p className={`text-sm font-nunito ${
-                submitStatus.type === 'success' ? 'text-green-200' : 'text-red-200'
-              }`}>
+              <p className={`text-sm font-nunito ${submitStatus.type === 'success' ? 'text-green-200' : 'text-red-200'
+                }`}>
                 {submitStatus.message}
               </p>
             </div>
@@ -355,13 +353,12 @@ export default function ContactForm({ isPopup = false, onSuccess }: ContactFormP
           <button
             type="submit"
             disabled={isSubmitting}
-            className={`w-full flex items-center justify-center py-2 sm:py-2.5 px-6 sm:px-8 rounded-lg transition-colors cursor-pointer ${
-              isSubmitting 
-                ? 'bg-[#FFB703]/50 cursor-not-allowed' 
+            className={`w-full flex items-center justify-center py-2 sm:py-2.5 px-6 sm:px-8 rounded-lg transition-colors cursor-pointer ${isSubmitting
+                ? 'bg-[#FFB703]/50 cursor-not-allowed'
                 : 'bg-[#FFB703] hover:bg-[#e6a602]'
-            }`}
+              }`}
           >
-            <span className="text-[#0C002B] font-nunito text-base sm:text-lg font-medium">
+            <span className={`text-[#0C002B] font-nunito font-medium ${isPopup ? 'text-sm sm:text-base' : 'text-base sm:text-lg'}`}>
               {isSubmitting ? 'Submitting...' : 'Submit Form'}
             </span>
           </button>
