@@ -21,6 +21,15 @@ const StatesAndUTs: React.FC = () => {
         { name: 'Madhya Pradesh', slug: 'madhya-pradesh' },
         { name: 'Karnataka', slug: 'karnataka' },
         { name: 'Bihar', slug: 'bihar' },
+        { name: 'Kerala', slug: 'kerela' },
+        { name: 'Rajasthan', slug: 'rajasthan' },
+        { name: 'Gujarat', slug: 'gujrat' },
+        { name: 'Chandigarh', slug: 'chandigarh' },
+        { name: 'Jammu & Kashmir', slug: 'jammu-and-kashmir' },
+        { name: 'Andhra Pradesh', slug: 'andhra-pradesh' },
+        { name: 'Himachal Pradesh', slug: 'himachal-pradesh' },
+        { name: 'West Bengal', slug: 'west-bengal' },
+        { name: 'Jharkhand', slug: 'jharkhand' },
     ];
 
     return (

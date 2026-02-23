@@ -112,7 +112,15 @@ export async function GET() {
     '/trademark-registration-in-madhya-pradesh',
     '/trademark-registration-in-karnataka',
     '/trademark-registration-in-bihar',
-    '/trademark-registration-in-bihar',
+    '/trademark-registration-in-kerela',
+    '/trademark-registration-in-rajasthan',
+    '/trademark-registration-in-gujrat',
+    '/trademark-registration-in-chandigarh',
+    '/trademark-registration-in-jammu-and-kashmir',
+    '/trademark-registration-in-andhra-pradesh',
+    '/trademark-registration-in-himachal-pradesh',
+    '/trademark-registration-in-west-bengal',
+    '/trademark-registration-in-jharkhand',
   ].map(path => ({ path, priority: '0.8', changefreq: 'weekly' } as RouteConfig));
 
   // Fetch Dynamic Blog Posts
