@@ -107,6 +107,7 @@ export async function GET() {
     '/trademark-registration-in-ahmedabad',
     '/trademark-registration-in-uttar-pradesh',
     '/trademark-registration-in-maharashtra',
+    '/trademark-registration-in-haryana',
   ].map(path => ({ path, priority: '0.8', changefreq: 'weekly' } as RouteConfig));
 
   // Fetch Dynamic Blog Posts
