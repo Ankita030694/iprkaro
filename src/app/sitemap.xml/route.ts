@@ -103,6 +103,8 @@ export async function GET() {
     '/trademark-registration-in-gaziabad',
     '/trademark-registration-in-faridabad',
     '/trademark-registration-in-indore',
+    '/trademark-registration-in-mumbai',
+    '/trademark-registration-in-ahmedabad',
   ].map(path => ({ path, priority: '0.8', changefreq: 'weekly' } as RouteConfig));
 
   // Fetch Dynamic Blog Posts
