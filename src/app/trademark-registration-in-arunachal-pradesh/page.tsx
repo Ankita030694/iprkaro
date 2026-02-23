@@ -128,14 +128,14 @@ export default function ArunachalPage() {
         "brand": { "@type": "Brand", "name": "IPR Karo" },
         "aggregateRating": {
             "@type": "AggregateRating",
-            "ratingValue": averageRating.toString(),
+            "ratingValue": averageRating,
             "reviewCount": reviewsCount.toString()
         },
         "review": reviews.map(r => ({
             "@type": "Review",
             "author": { "@type": "Person", "name": r.author },
             "reviewBody": r.content,
-            "reviewRating": { "@type": "Rating", "ratingValue": r.rating.toString() }
+            "reviewRating": { "@type": "Rating", "ratingValue": r.rating }
         }))
     };
 
@@ -161,24 +161,6 @@ export default function ArunachalPage() {
         ]
     };
 
-    const mainReviewSchema = {
-        "@context": "https://schema.org",
-        "@type": "Review",
-        "itemReviewed": {
-            "@type": "Service",
-            "name": "Trademark Registration Arunachal Pradesh"
-        },
-        "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5",
-            "bestRating": "5"
-        },
-        "author": {
-            "@type": "Person",
-            "name": "Tage T."
-        },
-        "reviewBody": "IPR Karo helped us protect our brand of organic kiwis. The process was digital and fast."
-    };
 
     return (
         <>
@@ -187,7 +169,6 @@ export default function ArunachalPage() {
             <Script id="product-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
             <Script id="org-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
             <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-            <Script id="review-schema-main" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(mainReviewSchema) }} />
 
             <div className="relative w-full overflow-hidden"
                 style={{ background: 'linear-gradient(to bottom, #0C002B 0%, #160049 45%, #6E5E93 80%, #E8E8E8 100%)' }}>

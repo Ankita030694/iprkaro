@@ -127,14 +127,14 @@ export default function SikkimPage() {
         "brand": { "@type": "Brand", "name": "IPR Karo" },
         "aggregateRating": {
             "@type": "AggregateRating",
-            "ratingValue": averageRating.toString(),
+            "ratingValue": averageRating,
             "reviewCount": reviewsCount.toString()
         },
         "review": reviews.map(r => ({
             "@type": "Review",
             "author": { "@type": "Person", "name": r.author },
             "reviewBody": r.content,
-            "reviewRating": { "@type": "Rating", "ratingValue": r.rating.toString() }
+            "reviewRating": { "@type": "Rating", "ratingValue": r.rating }
         }))
     };
 
@@ -159,26 +159,6 @@ export default function SikkimPage() {
             { "@type": "ListItem", "position": 2, "name": "Trademark Registration in Sikkim", "item": "https://www.iprkaro.com/trademark-registration-in-sikkim" }
         ]
     };
-
-    const reviewSchema = {
-        "@context": "https://schema.org",
-        "@type": "Review",
-        "itemReviewed": {
-            "@type": "Service",
-            "name": "Trademark Registration Sikkim"
-        },
-        "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5",
-            "bestRating": "5"
-        },
-        "author": {
-            "@type": "Person",
-            "name": "Tashi D."
-        },
-        "reviewBody": "IPR Karo made the process so simple. We secured our tea brand in Class 30 without ever leaving Gangtok."
-    };
-
     return (
         <>
             <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
@@ -186,7 +166,6 @@ export default function SikkimPage() {
             <Script id="product-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
             <Script id="org-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
             <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-            <Script id="review-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
 
             <div className="relative w-full overflow-hidden"
                 style={{ background: 'linear-gradient(to bottom, #0C002B 0%, #160049 45%, #6E5E93 80%, #E8E8E8 100%)' }}>

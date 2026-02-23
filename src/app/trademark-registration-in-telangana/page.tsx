@@ -126,14 +126,14 @@ export default function TelanganaPage() {
         "brand": { "@type": "Brand", "name": "IPR Karo" },
         "aggregateRating": {
             "@type": "AggregateRating",
-            "ratingValue": averageRating.toString(),
+            "ratingValue": averageRating,
             "reviewCount": reviewsCount.toString()
         },
         "review": reviews.map(r => ({
             "@type": "Review",
             "author": { "@type": "Person", "name": r.author },
             "reviewBody": r.content,
-            "reviewRating": { "@type": "Rating", "ratingValue": r.rating.toString() }
+            "reviewRating": { "@type": "Rating", "ratingValue": r.rating }
         }))
     };
 
@@ -158,26 +158,6 @@ export default function TelanganaPage() {
             { "@type": "ListItem", "position": 2, "name": "Trademark Registration in Telangana", "item": "https://www.iprkaro.com/trademark-registration-in-telangana" }
         ]
     };
-
-    const reviewSchema = {
-        "@context": "https://schema.org",
-        "@type": "Review",
-        "itemReviewed": {
-            "@type": "Service",
-            "name": "Trademark Registration Telangana"
-        },
-        "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5",
-            "bestRating": "5"
-        },
-        "author": {
-            "@type": "Person",
-            "name": "Sanjay V."
-        },
-        "reviewBody": "IPR Karo helped us secure our SaaS brand in record time. Their digital process is extremely efficient for Hyderabad startups."
-    };
-
     return (
         <>
             <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
@@ -185,7 +165,6 @@ export default function TelanganaPage() {
             <Script id="product-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
             <Script id="org-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
             <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-            <Script id="review-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
 
             <div className="relative w-full overflow-hidden"
                 style={{ background: 'linear-gradient(to bottom, #0C002B 0%, #160049 45%, #6E5E93 80%, #E8E8E8 100%)' }}>
