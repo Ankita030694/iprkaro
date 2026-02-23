@@ -158,7 +158,7 @@ export default function GhaziabadPage() {
                 <div className="container mx-auto px-4 py-12 lg:py-32 relative z-10 text-center">
                     <h1 className="text-2xl md:text-5xl lg:text-6xl font-extrabold mb-4 md:mb-6 leading-tight mt-20 md:mt-10 text-white uppercase tracking-tighter">
                         Trademark Registration <br />
-                        in <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#8A7AB5] to-[#D1C4E9]" style={{ WebkitTextFillColor: 'rgb(110, 94, 147)' }}>Gaziabad</span>
+                        in <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#8A7AB5] to-[#D1C4E9]" style={{ WebkitTextFillColor: 'rgb(110, 94, 147)' }}>Ghaziabad</span>
                     </h1>
                     <p className="text-sm md:text-xl mb-6 md:mb-8 max-w-4xl mx-auto text-gray-300 font-medium leading-relaxed px-2">
                         Protect your industrial legacy in the Gateway to Uttar Pradesh. From Sahibabad manufacturing giants to Indirapuram startups, we provide elite brand protection at the Delhi Registry.
