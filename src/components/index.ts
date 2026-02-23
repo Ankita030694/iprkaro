@@ -17,3 +17,4 @@ export { default as Expert } from './Expert';
 export { default as CitiesAndTerritories } from './CitiesAndTerritories';
 export { default as OurServices } from './OurServices';
 export { default as ReviewSnippets } from './ReviewSnippets';
+export { default as StatesAndUTs } from './StatesAndUTs';

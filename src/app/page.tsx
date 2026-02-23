@@ -1,4 +1,4 @@
-import { HeroSection, WhyTrademark, OurServices, SimplePlans, Faq, ReviewSnippets } from "@/components";
+import { HeroSection, WhyTrademark, OurServices, SimplePlans, Faq, ReviewSnippets, StatesAndUTs } from "@/components";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -142,19 +142,20 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-            __html: JSON.stringify(reviewSchema),
+          __html: JSON.stringify(reviewSchema),
         }}
       />
 
       <HeroSection />
       <WhyTrademark />
       <div className="-mt-10">
-      <OurServices />
+        <OurServices />
 
       </div>
       <ReviewSnippets />
       <SimplePlans />
       <Faq />
+      <StatesAndUTs />
     </>
   );
 }
