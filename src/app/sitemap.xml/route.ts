@@ -156,6 +156,7 @@ export async function GET() {
     '/trademark-registration-in-mizoram',
     '/trademark-registration-in-arunachal-pradesh',
     '/trademark-registration-in-tripura',
+    '/best-legal-firms-specializing-in-intellectual-property-in-india',
   ].map(path => ({ path, priority: '0.8', changefreq: 'weekly' } as RouteConfig));
 
   // Fetch Dynamic Blog Posts

@@ -677,6 +677,7 @@ const Footer: React.FC = () => {
             <a href="/can-i-file-a-trademark-application-for-a-mobile-app-name-in-india" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Mobile App Trademark Guide</a>
             <a href="/how-to-update-or-change-details-in-an-existing-trademark-registation" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Update Trademark Details</a>
             <a href="/where-can-i-check-if-my-desired-trademark-is-already-registered-in-india" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Where to Check Trademark India</a>
+            <a href="/best-legal-firms-specializing-in-intellectual-property-in-india" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Best IP Legal Firms in India</a>
           </div>
         </div>
 
