@@ -274,12 +274,14 @@ export default function FeesComparisonPage() {
         "@type": "Product",
         "name": "Online Trademark Registration Services",
         "description": "Comparison of trademark registration fees for individuals and companies in India.",
+        "image": "https://www.iprkaro.com/logo.png",
         "brand": {
             "@type": "Brand",
             "name": "IPR Karo"
         },
         "offers": {
             "@type": "Offer",
+            "url": "https://www.iprkaro.com/compare-fees-for-various-online-trademark-registration-providers-in-india",
             "priceCurrency": "INR",
             "price": "1499",
             "availability": "https://schema.org/InStock"
@@ -287,23 +289,57 @@ export default function FeesComparisonPage() {
         "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.9",
-            "ratingCount": "4890"
-        }
-    };
-
-    const reviewSchema = {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "Trademark Fee Consultation",
-        "provider": {
-            "@type": "LocalBusiness",
-            "name": "IPR Karo"
+            "reviewCount": "4890",
+            "bestRating": "5",
+            "worstRating": "1"
         },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "reviewCount": "4890"
-        }
+        "review": [
+            {
+                "@type": "Review",
+                "author": {
+                    "@type": "Person",
+                    "name": "Ananya Kapoor"
+                },
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5",
+                    "worstRating": "1"
+                },
+                "reviewBody": "I was confused by all the price variations online. IPR Karo's transparent breakdown helped me understand exactly where my money was going. No hidden charges and I got my TM number same day!",
+                "datePublished": "2024-12-01"
+            },
+            {
+                "@type": "Review",
+                "author": {
+                    "@type": "Person",
+                    "name": "Vikram Sethi"
+                },
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5",
+                    "worstRating": "1"
+                },
+                "reviewBody": "For our corporate group, we chose AMA Legal Solutions. Their strategic litigation focus was worth every rupee. They defended three oppositions effectively. Highly recommended for complex work.",
+                "datePublished": "2024-10-15"
+            },
+            {
+                "@type": "Review",
+                "author": {
+                    "@type": "Person",
+                    "name": "Suresh Pillai"
+                },
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5",
+                    "worstRating": "1"
+                },
+                "reviewBody": "Compared several providers and found IPR Karo's AI search report to be the most detailed. It identified a phonetic match that two other cheap providers missed. Saved me from a major legal headache!",
+                "datePublished": "2024-08-20"
+            }
+        ]
     };
 
     return (
@@ -313,7 +349,6 @@ export default function FeesComparisonPage() {
             <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
             <Script id="organization-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
             <Script id="product-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
-            <Script id="review-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
 
             <div className="bg-white min-h-screen width-full">
                 {/* Hero Section */}

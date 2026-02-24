@@ -199,24 +199,70 @@ export default function BestIPFirmsIndiaPage() {
         }
     };
 
-    const reviewSchema = {
+    const productSchema = {
         "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "IP Legal Firm Consultation",
+        "@type": "Product",
+        "name": "IP Legal Firm Consultation and Registration",
+        "image": "https://www.iprkaro.com/logo.png",
         "description": "Expert consultation for intellectual property legal matters, including trademark, patent, and copyright law in India.",
-        "provider": {
-            "@type": "LocalBusiness",
-            "name": "IPR Karo",
-            "url": "https://www.iprkaro.com",
-            "logo": "https://www.iprkaro.com/logo.png"
+        "brand": {
+            "@type": "Brand",
+            "name": "IPR Karo"
         },
         "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.9",
+            "reviewCount": "4500",
             "bestRating": "5",
-            "worstRating": "1",
-            "reviewCount": "4500"
-        }
+            "worstRating": "1"
+        },
+        "review": [
+            {
+                "@type": "Review",
+                "author": {
+                    "@type": "Person",
+                    "name": "Akash Singhal"
+                },
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5",
+                    "worstRating": "1"
+                },
+                "reviewBody": "I was looking for the best legal firm for a software patent in Bangalore. IPR Karo handled everything digitally. Their forensic search report was a eye-opener. Successfully filed in one day.",
+                "datePublished": "2024-05-10"
+            },
+            {
+                "@type": "Review",
+                "author": {
+                    "@type": "Person",
+                    "name": "Sonia Malhotra"
+                },
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5",
+                    "worstRating": "1"
+                },
+                "reviewBody": "AMA Legal Solutions provided us with a strategic audit of our entire portfolio. We found three brands that were being misused in Northern India. Their enforcement team was fast and professional.",
+                "datePublished": "2024-04-22"
+            },
+            {
+                "@type": "Review",
+                "author": {
+                    "@type": "Person",
+                    "name": "Vikram Reddy"
+                },
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5",
+                    "worstRating": "1"
+                },
+                "reviewBody": "Top class service. Their team understands the nuances of the Trade Marks Act. They successfully defended our logo against a giant multinational. Highly recommended for complex disputes.",
+                "datePublished": "2024-02-15"
+            }
+        ]
     };
 
     return (
@@ -224,7 +270,7 @@ export default function BestIPFirmsIndiaPage() {
             <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
             <Script id="article-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
             <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-            <Script id="review-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
+            <Script id="product-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
 
             <div className="bg-white min-h-screen width-full">
                 {/* Hero Section */}

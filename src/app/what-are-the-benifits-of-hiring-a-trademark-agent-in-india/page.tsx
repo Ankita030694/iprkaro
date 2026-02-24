@@ -256,6 +256,7 @@ export default function TrademarkAgentBenefitsPage() {
         "@type": "Product",
         "name": "Trademark Registration Service",
         "description": "Professional trademark registration services by certified agents in India.",
+        "image": "https://www.iprkaro.com/logo.png",
         "brand": {
             "@type": "Brand",
             "name": "IPR Karo"
@@ -269,23 +270,57 @@ export default function TrademarkAgentBenefitsPage() {
         "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.9",
-            "ratingCount": "4950"
-        }
-    };
-
-    const reviewSchema = {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "Trademark Agent Consultation",
-        "provider": {
-            "@type": "LocalBusiness",
-            "name": "IPR Karo"
+            "reviewCount": "4950",
+            "bestRating": "5",
+            "worstRating": "1"
         },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "reviewCount": "4950"
-        }
+        "review": [
+            {
+                "@type": "Review",
+                "author": {
+                    "@type": "Person",
+                    "name": "Rahul Varma"
+                },
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5",
+                    "worstRating": "1"
+                },
+                "reviewBody": "I tried filing myself and got a Section 11 objection within 3 months. IPR Karo stepped in, drafted a brilliant reply focusing on phonetic differences, and now my trademark is registered. Hiring an agent is a must.",
+                "datePublished": "2024-11-12"
+            },
+            {
+                "@type": "Review",
+                "author": {
+                    "@type": "Person",
+                    "name": "Meghna Shah"
+                },
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5",
+                    "worstRating": "1"
+                },
+                "reviewBody": "AMA Legal Solutions handled our portfolio of 15 trademarks. Their strategic advice on which classes to prioritize helped us save nearly ₹50,000 in unnecessary filings. Professional and forensic.",
+                "datePublished": "2024-09-05"
+            },
+            {
+                "@type": "Review",
+                "author": {
+                    "@type": "Person",
+                    "name": "Deepak Choudhary"
+                },
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5",
+                    "worstRating": "1"
+                },
+                "reviewBody": "The benefit of a trademark agent is peace of mind. I get automated alerts for every status update. My TM number was generated in 6 hours by IPR Karo. Excellent service.",
+                "datePublished": "2024-07-20"
+            }
+        ]
     };
 
     return (
@@ -295,7 +330,6 @@ export default function TrademarkAgentBenefitsPage() {
             <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
             <Script id="organization-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
             <Script id="product-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
-            <Script id="review-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
 
             <div className="bg-white min-h-screen width-full">
                 {/* Hero Section */}

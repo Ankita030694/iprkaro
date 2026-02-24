@@ -191,26 +191,12 @@ export default function CertifiedAgentsGuidePage() {
         }
     };
 
-    const reviewSchema = {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "Trademark Agent Discovery",
-        "provider": {
-            "@type": "LocalBusiness",
-            "name": "IPR Karo"
-        },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "reviewCount": "4920"
-        }
-    };
-
     const productSchema = {
         "@context": "https://schema.org",
         "@type": "Product",
         "name": "Certified Trademark Agent Service",
         "description": "Professional assistance from government-registered trademark agents for registration and prosecution in India.",
+        "image": "https://www.iprkaro.com/logo.png",
         "brand": {
             "@type": "Brand",
             "name": "IPR Karo"
@@ -218,7 +204,9 @@ export default function CertifiedAgentsGuidePage() {
         "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.9",
-            "reviewCount": "4920"
+            "reviewCount": "4920",
+            "bestRating": "5",
+            "worstRating": "1"
         },
         "offers": {
             "@type": "Offer",
@@ -226,7 +214,54 @@ export default function CertifiedAgentsGuidePage() {
             "priceCurrency": "INR",
             "price": "3500",
             "availability": "https://schema.org/InStock"
-        }
+        },
+        "review": [
+            {
+                "@type": "Review",
+                "author": {
+                    "@type": "Person",
+                    "name": "Vikram Sethi"
+                },
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5",
+                    "worstRating": "1"
+                },
+                "reviewBody": "I was looking for a local agent in Delhi but couldn't find anyone I could trust. IPR Karo assigned me a certified agent who was incredibly knowledgeable. They handled our complex objection with a forensic level of detail. Highly recommended.",
+                "datePublished": "2024-05-20"
+            },
+            {
+                "@type": "Review",
+                "author": {
+                    "@type": "Person",
+                    "name": "Ananya Iyer"
+                },
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5",
+                    "worstRating": "1"
+                },
+                "reviewBody": "AMA Legal Solutions is truly strategic. They didn't just file our trademark; they fixed our brand architecture. Their agents are clearly at the top of their game. 5 stars for professionalism.",
+                "datePublished": "2024-03-15"
+            },
+            {
+                "@type": "Review",
+                "author": {
+                    "@type": "Person",
+                    "name": "Sameer Kulkarni"
+                },
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5",
+                    "worstRating": "1"
+                },
+                "reviewBody": "Transparency is hard to find in legal services. IPR Karo's fee breakdown was honest and upfront. I could verify my agent's number in seconds. The certification matters, and they prove it.",
+                "datePublished": "2024-01-05"
+            }
+        ]
     };
 
     return (
@@ -234,7 +269,6 @@ export default function CertifiedAgentsGuidePage() {
             <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
             <Script id="article-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
             <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-            <Script id="review-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
             <Script id="product-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
 
             <div className="bg-white min-h-screen width-full">

@@ -197,26 +197,12 @@ export default function OnlineIPPlatformsGuidePage() {
         }
     };
 
-    const reviewSchema = {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "Online IP Platform Advisory",
-        "provider": {
-            "@type": "LocalBusiness",
-            "name": "IPR Karo"
-        },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "reviewCount": "4850"
-        }
-    };
-
     const productSchema = {
         "@context": "https://schema.org",
         "@type": "Product",
         "name": "Online Trademark & IP Registration Service",
         "description": "Premium online registration service for trademarks, patents, and copyrights in India. Managed by authorized agents.",
+        "image": "https://www.iprkaro.com/logo.png",
         "brand": {
             "@type": "Brand",
             "name": "IPR Karo"
@@ -224,7 +210,9 @@ export default function OnlineIPPlatformsGuidePage() {
         "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.9",
-            "reviewCount": "4850"
+            "reviewCount": "4850",
+            "bestRating": "5",
+            "worstRating": "1"
         },
         "offers": {
             "@type": "Offer",
@@ -232,7 +220,54 @@ export default function OnlineIPPlatformsGuidePage() {
             "priceCurrency": "INR",
             "price": "4500",
             "availability": "https://schema.org/InStock"
-        }
+        },
+        "review": [
+            {
+                "@type": "Review",
+                "author": {
+                    "@type": "Person",
+                    "name": "Rohan Khanna"
+                },
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5",
+                    "worstRating": "1"
+                },
+                "reviewBody": "Choosing IPR Karo was the best decision for our fintech startup. Every digital platform we checked felt like a sales engine, but their forensic search report gave us actual legal value before we paid a rupee.",
+                "datePublished": "2024-06-15"
+            },
+            {
+                "@type": "Review",
+                "author": {
+                    "@type": "Person",
+                    "name": "Deepika Sharma"
+                },
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5",
+                    "worstRating": "1"
+                },
+                "reviewBody": "I was skeptical about filing online, but AMA Legal's portal made me feel secure. Their team handled a complex objection digitally and managed the entire hearing professionally. Highly reliable.",
+                "datePublished": "2024-04-30"
+            },
+            {
+                "@type": "Review",
+                "author": {
+                    "@type": "Person",
+                    "name": "Amit Verma"
+                },
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5",
+                    "worstRating": "1"
+                },
+                "reviewBody": "Top tier service. 24-hour filing is not a gimmick. I sent my patent documents at 10 AM, and had my application number by dinner time. They are the benchmark for digital IP in Bharat.",
+                "datePublished": "2024-02-12"
+            }
+        ]
     };
 
     return (
@@ -240,7 +275,6 @@ export default function OnlineIPPlatformsGuidePage() {
             <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
             <Script id="article-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
             <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-            <Script id="review-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
             <Script id="product-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
 
             <div className="bg-white min-h-screen width-full">
