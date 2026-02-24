@@ -29,7 +29,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata: Metadata = {
-    title: "Trademark Registration in Kerala | Brand Protection for God's Own Country",
+    title: "Trademark Registration in Kerala | IPR Karo",
     description: "Secure your brand in Kerala with IPR Karo. Expertise in spice exports, tourism, ayurveda, and IT trademark filing at the Chennai Registry. Comprehensive 4000+ words guide, 4-hour filing, and Startup Kerala benefits.",
     keywords: [
         "trademark registration in Kerala",

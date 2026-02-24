@@ -26,7 +26,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata: Metadata = {
-    title: "Trademark Registration in Telangana | Hyderabad & Warangal - IPR Karo",
+    title: "Trademark Registration in Telangana | IPR Karo",
     description: "Expert trademark registration in Telangana. Secure your brand in Hyderabad, Warangal, and Nizamabad. 100% IP support for T-Hub startups and MSMEs.",
     keywords: [
         "trademark registration in telangana",

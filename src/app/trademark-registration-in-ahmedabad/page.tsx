@@ -25,7 +25,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata: Metadata = {
-    title: "Trademark Registration in Ahmedabad | Ghatlodia Registry IP Protection",
+    title: "Trademark Registration in Ahmedabad | Ghatlodia Registry",
     description: "Secure your brand in Ahmedabad with IPR Karo. Expert filing for Textiles, Auto, and Chemical industries at the Ghatlodia Registry. 4000+ words of expertise.",
     keywords: [
         "trademark registration in ahmedabad",

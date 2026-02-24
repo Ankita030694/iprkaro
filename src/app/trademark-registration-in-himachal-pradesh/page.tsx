@@ -28,7 +28,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata: Metadata = {
-    title: "Trademark Registration in Himachal Pradesh | Protect Your Brand in Baddi & Beyond",
+    title: "Trademark Registration in Himachal Pradesh | IPR Karo",
     description: "Expert trademark registration in Himachal Pradesh. Specialist IP protection for Baddi Pharma, Tourism, and Horticulture. 4000+ words elite guide with Delhi Registry filing.",
     keywords: [
         "trademark registration in himachal pradesh",

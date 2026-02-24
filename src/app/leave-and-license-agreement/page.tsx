@@ -37,7 +37,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Leave and License Agreement Guide | Rules, Fees & Registration 2026',
+    title: 'Leave and License Agreement Guide | Fees & Rules 2026',
     description: 'Master the Leave and License agreement process in India. Learn the difference between lease and license, mandatory registration, and stamp duty calculation.',
     keywords: [
         'leave and license agreement',

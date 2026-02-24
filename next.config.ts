@@ -36,6 +36,11 @@ const nextConfig: NextConfig = {
         destination: '/resources/:slug*',
         permanent: true,
       },
+      {
+        source: '/trademark-registration-in-gaziabad',
+        destination: '/trademark-registration-in-ghaziabad',
+        permanent: true,
+      },
 
     ];
   },

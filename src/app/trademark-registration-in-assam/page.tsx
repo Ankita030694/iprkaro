@@ -25,7 +25,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata: Metadata = {
-    title: "Trademark Registration in Assam | Guwahati & Dibrugarh - IPR Karo",
+    title: "Trademark Registration in Assam | IPR Karo",
     description: "Expert trademark registration in Assam. Secure your brand in Guwahati, Dibrugarh, Silchar, and Jorhat. 100% IP reimbursement support for Assam startups.",
     keywords: [
         "trademark registration in assam",

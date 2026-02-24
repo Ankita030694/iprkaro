@@ -25,22 +25,22 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata: Metadata = {
-    title: "Trademark Registration in Ghaziabad | Delhi Registry IP Protection",
+    title: "Trademark Registration in Ghaziabad | IPR Karo",
     description: "Secure your brand in Ghaziabad with IPR Karo. Expert filing for manufacturing, tech, and retail brands at the Delhi Registry. 4000+ words of legal guidance and 4-hour filing.",
     keywords: [
         "trademark registration in ghaziabad",
-        "online trademark filing gaziabad",
+        "online trademark filing ghaziabad",
         "brand protection delhi registry",
         "ghaziabad trademark office",
         "manufacturing trademark ghaziabad",
-        "logo registration gaziabad",
+        "logo registration ghaziabad",
         "indirapuram startup trademark",
         "trademark attorney ghaziabad",
-        "msme trademark registration gaziabad",
+        "msme trademark registration ghaziabad",
         "ncr brand protection",
     ],
     alternates: {
-        canonical: "https://www.iprkaro.com/trademark-registration-in-gaziabad",
+        canonical: "https://www.iprkaro.com/trademark-registration-in-ghaziabad",
     },
 };
 
@@ -116,7 +116,7 @@ export default function GhaziabadPage() {
         },
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https://www.iprkaro.com/trademark-registration-in-gaziabad"
+            "@id": "https://www.iprkaro.com/trademark-registration-in-ghaziabad"
         }
     };
 
@@ -159,7 +159,7 @@ export default function GhaziabadPage() {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Trademark Registration in Ghaziabad",
-                "item": "https://www.iprkaro.com/trademark-registration-in-gaziabad"
+                "item": "https://www.iprkaro.com/trademark-registration-in-ghaziabad"
             }
         ]
     };
@@ -193,7 +193,7 @@ export default function GhaziabadPage() {
 
             <div className="bg-gray-50 border-b border-gray-200 py-4">
                 <div className="container mx-auto px-4 max-w-[1400px]">
-                    <Breadcrumbs items={[{ label: "Trademark Registration in Gaziabad", href: "/trademark-registration-in-gaziabad" }]} />
+                    <Breadcrumbs items={[{ label: "Trademark Registration in Ghaziabad", href: "/trademark-registration-in-ghaziabad" }]} />
                 </div>
             </div>
 

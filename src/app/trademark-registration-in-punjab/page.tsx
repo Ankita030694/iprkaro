@@ -25,7 +25,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata: Metadata = {
-    title: "Trademark Registration in Punjab | Ludhiana, Jalandhar & Mohali - IPR Karo",
+    title: "Trademark Registration in Punjab | IPR Karo",
     description: "Expert trademark registration in Punjab. Secure your brand in Ludhiana, Jalandhar, Amritsar, and Mohali. 100% IP reimbursement support for MSMEs.",
     keywords: [
         "trademark registration in punjab",

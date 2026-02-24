@@ -1,6 +1,5 @@
-"use client";
-
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { Metadata } from 'next';
 import Link from 'next/link';
 import Script from 'next/script';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -13,16 +12,27 @@ import {
 import Breadcrumbs from '@/components/Breadcrumbs';
 import TableOfContents from '@/components/TableOfContents';
 
-export default function OdishaTrademark() {
-    const [scrolled, setScrolled] = useState(false);
+export const metadata: Metadata = {
+    title: "Trademark Registration in Odisha | IPR Karo",
+    description: "Register your trademark in Odisha with IPR Karo. Professional brand protection for Bhubaneswar tech hubs, Rourkela industries, and handloom sectors. Claim 100% MSME cost reimbursement.",
+    keywords: [
+        "trademark registration in odisha",
+        "bhubaneswar trademark filing",
+        "brand protection rourkela",
+        "cuttack trademark office",
+        "msme trademark subsidy odisha",
+        "startup odisha ip benefits",
+        "sambalpuri handloom trademark",
+        "kolkata trademark registry odisha",
+        "logo registration bhubaneswar",
+        "online trademark odisha"
+    ],
+    alternates: {
+        canonical: "https://www.iprkaro.com/trademark-registration-in-odisha",
+    },
+};
 
-    useEffect(() => {
-        const handleScroll = () => {
-            setScrolled(window.scrollY > 50);
-        };
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+export default function OdishaTrademark() {
 
     const tocSections = [
         { id: 'intro', title: 'Odisha Industrial Renaissance' },

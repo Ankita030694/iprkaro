@@ -25,7 +25,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata: Metadata = {
-    title: "Trademark Registration in Mumbai | Antop Hill Registry IP Protection",
+    title: "Trademark Registration in Mumbai | IPR Karo",
     description: "Secure your brand in Mumbai with IPR Karo. Expert filing for Finance, Entertainment, and Luxury sectors at the Antop Hill Registry. 4000+ words of expertise.",
     keywords: [
         "trademark registration in mumbai",

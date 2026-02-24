@@ -42,7 +42,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Non-Disclosure Agreement (NDA) Guide India | Formats & Legalities 2026',
+    title: 'NDA Guide India | Formats & Legalities 2026',
     description: 'Protect your trade secrets with a legally binding NDA in India. Learn about essential clauses, stamp duty, and the Indian Contract Act validity.',
     keywords: [
         'non-disclosure agreement format india',

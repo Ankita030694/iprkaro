@@ -1,6 +1,5 @@
-"use client";
-
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { Metadata } from 'next';
 import Link from 'next/link';
 import Script from 'next/script';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -13,16 +12,27 @@ import {
 import Breadcrumbs from '@/components/Breadcrumbs';
 import TableOfContents from '@/components/TableOfContents';
 
-export default function WestBengalTrademark() {
-    const [scrolled, setScrolled] = useState(false);
+export const metadata: Metadata = {
+    title: "Trademark Registration in West Bengal | IPR Karo",
+    description: "Elite trademark registration in West Bengal. Secure your brand at the Kolkata Registry with IPR Karo. Expert guidance for Salt Lake tech parks, tea estates, and Bengal MSME incentives.",
+    keywords: [
+        "trademark registration in west bengal",
+        "kolkata trademark registry filing",
+        "brand protection salt lake sector v",
+        "siliguri tea trademark",
+        "banglashree scheme trademark",
+        "online trademark registration kolkata",
+        "msme trademark bengal",
+        "logo registration west bengal",
+        "durgapur industrial ip",
+        "howrah business trademark"
+    ],
+    alternates: {
+        canonical: "https://www.iprkaro.com/trademark-registration-in-west-bengal",
+    },
+};
 
-    useEffect(() => {
-        const handleScroll = () => {
-            setScrolled(window.scrollY > 50);
-        };
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+export default function WestBengalTrademark() {
 
     const tocSections = [
         { id: 'intro', title: 'West Bengal Industrial Renaissance' },

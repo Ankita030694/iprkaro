@@ -1,6 +1,5 @@
-"use client";
-
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { Metadata } from 'next';
 import Link from 'next/link';
 import Script from 'next/script';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -13,16 +12,27 @@ import {
 import Breadcrumbs from '@/components/Breadcrumbs';
 import TableOfContents from '@/components/TableOfContents';
 
-export default function JharkhandTrademark() {
-    const [scrolled, setScrolled] = useState(false);
+export const metadata: Metadata = {
+    title: "Trademark Registration in Jharkhand | IPR Karo",
+    description: "Secure your brand in Jharkhand with IPR Karo. Expert trademark registration for mining, steel industries, and Ranchi startups. Claim 100% MSME reimbursement at the Kolkata Registry.",
+    keywords: [
+        "trademark registration in jharkhand",
+        "online trademark filing ranchi",
+        "brand protection jamshedpur",
+        "dhanbad trademark office",
+        "msme trademark reimbursement jharkhand",
+        "kolkata trademark registry",
+        "mining industry ip jharkhand",
+        "startup registration ranchi",
+        "logo registration jharkhand",
+        "ipr services jharkhand"
+    ],
+    alternates: {
+        canonical: "https://www.iprkaro.com/trademark-registration-in-jharkhand",
+    },
+};
 
-    useEffect(() => {
-        const handleScroll = () => {
-            setScrolled(window.scrollY > 50);
-        };
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+export default function JharkhandTrademark() {
 
     const tocSections = [
         { id: 'intro', title: 'Jharkhand Industrial Empowerment' },

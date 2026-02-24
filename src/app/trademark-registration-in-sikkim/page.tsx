@@ -27,7 +27,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata: Metadata = {
-    title: "Trademark Registration in Sikkim | Gangtok & Namchi - IPR Karo",
+    title: "Trademark Registration in Sikkim | IPR Karo",
     description: "Expert trademark registration in Sikkim. Secure your brand in Gangtok, Namchi, and Geyzing. 100% support for organic products and ecotourism startups.",
     keywords: [
         "trademark registration in sikkim",

@@ -27,7 +27,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata: Metadata = {
-    title: "Trademark Registration in Uttarakhand | Dehradun & Haridwar - IPR Karo",
+    title: "Trademark Registration in Uttarakhand | IPR Karo",
     description: "Expert trademark registration in Uttarakhand. Secure your brand in Dehradun, Haridwar, and Pantnagar. 100% IP support for Pharma, Wellness, and MSMEs.",
     keywords: [
         "trademark registration in uttarakhand",

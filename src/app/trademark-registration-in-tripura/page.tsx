@@ -28,7 +28,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata: Metadata = {
-    title: "Trademark Registration in Tripura | Agartala & Dharmanagar - IPR Karo",
+    title: "Trademark Registration in Tripura | IPR Karo",
     description: "Expert trademark registration in Tripura. Secure your brand in Agartala and Dharmanagar. 100% IP support for Rubber, Bamboo, Queen Pineapple, and startups.",
     keywords: [
         "trademark registration in tripura",

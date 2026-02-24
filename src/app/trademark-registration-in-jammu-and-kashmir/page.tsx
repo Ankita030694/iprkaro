@@ -29,7 +29,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata: Metadata = {
-    title: "Trademark Registration in Jammu & Kashmir | Protect Your Brand in Paradise",
+    title: "Trademark Registration in Jammu & Kashmir | IPR Karo",
     description: "Expert trademark registration in Jammu & Kashmir. Secure your brand identity for Pashmina, Saffron, and Tourism. Elite filing under Delhi Registry. 4000+ words guide and 24-hour filing acknowledgment.",
     keywords: [
         "trademark registration in jammu and kashmir",

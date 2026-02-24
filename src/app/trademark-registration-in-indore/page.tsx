@@ -25,7 +25,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata: Metadata = {
-    title: "Trademark Registration in Indore | Mumbai Registry IP Protection",
+    title: "Trademark Registration in Indore | IPR Karo",
     description: "Secure your brand in Indore with IPR Karo. Expert filing for Pharma, IT, and Food industries at the Mumbai Registry. 4000+ words of professional legal guidance.",
     keywords: [
         "trademark registration in indore",

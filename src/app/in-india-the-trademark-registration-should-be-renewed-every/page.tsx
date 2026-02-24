@@ -33,7 +33,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-  title: 'In India the Trademark Registration Should Be Renewed Every | Period, Fees & Process',
+  title: 'Trademark Renewal in India | Period, Fees & Process',
   description: 'Learn when trademark registration should be renewed in India. Complete guide on the 10-year renewal cycle, Form TM-R, government fees, and restoration process at IPR Karo.',
   keywords: [
     'in india the trademark registration should be renewed every',
