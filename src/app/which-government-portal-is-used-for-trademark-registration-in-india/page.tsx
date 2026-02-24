@@ -209,7 +209,7 @@ export default function IPIndiaPortalPage() {
             <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
             <Script id="review-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
 
-            <div className="bg-white min-h-screen">
+            <div className="bg-white min-h-screen width-full">
                 {/* Hero Section */}
                 <div className="relative w-full overflow-hidden"
                     style={{

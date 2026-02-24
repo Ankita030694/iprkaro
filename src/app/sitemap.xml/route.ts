@@ -80,6 +80,7 @@ export async function GET() {
     '/steps-to-file-trademark-application-online-india',
     '/what-are-the-steps-to-file-a-trademark-application-online-in-india',
     '/what-documents-are-needed-to-apply-for-trademark-registration-for-a-service',
+    '/is-there-a-difference-between-trademark-registration-for-goods-and-services',
     '/online-trademark-registration',
     '/registration-of-trademark',
     '/trade-mark-registration',

@@ -661,6 +661,7 @@ const Footer: React.FC = () => {
             <a href="/how-much-does-it-cost-to-get-a-logo-protected-in-india" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Logo Protection Cost Guide</a>
             <a href="/official-government-website-for-intellectual-property-in-india" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Official IP Website Guide</a>
             <a href="/what-documents-are-needed-to-apply-for-trademark-registration-for-a-service" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Documents for Service TM Registration</a>
+            <a href="/is-there-a-difference-between-trademark-registration-for-goods-and-services" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Goods vs Services Trademark Guide</a>
           </div>
         </div>
 
