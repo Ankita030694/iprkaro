@@ -118,16 +118,23 @@ export default function TamilNaduPage() {
         }
     };
 
-    const productSchema = {
+    const reviewSchema = {
         "@context": "https://schema.org",
-        "@type": "Product",
+        "@type": "Service",
         "name": "Tamil Nadu Trademark Registration",
         "image": "https://www.iprkaro.com/assets/tamil-nadu-trademark-og.jpg",
         "description": "Premium trademark registration services for Tamil Nadu businesses.",
-        "brand": { "@type": "Brand", "name": "IPR Karo" },
+        "provider": {
+            "@type": "LocalBusiness",
+            "name": "IPR Karo",
+            "url": "https://www.iprkaro.com",
+            "logo": "https://www.iprkaro.com/logo.png"
+        },
         "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": averageRating,
+            "bestRating": "5",
+            "worstRating": "1",
             "reviewCount": reviewsCount.toString()
         },
         "review": reviews.map(r => ({
@@ -164,7 +171,7 @@ export default function TamilNaduPage() {
         <>
             <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
             <Script id="article-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-            <Script id="product-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
+            <Script id="review-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
             <Script id="org-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
             <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 

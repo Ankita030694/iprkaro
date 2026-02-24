@@ -176,18 +176,22 @@ export default function UpdateTrademarkDetailsPage() {
         }
     };
 
-    const productSchema = {
+    const reviewSchema = {
         "@context": "https://schema.org",
-        "@type": "Product",
+        "@type": "Service",
         "name": "Trademark Amendment & Update Service",
         "description": "Expert assistance in filing Form TM-M and TM-P to update proprietor details, address, and clerical errors in the Indian Trademark Register.",
-        "brand": {
-            "@type": "Brand",
-            "name": "IPR Karo"
+        "provider": {
+            "@type": "LocalBusiness",
+            "name": "IPR Karo",
+            "url": "https://www.iprkaro.com",
+            "logo": "https://www.iprkaro.com/logo.png"
         },
         "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.9",
+            "bestRating": "5",
+            "worstRating": "1",
             "reviewCount": "1560"
         }
     };
@@ -197,7 +201,7 @@ export default function UpdateTrademarkDetailsPage() {
             <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
             <Script id="article-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
             <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-            <Script id="product-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
+            <Script id="review-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
 
             <div className="bg-white min-h-screen width-full">
                 {/* Hero Section */}

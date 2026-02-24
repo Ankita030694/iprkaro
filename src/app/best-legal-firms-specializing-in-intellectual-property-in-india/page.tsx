@@ -203,13 +203,18 @@ export default function BestIPFirmsIndiaPage() {
         "@context": "https://schema.org",
         "@type": "Service",
         "name": "IP Legal Firm Consultation",
+        "description": "Expert consultation for intellectual property legal matters, including trademark, patent, and copyright law in India.",
         "provider": {
             "@type": "LocalBusiness",
-            "name": "IPR Karo"
+            "name": "IPR Karo",
+            "url": "https://www.iprkaro.com",
+            "logo": "https://www.iprkaro.com/logo.png"
         },
         "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.9",
+            "bestRating": "5",
+            "worstRating": "1",
             "reviewCount": "4500"
         }
     };
@@ -654,7 +659,7 @@ export default function BestIPFirmsIndiaPage() {
                                 <div className="absolute -top-10 -right-10 w-32 h-32 bg-[#6E5E93] rounded-full blur-[60px] opacity-20 group-hover:opacity-40 transition-opacity"></div>
                                 <h3 className="text-2xl font-bold mb-4 relative z-10">Priority IP Filing</h3>
                                 <p className="text-sm opacity-80 mb-8 leading-relaxed relative z-10">
-                                    Secure your brand name today. Get your TM Application number within **4 to 12 hours**.
+                                    Secure your brand name today. Get your TM Application number within 4 to 12 hours.
                                 </p>
                                 <Link href="/contact-us" className="block relative z-10">
                                     <button className="w-full bg-[#6E5E93] hover:bg-[#8A7AB5] text-white font-extrabold py-4 px-4 rounded-xl transition-all shadow-lg transform hover:-translate-y-1">

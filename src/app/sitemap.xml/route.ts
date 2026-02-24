@@ -157,6 +157,10 @@ export async function GET() {
     '/trademark-registration-in-arunachal-pradesh',
     '/trademark-registration-in-tripura',
     '/best-legal-firms-specializing-in-intellectual-property-in-india',
+    '/guide-to-choosing-a-reliable-online-plarforms-for-ip-services-in-india',
+    '/where-can-find-certified-trademark-agents-or-attorneys-near-me',
+    '/what-are-the-benifits-of-hiring-a-trademark-agent-in-india',
+    '/compare-fees-for-various-online-trademark-registration-providers-in-india',
   ].map(path => ({ path, priority: '0.8', changefreq: 'weekly' } as RouteConfig));
 
   // Fetch Dynamic Blog Posts

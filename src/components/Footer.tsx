@@ -678,6 +678,10 @@ const Footer: React.FC = () => {
             <a href="/how-to-update-or-change-details-in-an-existing-trademark-registation" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Update Trademark Details</a>
             <a href="/where-can-i-check-if-my-desired-trademark-is-already-registered-in-india" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Where to Check Trademark India</a>
             <a href="/best-legal-firms-specializing-in-intellectual-property-in-india" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Best IP Legal Firms in India</a>
+            <a href="/guide-to-choosing-a-reliable-online-plarforms-for-ip-services-in-india" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Online IP Platforms Guide</a>
+            <a href="/where-can-find-certified-trademark-agents-or-attorneys-near-me" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Find Certified Agents Near Me</a>
+            <a href="/what-are-the-benifits-of-hiring-a-trademark-agent-in-india" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Benefits of Trademark Agent</a>
+            <a href="/compare-fees-for-various-online-trademark-registration-providers-in-india" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Trademark Fees Comparison</a>
           </div>
         </div>
 
