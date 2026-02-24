@@ -671,6 +671,12 @@ const Footer: React.FC = () => {
             <a href="/what-happens-when-someone-infringes-on-my-registered-trademark-in-india" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Trademark Infringement Guide</a>
             <a href="/what-is-the-meaning-of-trademark-opposition-and-how-to-handle-it" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Trademark Opposition Guide</a>
             <a href="/can-i-trademark-a-slogan-or-tagline-for-my-business-in-india" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Trademark Slogan Guide</a>
+            <a href="/can-i-register-a-sound-or-scent-as-a-trademark-in-india" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Sound & Scent Trademark Guide</a>
+            <a href="/what-legal-protections-does-a-registered-trademark-provide-to-a-company" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Trademark Legal Protections</a>
+            <a href="/how-to-cancel-or-dispute-someone-else-s-trademark-registration" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Cancel Trademark Guide</a>
+            <a href="/can-i-file-a-trademark-application-for-a-mobile-app-name-in-india" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Mobile App Trademark Guide</a>
+            <a href="/how-to-update-or-change-details-in-an-existing-trademark-registation" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Update Trademark Details</a>
+            <a href="/where-can-i-check-if-my-desired-trademark-is-already-registered-in-india" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Where to Check Trademark India</a>
           </div>
         </div>
 
