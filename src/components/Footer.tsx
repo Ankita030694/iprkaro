@@ -662,6 +662,10 @@ const Footer: React.FC = () => {
             <a href="/official-government-website-for-intellectual-property-in-india" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Official IP Website Guide</a>
             <a href="/what-documents-are-needed-to-apply-for-trademark-registration-for-a-service" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Documents for Service TM Registration</a>
             <a href="/is-there-a-difference-between-trademark-registration-for-goods-and-services" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Goods vs Services Trademark Guide</a>
+            <a href="/how-long-does-the-trademark-registration-process-take-in-india" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Trademark Registration Timeline</a>
+            <a href="/what-are-the-comman-reasons-for-trademark-application-rejection-in-india" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Reasons for TM Rejection Guide</a>
+            <a href="/difference-between-trademark-copyright-and-patent-protection-in-india" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Trademark vs Copyright vs Patent Guide</a>
+            <a href="/how-to-renew-a-registered-trademark-in-india" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Trademark Renewal Guide</a>
           </div>
         </div>
 
