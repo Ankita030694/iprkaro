@@ -666,6 +666,11 @@ const Footer: React.FC = () => {
             <a href="/what-are-the-comman-reasons-for-trademark-application-rejection-in-india" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Reasons for TM Rejection Guide</a>
             <a href="/difference-between-trademark-copyright-and-patent-protection-in-india" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Trademark vs Copyright vs Patent Guide</a>
             <a href="/how-to-renew-a-registered-trademark-in-india" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Trademark Renewal Guide</a>
+            <a href="/understanding-trademark-classes-for-services-and-goods-in-india" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Understanding Trademark Classes</a>
+            <a href="/are-there-any-fast-track-options-for-trademark-registration-in-india" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Fast Track Trademark Options</a>
+            <a href="/what-happens-when-someone-infringes-on-my-registered-trademark-in-india" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Trademark Infringement Guide</a>
+            <a href="/what-is-the-meaning-of-trademark-opposition-and-how-to-handle-it" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Trademark Opposition Guide</a>
+            <a href="/can-i-trademark-a-slogan-or-tagline-for-my-business-in-india" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Trademark Slogan Guide</a>
           </div>
         </div>
 
