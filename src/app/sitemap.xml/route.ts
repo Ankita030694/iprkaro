@@ -75,6 +75,7 @@ export async function GET() {
     '/where-can-i-find-affordable-trademark-registration-services-near-me',
     '/what-is-trademark-registration',
     '/steps-to-file-trademark-application-online-india',
+    '/what-are-the-steps-to-file-a-trademark-application-online-in-india',
     '/online-trademark-registration',
     '/registration-of-trademark',
     '/trade-mark-registration',

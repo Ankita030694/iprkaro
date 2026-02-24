@@ -656,6 +656,7 @@ const Footer: React.FC = () => {
             <a href="/small-company-definition" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Small Company Status</a>
             <a href="/registration-of-pharmacist-in-up" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Pharmacist Registration (UP)</a>
             <a href="/trademark-status" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Trademark Status Guide</a>
+            <a href="/what-are-the-steps-to-file-a-trademark-application-online-in-india" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Trademark Filing Steps Guide</a>
           </div>
         </div>
 
