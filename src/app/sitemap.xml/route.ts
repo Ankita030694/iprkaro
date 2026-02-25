@@ -55,6 +55,7 @@ export async function GET() {
     '/trademark-for-jewellery-brand',
     '/trademark-for-restaurant',
     '/trademark-for-business',
+    '/trademark-for-chemicals',
     '/trademark-for-stationary',
     '/trademark-for-furniture-shop',
     '/trademark-for-legal-services',

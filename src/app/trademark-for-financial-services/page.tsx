@@ -40,6 +40,7 @@ import {
   faLightbulb,
   faHandshake
 } from '@fortawesome/free-solid-svg-icons';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
   title: 'Trademark Registration for Financial Services | Class 36',
@@ -468,7 +469,7 @@ export default function TrademarkFinancialServicesPage() {
                          <div key={i} className="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-xl relative overflow-hidden group hover:-translate-y-2 transition-transform">
                             <div className="absolute top-0 right-0 w-24 h-24 bg-indigo-50 rounded-full -mr-8 -mt-8"></div>
                             <div className="flex text-yellow-500 mb-6">
-                               {[...Array(5)].map((_, j) => <FontAwesomeIcon key={j} icon={faAward} className="w-4 h-4 mr-1" />)}
+                               {[...Array(5)].map((_, j) => <FontAwesomeIcon key={j} icon={faStar} className="w-4 h-4 mr-1" />)}
                             </div>
                             <p className="text-gray-600 mb-8 font-medium italic">"{rev.text}"</p>
                             <div className="flex items-center">

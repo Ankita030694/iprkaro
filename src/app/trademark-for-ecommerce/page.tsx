@@ -5,6 +5,7 @@ import { Metadata } from 'next';
 import TableOfContents from '@/components/TableOfContents';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { 
   faCheck, 
   faSearch, 
@@ -335,7 +336,7 @@ export default function TrademarkEcommercePage() {
 
                   <section id="amazon-brand-registry" className="scroll-mt-32 border-t border-gray-100 pt-12">
                      <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-gray-900 mb-6 leading-tight flex items-center">
-                        <FontAwesomeIcon icon={faLock} className="mr-4 text-indigo-600 w-10 h-10" /> The Amazon Brand Registry: Why Trademark is the Golden Ticket
+                        <FontAwesomeIcon icon={faStar} className="mr-4 text-indigo-600 w-10 h-10" /> The Amazon Brand Registry: Why Trademark is the Golden Ticket
                      </h2>
                      <p className="mb-6">
                        In the world of e-commerce, Amazon is the undisputed giant. For millions of sellers, Amazon is their primary source of revenue. However, the platform is also a breeding ground for "listing hijackers" who sell counterfeit versions of popular products under the original brand\'s listing. This not only results in lost sales but also leads to negative reviews that can permanently damage a brand\'s reputation.
@@ -617,7 +618,7 @@ export default function TrademarkEcommercePage() {
                         {reviews.map((rev, i) => (
                           <div key={i} className="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-xl relative overflow-hidden group hover:bg-slate-50 transition-colors">
                              <div className="flex text-yellow-500 mb-6">
-                                {[...Array(5)].map((_, j) => <FontAwesomeIcon key={j} icon={faAward} className="w-4 h-4 mr-1" />)}
+                                {[...Array(5)].map((_, j) => <FontAwesomeIcon key={j} icon={faStar} className="w-4 h-4 mr-1" />)}
                              </div>
                              <p className="text-gray-600 mb-8 font-medium italic">"{rev.text}"</p>
                              <div className="flex items-center">

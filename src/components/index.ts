@@ -18,3 +18,4 @@ export { default as CitiesAndTerritories } from './CitiesAndTerritories';
 export { default as OurServices } from './OurServices';
 export { default as ReviewSnippets } from './ReviewSnippets';
 export { default as StatesAndUTs } from './StatesAndUTs';
+export { default as TrademarkClasses } from './TrademarkClasses';

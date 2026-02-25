@@ -1,4 +1,4 @@
-import { HeroSection, WhyTrademark, OurServices, SimplePlans, Faq, ReviewSnippets, StatesAndUTs } from "@/components";
+import { HeroSection, WhyTrademark, OurServices, SimplePlans, Faq, ReviewSnippets, StatesAndUTs, TrademarkClasses } from "@/components";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -156,6 +156,7 @@ export default function Home() {
       <SimplePlans />
       <Faq />
       <StatesAndUTs />
+      <TrademarkClasses />
     </>
   );
 }

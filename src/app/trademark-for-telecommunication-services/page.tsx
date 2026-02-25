@@ -647,7 +647,7 @@ export default function TrademarkTelecommunicationServicesPage() {
                        {reviews.map((rev, i) => (
                          <div key={i} className="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-xl relative overflow-hidden group hover:bg-slate-50 transition-colors">
                             <div className="flex text-yellow-500 mb-6">
-                               {[...Array(5)].map((_, j) => <FontAwesomeIcon key={j} icon={faAward} className="w-4 h-4 mr-1" />)}
+                               {[...Array(5)].map((_, j) => <FontAwesomeIcon key={j} icon={faStar} className="w-4 h-4 mr-1" />)}
                             </div>
                             <p className="text-gray-600 mb-8 font-medium italic">"{rev.text}"</p>
                             <div className="flex items-center">
