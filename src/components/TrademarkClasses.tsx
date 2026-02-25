@@ -15,8 +15,10 @@ const TrademarkClasses: React.FC = () => {
         { name: 'Telecommunication', slug: 'telecommunication-services' },
         { name: 'Toys & Sports', slug: 'toys-sports-services' },
         { name: 'Legal Services', slug: 'legal-services' },
-        { name: 'Business', slug: 'business' }
-        
+        { name: 'Business', slug: 'business' },
+        { name: 'Paints & Coatings', slug: 'paints-coatings' },
+        { name: 'Cosmetics & Cleaning', slug: 'cosmetics-cleaning' }
+
     ];
 
     return (

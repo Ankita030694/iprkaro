@@ -66,6 +66,8 @@ export async function GET() {
     '/trademark-for-medical-services',
     '/trademark-registration-for-pharmaceuticals',
     '/trademark-for-ecommerce',
+    '/trademark-for-paints-coatings',
+    '/trademark-for-cosmetics-cleaning',
     '/fast-track-trademark-registration',
     '/trademark-registration-in-noida',
     '/trademark-registration-in-delhi',
