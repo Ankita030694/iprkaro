@@ -5,17 +5,17 @@ import { Metadata } from 'next';
 import TableOfContents from '@/components/TableOfContents';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { 
-  faCheck, 
-  faSearch, 
-  faFileContract, 
-  faGavel, 
-  faGlobe, 
-  faShieldAlt, 
-  faBalanceScale, 
-  faRocket, 
-  faMoneyBillWave, 
-  faCertificate, 
+import {
+  faCheck,
+  faSearch,
+  faFileContract,
+  faGavel,
+  faGlobe,
+  faShieldAlt,
+  faBalanceScale,
+  faRocket,
+  faMoneyBillWave,
+  faCertificate,
   faFileSignature,
   faPhone,
   faChevronRight,
@@ -138,7 +138,6 @@ const reviews = [
 
 export default function ToysSportsTrademarkPage() {
   const breadcrumbItems = [
-    { label: "Home", href: "/" },
     { label: "Trademark for Toys & Sports Services", href: "/trademark-for-toys-sports-services" },
   ];
 
@@ -205,25 +204,25 @@ export default function ToysSportsTrademarkPage() {
       <Script id="review-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
 
       <div className="bg-gray-50 min-h-screen font-sans text-gray-800">
-        
+
         {/* Hero Section */}
-        <div className="relative w-full overflow-hidden" 
-             style={{
-               background: 'linear-gradient(to bottom, #0C002B 0%, #160049 45%, #6E5E93 80%, #E8E8E8 100%)'
-             }}>
-          
+        <div className="relative w-full overflow-hidden"
+          style={{
+            background: 'linear-gradient(to bottom, #0C002B 0%, #160049 45%, #6E5E93 80%, #E8E8E8 100%)'
+          }}>
+
           <div className="container mx-auto px-4 py-12 lg:py-32 relative z-10 text-center">
-             <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-snug md:leading-tight mt-20 md:mt-10 text-white">
-               Secure Your Toys & Sports Brand with <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'rgb(110, 94, 147)' }}>Expert Legal Protection</span>
-             </h1>
-             <p className="text-sm md:text-xl mb-6 md:mb-8 max-w-3xl mx-auto text-gray-300 px-2 leading-relaxed">
-               Protect your innovations in Class 28 & 41. India's #1 legal team for sporting goods, academies, and recreational brands. Same-day filing guaranteed for all IP assets.
-             </p>
-             <Link href="/contact-us">
-               <button className="bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-2.5 px-6 md:py-3 md:px-8 rounded-full transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(110,94,147,0.3)] text-base md:text-lg">
-                 Start Registration Now
-               </button>
-             </Link>
+            <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-snug md:leading-tight mt-20 md:mt-10 text-white">
+              Secure Your Toys & Sports Brand with <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'rgb(110, 94, 147)' }}>Expert Legal Protection</span>
+            </h1>
+            <p className="text-sm md:text-xl mb-6 md:mb-8 max-w-3xl mx-auto text-gray-300 px-2 leading-relaxed">
+              Protect your innovations in Class 28 & 41. India's #1 legal team for sporting goods, academies, and recreational brands. Same-day filing guaranteed for all IP assets.
+            </p>
+            <Link href="/contact-us">
+              <button className="bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-2.5 px-6 md:py-3 md:px-8 rounded-full transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(110,94,147,0.3)] text-base md:text-lg">
+                Start Registration Now
+              </button>
+            </Link>
           </div>
         </div>
 
@@ -231,7 +230,7 @@ export default function ToysSportsTrademarkPage() {
           <Breadcrumbs items={breadcrumbItems} />
 
           <div className="grid grid-cols-1 lg:grid-cols-[220px_1fr_280px] gap-4 md:gap-8 items-start">
-            
+
             {/* Left Sidebar - TOC (Desktop) */}
             <div className="hidden lg:block sticky top-32">
               <TableOfContents sections={tocSections} orientation="vertical" />
@@ -239,13 +238,13 @@ export default function ToysSportsTrademarkPage() {
 
             {/* Main Content Area */}
             <div className="min-w-0">
-               {/* TOC (Mobile) */}
-               <div className="lg:hidden mb-4 sticky top-25 z-10">
+              {/* TOC (Mobile) */}
+              <div className="lg:hidden mb-4 sticky top-25 z-10">
                 <TableOfContents sections={tocSections} orientation="horizontal" />
               </div>
 
               <div className="bg-white p-4 md:p-12 rounded-xl md:rounded-2xl shadow-sm space-y-8 md:space-y-16">
-                
+
                 <section id="why-trademark-toys-sports" className="scroll-mt-24 md:scroll-mt-32">
                   <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6">The Vital Importance of Brand Protection in Toys & Sports</h2>
                   <p className="text-base md:text-lg leading-relaxed mb-4 md:mb-6 text-gray-700">
@@ -257,7 +256,7 @@ export default function ToysSportsTrademarkPage() {
                   <p className="text-base md:text-lg leading-relaxed mb-4 md:mb-6 text-gray-700">
                     Beyond simple protection, a registered trademark is a powerful commercial asset. It transforms your abstract brand value into a tangible property that can be licensed for franchising, assigned for capital, or used as collateral for business financing. For exporters of sporting goods and creators of global toy phenomena, it is the first step toward international expansion and market dominance.
                   </p>
-                   <div className="bg-purple-50 border-l-4 border-[rgb(110,94,147)] p-4 md:p-8 my-6 md:my-8 rounded-r-lg">
+                  <div className="bg-purple-50 border-l-4 border-[rgb(110,94,147)] p-4 md:p-8 my-6 md:my-8 rounded-r-lg">
                     <p className="text-base md:text-xl text-purple-900 italic leading-relaxed">
                       "In the world of play and performance, your brand is the promise of quality. Protecting that promise is not just a legal necessity but a strategic business imperative."
                     </p>
@@ -270,34 +269,34 @@ export default function ToysSportsTrademarkPage() {
                     Trademark Class 28 is the dedicated category for physical products used in play, sporting activities, and recreation. If you manufacture or sell hardware for the sports industry, this is the foundational class for your brand strategy.
                   </p>
                   <div className="grid md:grid-cols-2 gap-6">
-                     <div className="bg-gray-50 p-6 rounded-lg">
-                        <h3 className="font-bold text-lg mb-2 text-[rgb(110,94,147)] flex items-center">
-                          <FontAwesomeIcon icon={faGamepad} className="w-12 h-12 mr-2 mb-2 text-[rgb(110,94,147)]" />
-                          Toys and Games
-                        </h3>
-                        <p className="text-gray-700 text-sm italic">Action figures, dolls, puzzles, educational toys, and board games for all ages.</p>
-                     </div>
-                     <div className="bg-gray-50 p-6 rounded-lg">
-                        <h3 className="font-bold text-lg mb-2 text-[rgb(110,94,147)] flex items-center">
-                          <FontAwesomeIcon icon={faBaseballBall} className="w-12 h-12 mr-2 mb-2 text-[rgb(110,94,147)]" />
-                          Sporting Equipment
-                        </h3>
-                        <p className="text-gray-700 text-sm italic">Cricket bats, footballs, rackets, goalposts, and specialized gear for competitive athletics.</p>
-                     </div>
-                     <div className="bg-gray-50 p-6 rounded-lg">
-                        <h3 className="font-bold text-lg mb-2 text-[rgb(110,94,147)] flex items-center">
-                          <FontAwesomeIcon icon={faRunning} className="w-12 h-12 mr-2 mb-2 text-[rgb(110,94,147)]" />
-                          Gym & Fitness Gear
-                        </h3>
-                        <p className="text-gray-700 text-sm italic">Dumbbells, treadmills, yoga mats, resistance bands, and home workout machines.</p>
-                     </div>
-                     <div className="bg-gray-50 p-6 rounded-lg">
-                        <h3 className="font-bold text-lg mb-2 text-[rgb(110,94,147)] flex items-center">
-                          <FontAwesomeIcon icon={faUsers} className="w-12 h-12 mr-2 mb-2 text-[rgb(110,94,147)]" />
-                          Recreational Items
-                        </h3>
-                        <p className="text-gray-700 text-sm italic">Playground equipment, inflatable structures, and novelty items for amusement parks.</p>
-                     </div>
+                    <div className="bg-gray-50 p-6 rounded-lg">
+                      <h3 className="font-bold text-lg mb-2 text-[rgb(110,94,147)] flex items-center">
+                        <FontAwesomeIcon icon={faGamepad} className="w-12 h-12 mr-2 mb-2 text-[rgb(110,94,147)]" />
+                        Toys and Games
+                      </h3>
+                      <p className="text-gray-700 text-sm italic">Action figures, dolls, puzzles, educational toys, and board games for all ages.</p>
+                    </div>
+                    <div className="bg-gray-50 p-6 rounded-lg">
+                      <h3 className="font-bold text-lg mb-2 text-[rgb(110,94,147)] flex items-center">
+                        <FontAwesomeIcon icon={faBaseballBall} className="w-12 h-12 mr-2 mb-2 text-[rgb(110,94,147)]" />
+                        Sporting Equipment
+                      </h3>
+                      <p className="text-gray-700 text-sm italic">Cricket bats, footballs, rackets, goalposts, and specialized gear for competitive athletics.</p>
+                    </div>
+                    <div className="bg-gray-50 p-6 rounded-lg">
+                      <h3 className="font-bold text-lg mb-2 text-[rgb(110,94,147)] flex items-center">
+                        <FontAwesomeIcon icon={faRunning} className="w-12 h-12 mr-2 mb-2 text-[rgb(110,94,147)]" />
+                        Gym & Fitness Gear
+                      </h3>
+                      <p className="text-gray-700 text-sm italic">Dumbbells, treadmills, yoga mats, resistance bands, and home workout machines.</p>
+                    </div>
+                    <div className="bg-gray-50 p-6 rounded-lg">
+                      <h3 className="font-bold text-lg mb-2 text-[rgb(110,94,147)] flex items-center">
+                        <FontAwesomeIcon icon={faUsers} className="w-12 h-12 mr-2 mb-2 text-[rgb(110,94,147)]" />
+                        Recreational Items
+                      </h3>
+                      <p className="text-gray-700 text-sm italic">Playground equipment, inflatable structures, and novelty items for amusement parks.</p>
+                    </div>
                   </div>
                   <p className="text-base md:text-lg leading-relaxed mt-6 text-gray-700">
                     It is important to note that while Class 28 covers total sporting goods, it specifically excludes apparel and footwear, which are registered in Class 25. For a complete brand defense, most established sports companies utilize a multi-class filing approach that spans both Class 28 and Class 25.
@@ -415,243 +414,243 @@ export default function ToysSportsTrademarkPage() {
                 </section>
 
                 <section id="documents-required" className="scroll-mt-24 md:scroll-mt-32">
-                   <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6">Document Checklist for IP Success</h2>
-                   <p className="text-base md:text-lg leading-relaxed mb-8 text-gray-700">
-                      The documentation requirements vary based on your legal entity. Providing accurate documents from the start prevents unnecessary delays in the filing process.
-                   </p>
-                   
-                   <div className="grid md:grid-cols-2 gap-8">
-                       <div className="bg-gray-50 p-8 rounded-xl border border-gray-100 shadow-sm">
-                           <h3 className="font-bold text-lg mb-4 text-[rgb(110,94,147)] flex items-center">
-                             <FontAwesomeIcon icon={faUsers} className="w-12 h-12 mr-2" />
-                             Individuals & Proprietors
-                           </h3>
-                           <ul className="space-y-4">
-                               <li className="flex items-start">
-                                    <FontAwesomeIcon icon={faCheck} className="w-12 h-12 mt-1 mr-3 text-green-500" />
-                                    <span className="text-sm text-gray-700">PAN Card and Aadhaar for identity verification.</span>
-                               </li>
-                               <li className="flex items-start">
-                                    <FontAwesomeIcon icon={faCheck} className="w-12 h-12 mt-1 mr-3 text-green-500" />
-                                    <span className="text-sm text-gray-700">High-resolution brand logo or stylized wordmark.</span>
-                               </li>
-                               <li className="flex items-start">
-                                    <FontAwesomeIcon icon={faCheck} className="w-12 h-12 mt-1 mr-3 text-green-500" />
-                                    <span className="text-sm text-gray-700">Signed Form 48 for legal representation.</span>
-                               </li>
-                               <li className="flex items-start">
-                                    <FontAwesomeIcon icon={faCheck} className="w-12 h-12 mt-1 mr-3 text-green-500" />
-                                    <span className="text-sm text-gray-700">Usage proof (invoices, ads) for prior claims.</span>
-                               </li>
-                           </ul>
-                       </div>
+                  <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6">Document Checklist for IP Success</h2>
+                  <p className="text-base md:text-lg leading-relaxed mb-8 text-gray-700">
+                    The documentation requirements vary based on your legal entity. Providing accurate documents from the start prevents unnecessary delays in the filing process.
+                  </p>
 
-                       <div className="bg-gray-50 p-8 rounded-xl border border-gray-100 shadow-sm">
-                           <h3 className="font-bold text-lg mb-4 text-[rgb(110,94,147)] flex items-center">
-                             <FontAwesomeIcon icon={faFileContract} className="w-12 h-12 mr-2" />
-                             Companies & Startups
-                           </h3>
-                           <ul className="space-y-4">
-                               <li className="flex items-start">
-                                    <FontAwesomeIcon icon={faCheck} className="w-12 h-12 mt-1 mr-3 text-green-500" />
-                                    <span className="text-sm text-gray-700">Certificate of Incorporation or Partnership Deed.</span>
-                               </li>
-                               <li className="flex items-start">
-                                    <FontAwesomeIcon icon={faCheck} className="w-12 h-12 mt-1 mr-3 text-green-500" />
-                                    <span className="text-sm text-gray-700">Udyam Registration for fee rebates.</span>
-                               </li>
-                               <li className="flex items-start">
-                                    <FontAwesomeIcon icon={faCheck} className="w-12 h-12 mt-1 mr-3 text-green-500" />
-                                    <span className="text-sm text-gray-700">Board Resolution or authorization letter.</span>
-                               </li>
-                               <li className="flex items-start">
-                                    <FontAwesomeIcon icon={faCheck} className="w-12 h-12 mt-1 mr-3 text-green-500" />
-                                    <span className="text-sm text-gray-700">Audited statements if claiming massive turnover.</span>
-                               </li>
-                           </ul>
-                       </div>
-                   </div>
+                  <div className="grid md:grid-cols-2 gap-8">
+                    <div className="bg-gray-50 p-8 rounded-xl border border-gray-100 shadow-sm">
+                      <h3 className="font-bold text-lg mb-4 text-[rgb(110,94,147)] flex items-center">
+                        <FontAwesomeIcon icon={faUsers} className="w-12 h-12 mr-2" />
+                        Individuals & Proprietors
+                      </h3>
+                      <ul className="space-y-4">
+                        <li className="flex items-start">
+                          <FontAwesomeIcon icon={faCheck} className="w-12 h-12 mt-1 mr-3 text-green-500" />
+                          <span className="text-sm text-gray-700">PAN Card and Aadhaar for identity verification.</span>
+                        </li>
+                        <li className="flex items-start">
+                          <FontAwesomeIcon icon={faCheck} className="w-12 h-12 mt-1 mr-3 text-green-500" />
+                          <span className="text-sm text-gray-700">High-resolution brand logo or stylized wordmark.</span>
+                        </li>
+                        <li className="flex items-start">
+                          <FontAwesomeIcon icon={faCheck} className="w-12 h-12 mt-1 mr-3 text-green-500" />
+                          <span className="text-sm text-gray-700">Signed Form 48 for legal representation.</span>
+                        </li>
+                        <li className="flex items-start">
+                          <FontAwesomeIcon icon={faCheck} className="w-12 h-12 mt-1 mr-3 text-green-500" />
+                          <span className="text-sm text-gray-700">Usage proof (invoices, ads) for prior claims.</span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div className="bg-gray-50 p-8 rounded-xl border border-gray-100 shadow-sm">
+                      <h3 className="font-bold text-lg mb-4 text-[rgb(110,94,147)] flex items-center">
+                        <FontAwesomeIcon icon={faFileContract} className="w-12 h-12 mr-2" />
+                        Companies & Startups
+                      </h3>
+                      <ul className="space-y-4">
+                        <li className="flex items-start">
+                          <FontAwesomeIcon icon={faCheck} className="w-12 h-12 mt-1 mr-3 text-green-500" />
+                          <span className="text-sm text-gray-700">Certificate of Incorporation or Partnership Deed.</span>
+                        </li>
+                        <li className="flex items-start">
+                          <FontAwesomeIcon icon={faCheck} className="w-12 h-12 mt-1 mr-3 text-green-500" />
+                          <span className="text-sm text-gray-700">Udyam Registration for fee rebates.</span>
+                        </li>
+                        <li className="flex items-start">
+                          <FontAwesomeIcon icon={faCheck} className="w-12 h-12 mt-1 mr-3 text-green-500" />
+                          <span className="text-sm text-gray-700">Board Resolution or authorization letter.</span>
+                        </li>
+                        <li className="flex items-start">
+                          <FontAwesomeIcon icon={faCheck} className="w-12 h-12 mt-1 mr-3 text-green-500" />
+                          <span className="text-sm text-gray-700">Audited statements if claiming massive turnover.</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </section>
 
                 <section id="landmark-cases" className="scroll-mt-24 md:scroll-mt-32">
-                   <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6">Landmark Legal Precedents in Toys & Sports</h2>
-                   <p className="text-base md:text-lg leading-relaxed mb-6 text-gray-700">
-                      The Indian judiciary has played a pivotal role in shaping the trademark landscape for the toys and sports sectors. Understanding these landmark cases is essential for any brand owner looking to navigate the complexities of intellectual property law.
-                   </p>
-                   <div className="space-y-8">
-                      <div className="bg-white border-l-4 border-blue-500 p-6 shadow-sm rounded-r-xl">
-                         <h3 className="font-bold text-lg mb-2 text-blue-900">LEGO Juris A/S v. Jayant Satish Kumar Patel (2018)</h3>
-                         <p className="text-gray-700 text-sm leading-relaxed">
-                            In this significant case, the globally recognized toy brand LEGO successfully defended its mark against a local manufacturer. The court held that well-known marks in Class 28 are entitled to broader protection, even against unrelated goods, because of their enormous reputation and the risk of dilution.
-                         </p>
-                      </div>
-                      <div className="bg-white border-l-4 border-pink-500 p-6 shadow-sm rounded-r-xl">
-                         <h3 className="font-bold text-lg mb-2 text-pink-900">Mattel, Inc. v. Radha Industries (2016)</h3>
-                         <p className="text-gray-700 text-sm leading-relaxed">
-                            Mattel, the creator of the iconic Barbie doll, took action against a manufacturer of counterfeit products. The court affirmed Mattel's rights under Class 28, underscoring that trademarks are critical in preserving brand value and preventing consumer confusion in the children's market.
-                         </p>
-                      </div>
-                      <div className="bg-white border-l-4 border-orange-500 p-6 shadow-sm rounded-r-xl">
-                         <h3 className="font-bold text-lg mb-2 text-orange-900">BCCI v. Grace Sports Pvt Ltd (IPL Cases)</h3>
-                         <p className="text-gray-700 text-sm leading-relaxed">
-                            The Board of Control for Cricket in India (BCCI) has successfully litigated several cases to protect the "IPL" trademark. The courts have issued injunctions against entities using deceptively similar names like "Indian Junior Player League," affirming that sports league identities are high-value intellectual assets.
-                         </p>
-                      </div>
-                   </div>
+                  <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6">Landmark Legal Precedents in Toys & Sports</h2>
+                  <p className="text-base md:text-lg leading-relaxed mb-6 text-gray-700">
+                    The Indian judiciary has played a pivotal role in shaping the trademark landscape for the toys and sports sectors. Understanding these landmark cases is essential for any brand owner looking to navigate the complexities of intellectual property law.
+                  </p>
+                  <div className="space-y-8">
+                    <div className="bg-white border-l-4 border-blue-500 p-6 shadow-sm rounded-r-xl">
+                      <h3 className="font-bold text-lg mb-2 text-blue-900">LEGO Juris A/S v. Jayant Satish Kumar Patel (2018)</h3>
+                      <p className="text-gray-700 text-sm leading-relaxed">
+                        In this significant case, the globally recognized toy brand LEGO successfully defended its mark against a local manufacturer. The court held that well-known marks in Class 28 are entitled to broader protection, even against unrelated goods, because of their enormous reputation and the risk of dilution.
+                      </p>
+                    </div>
+                    <div className="bg-white border-l-4 border-pink-500 p-6 shadow-sm rounded-r-xl">
+                      <h3 className="font-bold text-lg mb-2 text-pink-900">Mattel, Inc. v. Radha Industries (2016)</h3>
+                      <p className="text-gray-700 text-sm leading-relaxed">
+                        Mattel, the creator of the iconic Barbie doll, took action against a manufacturer of counterfeit products. The court affirmed Mattel's rights under Class 28, underscoring that trademarks are critical in preserving brand value and preventing consumer confusion in the children's market.
+                      </p>
+                    </div>
+                    <div className="bg-white border-l-4 border-orange-500 p-6 shadow-sm rounded-r-xl">
+                      <h3 className="font-bold text-lg mb-2 text-orange-900">BCCI v. Grace Sports Pvt Ltd (IPL Cases)</h3>
+                      <p className="text-gray-700 text-sm leading-relaxed">
+                        The Board of Control for Cricket in India (BCCI) has successfully litigated several cases to protect the "IPL" trademark. The courts have issued injunctions against entities using deceptively similar names like "Indian Junior Player League," affirming that sports league identities are high-value intellectual assets.
+                      </p>
+                    </div>
+                  </div>
                 </section>
 
                 <section id="objection-handling" className="scroll-mt-24 md:scroll-mt-32">
-                   <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6">Overcoming Objections specific to Sports Brands</h2>
-                   <p className="text-base md:text-lg leading-relaxed mb-6 text-gray-700">
-                      In the sports and toy sectors, brand names often border on being descriptive. For instance, a brand name like 'FitGear' for gym equipment might be seen as lacking inherent distinctiveness. We use specialized strategies to overcome these legal challenges.
-                   </p>
-                   <div className="grid md:grid-cols-2 gap-6">
-                      <div className="bg-gray-50 p-6 rounded-xl border-t-4 border-[rgb(110,94,147)] shadow-sm">
-                         <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
-                            <FontAwesomeIcon icon={faShieldAlt} className="w-12 h-12 mr-3 text-[rgb(110,94,147)]" />
-                            Section 9 Refusals
-                         </h3>
-                         <p className="text-gray-700 text-sm leading-relaxed mb-4">
-                            These objections occur when a name is considered too simple or descriptive. We counter this by submitting extensive evidence of usage, proving that your customers recognize the name as yours specifically, regardless of its dictionary meaning.
-                         </p>
-                         <div className="text-xs font-semibold text-[rgb(110,94,147)] uppercase tracking-wider">Strategy: Proving Acquired Distinctiveness</div>
-                      </div>
-                      <div className="bg-gray-50 p-6 rounded-xl border-t-4 border-[rgb(110,94,147)] shadow-sm">
-                         <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
-                            <FontAwesomeIcon icon={faBalanceScale} className="w-12 h-12 mr-3 text-[rgb(110,94,147)]" />
-                            Section 11 Conflicts
-                         </h3>
-                         <p className="text-gray-700 text-sm leading-relaxed mb-4">
-                            If a competitor has a similar name, you will face a Section 11 objection. We perform side by side comparisons, highlighting visual and phonetic differences, and showing that the customer base and trade channels are distinct enough to prevent confusion.
-                         </p>
-                         <div className="text-xs font-semibold text-[rgb(110,94,147)] uppercase tracking-wider">Strategy: Differentiation and Prior Use</div>
-                      </div>
-                   </div>
+                  <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6">Overcoming Objections specific to Sports Brands</h2>
+                  <p className="text-base md:text-lg leading-relaxed mb-6 text-gray-700">
+                    In the sports and toy sectors, brand names often border on being descriptive. For instance, a brand name like 'FitGear' for gym equipment might be seen as lacking inherent distinctiveness. We use specialized strategies to overcome these legal challenges.
+                  </p>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="bg-gray-50 p-6 rounded-xl border-t-4 border-[rgb(110,94,147)] shadow-sm">
+                      <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                        <FontAwesomeIcon icon={faShieldAlt} className="w-12 h-12 mr-3 text-[rgb(110,94,147)]" />
+                        Section 9 Refusals
+                      </h3>
+                      <p className="text-gray-700 text-sm leading-relaxed mb-4">
+                        These objections occur when a name is considered too simple or descriptive. We counter this by submitting extensive evidence of usage, proving that your customers recognize the name as yours specifically, regardless of its dictionary meaning.
+                      </p>
+                      <div className="text-xs font-semibold text-[rgb(110,94,147)] uppercase tracking-wider">Strategy: Proving Acquired Distinctiveness</div>
+                    </div>
+                    <div className="bg-gray-50 p-6 rounded-xl border-t-4 border-[rgb(110,94,147)] shadow-sm">
+                      <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                        <FontAwesomeIcon icon={faBalanceScale} className="w-12 h-12 mr-3 text-[rgb(110,94,147)]" />
+                        Section 11 Conflicts
+                      </h3>
+                      <p className="text-gray-700 text-sm leading-relaxed mb-4">
+                        If a competitor has a similar name, you will face a Section 11 objection. We perform side by side comparisons, highlighting visual and phonetic differences, and showing that the customer base and trade channels are distinct enough to prevent confusion.
+                      </p>
+                      <div className="text-xs font-semibold text-[rgb(110,94,147)] uppercase tracking-wider">Strategy: Differentiation and Prior Use</div>
+                    </div>
+                  </div>
                 </section>
 
                 <section id="opposition-proceedings" className="scroll-mt-24 md:scroll-mt-32">
-                   <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6">The Battle for Brand Supremacy: Opposition Proceedings</h2>
-                   <p className="text-base md:text-lg leading-relaxed mb-6 text-gray-700">
-                      The publication of your mark in the Journal is the ultimate test of its uniqueness. Any person who believes your registration would harm their business can file an opposition within four months. This is particularly common in the toys and sports world where names often overlap.
-                   </p>
-                   <p className="text-base md:text-lg leading-relaxed mb-6 text-gray-700">
-                      Our litigation team handles the entire opposition process, from filing counter-statements to presenting evidence in form of invoices, awards, and market feedback. We have a high success rate in defending against frivolous oppositions designed only to slow down your market entry.
-                   </p>
-                   <div className="bg-red-50 p-6 rounded-xl border-l-4 border-red-500">
-                     <h4 className="font-bold text-red-800 mb-2">Grounds for Defense:</h4>
-                     <p className="text-sm text-red-700 italic">"We focus on 'Prior Adopter' status. If you were the first to use the name in India, your rights are historically superior to someone who filed later but claims a similar name."</p>
-                   </div>
+                  <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6">The Battle for Brand Supremacy: Opposition Proceedings</h2>
+                  <p className="text-base md:text-lg leading-relaxed mb-6 text-gray-700">
+                    The publication of your mark in the Journal is the ultimate test of its uniqueness. Any person who believes your registration would harm their business can file an opposition within four months. This is particularly common in the toys and sports world where names often overlap.
+                  </p>
+                  <p className="text-base md:text-lg leading-relaxed mb-6 text-gray-700">
+                    Our litigation team handles the entire opposition process, from filing counter-statements to presenting evidence in form of invoices, awards, and market feedback. We have a high success rate in defending against frivolous oppositions designed only to slow down your market entry.
+                  </p>
+                  <div className="bg-red-50 p-6 rounded-xl border-l-4 border-red-500">
+                    <h4 className="font-bold text-red-800 mb-2">Grounds for Defense:</h4>
+                    <p className="text-sm text-red-700 italic">"We focus on 'Prior Adopter' status. If you were the first to use the name in India, your rights are historically superior to someone who filed later but claims a similar name."</p>
+                  </div>
                 </section>
 
                 <section id="trademark-squatting" className="scroll-mt-24 md:scroll-mt-32">
-                   <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6">Trademark Squatting: Protecting Against Bad-Faith Filings</h2>
-                   <p className="text-base md:text-lg leading-relaxed mb-6 text-gray-700">
-                      In the sports and toy industries, trademark squatting—where an entity in India registers a globally known brand name before the original brand enters the market—is a persistent threat. A recent example is the case of *BPI Sports LLC v. Saurabh Gulati & Anr.*, where a US-based company had to fight for its identity against a fraudulently obtained Indian registration.
-                   </p>
-                   <p className="text-base md:text-lg leading-relaxed mb-6 text-gray-700">
-                      We help brand owners combat squatting by leveraging the concept of 'trans-border reputation'. If your sports brand is well-known internationally, we can often cancel local bad-faith registrations even if you have no direct sales in India yet.
-                   </p>
-                   <div className="bg-yellow-50 p-6 rounded-xl border-l-4 border-yellow-500 text-yellow-900">
-                      <h4 className="font-bold mb-2 flex items-center">
-                         <FontAwesomeIcon icon={faExclamationTriangle} className="w-12 h-12 mr-2" />
-                         Warning for Global Brands
-                      </h4>
-                      <p className="text-sm">"The most effective way to prevent squatting is to file for your Indian trademark as early as possible—ideally as soon as your brand is launched globally."</p>
-                   </div>
+                  <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6">Trademark Squatting: Protecting Against Bad-Faith Filings</h2>
+                  <p className="text-base md:text-lg leading-relaxed mb-6 text-gray-700">
+                    In the sports and toy industries, trademark squatting—where an entity in India registers a globally known brand name before the original brand enters the market—is a persistent threat. A recent example is the case of *BPI Sports LLC v. Saurabh Gulati & Anr.*, where a US-based company had to fight for its identity against a fraudulently obtained Indian registration.
+                  </p>
+                  <p className="text-base md:text-lg leading-relaxed mb-6 text-gray-700">
+                    We help brand owners combat squatting by leveraging the concept of 'trans-border reputation'. If your sports brand is well-known internationally, we can often cancel local bad-faith registrations even if you have no direct sales in India yet.
+                  </p>
+                  <div className="bg-yellow-50 p-6 rounded-xl border-l-4 border-yellow-500 text-yellow-900">
+                    <h4 className="font-bold mb-2 flex items-center">
+                      <FontAwesomeIcon icon={faExclamationTriangle} className="w-12 h-12 mr-2" />
+                      Warning for Global Brands
+                    </h4>
+                    <p className="text-sm">"The most effective way to prevent squatting is to file for your Indian trademark as early as possible—ideally as soon as your brand is launched globally."</p>
+                  </div>
                 </section>
 
                 <section id="global-protection" className="scroll-mt-24 md:scroll-mt-32">
-                   <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6">Going Global: The Madrid Protocol and International Filing</h2>
-                   <p className="text-base md:text-lg leading-relaxed mb-6 text-gray-700">
-                      The sports business knows no borders. If you are manufacturing cricket bats in Meerut for the UK market or creating educational toys for the US, you need global protection. An Indian trademark registration is only the beginning.
-                   </p>
-                   <div className="grid md:grid-cols-2 gap-8">
-                     <div className="bg-gray-900 text-white p-6 rounded-xl shadow-xl">
-                       <h3 className="text-xl font-bold mb-3 flex items-center">
-                         <FontAwesomeIcon icon={faGlobe} className="w-12 h-12 mr-2 text-cyan-400" />
-                         Madrid Protocol
-                       </h3>
-                       <p className="text-sm text-gray-300 leading-relaxed mb-4">
-                         A centralized filing system covering over 130 countries. It allows you to protect your sports brand across major markets with a single application in one language.
-                       </p>
-                       <div className="text-xs bg-cyan-900/50 p-2 rounded border border-cyan-800 text-cyan-200">Ideal for: Established brands and exporters.</div>
-                     </div>
-                     <div className="bg-white border border-gray-200 p-6 rounded-xl shadow-sm">
-                       <h3 className="text-xl font-bold mb-3 flex items-center">
-                         <FontAwesomeIcon icon={faShieldAlt} className="w-12 h-12 mr-2 text-[rgb(110,94,147)]" />
-                         Direct Country Filing
-                       </h3>
-                       <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                         For specific high-impact markets like the UAE or certain Southeast Asian nations, direct filing via local attorneys is often more strategic and effective.
-                       </p>
-                       <div className="text-xs bg-purple-50 p-2 rounded border border-purple-100 text-purple-700">Ideal for: Targeted market expansion.</div>
-                     </div>
-                   </div>
+                  <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6">Going Global: The Madrid Protocol and International Filing</h2>
+                  <p className="text-base md:text-lg leading-relaxed mb-6 text-gray-700">
+                    The sports business knows no borders. If you are manufacturing cricket bats in Meerut for the UK market or creating educational toys for the US, you need global protection. An Indian trademark registration is only the beginning.
+                  </p>
+                  <div className="grid md:grid-cols-2 gap-8">
+                    <div className="bg-gray-900 text-white p-6 rounded-xl shadow-xl">
+                      <h3 className="text-xl font-bold mb-3 flex items-center">
+                        <FontAwesomeIcon icon={faGlobe} className="w-12 h-12 mr-2 text-cyan-400" />
+                        Madrid Protocol
+                      </h3>
+                      <p className="text-sm text-gray-300 leading-relaxed mb-4">
+                        A centralized filing system covering over 130 countries. It allows you to protect your sports brand across major markets with a single application in one language.
+                      </p>
+                      <div className="text-xs bg-cyan-900/50 p-2 rounded border border-cyan-800 text-cyan-200">Ideal for: Established brands and exporters.</div>
+                    </div>
+                    <div className="bg-white border border-gray-200 p-6 rounded-xl shadow-sm">
+                      <h3 className="text-xl font-bold mb-3 flex items-center">
+                        <FontAwesomeIcon icon={faShieldAlt} className="w-12 h-12 mr-2 text-[rgb(110,94,147)]" />
+                        Direct Country Filing
+                      </h3>
+                      <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                        For specific high-impact markets like the UAE or certain Southeast Asian nations, direct filing via local attorneys is often more strategic and effective.
+                      </p>
+                      <div className="text-xs bg-purple-50 p-2 rounded border border-purple-100 text-purple-700">Ideal for: Targeted market expansion.</div>
+                    </div>
+                  </div>
                 </section>
 
                 <section id="design-vs-trademark" className="scroll-mt-24 md:scroll-mt-32">
-                   <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6">Design Protection vs. Trademark: A Critical Distinction for Toys</h2>
-                   <p className="text-base md:text-lg leading-relaxed mb-6 text-gray-700">
-                      In the toy industry, the visual appearance—the shape, configuration, and pattern of a toy—is often its most attractive feature. While a trademark protects the brand name and logo, the *Design Act 2000* protects the physical aesthetics of the product itself.
-                   </p>
-                   <p className="text-base md:text-lg leading-relaxed mb-6 text-gray-700">
-                      For example, if you create a unique and original shape for a remote-controlled car, you should seek Design Registration to prevent others from manufacturing cars with an identical look. However, the name you give that car (e.g., 'TurboRover') remains a trademark. A comprehensive IP strategy involves both: Design registration for 15 years of aesthetic exclusivity and Trademark registration for indefinite brand protection.
-                   </p>
-                   <div className="bg-purple-900 text-white p-6 rounded-xl">
-                      <h4 className="font-bold flex items-center mb-2">
-                         <FontAwesomeIcon icon={faGavel} className="w-12 h-12 mr-3 text-purple-400" />
-                         Strategy Recommendation:
-                      </h4>
-                      <p className="text-sm">"For high-innovation toy brands, we recommend a dual-filing approach. Protect the product's 'Look and Feel' under the Designs Act and its 'Identity' under the Trade Marks Act."</p>
-                   </div>
+                  <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6">Design Protection vs. Trademark: A Critical Distinction for Toys</h2>
+                  <p className="text-base md:text-lg leading-relaxed mb-6 text-gray-700">
+                    In the toy industry, the visual appearance—the shape, configuration, and pattern of a toy—is often its most attractive feature. While a trademark protects the brand name and logo, the *Design Act 2000* protects the physical aesthetics of the product itself.
+                  </p>
+                  <p className="text-base md:text-lg leading-relaxed mb-6 text-gray-700">
+                    For example, if you create a unique and original shape for a remote-controlled car, you should seek Design Registration to prevent others from manufacturing cars with an identical look. However, the name you give that car (e.g., 'TurboRover') remains a trademark. A comprehensive IP strategy involves both: Design registration for 15 years of aesthetic exclusivity and Trademark registration for indefinite brand protection.
+                  </p>
+                  <div className="bg-purple-900 text-white p-6 rounded-xl">
+                    <h4 className="font-bold flex items-center mb-2">
+                      <FontAwesomeIcon icon={faGavel} className="w-12 h-12 mr-3 text-purple-400" />
+                      Strategy Recommendation:
+                    </h4>
+                    <p className="text-sm">"For high-innovation toy brands, we recommend a dual-filing approach. Protect the product's 'Look and Feel' under the Designs Act and its 'Identity' under the Trade Marks Act."</p>
+                  </div>
                 </section>
 
                 <section id="monetization" className="scroll-mt-24 md:scroll-mt-32">
-                   <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6">Beyond Protection: Monetizing Your IP through Licensing</h2>
-                   <p className="text-base md:text-lg leading-relaxed mb-6 text-gray-700">
-                      Your registered trademark is not just a shield; it is a revenue engine. In the sports academy and toy manufacturing industries, the most scalable business models rely on the licensing of intellectual property.
-                   </p>
-                   <div className="space-y-6">
-                     <div className="p-6 bg-gray-50 rounded-xl hover:shadow-md transition-shadow">
-                        <h4 className="font-bold text-lg mb-2 flex items-center">
-                          <FontAwesomeIcon icon={faHandshake} className="w-12 h-12 mr-3 text-[rgb(110,94,147)]" />
-                          Franchising and Brand Licensing
-                        </h4>
-                        <p className="text-sm text-gray-600">
-                          Allow local entrepreneurs to open sports academies or toy stores under your brand name. We draft the 'Registered User Agreements' to ensure you receive your royalties while maintaining strict control over brand quality and operational standards.
-                        </p>
-                     </div>
-                     <div className="p-6 bg-gray-50 rounded-xl hover:shadow-md transition-shadow">
-                        <h4 className="font-bold text-lg mb-2 flex items-center">
-                          <FontAwesomeIcon icon={faMoneyBillWave} className="w-12 h-12 mr-3 text-[rgb(110,94,147)]" />
-                          Trademark Assignment
-                        </h4>
-                        <p className="text-sm text-gray-600">
-                          A trademark is a saleable asset. You can permanently transfer your brand rights to another entity for a lumpsum payment. We manage the Assignment Deed and file Form TM-P to ensure a clean legal transfer of ownership.
-                        </p>
-                     </div>
-                   </div>
+                  <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6">Beyond Protection: Monetizing Your IP through Licensing</h2>
+                  <p className="text-base md:text-lg leading-relaxed mb-6 text-gray-700">
+                    Your registered trademark is not just a shield; it is a revenue engine. In the sports academy and toy manufacturing industries, the most scalable business models rely on the licensing of intellectual property.
+                  </p>
+                  <div className="space-y-6">
+                    <div className="p-6 bg-gray-50 rounded-xl hover:shadow-md transition-shadow">
+                      <h4 className="font-bold text-lg mb-2 flex items-center">
+                        <FontAwesomeIcon icon={faHandshake} className="w-12 h-12 mr-3 text-[rgb(110,94,147)]" />
+                        Franchising and Brand Licensing
+                      </h4>
+                      <p className="text-sm text-gray-600">
+                        Allow local entrepreneurs to open sports academies or toy stores under your brand name. We draft the 'Registered User Agreements' to ensure you receive your royalties while maintaining strict control over brand quality and operational standards.
+                      </p>
+                    </div>
+                    <div className="p-6 bg-gray-50 rounded-xl hover:shadow-md transition-shadow">
+                      <h4 className="font-bold text-lg mb-2 flex items-center">
+                        <FontAwesomeIcon icon={faMoneyBillWave} className="w-12 h-12 mr-3 text-[rgb(110,94,147)]" />
+                        Trademark Assignment
+                      </h4>
+                      <p className="text-sm text-gray-600">
+                        A trademark is a saleable asset. You can permanently transfer your brand rights to another entity for a lumpsum payment. We manage the Assignment Deed and file Form TM-P to ensure a clean legal transfer of ownership.
+                      </p>
+                    </div>
+                  </div>
                 </section>
 
                 <section id="enforcement" className="scroll-mt-24 md:scroll-mt-32">
-                   <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6">Enforcement: Taking Action Against Infringers</h2>
-                   <p className="text-base md:text-lg leading-relaxed mb-6 text-gray-700">
-                      Finding copycat sporting goods in a local market or a namesake academy in another city? Your registration is your legal basis for enforcement. The Trade Marks Act 1999 provides powerful remedies to stop unauthorized usage immediately.
-                   </p>
-                   <div className="grid md:grid-cols-2 gap-6">
-                     <div className="p-6 border border-red-100 bg-red-50/30 rounded-xl">
-                       <h5 className="font-bold text-red-900 mb-2">Civil Damages and Injunctions</h5>
-                       <p className="text-sm text-gray-700 leading-relaxed">
-                         File a lawsuit in a District Court to obtain 'John Doe' orders or permanent injunctions. You can claim monetary compensation for the profit the infringer made using your reputation.
-                       </p>
-                     </div>
-                     <div className="p-6 border border-red-100 bg-red-50/30 rounded-xl">
-                       <h5 className="font-bold text-red-900 mb-2">Criminal Raids and Seizure</h5>
-                       <p className="text-sm text-gray-700 leading-relaxed">
-                         Trademark infringement is a cognizable offense. We coordinate with the IP Cell of the police to conduct raids, seize counterfeit goods, and prosecute individuals responsible for brand theft.
-                       </p>
-                     </div>
-                   </div>
+                  <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6">Enforcement: Taking Action Against Infringers</h2>
+                  <p className="text-base md:text-lg leading-relaxed mb-6 text-gray-700">
+                    Finding copycat sporting goods in a local market or a namesake academy in another city? Your registration is your legal basis for enforcement. The Trade Marks Act 1999 provides powerful remedies to stop unauthorized usage immediately.
+                  </p>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="p-6 border border-red-100 bg-red-50/30 rounded-xl">
+                      <h5 className="font-bold text-red-900 mb-2">Civil Damages and Injunctions</h5>
+                      <p className="text-sm text-gray-700 leading-relaxed">
+                        File a lawsuit in a District Court to obtain 'John Doe' orders or permanent injunctions. You can claim monetary compensation for the profit the infringer made using your reputation.
+                      </p>
+                    </div>
+                    <div className="p-6 border border-red-100 bg-red-50/30 rounded-xl">
+                      <h5 className="font-bold text-red-900 mb-2">Criminal Raids and Seizure</h5>
+                      <p className="text-sm text-gray-700 leading-relaxed">
+                        Trademark infringement is a cognizable offense. We coordinate with the IP Cell of the police to conduct raids, seize counterfeit goods, and prosecute individuals responsible for brand theft.
+                      </p>
+                    </div>
+                  </div>
                 </section>
 
                 <section id="reviews" className="scroll-mt-24 md:scroll-mt-32">
@@ -700,7 +699,7 @@ export default function ToysSportsTrademarkPage() {
 
                 {/* Final CTA */}
                 <section className="bg-gradient-to-br from-[#0C002B] to-[#1a0033] rounded-xl md:rounded-3xl p-6 md:p-16 text-center text-white relative overflow-hidden mt-8 md:mt-12">
-                   <div className="relative z-10">
+                  <div className="relative z-10">
                     <h2 className="text-xl md:text-4xl font-bold mb-4 md:mb-6">Protect Your Sports Innovation Today</h2>
                     <p className="text-sm md:text-xl opacity-90 mb-6 md:mb-12 max-w-3xl mx-auto leading-relaxed">
                       Don't let copycats dilute your brand's hard-earned reputation. Secure your exclusive rights with India's leading trademark attorneys. Same-day filing across all classes.
@@ -712,7 +711,7 @@ export default function ToysSportsTrademarkPage() {
                         </button>
                       </Link>
                       <a href="tel:+919289707648">
-                         <button className="bg-transparent border-2 border-white/30 hover:bg-white hover:text-gray-900 text-white font-bold py-3 px-8 md:py-4 md:px-12 rounded-full transition-all text-base md:text-lg w-full sm:w-auto backdrop-blur-sm flex items-center justify-center">
+                        <button className="bg-transparent border-2 border-white/30 hover:bg-white hover:text-gray-900 text-white font-bold py-3 px-8 md:py-4 md:px-12 rounded-full transition-all text-base md:text-lg w-full sm:w-auto backdrop-blur-sm flex items-center justify-center">
                           <FontAwesomeIcon icon={faPhone} className="w-12 h-12 mr-2" />
                           Call: +91-9289707648
                         </button>
@@ -756,74 +755,74 @@ export default function ToysSportsTrademarkPage() {
               </div>
             </div>
 
-             {/* Right Sidebar */}
-             <div className="hidden lg:block space-y-8 sticky top-32">
-                
-                {/* Sidebar CTA */}
-                <div className="bg-gradient-to-br from-[#0C002B] to-[#1a0033] p-6 rounded-xl shadow-lg border border-gray-800 text-white text-center">
-                  <h3 className="text-xl font-bold mb-3">Trademark Enquiry</h3>
-                  <p className="text-sm opacity-90 mb-6 leading-relaxed">
-                    Check if your sports or toy brand name is available. Get a detailed search report today.
-                  </p>
-                  <Link href="/contact-us" className="block w-full">
-                    <button className="w-full bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-3 px-4 rounded-lg transition-all shadow-md text-sm">
-                      Get Free Search
-                    </button>
-                  </Link>
-                  <div className="mt-4 pt-4 border-t border-white/10">
-                    <a href="tel:+919289707648" className="text-sm font-semibold hover:text-[rgb(110,94,147)] transition-colors flex items-center justify-center">
-                      <span className="mr-2">
-                        <FontAwesomeIcon icon={faPhone} className="w-12 h-12" />
-                      </span> +91-9289707648
-                    </a>
-                  </div>
-                </div>
+            {/* Right Sidebar */}
+            <div className="hidden lg:block space-y-8 sticky top-32">
 
-                {/* Related Pages */}
-                <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                  <h3 className="text-lg font-bold text-gray-900 mb-4">Related Services</h3>
-                  <ul className="space-y-3 text-sm">
-                    <li>
-                      <Link href="/trademark-for-clothing-brand" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center group">
-                        <span className="mr-2 text-gray-400 group-hover:text-[rgb(110,94,147)]">
-                          <FontAwesomeIcon icon={faChevronRight} className="w-12 h-12" />
-                        </span> Clothing Brand TM
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/trademark-for-business" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center group">
-                         <span className="mr-2 text-gray-400 group-hover:text-[rgb(110,94,147)]">
-                           <FontAwesomeIcon icon={faChevronRight} className="w-12 h-12" />
-                         </span> Business Trademark
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/our-services/copyright-registration" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center group">
-                         <span className="mr-2 text-gray-400 group-hover:text-[rgb(110,94,147)]">
-                           <FontAwesomeIcon icon={faChevronRight} className="w-12 h-12" />
-                         </span> Copyright Services
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/how-to-check-trademark-availability" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center group">
-                         <span className="mr-2 text-gray-400 group-hover:text-[rgb(110,94,147)]">
-                           <FontAwesomeIcon icon={faChevronRight} className="w-12 h-12" />
-                         </span> TM Availability
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/our-services/patent-registration" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center group">
-                         <span className="mr-2 text-gray-400 group-hover:text-[rgb(110,94,147)]">
-                           <FontAwesomeIcon icon={faChevronRight} className="w-12 h-12" />
-                         </span> Patent Registration
-                      </Link>
-                    </li>
-                  </ul>
+              {/* Sidebar CTA */}
+              <div className="bg-gradient-to-br from-[#0C002B] to-[#1a0033] p-6 rounded-xl shadow-lg border border-gray-800 text-white text-center">
+                <h3 className="text-xl font-bold mb-3">Trademark Enquiry</h3>
+                <p className="text-sm opacity-90 mb-6 leading-relaxed">
+                  Check if your sports or toy brand name is available. Get a detailed search report today.
+                </p>
+                <Link href="/contact-us" className="block w-full">
+                  <button className="w-full bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-3 px-4 rounded-lg transition-all shadow-md text-sm">
+                    Get Free Search
+                  </button>
+                </Link>
+                <div className="mt-4 pt-4 border-t border-white/10">
+                  <a href="tel:+919289707648" className="text-sm font-semibold hover:text-[rgb(110,94,147)] transition-colors flex items-center justify-center">
+                    <span className="mr-2">
+                      <FontAwesomeIcon icon={faPhone} className="w-12 h-12" />
+                    </span> +91-9289707648
+                  </a>
                 </div>
+              </div>
+
+              {/* Related Pages */}
+              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <h3 className="text-lg font-bold text-gray-900 mb-4">Related Services</h3>
+                <ul className="space-y-3 text-sm">
+                  <li>
+                    <Link href="/trademark-for-clothing-brand" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center group">
+                      <span className="mr-2 text-gray-400 group-hover:text-[rgb(110,94,147)]">
+                        <FontAwesomeIcon icon={faChevronRight} className="w-12 h-12" />
+                      </span> Clothing Brand TM
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/trademark-for-business" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center group">
+                      <span className="mr-2 text-gray-400 group-hover:text-[rgb(110,94,147)]">
+                        <FontAwesomeIcon icon={faChevronRight} className="w-12 h-12" />
+                      </span> Business Trademark
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/our-services/copyright-registration" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center group">
+                      <span className="mr-2 text-gray-400 group-hover:text-[rgb(110,94,147)]">
+                        <FontAwesomeIcon icon={faChevronRight} className="w-12 h-12" />
+                      </span> Copyright Services
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/how-to-check-trademark-availability" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center group">
+                      <span className="mr-2 text-gray-400 group-hover:text-[rgb(110,94,147)]">
+                        <FontAwesomeIcon icon={faChevronRight} className="w-12 h-12" />
+                      </span> TM Availability
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/our-services/patent-registration" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center group">
+                      <span className="mr-2 text-gray-400 group-hover:text-[rgb(110,94,147)]">
+                        <FontAwesomeIcon icon={faChevronRight} className="w-12 h-12" />
+                      </span> Patent Registration
+                    </Link>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
+      </div>
     </>
   );
 }

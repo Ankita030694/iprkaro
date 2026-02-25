@@ -134,7 +134,6 @@ const reviews = [
 
 export default function TrademarkFurnitureShopPage() {
   const breadcrumbItems = [
-    { label: "Our Services", href: "/our-services" },
     { label: "Trademark for Furniture Shop", href: "/trademark-for-furniture-shop" },
   ];
 

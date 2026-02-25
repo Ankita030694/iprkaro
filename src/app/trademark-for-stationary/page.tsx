@@ -5,17 +5,17 @@ import { Metadata } from 'next';
 import TableOfContents from '@/components/TableOfContents';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { 
-  faCheck, 
-  faSearch, 
-  faFileContract, 
-  faGavel, 
-  faGlobe, 
-  faShieldAlt, 
-  faBalanceScale, 
-  faRocket, 
-  faMoneyBillWave, 
-  faCertificate, 
+import {
+  faCheck,
+  faSearch,
+  faFileContract,
+  faGavel,
+  faGlobe,
+  faShieldAlt,
+  faBalanceScale,
+  faRocket,
+  faMoneyBillWave,
+  faCertificate,
   faFileSignature,
   faPhone,
   faChevronRight,
@@ -139,7 +139,6 @@ const reviews = [
 
 export default function TrademarkForStationaryPage() {
   const breadcrumbItems = [
-    { label: "Home", href: "/" },
     { label: "Trademark for Stationary", href: "/trademark-for-stationary" },
   ];
 
@@ -211,28 +210,28 @@ export default function TrademarkForStationaryPage() {
       <Script id="review-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
 
       <div className="bg-white min-h-screen font-sans text-gray-800">
-        
+
         {/* Hero Section - Same design as trademark-registration but without grid */}
-        <div className="relative w-full overflow-hidden" 
-             style={{
-               background: 'linear-gradient(to bottom, #0C002B 0%, #160049 45%, #6E5E93 80%, #E8E8E8 100%)'
-             }}>
-          
+        <div className="relative w-full overflow-hidden"
+          style={{
+            background: 'linear-gradient(to bottom, #0C002B 0%, #160049 45%, #6E5E93 80%, #E8E8E8 100%)'
+          }}>
+
           <div className="container mx-auto px-4 py-12 lg:py-32 relative z-10 text-center">
-             <h1 className="text-2xl md:text-5xl lg:text-6xl font-extrabold mb-4 md:mb-6 leading-tight mt-20 md:mt-10 text-white">
-               Elite Trademark Registration for <br />
-               <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#8A7AB5] to-[#D1C4E9]" style={{ WebkitTextFillColor: 'rgb(110,94,147)' }}>
-                 Stationery and Paper Brands
-               </span>
-             </h1>
-             <p className="text-sm md:text-xl mb-6 md:mb-8 max-w-4xl mx-auto text-gray-300 font-medium leading-relaxed px-2">
-               Your creative designs deserve absolute protection. Secure your stationery brand, office supplies identity, and unique printed matter with India's most trusted IP legal team. 100% online process with same-day filing capability.
-             </p>
-             <Link href="/contact-us">
-               <button className="bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-3 px-8 md:py-4 md:px-12 rounded-full transition-all transform hover:scale-105 shadow-[0_0_30px_rgba(110,94,147,0.4)] text-base md:text-xl uppercase tracking-wider">
-                 Secure Your Brand Today
-               </button>
-             </Link>
+            <h1 className="text-2xl md:text-5xl lg:text-6xl font-extrabold mb-4 md:mb-6 leading-tight mt-20 md:mt-10 text-white">
+              Elite Trademark Registration for <br />
+              <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#8A7AB5] to-[#D1C4E9]" style={{ WebkitTextFillColor: 'rgb(110,94,147)' }}>
+                Stationery and Paper Brands
+              </span>
+            </h1>
+            <p className="text-sm md:text-xl mb-6 md:mb-8 max-w-4xl mx-auto text-gray-300 font-medium leading-relaxed px-2">
+              Your creative designs deserve absolute protection. Secure your stationery brand, office supplies identity, and unique printed matter with India's most trusted IP legal team. 100% online process with same-day filing capability.
+            </p>
+            <Link href="/contact-us">
+              <button className="bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-3 px-8 md:py-4 md:px-12 rounded-full transition-all transform hover:scale-105 shadow-[0_0_30px_rgba(110,94,147,0.4)] text-base md:text-xl uppercase tracking-wider">
+                Secure Your Brand Today
+              </button>
+            </Link>
           </div>
         </div>
 
@@ -245,9 +244,9 @@ export default function TrademarkForStationaryPage() {
 
         {/* 3-Column Layout - Occupies full width */}
         <div className="container mx-auto px-4 max-w-[1600px] py-8">
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-[250px_1fr_300px] gap-8 items-start">
-            
+
             {/* Left Column - Table of Contents (Sticky) */}
             <aside className="hidden lg:block sticky top-32">
               <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
@@ -258,17 +257,17 @@ export default function TrademarkForStationaryPage() {
 
             {/* Middle Column - Main Content (Highly SEO Optimized) */}
             <main className="min-w-0">
-               {/* TOC for Mobile */}
-               <div className="lg:hidden mb-6 sticky top-24 z-20">
+              {/* TOC for Mobile */}
+              <div className="lg:hidden mb-6 sticky top-24 z-20">
                 <div className="bg-white shadow-lg rounded-xl border border-gray-100 p-2">
                   <TableOfContents sections={tocSections} orientation="horizontal" />
                 </div>
               </div>
 
               <div className="bg-white p-4 md:p-12 rounded-2xl shadow-sm border border-gray-100 space-y-12 md:space-y-20">
-                
+
                 <article className="prose prose-lg max-w-none text-gray-700 leading-relaxed font-normal">
-                  
+
                   {/* Section 1 */}
                   <section id="importance-of-trademark" className="scroll-mt-32">
                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-gray-900 mb-6 leading-tight text-justify">
@@ -420,67 +419,67 @@ export default function TrademarkForStationaryPage() {
                       The path to securing a trademark certificate in India is a structured legal process that requires precision at every step. From the initial search to the final issuance of the registration certificate, each phase is handled by our expert attorneys to ensure maximum success.
                     </p>
                     <div className="relative space-y-12">
-                       <div className="hidden md:block absolute left-8 top-10 bottom-10 w-1 bg-gray-100"></div>
+                      <div className="hidden md:block absolute left-8 top-10 bottom-10 w-1 bg-gray-100"></div>
 
-                       <div className="flex gap-8 items-start relative">
-                          <div className="bg-white border-4 border-gray-100 text-[rgb(110,94,147)] w-16 h-16 rounded-full flex items-center justify-center font-black text-2xl z-10 shadow-lg flex-shrink-0">
-                             <FontAwesomeIcon icon={faSearch} className="w-8 h-8" />
-                          </div>
-                          <div className="bg-gray-50 p-8 rounded-3xl flex-1 hover:shadow-xl transition-all">
-                             <h3 className="text-xl font-bold mb-4 text-gray-900">Phase 1: Advanced and Multi-Class Trademark Search</h3>
-                             <p className="text-base text-gray-600 mb-4 text-justify">
-                                Before filing, we perform a deep-dive search on the Indian Trademark Registry's database. We do not just look for direct name matches; we analyze phonetic similarities and visual look-alikes. For stationery brands, we also check related classes like Class 9 (Digital goods), Class 35 (Retail), and even Class 41 (Education services) to ensure no potential conflicts exist. A comprehensive search reduces the risk of future objections by nearly 85% and provides you with a clear roadmap for your branding strategy.
-                             </p>
-                             <p className="text-sm italic text-gray-500 text-justify">
-                                We also monitor the 'Trademark Journal' to see if any similar marks are currently in the publication phase, allowing us to plan for oppositions if necessary.
-                             </p>
-                          </div>
-                       </div>
+                      <div className="flex gap-8 items-start relative">
+                        <div className="bg-white border-4 border-gray-100 text-[rgb(110,94,147)] w-16 h-16 rounded-full flex items-center justify-center font-black text-2xl z-10 shadow-lg flex-shrink-0">
+                          <FontAwesomeIcon icon={faSearch} className="w-8 h-8" />
+                        </div>
+                        <div className="bg-gray-50 p-8 rounded-3xl flex-1 hover:shadow-xl transition-all">
+                          <h3 className="text-xl font-bold mb-4 text-gray-900">Phase 1: Advanced and Multi-Class Trademark Search</h3>
+                          <p className="text-base text-gray-600 mb-4 text-justify">
+                            Before filing, we perform a deep-dive search on the Indian Trademark Registry's database. We do not just look for direct name matches; we analyze phonetic similarities and visual look-alikes. For stationery brands, we also check related classes like Class 9 (Digital goods), Class 35 (Retail), and even Class 41 (Education services) to ensure no potential conflicts exist. A comprehensive search reduces the risk of future objections by nearly 85% and provides you with a clear roadmap for your branding strategy.
+                          </p>
+                          <p className="text-sm italic text-gray-500 text-justify">
+                            We also monitor the 'Trademark Journal' to see if any similar marks are currently in the publication phase, allowing us to plan for oppositions if necessary.
+                          </p>
+                        </div>
+                      </div>
 
-                       <div className="flex gap-8 items-start relative">
-                          <div className="bg-white border-4 border-gray-100 text-[rgb(110,94,147)] w-16 h-16 rounded-full flex items-center justify-center font-black text-2xl z-10 shadow-lg flex-shrink-0">
-                             <FontAwesomeIcon icon={faFileContract} className="w-8 h-8" />
-                          </div>
-                          <div className="bg-gray-50 p-8 rounded-3xl flex-1 hover:shadow-xl transition-all">
-                             <h3 className="text-xl font-bold mb-4 text-gray-900">Phase 2: Drafting and Filing the Form TM-A</h3>
-                             <p className="text-base text-gray-600 mb-4 text-justify">
-                                This is the formal application that goes to the registry. We carefully draft the 'specification of goods' to ensure your protection covers everything from basic pens to advanced artistic materials. For companies, we help utilize MSME certificates to get a 50% discount on government fees. Once the application is submitted, you can immediately start using the ™ symbol, which serves as a public notice of your claim and a warning to potential infringers.
-                             </p>
-                             <p className="text-sm italic text-gray-500 text-justify">
-                                The filing is done through the official e-filing portal, ensuring same-day submission and an instant acknowledgement from the registry.
-                             </p>
-                          </div>
-                       </div>
+                      <div className="flex gap-8 items-start relative">
+                        <div className="bg-white border-4 border-gray-100 text-[rgb(110,94,147)] w-16 h-16 rounded-full flex items-center justify-center font-black text-2xl z-10 shadow-lg flex-shrink-0">
+                          <FontAwesomeIcon icon={faFileContract} className="w-8 h-8" />
+                        </div>
+                        <div className="bg-gray-50 p-8 rounded-3xl flex-1 hover:shadow-xl transition-all">
+                          <h3 className="text-xl font-bold mb-4 text-gray-900">Phase 2: Drafting and Filing the Form TM-A</h3>
+                          <p className="text-base text-gray-600 mb-4 text-justify">
+                            This is the formal application that goes to the registry. We carefully draft the 'specification of goods' to ensure your protection covers everything from basic pens to advanced artistic materials. For companies, we help utilize MSME certificates to get a 50% discount on government fees. Once the application is submitted, you can immediately start using the ™ symbol, which serves as a public notice of your claim and a warning to potential infringers.
+                          </p>
+                          <p className="text-sm italic text-gray-500 text-justify">
+                            The filing is done through the official e-filing portal, ensuring same-day submission and an instant acknowledgement from the registry.
+                          </p>
+                        </div>
+                      </div>
 
-                       <div className="flex gap-8 items-start relative">
-                          <div className="bg-white border-4 border-gray-100 text-[rgb(110,94,147)] w-16 h-16 rounded-full flex items-center justify-center font-black text-2xl z-10 shadow-lg flex-shrink-0">
-                             <FontAwesomeIcon icon={faFileSignature} className="w-8 h-8" />
-                          </div>
-                          <div className="bg-gray-50 p-8 rounded-3xl flex-1 hover:shadow-xl transition-all">
-                             <h3 className="text-xl font-bold mb-4 text-gray-900">Phase 3: Formal Examination and Technical Response</h3>
-                             <p className="text-base text-gray-600 mb-4 text-justify">
-                                The Trademark Registrar will examine your application for any legal issues or conflicts. If they raise an objection, such as if your name is too generic for stationery or too similar to an existing mark, our team of expert IP attorneys will draft a professional legal reply. We use past case laws and evidence of your brand's unique market presence to overcome these hurdles. Historically, over 70% of stationery trademarks face at least one technical objection, and our specialized handling is what ensures they move past this stage.
-                             </p>
-                             <p className="text-sm italic text-gray-500 text-justify">
-                                If a personal hearing is required, we represent you before the Registrar, presenting our arguments to secure the 'Acceptance' of your mark.
-                             </p>
-                          </div>
-                       </div>
+                      <div className="flex gap-8 items-start relative">
+                        <div className="bg-white border-4 border-gray-100 text-[rgb(110,94,147)] w-16 h-16 rounded-full flex items-center justify-center font-black text-2xl z-10 shadow-lg flex-shrink-0">
+                          <FontAwesomeIcon icon={faFileSignature} className="w-8 h-8" />
+                        </div>
+                        <div className="bg-gray-50 p-8 rounded-3xl flex-1 hover:shadow-xl transition-all">
+                          <h3 className="text-xl font-bold mb-4 text-gray-900">Phase 3: Formal Examination and Technical Response</h3>
+                          <p className="text-base text-gray-600 mb-4 text-justify">
+                            The Trademark Registrar will examine your application for any legal issues or conflicts. If they raise an objection, such as if your name is too generic for stationery or too similar to an existing mark, our team of expert IP attorneys will draft a professional legal reply. We use past case laws and evidence of your brand's unique market presence to overcome these hurdles. Historically, over 70% of stationery trademarks face at least one technical objection, and our specialized handling is what ensures they move past this stage.
+                          </p>
+                          <p className="text-sm italic text-gray-500 text-justify">
+                            If a personal hearing is required, we represent you before the Registrar, presenting our arguments to secure the 'Acceptance' of your mark.
+                          </p>
+                        </div>
+                      </div>
 
-                       <div className="flex gap-8 items-start relative">
-                          <div className="bg-white border-4 border-gray-100 text-[rgb(110,94,147)] w-16 h-16 rounded-full flex items-center justify-center font-black text-2xl z-10 shadow-lg flex-shrink-0">
-                             <FontAwesomeIcon icon={faCertificate} className="w-8 h-8" />
-                          </div>
-                          <div className="bg-gray-50 p-8 rounded-3xl flex-1 hover:shadow-xl transition-all">
-                             <h3 className="text-xl font-bold mb-4 text-gray-900">Phase 4: Publication, Opposition Window, and Final Registration</h3>
-                             <p className="text-base text-gray-600 mb-4 text-justify">
-                                Once accepted, your mark is published in the official Trademark Journal for a period of 4 months. This is a public window for any third party to object to your registration. If no one opposes your mark during this time, it is officially registered. You receive the digital Registration Certificate and can then proudly use the ® symbol. This certificate is valid for 10 years and acts as conclusive evidence of your ownership in any court of law across India.
-                             </p>
-                             <p className="text-sm italic text-gray-500 text-justify">
-                                We provide a free monitoring service during the publication phase to alert you if another brand tries to register something similar.
-                             </p>
-                          </div>
-                       </div>
+                      <div className="flex gap-8 items-start relative">
+                        <div className="bg-white border-4 border-gray-100 text-[rgb(110,94,147)] w-16 h-16 rounded-full flex items-center justify-center font-black text-2xl z-10 shadow-lg flex-shrink-0">
+                          <FontAwesomeIcon icon={faCertificate} className="w-8 h-8" />
+                        </div>
+                        <div className="bg-gray-50 p-8 rounded-3xl flex-1 hover:shadow-xl transition-all">
+                          <h3 className="text-xl font-bold mb-4 text-gray-900">Phase 4: Publication, Opposition Window, and Final Registration</h3>
+                          <p className="text-base text-gray-600 mb-4 text-justify">
+                            Once accepted, your mark is published in the official Trademark Journal for a period of 4 months. This is a public window for any third party to object to your registration. If no one opposes your mark during this time, it is officially registered. You receive the digital Registration Certificate and can then proudly use the ® symbol. This certificate is valid for 10 years and acts as conclusive evidence of your ownership in any court of law across India.
+                          </p>
+                          <p className="text-sm italic text-gray-500 text-justify">
+                            We provide a free monitoring service during the publication phase to alert you if another brand tries to register something similar.
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </section>
 
@@ -560,10 +559,10 @@ export default function TrademarkForStationaryPage() {
                       In a franchise or licensing agreement, you are essentially renting out your trademark to a third party. Without a registered mark, you have no legal basis to license your name or control how it is used by others. A registered trademark gives you the power to maintain quality standards across all locations and terminate the license if those standards are not met. This is how world-famous stationery brands maintain their uniform brand image across different continents and cultures.
                     </p>
                     <div className="bg-black text-white p-10 rounded-3xl my-10 shadow-2xl">
-                       <h3 className="text-2xl font-bold mb-4 text-[rgb(110,94,147)] uppercase">The Valuation Factor</h3>
-                       <p className="opacity-80 leading-relaxed italic text-justify">
-                         In most modern business valuations, the 'Goodwill' associated with the brand name often exceeds the value of physical machinery or inventory. A registered trademark is a tangible representation of this goodwill. It appears on your balance sheet as an IP asset, significantly increasing your business valuation when you are looking for external funding from investors, private equity firms, or bank loans. It is the gold standard of business credibility.
-                       </p>
+                      <h3 className="text-2xl font-bold mb-4 text-[rgb(110,94,147)] uppercase">The Valuation Factor</h3>
+                      <p className="opacity-80 leading-relaxed italic text-justify">
+                        In most modern business valuations, the 'Goodwill' associated with the brand name often exceeds the value of physical machinery or inventory. A registered trademark is a tangible representation of this goodwill. It appears on your balance sheet as an IP asset, significantly increasing your business valuation when you are looking for external funding from investors, private equity firms, or bank loans. It is the gold standard of business credibility.
+                      </p>
                     </div>
                     <p className="mb-6 text-justify">
                       Furthermore, for stationery brands that focus on specialized segments like 'Sustainable Stationery' or 'Eco-Friendly Paper', your trademark can be combined with <strong>Certification Marks</strong>. These marks tell the consumer that your products meet certain quality or environmental standards. This combined IP strategy can give you a massive competitive edge in the premium and ethical consumer markets, allowing you to charge a significant premium for your products.
@@ -591,46 +590,46 @@ export default function TrademarkForStationaryPage() {
 
                   {/* Section 9 */}
                   <section id="cost-of-registration" className="scroll-mt-32">
-                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-gray-900 mb-6 leading-tight text-center">
-                        Transparent Pricing and Fee Structures for Stationery Brands
-                     </h2>
-                     <p className="text-center mb-12 max-w-2xl mx-auto opacity-70 text-justify">
-                        We believe in keeping legal costs clear and affordable for creative entrepreneurs and stationery manufacturers. Our pricing models are designed to be inclusive, ensuring that even individual artists and small startups can afford high-quality professional legal representation.
-                     </p>
+                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-gray-900 mb-6 leading-tight text-center">
+                      Transparent Pricing and Fee Structures for Stationery Brands
+                    </h2>
+                    <p className="text-center mb-12 max-w-2xl mx-auto opacity-70 text-justify">
+                      We believe in keeping legal costs clear and affordable for creative entrepreneurs and stationery manufacturers. Our pricing models are designed to be inclusive, ensuring that even individual artists and small startups can afford high-quality professional legal representation.
+                    </p>
 
-                     <div className="grid md:grid-cols-2 gap-8">
-                        <div className="p-8 bg-gray-50 rounded-3xl border border-gray-100 flex flex-col items-center text-center">
-                           <div className="w-16 h-16 bg-[rgb(110,94,147)] text-white rounded-full flex items-center justify-center mb-6 shadow-lg">
-                              <FontAwesomeIcon icon={faCertificate} className="text-2xl" />
-                           </div>
-                           <h4 className="font-bold text-xl mb-4">Official Gov. Fees</h4>
-                           <p className="text-sm text-gray-600 mb-6 text-justify">Standard statutory fees set by the Trademark Registry of India per class of application.</p>
-                           <div className="space-y-4 w-full">
-                              <div className="flex justify-between items-center p-3 bg-white rounded-lg">
-                                 <span className="text-xs font-bold uppercase tracking-tight text-gray-400">Individuals/MSMEs</span>
-                                 <span className="text-lg font-black text-gray-900">₹4,500</span>
-                              </div>
-                              <div className="flex justify-between items-center p-3 bg-white rounded-lg">
-                                 <span className="text-xs font-bold uppercase tracking-tight text-gray-400">Companies / LLPs</span>
-                                 <span className="text-lg font-black text-gray-900">₹9,000</span>
-                              </div>
-                           </div>
+                    <div className="grid md:grid-cols-2 gap-8">
+                      <div className="p-8 bg-gray-50 rounded-3xl border border-gray-100 flex flex-col items-center text-center">
+                        <div className="w-16 h-16 bg-[rgb(110,94,147)] text-white rounded-full flex items-center justify-center mb-6 shadow-lg">
+                          <FontAwesomeIcon icon={faCertificate} className="text-2xl" />
                         </div>
-                        <div className="p-8 bg-[rgb(110,94,147)] text-white rounded-3xl shadow-xl flex flex-col items-center text-center">
-                           <div className="w-16 h-16 bg-white text-[rgb(110,94,147)] rounded-full flex items-center justify-center mb-6 shadow-lg">
-                              <FontAwesomeIcon icon={faMoneyBillWave} className="text-2xl" />
-                           </div>
-                           <h4 className="font-bold text-xl mb-4">IPR Karo Service Charges</h4>
-                           <p className="text-sm opacity-70 mb-6 text-justify">End-to-end assistance from initial search to final certificate issuance and monitoring.</p>
-                           <div className="space-y-4 w-full">
-                              <div className="flex justify-between items-center p-3 bg-white/10 rounded-lg backdrop-blur-sm">
-                                 <span className="text-xs font-bold uppercase tracking-tight opacity-70">Starting From</span>
-                                 <span className="text-lg font-black underline decoration-2 underline-offset-4">₹3,000</span>
-                              </div>
-                              <p className="text-[10px] opacity-60 text-left pt-2">Includes comprehensive search, expert drafting, filing, and real-time status notifications via WhatsApp/Email.</p>
-                           </div>
+                        <h4 className="font-bold text-xl mb-4">Official Gov. Fees</h4>
+                        <p className="text-sm text-gray-600 mb-6 text-justify">Standard statutory fees set by the Trademark Registry of India per class of application.</p>
+                        <div className="space-y-4 w-full">
+                          <div className="flex justify-between items-center p-3 bg-white rounded-lg">
+                            <span className="text-xs font-bold uppercase tracking-tight text-gray-400">Individuals/MSMEs</span>
+                            <span className="text-lg font-black text-gray-900">₹4,500</span>
+                          </div>
+                          <div className="flex justify-between items-center p-3 bg-white rounded-lg">
+                            <span className="text-xs font-bold uppercase tracking-tight text-gray-400">Companies / LLPs</span>
+                            <span className="text-lg font-black text-gray-900">₹9,000</span>
+                          </div>
                         </div>
-                     </div>
+                      </div>
+                      <div className="p-8 bg-[rgb(110,94,147)] text-white rounded-3xl shadow-xl flex flex-col items-center text-center">
+                        <div className="w-16 h-16 bg-white text-[rgb(110,94,147)] rounded-full flex items-center justify-center mb-6 shadow-lg">
+                          <FontAwesomeIcon icon={faMoneyBillWave} className="text-2xl" />
+                        </div>
+                        <h4 className="font-bold text-xl mb-4">IPR Karo Service Charges</h4>
+                        <p className="text-sm opacity-70 mb-6 text-justify">End-to-end assistance from initial search to final certificate issuance and monitoring.</p>
+                        <div className="space-y-4 w-full">
+                          <div className="flex justify-between items-center p-3 bg-white/10 rounded-lg backdrop-blur-sm">
+                            <span className="text-xs font-bold uppercase tracking-tight opacity-70">Starting From</span>
+                            <span className="text-lg font-black underline decoration-2 underline-offset-4">₹3,000</span>
+                          </div>
+                          <p className="text-[10px] opacity-60 text-left pt-2">Includes comprehensive search, expert drafting, filing, and real-time status notifications via WhatsApp/Email.</p>
+                        </div>
+                      </div>
+                    </div>
                   </section>
 
                   {/* Section 10 - Reviews Section */}
@@ -639,27 +638,27 @@ export default function TrademarkForStationaryPage() {
                       What Our Stationery Clients Say
                     </h2>
                     <div className="grid md:grid-cols-3 gap-8">
-                       {reviews.map((review, index) => (
-                         <div key={index} className="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition-all group">
-                            <div className="flex text-yellow-400 mb-4">
-                               {[...Array(review.rating)].map((_, i) => (
-                                 <FontAwesomeIcon key={i} icon={faStar} className="w-4 h-4" />
-                               ))}
+                      {reviews.map((review, index) => (
+                        <div key={index} className="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition-all group">
+                          <div className="flex text-yellow-400 mb-4">
+                            {[...Array(review.rating)].map((_, i) => (
+                              <FontAwesomeIcon key={i} icon={faStar} className="w-4 h-4" />
+                            ))}
+                          </div>
+                          <p className="text-gray-600 italic mb-6 text-sm text-justify leading-relaxed">
+                            "{review.text}"
+                          </p>
+                          <div className="flex items-center">
+                            <div className="w-10 h-10 bg-[rgb(110,94,147)]/10 text-[rgb(110,94,147)] rounded-full flex items-center justify-center font-bold mr-3">
+                              {review.name.charAt(0)}
                             </div>
-                            <p className="text-gray-600 italic mb-6 text-sm text-justify leading-relaxed">
-                               "{review.text}"
-                            </p>
-                            <div className="flex items-center">
-                               <div className="w-10 h-10 bg-[rgb(110,94,147)]/10 text-[rgb(110,94,147)] rounded-full flex items-center justify-center font-bold mr-3">
-                                  {review.name.charAt(0)}
-                               </div>
-                               <div>
-                                  <h4 className="font-bold text-gray-900 text-sm">{review.name}</h4>
-                                  <p className="text-[10px] text-gray-400 uppercase tracking-widest">{review.role}</p>
-                               </div>
+                            <div>
+                              <h4 className="font-bold text-gray-900 text-sm">{review.name}</h4>
+                              <p className="text-[10px] text-gray-400 uppercase tracking-widest">{review.role}</p>
                             </div>
-                         </div>
-                       ))}
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   </section>
 
@@ -672,58 +671,58 @@ export default function TrademarkForStationaryPage() {
                       {faqs.map((faq, index) => (
                         <div key={index} className="border-b border-gray-100 last:border-0 pb-6 mb-6">
                           <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-4 flex items-start text-justify">
-                             <span className="text-[rgb(110,94,147)] mr-4 font-black">Q.</span>
-                             {faq.question}
+                            <span className="text-[rgb(110,94,147)] mr-4 font-black">Q.</span>
+                            {faq.question}
                           </h3>
                           <p className="text-gray-600 pl-8 leading-relaxed text-justify">
-                             {faq.answer}
+                            {faq.answer}
                           </p>
                         </div>
                       ))}
                       {/* Additional FAQs for more content */}
                       <div className="border-b border-gray-100 last:border-0 pb-6 mb-6">
                         <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-4 flex items-start text-justify">
-                           <span className="text-[rgb(110,94,147)] mr-4 font-black">Q.</span>
-                           What is the 'Vienna Code' and why is it important for my stationery logo?
+                          <span className="text-[rgb(110,94,147)] mr-4 font-black">Q.</span>
+                          What is the 'Vienna Code' and why is it important for my stationery logo?
                         </h3>
                         <p className="text-gray-600 pl-8 leading-relaxed text-justify">
-                           The Vienna Classification is an international system for classifying the figurative elements of trademarks. For a stationery brand, if your logo has symbols like a pen, a book, or an ink bottle, these are assigned specific codes. This allows the registry and other brand owners to search for similar symbols during a trademark search. Proper indexing under the Vienna Code ensures your logo is better protected against visual imitations and provides a clear record of your design elements.
+                          The Vienna Classification is an international system for classifying the figurative elements of trademarks. For a stationery brand, if your logo has symbols like a pen, a book, or an ink bottle, these are assigned specific codes. This allows the registry and other brand owners to search for similar symbols during a trademark search. Proper indexing under the Vienna Code ensures your logo is better protected against visual imitations and provides a clear record of your design elements.
                         </p>
                       </div>
                       <div className="border-b border-gray-100 last:border-0 pb-6 mb-6">
                         <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-4 flex items-start text-justify">
-                           <span className="text-[rgb(110,94,147)] mr-4 font-black">Q.</span>
-                           Can I protect the unique 'hand-drawn' feel of my stationery illustrations?
+                          <span className="text-[rgb(110,94,147)] mr-4 font-black">Q.</span>
+                          Can I protect the unique 'hand-drawn' feel of my stationery illustrations?
                         </h3>
                         <p className="text-gray-600 pl-8 leading-relaxed text-justify">
-                           While a trademark protects the brand name and logo, the specific artistic illustrations on your cards or notebooks are better protected under the Copyright Act. We often recommend a 'Dual Protection' strategy where the brand name is trademarked and the unique designs are copyrighted. This provides 360-degree protection for your creative output and ensures no part of your creative work is left vulnerable to copycats.
+                          While a trademark protects the brand name and logo, the specific artistic illustrations on your cards or notebooks are better protected under the Copyright Act. We often recommend a 'Dual Protection' strategy where the brand name is trademarked and the unique designs are copyrighted. This provides 360-degree protection for your creative output and ensures no part of your creative work is left vulnerable to copycats.
                         </p>
                       </div>
                       <div className="border-b border-gray-100 last:border-0 pb-6 mb-6">
                         <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-4 flex items-start text-justify">
-                           <span className="text-[rgb(110,94,147)] mr-4 font-black">Q.</span>
-                           How often do I need to renew my stationery trademark registration?
+                          <span className="text-[rgb(110,94,147)] mr-4 font-black">Q.</span>
+                          How often do I need to renew my stationery trademark registration?
                         </h3>
                         <p className="text-gray-600 pl-8 leading-relaxed text-justify">
-                           A trademark registration in India is valid for 10 years from the date of the application. After this period, you can renew it indefinitely every 10 years upon payment of the renewal fees. Failure to renew on time can lead to the mark being 'removed' from the registry, though there is a six-month grace period for restoration with a late fee. We provide automated renewal reminders to all our clients to ensure their protection never lapses.
+                          A trademark registration in India is valid for 10 years from the date of the application. After this period, you can renew it indefinitely every 10 years upon payment of the renewal fees. Failure to renew on time can lead to the mark being 'removed' from the registry, though there is a six-month grace period for restoration with a late fee. We provide automated renewal reminders to all our clients to ensure their protection never lapses.
                         </p>
                       </div>
                       <div className="border-b border-gray-100 last:border-0 pb-6 mb-6">
                         <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-4 flex items-start text-justify">
-                           <span className="text-[rgb(110,94,147)] mr-4 font-black">Q.</span>
-                           What if someone is using a similar name but only for school notebooks while I sell office files?
+                          <span className="text-[rgb(110,94,147)] mr-4 font-black">Q.</span>
+                          What if someone is using a similar name but only for school notebooks while I sell office files?
                         </h3>
                         <p className="text-gray-600 pl-8 leading-relaxed text-justify">
-                           Since both items fall under Class 16 and are part of the broader stationery industry, there is a high likelihood of 'consumer confusion'. The registry usually considers these to be 'related goods'. If you have a registered trademark, you can likely stop them from using the name because a consumer might think both products come from the same source. This is why having a broad 'specification of goods' during filing is vital.
+                          Since both items fall under Class 16 and are part of the broader stationery industry, there is a high likelihood of 'consumer confusion'. The registry usually considers these to be 'related goods'. If you have a registered trademark, you can likely stop them from using the name because a consumer might think both products come from the same source. This is why having a broad 'specification of goods' during filing is vital.
                         </p>
                       </div>
                       <div className="border-b border-gray-100 last:border-0 pb-6 mb-6">
                         <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-4 flex items-start text-justify">
-                           <span className="text-[rgb(110,94,147)] mr-4 font-black">Q.</span>
-                           Can I trademark a series of notebook cover designs as one application?
+                          <span className="text-[rgb(110,94,147)] mr-4 font-black">Q.</span>
+                          Can I trademark a series of notebook cover designs as one application?
                         </h3>
                         <p className="text-gray-600 pl-8 leading-relaxed text-justify">
-                           If the series follows a consistent brand theme and shares a primary logo or name, you can register the core brand as a trademark. However, each unique cover design that is significantly different may need separate copyright protection. For a set of marks that are very similar, you might explore 'Series Trademark' registration, which can be more cost-effective than individual filings.
+                          If the series follows a consistent brand theme and shares a primary logo or name, you can register the core brand as a trademark. However, each unique cover design that is significantly different may need separate copyright protection. For a set of marks that are very similar, you might explore 'Series Trademark' registration, which can be more cost-effective than individual filings.
                         </p>
                       </div>
                     </div>
@@ -731,25 +730,25 @@ export default function TrademarkForStationaryPage() {
 
                   {/* Final CTA */}
                   <section className="bg-gradient-to-br from-[#0C002B] to-[#1a0033] rounded-[2.5rem] p-8 md:p-16 text-center text-white relative overflow-hidden mt-12 shadow-2xl">
-                     <div className="relative z-10">
-                        <h2 className="text-3xl md:text-5xl font-black mb-6 leading-tight">Secure Your Creative Legacy Today</h2>
-                        <p className="text-lg md:text-xl opacity-80 mb-10 max-w-2xl mx-auto">
-                          Don't let your stationery brand be vulnerable. Start your official trademark application now and get pan-India protection for your name and logo.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                           <Link href="/contact-us">
-                              <button className="bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-4 px-12 rounded-full transition-all transform hover:scale-110 shadow-xl text-lg uppercase tracking-widest">
-                                 Start Filing Now
-                              </button>
-                           </Link>
-                           <a href="tel:+919289707648">
-                              <button className="bg-transparent border-2 border-white/20 hover:border-white text-white font-bold py-4 px-12 rounded-full transition-all text-lg flex items-center justify-center backdrop-blur-md">
-                                 <FontAwesomeIcon icon={faPhone} className="w-5 h-5 mr-3" />
-                                 +91-9289707648
-                              </button>
-                           </a>
-                        </div>
-                     </div>
+                    <div className="relative z-10">
+                      <h2 className="text-3xl md:text-5xl font-black mb-6 leading-tight">Secure Your Creative Legacy Today</h2>
+                      <p className="text-lg md:text-xl opacity-80 mb-10 max-w-2xl mx-auto">
+                        Don't let your stationery brand be vulnerable. Start your official trademark application now and get pan-India protection for your name and logo.
+                      </p>
+                      <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                        <Link href="/contact-us">
+                          <button className="bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-4 px-12 rounded-full transition-all transform hover:scale-110 shadow-xl text-lg uppercase tracking-widest">
+                            Start Filing Now
+                          </button>
+                        </Link>
+                        <a href="tel:+919289707648">
+                          <button className="bg-transparent border-2 border-white/20 hover:border-white text-white font-bold py-4 px-12 rounded-full transition-all text-lg flex items-center justify-center backdrop-blur-md">
+                            <FontAwesomeIcon icon={faPhone} className="w-5 h-5 mr-3" />
+                            +91-9289707648
+                          </button>
+                        </a>
+                      </div>
+                    </div>
                   </section>
 
                 </article>
@@ -762,21 +761,21 @@ export default function TrademarkForStationaryPage() {
 
               {/* Sidebar CTA Box */}
               <div className="bg-[#0C002B] p-8 rounded-3xl shadow-[0_20px_40px_rgba(0,0,0,0.1)] border border-gray-800 text-white relative overflow-hidden group">
-                 <div className="absolute top-0 right-0 w-32 h-32 bg-[rgb(110,94,147)] rounded-full blur-[80px] opacity-20 group-hover:opacity-40 transition-opacity"></div>
-                 <h3 className="text-xl font-bold mb-4 relative z-10 leading-tight">Free Name Availability Check</h3>
-                 <p className="text-sm opacity-70 mb-8 leading-relaxed relative z-10">
-                   Ensure your stationery brand name is unique before you invest in printing and stocks. Get a **Free Search Report** in 24 hours.
-                 </p>
-                 <Link href="/contact-us" className="block relative z-10">
-                   <button className="w-full bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-4 px-4 rounded-xl transition-all shadow-lg transform hover:-translate-y-1 active:scale-95">
-                     Check Availability
-                   </button>
-                 </Link>
-                  <div className="mt-8 pt-8 border-t border-white/10 relative z-10 text-center">
-                    <a href="tel:+919289707648" className="text-[rgb(110,94,147)] font-black text-xl hover:text-white transition-colors flex items-center justify-center">
-                      <FontAwesomeIcon icon={faPhone} className="w-5 h-5 mr-3" /> +91-9289707648
-                    </a>
-                  </div>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[rgb(110,94,147)] rounded-full blur-[80px] opacity-20 group-hover:opacity-40 transition-opacity"></div>
+                <h3 className="text-xl font-bold mb-4 relative z-10 leading-tight">Free Name Availability Check</h3>
+                <p className="text-sm opacity-70 mb-8 leading-relaxed relative z-10">
+                  Ensure your stationery brand name is unique before you invest in printing and stocks. Get a **Free Search Report** in 24 hours.
+                </p>
+                <Link href="/contact-us" className="block relative z-10">
+                  <button className="w-full bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-4 px-4 rounded-xl transition-all shadow-lg transform hover:-translate-y-1 active:scale-95">
+                    Check Availability
+                  </button>
+                </Link>
+                <div className="mt-8 pt-8 border-t border-white/10 relative z-10 text-center">
+                  <a href="tel:+919289707648" className="text-[rgb(110,94,147)] font-black text-xl hover:text-white transition-colors flex items-center justify-center">
+                    <FontAwesomeIcon icon={faPhone} className="w-5 h-5 mr-3" /> +91-9289707648
+                  </a>
+                </div>
               </div>
 
               {/* Related Pages Widget */}
