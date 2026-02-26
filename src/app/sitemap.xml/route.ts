@@ -68,6 +68,15 @@ export async function GET() {
     '/trademark-for-ecommerce',
     '/trademark-for-paints-coatings',
     '/trademark-for-cosmetics-cleaning',
+    '/trademark-for-oils-and-lubricants',
+    '/trademark-for-pharmaceuticals',
+    '/trademark-for-metal-goods',
+    '/trademark-for-machinery',
+    '/trademark-for-hand-tools',
+    '/trademark-for-electronics-and-software',
+    '/trademark-for-medical-equipment',
+    '/trademark-for-appliances',
+    '/trademark-for-vehicles',
     '/fast-track-trademark-registration',
     '/trademark-registration-in-noida',
     '/trademark-registration-in-delhi',
@@ -164,6 +173,12 @@ export async function GET() {
     '/where-can-find-certified-trademark-agents-or-attorneys-near-me',
     '/what-are-the-benifits-of-hiring-a-trademark-agent-in-india',
     '/compare-fees-for-various-online-trademark-registration-providers-in-india',
+    '/trademark-for-firearms',
+    '/trademark-for-musical-instruments',
+    '/trademark-for-paper-goods-and-printing',
+    '/trademark-for-rubber-products',
+    '/trademark-for-leather-goods',
+    '/trademark-for-non-metal-building-materials',
   ].map(path => ({ path, priority: '0.8', changefreq: 'weekly' } as RouteConfig));
 
   // Fetch Dynamic Blog Posts

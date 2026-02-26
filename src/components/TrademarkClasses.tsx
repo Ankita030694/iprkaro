@@ -17,7 +17,22 @@ const TrademarkClasses: React.FC = () => {
         { name: 'Legal Services', slug: 'legal-services' },
         { name: 'Business', slug: 'business' },
         { name: 'Paints & Coatings', slug: 'paints-coatings' },
-        { name: 'Cosmetics & Cleaning', slug: 'cosmetics-cleaning' }
+        { name: 'Cosmetics & Cleaning', slug: 'cosmetics-cleaning' },
+        { name: 'Oils & Lubricants', slug: 'oils-and-lubricants' },
+        { name: 'Pharmaceuticals', slug: 'pharmaceuticals' },
+        { name: 'Metal Goods', slug: 'metal-goods' },
+        { name: 'Machinery', slug: 'machinery' },
+        { name: 'Hand Tools', slug: 'hand-tools' },
+        { name: 'Electronics & Software', slug: 'electronics-and-software' },
+        { name: 'Medical Equipment', slug: 'medical-equipment' },
+        { name: 'Appliances', slug: 'appliances' },
+        { name: 'Vehicles', slug: 'vehicles' },
+        { name: 'Firearms', slug: 'firearms' },
+        { name: 'Musical Instruments', slug: 'musical-instruments' },
+        { name: 'Paper & Printing', slug: 'paper-goods-and-printing' },
+        { name: 'Rubber Products', slug: 'rubber-products' },
+        { name: 'Leather Goods', slug: 'leather-goods' },
+        { name: 'Building Materials', slug: 'non-metal-building-materials' }
 
     ];
 
