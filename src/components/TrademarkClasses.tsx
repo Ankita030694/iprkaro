@@ -39,7 +39,15 @@ const TrademarkClasses: React.FC = () => {
         { name: 'Yarns & Threads', slug: 'yarns-and-threads' },
         { name: 'Fabrics', slug: 'fabrics' },
         { name: 'Lace & Embroidery', slug: 'lace-and-embroidery' },
-        { name: 'Carpets & Rugs', slug: 'carpets' }
+        { name: 'Carpets & Rugs', slug: 'carpets' },
+        { name: 'Staple Foods', slug: 'staple-foods' },
+        { name: 'Raw Agri Products', slug: 'raw-agricultural-products' },
+        { name: 'Construction & Repair', slug: 'construction-and-repair' },
+        { name: 'Transport & Logistics', slug: 'transport-and-logistics' },
+        { name: 'Tobacco', slug: 'tobacco' },
+        { name: 'Alcoholic Beverages', slug: 'alcoholic-drinks' },
+        { name: 'Beverages', slug: 'beverages' },
+        { name: 'Education & Training', slug: 'education-and-training' },
 
     ];
 
