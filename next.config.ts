@@ -28,7 +28,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/help',
-        destination: '/contact',
+        destination: '/contact-us',
         permanent: true, // 301 redirect
       },
       {
@@ -39,6 +39,11 @@ const nextConfig: NextConfig = {
       {
         source: '/trademark-registration-in-gaziabad',
         destination: '/trademark-registration-in-ghaziabad',
+        permanent: true,
+      },
+      {
+        source: '/contact',
+        destination: '/contact-us',
         permanent: true,
       },
 
