@@ -232,16 +232,20 @@ export default function TrademarkForProcessedFoodPage() {
 
     const productSchema = {
         "@context": "https://schema.org",
-        "@type": "Service",
+        "@type": "Product",
         "name": "Trademark Registration for Food Brands",
+        "image": "https://www.iprkaro.com/logo.png",
         "description": "Expert legal service for registering food trademarks in India Classes 29, 30, and 32.",
-        "provider": {
-            "@type": "Organization",
+        "brand": {
+            "@type": "Brand",
             "name": "IPR Karo"
         },
+        "url": "https://www.iprkaro.com/trademark-for-processed-food",
         "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.9",
+            "bestRating": "5",
+            "worstRating": "1",
             "reviewCount": "2150"
         },
         "review": reviews.map(review => ({
@@ -250,10 +254,15 @@ export default function TrademarkForProcessedFoodPage() {
                 "@type": "Person",
                 "name": review.name
             },
+            "publisher": {
+                "@type": "Organization",
+                "name": "IPR Karo"
+            },
             "reviewRating": {
                 "@type": "Rating",
-                "ratingValue": review.rating,
-                "bestRating": "5"
+                "ratingValue": review.rating.toString(),
+                "bestRating": "5",
+                "worstRating": "1"
             },
             "reviewBody": review.text
         }))
