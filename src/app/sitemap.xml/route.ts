@@ -54,10 +54,12 @@ export async function GET() {
     '/trademark-for-clothing-brand',
     '/trademark-for-jewellery-brand',
     '/trademark-for-restaurant',
+    '/trademark-for-processed-food',
     '/trademark-for-business',
     '/trademark-for-chemicals',
     '/trademark-for-stationary',
     '/trademark-for-furniture-shop',
+    '/trademark-for-kitchen-utensils',
     '/trademark-for-legal-services',
     '/trademark-for-toys-sports-services',
     '/trademark-for-musical-instruments',
@@ -179,6 +181,11 @@ export async function GET() {
     '/trademark-for-rubber-products',
     '/trademark-for-leather-goods',
     '/trademark-for-non-metal-building-materials',
+    '/trademark-for-ropes-and-tents',
+    '/trademark-for-yarns-and-threads',
+    '/trademark-for-fabrics',
+    '/trademark-for-lace-and-embroidery',
+    '/trademark-for-carpets',
   ].map(path => ({ path, priority: '0.8', changefreq: 'weekly' } as RouteConfig));
 
   // Fetch Dynamic Blog Posts

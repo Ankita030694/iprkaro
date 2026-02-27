@@ -158,14 +158,14 @@ export default function PillarContent() {
       <section id="introduction" className="scroll-mt-14">
         <div className="space-y-2 lg:space-y-3">
           <div className="flex items-center gap-1.5 lg:gap-2">
-            <div 
+            <div
               className="w-1.5 h-1.5 lg:w-2 lg:h-2 rounded-full relative"
               style={{
                 background: 'linear-gradient(135deg, #FFB703, #FFA000)',
                 boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
               }}
             >
-              <div 
+              <div
                 className="absolute inset-0 rounded-full animate-ping"
                 style={{ background: '#FFB703', opacity: 0.4 }}
               />
@@ -175,9 +175,9 @@ export default function PillarContent() {
             </h1>
           </div>
 
-          <div 
+          <div
             className="group relative p-3 lg:p-3.5 xl:p-4 rounded-lg backdrop-blur-sm transition-all duration-500"
-            style={{ 
+            style={{
               background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%)',
               border: '1px solid rgba(255, 255, 255, 0.1)',
               boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)'
@@ -197,14 +197,14 @@ export default function PillarContent() {
       <section id="what-is-trademark" className="scroll-mt-14">
         <div className="space-y-2 lg:space-y-3">
           <div className="flex items-center gap-1.5 lg:gap-2">
-            <div 
+            <div
               className="w-1.5 h-1.5 lg:w-2 lg:h-2 rounded-full relative"
               style={{
                 background: '#FFB703',
                 boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
               }}
             >
-              <div 
+              <div
                 className="absolute inset-0 rounded-full animate-ping"
                 style={{ background: '#FFB703', opacity: 0.4 }}
               />
@@ -214,9 +214,9 @@ export default function PillarContent() {
             </h2>
           </div>
 
-          <div 
+          <div
             className="p-3 lg:p-3.5 rounded-lg backdrop-blur-sm"
-            style={{ 
+            style={{
               background: 'rgba(255, 255, 255, 0.03)',
               border: '1px solid rgba(255, 255, 255, 0.1)',
               boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)'
@@ -225,11 +225,11 @@ export default function PillarContent() {
             <p className="text-white/95 font-nunito text-sm lg:text-base leading-relaxed mb-2">
               A trademark is any distinctive sign, symbol, word, phrase, logo, design, or combination thereof that identifies and distinguishes the source of goods or services of one party from those of others. Under the <span className="font-semibold text-[#FFB703]">Trademarks Act, 1999</span>, a trademark serves as a badge of origin that helps consumers identify products or services from a particular source.
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mt-3">
-              <div 
+              <div
                 className="p-2 rounded-md"
-                style={{ 
+                style={{
                   background: 'rgba(255, 183, 3, 0.08)',
                   border: '1px solid rgba(255, 183, 3, 0.2)'
                 }}
@@ -243,9 +243,9 @@ export default function PillarContent() {
                 </p>
               </div>
 
-              <div 
+              <div
                 className="p-2 rounded-md"
-                style={{ 
+                style={{
                   background: 'rgba(255, 255, 255, 0.03)',
                   border: '1px solid rgba(255, 255, 255, 0.1)'
                 }}
@@ -259,9 +259,9 @@ export default function PillarContent() {
                 </p>
               </div>
 
-              <div 
+              <div
                 className="p-2 rounded-md"
-                style={{ 
+                style={{
                   background: 'rgba(255, 255, 255, 0.03)',
                   border: '1px solid rgba(255, 255, 255, 0.1)'
                 }}
@@ -275,9 +275,9 @@ export default function PillarContent() {
                 </p>
               </div>
 
-              <div 
+              <div
                 className="p-2 rounded-md"
-                style={{ 
+                style={{
                   background: 'rgba(255, 255, 255, 0.03)',
                   border: '1px solid rgba(255, 255, 255, 0.1)'
                 }}
@@ -299,14 +299,14 @@ export default function PillarContent() {
       <section id="why-register" className="scroll-mt-14">
         <div className="space-y-2 lg:space-y-3">
           <div className="flex items-center gap-1.5 lg:gap-2">
-            <div 
+            <div
               className="w-1.5 h-1.5 lg:w-2 lg:h-2 rounded-full relative"
               style={{
                 background: '#FFB703',
                 boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
               }}
             >
-              <div 
+              <div
                 className="absolute inset-0 rounded-full animate-ping"
                 style={{ background: '#FFB703', opacity: 0.4 }}
               />
@@ -316,9 +316,9 @@ export default function PillarContent() {
             </h2>
           </div>
 
-          <div 
+          <div
             className="p-3 lg:p-3.5 rounded-lg backdrop-blur-sm"
-            style={{ 
+            style={{
               background: 'rgba(255, 255, 255, 0.03)',
               border: '1px solid rgba(255, 255, 255, 0.1)',
               boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)'
@@ -329,15 +329,15 @@ export default function PillarContent() {
             </p>
 
             <div className="space-y-2">
-              <div 
+              <div
                 className="p-2 lg:p-3 rounded-md hover:-translate-y-0.5 transition-all duration-300"
-                style={{ 
+                style={{
                   background: 'linear-gradient(135deg, rgba(255, 183, 3, 0.12) 0%, rgba(255, 183, 3, 0.04) 100%)',
                   border: '1px solid rgba(255, 183, 3, 0.2)'
                 }}
               >
                 <div className="flex items-start gap-2">
-                  <div 
+                  <div
                     className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0"
                     style={{
                       background: 'linear-gradient(135deg, #FFB703, #FFA000)',
@@ -357,15 +357,15 @@ export default function PillarContent() {
                 </div>
               </div>
 
-              <div 
+              <div
                 className="p-2 lg:p-3 rounded-md hover:-translate-y-0.5 transition-all duration-300"
-                style={{ 
+                style={{
                   background: 'rgba(255, 255, 255, 0.03)',
                   border: '1px solid rgba(255, 255, 255, 0.1)'
                 }}
               >
                 <div className="flex items-start gap-2">
-                  <div 
+                  <div
                     className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0"
                     style={{
                       background: 'rgba(255, 183, 3, 0.15)',
@@ -385,15 +385,15 @@ export default function PillarContent() {
                 </div>
               </div>
 
-              <div 
+              <div
                 className="p-2 lg:p-3 rounded-md hover:-translate-y-0.5 transition-all duration-300"
-                style={{ 
+                style={{
                   background: 'rgba(255, 255, 255, 0.03)',
                   border: '1px solid rgba(255, 255, 255, 0.1)'
                 }}
               >
                 <div className="flex items-start gap-2">
-                  <div 
+                  <div
                     className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0"
                     style={{
                       background: 'rgba(255, 183, 3, 0.15)',
@@ -413,15 +413,15 @@ export default function PillarContent() {
                 </div>
               </div>
 
-              <div 
+              <div
                 className="p-2 lg:p-3 rounded-md hover:-translate-y-0.5 transition-all duration-300"
-                style={{ 
+                style={{
                   background: 'rgba(255, 255, 255, 0.03)',
                   border: '1px solid rgba(255, 255, 255, 0.1)'
                 }}
               >
                 <div className="flex items-start gap-2">
-                  <div 
+                  <div
                     className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0"
                     style={{
                       background: 'rgba(255, 183, 3, 0.15)',
@@ -441,15 +441,15 @@ export default function PillarContent() {
                 </div>
               </div>
 
-              <div 
+              <div
                 className="p-2 lg:p-3 rounded-md hover:-translate-y-0.5 transition-all duration-300"
-                style={{ 
+                style={{
                   background: 'rgba(255, 255, 255, 0.03)',
                   border: '1px solid rgba(255, 255, 255, 0.1)'
                 }}
               >
                 <div className="flex items-start gap-2">
-                  <div 
+                  <div
                     className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0"
                     style={{
                       background: 'rgba(255, 183, 3, 0.15)',
@@ -469,15 +469,15 @@ export default function PillarContent() {
                 </div>
               </div>
 
-              <div 
+              <div
                 className="p-2 lg:p-3 rounded-md hover:-translate-y-0.5 transition-all duration-300"
-                style={{ 
+                style={{
                   background: 'rgba(255, 255, 255, 0.03)',
                   border: '1px solid rgba(255, 255, 255, 0.1)'
                 }}
               >
                 <div className="flex items-start gap-2">
-                  <div 
+                  <div
                     className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0"
                     style={{
                       background: 'rgba(255, 183, 3, 0.15)',
@@ -505,14 +505,14 @@ export default function PillarContent() {
       <section id="process" className="scroll-mt-14">
         <div className="space-y-3 lg:space-y-3.5">
           <div className="flex items-center gap-2 lg:gap-3">
-            <div 
+            <div
               className="w-2 h-2 lg:w-3 lg:h-3 rounded-full relative"
               style={{
                 background: '#FFB703',
                 boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
               }}
             >
-              <div 
+              <div
                 className="absolute inset-0 rounded-full animate-ping"
                 style={{ background: '#FFB703', opacity: 0.4 }}
               />
@@ -522,9 +522,9 @@ export default function PillarContent() {
             </h2>
           </div>
 
-          <div 
+          <div
             className="p-3 lg:p-4 rounded-lg backdrop-blur-sm"
-            style={{ 
+            style={{
               background: 'rgba(255, 255, 255, 0.03)',
               border: '1px solid rgba(255, 255, 255, 0.1)',
               boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)'
@@ -536,20 +536,20 @@ export default function PillarContent() {
 
             <div className="relative space-y-3">
               {/* Connecting line */}
-              <div 
+              <div
                 className="absolute left-3 top-0 bottom-0 w-0.5"
                 style={{
                   background: 'rgba(255, 183, 3, 0.3)',
                   opacity: 0.5
                 }}
               />
-              
+
               {processSteps.map((step, index) => (
                 <div key={index} className="relative flex gap-3">
                   {/* Step Number Badge */}
-                  <div 
+                  <div
                     className="relative z-10 flex-shrink-0 w-7 h-7 lg:w-8 lg:h-8 rounded-full flex items-center justify-center font-nunito font-bold text-xs"
-                    style={{ 
+                    style={{
                       background: 'linear-gradient(135deg, #FFB703, #FFA000)',
                       color: '#0C002B',
                       boxShadow: '0 3px 10px rgba(255, 183, 3, 0.4)'
@@ -557,11 +557,11 @@ export default function PillarContent() {
                   >
                     {index + 1}
                   </div>
-                  
+
                   {/* Step Content */}
-                  <div 
+                  <div
                     className="flex-1 p-2 lg:p-3 rounded-md backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5"
-                    style={{ 
+                    style={{
                       background: 'rgba(255, 255, 255, 0.03)',
                       border: '1px solid rgba(255, 255, 255, 0.1)',
                       boxShadow: '0 3px 14px rgba(0, 0, 0, 0.3)'
@@ -571,7 +571,7 @@ export default function PillarContent() {
                       <h4 className="text-white font-nunito text-sm lg:text-base font-semibold">
                         {step.step}
                       </h4>
-                      <span 
+                      <span
                         className="px-2 py-0.5 rounded-full text-[10px] font-semibold"
                         style={{
                           background: 'rgba(255, 183, 3, 0.15)',
@@ -591,7 +591,7 @@ export default function PillarContent() {
               ))}
             </div>
 
-            <div 
+            <div
               className="mt-4 p-3 rounded-md"
               style={{
                 background: 'rgba(255, 183, 3, 0.08)',
@@ -603,9 +603,9 @@ export default function PillarContent() {
                 <div>
                   <h5 className="text-white font-nunito text-sm font-semibold mb-1">Forms Used in Trademark Registration</h5>
                   <p className="text-white/90 font-nunito text-xs">
-                    <strong>TM-A:</strong> Main application form for trademark registration<br/>
-                    <strong>TM-9:</strong> Form for entering appearance in opposition<br/>
-                    <strong>TM-O:</strong> Notice of opposition<br/>
+                    <strong>TM-A:</strong> Main application form for trademark registration<br />
+                    <strong>TM-9:</strong> Form for entering appearance in opposition<br />
+                    <strong>TM-O:</strong> Notice of opposition<br />
                     <strong>TM-R:</strong> Request for renewal of trademark
                   </p>
                 </div>
@@ -619,14 +619,14 @@ export default function PillarContent() {
       <section id="fees" className="scroll-mt-14">
         <div className="space-y-3 lg:space-y-3.5">
           <div className="flex items-center gap-2 lg:gap-3">
-            <div 
+            <div
               className="w-2 h-2 lg:w-3 lg:h-3 rounded-full relative"
               style={{
                 background: '#FFB703',
                 boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
               }}
             >
-              <div 
+              <div
                 className="absolute inset-0 rounded-full animate-ping"
                 style={{ background: '#FFB703', opacity: 0.4 }}
               />
@@ -636,9 +636,9 @@ export default function PillarContent() {
             </h2>
           </div>
 
-          <div 
+          <div
             className="p-3 lg:p-4 rounded-lg backdrop-blur-sm"
-            style={{ 
+            style={{
               background: 'rgba(255, 255, 255, 0.03)',
               border: '1px solid rgba(255, 255, 255, 0.1)',
               boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)'
@@ -649,7 +649,7 @@ export default function PillarContent() {
             </p>
 
             {/* Government Fees Table */}
-            <div 
+            <div
               className="p-3 lg:p-3.5 rounded-md mb-4"
               style={{
                 background: 'rgba(255, 183, 3, 0.08)',
@@ -680,27 +680,26 @@ export default function PillarContent() {
             <h4 className="text-white font-nunito text-base font-semibold mb-3">Our Service Packages</h4>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-3">
               {feesStructure.map((pkg, index) => (
-                <div 
+                <div
                   key={index}
-                  className={`relative p-3 rounded-lg backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 ${
-                    pkg.popular ? 'scale-105' : ''
-                  }`}
+                  className={`relative p-3 rounded-lg backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 ${pkg.popular ? 'scale-105' : ''
+                    }`}
                   style={
                     pkg.popular
                       ? {
-                          background: 'linear-gradient(135deg, rgba(255, 183, 3, 0.15) 0%, rgba(255, 183, 3, 0.05) 100%)',
-                          border: '2px solid rgba(255, 183, 3, 0.4)',
-                          boxShadow: '0 6px 22px rgba(255, 183, 3, 0.3)'
-                        }
+                        background: 'linear-gradient(135deg, rgba(255, 183, 3, 0.15) 0%, rgba(255, 183, 3, 0.05) 100%)',
+                        border: '2px solid rgba(255, 183, 3, 0.4)',
+                        boxShadow: '0 6px 22px rgba(255, 183, 3, 0.3)'
+                      }
                       : {
-                          background: 'rgba(255, 255, 255, 0.03)',
-                          border: '1px solid rgba(255, 255, 255, 0.1)',
-                          boxShadow: '0 3px 14px rgba(0, 0, 0, 0.3)'
-                        }
+                        background: 'rgba(255, 255, 255, 0.03)',
+                        border: '1px solid rgba(255, 255, 255, 0.1)',
+                        boxShadow: '0 3px 14px rgba(0, 0, 0, 0.3)'
+                      }
                   }
                 >
                   {pkg.popular && (
-                    <div 
+                    <div
                       className="absolute -top-2 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full text-[10px] font-bold"
                       style={{
                         background: 'linear-gradient(135deg, #FFB703, #FFA000)',
@@ -710,7 +709,7 @@ export default function PillarContent() {
                       MOST POPULAR
                     </div>
                   )}
-                  
+
                   <div className="text-center mb-3">
                     <h5 className="text-white font-nunito text-base font-semibold mb-1.5">
                       {pkg.package}
@@ -730,20 +729,20 @@ export default function PillarContent() {
                     ))}
                   </ul>
 
-                  <button 
+                  <button
                     className="w-full py-2 rounded-md font-nunito font-bold text-sm transition-all duration-300 hover:scale-105"
                     style={
                       pkg.popular
                         ? {
-                            background: 'linear-gradient(135deg, #FFB703, #FFA000)',
-                            color: '#0C002B',
-                            boxShadow: '0 3px 10px rgba(255, 183, 3, 0.4)'
-                          }
+                          background: 'linear-gradient(135deg, #FFB703, #FFA000)',
+                          color: '#0C002B',
+                          boxShadow: '0 3px 10px rgba(255, 183, 3, 0.4)'
+                        }
                         : {
-                            background: 'rgba(255, 183, 3, 0.15)',
-                            border: '1px solid rgba(255, 183, 3, 0.3)',
-                            color: '#FFB703'
-                          }
+                          background: 'rgba(255, 183, 3, 0.15)',
+                          border: '1px solid rgba(255, 183, 3, 0.3)',
+                          color: '#FFB703'
+                        }
                     }
                   >
                     Get Started
@@ -759,14 +758,14 @@ export default function PillarContent() {
       <section id="documents" className="scroll-mt-14">
         <div className="space-y-3 lg:space-y-3.5">
           <div className="flex items-center gap-2 lg:gap-3">
-            <div 
+            <div
               className="w-2 h-2 lg:w-3 lg:h-3 rounded-full relative"
               style={{
                 background: '#FFB703',
                 boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
               }}
             >
-              <div 
+              <div
                 className="absolute inset-0 rounded-full animate-ping"
                 style={{ background: '#FFB703', opacity: 0.4 }}
               />
@@ -776,9 +775,9 @@ export default function PillarContent() {
             </h2>
           </div>
 
-          <div 
+          <div
             className="p-3 lg:p-4 rounded-lg backdrop-blur-sm"
-            style={{ 
+            style={{
               background: 'rgba(255, 255, 255, 0.03)',
               border: '1px solid rgba(255, 255, 255, 0.1)',
               boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)'
@@ -790,16 +789,16 @@ export default function PillarContent() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
               {documents.map((document, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className="group flex items-start gap-2 p-2 rounded-md backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5"
-                  style={{ 
+                  style={{
                     background: 'rgba(255, 255, 255, 0.03)',
                     border: '1px solid rgba(255, 255, 255, 0.08)',
                     boxShadow: '0 3px 10px rgba(0, 0, 0, 0.2)'
                   }}
                 >
-                  <div 
+                  <div
                     className="w-1.5 h-1.5 rounded-full flex-shrink-0 mt-1.5"
                     style={{
                       background: '#FFB703',
@@ -813,7 +812,7 @@ export default function PillarContent() {
               ))}
             </div>
 
-            <div 
+            <div
               className="mt-3 p-3 rounded-md"
               style={{
                 background: 'rgba(255, 183, 3, 0.08)',
@@ -838,14 +837,14 @@ export default function PillarContent() {
       <section id="classes" className="scroll-mt-14">
         <div className="space-y-3 lg:space-y-3.5">
           <div className="flex items-center gap-2 lg:gap-3">
-            <div 
+            <div
               className="w-2 h-2 lg:w-3 lg:h-3 rounded-full relative"
               style={{
                 background: '#FFB703',
                 boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
               }}
             >
-              <div 
+              <div
                 className="absolute inset-0 rounded-full animate-ping"
                 style={{ background: '#FFB703', opacity: 0.4 }}
               />
@@ -855,9 +854,9 @@ export default function PillarContent() {
             </h2>
           </div>
 
-          <div 
+          <div
             className="p-3 lg:p-4 rounded-lg backdrop-blur-sm"
-            style={{ 
+            style={{
               background: 'rgba(255, 255, 255, 0.03)',
               border: '1px solid rgba(255, 255, 255, 0.1)',
               boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)'
@@ -867,7 +866,7 @@ export default function PillarContent() {
               India follows the <span className="font-bold text-[#FFB703]">Nice Classification</span> system, which divides all goods and services into <strong>45 classes</strong> (Classes 1-34 for goods, Classes 35-45 for services). Choosing the correct class is critical for proper protection.
             </p>
 
-            <div 
+            <div
               className="p-3 rounded-md mb-3"
               style={{
                 background: 'rgba(255, 183, 3, 0.08)',
@@ -886,17 +885,17 @@ export default function PillarContent() {
             <h4 className="text-white font-nunito text-base font-semibold mb-2">Popular Trademark Classes:</h4>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
               {trademarkClasses.map((item, index) => (
-                <div 
+                <div
                   key={index}
                   className="p-2 rounded-md backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5"
-                  style={{ 
+                  style={{
                     background: 'rgba(255, 255, 255, 0.03)',
                     border: '1px solid rgba(255, 255, 255, 0.1)',
                     boxShadow: '0 3px 10px rgba(0, 0, 0, 0.2)'
                   }}
                 >
                   <div className="flex items-center gap-2 mb-1.5">
-                    <div 
+                    <div
                       className="w-7 h-7 rounded-md flex items-center justify-center font-nunito font-bold text-xs"
                       style={{
                         background: 'linear-gradient(135deg, #FFB703, #FFA000)',
@@ -913,7 +912,7 @@ export default function PillarContent() {
               ))}
             </div>
 
-            <div 
+            <div
               className="mt-3 p-3 rounded-md"
               style={{
                 background: 'rgba(255, 183, 3, 0.08)',
@@ -927,7 +926,7 @@ export default function PillarContent() {
                   <p className="text-white/90 font-nunito text-xs mb-2">
                     Class selection is complex and requires expertise. Our AI-powered trademark search tool analyzes your business and recommends appropriate classes automatically.
                   </p>
-                  <Link 
+                  <Link
                     href="/our-services/trademark-registration"
                     className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md font-nunito font-semibold text-xs transition-all duration-300 hover:scale-105"
                     style={{
@@ -950,14 +949,14 @@ export default function PillarContent() {
       <section id="objections" className="scroll-mt-14">
         <div className="space-y-3 lg:space-y-3.5">
           <div className="flex items-center gap-2 lg:gap-3">
-            <div 
+            <div
               className="w-2 h-2 lg:w-3 lg:h-3 rounded-full relative"
               style={{
                 background: '#FFB703',
                 boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
               }}
             >
-              <div 
+              <div
                 className="absolute inset-0 rounded-full animate-ping"
                 style={{ background: '#FFB703', opacity: 0.4 }}
               />
@@ -967,9 +966,9 @@ export default function PillarContent() {
             </h2>
           </div>
 
-          <div 
+          <div
             className="p-3 lg:p-4 rounded-lg backdrop-blur-sm"
-            style={{ 
+            style={{
               background: 'rgba(255, 255, 255, 0.03)',
               border: '1px solid rgba(255, 255, 255, 0.1)',
               boxShadow: '0 6px 22px rgba(0, 0, 0, 0.3)'
@@ -981,21 +980,21 @@ export default function PillarContent() {
 
             <div className="space-y-3">
               {commonObjections.map((item, index) => (
-                <div 
+                <div
                   key={index}
                   className="p-3 rounded-md backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5"
-                  style={{ 
-                    background: index === 0 
+                  style={{
+                    background: index === 0
                       ? 'linear-gradient(135deg, rgba(255, 183, 3, 0.12) 0%, rgba(255, 183, 3, 0.04) 100%)'
                       : 'rgba(255, 255, 255, 0.03)',
-                    border: index === 0 
+                    border: index === 0
                       ? '1px solid rgba(255, 183, 3, 0.2)'
                       : '1px solid rgba(255, 255, 255, 0.1)',
                     boxShadow: '0 3px 14px rgba(0, 0, 0, 0.3)'
                   }}
                 >
                   <div className="flex items-start gap-2 mb-2">
-                    <div 
+                    <div
                       className="w-6 h-6 rounded-md flex items-center justify-center flex-shrink-0"
                       style={{
                         background: 'rgba(255, 183, 3, 0.15)',
@@ -1013,8 +1012,8 @@ export default function PillarContent() {
                       </p>
                     </div>
                   </div>
-                  
-                  <div 
+
+                  <div
                     className="pl-8 p-2 rounded-md"
                     style={{
                       background: 'rgba(255, 255, 255, 0.03)',
@@ -1035,7 +1034,7 @@ export default function PillarContent() {
               ))}
             </div>
 
-            <div 
+            <div
               className="mt-3 p-3 rounded-md"
               style={{
                 background: 'rgba(255, 183, 3, 0.08)',
@@ -1052,7 +1051,7 @@ export default function PillarContent() {
                     Our experienced trademark attorneys have successfully handled <strong>1000+ objection cases</strong> with a high success rate. We draft comprehensive replies, gather supporting evidence, and represent you at hearings before the Trademark Registry.
                   </p>
                   <div className="flex flex-wrap gap-1.5">
-                    <span 
+                    <span
                       className="px-2 py-0.5 rounded-full text-xs font-semibold"
                       style={{
                         background: 'rgba(255, 255, 255, 0.1)',
@@ -1062,7 +1061,7 @@ export default function PillarContent() {
                       <i className="fas fa-check mr-0.5" aria-hidden="true"></i>
                       90% Success Rate
                     </span>
-                    <span 
+                    <span
                       className="px-2 py-0.5 rounded-full text-xs font-semibold"
                       style={{
                         background: 'rgba(255, 255, 255, 0.1)',
@@ -1072,7 +1071,7 @@ export default function PillarContent() {
                       <i className="fas fa-clock mr-0.5" aria-hidden="true"></i>
                       Fast Response
                     </span>
-                    <span 
+                    <span
                       className="px-2 py-0.5 rounded-full text-xs font-semibold"
                       style={{
                         background: 'rgba(255, 255, 255, 0.1)',
@@ -1092,9 +1091,9 @@ export default function PillarContent() {
 
       {/* CTA Section */}
       <section id="cta" className="scroll-mt-14">
-        <div 
+        <div
           className="relative overflow-hidden p-4 lg:p-5 xl:p-6 rounded-xl"
-          style={{ 
+          style={{
             background: 'linear-gradient(135deg, rgba(255, 183, 3, 0.15) 0%, rgba(255, 183, 3, 0.05) 100%)',
             border: '2px solid rgba(255, 183, 3, 0.3)',
             boxShadow: '0 8px 32px rgba(255, 183, 3, 0.3)'
@@ -1103,7 +1102,7 @@ export default function PillarContent() {
           {/* Decorative elements */}
           <div className="absolute top-0 right-0 w-28 h-28 rounded-full bg-[#FFB703] opacity-10 blur-3xl" />
           <div className="absolute bottom-0 left-0 w-32 h-32 rounded-full bg-[#FFB703] opacity-10 blur-3xl" />
-          
+
           <div className="relative text-center">
             <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full mb-3"
               style={{
@@ -1179,14 +1178,14 @@ export default function PillarContent() {
       <section id="related-resources" className="scroll-mt-14">
         <div className="space-y-3 lg:space-y-3.5">
           <div className="flex items-center gap-2 lg:gap-3">
-            <div 
+            <div
               className="w-2 h-2 lg:w-3 lg:h-3 rounded-full relative"
               style={{
                 background: '#FFB703',
                 boxShadow: '0 0 14px rgba(255, 183, 3, 0.6)'
               }}
             >
-              <div 
+              <div
                 className="absolute inset-0 rounded-full animate-ping"
                 style={{ background: '#FFB703', opacity: 0.4 }}
               />
@@ -1239,13 +1238,13 @@ export default function PillarContent() {
                 key={index}
                 href={resource.link}
                 className="group p-3 rounded-lg backdrop-blur-sm transition-all duration-300 hover:-translate-y-1"
-                style={{ 
+                style={{
                   background: 'rgba(255, 255, 255, 0.03)',
                   border: '1px solid rgba(255, 255, 255, 0.1)',
                   boxShadow: '0 3px 14px rgba(0, 0, 0, 0.3)'
                 }}
               >
-                <div 
+                <div
                   className="w-8 h-8 rounded-md flex items-center justify-center mb-2"
                   style={{
                     background: 'rgba(255, 183, 3, 0.15)',
@@ -1269,7 +1268,7 @@ export default function PillarContent() {
           </div>
 
           {/* Service Pages Links */}
-          <div 
+          <div
             className="mt-4 p-3 rounded-lg"
             style={{
               background: 'rgba(255, 183, 3, 0.08)',
