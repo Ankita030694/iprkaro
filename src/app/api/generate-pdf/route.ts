@@ -31,25 +31,32 @@ export async function GET(request: NextRequest) {
     console.log('Generating PDF for:', { trademark, classNumber, baseUrl });
 
     // Launch Puppeteer with Vercel-compatible Chromium
-    let browser;
-    try {
-      browser = await puppeteer.launch({
-        args: chromium.args,
-        defaultViewport: chromium.defaultViewport,
-        executablePath: await chromium.executablePath(),
-        headless: chromium.headless,
-      });
-      console.log('Browser launched successfully');
-    } catch (launchError: any) {
-      console.error('Failed to launch browser:', launchError);
-      return NextResponse.json(
-        {
-          error: 'Failed to launch browser',
-          details: launchError.message
-        },
-        { status: 500 }
-      );
-    }
+   // Launch Puppeteer with Vercel-compatible Chromium
+// Launch Puppeteer with Vercel-compatible Chromium
+let browser;
+try {
+  browser = await puppeteer.launch({
+    args: [
+      ...chromium.args,
+      '--disable-web-security',
+      '--disable-features=IsolateOrigins',
+      '--disable-site-isolation-trials',
+    ],
+    defaultViewport: chromium.defaultViewport,
+    executablePath: await chromium.executablePath(),
+    headless: true,
+  });
+  console.log('Browser launched successfully');
+} catch (launchError: any) {
+  console.error('Failed to launch browser:', launchError);
+  return NextResponse.json(
+    {
+      error: 'Failed to launch browser',
+      details: launchError.message
+    },
+    { status: 500 }
+  );
+}
 
     try {
       const page = await browser.newPage();
