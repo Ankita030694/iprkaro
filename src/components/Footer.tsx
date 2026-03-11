@@ -691,6 +691,16 @@ const Footer: React.FC = () => {
             <a href="/What-happens-after-trademark-opposition-is-filed" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">What happens after opposition?</a>
             <a href="/how-long-trademark-opposition-cases-take" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Opposition Case Timeline</a>
             <a href="/documents-required-for-trademark-opposition" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Opposition Documents Checklist</a>
+            <a href="/how-to-avoid-trademark-registration-scams" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Avoid Trademark Scams</a>
+            <a href="/can-you-trademark-your-own-name-in-india" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Trademark Your Name</a>
+            <a href="/trademark-objection-reply-format-india" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Objection Reply Format</a>
+            <a href="/how-to-respond-to-trademark-examination-report" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Examination Report Response</a>
+            <a href="/how-to-overcome-trademark-objection" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Overcome Objection Guide</a>
+            <a href="/how-to-win-trademark-objection-case" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Win Trademark Case</a>
+            <a href="/what-happens-if-trademark-expires" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Trademark Expiry Guide</a>
+            <a href="/how-to-restore-expired-trademark" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Restore Trademark Guide</a>
+            <a href="/trademark-enforcement-strategies" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Trademark Enforcement Strategies</a>
+            <a href="/how-to-stop-trademark-infringement" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Stop Trademark Infringement</a>
           </div>
         </div>
 

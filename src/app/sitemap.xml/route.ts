@@ -203,8 +203,19 @@ export async function GET() {
     '/Common-reasons-why-trademark-applications-get-rejected',
     '/What-happens-after-trademark-opposition-is-filed',
     '/how-long-trademark-opposition-cases-take',
-    '/documents-required-for-trademark-opposition'
+    '/documents-required-for-trademark-opposition',
+    '/how-to-avoid-trademark-registration-scams',
+    '/can-you-trademark-your-own-name-in-india',
+    '/trademark-objection-reply-format-india',
+    '/how-to-respond-to-trademark-examination-report',
+    '/how-to-overcome-trademark-objection',
+    '/how-to-win-trademark-objection-case',
+    '/what-happens-if-trademark-expires',
+    '/how-to-restore-expired-trademark',
+    '/trademark-enforcement-strategies',
+    '/how-to-stop-trademark-infringement',
   ].map(path => ({ path, priority: '0.8', changefreq: 'weekly' } as RouteConfig));
+
 
   // Fetch Dynamic Blog Posts
   let blogRoutes: RouteConfig[] = [];
