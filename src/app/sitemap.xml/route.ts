@@ -214,7 +214,9 @@ export async function GET() {
     '/how-to-restore-expired-trademark',
     '/trademark-enforcement-strategies',
     '/how-to-stop-trademark-infringement',
+    '/expedited-process-of-trademark-filing',
   ].map(path => ({ path, priority: '0.8', changefreq: 'weekly' } as RouteConfig));
+
 
 
   // Fetch Dynamic Blog Posts

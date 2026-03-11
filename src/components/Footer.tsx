@@ -701,6 +701,7 @@ const Footer: React.FC = () => {
             <a href="/how-to-restore-expired-trademark" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Restore Trademark Guide</a>
             <a href="/trademark-enforcement-strategies" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Trademark Enforcement Strategies</a>
             <a href="/how-to-stop-trademark-infringement" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Stop Trademark Infringement</a>
+            <a href="/expedited-process-of-trademark-filing" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Expedited Trademark Filing</a>
           </div>
         </div>
 
