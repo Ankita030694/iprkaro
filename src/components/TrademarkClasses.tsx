@@ -60,7 +60,7 @@ const TrademarkClasses: React.FC = () => {
 
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-9 gap-3">
                     {classes.map((cls, index) => {
-                        const href = `/trademark-for-${cls.slug}`;
+                        const href = (cls as any).isCustomPath ? (cls as any).slug : `/trademark-for-${cls.slug}`;
 
                         return (
                             <Link

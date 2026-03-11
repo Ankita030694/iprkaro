@@ -607,8 +607,6 @@ const Footer: React.FC = () => {
             <a href="/trademark-india" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Trademark India</a>
             <a href="/what-is-trademark" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">What is Trademark</a>
             <a href="/what-is-trademark-registration" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">What is Trademark Registration</a>
-
-            {/* Original Links */}
             <a href="/trademark-register-kese-karte-hai" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Trademark Register Kaise Karte Hai</a>
             <a href="/how-to-register-trademark" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">How to Register Trademark</a>
             <a href="/trademark-application-status" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Trademark Application Status</a>
@@ -682,6 +680,17 @@ const Footer: React.FC = () => {
             <a href="/where-can-find-certified-trademark-agents-or-attorneys-near-me" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Find Certified Agents Near Me</a>
             <a href="/what-are-the-benifits-of-hiring-a-trademark-agent-in-india" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Benefits of Trademark Agent</a>
             <a href="/compare-fees-for-various-online-trademark-registration-providers-in-india" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Trademark Fees Comparison</a>
+
+            <a href="/how-to-do-a-trademark-search-before-filing" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">How to do a Trademark Search</a>
+            <a href="/what-are-absolute-and-relative-grounds-for-rejection-section-9-11" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Grounds for TM Rejection</a>
+            <a href="/what-happens-if-someone-opposes-my-trademark" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Trademark Opposition Guide</a>
+            <a href="/how-to-file-international-trademark-madrid-protocol-from-india" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Madrid Protocol India</a>
+            <a href="/Can-two-trademarks-exist-in-different-classes-in-India" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Can two trademarks exist in different classes?</a>
+            <a href="/How-to-avoid-trademark-objection-before-filing" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">How to avoid trademark objection?</a>
+            <a href="/Common-reasons-why-trademark-applications-get-rejected" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Why are trademarks rejected?</a>
+            <a href="/What-happens-after-trademark-opposition-is-filed" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">What happens after opposition?</a>
+            <a href="/how-long-trademark-opposition-cases-take" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Opposition Case Timeline</a>
+            <a href="/documents-required-for-trademark-opposition" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Opposition Documents Checklist</a>
           </div>
         </div>
 

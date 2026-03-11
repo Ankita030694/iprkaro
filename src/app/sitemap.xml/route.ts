@@ -194,6 +194,16 @@ export async function GET() {
     '/trademark-for-construction-and-repair',
     '/trademark-for-transport-and-logistics',
     '/trademark-for-education-and-training',
+    '/how-to-do-a-trademark-search-before-filing',
+    '/what-are-absolute-and-relative-grounds-for-rejection-section-9-11',
+    '/what-happens-if-someone-opposes-my-trademark',
+    '/how-to-file-international-trademark-madrid-protocol-from-india',
+    '/Can-two-trademarks-exist-in-different-classes-in-India',
+    '/How-to-avoid-trademark-objection-before-filing',
+    '/Common-reasons-why-trademark-applications-get-rejected',
+    '/What-happens-after-trademark-opposition-is-filed',
+    '/how-long-trademark-opposition-cases-take',
+    '/documents-required-for-trademark-opposition'
   ].map(path => ({ path, priority: '0.8', changefreq: 'weekly' } as RouteConfig));
 
   // Fetch Dynamic Blog Posts
