@@ -181,32 +181,55 @@ export default function ExpeditedTrademarkFilingPage() {
     ],
   };
 
+
   const productSchema = {
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "Expedited Trademark Registration Service India",
-    "description": "Fast-track trademark registration in India under Rule 34. Get your trademark registered in 3-6 months.",
+    "description": "Fast-track trademark registration in India under Rule 34. Get your trademark registered in 3-6 months with Form TM-M.",
+    // SEO: image required for Merchant Listing rich results
+    "image": [
+      "https://www.iprkaro.com/images/trademark-fast-track-vs-standard.webp",
+      "https://www.iprkaro.com/images/trademark-expedited-timeline.webp",
+    ],
+    "sku": "TM-EXPEDITED-001",
     "brand": { "@type": "Brand", "name": "IPR Karo" },
     "offers": {
       "@type": "Offer",
       "priceCurrency": "INR",
       "price": "20000",
-      "priceValidUntil": "2025-12-31",
+      // SEO: priceValidUntil must be a future date; was 2025-12-31 (expired) — now 2026-12-31
+      "priceValidUntil": "2026-12-31",
       "availability": "https://schema.org/InStock",
+      "itemCondition": "https://schema.org/NewCondition",
       "url": "https://www.iprkaro.com/expedited-process-of-trademark-filing",
+      // SEO: seller required by Google Merchant Listing rich result guidelines
+      "seller": {
+        "@type": "Organization",
+        "name": "IPR Karo",
+        "url": "https://www.iprkaro.com",
+      },
     },
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.9",
       "reviewCount": "2400",
+      "bestRating": "5",
+      "worstRating": "1",
     },
     "review": reviews.map(r => ({
       "@type": "Review",
       "author": { "@type": "Person", "name": r.name },
-      "reviewRating": { "@type": "Rating", "ratingValue": r.rating.toString() },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": r.rating.toString(),
+        "bestRating": "5",
+        "worstRating": "1",
+      },
       "reviewBody": r.text,
     })),
   };
+
 
   const orgSchema = {
     "@context": "https://schema.org",
