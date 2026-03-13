@@ -61,7 +61,7 @@ export async function GET(request: NextRequest) {
 
       // Optimize: Block unnecessary requests to speed up page load
       await page.setRequestInterception(true);
-      page.on('request', (req) => {
+      page.on('request', (req: any) => {
         const resourceType = req.resourceType();
         const url = req.url().toLowerCase();
         
