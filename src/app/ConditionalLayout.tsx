@@ -2,11 +2,13 @@
 
 import { usePathname } from 'next/navigation';
 import { Navbar, Footer } from '@/components';
+import GlobalPopupForm from '@/components/common/GlobalPopupForm';
+import WhatsAppWidget from '@/components/WhatsAppWidget';
 
 export default function ConditionalLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
 
-  // Pages where navbar and footer should not be shown
+  // Pages where navbar, footer, and widgets should not be shown
   const excludedPaths = ['/form', '/authority', '/dashboard/pdf'];
   const shouldHideLayout = excludedPaths.some(path =>
     pathname === path || pathname?.startsWith(`${path}/`)
@@ -21,6 +23,8 @@ export default function ConditionalLayout({ children }: { children: React.ReactN
       <Navbar />
       {children}
       <Footer />
+      <WhatsAppWidget />
+      <GlobalPopupForm />
     </>
   );
 }

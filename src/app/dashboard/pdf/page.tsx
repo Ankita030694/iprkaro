@@ -53,17 +53,23 @@ async function PDFContent({ searchParams }: PDFPageProps) {
 
 export default function PDFPage(props: PDFPageProps) {
   return (
-    <Suspense fallback={
-      <div className="min-h-screen flex items-center justify-center" style={{ 
-        background: '#0C002B',
-      }}>
-        <div className="text-center">
-          <p className="text-white font-nunito text-xl">Loading...</p>
+    <>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      />
+      <Suspense fallback={
+        <div className="min-h-screen flex items-center justify-center" style={{ 
+          background: '#0C002B',
+        }}>
+          <div className="text-center">
+            <p className="text-white font-nunito text-xl">Loading...</p>
+          </div>
         </div>
-      </div>
-    }>
-      <PDFContent {...props} />
-    </Suspense>
+      }>
+        <PDFContent {...props} />
+      </Suspense>
+    </>
   );
 }
 

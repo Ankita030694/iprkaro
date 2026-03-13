@@ -5,9 +5,7 @@ import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 import { Navbar, Footer, CitiesAndTerritories } from "@/components";
 import ConditionalLayout from "./ConditionalLayout";
-import WhatsAppWidget from "@/components/WhatsAppWidget";
 import { Analytics } from "@vercel/analytics/next"
-import GlobalPopupForm from "@/components/common/GlobalPopupForm";
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
@@ -142,8 +140,6 @@ export default function RootLayout({
           <ConditionalLayout>
             {children}
           </ConditionalLayout>
-          <WhatsAppWidget />
-          <GlobalPopupForm />
         </div>
         <Analytics />
       </body>
