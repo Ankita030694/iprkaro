@@ -44,7 +44,7 @@ export async function GET(request: NextRequest) {
             ? '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
             : '/usr/bin/google-chrome'
           : await chromium.executablePath('https://github.com/Sparticuz/chromium/releases/download/v132.0.0/chromium-v132.0.0-pack.tar'),
-        headless: isDev ? true : chromium.headless,
+        headless: (isDev ? true : chromium.headless) as any,
         ignoreHTTPSErrors: true,
       });
       console.log('Browser launched successfully');
