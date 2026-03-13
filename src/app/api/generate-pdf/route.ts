@@ -45,7 +45,6 @@ export async function GET(request: NextRequest) {
             : '/usr/bin/google-chrome'
           : await chromium.executablePath('https://github.com/Sparticuz/chromium/releases/download/v132.0.0/chromium-v132.0.0-pack.tar'),
         headless: (isDev ? true : chromium.headless) as any,
-        ignoreHTTPSErrors: true,
       });
       console.log('Browser launched successfully');
     } catch (launchError: any) {
