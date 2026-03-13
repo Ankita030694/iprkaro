@@ -20,9 +20,9 @@ importers:
       '@fortawesome/react-fontawesome':
         specifier: ^3.0.2
         version: 3.0.2(@fortawesome/fontawesome-svg-core@7.0.1)(react@19.2.1)
-      '@sparticuz/chromium-min':
-        specifier: 132.0.0
-        version: 132.0.0
+      '@sparticuz/chromium':
+        specifier: 131.0.1
+        version: 131.0.1
       '@tiptap/extension-code-block-lowlight':
         specifier: ^3.6.7
         version: 3.6.7(@tiptap/core@3.6.7(@tiptap/pm@3.6.7))(@tiptap/extension-code-block@3.6.7(@tiptap/core@3.6.7(@tiptap/pm@3.6.7))(@tiptap/pm@3.6.7))(@tiptap/pm@3.6.7)(highlight.js@11.11.1)(lowlight@3.3.0)
@@ -93,8 +93,8 @@ importers:
         specifier: ^4.73.0
         version: 4.104.0(ws@8.18.3)(zod@3.25.76)
       puppeteer-core:
-        specifier: 24.1.0
-        version: 24.1.0
+        specifier: 23.11.1
+        version: 23.11.1
       react:
         specifier: 19.2.1
         version: 19.2.1
@@ -656,16 +656,16 @@ packages:
   '@protobufjs/utf8@1.1.0':
     resolution: {integrity: sha512-Vvn3zZrhQZkkBE8LSuW3em98c0FwgO4nxzv6OdSxPKJIEKY2bGbHn+mhGIPerzI4twdxaP8/0+06HBpwf345Lw==}
 
-  '@puppeteer/browsers@2.7.0':
-    resolution: {integrity: sha512-bO61XnTuopsz9kvtfqhVbH6LTM1koxK0IlBR+yuVrM2LB7mk8+5o1w18l5zqd5cs8xlf+ntgambqRqGifMDjog==}
+  '@puppeteer/browsers@2.6.1':
+    resolution: {integrity: sha512-aBSREisdsGH890S2rQqK82qmQYU3uFpSH8wcZWHgHzl3LfzsxAKbLNiAG9mO8v1Y0UICBeClICxPJvyr0rcuxg==}
     engines: {node: '>=18'}
     hasBin: true
 
   '@remirror/core-constants@3.0.0':
     resolution: {integrity: sha512-42aWfPrimMfDKDi4YegyS7x+/0tlzaqwPQCULLanv3DMIlu96KTJR0fM5isWX2UViOqlGnX6YFgqWepcX+XMNg==}
 
-  '@sparticuz/chromium-min@132.0.0':
-    resolution: {integrity: sha512-Wqz6DK0fkXNrcQ/POablGRoip4NVPYoZ8yYPuipKTox6sRGzGKTdhgNHS4yK1UUPc47IfP7Wm8hTPxyXI5zgmg==}
+  '@sparticuz/chromium@131.0.1':
+    resolution: {integrity: sha512-VfmHkQmb/Px0zjwdSQwjRMwFw63Qfj+g4Giumz4jiAGEpXHgIZk6xEwlUz6yiUHVDveK2TEgMR2MR6I3okOE7w==}
     engines: {node: '>= 16'}
 
   '@stablelib/base64@1.0.1':
@@ -1215,8 +1215,8 @@ packages:
   devlop@1.1.0:
     resolution: {integrity: sha512-RWmIqhcFf1lRYBvNmr7qTNuyCt/7/ns2jbpp1+PalgE/rDQcBT0fioSMUpJ93irlUhC5hrg4cYqe6U+0ImW0rA==}
 
-  devtools-protocol@0.0.1380148:
-    resolution: {integrity: sha512-1CJABgqLxbYxVI+uJY/UDUHJtJ0KZTSjNYJYKqd9FRoXT33WDakDHNxRapMEgzeJ/C3rcs01+avshMnPmKQbvA==}
+  devtools-protocol@0.0.1367902:
+    resolution: {integrity: sha512-XxtPuC3PGakY6PD7dG66/o8KwJ/LkH2/EKe19Dcw58w53dv4/vSQEkn/SzuyhHE2q4zPgCkxQBxus3VV4ql+Pg==}
 
   dunder-proto@1.0.1:
     resolution: {integrity: sha512-KIN/nDJBQRcXw0MLVhZE9iQHmG68qAVIBg9CqmUYjmQIhgij9U5MFvrqkUL5FbtyyzZuOeOt0zdeRe4UY7ct+A==}
@@ -1736,8 +1736,8 @@ packages:
     resolution: {integrity: sha512-uxFIHU0YlHYhDQtV4R9J6a52SLx28BCjT+4ieh7IGbgwVJWO+km431c4yRlREUAsAmt/uMjQUyQHNEPf0M39CA==}
     engines: {node: '>=6'}
 
-  puppeteer-core@24.1.0:
-    resolution: {integrity: sha512-ReefWoQgqdyl67uWEBy/TMZ4mAB7hP0JB5HIxSE8B1ot/4ningX1gmzHCOSNfMbTiS/VJHCvaZAe3oJTXph7yw==}
+  puppeteer-core@23.11.1:
+    resolution: {integrity: sha512-3HZ2/7hdDKZvZQ7dhhITOUg4/wOrDRjyK2ZBllRB0ZCOi9u0cwq1ACHDjBB+nX+7+kltHjQvBRdeY7+W0T+7Gg==}
     engines: {node: '>=18'}
 
   react-dom@19.2.1:
@@ -2550,7 +2550,7 @@ snapshots:
 
   '@protobufjs/utf8@1.1.0': {}
 
-  '@puppeteer/browsers@2.7.0':
+  '@puppeteer/browsers@2.6.1':
     dependencies:
       debug: 4.4.3
       extract-zip: 2.0.1
@@ -2568,7 +2568,7 @@ snapshots:
 
   '@remirror/core-constants@3.0.0': {}
 
-  '@sparticuz/chromium-min@132.0.0':
+  '@sparticuz/chromium@131.0.1':
     dependencies:
       follow-redirects: 1.15.11
       tar-fs: 3.1.1
@@ -3021,9 +3021,9 @@ snapshots:
 
   chownr@3.0.0: {}
 
-  chromium-bidi@0.11.0(devtools-protocol@0.0.1380148):
+  chromium-bidi@0.11.0(devtools-protocol@0.0.1367902):
     dependencies:
-      devtools-protocol: 0.0.1380148
+      devtools-protocol: 0.0.1367902
       mitt: 3.0.1
       zod: 3.23.8
 
@@ -3076,7 +3076,7 @@ snapshots:
     dependencies:
       dequal: 2.0.3
 
-  devtools-protocol@0.0.1380148: {}
+  devtools-protocol@0.0.1367902: {}
 
   dunder-proto@1.0.1:
     dependencies:
@@ -3643,12 +3643,12 @@ snapshots:
 
   punycode.js@2.3.1: {}
 
-  puppeteer-core@24.1.0:
+  puppeteer-core@23.11.1:
     dependencies:
-      '@puppeteer/browsers': 2.7.0
-      chromium-bidi: 0.11.0(devtools-protocol@0.0.1380148)
+      '@puppeteer/browsers': 2.6.1
+      chromium-bidi: 0.11.0(devtools-protocol@0.0.1367902)
       debug: 4.4.3
-      devtools-protocol: 0.0.1380148
+      devtools-protocol: 0.0.1367902
       typed-query-selector: 2.12.1
       ws: 8.18.3
     transitivePeerDependencies:

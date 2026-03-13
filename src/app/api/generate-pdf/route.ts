@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import puppeteer from 'puppeteer-core';
-import chromium from '@sparticuz/chromium-min';
+import chromium from '@sparticuz/chromium';
 
 export async function GET(request: NextRequest) {
   try {
@@ -33,7 +33,11 @@ export async function GET(request: NextRequest) {
     // Launch Puppeteer with Vercel-compatible Chromium
     let browser;
     try {
-      // Configuration for "@sparticuz/chromium-min"
+      // For Node.js 20+ environments on Vercel/AWS Lambda
+      if (!isDev && !process.env.AWS_LAMBDA_JS_RUNTIME) {
+        process.env.AWS_LAMBDA_JS_RUNTIME = 'nodejs20.x';
+      }
+
       browser = await puppeteer.launch({
         args: isDev 
           ? ['--no-sandbox', '--disable-setuid-sandbox'] 
@@ -43,7 +47,7 @@ export async function GET(request: NextRequest) {
           ? process.platform === 'darwin'
             ? '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
             : '/usr/bin/google-chrome'
-          : await chromium.executablePath('https://github.com/Sparticuz/chromium/releases/download/v132.0.0/chromium-v132.0.0-pack.tar'),
+          : await chromium.executablePath(),
         headless: (isDev ? true : chromium.headless) as any,
       });
       console.log('Browser launched successfully');
