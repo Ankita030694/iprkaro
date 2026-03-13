@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import puppeteer from 'puppeteer-core';
-import chromium from '@sparticuz/chromium';
+import chromium from '@sparticuz/chromium-min';
 
 export async function GET(request: NextRequest) {
   try {
@@ -33,16 +33,19 @@ export async function GET(request: NextRequest) {
     // Launch Puppeteer with Vercel-compatible Chromium
     let browser;
     try {
+      // Configuration for "@sparticuz/chromium-min"
       browser = await puppeteer.launch({
-        args: [
-          ...chromium.args,
-          '--disable-web-security',
-          '--disable-features=IsolateOrigins',
-          '--disable-site-isolation-trials',
-        ],
+        args: isDev 
+          ? ['--no-sandbox', '--disable-setuid-sandbox'] 
+          : [...chromium.args, '--hide-scrollbars', '--disable-web-security'],
         defaultViewport: chromium.defaultViewport,
-        executablePath: await chromium.executablePath(),
-        headless: true,
+        executablePath: isDev
+          ? process.platform === 'darwin'
+            ? '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
+            : '/usr/bin/google-chrome'
+          : await chromium.executablePath('https://github.com/Sparticuz/chromium/releases/download/v132.0.0/chromium-v132.0.0-pack.tar'),
+        headless: isDev ? true : chromium.headless,
+        ignoreHTTPSErrors: true,
       });
       console.log('Browser launched successfully');
     } catch (launchError: any) {
@@ -50,7 +53,8 @@ export async function GET(request: NextRequest) {
       return NextResponse.json(
         {
           error: 'Failed to launch browser',
-          details: launchError.message
+          details: launchError.message,
+          stack: launchError.stack
         },
         { status: 500 }
       );
@@ -65,12 +69,11 @@ export async function GET(request: NextRequest) {
         const resourceType = req.resourceType();
         const url = req.url().toLowerCase();
         
-        // Block tracking, analytics, and images that aren't the logo if needed
         if (
           url.includes('google-analytics') || 
           url.includes('facebook') || 
           url.includes('googletagmanager') ||
-          resourceType === 'font' // We'll rely on the Google Fonts link we added to the page
+          resourceType === 'font'
         ) {
           req.abort();
         } else {
@@ -88,7 +91,7 @@ export async function GET(request: NextRequest) {
       try {
         await page.goto(dashboardUrl, {
           waitUntil: ['domcontentloaded', 'networkidle2'],
-          timeout: 12000, 
+          timeout: 15000, 
         });
         console.log('Page loaded');
       } catch (navigationError: any) {
@@ -147,7 +150,7 @@ export async function GET(request: NextRequest) {
         },
       });
     } catch (pageError) {
-      await browser.close();
+      if (browser) await browser.close();
       throw pageError;
     }
   } catch (error: any) {
