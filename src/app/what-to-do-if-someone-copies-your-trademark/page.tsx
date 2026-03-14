@@ -159,7 +159,6 @@ const reviews = [
 
 export default function TrademarkCopyingPage() {
     const breadcrumbItems = [
-        { label: "Help Center", href: "/resources" },
         { label: "Action Plan: Trademark Copying", href: "/what-to-do-if-someone-copies-your-trademark" },
     ];
 

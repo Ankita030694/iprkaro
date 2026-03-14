@@ -175,7 +175,7 @@ const reviews = [
 
 export default function TrademarkRightsPage() {
     const breadcrumbItems = [
-        { label: "IP Education", href: "/resources" },
+        
         { label: "Trademark Owner Rights", href: "/legal-rights-of-trademark-owner-in-india" },
     ];
 
