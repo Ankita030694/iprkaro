@@ -702,6 +702,11 @@ const Footer: React.FC = () => {
             <a href="/trademark-enforcement-strategies" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Trademark Enforcement Strategies</a>
             <a href="/how-to-stop-trademark-infringement" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Stop Trademark Infringement</a>
             <a href="/expedited-process-of-trademark-filing" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Expedited Trademark Filing</a>
+            <a href="/what-to-do-if-someone-copies-your-trademark" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Trademark Copying Action Plan</a>
+            <a href="/legal-rights-of-trademark-owner-in-india" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Trademark Owner Legal Rights</a>
+            <a href="/how-to-stop-someone-using-your-brand-name" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Stop Brand Name Misuse</a>
+            <a href="/what-does-objected-mean-in-trademark-status" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Trademark Objected Meaning</a>
+            <a href="/protect-company-name-with-trademark" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Protect Company Name</a>
           </div>
         </div>
 

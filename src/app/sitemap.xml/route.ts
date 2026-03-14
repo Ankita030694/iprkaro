@@ -215,6 +215,11 @@ export async function GET() {
     '/trademark-enforcement-strategies',
     '/how-to-stop-trademark-infringement',
     '/expedited-process-of-trademark-filing',
+    '/what-to-do-if-someone-copies-your-trademark',
+    '/legal-rights-of-trademark-owner-in-india',
+    '/how-to-stop-someone-using-your-brand-name',
+    '/what-does-objected-mean-in-trademark-status',
+    '/protect-company-name-with-trademark',
   ].map(path => ({ path, priority: '0.8', changefreq: 'weekly' } as RouteConfig));
 
 

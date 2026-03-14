@@ -47,8 +47,7 @@ const TrademarkClasses: React.FC = () => {
         { name: 'Tobacco', slug: 'tobacco' },
         { name: 'Alcoholic Beverages', slug: 'alcoholic-drinks' },
         { name: 'Beverages', slug: 'beverages' },
-        { name: 'Education & Training', slug: 'education-and-training' },
-
+        { name: 'Education & Training', slug: 'education-and-training' }
     ];
 
     return (
