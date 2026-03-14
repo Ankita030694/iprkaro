@@ -2,13 +2,11 @@ import { AnalysisData } from '@/lib/dashboard-utils';
 
 interface MetricsSectionPDFPage2Props {
   analysisData: AnalysisData;
-  userName?: string;
   generatedDate?: string;
 }
 
 export default function MetricsSectionPDFPage2({ 
   analysisData,
-  userName = "Mr. XYZ",
   generatedDate = new Date().toLocaleDateString('en-GB')
 }: MetricsSectionPDFPage2Props) {
 
