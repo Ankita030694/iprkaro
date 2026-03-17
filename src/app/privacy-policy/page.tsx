@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Privacy Policy | Data Protection & Your Rights | IPR Karo',
@@ -202,9 +203,9 @@ const PrivacyPolicy: React.FC = () => {
         <div className="mt-6 text-center">
           <p className="text-gray-600">
             Also see our{' '}
-            <a href="/terms-and-conditions" className="text-cyan-600 hover:text-cyan-700 underline font-semibold">
-              Terms & Conditions
-            </a>
+            <Link href="/terms-and-conditions" className="text-cyan-600 hover:text-cyan-700 underline font-semibold">
+              terms and conditions
+            </Link>
           </p>
         </div>
       </div>

@@ -702,7 +702,7 @@ export default function TrademarkRightsPage() {
                                 <h3 className="text-lg font-black text-gray-900 mb-6 border-b-2 border-[rgb(110,94,147)] pb-4 uppercase tracking-widest font-normal">Rights Library</h3>
                                 <ul className="space-y-4 font-normal">
                                     <li>
-                                        <Link href="/can-two-trademarks-exist-in-different-classes" className="group flex items-center text-gray-600 hover:text-[rgb(110,94,147)] transition-all">
+                                        <Link href="/Can-two-trademarks-exist-in-different-classes-in-India" className="group flex items-center text-gray-600 hover:text-[rgb(110,94,147)] transition-all">
                                             <div className="w-2 h-2 bg-gray-300 rounded-full mr-4 group-hover:bg-[rgb(110,94,147)] transition-all"></div>
                                             <span className="font-bold text-xs uppercase tracking-tighter font-normal">Cross-Class Rights</span>
                                         </Link>
@@ -714,7 +714,7 @@ export default function TrademarkRightsPage() {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/Madrid-Protocol-In-India" className="group flex items-center text-gray-600 hover:text-[rgb(110,94,147)] transition-all">
+                                        <Link href="/how-to-file-international-trademark-madrid-protocol-from-india" className="group flex items-center text-gray-600 hover:text-[rgb(110,94,147)] transition-all">
                                             <div className="w-2 h-2 bg-gray-300 rounded-full mr-4 group-hover:bg-[rgb(110,94,147)] transition-all"></div>
                                             <span className="font-bold text-xs uppercase tracking-tighter font-normal">Global Rights Guide</span>
                                         </Link>

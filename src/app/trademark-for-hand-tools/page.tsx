@@ -724,7 +724,7 @@ export default function TrademarkHandToolsPage() {
                                     {[
                                         { label: 'Machinery IP (Class 7)', link: '/trademark-for-machinery' },
                                         { label: 'Metal Goods IP', link: '/trademark-for-metal-goods' },
-                                        { label: 'Jewellery Branding', link: '/trademark-classes/class-14' },
+                                        { label: 'Jewellery Branding', link: '/trademark-for-jewellery-brand' },
                                         { label: 'Startup Hub', link: '/want-to-register-trademark-for-startup' }
                                     ].map((item, idx) => (
                                         <li key={idx}>

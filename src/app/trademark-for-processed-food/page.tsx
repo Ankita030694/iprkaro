@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
 import { Metadata } from 'next';
@@ -809,11 +809,16 @@ export default function TrademarkForProcessedFoodPage() {
                             <div className="bg-gray-50 p-10 rounded-[2.5rem] shadow-sm border border-gray-100">
                                 <h3 className="text-sm font-black text-gray-900 mb-8 border-b-2 border-[rgb(110,94,147)] pb-4 uppercase tracking-widest">Related Sectors</h3>
                                 <ul className="space-y-6">
-                                    {['Restaurant', 'Oils & Lubricants', 'Cosmetics', 'FMCG Startups'].map((item, idx) => (
+                                    {[
+                                        { label: 'Restaurant', href: '/trademark-for-restaurant' },
+                                        { label: 'Oils & Lubricants', href: '/trademark-for-oils-and-lubricants' },
+                                        { label: 'Cosmetics', href: '/trademark-for-cosmetics-cleaning' },
+                                        { label: 'FMCG Startups', href: '/want-to-register-trademark-for-startup' }
+                                    ].map((item, idx) => (
                                         <li key={idx}>
-                                            <Link href={`/trademark-for-${item.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-')}`} className="group flex items-center text-gray-500 hover:text-[rgb(110,94,147)] transition-all">
+                                            <Link href={item.href} className="group flex items-center text-gray-500 hover:text-[rgb(110,94,147)] transition-all">
                                                 <div className="w-1.5 h-1.5 bg-gray-300 rounded-full mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:w-4 transition-all"></div>
-                                                <span className="font-bold text-sm">{item}</span>
+                                                <span className="font-bold text-sm">{item.label}</span>
                                             </Link>
                                         </li>
                                     ))}

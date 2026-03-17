@@ -173,7 +173,7 @@ export async function GET() {
     '/best-legal-firms-specializing-in-intellectual-property-in-india',
     '/guide-to-choosing-a-reliable-online-plarforms-for-ip-services-in-india',
     '/where-can-find-certified-trademark-agents-or-attorneys-near-me',
-    '/what-are-the-benifits-of-hiring-a-trademark-agent-in-india',
+    '/what-are-the-benefits-of-hiring-a-trademark-agent-in-india',
     '/compare-fees-for-various-online-trademark-registration-providers-in-india',
     '/trademark-for-firearms',
     '/trademark-for-musical-instruments',

@@ -697,8 +697,8 @@ export default function TrademarkMachineryPage() {
                                 <ul className="space-y-6">
                                     {[
                                         { label: 'Metal Goods IP', link: '/trademark-for-metal-goods' },
-                                        { label: 'Hand Tools branding', link: '/trademark-classes/class-8' },
-                                        { label: 'Car Motors IP', link: '/trademark-classes/class-12' },
+                                        { label: 'Hand Tools branding', link: '/trademark-for-hand-tools' },
+                                        { label: 'Car Motors IP', link: '/trademark-for-vehicles' },
                                         { label: 'Startup Filing', link: '/want-to-register-trademark-for-startup' }
                                     ].map((item, idx) => (
                                         <li key={idx}>

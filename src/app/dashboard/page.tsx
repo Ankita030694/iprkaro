@@ -1,5 +1,6 @@
 import { Suspense } from 'react';
 import { redirect } from 'next/navigation';
+import Link from 'next/link';
 
 import { fetchAnalysisData } from '@/lib/firebase-server';
 
@@ -33,9 +34,9 @@ async function DashboardContent({ searchParams }: DashboardPageProps) {
         <div className="text-center max-w-md mx-auto px-4">
           <i className="fas fa-exclamation-triangle text-yellow-500 text-5xl mb-4"></i>
           <h2 className="text-white font-nunito text-3xl mb-4">Analysis data not found</h2>
-          <a href="/" className="bg-[#FFB703] text-black px-6 py-3 rounded-lg font-nunito font-semibold hover:bg-[#e6a602] transition-colors">
+          <Link href="/" className="bg-[#FFB703] text-black px-6 py-3 rounded-lg font-nunito font-semibold hover:bg-[#e6a602] transition-colors">
             Return to Home
-          </a>
+          </Link>
         </div>
       </div>
     );

@@ -691,10 +691,10 @@ export default function TrademarkMetalGoodsPage() {
                                 <h3 className="text-[10px] font-black text-gray-400 mb-8 uppercase tracking-[0.4em] border-b border-gray-200 pb-4">Industrial IP</h3>
                                 <ul className="space-y-6">
                                     {[
-                                        { label: 'Machines IP', link: '/trademark-classes/class-7' },
-                                        { label: 'Tools Branding', link: '/trademark-classes/class-8' },
-                                        { label: 'Electronics IP', link: '/trademark-classes/class-9' },
-                                        { label: 'Precious Metals', link: '/trademark-classes/class-14' }
+                                        { label: 'Machines IP', link: '/trademark-for-machinery' },
+                                        { label: 'Tools Branding', link: '/trademark-for-hand-tools' },
+                                        { label: 'Electronics IP', link: '/trademark-for-electronics-and-software' },
+                                        { label: 'Precious Metals', link: '/trademark-for-jewellery-brand' }
                                     ].map((item, idx) => (
                                         <li key={idx}>
                                             <Link href={item.link} className="group flex items-center text-gray-500 hover:text-[rgb(110,94,147)] transition-all">

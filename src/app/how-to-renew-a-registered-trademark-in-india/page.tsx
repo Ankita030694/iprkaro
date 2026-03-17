@@ -549,7 +549,7 @@ export default function TrademarkRenewalPage() {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/trademark-registration-in-india" className="group flex items-center text-gray-700 hover:text-[#6E5E93] transition-all">
+                                        <Link href="/trademark-registration-india" className="group flex items-center text-gray-700 hover:text-[#6E5E93] transition-all">
                                             <div className="w-2 h-2 bg-gray-300 rounded-full mr-4 group-hover:bg-[#6E5E93] transition-all"></div>
                                             <span className="font-medium text-sm">Unified Filing Guide</span>
                                         </Link>

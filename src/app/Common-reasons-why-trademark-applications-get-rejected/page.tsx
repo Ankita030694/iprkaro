@@ -639,7 +639,7 @@ export default function TrademarkRejectionReasonsPage() {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/what-happens-after-trademark-opposition-is-filed" className="group flex items-center text-gray-600 hover:text-[rgb(157,78,221)] transition-all">
+                                        <Link href="/What-happens-after-trademark-opposition-is-filed" className="group flex items-center text-gray-600 hover:text-[rgb(157,78,221)] transition-all">
                                             <div className="w-2 h-2 bg-gray-300 rounded-full mr-4 group-hover:bg-[rgb(157,78,221)] transition-all"></div>
                                             <span className="font-bold text-xs uppercase tracking-tighter">Post-Opposition Flow</span>
                                         </Link>

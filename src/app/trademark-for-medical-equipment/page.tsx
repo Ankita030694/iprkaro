@@ -744,7 +744,7 @@ export default function TrademarkForMedicalEquipmentPage() {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/trademark-for-cosmetics" className="group flex items-center text-gray-600 hover:text-[rgb(110,94,147)] transition-all">
+                                        <Link href="/trademark-for-cosmetics-cleaning" className="group flex items-center text-gray-600 hover:text-[rgb(110,94,147)] transition-all">
                                             <div className="w-2 h-2 bg-gray-300 rounded-full mr-4 group-hover:bg-[rgb(110,94,147)] transition-all"></div>
                                             <span className="font-bold text-sm">Class 3 Cosmetics</span>
                                         </Link>

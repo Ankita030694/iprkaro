@@ -712,7 +712,7 @@ export default function OnlineIPPlatformsGuidePage() {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/trademark-registration-online-india" className="group flex items-center text-gray-700 hover:text-[#6E5E93] transition-all">
+                                        <Link href="/online-trademark-registration" className="group flex items-center text-gray-700 hover:text-[#6E5E93] transition-all">
                                             <div className="w-2 h-2 bg-gray-300 rounded-full mr-4 group-hover:bg-[#6E5E93] transition-all"></div>
                                             <span className="font-medium text-sm">Online TM Process</span>
                                         </Link>

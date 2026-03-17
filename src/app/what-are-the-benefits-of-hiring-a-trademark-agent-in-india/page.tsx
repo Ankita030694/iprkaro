@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     title: 'What are the Benefits of Hiring a Trademark Agent in India? | 2026 Guide',
     description: 'Discover the critical benefits of hiring a trademark agent in India. Learn how professional representation from IPR Karo and AMA Legal secures your brand assets.',
     keywords: [
-        'what are the benifits of hiring a trademark agent in india',
+        'what are the benefits of hiring a trademark agent in india',
         'benefits of trademark agent india',
         'why hire trademark lawyer india',
         'trademark registration benefits india',
@@ -56,11 +56,11 @@ export const metadata: Metadata = {
     openGraph: {
         title: 'What are the Benefits of Hiring a Trademark Agent in India? | Official 2026 Insights',
         description: 'The definitive 5000-word guide on why professional trademark representation is essential in Bharat. Explore the expertise of IPR Karo and AMA Legal Solutions.',
-        url: 'https://www.iprkaro.com/what-are-the-benifits-of-hiring-a-trademark-agent-in-india',
+        url: 'https://www.iprkaro.com/what-are-the-benefits-of-hiring-a-trademark-agent-in-india',
         type: 'article',
     },
     alternates: {
-        canonical: 'https://www.iprkaro.com/what-are-the-benifits-of-hiring-a-trademark-agent-in-india',
+        canonical: 'https://www.iprkaro.com/what-are-the-benefits-of-hiring-a-trademark-agent-in-india',
     },
 };
 
@@ -179,7 +179,7 @@ const faqs = [
 
 export default function TrademarkAgentBenefitsPage() {
     const breadcrumbItems = [
-        { label: "Benefits of Trademark Agent", href: "/what-are-the-benifits-of-hiring-a-trademark-agent-in-india" },
+        { label: "Benefits of Trademark Agent", href: "/what-are-the-benefits-of-hiring-a-trademark-agent-in-india" },
     ];
 
     const breadcrumbSchema = {
@@ -196,7 +196,7 @@ export default function TrademarkAgentBenefitsPage() {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Benefits of Hiring a Trademark Agent",
-                "item": "https://www.iprkaro.com/what-are-the-benifits-of-hiring-a-trademark-agent-in-india"
+                "item": "https://www.iprkaro.com/what-are-the-benefits-of-hiring-a-trademark-agent-in-india"
             }
         ]
     };
@@ -234,7 +234,7 @@ export default function TrademarkAgentBenefitsPage() {
         "datePublished": "2026-02-24",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https://www.iprkaro.com/what-are-the-benifits-of-hiring-a-trademark-agent-in-india"
+            "@id": "https://www.iprkaro.com/what-are-the-benefits-of-hiring-a-trademark-agent-in-india"
         }
     };
 
@@ -929,13 +929,13 @@ export default function TrademarkAgentBenefitsPage() {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/trademark-registration-in-india" className="group flex items-center text-gray-700 hover:text-[#6E5E93] transition-all">
+                                        <Link href="/trademark-registration-india" className="group flex items-center text-gray-700 hover:text-[#6E5E93] transition-all">
                                             <div className="w-2 h-2 bg-gray-300 rounded-full mr-4 group-hover:bg-[#6E5E93] transition-all"></div>
                                             <span className="font-medium text-sm">Full Registration Guide</span>
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/trademark-objection-reply" className="group flex items-center text-gray-700 hover:text-[#6E5E93] transition-all">
+                                        <Link href="/trademark-objection-reply-format-india" className="group flex items-center text-gray-700 hover:text-[#6E5E93] transition-all">
                                             <div className="w-2 h-2 bg-gray-300 rounded-full mr-4 group-hover:bg-[#6E5E93] transition-all"></div>
                                             <span className="font-medium text-sm">Handling Objections</span>
                                         </Link>

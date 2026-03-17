@@ -628,19 +628,19 @@ export default function LogoProtectionCostPage() {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/msme-registration-benefits" className="group flex items-center text-gray-700 hover:text-[#6E5E93] transition-all">
+                                        <Link href="/what-documents-are-needed-to-apply-for-trademark-registration-for-a-service#msme-startup-docs" className="group flex items-center text-gray-700 hover:text-[#6E5E93] transition-all">
                                             <div className="w-2 h-2 bg-gray-300 rounded-full mr-4 group-hover:bg-[#6E5E93] transition-all"></div>
                                             <span className="font-medium text-sm text-justify">Rebate Eligibility</span>
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/trademark-journal-monitoring" className="group flex items-center text-gray-700 hover:text-[#6E5E93] transition-all">
+                                        <Link href="/what-are-the-benefits-of-hiring-a-trademark-agent-in-india#watch-services" className="group flex items-center text-gray-700 hover:text-[#6E5E93] transition-all">
                                             <div className="w-2 h-2 bg-gray-300 rounded-full mr-4 group-hover:bg-[#6E5E93] transition-all"></div>
                                             <span className="font-medium text-sm text-justify">Monitoring Costs</span>
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/trademark-registration-in-india" className="group flex items-center text-gray-700 hover:text-[#6E5E93] transition-all">
+                                        <Link href="/trademark-registration-india" className="group flex items-center text-gray-700 hover:text-[#6E5E93] transition-all">
                                             <div className="w-2 h-2 bg-gray-300 rounded-full mr-4 group-hover:bg-[#6E5E93] transition-all"></div>
                                             <span className="font-medium text-sm text-justify">Registration Overview</span>
                                         </Link>

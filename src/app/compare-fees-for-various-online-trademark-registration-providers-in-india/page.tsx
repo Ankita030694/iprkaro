@@ -971,7 +971,7 @@ export default function FeesComparisonPage() {
                                 <h3 className="text-xl font-bold text-[#0C002B] mb-6 border-b pb-4">Related Search</h3>
                                 <ul className="space-y-4">
                                     <li>
-                                        <Link href="/what-are-the-benifits-of-hiring-a-trademark-agent-in-india" className="group flex items-center text-gray-700 hover:text-[#6E5E93] transition-all">
+                                        <Link href="/what-are-the-benefits-of-hiring-a-trademark-agent-in-india" className="group flex items-center text-gray-700 hover:text-[#6E5E93] transition-all">
                                             <div className="w-2 h-2 bg-gray-300 rounded-full mr-4 group-hover:bg-[#6E5E93] transition-all"></div>
                                             <span className="font-medium text-sm">Benefits of an Agent</span>
                                         </Link>
@@ -989,7 +989,7 @@ export default function FeesComparisonPage() {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/trademark-registration-in-india" className="group flex items-center text-gray-700 hover:text-[#6E5E93] transition-all">
+                                        <Link href="/trademark-registration-india" className="group flex items-center text-gray-700 hover:text-[#6E5E93] transition-all">
                                             <div className="w-2 h-2 bg-gray-300 rounded-full mr-4 group-hover:bg-[#6E5E93] transition-all"></div>
                                             <span className="font-medium text-sm">Official Process Guide</span>
                                         </Link>
