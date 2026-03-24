@@ -27,16 +27,37 @@ async function DashboardContent({ searchParams }: DashboardPageProps) {
 
   if (!analysisData) {
     return (
-      <div className="min-h-screen pt-20 flex items-center justify-center" style={{ 
+      <div className="min-h-screen pt-20 flex items-center justify-center p-4" style={{ 
         background: '#0C002B',
         backgroundImage: 'linear-gradient(to right top, #0c002b, #0c002b,rgb(25, 10, 60),rgb(80, 60, 124),rgb(79, 75, 75))',
       }}>
-        <div className="text-center max-w-md mx-auto px-4">
-          <i className="fas fa-exclamation-triangle text-yellow-500 text-5xl mb-4"></i>
-          <h2 className="text-white font-nunito text-3xl mb-4">Analysis data not found</h2>
-          <Link href="/" className="bg-[#FFB703] text-black px-6 py-3 rounded-lg font-nunito font-semibold hover:bg-[#e6a602] transition-colors">
-            Return to Home
-          </Link>
+        <div 
+          className="text-center max-w-lg mx-auto px-8 py-10 rounded-[30px] border-2 border-white/10 backdrop-blur-md"
+          style={{ background: 'rgba(255, 255, 255, 0.03)' }}
+        >
+          <div className="w-20 h-20 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i className="fas fa-search text-red-500 text-3xl"></i>
+          </div>
+          <h2 className="text-white font-nunito text-3xl font-bold mb-4">Analysis Not Found</h2>
+          <p className="text-white/70 font-nunito mb-8 leading-relaxed">
+            We couldn't find analysis data for <span className="text-[#FFB703] font-bold">"{trademark}"</span> 
+            {classNumber && <span> in <span className="text-[#FFB703] font-bold">Class {classNumber}</span></span>}.
+            This might happen if the analysis hasn't been completed yet.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              href={`/form?trademark=${encodeURIComponent(trademark || '')}&class=${encodeURIComponent(classNumber || '')}`}
+              className="bg-[#FFB703] text-[#0C002B] px-8 py-3 rounded-xl font-nunito font-bold hover:bg-[#e6a602] transition-all transform hover:scale-105 shadow-lg shadow-[#FFB703]/20"
+            >
+              Analyze Now
+            </Link>
+            <Link 
+              href="/" 
+              className="bg-white/10 text-white px-8 py-3 rounded-xl font-nunito font-semibold hover:bg-white/20 transition-all border border-white/10"
+            >
+              Back to Home
+            </Link>
+          </div>
         </div>
       </div>
     );

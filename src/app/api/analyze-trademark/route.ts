@@ -219,7 +219,8 @@ export async function POST(request: NextRequest) {
     }
 
     // Step 3: Normalize the document ID
-    docId = `${trademarkName.toLowerCase().trim()}_${classNumber}`;
+    const normalizedTrademark = trademarkName.toLowerCase().trim().replace(/\s+/g, ' ');
+    docId = `${normalizedTrademark}_${classNumber}`;
     console.log('📝 Document ID:', docId);
 
     // Step 4: Check Firebase cache

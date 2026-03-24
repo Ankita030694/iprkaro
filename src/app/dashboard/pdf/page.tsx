@@ -22,11 +22,14 @@ async function PDFContent({ searchParams }: PDFPageProps) {
 
   if (!analysisData) {
     return (
-      <div className="min-h-screen flex items-center justify-center" style={{ 
+      <div className="min-h-screen flex items-center justify-center p-4" style={{ 
         background: '#0C002B',
       }}>
-        <div className="text-center max-w-md mx-auto px-4">
-          <h2 className="text-white font-nunito text-3xl mb-4">Analysis data not found</h2>
+        <div className="text-center max-w-lg mx-auto px-8 py-10 rounded-2xl border-2 border-white/10" style={{ background: 'rgba(255, 255, 255, 0.03)' }}>
+          <h2 className="text-white font-nunito text-2xl font-bold mb-4">Report Not Found</h2>
+          <p className="text-white/60 font-nunito mb-0">
+            No analysis data found for "{trademark}" in Class {classNumber}.
+          </p>
         </div>
       </div>
     );

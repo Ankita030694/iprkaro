@@ -9,7 +9,8 @@ export async function fetchAnalysisData(trademark: string, classNumber: string):
     }
 
     // Normalize document ID
-    const docId = `${trademark.toLowerCase().trim()}_${classNumber}`;
+    const normalizedTrademark = trademark.toLowerCase().trim().replace(/\s+/g, ' ');
+    const docId = `${normalizedTrademark}_${classNumber}`;
     const searchResultsRef = collection(db, 'searchResults');
     const docRef = doc(searchResultsRef, docId);
     const docSnap = await getDoc(docRef);
