@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const SparkIcon = ({ color }: { color: string }) => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -217,9 +218,11 @@ export default function WhatWeProtect() {
           })}
         </div>
 
-        <button className="mt-6 md:mt-24 bg-[#0C002B] text-white px-8 py-3.5 rounded-[12px] font-medium text-[16px] transition-all duration-300 hover:bg-[#1A0B42] active:scale-[0.98]">
-          Explore Everything
-        </button>
+        <Link href="/our-services">
+          <button className="mt-6 md:mt-24 bg-[#0C002B] text-white px-8 py-3.5 rounded-[12px] font-medium text-[16px] transition-all duration-300 hover:bg-[#1A0B42] active:scale-[0.98]">
+            Explore Everything
+          </button>
+        </Link>
       </div>
     </section>
   );
