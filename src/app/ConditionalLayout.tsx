@@ -1,7 +1,7 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
-import { Navbar, Footer } from '@/components';
+import { Navbar, NewFooter } from '@/components';
 import GlobalPopupForm from '@/components/common/GlobalPopupForm';
 import WhatsAppWidget from '@/components/WhatsAppWidget';
 
@@ -22,7 +22,7 @@ export default function ConditionalLayout({ children }: { children: React.ReactN
     <>
       <Navbar />
       {children}
-      <Footer />
+      <NewFooter />
       <WhatsAppWidget />
       <GlobalPopupForm />
     </>

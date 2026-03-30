@@ -1,4 +1,4 @@
-import { HeroSection, WhyTrademark, OurServices, SimplePlans, Faq, ReviewSnippets, StatesAndUTs, TrademarkClasses } from "@/components";
+import { HeroSection, WhyTrademark, OurServices, SimplePlans, Faq, ReviewSnippets, StatesAndUTs, TrademarkClasses, BrandGrid, ResultsGrid, SmarterDecisions, WhatWeProtect, CtaSection, BuiltToProtect, SimplePricing, FaqSection, NewFooter } from "@/components";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -131,7 +131,7 @@ export default function Home() {
   };
 
   return (
-    <>
+    <div className="home-page-font">
       {/* Server-side rendered FAQ Schema for Google Search Console */}
       <script
         type="application/ld+json"
@@ -147,16 +147,34 @@ export default function Home() {
       />
 
       <HeroSection />
-      <WhyTrademark />
+      
+      {/* Wrapper to prevent dark subpixel bleeding between white sections on mobile */}
+      <div className="w-full bg-white flex flex-col">
+        <BrandGrid />
+        <ResultsGrid />
+        <SmarterDecisions />
+        <WhatWeProtect />
+      </div>
+      
+      <CtaSection />
+      <BuiltToProtect />
+      <SimplePricing />
+      <FaqSection />
+      
+      {/* Wrapper to handle white sections cleanly */}
+      <div className="w-full bg-white flex flex-col">
+          <StatesAndUTs />
+          <TrademarkClasses />
+      </div>
+
+      {/* <WhyTrademark />
       <div className="-mt-10">
         <OurServices />
 
       </div>
       <ReviewSnippets />
       <SimplePlans />
-      <Faq />
-      <StatesAndUTs />
-      <TrademarkClasses />
-    </>
+     <Faq />*/}
+    </div> 
   );
 }

@@ -1,3 +1,4 @@
+@import url('https://fonts.cdnfonts.com/css/aileron');
 @import "tailwindcss";
 
 :root {
@@ -275,7 +276,13 @@ img, svg, picture {
   overflow-x: hidden;
 }
 
-/* Animated Gradient Text */
+/* Animated Gradient Flow Utility (Animation Only) */
+.animate-gradient {
+  background-size: 200% auto;
+  animation: gradientFlow 3s linear infinite;
+}
+
+/* Animated Gradient Text (With Default Colors) */
 .animated-gradient {
   background: linear-gradient(
     90deg,
@@ -285,11 +292,12 @@ img, svg, picture {
     #8A38F5 75%,
     #FFFFFF 100%
   );
-  background-size: 200% 100%;
+  background-size: 200% auto;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: gradientFlow 3s ease-in-out infinite;
+  display: inline-block;
+  animation: gradientFlow 3s linear infinite;
 }
 
 @keyframes gradientFlow {
@@ -755,3 +763,9 @@ textarea {
   }
 }
 
+/* Scoped Font for Home Page */
+.home-page-font {
+  --font-nunito: 'Aileron', sans-serif;
+  --font-sans: 'Aileron', sans-serif;
+  font-family: 'Aileron', sans-serif !important;
+}

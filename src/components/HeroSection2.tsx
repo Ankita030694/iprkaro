@@ -7,6 +7,7 @@ const ClientLogoSlider = dynamic(() => import('./ClientLogoSlider'));
 
 export default function HeroSection2() {
   const [mounted, setMounted] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   useEffect(() => {
     setMounted(true);
@@ -52,7 +53,7 @@ export default function HeroSection2() {
       </div>
 
       {/* Main Content Section */}
-      <div className="flex flex-col lg:flex-row w-full z-[60] px-4 lg:px-0 pt-20 lg:pt-32 pb-8" style={{ minHeight: 'calc(100vh - 120px)' }}>
+      <div className={`flex flex-col lg:flex-row w-full ${isDropdownOpen ? 'relative z-[110]' : 'z-[60]'} px-4 lg:px-0 pt-20 lg:pt-32 pb-8 transition-all duration-300`} style={{ minHeight: 'calc(100vh - 120px)' }}>
         
         {/* Mobile Layout */}
         <div className="flex flex-col justify-start items-center w-full h-full lg:hidden pt-12">
@@ -94,9 +95,9 @@ export default function HeroSection2() {
 
             {/* Search Bar */}
             <div 
-              className={`w-full mt-2 transition-all duration-700 delay-300 ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+              className={`w-full mt-2 transition-all duration-700 delay-300 ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'} ${isDropdownOpen ? 'relative z-[110]' : ''}`}
             >
-              <SearchClient />
+              <SearchClient onDropdownToggle={setIsDropdownOpen} />
             </div>
 
             {/* Secondary CTA */}
@@ -181,9 +182,9 @@ export default function HeroSection2() {
 
             {/* Search Bar */}
             <div 
-              className={`w-full mt-2 transition-all duration-700 delay-300 ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+              className={`w-full mt-2 transition-all duration-700 delay-300 ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'} ${isDropdownOpen ? 'relative z-[110]' : ''}`}
             >
-              <SearchClient />
+              <SearchClient onDropdownToggle={setIsDropdownOpen} />
             </div>
 
             {/* Secondary CTA */}

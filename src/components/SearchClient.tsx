@@ -1,13 +1,74 @@
 'use client';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
-export default function SearchClient() {
+const TRADEMARK_CLASSES = [
+  { number: 1, name: 'Chemicals' },
+  { number: 2, name: 'Paints' },
+  { number: 3, name: 'Cosmetics & Cleaning Products' },
+  { number: 4, name: 'Fuels & Industrial Oils' },
+  { number: 5, name: 'Pharmaceuticals & Medical Supplies' },
+  { number: 6, name: 'Metals & Metal Goods' },
+  { number: 7, name: 'Machinery' },
+  { number: 8, name: 'Hand Tools' },
+  { number: 9, name: 'Electronics & Software' },
+  { number: 10, name: 'Medical Instruments' },
+  { number: 11, name: 'Appliances (Lighting, Heating, Plumbing)' },
+  { number: 12, name: 'Vehicles' },
+  { number: 13, name: 'Firearms & Explosives' },
+  { number: 14, name: 'Jewelry & Precious Metals' },
+  { number: 15, name: 'Musical Instruments' },
+  { number: 16, name: 'Paper & Stationery' },
+  { number: 17, name: 'Rubber & Plastics' },
+  { number: 18, name: 'Leather Goods & Bags' },
+  { number: 19, name: 'Building Materials (Non-Metallic)' },
+  { number: 20, name: 'Furniture' },
+  { number: 21, name: 'Household Utensils & Kitchenware' },
+  { number: 22, name: 'Ropes, Nets & Sacks' },
+  { number: 23, name: 'Yarns & Threads' },
+  { number: 24, name: 'Fabrics & Textiles' },
+  { number: 25, name: 'Clothing, Footwear & Headgear' },
+  { number: 26, name: 'Lace, Embroidery & Accessories' },
+  { number: 27, name: 'Carpets & Floor Coverings' },
+  { number: 28, name: 'Toys, Games & Sporting Goods' },
+  { number: 29, name: 'Foodstuffs (Meat, Fish, Dairy, Preserves)' },
+  { number: 30, name: 'Foodstuffs (Staples: Coffee, Tea, Flour, Spices)' },
+  { number: 31, name: 'Agricultural Products (Fresh Fruits, Vegetables, Grains)' },
+  { number: 32, name: 'Beers & Non-Alcoholic Beverages' },
+  { number: 33, name: 'Alcoholic Beverages (Except Beer)' },
+  { number: 34, name: 'Tobacco, Smokers\' Articles & Matches' },
+  { number: 35, name: 'Business & Management Services' },
+  { number: 36, name: 'Financial & Insurance Services' },
+  { number: 37, name: 'Construction & Repair Services' },
+  { number: 38, name: 'Telecommunications Services' },
+  { number: 39, name: 'Transport & Storage Services' },
+  { number: 40, name: 'Treatment of Materials (Manufacturing, Processing)' },
+  { number: 41, name: 'Education & Training Services' },
+  { number: 42, name: 'Scientific & IT Services (Technology, Software, Research)' },
+  { number: 43, name: 'Hospitality (Restaurants, Hotels, Catering)' },
+  { number: 44, name: 'Medical & Veterinary Services' },
+  { number: 45, name: 'Legal & Security Services' }
+];
+
+export default function SearchClient({ 
+  variant = 'light',
+  onDropdownToggle 
+}: { 
+  variant?: 'light' | 'dark',
+  onDropdownToggle?: (isOpen: boolean) => void
+}) {
   const router = useRouter();
   const [searchTerm, setSearchTerm] = useState('');
   const [trademarkClass, setTrademarkClass] = useState('');
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
   const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    onDropdownToggle?.(isDropdownOpen);
+  }, [isDropdownOpen, onDropdownToggle]);
 
   const handleSearch = async () => {
     const normalizedTrademark = searchTerm.trim();
@@ -47,123 +108,178 @@ export default function SearchClient() {
     }
   };
 
-  const handleClassChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setTrademarkClass(e.target.value);
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsDropdownOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  const handleClassSelect = (value: string) => {
+    setTrademarkClass(value);
+    setIsDropdownOpen(false);
   };
 
   return (
-    <>
-      {/* Search Bar */}
-      <div className="w-full max-w-2xl lg:max-w-2xl relative mt-4 lg:mt-7 px-4 lg:px-0">
-        <div className="flex flex-col lg:flex-row gap-3 lg:gap-4">
-          {/* Trademark Name Input */}
-          <div className="relative flex-1">
-            <input
-              type="text"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              onKeyDown={handleKeyPress}
-              placeholder="Enter trademark name"
-              className="w-full px-4 lg:px-6 py-3 rounded-[15px] bg-[rgba(255,255,255,0.2)] backdrop-blur-sm border border-[rgba(255,255,255,0.2)] text-[#F8F9FA] placeholder-[rgba(248,249,250,0.6)] focus:outline-none focus:ring-2 focus:ring-[#FFB703] focus:border-[#FFB703] transition-all duration-300 text-[14px] lg:text-[16px] font-nunito"
-              disabled={isSubmitting}
-            />
-          </div>
+    <div className="w-full max-w-[700px] mx-auto flex flex-col items-center relative z-20">
+      <div className="w-full rounded-[12px] shadow-[0_15px_30px_rgba(0,0,0,0.06)] border border-white/10 relative">
 
-          {/* Trademark Class Dropdown */}
-          <div className="relative lg:w-48">
-            <select
-              value={trademarkClass}
-              onChange={handleClassChange}
-              className="w-full px-4 lg:px-6 py-3 rounded-[15px] bg-[rgba(255,255,255,0.2)] backdrop-blur-sm border border-[rgba(255,255,255,0.2)] text-[#F8F9FA] focus:outline-none focus:ring-2 focus:ring-[#FFB703] focus:border-[#FFB703] transition-all duration-300 text-[14px] lg:text-[16px] font-nunito appearance-none cursor-pointer"
+        {/* ── MOBILE: input+select row ── DESKTOP: single flex row with button ── */}
+        <div className={`rounded-t-[12px] ${variant === 'dark' ? 'bg-[#2D2D2D]' : 'bg-white'}`}>
+
+          {/* Row 1 on mobile: Input + Select side by side | Row 1 on desktop: Input + Select + Button */}
+          <div className="flex items-center p-2 gap-1.5">
+            <div className="flex-1 flex items-center px-3">
+              <input
+                type="text"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                onKeyDown={handleKeyPress}
+                placeholder="Enter your brand name"
+                className={`w-full bg-transparent border-none focus:outline-none text-[14px] md:text-[16px] lg:text-[17px] font-medium placeholder-[#9CA3AF] my-2 md:my-0 ${
+                  variant === 'dark' ? 'text-white' : 'text-[#0C002B]'
+                }`}
+                disabled={isSubmitting}
+              />
+            </div>
+
+            {/* Vertical Divider */}
+            <div className={`h-6 w-px flex-shrink-0 ${variant === 'dark' ? 'bg-white/20' : 'bg-gray-200'}`}></div>
+
+            <div className="relative flex-shrink-0 px-3 md:px-4" ref={dropdownRef}>
+              {/* Native Select Overlay for Mobile */}
+              <select
+                className="md:hidden absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
+                value={trademarkClass}
+                onChange={(e) => handleClassSelect(e.target.value)}
+                disabled={isSubmitting}
+                aria-label="Select Trademark Class"
+              >
+                <option value="" disabled>Select Class</option>
+                {TRADEMARK_CLASSES.map((tmClass) => (
+                  <option key={tmClass.number} value={tmClass.number.toString()}>
+                    Class {tmClass.number} - {tmClass.name}
+                  </option>
+                ))}
+              </select>
+
+              {/* Visual Trigger */}
+              <div 
+                onClick={() => !isSubmitting && setIsDropdownOpen(!isDropdownOpen)}
+                className={`w-[110px] md:w-[130px] h-full flex items-center justify-between gap-1 text-[13px] font-medium cursor-pointer transition-all duration-200 py-2 ${
+                  variant === 'dark' ? 'text-white' : 'text-[#0C002B]'
+                }`}
+              >
+                <span className="truncate">
+                  {trademarkClass ? `Class ${trademarkClass}` : 'Select Class'}
+                </span>
+                <svg 
+                  className={`w-3.5 h-3.5 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} 
+                  fill="none" 
+                  viewBox="0 0 24 24" 
+                  stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+
+              {/* Custom Dropdown Menu (Desktop Only) */}
+              {isDropdownOpen && (
+                <div className="hidden md:block absolute bottom-[calc(100%+12px)] left-0 md:left-auto md:right-0 w-[280px] md:w-[320px] bg-white rounded-xl shadow-[0_-10px_40px_rgba(0,0,0,0.15)] border border-gray-100 overflow-hidden z-[60] animate-in fade-in slide-in-from-bottom-2 duration-200 text-left">
+                  <div className="bg-[#1345C3] px-4 py-2.5">
+                    <span className="text-white text-[10px] font-bold">Select Class</span>
+                  </div>
+                  <div className="max-h-[300px] overflow-y-auto custom-scrollbar">
+                    {TRADEMARK_CLASSES.map((tmClass) => (
+                      <div 
+                        key={tmClass.number}
+                        onClick={() => handleClassSelect(tmClass.number.toString())}
+                        className={`px-4 py-3 cursor-pointer hover:bg-blue-50 transition-colors flex flex-col gap-0.5 border-b border-gray-50 last:border-0 ${
+                          trademarkClass === tmClass.number.toString() ? 'bg-blue-50/50' : ''
+                        }`}
+                      >
+                        <span className="text-[#1345C3] font-bold text-[14px]">
+                          Class {tmClass.number} - {tmClass.name}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Desktop-only inline button */}
+            <button
+              onClick={() => void handleSearch()}
               disabled={isSubmitting}
-              style={{
-                backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23F8F9FA' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e")`,
-                backgroundPosition: 'right 12px center',
-                backgroundRepeat: 'no-repeat',
-                backgroundSize: '16px'
-              }}
+              className={`hidden md:block px-5 md:px-6 py-2.5 rounded-[10px] font-semibold text-[13px] transition-all duration-300 active:scale-[0.98] whitespace-nowrap ${
+                variant === 'dark' 
+                  ? 'bg-white text-[#0C002B] hover:bg-white/90 shadow-lg' 
+                  : 'bg-[#0C002B] text-white hover:bg-[#1A0B42]'
+              }`}
             >
-              <option value="" className="bg-[#0C002B] text-white">Select Class</option>
-              <option value="1" className="bg-[#0C002B] text-white">Class 1 - Chemicals</option>
-              <option value="2" className="bg-[#0C002B] text-white">Class 2 - Paints</option>
-              <option value="3" className="bg-[#0C002B] text-white">Class 3 - Cosmetics & Cleaning Products</option>
-              <option value="4" className="bg-[#0C002B] text-white">Class 4 - Fuels & Industrial Oils</option>
-              <option value="5" className="bg-[#0C002B] text-white">Class 5 - Pharmaceuticals & Medical Supplies</option>
-              <option value="6" className="bg-[#0C002B] text-white">Class 6 - Metals & Metal Goods</option>
-              <option value="7" className="bg-[#0C002B] text-white">Class 7 - Machinery</option>
-              <option value="8" className="bg-[#0C002B] text-white">Class 8 - Hand Tools</option>
-              <option value="9" className="bg-[#0C002B] text-white">Class 9 - Electronics & Software</option>
-              <option value="10" className="bg-[#0C002B] text-white">Class 10 - Medical Instruments</option>
-              <option value="11" className="bg-[#0C002B] text-white">Class 11 - Appliances (Lighting, Heating, Plumbing)</option>
-              <option value="12" className="bg-[#0C002B] text-white">Class 12 - Vehicles</option>
-              <option value="13" className="bg-[#0C002B] text-white">Class 13 - Firearms & Explosives</option>
-              <option value="14" className="bg-[#0C002B] text-white">Class 14 - Jewelry & Precious Metals</option>
-              <option value="15" className="bg-[#0C002B] text-white">Class 15 - Musical Instruments</option>
-              <option value="16" className="bg-[#0C002B] text-white">Class 16 - Paper & Stationery</option>
-              <option value="17" className="bg-[#0C002B] text-white">Class 17 - Rubber & Plastics</option>
-              <option value="18" className="bg-[#0C002B] text-white">Class 18 - Leather Goods & Bags</option>
-              <option value="19" className="bg-[#0C002B] text-white">Class 19 - Building Materials (Non-Metallic)</option>
-              <option value="20" className="bg-[#0C002B] text-white">Class 20 - Furniture</option>
-              <option value="21" className="bg-[#0C002B] text-white">Class 21 - Household Utensils & Kitchenware</option>
-              <option value="22" className="bg-[#0C002B] text-white">Class 22 - Ropes, Nets & Sacks</option>
-              <option value="23" className="bg-[#0C002B] text-white">Class 23 - Yarns & Threads</option>
-              <option value="24" className="bg-[#0C002B] text-white">Class 24 - Fabrics & Textiles</option>
-              <option value="25" className="bg-[#0C002B] text-white">Class 25 - Clothing, Footwear & Headgear</option>
-              <option value="26" className="bg-[#0C002B] text-white">Class 26 - Lace, Embroidery & Accessories</option>
-              <option value="27" className="bg-[#0C002B] text-white">Class 27 - Carpets & Floor Coverings</option>
-              <option value="28" className="bg-[#0C002B] text-white">Class 28 - Toys, Games & Sporting Goods</option>
-              <option value="29" className="bg-[#0C002B] text-white">Class 29 - Foodstuffs (Meat, Fish, Dairy, Preserves)</option>
-              <option value="30" className="bg-[#0C002B] text-white">Class 30 - Foodstuffs (Staples: Coffee, Tea, Flour, Spices)</option>
-              <option value="31" className="bg-[#0C002B] text-white">Class 31 - Agricultural Products (Fresh Fruits, Vegetables, Grains)</option>
-              <option value="32" className="bg-[#0C002B] text-white">Class 32 - Beers & Non-Alcoholic Beverages</option>
-              <option value="33" className="bg-[#0C002B] text-white">Class 33 - Alcoholic Beverages (Except Beer)</option>
-              <option value="34" className="bg-[#0C002B] text-white">Class 34 - Tobacco, Smokers' Articles & Matches</option>
-              <option value="35" className="bg-[#0C002B] text-white">Class 35 - Business & Management Services</option>
-              <option value="36" className="bg-[#0C002B] text-white">Class 36 - Financial & Insurance Services</option>
-              <option value="37" className="bg-[#0C002B] text-white">Class 37 - Construction & Repair Services</option>
-              <option value="38" className="bg-[#0C002B] text-white">Class 38 - Telecommunications Services</option>
-              <option value="39" className="bg-[#0C002B] text-white">Class 39 - Transport & Storage Services</option>
-              <option value="40" className="bg-[#0C002B] text-white">Class 40 - Treatment of Materials (Manufacturing, Processing)</option>
-              <option value="41" className="bg-[#0C002B] text-white">Class 41 - Education & Training Services</option>
-              <option value="42" className="bg-[#0C002B] text-white">Class 42 - Scientific & IT Services (Technology, Software, Research)</option>
-              <option value="43" className="bg-[#0C002B] text-white">Class 43 - Hospitality (Restaurants, Hotels, Catering)</option>
-              <option value="44" className="bg-[#0C002B] text-white">Class 44 - Medical & Veterinary Services</option>
-              <option value="45" className="bg-[#0C002B] text-white">Class 45 - Legal & Security Services</option>
-            </select>
+              {isSubmitting ? 'Generating...' : 'Generate Free Report'}
+            </button>
           </div>
 
-          {/* Search Button */}
-          <button
-            onClick={() => void handleSearch()}
-            disabled={isSubmitting}
-            className={`px-6 lg:px-10 py-3 rounded-[15px] transition-colors duration-300 text-[#170154] font-nunito font-semibold text-sm lg:text-base whitespace-nowrap ${
-              isSubmitting
-                ? 'bg-[#e6a602] opacity-70 cursor-not-allowed'
-                : 'bg-[#FFB703] hover:bg-[#e6a602]'
-            }`}
-          >
-            {isSubmitting ? (
-              <span className="flex items-center gap-2">
-                <i className="fa-solid fa-spinner fa-spin text-xs"></i>
-                Generating...
-              </span>
-            ) : (
-              'Search'
-            )}
-          </button>
+
         </div>
 
-        {error && (
-          <p className="mt-3 text-sm text-red-200 font-nunito" role="alert">
-            {error}
-          </p>
-        )}
+        {/* Bottom Row: Trust Badges */}
+        <div className={`rounded-b-[12px] ${variant === 'dark' ? 'bg-[#191919]' : 'bg-white/20 backdrop-blur-[20px] saturate-150 shadow-inner'} px-5 md:px-8 py-0.5 md:py-2.5 flex flex-wrap items-center justify-center md:justify-between gap-3 border-t border-white/5 overflow-hidden`}>
+          <div className="flex items-center gap-3">
+            {/* Google Logo */}
+            <div className="flex items-center text-[23px] font-bold tracking-tighter" style={{ fontFamily: 'Product Sans, sans-serif' }}>
+              <span className="text-[#4285F4]">G</span>
+              <span className="text-[#EA4335]">o</span>
+              <span className="text-[#FBBC05]">o</span>
+              <span className="text-[#4285F4]">g</span>
+              <span className="text-[#34A853]">l</span>
+              <span className="text-[#EA4335]">e</span>
+            </div>
+
+            {/* 5 Stars */}
+            <div className="flex items-center gap-[2px]">
+              {[...Array(5)].map((_, i) => (
+                <svg key={i} className="w-[15px] h-[15px] text-[#FBBF24] fill-current" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+          </div>
+
+          <div className={`${variant === 'dark' ? 'text-white' : 'text-[#374151]'} font-medium text-[15px]`}>
+            1,000+ founders trust us on <span className={variant === 'dark' ? 'text-[#FFB703]' : 'text-[#0C002B] font-bold'}>Google</span>
+          </div>
+        </div>
+      </div>
+      
+      {/* Separate Mobile Button */}
+      <div className="w-full md:hidden mt-4">
+        <button
+          onClick={() => void handleSearch()}
+          disabled={isSubmitting}
+          className={`w-full py-4 rounded-[12px] font-bold text-[16px] transition-all duration-300 active:scale-[0.98] shadow-lg ${
+            variant === 'dark' 
+              ? 'bg-white text-[#0C002B] hover:bg-white/90 shadow-white/10' 
+              : 'bg-[#0C002B] text-white hover:bg-[#1A0B42] shadow-[#0C002B]/20'
+          }`}
+        >
+          {isSubmitting ? 'Generating...' : 'Generate Free Report'}
+        </button>
       </div>
 
-      {/* Trademark Counter */}
-      {/* <div className="w-full flex justify-start">
-        <TrademarkCounter />
-      </div> */}
-    </>
+      {error && (
+        <div className="mt-4 bg-red-50 text-red-600 px-4 py-2 rounded-lg text-[14px] font-medium border border-red-100 flex items-center gap-2 max-w-md animate-bounce">
+          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          {error}
+        </div>
+      )}
+    </div>
   );
 }

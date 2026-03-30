@@ -46,13 +46,13 @@ const StatesAndUTs: React.FC = () => {
     ];
 
     return (
-        <section className="bg-[#0C002B] py-16 sm:py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 className="text-white font-nunito font-bold text-2xl sm:text-3xl md:text-4xl mb-12 text-center">
-                    We also <span className="text-[#FFB703]">serve in</span>
+        <section className="bg-white py-16 sm:py-24">
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 className="text-[#0C002B] font-nunito font-semibold text-[32px] md:text-[40px] mb-12 text-center tracking-tight">
+                    We also serve in
                 </h2>
 
-                <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-8 gap-3">
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4 md:gap-5">
                     {locations.map((loc, index) => {
                         const href = `/trademark-registration-in-${loc.slug}`;
 
@@ -62,8 +62,8 @@ const StatesAndUTs: React.FC = () => {
                                 href={href}
                                 className="group block"
                             >
-                                <div className="h-full bg-white/5 border border-white/10 rounded-lg px-2 py-3 flex items-center justify-center text-center transition-all duration-300 group-hover:bg-[#FFB703] group-hover:border-[#FFB703] group-hover:scale-105">
-                                    <span className="text-white font-nunito text-xs sm:text-sm font-medium transition-colors group-hover:text-[#0C002B]">
+                                <div className="h-full bg-white border border-gray-100 shadow-[0_4px_16px_rgba(0,0,0,0.06)] rounded-[12px] px-4 py-4 md:py-4 flex items-center justify-center text-center transition-all duration-300 group-hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] group-hover:-translate-y-1 group-hover:border-gray-200">
+                                    <span className="text-[#0C002B] font-nunito text-[14px] md:text-[15px] font-medium transition-colors">
                                         {loc.name}
                                     </span>
                                 </div>
