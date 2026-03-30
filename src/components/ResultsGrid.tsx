@@ -9,21 +9,24 @@ const testimonials = [
     quote: "Super smooth process. I checked and filed my trademark in minutes without any confusion.",
     author: "Anuj Anand Malik",
     role: "Founder",
+    founderImage: "/results/anuj.png",
     companyLogo: "/results/ama-logo.svg", // Stand-in for AMA Legal Solutions
   },
   {
     id: 't2',
     quote: "The AI report saved me from choosing a risky name. Honestly, this is a must-have tool.",
-    author: "Anuj Anand Malik",
+    author: "Lavanya",
     role: "Founder",
-    companyLogo: "/results/Credsettle Logo 3.svg", // Stand-in for CredSettle
+    founderImage: "/Lavanya.png",
+    companyLogo: "/clientlogos/15.png",
   },
   {
     id: 't3',
     quote: "Way faster than traditional agents. Everything was clear, transparent, and quick.",
-    author: "Anuj Anand Malik",
-    role: "Founder",
-    companyLogo: "/results/codewrote.svg", // Stand-in for CODE WROTE
+    author: "Akanksha",
+    role: "Senior Executive",
+    founderImage: "/akanksha.jpeg",
+    companyLogo: "/clientlogos/13.png",
   }
 ];
 
@@ -78,7 +81,7 @@ export default function ResultsGrid() {
             <div className="flex items-center justify-between pt-8">
               <div className="flex items-center gap-4">
                 <div className="bg-[#EBEBE4] w-16 h-16 rounded-2xl flex items-center justify-center overflow-hidden flex-shrink-0">
-                  <Image src="/results/anuj.png" alt={testimonials[0].author} width={64} height={64} className="object-cover mt-2 w-full h-full" />
+                  <Image src={testimonials[0].founderImage} alt={testimonials[0].author} width={64} height={64} className="object-cover mt-2 w-full h-full" />
                 </div>
                 <div>
                   <div className="text-[#0C002B] font-bold text-[14px]">{testimonials[0].author}</div>
@@ -103,14 +106,14 @@ export default function ResultsGrid() {
             <div className="flex items-center justify-between pt-8">
               <div className="flex items-center gap-4">
                 <div className="bg-[#EBEBE4] w-16 h-16 rounded-2xl flex items-center justify-center overflow-hidden flex-shrink-0">
-                  <Image src="/results/anuj.png" alt={testimonials[1].author} width={64} height={64} className="object-cover mt-2 w-full h-full" />
+                  <Image src={testimonials[1].founderImage} alt={testimonials[1].author} width={64} height={64} className="object-cover mt-2 w-full h-full" />
                 </div>
                 <div>
                   <div className="text-[#0C002B] font-bold text-[14px]">{testimonials[1].author}</div>
                   <div className="text-[#0C002B]/60 text-[13px]">{testimonials[1].role}</div>
                 </div>
               </div>
-              <Image src={testimonials[1].companyLogo} alt="Company Logo" width={100} height={30} className="object-contain opacity-80" />
+              <Image src={testimonials[1].companyLogo} alt="Company Logo" width={50} height={15} className="object-contain opacity-80" />
             </div>
           </motion.div>
 
@@ -180,7 +183,7 @@ export default function ResultsGrid() {
             <div className="flex items-center justify-between pt-8">
               <div className="flex items-center gap-3">
                 <div className="bg-[#EBEBE4] w-12 h-12 rounded-2xl flex items-center justify-center overflow-hidden flex-shrink-0">
-                  <Image src="/results/anuj.png" alt={testimonials[2].author} width={45} height={45} className="object-cover mt-2 w-full h-full" />
+                  <Image src={testimonials[2].founderImage} alt={testimonials[2].author} width={45} height={45} className="object-cover mt-2 w-full h-full" />
                 </div>
                 <div>
                   <div className="text-[#0C002B] font-bold text-[14px]">{testimonials[2].author}</div>
@@ -213,19 +216,19 @@ export default function ResultsGrid() {
           {/* Item 3 - Big (Testimonial) */}
           <div className="col-span-2 bg-[#F7F7FA] rounded-[24px] p-6 flex flex-col justify-between">
             <div className="text-[#0C002B] font-nunito text-[18px] leading-[1.4] font-medium mb-12">
-              “{testimonials[0].quote}”
+              “{testimonials[1].quote}”
             </div>
             <div className="flex items-center justify-between mt-auto">
               <div className="flex items-center gap-3">
                 <div className="bg-[#EBEBE4] w-14 h-14 rounded-2xl flex items-center justify-center overflow-hidden">
-                  <Image src="/results/anuj.png" alt={testimonials[0].author} width={56} height={56} className="object-cover mt-2 w-full h-full" />
+                  <Image src={testimonials[1].founderImage} alt={testimonials[1].author} width={56} height={56} className="object-cover mt-2 w-full h-full" />
                 </div>
                 <div>
-                  <div className="text-[#0C002B] font-bold text-[14px] leading-tight">{testimonials[0].author}</div>
-                  <div className="text-[#0C002B]/60 text-[13px]">{testimonials[0].role}</div>
+                  <div className="text-[#0C002B] font-bold text-[14px] leading-tight">{testimonials[1].author}</div>
+                  <div className="text-[#0C002B]/60 text-[13px]">{testimonials[1].role}</div>
                 </div>
               </div>
-              <Image src={testimonials[0].companyLogo} alt="Logo" width={90} height={30} className="object-contain opacity-80" />
+              <Image src={testimonials[1].companyLogo} alt="Logo" width={45} height={15} className="object-contain opacity-80" />
             </div>
           </div>
 
@@ -248,19 +251,19 @@ export default function ResultsGrid() {
           {/* Item 6 - Big (Testimonial/Another Card) */}
           <div className="col-span-2 bg-[#F7F7FA] rounded-[24px] p-6 flex flex-col justify-between">
             <div className="text-[#0C002B] font-nunito text-[18px] leading-[1.4] font-medium mb-12">
-              “{testimonials[0].quote}”
+              “{testimonials[2].quote}”
             </div>
             <div className="flex items-center justify-between mt-auto">
               <div className="flex items-center gap-3">
                 <div className="bg-[#EBEBE4] w-14 h-14 rounded-2xl flex items-center justify-center overflow-hidden">
-                  <Image src="/results/anuj.png" alt={testimonials[0].author} width={56} height={56} className="object-cover mt-2 w-full h-full" />
+                  <Image src={testimonials[2].founderImage} alt={testimonials[2].author} width={56} height={56} className="object-cover mt-2 w-full h-full" />
                 </div>
                 <div>
-                  <div className="text-[#0C002B] font-bold text-[14px] leading-tight">{testimonials[0].author}</div>
-                  <div className="text-[#0C002B]/60 text-[13px]">{testimonials[0].role}</div>
+                  <div className="text-[#0C002B] font-bold text-[14px] leading-tight">{testimonials[2].author}</div>
+                  <div className="text-[#0C002B]/60 text-[13px]">{testimonials[2].role}</div>
                 </div>
               </div>
-              <Image src={testimonials[0].companyLogo} alt="Logo" width={90} height={30} className="object-contain opacity-80" />
+              <Image src={testimonials[2].companyLogo} alt="Logo" width={90} height={30} className="object-contain opacity-80" />
             </div>
           </div>
 
