@@ -29,6 +29,7 @@ const queries = [
   { name: 'Trademark for Clothing Brand', href: '/trademark-for-clothing-brand' },
   { name: 'Trademark for Jewellery Brand', href: '/trademark-for-jewellery-brand' },
   { name: 'Trademark for Restaurant', href: '/trademark-for-restaurant' },
+  { name: 'Trademark for Cloud Kitchen', href: '/trademark-for-cloud-kitchen' },
   { name: 'Trademark for Business', href: '/trademark-for-business' },
   { name: 'Trademark for Stationary', href: '/trademark-for-stationary' },
   { name: 'Trademark for Furniture Shop', href: '/trademark-for-furniture-shop' },
@@ -131,8 +132,17 @@ const queries = [
   { name: 'Trademark Violation Examples India', href: '/trademark-violation-examples-india' },
   { name: 'Civil vs Criminal Trademark Infringement', href: '/civil-vs-criminal-trademark-infringement-india' },
   { name: 'How to File Trademark Rectification India', href: '/how-to-file-trademark-rectification-india' },
-  { name: 'Trademark Opposition Evidence Guide', href: '/what-evidence-is-required-in-trademark-opposition' }
-  
+  { name: 'Trademark Opposition Evidence Guide', href: '/what-evidence-is-required-in-trademark-opposition' },
+  { name: 'Trademark for Digital Marketing Agency', href: '/trademark-for-digital-marketing-agency' },
+  { name: 'Trademark for YouTube Channel', href: '/trademark-for-youtube-channel-name' },
+  { name: 'Trademark for Coaching Institute', href: '/trademark-for-coaching-institute' },
+  { name: 'Trademark for Real Estate Company', href: '/trademark-for-real-estate-company' },
+  { name: 'Trademark for Fintech Startup', href: '/trademark-for-fintech-startup' },
+  { name: 'Trademark for SaaS Product', href: '/trademark-for-saas-product' },
+  { name: 'Trademark for D2C Brand', href: '/trademark-for-d2c-brand-india' },
+  { name: 'Trademark for Cloud Kitchen', href: '/trademark-for-cloud-kitchen' },
+  { name: 'Trademark for Export Business', href: '/trademark-for-export-business' },
+  { name: 'Trademark for Instagram Brand', href: '/trademark-for-instagram-brand' },
 ];
 
 const NewFooter = () => {
@@ -156,10 +166,10 @@ const NewFooter = () => {
           <div className="lg:col-span-2">
             <Link href="/" className="inline-block mb-10">
               <div className="relative w-[240px] h-[60px]">
-                <Image 
-                  src="/Group 2 (2).svg" 
-                  alt="IPR KARO Logo" 
-                  fill 
+                <Image
+                  src="/Group 2 (2).svg"
+                  alt="IPR KARO Logo"
+                  fill
                   className="object-contain object-left"
                 />
               </div>
@@ -204,9 +214,9 @@ const NewFooter = () => {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-4">
             {queries.map((q, i) => (
-              <Link 
-                key={i} 
-                href={q.href} 
+              <Link
+                key={i}
+                href={q.href}
                 className="text-[13px] text-white/40 hover:text-white transition-all hover:translate-x-1 inline-block"
               >
                 {q.name}

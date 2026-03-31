@@ -57,6 +57,7 @@ export async function GET() {
     '/trademark-for-processed-food',
     '/trademark-for-business',
     '/trademark-for-chemicals',
+    '/trademark-for-fintech-startup',
     '/trademark-for-stationary',
     '/trademark-for-furniture-shop',
     '/trademark-for-kitchen-utensils',
@@ -68,6 +69,7 @@ export async function GET() {
     '/trademark-for-medical-services',
     '/trademark-registration-for-pharmaceuticals',
     '/trademark-for-ecommerce',
+    '/trademark-for-digital-marketing-agency',
     '/trademark-for-paints-coatings',
     '/trademark-for-cosmetics-cleaning',
     '/trademark-for-oils-and-lubricants',
@@ -237,6 +239,17 @@ export async function GET() {
     '/civil-vs-criminal-trademark-infringement-india',
     '/how-to-file-trademark-rectification-india',
     '/what-evidence-is-required-in-trademark-opposition',
+    '/trademark-for-youtube-channel-name',
+    '/trademark-for-instagram-brand',
+    '/trademark-for-coaching-institute',
+    '/trademark-for-saas-product',
+    '/trademark-for-cloud-kitchen',
+    '/trademark-for-export-business',
+    '/trademark-for-d2c-brand-india',
+    '/trademark-for-digital-marketing-agency',
+    '/trademark-for-fintech-startup',
+    '/trademark-for-real-estate-company'
+
   ].map(path => ({ path, priority: '0.8', changefreq: 'weekly' } as RouteConfig));
 
 

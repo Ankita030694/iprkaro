@@ -710,7 +710,9 @@ const Footer: React.FC = () => {
             <a href="/trademark-objected-what-to-do-next" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Trademark Objected: What to Do Next</a>
             <a href="/trademark-sent-for-examination-what-to-do" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Trademark Sent for Examination: What to Do</a>
             <a href="/trademark-marked-for-exam-meaning" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Trademark Marked for Exam Meaning</a>
+            <a href="/trademark-for-instagram-brand" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Trademark for Instagram Brand</a>
             <a href="/how-to-file-trademark-rectification-india" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">How to File Trademark Rectification India</a>
+            <a href="/trademark-for-saas-product" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Trademark for SaaS Product</a>
           </div>
         </div>
 
