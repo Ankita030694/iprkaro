@@ -220,6 +220,23 @@ export async function GET() {
     '/how-to-stop-someone-using-your-brand-name',
     '/what-does-objected-mean-in-trademark-status',
     '/protect-company-name-with-trademark',
+    '/trademark-objected-what-to-do-next',
+    '/trademark-sent-for-examination-what-to-do',
+    '/trademark-marked-for-exam-meaning',
+    '/trademark-accepted-but-advertised-meaning',
+    '/trademark-refused-what-are-options',
+    '/trademark-abandoned-how-to-restore',
+    '/trademark-opposed-what-happens-next-india',
+    '/trademark-hearing-notice-what-to-do',
+    '/trademark-discrepancy-meaning',
+    '/trademark-formalities-check-fail-meaning',
+    '/famous-trademark-infringement-cases-in-india',
+    '/penalty-for-trademark-infringement-india',
+    '/how-to-send-trademark-legal-notice-india',
+    '/trademark-violation-examples-india',
+    '/civil-vs-criminal-trademark-infringement-india',
+    '/how-to-file-trademark-rectification-india',
+    '/what-evidence-is-required-in-trademark-opposition',
   ].map(path => ({ path, priority: '0.8', changefreq: 'weekly' } as RouteConfig));
 
 

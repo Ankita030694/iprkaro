@@ -707,6 +707,10 @@ const Footer: React.FC = () => {
             <a href="/how-to-stop-someone-using-your-brand-name" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Stop Brand Name Misuse</a>
             <a href="/what-does-objected-mean-in-trademark-status" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Trademark Objected Meaning</a>
             <a href="/protect-company-name-with-trademark" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Protect Company Name</a>
+            <a href="/trademark-objected-what-to-do-next" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Trademark Objected: What to Do Next</a>
+            <a href="/trademark-sent-for-examination-what-to-do" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Trademark Sent for Examination: What to Do</a>
+            <a href="/trademark-marked-for-exam-meaning" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Trademark Marked for Exam Meaning</a>
+            <a href="/how-to-file-trademark-rectification-india" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">How to File Trademark Rectification India</a>
           </div>
         </div>
 

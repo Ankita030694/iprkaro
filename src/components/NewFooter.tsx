@@ -114,7 +114,25 @@ const queries = [
   { name: 'Trademark Owner Legal Rights', href: '/legal-rights-of-trademark-owner-in-india' },
   { name: 'Stop Brand Name Misuse', href: '/how-to-stop-someone-using-your-brand-name' },
   { name: 'Trademark Objected Meaning', href: '/what-does-objected-mean-in-trademark-status' },
-  { name: 'Protect Company Name', href: '/protect-company-name-with-trademark' }
+  { name: 'Protect Company Name', href: '/protect-company-name-with-trademark' },
+  { name: 'Trademark Objected: What to Do Next', href: '/trademark-objected-what-to-do-next' },
+  { name: 'Trademark Sent for Examination: What to Do', href: '/trademark-sent-for-examination-what-to-do' },
+  { name: 'Trademark Marked for Exam Meaning', href: '/trademark-marked-for-exam-meaning' },
+  { name: 'Trademark Accepted but Advertised Meaning', href: '/trademark-accepted-but-advertised-meaning' },
+  { name: 'Trademark Refused: What to Do', href: '/trademark-refused-what-are-options' },
+  { name: 'Trademark Abandoned: How to Restore', href: '/trademark-abandoned-how-to-restore' },
+  { name: 'Trademark Opposed: What Happens Next', href: '/trademark-opposed-what-happens-next-india' },
+  { name: 'Trademark Hearing Guide: What to Do', href: '/trademark-hearing-notice-what-to-do' },
+  { name: 'Trademark Discrepancy Meaning', href: '/trademark-discrepancy-meaning' },
+  { name: 'Trademark Formalities Check Fail Meaning', href: '/trademark-formalities-check-fail-meaning' },
+  { name: 'Famous Trademark Infringement Cases in India', href: '/famous-trademark-infringement-cases-in-india' },
+  { name: 'Penalty for Trademark Infringement India', href: '/penalty-for-trademark-infringement-india' },
+  { name: 'How to Send Trademark Legal Notice India', href: '/how-to-send-trademark-legal-notice-india' },
+  { name: 'Trademark Violation Examples India', href: '/trademark-violation-examples-india' },
+  { name: 'Civil vs Criminal Trademark Infringement', href: '/civil-vs-criminal-trademark-infringement-india' },
+  { name: 'How to File Trademark Rectification India', href: '/how-to-file-trademark-rectification-india' },
+  { name: 'Trademark Opposition Evidence Guide', href: '/what-evidence-is-required-in-trademark-opposition' }
+  
 ];
 
 const NewFooter = () => {
