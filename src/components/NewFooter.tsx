@@ -137,7 +137,7 @@ const NewFooter = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-12 md:gap-8 mb-24">
           <div className="lg:col-span-2">
             <Link href="/" className="inline-block mb-10">
-              <div className="relative w-[180px] h-[45px]">
+              <div className="relative w-[240px] h-[60px]">
                 <Image 
                   src="/Group 2 (2).svg" 
                   alt="IPR KARO Logo" 
@@ -202,7 +202,6 @@ const NewFooter = () => {
           <p className="text-white/40 text-[13px]">© 2025 reserved by IPR KARO</p>
           <div className="flex items-center gap-8">
             <Link href="/privacy-policy" className="text-white/40 hover:text-white text-[13px] transition-colors">Privacy Policy</Link>
-            <Link href="/terms-and-conditions" className="text-white/40 hover:text-white text-[13px] transition-colors">Term of Service</Link>
             <Link href="/terms-and-conditions" className="text-white/40 hover:text-white text-[13px] transition-colors">Term of Service</Link>
           </div>
         </div>
