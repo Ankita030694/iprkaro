@@ -63,10 +63,7 @@ export default function ThankYouPage() {
             Your Message Has Been Received
           </h2>
 
-          {/* Message */}
-          <p className="text-white/90 font-nunito text-sm sm:text-base mb-5 max-w-xl mx-auto leading-relaxed">
-            We appreciate you reaching out to IPR Karo. Our team of trademark experts will review your inquiry and get back to you within 2-4 hours during business hours.
-          </p>
+         
 
           {/* Additional Info */}
           <div className="bg-white/10 rounded-lg p-4 mb-5">
@@ -84,9 +81,27 @@ export default function ThankYouPage() {
               </li>
               <li className="flex items-start gap-2">
                 <i className="fas fa-circle-check text-[#FFB703] mt-0.5 flex-shrink-0 text-sm"></i>
+                <span>Our legal partner <strong className="text-[#FFB703]">AMA Legal Solutions</strong> will contact you</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <i className="fas fa-circle-check text-[#FFB703] mt-0.5 flex-shrink-0 text-sm"></i>
                 <span>We'll guide you through the trademark registration process</span>
               </li>
             </ul>
+
+            {/* Legal Partner Logo */}
+            <div className="mt-6 pt-4 border-t border-white/10 flex flex-col items-center">
+              <p className="text-white/50 text-[10px] uppercase tracking-widest mb-3 font-semibold">Our Legal Partner</p>
+              <div className="relative w-60 h-44">
+                <Image
+                  src="/clientlogos/7.png"
+                  alt="AMA Legal Solutions"
+                  fill
+                  className="object-contain brightness-0 invert contrast-150"
+                  priority
+                />
+              </div>
+            </div>
           </div>
 
           {/* Contact Info */}
