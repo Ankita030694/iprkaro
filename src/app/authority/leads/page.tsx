@@ -27,6 +27,13 @@ interface Lead {
     userAgent?: string;
     ip?: string;
     pageUrl?: string;
+    utm?: {
+      source?: string | null;
+      medium?: string | null;
+      campaign?: string | null;
+      term?: string | null;
+      content?: string | null;
+    };
   };
 }
 
@@ -759,6 +766,42 @@ export default function LeadsPage() {
                     <p className="text-sm text-gray-900 font-nunito"><strong>Name:</strong> {lead.name}</p>
                     <p className="text-sm text-gray-900 font-nunito"><strong>Email:</strong> {lead.email}</p>
                     <p className="text-sm text-gray-900 font-nunito"><strong>Phone:</strong> {lead.phone}</p>
+                  </div>
+                  <div className="border-t border-gray-200 pt-3">
+                    <p className="text-sm font-semibold text-gray-700 font-nunito mb-2">Tracking Information:</p>
+                    <div className="bg-blue-50/50 rounded-lg p-3 border border-blue-100 space-y-1.5">
+                      <p className="text-xs text-blue-900 font-nunito">
+                        <i className="fas fa-link mr-1.5 opacity-70"></i>
+                        <strong>Form URL:</strong> <span className="break-all">{lead.meta?.pageUrl || 'N/A'}</span>
+                      </p>
+                      
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1.5 mt-2 pt-2 border-t border-blue-100">
+                        <p className="text-xs text-blue-900 font-nunito">
+                          <i className="fas fa-bullhorn mr-1.5 opacity-70"></i>
+                          <strong>Source:</strong> {lead.meta?.utm?.source || (lead.meta?.utm ? 'N/A' : 'Direct')}
+                        </p>
+                        <p className="text-xs text-blue-900 font-nunito">
+                          <i className="fas fa-share-alt mr-1.5 opacity-70"></i>
+                          <strong>Medium:</strong> {lead.meta?.utm?.medium || 'N/A'}
+                        </p>
+                        <p className="text-xs text-blue-900 font-nunito">
+                          <i className="fas fa-flag mr-1.5 opacity-70"></i>
+                          <strong>Campaign:</strong> {lead.meta?.utm?.campaign || 'N/A'}
+                        </p>
+                        {lead.meta?.utm?.term && (
+                          <p className="text-xs text-blue-900 font-nunito">
+                            <i className="fas fa-keyboard mr-1.5 opacity-70"></i>
+                            <strong>Term:</strong> {lead.meta.utm.term}
+                          </p>
+                        )}
+                      </div>
+                      
+                      {lead.meta?.userAgent && (
+                        <p className="text-[10px] text-blue-800/60 font-nunito mt-1 truncate" title={lead.meta.userAgent}>
+                          <strong>UA:</strong> {lead.meta.userAgent}
+                        </p>
+                      )}
+                    </div>
                   </div>
                   <div className="border-t border-gray-200 pt-3">
                     <p className="text-sm font-semibold text-gray-700 font-nunito mb-2">Remarks:</p>

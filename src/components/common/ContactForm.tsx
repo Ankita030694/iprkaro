@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { db } from '@/lib/firebase';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { getUTMParameters } from '@/lib/utils';
 
 interface ContactFormProps {
   isPopup?: boolean;
@@ -116,7 +117,8 @@ export default function ContactForm({ isPopup = false, onSuccess }: ContactFormP
           fbp: fbp || null,
           fbc: fbc || null,
           userAgent: navigator.userAgent,
-          pageUrl: window.location.href
+          pageUrl: window.location.href,
+          utm: getUTMParameters()
         }
       });
 

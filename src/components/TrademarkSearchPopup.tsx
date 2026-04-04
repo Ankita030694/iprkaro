@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { db } from '@/lib/firebase';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { getUTMParameters } from '@/lib/utils';
 
 interface TrademarkSearchPopupProps {
   isOpen: boolean;
@@ -369,7 +370,8 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
           fbp: fbp || null,
           fbc: fbc || null,
           userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
-          pageUrl: typeof window !== 'undefined' ? window.location.href : 'unknown'
+          pageUrl: typeof window !== 'undefined' ? window.location.href : 'unknown',
+          utm: getUTMParameters()
         }
       });
 
