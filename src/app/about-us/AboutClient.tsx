@@ -156,17 +156,7 @@ export default function AboutClient() {
   };
 
   return (
-    <div
-      className="min-h-screen relative overflow-x-hidden"
-      style={{
-        backgroundImage: 'linear-gradient(to right top, #0c002b, #0c002b,rgb(25, 10, 60),rgb(92, 75, 130),rgb(91, 88, 88))',
-        backgroundSize: '100% 100%',
-        backgroundPosition: '10% 20%',
-        backgroundRepeat: 'no-repeat',
-        marginTop: '-100px',
-        paddingTop: '100px'
-      }}
-    >
+    <div className="home-page-font min-h-screen relative overflow-x-hidden bg-white">
       {/* Global styles for yellow hover effect */}
       <style jsx global>{`
         .icon-hover-yellow {
@@ -199,7 +189,7 @@ export default function AboutClient() {
           <h1
             className="font-bold text-center"
             style={{
-              color: '#FFF',
+              color: '#0C002B',
               fontFamily: 'Nunito',
               fontStyle: 'normal',
               fontWeight: 700,
@@ -231,7 +221,7 @@ export default function AboutClient() {
             <span
               className="font-semibold"
               style={{
-                color: '#FFF',
+                color: '#0C002B',
                 fontFamily: 'Nunito',
                 fontStyle: 'italic',
                 fontWeight: 600,
@@ -244,7 +234,7 @@ export default function AboutClient() {
             <span
               className="font-medium"
               style={{
-                color: '#FFF',
+                color: '#0C002B',
                 fontFamily: 'Nunito',
                 fontStyle: 'italic',
                 fontWeight: 500,
@@ -294,7 +284,7 @@ export default function AboutClient() {
               <h3
                 className="text-xl sm:text-2xl font-semibold"
                 style={{
-                  color: '#FFF',
+                  color: '#0C002B',
                   fontFamily: 'Nunito',
                   fontWeight: 600,
                   lineHeight: '1.3'
@@ -306,7 +296,7 @@ export default function AboutClient() {
               <p
                 className="text-base sm:text-lg"
                 style={{
-                  color: '#FFF',
+                  color: '#0C002B',
                   fontFamily: 'Nunito',
                   fontWeight: 400,
                   lineHeight: '1.6',
@@ -345,7 +335,7 @@ export default function AboutClient() {
             <h3
               className="text-xl sm:text-2xl font-semibold"
               style={{
-                color: '#FFF',
+                color: '#0C002B',
                 fontFamily: 'Nunito',
                 fontWeight: 600,
                 lineHeight: '1.3'
@@ -357,7 +347,7 @@ export default function AboutClient() {
             <p
               className="text-base sm:text-lg"
               style={{
-                color: '#FFF',
+                color: '#0C002B',
                 fontFamily: 'Nunito',
                 fontWeight: 400,
                 lineHeight: '1.6',
@@ -371,12 +361,12 @@ export default function AboutClient() {
       </div>
 
       {/* Our Clients Section */}
-      <div className="w-full py-16">
+      <div className="w-full py-16 bg-white">
         <div className="text-center mb-12">
           <h2 
             className="text-3xl sm:text-4xl lg:text-[42px] font-bold"
             style={{
-              color: '#FFF',
+              color: '#0C002B',
               fontFamily: 'Nunito',
               fontWeight: 700,
               lineHeight: '1.2'
@@ -388,18 +378,18 @@ export default function AboutClient() {
         
         {/* Mobile: Client Logos Slider */}
         <div className="block lg:hidden">
-          <ClientLogoSlider useWhiteLogos={true} />
+          <ClientLogoSlider useWhiteLogos={false} />
         </div>
 
         {/* Desktop: Client Logos Carousel */}
         <div className="hidden lg:block w-full overflow-hidden">
           <div className="flex relative overflow-hidden">
              {/* Gradient Masks for smooth fade effect */}
-            <div className="absolute left-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-[#0c002b] to-transparent pointer-events-none" />
-            <div className="absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-l from-[#0c002b] to-transparent pointer-events-none" />
+            <div className="absolute left-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-white to-transparent pointer-events-none" />
+            <div className="absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-l from-white to-transparent pointer-events-none" />
             
             <motion.div
-              className="flex gap-12"
+              className="flex gap-12 py-4"
               animate={{
                 x: ["0%", "-50%"]
               }}
@@ -416,11 +406,11 @@ export default function AboutClient() {
               }}
             >
               {[
-                ...[1, 2, 3, 4, 5, 6, 7, 8, 13, 14].map(n => `/clientlogos/white${n}.png`),
+                ...[1, 2, 3, 4, 5, 6, 7, 8, 13, 14].map(n => `/clientlogos/${n}.png`),
                 '/partner1.jpeg',
                 '/partner2.jpeg',
                 // Duplicate for infinite loop
-                ...[1, 2, 3, 4, 5, 6, 7, 8, 13, 14].map(n => `/clientlogos/white${n}.png`),
+                ...[1, 2, 3, 4, 5, 6, 7, 8, 13, 14].map(n => `/clientlogos/${n}.png`),
                 '/partner1.jpeg',
                 '/partner2.jpeg'
               ].map((logo, index) => (
@@ -436,8 +426,9 @@ export default function AboutClient() {
                     alignItems: 'center',
                     aspectRatio: '1/1',
                     borderRadius: '15px',
-                    background: 'linear-gradient(145deg, rgba(12, 0, 43, 0.20) 6.6%, rgba(255, 183, 3, 0.20) 120.24%), rgba(0, 0, 0, 0.20)',
-                    boxShadow: '0 0 20px 1px rgba(255, 255, 255, 0.10) inset'
+                    background: '#FFFFFF',
+                    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)',
+                    border: '1px solid rgba(0,0,0,0.05)'
                   }}
                 >
                   <img
@@ -461,12 +452,12 @@ export default function AboutClient() {
       </div>
 
       {/* Our Story Timeline Section */}
-      <div className="w-full md:py-8 relative -mt-10 md:mt-0">
+      <div className="w-full md:py-8 relative -mt-10 md:mt-0 bg-white">
         <div className="text-center mb-16">
           <h2 
             className="text-3xl sm:text-4xl lg:text-[42px] font-bold"
             style={{
-              color: '#FFF',
+              color: '#0C002B',
               fontFamily: 'Nunito',
               fontWeight: 700,
               lineHeight: '1.2'
@@ -485,7 +476,7 @@ export default function AboutClient() {
             fontFamily: 'Nunito',
             fontWeight: 700,
             color: 'transparent',
-            WebkitTextStroke: '1px #FFB703',
+            WebkitTextStroke: '1px rgba(12, 0, 43, 0.1)',
             letterSpacing: '2px',
             userSelect: 'none',
             pointerEvents: 'none',
@@ -506,7 +497,7 @@ export default function AboutClient() {
             fontFamily: 'Nunito',
             fontWeight: 700,
             color: 'transparent',
-            WebkitTextStroke: '1px #FFB703',
+            WebkitTextStroke: '1px rgba(12, 0, 43, 0.1)',
             letterSpacing: '2px',
             userSelect: 'none',
             pointerEvents: 'none',
@@ -525,7 +516,7 @@ export default function AboutClient() {
           <div
             className="absolute left-1/2 transform -translate-x-1/2 h-full w-2"
             style={{
-              background: 'linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.3))',
+              background: 'linear-gradient(to bottom, rgba(12, 0, 43, 0.05), rgba(12, 0, 43, 0.1), rgba(12, 0, 43, 0.05))',
               borderRadius: '2px'
             }}
           />
@@ -537,7 +528,7 @@ export default function AboutClient() {
               height: `${timelineProgress}%`,
               background: 'linear-gradient(to bottom, #8A38F5, #a855f7)',
               borderRadius: '2px',
-              boxShadow: '0 0 10px rgba(138, 56, 245, 0.6)',
+              boxShadow: '0 0 10px rgba(138, 56, 245, 0.4)',
               willChange: 'height'
             }}
           />
@@ -561,13 +552,13 @@ export default function AboutClient() {
                     </h3>
                   </div>
 
-                  {/* White Dot */}
+                  {/* Dot */}
                   <div
-                    className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full border-2 mt-2"
+                    className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full border-2 mt-2 z-10"
                     style={{
-                      background: 'radial-gradient(circle, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.7))',
-                      borderColor: 'rgba(255, 255, 255, 0.8)',
-                      boxShadow: '0 0 8px rgba(255, 255, 255, 0.3)'
+                      background: '#FFFFFF',
+                      borderColor: '#8A38F5',
+                      boxShadow: '0 0 8px rgba(138, 56, 245, 0.2)'
                     }}
                   />
 
@@ -575,7 +566,7 @@ export default function AboutClient() {
                   <div className="w-1/2 pl-8">
                     <h4
                       style={{
-                        color: '#FFF',
+                        color: '#0C002B',
                         fontFamily: 'Nunito',
                         fontSize: '20px',
                         fontWeight: 600,
@@ -586,12 +577,12 @@ export default function AboutClient() {
                     </h4>
                   <p
                       style={{
-                        color: '#FFF',
+                        color: '#0C002B',
                         fontFamily: 'Nunito',
                         fontSize: '16px',
                         fontWeight: 400,
                         lineHeight: '1.6',
-                        opacity: 0.9
+                        opacity: 0.8
                       }}
                     >
                     IPR Karo began with a mission: to simplify and democratize trademark registration for businesses of all sizes in India. We focused on making it easy for anyone to understand how to register a trademark and get expert help online.
@@ -607,7 +598,7 @@ export default function AboutClient() {
                   <div className="w-1/2 pr-8 text-right">
                     <h4
                       style={{
-                        color: '#FFF',
+                        color: '#0C002B',
                         fontFamily: 'Nunito',
                         fontSize: '20px',
                         fontWeight: 600,
@@ -618,25 +609,25 @@ export default function AboutClient() {
                     </h4>
                   <p
                       style={{
-                        color: '#FFF',
+                        color: '#0C002B',
                         fontFamily: 'Nunito',
                         fontSize: '16px',
                         fontWeight: 400,
                         lineHeight: '1.6',
-                        opacity: 0.9
+                        opacity: 0.8
                       }}
                     >
                     We launched India's first AI-powered trademark search, instantly scanning millions of trademarks for similarity and conflicts. This breakthrough helped users quickly check if their brand name is available, receive an AI-powered risk report, and improve their chances to register a trademark successfully.
                   </p>
                   </div>
 
-                  {/* White Dot */}
+                  {/* Dot */}
                   <div
-                    className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full border-2 mt-2"
+                    className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full border-2 mt-2 z-10"
                     style={{
-                      background: 'radial-gradient(circle, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.7))',
-                      borderColor: 'rgba(255, 255, 255, 0.8)',
-                      boxShadow: '0 0 8px rgba(255, 255, 255, 0.3)'
+                      background: '#FFFFFF',
+                      borderColor: '#8A38F5',
+                      boxShadow: '0 0 8px rgba(138, 56, 245, 0.2)'
                     }}
                   />
 
@@ -673,13 +664,13 @@ export default function AboutClient() {
                     </h3>
                   </div>
 
-                  {/* White Dot */}
+                  {/* Dot */}
                   <div
-                    className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full border-2 mt-2"
+                    className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full border-2 mt-2 z-10"
                     style={{
-                      background: 'radial-gradient(circle, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.7))',
-                      borderColor: 'rgba(255, 255, 255, 0.8)',
-                      boxShadow: '0 0 8px rgba(255, 255, 255, 0.3)'
+                      background: '#FFFFFF',
+                      borderColor: '#8A38F5',
+                      boxShadow: '0 0 8px rgba(138, 56, 245, 0.2)'
                     }}
                   />
 
@@ -687,7 +678,7 @@ export default function AboutClient() {
                   <div className="w-1/2 pl-8">
                     <h4
                       style={{
-                        color: '#FFF',
+                        color: '#0C002B',
                         fontFamily: 'Nunito',
                         fontSize: '20px',
                         fontWeight: 600,
@@ -698,12 +689,12 @@ export default function AboutClient() {
                     </h4>
                   <p
                       style={{
-                        color: '#FFF',
+                        color: '#0C002B',
                         fontFamily: 'Nunito',
                         fontSize: '16px',
                         fontWeight: 400,
                         lineHeight: '1.6',
-                        opacity: 0.9
+                        opacity: 0.8
                       }}
                     >
                     With over 5,000 trademark registrations, IPR Karo became known for reliable, AI-driven brand protection. Our platform delivered accurate legal results, faster registration, and ongoing trademark monitoring.
@@ -719,7 +710,7 @@ export default function AboutClient() {
                   <div className="w-1/2 pr-8 text-right">
                     <h4
                       style={{
-                        color: '#FFF',
+                        color: '#0C002B',
                         fontFamily: 'Nunito',
                         fontSize: '20px',
                         fontWeight: 600,
@@ -730,25 +721,25 @@ export default function AboutClient() {
                     </h4>
                   <p
                       style={{
-                        color: '#FFF',
+                        color: '#0C002B',
                         fontFamily: 'Nunito',
                         fontSize: '16px',
                         fontWeight: 400,
                         lineHeight: '1.6',
-                        opacity: 0.9
+                        opacity: 0.8
                       }}
                     >
                     Today, IPR Karo is India's leading online partner for trademark registration. Startups and enterprises rely on our AI search reports, expert legal support, and full-service brand protection, making how to register a trademark in India easier than ever.
                   </p>
                   </div>
 
-                  {/* White Dot */}
+                  {/* Dot */}
                   <div
-                    className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full border-2 mt-2"
+                    className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full border-2 mt-2 z-10"
                     style={{
-                      background: 'radial-gradient(circle, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.7))',
-                      borderColor: 'rgba(255, 255, 255, 0.8)',
-                      boxShadow: '0 0 8px rgba(255, 255, 255, 0.3)'
+                      background: '#FFFFFF',
+                      borderColor: '#8A38F5',
+                      boxShadow: '0 0 8px rgba(138, 56, 245, 0.2)'
                     }}
                   />
 
@@ -773,15 +764,12 @@ export default function AboutClient() {
 
         {/* Mobile Timeline Section */}
         <div className="block lg:hidden">
-          <div className="max-w-4xl mx-auto relative" ref={timelineMobileRef}>
-            {/* Decorative "Our Story" Text - Right Side for Mobile */}
-           
-
+          <div className="max-w-4xl mx-auto relative px-4" ref={timelineMobileRef}>
             {/* Vertical Line - Left Side for Mobile */}
             <div
               className="absolute left-7.5 top-0 bottom-0 w-2"
               style={{
-                background: 'linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.3))',
+                background: 'linear-gradient(to bottom, rgba(12, 0, 43, 0.05), rgba(12, 0, 43, 0.1), rgba(12, 0, 43, 0.05))',
                 borderRadius: '2px'
               }}
             />
@@ -793,7 +781,7 @@ export default function AboutClient() {
                 height: `${timelineProgress}%`,
                 background: 'linear-gradient(to bottom, #8A38F5, #a855f7)',
                 borderRadius: '2px',
-                boxShadow: '0 0 10px rgba(138, 56, 245, 0.6)',
+                boxShadow: '0 0 10px rgba(138, 56, 245, 0.4)',
                 willChange: 'height'
               }}
             />
@@ -803,13 +791,13 @@ export default function AboutClient() {
               {/* Timeline Item 1 - Year and Content on Right for Mobile */}
               <div>
                   <div className="relative flex items-start">
-                    {/* White Dot - Left for Mobile */}
+                    {/* Dot - Left for Mobile */}
                     <div
-                      className="absolute left-5.5 w-6 h-6 rounded-full border-2 -mt-2"
+                      className="absolute left-5.5 w-6 h-6 rounded-full border-2 -mt-2 z-10"
                       style={{
-                        background: 'radial-gradient(circle, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.7))',
-                        borderColor: 'rgba(255, 255, 255, 0.8)',
-                        boxShadow: '0 0 8px rgba(255, 255, 255, 0.3)'
+                        background: '#FFFFFF',
+                        borderColor: '#8A38F5',
+                        boxShadow: '0 0 8px rgba(138, 56, 245, 0.2)'
                       }}
                     />
 
@@ -833,7 +821,7 @@ export default function AboutClient() {
                         <h4
                           className="text-lg sm:text-xl font-semibold mb-2"
                           style={{
-                            color: '#FFF',
+                            color: '#0C002B',
                             fontFamily: 'Nunito',
                             fontWeight: 600
                           }}
@@ -843,11 +831,11 @@ export default function AboutClient() {
                       <p
                           className="text-sm sm:text-base"
                           style={{
-                            color: '#FFF',
+                            color: '#0C002B',
                             fontFamily: 'Nunito',
                             fontWeight: 400,
                             lineHeight: '1.6',
-                            opacity: 0.9
+                            opacity: 0.8
                           }}
                         >
                         IPR Karo began with a mission: to simplify and democratize trademark registration for businesses of all sizes in India. We focused on making it easy for anyone to understand how to register a trademark and get expert help online.
@@ -860,13 +848,13 @@ export default function AboutClient() {
               {/* Timeline Item 2 - Year and Content on Right for Mobile */}
               <div>
                   <div className="relative flex items-start">
-                    {/* White Dot - Left for Mobile */}
+                    {/* Dot - Left for Mobile */}
                     <div
-                      className="absolute left-5.5 w-6 h-6 rounded-full border-2 -mt-2"
+                      className="absolute left-5.5 w-6 h-6 rounded-full border-2 -mt-2 z-10"
                       style={{
-                        background: 'radial-gradient(circle, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.7))',
-                        borderColor: 'rgba(255, 255, 255, 0.8)',
-                        boxShadow: '0 0 8px rgba(255, 255, 255, 0.3)'
+                        background: '#FFFFFF',
+                        borderColor: '#8A38F5',
+                        boxShadow: '0 0 8px rgba(138, 56, 245, 0.2)'
                       }}
                     />
 
@@ -890,7 +878,7 @@ export default function AboutClient() {
                         <h4
                           className="text-lg sm:text-xl font-semibold mb-2"
                           style={{
-                            color: '#FFF',
+                            color: '#0C002B',
                             fontFamily: 'Nunito',
                             fontWeight: 600
                           }}
@@ -900,11 +888,11 @@ export default function AboutClient() {
                       <p
                           className="text-sm sm:text-base"
                           style={{
-                            color: '#FFF',
+                            color: '#0C002B',
                             fontFamily: 'Nunito',
                             fontWeight: 400,
                             lineHeight: '1.6',
-                            opacity: 0.9
+                            opacity: 0.8
                           }}
                         >
                         We launched India's first AI-powered trademark search, instantly scanning millions of trademarks for similarity and conflicts. This breakthrough helped users quickly check if their brand name is available, receive an AI-powered risk report, and improve their chances to register a trademark successfully.
@@ -917,13 +905,13 @@ export default function AboutClient() {
               {/* Timeline Item 3 - Year and Content on Right for Mobile */}
               <div>
                   <div className="relative flex items-start">
-                    {/* White Dot - Left for Mobile */}
+                    {/* Dot - Left for Mobile */}
                     <div
-                      className="absolute left-5.5 w-6 h-6 rounded-full border-2 -mt-2"
+                      className="absolute left-5.5 w-6 h-6 rounded-full border-2 -mt-2 z-10"
                       style={{
-                        background: 'radial-gradient(circle, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.7))',
-                        borderColor: 'rgba(255, 255, 255, 0.8)',
-                        boxShadow: '0 0 8px rgba(255, 255, 255, 0.3)'
+                        background: '#FFFFFF',
+                        borderColor: '#8A38F5',
+                        boxShadow: '0 0 8px rgba(138, 56, 245, 0.2)'
                       }}
                     />
 
@@ -947,7 +935,7 @@ export default function AboutClient() {
                         <h4
                           className="text-lg sm:text-xl font-semibold mb-2"
                           style={{
-                            color: '#FFF',
+                            color: '#0C002B',
                             fontFamily: 'Nunito',
                             fontWeight: 600
                           }}
@@ -957,11 +945,11 @@ export default function AboutClient() {
                       <p
                           className="text-sm sm:text-base"
                           style={{
-                            color: '#FFF',
+                            color: '#0C002B',
                             fontFamily: 'Nunito',
                             fontWeight: 400,
                             lineHeight: '1.6',
-                            opacity: 0.9
+                            opacity: 0.8
                           }}
                         >
                         With over 5,000 trademark registrations, IPR Karo became known for reliable, AI-driven brand protection. Our platform delivered accurate legal results, faster registration, and ongoing trademark monitoring.
@@ -971,34 +959,16 @@ export default function AboutClient() {
                 </div>
               </div>
 
-              {/* Decorative "Our Story" Text - Vertically positioned at right end of screen */}
-              <div
-                className="absolute -right-95 top-1/2 transform -translate-y-1/2 -rotate-90 origin-center"
-                style={{
-                  fontSize: '200px',
-                  fontFamily: 'Nunito',
-                  fontWeight: 700,
-                  color: 'transparent',
-                  WebkitTextStroke: '1px #FFB703',
-                  letterSpacing: '1px',
-                  userSelect: 'none',
-                  pointerEvents: 'none',
-                  whiteSpace: 'nowrap'
-                }}
-              >
-                Our Story
-              </div>
-
               {/* Timeline Item 4 - Year and Content on Right for Mobile */}
               <div>
                   <div className="relative flex items-start">
-                    {/* White Dot - Left for Mobile */}
+                    {/* Dot - Left for Mobile */}
                     <div
-                      className="absolute left-5.5 w-6 h-6 rounded-full border-2 -mt-2"
+                      className="absolute left-5.5 w-6 h-6 rounded-full border-2 -mt-2 z-10"
                       style={{
-                        background: 'radial-gradient(circle, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.7))',
-                        borderColor: 'rgba(255, 255, 255, 0.8)',
-                        boxShadow: '0 0 8px rgba(255, 255, 255, 0.3)'
+                        background: '#FFFFFF',
+                        borderColor: '#8A38F5',
+                        boxShadow: '0 0 8px rgba(138, 56, 245, 0.2)'
                       }}
                     />
 
@@ -1022,7 +992,7 @@ export default function AboutClient() {
                         <h4
                           className="text-lg sm:text-xl font-semibold mb-2"
                           style={{
-                            color: '#FFF',
+                            color: '#0C002B',
                             fontFamily: 'Nunito',
                             fontWeight: 600
                           }}
@@ -1032,11 +1002,11 @@ export default function AboutClient() {
                       <p
                           className="text-sm sm:text-base"
                           style={{
-                            color: '#FFF',
+                            color: '#0C002B',
                             fontFamily: 'Nunito',
                             fontWeight: 400,
                             lineHeight: '1.6',
-                            opacity: 0.9
+                            opacity: 0.8
                           }}
                         >
                         Today, IPR Karo is India's leading online partner for trademark registration. Startups and enterprises rely on our AI search reports, expert legal support, and full-service brand protection, making how to register a trademark in India easier than ever.
@@ -1051,12 +1021,12 @@ export default function AboutClient() {
       </div>
 
       {/* What makes IPR Karo Different Section */}
-      <div className="w-full py-[30px] sm:py-[45px] lg:py-[60px] mt-[15px] sm:mt-[20px] lg:mt-[30px] px-4 sm:px-8 lg:px-20">
+      <div className="w-full py-[30px] sm:py-[45px] lg:py-[60px] mt-[15px] sm:mt-[20px] lg:mt-[30px] px-4 sm:px-8 lg:px-20 bg-white">
         <div className="text-center mb-[24px] sm:mb-[36px] lg:mb-[48px] px-[12px] sm:px-[18px] lg:px-[72px]">
           <h2
             className="text-[18px] sm:text-[30px] lg:text-[31.5px] font-bold mb-[8px] sm:mb-[10px] lg:mb-[12px]"
             style={{
-              color: '#FFF',
+              color: '#0C002B',
               fontFamily: 'Nunito',
               fontWeight: 700,
               lineHeight: '1.2'
@@ -1067,10 +1037,11 @@ export default function AboutClient() {
           <p 
             className="text-[12px] sm:text-[13.5px] max-w-3xl mx-auto"
             style={{
-              color: 'rgba(255, 255, 255, 0.7)',
+              color: '#0C002B',
               fontFamily: 'Nunito',
               fontWeight: 400,
-              lineHeight: '1.6'
+              lineHeight: '1.6',
+              opacity: 0.7
             }}
           >
             Experience the perfect blend of AI technology and expert guidance for comprehensive trademark protection
@@ -1088,18 +1059,18 @@ export default function AboutClient() {
                 className="relative group cursor-pointer overflow-hidden transition-all duration-300 hover:scale-[1.02]"
                 style={{
                   borderRadius: '18px',
-                  background: 'linear-gradient(135deg, rgba(255, 183, 3, 0.08) 0%, rgba(12, 0, 43, 0.4) 100%)',
-                  border: '1px solid rgba(255, 183, 3, 0.2)',
-                  boxShadow: '0 6px 24px rgba(0, 0, 0, 0.3), inset 0 0 18px rgba(255, 255, 255, 0.05)'
+                  background: '#F8F9FA',
+                  border: '1px solid rgba(12, 0, 43, 0.05)',
+                  boxShadow: '0 4px 15px rgba(0, 0, 0, 0.05)'
                 }}
                 onClick={() => setActiveCard(activeCard === 1 ? null : 1)}
               >
                 {/* Content */}
                 <div className="relative z-10 p-[16px] sm:p-[20px] lg:p-[24px]">
-                  <h3 className="text-[15px] font-bold mb-[6px] sm:mb-[8px] lg:mb-[9px] text-white" style={{fontFamily: 'Nunito', fontWeight: 700}}>
+                  <h3 className="text-[15px] font-bold mb-[6px] sm:mb-[8px] lg:mb-[9px] text-[#0C002B]" style={{fontFamily: 'Nunito', fontWeight: 700}}>
                     AI-Powered Trademark Search
                   </h3>
-                  <p className="text-[10.5px] mb-[12px] sm:mb-[15px] lg:mb-[18px]" style={{color: 'rgba(255, 255, 255, 0.85)', fontFamily: 'Nunito', lineHeight: '1.6'}}>
+                  <p className="text-[10.5px] mb-[12px] sm:mb-[15px] lg:mb-[18px]" style={{color: 'rgba(12, 0, 43, 0.7)', fontFamily: 'Nunito', lineHeight: '1.6'}}>
                     Instantly scan millions of records. Our AI-powered search report finds identical and confusingly similar marks so you can decide whether to register or tweak your brand.
                   </p>
                   
@@ -1111,10 +1082,10 @@ export default function AboutClient() {
                       width={210}
                       height={60}
                       className={`w-full max-w-[210px] h-auto object-contain transition-all duration-500 ${
-                        activeCard === 1 ? 'opacity-100 scale-110 brightness-[1.2] saturate-[1.5] hue-rotate-[-15deg]' : 'opacity-60'
+                        activeCard === 1 ? 'opacity-100 scale-110 brightness-[0.8]' : 'opacity-60'
                       }`}
                       style={{
-                        filter: activeCard === 1 ? 'brightness(1.2) saturate(1.5) hue-rotate(-15deg)' : 'none'
+                        filter: activeCard === 1 ? 'brightness(0.8)' : 'none'
                       }}
                     />
                   </div>
@@ -1126,9 +1097,9 @@ export default function AboutClient() {
                 className="relative group cursor-pointer overflow-hidden transition-all duration-300 hover:scale-[1.02]"
                 style={{
                   borderRadius: '18px',
-                  background: 'linear-gradient(135deg, rgba(255, 183, 3, 0.08) 0%, rgba(12, 0, 43, 0.4) 100%)',
-                  border: '1px solid rgba(255, 183, 3, 0.2)',
-                  boxShadow: '0 6px 24px rgba(0, 0, 0, 0.3), inset 0 0 18px rgba(255, 255, 255, 0.05)'
+                  background: '#F8F9FA',
+                  border: '1px solid rgba(12, 0, 43, 0.05)',
+                  boxShadow: '0 4px 15px rgba(0, 0, 0, 0.05)'
                 }}
                 onClick={() => setActiveCard(activeCard === 2 ? null : 2)}
               >
@@ -1139,16 +1110,16 @@ export default function AboutClient() {
                     alt="Expert Guidance Icon"
                     width={75}
                     height={105}
-                    className="w-auto h-24 object-contain icon-hover-yellow opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"
+                    className="w-auto h-24 object-contain opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 brightness-0"
                   />
                 </div>
 
                 {/* Content */}
                 <div className="relative z-10 p-[16px] sm:p-[20px] lg:p-[24px]">
-                  <h3 className="text-[15px] font-bold mb-[6px] sm:mb-[8px] lg:mb-[9px] text-white" style={{fontFamily: 'Nunito', fontWeight: 700}}>
+                  <h3 className="text-[15px] font-bold mb-[6px] sm:mb-[8px] lg:mb-[9px] text-[#0C002B]" style={{fontFamily: 'Nunito', fontWeight: 700}}>
                     Expert-Led Guidance
                   </h3>
-                  <p className="text-[10.5px] max-w-[180px]" style={{color: 'rgba(255, 255, 255, 0.85)', fontFamily: 'Nunito', lineHeight: '1.6'}}>
+                  <p className="text-[10.5px] max-w-[180px]" style={{color: 'rgba(12, 0, 43, 0.7)', fontFamily: 'Nunito', lineHeight: '1.6'}}>
                     Certified IP lawyers review your AI report, advise on registrability, and prepare filing documents. Clear legal answers with no jargon.
                   </p>
                 </div>
@@ -1159,9 +1130,9 @@ export default function AboutClient() {
                 className="relative group cursor-pointer overflow-hidden transition-all duration-300 hover:scale-[1.02]"
                 style={{
                   borderRadius: '18px',
-                  background: 'linear-gradient(135deg, rgba(255, 183, 3, 0.08) 0%, rgba(12, 0, 43, 0.4) 100%)',
-                  border: '1px solid rgba(255, 183, 3, 0.2)',
-                  boxShadow: '0 6px 24px rgba(0, 0, 0, 0.3), inset 0 0 18px rgba(255, 255, 255, 0.05)'
+                  background: '#F8F9FA',
+                  border: '1px solid rgba(12, 0, 43, 0.05)',
+                  boxShadow: '0 4px 15px rgba(0, 0, 0, 0.05)'
                 }}
                 onClick={() => setActiveCard(activeCard === 3 ? null : 3)}
               >
@@ -1172,16 +1143,16 @@ export default function AboutClient() {
                     alt="Fast Processing Icon"
                     width={75}
                     height={135}
-                    className="w-auto h-30 object-contain icon-hover-yellow opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"
+                    className="w-auto h-30 object-contain opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 brightness-0"
                   />
                 </div>
 
                 {/* Content */}
                 <div className="relative z-10 p-[16px] sm:p-[20px] lg:p-[24px]">
-                  <h3 className="text-[15px] font-bold mb-[6px] sm:mb-[8px] lg:mb-[9px] text-white" style={{fontFamily: 'Nunito', fontWeight: 700}}>
+                  <h3 className="text-[15px] font-bold mb-[6px] sm:mb-[8px] lg:mb-[9px] text-[#0C002B]" style={{fontFamily: 'Nunito', fontWeight: 700}}>
                     Fast Processing
                   </h3>
-                  <p className="text-[10.5px] max-w-[180px]" style={{color: 'rgba(255, 255, 255, 0.85)', fontFamily: 'Nunito', lineHeight: '1.6'}}>
+                  <p className="text-[10.5px] max-w-[180px]" style={{color: 'rgba(12, 0, 43, 0.7)', fontFamily: 'Nunito', lineHeight: '1.6'}}>
                     Optimised workflows cut filing time to get search results within minutes and an expert review within 24 to 48 hours.
                   </p>
                 </div>
@@ -1192,9 +1163,9 @@ export default function AboutClient() {
                 className="relative group cursor-pointer overflow-hidden transition-all duration-300 hover:scale-[1.02]"
                 style={{
                   borderRadius: '18px',
-                  background: 'linear-gradient(135deg, rgba(255, 183, 3, 0.08) 0%, rgba(12, 0, 43, 0.4) 100%)',
-                  border: '1px solid rgba(255, 183, 3, 0.2)',
-                  boxShadow: '0 6px 24px rgba(0, 0, 0, 0.3), inset 0 0 18px rgba(255, 255, 255, 0.05)'
+                  background: '#F8F9FA',
+                  border: '1px solid rgba(12, 0, 43, 0.05)',
+                  boxShadow: '0 4px 15px rgba(0, 0, 0, 0.05)'
                 }}
                 onClick={() => setActiveCard(activeCard === 4 ? null : 4)}
               >
@@ -1205,16 +1176,16 @@ export default function AboutClient() {
                     alt="Affordable Pricing Icon"
                     width={120}
                     height={90}
-                    className="w-auto h-21 object-contain icon-hover-yellow opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"
+                    className="w-auto h-21 object-contain opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 brightness-0"
                   />
                 </div>
 
                 {/* Content */}
                 <div className="relative z-10 p-[16px] sm:p-[20px] lg:p-[24px]">
-                  <h3 className="text-[15px] font-bold mb-[6px] sm:mb-[8px] lg:mb-[9px] text-white" style={{fontFamily: 'Nunito', fontWeight: 700}}>
+                  <h3 className="text-[15px] font-bold mb-[6px] sm:mb-[8px] lg:mb-[9px] text-[#0C002B]" style={{fontFamily: 'Nunito', fontWeight: 700}}>
                     Affordable & Transparent Pricing
                   </h3>
-                  <p className="text-[10.5px] max-w-[180px]" style={{color: 'rgba(255, 255, 255, 0.85)', fontFamily: 'Nunito', lineHeight: '1.6'}}>
+                  <p className="text-[10.5px] max-w-[180px]" style={{color: 'rgba(12, 0, 43, 0.7)', fontFamily: 'Nunito', lineHeight: '1.6'}}>
                     No hidden fees. Choose a plan that fits your needs (search report, filing, or full legal package) with one-page invoices that explain every cost.
                   </p>
                 </div>
@@ -1225,42 +1196,42 @@ export default function AboutClient() {
                 className="relative group cursor-pointer overflow-hidden transition-all duration-300 hover:scale-[1.02]"
                 style={{
                   borderRadius: '18px',
-                  background: 'linear-gradient(135deg, rgba(255, 183, 3, 0.08) 0%, rgba(12, 0, 43, 0.4) 100%)',
-                  border: '1px solid rgba(255, 183, 3, 0.2)',
-                  boxShadow: '0 6px 24px rgba(0, 0, 0, 0.3), inset 0 0 18px rgba(255, 255, 255, 0.05)'
+                  background: '#F8F9FA',
+                  border: '1px solid rgba(12, 0, 43, 0.05)',
+                  boxShadow: '0 4px 15px rgba(0, 0, 0, 0.05)'
                 }}
                 onClick={() => setActiveCard(activeCard === 5 ? null : 5)}
               >
                 {/* Content */}
                 <div className="relative z-10 p-[16px] sm:p-[20px] lg:p-[24px]">
-                  <h3 className="text-[15px] font-bold mb-[6px] sm:mb-[8px] lg:mb-[9px] text-white" style={{fontFamily: 'Nunito', fontWeight: 700}}>
+                  <h3 className="text-[15px] font-bold mb-[6px] sm:mb-[8px] lg:mb-[9px] text-[#0C002B]" style={{fontFamily: 'Nunito', fontWeight: 700}}>
                     End-to-End Support
                   </h3>
-                  <p className="text-[10.5px] mb-[12px] sm:mb-[15px] lg:mb-[18px]" style={{color: 'rgba(255, 255, 255, 0.85)', fontFamily: 'Nunito', lineHeight: '1.6'}}>
+                  <p className="text-[10.5px] mb-[12px] sm:mb-[15px] lg:mb-[18px]" style={{color: 'rgba(12, 0, 43, 0.7)', fontFamily: 'Nunito', lineHeight: '1.6'}}>
                     From search to filing to post-registration monitoring, we handle filings, replies, and renewals so your brand stays protected.
                   </p>
 
                   {/* Process List */}
-                  <div className={`bg-white/10 backdrop-blur-sm rounded-2xl p-[12px] sm:p-[14px] lg:p-[16px] transition-all duration-500 ${
-                    activeCard === 5 ? 'opacity-100 scale-100' : 'opacity-70 scale-95'
+                  <div className={`bg-white/50 backdrop-blur-sm rounded-2xl p-[12px] sm:p-[14px] lg:p-[16px] transition-all duration-500 border border-gray-100 ${
+                    activeCard === 5 ? 'opacity-100 scale-100 shadow-sm' : 'opacity-70 scale-95'
                   }`}>
-                    <div className="text-[10px] sm:text-[11px] lg:text-[12px] font-semibold mb-[8px] sm:mb-[10px] lg:mb-[12px] text-yellow-400" style={{fontFamily: 'Nunito'}}>Complete Process:</div>
+                    <div className="text-[10px] sm:text-[11px] lg:text-[12px] font-semibold mb-[8px] sm:mb-[10px] lg:mb-[12px] text-[#FFB703]" style={{fontFamily: 'Nunito'}}>Complete Process:</div>
                     <ul className="space-y-[6px] sm:space-y-[7px] lg:space-y-[8px] text-[9px] sm:text-[10px] lg:text-[11px]">
                       <li className="flex items-start">
-                        <span className="w-[6px] h-[6px] bg-yellow-400 rounded-full mt-1.5 mr-[12px] flex-shrink-0"></span>
-                        <span style={{color: 'rgba(255, 255, 255, 0.9)', fontFamily: 'Nunito', lineHeight: '1.4'}}>AI-powered trademark search & analysis</span>
+                        <span className="w-[6px] h-[6px] bg-[#FFB703] rounded-full mt-1.5 mr-[12px] flex-shrink-0"></span>
+                        <span style={{color: '#0C002B', fontFamily: 'Nunito', lineHeight: '1.4'}}>AI-powered trademark search & analysis</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="w-[6px] h-[6px] bg-yellow-400 rounded-full mt-1.5 mr-[12px] flex-shrink-0"></span>
-                        <span style={{color: 'rgba(255, 255, 255, 0.9)', fontFamily: 'Nunito', lineHeight: '1.4'}}>Expert legal review & consultation</span>
+                        <span className="w-[6px] h-[6px] bg-[#FFB703] rounded-full mt-1.5 mr-[12px] flex-shrink-0"></span>
+                        <span style={{color: '#0C002B', fontFamily: 'Nunito', lineHeight: '1.4'}}>Expert legal review & consultation</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="w-[6px] h-[6px] bg-yellow-400 rounded-full mt-1.5 mr-[12px] flex-shrink-0"></span>
-                        <span style={{color: 'rgba(255, 255, 255, 0.9)', fontFamily: 'Nunito', lineHeight: '1.4'}}>Complete filing & documentation</span>
+                        <span className="w-[6px] h-[6px] bg-[#FFB703] rounded-full mt-1.5 mr-[12px] flex-shrink-0"></span>
+                        <span style={{color: '#0C002B', fontFamily: 'Nunito', lineHeight: '1.4'}}>Complete filing & documentation</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="w-[6px] h-[6px] bg-yellow-400 rounded-full mt-1.5 mr-[12px] flex-shrink-0"></span>
-                        <span style={{color: 'rgba(255, 255, 255, 0.9)', fontFamily: 'Nunito', lineHeight: '1.4'}}>Post-registration monitoring & renewals</span>
+                        <span className="w-[6px] h-[6px] bg-[#FFB703] rounded-full mt-1.5 mr-[12px] flex-shrink-0"></span>
+                        <span style={{color: '#0C002B', fontFamily: 'Nunito', lineHeight: '1.4'}}>Post-registration monitoring & renewals</span>
                       </li>
                     </ul>
                   </div>
@@ -1273,12 +1244,12 @@ export default function AboutClient() {
               <div className="flex-1 grid grid-cols-2 gap-[24px]">
                 {/* Card 1 - AI-Powered Trademark Search */}
                 <div
-                  className="relative text-center h-60 flex flex-col group cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+                  className="relative text-center h-60 flex flex-col group cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-xl"
                   style={{
                     borderRadius: '18px',
-                    background: 'linear-gradient(135deg, rgba(255, 183, 3, 0.08) 0%, rgba(12, 0, 43, 0.4) 100%)',
-                    border: '1px solid rgba(255, 183, 3, 0.2)',
-                    boxShadow: '0 9px 36px rgba(0, 0, 0, 0.4), inset 0 0 24px rgba(255, 255, 255, 0.05)'
+                    background: '#F8F9FA',
+                    border: '1px solid rgba(12, 0, 43, 0.05)',
+                    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.05)'
                   }}
                 >
                   {/* Content */}
@@ -1286,7 +1257,7 @@ export default function AboutClient() {
                     <h3
                       className="text-[22px] font-bold mb-[12px]"
                       style={{
-                        color: '#FFF',
+                        color: '#0C002B',
                         fontFamily: 'Nunito',
                         fontWeight: 700,
                         lineHeight: '1.3'
@@ -1297,7 +1268,7 @@ export default function AboutClient() {
                     <p
                       className="text-[13px] px-[12px] mb-[18px]"
                       style={{
-                        color: 'rgba(255, 255, 255, 0.85)',
+                        color: 'rgba(12, 0, 43, 0.7)',
                         fontFamily: 'Nunito',
                         fontWeight: 400,
                         lineHeight: '1.6'
@@ -1313,7 +1284,7 @@ export default function AboutClient() {
                         alt="Search Icon"
                         width={262}
                         height={75}
-                        className="w-full max-w-[225px] h-auto object-contain icon-hover-yellow group-hover:scale-110 opacity-70 group-hover:opacity-100"
+                        className="w-full max-w-[225px] h-auto object-contain group-hover:scale-110 opacity-70 group-hover:opacity-100 brightness-[0.8]"
                       />
                     </div>
                   </div>
@@ -1321,12 +1292,12 @@ export default function AboutClient() {
 
                 {/* Card 2 - Expert-Led Guidance */}
                 <div
-                  className="relative h-60 group cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl overflow-hidden"
+                  className="relative h-60 group cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-xl overflow-hidden"
                   style={{
                     borderRadius: '18px',
-                    background: 'linear-gradient(135deg, rgba(255, 183, 3, 0.08) 0%, rgba(12, 0, 43, 0.4) 100%)',
-                    border: '1px solid rgba(255, 183, 3, 0.2)',
-                    boxShadow: '0 9px 36px rgba(0, 0, 0, 0.4), inset 0 0 24px rgba(255, 255, 255, 0.05)'
+                    background: '#F8F9FA',
+                    border: '1px solid rgba(12, 0, 43, 0.05)',
+                    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.05)'
                   }}
                 >
                   {/* Icon - top right */}
@@ -1336,7 +1307,7 @@ export default function AboutClient() {
                       alt="Expert Guidance Icon"
                       width={90}
                       height={135}
-                      className="w-auto h-33 object-contain icon-hover-yellow opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"
+                      className="w-auto h-33 object-contain opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 brightness-0"
                     />
                   </div>
 
@@ -1345,7 +1316,7 @@ export default function AboutClient() {
                     <h3
                       className="text-[22px] font-bold mb-[9px]"
                       style={{
-                        color: '#FFF',
+                        color: '#0C002B',
                         fontFamily: 'Nunito',
                         fontWeight: 700,
                         lineHeight: '1.3'
@@ -1356,7 +1327,7 @@ export default function AboutClient() {
                     <p
                       className="text-[13px] max-w-[150px]"
                       style={{
-                        color: 'rgba(255, 255, 255, 0.85)',
+                        color: 'rgba(12, 0, 43, 0.7)',
                         fontFamily: 'Nunito',
                         fontWeight: 400,
                         lineHeight: '1.6'
@@ -1369,12 +1340,12 @@ export default function AboutClient() {
 
                 {/* Card 3 - Fast Processing */}
                 <div
-                  className="relative h-60 group cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl overflow-hidden"
+                  className="relative h-60 group cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-xl overflow-hidden"
                   style={{
                     borderRadius: '18px',
-                    background: 'linear-gradient(135deg, rgba(255, 183, 3, 0.08) 0%, rgba(12, 0, 43, 0.4) 100%)',
-                    border: '1px solid rgba(255, 183, 3, 0.2)',
-                    boxShadow: '0 9px 36px rgba(0, 0, 0, 0.4), inset 0 0 24px rgba(255, 255, 255, 0.05)'
+                    background: '#F8F9FA',
+                    border: '1px solid rgba(12, 0, 43, 0.05)',
+                    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.05)'
                   }}
                 >
                   {/* Icon - top right */}
@@ -1384,7 +1355,7 @@ export default function AboutClient() {
                       alt="Fast Processing Icon"
                       width={90}
                       height={180}
-                      className="w-auto h-36 object-contain icon-hover-yellow opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"
+                      className="w-auto h-36 object-contain opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 brightness-0"
                     />
                   </div>
 
@@ -1393,7 +1364,7 @@ export default function AboutClient() {
                     <h3
                       className="text-[22px] font-bold mb-[9px]"
                       style={{
-                        color: '#FFF',
+                        color: '#0C002B',
                         fontFamily: 'Nunito',
                         fontWeight: 700,
                         lineHeight: '1.3'
@@ -1404,7 +1375,7 @@ export default function AboutClient() {
                     <p
                       className="text-[13px] max-w-[150px]"
                       style={{
-                        color: 'rgba(255, 255, 255, 0.85)',
+                        color: 'rgba(12, 0, 43, 0.7)',
                         fontFamily: 'Nunito',
                         fontWeight: 400,
                         lineHeight: '1.6'
@@ -1417,12 +1388,12 @@ export default function AboutClient() {
 
                 {/* Card 4 - Affordable & Transparent Pricing */}
                 <div
-                  className="relative h-60 group cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl overflow-hidden"
+                  className="relative h-60 group cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-xl overflow-hidden"
                   style={{
                     borderRadius: '18px',
-                    background: 'linear-gradient(135deg, rgba(255, 183, 3, 0.08) 0%, rgba(12, 0, 43, 0.4) 100%)',
-                    border: '1px solid rgba(255, 183, 3, 0.2)',
-                    boxShadow: '0 9px 36px rgba(0, 0, 0, 0.4), inset 0 0 24px rgba(255, 255, 255, 0.05)'
+                    background: '#F8F9FA',
+                    border: '1px solid rgba(12, 0, 43, 0.05)',
+                    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.05)'
                   }}
                 >
                   {/* Icon - bottom right */}
@@ -1432,7 +1403,7 @@ export default function AboutClient() {
                       alt="Affordable Pricing Icon"
                       width={150}
                       height={112}
-                      className="w-auto h-27 object-contain icon-hover-yellow opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"
+                      className="w-auto h-27 object-contain opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 brightness-0"
                     />
                   </div>
 
@@ -1441,7 +1412,7 @@ export default function AboutClient() {
                     <h3
                       className="text-[22px] font-bold mb-[9px]"
                       style={{
-                        color: '#FFF',
+                        color: '#0C002B',
                         fontFamily: 'Nunito',
                         fontWeight: 700,
                         lineHeight: '1.3'
@@ -1452,7 +1423,7 @@ export default function AboutClient() {
                     <p
                         className="text-[13px] max-w-[150px]"
                       style={{
-                        color: 'rgba(255, 255, 255, 0.85)',
+                        color: 'rgba(12, 0, 43, 0.7)',
                         fontFamily: 'Nunito',
                         fontWeight: 400,
                         lineHeight: '1.6'
@@ -1467,12 +1438,12 @@ export default function AboutClient() {
               {/* Right Section - Card 5 (End-to-End Support) */}
               <div className="w-72 flex-shrink-0">
                 <div
-                  className="relative h-[31.125rem] group cursor-pointer overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+                  className="relative h-[31.125rem] group cursor-pointer overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl"
                   style={{
                     borderRadius: '18px',
-                    background: 'linear-gradient(135deg, rgba(255, 183, 3, 0.12) 0%, rgba(12, 0, 43, 0.5) 100%)',
-                    border: '1px solid rgba(255, 183, 3, 0.3)',
-                    boxShadow: '0 9px 36px rgba(0, 0, 0, 0.4), inset 0 0 24px rgba(255, 255, 255, 0.05)'
+                    background: '#F8F9FA',
+                    border: '1px solid rgba(12, 0, 43, 0.1)',
+                    boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)'
                   }}
                 >
                   {/* Main content */}
@@ -1480,7 +1451,7 @@ export default function AboutClient() {
                     <h3
                       className="text-[22px] font-bold mb-[12px] text-center"
                       style={{
-                        color: '#FFF',
+                        color: '#0C002B',
                         fontFamily: 'Nunito',
                         fontWeight: 700,
                         lineHeight: '1.3'
@@ -1491,7 +1462,7 @@ export default function AboutClient() {
                     <p
                       className="text-[13px] mb-[24px] text-center"
                       style={{
-                        color: 'rgba(255, 255, 255, 0.85)',
+                        color: 'rgba(12, 0, 43, 0.7)',
                         fontFamily: 'Nunito',
                         fontWeight: 400,
                         lineHeight: '1.6'
@@ -1501,32 +1472,32 @@ export default function AboutClient() {
                     </p>
 
                     {/* Process Steps - Always Visible */}
-                    <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-[18px] flex-1 flex flex-col justify-center">
-                      <div className="text-[12px] font-bold mb-[18px] text-yellow-400 text-center" style={{fontFamily: 'Nunito'}}>Complete Process</div>
+                    <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-[18px] flex-1 flex flex-col justify-center border border-gray-100 shadow-sm">
+                      <div className="text-[12px] font-bold mb-[18px] text-[#FFB703] text-center" style={{fontFamily: 'Nunito'}}>Complete Process</div>
                       <ul className="space-y-[12px]">
                         <li className="flex items-start group/item">
-                          <div className="w-6 h-6 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mt-0.5 mr-[9px] flex-shrink-0 group-hover/item:scale-110 transition-transform">
+                          <div className="w-6 h-6 bg-gradient-to-br from-[#FFB703] to-orange-400 rounded-full flex items-center justify-center mt-0.5 mr-[9px] flex-shrink-0 group-hover/item:scale-110 transition-transform shadow-sm">
                             <span className="text-white font-bold text-[10.5px]" style={{fontFamily: 'Nunito'}}>1</span>
                           </div>
-                          <span className="text-[10.5px] leading-relaxed" style={{color: 'rgba(255, 255, 255, 0.9)', fontFamily: 'Nunito'}}>AI-powered trademark search & analysis</span>
+                          <span className="text-[10.5px] leading-relaxed" style={{color: '#0C002B', fontFamily: 'Nunito'}}>AI-powered trademark search & analysis</span>
                         </li>
                         <li className="flex items-start group/item">
-                          <div className="w-6 h-6 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mt-0.5 mr-[9px] flex-shrink-0 group-hover/item:scale-110 transition-transform">
+                          <div className="w-6 h-6 bg-gradient-to-br from-[#FFB703] to-orange-400 rounded-full flex items-center justify-center mt-0.5 mr-[9px] flex-shrink-0 group-hover/item:scale-110 transition-transform shadow-sm">
                             <span className="text-white font-bold text-[10.5px]" style={{fontFamily: 'Nunito'}}>2</span>
                           </div>
-                          <span className="text-[10.5px] leading-relaxed" style={{color: 'rgba(255, 255, 255, 0.9)', fontFamily: 'Nunito'}}>Expert legal review & consultation</span>
+                          <span className="text-[10.5px] leading-relaxed" style={{color: '#0C002B', fontFamily: 'Nunito'}}>Expert legal review & consultation</span>
                         </li>
                         <li className="flex items-start group/item">
-                          <div className="w-6 h-6 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mt-0.5 mr-[9px] flex-shrink-0 group-hover/item:scale-110 transition-transform">
+                          <div className="w-6 h-6 bg-gradient-to-br from-[#FFB703] to-orange-400 rounded-full flex items-center justify-center mt-0.5 mr-[9px] flex-shrink-0 group-hover/item:scale-110 transition-transform shadow-sm">
                             <span className="text-white font-bold text-[10.5px]" style={{fontFamily: 'Nunito'}}>3</span>
                           </div>
-                          <span className="text-[10.5px] leading-relaxed" style={{color: 'rgba(255, 255, 255, 0.9)', fontFamily: 'Nunito'}}>Complete filing & documentation</span>
+                          <span className="text-[10.5px] leading-relaxed" style={{color: '#0C002B', fontFamily: 'Nunito'}}>Complete filing & documentation</span>
                         </li>
                         <li className="flex items-start group/item">
-                          <div className="w-6 h-6 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mt-0.5 mr-[9px] flex-shrink-0 group-hover/item:scale-110 transition-transform">
+                          <div className="w-6 h-6 bg-gradient-to-br from-[#FFB703] to-orange-400 rounded-full flex items-center justify-center mt-0.5 mr-[9px] flex-shrink-0 group-hover/item:scale-110 transition-transform shadow-sm">
                             <span className="text-white font-bold text-[10.5px]" style={{fontFamily: 'Nunito'}}>4</span>
                           </div>
-                          <span className="text-[10.5px] leading-relaxed" style={{color: 'rgba(255, 255, 255, 0.9)', fontFamily: 'Nunito'}}>Post-registration monitoring & renewals</span>
+                          <span className="text-[10.5px] leading-relaxed" style={{color: '#0C002B', fontFamily: 'Nunito'}}>Post-registration monitoring & renewals</span>
                         </li>
                       </ul>
                     </div>
@@ -1540,12 +1511,12 @@ export default function AboutClient() {
             <div 
               className="inline-flex items-center gap-[8px] sm:gap-[10px] lg:gap-[12px] px-[20px] sm:px-[24px] lg:px-[28px] py-[12px] sm:py-[14px] lg:py-[16px] rounded-full max-w-4xl"
               style={{
-                background: 'linear-gradient(135deg, rgba(255, 183, 3, 0.1) 0%, rgba(12, 0, 43, 0.3) 100%)',
-                border: '1px solid rgba(255, 183, 3, 0.2)',
-                boxShadow: '0 3px 12px rgba(0, 0, 0, 0.2)'
+                background: '#F8F9FA',
+                border: '1px solid rgba(12, 0, 43, 0.05)',
+                boxShadow: '0 3px 12px rgba(0, 0, 0, 0.05)'
               }}
             >
-              <span className="text-[10px] sm:text-[11px] lg:text-[12px] font-medium leading-relaxed" style={{color: 'rgba(255, 255, 255, 0.9)', fontFamily: 'Nunito', lineHeight: '1.5'}}>
+              <span className="text-[10px] sm:text-[11px] lg:text-[12px] font-medium leading-relaxed" style={{color: '#0C002B', fontFamily: 'Nunito', lineHeight: '1.5', opacity: 0.8}}>
                 Trusted by 5,000+ entrepreneurs and startups with official filings, attorney review, and secure document handling.
               </span>
             </div>
@@ -1556,11 +1527,10 @@ export default function AboutClient() {
       <AboutContentExpanded />
 
         {/* FAQ Section */}
-        <div className="py-[57.6px] relative overflow-hidden w-full">
+        <div className="py-[57.6px] relative overflow-hidden w-full bg-white">
         {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-full h-full" style={{ background: 'linear-gradient(to right, #FFB70320, transparent)' }}></div>
-          <div className="absolute bottom-0 right-0 w-[69.12px] h-[69.12px] rounded-full blur-[2.16rem]" style={{ background: 'linear-gradient(to left, #FFB70320, transparent)' }}></div>
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-0 left-0 w-full h-full" style={{ background: 'linear-gradient(to right, #0C002B05, transparent)' }}></div>
         </div>
 
         <div className="mx-4 lg:mx-20 relative z-10">
@@ -1569,7 +1539,7 @@ export default function AboutClient() {
             {/* Left Section - Questions */}
             <div className="space-y-[28.8px] flex flex-col justify-start">
               <div className="space-y-[18px]">
-                <h2 className="text-white text-left font-nunito text-[23.4px] md:text-[36px] font-medium leading-[28.8px] md:leading-[39.6px] w-full">
+                <h2 className="text-[#0C002B] text-left font-nunito text-[23.4px] md:text-[36px] font-bold leading-[28.8px] md:leading-[39.6px] w-full">
                   Have Question?
                   <br />
                   <span style={{ color: '#FFB703' }}>
@@ -1577,27 +1547,25 @@ export default function AboutClient() {
                   </span>
                 </h2>
 
-                <p className="text-white font-nunito text-[10.8px] md:text-[12.6px] lg:text-[13.5px] xl:text-[14.4px] font-medium">
-                  Still have questions? <span style={{ color: '#FFB703' }} className="font-medium">Contact us</span> anytime.
+                <p className="text-gray-500 font-nunito text-[10.8px] md:text-[12.6px] lg:text-[13.5px] xl:text-[14.4px] font-medium">
+                  Still have questions? <span style={{ color: '#FFB703' }} className="font-bold">Contact us</span> anytime.
                 </p>
               </div>
 
               {/* AI Input */}
               <form onSubmit={handleAiSubmit} className="relative">
-                <div className="relative bg-white/50 backdrop-blur-sm border border-purple-400/30 rounded-[10.8px] p-[14.4px] max-w-lg">
+                <div className="relative bg-slate-50 border border-gray-100 rounded-[10.8px] p-[14.4px] max-w-lg shadow-sm">
                   <input
                     type="text"
                     value={aiQuestion}
                     onChange={(e) => setAiQuestion(e.target.value)}
-                    placeholder="Smart AI, Ask me Anything...."
-                    className="bg-transparent text-white placeholder-white outline-none text-[14.4px] w-full"
+                    placeholder="Ask our AI anything about IPR..."
+                    className="bg-transparent text-[#0C002B] placeholder-gray-400 outline-none text-[14.4px] w-full font-medium"
                   />
                   <button
                     type="submit"
                     className="absolute right-[14.4px] top-1/2 transform -translate-y-1/2 transition-colors"
                     style={{ color: '#FFB703' }}
-                    onMouseEnter={(e) => e.currentTarget.style.color = '#e6a503'}
-                    onMouseLeave={(e) => e.currentTarget.style.color = '#FFB703'}
                   >
                     <FontAwesomeIcon icon={faPaperPlane} className="w-[18px] h-[18px]" />
                   </button>
@@ -1608,25 +1576,20 @@ export default function AboutClient() {
               {searchResult && (
                 <div 
                   key={searchResult.question}
-                  className="p-[18px] rounded-[10.8px] max-w-lg animate-fade-in-up"
-                  style={{
-                    background: 'linear-gradient(140deg, rgba(12, 0, 43, 0.10) 6.89%, rgba(255, 183, 3, 0.10) 101.84%)',
-                    boxShadow: '2.88px 2.88px 18.144px 0 rgba(0, 0, 0, 0.15), 0 0 14.4px 0.72px rgba(255, 255, 255, 0.10) inset',
-                    backdropFilter: 'blur(87.876px)'
-                  }}
+                  className="p-[18px] rounded-[10.8px] max-w-lg animate-fade-in-up bg-white border border-gray-100 shadow-lg"
                 >
                   <div className="flex justify-between items-start mb-[10.8px]">
-                    <h4 className="text-white font-nunito text-[14.4px] md:text-[16.2px] font-semibold leading-snug" style={{ color: '#FFB703' }}>
+                    <h4 className="text-[#FFB703] font-nunito text-[14.4px] md:text-[16.2px] font-bold leading-snug">
                       {searchResult.question}
                     </h4>
                     <button
                       onClick={() => setSearchResult(null)}
-                      className="text-white hover:text-gray-300 transition-colors ml-[10.8px] flex-shrink-0"
+                      className="text-gray-400 hover:text-[#0C002B] transition-colors ml-[10.8px] flex-shrink-0"
                     >
                       <FontAwesomeIcon icon={faChevronDown} className="w-[14.4px] h-[14.4px] rotate-180" />
                     </button>
                   </div>
-                  <p className="text-white font-nunito text-[12.6px] md:text-[13.5px] font-medium leading-relaxed">
+                  <p className="text-[#0C002B] font-nunito text-[12.6px] md:text-[13.5px] font-medium leading-relaxed opacity-90">
                     {searchResult.answer}
                   </p>
                 </div>
@@ -1635,20 +1598,15 @@ export default function AboutClient() {
               {/* No Match Message */}
               {showNoMatch && (
                 <div 
-                  className="p-[18px] rounded-[10.8px] max-w-lg animate-fade-in-up"
-                  style={{
-                    background: 'linear-gradient(140deg, rgba(12, 0, 43, 0.10) 6.89%, rgba(255, 183, 3, 0.10) 101.84%)',
-                    boxShadow: '2.88px 2.88px 18.144px 0 rgba(0, 0, 0, 0.15), 0 0 14.4px 0.72px rgba(255, 255, 255, 0.10) inset',
-                    backdropFilter: 'blur(87.876px)'
-                  }}
+                  className="p-[18px] rounded-[10.8px] max-w-lg animate-fade-in-up bg-slate-50 border border-gray-100 shadow-sm"
                 >
                   <div className="flex justify-between items-start">
-                    <p className="text-white font-nunito text-[13.5px] md:text-[14.4px] font-medium leading-relaxed">
-                      We're experiencing high traffic at the moment. Please try your search again in a few moments, or browse our FAQ section for answers.
+                    <p className="text-[#0C002B] font-nunito text-[13.5px] md:text-[14.4px] font-medium leading-relaxed opacity-70">
+                      We're experiencing high traffic at the moment. Please try your search again shortly, or browse our FAQ section below.
                     </p>
                     <button
                       onClick={() => setShowNoMatch(false)}
-                      className="text-white hover:text-gray-300 transition-colors ml-[10.8px] flex-shrink-0"
+                      className="text-gray-400 hover:text-[#0C002B] transition-colors ml-[10.8px] flex-shrink-0"
                     >
                       <FontAwesomeIcon icon={faChevronDown} className="w-[14.4px] h-[14.4px] rotate-180" />
                     </button>
@@ -1659,35 +1617,32 @@ export default function AboutClient() {
 
             {/* Right Section - FAQ Items */}
             <div
-              className="space-y-[14.4px] p-[21.6px]"
+              className="space-y-[14.4px] p-[21.6px] bg-slate-50 border border-gray-100 shadow-sm"
               style={{
                 borderRadius: '14.4px',
-                background: 'linear-gradient(140deg, rgba(12, 0, 43, 0.10) 6.89%, rgba(255, 183, 3, 0.10) 101.84%)',
-                boxShadow: '2.88px 2.88px 18.144px 0 rgba(0, 0, 0, 0.15), 0 0 14.4px 0.72px rgba(255, 255, 255, 0.10) inset',
-                backdropFilter: 'blur(87.876px)'
               }}
             >
               {aboutFaqs.map((faq, index) => (
                 <div key={index} className="relative">
                   <div
-                    className="p-[18px] cursor-pointer transition-all duration-300 ease-in-out hover:scale-[1.02] transform"
+                    className="p-[18px] cursor-pointer transition-all duration-300 ease-in-out hover:bg-white hover:shadow-md transform border border-transparent"
                     style={{
                       borderRadius: '10.8px',
-                      background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%)',
-                      ...(openFaq === index ? { boxShadow: `0 0 0 1.44px #FFB70380` } : {})
+                      background: openFaq === index ? '#FFFFFF' : 'rgba(255, 255, 255, 0.5)',
+                      borderColor: openFaq === index ? '#FFB70340' : 'transparent',
+                      ...(openFaq === index ? { boxShadow: `0 4px 15px rgba(0, 0, 0, 0.05)` } : {})
                     }}
                     onClick={() => toggleFaq(index)}
                   >
                     <div className="flex justify-between items-center mb-[10.8px]">
-                      <h3 className="text-white font-nunito text-[13.5px] md:text-[16.2px] lg:text-[19.8px] font-semibold pr-[14.4px] leading-snug">
+                      <h3 className={`font-nunito text-[13.5px] md:text-[16.2px] lg:text-[18px] font-bold pr-[14.4px] leading-snug transition-colors duration-300 ${openFaq === index ? 'text-[#FFB703]' : 'text-[#0C002B]'}`}>
                         {faq.question}
                       </h3>
                       <FontAwesomeIcon
                         icon={faChevronDown}
-                        className={`w-[18px] h-[18px] transition-all duration-500 ease-in-out flex-shrink-0 ${
-                          openFaq === index ? 'rotate-180 scale-110' : 'rotate-0 scale-100'
+                        className={`w-[14px] h-[14px] transition-all duration-500 ease-in-out flex-shrink-0 ${
+                          openFaq === index ? 'rotate-180 text-[#FFB703]' : 'rotate-0 text-[#0C002B] opacity-50'
                         }`}
-                        style={{ color: '#000000' }}
                       />
                     </div>
 
@@ -1696,8 +1651,8 @@ export default function AboutClient() {
                         openFaq === index ? 'max-h-[345.6px] opacity-100 mt-0' : 'max-h-0 opacity-0 -mt-[14.4px]'
                       }`}
                     >
-                      <div className="mt-[14.4px] pt-[14.4px] border-t border-black/20 transform transition-all duration-500 ease-in-out">
-                        <p className="text-white font-nunito text-[10.8px] md:text-[11.7px] lg:text-[12.6px] xl:text-[13.5px] font-medium leading-relaxed">
+                      <div className="mt-[14.4px] pt-[14.4px] border-t border-gray-100 transform transition-all duration-500 ease-in-out">
+                        <p className="text-[#0C002B] font-nunito text-[11.7px] md:text-[12.6px] lg:text-[13.5px] font-medium leading-relaxed opacity-80">
                           {faq.answer}
                         </p>
                       </div>

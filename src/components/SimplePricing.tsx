@@ -62,7 +62,7 @@ export default function SimplePricing() {
   const scaleX = useTransform(scrollXProgress, [0, 1], [0.15, 1]);
 
   return (
-    <section className="w-full bg-white py-5 px-4 md:px-8">
+    <section className="w-full bg-white py-20 px-4 md:px-8">
       <div className="max-w-[1100px] mx-auto flex flex-col items-center">
         <h2 className="text-[#0C002B] font-nunito text-[32px] md:text-[52px] font-semibold text-center mb-12 md:mb-16 leading-[1.1] tracking-tight max-w-[320px] md:max-w-none">
           Simple Pricing. Serious<br /> Brand Protection.
