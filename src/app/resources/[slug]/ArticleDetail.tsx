@@ -210,9 +210,7 @@ const ArticleDetail = memo(function ArticleDetail({ slug, initialReviews = [], i
   const [relatedBlogs, setRelatedBlogs] = useState<Blog[]>([]);
   const [activeSection, setActiveSection] = useState('');
   const [tocSections, setTocSections] = useState<TOCSection[]>([]);
-  const [sidebarsFixed, setSidebarsFixed] = useState(true);
   const [isLoaded, setIsLoaded] = useState(false);
-  // Pre-process description server-side data on first render (no DOMParser needed for initial paint)
   const [processedDescription, setProcessedDescription] = useState(initialBlog?.description || '');
 
   useEffect(() => {
@@ -224,7 +222,6 @@ const ArticleDetail = memo(function ArticleDetail({ slug, initialReviews = [], i
     
     const loadBlogData = async () => {
       try {
-        // If we already have the blog from the server, skip fetching it again
         const blogData = initialBlog || await fetchBlogBySlug(slug);
         
         if (blogData) {
@@ -232,11 +229,9 @@ const ArticleDetail = memo(function ArticleDetail({ slug, initialReviews = [], i
             setBlog(blogData);
           }
           
-          // Extract H2 headings and add IDs (client-side for TOC interactivity)
           const sections = extractH2Headings(blogData.description);
           setTocSections(sections);
           
-          // Add IDs to H2 elements in the description for TOC scroll tracking
           const parser = new DOMParser();
           const doc = parser.parseFromString(blogData.description, 'text/html');
           const h2Elements = doc.querySelectorAll('h2');
@@ -251,8 +246,6 @@ const ArticleDetail = memo(function ArticleDetail({ slug, initialReviews = [], i
             setActiveSection(sections[0].id);
           }
           
-          // Fetch related articles (always client-side for freshness)
-          // FAQs and reviews are already passed from server if available
           const [relatedBlogsData, faqsData, reviewsData] = await Promise.all([
             fetchRelatedBlogs(blogData.id),
             initialFaqs.length > 0 ? Promise.resolve(initialFaqs) : fetchFAQs(blogData.id),
@@ -280,53 +273,25 @@ const ArticleDetail = memo(function ArticleDetail({ slug, initialReviews = [], i
         window.history.scrollRestoration = 'auto';
       }
     };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [slug]);
+  }, [slug, initialBlog, initialFaqs, initialReviews]);
 
   useEffect(() => {
-    const updateSidebarPosition = () => {
-      const footer = document.querySelector('footer');
-      if (!footer) return;
-
-      const scrollY = window.scrollY;
-      const footerTop = footer.getBoundingClientRect().top + scrollY;
-      const shouldApplyConstraint = footerTop < scrollY + 400;
-      setSidebarsFixed(!shouldApplyConstraint);
-    };
-
-    let ticking = false;
     const handleScroll = () => {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          updateSidebarPosition();
-
-          // Section tracking
-          const scrollPosition = window.scrollY + 250;
-          for (const section of tocSections) {
-            const element = document.getElementById(section.id);
-            if (element) {
-              const { offsetTop, offsetHeight } = element;
-              if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-                setActiveSection(section.id);
-                break;
-              }
-            }
+      const scrollPosition = window.scrollY + 250;
+      for (const section of tocSections) {
+        const element = document.getElementById(section.id);
+        if (element) {
+          const { offsetTop, offsetHeight } = element;
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            setActiveSection(section.id);
+            break;
           }
-
-          ticking = false;
-        });
-        ticking = true;
+        }
       }
     };
 
-    updateSidebarPosition();
     window.addEventListener('scroll', handleScroll, { passive: true });
-    window.addEventListener('resize', updateSidebarPosition);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('resize', updateSidebarPosition);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, [tocSections]);
 
   const toggleFaq = (faqId: string) => {
@@ -334,9 +299,6 @@ const ArticleDetail = memo(function ArticleDetail({ slug, initialReviews = [], i
       prev.includes(faqId) ? prev.filter(id => id !== faqId) : [...prev, faqId]
     );
   };
-
-  // FAQ Schema is now rendered server-side in page.tsx for better SEO
-  // No client-side schema injection needed
 
   const handleShare = (platform: string) => {
     const currentUrl = typeof window !== 'undefined' ? window.location.href : '';
@@ -362,14 +324,12 @@ const ArticleDetail = memo(function ArticleDetail({ slug, initialReviews = [], i
 
   if (loading) {
     return (
-      <div className="min-h-screen relative overflow-x-hidden mt-20" style={{ 
-        background: 'radial-gradient(ellipse 80% 50% at 50% -20%, rgba(19, 69, 195, 0.15), transparent), linear-gradient(180deg, #0C002B 0%, #1a0052 50%, #0C002B 100%)'
-      }}>
+      <div className="min-h-screen bg-white mt-20">
         <div className="container mx-auto px-4 py-20">
           <div className="animate-pulse space-y-8">
-            <div className="h-12 bg-white/10 rounded-lg w-3/4 mx-auto"></div>
-            <div className="h-6 bg-white/10 rounded-lg w-1/2 mx-auto"></div>
-            <div className="h-64 bg-white/10 rounded-lg"></div>
+            <div className="h-12 bg-gray-100 rounded-lg w-3/4 mx-auto"></div>
+            <div className="h-6 bg-gray-100 rounded-lg w-1/2 mx-auto"></div>
+            <div className="aspect-video bg-gray-100 rounded-2xl"></div>
           </div>
         </div>
       </div>
@@ -378,17 +338,12 @@ const ArticleDetail = memo(function ArticleDetail({ slug, initialReviews = [], i
 
   if (!blog) {
     return (
-      <div className="min-h-screen flex items-center justify-center" style={{ 
-        background: 'radial-gradient(ellipse 80% 50% at 50% -20%, rgba(19, 69, 195, 0.15), transparent), linear-gradient(180deg, #0C002B 0%, #1a0052 50%, #0C002B 100%)'
-      }}>
+      <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="text-center">
-          <i className="fas fa-book-open text-[#FFB703] text-6xl mb-6" aria-hidden="true"></i>
-          <h1 className="text-3xl font-bold text-white mb-4 font-nunito">Article Not Found</h1>
-          <p className="text-white/70 mb-8 font-nunito">We couldn't find the blog post you're looking for.</p>
-          <Link href="/resources" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-nunito font-bold text-sm transition-all duration-300 hover:scale-105" style={{
-            background: 'linear-gradient(135deg, #FFB703 0%, #FFA000 100%)',
-            color: '#0C002B'
-          }}>
+          <i className="fas fa-book-open text-[#B3A1FF] text-6xl mb-6" aria-hidden="true"></i>
+          <h1 className="text-3xl font-bold text-[#0C002B] mb-4 font-nunito">Article Not Found</h1>
+          <p className="text-[#0C002B]/60 mb-8 font-nunito">We couldn't find the blog post you're looking for.</p>
+          <Link href="/resources" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-nunito font-bold text-sm transition-all duration-300 hover:scale-105 bg-[#B3A1FF] text-white">
             <i className="fas fa-arrow-left text-xs" aria-hidden="true"></i>
             Return to Resources
           </Link>
@@ -398,504 +353,236 @@ const ArticleDetail = memo(function ArticleDetail({ slug, initialReviews = [], i
   }
 
   return (
-    <div className="min-h-screen relative overflow-x-hidden mt-20" style={{ 
-      background: 'radial-gradient(ellipse 80% 50% at 50% -20%, rgba(19, 69, 195, 0.15), transparent), linear-gradient(180deg, #0C002B 0%, #1a0052 50%, #0C002B 100%)'
-    }}>
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none" style={{ contain: 'layout style paint' }}>
-        <div 
-          className="absolute -top-40 -right-40 w-96 h-96 rounded-full opacity-20 blur-3xl"
-          style={{
-            background: 'radial-gradient(circle, #FFB703 0%, transparent 70%)',
-            animation: 'float 8s ease-in-out infinite'
-          }}
-        />
-        <div 
-          className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full opacity-15 blur-3xl"
-          style={{
-            background: 'radial-gradient(circle, #1345C3 0%, transparent 70%)',
-            animation: 'float 10s ease-in-out infinite reverse',
-            animationDelay: '2s'
-          }}
-        />
-        <div 
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full opacity-10 blur-3xl"
-          style={{
-            background: 'radial-gradient(circle, #069A81 0%, transparent 70%)',
-            animation: 'glow-pulse 6s ease-in-out infinite'
-          }}
-        />
+    <div className="min-h-screen bg-white relative pt-20">
+      {/* Top Hero Image Section */}
+      <div className="w-full mb-12">
+        <div className="max-w-[1920px] mx-auto px-4 md:px-0">
+          <div className="aspect-video md:aspect-[21/9] w-full overflow-hidden md:rounded-none rounded-2xl shadow-xl">
+            {blog.image && (
+              <img
+                src={blog.image}
+                alt={blog.title}
+                className="w-full h-full object-cover"
+                loading="eager"
+              />
+            )}
+          </div>
+        </div>
       </div>
 
-      {/* Table of Contents */}
-      {tocSections.length > 0 && (
-        <BlogTableOfContents 
-          activeSection={activeSection} 
-          blogTitle={blog.title}
-          sections={tocSections}
-        />
-      )}
+      <div className="mx-auto px-4 lg:px-8 max-w-8xl">
+        {/* Meta Info Section */}
+        <div className={`mb-12 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          {/* Breadcrumb */}
+          <div className="flex items-center gap-2 mb-6 text-xs lg:text-sm px-20">
+            <Link href="/" className="text-[#0C002B]/40 hover:text-[#B3A1FF] font-nunito">Home</Link>
+            <i className="fas fa-chevron-right text-[#0C002B]/20 text-[10px]" aria-hidden="true"></i>
+            <Link href="/resources" className="text-[#0C002B]/40 hover:text-[#B3A1FF] font-nunito">Resources</Link>
+            <i className="fas fa-chevron-right text-[#0C002B]/20 text-[10px]" aria-hidden="true"></i>
+            <span className="text-[#B3A1FF] font-nunito font-medium">Article</span>
+          </div>
 
-      <div className="relative z-10 pt-8 pb-16 md:pb-8">
-        <div className="container mx-auto px-3 sm:px-4 lg:px-5 xl:px-6 2xl:px-8 max-w-7xl">
-          {/* Hero Section */}
-          <div className={`text-center mb-8 lg:mb-10 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            {/* Breadcrumb */}
-            <div className="flex items-center justify-center gap-1.5 mb-3 text-[10px] lg:text-xs">
-              <span className="text-white/60 font-nunito">Home</span>
-              <i className="fas fa-chevron-right text-white/40 text-[8px]" aria-hidden="true"></i>
-              <span className="text-white/60 font-nunito">Resources</span>
-              <i className="fas fa-chevron-right text-white/40 text-[8px]" aria-hidden="true"></i>
-              <span className="text-[#FFB703] font-nunito font-medium">Article</span>
-            </div>
-
-            {/* Main Heading */}
-            <div className="relative inline-block mb-4">
-              <h1 
-                className="font-nunito font-extrabold text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl leading-tight mb-3"
-      style={{
-                  background: 'linear-gradient(135deg, #FFB703 0%, #FFC93D 50%, #FFB703 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
-                  textShadow: '0 0 40px rgba(255, 183, 3, 0.3)'
-                }}
-              >
+          <h1 className="font-nunito font-bold text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-[#0C002B] leading-tight mb-6 px-20 text-center">
             {blog.title}
           </h1>
-              <div 
-                className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 h-0.5 rounded-full"
-                style={{
-                  width: '60%',
-                  background: 'linear-gradient(90deg, transparent, #FFB703, transparent)',
-                  boxShadow: '0 0 20px rgba(255, 183, 3, 0.5)'
-                }}
-              />
-      </div>
-      
-            {/* Subtitle */}
-            {blog.subtitle && (
-              <p className="text-white/90 font-nunito text-xs md:text-sm lg:text-base leading-relaxed max-w-3xl mx-auto mb-5">
-                {blog.subtitle}
-                    </p>
-                  )}
 
-            {/* Metadata */}
-            <div className="flex flex-wrap items-center justify-center gap-4 mb-4">
-              <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 backdrop-blur-sm border border-white/10">
-                <i className="fas fa-calendar text-[#FFB703] text-xs" aria-hidden="true"></i>
-                <span className="text-white text-[10px] lg:text-xs font-nunito">{blog.date}</span>
-              </div>
-                <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 backdrop-blur-sm border border-white/10">
-                  <i className="fas fa-user text-[#FFB703] text-xs" aria-hidden="true"></i>
-                  <span className="text-white text-[10px] lg:text-xs font-nunito">Team IPRKaro</span>
-                </div>
-              </div>
-              
-            {/* Featured Image */}
-              {blog.image && (
-              <div className="max-w-5xl mx-auto mb-8 rounded-2xl overflow-hidden shadow-2xl">
-                  <img
-                    src={blog.image}
-                  alt={blog.title}
-                  className="w-full h-auto"
-                    loading="eager"
-                  />
-                </div>
-              )}
-          </div>
+          {blog.subtitle && (
+            <p className="text-[#0C002B]/60 font-nunito text-lg md:text-xl leading-relaxed mb-8 px-20 text-center">
+              {blog.subtitle}
+            </p>
+          )}
 
-          {/* Content Layout with Right Sidebar */}
-          <div className="relative grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-6">
-            {/* Main Content Area */}
-            <div 
-              className={`lg:col-span-8 min-h-[500px] transition-all duration-700 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
-            >
-              <div 
-                className="rounded-2xl p-6 md:p-8 backdrop-blur-xl border border-white/10 shadow-2xl"
-                style={{
-                  background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(12, 0, 43, 0.8) 100%)'
-                }}
-              >
-                <div 
-                  className="prose prose-invert prose-lg max-w-none blog-content" 
-                  dangerouslySetInnerHTML={{ __html: processedDescription }}
-                />
+          <div className="flex flex-wrap items-center gap-6 py-6 border-y border-gray-100 mb-12">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full bg-[#B3A1FF]/10 flex items-center justify-center">
+                <i className="fas fa-calendar text-[#B3A1FF]" aria-hidden="true"></i>
               </div>
-                
-                {/* Share Section */}
-              <div className="mt-6 rounded-xl p-5 backdrop-blur-xl border border-white/10" style={{
-                background: 'linear-gradient(135deg, rgba(255, 183, 3, 0.1) 0%, rgba(12, 0, 43, 0.8) 100%)'
-              }}>
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                  <div className="flex items-center gap-2">
-                    <i className="fas fa-share-alt text-[#FFB703] text-lg" aria-hidden="true"></i>
-                    <span className="text-white font-nunito font-semibold">Share this article</span>
-                  </div>
-                  <div className="flex gap-2">
-                        <button 
-                          onClick={() => handleShare('facebook')}
-                      className="w-10 h-10 rounded-lg bg-white/10 hover:bg-blue-600 flex items-center justify-center transition-all duration-300 border border-white/20"
-                      aria-label="Share on Facebook"
-                        >
-                      <i className="fab fa-facebook-f text-white text-sm" aria-hidden="true"></i>
-                        </button>
-                        <button 
-                          onClick={() => handleShare('twitter')}
-                      className="w-10 h-10 rounded-lg bg-white/10 hover:bg-black flex items-center justify-center transition-all duration-300 border border-white/20"
-                      aria-label="Share on Twitter"
-                        >
-                      <i className="fab fa-twitter text-white text-sm" aria-hidden="true"></i>
-                        </button>
-                        <button 
-                          onClick={() => handleShare('linkedin')}
-                      className="w-10 h-10 rounded-lg bg-white/10 hover:bg-blue-700 flex items-center justify-center transition-all duration-300 border border-white/20"
-                      aria-label="Share on LinkedIn"
-                    >
-                      <i className="fab fa-linkedin-in text-white text-sm" aria-hidden="true"></i>
-                        </button>
+              <div>
+                <p className="text-[10px] text-[#0C002B]/40 uppercase font-semibold tracking-wider">Published</p>
+                <p className="text-sm font-nunito font-bold text-[#0C002B]">{blog.date}</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full bg-[#B3A1FF]/10 flex items-center justify-center">
+                <i className="fas fa-user text-[#B3A1FF]" aria-hidden="true"></i>
+              </div>
+              <div>
+                <p className="text-[10px] text-[#0C002B]/40 uppercase font-semibold tracking-wider">Author</p>
+                <p className="text-sm font-nunito font-bold text-[#0C002B]">Team IPRKaro</p>
               </div>
             </div>
           </div>
-          
-            {/* Author Bio */}
-            {(() => {
-                const bio = authorBios["Team IPRKaro"];
-                return (
-                  <div className="mt-6 rounded-2xl p-6 backdrop-blur-xl border border-white/10 shadow-xl" style={{
-                    background: 'linear-gradient(135deg, rgba(255, 183, 3, 0.1) 0%, rgba(12, 0, 43, 0.9) 100%)'
-                  }}>
-                    <div className="flex flex-col sm:flex-row gap-4">
-                      <div className="w-20 h-20 rounded-xl border-2 border-[#FFB703]/30 shadow-lg bg-white/10 flex items-center justify-center overflow-hidden p-2">
-                        <img 
-                          src={bio.image}
-                          alt={bio.name}
-                          className="w-full h-full object-contain"
-                        />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-white font-nunito font-bold text-lg mb-1">{bio.name}</h3>
-                        <p className="text-white/70 font-nunito text-sm mb-3 leading-relaxed">
-                          {bio.description}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                );
-            })()}
+        </div>
 
+        {/* 3-Column Layout Section */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          {/* Left Column: Sticky Table of Contents */}
+          <div className="hidden lg:block lg:col-span-2 sticky top-28 self-start">
+            <BlogTableOfContents 
+              activeSection={activeSection} 
+              blogTitle={blog.title}
+              sections={tocSections}
+              variant="vertical"
+            />
+          </div>
 
-              {/* FAQs */}
-        {faqs.length > 0 && (
-                  <div className="mt-6 rounded-2xl p-6 backdrop-blur-xl border border-white/10 shadow-xl" style={{
-                    background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(12, 0, 43, 0.8) 100%)'
-                  }}>
-                    <h2 className="text-white font-nunito font-bold text-2xl mb-6 flex items-center gap-2">
-                      <i className="fas fa-question-circle text-[#FFB703]" aria-hidden="true"></i>
-                      Frequently Asked Questions
-                    </h2>
-                    <div className="space-y-3">
+          {/* Middle Column: Main Article Content */}
+          <div className="col-span-1 lg:col-span-8">
+            <div className="prose prose-lg max-w-none blog-content-light">
+              <div dangerouslySetInnerHTML={{ __html: processedDescription }} />
+            </div>
+
+            {/* Share Section */}
+            <div className="mt-12 py-8 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-6">
+              <span className="text-[#0C002B] font-nunito font-bold">Share this article:</span>
+              <div className="flex gap-3">
+                <button 
+                  onClick={() => handleShare('facebook')}
+                  className="w-11 h-11 rounded-full bg-gray-50 text-[#0C002B] hover:bg-[#B3A1FF] hover:text-white flex items-center justify-center transition-all duration-300"
+                >
+                  <i className="fab fa-facebook-f text-sm" aria-hidden="true"></i>
+                </button>
+                <button 
+                  onClick={() => handleShare('twitter')}
+                  className="w-11 h-11 rounded-full bg-gray-50 text-[#0C002B] hover:bg-[#B3A1FF] hover:text-white flex items-center justify-center transition-all duration-300"
+                >
+                  <i className="fab fa-twitter text-sm" aria-hidden="true"></i>
+                </button>
+                <button 
+                  onClick={() => handleShare('linkedin')}
+                  className="w-11 h-11 rounded-full bg-gray-50 text-[#0C002B] hover:bg-[#B3A1FF] hover:text-white flex items-center justify-center transition-all duration-300"
+                >
+                  <i className="fab fa-linkedin-in text-sm" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+
+            {/* FAQs */}
+            {faqs.length > 0 && (
+              <div className="mt-12">
+                <h2 className="text-[#0C002B] font-nunito font-bold text-2xl mb-8 flex items-center gap-3">
+                  <i className="fas fa-question-circle text-[#B3A1FF]" aria-hidden="true"></i>
+                  Frequently Asked Questions
+                </h2>
+                <div className="space-y-4">
                   {faqs.map((faq) => (
-                        <div 
-                          key={faq.id} 
-                          className="border border-white/10 rounded-lg overflow-hidden bg-white/5 hover:bg-white/10 transition-all"
-                        >
+                    <div 
+                      key={faq.id} 
+                      className="border border-gray-100 rounded-xl overflow-hidden bg-white hover:border-[#B3A1FF]/30 transition-all shadow-sm"
+                    >
                       <button
                         onClick={() => toggleFaq(faq.id)}
-                            className="flex justify-between items-start w-full text-left p-4 font-medium text-white hover:text-[#FFB703] transition-colors"
-                          >
-                            <span className="pr-4 text-sm font-nunito">{faq.question}</span>
-                            <i className={`fas fa-chevron-down text-[#FFB703] transition-transform ${expandedFaqs.includes(faq.id) ? 'rotate-180' : ''}`} aria-hidden="true"></i>
+                        className="flex justify-between items-center w-full text-left p-5 font-bold text-[#0C002B] hover:text-[#B3A1FF] transition-colors"
+                      >
+                        <span className="pr-4 text-base font-nunito">{faq.question}</span>
+                        <i className={`fas fa-chevron-down text-xs transition-transform ${expandedFaqs.includes(faq.id) ? 'rotate-180' : ''}`} aria-hidden="true"></i>
                       </button>
                       {expandedFaqs.includes(faq.id) && (
-                            <div className="px-4 pb-4 border-t border-white/10">
-                              <p className="text-white/80 text-sm leading-relaxed mt-3 font-nunito">{faq.answer}</p>
+                        <div className="px-5 pb-5 border-t border-gray-50 pt-4">
+                          <p className="text-[#0C002B]/60 text-sm leading-relaxed font-nunito">{faq.answer}</p>
                         </div>
                       )}
                     </div>
                   ))}
                 </div>
               </div>
-              )}
+            )}
 
-              {/* Reviews Section */}
-              {reviews.length > 0 && (
-                <div className="mt-6 rounded-2xl p-6 backdrop-blur-xl border border-white/10 shadow-xl" style={{
-                  background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(12, 0, 43, 0.8) 100%)'
-                }}>
-                  <h2 className="text-white font-nunito font-bold text-2xl mb-6 flex items-center gap-2">
-                    <i className="fas fa-star text-[#FFB703]" aria-hidden="true"></i>
-                    Client Reviews
-                  </h2>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {reviews.map((review) => (
-                      <div key={review.id} className="bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-white/10 transition-all">
-                        <div className="flex justify-between items-start mb-3">
-                          <div>
-                            <h3 className="text-white font-bold font-nunito">{review.name}</h3>
-                            <span className="text-white/60 text-xs font-nunito">{review.date}</span>
-                          </div>
-                          <div className="flex gap-1">
-                            {[...Array(5)].map((_, i) => (
-                              <i 
-                                key={i} 
-                                className={`fas fa-star text-xs ${i < review.rating ? 'text-[#FFB703]' : 'text-white/20'}`}
-                                aria-hidden="true"
-                              ></i>
-                            ))}
-                          </div>
-                        </div>
-                        <p className="text-white/80 text-sm font-nunito italic">"{review.review}"</p>
-                      </div>
-                    ))}
-                  </div>
+            {/* Author Bio */}
+            <div className="mt-12 p-8 rounded-2xl bg-gray-50 border border-gray-100">
+              <div className="flex flex-col sm:flex-row gap-6 items-center sm:items-start text-center sm:text-left">
+                <div className="w-20 h-20 rounded-2xl bg-[#B3A1FF]/10 flex items-center justify-center overflow-hidden p-2 flex-shrink-0">
+                  <img src={authorBios["Team IPRKaro"].image} alt="Team IPRKaro" className="w-full h-full object-contain" />
                 </div>
-              )}
+                <div>
+                  <h3 className="text-[#0C002B] font-nunito font-bold text-xl mb-2">Team IPRKaro</h3>
+                  <p className="text-[#0C002B]/60 font-nunito text-sm leading-relaxed">
+                    {authorBios["Team IPRKaro"].description}
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
 
-            {/* Right Sidebar */}
-            <div 
-              className={`lg:col-span-4 transition-all duration-700 delay-100 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
-            >
-              <div className={`${sidebarsFixed ? 'lg:sticky lg:top-[200px]' : ''}`}>
-                <BlogSidebarForm />
-
-                {/* Related Articles */}
-        {relatedBlogs.length > 0 && (
-                  <div className="mt-6 rounded-2xl p-6 backdrop-blur-xl border border-white/10 shadow-xl" style={{
-                    background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(12, 0, 43, 0.8) 100%)'
-                  }}>
-                    <h3 className="text-white font-nunito font-bold text-lg mb-4 flex items-center gap-2">
-                      <i className="fas fa-newspaper text-[#FFB703]" aria-hidden="true"></i>
-                      Related Articles
-                    </h3>
-                    <div className="space-y-4">
+          {/* Right Column: Sticky CTA Sidebar */}
+          <div className="col-span-1 lg:col-span-2 sticky top-28 self-start">
+            <BlogSidebarForm />
+            
+            {/* Related Articles */}
+            {relatedBlogs.length > 0 && (
+              <div className="mt-8 rounded-2xl p-6 bg-white border border-gray-100 shadow-sm">
+                <h3 className="text-[#0C002B] font-nunito font-bold text-lg mb-6 flex items-center gap-2">
+                  <i className="fas fa-newspaper text-[#B3A1FF]" aria-hidden="true"></i>
+                  Related Articles
+                </h3>
+                <div className="space-y-6">
                   {relatedBlogs.map((article) => (
-                    <Link key={article.id} href={`/resources/${article.slug}`} prefetch={true}>
-                          <div className="group rounded-xl overflow-hidden border border-white/10 hover:border-[#FFB703]/50 transition-all bg-white/5 hover:bg-white/10">
-                            {article.image && (
-                              <div className="relative h-32 overflow-hidden">
-                          <img 
-                            src={article.image}
-                            alt={article.title}
-                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                          />
+                    <Link key={article.id} href={`/resources/${article.slug}`} className="group block">
+                      <div className="flex gap-4">
+                        {article.image && (
+                          <div className="w-20 h-20 rounded-xl overflow-hidden flex-shrink-0 border border-gray-100">
+                            <img src={article.image} alt={article.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                           </div>
-                            )}
-                            <div className="p-3">
-                              <h4 className="text-white font-nunito font-semibold text-sm mb-1 line-clamp-2 group-hover:text-[#FFB703] transition-colors">
-                                {article.title}
-                              </h4>
-                              <span className="text-white/60 text-xs font-nunito">{article.date}</span>
+                        )}
+                        <div className="flex-1">
+                          <h4 className="text-[#0C002B] font-nunito font-bold text-sm mb-1 line-clamp-2 group-hover:text-[#B3A1FF] transition-colors leading-tight">
+                            {article.title}
+                          </h4>
+                          <span className="text-[#0C002B]/40 text-[10px] font-nunito">{article.date}</span>
                         </div>
                       </div>
                     </Link>
                   ))}
                 </div>
-                  </div>
-                )}
               </div>
-            </div>
+            )}
           </div>
         </div>
-
-        {/* Scroll to Top Button */}
-        {isLoaded && (
-          <button
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="fixed bottom-8 right-8 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 z-50"
-            style={{
-              background: 'linear-gradient(135deg, #FFB703, #FFA000)',
-              boxShadow: '0 4px 20px rgba(255, 183, 3, 0.4)'
-            }}
-            aria-label="Scroll to top"
-          >
-            <i className="fas fa-arrow-up text-[#0C002B]" aria-hidden="true"></i>
-          </button>
-        )}
       </div>
 
-      {/* Animations */}
-      <style jsx global>{`
-        @keyframes float {
-          0%, 100% {
-            transform: translateY(0) rotate(0deg);
-          }
-          50% {
-            transform: translateY(-20px) rotate(5deg);
-          }
-        }
-        
-        @keyframes glow-pulse {
-          0%, 100% {
-            opacity: 0.1;
-            transform: translate(-50%, -50%) scale(1);
-          }
-          50% {
-            opacity: 0.15;
-            transform: translate(-50%, -50%) scale(1.05);
-          }
-        }
+      {/* Styled Footer for Article Page */}
+      <div className="mt-20 py-20 bg-gray-50 border-t border-gray-100 text-center">
+        <div className="max-w-2xl mx-auto px-4">
+          <h2 className="text-[#0C002B] font-nunito font-bold text-2xl md:text-3xl mb-4">Was this article helpful?</h2>
+          <p className="text-[#0C002B]/60 mb-8">Share your feedback with us or get legal advice from our experts.</p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link href="/contact" className="px-8 py-3 rounded-full bg-[#0C002B] text-white font-nunito font-bold hover:bg-[#B3A1FF] transition-all">
+              Talk to an Expert
+            </Link>
+            <button 
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="px-8 py-3 rounded-full border border-[#0C002B] text-[#0C002B] font-nunito font-bold hover:bg-[#0C002B] hover:text-white transition-all"
+            >
+              Back to Top
+            </button>
+          </div>
+        </div>
+      </div>
 
-        /* Blog Content Styling */
-        .blog-content {
-          color: #e5e7eb;
-          line-height: 1.8;
+      <style jsx global>{`
+        .blog-content-light {
+          color: #0C002B;
         }
-        
-        .blog-content h1,
-        .blog-content h2,
-        .blog-content h3,
-        .blog-content h4,
-        .blog-content h5,
-        .blog-content h6 {
-          color: #FFB703;
-          font-weight: 700;
+        .blog-content-light h1,
+        .blog-content-light h2,
+        .blog-content-light h3,
+        .blog-content-light h4 {
+          color: #0C002B;
+          font-family: 'Nunito', sans-serif;
+          font-weight: 800;
           margin-top: 2em;
           margin-bottom: 1em;
-          font-family: 'Nunito', sans-serif;
+          line-height: 1.2;
         }
-        
-        .blog-content h2 {
-          font-size: 1.875em;
-          border-bottom: 2px solid rgba(255, 183, 3, 0.2);
-          padding-bottom: 0.5em;
-        }
-        
-        .blog-content h3 {
-          font-size: 1.5em;
-        }
-        
-        .blog-content p {
-          margin: 1.5em 0;
-          color: rgba(255, 255, 255, 0.9);
-        }
-        
-        .blog-content a {
-          color: #FFB703;
-          text-decoration: underline;
-          text-decoration-color: rgba(255, 183, 3, 0.3);
-          transition: all 0.2s;
-        }
-        
-        .blog-content a:hover {
-          color: #FFC93D;
-          text-decoration-color: #FFC93D;
-        }
-        
-        .blog-content blockquote {
-          border-left: 4px solid #FFB703;
-          margin: 2em 0;
-          padding: 1em 1.5em;
-          background: rgba(255, 183, 3, 0.1);
-          border-radius: 0.5rem;
-          font-style: italic;
-          color: rgba(255, 255, 255, 0.85);
-        }
-        
-        .blog-content code {
-          background: rgba(255, 183, 3, 0.1);
-          color: #FFB703;
-          padding: 0.2em 0.4em;
-          border-radius: 0.25rem;
-          font-size: 0.875em;
-          font-family: 'Monaco', 'Courier New', monospace;
-        }
-        
-        .blog-content pre {
-          background: rgba(0, 0, 0, 0.3);
-          color: #e5e7eb;
-          padding: 1.5em;
-          border-radius: 0.75rem;
-          overflow-x: auto;
-          margin: 2em 0;
-          border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .blog-content pre code {
-          background: transparent;
-          color: inherit;
-          padding: 0;
-        }
-        
-        .blog-content ul,
-        .blog-content ol {
-          margin: 1.5em 0;
-          padding-left: 2em;
-          list-style-position: outside;
-        }
-        
-        .blog-content ul {
-          list-style-type: disc;
-        }
-        
-        .blog-content ol {
-          list-style-type: decimal;
-        }
-        
-        .blog-content li {
-          margin: 0.75em 0;
-          color: rgba(255, 255, 255, 0.9);
-          padding-left: 0.5em;
-        }
-        
-        .blog-content ul ul {
-          list-style-type: circle;
-          margin-top: 0.5em;
-        }
-        
-        .blog-content ul ul ul {
-          list-style-type: square;
-        }
-        
-        .blog-content li::marker {
-          color: #FFB703;
-        }
-        
-        .blog-content img {
-          max-width: 100%;
-          height: auto;
-          border-radius: 0.75rem;
-          margin: 2em 0;
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        }
-        
-        .blog-content table {
-          width: 100%;
-          border-collapse: collapse;
-          margin: 2em 0;
-          border-radius: 0.5rem;
-          overflow: hidden;
-        }
-        
-        .blog-content table th,
-        .blog-content table td {
-          padding: 0.75em 1em;
-          border: 1px solid rgba(255, 255, 255, 0.1);
-          text-align: left;
-        }
-        
-        .blog-content table th {
-          background: rgba(255, 183, 3, 0.1);
-          color: #FFB703;
-          font-weight: 600;
-        }
-        
-        .blog-content table tbody tr:hover {
-          background: rgba(255, 255, 255, 0.05);
-        }
-        
-        .blog-content strong {
-          color: #FFB703;
-          font-weight: 600;
-        }
-        
-        .blog-content hr {
-          border: none;
-          height: 1px;
-          background: linear-gradient(90deg, transparent, rgba(255, 183, 3, 0.3), transparent);
-          margin: 3em 0;
-        }
+        .blog-content-light h2 { font-size: 2rem; border-bottom: 2px solid #f3f4f6; padding-bottom: 0.5rem; }
+        .blog-content-light h3 { font-size: 1.5rem; }
+        .blog-content-light p { margin: 1.5rem 0; line-height: 1.8; color: rgba(12, 0, 43, 0.7); }
+        .blog-content-light ul, .blog-content-light ol { margin: 1.5rem 0; padding-left: 1.5rem; }
+        .blog-content-light li { margin: 0.5rem 0; color: rgba(12, 0, 43, 0.7); }
+        .blog-content-light a { color: #B3A1FF; font-weight: 600; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+        .blog-content-light a:hover { color: #0C002B; }
+        .blog-content-light blockquote { border-left: 4px solid #B3A1FF; padding: 1.5rem; background: #f9fafb; border-radius: 0 1rem 1rem 0; font-style: italic; margin: 2rem 0; }
+        .blog-content-light img { border-radius: 1rem; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin: 2rem 0; }
       `}</style>
     </div>
   );
