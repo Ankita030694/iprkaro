@@ -29,6 +29,7 @@ const queries = [
   { name: 'Trademark for Clothing Brand', href: '/trademark-for-clothing-brand' },
   { name: 'Trademark for Jewellery Brand', href: '/trademark-for-jewellery-brand' },
   { name: 'Trademark for Restaurant', href: '/trademark-for-restaurant' },
+  { name: 'Trademark for Cloud Kitchen', href: '/trademark-for-cloud-kitchen' },
   { name: 'Trademark for Business', href: '/trademark-for-business' },
   { name: 'Trademark for Stationary', href: '/trademark-for-stationary' },
   { name: 'Trademark for Furniture Shop', href: '/trademark-for-furniture-shop' },
@@ -114,7 +115,34 @@ const queries = [
   { name: 'Trademark Owner Legal Rights', href: '/legal-rights-of-trademark-owner-in-india' },
   { name: 'Stop Brand Name Misuse', href: '/how-to-stop-someone-using-your-brand-name' },
   { name: 'Trademark Objected Meaning', href: '/what-does-objected-mean-in-trademark-status' },
-  { name: 'Protect Company Name', href: '/protect-company-name-with-trademark' }
+  { name: 'Protect Company Name', href: '/protect-company-name-with-trademark' },
+  { name: 'Trademark Objected: What to Do Next', href: '/trademark-objected-what-to-do-next' },
+  { name: 'Trademark Sent for Examination: What to Do', href: '/trademark-sent-for-examination-what-to-do' },
+  { name: 'Trademark Marked for Exam Meaning', href: '/trademark-marked-for-exam-meaning' },
+  { name: 'Trademark Accepted but Advertised Meaning', href: '/trademark-accepted-but-advertised-meaning' },
+  { name: 'Trademark Refused: What to Do', href: '/trademark-refused-what-are-options' },
+  { name: 'Trademark Abandoned: How to Restore', href: '/trademark-abandoned-how-to-restore' },
+  { name: 'Trademark Opposed: What Happens Next', href: '/trademark-opposed-what-happens-next-india' },
+  { name: 'Trademark Hearing Guide: What to Do', href: '/trademark-hearing-notice-what-to-do' },
+  { name: 'Trademark Discrepancy Meaning', href: '/trademark-discrepancy-meaning' },
+  { name: 'Trademark Formalities Check Fail Meaning', href: '/trademark-formalities-check-fail-meaning' },
+  { name: 'Famous Trademark Infringement Cases in India', href: '/famous-trademark-infringement-cases-in-india' },
+  { name: 'Penalty for Trademark Infringement India', href: '/penalty-for-trademark-infringement-india' },
+  { name: 'How to Send Trademark Legal Notice India', href: '/how-to-send-trademark-legal-notice-india' },
+  { name: 'Trademark Violation Examples India', href: '/trademark-violation-examples-india' },
+  { name: 'Civil vs Criminal Trademark Infringement', href: '/civil-vs-criminal-trademark-infringement-india' },
+  { name: 'How to File Trademark Rectification India', href: '/how-to-file-trademark-rectification-india' },
+  { name: 'Trademark Opposition Evidence Guide', href: '/what-evidence-is-required-in-trademark-opposition' },
+  { name: 'Trademark for Digital Marketing Agency', href: '/trademark-for-digital-marketing-agency' },
+  { name: 'Trademark for YouTube Channel', href: '/trademark-for-youtube-channel-name' },
+  { name: 'Trademark for Coaching Institute', href: '/trademark-for-coaching-institute' },
+  { name: 'Trademark for Real Estate Company', href: '/trademark-for-real-estate-company' },
+  { name: 'Trademark for Fintech Startup', href: '/trademark-for-fintech-startup' },
+  { name: 'Trademark for SaaS Product', href: '/trademark-for-saas-product' },
+  { name: 'Trademark for D2C Brand', href: '/trademark-for-d2c-brand-india' },
+  { name: 'Trademark for Cloud Kitchen', href: '/trademark-for-cloud-kitchen' },
+  { name: 'Trademark for Export Business', href: '/trademark-for-export-business' },
+  { name: 'Trademark for Instagram Brand', href: '/trademark-for-instagram-brand' },
 ];
 
 const NewFooter = () => {
@@ -137,11 +165,11 @@ const NewFooter = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-12 md:gap-8 mb-24">
           <div className="lg:col-span-2">
             <Link href="/" className="inline-block mb-10">
-              <div className="relative w-[180px] h-[45px]">
-                <Image 
-                  src="/Group 2 (2).svg" 
-                  alt="IPR KARO Logo" 
-                  fill 
+              <div className="relative w-[240px] h-[60px]">
+                <Image
+                  src="/Group 2 (2).svg"
+                  alt="IPR KARO Logo"
+                  fill
                   className="object-contain object-left"
                 />
               </div>
@@ -186,9 +214,9 @@ const NewFooter = () => {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-4">
             {queries.map((q, i) => (
-              <Link 
-                key={i} 
-                href={q.href} 
+              <Link
+                key={i}
+                href={q.href}
                 className="text-[13px] text-white/40 hover:text-white transition-all hover:translate-x-1 inline-block"
               >
                 {q.name}
@@ -202,7 +230,6 @@ const NewFooter = () => {
           <p className="text-white/40 text-[13px]">© 2025 reserved by IPR KARO</p>
           <div className="flex items-center gap-8">
             <Link href="/privacy-policy" className="text-white/40 hover:text-white text-[13px] transition-colors">Privacy Policy</Link>
-            <Link href="/terms-and-conditions" className="text-white/40 hover:text-white text-[13px] transition-colors">Term of Service</Link>
             <Link href="/terms-and-conditions" className="text-white/40 hover:text-white text-[13px] transition-colors">Term of Service</Link>
           </div>
         </div>

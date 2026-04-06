@@ -65,7 +65,7 @@ export default function SimplePlans() {
     if (isMobile && scrollContainerRef.current && cardRefs.current[1] && !hasInitiallyScrolled.current) {
       const container = scrollContainerRef.current;
       const card = cardRefs.current[1];
-      
+
       // Use requestAnimationFrame and setTimeout for Safari compatibility
       // Use 'auto' for initial scroll to avoid Safari smooth scroll issues on page load
       requestAnimationFrame(() => {
@@ -94,11 +94,11 @@ export default function SimplePlans() {
         const scrollLeft = container.scrollLeft;
         const containerWidth = container.offsetWidth;
         const scrollCenter = scrollLeft + containerWidth / 2;
-        
+
         // Find which card is closest to center
         let closestIndex = 0;
         let closestDistance = Infinity;
-        
+
         cardRefs.current.forEach((card, index) => {
           if (card) {
             const cardCenter = card.offsetLeft + card.offsetWidth / 2;
@@ -109,7 +109,7 @@ export default function SimplePlans() {
             }
           }
         });
-        
+
         setActiveCardIndex(closestIndex);
       });
     };
@@ -122,7 +122,7 @@ export default function SimplePlans() {
     if (scrollContainerRef.current && cardRefs.current[index]) {
       const container = scrollContainerRef.current;
       const card = cardRefs.current[index];
-      
+
       // Use requestAnimationFrame for Safari compatibility
       requestAnimationFrame(() => {
         const scrollLeft = card.offsetLeft - (container.offsetWidth - card.offsetWidth) / 2;
@@ -172,207 +172,205 @@ export default function SimplePlans() {
           
         }
       `}</style>
-      <section className="w-full relative overflow-hidden -mt-10" style={{scale:1}}>
-      {/* Solid Background */}
-      <div className="absolute inset-0 bg-[#0C002B]"></div>
+      <section className="w-full relative overflow-hidden -mt-10" style={{ scale: 1 }}>
+        {/* Solid Background */}
+        <div className="absolute inset-0 bg-[#0C002B]"></div>
 
-      {/* Main Content */}
-      <div className="relative z-10 mt-6 md:mt-16 px-2 lg:px-3 mb-6 md:mb-16">
-        <div className="max-w-8xl mx-auto">
-          {/* Section Heading with Gradient Text */}
-          <div className="text-center mb-6 md:mb-10">
-            <h2 className="text-white text-center font-nunito text-[26px] md:text-[40px] lg:text-[36px] font-medium leading-[30px] md:leading-[44px] lg:leading-[40px] w-full mb-3">
-            Trademark Registration Packages with AI-Powered Search Report
-            </h2>
-            <p className="text-white font-nunito text-[12px] md:text-[14px] lg:text-[14px] xl:text-[16px] font-medium text-center">
-              Search, File, Secure.
-            </p>
-          </div>
+        {/* Main Content */}
+        <div className="relative z-10 mt-6 md:mt-16 px-2 lg:px-3 mb-6 md:mb-16">
+          <div className="max-w-8xl mx-auto">
+            {/* Section Heading with Gradient Text */}
+            <div className="text-center mb-6 md:mb-10">
+              <h2 className="text-white text-center font-nunito text-[26px] md:text-[40px] lg:text-[36px] font-medium leading-[30px] md:leading-[44px] lg:leading-[40px] w-full mb-3">
+                Trademark Registration Packages with AI-Powered Search Report
+              </h2>
+              <p className="text-white font-nunito text-[12px] md:text-[14px] lg:text-[14px] xl:text-[16px] font-medium text-center">
+                Search, File, Secure.
+              </p>
+            </div>
 
-          {/* Pricing Cards */}
-          <div
-            ref={scrollContainerRef}
-            className="mobile-scroll-container flex flex-row overflow-x-auto overflow-y-hidden justify-start items-start lg:flex-row lg:items-center lg:justify-center lg:overflow-x-visible mb-6 md:mb-10 mt-6 md:mt-10 gap-3 lg:gap-5 pb-3 px-2 lg:px-0"
-            style={{ 
-              scrollbarWidth: 'none', 
-              msOverflowStyle: 'none',
-              WebkitOverflowScrolling: 'touch'
-            }}
-          >
-            {plans.map((plan, index) => (
-              <div
-                key={plan.id}
-                ref={(el) => { cardRefs.current[index] = el; }}
-                className={`relative cursor-pointer transition-all duration-300 ease-in-out flex flex-col items-center flex-shrink-0 ${
-                  index === 1 ? '' : ''
-                }`}
-                onClick={() => setSelectedPlan(plan.id)}
-                style={{
-                  display: 'flex',
-                  width: 'clamp(303.93px, 79.2vw, 425.7px)',
-                  minHeight: 'clamp(396px, 66vh, 514.8px)',
-                  padding: '11.88px 19.008px 19.008px 19.008px',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  flexShrink: 0
-                }}
-              >
-                {/* Container with conditional blue gradient */}
+            {/* Pricing Cards */}
+            <div
+              ref={scrollContainerRef}
+              className="mobile-scroll-container flex flex-row overflow-x-auto overflow-y-hidden justify-start items-start lg:flex-row lg:items-center lg:justify-center lg:overflow-x-visible mb-6 md:mb-10 mt-6 md:mt-10 gap-3 lg:gap-5 pb-3 px-2 lg:px-0"
+              style={{
+                scrollbarWidth: 'none',
+                msOverflowStyle: 'none',
+                WebkitOverflowScrolling: 'touch'
+              }}
+            >
+              {plans.map((plan, index) => (
                 <div
-                  className="w-full relative transition-all duration-300"
+                  key={plan.id}
+                  ref={(el) => { cardRefs.current[index] = el; }}
+                  className={`relative cursor-pointer transition-all duration-300 ease-in-out flex flex-col items-center flex-shrink-0 ${index === 1 ? '' : ''
+                    }`}
+                  onClick={() => setSelectedPlan(plan.id)}
                   style={{
-                    borderRadius: '23.76px',
-                    padding: '3.168px',
-                    paddingTop: '47.52px'
+                    display: 'flex',
+                    width: 'clamp(303.93px, 79.2vw, 425.7px)',
+                    minHeight: 'clamp(396px, 66vh, 514.8px)',
+                    padding: '11.88px 19.008px 19.008px 19.008px',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    flexShrink: 0
                   }}
                 >
-                  {/* Blue Gradient Background - Only for middle card */}
+                  {/* Container with conditional blue gradient */}
                   <div
-                    className={`absolute inset-0 transition-opacity duration-300 ${
-                      index === 1 ? 'opacity-100' : 'opacity-0'
-                    }`}
+                    className="w-full relative transition-all duration-300"
                     style={{
-                      borderRadius: '29.7px',
-                      background: 'linear-gradient(180deg, #1345C3 0%, rgba(19, 69, 195, 0) 50%)',
-                      pointerEvents: 'none'
+                      borderRadius: '23.76px',
+                      padding: '3.168px',
+                      paddingTop: '47.52px'
                     }}
                   >
-                    {/* Most Popular Badge - Only for middle card */}
-                    {index === 1 && (
-                      <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-20">
-                        <span className="animated-gradient text-xl font-bold">
-                          Most Popular
-                        </span>
-                      </div>
-                    )}
-                  </div>
-
-                  {/* Black Card Container - Glass effect by default, solid black for middle card only */}
-                  <div
-                    className="relative flex flex-col z-10 transition-all duration-300 min-h-0 flex-1"
-                    style={{
-                      borderRadius: index === 1 ? '20.592px' : '19.8px',
-                      background: index === 1 ? '#000' : 'rgba(0, 0, 0, 0.05)',
-                      boxShadow: index === 1 ? 'none' : '0 0 15.84px 0 rgba(255, 255, 255, 0.31) inset',
-                      backdropFilter: 'blur(12.672px)',
-                      width: '100%',
-                      minHeight: 'clamp(356.4px, 52.8vh, 475.2px)'
-                    }}
-                  >
-
-                    {/* Main Content Container */}
+                    {/* Blue Gradient Background - Only for middle card */}
                     <div
-                      className="relative flex flex-col h-full p-6"
+                      className={`absolute inset-0 transition-opacity duration-300 ${index === 1 ? 'opacity-100' : 'opacity-0'
+                        }`}
                       style={{
-                        borderRadius: '0 0 20.592px 20.592px'
+                        borderRadius: '29.7px',
+                        background: 'linear-gradient(180deg, #1345C3 0%, rgba(19, 69, 195, 0) 50%)',
+                        pointerEvents: 'none'
                       }}
                     >
-                      {/* Plan Name Header - Now inside the card */}
-                      <div className="w-full text-center mb-4">
-                        <h3 className="text-white font-nunito text-[15px] md:text-[18px] lg:text-[22px] font-semibold leading-snug">
-                          {plan.name}
-                        </h3>
-                      </div>
-
-                      {/* Content Layout */}
-                      <div className="flex items-start justify-end mb-4">
-                        {/* Right Side Price */}
-                        <div
-                          className="text-white font-nunito font-bold flex-shrink-0 text-[15px] md:text-[18px] lg:text-[27px]"
-                          style={{
-                            lineHeight: '27px',
-                            fontWeight: 700
-                          }}
-                        >
-                          {plan.price}
+                      {/* Most Popular Badge - Only for middle card */}
+                      {index === 1 && (
+                        <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-20">
+                          <span className="animated-gradient text-xl font-bold">
+                            Most Popular
+                          </span>
                         </div>
-                      </div>
+                      )}
+                    </div>
 
-                      {/* Description Text */}
-                      <p className="text-white font-nunito text-[11px] md:text-[12px] lg:text-[14px] xl:text-[16px] font-medium mb-4 leading-relaxed">
-                        {plan.description}
-                      </p>
+                    {/* Black Card Container - Glass effect by default, solid black for middle card only */}
+                    <div
+                      className="relative flex flex-col z-10 transition-all duration-300 min-h-0 flex-1"
+                      style={{
+                        borderRadius: index === 1 ? '20.592px' : '19.8px',
+                        background: index === 1 ? '#000' : 'rgba(0, 0, 0, 0.05)',
+                        boxShadow: index === 1 ? 'none' : '0 0 15.84px 0 rgba(255, 255, 255, 0.31) inset',
+                        backdropFilter: 'blur(12.672px)',
+                        width: '100%',
+                        minHeight: 'clamp(356.4px, 52.8vh, 475.2px)'
+                      }}
+                    >
 
-                      {/* Content Text */}
-                      <p className="text-white font-nunito text-[11px] md:text-[12px] lg:text-[12px] xl:text-[16px] font-medium mb-6 leading-relaxed">
-                        {plan.content}
-                      </p>
+                      {/* Main Content Container */}
+                      <div
+                        className="relative flex flex-col h-full p-6"
+                        style={{
+                          borderRadius: '0 0 20.592px 20.592px'
+                        }}
+                      >
+                        {/* Plan Name Header - Now inside the card */}
+                        <div className="w-full text-center mb-4">
+                          <h3 className="text-white font-nunito text-[15px] md:text-[18px] lg:text-[22px] font-semibold leading-snug">
+                            {plan.name}
+                          </h3>
+                        </div>
 
-                      {/* Features List - Flexible height */}
-                      <div className="space-y-3 flex-1 mb-4 overflow-y-auto">
-                        {plan.features.map((feature, featIndex) => (
-                          <div key={featIndex} className="flex items-start">
-                            <i className="fas fa-check text-green-400 mr-3 mt-1 flex-shrink-0 text-sm"></i>
-                            <span
-                              className="text-white font-nunito leading-relaxed text-[11px] md:text-[12px] lg:text-[13px] xl:text-[14px]"
-                            >
-                              {feature}
-                            </span>
-                          </div>
-                        ))}
-                      </div>
-
-                      {/* Get Protected Button - Fixed at bottom */}
-                      <div className="flex-shrink-0 mt-auto">
-                        <button
-                          onClick={handleGetProtected}
-                          className="w-full text-center py-3 px-5 transition-all duration-300 hover:scale-105"
-                          style={{
-                            borderRadius: '11.88px',
-                            background: '#FFB703',
-                            boxShadow: '0 0 15.84px 0 #000 inset'
-                          }}
-                        >
-                          <span
-                            className="font-nunito font-semibold text-[17px] md:text-[23px]"
+                        {/* Content Layout */}
+                        <div className="flex items-start justify-end mb-4">
+                          {/* Right Side Price */}
+                          <div
+                            className="text-white font-nunito font-bold flex-shrink-0 text-[15px] md:text-[18px] lg:text-[27px]"
                             style={{
-                              color: '#0C002B',
-                              lineHeight: '23px',
-                              fontWeight: 600
+                              lineHeight: '27px',
+                              fontWeight: 700
                             }}
                           >
-                            Get Protected
-                          </span>
-                        </button>
+                            {plan.price}
+                          </div>
+                        </div>
+
+                        {/* Description Text */}
+                        <p className="text-white font-nunito text-[11px] md:text-[12px] lg:text-[14px] xl:text-[16px] font-medium mb-4 leading-relaxed">
+                          {plan.description}
+                        </p>
+
+                        {/* Content Text */}
+                        <p className="text-white font-nunito text-[11px] md:text-[12px] lg:text-[12px] xl:text-[16px] font-medium mb-6 leading-relaxed">
+                          {plan.content}
+                        </p>
+
+                        {/* Features List - Flexible height */}
+                        <div className="space-y-3 flex-1 mb-4 overflow-y-auto">
+                          {plan.features.map((feature, featIndex) => (
+                            <div key={featIndex} className="flex items-start">
+                              <i className="fas fa-check text-green-400 mr-3 mt-1 flex-shrink-0 text-sm"></i>
+                              <span
+                                className="text-white font-nunito leading-relaxed text-[11px] md:text-[12px] lg:text-[13px] xl:text-[14px]"
+                              >
+                                {feature}
+                              </span>
+                            </div>
+                          ))}
+                        </div>
+
+                        {/* Get Protected Button - Fixed at bottom */}
+                        <div className="flex-shrink-0 mt-auto">
+                          <button
+                            onClick={handleGetProtected}
+                            className="w-full text-center py-3 px-5 transition-all duration-300 hover:scale-105"
+                            style={{
+                              borderRadius: '11.88px',
+                              background: '#FFB703',
+                              boxShadow: '0 0 15.84px 0 #000 inset'
+                            }}
+                          >
+                            <span
+                              className="font-nunito font-semibold text-[17px] md:text-[23px]"
+                              style={{
+                                color: '#0C002B',
+                                lineHeight: '23px',
+                                fontWeight: 600
+                              }}
+                            >
+                              Get Protected
+                            </span>
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
 
-          {/* Navigation Dots - Mobile Only */}
-          <div className="flex justify-center items-center gap-2 mt-4 lg:hidden">
-            {plans.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => scrollToCard(index)}
-                className="transition-all duration-300"
-                aria-label={`Go to plan ${index + 1}`}
-                style={{
-                  width: activeCardIndex === index ? '24px' : '8px',
-                  height: '8px',
-                  borderRadius: '4px',
-                  backgroundColor: activeCardIndex === index ? '#FFB703' : 'rgba(255, 255, 255, 0.4)',
-                  border: 'none',
-                  cursor: 'pointer'
-                }}
-              />
-            ))}
+            {/* Navigation Dots - Mobile Only */}
+            <div className="flex justify-center items-center gap-2 mt-4 lg:hidden">
+              {plans.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => scrollToCard(index)}
+                  className="transition-all duration-300"
+                  aria-label={`Go to plan ${index + 1}`}
+                  style={{
+                    width: activeCardIndex === index ? '24px' : '8px',
+                    height: '8px',
+                    borderRadius: '4px',
+                    backgroundColor: activeCardIndex === index ? '#FFB703' : 'rgba(255, 255, 255, 0.4)',
+                    border: 'none',
+                    cursor: 'pointer'
+                  }}
+                />
+              ))}
+            </div>
+
           </div>
-         
         </div>
-      </div>
 
-      {/* Scroll to Top Icon */}
-      <button
-        onClick={scrollToTop}
-        className="fixed bottom-6.4 right-6.4 w-11.2 h-11.2 bg-[#1345C3] rounded-full flex items-center justify-center shadow-lg hover:bg-[#0f3aa3] transition-colors duration-300 z-50"
-        aria-label="Scroll to top"
-      >
-        <i className="fas fa-arrow-up text-white text-[12.96px]"></i>
-      </button>
+        {/* Scroll to Top Icon */}
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-6.4 right-6.4 w-11.2 h-11.2 bg-[#1345C3] rounded-full flex items-center justify-center shadow-lg hover:bg-[#0f3aa3] transition-colors duration-300 z-50"
+          aria-label="Scroll to top"
+        >
+          <i className="fas fa-arrow-up text-white text-[12.96px]"></i>
+        </button>
       </section>
     </>
   );

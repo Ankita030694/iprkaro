@@ -1,8 +1,7 @@
 'use client';
 
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import Image from 'next/image';
+import { useState, useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import Link from 'next/link';
 
 const SparkIcon = ({ color }: { color: string }) => (
@@ -12,16 +11,7 @@ const SparkIcon = ({ color }: { color: string }) => (
   </svg>
 );
 
-const ClickMeArrow = () => (
-  <div className="absolute -top-[100px] md:-top-[120px] -right-8 md:-right-24 lg:-right-32 hidden sm:flex z-50 pointer-events-none w-[120px] md:w-[160px] h-[120px] md:h-[160px]">
-    <Image 
-      src="/protect/arrow.png" 
-      alt="Click me!" 
-      fill 
-      className="object-contain"
-    />
-  </div>
-);
+
 
 const services = [
   {
@@ -79,6 +69,13 @@ const services = [
 
 export default function WhatWeProtect() {
   const [activeTab, setActiveTab] = useState(2); // trademark is front by default
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const { scrollXProgress } = useScroll({
+    container: scrollRef
+  });
+
+  // Small initial width (0.2) to show it's a bar even at start
+  const scaleX = useTransform(scrollXProgress, [0, 1], [0.2, 1]);
 
   const getSlot = (index: number, active: number) => {
     if (index === active) return 2;
@@ -102,7 +99,10 @@ export default function WhatWeProtect() {
         </h2>
 
         <div className="w-full relative h-auto md:h-[680px] lg:h-[650px]">
-          <div className="md:hidden flex overflow-x-auto snap-x snap-mandatory gap-4 pb-12 scrollbar-hide -mx-4 px-4">
+          <div 
+            ref={scrollRef}
+            className="md:hidden flex overflow-x-auto snap-x snap-mandatory gap-4 pb-8 scrollbar-hide -mx-4 px-4"
+          >
             {services.map((service) => (
               <div
                 key={service.id}
@@ -146,9 +146,15 @@ export default function WhatWeProtect() {
             ))}
           </div>
 
-          <div className="hidden md:block">
-            <ClickMeArrow />
+          {/* Mobile Scroll Progress Indicator */}
+          <div className="md:hidden w-full max-w-[120px] h-[4px] bg-[#0C002B]/5 rounded-full mx-auto mb-10 overflow-hidden">
+            <motion.div 
+              className="h-full bg-[#0C002B] origin-left"
+              style={{ scaleX }}
+            />
           </div>
+
+
           
           {services.map((service, index) => {
             const slot = getSlot(index, activeTab);

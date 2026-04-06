@@ -1,4 +1,6 @@
 'use client';
+import { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 const plans = [
   {
@@ -52,6 +54,13 @@ const CheckIcon = () => (
 );
 
 export default function SimplePricing() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const { scrollXProgress } = useScroll({
+    container: scrollRef
+  });
+
+  const scaleX = useTransform(scrollXProgress, [0, 1], [0.15, 1]);
+
   return (
     <section className="w-full bg-white py-5 px-4 md:px-8">
       <div className="max-w-[1100px] mx-auto flex flex-col items-center">
@@ -59,7 +68,10 @@ export default function SimplePricing() {
           Simple Pricing. Serious<br /> Brand Protection.
         </h2>
 
-        <div className="w-full flex md:grid md:grid-cols-3 overflow-x-auto md:overflow-x-visible snap-x snap-mandatory gap-6 md:gap-8 pb-8 no-scrollbar -mx-4 px-4 scrollbar-hide">
+        <div 
+          ref={scrollRef}
+          className="w-full flex md:grid md:grid-cols-3 overflow-x-auto md:overflow-x-visible snap-x snap-mandatory gap-6 md:gap-8 pb-8 no-scrollbar -mx-4 px-4 scrollbar-hide"
+        >
           {plans.map((plan, index) => (
             <div 
               key={index}
@@ -106,6 +118,14 @@ export default function SimplePricing() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Mobile Scroll Progress Indicator */}
+        <div className="md:hidden w-full max-w-[120px] h-[4px] bg-[#0C002B]/5 rounded-full mx-auto mt-2 overflow-hidden">
+          <motion.div 
+            className="h-full bg-[#0C002B] origin-left"
+            style={{ scaleX }}
+          />
         </div>
       </div>
     </section>
