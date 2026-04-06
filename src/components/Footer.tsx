@@ -357,13 +357,15 @@
 
 // export default Footer;
 
-import React from 'react';
+'use client';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import ClientLogoSlider from './ClientLogoSlider';
 
 const Footer: React.FC = () => {
+  const [isQueriesExpanded, setIsQueriesExpanded] = useState(false);
   return (
-    <footer className="text-white" style={{ backgroundColor: '#202020' }}>
+    <footer className="text-white home-page-font" style={{ backgroundColor: '#202020' }}>
       <div className="max-w-8xl px-4 lg:px-24 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-6 gap-8 lg:gap-16">
           {/* Logo and Email Signup Section */}
@@ -594,8 +596,16 @@ const Footer: React.FC = () => {
 
         {/* Queries Row */}
         <div className="border-t border-gray-700 mt-12 pt-8">
-          <h3 className="text-sm font-semibold mb-6 uppercase text-gray-400">Queries</h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-8 gap-y-4">
+          <button 
+            onClick={() => setIsQueriesExpanded(!isQueriesExpanded)}
+            className="flex items-center justify-between w-full mb-4 focus:outline-none group cursor-pointer"
+          >
+            <h3 className="text-sm font-semibold uppercase text-gray-400 group-hover:text-white transition-colors">
+              Explore More
+            </h3>
+            <i className={`fas fa-chevron-down text-xs text-gray-400 transition-transform duration-300 ${isQueriesExpanded ? 'rotate-180' : ''}`}></i>
+          </button>
+          <div className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-8 gap-y-4 transition-all duration-500 ease-in-out overflow-hidden ${isQueriesExpanded ? 'max-h-[5000px] opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
             {/* New Trademark Pages */}
             <a href="/registration-of-trademark" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Registration of Trademark</a>
             <a href="/trademark-registration-india" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Trademark Registration India</a>

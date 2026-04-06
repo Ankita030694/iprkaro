@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -146,8 +146,9 @@ const queries = [
 ];
 
 const NewFooter = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
   return (
-    <footer className="w-full bg-[#05030E] text-white pt-24 pb-8 overflow-hidden font-nunito">
+    <footer className="w-full bg-[#05030E] text-white pt-24 pb-8 overflow-hidden font-nunito home-page-font">
       {/* Top CTA Section */}
       <div className="max-w-[1200px] mx-auto px-6 mb-24 flex flex-col items-center">
         <h2 className="text-white font-nunito text-[40px] md:text-[56px] font-bold text-center leading-[1.1] mb-12 tracking-tight">
@@ -208,11 +209,15 @@ const NewFooter = () => {
 
         {/* Explore More Section */}
         <div className="mb-24">
-          <div className="flex items-center gap-4 mb-10">
-            <h4 className="text-3xl md:text-xl font-bold whitespace-nowrap">Explore More</h4>
-            <div className="w-full h-px bg-white/10"></div>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-4">
+          <button 
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="flex items-center gap-4 mb-10 w-full group cursor-pointer focus:outline-none"
+          >
+            <h4 className="text-3xl md:text-xl font-bold whitespace-nowrap group-hover:text-white transition-colors">Explore More</h4>
+            <div className="w-full h-px bg-white/10 group-hover:bg-white/20 transition-colors"></div>
+            <i className={`fas fa-chevron-down text-white/40 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}></i>
+          </button>
+          <div className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-4 transition-all duration-500 ease-in-out overflow-hidden ${isExpanded ? 'max-h-[5000px] opacity-100' : 'max-h-0 opacity-0'}`}>
             {queries.map((q, i) => (
               <Link
                 key={i}
