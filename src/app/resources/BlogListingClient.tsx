@@ -2,9 +2,48 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Faq } from '@/components';
+import { FaqSection } from '@/components';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
+
+const resourceFaqs = [
+  {
+    question: "What is trademark registration and why is it important?",
+    answer: "Trademark registration is the legal process of securing exclusive rights to your brand name, logo, or trademark registration symbol (®) in India. It protects your trademark registration mark from infringement, establishes ownership, and builds brand trust. IPR Karo simplifies the entire trademark registration process in India with AI-powered tools."
+  },
+  {
+    question: "How to register a trademark in India with IPR Karo?",
+    answer: "To register a trademark, start with our AI-powered trademark search to check trademark availability. Review the brand name availability search report for conflicts, prepare the trademark registration documents required, pay the trademark registration govt fees, and submit your application online. IPR Karo guides you through every step of the trademark registration process in India."
+  },
+  {
+    question: "What is the trademark registration cost in India?",
+    answer: "The trademark registration price varies by applicant type and class count. Trademark registration govt fees for individuals and startups start at ₹4,500 per class, while companies pay ₹9,000 per class. IPR Karo offers transparent trademark registration pricing with no hidden costs, making it affordable for all budgets."
+  },
+  {
+    question: "What documents are required for trademark registration?",
+    answer: "The trademark registration documents required include: your brand logo or word mark, identity proof (Aadhaar/PAN), address proof, business registration certificate, MSME/Udyam certificate (if applicable), and a signed Form TM-48 (authorization). IPR Karo provides a complete document checklist and helps prepare everything for seamless filing."
+  },
+  {
+    question: "How does the AI trademark search work at IPR Karo?",
+    answer: "Our AI-powered trademark search scans the trademark search public database instantly, performing a comprehensive trademark search by name, trademark search by class, and phonetic similarity analysis. It checks trademark availability, runs a brand name availability search, and generates a detailed report with a registerability score — helping you make informed decisions before filing."
+  },
+  {
+    question: "How long does trademark registration take in India?",
+    answer: "Trademark registration in India typically takes 12-18 months from application to final registration. The trademark registration process includes filing, examination, publication in the Trademark Journal, and registration stages. IPR Karo's AI-powered pre-filing trademark search reduces objections and helps expedite approval."
+  },
+  {
+    question: "Can I get trademark registration in Delhi and other cities?",
+    answer: "Yes! IPR Karo offers trademark registration Delhi, Noida, Gurgaon, Mumbai, Bangalore, and PAN India coverage. Our fully online trademark registration process means you can register your trademark from anywhere in India. We also support trademark search international and trademark search WIPO for global brand protection."
+  },
+  {
+    question: "What happens if my trademark application faces an objection?",
+    answer: "If your trademark application faces objections or opposition, IPR Karo's legal experts help you respond with proper documentation and arguments. Our AI-powered trademark search reduces rejection risks by identifying trademark availability conflicts before filing, and our attorneys provide expert guidance throughout the trademark registration process."
+  },
+  {
+    question: "Can I register a trademark for multiple classes?",
+    answer: "Yes, you can register your trademark registration mark across multiple classes under the Nice Classification system. Use our trademark search by class tool to identify the right categories. Each class requires separate trademark registration govt fees. IPR Karo helps you select the relevant classes and offers cost-effective multi-class trademark registration."
+  }
+];
 
 
 interface Blog {
@@ -98,125 +137,78 @@ export default function BlogListingClient() {
   }
 
   return (
-    <div 
-      className="min-h-screen relative"
-      style={{
-        backgroundImage: 'linear-gradient(to right top, #0c002b, #0c002b,rgb(25, 10, 60),rgb(92, 75, 130),rgb(91, 88, 88))',
-        backgroundSize: '100% 100%',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-      }}
-    >
-      {/* Decorative gradient background elements */}
-      <div className="absolute inset-0 overflow-hidden">
+    <div className="min-h-screen relative bg-white">
+      {/* Decorative background elements - subtle for white background */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div 
-          className="absolute top-0 right-0 w-96 h-96 rounded-full blur-3xl opacity-20"
+          className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full blur-[120px] opacity-[0.05]"
           style={{
-            background: 'radial-gradient(circle, #16a34a 0%, transparent 70%)'
+            background: 'radial-gradient(circle, #0C002B 0%, transparent 70%)'
           }}
         />
         <div 
-          className="absolute bottom-0 left-0 w-96 h-96 rounded-full blur-3xl opacity-15"
+          className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full blur-[120px] opacity-[0.05]"
           style={{
-            background: 'radial-gradient(circle, #FFB400 0%, transparent 70%)'
+            background: 'radial-gradient(circle, #B3A1FF 0%, transparent 70%)'
           }}
         />
       </div>
 
-      {/* Navbar */}
-
       {/* Main Content */}
       <div className="relative z-10 pt-16 lg:pt-28 px-4 md:px-10 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          {/* Header Section */}
-          <div className="mb-8 md:mb-20 lg:mb-16">
-            {/* Blogs Label */}
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-2 h-2 rounded-full bg-[#FFB400]"></div>
-              <span className="text-[rgba(255,255,255,0.8)] font-nunito text-[11px] md:text-[13px] lg:text-[13px] font-normal tracking-wider uppercase">
-                 Resources
+          {/* Header & Featured Section */}
+          <div className="flex flex-col md:flex-row gap-12 md:gap-16 lg:gap-24 mb-12 md:mb-20 lg:mb-24 items-start">
+            {/* Left Column: Hero Text */}
+            <div className="w-full md:w-[50%] flex flex-col pt-4">
+              <span className="text-[#0C002B]/60 font-nunito text-[12px] md:text-[14px] font-semibold tracking-[0.1em] uppercase mb-6">
+                IPRKARO BLOG
               </span>
+              <h1 className="text-[#0C002B] font-nunito text-[42px] md:text-[68px] lg:text-[62px] font-bold leading-[1.05] mb-8">
+                The IPR Edge:<br />
+                all things brand protection
+              </h1>
+              <p className="text-[#0C002B]/50 font-nunito text-[15px] md:text-[20px] lg:text-[18px] font-normal leading-relaxed max-w-[550px]">
+                Anything and everything you&apos;re looking for to protect your brand, trademarks, and intellectual property rights.
+              </p>
             </div>
 
-            {/* Main Title */}
-            <h1 className="text-white font-nunito text-[28px] md:text-[45px] lg:text-[38px] font-medium leading-[32px] md:leading-[45px] lg:leading-[42px] mb-8 md:mb-12 lg:mb-10">
-              Insights & Trends: The&nbsp;<br />
-              Future of Intellectual Property
-            </h1>
-
-            {/* Featured Blog Post */}
-            {loading ? (
-              <div className="grid lg:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-16 lg:mb-12">
-                <div className="relative">
-                  <div className="relative rounded-[20px] md:rounded-[25px] overflow-hidden bg-[#1f1310]/30 border border-[#16a34a]/20 p-4 md:p-8 animate-pulse">
-                    <div className="w-full h-48 md:h-64 bg-[#3b2412]/50 rounded-lg"></div>
-                  </div>
+            {/* Right Column: Featured Blog Post */}
+            <div className="w-full md:w-[40%] relative">
+              {loading ? (
+                <div className="animate-pulse">
+                  <div className="aspect-[16/9] bg-gray-100 rounded-[30px] mb-6"></div>
+                  <div className="h-8 bg-gray-200 rounded w-3/4 mb-4"></div>
+                  <div className="h-4 bg-gray-200 rounded w-1/4"></div>
                 </div>
-                <div className="flex flex-col justify-center">
-                  <div className="h-6 bg-[#3b2412]/50 rounded mb-4 animate-pulse"></div>
-                  <div className="h-12 bg-[#3b2412]/50 rounded mb-4 animate-pulse"></div>
-                  <div className="h-16 bg-[#3b2412]/50 rounded animate-pulse"></div>
-                </div>
-              </div>
-            ) : featuredBlog ? (
-              <Link href={`/resources/${featuredBlog.slug}`}>
-                <div className="grid lg:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-16 lg:mb-12 cursor-pointer group">
-                  {/* Featured Image */}
-                  <div className="relative">
-                    <div className="relative rounded-[20px] md:rounded-[25px] overflow-hidden glass-card border border-[#16a34a]/20 p-4 md:p-8 hover:border-[#FFB400]/40 transition-all duration-300">
-                      {/* Blog image */}
-                      <div className="w-full h-48 md:h-72 bg-[#1f1310] rounded-lg flex items-center justify-center overflow-hidden">
-                        <img
-                          src={featuredBlog.image}
-                          alt={featuredBlog.title}
-                          className="w-full h-full object-cover rounded-lg"
-                          loading="eager"
-                        />
-                      </div>
+              ) : featuredBlog ? (
+                <Link href={`/resources/${featuredBlog.slug}`}>
+                  <div className="group cursor-pointer">
+                    {/* Featured Image */}
+                    <div className="aspect-[4/3] rounded-[30px] overflow-hidden mb-6 shadow-[0_8px_40px_rgb(0,0,0,0.06)] group-hover:shadow-[0_8px_50px_rgb(179,161,255,0.15)] transition-all duration-500">
+                      <img
+                        src={featuredBlog.image}
+                        alt={featuredBlog.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        loading="eager"
+                      />
                     </div>
-                  </div>
-
-                  {/* Featured Content */}
-                  <div className="flex flex-col justify-center">
-                    {/* Tags */}
-                    <div className="flex gap-2 mb-3 md:mb-4">
-                      {featuredBlog.tags.map((tag, index) => (
-                        <span 
-                          key={index}
-                          className="px-3 py-1 rounded-full text-[10px] md:text-[11px] lg:text-[11px] font-medium border transition-colors duration-300"
-                          style={{ 
-                            background: index === 0 ? 'rgba(22, 163, 74, 0.2)' : 'rgba(255, 180, 0, 0.2)',
-                            borderColor: index === 0 ? 'rgba(22, 163, 74, 0.4)' : 'rgba(255, 180, 0, 0.4)',
-                            color: index === 0 ? '#86efac' : '#FFB400'
-                          }}
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-
-                    {/* Title */}
-                    <h2 className="text-white font-nunito text-[20px] md:text-[28px] lg:text-[24px] font-semibold leading-[24px] md:leading-[32px] lg:leading-[28px] mb-3 md:mb-4 group-hover:text-[#FFB400] transition-colors duration-300">
+                    {/* Featured Title */}
+                    <h2 className="text-[#0C002B] font-nunito text-[22px] md:text-[28px] lg:text-[24px] font-bold leading-tight mb-3 group-hover:text-[#B3A1FF] transition-colors duration-300">
                       {featuredBlog.title}
                     </h2>
-
-                    {/* Excerpt */}
-                    <p className="text-[rgba(255,255,255,0.8)] font-nunito text-[11px] md:text-[13px] lg:text-[13px] font-normal leading-[13px] md:leading-[15.6px] lg:leading-[15.6px] mb-4 md:mb-6">
-                      {featuredBlog.excerpt}
-                    </p>
-
-                    {/* Date */}
-                    <p className="text-[rgba(255,255,255,0.6)] font-nunito text-[10px] md:text-[12px] lg:text-[12px]">
+                    {/* Featured Date */}
+                    <p className="text-[#0C002B]/40 font-nunito text-[14px] md:text-[16px]">
                       {featuredBlog.date}
                     </p>
                   </div>
+                </Link>
+              ) : (
+                <div className="text-center text-[#0C002B] py-12">
+                  <p className="text-[#0C002B]/80 font-nunito text-[13px]">No resources available at the moment.</p>
                 </div>
-              </Link>
-            ) : (
-              <div className="text-center text-white py-12">
-                <p className="text-[rgba(255,255,255,0.8)] font-nunito text-[13px]">No resources available at the moment.</p>
-              </div>
-            )}
+              )}
+            </div>
           </div>
 
           {/* Filter and Sort Section */}
@@ -229,8 +221,8 @@ export default function BlogListingClient() {
                   onClick={() => setActiveFilter(filter)}
                   className={`px-4 md:px-6 py-1.5 md:py-2 rounded-full font-nunito text-[11px] md:text-[12px] lg:text-[12px] font-medium transition-all duration-300 border ${
                     activeFilter === filter
-                      ? 'bg-[#FFB400] text-black border-[#FFB400]'
-                      : 'bg-transparent text-white border-[#16a34a]/30 hover:border-[#FFB400]/50 hover:bg-[#FFB400]/10'
+                      ? 'bg-[#0C002B] text-white border-[#0C002B]'
+                      : 'bg-transparent text-[#0C002B] border-gray-200 hover:border-[#0C002B]/30 hover:bg-gray-50'
                   }`}
                 >
                   {filter}
@@ -240,14 +232,14 @@ export default function BlogListingClient() {
 
             {/* Sort By */}
             <div className="flex items-center gap-3">
-              <span className="text-white font-nunito text-[11px] md:text-[12px] lg:text-[12px]">Sort By:</span>
+              <span className="text-[#0C002B] font-nunito text-[11px] md:text-[12px] lg:text-[12px]">Sort By:</span>
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="bg-[#1f1310]/50 text-white border border-[#16a34a]/30 rounded-lg px-3 md:px-4 py-1.5 md:py-2 font-nunito text-[11px] md:text-[12px] lg:text-[12px] focus:outline-none focus:ring-2 focus:ring-[#FFB400] focus:border-[#FFB400]"
+                className="bg-white text-[#0C002B] border border-gray-200 rounded-lg px-3 md:px-4 py-1.5 md:py-2 font-nunito text-[11px] md:text-[12px] lg:text-[12px] focus:outline-none focus:ring-2 focus:ring-[#B3A1FF] focus:border-[#B3A1FF]"
               >
                 {sortOptions.map((option) => (
-                  <option key={option} value={option} className="bg-black text-white">
+                  <option key={option} value={option}>
                     {option}
                   </option>
                 ))}
@@ -261,9 +253,9 @@ export default function BlogListingClient() {
               // Loading skeleton
               Array.from({ length: 6 }).map((_, index) => (
                 <div key={index} className="animate-pulse">
-                  <div className="aspect-video bg-[#1f1310]/30 border border-[#16a34a]/20 rounded-lg md:rounded-[15px] mb-3 md:mb-4"></div>
-                  <div className="h-4 bg-[#3b2412]/50 rounded mb-2"></div>
-                  <div className="h-6 bg-[#3b2412]/50 rounded"></div>
+                  <div className="aspect-video bg-gray-100 border border-gray-200 rounded-lg md:rounded-[15px] mb-3 md:mb-4"></div>
+                  <div className="h-4 bg-gray-200 rounded mb-2"></div>
+                  <div className="h-6 bg-gray-200 rounded"></div>
                 </div>
               ))
             ) : blogPosts.length > 0 ? (
@@ -271,8 +263,8 @@ export default function BlogListingClient() {
                 <Link href={`/resources/${post.slug}`} key={post.id}>
                   <div className="group cursor-pointer">
                     {/* Blog Image */}
-                    <div className="relative mb-3 md:mb-4 overflow-hidden rounded-lg md:rounded-[15px] border border-[#16a34a]/20 hover:border-[#FFB400]/40 transition-all duration-300">
-                      <div className="aspect-video bg-[#1f1310] flex items-center justify-center overflow-hidden">
+                    <div className="relative mb-3 md:mb-4 overflow-hidden rounded-lg md:rounded-[15px] border border-gray-100 shadow-[0_4px_20px_rgb(0,0,0,0.03)] group-hover:border-[#B3A1FF]/40 transition-all duration-300">
+                      <div className="aspect-video bg-gray-50 flex items-center justify-center overflow-hidden">
                         <img
                           src={post.image}
                           alt={post.title}
@@ -284,31 +276,39 @@ export default function BlogListingClient() {
 
                     {/* Blog Meta */}
                     <div className="mb-2">
-                      <div className="flex items-center gap-2 text-[#86efac]/80 text-[10px] md:text-[11px] lg:text-[11px] font-nunito mb-1">
+                      <div className="flex items-center gap-2 text-[#0C002B]/60 text-[10px] md:text-[11px] lg:text-[11px] font-nunito mb-1">
                         <span>{post.type}</span>
-                        <span className="text-[#FFB400]">|</span>
+                        <span className="text-gray-300">|</span>
                         <span>{post.date}</span>
-                        <span className="text-[#FFB400]">|</span>
+                        <span className="text-gray-300">|</span>
                         <span className="truncate max-w-[150px]">{post.category}</span>
                       </div>
                     </div>
 
                     {/* Blog Title */}
-                    <h3 className="text-white font-nunito text-[14px] md:text-[16px] lg:text-[18px] font-semibold leading-[18px] md:leading-[20px] lg:leading-tight group-hover:text-[#FFB400] transition-colors duration-300">
+                    <h3 className="text-[#0C002B] font-nunito text-[14px] md:text-[16px] lg:text-[18px] font-semibold leading-[18px] md:leading-[20px] lg:leading-tight group-hover:text-[#B3A1FF] transition-colors duration-300">
                       {post.title}
                     </h3>
                   </div>
                 </Link>
               ))
             ) : (
-              <div className="col-span-full text-center text-white py-12">
-                <p className="text-[rgba(255,255,255,0.8)] font-nunito text-[13px]">No resources available.</p>
+              <div className="col-span-full text-center text-[#0C002B] py-12">
+                <p className="text-[#0C002B]/80 font-nunito text-[13px]">No resources available.</p>
               </div>
             )}
           </div>
         </div>
       </div>
-      <Faq />
+      <FaqSection 
+        items={resourceFaqs} 
+        title={
+          <>
+            Have Question? <br />
+            <span style={{ color: '#B3A1FF' }}>We've Got Answers.</span>
+          </>
+        }
+      />
     </div>
   );
 }
