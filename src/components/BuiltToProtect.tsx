@@ -8,7 +8,7 @@ const tabs = [
   {
     id: 1,
     category: 'Founders',
-    icon: '/built/1.svg',
+    icon: '/abovepricing/Startups.png',
     title: 'Turning ideas into protected brands',
     buttonText: 'Check Trademark Availability',
     features: [
@@ -25,7 +25,7 @@ const tabs = [
   {
     id: 2,
     category: 'Startups',
-    icon: '/built/2.svg',
+    icon: '/abovepricing/Founder.png',
     title: 'Build fast. Stay protected.',
     buttonText: 'Start Your Trademark',
     features: [
@@ -42,7 +42,7 @@ const tabs = [
   {
     id: 3,
     category: 'Personal Brands',
-    icon: '/built/3.svg',
+    icon: '/abovepricing/Agencies.png',
     title: 'Own your name. Build your legacy.',
     buttonText: 'Protect My Brand',
     features: [
@@ -59,7 +59,7 @@ const tabs = [
   {
     id: 4,
     category: 'Agencies',
-    icon: '/built/4.svg',
+    icon: '/abovepricing/Creators.png',
     title: 'Manage brands. We handle protection.',
     buttonText: 'Explore Agency Solutions',
     features: [
@@ -76,7 +76,7 @@ const tabs = [
   {
     id: 5,
     category: 'Online Sellers',
-    icon: '/built/5.svg',
+    icon: '/abovepricing/Ecommerce.png',
     title: 'Sell freely. Stay protected.',
     buttonText: 'Secure My Brand',
     features: [
@@ -180,7 +180,7 @@ export default function BuiltToProtect() {
                           src={tab.icon} 
                           alt="Illustration" 
                           fill 
-                          className="object-contain"
+                          className="object-cover"
                         />
                       </div>
                     </div>
@@ -200,14 +200,13 @@ export default function BuiltToProtect() {
                 <div 
                   key={tab.id}
                   onClick={() => setActiveTab(index)}
-                  className={`relative cursor-pointer transition-all duration-300 bg-white rounded-[24px] flex-shrink-0 md:flex-1 aspect-[4/5] flex items-center justify-center snap-center
-                    ${isActive ? 'opacity-100 shadow-[0_10px_30px_rgba(0,0,0,0.06)]' : 'opacity-40 hover:opacity-100 grayscale'}`}
+                  className={`relative cursor-pointer transition-all duration-300 bg-white rounded-[24px] flex-shrink-0 md:flex-1 aspect-[4/5] flex items-center justify-center snap-center}`}
                 >
                   <Image 
                     src={tab.icon} 
                     alt={tab.title} 
                     fill 
-                    className="object-contain p-8"
+                    className="object-cover rounded-lg"
                   />
                 </div>
               );
