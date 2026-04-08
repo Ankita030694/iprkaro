@@ -38,10 +38,7 @@ export default function ContentSection({ analysisData }: ContentSectionProps) {
   return (
     <div className="space-y-4 md:space-y-6 md:mx-auto w-full">
       <div
-        className="flex p-3 md:p-5 justify-center items-center rounded-[16px] border-2 border-white/[0.15] backdrop-blur-[13px]"
-        style={{
-          background: 'linear-gradient(135deg, rgba(138, 56, 245, 0.25) 0%, rgba(255, 183, 3, 0.15) 50%, rgba(138, 56, 245, 0.25) 100%)',
-        }}
+        className="flex p-3 md:p-5 justify-center items-center rounded-[16px] border border-slate-200 bg-white shadow-sm"
       >
         <div className="md:hidden flex flex-col items-center gap-2 w-full px-2 py-1">
           <div className="flex items-center justify-center gap-1.5">
@@ -59,15 +56,15 @@ export default function ContentSection({ analysisData }: ContentSectionProps) {
                 </clipPath>
               </defs>
             </svg>
-            <span className="text-white font-nunito text-[14px] lg:text-[18px] font-medium leading-[17px] lg:leading-[20px]">
+            <span className="text-[#0C002B] font-nunito text-[14px] lg:text-[18px] font-medium leading-[17px] lg:leading-[20px]">
               4.7
             </span>
           </div>
           <div className="text-center">
-            <div className="text-white font-nunito text-[12.6px] lg:text-[16px] font-medium leading-[15px] lg:leading-[18px] mb-1">
+            <div className="text-[#0C002B] font-nunito text-[12.6px] lg:text-[16px] font-medium leading-[15px] lg:leading-[18px] mb-1">
               Trusted by Over 1.25 Lakh Clients
             </div>
-            <div className="text-white font-nunito text-[8.4px] lg:text-[11px] italic font-normal leading-[10px] lg:leading-[12px]">
+            <div className="text-[#6B7280] font-nunito text-[8.4px] lg:text-[11px] italic font-normal leading-[10px] lg:leading-[12px]">
               Rated 4.7/5 stars for reliable trademark registration across India, startups, and enterprises.
             </div>
           </div>
@@ -89,15 +86,15 @@ export default function ContentSection({ analysisData }: ContentSectionProps) {
                 </clipPath>
               </defs>
             </svg>
-            <span className="text-white font-nunito text-[25px] lg:text-[22px] font-medium leading-[30px] lg:leading-[24px] ml-1">
+            <span className="text-[#0C002B] font-nunito text-[25px] lg:text-[22px] font-medium leading-[30px] lg:leading-[24px] ml-1">
               4.7
             </span>
           </div>
           <div className="flex-1">
-            <div className="text-white font-nunito text-[20px] lg:text-[18px] font-medium leading-[24px] lg:leading-[20px] mb-2">
+            <div className="text-[#0C002B] font-nunito text-[20px] lg:text-[18px] font-medium leading-[24px] lg:leading-[20px] mb-2">
               Trusted by Over 1.25 Lakh Clients
             </div>
-            <div className="text-white font-nunito text-[12px] lg:text-[11px] italic font-normal leading-[14px] lg:leading-[12px]">
+            <div className="text-[#6B7280] font-nunito text-[12px] lg:text-[11px] italic font-normal leading-[14px] lg:leading-[12px]">
               Rated 4.7/5 stars for reliable trademark registration across India, startups, and enterprises.
             </div>
           </div>
@@ -105,17 +102,13 @@ export default function ContentSection({ analysisData }: ContentSectionProps) {
       </div>
 
       <div className="space-y-5">
-        <h3 className="text-white font-nunito text-lg md:text-2xl font-medium text-center md:text-left">
+        <h3 className="text-[#0C002B] font-nunito text-lg md:text-2xl font-medium text-center md:text-left">
           Why Trademark with IPRKaro ?
         </h3>
 
         <div className="md:hidden w-full">
           <div
-            className="w-full rounded-[5px] p-4"
-            style={{
-              background: 'linear-gradient(145deg, rgba(12, 0, 43, 0.20) 6.6%, rgba(255, 183, 3, 0.20) 120.24%), rgba(0, 0, 0, 0.78)',
-              boxShadow: '0 0 20px 1px rgba(255, 255, 255, 0.10) inset'
-            }}
+            className="w-full rounded-[12px] p-4 border border-slate-200 bg-white shadow-sm"
           >
             <div className="grid grid-cols-2 grid-rows-3 gap-3">
               {features.map((feature, index) => (
@@ -123,7 +116,7 @@ export default function ContentSection({ analysisData }: ContentSectionProps) {
                   <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center opacity-60">
                     {mobileCardIcons[feature.icon]}
                   </div>
-                  <h3 className="text-white font-nunito text-[14px] font-medium leading-[14px] break-words flex-1">
+                  <h3 className="text-[#0C002B] font-nunito text-[14px] font-medium leading-[14px] break-words flex-1">
                     {feature.text}
                   </h3>
                 </div>
@@ -137,15 +130,11 @@ export default function ContentSection({ analysisData }: ContentSectionProps) {
             {features.map((feature, index) => (
               <div key={index} className="flex items-center space-x-2 p-2">
                 <div
-                  className="flex-shrink-0 text-white p-2"
-                  style={{
-                    borderRadius: '5px',
-                    background: 'rgba(255, 255, 255, 0.25)'
-                  }}
+                  className="flex-shrink-0 text-[#1952C7] p-2 rounded-md bg-slate-50"
                 >
                   {mobileCardIcons[feature.icon]}
                 </div>
-                <span className="text-white font-nunito text-sm lg:text-base font-medium">
+                <span className="text-[#0C002B] font-nunito text-sm lg:text-base font-medium">
                   {feature.text}
                 </span>
               </div>
@@ -180,45 +169,35 @@ export default function ContentSection({ analysisData }: ContentSectionProps) {
             </div>
           </div>
 
-          <div className="flex-1 space-y-8">
+        <div className="flex-1 space-y-8">
             <div className="text-center lg:text-left">
-              <h3 className="text-white font-nunito text-base md:text-xl lg:text-2xl font-medium">
+              <h3 className="text-[#0C002B] font-nunito text-base md:text-xl lg:text-2xl font-medium">
                 Get a Guaranteed Trademark on
               </h3>
             </div>
 
             <div className="space-y-4 mt-13">
               <div
-                className="relative p-4 rounded-2xl w-full max-w-[500px]"
-                style={{
-                  background: 'transparent',
-                  border: '2px solid rgba(128, 128, 128, 0.4)',
-                  borderRadius: '16px'
-                }}
+                className="relative p-4 rounded-2xl w-full max-w-[500px] border border-slate-200 bg-white shadow-sm"
               >
                 <div className="flex items-center justify-between px-10">
-                  <div className="text-white font-nunito text-sm md:text-base font-medium">
+                  <div className="text-[#0C002B] font-nunito text-sm md:text-base font-medium">
                     Filing Date
                   </div>
-                  <div className="text-white font-nunito text-xs md:text-sm opacity-90">
+                  <div className="text-[#6B7280] font-nunito text-xs md:text-sm">
                     {filingDate}
                   </div>
                 </div>
               </div>
 
               <div
-                className="relative p-4 rounded-2xl w-full max-w-[500px]"
-                style={{
-                  background: 'transparent',
-                  border: '2px solid rgba(128, 128, 128, 0.4)',
-                  borderRadius: '16px'
-                }}
+                className="relative p-4 rounded-2xl w-full max-w-[500px] border border-slate-200 bg-white shadow-sm"
               >
                 <div className="flex items-center justify-between px-10">
-                  <div className="text-white font-nunito text-sm md:text-base font-medium">
+                  <div className="text-[#0C002B] font-nunito text-sm md:text-base font-medium">
                     Estimated Date
                   </div>
-                  <div className="text-white font-nunito text-xs md:text-sm opacity-90">
+                  <div className="text-[#6B7280] font-nunito text-xs md:text-sm">
                     {estimatedDate}
                   </div>
                 </div>
@@ -229,18 +208,14 @@ export default function ContentSection({ analysisData }: ContentSectionProps) {
       </div>
 
       <div className="space-y-5">
-        <h3 className="text-white font-nunito text-lg md:text-2xl font-medium text-center md:text-left">
+        <h3 className="text-[#0C002B] font-nunito text-lg md:text-2xl font-medium text-center md:text-left">
           Documents Required
         </h3>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
           {trademarkRequirements.map((req, index) => (
             <div
               key={index}
-              className="flex flex-col items-center justify-center p-3 rounded-lg border border-white/20"
-              style={{
-                background: 'rgba(255, 255, 255, 0.05)',
-                backdropFilter: 'blur(8px)'
-              }}
+              className="flex flex-col items-center justify-center p-3 rounded-lg border border-slate-200 bg-white shadow-sm"
             >
               <div className="mb-2">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFB703" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -251,7 +226,7 @@ export default function ContentSection({ analysisData }: ContentSectionProps) {
                   <polyline points="10 9 9 9 8 9"></polyline>
                 </svg>
               </div>
-              <span className="text-white font-nunito text-[8px] md:text-[10px] lg:text-xs font-medium text-center">
+              <span className="text-[#0C002B] font-nunito text-[8px] md:text-[10px] lg:text-xs font-medium text-center">
                 {req.text}
               </span>
             </div>
@@ -260,10 +235,10 @@ export default function ContentSection({ analysisData }: ContentSectionProps) {
       </div>
 
       <div className="space-y-5">
-        <h3 className="text-white font-nunito text-lg md:text-2xl font-medium text-center md:text-left">
+        <h3 className="text-[#0C002B] font-nunito text-lg md:text-2xl font-medium text-center md:text-left">
           We work with the Guidelines of
         </h3>
-        <div className="md:hidden flex items-center justify-between w-full gap-0">
+        <div className="md:hidden flex items-center justify-between w-full gap-0 rounded-2xl bg-slate-900 px-4 py-3">
           {[9, 10, 11, 12].map((num) => (
             <div key={num} className="flex-1 flex items-center justify-center">
               <Image
@@ -276,14 +251,14 @@ export default function ContentSection({ analysisData }: ContentSectionProps) {
             </div>
           ))}
         </div>
-        <div className="hidden md:flex items-center justify-start gap-6 md:gap-8">
+        <div className="hidden md:flex items-center justify-start gap-6 md:gap-8 rounded-2xl bg-slate-900 px-6 py-5">
           {[1, 2, 3, 4].map((num) => (
             <div
               key={num}
               className="flex items-center justify-center p-4 md:p-5"
               style={{
                 background: 'transparent',
-                border: '1px solid rgba(255, 255, 255, 0.2)',
+                border: '1px solid rgba(148, 163, 184, 0.6)',
                 borderRadius: '16px',
                 width: '140px',
                 height: '140px',

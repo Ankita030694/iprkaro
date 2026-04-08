@@ -17,6 +17,7 @@ interface TrademarkSearchPopupProps {
 
 function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = '' }: TrademarkSearchPopupProps) {
   const router = useRouter();
+  const isProductionEnv = process.env.NODE_ENV === 'production';
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -230,6 +231,11 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
   }, [searchTerm, trademarkClass]);
 
   const validateForm = () => {
+    if (!isProductionEnv) {
+      setErrors({});
+      return true;
+    }
+
     const newErrors: {[key: string]: string} = {};
     
     if (!formData.name.trim()) {
@@ -353,39 +359,51 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
       const fbp = cookies.find(row => row.startsWith('_fbp='))?.split('=')[1];
       const fbc = cookies.find(row => row.startsWith('_fbc='))?.split('=')[1];
 
-      // Add the lead to Firestore
-      await addDoc(collection(db, 'leads'), {
-        name: formData.name,
-        email: formData.email,
-        phone: formData.phone,
-        interest: `Trademark Registration - Class ${formData.class}`,
-        message: `Trademark Search: ${formData.trademarkSearched}`,
-        state: formData.state,
-        trademarkName: formData.trademarkSearched,
-        className: trademarkClasses[formData.class] || formData.class,
-        classNumber: formData.class,
-        createdAt: serverTimestamp(),
-        status: 'new',
-        meta: {
-          fbp: fbp || null,
-          fbc: fbc || null,
-          userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
-          pageUrl: typeof window !== 'undefined' ? window.location.href : 'unknown',
-          utm: getUTMParameters()
-        }
-      });
+      // Keep lead capture mandatory only in production.
+      if (isProductionEnv) {
+        await addDoc(collection(db, 'leads'), {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          interest: `Trademark Registration - Class ${formData.class}`,
+          message: `Trademark Search: ${formData.trademarkSearched}`,
+          state: formData.state,
+          trademarkName: formData.trademarkSearched,
+          className: trademarkClasses[formData.class] || formData.class,
+          classNumber: formData.class,
+          createdAt: serverTimestamp(),
+          status: 'new',
+          meta: {
+            fbp: fbp || null,
+            fbc: fbc || null,
+            userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
+            pageUrl: typeof window !== 'undefined' ? window.location.href : 'unknown',
+            utm: getUTMParameters()
+          }
+        });
+      }
 
       // Call the trademark analysis API
+      const analysisPayload: {
+        trademarkName: string;
+        classNumber: string;
+        phoneNumber?: string;
+      } = {
+        trademarkName: formData.trademarkSearched,
+        classNumber: formData.class,
+      };
+
+      const trimmedPhone = formData.phone.trim();
+      if (trimmedPhone) {
+        analysisPayload.phoneNumber = trimmedPhone;
+      }
+
       const analysisResponse = await fetch('/api/analyze-trademark', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          trademarkName: formData.trademarkSearched,
-          classNumber: formData.class,
-          phoneNumber: formData.phone,
-        }),
+        body: JSON.stringify(analysisPayload),
       });
 
       if (!analysisResponse.ok) {
@@ -564,11 +582,11 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
         }
       `}</style>
       
-      <div className="fixed inset-0 overflow-hidden bg-black">
+      <div className="fixed inset-0 overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-100">
         {/* Close Button */}
         <button
           onClick={onClose}
-        className="absolute top-4 right-4 lg:top-6 lg:right-6 text-white hover:text-gray-300 bg-black bg-opacity-30 rounded-full p-2 backdrop-blur-sm z-50"
+        className="absolute top-4 right-4 lg:top-6 lg:right-6 text-[#0C002B] hover:text-[#1952C7] bg-white/90 border border-slate-200 rounded-full p-2 shadow-sm z-50"
         >
           <i className="fas fa-xmark text-lg lg:text-xl"></i>
         </button>
@@ -605,7 +623,7 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
           <div 
             className="w-[70%] h-full flex flex-col overflow-hidden"
             style={{
-              background: 'linear-gradient(to bottom, #FFFFFF 0%, #6E5E93 20%, #160049 55%, #0C002B 100%)'
+              background: 'linear-gradient(to bottom, #F8FAFF 0%, #EEF4FF 38%, #FFFFFF 100%)'
             }}
           >
             {/* Content Container */}
@@ -613,16 +631,7 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
               {/* Logo Section */}
               <Link href="/" className="flex justify-center mb-3 sm:mb-4 cursor-pointer hover:opacity-80 transition-opacity">
                 <div className="w-12 h-10 sm:w-16 sm:h-12">
-                  <svg width="65" height="49" viewBox="0 0 65 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M51.5449 6.37838C51.5449 6.37838 53.1893 8.32436 54.2579 10.2051C54.2579 10.2051 59.0267 3.22541 63.8798 1" stroke="url(#paint0_linear_134_395)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M43.0068 42.2387C43.5015 42.2387 43.9585 42.3251 44.377 42.4965C44.8018 42.6615 45.1697 42.896 45.4805 43.2006C45.791 43.5053 46.0319 43.8641 46.2031 44.2768C46.3806 44.6831 46.4697 45.1308 46.4697 45.6196C46.4697 46.1085 46.3806 46.5594 46.2031 46.9721C46.0319 47.3781 45.791 47.7339 45.4805 48.0385C45.1697 48.3431 44.8018 48.581 44.377 48.7524C43.9585 48.9175 43.5015 49.0004 43.0068 49.0004C42.5125 49.0004 42.0525 48.9175 41.6279 48.7524C41.2094 48.581 40.8416 48.3431 40.5244 48.0385C40.2139 47.7276 39.973 47.3686 39.8018 46.9623C39.6305 46.5496 39.5449 46.1019 39.5449 45.6196C39.5449 45.1373 39.6306 44.6926 39.8018 44.2866C39.9729 43.8739 40.2139 43.515 40.5244 43.2104C40.8415 42.8995 41.2094 42.6615 41.6279 42.4965C42.0525 42.3252 42.5125 42.2388 43.0068 42.2387ZM16.6826 46.5688L20.8389 42.2866H21.4287L18.502 45.3188L21.6289 48.9526H21.0391L18.1719 45.6713L16.6826 47.1987V48.9526H16.1973V42.2866H16.6826V46.5688ZM29.4639 48.9526H28.9414L28.0889 47.0766H24.2266L23.377 48.9526H22.8535L25.916 42.2866H26.4014L29.4639 48.9526ZM34.3926 42.2866C34.9503 42.2866 35.4288 42.3756 35.8281 42.5532C36.2276 42.7308 36.5352 42.9882 36.751 43.3246C36.9665 43.6545 37.0742 44.0575 37.0742 44.5336C37.0742 44.9968 36.9666 45.3973 36.751 45.7338C36.5352 46.0637 36.2276 46.3212 35.8281 46.5053C35.7275 46.5501 35.6214 46.588 35.5107 46.6215L37.1787 48.9526H36.627L35.0342 46.726C34.8334 46.7555 34.6197 46.7719 34.3926 46.7719H32.4893V48.9526H32.0049V42.2866H34.3926ZM43.0068 42.687C42.5823 42.687 42.1893 42.7596 41.8281 42.9057C41.4666 43.0517 41.1496 43.2581 40.877 43.5248C40.6106 43.7913 40.4013 44.1019 40.249 44.4575C40.103 44.8065 40.0303 45.1943 40.0303 45.6196C40.0303 46.0386 40.103 46.4262 40.249 46.7817C40.4013 47.1372 40.6107 47.4478 40.877 47.7143C41.1496 47.981 41.4666 48.1875 41.8281 48.3334C42.1893 48.4795 42.5824 48.5521 43.0068 48.5522C43.4316 48.5522 43.8252 48.4795 44.1865 48.3334C44.5479 48.1874 44.8625 47.9811 45.1289 47.7143C45.3951 47.4478 45.6013 47.1371 45.7471 46.7817C45.8993 46.4262 45.9746 46.0386 45.9746 45.6196C45.9746 45.1943 45.8993 44.8065 45.7471 44.4575C45.6013 44.102 45.3951 43.7913 45.1289 43.5248C44.8625 43.2581 44.5479 43.0517 44.1865 42.9057C43.8252 42.7596 43.4316 42.687 43.0068 42.687ZM24.4121 46.6674H27.9023L26.1543 42.8207L24.4121 46.6674ZM32.4893 46.3432H34.3926C35.1085 46.3431 35.6506 46.1847 36.0186 45.8676C36.3925 45.55 36.5801 45.1049 36.5801 44.5336C36.58 43.9561 36.3924 43.5115 36.0186 43.2006C35.6506 42.8834 35.1086 42.7251 34.3926 42.725H32.4893V46.3432ZM7.50195 38.6655H0V5.3266H7.50195V38.6655ZM22.0898 5.3266C30.4806 5.32673 34.6758 8.86971 34.6758 15.9526C34.6755 19.2997 33.4684 22.0127 31.0537 24.0893C28.6541 26.1501 25.4414 27.1799 21.417 27.1801H17.8408V38.6655H10.3389V5.3266H22.0898ZM46.6865 5.3266C47.6702 5.3266 48.5948 5.3708 49.459 5.46039V10.0971C49.459 11.1489 50.3107 12.0024 51.3613 12.0024H58.5615C58.7242 12.7388 58.8086 13.5357 58.8086 14.394C58.8086 15.5563 58.6314 16.6346 58.2754 17.6264C57.9193 18.6026 57.4158 19.4867 56.7656 20.2768C56.1156 21.067 55.3253 21.7494 54.3965 22.3227C53.4832 22.8961 52.4609 23.3451 51.3311 23.6703V23.7641C51.8261 23.9191 52.3072 24.1735 52.7715 24.5297C53.2359 24.8708 53.6848 25.2739 54.1182 25.7387C54.5517 26.2036 54.9624 26.7089 55.3496 27.2514C55.7516 27.7779 56.1155 28.2969 56.4404 28.808L62.7344 38.6655H54.1182L48.9404 30.0873C48.5535 29.4366 48.1812 28.8546 47.8252 28.3432C47.4693 27.8319 47.1048 27.3978 46.7334 27.0414C46.3775 26.6696 45.998 26.3897 45.5957 26.2036C45.2089 26.0023 44.7824 25.9028 44.3184 25.9028H42.2988V38.6655H34.7969V5.3266H46.6865ZM17.8408 21.4858H20.7891C24.7829 21.4857 26.7799 19.7331 26.7803 16.2309C26.7801 12.8059 24.7831 11.0923 20.7891 11.0922H17.8408V21.4858ZM42.2988 20.2299H45.5498C47.1591 20.2297 48.4516 19.7646 49.4268 18.8354C50.4176 17.89 50.9131 16.7186 50.9131 15.3237C50.9131 12.4102 49.1719 10.9529 45.6895 10.9526H42.2988V20.2299Z" fill="white"/>
-                    <defs>
-                      <linearGradient id="paint0_linear_134_395" x1="49.9944" y1="0.697201" x2="64.3909" y2="3.00788" gradientUnits="userSpaceOnUse">
-                        <stop stopColor="#1345C3"/>
-                        <stop offset="1" stopColor="#069A81"/>
-                      </linearGradient>
-                    </defs>
-                  </svg>
+                  <Image src="/logo/iprlogoblack.svg" alt="IPR Karo Logo" width={65} height={49} />
                 </div>
               </Link>
             {/* Trademark Check Results Container */}
@@ -630,9 +639,9 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
               className="relative p-3 sm:p-4 lg:p-5 mb-3 sm:mb-4 max-w-2xl mx-auto w-full"
               style={{
                 borderRadius: '20px',
-                border: '2px solid rgba(255, 255, 255, 0.15)',
-                background: 'rgba(255, 255, 255, 0.01)',
-                backdropFilter: 'blur(16px)'
+                border: '1px solid rgba(30, 41, 59, 0.12)',
+                background: '#FFFFFF',
+                boxShadow: '0 10px 30px rgba(12, 0, 43, 0.08)'
               }}
             >
               {/* Header Badges - Top Left and Top Right */}
@@ -641,30 +650,30 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
                   className="flex items-center gap-2 px-3 py-1.5"
                   style={{
                     borderRadius: '5px',
-                    background: 'rgba(0, 0, 0, 0.30)'
+                    background: 'rgba(25, 82, 199, 0.10)'
                   }}
                 >
-                  <i className="fas fa-brain text-white text-xs"></i>
-                <span className="text-white text-xs font-medium font-nunito">AI Trademark</span>
+                  <i className="fas fa-brain text-[#1952C7] text-xs"></i>
+                <span className="text-[#0C002B] text-xs font-medium font-nunito">AI Trademark</span>
               </div>
                 <div 
                   className="flex items-center gap-2 px-3 py-1.5"
                   style={{
                     borderRadius: '5px',
-                    background: 'rgba(0, 0, 0, 0.30)'
+                    background: 'rgba(0, 155, 124, 0.10)'
                   }}
                 >
-                  <i className="fas fa-shield-alt text-white text-xs"></i>
-                <span className="text-white text-xs font-medium font-nunito">Security Checking</span>
+                  <i className="fas fa-shield-alt text-[#009B7C] text-xs"></i>
+                <span className="text-[#0C002B] text-xs font-medium font-nunito">Security Checking</span>
               </div>
             </div>
 
             {/* Main Heading */}
             <div>
-              <h2 className="text-white text-base sm:text-lg lg:text-xl font-bold mb-1 font-nunito break-words">
+              <h2 className="text-[#0C002B] text-base sm:text-lg lg:text-xl font-bold mb-1 font-nunito break-words">
                 Trademark Check Results for "{searchTerm}"
               </h2>
-              <p className="text-gray-400 text-sm font-nunito hidden sm:block">
+              <p className="text-[#6B7280] text-sm font-nunito hidden sm:block">
                 Preliminary automated scan completed. Review quick insights below.
               </p>
               </div>
@@ -675,42 +684,42 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
               className="p-3 sm:p-4 lg:p-5 mb-3 sm:mb-4 max-w-2xl mx-auto w-full"
               style={{
                 borderRadius: '20px',
-                border: '2px solid rgba(255, 255, 255, 0.15)',
-                background: 'rgba(255, 255, 255, 0.01)',
-                backdropFilter: 'blur(16px)'
+                border: '1px solid rgba(30, 41, 59, 0.12)',
+                background: '#FFFFFF',
+                boxShadow: '0 10px 30px rgba(12, 0, 43, 0.08)'
               }}
             >
               <div 
                 className="flex items-center gap-2 mb-3 px-3 py-1.5 w-fit"
                 style={{
                   borderRadius: '5px',
-                  background: 'rgba(0, 0, 0, 0.30)'
+                  background: 'rgba(25, 82, 199, 0.10)'
                 }}
               >
-                <i className="fas fa-lightbulb text-white text-xs"></i>
-                <span className="text-white font-semibold font-nunito text-base">Quick insights</span>
+                <i className="fas fa-lightbulb text-[#1952C7] text-xs"></i>
+                <span className="text-[#0C002B] font-semibold font-nunito text-base">Quick insights</span>
               </div>
               
               <div className="space-y-2">
                 {searchResults ? (
                   <>
                     <div className="flex items-start gap-2">
-                      <i className="fas fa-tag text-white text-xs mt-0.5 flex-shrink-0"></i>
-                      <span className="text-white text-sm font-nunito break-words">
+                      <i className="fas fa-tag text-[#1952C7] text-xs mt-0.5 flex-shrink-0"></i>
+                      <span className="text-[#0C002B] text-sm font-nunito break-words">
                         <span className="font-semibold">Class {searchResults.class.number} - {searchResults.class.name}:</span> {searchResults.class.description}
                       </span>
                     </div>
                     <div className="flex items-start gap-2">
-                      <i className="fas fa-chart-line text-white text-xs mt-0.5 flex-shrink-0"></i>
-                      <span className="text-white text-sm font-nunito break-words">
+                      <i className="fas fa-chart-line text-[#009B7C] text-xs mt-0.5 flex-shrink-0"></i>
+                      <span className="text-[#0C002B] text-sm font-nunito break-words">
                         AI Confidence Score: {searchResults.confidenceScore}% chance your brand may face an objection
                       </span>
                     </div>
                   </>
                 ) : (
                   <div className="flex items-start gap-2">
-                    <i className="fas fa-info-circle text-white text-xs mt-0.5 flex-shrink-0"></i>
-                    <span className="text-white text-sm font-nunito break-words">
+                    <i className="fas fa-info-circle text-[#1952C7] text-xs mt-0.5 flex-shrink-0"></i>
+                    <span className="text-[#0C002B] text-sm font-nunito break-words">
                       Please enter a trademark class to see detailed insights
                     </span>
                   </div>
@@ -1145,7 +1154,7 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
               </div>
               
           {/* Right Section - Signup Form (30%) */}
-          <div className="w-[30%] bg-[#121212] p-6 flex flex-col justify-center h-full overflow-hidden">
+          <div className="w-[30%] bg-white/95 p-6 flex flex-col justify-center h-full overflow-hidden border-l border-slate-200 shadow-[-16px_0_30px_rgba(12,0,43,0.05)]">
             
             {/* AI Creative Section */}
             <div className="text-center mb-5">
@@ -1169,18 +1178,18 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
               </div>
               
               <div className="space-y-1">
-                <h4 className="text-[#FFB703] text-base font-bold font-nunito tracking-wide">
+                <h4 className="text-[#1952C7] text-base font-bold font-nunito tracking-wide">
                   AI-POWERED INSIGHTS
                 </h4>
-                <p className="text-white text-sm font-nunito opacity-80">
+                <p className="text-[#6B7280] text-sm font-nunito">
                   Intelligent trademark analysis at your fingertips
                 </p>
               </div>
             </div>
 
             <div className="text-center mb-4">
-              <h3 className="text-white text-2xl font-bold mb-2 font-nunito">Create your account</h3>
-              <p className="text-gray-300 text-base font-nunito">
+              <h3 className="text-[#0C002B] text-2xl font-bold mb-2 font-nunito">Create your account</h3>
+              <p className="text-[#6B7280] text-base font-nunito">
                 Sign up for free to unlock your complete trademark report.
               </p>
             </div>
@@ -1188,7 +1197,7 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
             <form onSubmit={handleSubmit} className="space-y-2.5">
                   {/* Name Field */}
                   <div>
-                <label className="text-white text-sm font-medium mb-1 block font-nunito text-left">
+                <label className="text-[#0C002B] text-sm font-medium mb-1 block font-nunito text-left">
                       Name <span className="text-red-400">*</span>
                     </label>
                     <input
@@ -1196,18 +1205,18 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
                       name="name"
                       value={formData.name}
                       onChange={handleInputChange}
-                  className={`w-full px-3 py-2 border rounded-lg text-white text-base focus:outline-none focus:border-[#fbbf24] placeholder-gray-400 bg-transparent ${
-                        errors.name ? 'border-red-400' : 'border-gray-600'
+                  className={`w-full px-3 py-2 border rounded-lg text-[#0C002B] text-base focus:outline-none focus:border-[#1952C7] placeholder-slate-400 bg-white ${
+                        errors.name ? 'border-red-400' : 'border-slate-200'
                       }`}
                       placeholder="Enter your name"
-                      required
+                      required={isProductionEnv}
                     />
                     {errors.name && <p className="text-red-400 text-xs mt-1 font-nunito">{errors.name}</p>}
                   </div>
 
                   {/* Phone Field */}
                   <div>
-                <label className="text-white text-sm font-medium mb-1 block font-nunito text-left">
+                <label className="text-[#0C002B] text-sm font-medium mb-1 block font-nunito text-left">
                       Phone No. <span className="text-red-400">*</span>
                     </label>
                     <input
@@ -1216,17 +1225,17 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
                       value={formData.phone}
                       onChange={handleInputChange}
                       placeholder="Enter 10-digit phone number"
-                  className={`w-full px-3 py-2 border rounded-lg text-white text-base focus:outline-none focus:border-[#fbbf24] placeholder-gray-400 bg-transparent ${
-                        errors.phone ? 'border-red-400' : 'border-gray-600'
+                  className={`w-full px-3 py-2 border rounded-lg text-[#0C002B] text-base focus:outline-none focus:border-[#1952C7] placeholder-slate-400 bg-white ${
+                        errors.phone ? 'border-red-400' : 'border-slate-200'
                       }`}
-                      required
+                      required={isProductionEnv}
                     />
                     {errors.phone && <p className="text-red-400 text-xs mt-1 font-nunito">{errors.phone}</p>}
                   </div>
 
               {/* Email Field */}
               <div>
-                <label className="text-white text-sm font-medium mb-1 block font-nunito text-left">
+                <label className="text-[#0C002B] text-sm font-medium mb-1 block font-nunito text-left">
                   Email <span className="text-red-400">*</span>
                 </label>
                 <input
@@ -1235,27 +1244,27 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
                   value={formData.email}
                   onChange={handleInputChange}
                   placeholder="Enter your email address"
-                  className={`w-full px-3 py-2 border rounded-lg text-white text-base focus:outline-none focus:border-[#fbbf24] placeholder-gray-400 bg-transparent ${
-                    errors.email ? 'border-red-400' : 'border-gray-600'
+                  className={`w-full px-3 py-2 border rounded-lg text-[#0C002B] text-base focus:outline-none focus:border-[#1952C7] placeholder-slate-400 bg-white ${
+                    errors.email ? 'border-red-400' : 'border-slate-200'
                   }`}
-                  required
+                  required={isProductionEnv}
                 />
                 {errors.email && <p className="text-red-400 text-xs mt-1 font-nunito">{errors.email}</p>}
               </div>
 
                   {/* State Field */}
                   <div>
-                <label className="text-white text-sm font-medium mb-1 block font-nunito text-left">
+                <label className="text-[#0C002B] text-sm font-medium mb-1 block font-nunito text-left">
                       State <span className="text-red-400">*</span>
                     </label>
                     <select
                       name="state"
                       value={formData.state}
                       onChange={handleInputChange}
-                  className={`w-full px-3 py-2 border rounded-lg text-white text-base focus:outline-none focus:border-[#fbbf24] bg-transparent ${
-                        errors.state ? 'border-red-400' : 'border-gray-600'
+                  className={`w-full px-3 py-2 border rounded-lg text-[#0C002B] text-base focus:outline-none focus:border-[#1952C7] bg-white ${
+                        errors.state ? 'border-red-400' : 'border-slate-200'
                       }`}
-                      required
+                      required={isProductionEnv}
                     >
                       <option value="" className="bg-[#121212] text-white">Select State</option>
                       
@@ -1304,7 +1313,7 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
 
                   {/* Trademark Searched Field */}
                   <div>
-                <label className="text-white text-sm font-medium mb-1 block font-nunito text-left">
+                <label className="text-[#0C002B] text-sm font-medium mb-1 block font-nunito text-left">
                       Trademark You Searched
                     </label>
                     <div className="relative">
@@ -1313,13 +1322,13 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
                         name="trademarkSearched"
                         value={formData.trademarkSearched}
                         onChange={handleInputChange}
-                    className="w-full px-3 py-2 pr-8 border border-gray-600 rounded-lg text-white text-base focus:outline-none focus:border-[#fbbf24] placeholder-gray-400 bg-transparent"
+                    className="w-full px-3 py-2 pr-8 border border-slate-200 rounded-lg text-[#0C002B] text-base focus:outline-none focus:border-[#1952C7] placeholder-slate-400 bg-white"
                         placeholder="Enter trademark name"
                       />
                       <button
                         type="button"
                         onClick={() => setFormData(prev => ({ ...prev, trademarkSearched: '' }))}
-                        className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white"
+                        className="absolute right-2 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-[#1952C7]"
                       >
                         <i className="fas fa-xmark text-sm"></i>
                       </button>
@@ -1329,7 +1338,7 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
                   {/* Class Field */}
                   <div>
                     <div className="flex items-center justify-between mb-1">
-                  <label className="text-white text-xs font-medium font-nunito text-left">
+                  <label className="text-[#0C002B] text-xs font-medium font-nunito text-left">
                         Class <span className="text-red-400">*</span>
                       </label>
                     
@@ -1339,10 +1348,10 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
                       name="class"
                       value={formData.class}
                       onChange={handleInputChange}
-                  className={`w-full px-3 py-2 border rounded-lg text-white text-base focus:outline-none focus:border-[#fbbf24] bg-transparent ${
-                        errors.class ? 'border-red-400' : 'border-gray-600'
+                  className={`w-full px-3 py-2 border rounded-lg text-[#0C002B] text-base focus:outline-none focus:border-[#1952C7] bg-white ${
+                        errors.class ? 'border-red-400' : 'border-slate-200'
                       }`}
-                      required
+                      required={isProductionEnv}
                     >
                       <option value="" className="bg-[#121212] text-white">Select Class</option>
                       <option value="1" className="bg-[#121212] text-white">Class 1 - Chemicals</option>
@@ -1400,8 +1409,8 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
                 disabled={isSubmitting}
                 className={`w-full font-semibold py-2.5 rounded-lg transition-colors duration-300 mt-3 text-base ${
                   isSubmitting 
-                    ? 'bg-gray-500 text-gray-300 cursor-not-allowed' 
-                    : 'bg-[#fbbf24] hover:bg-[#e6a602] text-black'
+                    ? 'bg-slate-300 text-slate-500 cursor-not-allowed' 
+                    : 'bg-[#1952C7] hover:bg-[#123ea9] text-white'
                 }`}
               >
                 {isSubmitting ? (
@@ -1423,13 +1432,13 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
           <div 
             className="w-full p-6"
             style={{
-              background: 'linear-gradient(to bottom, #FFFFFF 0%, #6E5E93 20%, #160049 55%, #0C002B 100%)'
+              background: 'linear-gradient(to bottom, #F8FAFF 0%, #EEF4FF 38%, #FFFFFF 100%)'
             }}
           >
             {/* Logo Section */}
             <Link href="/" className="flex justify-center mb-6 cursor-pointer hover:opacity-80 transition-opacity">
               <div className="w-16 h-12">
-                <Image src="/logo/iprlogo.svg" alt="IPR Karo Logo" width={65} height={49} />
+                <Image src="/logo/iprlogoblack.svg" alt="IPR Karo Logo" width={65} height={49} />
               </div>
             </Link>
 
@@ -1455,18 +1464,18 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
               </div>
               
               <div className="space-y-1">
-                <h4 className="text-[#FFB703] text-sm font-bold font-nunito tracking-wide">
+                <h4 className="text-[#1952C7] text-sm font-bold font-nunito tracking-wide">
                   AI-POWERED INSIGHTS
                 </h4>
-                <p className="text-white text-sm font-nunito opacity-80">
+                <p className="text-[#6B7280] text-sm font-nunito">
                   Intelligent trademark analysis at your fingertips
                 </p>
               </div>
             </div>
 
             <div className="text-center mb-4">
-              <h3 className="text-white text-xl font-bold mb-2 font-nunito">Create your account</h3>
-              <p className="text-gray-300 text-base font-nunito">
+              <h3 className="text-[#0C002B] text-xl font-bold mb-2 font-nunito">Create your account</h3>
+              <p className="text-[#6B7280] text-base font-nunito">
                 Sign up for free to unlock your complete trademark report.
               </p>
             </div>
@@ -1475,7 +1484,7 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
             <form onSubmit={handleSubmit} className="space-y-3">
               {/* Name Field */}
               <div>
-                <label className="text-white text-sm font-medium mb-1 block font-nunito text-left">
+                <label className="text-[#0C002B] text-sm font-medium mb-1 block font-nunito text-left">
                   Name <span className="text-red-400">*</span>
                 </label>
                 <input
@@ -1483,18 +1492,18 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
                   name="name"
                   value={formData.name}
                   onChange={handleInputChange}
-                  className={`w-full px-3 py-2 border rounded-lg text-white text-base focus:outline-none focus:border-[#fbbf24] placeholder-gray-400 bg-transparent ${
-                    errors.name ? 'border-red-400' : 'border-gray-600'
+                  className={`w-full px-3 py-2 border rounded-lg text-[#0C002B] text-base focus:outline-none focus:border-[#1952C7] placeholder-slate-400 bg-white ${
+                    errors.name ? 'border-red-400' : 'border-slate-200'
                   }`}
                   placeholder="Enter your name"
-                  required
+                  required={isProductionEnv}
                 />
                 {errors.name && <p className="text-red-400 text-xs mt-1 font-nunito">{errors.name}</p>}
               </div>
 
               {/* Phone Field */}
               <div>
-                <label className="text-white text-sm font-medium mb-1 block font-nunito text-left">
+                <label className="text-[#0C002B] text-sm font-medium mb-1 block font-nunito text-left">
                   Phone No. <span className="text-red-400">*</span>
                 </label>
                 <input
@@ -1503,17 +1512,17 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
                   value={formData.phone}
                   onChange={handleInputChange}
                   placeholder="Enter 10-digit phone number"
-                  className={`w-full px-3 py-2 border rounded-lg text-white text-base focus:outline-none focus:border-[#fbbf24] placeholder-gray-400 bg-transparent ${
-                    errors.phone ? 'border-red-400' : 'border-gray-600'
+                  className={`w-full px-3 py-2 border rounded-lg text-[#0C002B] text-base focus:outline-none focus:border-[#1952C7] placeholder-slate-400 bg-white ${
+                    errors.phone ? 'border-red-400' : 'border-slate-200'
                   }`}
-                  required
+                  required={isProductionEnv}
                 />
                 {errors.phone && <p className="text-red-400 text-xs mt-1 font-nunito">{errors.phone}</p>}
               </div>
 
               {/* Email Field */}
               <div>
-                <label className="text-white text-sm font-medium mb-1 block font-nunito text-left">
+                <label className="text-[#0C002B] text-sm font-medium mb-1 block font-nunito text-left">
                   Email <span className="text-red-400">*</span>
                 </label>
                 <input
@@ -1522,27 +1531,27 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
                   value={formData.email}
                   onChange={handleInputChange}
                   placeholder="Enter your email address"
-                  className={`w-full px-3 py-2 border rounded-lg text-white text-base focus:outline-none focus:border-[#fbbf24] placeholder-gray-400 bg-transparent ${
-                    errors.email ? 'border-red-400' : 'border-gray-600'
+                  className={`w-full px-3 py-2 border rounded-lg text-[#0C002B] text-base focus:outline-none focus:border-[#1952C7] placeholder-slate-400 bg-white ${
+                    errors.email ? 'border-red-400' : 'border-slate-200'
                   }`}
-                  required
+                  required={isProductionEnv}
                 />
                 {errors.email && <p className="text-red-400 text-xs mt-1 font-nunito">{errors.email}</p>}
               </div>
 
               {/* State Field */}
               <div>
-                <label className="text-white text-sm font-medium mb-1 block font-nunito text-left">
+                <label className="text-[#0C002B] text-sm font-medium mb-1 block font-nunito text-left">
                   State <span className="text-red-400">*</span>
                 </label>
                 <select
                   name="state"
                   value={formData.state}
                   onChange={handleInputChange}
-                  className={`w-full px-3 py-2 border rounded-lg text-white text-base focus:outline-none focus:border-[#fbbf24] bg-transparent ${
-                    errors.state ? 'border-red-400' : 'border-gray-600'
+                  className={`w-full px-3 py-2 border rounded-lg text-[#0C002B] text-base focus:outline-none focus:border-[#1952C7] bg-white ${
+                    errors.state ? 'border-red-400' : 'border-slate-200'
                   }`}
-                  required
+                  required={isProductionEnv}
                 >
                   <option value="" className="bg-[#0C002B] text-white">Select State</option>
                   
@@ -1591,7 +1600,7 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
 
               {/* Trademark Searched Field */}
               <div>
-                <label className="text-white text-sm font-medium mb-1 block font-nunito text-left">
+                <label className="text-[#0C002B] text-sm font-medium mb-1 block font-nunito text-left">
                   Trademark You Searched
                 </label>
                 <div className="relative">
@@ -1600,13 +1609,13 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
                     name="trademarkSearched"
                     value={formData.trademarkSearched}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 pr-8 border border-gray-600 rounded-lg text-white text-base focus:outline-none focus:border-[#fbbf24] placeholder-gray-400 bg-transparent"
+                    className="w-full px-3 py-2 pr-8 border border-slate-200 rounded-lg text-[#0C002B] text-base focus:outline-none focus:border-[#1952C7] placeholder-slate-400 bg-white"
                     placeholder="Enter trademark name"
                   />
                   <button
                     type="button"
                     onClick={() => setFormData(prev => ({ ...prev, trademarkSearched: '' }))}
-                    className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white"
+                    className="absolute right-2 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-[#1952C7]"
                   >
                     <i className="fas fa-xmark text-sm"></i>
                   </button>
@@ -1615,17 +1624,17 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
 
               {/* Class Field */}
               <div>
-                <label className="text-white text-sm font-medium mb-1 block font-nunito text-left">
+                <label className="text-[#0C002B] text-sm font-medium mb-1 block font-nunito text-left">
                   Class <span className="text-red-400">*</span>
                 </label>
                 <select
                   name="class"
                   value={formData.class}
                   onChange={handleInputChange}
-                  className={`w-full px-3 py-2 border rounded-lg text-white text-base focus:outline-none focus:border-[#fbbf24] bg-transparent ${
-                    errors.class ? 'border-red-400' : 'border-gray-600'
+                  className={`w-full px-3 py-2 border rounded-lg text-[#0C002B] text-base focus:outline-none focus:border-[#1952C7] bg-white ${
+                    errors.class ? 'border-red-400' : 'border-slate-200'
                   }`}
-                  required
+                  required={isProductionEnv}
                 >
                   <option value="" className="bg-[#0C002B] text-white">Select Class</option>
                   <option value="1" className="bg-[#0C002B] text-white">Class 1 - Chemicals</option>
@@ -1683,8 +1692,8 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
                 disabled={isSubmitting}
                 className={`w-full font-semibold py-2.5 rounded-lg transition-colors duration-300 text-base ${
                   isSubmitting 
-                    ? 'bg-gray-500 text-gray-300 cursor-not-allowed' 
-                    : 'bg-[#fbbf24] hover:bg-[#e6a602] text-black'
+                    ? 'bg-slate-300 text-slate-500 cursor-not-allowed' 
+                    : 'bg-[#1952C7] hover:bg-[#123ea9] text-white'
                 }`}
               >
                 {isSubmitting ? (
@@ -1700,15 +1709,15 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
           </div>
 
           {/* Bottom Section - Grey Container with Search Results */}
-          <div className="w-full bg-[#121212] p-6">
+          <div className="w-full bg-white p-6 border-t border-slate-200">
             {/* Trademark Check Results Container */}
             <div 
               className="relative p-4 mb-4"
               style={{
                 borderRadius: '20px',
-                border: '2px solid rgba(255, 255, 255, 0.15)',
-                background: 'rgba(255, 255, 255, 0.01)',
-                backdropFilter: 'blur(16px)'
+                border: '1px solid rgba(30, 41, 59, 0.12)',
+                background: '#FFFFFF',
+                boxShadow: '0 10px 30px rgba(12, 0, 43, 0.08)'
               }}
             >
               {/* Header Badges - Top Left and Top Right */}
@@ -1717,30 +1726,30 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
                   className="flex items-center gap-2 px-3 py-1.5"
                   style={{
                     borderRadius: '5px',
-                    background: 'rgba(0, 0, 0, 0.30)'
+                    background: 'rgba(25, 82, 199, 0.10)'
                   }}
                 >
-                  <i className="fas fa-brain text-white text-xs"></i>
-                  <span className="text-white text-xs font-medium font-nunito">AI Trademark</span>
+                  <i className="fas fa-brain text-[#1952C7] text-xs"></i>
+                  <span className="text-[#0C002B] text-xs font-medium font-nunito">AI Trademark</span>
                 </div>
                 <div 
                   className="flex items-center gap-2 px-3 py-1.5"
                   style={{
                     borderRadius: '5px',
-                    background: 'rgba(0, 0, 0, 0.30)'
+                    background: 'rgba(0, 155, 124, 0.10)'
                   }}
                 >
-                  <i className="fas fa-shield-alt text-white text-xs"></i>
-                  <span className="text-white text-xs font-medium font-nunito">Security Checking</span>
+                  <i className="fas fa-shield-alt text-[#009B7C] text-xs"></i>
+                  <span className="text-[#0C002B] text-xs font-medium font-nunito">Security Checking</span>
                 </div>
               </div>
 
               {/* Main Heading */}
               <div>
-                <h2 className="text-white text-lg font-bold mb-1 font-nunito break-words">
+                <h2 className="text-[#0C002B] text-lg font-bold mb-1 font-nunito break-words">
                   Trademark Check Results for "{searchTerm}"
                 </h2>
-                <p className="text-gray-400 text-sm font-nunito">
+                <p className="text-[#6B7280] text-sm font-nunito">
                   Preliminary automated scan completed. Review quick insights below.
                 </p>
               </div>
@@ -1751,42 +1760,42 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
               className="p-4 mb-4"
               style={{
                 borderRadius: '20px',
-                border: '2px solid rgba(255, 255, 255, 0.15)',
-                background: 'rgba(255, 255, 255, 0.01)',
-                backdropFilter: 'blur(16px)'
+                border: '1px solid rgba(30, 41, 59, 0.12)',
+                background: '#FFFFFF',
+                boxShadow: '0 10px 30px rgba(12, 0, 43, 0.08)'
               }}
             >
               <div 
                 className="flex items-center gap-2 mb-3 px-3 py-1.5 w-fit"
                 style={{
                   borderRadius: '5px',
-                  background: 'rgba(0, 0, 0, 0.30)'
+                  background: 'rgba(25, 82, 199, 0.10)'
                 }}
               >
-                <i className="fas fa-lightbulb text-white text-xs"></i>
-                <span className="text-white font-semibold font-nunito text-base">Quick insights</span>
+                <i className="fas fa-lightbulb text-[#1952C7] text-xs"></i>
+                <span className="text-[#0C002B] font-semibold font-nunito text-base">Quick insights</span>
               </div>
               
               <div className="space-y-2">
                 {searchResults ? (
                   <>
                     <div className="flex items-start gap-2">
-                      <i className="fas fa-tag text-white text-xs mt-0.5 flex-shrink-0"></i>
-                      <span className="text-white text-sm font-nunito break-words">
+                      <i className="fas fa-tag text-[#1952C7] text-xs mt-0.5 flex-shrink-0"></i>
+                      <span className="text-[#0C002B] text-sm font-nunito break-words">
                         <span className="font-semibold">Class {searchResults.class.number} - {searchResults.class.name}:</span> {searchResults.class.description}
                       </span>
                     </div>
                     <div className="flex items-start gap-2">
-                      <i className="fas fa-chart-line text-white text-xs mt-0.5 flex-shrink-0"></i>
-                      <span className="text-white text-sm font-nunito break-words">
+                      <i className="fas fa-chart-line text-[#009B7C] text-xs mt-0.5 flex-shrink-0"></i>
+                      <span className="text-[#0C002B] text-sm font-nunito break-words">
                         AI Confidence Score: {searchResults.confidenceScore}% chance your brand may face an objection
                       </span>
                     </div>
                   </>
                 ) : (
                   <div className="flex items-start gap-2">
-                    <i className="fas fa-info-circle text-white text-xs mt-0.5 flex-shrink-0"></i>
-                    <span className="text-white text-sm font-nunito break-words">
+                    <i className="fas fa-info-circle text-[#1952C7] text-xs mt-0.5 flex-shrink-0"></i>
+                    <span className="text-[#0C002B] text-sm font-nunito break-words">
                       Please enter a trademark class to see detailed insights
                     </span>
                   </div>

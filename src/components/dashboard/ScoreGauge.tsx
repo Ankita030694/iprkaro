@@ -69,10 +69,9 @@ export default function ScoreGauge({
           x="100" 
           y="78" 
           textAnchor="middle" 
-          fill="white" 
+          fill="#0C002B" 
           className={textSize}
-          fontWeight="bold" 
-          style={{ textShadow: '0 0 10px rgba(255,255,255,0.5)' }}
+          fontWeight="bold"
         >
           {score}
         </text>

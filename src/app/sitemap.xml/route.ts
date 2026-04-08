@@ -1,5 +1,6 @@
-
 import { type Firestore } from 'firebase/firestore';
+// IMPORTANT: Adjust this import path to point to where you saved your locations.ts file
+import { locations, toSlug } from '@/app/trademark-by-location/locations';
 
 interface RouteConfig {
   path: string;
@@ -16,7 +17,7 @@ export async function GET() {
     { path: '', priority: '1.0', changefreq: 'daily' },
   ];
 
-  // 3. Lead Capture & Info Pages
+  // 2. Lead Capture & Info Pages
   const standardPages: RouteConfig[] = [
     { path: '/resources', priority: '0.9', changefreq: 'daily' },
     { path: '/about-us', priority: '0.7', changefreq: 'monthly' },
@@ -25,9 +26,8 @@ export async function GET() {
     { path: '/terms-and-conditions', priority: '0.5', changefreq: 'yearly' },
   ];
 
-
-  // 6. Features and Services
-  const staticUrls = [
+  // 3. Features and Services
+  const staticUrls: RouteConfig[] = [
     '/our-services',
     '/our-services/trademark-registration',
     '/our-services/patent-registration',
@@ -249,27 +249,34 @@ export async function GET() {
     '/trademark-for-digital-marketing-agency',
     '/trademark-for-fintech-startup',
     '/trademark-for-real-estate-company'
-
   ].map(path => ({ path, priority: '0.8', changefreq: 'weekly' } as RouteConfig));
 
+  // 4. Dynamic Programmatic SEO Pages (Locations)
+  // Deduplicate the array first to avoid identical URLs in the sitemap
+  const uniqueLocations = Array.from(new Set(locations));
 
+  // Add the main directory page
+  const programmaticIndexRoute: RouteConfig = {
+    path: '/trademark-by-location',
+    priority: '0.8',
+    changefreq: 'weekly'
+  };
 
-  // Fetch Dynamic Blog Posts
+  // Add all the individual slug pages
+  const programmaticLocationRoutes: RouteConfig[] = uniqueLocations.map(loc => ({
+    path: `/trademark-by-location/${toSlug(loc)}`,
+    priority: '0.6', // Slightly lower priority than core service pages
+    changefreq: 'monthly'
+  }));
+
+  // 5. Fetch Dynamic Blog Posts
   let blogRoutes: RouteConfig[] = [];
   try {
-    // Dynamic imports to avoid server crashes if Firebase is misconfigured or unreachable
     const { db } = await import('@/lib/firebase');
     const { collection, getDocs } = await import('firebase/firestore');
 
-    // Check if db is initialized (it might be undefined if window check failed in lib/firebase.js, 
-    // although lib/firebase.js usually returns strict exports. 
-    // But checking ensures safety.)
     if (db) {
-      // We know standard firebase SDK returns Firestore instance, but it might be untyped in JS.
-      // We cast/assume it works.
       const blogsCollection = collection(db as Firestore, 'blogs');
-      // Add timeout explicitly? getDocs doesn't support signal easily in v9 without implementing it.
-      // We hope it doesn't hang.
       const blogSnapshot = await getDocs(blogsCollection);
 
       blogRoutes = blogSnapshot.docs.map(doc => ({
@@ -280,7 +287,6 @@ export async function GET() {
     }
   } catch (error) {
     console.error('Error fetching blogs for sitemap:', error);
-    // Continue without blogs, do not crash
   }
 
   // Combine all routes
@@ -288,6 +294,8 @@ export async function GET() {
     ...rootPages,
     ...standardPages,
     ...staticUrls,
+    programmaticIndexRoute,
+    ...programmaticLocationRoutes,
     ...blogRoutes
   ];
 

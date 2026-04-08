@@ -58,34 +58,31 @@ export default function FAQSection() {
         <div className="grid lg:grid-cols-2 gap-8 items-start max-w-7xl mx-auto">
           <div className="space-y-6 flex flex-col justify-start">
             <div className="space-y-4">
-              <h2 className="text-white text-left font-nunito text-xl md:text-3xl font-medium leading-tight w-full">
+              <h2 className="text-[#0C002B] text-left font-nunito text-xl md:text-3xl font-medium leading-tight w-full">
                 Have Question?
                 <br />
-                <span style={{ color: '#FFB703' }}>
+                <span style={{ color: '#1952C7' }}>
                   We've Got Answers.
                 </span>
               </h2>
 
-              <p className="text-white font-nunito text-sm md:text-base font-medium">
-                Still have questions? <span style={{ color: '#FFB703' }} className="font-medium">Contact us</span> anytime.
+              <p className="text-[#6B7280] font-nunito text-sm md:text-base font-medium">
+                Still have questions? <span style={{ color: '#1952C7' }} className="font-medium">Contact us</span> anytime.
               </p>
             </div>
 
             <form onSubmit={handleAiSubmit} className="relative">
-              <div className="relative bg-white/50 backdrop-blur-sm border border-purple-400/30 rounded-lg p-3 max-w-lg">
+              <div className="relative bg-white border border-slate-200 rounded-lg p-3 max-w-lg shadow-sm">
                 <input
                   type="text"
                   value={aiQuestion}
                   onChange={(e) => setAiQuestion(e.target.value)}
                   placeholder="Smart AI, Ask me Anything...."
-                  className="bg-transparent text-white placeholder-white outline-none text-base w-full"
+                  className="bg-transparent text-[#0C002B] placeholder-slate-400 outline-none text-base w-full"
                 />
                 <button
                   type="submit"
-                  className="absolute right-3 top-1/2 transform -translate-y-1/2 transition-colors"
-                  style={{ color: '#FFB703' }}
-                  onMouseEnter={(e) => e.currentTarget.style.color = '#e6a503'}
-                  onMouseLeave={(e) => e.currentTarget.style.color = '#FFB703'}
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 transition-colors text-[#1952C7] hover:text-[#123ea9]"
                 >
                   <FontAwesomeIcon icon={faPaperPlane} className="w-4 h-4" />
                 </button>
@@ -93,32 +90,26 @@ export default function FAQSection() {
             </form>
 
             {searchResult && (
-              <div key={searchResult.question} className="p-4 rounded-lg max-w-lg animate-fade-in-up" style={{background: 'linear-gradient(140deg, rgba(12, 0, 43, 0.10) 6.89%, rgba(255, 183, 3, 0.10) 101.84%)',boxShadow: '2.88px 2.88px 18.144px 0 rgba(0, 0, 0, 0.15), 0 0 14.4px 0.72px rgba(255, 255, 255, 0.10) inset',backdropFilter: 'blur(87.876px)'}}>
+              <div key={searchResult.question} className="p-4 rounded-lg max-w-lg animate-fade-in-up bg-white border border-slate-200 shadow-md">
                 <div className="flex justify-between items-start mb-2">
-                  <h4 className="text-white font-nunito text-base md:text-lg font-semibold leading-snug" style={{ color: '#FFB703' }}>{searchResult.question}</h4>
-                  <button onClick={() => setSearchResult(null)} className="text-white hover:text-gray-300 transition-colors ml-2 flex-shrink-0"><FontAwesomeIcon icon={faChevronDown} className="w-3 h-3 rotate-180" /></button>
+                  <h4 className="text-[#1952C7] font-nunito text-base md:text-lg font-semibold leading-snug">{searchResult.question}</h4>
+                  <button onClick={() => setSearchResult(null)} className="text-slate-400 hover:text-slate-600 transition-colors ml-2 flex-shrink-0"><FontAwesomeIcon icon={faChevronDown} className="w-3 h-3 rotate-180" /></button>
                 </div>
-                <p className="text-white font-nunito text-sm md:text-base font-medium leading-relaxed">{searchResult.answer}</p>
+                <p className="text-[#4B5563] font-nunito text-sm md:text-base font-medium leading-relaxed">{searchResult.answer}</p>
               </div>
             )}
             {showNoMatch && (
-              <div className="p-4 rounded-lg max-w-lg animate-fade-in-up" style={{background: 'linear-gradient(140deg, rgba(12, 0, 43, 0.10) 6.89%, rgba(255, 183, 3, 0.10) 101.84%)',boxShadow: '2.88px 2.88px 18.144px 0 rgba(0, 0, 0, 0.15), 0 0 14.4px 0.72px rgba(255, 255, 255, 0.10) inset',backdropFilter: 'blur(87.876px)'}}>
+              <div className="p-4 rounded-lg max-w-lg animate-fade-in-up bg-white border border-slate-200 shadow-md">
                 <div className="flex justify-between items-start">
-                  <p className="text-white font-nunito text-sm md:text-base font-medium leading-relaxed">We're experiencing high traffic at the moment. Please try your search again in a few moments, or browse our FAQ section for answers.</p>
-                  <button onClick={() => setShowNoMatch(false)} className="text-white hover:text-gray-300 transition-colors ml-2 flex-shrink-0"><FontAwesomeIcon icon={faChevronDown} className="w-3 h-3 rotate-180" /></button>
+                  <p className="text-[#4B5563] font-nunito text-sm md:text-base font-medium leading-relaxed">We&apos;re experiencing high traffic at the moment. Please try your search again in a few moments, or browse our FAQ section for answers.</p>
+                  <button onClick={() => setShowNoMatch(false)} className="text-slate-400 hover:text-slate-600 transition-colors ml-2 flex-shrink-0"><FontAwesomeIcon icon={faChevronDown} className="w-3 h-3 rotate-180" /></button>
                 </div>
               </div>
             )}
           </div>
 
           <div
-            className="space-y-3 p-4"
-            style={{
-              borderRadius: '12px',
-              background: 'linear-gradient(140deg, rgba(12, 0, 43, 0.10) 6.89%, rgba(255, 183, 3, 0.10) 101.84%)',
-              boxShadow: '2px 2px 14px 0 rgba(0, 0, 0, 0.15), 0 0 12px 0.5px rgba(255, 255, 255, 0.10) inset',
-              backdropFilter: 'blur(70px)'
-            }}
+            className="space-y-3 p-4 rounded-2xl bg-white border border-slate-200 shadow-md"
           >
             {faqs.map((faq, index) => (
               <div key={index} className="relative">
@@ -132,7 +123,7 @@ export default function FAQSection() {
                   onClick={() => toggleFaq(index)}
                 >
                   <div className="flex justify-between items-center mb-2">
-                    <h3 className="text-white font-nunito text-sm md:text-base lg:text-lg font-semibold pr-3 leading-snug">
+                    <h3 className="text-[#0C002B] font-nunito text-sm md:text-base lg:text-lg font-semibold pr-3 leading-snug">
                       {faq.question}
                     </h3>
                     <FontAwesomeIcon
@@ -150,7 +141,7 @@ export default function FAQSection() {
                     }`}
                   >
                     <div className="mt-3 pt-3 border-t border-black/20 transform transition-all duration-500 ease-in-out">
-                      <p className="text-white font-nunito text-xs md:text-sm font-medium leading-relaxed">
+                      <p className="text-[#4B5563] font-nunito text-xs md:text-sm font-medium leading-relaxed">
                         {faq.answer}
                       </p>
                     </div>

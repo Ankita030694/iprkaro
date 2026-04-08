@@ -16,7 +16,7 @@ export default function PlansSection() {
 
   return (
     <div className="flex-1 space-y-3">
-      <h4 className="text-white font-nunito font-medium text-lg md:text-3xl leading-[20px] mb-5 text-center">
+      <h4 className="text-[#0C002B] font-nunito font-medium text-lg md:text-3xl leading-[20px] mb-5 text-center">
         Our Plans
       </h4>
 
@@ -24,12 +24,7 @@ export default function PlansSection() {
         <div key={plan.id} className="mb-3">
           <div
             onClick={() => togglePlan(plan.id)}
-            className="w-full p-2.5 rounded-lg text-white font-nunito font-medium text-base md:text-lg border-2 border-white/20 cursor-pointer hover:border-white/40 transition-all duration-300 flex items-center justify-between"
-            style={{
-              background: 'rgba(255, 255, 255, 0.05)',
-              backdropFilter: 'blur(8px)',
-              WebkitBackdropFilter: 'blur(8px)'
-            }}
+            className="w-full p-2.5 rounded-lg text-[#0C002B] font-nunito font-medium text-base md:text-lg border border-slate-200 cursor-pointer hover:border-[#1952C7] transition-all duration-300 flex items-center justify-between bg-white"
           >
             <span className="text-sm md:text-xl">{plan.name} - {plan.price}</span>
             <FontAwesomeIcon
@@ -46,24 +41,17 @@ export default function PlansSection() {
             }`}
           >
             <div
-              className="relative p-5 rounded-xl transition-all duration-300"
-              style={{
-                background: 'rgba(255, 255, 255, 0.10)',
-                backdropFilter: 'blur(13px)',
-                WebkitBackdropFilter: 'blur(13px)',
-                border: plan.highlighted ? '1.5px solid #1345C3' : 'none',
-                boxShadow: '0 0 16px 0 rgba(0, 0, 0, 0.10) inset, inset 0 0 16px rgba(255, 255, 255, 0.1)'
-              }}
+              className={`relative p-5 rounded-xl transition-all duration-300 bg-white border ${plan.highlighted ? 'border-[#1345C3]' : 'border-slate-200'} shadow-md`}
             >
               <div className="text-center mb-5">
-                <h3 className="text-white font-nunito text-lg md:text-3xl font-semibold mb-1.5">
+                <h3 className="text-[#0C002B] font-nunito text-lg md:text-3xl font-semibold mb-1.5">
                   {plan.name}
                 </h3>
                 <div className="flex items-center justify-center gap-3 mb-3">
-                  <span className="text-white font-nunito text-sm md:text-xl opacity-80">{plan.description}</span>
+                  <span className="text-[#4B5563] font-nunito text-sm md:text-xl">{plan.description}</span>
                 </div>
                 <div className="text-right">
-                  <span className="text-white font-nunito font-bold text-lg md:text-3xl">
+                  <span className="text-[#0C002B] font-nunito font-bold text-lg md:text-3xl">
                     {plan.price}
                   </span>
                 </div>
@@ -73,7 +61,7 @@ export default function PlansSection() {
                 {plan.features.map((feature, index) => (
                   <div key={index} className="flex items-start gap-2.5">
                     <i className="fas fa-check text-green-400 mt-0.5 flex-shrink-0 text-xs"></i>
-                    <span className="text-white font-nunito text-sm md:text-xl leading-relaxed">
+                    <span className="text-[#4B5563] font-nunito text-sm md:text-xl leading-relaxed">
                       {feature}
                     </span>
                   </div>
@@ -93,7 +81,7 @@ export default function PlansSection() {
               </button>
 
               <div className="mt-3 text-center">
-                <span className="text-white font-nunito text-[10px] opacity-80">
+                <span className="text-[#4B5563] font-nunito text-[10px]">
                   {plan.subtitle}
                 </span>
               </div>

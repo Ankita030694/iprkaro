@@ -184,6 +184,8 @@ const NewFooter = () => {
               <li><Link href="/our-services/trademark-registration" className="text-white/60 hover:text-white transition-colors">Trademark Filing</Link></li>
               <li><Link href="/our-services/patent-registration" className="text-white/60 hover:text-white transition-colors">Patent Filing</Link></li>
               <li><Link href="/our-services/copyright-registration" className="text-white/60 hover:text-white transition-colors">Copyright Filing</Link></li>
+              <li><Link href="/trademark-by-location" className="text-white/60 hover:text-white transition-colors">Trademark by Location</Link></li>
+              
             </ul>
           </div>
 

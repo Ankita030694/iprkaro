@@ -9,7 +9,7 @@ export default function MetricsSection({ analysisData }: MetricsSectionProps) {
   return (
     <div className="mb-10">
       <div className="hidden md:block text-left mb-5">
-        <h1 className="text-white font-nunito text-xl md:text-3xl lg:text-4xl xl:text-3xl font-bold mb-1.5">
+        <h1 className="text-[#0C002B] font-nunito text-xl md:text-3xl lg:text-4xl xl:text-3xl font-bold mb-1.5">
           Your Trademark Health Score for "{analysisData.trademarkName}" - Class {analysisData.classNumber}
         </h1>
         <p className="font-nunito text-lg md:text-2xl lg:text-3xl font-semibold" style={{ color: getHealthColor(analysisData.overallHealth) }}>
@@ -22,29 +22,20 @@ export default function MetricsSection({ analysisData }: MetricsSectionProps) {
       </div>
 
       <div className="block md:hidden text-center mb-5">
-        <h1 className="text-white font-nunito text-xl font-bold mb-1.5">
+        <h1 className="text-[#0C002B] font-nunito text-xl font-bold mb-1.5">
           Register Today and get your Trademark in <span style={{ color: '#FFB703' }}>9 months</span>
         </h1>
       </div>
 
       <div
-        className="hidden md:block w-full px-5 md:px-6 lg:px-8 py-6 md:py-8 lg:py-5 relative"
-        style={{
-          borderRadius: '32px',
-          background: 'rgba(255, 255, 255, 0.10)',
-          boxShadow: '0 0 16px 0 rgba(0, 0, 0, 0.10) inset, 0 0 16px 5px rgba(255, 255, 255, 0.20) inset'
-        }}
+        className="hidden md:block w-full px-5 md:px-6 lg:px-8 py-6 md:py-8 lg:py-5 relative bg-white rounded-[32px] border border-slate-200 shadow-xl shadow-slate-200/70"
       >
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-5 items-stretch">
           <div className="lg:col-span-3 flex flex-col">
             <div
-              className="flex items-center justify-between px-5 py-3 mb-3"
-              style={{
-                borderRadius: '4px 4px 0 0',
-                background: 'rgba(0, 0, 0, 0.26)'
-              }}
+              className="flex items-center justify-between px-5 py-3 mb-3 rounded-t-2xl bg-slate-50 border border-slate-200"
             >
-              <h3 className="text-white font-nunito text-lg md:text-xl font-semibold">
+              <h3 className="text-[#0C002B] font-nunito text-lg md:text-xl font-semibold">
                 Your Trademark Health Score
               </h3>
               <span className="font-nunito text-lg md:text-xl font-semibold" style={{ color: getHealthColor(analysisData.overallHealth) }}>
@@ -111,7 +102,7 @@ function MetricCard({
 }) {
   return (
     <div className="flex flex-col items-center h-full">
-      <h4 className="text-white font-nunito text-base md:text-lg font-semibold mb-3">
+      <h4 className="text-[#0C002B] font-nunito text-base md:text-lg font-semibold mb-3">
         {title}
       </h4>
       
@@ -125,15 +116,10 @@ function MetricCard({
       </div>
 
       <div
-        className="w-full p-3 flex-1 flex flex-col"
-        style={{
-          borderRadius: '12px',
-          border: '1.5px solid #171717',
-          background: 'rgba(24, 24, 24, 0.15)'
-        }}
+        className="w-full p-3 flex-1 flex flex-col rounded-xl border border-slate-200 bg-white"
       >
         <div className="flex items-center justify-between mb-2">
-          <h5 className="text-white font-nunito text-md font-semibold">
+          <h5 className="text-[#0C002B] font-nunito text-md font-semibold">
             Remarks
           </h5>
           <div className="transition-all duration-300">
@@ -151,24 +137,14 @@ function MetricCard({
         
         <div className="mb-2 flex items-start">
           <span className="text-[#00D9FF] mr-2 mt-0.5 flex-shrink-0 text-lg xl:text-lg">•</span>
-          <p className="font-nunito text-base leading-relaxed" style={{ 
-            background: 'linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 100%)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text'
-          }}>
+          <p className="font-nunito text-sm leading-relaxed text-[#4B5563]">
             {reasoning}
           </p>
         </div>
 
         <div className="flex items-start">
           <span className="text-[#00D9FF] mr-2 mt-0.5 flex-shrink-0 text-lg xl:text-base">•</span>
-          <p className="font-nunito text-base leading-relaxed" style={{ 
-            background: 'linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 100%)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text'
-          }}>
+          <p className="font-nunito text-sm leading-relaxed text-[#4B5563]">
             {assessment}
           </p>
         </div>
@@ -189,13 +165,9 @@ function KeyFactorsColumn({ keyFactors }: { keyFactors: AnalysisData['keyFactors
   return (
     <div className="lg:col-span-1 flex flex-col">
       <div
-        className="flex items-center justify-center px-5 py-3 mb-3"
-        style={{
-          borderRadius: '4px 4px 0 0',
-          background: 'rgba(0, 0, 0, 0.26)'
-        }}
+        className="flex items-center justify-center px-5 py-3 mb-3 rounded-2xl bg-slate-50 border border-slate-200"
       >
-        <h3 className="text-white font-nunito text-lg md:text-xl xl:text-lg font-semibold">
+        <h3 className="text-[#0C002B] font-nunito text-lg md:text-xl xl:text-lg font-semibold">
           Key Factors
         </h3>
       </div>
@@ -204,16 +176,10 @@ function KeyFactorsColumn({ keyFactors }: { keyFactors: AnalysisData['keyFactors
         {factors.map((factor, index) => (
           <div
             key={index}
-            className="p-2.5 flex items-center gap-2.5 flex-1"
-            style={{
-              borderRadius: '12px',
-              border: '1.5px solid rgba(255, 255, 255, 0.15)',
-              background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.40) 0%, rgba(158, 143, 143, 0.4) 100%)',
-              backdropFilter: 'blur(13px)'
-            }}
+            className="p-2.5 flex items-center gap-2.5 flex-1 rounded-xl border border-slate-200 bg-white"
           >
             <div className="flex-shrink-0">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white xl:w-3 xl:h-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-black xl:w-3 xl:h-3">
                 {factor.icon === 'brand' && <path d="M12 2L2 7l10 5 10-5-10-5z M2 17l10 5 10-5 M2 12l10 5 10-5"></path>}
                 {factor.icon === 'legal' && <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>}
                 {factor.icon === 'market' && <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>}
@@ -232,15 +198,10 @@ function KeyFactorsColumn({ keyFactors }: { keyFactors: AnalysisData['keyFactors
               </svg>
             </div>
             <div className="flex-1">
-              <h4 className="text-white font-nunito text-sm font-semibold mb-0.5">
+              <h4 className="text-[#0C002B] font-nunito text-sm font-semibold mb-0.5">
                 {factor.label}
               </h4>
-              <p className="font-nunito text-[12px] leading-snug" style={{ 
-                background: 'linear-gradient(90deg,rgb(255, 255, 255) 0%,rgb(255, 255, 255) 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text'  
-              }}>
+              <p className="font-nunito text-[12px] leading-snug text-[#4B5563]">
                 {factor.value}
               </p>
             </div>
@@ -255,7 +216,7 @@ function MobileMetricsSection({ analysisData }: { analysisData: AnalysisData }) 
   return (
     <div className="block md:hidden space-y-6">
       <div className="space-y-3">
-        <h4 className="text-white font-nunito text-base font-semibold text-center">
+        <h4 className="text-[#0C002B] font-nunito text-base font-semibold text-center">
           Trademark Registrability
         </h4>
         <div className="grid grid-cols-2 gap-3">
