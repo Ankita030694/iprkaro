@@ -2,11 +2,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import ContactFormPopup from './ContactFormPopup';
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isContactFormOpen, setIsContactFormOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -58,12 +56,12 @@ export default function Navbar() {
 
             {/* Action Button */}
             <div className="flex items-center gap-2 md:gap-4">
-              <button
-                onClick={() => setIsContactFormOpen(true)}
+              <Link
+                href="/contact"
                 className="bg-white text-[#05030E] px-4 md:px-6 py-1.5 rounded-[10px] text-[12px] md:text-[14px] lg:text-base font-bold hover:bg-gray-100 transition-all duration-200 shadow-xl active:scale-95 whitespace-nowrap"
               >
                 Get in Touch
-              </button>
+              </Link>
 
               {/* Mobile Menu Button */}
               <button
@@ -94,23 +92,17 @@ export default function Navbar() {
                 {link.name}
               </Link>
             ))}
-            <button
-              onClick={() => {
-                setIsMobileMenuOpen(false);
-                setIsContactFormOpen(true);
-              }}
-              className={`mt-4 w-full bg-white text-[#05030E] py-4 rounded-2xl text-xl font-bold transition-all duration-500 delay-400 ${isMobileMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+            <Link
+              href="/contact"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className={`mt-4 w-full flex justify-center bg-white text-[#05030E] py-4 rounded-2xl text-xl font-bold transition-all duration-500 delay-400 ${isMobileMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
             >
               Get in Touch
-            </button>
+            </Link>
           </div>
         </div>
       </div>
 
-      <ContactFormPopup 
-        isOpen={isContactFormOpen} 
-        onClose={() => setIsContactFormOpen(false)} 
-      />
     </>
   );
 }

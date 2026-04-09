@@ -6,8 +6,8 @@ const OurHeadOffice = () => {
     {
       icon: (
         <svg className="w-full h-full" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="40" height="40" rx="5" fill="white" fillOpacity="0.25"/>
-          <path d="M15.1493 20.3279L19.775 14.1147C20.1365 13.6284 25 6.89643 25 7.54382L20.8147 19.3872C20.8147 19.7745 21.0804 20.0892 21.4089 20.0892H23.659C24.1699 20.0892 24.4422 20.8016 24.1045 21.2554L19.4788 27.4686C19.1173 27.9541 15.5948 33.0911 15.5948 32.4437L18.4391 22.1953C18.4391 21.808 18.1727 21.4933 17.8449 21.4933H15.5948C15.0839 21.4933 14.8116 20.7816 15.1493 20.3279Z" stroke="#FFB703" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <rect width="40" height="40" rx="5" fill="#1952C7" fillOpacity="0.1"/>
+          <path d="M15.1493 20.3279L19.775 14.1147C20.1365 13.6284 25 6.89643 25 7.54382L20.8147 19.3872C20.8147 19.7745 21.0804 20.0892 21.4089 20.0892H23.659C24.1699 20.0892 24.4422 20.8016 24.1045 21.2554L19.4788 27.4686C19.1173 27.9541 15.5948 33.0911 15.5948 32.4437L18.4391 22.1953C18.4391 21.808 18.1727 21.4933 17.8449 21.4933H15.5948C15.0839 21.4933 14.8116 20.7816 15.1493 20.3279Z" stroke="#1952C7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
       ),
       title: "Fast Process"
@@ -15,9 +15,9 @@ const OurHeadOffice = () => {
     {
       icon: (
         <svg className="w-full h-full" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="40" height="40" rx="5" fill="white" fillOpacity="0.25"/>
-          <path d="M19.5 30C24.2137 30 26.5712 30 28.035 28.535C29.5 27.0712 29.5 24.7137 29.5 20M19.5 30C14.7863 30 12.4287 30 10.965 28.535C9.50125 27.07 9.5 24.7137 9.5 20M19.5 30V32.5M9.5 20C9.5 15.2863 9.5 12.9287 10.965 11.465C12.43 10.0012 14.7863 10 19.5 10M9.5 20H7M19.5 10C24.2137 10 26.5712 10 28.035 11.465C29.4987 12.93 29.5 15.2863 29.5 20M19.5 10V7.5M29.5 20H32M14.5 7.5V10M24.5 7.5V10M14.5 30V32.5M24.5 30V32.5M32 25H29.5M9.5 15H7M9.5 25H7M32 15H29.5" stroke="#FFB703" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M18.8511 14.8267C18.9 14.6936 18.9886 14.5788 19.1048 14.4977C19.2211 14.4165 19.3594 14.373 19.5011 14.373C19.6429 14.373 19.7812 14.4165 19.8975 14.4977C20.0137 14.5788 20.1022 14.6936 20.1511 14.8267L21.1511 17.5304C21.2911 17.9092 21.5911 18.2092 21.9699 18.3492L24.6736 19.3492C24.8067 19.3981 24.9215 19.4866 25.0026 19.6029C25.0838 19.7191 25.1273 19.8574 25.1273 19.9992C25.1273 20.1409 25.0838 20.2793 25.0026 20.3955C24.9215 20.5117 24.8067 20.6003 24.6736 20.6492L21.9699 21.6492C21.7821 21.7179 21.6115 21.8268 21.4701 21.9682C21.3287 22.1096 21.2199 22.2801 21.1511 22.4679L20.1511 25.1717C20.1022 25.3047 20.0137 25.4196 19.8975 25.5007C19.7812 25.5818 19.6429 25.6253 19.5011 25.6253C19.3594 25.6253 19.2211 25.5818 19.1048 25.5007C18.9886 25.4196 18.9 25.3047 18.8511 25.1717L17.8511 22.4679C17.7824 22.2801 17.6736 22.1096 17.5321 21.9682C17.3907 21.8268 17.2202 21.7179 17.0324 21.6492L14.3286 20.6492C14.1956 20.6003 14.0807 20.5117 13.9996 20.3955C13.9185 20.2793 13.875 20.1409 13.875 19.9992C13.875 19.8574 13.9185 19.7191 13.9996 19.6029C14.0807 19.4866 14.1956 19.3981 14.3286 19.3492L17.0324 18.3492C17.2198 18.2797 17.3899 18.1706 17.5312 18.0293C17.6726 17.888 17.7817 17.7178 17.8511 17.5304L18.8511 14.8267Z" stroke="#FFB703" strokeWidth="2"/>
+          <rect width="40" height="40" rx="5" fill="#1952C7" fillOpacity="0.1"/>
+          <path d="M19.5 30C24.2137 30 26.5712 30 28.035 28.535C29.5 27.0712 29.5 24.7137 29.5 20M19.5 30C14.7863 30 12.4287 30 10.965 28.535C9.50125 27.07 9.5 24.7137 9.5 20M19.5 30V32.5M9.5 20C9.5 15.2863 9.5 12.9287 10.965 11.465C12.43 10.0012 14.7863 10 19.5 10M9.5 20H7M19.5 10C24.2137 10 26.5712 10 28.035 11.465C29.4987 12.93 29.5 15.2863 29.5 20M19.5 10V7.5M29.5 20H32M14.5 7.5V10M24.5 7.5V10M14.5 30V32.5M24.5 30V32.5M32 25H29.5M9.5 15H7M9.5 25H7M32 15H29.5" stroke="#1952C7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M18.8511 14.8267C18.9 14.6936 18.9886 14.5788 19.1048 14.4977C19.2211 14.4165 19.3594 14.373 19.5011 14.373C19.6429 14.373 19.7812 14.4165 19.8975 14.4977C20.0137 14.5788 20.1022 14.6936 20.1511 14.8267L21.1511 17.5304C21.2911 17.9092 21.5911 18.2092 21.9699 18.3492L24.6736 19.3492C24.8067 19.3981 24.9215 19.4866 25.0026 19.6029C25.0838 19.7191 25.1273 19.8574 25.1273 19.9992C25.1273 20.1409 25.0838 20.2793 25.0026 20.3955C24.9215 20.5117 24.8067 20.6003 24.6736 20.6492L21.9699 21.6492C21.7821 21.7179 21.6115 21.8268 21.4701 21.9682C21.3287 22.1096 21.2199 22.2801 21.1511 22.4679L20.1511 25.1717C20.1022 25.3047 20.0137 25.4196 19.8975 25.5007C19.7812 25.5818 19.6429 25.6253 19.5011 25.6253C19.3594 25.6253 19.2211 25.5818 19.1048 25.5007C18.9886 25.4196 18.9 25.3047 18.8511 25.1717L17.8511 22.4679C17.7824 22.2801 17.6736 22.1096 17.5321 21.9682C17.3907 21.8268 17.2202 21.7179 17.0324 21.6492L14.3286 20.6492C14.1956 20.6003 14.0807 20.5117 13.9996 20.3955C13.9185 20.2793 13.875 20.1409 13.875 19.9992C13.875 19.8574 13.9185 19.7191 13.9996 19.6029C14.0807 19.4866 14.1956 19.3981 14.3286 19.3492L17.0324 18.3492C17.2198 18.2797 17.3899 18.1706 17.5312 18.0293C17.6726 17.888 17.7817 17.7178 17.8511 17.5304L18.8511 14.8267Z" stroke="#1952C7" strokeWidth="2"/>
         </svg>
       ),
       title: "AI Driven"
@@ -25,9 +25,9 @@ const OurHeadOffice = () => {
     {
       icon: (
         <svg className="w-full h-full" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="40" height="40" rx="5" fill="white" fillOpacity="0.25"/>
-          <path d="M27.0526 31.5671C26.6595 31.7449 26.2363 31.8467 25.8053 31.8671C24.3961 31.9382 22.4224 32 19.8158 32C17.2092 32 15.2355 31.9375 13.8263 31.8664C13.3954 31.8462 12.9721 31.7446 12.5789 31.5671M30.0132 27.973C29.5098 28.2962 28.9304 28.4818 28.3329 28.5112C26.4987 28.6112 23.7046 28.7099 19.8158 28.7099C15.927 28.7099 13.1329 28.6112 11.2987 28.5112C10.7012 28.4818 10.1218 28.2962 9.61842 27.973M6.26184 22.2697C6.42368 23.9112 7.74737 25.0908 9.39539 25.1809C11.5145 25.2974 14.9224 25.4211 19.8158 25.4211C24.7092 25.4211 28.1171 25.2974 30.2368 25.1809C31.8842 25.0908 33.2079 23.9112 33.3697 22.2697C33.5092 20.8559 33.6316 18.8599 33.6316 16.2105C33.6316 13.5612 33.5092 11.5651 33.3697 10.1513C33.2079 8.50921 31.8842 7.33026 30.2362 7.24013C28.1171 7.12368 24.7092 7 19.8158 7C14.9224 7 11.5145 7.12368 9.39474 7.24013C7.74737 7.33026 6.42368 8.50987 6.26184 10.1513C6.12237 11.5658 6 13.5612 6 16.2105C6 18.8599 6.12237 20.8559 6.26184 22.2697Z" stroke="#FFB703" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M22.4498 13.2565C22.4498 13.2565 21.3972 12.4506 19.8183 12.4506C18.5025 12.4506 17.1867 13.2565 17.1867 14.3302C17.1867 17.0157 22.4498 15.4045 22.4498 18.09C22.4498 19.1637 21.134 19.9696 19.8183 19.9696M19.8183 19.9696C18.2393 19.9696 17.1867 19.1637 17.1867 19.1637M19.8183 19.9696V21.4736M19.8183 12.4512V10.9473M28.3709 16.2104H27.713M11.9235 16.2104H11.2656" stroke="#FFB703" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <rect width="40" height="40" rx="5" fill="#1952C7" fillOpacity="0.1"/>
+          <path d="M27.0526 31.5671C26.6595 31.7449 26.2363 31.8467 25.8053 31.8671C24.3961 31.9382 22.4224 32 19.8158 32C17.2092 32 15.2355 31.9375 13.8263 31.8664C13.3954 31.8462 12.9721 31.7446 12.5789 31.5671M30.0132 27.973C29.5098 28.2962 28.9304 28.4818 28.3329 28.5112C26.4987 28.6112 23.7046 28.7099 19.8158 28.7099C15.927 28.7099 13.1329 28.6112 11.2987 28.5112C10.7012 28.4818 10.1218 28.2962 9.61842 27.973M6.26184 22.2697C6.42368 23.9112 7.74737 25.0908 9.39539 25.1809C11.5145 25.2974 14.9224 25.4211 19.8158 25.4211C24.7092 25.4211 28.1171 25.2974 30.2368 25.1809C31.8842 25.0908 33.2079 23.9112 33.3697 22.2697C33.5092 20.8559 33.6316 18.8599 33.6316 16.2105C33.6316 13.5612 33.5092 11.5651 33.3697 10.1513C33.2079 8.50921 31.8842 7.33026 30.2362 7.24013C28.1171 7.12368 24.7092 7 19.8158 7C14.9224 7 11.5145 7.12368 9.39474 7.24013C7.74737 7.33026 6.42368 8.50987 6.26184 10.1513C6.12237 11.5658 6 13.5612 6 16.2105C6 18.8599 6.12237 20.8559 6.26184 22.2697Z" stroke="#1952C7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M22.4498 13.2565C22.4498 13.2565 21.3972 12.4506 19.8183 12.4506C18.5025 12.4506 17.1867 13.2565 17.1867 14.3302C17.1867 17.0157 22.4498 15.4045 22.4498 18.09C22.4498 19.1637 21.134 19.9696 19.8183 19.9696M19.8183 19.9696C18.2393 19.9696 17.1867 19.1637 17.1867 19.1637M19.8183 19.9696V21.4736M19.8183 12.4512V10.9473M28.3709 16.2104H27.713M11.9235 16.2104H11.2656" stroke="#1952C7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
       ),
       title: "Cost Effective"
@@ -35,8 +35,8 @@ const OurHeadOffice = () => {
     {
       icon: (
         <svg className="w-full h-full" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="40" height="40" rx="5" fill="white" fillOpacity="0.25"/>
-          <path d="M15.9545 18.3636C17.4615 18.3636 18.9066 17.765 19.9722 16.6995C21.0377 15.6339 21.6364 14.1887 21.6364 12.6818C21.6364 11.1749 21.0377 9.72971 19.9722 8.66417C18.9066 7.59862 17.4615 7 15.9545 7C14.4476 7 13.0024 7.59862 11.9369 8.66417C10.8713 9.72971 10.2727 11.1749 10.2727 12.6818C10.2727 14.1887 10.8713 15.6339 11.9369 16.6995C13.0024 17.765 14.4476 18.3636 15.9545 18.3636ZM15.9545 18.3636C18.242 18.3636 20.2409 19.2273 21.6625 20.6625C22.5053 21.517 23.1359 22.5574 23.5034 23.7M15.9545 18.3636C11.4091 18.3636 8 21.7727 8 26.3182V32H19.3636M20.5 27.2545L25.2614 30.8636L33 20.6364" stroke="#FFB703" strokeWidth="2"/>
+          <rect width="40" height="40" rx="5" fill="#1952C7" fillOpacity="0.1"/>
+          <path d="M15.9545 18.3636C17.4615 18.3636 18.9066 17.765 19.9722 16.6995C21.0377 15.6339 21.6364 14.1887 21.6364 12.6818C21.6364 11.1749 21.0377 9.72971 19.9722 8.66417C18.9066 7.59862 17.4615 7 15.9545 7C14.4476 7 13.0024 7.59862 11.9369 8.66417C10.8713 9.72971 10.2727 11.1749 10.2727 12.6818C10.2727 14.1887 10.8713 15.6339 11.9369 16.6995C13.0024 17.765 14.4476 18.3636 15.9545 18.3636ZM15.9545 18.3636C18.242 18.3636 20.2409 19.2273 21.6625 20.6625C22.5053 21.517 23.1359 22.5574 23.5034 23.7M15.9545 18.3636C11.4091 18.3636 8 21.7727 8 26.3182V32H19.3636M20.5 27.2545L25.2614 30.8636L33 20.6364" stroke="#1952C7" strokeWidth="2"/>
         </svg>
       ),
       title: "Expert Guidance"
@@ -44,9 +44,9 @@ const OurHeadOffice = () => {
     {
       icon: (
         <svg className="w-full h-full" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="40" height="40" rx="5" fill="white" fillOpacity="0.25"/>
-          <path d="M9 18.75L20.25 15L31.5 18.75M20.25 7.5V31.875" stroke="#FFB703" strokeWidth="2"/>
-          <path d="M9.24125 22.5C10.3125 27.8725 14.72 30.6413 17.6238 31.9088C18.525 32.3025 18.9762 32.5 20.25 32.5C21.525 32.5 21.975 32.3025 22.8762 31.9088C23.6 31.5938 24.415 31.1838 25.25 30.6663M29 27.38C30.4537 25.535 31.5 23.12 31.5 19.9888V18.0212C31.5 14.0237 31.5 12.025 31.0275 11.3525C30.5562 10.6812 28.6775 10.0375 24.9187 8.75125L24.2025 8.50625C22.2437 7.835 21.265 7.5 20.25 7.5C19.235 7.5 18.2563 7.835 16.2975 8.50625L15.5813 8.75C11.8225 10.0375 9.94375 10.6812 9.4725 11.3525C9 12.025 9 14.025 9 18.0212V18.75" stroke="#FFB703" strokeWidth="2" strokeLinecap="round"/>
+          <rect width="40" height="40" rx="5" fill="#1952C7" fillOpacity="0.1"/>
+          <path d="M9 18.75L20.25 15L31.5 18.75M20.25 7.5V31.875" stroke="#1952C7" strokeWidth="2"/>
+          <path d="M9.24125 22.5C10.3125 27.8725 14.72 30.6413 17.6238 31.9088C18.525 32.3025 18.9762 32.5 20.25 32.5C21.525 32.5 21.975 32.3025 22.8762 31.9088C23.6 31.5938 24.415 31.1838 25.25 30.6663M29 27.38C30.4537 25.535 31.5 23.12 31.5 19.9888V18.0212C31.5 14.0237 31.5 12.025 31.0275 11.3525C30.5562 10.6812 28.6775 10.0375 24.9187 8.75125L24.2025 8.50625C22.2437 7.835 21.265 7.5 20.25 7.5C19.235 7.5 18.2563 7.835 16.2975 8.50625L15.5813 8.75C11.8225 10.0375 9.94375 10.6812 9.4725 11.3525C9 12.025 9 14.025 9 18.0212V18.75" stroke="#1952C7" strokeWidth="2" strokeLinecap="round"/>
         </svg>
       ),
       title: "Risk Reduction"
@@ -54,9 +54,9 @@ const OurHeadOffice = () => {
     {
       icon: (
         <svg className="w-full h-full" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="40" height="40" rx="5" fill="white" fillOpacity="0.25"/>
-          <path d="M19.9688 32C26.0612 32 31 27.0612 31 20.9688C31 14.8764 26.0612 9.9375 19.9688 9.9375C13.8764 9.9375 8.9375 14.8764 8.9375 20.9688C8.9375 27.0612 13.8764 32 19.9688 32Z" stroke="#FFB703" strokeWidth="2"/>
-          <path d="M10.4582 7C9.38913 7.28633 8.41427 7.84908 7.63168 8.63168C6.84908 9.41427 6.28633 10.3891 6 11.4582M29.4793 7C30.5483 7.28633 31.5232 7.84908 32.3058 8.63168C33.0884 9.41427 33.6511 10.3891 33.9375 11.4582M19.9687 14.6652V20.5748C19.9687 20.7922 20.1452 20.9687 20.3627 20.9687H24.6964" stroke="#FFB703" strokeWidth="2" strokeLinecap="round"/>
+          <rect width="40" height="40" rx="5" fill="#1952C7" fillOpacity="0.1"/>
+          <path d="M19.9688 32C26.0612 32 31 27.0612 31 20.9688C31 14.8764 26.0612 9.9375 19.9688 9.9375C13.8764 9.9375 8.9375 14.8764 8.9375 20.9688C8.9375 27.0612 13.8764 32 19.9688 32Z" stroke="#1952C7" strokeWidth="2"/>
+          <path d="M10.4582 7C9.38913 7.28633 8.41427 7.84908 7.63168 8.63168C6.84908 9.41427 6.28633 10.3891 6 11.4582M29.4793 7C30.5483 7.28633 31.5232 7.84908 32.3058 8.63168C33.0884 9.41427 33.6511 10.3891 33.9375 11.4582M19.9687 14.6652V20.5748C19.9687 20.7922 20.1452 20.9687 20.3627 20.9687H24.6964" stroke="#1952C7" strokeWidth="2" strokeLinecap="round"/>
         </svg>
       ),
       title: "24/7 Accessibility"
@@ -65,7 +65,7 @@ const OurHeadOffice = () => {
 
   return (
     <div
-      className="bg-[#171717] py-6 sm:py-12 md:py-14 lg:py-14"
+      className="bg-white py-12 sm:py-16 md:py-20 lg:py-20 border-y border-gray-100"
       style={{
         transform: 'scale(1)',
         transformOrigin: 'top center',
@@ -87,25 +87,25 @@ const OurHeadOffice = () => {
         <div className="flex flex-col gap-8 sm:gap-10 md:gap-10 w-full lg:max-w-[374px]">
           <div className="flex flex-col gap-8 sm:gap-8 md:gap-10">
             <div className="flex flex-col gap-8 sm:gap-10 md:gap-12 lg:gap-12">
-              <h2 className="text-white font-nunito text-3xl sm:text-4xl md:text-[42px] lg:text-[42px] font-normal leading-tight sm:leading-tight md:leading-tight lg:leading-tight">
+              <h2 className="text-[#0C002B] font-nunito text-3xl sm:text-4xl md:text-[42px] lg:text-[42px] font-normal leading-tight sm:leading-tight md:leading-tight lg:leading-tight">
                 Our Head Office
               </h2>
               <div className="flex flex-col gap-6 sm:gap-7">
                 <a 
                   href="tel:+919289707648" 
-                  className="text-white font-nunito text-lg sm:text-xl md:text-2xl lg:text-2xl font-normal leading-relaxed hover:text-[#FFB703] transition-colors"
+                  className="text-[#0C002B] font-nunito text-lg sm:text-xl md:text-2xl lg:text-2xl font-normal leading-relaxed hover:text-[#1952C7] transition-colors"
                 >
                   +91-9289707648
                 </a>
                 <a 
                   href="mailto:info@iprkaro.com" 
-                  className="text-white font-nunito text-lg sm:text-xl md:text-2xl lg:text-2xl font-normal leading-relaxed hover:text-[#FFB703] transition-colors break-words"
+                  className="text-[#0C002B] font-nunito text-lg sm:text-xl md:text-2xl lg:text-2xl font-normal leading-relaxed hover:text-[#1952C7] transition-colors break-words"
                 >
                   info@iprkaro.com
                 </a>
               </div>
             </div>
-            <div className="text-white font-nunito text-base sm:text-lg md:text-xl lg:text-xl font-normal leading-relaxed mt-2">
+            <div className="text-[#0C002B] font-nunito text-base sm:text-lg md:text-xl lg:text-xl font-normal leading-relaxed mt-2">
               2493AP, Block G, Sushant Lok 2, Sector 57, Gurugram, Haryana 122001
             </div>
           </div>
@@ -132,15 +132,15 @@ const OurHeadOffice = () => {
                   </clipPath>
                 </defs>
               </svg>
-              <span className="text-white font-nunito text-xl sm:text-2xl md:text-[25px] font-normal leading-relaxed">
+              <span className="text-[#0C002B] font-nunito text-xl sm:text-2xl md:text-[25px] font-normal leading-relaxed">
                 4.7
               </span>
             </div>
             <div className="flex flex-col gap-2 sm:gap-2">
-              <h3 className="text-white font-nunito text-xl sm:text-2xl md:text-[28px] lg:text-[28px] font-bold leading-tight">
+              <h3 className="text-[#0C002B] font-nunito text-xl sm:text-2xl md:text-[28px] lg:text-[28px] font-bold leading-tight">
                 Loved and Trusted by 1.25L Indians
               </h3>
-              <p className="text-white font-nunito text-sm sm:text-sm md:text-[15px] font-normal italic leading-relaxed">
+              <p className="text-[#0C002B] font-nunito text-sm sm:text-sm md:text-[15px] font-normal italic leading-relaxed">
                 Rated 5 stars by Startups, Entrepreneur and Companies
               </p>
             </div>
@@ -149,7 +149,7 @@ const OurHeadOffice = () => {
 
           {/* Why Trademark Section */}
           <div className="flex flex-col gap-6 sm:gap-8 md:gap-8">
-            <h3 className="text-white font-nunito text-2xl sm:text-3xl md:text-[32px] lg:text-[32px] font-normal leading-tight">
+            <h3 className="text-[#0C002B] font-nunito text-2xl sm:text-3xl md:text-[32px] lg:text-[32px] font-normal leading-tight">
               Why Trademark with IPRKaro ?
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-y-6 gap-x-4 sm:gap-y-10 sm:gap-x-6 md:gap-y-10 md:gap-x-8 lg:gap-y-12 lg:gap-x-12 xl:gap-10">
@@ -161,7 +161,7 @@ const OurHeadOffice = () => {
                       {feature.icon}
                     </div>
                   </div>
-                  <span className="text-white font-nunito text-sm sm:text-base md:text-[17px] lg:text-[17px] font-normal leading-relaxed">
+                  <span className="text-[#0C002B] font-nunito text-sm sm:text-base md:text-[17px] lg:text-[17px] font-normal leading-relaxed">
                     {feature.title}
                   </span>
                 </div>

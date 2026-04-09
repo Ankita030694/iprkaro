@@ -143,194 +143,196 @@ export default function ContactForm({ isPopup = false, onSuccess }: ContactFormP
     <div
       className={`w-full ${isPopup ? 'max-w-md mx-auto' : ''}`}
     >
-      {/* Glassmorphism Container */}
       <div
-        className={`rounded-xl sm:rounded-2xl w-full ${isPopup ? 'p-3 sm:p-5' : 'p-3 sm:p-4 md:p-7'}`}
-        style={{
-          background: `linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), linear-gradient(145deg, rgba(12, 0, 43, 0.40) 6.6%, rgba(255, 183, 3, 0.40) 120.24%), rgba(0, 0, 0, 0.50)`,
-          boxShadow: '0 0 20px 0 rgba(255, 255, 255, 0.31) inset',
-          backdropFilter: 'blur(31.7px)',
-          WebkitBackdropFilter: 'blur(31.7px)'
+        className={`rounded-xl sm:rounded-[20px] w-full ${isPopup ? 'p-3 sm:p-5' : 'p-6 sm:p-8 md:p-10'}`}
+        style={isPopup ? {
+          borderRadius: '20px',
+          background: 'linear-gradient(0deg, #FFF 0%, #8FD4FF 100%)',
+          boxShadow: '0 4px 23.1px 0 rgba(0, 0, 0, 0.15)'
+        } : {
+          background: '#ffffff',
+          boxShadow: '0 8px 30px -6px rgba(0,0,0,0.12)',
+          border: '1px solid #e5e7eb'
         }}
       >
         {isPopup && (
-          <h2 className="text-white text-lg sm:text-2xl font-nunito font-bold mb-3 text-center">
-            Get <span className="text-[#FFB703]">Free Expert</span> Advice
+          <h2 className="text-[#0C002B] text-lg sm:text-2xl font-nunito font-bold mb-3 text-center">
+            Get <span className="text-[#0C002B]">Free Expert</span> Advice
           </h2>
         )}
-        <form onSubmit={handleSubmit} className={`space-y-2.5 sm:space-y-4 ${isPopup ? 'md:space-y-3' : 'md:space-y-4'}`}>
+        <form onSubmit={handleSubmit} className={`space-y-4 sm:space-y-5 ${isPopup ? 'md:space-y-3' : 'md:space-y-6'}`}>
           {/* Basic Input Fields */}
-          <div className="space-y-2 sm:space-y-2.5">
+          <div className="space-y-3 sm:space-y-4">
             {/* Name Field */}
-            <div className="space-y-0.5 sm:space-y-1">
-              <label className={`block text-white font-nunito font-normal ${isPopup ? 'text-sm sm:text-base' : 'text-base sm:text-lg'}`}>
+            <div className="space-y-1">
+              <label className={`block font-nunito font-semibold ${isPopup ? 'text-[#0C002B] text-sm sm:text-base' : 'text-[#0C002B] text-sm sm:text-base'}`}>
                 Name
               </label>
               <div
-                className={`rounded-lg ${isPopup ? 'h-9 sm:h-11' : 'h-10 sm:h-12'}`}
-                style={{ background: 'rgba(255, 255, 255, 0.15)' }}
+                className={`rounded-lg overflow-hidden border ${isPopup ? 'h-9 sm:h-11 border-black/10 bg-white' : 'h-11 sm:h-12 border-gray-200'}`}
+                style={!isPopup ? { background: '#f9fafb' } : undefined}
               >
                 <input
                   type="text"
                   name="name"
                   value={formData.name}
                   onChange={handleInputChange}
-                  className="w-full h-full px-3 sm:px-4 rounded-lg bg-transparent text-white placeholder-[rgba(255,255,255,0.6)] border-0 outline-0 font-nunito text-sm sm:text-base"
+                  className={`w-full h-full px-3 sm:px-4 bg-transparent border-0 outline-0 font-nunito text-sm sm:text-base text-[#0C002B] ${isPopup ? 'placeholder-black/50' : 'placeholder-gray-400'}`}
                   placeholder="Enter your name"
                 />
               </div>
-              {errors.name && <p className="text-red-400 text-xs mt-1 font-nunito">{errors.name}</p>}
+              {errors.name && <p className={`text-xs mt-1 font-nunito ${isPopup ? 'text-red-600' : 'text-red-500'}`}>{errors.name}</p>}
             </div>
 
             {/* Email Field */}
-            <div className="space-y-0.5 sm:space-y-1">
-              <label className={`block text-white font-nunito font-normal ${isPopup ? 'text-sm sm:text-base' : 'text-base sm:text-lg'}`}>
+            <div className="space-y-1">
+              <label className={`block font-nunito font-semibold ${isPopup ? 'text-[#0C002B] text-sm sm:text-base' : 'text-[#0C002B] text-sm sm:text-base'}`}>
                 Email
               </label>
               <div
-                className={`rounded-lg ${isPopup ? 'h-9 sm:h-11' : 'h-10 sm:h-12'}`}
-                style={{ background: 'rgba(255, 255, 255, 0.15)' }}
+                className={`rounded-lg overflow-hidden border ${isPopup ? 'h-9 sm:h-11 border-black/10 bg-white' : 'h-11 sm:h-12 border-gray-200'}`}
+                style={!isPopup ? { background: '#f9fafb' } : undefined}
               >
                 <input
                   type="email"
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  className="w-full h-full px-3 sm:px-4 rounded-lg bg-transparent text-white placeholder-[rgba(255,255,255,0.6)] border-0 outline-0 font-nunito text-sm sm:text-base"
+                  className={`w-full h-full px-3 sm:px-4 bg-transparent border-0 outline-0 font-nunito text-sm sm:text-base text-[#0C002B] ${isPopup ? 'placeholder-black/50' : 'placeholder-gray-400'}`}
                   placeholder="Enter your email"
                 />
               </div>
-              {errors.email && <p className="text-red-400 text-xs mt-1 font-nunito">{errors.email}</p>}
+              {errors.email && <p className={`text-xs mt-1 font-nunito ${isPopup ? 'text-red-600' : 'text-red-500'}`}>{errors.email}</p>}
             </div>
 
             {/* Phone Field */}
-            <div className="space-y-0.5 sm:space-y-1">
-              <label className={`block text-white font-nunito font-normal ${isPopup ? 'text-sm sm:text-base' : 'text-base sm:text-lg'}`}>
+            <div className="space-y-1">
+              <label className={`block font-nunito font-semibold ${isPopup ? 'text-[#0C002B] text-sm sm:text-base' : 'text-[#0C002B] text-sm sm:text-base'}`}>
                 Phone No.
               </label>
               <div
-                className={`rounded-lg ${isPopup ? 'h-9 sm:h-11' : 'h-10 sm:h-12'}`}
-                style={{ background: 'rgba(255, 255, 255, 0.15)' }}
+                className={`rounded-lg overflow-hidden border ${isPopup ? 'h-9 sm:h-11 border-black/10 bg-white' : 'h-11 sm:h-12 border-gray-200'}`}
+                style={!isPopup ? { background: '#f9fafb' } : undefined}
               >
                 <input
                   type="tel"
                   name="phone"
                   value={formData.phone}
                   onChange={handleInputChange}
-                  className="w-full h-full px-3 sm:px-4 rounded-lg bg-transparent text-white placeholder-[rgba(255,255,255,0.6)] border-0 outline-0 font-nunito text-sm sm:text-base"
+                  className={`w-full h-full px-3 sm:px-4 bg-transparent border-0 outline-0 font-nunito text-sm sm:text-base text-[#0C002B] ${isPopup ? 'placeholder-black/50' : 'placeholder-gray-400'}`}
                   placeholder="Enter your phone number"
                 />
               </div>
-              {errors.phone && <p className="text-red-400 text-xs mt-1 font-nunito">{errors.phone}</p>}
+              {errors.phone && <p className={`text-xs mt-1 font-nunito ${isPopup ? 'text-red-600' : 'text-red-500'}`}>{errors.phone}</p>}
             </div>
 
             {/* State Field */}
-            <div className="space-y-0.5 sm:space-y-1">
-              <label className={`block text-white font-nunito font-normal ${isPopup ? 'text-sm sm:text-base' : 'text-base sm:text-lg'}`}>
+            <div className="space-y-1">
+              <label className={`block font-nunito font-semibold ${isPopup ? 'text-[#0C002B] text-sm sm:text-base' : 'text-[#0C002B] text-sm sm:text-base'}`}>
                 State
               </label>
               <div
-                className={`rounded-lg ${isPopup ? 'h-9 sm:h-11' : 'h-10 sm:h-12'}`}
-                style={{ background: 'rgba(255, 255, 255, 0.15)' }}
+                className={`rounded-lg overflow-hidden border ${isPopup ? 'h-9 sm:h-11 border-black/10 bg-white' : 'h-11 sm:h-12 border-gray-200'}`}
+                style={!isPopup ? { background: '#f9fafb' } : undefined}
               >
                 <select
                   name="state"
                   value={formData.state}
                   onChange={handleInputChange}
-                  className="w-full h-full px-3 sm:px-4 rounded-lg bg-transparent text-white border-0 outline-0 font-nunito text-sm sm:text-base appearance-none cursor-pointer"
+                  className={`w-full h-full px-3 sm:px-4 bg-transparent border-0 outline-0 font-nunito text-sm sm:text-base appearance-none cursor-pointer text-[#0C002B]`}
                 >
-                  <option value="" className="bg-[#0C002B] text-white">Select State</option>
+                  <option value="" className="bg-white text-[#0C002B]">Select State</option>
 
                   {/* States */}
-                  <option value="Andhra Pradesh" className="bg-[#0C002B] text-white">Andhra Pradesh</option>
-                  <option value="Arunachal Pradesh" className="bg-[#0C002B] text-white">Arunachal Pradesh</option>
-                  <option value="Assam" className="bg-[#0C002B] text-white">Assam</option>
-                  <option value="Bihar" className="bg-[#0C002B] text-white">Bihar</option>
-                  <option value="Chhattisgarh" className="bg-[#0C002B] text-white">Chhattisgarh</option>
-                  <option value="Goa" className="bg-[#0C002B] text-white">Goa</option>
-                  <option value="Gujarat" className="bg-[#0C002B] text-white">Gujarat</option>
-                  <option value="Haryana" className="bg-[#0C002B] text-white">Haryana</option>
-                  <option value="Himachal Pradesh" className="bg-[#0C002B] text-white">Himachal Pradesh</option>
-                  <option value="Jharkhand" className="bg-[#0C002B] text-white">Jharkhand</option>
-                  <option value="Karnataka" className="bg-[#0C002B] text-white">Karnataka</option>
-                  <option value="Kerala" className="bg-[#0C002B] text-white">Kerala</option>
-                  <option value="Madhya Pradesh" className="bg-[#0C002B] text-white">Madhya Pradesh</option>
-                  <option value="Maharashtra" className="bg-[#0C002B] text-white">Maharashtra</option>
-                  <option value="Manipur" className="bg-[#0C002B] text-white">Manipur</option>
-                  <option value="Meghalaya" className="bg-[#0C002B] text-white">Meghalaya</option>
-                  <option value="Mizoram" className="bg-[#0C002B] text-white">Mizoram</option>
-                  <option value="Nagaland" className="bg-[#0C002B] text-white">Nagaland</option>
-                  <option value="Odisha" className="bg-[#0C002B] text-white">Odisha</option>
-                  <option value="Punjab" className="bg-[#0C002B] text-white">Punjab</option>
-                  <option value="Rajasthan" className="bg-[#0C002B] text-white">Rajasthan</option>
-                  <option value="Sikkim" className="bg-[#0C002B] text-white">Sikkim</option>
-                  <option value="Tamil Nadu" className="bg-[#0C002B] text-white">Tamil Nadu</option>
-                  <option value="Telangana" className="bg-[#0C002B] text-white">Telangana</option>
-                  <option value="Tripura" className="bg-[#0C002B] text-white">Tripura</option>
-                  <option value="Uttar Pradesh" className="bg-[#0C002B] text-white">Uttar Pradesh</option>
-                  <option value="Uttarakhand" className="bg-[#0C002B] text-white">Uttarakhand</option>
-                  <option value="West Bengal" className="bg-[#0C002B] text-white">West Bengal</option>
+                  <option value="Andhra Pradesh" className="bg-white text-[#0C002B]">Andhra Pradesh</option>
+                  <option value="Arunachal Pradesh" className="bg-white text-[#0C002B]">Arunachal Pradesh</option>
+                  <option value="Assam" className="bg-white text-[#0C002B]">Assam</option>
+                  <option value="Bihar" className="bg-white text-[#0C002B]">Bihar</option>
+                  <option value="Chhattisgarh" className="bg-white text-[#0C002B]">Chhattisgarh</option>
+                  <option value="Goa" className="bg-white text-[#0C002B]">Goa</option>
+                  <option value="Gujarat" className="bg-white text-[#0C002B]">Gujarat</option>
+                  <option value="Haryana" className="bg-white text-[#0C002B]">Haryana</option>
+                  <option value="Himachal Pradesh" className="bg-white text-[#0C002B]">Himachal Pradesh</option>
+                  <option value="Jharkhand" className="bg-white text-[#0C002B]">Jharkhand</option>
+                  <option value="Karnataka" className="bg-white text-[#0C002B]">Karnataka</option>
+                  <option value="Kerala" className="bg-white text-[#0C002B]">Kerala</option>
+                  <option value="Madhya Pradesh" className="bg-white text-[#0C002B]">Madhya Pradesh</option>
+                  <option value="Maharashtra" className="bg-white text-[#0C002B]">Maharashtra</option>
+                  <option value="Manipur" className="bg-white text-[#0C002B]">Manipur</option>
+                  <option value="Meghalaya" className="bg-white text-[#0C002B]">Meghalaya</option>
+                  <option value="Mizoram" className="bg-white text-[#0C002B]">Mizoram</option>
+                  <option value="Nagaland" className="bg-white text-[#0C002B]">Nagaland</option>
+                  <option value="Odisha" className="bg-white text-[#0C002B]">Odisha</option>
+                  <option value="Punjab" className="bg-white text-[#0C002B]">Punjab</option>
+                  <option value="Rajasthan" className="bg-white text-[#0C002B]">Rajasthan</option>
+                  <option value="Sikkim" className="bg-white text-[#0C002B]">Sikkim</option>
+                  <option value="Tamil Nadu" className="bg-white text-[#0C002B]">Tamil Nadu</option>
+                  <option value="Telangana" className="bg-white text-[#0C002B]">Telangana</option>
+                  <option value="Tripura" className="bg-white text-[#0C002B]">Tripura</option>
+                  <option value="Uttar Pradesh" className="bg-white text-[#0C002B]">Uttar Pradesh</option>
+                  <option value="Uttarakhand" className="bg-white text-[#0C002B]">Uttarakhand</option>
+                  <option value="West Bengal" className="bg-white text-[#0C002B]">West Bengal</option>
 
                   {/* Union Territories */}
-                  <option value="Andaman and Nicobar Islands" className="bg-[#0C002B] text-white">Andaman and Nicobar Islands</option>
-                  <option value="Chandigarh" className="bg-[#0C002B] text-white">Chandigarh</option>
-                  <option value="Dadra and Nagar Haveli and Daman and Diu" className="bg-[#0C002B] text-white">Dadra and Nagar Haveli and Daman and Diu</option>
-                  <option value="Delhi" className="bg-[#0C002B] text-white">Delhi</option>
-                  <option value="Jammu and Kashmir" className="bg-[#0C002B] text-white">Jammu and Kashmir</option>
-                  <option value="Ladakh" className="bg-[#0C002B] text-white">Ladakh</option>
-                  <option value="Lakshadweep" className="bg-[#0C002B] text-white">Lakshadweep</option>
-                  <option value="Puducherry" className="bg-[#0C002B] text-white">Puducherry</option>
+                  <option value="Andaman and Nicobar Islands" className="bg-white text-[#0C002B]">Andaman and Nicobar Islands</option>
+                  <option value="Chandigarh" className="bg-white text-[#0C002B]">Chandigarh</option>
+                  <option value="Dadra and Nagar Haveli and Daman and Diu" className="bg-white text-[#0C002B]">Dadra and Nagar Haveli and Daman and Diu</option>
+                  <option value="Delhi" className="bg-white text-[#0C002B]">Delhi</option>
+                  <option value="Jammu and Kashmir" className="bg-white text-[#0C002B]">Jammu and Kashmir</option>
+                  <option value="Ladakh" className="bg-white text-[#0C002B]">Ladakh</option>
+                  <option value="Lakshadweep" className="bg-white text-[#0C002B]">Lakshadweep</option>
+                  <option value="Puducherry" className="bg-white text-[#0C002B]">Puducherry</option>
                 </select>
               </div>
             </div>
           </div>
 
           {/* Interest Section */}
-          <div className="space-y-1 sm:space-y-2">
-            <div className={`text-white font-nunito font-normal ${isPopup ? 'text-sm sm:text-base' : 'text-base sm:text-lg'}`}>
+          <div className="space-y-2">
+            <div className={`font-nunito font-semibold ${isPopup ? 'text-[#0C002B] text-sm sm:text-base' : 'text-[#0C002B] text-sm sm:text-base'}`}>
               What are you Interested in? <span className="text-red-500">*</span>
             </div>
 
             {/* Radio Options */}
-            <div className="space-y-1">
+            <div className="space-y-1.5">
               {interestOptions.map((option, index) => (
                 <div
                   key={index}
-                  className="flex items-center gap-2 sm:gap-3 cursor-pointer hover:bg-white/5 p-1.5 sm:p-2 rounded-lg transition-colors"
+                  className={`flex items-center gap-2 sm:gap-3 cursor-pointer p-1.5 sm:p-2 rounded-lg transition-colors ${isPopup ? 'hover:bg-black/5' : 'hover:bg-gray-100'}`}
                   onClick={() => handleRadioChange(option)}
                 >
                   <div className="relative flex-shrink-0">
                     <svg width="18" height="18" className="sm:w-5 sm:h-5" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="15" cy="15" r="14.5" stroke="white" strokeWidth="1" />
+                      <circle cx="15" cy="15" r="14.5" stroke="#0C002B" strokeWidth="1" />
                       {formData.interest === option && (
-                        <circle cx="15" cy="15" r="6" fill="white" />
+                        <circle cx="15" cy="15" r="6" fill="#0C002B" />
                       )}
                     </svg>
                   </div>
-                  <span className="text-[rgba(255,255,255,0.8)] font-nunito text-xs sm:text-sm font-normal">
+                  <span className={`font-nunito text-sm font-medium text-[#0C002B]`}>
                     {option}
                   </span>
                 </div>
               ))}
             </div>
-            {errors.interest && <p className="text-red-400 text-xs mt-1 font-nunito">{errors.interest}</p>}
+            {errors.interest && <p className={`text-xs mt-1 font-nunito ${isPopup ? 'text-red-600' : 'text-red-500'}`}>{errors.interest}</p>}
           </div>
 
           {/* Message Field */}
-          <div className="space-y-0.5 sm:space-y-1">
-            <label className={`block text-white font-nunito font-normal ${isPopup ? 'text-sm sm:text-base' : 'text-base sm:text-lg'}`}>
+          <div className="space-y-1">
+            <label className={`block font-nunito font-semibold ${isPopup ? 'text-[#0C002B] text-sm sm:text-base' : 'text-[#0C002B] text-sm sm:text-base'}`}>
               Write a message
             </label>
             <div
-              className="rounded-lg"
-              style={{ background: 'rgba(255, 255, 255, 0.15)' }}
+              className={`rounded-lg overflow-hidden border ${isPopup ? 'border-black/10 bg-white' : 'border-gray-200'}`}
+              style={!isPopup ? { background: '#f9fafb' } : undefined}
             >
               <textarea
                 name="message"
                 value={formData.message}
                 onChange={handleInputChange}
                 rows={2}
-                className="w-full p-2.5 sm:p-3 rounded-lg bg-transparent text-white placeholder-[rgba(255,255,255,0.6)] border-0 outline-0 resize-none font-nunito text-sm sm:text-base"
+                className={`w-full p-2.5 sm:p-3 bg-transparent border-0 outline-0 resize-none font-nunito text-sm sm:text-base text-[#0C002B] ${isPopup ? 'placeholder-black/50' : 'placeholder-gray-400'}`}
                 placeholder="Tell us about your needs..."
               />
             </div>
@@ -340,11 +342,11 @@ export default function ContactForm({ isPopup = false, onSuccess }: ContactFormP
           {submitStatus && (
             <div
               className={`p-3 rounded-lg ${submitStatus.type === 'success'
-                  ? 'bg-green-500/20 border border-green-500/30'
-                  : 'bg-red-500/20 border border-red-500/30'
+                  ? 'bg-green-50 border border-green-200'
+                  : 'bg-red-50 border border-red-200'
                 }`}
             >
-              <p className={`text-sm font-nunito ${submitStatus.type === 'success' ? 'text-green-200' : 'text-red-200'
+              <p className={`text-sm font-nunito font-medium ${submitStatus.type === 'success' ? 'text-green-800' : 'text-red-800'
                 }`}>
                 {submitStatus.message}
               </p>
@@ -355,12 +357,13 @@ export default function ContactForm({ isPopup = false, onSuccess }: ContactFormP
           <button
             type="submit"
             disabled={isSubmitting}
-            className={`w-full flex items-center justify-center py-2 sm:py-2.5 px-6 sm:px-8 rounded-lg transition-colors cursor-pointer ${isSubmitting
-                ? 'bg-[#FFB703]/50 cursor-not-allowed'
-                : 'bg-[#FFB703] hover:bg-[#e6a602]'
-              }`}
+            className={`w-full flex items-center justify-center py-2 sm:py-3.5 px-6 sm:px-8 rounded-lg transition-colors cursor-pointer ${
+              isPopup
+                ? isSubmitting ? 'bg-[#0C002B]/50 cursor-not-allowed' : 'bg-[#0C002B] hover:bg-[#150047]'
+                : isSubmitting ? 'bg-[#1952C7]/50 cursor-not-allowed' : 'bg-[#1952C7] hover:bg-[#123e9a]'
+            }`}
           >
-            <span className={`text-[#0C002B] font-nunito font-medium ${isPopup ? 'text-sm sm:text-base' : 'text-base sm:text-lg'}`}>
+            <span className={`font-nunito font-bold text-white ${isPopup ? 'text-sm sm:text-base' : 'text-base sm:text-lg'}`}>
               {isSubmitting ? 'Submitting...' : 'Submit Form'}
             </span>
           </button>

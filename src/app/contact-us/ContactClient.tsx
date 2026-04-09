@@ -7,17 +7,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import OurHeadOffice from '@/components/OurHeadOffice';
 import ContactForm from '@/components/common/ContactForm';
+import FaqSection from '@/components/FaqSection';
 
 export default function ContactClient() {
   const router = useRouter();
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
-  const [aiQuestion, setAiQuestion] = useState('');
-  const [searchResult, setSearchResult] = useState<{question: string, answer: string} | null>(null);
-  const [showNoMatch, setShowNoMatch] = useState(false);
 
-  const toggleFaq = (index: number) => {
-    setOpenFaq(openFaq === index ? null : index);
-  };
 
   const contactFaqs = [
     {
@@ -42,74 +36,10 @@ export default function ContactClient() {
     }
   ];
 
-  const handleAiSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (aiQuestion.trim()) {
-      setSearchResult(null);
-      setShowNoMatch(false);
-      
-      const query = aiQuestion.toLowerCase().trim();
-      
-      const scoredFaqs = contactFaqs.map(faq => {
-        const questionLower = faq.question.toLowerCase();
-        const answerLower = faq.answer.toLowerCase();
-        let score = 0;
-        
-        const queryWords = query.split(' ').filter(word => word.length > 2);
-        
-        queryWords.forEach(word => {
-          if (questionLower.includes(query)) {
-            score += 100;
-          }
-          if (questionLower.includes(word)) {
-            score += 10;
-          }
-          if (answerLower.includes(word)) {
-            score += 3;
-          }
-        });
-        
-        return { faq, score };
-      });
-      
-      const bestMatch = scoredFaqs.reduce((best, current) => 
-        current.score > best.score ? current : best
-      );
-      
-      setTimeout(() => {
-        if (bestMatch.score > 0) {
-          setSearchResult(bestMatch.faq);
-          setShowNoMatch(false);
-        } else {
-          setSearchResult(null);
-          setShowNoMatch(true);
-        }
-      }, 50);
-      
-      setAiQuestion('');
-    }
-  };
 
   return (
-    <div
-      className="min-h-screen"
-      style={{
-        backgroundImage: 'linear-gradient(to right top, #0c002b, #0c002b,rgb(25, 10, 60),rgb(92, 75, 130),rgb(91, 88, 88))',
-        backgroundSize: '100% 80%',
-        backgroundPosition: '10% 20%',
-        backgroundRepeat: 'no-repeat',
-        marginTop: '-100px',
-        paddingTop: '100px'
-      }}
-    >
-      {/* Main Content Container with Responsive Scaling */}
-      <div
-        className="w-full pt-28 sm:pt-32 md:pt-36 lg:pt-36"
-        style={{
-          transform: 'scale(0.9)',
-          transformOrigin: 'top center',
-        }}
-      >
+    <div className="min-h-screen bg-[#F8FAFF] pt-[120px] md:pt-[160px] pb-10">
+      <div className="w-full">
         {/* Large screen scaling */}
         <style dangerouslySetInnerHTML={{
           __html: `
@@ -130,7 +60,7 @@ export default function ContactClient() {
               <div className="hidden sm:flex items-center gap-3 sm:gap-4">
                 <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-27 md:h-27 relative">
                   <Image
-                    src="/logo/iprlogo.svg"
+                    src="/logo/iprlogoblack.svg"
                     alt="IPR Karo Logo"
                     fill
                     className="object-contain"
@@ -142,36 +72,33 @@ export default function ContactClient() {
               <div className="space-y-4 sm:space-y-6 md:space-y-8">
                 {/* Section Label */}
                 <div className="flex items-center gap-3 sm:gap-4">
-                  <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#FFB703]"></div>
-                  <span className="text-[rgba(255,255,255,0.8)] font-nunito text-xs sm:text-sm font-normal tracking-wider uppercase">
+                  <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#1952C7]"></div>
+                  <span className="text-[#1952C7] font-nunito text-xs sm:text-sm font-bold tracking-wider uppercase">
                     CONNECT WITH US
                   </span>
                 </div>
 
-                {/* Main Headline */}
-                <h1 className="font-nunito text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-normal leading-tight text-white">
-                  Connect With Expert <span className="font-bold text-[#FFB703]">Trademark Registration Help in India</span>
+                <h1 className="font-nunito text-[32px] sm:text-[42px] md:text-[54px] font-bold leading-[1.1] text-[#0C002B] tracking-tight">
+                  Connect With Expert <span className="text-[#1952C7]">Trademark Registration</span> Help in India
                 </h1>
 
-                {/* Description */}
-                <p className="text-[rgba(255,255,255,0.85)] font-nunito text-base sm:text-lg md:text-xl font-normal max-w-2xl">
-                  IPR Karo simplifies trademark registration in India using AI-powered search, risk reports, and expert legal support.<br />
+                <p className="text-[#6B7280] font-nunito text-[16px] md:text-[18px] font-medium max-w-2xl leading-[1.6]">
+                  IPR Karo simplifies trademark registration in India using AI-powered search, risk reports, and expert legal support.<br className="hidden md:block" />
                   Start by searching your trademark availability, get instant AI conflict analysis, and file online for fast, reliable protection.
                 </p>
 
-                {/* Email Contact */}
-                <div className="flex items-center gap-3 sm:gap-4">
+                <div className="flex items-center gap-3 sm:gap-4 mt-6">
                   <a
                     href="mailto:info@iprkaro.com"
-                    className="text-white font-nunito text-base sm:text-lg md:text-xl font-normal underline decoration-1 underline-offset-2 hover:text-[#FFB703] transition-colors"
+                    className="text-[#0C002B] font-nunito text-lg sm:text-xl font-bold hover:text-[#1952C7] transition-colors"
                   >
                     info@iprkaro.com
                   </a>
                   <button
-                    className="flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-md bg-[#FFB703] hover:bg-[#e6a602] transition-colors cursor-pointer"
+                    className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#1952C7] hover:bg-[#123e9a] transition-colors cursor-pointer"
                     aria-label="Send Email"
                   >
-                    <i className="fas fa-paper-plane text-[#0C002B] text-lg sm:text-xl" aria-hidden="true"></i>
+                    <i className="fas fa-paper-plane text-white text-sm sm:text-base" aria-hidden="true"></i>
                   </button>
                 </div>
               </div>
@@ -187,159 +114,17 @@ export default function ContactClient() {
       <OurHeadOffice />
 
       {/* FAQ Section */}
-      <section className="py-[57.6px] relative overflow-hidden" style={{ backgroundColor: '#0C002B' }}>
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-full h-full" style={{ background: 'linear-gradient(to right, #FFB70320, transparent)' }}></div>
-          <div className="absolute bottom-0 right-0 w-[69.12px] h-[69.12px] rounded-full blur-[2.16rem]" style={{ background: 'linear-gradient(to left, #FFB70320, transparent)' }}></div>
-        </div>
-
-        <div className="mx-4 lg:mx-20 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-10 items-start">
-
-            {/* Left Section - Questions */}
-            <div className="space-y-[28.8px] flex flex-col justify-start">
-              <div className="space-y-[18px]">
-                <h2 className="text-white text-left font-nunito text-[23.4px] md:text-[36px] font-medium leading-[28.8px] md:leading-[39.6px] w-full">
-                  Have Question?
-                  <br />
-                  <span style={{ color: '#FFB703' }}>
-                    We've Got Answers.
-                  </span>
-                </h2>
-
-                <p className="text-white font-nunito text-[10.8px] md:text-[12.6px] lg:text-[13.5px] xl:text-[14.4px] font-medium">
-                  Still have questions? <span style={{ color: '#FFB703' }} className="font-medium">Contact us</span> anytime.
-                </p>
-              </div>
-
-              {/* AI Input */}
-              <form onSubmit={handleAiSubmit} className="relative">
-                <div className="relative bg-white/50 backdrop-blur-sm border border-purple-400/30 rounded-[10.8px] p-[14.4px] max-w-lg">
-                  <input
-                    type="text"
-                    value={aiQuestion}
-                    onChange={(e) => setAiQuestion(e.target.value)}
-                    placeholder="Smart AI, Ask me Anything...."
-                    className="bg-transparent text-white placeholder-white outline-none text-[14.4px] w-full"
-                  />
-                  <button
-                    type="submit"
-                    className="absolute right-[14.4px] top-1/2 transform -translate-y-1/2 transition-colors"
-                    style={{ color: '#FFB703' }}
-                    onMouseEnter={(e) => e.currentTarget.style.color = '#e6a503'}
-                    onMouseLeave={(e) => e.currentTarget.style.color = '#FFB703'}
-                  >
-                    <FontAwesomeIcon icon={faPaperPlane} className="w-[18px] h-[18px]" />
-                  </button>
-                </div>
-              </form>
-
-              {/* Search Result Display */}
-              {searchResult && (
-                <div 
-                  key={searchResult.question}
-                  className="p-[18px] rounded-[10.8px] max-w-lg animate-fade-in-up"
-                  style={{
-                    background: 'linear-gradient(140deg, rgba(12, 0, 43, 0.10) 6.89%, rgba(255, 183, 3, 0.10) 101.84%)',
-                    boxShadow: '2.88px 2.88px 18.144px 0 rgba(0, 0, 0, 0.15), 0 0 14.4px 0.72px rgba(255, 255, 255, 0.10) inset',
-                    backdropFilter: 'blur(87.876px)'
-                  }}
-                >
-                  <div className="flex justify-between items-start mb-[10.8px]">
-                    <h4 className="text-white font-nunito text-[14.4px] md:text-[16.2px] font-semibold leading-snug" style={{ color: '#FFB703' }}>
-                      {searchResult.question}
-                    </h4>
-                    <button
-                      onClick={() => setSearchResult(null)}
-                      className="text-white hover:text-gray-300 transition-colors ml-[10.8px] flex-shrink-0"
-                    >
-                      <FontAwesomeIcon icon={faChevronDown} className="w-[14.4px] h-[14.4px] rotate-180" />
-                    </button>
-                  </div>
-                  <p className="text-white font-nunito text-[12.6px] md:text-[13.5px] font-medium leading-relaxed">
-                    {searchResult.answer}
-                  </p>
-                </div>
-              )}
-
-              {/* No Match Message */}
-              {showNoMatch && (
-                <div 
-                  className="p-[18px] rounded-[10.8px] max-w-lg animate-fade-in-up"
-                  style={{
-                    background: 'linear-gradient(140deg, rgba(12, 0, 43, 0.10) 6.89%, rgba(255, 183, 3, 0.10) 101.84%)',
-                    boxShadow: '2.88px 2.88px 18.144px 0 rgba(0, 0, 0, 0.15), 0 0 14.4px 0.72px rgba(255, 255, 255, 0.10) inset',
-                    backdropFilter: 'blur(87.876px)'
-                  }}
-                >
-                  <div className="flex justify-between items-start">
-                    <p className="text-white font-nunito text-[13.5px] md:text-[14.4px] font-medium leading-relaxed">
-                      We're experiencing high traffic at the moment. Please try your search again in a few moments, or browse our FAQ section for answers.
-                    </p>
-                    <button
-                      onClick={() => setShowNoMatch(false)}
-                      className="text-white hover:text-gray-300 transition-colors ml-[10.8px] flex-shrink-0"
-                    >
-                      <FontAwesomeIcon icon={faChevronDown} className="w-[14.4px] h-[14.4px] rotate-180" />
-                    </button>
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* Right Section - FAQ Items */}
-            <div
-              className="space-y-[14.4px] p-[21.6px]"
-              style={{
-                borderRadius: '14.4px',
-                background: 'linear-gradient(140deg, rgba(12, 0, 43, 0.10) 6.89%, rgba(255, 183, 3, 0.10) 101.84%)',
-                boxShadow: '2.88px 2.88px 18.144px 0 rgba(0, 0, 0, 0.15), 0 0 14.4px 0.72px rgba(255, 255, 255, 0.10) inset',
-                backdropFilter: 'blur(87.876px)'
-              }}
-            >
-              {contactFaqs.map((faq, index) => (
-                <div key={index} className="relative">
-                  <div
-                    className="p-[18px] cursor-pointer transition-all duration-300 ease-in-out hover:scale-[1.02] transform"
-                    style={{
-                      borderRadius: '10.8px',
-                      background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%)',
-                      ...(openFaq === index ? { boxShadow: `0 0 0 1.44px #FFB70380` } : {})
-                    }}
-                    onClick={() => toggleFaq(index)}
-                  >
-                    <div className="flex justify-between items-center mb-[10.8px]">
-                      <h3 className="text-white font-nunito text-[13.5px] md:text-[16.2px] lg:text-[19.8px] font-semibold pr-[14.4px] leading-snug">
-                        {faq.question}
-                      </h3>
-                      <FontAwesomeIcon
-                        icon={faChevronDown}
-                        className={`w-[18px] h-[18px] transition-all duration-500 ease-in-out flex-shrink-0 ${
-                          openFaq === index ? 'rotate-180 scale-110' : 'rotate-0 scale-100'
-                        }`}
-                        style={{ color: '#000000' }}
-                      />
-                    </div>
-
-                    <div
-                      className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                        openFaq === index ? 'max-h-[345.6px] opacity-100 mt-0' : 'max-h-0 opacity-0 -mt-[14.4px]'
-                      }`}
-                    >
-                      <div className="mt-[14.4px] pt-[14.4px] border-t border-black/20 transform transition-all duration-500 ease-in-out">
-                        <p className="text-white font-nunito text-[10.8px] md:text-[11.7px] lg:text-[12.6px] xl:text-[13.5px] font-medium leading-relaxed">
-                          {faq.answer}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      <FaqSection 
+        items={contactFaqs} 
+        title={
+          <>
+            Have Question?<br className="md:hidden" />
+            <span className="text-[#1952C7]">
+              We've Got Answers.
+            </span>
+          </>
+        } 
+      />
     </div>
   );
 }
