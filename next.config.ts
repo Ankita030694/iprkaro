@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  compress: true,
   images: {
     unoptimized: false,
     domains: ['firebasestorage.googleapis.com'],
@@ -14,6 +15,15 @@ const nextConfig: NextConfig = {
     ],
     formats: ['image/webp', 'image/avif'],
   },
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: [
+      '@fortawesome/free-solid-svg-icons',
+      '@fortawesome/free-brands-svg-icons',
+      'framer-motion',
+      'lucide-react',
+    ],
+  },
   async redirects() {
     return [
       {
@@ -24,12 +34,12 @@ const nextConfig: NextConfig = {
       {
         source: '/terms',
         destination: '/terms-and-conditions',
-        permanent: true, // 301 redirect
+        permanent: true,
       },
       {
         source: '/help',
         destination: '/contact-us',
-        permanent: true, // 301 redirect
+        permanent: true,
       },
       {
         source: '/blog/:slug*',
@@ -46,10 +56,21 @@ const nextConfig: NextConfig = {
         destination: '/contact-us',
         permanent: true,
       },
-
     ];
   },
-  /* config options here */
+  async headers() {
+    return [
+      {
+        source: '/(.*\.(?:woff2?|ttf|eot|otf|mp4|webm|ogg))',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+    ];
+  },
 };
 
 export default nextConfig;

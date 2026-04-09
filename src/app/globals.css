@@ -3,35 +3,35 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Aileron'), url('https://fonts.cdnfonts.com/s/16225/Aileron-Regular.woff') format('woff');
+  src: local('Aileron'), url('/fonts/aileron/Aileron-Regular.woff') format('woff');
 }
 @font-face {
   font-family: 'Aileron';
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: local('Aileron'), url('https://fonts.cdnfonts.com/s/16225/Aileron-Italic.woff') format('woff');
+  src: local('Aileron'), url('/fonts/aileron/Aileron-Italic.woff') format('woff');
 }
 @font-face {
   font-family: 'Aileron';
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: local('Aileron'), url('https://fonts.cdnfonts.com/s/16225/Aileron-SemiBold.woff') format('woff');
+  src: local('Aileron'), url('/fonts/aileron/Aileron-SemiBold.woff') format('woff');
 }
 @font-face {
   font-family: 'Aileron';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: local('Aileron'), url('https://fonts.cdnfonts.com/s/16225/Aileron-Bold.woff') format('woff');
+  src: local('Aileron'), url('/fonts/aileron/Aileron-Bold.woff') format('woff');
 }
 @font-face {
   font-family: 'Aileron';
   font-style: normal;
   font-weight: 900;
   font-display: swap;
-  src: local('Aileron'), url('https://fonts.cdnfonts.com/s/16225/Aileron-Heavy.woff') format('woff');
+  src: local('Aileron'), url('/fonts/aileron/Aileron-Heavy.woff') format('woff');
 }
 @import "tailwindcss";
 

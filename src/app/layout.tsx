@@ -77,33 +77,56 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-
-        <link rel="preconnect" href="https://fonts.cdnfonts.com" />
-        <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-        <link rel="preconnect" href="https://connect.facebook.net" />
+        {/* Critical preconnects — exactly 4, highest impact origins */}
+        <link rel="preconnect" href="https://iprkaro-729d3.firebaseapp.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://iprkaro-729d3.firebaseapp.com" />
-        <link rel="preconnect" href="https://apis.google.com" />
-        
+        <link rel="preconnect" href="https://www.google-analytics.com" />
+        <link rel="preconnect" href="https://connect.facebook.net" />
+
+        {/* DNS-prefetch fallbacks for lower-priority 3rd parties */}
+        <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+        <link rel="dns-prefetch" href="https://apis.google.com" />
+        <link rel="dns-prefetch" href="https://mpc-prod-23-s6uit34pua-ue.a.run.app" />
+
+        {/* Preload critical self-hosted Aileron fonts — eliminates fonts.cdnfonts.com round-trip */}
+        <link rel="preload" href="/fonts/aileron/Aileron-Regular.woff" as="font" type="font/woff" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/aileron/Aileron-Bold.woff" as="font" type="font/woff" crossOrigin="anonymous" />
+
+        {/* Preload LCP video — browser hints to start fetching early */}
         <link rel="preload" href="/hero/bg.mp4" as="video" type="video/mp4" />
-        
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-          crossOrigin="anonymous"
-          referrerPolicy="no-referrer"
-        />
+
+        {/* Font Awesome CSS — dynamically injected after page idle to avoid render-blocking */}
+        <Script id="fa-css-loader" strategy="lazyOnload">
+          {`
+            var l = document.createElement('link');
+            l.rel = 'stylesheet';
+            l.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';
+            l.integrity = 'sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==';
+            l.crossOrigin = 'anonymous';
+            document.head.appendChild(l);
+          `}
+        </Script>
+        <noscript>
+          <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossOrigin="anonymous"
+            referrerPolicy="no-referrer"
+          />
+        </noscript>
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
-        {/* Google Analytics */}
+
+        {/* Google Analytics — lazyOnload defers until page is idle (non-blocking) */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-7DNEQJ9TBP"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -111,10 +134,11 @@ export default function RootLayout({
             gtag('config', 'G-7DNEQJ9TBP');
           `}
         </Script>
-        {/* Meta Pixel Code */}
+
+        {/* Meta Pixel — lazyOnload so it never blocks FCP/LCP */}
         <Script
           id="fb-pixel"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
               !function(f,b,e,v,n,t,s)
@@ -139,7 +163,6 @@ export default function RootLayout({
             alt=""
           />
         </noscript>
-        {/* End Meta Pixel Code */}
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${nunito.variable} antialiased overflow-x-hidden`}
