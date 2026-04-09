@@ -1,9 +1,16 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
+import dynamic from 'next/dynamic';
 import { Navbar, NewFooter } from '@/components';
-import GlobalPopupForm from '@/components/common/GlobalPopupForm';
-import WhatsAppWidget from '@/components/WhatsAppWidget';
+
+// Lazy-load heavy components that aren't needed for initial render
+const GlobalPopupForm = dynamic(() => import('@/components/common/GlobalPopupForm'), {
+  ssr: false,  // Only renders client-side after 5s delay anyway
+});
+const WhatsAppWidget = dynamic(() => import('@/components/WhatsAppWidget'), {
+  ssr: false,  // Floating button, not needed for SSR
+});
 
 export default function ConditionalLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();

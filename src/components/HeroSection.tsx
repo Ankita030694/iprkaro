@@ -22,12 +22,12 @@ export default function HeroSection() {
           muted
           loop
           playsInline
+          preload="auto"
+          src="/hero/bg.mp4"
           className="absolute inset-0 w-full h-full object-cover"
           // @ts-ignore
           fetchPriority="high"
-        >
-          <source src="/hero/bg.mp4" type="video/mp4" />
-        </video>
+        />
         {/* Soft overlay to ensure text readability */}
         <div className="absolute inset-0 bg-white/10 mix-blend-overlay"></div>
         {/* Bottom fade out gradient */}

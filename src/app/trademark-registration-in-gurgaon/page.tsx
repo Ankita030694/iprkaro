@@ -234,9 +234,6 @@ export default function TrademarkInGurgaonPage() {
     { label: "Trademark Registration in Gurgaon", href: "/trademark-registration-in-gurgaon" },
   ];
 
-  const averageRating = 5.0;
-  const reviewsCount = reviews.length;
-
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -273,26 +270,6 @@ export default function TrademarkInGurgaonPage() {
     <>
       <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Script id="article-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <Script id="review-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Product",
-        "name": "Trademark Registration Gurgaon",
-        "image": "https://www.iprkaro.com/assets/gurgaon-trademark-og.jpg",
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": averageRating,
-          "reviewCount": reviewsCount.toString()
-        },
-        "review": reviews.map(r => ({
-          "@type": "Review",
-          "author": r.author,
-          "reviewBody": r.content,
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": r.rating
-          }
-        }))
-      }) }} />
 
       <div className="bg-white min-h-screen font-sans text-gray-800">
         

@@ -1,6 +1,5 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 import { getStorage } from "firebase/storage";
@@ -22,10 +21,20 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-// Initialize Analytics only on client side
+// Lazy-load Analytics — defers ~142 KiB gtag download until after page load
 let analytics;
 if (typeof window !== 'undefined') {
-  analytics = getAnalytics(app);
+  // Wait for page to finish loading before initializing analytics
+  const initAnalytics = () => {
+    import('firebase/analytics').then(({ getAnalytics }) => {
+      analytics = getAnalytics(app);
+    });
+  };
+  if (document.readyState === 'complete') {
+    initAnalytics();
+  } else {
+    window.addEventListener('load', initAnalytics, { once: true });
+  }
 }
 
 const db = getFirestore(app);
