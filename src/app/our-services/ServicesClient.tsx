@@ -30,12 +30,12 @@ function ServicesHeroSection() {
         {/* Our Services Heading */}
         <div className="text-center mb-10 md:mb-16">
           <h1 
-            className={`text-[#0C002B] font-nunito text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 transition-all duration-1000 transform ${mounted ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+            className={`text-[#0C002B] font-sans text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 transition-all duration-1000 transform ${mounted ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
           >
             Our <span className="text-[#1952C7]">Services</span>
           </h1>
           <p 
-            className={`text-[#6B7280] font-nunito text-base md:text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-300 transform ${mounted ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+            className={`text-[#6B7280] font-sans text-base md:text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-300 transform ${mounted ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
           >
             Comprehensive intellectual property solutions powered by AI and backed by expert legal guidance. From trademarks to patents, we protect what matters most to your business.
           </p>
@@ -58,7 +58,7 @@ function ServicesHeroSection() {
               <div className="w-12 h-12 flex-shrink-0 rounded-xl bg-indigo-50 flex items-center justify-center text-[#1952C7]">
                 <FontAwesomeIcon icon={faMicrochip} className="text-xl" />
               </div>
-              <p className="text-[#0C002B] font-nunito text-sm font-semibold leading-snug">
+              <p className="text-[#0C002B] font-sans text-sm font-semibold leading-snug">
                 AI-Powered Analysis in 60 Seconds
               </p>
             </div>
@@ -68,7 +68,7 @@ function ServicesHeroSection() {
               <div className="w-12 h-12 flex-shrink-0 rounded-xl bg-emerald-50 flex items-center justify-center text-[#009B7C]">
                 <FontAwesomeIcon icon={faChartLine} className="text-xl" />
               </div>
-              <p className="text-[#0C002B] font-nunito text-sm font-semibold leading-snug">
+              <p className="text-[#0C002B] font-sans text-sm font-semibold leading-snug">
                 10,000+ Trademarks Checked
               </p>
             </div>
@@ -78,7 +78,7 @@ function ServicesHeroSection() {
               <div className="w-12 h-12 flex-shrink-0 rounded-xl bg-orange-50 flex items-center justify-center text-[#FFB703]">
                 <FontAwesomeIcon icon={faCheckCircle} className="text-xl" />
               </div>
-              <p className="text-[#0C002B] font-nunito text-sm font-semibold leading-snug">
+              <p className="text-[#0C002B] font-sans text-sm font-semibold leading-snug">
                 95% Success Rate for AI-Names
               </p>
             </div>
@@ -100,28 +100,28 @@ function ServiceCardsSection() {
               className="h-full p-6 lg:p-8 flex flex-col rounded-[24px] border border-slate-100 bg-white shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group"
             >
               <div className="mb-6">
-                <h3 className="text-[#0C002B] font-nunito text-xl lg:text-2xl font-bold mb-2">
+                <h3 className="text-[#0C002B] font-sans text-xl lg:text-2xl font-bold mb-2">
                   Trademark Registration
                 </h3>
                 <div className="w-12 h-1 bg-[#1952C7] rounded-full"></div>
               </div>
               
               <div className="flex-grow space-y-6">
-                <p className="text-[#6B7280] font-nunito text-sm leading-relaxed">
+                <p className="text-[#6B7280] font-sans text-sm leading-relaxed">
                   Register your trademark online starting with our AI trademark search. Review your report and file instantly.
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-start gap-3">
                     <FontAwesomeIcon icon={faCheckCircle} className="text-[#009B7C] mt-1 text-sm" />
-                    <span className="text-[#0C002B]/80 font-nunito text-sm leading-snug">AI-powered trademark search for instant conflict detection</span>
+                    <span className="text-[#0C002B]/80 font-sans text-sm leading-snug">AI-powered trademark search for instant conflict detection</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <FontAwesomeIcon icon={faCheckCircle} className="text-[#009B7C] mt-1 text-sm" />
-                    <span className="text-[#0C002B]/80 font-nunito text-sm leading-snug">Step-by-step guided application and online filing</span>
+                    <span className="text-[#0C002B]/80 font-sans text-sm leading-snug">Step-by-step guided application and online filing</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <FontAwesomeIcon icon={faCheckCircle} className="text-[#009B7C] mt-1 text-sm" />
-                    <span className="text-[#0C002B]/80 font-nunito text-sm leading-snug">Maximum registerability with AI-backed reports</span>
+                    <span className="text-[#0C002B]/80 font-sans text-sm leading-snug">Maximum registerability with AI-backed reports</span>
                   </div>
                 </div>
               </div>
@@ -139,28 +139,28 @@ function ServiceCardsSection() {
               className="h-full p-6 lg:p-8 flex flex-col rounded-[24px] border border-slate-100 bg-white shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group"
             >
               <div className="mb-6">
-                <h3 className="text-[#0C002B] font-nunito text-xl lg:text-2xl font-bold mb-2">
+                <h3 className="text-[#0C002B] font-sans text-xl lg:text-2xl font-bold mb-2">
                   Copyright Protection
                 </h3>
                 <div className="w-12 h-1 bg-[#8A38F5] rounded-full"></div>
               </div>
               
               <div className="flex-grow space-y-6">
-                <p className="text-[#6B7280] font-nunito text-sm leading-relaxed">
+                <p className="text-[#6B7280] font-sans text-sm leading-relaxed">
                   Secure your creative works digitally with AI copyright search and a seamless online application process.
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-start gap-3">
                     <FontAwesomeIcon icon={faCheckCircle} className="text-[#009B7C] mt-1 text-sm" />
-                    <span className="text-[#0C002B]/80 font-nunito text-sm leading-snug">Registration for digital content and artistic works</span>
+                    <span className="text-[#0C002B]/80 font-sans text-sm leading-snug">Registration for digital content and artistic works</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <FontAwesomeIcon icon={faCheckCircle} className="text-[#009B7C] mt-1 text-sm" />
-                    <span className="text-[#0C002B]/80 font-nunito text-sm leading-snug">AI search for originality and infringement checks</span>
+                    <span className="text-[#0C002B]/80 font-sans text-sm leading-snug">AI search for originality and infringement checks</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <FontAwesomeIcon icon={faCheckCircle} className="text-[#009B7C] mt-1 text-sm" />
-                    <span className="text-[#0C002B]/80 font-nunito text-sm leading-snug">Lifetime protection plus 60 years for your assets</span>
+                    <span className="text-[#0C002B]/80 font-sans text-sm leading-snug">Lifetime protection plus 60 years for your assets</span>
                   </div>
                 </div>
               </div>
@@ -178,28 +178,28 @@ function ServiceCardsSection() {
               className="h-full p-6 lg:p-8 flex flex-col rounded-[24px] border border-slate-100 bg-white shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group"
             >
               <div className="mb-6">
-                <h3 className="text-[#0C002B] font-nunito text-xl lg:text-2xl font-bold mb-2">
+                <h3 className="text-[#0C002B] font-sans text-xl lg:text-2xl font-bold mb-2">
                   Patent Services
                 </h3>
                 <div className="w-12 h-1 bg-[#FFB703] rounded-full"></div>
               </div>
               
               <div className="flex-grow space-y-6">
-                <p className="text-[#6B7280] font-nunito text-sm leading-relaxed">
+                <p className="text-[#6B7280] font-sans text-sm leading-relaxed">
                   Protect your inventions with AI-optimized patent search and quick filing to stay ahead of the competition.
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-start gap-3">
                     <FontAwesomeIcon icon={faCheckCircle} className="text-[#009B7C] mt-1 text-sm" />
-                    <span className="text-[#0C002B]/80 font-nunito text-sm leading-snug">AI-powered novelty search and risk analysis</span>
+                    <span className="text-[#0C002B]/80 font-sans text-sm leading-snug">AI-powered novelty search and risk analysis</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <FontAwesomeIcon icon={faCheckCircle} className="text-[#009B7C] mt-1 text-sm" />
-                    <span className="text-[#0C002B]/80 font-nunito text-sm leading-snug">Expert patent drafting with defensible claims</span>
+                    <span className="text-[#0C002B]/80 font-sans text-sm leading-snug">Expert patent drafting with defensible claims</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <FontAwesomeIcon icon={faCheckCircle} className="text-[#009B7C] mt-1 text-sm" />
-                    <span className="text-[#0C002B]/80 font-nunito text-sm leading-snug">20-year exclusive rights protection for inventions</span>
+                    <span className="text-[#0C002B]/80 font-sans text-sm leading-snug">20-year exclusive rights protection for inventions</span>
                   </div>
                 </div>
               </div>
@@ -247,10 +247,11 @@ export default function ServicesClient() {
       
       <div className="w-full bg-white flex flex-col pt-10">
         <ServicesContentExpanded />
+        <SimplePricing />
+
         <SmarterDecisions />
         <BuiltToProtect />
         <ReviewSnippets />
-        <SimplePricing />
         <FaqSection items={servicesFaqs} />
       </div>
     </div>

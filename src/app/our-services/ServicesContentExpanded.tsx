@@ -20,12 +20,12 @@ const SectionTitle = ({ title, subtitle }: { title: string, subtitle?: string })
   <div className="text-center mb-16">
     <h2 
       className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-[#0C002B]"
-      style={{ fontFamily: 'Nunito', lineHeight: '1.2' }}
+      style={{ fontFamily: 'Aileron', lineHeight: '1.2' }}
     >
       {title}
     </h2>
     {subtitle && (
-      <p className="text-base sm:text-lg text-[#6B7280] max-w-4xl mx-auto font-nunito leading-relaxed">
+      <p className="text-base sm:text-lg text-[#6B7280] max-w-4xl mx-auto font-sans leading-relaxed">
         {subtitle}
       </p>
     )}
@@ -46,7 +46,7 @@ export default function ServicesContentExpanded() {
   const [activeTab, setActiveTab] = useState('trademark');
 
   return (
-    <div className="w-full px-6 sm:px-12 lg:px-24 py-20 text-[#0C002B] font-['Nunito'] relative overflow-hidden bg-white">
+    <div className="w-full px-6 sm:px-12 lg:px-24 py-20 text-[#0C002B] font-sans relative overflow-hidden bg-white">
       
        {/* Background Ambience */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
@@ -253,7 +253,7 @@ export default function ServicesContentExpanded() {
         <section>
             <SectionTitle title="Which IP is Right for You?" subtitle="A quick guide to navigating the different forms of protection." />
             <div className="overflow-x-auto rounded-2xl border border-slate-100 shadow-sm">
-                <table className="w-full text-left bg-white font-nunito">
+                <table className="w-full text-left bg-white font-sans">
                     <thead>
                         <tr className="bg-slate-50/50 border-b border-slate-100">
                             <th className="p-6 text-[#1952C7] font-bold text-lg">Feature</th>

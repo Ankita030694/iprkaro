@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Nunito } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
@@ -20,10 +20,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const nunito = Nunito({
-  variable: "--font-nunito",
-  subsets: ["latin"],
-});
+
 
 export const viewport = {
   width: "device-width",
@@ -165,7 +162,7 @@ export default function RootLayout({
         </noscript>
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${nunito.variable} antialiased overflow-x-hidden`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}
       >
         <div className="w-full">
           <ConditionalLayout>

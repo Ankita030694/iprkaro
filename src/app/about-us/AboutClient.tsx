@@ -190,7 +190,7 @@ export default function AboutClient() {
             className="font-bold text-center"
             style={{
               color: '#0C002B',
-              fontFamily: 'Nunito',
+              fontFamily: 'Aileron',
               fontStyle: 'normal',
               fontWeight: 700,
               lineHeight: '1.2',
@@ -209,7 +209,7 @@ export default function AboutClient() {
                 backgroundClip: 'text',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
-                fontFamily: 'Nunito',
+                fontFamily: 'Aileron',
                 fontStyle: 'italic',
                 fontWeight: 600,
                 lineHeight: '1.2',
@@ -222,7 +222,7 @@ export default function AboutClient() {
               className="font-semibold"
               style={{
                 color: '#0C002B',
-                fontFamily: 'Nunito',
+                fontFamily: 'Aileron',
                 fontStyle: 'italic',
                 fontWeight: 600,
                 lineHeight: '1.2',
@@ -235,7 +235,7 @@ export default function AboutClient() {
               className="font-medium"
               style={{
                 color: '#0C002B',
-                fontFamily: 'Nunito',
+                fontFamily: 'Aileron',
                 fontStyle: 'italic',
                 fontWeight: 500,
                 lineHeight: '1.2',
@@ -267,7 +267,7 @@ export default function AboutClient() {
                   writingMode: 'vertical-lr',
                   textOrientation: 'mixed',
                   color: '#FFB703',
-                  fontFamily: 'Nunito',
+                  fontFamily: 'Aileron',
                   fontSize: '24px',
                   fontWeight: 700,
                   lineHeight: '1.2',
@@ -285,7 +285,7 @@ export default function AboutClient() {
                 className="text-xl sm:text-2xl font-semibold"
                 style={{
                   color: '#0C002B',
-                  fontFamily: 'Nunito',
+                  fontFamily: 'Aileron',
                   fontWeight: 600,
                   lineHeight: '1.3'
                 }}
@@ -297,7 +297,7 @@ export default function AboutClient() {
                 className="text-base sm:text-lg"
                 style={{
                   color: '#0C002B',
-                  fontFamily: 'Nunito',
+                  fontFamily: 'Aileron',
                   fontWeight: 400,
                   lineHeight: '1.6',
                   opacity: 0.9
@@ -318,7 +318,7 @@ export default function AboutClient() {
                 writingMode: 'vertical-lr',
                 textOrientation: 'mixed',
                 color: '#FFB703',
-                fontFamily: 'Nunito',
+                fontFamily: 'Aileron',
                 fontSize: '40px',
                 fontWeight: 700,
                 lineHeight: '1.2',
@@ -336,7 +336,7 @@ export default function AboutClient() {
               className="text-xl sm:text-2xl font-semibold"
               style={{
                 color: '#0C002B',
-                fontFamily: 'Nunito',
+                fontFamily: 'Aileron',
                 fontWeight: 600,
                 lineHeight: '1.3'
               }}
@@ -348,7 +348,7 @@ export default function AboutClient() {
               className="text-base sm:text-lg"
               style={{
                 color: '#0C002B',
-                fontFamily: 'Nunito',
+                fontFamily: 'Aileron',
                 fontWeight: 400,
                 lineHeight: '1.6',
                 opacity: 0.9
@@ -367,7 +367,7 @@ export default function AboutClient() {
             className="text-3xl sm:text-4xl lg:text-[42px] font-bold"
             style={{
               color: '#0C002B',
-              fontFamily: 'Nunito',
+              fontFamily: 'Aileron',
               fontWeight: 700,
               lineHeight: '1.2'
             }}
@@ -458,7 +458,7 @@ export default function AboutClient() {
             className="text-3xl sm:text-4xl lg:text-[42px] font-bold"
             style={{
               color: '#0C002B',
-              fontFamily: 'Nunito',
+              fontFamily: 'Aileron',
               fontWeight: 700,
               lineHeight: '1.2'
             }}
@@ -473,7 +473,7 @@ export default function AboutClient() {
           style={{
             left: '0',
             fontSize: '200px',
-            fontFamily: 'Nunito',
+            fontFamily: 'Aileron',
             fontWeight: 700,
             color: 'transparent',
             WebkitTextStroke: '1px rgba(12, 0, 43, 0.1)',
@@ -494,7 +494,7 @@ export default function AboutClient() {
           style={{
             right: '0',
             fontSize: '200px',
-            fontFamily: 'Nunito',
+            fontFamily: 'Aileron',
             fontWeight: 700,
             color: 'transparent',
             WebkitTextStroke: '1px rgba(12, 0, 43, 0.1)',
@@ -543,7 +543,7 @@ export default function AboutClient() {
                     <h3
                       style={{
                         color: '#FFB703',
-                        fontFamily: 'Nunito',
+                        fontFamily: 'Aileron',
                         fontSize: '28px',
                         fontWeight: 700
                       }}
@@ -567,7 +567,7 @@ export default function AboutClient() {
                     <h4
                       style={{
                         color: '#0C002B',
-                        fontFamily: 'Nunito',
+                        fontFamily: 'Aileron',
                         fontSize: '20px',
                         fontWeight: 600,
                         marginBottom: '8px'
@@ -578,7 +578,7 @@ export default function AboutClient() {
                   <p
                       style={{
                         color: '#0C002B',
-                        fontFamily: 'Nunito',
+                        fontFamily: 'Aileron',
                         fontSize: '16px',
                         fontWeight: 400,
                         lineHeight: '1.6',
@@ -599,7 +599,7 @@ export default function AboutClient() {
                     <h4
                       style={{
                         color: '#0C002B',
-                        fontFamily: 'Nunito',
+                        fontFamily: 'Aileron',
                         fontSize: '20px',
                         fontWeight: 600,
                         marginBottom: '8px'
@@ -610,7 +610,7 @@ export default function AboutClient() {
                   <p
                       style={{
                         color: '#0C002B',
-                        fontFamily: 'Nunito',
+                        fontFamily: 'Aileron',
                         fontSize: '16px',
                         fontWeight: 400,
                         lineHeight: '1.6',
@@ -636,7 +636,7 @@ export default function AboutClient() {
                     <h3
                       style={{
                         color: '#FFB703',
-                        fontFamily: 'Nunito',
+                        fontFamily: 'Aileron',
                         fontSize: '28px',
                         fontWeight: 700
                       }}
@@ -655,7 +655,7 @@ export default function AboutClient() {
                     <h3
                       style={{
                         color: '#FFB703',
-                        fontFamily: 'Nunito',
+                        fontFamily: 'Aileron',
                         fontSize: '28px',
                         fontWeight: 700
                       }}
@@ -679,7 +679,7 @@ export default function AboutClient() {
                     <h4
                       style={{
                         color: '#0C002B',
-                        fontFamily: 'Nunito',
+                        fontFamily: 'Aileron',
                         fontSize: '20px',
                         fontWeight: 600,
                         marginBottom: '8px'
@@ -690,7 +690,7 @@ export default function AboutClient() {
                   <p
                       style={{
                         color: '#0C002B',
-                        fontFamily: 'Nunito',
+                        fontFamily: 'Aileron',
                         fontSize: '16px',
                         fontWeight: 400,
                         lineHeight: '1.6',
@@ -711,7 +711,7 @@ export default function AboutClient() {
                     <h4
                       style={{
                         color: '#0C002B',
-                        fontFamily: 'Nunito',
+                        fontFamily: 'Aileron',
                         fontSize: '20px',
                         fontWeight: 600,
                         marginBottom: '8px'
@@ -722,7 +722,7 @@ export default function AboutClient() {
                   <p
                       style={{
                         color: '#0C002B',
-                        fontFamily: 'Nunito',
+                        fontFamily: 'Aileron',
                         fontSize: '16px',
                         fontWeight: 400,
                         lineHeight: '1.6',
@@ -748,7 +748,7 @@ export default function AboutClient() {
                     <h3
                       style={{
                         color: '#FFB703',
-                        fontFamily: 'Nunito',
+                        fontFamily: 'Aileron',
                         fontSize: '28px',
                         fontWeight: 700
                       }}
@@ -808,7 +808,7 @@ export default function AboutClient() {
                           className="text-xl sm:text-2xl font-bold"
                           style={{
                             color: '#FFB703',
-                            fontFamily: 'Nunito',
+                            fontFamily: 'Aileron',
                             fontWeight: 700
                           }}
                         >
@@ -822,7 +822,7 @@ export default function AboutClient() {
                           className="text-lg sm:text-xl font-semibold mb-2"
                           style={{
                             color: '#0C002B',
-                            fontFamily: 'Nunito',
+                            fontFamily: 'Aileron',
                             fontWeight: 600
                           }}
                         >
@@ -832,7 +832,7 @@ export default function AboutClient() {
                           className="text-sm sm:text-base"
                           style={{
                             color: '#0C002B',
-                            fontFamily: 'Nunito',
+                            fontFamily: 'Aileron',
                             fontWeight: 400,
                             lineHeight: '1.6',
                             opacity: 0.8
@@ -865,7 +865,7 @@ export default function AboutClient() {
                           className="text-xl sm:text-2xl font-bold"
                           style={{
                             color: '#FFB703',
-                            fontFamily: 'Nunito',
+                            fontFamily: 'Aileron',
                             fontWeight: 700
                           }}
                         >
@@ -879,7 +879,7 @@ export default function AboutClient() {
                           className="text-lg sm:text-xl font-semibold mb-2"
                           style={{
                             color: '#0C002B',
-                            fontFamily: 'Nunito',
+                            fontFamily: 'Aileron',
                             fontWeight: 600
                           }}
                         >
@@ -889,7 +889,7 @@ export default function AboutClient() {
                           className="text-sm sm:text-base"
                           style={{
                             color: '#0C002B',
-                            fontFamily: 'Nunito',
+                            fontFamily: 'Aileron',
                             fontWeight: 400,
                             lineHeight: '1.6',
                             opacity: 0.8
@@ -922,7 +922,7 @@ export default function AboutClient() {
                           className="text-xl sm:text-2xl font-bold"
                           style={{
                             color: '#FFB703',
-                            fontFamily: 'Nunito',
+                            fontFamily: 'Aileron',
                             fontWeight: 700
                           }}
                         >
@@ -936,7 +936,7 @@ export default function AboutClient() {
                           className="text-lg sm:text-xl font-semibold mb-2"
                           style={{
                             color: '#0C002B',
-                            fontFamily: 'Nunito',
+                            fontFamily: 'Aileron',
                             fontWeight: 600
                           }}
                         >
@@ -946,7 +946,7 @@ export default function AboutClient() {
                           className="text-sm sm:text-base"
                           style={{
                             color: '#0C002B',
-                            fontFamily: 'Nunito',
+                            fontFamily: 'Aileron',
                             fontWeight: 400,
                             lineHeight: '1.6',
                             opacity: 0.8
@@ -979,7 +979,7 @@ export default function AboutClient() {
                           className="text-xl sm:text-2xl font-bold"
                           style={{
                             color: '#FFB703',
-                            fontFamily: 'Nunito',
+                            fontFamily: 'Aileron',
                             fontWeight: 700
                           }}
                         >
@@ -993,7 +993,7 @@ export default function AboutClient() {
                           className="text-lg sm:text-xl font-semibold mb-2"
                           style={{
                             color: '#0C002B',
-                            fontFamily: 'Nunito',
+                            fontFamily: 'Aileron',
                             fontWeight: 600
                           }}
                         >
@@ -1003,7 +1003,7 @@ export default function AboutClient() {
                           className="text-sm sm:text-base"
                           style={{
                             color: '#0C002B',
-                            fontFamily: 'Nunito',
+                            fontFamily: 'Aileron',
                             fontWeight: 400,
                             lineHeight: '1.6',
                             opacity: 0.8
@@ -1027,7 +1027,7 @@ export default function AboutClient() {
             className="text-[18px] sm:text-[30px] lg:text-[31.5px] font-bold mb-[8px] sm:mb-[10px] lg:mb-[12px]"
             style={{
               color: '#0C002B',
-              fontFamily: 'Nunito',
+              fontFamily: 'Aileron',
               fontWeight: 700,
               lineHeight: '1.2'
             }}
@@ -1038,7 +1038,7 @@ export default function AboutClient() {
             className="text-[12px] sm:text-[13.5px] max-w-3xl mx-auto"
             style={{
               color: '#0C002B',
-              fontFamily: 'Nunito',
+              fontFamily: 'Aileron',
               fontWeight: 400,
               lineHeight: '1.6',
               opacity: 0.7
@@ -1067,10 +1067,10 @@ export default function AboutClient() {
               >
                 {/* Content */}
                 <div className="relative z-10 p-[16px] sm:p-[20px] lg:p-[24px]">
-                  <h3 className="text-[15px] font-bold mb-[6px] sm:mb-[8px] lg:mb-[9px] text-[#0C002B]" style={{fontFamily: 'Nunito', fontWeight: 700}}>
+                  <h3 className="text-[15px] font-bold mb-[6px] sm:mb-[8px] lg:mb-[9px] text-[#0C002B]" style={{fontFamily: 'Aileron', fontWeight: 700}}>
                     AI-Powered Trademark Search
                   </h3>
-                  <p className="text-[10.5px] mb-[12px] sm:mb-[15px] lg:mb-[18px]" style={{color: 'rgba(12, 0, 43, 0.7)', fontFamily: 'Nunito', lineHeight: '1.6'}}>
+                  <p className="text-[10.5px] mb-[12px] sm:mb-[15px] lg:mb-[18px]" style={{color: 'rgba(12, 0, 43, 0.7)', fontFamily: 'Aileron', lineHeight: '1.6'}}>
                     Instantly scan millions of records. Our AI-powered search report finds identical and confusingly similar marks so you can decide whether to register or tweak your brand.
                   </p>
                   
@@ -1116,10 +1116,10 @@ export default function AboutClient() {
 
                 {/* Content */}
                 <div className="relative z-10 p-[16px] sm:p-[20px] lg:p-[24px]">
-                  <h3 className="text-[15px] font-bold mb-[6px] sm:mb-[8px] lg:mb-[9px] text-[#0C002B]" style={{fontFamily: 'Nunito', fontWeight: 700}}>
+                  <h3 className="text-[15px] font-bold mb-[6px] sm:mb-[8px] lg:mb-[9px] text-[#0C002B]" style={{fontFamily: 'Aileron', fontWeight: 700}}>
                     Expert-Led Guidance
                   </h3>
-                  <p className="text-[10.5px] max-w-[180px]" style={{color: 'rgba(12, 0, 43, 0.7)', fontFamily: 'Nunito', lineHeight: '1.6'}}>
+                  <p className="text-[10.5px] max-w-[180px]" style={{color: 'rgba(12, 0, 43, 0.7)', fontFamily: 'Aileron', lineHeight: '1.6'}}>
                     Certified IP lawyers review your AI report, advise on registrability, and prepare filing documents. Clear legal answers with no jargon.
                   </p>
                 </div>
@@ -1149,10 +1149,10 @@ export default function AboutClient() {
 
                 {/* Content */}
                 <div className="relative z-10 p-[16px] sm:p-[20px] lg:p-[24px]">
-                  <h3 className="text-[15px] font-bold mb-[6px] sm:mb-[8px] lg:mb-[9px] text-[#0C002B]" style={{fontFamily: 'Nunito', fontWeight: 700}}>
+                  <h3 className="text-[15px] font-bold mb-[6px] sm:mb-[8px] lg:mb-[9px] text-[#0C002B]" style={{fontFamily: 'Aileron', fontWeight: 700}}>
                     Fast Processing
                   </h3>
-                  <p className="text-[10.5px] max-w-[180px]" style={{color: 'rgba(12, 0, 43, 0.7)', fontFamily: 'Nunito', lineHeight: '1.6'}}>
+                  <p className="text-[10.5px] max-w-[180px]" style={{color: 'rgba(12, 0, 43, 0.7)', fontFamily: 'Aileron', lineHeight: '1.6'}}>
                     Optimised workflows cut filing time to get search results within minutes and an expert review within 24 to 48 hours.
                   </p>
                 </div>
@@ -1182,10 +1182,10 @@ export default function AboutClient() {
 
                 {/* Content */}
                 <div className="relative z-10 p-[16px] sm:p-[20px] lg:p-[24px]">
-                  <h3 className="text-[15px] font-bold mb-[6px] sm:mb-[8px] lg:mb-[9px] text-[#0C002B]" style={{fontFamily: 'Nunito', fontWeight: 700}}>
+                  <h3 className="text-[15px] font-bold mb-[6px] sm:mb-[8px] lg:mb-[9px] text-[#0C002B]" style={{fontFamily: 'Aileron', fontWeight: 700}}>
                     Affordable & Transparent Pricing
                   </h3>
-                  <p className="text-[10.5px] max-w-[180px]" style={{color: 'rgba(12, 0, 43, 0.7)', fontFamily: 'Nunito', lineHeight: '1.6'}}>
+                  <p className="text-[10.5px] max-w-[180px]" style={{color: 'rgba(12, 0, 43, 0.7)', fontFamily: 'Aileron', lineHeight: '1.6'}}>
                     No hidden fees. Choose a plan that fits your needs (search report, filing, or full legal package) with one-page invoices that explain every cost.
                   </p>
                 </div>
@@ -1204,10 +1204,10 @@ export default function AboutClient() {
               >
                 {/* Content */}
                 <div className="relative z-10 p-[16px] sm:p-[20px] lg:p-[24px]">
-                  <h3 className="text-[15px] font-bold mb-[6px] sm:mb-[8px] lg:mb-[9px] text-[#0C002B]" style={{fontFamily: 'Nunito', fontWeight: 700}}>
+                  <h3 className="text-[15px] font-bold mb-[6px] sm:mb-[8px] lg:mb-[9px] text-[#0C002B]" style={{fontFamily: 'Aileron', fontWeight: 700}}>
                     End-to-End Support
                   </h3>
-                  <p className="text-[10.5px] mb-[12px] sm:mb-[15px] lg:mb-[18px]" style={{color: 'rgba(12, 0, 43, 0.7)', fontFamily: 'Nunito', lineHeight: '1.6'}}>
+                  <p className="text-[10.5px] mb-[12px] sm:mb-[15px] lg:mb-[18px]" style={{color: 'rgba(12, 0, 43, 0.7)', fontFamily: 'Aileron', lineHeight: '1.6'}}>
                     From search to filing to post-registration monitoring, we handle filings, replies, and renewals so your brand stays protected.
                   </p>
 
@@ -1215,23 +1215,23 @@ export default function AboutClient() {
                   <div className={`bg-white/50 backdrop-blur-sm rounded-2xl p-[12px] sm:p-[14px] lg:p-[16px] transition-all duration-500 border border-gray-100 ${
                     activeCard === 5 ? 'opacity-100 scale-100 shadow-sm' : 'opacity-70 scale-95'
                   }`}>
-                    <div className="text-[10px] sm:text-[11px] lg:text-[12px] font-semibold mb-[8px] sm:mb-[10px] lg:mb-[12px] text-[#FFB703]" style={{fontFamily: 'Nunito'}}>Complete Process:</div>
+                    <div className="text-[10px] sm:text-[11px] lg:text-[12px] font-semibold mb-[8px] sm:mb-[10px] lg:mb-[12px] text-[#FFB703]" style={{fontFamily: 'Aileron'}}>Complete Process:</div>
                     <ul className="space-y-[6px] sm:space-y-[7px] lg:space-y-[8px] text-[9px] sm:text-[10px] lg:text-[11px]">
                       <li className="flex items-start">
                         <span className="w-[6px] h-[6px] bg-[#FFB703] rounded-full mt-1.5 mr-[12px] flex-shrink-0"></span>
-                        <span style={{color: '#0C002B', fontFamily: 'Nunito', lineHeight: '1.4'}}>AI-powered trademark search & analysis</span>
+                        <span style={{color: '#0C002B', fontFamily: 'Aileron', lineHeight: '1.4'}}>AI-powered trademark search & analysis</span>
                       </li>
                       <li className="flex items-start">
                         <span className="w-[6px] h-[6px] bg-[#FFB703] rounded-full mt-1.5 mr-[12px] flex-shrink-0"></span>
-                        <span style={{color: '#0C002B', fontFamily: 'Nunito', lineHeight: '1.4'}}>Expert legal review & consultation</span>
+                        <span style={{color: '#0C002B', fontFamily: 'Aileron', lineHeight: '1.4'}}>Expert legal review & consultation</span>
                       </li>
                       <li className="flex items-start">
                         <span className="w-[6px] h-[6px] bg-[#FFB703] rounded-full mt-1.5 mr-[12px] flex-shrink-0"></span>
-                        <span style={{color: '#0C002B', fontFamily: 'Nunito', lineHeight: '1.4'}}>Complete filing & documentation</span>
+                        <span style={{color: '#0C002B', fontFamily: 'Aileron', lineHeight: '1.4'}}>Complete filing & documentation</span>
                       </li>
                       <li className="flex items-start">
                         <span className="w-[6px] h-[6px] bg-[#FFB703] rounded-full mt-1.5 mr-[12px] flex-shrink-0"></span>
-                        <span style={{color: '#0C002B', fontFamily: 'Nunito', lineHeight: '1.4'}}>Post-registration monitoring & renewals</span>
+                        <span style={{color: '#0C002B', fontFamily: 'Aileron', lineHeight: '1.4'}}>Post-registration monitoring & renewals</span>
                       </li>
                     </ul>
                   </div>
@@ -1258,7 +1258,7 @@ export default function AboutClient() {
                       className="text-[22px] font-bold mb-[12px]"
                       style={{
                         color: '#0C002B',
-                        fontFamily: 'Nunito',
+                        fontFamily: 'Aileron',
                         fontWeight: 700,
                         lineHeight: '1.3'
                       }}
@@ -1269,7 +1269,7 @@ export default function AboutClient() {
                       className="text-[13px] px-[12px] mb-[18px]"
                       style={{
                         color: 'rgba(12, 0, 43, 0.7)',
-                        fontFamily: 'Nunito',
+                        fontFamily: 'Aileron',
                         fontWeight: 400,
                         lineHeight: '1.6'
                       }}
@@ -1317,7 +1317,7 @@ export default function AboutClient() {
                       className="text-[22px] font-bold mb-[9px]"
                       style={{
                         color: '#0C002B',
-                        fontFamily: 'Nunito',
+                        fontFamily: 'Aileron',
                         fontWeight: 700,
                         lineHeight: '1.3'
                       }}
@@ -1328,7 +1328,7 @@ export default function AboutClient() {
                       className="text-[13px] max-w-[150px]"
                       style={{
                         color: 'rgba(12, 0, 43, 0.7)',
-                        fontFamily: 'Nunito',
+                        fontFamily: 'Aileron',
                         fontWeight: 400,
                         lineHeight: '1.6'
                       }}
@@ -1365,7 +1365,7 @@ export default function AboutClient() {
                       className="text-[22px] font-bold mb-[9px]"
                       style={{
                         color: '#0C002B',
-                        fontFamily: 'Nunito',
+                        fontFamily: 'Aileron',
                         fontWeight: 700,
                         lineHeight: '1.3'
                       }}
@@ -1376,7 +1376,7 @@ export default function AboutClient() {
                       className="text-[13px] max-w-[150px]"
                       style={{
                         color: 'rgba(12, 0, 43, 0.7)',
-                        fontFamily: 'Nunito',
+                        fontFamily: 'Aileron',
                         fontWeight: 400,
                         lineHeight: '1.6'
                       }}
@@ -1413,7 +1413,7 @@ export default function AboutClient() {
                       className="text-[22px] font-bold mb-[9px]"
                       style={{
                         color: '#0C002B',
-                        fontFamily: 'Nunito',
+                        fontFamily: 'Aileron',
                         fontWeight: 700,
                         lineHeight: '1.3'
                       }}
@@ -1424,7 +1424,7 @@ export default function AboutClient() {
                         className="text-[13px] max-w-[150px]"
                       style={{
                         color: 'rgba(12, 0, 43, 0.7)',
-                        fontFamily: 'Nunito',
+                        fontFamily: 'Aileron',
                         fontWeight: 400,
                         lineHeight: '1.6'
                       }}
@@ -1452,7 +1452,7 @@ export default function AboutClient() {
                       className="text-[22px] font-bold mb-[12px] text-center"
                       style={{
                         color: '#0C002B',
-                        fontFamily: 'Nunito',
+                        fontFamily: 'Aileron',
                         fontWeight: 700,
                         lineHeight: '1.3'
                       }}
@@ -1463,7 +1463,7 @@ export default function AboutClient() {
                       className="text-[13px] mb-[24px] text-center"
                       style={{
                         color: 'rgba(12, 0, 43, 0.7)',
-                        fontFamily: 'Nunito',
+                        fontFamily: 'Aileron',
                         fontWeight: 400,
                         lineHeight: '1.6'
                       }}
@@ -1473,31 +1473,31 @@ export default function AboutClient() {
 
                     {/* Process Steps - Always Visible */}
                     <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-[18px] flex-1 flex flex-col justify-center border border-gray-100 shadow-sm">
-                      <div className="text-[12px] font-bold mb-[18px] text-[#FFB703] text-center" style={{fontFamily: 'Nunito'}}>Complete Process</div>
+                      <div className="text-[12px] font-bold mb-[18px] text-[#FFB703] text-center" style={{fontFamily: 'Aileron'}}>Complete Process</div>
                       <ul className="space-y-[12px]">
                         <li className="flex items-start group/item">
                           <div className="w-6 h-6 bg-gradient-to-br from-[#FFB703] to-orange-400 rounded-full flex items-center justify-center mt-0.5 mr-[9px] flex-shrink-0 group-hover/item:scale-110 transition-transform shadow-sm">
-                            <span className="text-white font-bold text-[10.5px]" style={{fontFamily: 'Nunito'}}>1</span>
+                            <span className="text-white font-bold text-[10.5px]" style={{fontFamily: 'Aileron'}}>1</span>
                           </div>
-                          <span className="text-[10.5px] leading-relaxed" style={{color: '#0C002B', fontFamily: 'Nunito'}}>AI-powered trademark search & analysis</span>
+                          <span className="text-[10.5px] leading-relaxed" style={{color: '#0C002B', fontFamily: 'Aileron'}}>AI-powered trademark search & analysis</span>
                         </li>
                         <li className="flex items-start group/item">
                           <div className="w-6 h-6 bg-gradient-to-br from-[#FFB703] to-orange-400 rounded-full flex items-center justify-center mt-0.5 mr-[9px] flex-shrink-0 group-hover/item:scale-110 transition-transform shadow-sm">
-                            <span className="text-white font-bold text-[10.5px]" style={{fontFamily: 'Nunito'}}>2</span>
+                            <span className="text-white font-bold text-[10.5px]" style={{fontFamily: 'Aileron'}}>2</span>
                           </div>
-                          <span className="text-[10.5px] leading-relaxed" style={{color: '#0C002B', fontFamily: 'Nunito'}}>Expert legal review & consultation</span>
+                          <span className="text-[10.5px] leading-relaxed" style={{color: '#0C002B', fontFamily: 'Aileron'}}>Expert legal review & consultation</span>
                         </li>
                         <li className="flex items-start group/item">
                           <div className="w-6 h-6 bg-gradient-to-br from-[#FFB703] to-orange-400 rounded-full flex items-center justify-center mt-0.5 mr-[9px] flex-shrink-0 group-hover/item:scale-110 transition-transform shadow-sm">
-                            <span className="text-white font-bold text-[10.5px]" style={{fontFamily: 'Nunito'}}>3</span>
+                            <span className="text-white font-bold text-[10.5px]" style={{fontFamily: 'Aileron'}}>3</span>
                           </div>
-                          <span className="text-[10.5px] leading-relaxed" style={{color: '#0C002B', fontFamily: 'Nunito'}}>Complete filing & documentation</span>
+                          <span className="text-[10.5px] leading-relaxed" style={{color: '#0C002B', fontFamily: 'Aileron'}}>Complete filing & documentation</span>
                         </li>
                         <li className="flex items-start group/item">
                           <div className="w-6 h-6 bg-gradient-to-br from-[#FFB703] to-orange-400 rounded-full flex items-center justify-center mt-0.5 mr-[9px] flex-shrink-0 group-hover/item:scale-110 transition-transform shadow-sm">
-                            <span className="text-white font-bold text-[10.5px]" style={{fontFamily: 'Nunito'}}>4</span>
+                            <span className="text-white font-bold text-[10.5px]" style={{fontFamily: 'Aileron'}}>4</span>
                           </div>
-                          <span className="text-[10.5px] leading-relaxed" style={{color: '#0C002B', fontFamily: 'Nunito'}}>Post-registration monitoring & renewals</span>
+                          <span className="text-[10.5px] leading-relaxed" style={{color: '#0C002B', fontFamily: 'Aileron'}}>Post-registration monitoring & renewals</span>
                         </li>
                       </ul>
                     </div>
@@ -1516,7 +1516,7 @@ export default function AboutClient() {
                 boxShadow: '0 3px 12px rgba(0, 0, 0, 0.05)'
               }}
             >
-              <span className="text-[10px] sm:text-[11px] lg:text-[12px] font-medium leading-relaxed" style={{color: '#0C002B', fontFamily: 'Nunito', lineHeight: '1.5', opacity: 0.8}}>
+              <span className="text-[10px] sm:text-[11px] lg:text-[12px] font-medium leading-relaxed" style={{color: '#0C002B', fontFamily: 'Aileron', lineHeight: '1.5', opacity: 0.8}}>
                 Trusted by 5,000+ entrepreneurs and startups with official filings, attorney review, and secure document handling.
               </span>
             </div>
@@ -1539,7 +1539,7 @@ export default function AboutClient() {
             {/* Left Section - Questions */}
             <div className="space-y-[28.8px] flex flex-col justify-start">
               <div className="space-y-[18px]">
-                <h2 className="text-[#0C002B] text-left font-nunito text-[23.4px] md:text-[36px] font-bold leading-[28.8px] md:leading-[39.6px] w-full">
+                <h2 className="text-[#0C002B] text-left font-sans text-[23.4px] md:text-[36px] font-bold leading-[28.8px] md:leading-[39.6px] w-full">
                   Have Question?
                   <br />
                   <span style={{ color: '#FFB703' }}>
@@ -1547,7 +1547,7 @@ export default function AboutClient() {
                   </span>
                 </h2>
 
-                <p className="text-gray-500 font-nunito text-[10.8px] md:text-[12.6px] lg:text-[13.5px] xl:text-[14.4px] font-medium">
+                <p className="text-gray-500 font-sans text-[10.8px] md:text-[12.6px] lg:text-[13.5px] xl:text-[14.4px] font-medium">
                   Still have questions? <span style={{ color: '#FFB703' }} className="font-bold">Contact us</span> anytime.
                 </p>
               </div>
@@ -1579,7 +1579,7 @@ export default function AboutClient() {
                   className="p-[18px] rounded-[10.8px] max-w-lg animate-fade-in-up bg-white border border-gray-100 shadow-lg"
                 >
                   <div className="flex justify-between items-start mb-[10.8px]">
-                    <h4 className="text-[#FFB703] font-nunito text-[14.4px] md:text-[16.2px] font-bold leading-snug">
+                    <h4 className="text-[#FFB703] font-sans text-[14.4px] md:text-[16.2px] font-bold leading-snug">
                       {searchResult.question}
                     </h4>
                     <button
@@ -1589,7 +1589,7 @@ export default function AboutClient() {
                       <FontAwesomeIcon icon={faChevronDown} className="w-[14.4px] h-[14.4px] rotate-180" />
                     </button>
                   </div>
-                  <p className="text-[#0C002B] font-nunito text-[12.6px] md:text-[13.5px] font-medium leading-relaxed opacity-90">
+                  <p className="text-[#0C002B] font-sans text-[12.6px] md:text-[13.5px] font-medium leading-relaxed opacity-90">
                     {searchResult.answer}
                   </p>
                 </div>
@@ -1601,7 +1601,7 @@ export default function AboutClient() {
                   className="p-[18px] rounded-[10.8px] max-w-lg animate-fade-in-up bg-slate-50 border border-gray-100 shadow-sm"
                 >
                   <div className="flex justify-between items-start">
-                    <p className="text-[#0C002B] font-nunito text-[13.5px] md:text-[14.4px] font-medium leading-relaxed opacity-70">
+                    <p className="text-[#0C002B] font-sans text-[13.5px] md:text-[14.4px] font-medium leading-relaxed opacity-70">
                       We're experiencing high traffic at the moment. Please try your search again shortly, or browse our FAQ section below.
                     </p>
                     <button
@@ -1635,7 +1635,7 @@ export default function AboutClient() {
                     onClick={() => toggleFaq(index)}
                   >
                     <div className="flex justify-between items-center mb-[10.8px]">
-                      <h3 className={`font-nunito text-[13.5px] md:text-[16.2px] lg:text-[18px] font-bold pr-[14.4px] leading-snug transition-colors duration-300 ${openFaq === index ? 'text-[#FFB703]' : 'text-[#0C002B]'}`}>
+                      <h3 className={`font-sans text-[13.5px] md:text-[16.2px] lg:text-[18px] font-bold pr-[14.4px] leading-snug transition-colors duration-300 ${openFaq === index ? 'text-[#FFB703]' : 'text-[#0C002B]'}`}>
                         {faq.question}
                       </h3>
                       <FontAwesomeIcon
@@ -1652,7 +1652,7 @@ export default function AboutClient() {
                       }`}
                     >
                       <div className="mt-[14.4px] pt-[14.4px] border-t border-gray-100 transform transition-all duration-500 ease-in-out">
-                        <p className="text-[#0C002B] font-nunito text-[11.7px] md:text-[12.6px] lg:text-[13.5px] font-medium leading-relaxed opacity-80">
+                        <p className="text-[#0C002B] font-sans text-[11.7px] md:text-[12.6px] lg:text-[13.5px] font-medium leading-relaxed opacity-80">
                           {faq.answer}
                         </p>
                       </div>

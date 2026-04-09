@@ -21,12 +21,12 @@ const SectionTitle = ({ title, subtitle }: { title: string, subtitle?: string })
   <div className="text-center mb-12">
     <h2 
       className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4"
-      style={{ color: '#0C002B', fontFamily: 'Nunito', lineHeight: '1.2' }}
+      style={{ color: '#0C002B', fontFamily: 'Aileron', lineHeight: '1.2' }}
     >
       {title}
     </h2>
     {subtitle && (
-      <p className="text-sm sm:text-base text-gray-500 max-w-3xl mx-auto font-nunito leading-relaxed">
+      <p className="text-sm sm:text-base text-gray-500 max-w-3xl mx-auto font-sans leading-relaxed">
         {subtitle}
       </p>
     )}
@@ -41,7 +41,7 @@ export default function AboutContentExpanded() {
   };
 
   return (
-    <div className="w-full px-6 sm:px-12 lg:px-24 py-16 text-[#0C002B] font-['Nunito'] relative bg-white">
+    <div className="w-full px-6 sm:px-12 lg:px-24 py-16 text-[#0C002B] font-sans relative bg-white">
         
       {/* Decorative Background Elements - Light Mode */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
@@ -79,7 +79,7 @@ export default function AboutContentExpanded() {
                  <GlassCard className="h-full flex flex-col justify-center items-center text-center p-10 relative overflow-visible border-none bg-gradient-to-br from-slate-50 to-white shadow-xl">
                     <div className="absolute inset-0 bg-gradient-to-br from-[#FFB703]/5 to-transparent opacity-50 rounded-[18px]"></div>
                     <div className="relative z-10">
-                         <div className="text-[120px] font-bold text-[#0C002B]/5 font-nunito leading-none absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 select-none">
+                         <div className="text-[120px] font-bold text-[#0C002B]/5 font-sans leading-none absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 select-none">
                             VISION
                         </div>
                         <h3 className="text-2xl font-bold text-[#FFB703] mb-4">Our Mission</h3>
@@ -360,7 +360,7 @@ export default function AboutContentExpanded() {
             <div className="p-10 sm:p-16 rounded-[32px] bg-gradient-to-r from-[#FFB703] to-[#FF9500] shadow-xl text-center transform hover:scale-[1.01] transition-all relative overflow-hidden group">
                 <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10 pointer-events-none"></div>
                 <div className="relative z-10">
-                    <p className="text-[#0C002B] text-2xl sm:text-3xl font-extrabold italic font-nunito max-w-4xl mx-auto leading-tight">
+                    <p className="text-[#0C002B] text-2xl sm:text-3xl font-extrabold italic font-sans max-w-4xl mx-auto leading-tight">
                     "Intellectual Property is not just a shield; it is a sword. It separates the leaders from the followers. At IPR Karo, we arm you for the battle of the marketplace."
                     </p>
                     <div className="mt-8 flex justify-center gap-3">
