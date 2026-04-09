@@ -78,6 +78,15 @@ export default function RootLayout({
     <html lang="en">
       <head>
 
+        <link rel="preconnect" href="https://fonts.cdnfonts.com" />
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+        <link rel="preconnect" href="https://connect.facebook.net" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://iprkaro-729d3.firebaseapp.com" />
+        <link rel="preconnect" href="https://apis.google.com" />
+        
+        <link rel="preload" href="/hero/bg.mp4" as="video" type="video/mp4" />
+        
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -90,20 +99,18 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
         {/* Google Analytics */}
-        <script
-          async
+        <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-7DNEQJ9TBP"
+          strategy="afterInteractive"
         />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-7DNEQJ9TBP');
-            `,
-          }}
-        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-7DNEQJ9TBP');
+          `}
+        </Script>
         {/* Meta Pixel Code */}
         <Script
           id="fb-pixel"
@@ -129,6 +136,7 @@ export default function RootLayout({
             width="1"
             style={{ display: "none" }}
             src="https://www.facebook.com/tr?id=1641589187020786&ev=PageView&noscript=1"
+            alt=""
           />
         </noscript>
         {/* End Meta Pixel Code */}
