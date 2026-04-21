@@ -23,7 +23,7 @@ export default function MetricsSection({ analysisData }: MetricsSectionProps) {
 
       <div className="block md:hidden text-center mb-5">
         <h1 className="text-[#0C002B] font-nunito text-xl font-bold mb-1.5">
-          Register Today and get your Trademark in <span style={{ color: '#FFB703' }}>9 months</span>
+          Register Today and get your Trademark in <span style={{ color: '#1952C7' }}>9 months</span>
         </h1>
       </div>
 
@@ -240,7 +240,7 @@ function MobileMetricsSection({ analysisData }: { analysisData: AnalysisData }) 
       </div>
 
       <div className="space-y-3">
-        <h4 className="text-white font-nunito text-base font-semibold text-center">
+        <h4 className="text-[#0C002B] font-nunito text-base font-semibold text-center">
           Similarity Rate
         </h4>
         <div className="grid grid-cols-2 gap-3">
@@ -265,7 +265,7 @@ function MobileMetricsSection({ analysisData }: { analysisData: AnalysisData }) 
       </div>
 
       <div className="space-y-3">
-        <h4 className="text-white font-nunito text-base font-semibold text-center">
+        <h4 className="text-[#0C002B] font-nunito text-base font-semibold text-center">
           Class Probability
         </h4>
         <div className="grid grid-cols-2 gap-3">
@@ -307,9 +307,9 @@ function AssessmentBox({
   const isGood = isReversed ? score <= 50 : score >= 50;
   
   return (
-    <div className="p-2" style={{ borderRadius: '8px', border: '1.5px solid #171717', background: 'rgba(24, 24, 24, 0.15)' }}>
+    <div className="p-2" style={{ borderRadius: '8px', border: '1.5px solid #e2e8f0', background: '#ffffff' }}>
       <div className="flex items-center justify-between mb-1.5">
-        <h5 className="text-white font-nunito text-[10px] font-semibold">Assessment</h5>
+        <h5 className="text-[#0C002B] font-nunito text-[10px] font-semibold">Assessment</h5>
         <div>
           {!isGood ? (
             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#EF4444" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -325,13 +325,13 @@ function AssessmentBox({
       <div className="space-y-1.5">
         <div className="flex items-start">
           <span className="text-[#00D9FF] mr-1 mt-0.5 flex-shrink-0 text-[10px]">•</span>
-          <p className="font-nunito text-[9px] leading-tight" style={{ background: 'linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+          <p className="font-nunito text-[9px] leading-tight text-[#4B5563]">
             {reasoning}
           </p>
         </div>
         <div className="flex items-start">
           <span className="text-[#00D9FF] mr-1 mt-0.5 flex-shrink-0 text-[10px]">•</span>
-          <p className="font-nunito text-[9px] leading-tight" style={{ background: 'linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+          <p className="font-nunito text-[9px] leading-tight text-[#4B5563]">
             {assessment}
           </p>
         </div>
@@ -352,38 +352,29 @@ function MobileKeyFactors({ keyFactors }: { keyFactors: AnalysisData['keyFactors
   return (
     <div className="mb-10">
       <div
-        className="w-full px-4 py-2.5 mb-3"
-        style={{
-          borderRadius: '5px',
-          background: 'rgba(0, 0, 0, 0.44)'
-        }}
+        className="w-full px-4 py-2.5 mb-3 rounded-lg border border-slate-200 bg-slate-50"
       >
-        <h3 className="text-white font-nunito text-base font-semibold text-left">
+        <h3 className="text-[#0C002B] font-nunito text-base font-semibold text-left">
           Key Factors
         </h3>
       </div>
 
       <div
-        className="w-full px-4 py-5 relative"
-        style={{
-          borderRadius: '24px',
-          background: 'rgba(255, 255, 255, 0.10)',
-          boxShadow: '0 0 16px 0 rgba(0, 0, 0, 0.10) inset, 0 0 16px 5px rgba(255, 255, 255, 0.20) inset'
-        }}
+        className="w-full px-4 py-5 relative bg-white rounded-[24px] border border-slate-200 shadow-lg shadow-slate-200/50"
       >
         <span className="absolute top-3 right-4 text-red-500 font-nunito text-lg font-bold">*</span>
         
         <div className="space-y-2">
           {factors.map((factor, index) => (
-            <div key={index} className="flex items-start gap-2 p-2" style={{ borderRadius: '8px', border: '1.5px solid rgba(255, 255, 255, 0.15)', background: 'linear-gradient(90deg, rgba(255, 183, 3, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%)', backdropFilter: 'blur(13px)' }}>
+            <div key={index} className="flex items-start gap-2 p-2 rounded-lg border border-slate-100 bg-white shadow-sm">
               <div className="flex-shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-black">
                   <path d="M12 2L2 7l10 5 10-5-10-5z M2 17l10 5 10-5 M2 12l10 5 10-5"></path>
                 </svg>
               </div>
               <div className="flex-1">
-                <h5 className="text-white font-nunito text-[10px] font-semibold mb-0.5">{factor.label}</h5>
-                <p className="font-nunito text-[9px] leading-tight" style={{ background: 'linear-gradient(90deg,rgb(255, 255, 255) 0%,rgb(255, 255, 255) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+                <h5 className="text-[#0C002B] font-nunito text-[10px] font-semibold mb-0.5">{factor.label}</h5>
+                <p className="font-nunito text-[9px] leading-tight text-[#4B5563]">
                   {factor.value}
                 </p>
               </div>
