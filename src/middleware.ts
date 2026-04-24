@@ -10,7 +10,9 @@ export function middleware(req: NextRequest) {
 
   // Force non-www to www redirect for SEO consistency
   if (host === 'iprkaro.com') {
-    return NextResponse.redirect(`https://www.iprkaro.com${pathname}`, 301)
+    const redirectRes = NextResponse.redirect(`https://www.iprkaro.com${pathname}`, 301)
+    redirectRes.headers.set('X-Robots-Tag', 'index, follow')
+    return redirectRes
   }
 
   const res = NextResponse.next()
@@ -20,7 +22,7 @@ export function middleware(req: NextRequest) {
   // Protection: Force indexing headers for all public routes
   // to override any potential platform-level injections (Vercel, etc.)
   if (!isNoIndexReserved) {
-    res.headers.set('X-Robots-Tag', 'index, follow, all')
+    res.headers.set('X-Robots-Tag', 'index, follow')
   } else {
     // For reserved pages, ensure we aren't accidentally forcing index
     res.headers.set('X-Robots-Tag', 'noindex, nofollow')
