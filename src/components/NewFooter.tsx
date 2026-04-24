@@ -194,7 +194,7 @@ const NewFooter = () => {
             <ul className="space-y-1">
               <li><Link href="/about-us" className="text-white/60 hover:text-white transition-colors">About Us</Link></li>
               <li><Link href="/about-us" className="text-white/60 hover:text-white transition-colors">Our Vision</Link></li>
-              <li><Link href="/pricing" className="text-white/60 hover:text-white transition-colors">Pricing</Link></li>
+              <li><Link href="/#pricing" className="text-white/60 hover:text-white transition-colors">Pricing</Link></li>
               <li><Link href="/trademark-by-city" className="text-white/60 hover:text-white transition-colors">Trademark by City</Link></li>
             </ul>
           </div>

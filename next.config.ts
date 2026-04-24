@@ -56,6 +56,21 @@ const nextConfig: NextConfig = {
         destination: '/contact-us',
         permanent: true,
       },
+      {
+        source: '/pricing',
+        destination: '/#pricing',
+        permanent: true,
+      },
+      {
+        source: '/trademark-for-startup',
+        destination: '/want-to-register-trademark-for-startup',
+        permanent: true,
+      },
+      {
+        source: '/how-to-avoid-trademark-objection-before-filing',
+        destination: '/How-to-avoid-trademark-objection-before-filing',
+        permanent: true,
+      },
     ];
   },
   async headers() {

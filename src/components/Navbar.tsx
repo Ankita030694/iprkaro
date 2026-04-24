@@ -57,7 +57,7 @@ export default function Navbar() {
             {/* Action Button */}
             <div className="flex items-center gap-2 md:gap-4">
               <Link
-                href="/contact"
+                href="/contact-us"
                 className="bg-white text-[#05030E] px-4 md:px-6 py-1.5 rounded-[10px] text-[12px] md:text-[14px] lg:text-base font-bold hover:bg-gray-100 transition-all duration-200 shadow-xl active:scale-95 whitespace-nowrap"
               >
                 Get in Touch
@@ -93,7 +93,7 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              href="/contact"
+              href="/contact-us"
               onClick={() => setIsMobileMenuOpen(false)}
               className={`mt-4 w-full flex justify-center bg-white text-[#05030E] py-4 rounded-2xl text-xl font-bold transition-all duration-500 delay-400 ${isMobileMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
             >
