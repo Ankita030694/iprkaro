@@ -22,7 +22,7 @@ import {
   faCalendarAlt,
   faHandshake,
   faCogs,
-  faHourglassHalf,
+  faHourglassHalf, 
   faMicroscope
 } from '@fortawesome/free-solid-svg-icons';
 
