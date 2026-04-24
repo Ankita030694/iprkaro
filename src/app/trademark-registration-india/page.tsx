@@ -32,8 +32,8 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Trademark Registration India | Complete Online Filing Guide 2026',
-    description: 'Navigate trademark registration India with our expert guide. Learn about TM-A filing, government fees, documents required, and how to protect your brand in Bharat.',
+    title: 'Trademark Registration India | Low Cost Online Filing',
+    description: 'Register your trademark online in India with IPR Karo. Lowest fees for Startups & MSMEs. 100% Online process with expert legal support and 24/7 assistance.',
     keywords: [
         'trademark registration india',
         'how to register brand name in india',

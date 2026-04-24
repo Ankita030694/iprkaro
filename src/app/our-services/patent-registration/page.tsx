@@ -27,7 +27,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-  title: 'Patent Registration in India (2025) | Cost, Process & Filing',
+  title: 'Patent Registration India | Process, Cost & Expert Filing',
   description: 'File your Patent in India with IPR Karo. Low-cost filing for Startups & MSMEs. Expert Patent Agents for Provisional/Complete specifications, Patent Search, and Expedited Examination.',
   keywords: [
     'patent registration india',

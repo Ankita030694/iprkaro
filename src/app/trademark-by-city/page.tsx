@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { locations, toSlug } from './locations';
 
 export const metadata: Metadata = {
-  title: "Trademark Registration by City | Best Trademark Advocates & Lawyers - IPR Karo",
+  title: "Trademark Registration by City | IPR Karo",
   description: "Find the best trademark advocates and lawyers for trademark registration in major cities across India. Local expertise for your brand protection with IPR Karo.",
   alternates: {
     canonical: "/trademark-by-city",

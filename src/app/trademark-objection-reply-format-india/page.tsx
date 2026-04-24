@@ -28,7 +28,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-  title: 'Trademark Objection Reply Format India | Expert Legal Drafts',
+  title: 'Trademark Objection Reply Format | Expert Legal Drafts',
   description: 'Download the official trademark objection reply format for India. Expert guide on responding to Section 9 and Section 11 objections with legal precedents.',
   keywords: [
     'trademark objection reply format india',

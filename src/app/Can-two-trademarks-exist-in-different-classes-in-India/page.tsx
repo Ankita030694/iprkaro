@@ -31,7 +31,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Can Two Trademarks Exist in Different Classes in India? (2024 Legal Guide)',
+    title: 'Trademark Coexistence in Different Classes | India Guide',
     description: 'Explore the legal nuances of trademark coexistence across different classes in India. Learn about Nice Classification, likelihood of confusion, and well-known mark exceptions.',
     keywords: [
         'two trademarks in different classes india',
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
         'trademark registration multiple classes'
     ],
     openGraph: {
-        title: 'Brand Coexistence: Same Trademark, Different Classes in India',
+        title: 'Trademark Coexistence in Different Classes | India Guide',
         description: 'A deep dive into Indian trademark law regarding the registration of identical or similar marks in different service and product categories.',
         url: 'https://www.iprkaro.com/Can-two-trademarks-exist-in-different-classes-in-India',
         type: 'article',

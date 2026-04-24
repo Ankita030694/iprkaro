@@ -44,7 +44,7 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const location = locations.find(loc => toSlug(loc) === slug) || "your area";
-  const title = `Trademark Registration in ${location} | Expert Lawyers - IPR Karo`;
+  const title = `Trademark Registration in ${location} | IPR Karo`;
   const description = `Looking for trademark registration in ${location}? Get comprehensive legal assistance for brand protection, trademark filing, objection handling, and IPR services. Contact IPR Karo today!`;
 
   return {
