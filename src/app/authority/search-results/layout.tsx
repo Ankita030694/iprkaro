@@ -1,9 +1,12 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Search Results Dashboard | IPR Karo Authority',
-  description: 'View and manage trademark search results and analysis for IPR Karo.',
-  robots: 'noindex, nofollow',
+  title: 'Trademark Search Results | Authority | IPR Karo',
+  description: 'View and analyze trademark search results and registrability reports.',
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function SearchResultsLayout({
@@ -13,7 +16,3 @@ export default function SearchResultsLayout({
 }) {
   return <>{children}</>;
 }
-
-
-
-

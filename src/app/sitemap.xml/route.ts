@@ -27,7 +27,7 @@ export async function GET() {
   ];
 
   // 3. Features and Services
-  const staticUrls: RouteConfig[] = [
+  const staticUrls: string[] = [
     '/our-services',
     '/our-services/trademark-registration',
     '/our-services/patent-registration',
@@ -249,24 +249,14 @@ export async function GET() {
     '/trademark-for-digital-marketing-agency',
     '/trademark-for-fintech-startup',
     '/trademark-for-real-estate-company'
-  ].map(path => ({ path, priority: '0.8', changefreq: 'weekly' } as RouteConfig));
+  ];
 
-  // 4. Dynamic Programmatic SEO Pages (Locations)
-  // Deduplicate the array first to avoid identical URLs in the sitemap
-  const uniqueLocations = Array.from(new Set(locations));
-
-  // Add the main directory page
-  const programmaticIndexRoute: RouteConfig = {
-    path: '/trademark-by-location',
+  // 4. Clean and Deduplicate Static URLs
+  const uniqueStaticPaths = Array.from(new Set(staticUrls));
+  const staticRoutes: RouteConfig[] = uniqueStaticPaths.map(path => ({
+    path,
     priority: '0.8',
     changefreq: 'weekly'
-  };
-
-  // Add all the individual slug pages
-  const programmaticLocationRoutes: RouteConfig[] = uniqueLocations.map(loc => ({
-    path: `/trademark-by-location/${toSlug(loc)}`,
-    priority: '0.6', // Slightly lower priority than core service pages
-    changefreq: 'monthly'
   }));
 
   // 5. Fetch Dynamic Blog Posts
@@ -276,7 +266,7 @@ export async function GET() {
     const { collection, getDocs } = await import('firebase/firestore');
 
     if (db) {
-      const blogsCollection = collection(db as Firestore, 'blogs');
+      const blogsCollection = collection(db as any, 'blogs');
       const blogSnapshot = await getDocs(blogsCollection);
 
       blogRoutes = blogSnapshot.docs.map(doc => ({
@@ -293,9 +283,7 @@ export async function GET() {
   const allRoutes = [
     ...rootPages,
     ...standardPages,
-    ...staticUrls,
-    programmaticIndexRoute,
-    ...programmaticLocationRoutes,
+    ...staticRoutes,
     ...blogRoutes
   ];
 

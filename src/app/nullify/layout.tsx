@@ -1,9 +1,12 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Login | IPR Karo - Intellectual Property Solutions',
-  description: 'Sign in to your IPR Karo account to access trademark registration, patent services, and copyright protection management.',
-  robots: 'noindex, nofollow', // Prevent indexing of login page
+  title: 'Login | Authority Dashboard | IPR Karo',
+  description: 'Access the IPR Karo authority dashboard to manage trademark searches, leads, and legal filings.',
+  robots: {
+    index: false, // Don't index login pages
+    follow: false,
+  },
 };
 
 export default function LoginLayout({
@@ -13,6 +16,3 @@ export default function LoginLayout({
 }) {
   return <>{children}</>;
 }
-
-
-

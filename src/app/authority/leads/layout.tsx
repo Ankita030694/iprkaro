@@ -1,9 +1,12 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Leads Dashboard | IPR Karo Authority',
-  description: 'View and manage all leads for IPR Karo trademark registration, patent services, and copyright protection.',
-  robots: 'noindex, nofollow', // Prevent indexing of authority pages
+  title: 'Leads Dashboard | Authority | IPR Karo',
+  description: 'Manage and track business leads for trademark, copyright, and patent services.',
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function LeadsLayout({
@@ -13,6 +16,3 @@ export default function LeadsLayout({
 }) {
   return <>{children}</>;
 }
-
-
-

@@ -57,6 +57,7 @@ export default function LoginPage() {
     >
 
       <div className="w-full max-w-md relative z-10">
+        <h1 className="sr-only">Authority Login | IPR Karo</h1>
         {/* Logo/Brand section */}
         <div className="text-center mt-15 mb-8">
           <Link href="/" className="inline-block mb-6">

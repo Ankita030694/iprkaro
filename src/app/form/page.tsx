@@ -41,7 +41,9 @@ function FormContent() {
 
 export default function FormPage() {
   return (
-    <Suspense fallback={
+    <>
+      <h1 className="sr-only">Trademark Registration Application Form</h1>
+      <Suspense fallback={
       <div className="fixed inset-0 bg-black flex items-center justify-center">
         <div className="text-white text-xl">Loading...</div>
       </div>
