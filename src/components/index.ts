@@ -29,3 +29,4 @@ export { default as BuiltToProtect } from './BuiltToProtect';
 export { default as SimplePricing } from './SimplePricing';
 export { default as FaqSection } from './FaqSection';
 export { default as NewFooter } from './NewFooter';
+export { default as ThirdPartyScripts } from './ThirdPartyScripts';

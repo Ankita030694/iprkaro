@@ -26,9 +26,12 @@ let analytics;
 if (typeof window !== 'undefined') {
   // Wait for page to finish loading before initializing analytics
   const initAnalytics = () => {
-    import('firebase/analytics').then(({ getAnalytics }) => {
-      analytics = getAnalytics(app);
-    });
+    // Delay Firebase analytics by 2.5s to give room for LCP and hydration
+    setTimeout(() => {
+      import('firebase/analytics').then(({ getAnalytics }) => {
+        analytics = getAnalytics(app);
+      });
+    }, 2500);
   };
   if (document.readyState === 'complete') {
     initAnalytics();

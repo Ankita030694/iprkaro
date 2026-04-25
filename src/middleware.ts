@@ -8,9 +8,14 @@ export function middleware(req: NextRequest) {
   const pathname = req.nextUrl.pathname
   const host = req.headers.get('host')
 
-  // Force non-www to www redirect for SEO consistency
-  if (host === 'iprkaro.com') {
+  // 1. Consolidated Redirect: Force HTTPS and WWW in one step
+  const proto = req.headers.get('x-forwarded-proto')
+  const shouldRedirectProto = proto === 'http'
+  const shouldRedirectHost = host === 'iprkaro.com'
+
+  if (shouldRedirectProto || shouldRedirectHost) {
     const redirectRes = NextResponse.redirect(`https://www.iprkaro.com${pathname}`, 301)
+    // Protection: Ensure SEO indexing headers are present on redirects
     redirectRes.headers.set('X-Robots-Tag', 'index, follow')
     return redirectRes
   }
