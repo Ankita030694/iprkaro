@@ -51,7 +51,8 @@ export default function FormPage() {
       <ErrorBoundary>
         <FormContent />
       </ErrorBoundary>
-    </Suspense>
+      </Suspense>
+    </>
   );
 }
 
