@@ -41,22 +41,47 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
+const staticLocationMapping: Record<string, string> = {
+  "gujarat": "gujrat",
+  "kerala": "kerela",
+  "bangalore": "bengaluru",
+};
+
+const staticLocationSlugs = [
+  "ahmedabad", "andhra-pradesh", "arunachal-pradesh", "assam", "bengaluru",
+  "bihar", "chandigarh", "chennai", "delhi", "faridabad", "ghaziabad", "goa",
+  "gujrat", "gurgaon", "haryana", "himachal-pradesh", "hyderabad", "indore",
+  "jammu-and-kashmir", "jharkhand", "karnataka", "kerela", "madhya-pradesh",
+  "maharashtra", "manipur", "meghalaya", "mizoram", "mumbai", "nagaland",
+  "noida", "odisha", "punjab", "rajasthan", "sikkim", "tamil-nadu",
+  "telangana", "tripura", "uttar-pradesh", "uttarakhand", "west-bengal"
+];
+
+function getCanonicalUrl(slug: string) {
+  const targetSlug = staticLocationMapping[slug] || slug;
+  if (staticLocationSlugs.includes(targetSlug)) {
+    return `https://www.iprkaro.com/trademark-registration-in-${targetSlug}`;
+  }
+  return `https://www.iprkaro.com/trademark-by-location/${slug}`;
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const location = locations.find(loc => toSlug(loc) === slug) || "your area";
-  const title = `Trademark Registration in ${location} | IPR Karo`;
+  const title = `TM Registration in ${location} | IPR Karo`;
   const description = `Looking for trademark registration in ${location}? Get comprehensive legal assistance for brand protection, trademark filing, objection handling, and IPR services. Contact IPR Karo today!`;
+  const canonical = getCanonicalUrl(slug);
 
   return {
     title,
     description,
     alternates: {
-      canonical: `https://www.iprkaro.com/trademark-by-location/${slug}`,
+      canonical,
     },
     openGraph: {
       title,
       description,
-      url: `https://www.iprkaro.com/trademark-by-location/${slug}`,
+      url: canonical,
       type: 'article',
     }
   };

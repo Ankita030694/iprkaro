@@ -22,7 +22,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'What to Do if Someone Copies Your Trademark? Legal Remedies in India',
+    title: 'What to Do if Someone Copies Your Trademark? | India',
     description: 'A complete legal action plan for trademark owners in India. Learn about cease and desist notices, civil suits, criminal raids, and claiming damages under the Trade Marks Act 1999.',
     keywords: [
         'someone copied my trademark india',
@@ -206,7 +206,7 @@ export default function TrademarkCopyingPage() {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Help Center",
-                "item": "https://www.iprkaro.com/resources"
+                "item": "https://www.iprkaro.com/blog"
             },
             {
                 "@type": "ListItem",

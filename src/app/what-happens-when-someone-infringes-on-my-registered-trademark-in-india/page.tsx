@@ -23,7 +23,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'What Happens When Someone Infringes Your Trademark in India | 2026 Guide',
+    title: 'TM Infringement in India: What Happens? | 2026 Guide',
     description: 'The ultimate forensic guide to trademark infringement remedies in India. Learn about civil injunctions, damages, criminal penalties, and 2026 case law.',
     keywords: [
         'what happens when someone infringes on my registered trademark in india',

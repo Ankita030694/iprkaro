@@ -23,7 +23,7 @@ import { faBolt } from '@fortawesome/free-solid-svg-icons/faBolt';
 import { faUserTie } from '@fortawesome/free-solid-svg-icons/faUserTie';
 
 export const metadata: Metadata = {
-  title: 'Expedited Process of Trademark Filing in India | Fast Track Registration Guide',
+  title: 'Expedited Trademark Filing in India | Fast Track Guide',
   description: 'Complete guide to the expedited process of trademark filing in India under Rule 34. Learn Form TM-M fees, eligibility, timeline (3-6 months), and step-by-step procedure for fast-track trademark registration.',
   keywords: [
     'expedited process of trademark filing india',

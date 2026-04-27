@@ -608,7 +608,7 @@ export default function SmallCompanyDefinitionPage() {
                                 <h3 className="text-xl font-bold text-[#0C002B] mb-6 border-b pb-4">Corporate Guides</h3>
                                 <ul className="space-y-4">
                                     <li>
-                                        <Link href="/non-disclosure-agreement-format" className="group flex items-center text-gray-700 hover:text-[#6E5E93] transition-all">
+                                        <Link href="/nda-format-india-legal-guide" className="group flex items-center text-gray-700 hover:text-[#6E5E93] transition-all">
                                             <div className="w-2 h-2 bg-gray-300 rounded-full mr-4 group-hover:bg-[#6E5E93] transition-all"></div>
                                             <span className="font-medium">NDA Drafting Guide</span>
                                         </Link>

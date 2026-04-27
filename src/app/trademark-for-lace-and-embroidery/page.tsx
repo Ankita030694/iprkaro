@@ -33,7 +33,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Trademark for Lace and Embroidery | Register Class 26 Brand Online',
+    title: 'TM for Lace & Embroidery | Class 26 Registration',
     description: 'Protect your lace, embroidery, ribbons, and textile accessory brand with Class 26 trademark registration in India. Expert legal guidance for textile manufacturers.',
     keywords: [
         'trademark for lace',

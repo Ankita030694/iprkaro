@@ -30,7 +30,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Trademark for Transport and Logistics | Protect Your Logistics Brand (Class 39)',
+    title: 'TM for Transport & Logistics (Class 39) Guide',
     description: 'Comprehensive guide to trademark registration for transport, logistics, warehousing, and courier services in India. Secure your brand under Class 39 today with IPR Karo.',
     keywords: [
         'trademark for transport and logistics',

@@ -27,7 +27,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata: Metadata = {
-    title: "Trademark Registration in Chandigarh | IPR Karo",
+    title: "Expert TM Registration in Chandigarh | IPR Karo",
     description: "Expert trademark registration in Chandigarh. Protect your brand in the IT Park, Mohali, and Panchkula ecosystem. Elite filing under Delhi Registry jurisdiction. 4000+ words guide and 24-hour filing acknowledgment.",
     keywords: [
         "trademark registration in chandigarh",

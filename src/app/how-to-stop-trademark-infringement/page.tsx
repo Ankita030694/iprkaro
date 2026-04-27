@@ -24,7 +24,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-  title: 'How to Stop Trademark Infringement in India | Step-by-Step Legal Guide',
+  title: 'Stop Trademark Infringement in India | Legal Guide',
   description: 'Discover how to stop trademark infringement in India with expert legal steps: cease and desist notice, interim injunction, criminal complaint, and evidence gathering. Protect your brand today.',
   keywords: [
     'how to stop trademark infringement in india',

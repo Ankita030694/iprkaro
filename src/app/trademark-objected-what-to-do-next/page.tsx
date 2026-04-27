@@ -25,7 +25,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Trademark Objected: What to Do Next? | Step-by-Step Recovery Guide',
+    title: 'Trademark Objected: What to Do Next? | Recovery Guide',
     description: 'Received a trademark objection in India? Learn exactly what to do next. Complete guide on Section 9 and 11 objections, reply drafting, and hearing process. 5000+ words of legal expertise.',
     keywords: [
         'trademark objected what to do next',
@@ -130,7 +130,7 @@ const reviews = [
 
 export default function TrademarkObjectedGuidePage() {
     const breadcrumbItems = [
-        { label: "Resources", href: "/resources" },
+        { label: "Blog", href: "/blog" },
         { label: "Trademark Objected: What to Do Next", href: "/trademark-objected-what-to-do-next" },
     ];
 
@@ -180,8 +180,8 @@ export default function TrademarkObjectedGuidePage() {
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Resources",
-                "item": "https://www.iprkaro.com/resources"
+                "name": "Blog",
+                "item": "https://www.iprkaro.com/blog"
             },
             {
                 "@type": "ListItem",

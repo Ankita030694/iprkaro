@@ -25,7 +25,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata: Metadata = {
-    title: "Trademark Registration in Uttar Pradesh | IPR Karo",
+    title: "Expert TM Registration in Uttar Pradesh | IPR Karo",
     description: "Register your trademark in Uttar Pradesh (UP). Expert filing for Noida, Lucknow, and Kanpur at the Dwarka Registry. 3500+ words of SEO legal content.",
     keywords: [
         "trademark registration in uttar pradesh",

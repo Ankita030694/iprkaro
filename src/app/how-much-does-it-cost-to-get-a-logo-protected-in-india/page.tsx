@@ -31,7 +31,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'How Much Does it Cost to Get a Logo Protected in India? | 2026 Fee Guide',
+    title: 'Cost of Logo Protection in India | 2026 Fee Guide',
     description: 'Complete breakdown of logo protection costs in India. Learn about government fees, professional attorney charges, and 50% rebates for MSMEs and Startups.',
     keywords: [
         'how much does it cost to get a logo protected in india',

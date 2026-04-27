@@ -25,7 +25,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata: Metadata = {
-    title: "Trademark Registration in Madhya Pradesh | IPR Karo",
+    title: "Expert TM Registration in Madhya Pradesh | IPR Karo",
     description: "Expert trademark registration in Madhya Pradesh. Secure your brand in Indore, Bhopal, and Pithampur. 50% government fee rebate for MSMEs.",
     keywords: [
         "trademark registration in madhya pradesh",

@@ -772,7 +772,7 @@ export default function TrademarkApplicationStepsPage() {
                   <h3 className="text-lg font-bold text-gray-900 mb-4">Explore More</h3>
                   <ul className="space-y-3 text-sm">
                     <li>
-                      <Link href="/features/trademark-risk-reduction" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center group">
+                      <Link href="/comprehensive-ip-protection-features/trademark-risk-reduction" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center group">
                         <span className="mr-2 text-gray-400 group-hover:text-[rgb(110,94,147)]">
                           <FontAwesomeIcon icon={faChevronRight} className="w-2 h-2" />
                         </span> Risk Reduction

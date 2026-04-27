@@ -598,12 +598,12 @@ export default function WhyTrademark() {
             <div className="hidden md:grid grid-cols-2 grid-rows-3 gap-2 md:gap-3 lg:gap-7 w-full h-full px-9">
               {featureCards.map((card, index) => {
                 const featureRoutes = [
-                  '/features/fast-trademark-registration',
-                  '/features/expert-trademark-guidance',
-                  '/features/affordable-trademark-services',
-                  '/features/ai-powered-trademark-solutions',
-                  '/features/trademark-risk-reduction',
-                  '/features/247-trademark-protection'
+                  '/comprehensive-ip-protection-features/fast-trademark-registration',
+                  '/comprehensive-ip-protection-features/expert-trademark-guidance',
+                  '/comprehensive-ip-protection-features/affordable-trademark-services',
+                  '/comprehensive-ip-protection-features/ai-powered-trademark-solutions',
+                  '/comprehensive-ip-protection-features/trademark-risk-reduction',
+                  '/comprehensive-ip-protection-features/247-trademark-protection'
                 ];
 
                 return (
@@ -641,12 +641,12 @@ export default function WhyTrademark() {
                 <div className="grid grid-cols-2 grid-rows-3 gap-4">
                   {featureCards.map((card, index) => {
                     const featureRoutes = [
-                      '/features/fast-trademark-registration',
-                      '/features/expert-trademark-guidance',
-                      '/features/affordable-trademark-services',
-                      '/features/ai-powered-trademark-solutions',
-                      '/features/trademark-risk-reduction',
-                      '/features/247-trademark-protection'
+                      '/comprehensive-ip-protection-features/fast-trademark-registration',
+                      '/comprehensive-ip-protection-features/expert-trademark-guidance',
+                      '/comprehensive-ip-protection-features/affordable-trademark-services',
+                      '/comprehensive-ip-protection-features/ai-powered-trademark-solutions',
+                      '/comprehensive-ip-protection-features/trademark-risk-reduction',
+                      '/comprehensive-ip-protection-features/247-trademark-protection'
                     ];
 
                     return (

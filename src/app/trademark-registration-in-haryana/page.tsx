@@ -25,7 +25,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata: Metadata = {
-    title: "Trademark Registration in Haryana | IPR Karo",
+    title: "Expert TM Registration in Haryana | IPR Karo",
     description: "Expert trademark registration in Haryana. Secure your brand in Gurugram, Faridabad, and Panipat. 100% government fee reimbursement support for startups.",
     keywords: [
         "trademark registration in haryana",

@@ -19,7 +19,7 @@ export async function GET() {
 
   // 2. Lead Capture & Info Pages
   const standardPages: RouteConfig[] = [
-    { path: '/resources', priority: '0.9', changefreq: 'daily' },
+    { path: '/blog', priority: '0.9', changefreq: 'daily' },
     { path: '/about-us', priority: '0.7', changefreq: 'monthly' },
     { path: '/contact-us', priority: '0.7', changefreq: 'monthly' },
     { path: '/privacy-policy', priority: '0.5', changefreq: 'yearly' },
@@ -32,13 +32,13 @@ export async function GET() {
     '/our-services/trademark-registration',
     '/our-services/patent-registration',
     '/our-services/copyright-registration',
-    '/features',
-    '/features/247-trademark-protection',
-    '/features/affordable-trademark-services',
-    '/features/ai-powered-trademark-solutions',
-    '/features/expert-trademark-guidance',
-    '/features/fast-trademark-registration',
-    '/features/trademark-risk-reduction',
+    '/comprehensive-ip-protection-features',
+    '/comprehensive-ip-protection-features/247-trademark-protection',
+    '/comprehensive-ip-protection-features/affordable-trademark-services',
+    '/comprehensive-ip-protection-features/ai-powered-trademark-solutions',
+    '/comprehensive-ip-protection-features/expert-trademark-guidance',
+    '/comprehensive-ip-protection-features/fast-trademark-registration',
+    '/comprehensive-ip-protection-features/trademark-risk-reduction',
     '/how-to-register-trademark',
     '/want-to-register-trademark-for-startup',
     '/trademark-register-kese-karte-hai',
@@ -131,7 +131,7 @@ export async function GET() {
     '/trademark-and-copyright-difference',
     '/indian-patent-office-search',
     '/return-filling-online',
-    '/non-disclosure-agreement-format',
+    '/nda-format-india-legal-guide',
     '/small-company-definition',
     '/registration-of-pharmacist-in-up',
     '/trademark-status',
@@ -248,7 +248,8 @@ export async function GET() {
     '/trademark-for-d2c-brand-india',
     '/trademark-for-digital-marketing-agency',
     '/trademark-for-fintech-startup',
-    '/trademark-for-real-estate-company'
+    '/trademark-for-real-estate-company',
+    '/best-trademark-filing-services-for-startups-in-india'
   ];
 
   // 4. Clean and Deduplicate Static URLs
@@ -270,7 +271,7 @@ export async function GET() {
       const blogSnapshot = await getDocs(blogsCollection);
 
       blogRoutes = blogSnapshot.docs.map(doc => ({
-        path: `/resources/${doc.data().slug}`,
+        path: `/blog/${doc.data().slug}`,
         priority: '0.8',
         changefreq: 'monthly'
       }));

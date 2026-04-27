@@ -34,7 +34,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Trademark for Staple Foods (Class 30) | Register Your Brand Identity',
+    title: 'TM for Staple Foods (Class 30) | Register Your Brand',
     description: 'Comprehensive guide to trademark registration for staple foods like rice, flour, spices, coffee, and tea in India. Secure your food brand under Class 30 with expert legal help.',
     keywords: [
         'trademark for staple foods',

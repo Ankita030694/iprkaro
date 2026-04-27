@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle, faShieldAlt, faBalanceScale, faGavel, faFileSignature, faSearch, faTrademark, faStar } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-  title: 'How to Protect Company Name with Trademark in India | Legal Guide 2024',
+  title: 'Protect Company Name with Trademark in India | 2024',
   description: 'Learn how to protect your company name with a trademark in India. Detailed guide on registration process, legal benefits, documents required, and professional strategies for brand protection.',
   keywords: 'protect company name with trademark, trademark registration india, brand name protection, trademark search india, intellectual property india, company name trademark law',
 };

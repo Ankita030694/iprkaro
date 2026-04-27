@@ -28,7 +28,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata: Metadata = {
-    title: "Trademark Registration in Arunachal Pradesh | IPR Karo",
+    title: "Expert TM Registration in Arunachal Pradesh | IPR Karo",
     description: "Expert trademark registration in Arunachal Pradesh. Secure your brand in Itanagar, Pasighat, and Tawang. 100% IP support for Organic products, Idu Mishmi textiles, and Startups.",
     keywords: [
         "trademark registration in arunachal pradesh",

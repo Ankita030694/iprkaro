@@ -37,7 +37,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Steps to File a Trademark Application Online in India | Complete 2026 Guide',
+    title: 'Steps to File Trademark Online in India | 2026 Guide',
     description: 'Learn the exact steps to file a trademark application online in India via the IPIndia portal. A comprehensive 4000-word guide on Search, Classes, DSC, Form TM-A, and more.',
     keywords: [
         'what are the steps to file a trademark application online in india',

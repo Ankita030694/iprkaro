@@ -223,7 +223,7 @@ export default function TrademarkRightsPage() {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "IP Education",
-                "item": "https://www.iprkaro.com/resources"
+                "item": "https://www.iprkaro.com/blog"
             },
             {
                 "@type": "ListItem",

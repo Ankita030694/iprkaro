@@ -29,7 +29,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Trademark for Fintech Startup | Class 36, 9, & 42 Registration India',
+    title: 'TM for Fintech Startup | Class 36, 9 & 42 India',
     description: 'Complete guide to trademark registration for fintech startups in India. Secure your digital payments, mobile apps, and SaaS platforms under Class 36, 9, and 42. 5000+ words of tech-legal expertise.',
     keywords: [
         'trademark for fintech startup',

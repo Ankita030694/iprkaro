@@ -27,7 +27,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata: Metadata = {
-    title: "Trademark Registration in Manipur | IPR Karo",
+    title: "Expert TM Registration in Manipur | IPR Karo",
     description: "Expert trademark registration in Manipur. Secure your brand in Imphal, Thoubal, and Bishnupur. 100% IP support for Handlooms, Food Processing, and Startups.",
     keywords: [
         "trademark registration in manipur",

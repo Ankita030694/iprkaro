@@ -24,7 +24,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Penalty for Trademark Infringement India | Civil & Criminal Remedies',
+    title: 'Penalty for Trademark Infringement in India | Guide',
     description: 'Learn about the severe penalties for trademark infringement in India. Understand civil remedies (injunctions, damages) and criminal punishments under Sections 103, 104, & 105 of the Trademarks Act.',
     keywords: [
         'penalty for trademark infringement india',
@@ -744,7 +744,7 @@ export default function PenaltyForTrademarkInfringementPage() {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/resources" className="group flex items-center text-gray-600 hover:text-[rgb(110,94,147)] transition-all">
+                                        <Link href="/blog" className="group flex items-center text-gray-600 hover:text-[rgb(110,94,147)] transition-all">
                                             <div className="w-2 h-2 bg-gray-300 rounded-full mr-4 group-hover:bg-[rgb(110,94,147)] transition-all"></div>
                                             <span className="font-bold text-base">View All Resources</span>
                                         </Link>

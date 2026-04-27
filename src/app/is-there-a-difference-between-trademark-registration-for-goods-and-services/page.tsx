@@ -30,7 +30,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Difference Between Trademark for Goods vs Services | 2026 India Guide',
+    title: 'Trademark for Goods vs Services | 2026 India Guide',
     description: 'Is there a difference between trademark registration for goods and services in India? Learn about Classes 1-45, evidence of use, and legal nuances.',
     keywords: [
         'is there a difference between trademark registration for goods and services',

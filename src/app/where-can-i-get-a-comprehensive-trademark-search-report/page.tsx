@@ -652,7 +652,7 @@ export default function ComprehensiveTrademarkSearchPage() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/features/trademark-risk-reduction" className="group flex items-center text-gray-600 hover:text-[rgb(110,94,147)] transition-all">
+                    <Link href="/comprehensive-ip-protection-features/trademark-risk-reduction" className="group flex items-center text-gray-600 hover:text-[rgb(110,94,147)] transition-all">
                       <div className="w-2 h-2 bg-gray-300 rounded-full mr-4 group-hover:bg-[rgb(110,94,147)] transition-all"></div>
                       <span className="font-bold text-sm">Risk Reduction</span>
                     </Link>

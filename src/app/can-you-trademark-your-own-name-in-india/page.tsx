@@ -562,7 +562,7 @@ export default function PersonalNameTrademarkPage() {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/resources" className="group flex items-center text-gray-600 hover:text-[rgb(110,94,147)] transition-all">
+                                        <Link href="/blog" className="group flex items-center text-gray-600 hover:text-[rgb(110,94,147)] transition-all">
                                             <div className="w-2 h-2 bg-gray-300 rounded-full mr-4 group-hover:bg-[rgb(110,94,147)] transition-all"></div>
                                             <span className="font-bold text-xs uppercase tracking-tighter">Complete Library</span>
                                         </Link>

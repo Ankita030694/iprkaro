@@ -29,7 +29,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Trademark for Coaching Institute | Protect Your Educational Brand India',
+    title: 'TM for Coaching Institute | Protect Your Brand India',
     description: 'Exhaustive 5000+ word guide on trademarking your coaching institute in India. Secure your institute name, logo, and study materials. Expert legal advice for education entrepreneurs.',
     keywords: [
         'trademark for coaching institute',

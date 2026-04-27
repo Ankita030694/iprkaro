@@ -29,7 +29,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Trademark Formalities Check Fail Meaning | Causes, Effects & Resolution India',
+    title: 'TM Formalities Check Fail Meaning & Resolution',
     description: 'Complete 5000+ word guide on Trademark Formalities Check Fail in India. Learn the common causes, why it happens, the 30-day deadline, and how to resolve it using MIS-F and TM-M.',
     keywords: [
         'trademark formalities check fail meaning',

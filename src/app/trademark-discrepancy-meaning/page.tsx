@@ -27,7 +27,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Trademark Discrepancy Meaning | Causes, Effects & Resolution India',
+    title: 'Trademark Discrepancy Meaning & Resolution in India',
     description: 'Comprehensive 5000+ word guide on Trademark Discrepancy in India. Learn about causes, legal implications, Section 57 rectification, and how to resolve discrepancies using Form TM-P.',
     keywords: [
         'trademark discrepancy meaning',

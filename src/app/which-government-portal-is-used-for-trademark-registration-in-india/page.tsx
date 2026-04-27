@@ -31,7 +31,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Which Government Portal is Used for Trademark Registration in India? | 2026 Guide',
+    title: 'Govt Portal for TM Registration in India | 2026 Guide',
     description: 'Find out which government portal is used for trademark registration in India. Detailed guide on ipindia.gov.in, CGPDTM, e-filing services, and public search tools.',
     keywords: [
         'which government portal is used for trademark registration in india',

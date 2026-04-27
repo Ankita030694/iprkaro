@@ -68,7 +68,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
           images: blogData.image ? [blogData.image] : [],
         },
         alternates: {
-          canonical: `/resources/${slug}`,
+          canonical: `/blog/${slug}`,
         },
       };
     }
@@ -80,7 +80,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: 'Blog Article - IPR Karo',
     description: 'Read the latest legal insights and articles from IPR Karo',
     alternates: {
-      canonical: `/resources/${slug}`,
+      canonical: `/blog/${slug}`,
     },
   };
 }
@@ -190,7 +190,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       "dateModified": formatDate(blogData.date || blogData.created),
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": `https://www.iprkaro.com/resources/${slug}`
+        "@id": `https://www.iprkaro.com/blog/${slug}`
       },
 
     };
@@ -224,13 +224,13 @@ export default async function BlogPostPage({ params }: PageProps) {
           "@type": "ListItem",
           "position": 2,
           "name": "Blog",
-          "item": "https://www.iprkaro.com/resources"
+          "item": "https://www.iprkaro.com/blog"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": blogData.title,
-          "item": `https://www.iprkaro.com/resources/${slug}`
+          "item": `https://www.iprkaro.com/blog/${slug}`
         }
       ]
     };

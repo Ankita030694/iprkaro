@@ -30,7 +30,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Official Government Website for Intellectual Property in India | Guide 2026',
+    title: 'Official Govt Website for IP in India | 2026 Guide',
     description: 'Comprehensive guide to ipindia.gov.in - the official government website for intellectual property in India. Learn about Patents, Trademarks, Designs, and GI registration.',
     keywords: [
         'official government website for intellectual property in india',

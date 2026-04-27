@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'AI Powered Trademark Solutions India | Future of IP Protection',
     description: 'Revolutionizing trademark registration and IP protection with advanced Artificial Intelligence. Faster searches, higher accuracy, and zero human error.',
-    url: 'https://www.iprkaro.com/features/ai-powered-trademark-solutions',
+    url: 'https://www.iprkaro.com/comprehensive-ip-protection-features/ai-powered-trademark-solutions',
     type: 'article',
     images: [
       {
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://www.iprkaro.com/features/ai-powered-trademark-solutions',
+    canonical: 'https://www.iprkaro.com/comprehensive-ip-protection-features/ai-powered-trademark-solutions',
   },
 };
 
@@ -86,8 +86,8 @@ const faqs = [
 
 export default function AiPoweredTrademarkSolutions() {
   const breadcrumbItems = [
-    { label: "Features", href: "/features" },
-    { label: "AI Powered Trademark Solutions", href: "/features/ai-powered-trademark-solutions" },
+    { label: "Features", href: "/comprehensive-ip-protection-features" },
+    { label: "AI Powered Trademark Solutions", href: "/comprehensive-ip-protection-features/ai-powered-trademark-solutions" },
   ];
 
   const faqSchema = {
@@ -542,27 +542,27 @@ export default function AiPoweredTrademarkSolutions() {
                   <h3 className="text-lg font-bold text-gray-900 mb-4">Related Features</h3>
                   <ul className="space-y-3 text-sm">
                     <li>
-                      <Link href="/features/affordable-trademark-services" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center">
+                      <Link href="/comprehensive-ip-protection-features/affordable-trademark-services" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center">
                         <span className="mr-2">›</span> Affordable Services
                       </Link>
                     </li>
                     <li>
-                      <Link href="/features/247-trademark-protection" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center">
+                      <Link href="/comprehensive-ip-protection-features/247-trademark-protection" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center">
                         <span className="mr-2">›</span> 24/7 Protection
                       </Link>
                     </li>
                     <li>
-                      <Link href="/features/expert-trademark-guidance" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center">
+                      <Link href="/comprehensive-ip-protection-features/expert-trademark-guidance" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center">
                         <span className="mr-2">›</span> Expert Guidance
                       </Link>
                     </li>
                     <li>
-                      <Link href="/features/fast-trademark-registration" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center">
+                      <Link href="/comprehensive-ip-protection-features/fast-trademark-registration" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center">
                         <span className="mr-2">›</span> Fast Registration
                       </Link>
                     </li>
                     <li>
-                      <Link href="/features/trademark-risk-reduction" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center">
+                      <Link href="/comprehensive-ip-protection-features/trademark-risk-reduction" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center">
                         <span className="mr-2">›</span> Risk Reduction
                       </Link>
                     </li>

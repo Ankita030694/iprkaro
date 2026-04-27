@@ -28,7 +28,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata: Metadata = {
-    title: "Trademark Registration in Nagaland | IPR Karo",
+    title: "Expert TM Registration in Nagaland | IPR Karo",
     description: "Expert trademark registration in Nagaland. Secure your brand in Kohima, Dimapur, and Mokokchung. 100% IP support for Naga Mircha, Handlooms, and Startups.",
     keywords: [
         "trademark registration in nagaland",

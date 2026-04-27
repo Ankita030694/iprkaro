@@ -29,7 +29,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata: Metadata = {
-    title: "Trademark Registration in Andhra Pradesh | IPR Karo",
+    title: "Expert TM Registration in Andhra Pradesh | IPR Karo",
     description: "Expert trademark registration in Andhra Pradesh. Protect your brand in Pharma, Aqua, and Electronics. Elite filing under Chennai Registry. 4000+ words guide with 24-hour filing acknowledgment.",
     keywords: [
         "trademark registration in andhra pradesh",

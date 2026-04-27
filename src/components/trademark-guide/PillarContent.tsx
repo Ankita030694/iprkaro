@@ -1201,37 +1201,37 @@ export default function PillarContent() {
                 title: "How to Choose the Right Trademark Class",
                 description: "Complete guide to Nice Classification and class selection strategy",
                 icon: "fas fa-layer-group",
-                link: "/resources/trademark-class-selection"
+                link: "/blog/trademark-class-selection"
               },
               {
                 title: "Trademark vs Copyright: Key Differences",
                 description: "Understand which intellectual property protection you need",
                 icon: "fas fa-balance-scale",
-                link: "/resources/trademark-vs-copyright"
+                link: "/blog/trademark-vs-copyright"
               },
               {
                 title: "Top 10 Trademark Rejection Reasons",
                 description: "Common mistakes to avoid in your trademark application",
                 icon: "fas fa-exclamation-triangle",
-                link: "/resources/trademark-rejection-reasons"
+                link: "/blog/trademark-rejection-reasons"
               },
               {
                 title: "Trademark Objection Reply Guide",
                 description: "Step-by-step guide to responding to examination reports",
                 icon: "fas fa-reply-all",
-                link: "/resources/trademark-objection-reply"
+                link: "/blog/trademark-objection-reply"
               },
               {
                 title: "International Trademark Registration",
                 description: "Madrid Protocol and multi-country trademark protection",
                 icon: "fas fa-globe",
-                link: "/resources/international-trademark"
+                link: "/blog/international-trademark"
               },
               {
                 title: "Trademark Renewal Process",
                 description: "Keep your trademark alive with timely renewals",
                 icon: "fas fa-sync-alt",
-                link: "/resources/trademark-renewal"
+                link: "/blog/trademark-renewal"
               }
             ].map((resource, index) => (
               <Link

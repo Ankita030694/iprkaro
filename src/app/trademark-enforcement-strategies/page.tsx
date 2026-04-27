@@ -24,7 +24,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-  title: 'Trademark Enforcement Strategies in India | Protect Your Brand Legally',
+  title: 'TM Enforcement Strategies in India | Protect Your Brand',
   description: 'Discover comprehensive trademark enforcement strategies in India. Learn how to protect your registered brand using civil suits, cease and desist letters, criminal complaints, customs recordal, and online takedowns.',
   keywords: [
     'trademark enforcement strategies india',

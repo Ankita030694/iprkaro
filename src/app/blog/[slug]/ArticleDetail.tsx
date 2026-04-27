@@ -343,7 +343,7 @@ const ArticleDetail = memo(function ArticleDetail({ slug, initialReviews = [], i
           <i className="fas fa-book-open text-[#B3A1FF] text-6xl mb-6" aria-hidden="true"></i>
           <h1 className="text-3xl font-bold text-[#0C002B] mb-4 font-nunito">Article Not Found</h1>
           <p className="text-[#0C002B]/60 mb-8 font-nunito">We couldn't find the blog post you're looking for.</p>
-          <Link href="/resources" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-nunito font-bold text-sm transition-all duration-300 hover:scale-105 bg-[#B3A1FF] text-white">
+          <Link href="/blog" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-nunito font-bold text-sm transition-all duration-300 hover:scale-105 bg-[#B3A1FF] text-white">
             <i className="fas fa-arrow-left text-xs" aria-hidden="true"></i>
             Return to Resources
           </Link>
@@ -377,7 +377,7 @@ const ArticleDetail = memo(function ArticleDetail({ slug, initialReviews = [], i
           <div className="flex items-center gap-2 mb-6 text-xs lg:text-sm px-20">
             <Link href="/" className="text-[#0C002B]/40 hover:text-[#B3A1FF] font-nunito">Home</Link>
             <i className="fas fa-chevron-right text-[#0C002B]/20 text-[10px]" aria-hidden="true"></i>
-            <Link href="/resources" className="text-[#0C002B]/40 hover:text-[#B3A1FF] font-nunito">Resources</Link>
+            <Link href="/blog" className="text-[#0C002B]/40 hover:text-[#B3A1FF] font-nunito">Resources</Link>
             <i className="fas fa-chevron-right text-[#0C002B]/20 text-[10px]" aria-hidden="true"></i>
             <span className="text-[#B3A1FF] font-nunito font-medium">Article</span>
           </div>
@@ -517,7 +517,7 @@ const ArticleDetail = memo(function ArticleDetail({ slug, initialReviews = [], i
                 </h3>
                 <div className="space-y-6">
                   {relatedBlogs.map((article) => (
-                    <Link key={article.id} href={`/resources/${article.slug}`} className="group block">
+                    <Link key={article.id} href={`/blog/${article.slug}`} className="group block">
                       <div className="flex gap-4">
                         {article.image && (
                           <div className="w-20 h-20 rounded-xl overflow-hidden flex-shrink-0 border border-gray-100">

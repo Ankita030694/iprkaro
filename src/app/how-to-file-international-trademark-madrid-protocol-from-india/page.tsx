@@ -32,7 +32,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'How to File International Trademark (Madrid Protocol) from India (2024)',
+    title: 'International TM Filing (Madrid Protocol) India | 2024',
     description: 'Protect your brand globally with one application. Learn the Madrid Protocol process from India, including fees, forms, and benefits. 5000+ words expert guide.',
     keywords: [
         'madrid protocol india',
@@ -656,7 +656,7 @@ export default function MadridProtocolGuidePage() {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/resources" className="group flex items-center text-gray-600 hover:text-[rgb(110,94,147)] transition-all">
+                                        <Link href="/blog" className="group flex items-center text-gray-600 hover:text-[rgb(110,94,147)] transition-all">
                                             <div className="w-2 h-2 bg-gray-300 rounded-full mr-4 group-hover:bg-[rgb(110,94,147)] transition-all"></div>
                                             <span className="font-bold text-xs uppercase tracking-tighter">View All Resources</span>
                                         </Link>

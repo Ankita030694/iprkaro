@@ -28,7 +28,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'How to Avoid Trademark Objection Before Filing in India (Pro Guide)',
+    title: 'Avoid Trademark Objection in India | Pro Guide',
     description: 'Master the art of filing a flawless trademark application. Lean strategies to avoid absolute and relative grounds for refusal, conduct elite searches, and secure your brand.',
     keywords: [
         'avoid trademark objection india',
@@ -610,7 +610,7 @@ export default function AvoidObjectionPage() {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/resources" className="group flex items-center text-gray-600 hover:text-[rgb(85,60,154)] transition-all">
+                                        <Link href="/blog" className="group flex items-center text-gray-600 hover:text-[rgb(85,60,154)] transition-all">
                                             <div className="w-2 h-2 bg-gray-300 rounded-full mr-4 group-hover:bg-[rgb(85,60,154)] transition-all"></div>
                                             <span className="font-bold text-xs uppercase tracking-tighter">Full Library</span>
                                         </Link>

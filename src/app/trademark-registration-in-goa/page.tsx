@@ -25,7 +25,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata: Metadata = {
-    title: "Trademark Registration in Goa | Panaji & Margao - IPR Karo",
+    title: "Expert TM Registration in Goa | IPR Karo",
     description: "Expert trademark registration in Goa. Secure your brand in Panaji, Margao, Vasco, and Mapusa. 100% IP reimbursement support under Goa Startup Policy 2025.",
     keywords: [
         "trademark registration in goa",

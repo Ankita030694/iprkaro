@@ -42,8 +42,18 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: '/blog/:slug*',
-        destination: '/resources/:slug*',
+        source: '/features',
+        destination: '/comprehensive-ip-protection-features',
+        permanent: true,
+      },
+      {
+        source: '/resources/:slug*',
+        destination: '/blog/:slug*',
+        permanent: true,
+      },
+      {
+        source: '/non-disclosure-agreement-format',
+        destination: '/nda-format-india-legal-guide',
         permanent: true,
       },
       {

@@ -13,7 +13,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import TableOfContents from '@/components/TableOfContents';
 
 export const metadata: Metadata = {
-    title: "Trademark Registration in West Bengal | IPR Karo",
+    title: "Expert TM Registration in West Bengal | IPR Karo",
     description: "Elite trademark registration in West Bengal. Secure your brand at the Kolkata Registry with IPR Karo. Expert guidance for Salt Lake tech parks, tea estates, and Bengal MSME incentives.",
     keywords: [
         "trademark registration in west bengal",

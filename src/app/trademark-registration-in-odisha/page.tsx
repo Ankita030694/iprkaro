@@ -13,7 +13,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import TableOfContents from '@/components/TableOfContents';
 
 export const metadata: Metadata = {
-    title: "Trademark Registration in Odisha | IPR Karo",
+    title: "Expert TM Registration in Odisha | IPR Karo",
     description: "Register your trademark in Odisha with IPR Karo. Professional brand protection for Bhubaneswar tech hubs, Rourkela industries, and handloom sectors. Claim 100% MSME cost reimbursement.",
     keywords: [
         "trademark registration in odisha",

@@ -27,7 +27,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata: Metadata = {
-    title: "Trademark Registration in Meghalaya | IPR Karo",
+    title: "Expert TM Registration in Meghalaya | IPR Karo",
     description: "Expert trademark registration in Meghalaya. Secure your brand in Shillong, Tura, and Jowai. 100% IP support for Lakadong Turmeric, Tourism, and Startups.",
     keywords: [
         "trademark registration in meghalaya",

@@ -25,7 +25,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata: Metadata = {
-    title: "Trademark Registration in Bihar | IPR Karo",
+    title: "Expert TM Registration in Bihar | IPR Karo",
     description: "Expert trademark registration in Bihar. Secure your brand in Patna, Muzaffarpur, Bhagalpur and Gaya. 100% government fee reimbursement support for Bihar startups.",
     keywords: [
         "trademark registration in bihar",

@@ -132,7 +132,7 @@ const reviews = [
 
 export default function TrademarkClassFinderPage() {
   const breadcrumbItems = [
-    { label: "Resources", href: "/resources" },
+    { label: "Blog", href: "/blog" },
     { label: "Trademark Class Finder", href: "/trademark-class-finder" },
   ];
 

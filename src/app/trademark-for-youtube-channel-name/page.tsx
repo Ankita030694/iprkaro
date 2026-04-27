@@ -28,7 +28,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Trademark for YouTube Channel Name | Protect Your Creator Brand India',
+    title: 'TM for YouTube Channel Name | Protect Your Brand',
     description: 'Comprehensive 5000+ word guide on trademarking your YouTube channel name in India. Secure your brand, prevent impersonation, and build digital equity. Expert legal insights for creators.',
     keywords: [
         'trademark for youtube channel name',

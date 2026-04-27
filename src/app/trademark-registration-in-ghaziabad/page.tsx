@@ -25,7 +25,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata: Metadata = {
-    title: "Trademark Registration in Ghaziabad | IPR Karo",
+    title: "Expert TM Registration in Ghaziabad | IPR Karo",
     description: "Secure your brand in Ghaziabad with IPR Karo. Expert filing for manufacturing, tech, and retail brands at the Delhi Registry. 4000+ words of legal guidance and 4-hour filing.",
     keywords: [
         "trademark registration in ghaziabad",

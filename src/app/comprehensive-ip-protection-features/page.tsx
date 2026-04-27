@@ -19,10 +19,10 @@ export const metadata: Metadata = {
     'ipr karo features'
   ],
   openGraph: {
-    title: 'Comprehensive IP Services India | The IPR Karo Ecosystem',
-    description: 'Explore our integrated IP protection suite. Fast registration, risk reduction, AI monitoring, and expert legal guidance under one roof.',
-    url: 'https://www.iprkaro.com/features',
-    type: 'article',
+    title: 'IPR Karo Features | AI-Powered IP Protection & Strategy',
+    description: 'Explore the powerful features of IPR Karo. From AI trademark searches to expert legal guidance, we provide everything you need to protect your intellectual property in India.',
+    url: 'https://www.iprkaro.com/comprehensive-ip-protection-features',
+    type: 'website',
     images: [
       {
         url: 'https://www.iprkaro.com/assets/features-og.jpg',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://www.iprkaro.com/features',
+    canonical: 'https://www.iprkaro.com/comprehensive-ip-protection-features',
   },
 };
 
@@ -96,7 +96,7 @@ const faqs = [
 export default function FeaturesIndex() {
   const breadcrumbItems = [
     { label: "Home", href: "/" },
-    { label: "Features", href: "/features" },
+    { label: "Features", href: "/comprehensive-ip-protection-features" },
   ];
 
   const faqSchema = {
@@ -276,7 +276,7 @@ export default function FeaturesIndex() {
                      This feature is particularly vital for product launches. You can start using the ™ symbol immediately upon filing, acting as a deterrent to copycats from Day 1.
                   </p>
                   
-                  <Link href="/features/fast-trademark-registration">
+                  <Link href="/comprehensive-ip-protection-features/fast-trademark-registration">
                      <button className="bg-white border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-bold py-3 px-8 rounded-lg transition-all">
                         Explore Fast Filing →
                      </button>
@@ -306,7 +306,7 @@ export default function FeaturesIndex() {
                      This feature is essential for companies looking to raise funding or exit. Investors hate legal risk. A clean IP audit report increases your valuation.
                   </p>
 
-                  <Link href="/features/trademark-risk-reduction">
+                  <Link href="/comprehensive-ip-protection-features/trademark-risk-reduction">
                      <button className="bg-white border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white font-bold py-3 px-8 rounded-lg transition-all">
                         View Risk Services →
                      </button>
@@ -336,7 +336,7 @@ export default function FeaturesIndex() {
                      Technology doesn't replace our lawyers; it gives them bionic eyes. It ensures that the advice you get is backed by hard data, not just intuition.
                   </p>
 
-                  <Link href="/features/ai-powered-trademark-solutions">
+                  <Link href="/comprehensive-ip-protection-features/ai-powered-trademark-solutions">
                      <button className="bg-white border-2 border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white font-bold py-3 px-8 rounded-lg transition-all">
                         Discover AI Tools →
                      </button>
@@ -366,7 +366,7 @@ export default function FeaturesIndex() {
                      This proactive stance maintains the "Distinctiveness" of your brand. If you allow too many similar marks to coexist, your brand becomes generic and loses legal power.
                   </p>
 
-                  <Link href="/features/247-trademark-protection">
+                  <Link href="/comprehensive-ip-protection-features/247-trademark-protection">
                      <button className="bg-white border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white font-bold py-3 px-8 rounded-lg transition-all">
                         See Watch Services →
                      </button>
@@ -396,7 +396,7 @@ export default function FeaturesIndex() {
                      We believe that every entrepreneur in India, from a home-baker to a tech unicorn, deserves the same quality of legal protection. Your budget should not dictate your security.
                   </p>
 
-                  <Link href="/features/affordable-trademark-services">
+                  <Link href="/comprehensive-ip-protection-features/affordable-trademark-services">
                      <button className="bg-white border-2 border-yellow-600 text-yellow-600 hover:bg-yellow-600 hover:text-white font-bold py-3 px-8 rounded-lg transition-all">
                         Check Pricing →
                      </button>
@@ -426,7 +426,7 @@ export default function FeaturesIndex() {
                      When the stakes are high, AI isn't enough. You need a strategist. We act as your external General Counsel, guiding your IP ship through stormy legal waters.
                   </p>
 
-                  <Link href="/features/expert-trademark-guidance">
+                  <Link href="/comprehensive-ip-protection-features/expert-trademark-guidance">
                      <button className="bg-white border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white font-bold py-3 px-8 rounded-lg transition-all">
                         Meet The Experts →
                      </button>
@@ -772,32 +772,32 @@ export default function FeaturesIndex() {
                   <h3 className="text-lg font-bold text-gray-900 mb-4">Feature Quick Links</h3>
                   <ul className="space-y-3 text-sm">
                     <li>
-                      <Link href="/features/fast-trademark-registration" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center transition-colors">
+                      <Link href="/comprehensive-ip-protection-features/fast-trademark-registration" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center transition-colors">
                         <span className="mr-2 text-blue-500">›</span> Fast Registration
                       </Link>
                     </li>
                     <li>
-                      <Link href="/features/trademark-risk-reduction" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center transition-colors">
+                      <Link href="/comprehensive-ip-protection-features/trademark-risk-reduction" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center transition-colors">
                         <span className="mr-2 text-purple-500">›</span> Risk Reduction
                       </Link>
                     </li>
                     <li>
-                      <Link href="/features/ai-powered-trademark-solutions" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center transition-colors">
+                      <Link href="/comprehensive-ip-protection-features/ai-powered-trademark-solutions" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center transition-colors">
                         <span className="mr-2 text-indigo-500">›</span> AI Solutions
                       </Link>
                     </li>
                     <li>
-                      <Link href="/features/247-trademark-protection" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center transition-colors">
+                      <Link href="/comprehensive-ip-protection-features/247-trademark-protection" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center transition-colors">
                         <span className="mr-2 text-green-500">›</span> 24/7 Protection
                       </Link>
                     </li>
                      <li>
-                      <Link href="/features/affordable-trademark-services" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center transition-colors">
+                      <Link href="/comprehensive-ip-protection-features/affordable-trademark-services" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center transition-colors">
                         <span className="mr-2 text-yellow-500">›</span> Affordable Services
                       </Link>
                     </li>
                      <li>
-                      <Link href="/features/expert-trademark-guidance" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center transition-colors">
+                      <Link href="/comprehensive-ip-protection-features/expert-trademark-guidance" className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center transition-colors">
                         <span className="mr-2 text-red-500">›</span> Expert Guidance
                       </Link>
                     </li>

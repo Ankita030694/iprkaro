@@ -29,7 +29,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Trademark for Non-Metal Building Materials | Class 19 Registration India',
+    title: 'TM for Non-Metal Building Materials | Class 19 India',
     description: 'Protect your construction brand under Class 19. Complete guide to trademarking cement, bricks, tiles, and non-metal building materials in India.',
     keywords: [
         'trademark for non-metal building materials',

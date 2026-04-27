@@ -59,11 +59,11 @@ export const metadata: Metadata = {
     openGraph: {
         title: 'Confidentiality Forensics: The Ultimate NDA Guide for Indian Businesses',
         description: 'Dont let your ideas leak. Our deep dive into Non-Disclosure Agreements explains how to draft a watertight contract that protects your intellectual property.',
-        url: 'https://www.iprkaro.com/non-disclosure-agreement-format',
+        url: 'https://www.iprkaro.com/nda-format-india-legal-guide',
         type: 'article',
     },
     alternates: {
-        canonical: 'https://www.iprkaro.com/non-disclosure-agreement-format',
+        canonical: 'https://www.iprkaro.com/nda-format-india-legal-guide',
     },
 };
 
@@ -132,7 +132,7 @@ const faqs = [
 
 export default function NDAGuidePage() {
     const breadcrumbItems = [
-        { label: "NDA Guide & Format", href: "/non-disclosure-agreement-format" },
+        { label: "NDA Guide & Format", href: "/nda-format-india-legal-guide" },
     ];
 
     const breadcrumbSchema = {
@@ -149,7 +149,7 @@ export default function NDAGuidePage() {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "NDA Guide",
-                "item": "https://www.iprkaro.com/non-disclosure-agreement-format"
+                "item": "https://www.iprkaro.com/nda-format-india-legal-guide"
             }
         ]
     };
@@ -187,7 +187,7 @@ export default function NDAGuidePage() {
         "datePublished": "2026-02-21",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https://www.iprkaro.com/non-disclosure-agreement-format"
+            "@id": "https://www.iprkaro.com/nda-format-india-legal-guide"
         }
     };
 

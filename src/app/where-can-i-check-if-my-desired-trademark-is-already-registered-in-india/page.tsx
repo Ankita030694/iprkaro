@@ -22,7 +22,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Where Can I Check if My Desired Trademark is Already Registered in India? | 2026',
+    title: 'Check if Trademark is Already Registered | India 2026',
     description: 'Master the IP India public search portal. Learn how to perform wordmark, phonetic, and Vienna code searches to verify trademark availability in India.',
     keywords: [
         'where can i check if my desired trademark is already registered in india',

@@ -64,7 +64,7 @@
 //                 </li>
 
 //                 <li>
-//                   <a href="/resources" className="text-sm hover:text-cyan-300 transition-colors">
+//                   <a href="/blog" className="text-sm hover:text-cyan-300 transition-colors">
 //                     Resources
 //                   </a>
 //                 </li>
@@ -155,7 +155,7 @@
 //               </li>
 
 //               <li>
-//                 <a href="/resources" className="text-sm hover:text-cyan-300 transition-colors">
+//                 <a href="/blog" className="text-sm hover:text-cyan-300 transition-colors">
 //                   Resources
 //                 </a>
 //               </li>
@@ -425,8 +425,8 @@ const Footer: React.FC = () => {
                 </li>
 
                 <li>
-                  <a href="/resources" className="text-sm hover:text-cyan-300 transition-colors">
-                    Resources
+                  <a href="/blog" className="text-sm hover:text-cyan-300 transition-colors">
+                    Blog
                   </a>
                 </li>
                 <li>
@@ -516,8 +516,8 @@ const Footer: React.FC = () => {
               </li>
 
               <li>
-                <a href="/resources" className="text-sm hover:text-cyan-300 transition-colors">
-                  Resources
+                <a href="/blog" className="text-sm hover:text-cyan-300 transition-colors">
+                  Blog
                 </a>
               </li>
               <li>
@@ -660,7 +660,7 @@ const Footer: React.FC = () => {
             <a href="/trademark-and-copyright-difference" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Trademark vs Copyright</a>
             <a href="/indian-patent-office-search" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Patent Search</a>
             <a href="/return-filling-online" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Income Tax & GST Filing</a>
-            <a href="/non-disclosure-agreement-format" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">NDA Formats</a>
+            <a href="/nda-format-india-legal-guide" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">NDA Formats</a>
             <a href="/small-company-definition" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Small Company Status</a>
             <a href="/registration-of-pharmacist-in-up" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Pharmacist Registration (UP)</a>
             <a href="/trademark-status" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Trademark Status Guide</a>

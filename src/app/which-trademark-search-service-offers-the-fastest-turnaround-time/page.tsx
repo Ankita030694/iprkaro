@@ -134,7 +134,7 @@ const reviews = [
 export default function FastestTrademarkSearchPage() {
   const breadcrumbItems = [
     { label: "Home", href: "/" },
-    { label: "Resources", href: "/resources" },
+    { label: "Blog", href: "/blog" },
     { label: "Trademark Search Turnaround", href: "/which-trademark-search-service-offers-the-fastest-turnaround-time" },
   ];
 

@@ -28,7 +28,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Trademark for Instagram Brand | Protect Your Social Media Identity India',
+    title: 'TM for Instagram Brand | Protect Your Identity India',
     description: 'The ultimate 5000+ word guide on trademarking your Instagram brand in India. Secure your handle, prevent impersonation, and build digital equity. Expert legal insights for influencers and businesses.',
     keywords: [
         'trademark for instagram brand',

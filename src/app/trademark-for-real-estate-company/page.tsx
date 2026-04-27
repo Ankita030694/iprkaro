@@ -28,7 +28,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Trademark for Real Estate Company | Class 36 & 37 Registration India',
+    title: 'TM for Real Estate Company | Class 36 & 37 India',
     description: 'Expert guide to trademark registration for real estate developers and agencies in India. Secure your company name and project brands under Class 36 and 37. 5000+ words of professional legal insight.',
     keywords: [
         'trademark for real estate company',

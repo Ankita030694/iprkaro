@@ -31,7 +31,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Trademark for Paper Goods and Printing | Class 16 Brand Protection',
+    title: 'TM for Paper Goods & Printing | Class 16 Protection',
     description: 'Complete guide to trademark registration for paper products, stationery, books, and printing in India. Secure your Class 16 legacy today.',
     keywords: [
         'trademark for paper goods',

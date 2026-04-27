@@ -26,7 +26,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata: Metadata = {
-    title: "Trademark Registration in Tamil Nadu | IPR Karo",
+    title: "Expert TM Registration in Tamil Nadu | IPR Karo",
     description: "Expert trademark registration in Tamil Nadu. Secure your brand in Chennai, Coimbatore, Madurai, and Tiruppur. 100% IP support for MSMEs and startups in TN.",
     keywords: [
         "trademark registration in tamil nadu",

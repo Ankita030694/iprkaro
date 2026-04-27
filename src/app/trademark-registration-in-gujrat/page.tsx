@@ -29,7 +29,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata: Metadata = {
-    title: "Trademark Registration in Gujarat | IPR Karo",
+    title: "Expert TM Registration in Gujrat | IPR Karo",
     description: "Expert trademark registration in Gujarat. Protect your brand in Ahmedabad, Surat, and GIFT City. Elite filing for Diamonds, Pharma, and Textiles. 4000+ words guide, RIPS indexing, and 4-hour filing acknowledgment.",
     keywords: [
         "trademark registration in Gujarat",

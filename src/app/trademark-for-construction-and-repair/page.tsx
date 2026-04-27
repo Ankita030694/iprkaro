@@ -40,7 +40,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Register Trademark for Construction & Repair Services in India | Class 37 Guide',
+    title: 'TM for Construction & Repair (Class 37) Guide',
     description: 'Protect your building, infrastructure, and repair brand with India\'s leading IP firm. Comprehensive guide to Trademark Class 37 for construction, installation, and maintenance.',
     keywords: [
         'trademark for construction services',

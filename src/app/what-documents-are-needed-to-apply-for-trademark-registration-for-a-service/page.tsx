@@ -30,7 +30,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'What Documents are Needed to Apply for Trademark Registration for a Service? | 2026 Guide',
+    title: 'Documents for TM Registration for Services | 2026',
     description: 'Exhaustive checklist of documents required for service trademark registration in India. Individual, Company, MSME, and Startup requirements explained.',
     keywords: [
         'what documents are needed to apply for trademark registration for a service',

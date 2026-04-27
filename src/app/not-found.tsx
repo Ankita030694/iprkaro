@@ -112,7 +112,7 @@ export default function NotFound() {
             </Link>
             <span className="text-white/30">•</span>
             <Link 
-              href="/resources" 
+              href="/blog" 
               className="text-white/70 hover:text-[#FFB703] font-nunito text-sm transition-colors duration-300"
             >
               Resources

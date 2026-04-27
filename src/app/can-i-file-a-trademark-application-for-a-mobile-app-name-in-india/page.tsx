@@ -22,7 +22,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Can I File a Trademark Application for a Mobile App Name in India? | 2026 Guide',
+    title: 'Trademark for Mobile App Name in India | 2026 Guide',
     description: 'Learn how to trademark your mobile app name, icon, and logo in India. Discover the dual classification of Class 9 and Class 42 for complete app protection.',
     keywords: [
         'can i file a trademark application for a mobile app name in india',

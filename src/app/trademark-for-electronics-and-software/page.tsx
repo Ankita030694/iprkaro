@@ -28,7 +28,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Trademark for Electronics & Software | Class 9 & 42 Registration Guide India',
+    title: 'TM for Electronics & Software (Class 9 & 42) India',
     description: 'Expert guide to trademark registration for electronics hardware, downloadable software, and SaaS in India. Secure your tech assets under Class 9 and 42. 5000+ words SEO manual.',
     keywords: [
         'trademark for electronics',

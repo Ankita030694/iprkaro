@@ -25,7 +25,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata: Metadata = {
-    title: "Trademark Registration in Bengaluru | IP Protection",
+    title: "Expert TM Registration in Bengaluru | IPR Karo",
     description: "Secure your brand in Bangalore with IPR Karo. Expertise in tech, biotech, and retail trademark filing at the Chennai Registry. 4000+ words of expert guidance, 4-hour filing, and Startup India benefits.",
     keywords: [
         "trademark registration in bengaluru",

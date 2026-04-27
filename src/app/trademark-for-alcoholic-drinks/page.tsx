@@ -37,7 +37,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Secure Trademark Registration for Alcoholic Drinks in India | Class 33 Guide',
+    title: 'TM for Alcoholic Drinks (Class 33) Guide | India',
     description: 'Protect your liquor brand with India\'s leading IP firm. Complete guide to Trademark Class 33 for whisky, wine, spirits, and liqueurs. Expert FSSAI & Advertising compliance.',
     keywords: [
         'trademark for alcoholic drinks',

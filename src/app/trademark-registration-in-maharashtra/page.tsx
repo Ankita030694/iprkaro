@@ -25,7 +25,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata: Metadata = {
-    title: "Trademark Registration in Maharashtra | IPR Karo",
+    title: "Expert TM Registration in Maharashtra | IPR Karo",
     description: "Secure your brand in Maharashtra. Expert filing for Mumbai, Pune, and Nagpur at the Antop Hill Registry. 3500+ words of industrial IP expertise.",
     keywords: [
         "trademark registration in maharashtra",

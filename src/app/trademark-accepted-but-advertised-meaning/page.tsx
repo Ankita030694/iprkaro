@@ -27,7 +27,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Trademark Accepted but Advertised Meaning | Journal Publication Guide',
+    title: 'TM Accepted but Advertised Meaning | Journal Guide',
     description: 'Comprehensive guide to "Accepted and Advertised" trademark status in India. Learn about the 4-month opposition period, Trademark Journal publication, and next steps to registration. 5000+ words of expertise.',
     keywords: [
         'trademark accepted but advertised meaning',

@@ -22,7 +22,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'What Legal Protections Does a Registered Trademark Provide to a Company? | 2026 Guide',
+    title: 'Legal Protections of a Registered Trademark | 2026',
     description: 'Discover the comprehensive legal protections of a registered trademark in India. Learn about exclusive rights, civil/criminal remedies, and brand valuation benefits.',
     keywords: [
         'what legal protections does a registered trademark provide to a company',

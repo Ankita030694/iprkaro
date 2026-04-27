@@ -182,7 +182,7 @@ export default function BlogListingClient() {
                   <div className="h-4 bg-gray-200 rounded w-1/4"></div>
                 </div>
               ) : featuredBlog ? (
-                <Link href={`/resources/${featuredBlog.slug}`}>
+                <Link href={`/blog/${featuredBlog.slug}`}>
                   <div className="group cursor-pointer">
                     {/* Featured Image */}
                     <div className="aspect-[4/3] rounded-[30px] overflow-hidden mb-6 shadow-[0_8px_40px_rgb(0,0,0,0.06)] group-hover:shadow-[0_8px_50px_rgb(179,161,255,0.15)] transition-all duration-500">
@@ -260,7 +260,7 @@ export default function BlogListingClient() {
               ))
             ) : blogPosts.length > 0 ? (
               blogPosts.map((post) => (
-                <Link href={`/resources/${post.slug}`} key={post.id}>
+                <Link href={`/blog/${post.slug}`} key={post.id}>
                   <div className="group cursor-pointer">
                     {/* Blog Image */}
                     <div className="relative mb-3 md:mb-4 overflow-hidden rounded-lg md:rounded-[15px] border border-gray-100 shadow-[0_4px_20px_rgb(0,0,0,0.03)] group-hover:border-[#B3A1FF]/40 transition-all duration-300">

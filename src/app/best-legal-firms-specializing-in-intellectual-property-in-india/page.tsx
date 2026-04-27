@@ -39,7 +39,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Best Legal Firms Specializing in Intellectual Property in India | 2026 Rankings',
+    title: 'Best IP Law Firms in India | 2026 Rankings',
     description: 'Explore the best legal firms specializing in Intellectual Property in India. Detailed rankings of top IP law firms like IPR Karo, AMA Legal, and more. 5000+ word guide.',
     keywords: [
         'best legal firms specializing in intellectual property in india',

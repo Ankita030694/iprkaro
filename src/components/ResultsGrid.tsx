@@ -270,7 +270,7 @@ export default function ResultsGrid() {
 
         </div>
 
-        <Link href="/resources">
+        <Link href="/blog">
           <motion.button
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

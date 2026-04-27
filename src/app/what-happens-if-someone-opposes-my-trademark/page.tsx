@@ -32,7 +32,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'What Happens if Someone Opposes My Trademark in India? (2024 Guide)',
+    title: 'What if Someone Opposes My Trademark? | 2024 Guide',
     description: 'Received a trademark opposition? Don\'t panic. Learn the complete legal process from counter-statement to hearing. Our 5000+ word guide helps you defend your brand.',
     keywords: [
         'trademark opposition india',
@@ -705,7 +705,7 @@ export default function TrademarkOppositionGuidePage() {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/resources" className="group flex items-center text-gray-600 hover:text-[rgb(110,94,147)] transition-all">
+                                        <Link href="/blog" className="group flex items-center text-gray-600 hover:text-[rgb(110,94,147)] transition-all">
                                             <div className="w-2 h-2 bg-gray-300 rounded-full mr-4 group-hover:bg-[rgb(110,94,147)] transition-all"></div>
                                             <span className="font-bold text-xs uppercase tracking-tighter">Guide Library</span>
                                         </Link>

@@ -29,7 +29,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Trademark for Digital Marketing Agency | Class 35 & 42 Registration India',
+    title: 'TM for Digital Marketing Agency | Class 35 & 42 India',
     description: 'Expert guide to trademark registration for digital marketing agencies in India. Protect your SEO, SMM, and PPC brand identities under Class 35. 5000+ words of deep legal and strategic insights.',
     keywords: [
         'trademark for digital marketing agency',

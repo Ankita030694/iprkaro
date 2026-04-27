@@ -30,7 +30,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'How Long Does Trademark Registration Take in India? | 2026 Timeline',
+    title: 'Trademark Registration Timeline in India | 2026',
     description: 'Find out exactly how long the trademark registration process takes in India. Stage-by-stage timeline for 2026, from filing to registration certificate.',
     keywords: [
         'how long does trademark registration take in india',

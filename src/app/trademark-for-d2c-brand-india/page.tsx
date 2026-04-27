@@ -28,7 +28,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Trademark for D2C Brand India | Class 35 & Product Registration Guide',
+    title: 'TM for D2C Brand India | Class 35 & Product Guide',
     description: 'Expert legal guide to trademark registration for D2C brands in India. Protect your digital-first brand on Amazon, Flipkart, and your own website. Detailed insights on Class 35, 3, 25, 30. 5000+ words.',
     keywords: [
         'trademark for d2c brand india',

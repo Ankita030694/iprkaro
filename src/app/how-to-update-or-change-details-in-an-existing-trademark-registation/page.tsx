@@ -23,7 +23,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'How to Update or Change Details in an Existing Trademark Registration India | 2026',
+    title: 'Update Existing Trademark Details in India | 2026',
     description: 'Learn the official process to update trademark details in India. Master Form TM-M and TM-P for name change, address update, and post-registration amendments.',
     keywords: [
         'how to update or change details in an existing trademark registration',

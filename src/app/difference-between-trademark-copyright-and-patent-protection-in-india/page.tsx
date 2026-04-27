@@ -29,7 +29,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Difference Between Trademark, Copyright, and Patent in India | 2026 Guide',
+    title: 'Trademark vs Copyright vs Patent | 2026 India Guide',
     description: 'Understand the critical differences between Trademark, Copyright, and Patent in India. Full 2026 guide on duration, scope, and statutory frameworks.',
     keywords: [
         'difference between trademark copyright and patent protection in india',

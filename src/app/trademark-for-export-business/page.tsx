@@ -26,7 +26,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Trademark for Export Business | Global Brand Protection Guide India',
+    title: 'TM for Export Business | Global Brand Protection India',
     description: 'Comprehensive 5000+ word guide on trademark registration for export businesses in India. Learn about Madrid Protocol, Class 35 registration, and international brand security. Rank #1 today.',
     keywords: [
         'trademark for export business',

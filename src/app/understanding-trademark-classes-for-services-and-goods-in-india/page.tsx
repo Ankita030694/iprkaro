@@ -23,7 +23,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Understanding Trademark Classes for Services & Goods in India | 2026 Guide',
+    title: 'Trademark Classes for Goods & Services | 2026 Guide',
     description: 'The ultimate forensic guide to trademark classes in India. Explore Nice Classification 2026 (NCL 13), goods classes 1-34, and service classes 35-45.',
     keywords: [
         'understanding trademark classes for services and goods in india',

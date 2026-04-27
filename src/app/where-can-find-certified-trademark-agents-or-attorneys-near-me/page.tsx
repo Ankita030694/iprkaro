@@ -37,7 +37,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Where Can I Find Certified Trademark Agents or Attorneys Near Me? | India 2026',
+    title: 'Find Certified TM Agents or Attorneys Near Me | India',
     description: 'Find certified trademark agents and attorneys near you in India. Expert guide on verifying CGPDTM registered professionals and choosing top IP law firms.',
     keywords: [
         'certified trademark agents near me',

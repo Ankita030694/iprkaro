@@ -37,7 +37,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Trademark Registration for Beverages in India | Class 32 & 33 Guide',
+    title: 'TM for Beverages (Class 32 & 33) Guide | India',
     description: 'Complete legal guide to trademark registration for beverages in India. Secure your soft drinks, juices, beer, and spirits under Class 32 and 33. 100% online filing.',
     keywords: [
         'trademark for beverages',

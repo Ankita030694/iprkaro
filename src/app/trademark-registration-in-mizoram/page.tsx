@@ -28,7 +28,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata: Metadata = {
-    title: "Trademark Registration in Mizoram | IPR Karo",
+    title: "Expert TM Registration in Mizoram | IPR Karo",
     description: "Expert trademark registration in Mizoram. Secure your brand in Aizawl, Lunglei, and Saiha. 100% IP support for Bamboo products, Mizo Chilli, Ginger, and Startups.",
     keywords: [
         "trademark registration in mizoram",

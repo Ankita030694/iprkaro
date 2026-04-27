@@ -13,7 +13,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import TableOfContents from '@/components/TableOfContents';
 
 export const metadata: Metadata = {
-    title: "Trademark Registration in Jharkhand | IPR Karo",
+    title: "Expert TM Registration in Jharkhand | IPR Karo",
     description: "Secure your brand in Jharkhand with IPR Karo. Expert trademark registration for mining, steel industries, and Ranchi startups. Claim 100% MSME reimbursement at the Kolkata Registry.",
     keywords: [
         "trademark registration in jharkhand",

@@ -28,7 +28,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Trademark for Education and Training | Protect Your Institute Brand',
+    title: 'TM for Education & Training | Protect Your Brand',
     description: 'Exhaustive guide to trademark registration for schools, coaching centers, and EdTech platforms in India. Secure your educational brand under Class 41 today.',
     keywords: [
         'trademark for education and training',

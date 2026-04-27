@@ -31,7 +31,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-  title: 'What Happens if Trademark Expires in India? | Renewal & Expiry Consequences',
+  title: 'What Happens if Trademark Expires in India? | Guide',
   description: 'Understand the legal risks of trademark expiry in India. Learn about the O-3 notice, grace periods, removal from registry, and how to protect your brand from abandonment.',
   keywords: [
     'what happens if trademark expires india',

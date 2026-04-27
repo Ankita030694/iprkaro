@@ -37,7 +37,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Register Trademark for Tobacco & Smoking Products in India | Class 34 Guide',
+    title: 'TM for Tobacco & Smoking Products (Class 34) Guide',
     description: 'Protect your tobacco brand with India\'s top IP law firm. Expert guide to Trademark Class 34 for cigarettes, cigars, chewing tobacco, and smoking accessories.',
     keywords: [
         'trademark for tobacco',

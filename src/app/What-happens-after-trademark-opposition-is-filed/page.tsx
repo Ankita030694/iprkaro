@@ -25,7 +25,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'What Happens After Trademark Opposition is Filed? | Process & Timeline',
+    title: 'Trademark Opposition Process & Timeline India',
     description: 'Step-by-step guide to the trademark opposition process in India. Learn about counter-statements, evidence (Rule 45/46), hearings, and legal strategies to win.',
     keywords: [
         'trademark opposition process india',

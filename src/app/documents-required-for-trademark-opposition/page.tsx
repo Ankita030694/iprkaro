@@ -26,7 +26,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Documents Required for Trademark Opposition in India | Checklist 2024',
+    title: 'Documents for Trademark Opposition in India | 2024',
     description: 'The ultimate guide to documents and evidence required for successful trademark opposition in India. Learn about Rule 45 affidavits, proof of prior use, and more.',
     keywords: [
         'documents required for trademark opposition',

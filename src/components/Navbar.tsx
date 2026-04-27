@@ -19,7 +19,7 @@ export default function Navbar() {
     { name: 'Home', href: '/' },
     { name: 'Our Story', href: '/about-us' },
     { name: 'What We Protect', href: '/our-services' },
-    { name: 'Learn', href: '/resources' },
+    { name: 'Learn', href: '/blog' },
   ];
 
   return (

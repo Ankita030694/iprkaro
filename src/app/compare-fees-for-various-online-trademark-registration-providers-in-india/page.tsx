@@ -30,7 +30,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Compare Trademark Registration Fees in India 2026 | Top Providers Ranked',
+    title: 'Compare TM Registration Fees in India | 2026 Rankings',
     description: 'Forensic comparison of trademark registration fees in Bharat. Compare ClearTax, Vakilsearch, and IPR Karo. See government fees and professional charges for 2026.',
     keywords: [
         'compare fees for various online trademark registration providers in india',

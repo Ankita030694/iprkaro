@@ -43,7 +43,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Guide to Choosing a Reliable Online Platforms for IP Services in India | 2026',
+    title: 'Choose Reliable IP Service Platforms in India | 2026',
     description: 'Expert guide to selecting reliable online platforms for Intellectual Property services in India. 5000+ words on Trademark, Patent & Copyright registration.',
     keywords: [
         'guide-to-choosing-a-reliable-online-plarforms-for-ip-services-in-india',

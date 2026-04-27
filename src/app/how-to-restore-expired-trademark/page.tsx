@@ -31,7 +31,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-  title: 'How to Restore Expired Trademark in India | Form TM-R & Restoration Fees',
+  title: 'Restore Expired Trademark in India | Fees & Process',
   description: 'Step-by-step guide to restore an expired trademark in India. Learn the Form TM-R procedure, restoration fees (Rs 18,000), and the 1-year revival deadline.',
   keywords: [
     'how to restore expired trademark india',

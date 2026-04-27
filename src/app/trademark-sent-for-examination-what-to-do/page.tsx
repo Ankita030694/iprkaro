@@ -130,7 +130,7 @@ const reviews = [
 
 export default function TrademarkSentForExaminationPage() {
     const breadcrumbItems = [
-        { label: "Resources", href: "/resources" },
+        { label: "Blog", href: "/blog" },
         { label: "Trademark Sent for Examination: What to Do Next", href: "/trademark-sent-for-examination-what-to-do" },
     ];
 
@@ -180,8 +180,8 @@ export default function TrademarkSentForExaminationPage() {
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Resources",
-                "item": "https://www.iprkaro.com/resources"
+                "name": "Blog",
+                "item": "https://www.iprkaro.com/blog"
             },
             {
                 "@type": "ListItem",

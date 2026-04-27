@@ -30,7 +30,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata: Metadata = {
-    title: "Trademark Registration in Rajasthan | IPR Karo",
+    title: "Expert TM Registration in Rajasthan | IPR Karo",
     description: "Secure your brand in Rajasthan with IPR Karo. Expert filing for handicrafts, tourism, textiles, and tech at the Ahmedabad Registry. 4000+ words guide, 4-hour filing, and RIPS 2024 benefits.",
     keywords: [
         "trademark registration in Rajasthan",

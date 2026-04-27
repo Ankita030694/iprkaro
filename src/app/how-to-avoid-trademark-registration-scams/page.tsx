@@ -26,7 +26,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'How to Avoid Trademark Registration Scams in India (Official Guide)',
+    title: 'Avoid Trademark Registration Scams in India | Guide',
     description: 'Learn how to identify and avoid trademark registration scams, fake invoices, and phishing emails in India. Expert advice on protecting your brand from intellectual property fraud.',
     keywords: [
         'trademark registration scams india',
@@ -608,7 +608,7 @@ export default function TrademarkScamGuidePage() {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/resources" className="group flex items-center text-gray-600 hover:text-[rgb(110,94,147)] transition-all">
+                                        <Link href="/blog" className="group flex items-center text-gray-600 hover:text-[rgb(110,94,147)] transition-all">
                                             <div className="w-2 h-2 bg-gray-300 rounded-full mr-4 group-hover:bg-[rgb(110,94,147)] transition-all"></div>
                                             <span className="font-bold text-xs uppercase tracking-tighter">Site Library</span>
                                         </Link>

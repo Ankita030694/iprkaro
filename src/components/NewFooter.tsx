@@ -61,7 +61,7 @@ const queries = [
   { name: 'Trademark vs Copyright', href: '/trademark-and-copyright-difference' },
   { name: 'Patent Search', href: '/indian-patent-office-search' },
   { name: 'Income Tax & GST Filing', href: '/return-filling-online' },
-  { name: 'NDA Formats', href: '/non-disclosure-agreement-format' },
+  { name: 'NDA Formats', href: '/nda-format-india-legal-guide' },
   { name: 'Small Company Status', href: '/small-company-definition' },
   { name: 'Pharmacist Registration (UP)', href: '/registration-of-pharmacist-in-up' },
   { name: 'Trademark Status Guide', href: '/trademark-status' },
@@ -200,10 +200,10 @@ const NewFooter = () => {
           </div>
 
           <div>
-            <h4 className="text-3xl md:text-xl font-bold mb-6">Resources</h4>
+            <h4 className="text-3xl md:text-xl font-bold mb-6">Blog</h4>
             <ul className="space-y-1">
-              <li><Link href="/resources" className="text-white/60 hover:text-white transition-colors">Blog</Link></li>
-              <li><Link href="/resources" className="text-white/60 hover:text-white transition-colors">Trademark Guide</Link></li>
+              <li><Link href="/blog" className="text-white/60 hover:text-white transition-colors">Blog</Link></li>
+              <li><Link href="/blog" className="text-white/60 hover:text-white transition-colors">Trademark Guide</Link></li>
               <li><Link href="/" className="text-white/60 hover:text-white transition-colors">FAQs</Link></li>
               <li><Link href="/" className="text-white/60 hover:text-white transition-colors">Brand Guidelines</Link></li>
             </ul>

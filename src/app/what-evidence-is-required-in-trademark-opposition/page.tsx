@@ -27,7 +27,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'What Evidence is Required in Trademark Opposition | Rule 45, 46, 47 Guide',
+    title: 'Evidence for Trademark Opposition | Rule 45, 46, 47',
     description: 'Master the trademark opposition process in India. Learn about evidence requirements under Rules 45, 46, and 47. Comprehensive legal guide on proof of use, affidavits, and winning strategies.',
     keywords: [
         'what evidence is required in trademark opposition',

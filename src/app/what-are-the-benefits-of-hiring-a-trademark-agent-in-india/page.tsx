@@ -39,7 +39,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'What are the Benefits of Hiring a Trademark Agent in India? | 2026 Guide',
+    title: 'Benefits of Hiring a TM Agent in India | 2026 Guide',
     description: 'Discover the critical benefits of hiring a trademark agent in India. Learn how professional representation from IPR Karo and AMA Legal secures your brand assets.',
     keywords: [
         'what are the benefits of hiring a trademark agent in india',

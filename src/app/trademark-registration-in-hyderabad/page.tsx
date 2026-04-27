@@ -25,7 +25,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata: Metadata = {
-    title: "Trademark Registration in Hyderabad | IPR Karo",
+    title: "Expert TM Registration in Hyderabad | IPR Karo",
     description: "Register your trademark in Hyderabad with IPR Karo. Expert filing for pharma, IT, and Tollywood brands at the Secunderabad Registry. 4000+ words of legal guidance and 4-hour filing.",
     keywords: [
         "trademark registration in hyderabad",

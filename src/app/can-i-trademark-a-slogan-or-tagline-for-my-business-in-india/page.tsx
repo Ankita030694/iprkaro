@@ -20,7 +20,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Can I Trademark a Slogan or Tagline for My Business in India? | 2026 Guide',
+    title: 'Trademark a Slogan or Tagline in India | 2026 Guide',
     description: 'The ultimate forensic guide to trademarking slogans and taglines in India. Learn about distinctiveness, acquired secondary meaning, and case law like P&G vs Anchor.',
     keywords: [
         'can i trademark a slogan or tagline for my business in india',

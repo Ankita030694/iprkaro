@@ -127,7 +127,7 @@ const faqs = [
 export default function AffordableTrademarkPage() {
   const breadcrumbItems = [
     { label: "Home", href: "/" },
-    { label: "Resources", href: "/resources" },
+    { label: "Blog", href: "/blog" },
     { label: "Affordable Trademark Registration", href: "/where-can-i-find-affordable-trademark-registration-services-near-me" },
   ];
 

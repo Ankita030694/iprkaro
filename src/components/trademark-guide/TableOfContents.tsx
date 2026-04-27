@@ -17,7 +17,7 @@ export default function TableOfContents({ activeSection }: TableOfContentsProps)
     { id: 'classes', title: 'Classes', icon: 'fas fa-layer-group' },
     { id: 'objections', title: 'Objections', icon: 'fas fa-exclamation-circle' },
     { id: 'cta', title: 'Get Started', icon: 'fas fa-rocket' },
-    { id: 'related-resources', title: 'Resources', icon: 'fas fa-book' }
+    { id: 'related-resources', title: 'Blog', icon: 'fas fa-book' }
   ];
 
   const scrollToSection = (sectionId: string) => {

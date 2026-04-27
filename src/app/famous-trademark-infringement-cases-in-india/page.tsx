@@ -27,7 +27,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Famous Trademark Infringement Cases in India | Comprehensive 2025 Guide',
+    title: 'Famous Trademark Infringement Cases in India | 2025',
     description: 'Explore the most landmark and recent trademark infringement cases in India. Expert analysis of IndiGo vs Mahindra, Ratan Tata personality rights, and 5000+ words of legal insights.',
     keywords: [
         'famous trademark infringement cases in india',

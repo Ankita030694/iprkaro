@@ -649,7 +649,7 @@ export default function TrademarkSearchLegalSupportPage() {
                     </Link>
                   </li>
                    <li>
-                    <Link href="/features/expert-trademark-guidance" className="group flex items-center text-gray-600 hover:text-[rgb(110,94,147)] transition-all">
+                    <Link href="/comprehensive-ip-protection-features/expert-trademark-guidance" className="group flex items-center text-gray-600 hover:text-[rgb(110,94,147)] transition-all">
                       <div className="w-2 h-2 bg-gray-300 rounded-full mr-4 group-hover:bg-[rgb(110,94,147)] transition-all"></div>
                       <span className="font-bold text-sm">Expert Guidance</span>
                     </Link>

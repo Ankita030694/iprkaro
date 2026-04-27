@@ -29,7 +29,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-  title: 'Trademark Registration for Pharmaceuticals | Class 5 IP Protection',
+  title: 'TM Registration for Pharmaceuticals | Class 5 Guide',
   description: 'Elite guide to trademark registration for pharmaceutical brands in India. Secure your drug names, formulations, and healthcare products under Class 5 with expert legal support.',
   keywords: [
     'trademark for pharmaceuticals',

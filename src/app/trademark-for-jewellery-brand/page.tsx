@@ -757,7 +757,7 @@ export default function TrademarkForJewelleryBrandPage() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/features/trademark-risk-reduction" className="group flex items-center text-gray-700 hover:text-indigo-600 transition-all">
+                    <Link href="/comprehensive-ip-protection-features/trademark-risk-reduction" className="group flex items-center text-gray-700 hover:text-indigo-600 transition-all">
                       <div className="w-2.5 h-2.5 bg-gray-300 rounded-full mr-4 group-hover:bg-indigo-600 transition-all"></div>
                       <span className="font-bold text-base">Risk Reduction</span>
                     </Link>
