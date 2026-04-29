@@ -349,7 +349,7 @@ export default function TrademarkViolationExamplesPage() {
                                             Visual Similarity and The Wrapper War
                                         </h2>
                                         <p className="mb-6">
-                                            Visual similarity focuses on the 'Get-Up' of the product—the specific way it is presented to the consumer on a shelf. This includes the color combination, graphics, and even the font style.
+                                            Visual similarity focuses on the 'Get-Up' of the product-the specific way it is presented to the consumer on a shelf. This includes the color combination, graphics, and even the font style.
                                         </p>
                                         <div className="flex flex-col md:flex-row gap-8 items-center bg-gray-900 text-white p-10 rounded-[2rem] my-10">
                                             <div className="flex-1">
@@ -407,7 +407,7 @@ export default function TrademarkViolationExamplesPage() {
                                         </p>
                                         <div className="bg-gray-50 p-10 rounded-[2.5rem] border border-gray-100 mb-10">
                                             <h4 className="text-xl font-bold mb-4">Example: Corn Products v. Shangrila</h4>
-                                            <p className="text-gray-600 mb-6">In the **Gluvita vs. Glucovita** case, the court held that both names referred to 'Glucose' and 'Vitamin'—a nutrition concept. Since both target the same consumer base for the same health benefit, the conceptual overlap was a violation, regardless of the extra syllables.</p>
+                                            <p className="text-gray-600 mb-6">In the **Gluvita vs. Glucovita** case, the court held that both names referred to 'Glucose' and 'Vitamin'-a nutrition concept. Since both target the same consumer base for the same health benefit, the conceptual overlap was a violation, regardless of the extra syllables.</p>
                                             <div className="flex gap-4">
                                                 <span className="bg-[rgb(110,94,147)]/10 text-[rgb(110,94,147)] px-4 py-2 rounded-full text-xs font-bold uppercase">Vitamin Concept</span>
                                                 <span className="bg-[rgb(110,94,147)]/10 text-[rgb(110,94,147)] px-4 py-2 rounded-full text-xs font-bold uppercase">Average Intelligence Test</span>
@@ -478,7 +478,7 @@ export default function TrademarkViolationExamplesPage() {
                                             Some brands are so famous that their protection extends across all categories of goods and services. These are called 'Well-Known Trademarks.' If a mark is recognized as well-known, like **ROLEX**, using it even for something as unrelated as 'Rolex Cement' or 'Rolex Hair Saloon' is a violation.
                                         </p>
                                         <p className="mb-6">
-                                            This is because such use leads to 'Dilution'—it blurs the uniqueness of the famous mark and 'tarnishes' its premium reputation. Indian courts maintain a list of such well-known marks (e.g., TATA, AMUL, BISLERI) to ensure that their identity is not eroded by thousands of small-scale violations across unrelated industries.
+                                            This is because such use leads to 'Dilution'-it blurs the uniqueness of the famous mark and 'tarnishes' its premium reputation. Indian courts maintain a list of such well-known marks (e.g., TATA, AMUL, BISLERI) to ensure that their identity is not eroded by thousands of small-scale violations across unrelated industries.
                                         </p>
                                     </section>
 

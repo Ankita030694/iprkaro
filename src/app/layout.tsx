@@ -74,7 +74,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Critical preconnects — exactly 4, highest impact origins */}
+        {/* Critical preconnects - exactly 4, highest impact origins */}
         <link rel="preconnect" href="https://iprkaro-729d3.firebaseapp.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://www.google-analytics.com" />
@@ -85,14 +85,14 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://apis.google.com" />
         <link rel="dns-prefetch" href="https://mpc-prod-23-s6uit34pua-ue.a.run.app" />
 
-        {/* Preload critical self-hosted Aileron fonts — eliminates fonts.cdnfonts.com round-trip */}
+        {/* Preload critical self-hosted Aileron fonts - eliminates fonts.cdnfonts.com round-trip */}
         <link rel="preload" href="/fonts/aileron/Aileron-Regular.woff" as="font" type="font/woff" crossOrigin="anonymous" />
         <link rel="preload" href="/fonts/aileron/Aileron-Bold.woff" as="font" type="font/woff" crossOrigin="anonymous" />
 
-        {/* Preload LCP video — browser hints to start fetching early */}
+        {/* Preload LCP video - browser hints to start fetching early */}
         <link rel="preload" href="/hero/bg.mp4" as="video" type="video/mp4" />
 
-        {/* Font Awesome CSS — dynamically injected after page idle to avoid render-blocking */}
+        {/* Font Awesome CSS - dynamically injected after page idle to avoid render-blocking */}
         <Script id="fa-css-loader" strategy="lazyOnload">
           {`
             var l = document.createElement('link');

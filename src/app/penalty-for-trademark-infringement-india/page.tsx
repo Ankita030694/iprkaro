@@ -301,7 +301,7 @@ export default function PenaltyForTrademarkInfringementPage() {
                                             Civil Remedies: Restoring Balance and Compensating Losses
                                         </h2>
                                         <p className="mb-6">
-                                            Civil actions are often the first line of defense for brand owners. They are governed by Section 135 of the Act and are designed to provide immediate relief and long-term compensation. The primary goal of a civil suit is to stop the bleeding—to prevent the infringer from continuing their illegal activities while the court determines the final liability.
+                                            Civil actions are often the first line of defense for brand owners. They are governed by Section 135 of the Act and are designed to provide immediate relief and long-term compensation. The primary goal of a civil suit is to stop the bleeding-to prevent the infringer from continuing their illegal activities while the court determines the final liability.
                                         </p>
                                         <div className="grid md:grid-cols-2 gap-8 mb-10">
                                             <div className="bg-gray-50 p-8 rounded-2xl border border-transparent hover:border-[rgb(110,94,147)] hover:bg-white transition-all shadow-sm">

@@ -431,7 +431,7 @@ export default function TrademarkForCarpetsPage() {
                                                 <div className="bg-gray-50 p-8 rounded-3xl flex-1 hover:shadow-xl transition-all">
                                                     <h3 className="text-xl font-bold mb-4 text-gray-900">2. Strategic E-Filing & User Proof</h3>
                                                     <p className="text-base text-gray-600 mb-4">
-                                                        Once the brand is finalized, we draft the application with a focus on the 'User Date'—the date you first launched the brand in the market. In the flooring sector, prior use is a powerful legal right. We compile historical invoices, advertisements, and expo documents into a 'User Affidavit' to prove your history. This ensures you have priority over any later filers. You will receive your TM number within 24 hours, allowing immediate use of the ™ symbol.
+                                                        Once the brand is finalized, we draft the application with a focus on the 'User Date'-the date you first launched the brand in the market. In the flooring sector, prior use is a powerful legal right. We compile historical invoices, advertisements, and expo documents into a 'User Affidavit' to prove your history. This ensures you have priority over any later filers. You will receive your TM number within 24 hours, allowing immediate use of the ™ symbol.
                                                     </p>
                                                 </div>
                                             </div>

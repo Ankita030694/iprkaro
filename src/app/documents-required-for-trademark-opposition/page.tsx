@@ -331,7 +331,7 @@ export default function TrademarkOppositionDocumentsPage() {
                                             Proof of Prior Use: The Ultimate Weapon
                                         </h2>
                                         <p className="mb-6">
-                                            In Indian Trademark Law, "Prior Use" is king. If you can show that you used the name in 2010 while the other person started in 2015, you usually win—even if they have a registration. But this "Use" must be "Continuous" and "Commercial."
+                                            In Indian Trademark Law, "Prior Use" is king. If you can show that you used the name in 2010 while the other person started in 2015, you usually win-even if they have a registration. But this "Use" must be "Continuous" and "Commercial."
                                         </p>
                                         <div className="bg-white border rounded-[2.5rem] p-10 shadow-sm mb-12">
                                             <h4 className="font-black text-gray-900 mb-6 uppercase tracking-wider text-sm flex items-center">

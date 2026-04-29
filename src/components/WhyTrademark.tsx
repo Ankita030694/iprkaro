@@ -370,7 +370,7 @@ export default function WhyTrademark() {
     },
     {
       title: "AI-Powered Trademark Search",
-      description: "Comprehensive trademark search public database scan, trademark search by name and class, brand name availability search, and trademark availability check — all powered by AI."
+      description: "Comprehensive trademark search public database scan, trademark search by name and class, brand name availability search, and trademark availability check - all powered by AI."
     },
     {
       title: "Trademark Risk Reduction",
@@ -718,7 +718,7 @@ export default function WhyTrademark() {
                     Instant AI-Powered Trademark Search
                   </h3>
                   <p className="text-white font-nunito text-[10px] md:text-[10px] lg:text-[13px] font-medium leading-snug m-0 break-words">
-                    Enter your brand name for a comprehensive trademark search across the trademark search public database. Our AI performs a trademark search by name and class, runs a brand name availability search, and checks trademark availability instantly — no manual searching needed.
+                    Enter your brand name for a comprehensive trademark search across the trademark search public database. Our AI performs a trademark search by name and class, runs a brand name availability search, and checks trademark availability instantly - no manual searching needed.
                   </p>
                 </div>
                 {/* Search SVG - Bottom Left */}
@@ -870,7 +870,7 @@ export default function WhyTrademark() {
                     Instant AI-Powered Trademark Search
                   </h3>
                   <p className="text-white font-nunito text-[10px] font-medium leading-snug m-0 break-words">
-                    Enter your brand name for a comprehensive trademark search across the trademark search public database. Our AI runs a brand name availability search and checks trademark availability instantly — no manual searching needed.
+                    Enter your brand name for a comprehensive trademark search across the trademark search public database. Our AI runs a brand name availability search and checks trademark availability instantly - no manual searching needed.
                   </p>
                 </div>
                 {/* Search SVG - Bottom Left */}

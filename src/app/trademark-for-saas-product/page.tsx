@@ -384,7 +384,7 @@ export default function TrademarkForSaaSPage() {
                                         <div className="bg-gray-900 text-white p-10 rounded-3xl my-10 shadow-2xl">
                                             <h3 className="text-2xl font-bold mb-4 text-blue-400 uppercase">The Logic of Suggestibility</h3>
                                             <p className="opacity-80 leading-relaxed">
-                                                If you want a middle ground, choose a **Suggestive** name. These names hint at the benefit without describing the product directly. Think of 'Salesforce'—it suggests a powerful sales team without saying 'Software for Tracking CRM Leads.' We help founders pivot their branding slightly to ensure their chosen name is not just a marketing win, but a legal fortress.
+                                                If you want a middle ground, choose a **Suggestive** name. These names hint at the benefit without describing the product directly. Think of 'Salesforce'-it suggests a powerful sales team without saying 'Software for Tracking CRM Leads.' We help founders pivot their branding slightly to ensure their chosen name is not just a marketing win, but a legal fortress.
                                             </p>
                                         </div>
                                     </section>

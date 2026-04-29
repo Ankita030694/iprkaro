@@ -61,7 +61,7 @@ const tocSections = [
 const faqs = [
   {
     question: "Why do I need a comprehensive IP strategy instead of just filing a trademark?",
-    answer: "Filing a trademark is just the first step. A comprehensive strategy ensures your brand is not just registered but enforceable. Without monitoring, copycats can dilute your brand. Without risk assessment, you might be sued for using your own logo. Our ecosystem covers the entire lifecycle—search, file, monitor, and enforce—giving you 360-degree protection that a single filing cannot provide."
+    answer: "Filing a trademark is just the first step. A comprehensive strategy ensures your brand is not just registered but enforceable. Without monitoring, copycats can dilute your brand. Without risk assessment, you might be sued for using your own logo. Our ecosystem covers the entire lifecycle-search, file, monitor, and enforce-giving you 360-degree protection that a single filing cannot provide."
   },
   {
     question: "Can I pick and choose services, or do I have to buy a bundle?",
@@ -69,7 +69,7 @@ const faqs = [
   },
   {
     question: "How does your AI technology integrate with human legal expertise?",
-    answer: "We use a 'Human-in-the-Loop' AI model. Our AI algorithms handle the heavy lifting—scanning millions of database records, detecting potential infringements, and drafting routine forms. This data is then verified by senior attorneys who provide the strategic judgment. This hybrid approach gives you the speed of a machine with the reliability of a seasoned lawyer."
+    answer: "We use a 'Human-in-the-Loop' AI model. Our AI algorithms handle the heavy lifting-scanning millions of database records, detecting potential infringements, and drafting routine forms. This data is then verified by senior attorneys who provide the strategic judgment. This hybrid approach gives you the speed of a machine with the reliability of a seasoned lawyer."
   },
   {
     question: "What makes your services more affordable than traditional firms?",
@@ -81,7 +81,7 @@ const faqs = [
   },
   {
     question: "What is the difference between specific 'Risk Reduction' and general legal advice?",
-    answer: "General advice is reactive—fixing problems after they happen. 'Risk Reduction' is predictive. We analyze your brand architecture, supply chain contracts, and digital footprint to find vulnerabilities *before* a lawsuit hits. It is the difference between buying fire insurance and installing a sprinkler system."
+    answer: "General advice is reactive-fixing problems after they happen. 'Risk Reduction' is predictive. We analyze your brand architecture, supply chain contracts, and digital footprint to find vulnerabilities *before* a lawsuit hits. It is the difference between buying fire insurance and installing a sprinkler system."
   },
   {
     question: "How fast is 'Fast Trademark Registration' really?",
@@ -297,7 +297,7 @@ export default function FeaturesIndex() {
                   </div>
                   
                   <p className="text-lg leading-relaxed mb-6 text-gray-700">
-                     Most businesses operate with "Hidden IP Debt"—vulnerabilities they don't know exist. Maybe your logo was designed by a freelancer who never signed over the copyright. Maybe you are using a name that infringes on a "common law" user in another state. 
+                     Most businesses operate with "Hidden IP Debt"-vulnerabilities they don't know exist. Maybe your logo was designed by a freelancer who never signed over the copyright. Maybe you are using a name that infringes on a "common law" user in another state. 
                   </p>
                   <p className="text-lg leading-relaxed mb-6 text-gray-700">
                      Our **Risk Reduction** feature is a deep-dive audit. We analyze your contracts, your portfolio gaps, and your infringement exposure. We don't just tell you what's wrong; we provide a "Cleanup Roadmap" to fix titles, retrofit agreements, and buy out potential risks before they become million-dollar lawsuits.
@@ -360,7 +360,7 @@ export default function FeaturesIndex() {
                      Registration is not an enforcement shield. The Government does not police the market for you. If a competitor files a similar mark, you have only 4 months to oppose it. If you miss that window, they get registered.
                   </p>
                   <p className="text-lg leading-relaxed mb-6 text-gray-700">
-                     Our **24/7 Protection** (Watch Service) monitors the Trade Marks Journal weekly. It also scans e-commerce platforms and domain registries. When a threat appears, you get an instant alert. We enable you to act swiftly—filing oppositions or takedown notices often within 24 hours of the infringement appearing.
+                     Our **24/7 Protection** (Watch Service) monitors the Trade Marks Journal weekly. It also scans e-commerce platforms and domain registries. When a threat appears, you get an instant alert. We enable you to act swiftly-filing oppositions or takedown notices often within 24 hours of the infringement appearing.
                   </p>
                   <p className="text-lg leading-relaxed mb-8 text-gray-700">
                      This proactive stance maintains the "Distinctiveness" of your brand. If you allow too many similar marks to coexist, your brand becomes generic and loses legal power.
@@ -472,7 +472,7 @@ export default function FeaturesIndex() {
                 <section id="startup-enterprise" className="scroll-mt-32">
                    <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Tailored for Every Stage of Growth</h2>
                    <p className="text-lg leading-relaxed mb-6 text-gray-700">
-                      A bootstrapped founder needs speed and low cost. An established conglomerate needs risk mitigation and portfolio auditing. Our ecosystem is elastic—it stretches to fit your size.
+                      A bootstrapped founder needs speed and low cost. An established conglomerate needs risk mitigation and portfolio auditing. Our ecosystem is elastic-it stretches to fit your size.
                    </p>
                    
                    <div className="overflow-x-auto">

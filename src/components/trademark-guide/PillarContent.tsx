@@ -184,10 +184,10 @@ export default function PillarContent() {
             }}
           >
             <p className="text-white/95 font-nunito text-sm lg:text-base leading-relaxed mb-2">
-              Trademark registration is the cornerstone of brand protection in India's competitive marketplace. Whether you're a startup founder, established business owner, or individual entrepreneur, securing your trademark rights is crucial for long-term success. This comprehensive guide walks you through every aspect of trademark registration in India—from understanding what trademarks are to navigating the complete registration process in 2025.
+              Trademark registration is the cornerstone of brand protection in India's competitive marketplace. Whether you're a startup founder, established business owner, or individual entrepreneur, securing your trademark rights is crucial for long-term success. This comprehensive guide walks you through every aspect of trademark registration in India-from understanding what trademarks are to navigating the complete registration process in 2025.
             </p>
             <p className="text-white/95 font-nunito text-sm lg:text-base leading-relaxed">
-              With over <span className="font-bold text-[#FFB703]">5 lakh+ trademark applications</span> filed annually in India, the importance of proper trademark protection cannot be overstated. This guide provides you with expert insights on processes, fees, documentation, class selection, objection handling, and timelines—everything you need to successfully register your trademark.
+              With over <span className="font-bold text-[#FFB703]">5 lakh+ trademark applications</span> filed annually in India, the importance of proper trademark protection cannot be overstated. This guide provides you with expert insights on processes, fees, documentation, class selection, objection handling, and timelines-everything you need to successfully register your trademark.
             </p>
           </div>
         </div>

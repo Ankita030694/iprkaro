@@ -53,7 +53,7 @@ export const faqs = [
     },
     {
         question: "What should I do if my desired trademark is already taken?",
-        answer: "If the mark is identical in the same class, you must re-evaluate your brand name. You can try adding distinctive prefixes, choosing a different class if applicable, or modifying the spelling—though phonetic similarities might still pose a risk."
+        answer: "If the mark is identical in the same class, you must re-evaluate your brand name. You can try adding distinctive prefixes, choosing a different class if applicable, or modifying the spelling-though phonetic similarities might still pose a risk."
     },
     {
         question: "Does checking the MCA database replace a trademark search?",

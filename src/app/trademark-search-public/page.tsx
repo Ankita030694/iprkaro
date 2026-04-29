@@ -443,7 +443,7 @@ export default function TrademarkSearchPublicPage() {
                                 <section id="well-known-marks" className="mb-12 scroll-mt-24 md:scroll-mt-32">
                                     <h2 className="text-2xl md:text-3xl font-bold text-[#0C002B] mb-6">The Forbidden Zone: Well-Known and Prohibited Marks</h2>
                                     <p className="mb-6 leading-relaxed text-lg">
-                                        A common trap in <strong>trademark search public</strong> is thinking you are safe because a name is not registered in your specific class. But certain marks are "Well-Known"—like 'Tata', 'Reliance', 'Google', or 'Amul'. These brands enjoy protection across all 45 classes, even if they don't sell products in those classes.
+                                        A common trap in <strong>trademark search public</strong> is thinking you are safe because a name is not registered in your specific class. But certain marks are "Well-Known"-like 'Tata', 'Reliance', 'Google', or 'Amul'. These brands enjoy protection across all 45 classes, even if they don't sell products in those classes.
                                     </p>
                                     <p className="mb-4 leading-relaxed text-lg">
                                         Furthermore, Section Nine of the Act prohibits trademarks that are purely descriptive (e.g., searching 'Sweet' for sugar) or are part of national emblems. A professional search identifies these pitfalls before you pay the non-refundable government filing fee.

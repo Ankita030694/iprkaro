@@ -6,7 +6,7 @@ import { Metadata } from 'next';
 import TableOfContents from '@/components/TableOfContents';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// SEO: Tree-shaken imports — only actually-used icons are bundled
+// SEO: Tree-shaken imports - only actually-used icons are bundled
 import { faRocket } from '@fortawesome/free-solid-svg-icons/faRocket';
 import { faPhone } from '@fortawesome/free-solid-svg-icons/faPhone';
 import { faCircleCheck } from '@fortawesome/free-solid-svg-icons/faCircleCheck';
@@ -144,7 +144,7 @@ export default function ExpeditedTrademarkFilingPage() {
     })),
   };
 
-  // SEO: Updated Article schema — author as Person with worksFor, plus image property
+  // SEO: Updated Article schema - author as Person with worksFor, plus image property
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -198,7 +198,7 @@ export default function ExpeditedTrademarkFilingPage() {
       "@type": "Offer",
       "priceCurrency": "INR",
       "price": "20000",
-      // SEO: priceValidUntil must be a future date; was 2025-12-31 (expired) — now 2026-12-31
+      // SEO: priceValidUntil must be a future date; was 2025-12-31 (expired) - now 2026-12-31
       "priceValidUntil": "2026-12-31",
       "availability": "https://schema.org/InStock",
       "itemCondition": "https://schema.org/NewCondition",

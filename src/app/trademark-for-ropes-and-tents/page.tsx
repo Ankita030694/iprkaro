@@ -548,7 +548,7 @@ export default function TrademarkForRopesAndTentsPage() {
                                             As we look toward 2030, the ropes and tents industry is undergoing a radical transformation driven by sustainability. Brands that focus on biodegradable fibers, recycled ocean plastics, or energy efficient manufacturing are gaining massive traction. Protecting these 'Green Brands' requires a specialized IP strategy that highlights your environmental credentials without falling into the trap of 'greenwashing.'
                                         </p>
                                         <p className="mb-6">
-                                            We are also seeing the rise of 'Smart Fibers' — ropes and tents embedded with sensors that can detect tension, temperature, or structural failure. These innovations often sit at the intersection of Class 22 (the fiber) and Class 9 (the sensors). Our team helps you navigate these complex 'Hybrid Class' filings, ensuring that your high tech innovations are fully protected across all relevant domains.
+                                            We are also seeing the rise of 'Smart Fibers' - ropes and tents embedded with sensors that can detect tension, temperature, or structural failure. These innovations often sit at the intersection of Class 22 (the fiber) and Class 9 (the sensors). Our team helps you navigate these complex 'Hybrid Class' filings, ensuring that your high tech innovations are fully protected across all relevant domains.
                                         </p>
                                     </section>
 

@@ -565,7 +565,7 @@ export default function ToysSportsTrademarkPage() {
                 <section id="trademark-squatting" className="scroll-mt-24 md:scroll-mt-32">
                   <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6">Trademark Squatting: Protecting Against Bad-Faith Filings</h2>
                   <p className="text-base md:text-lg leading-relaxed mb-6 text-gray-700">
-                    In the sports and toy industries, trademark squatting—where an entity in India registers a globally known brand name before the original brand enters the market—is a persistent threat. A recent example is the case of *BPI Sports LLC v. Saurabh Gulati & Anr.*, where a US-based company had to fight for its identity against a fraudulently obtained Indian registration.
+                    In the sports and toy industries, trademark squatting-where an entity in India registers a globally known brand name before the original brand enters the market-is a persistent threat. A recent example is the case of *BPI Sports LLC v. Saurabh Gulati & Anr.*, where a US-based company had to fight for its identity against a fraudulently obtained Indian registration.
                   </p>
                   <p className="text-base md:text-lg leading-relaxed mb-6 text-gray-700">
                     We help brand owners combat squatting by leveraging the concept of 'trans-border reputation'. If your sports brand is well-known internationally, we can often cancel local bad-faith registrations even if you have no direct sales in India yet.
@@ -575,7 +575,7 @@ export default function ToysSportsTrademarkPage() {
                       <FontAwesomeIcon icon={faExclamationTriangle} className="w-12 h-12 mr-2" />
                       Warning for Global Brands
                     </h4>
-                    <p className="text-sm">"The most effective way to prevent squatting is to file for your Indian trademark as early as possible—ideally as soon as your brand is launched globally."</p>
+                    <p className="text-sm">"The most effective way to prevent squatting is to file for your Indian trademark as early as possible-ideally as soon as your brand is launched globally."</p>
                   </div>
                 </section>
 
@@ -611,7 +611,7 @@ export default function ToysSportsTrademarkPage() {
                 <section id="design-vs-trademark" className="scroll-mt-24 md:scroll-mt-32">
                   <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6">Design Protection vs. Trademark: A Critical Distinction for Toys</h2>
                   <p className="text-base md:text-lg leading-relaxed mb-6 text-gray-700">
-                    In the toy industry, the visual appearance—the shape, configuration, and pattern of a toy—is often its most attractive feature. While a trademark protects the brand name and logo, the *Design Act 2000* protects the physical aesthetics of the product itself.
+                    In the toy industry, the visual appearance-the shape, configuration, and pattern of a toy-is often its most attractive feature. While a trademark protects the brand name and logo, the *Design Act 2000* protects the physical aesthetics of the product itself.
                   </p>
                   <p className="text-base md:text-lg leading-relaxed mb-6 text-gray-700">
                     For example, if you create a unique and original shape for a remote-controlled car, you should seek Design Registration to prevent others from manufacturing cars with an identical look. However, the name you give that car (e.g., 'TurboRover') remains a trademark. A comprehensive IP strategy involves both: Design registration for 15 years of aesthetic exclusivity and Trademark registration for indefinite brand protection.

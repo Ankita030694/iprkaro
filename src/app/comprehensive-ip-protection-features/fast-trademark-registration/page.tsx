@@ -99,7 +99,7 @@ const faqs = [
   },
   {
     question: "Does the 'Fast Track' guarantee a grant?",
-    answer: "No, 'Fast Track' guarantees a *fast decision*, not necessarily a positive one. The Registrar will still apply the same strict rules regarding distinctiveness and similarity. That is why our pre-filing clearance search is even more critical for fast-track cases—we ensure your mark is strong enough to pass the rapid examination."
+    answer: "No, 'Fast Track' guarantees a *fast decision*, not necessarily a positive one. The Registrar will still apply the same strict rules regarding distinctiveness and similarity. That is why our pre-filing clearance search is even more critical for fast-track cases-we ensure your mark is strong enough to pass the rapid examination."
   },
   {
     question: "How do I prove I am a 'Small Entity' for the fee rebate?",

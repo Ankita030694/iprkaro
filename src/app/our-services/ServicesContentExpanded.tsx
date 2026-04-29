@@ -186,7 +186,7 @@ export default function ServicesContentExpanded() {
                          <div className="space-y-8 text-center max-w-4xl mx-auto">
                             <h3 className="text-3xl font-bold text-[#0C002B]">For the Inventors & <span className="text-[#FFB703]">Deep-Tech Pioneers.</span></h3>
                             <p className="text-lg text-[#6B7280]">
-                                A patent is a monopoly granted by the state. It is the strongest form of IP protection but also the most complex. The criteria—Novelty, Inventive Step, and Industrial Application—are rigorous.
+                                A patent is a monopoly granted by the state. It is the strongest form of IP protection but also the most complex. The criteria-Novelty, Inventive Step, and Industrial Application-are rigorous.
                             </p>
                          </div>
                          
@@ -231,7 +231,7 @@ export default function ServicesContentExpanded() {
                             <FontAwesomeIcon icon={faChartLine} className="text-5xl text-[#009B7C] mb-6" />
                             <h3 className="text-3xl font-bold text-[#0C002B] mb-6">Industrial Design Registration</h3>
                             <p className="text-lg text-[#6B7280] leading-relaxed mb-8">
-                                Sometimes, the innovation isn't in how it <em>works</em>, but in how it <em>looks</em>. The shape of a Coke bottle, the contour of an iPhone, the pattern on a Sabyasachi saree—these are Industrial Designs.
+                                Sometimes, the innovation isn't in how it <em>works</em>, but in how it <em>looks</em>. The shape of a Coke bottle, the contour of an iPhone, the pattern on a Sabyasachi saree-these are Industrial Designs.
                             </p>
                             <div className="grid md:grid-cols-2 gap-8 text-left">
                                 <div>

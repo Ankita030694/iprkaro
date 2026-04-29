@@ -82,7 +82,7 @@ export default function HeroSection2() {
               >
                 60 Seconds
               </span>
-              {' '}— Powered by AI
+              {' '}- Powered by AI
             </h1>
 
             {/* Subheadline */}
@@ -90,7 +90,7 @@ export default function HeroSection2() {
               className={`text-[#C4BFFF] font-nunito text-[13px] font-normal leading-[18px] max-w-sm transition-all duration-700 delay-200 ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
             >
               India's first AI-powered platform that predicts trademark approval chances, 
-              finds the right class, and flags legal risks — all before you file.
+              finds the right class, and flags legal risks - all before you file.
             </p>
 
             {/* Search Bar */}
@@ -169,7 +169,7 @@ export default function HeroSection2() {
                 60 Seconds
               </span>
               <br />
-              — Powered by AI
+              - Powered by AI
             </h1>
 
             {/* Subheadline */}
@@ -177,7 +177,7 @@ export default function HeroSection2() {
               className={`text-[#C4BFFF] font-nunito text-[16px] font-normal leading-[24px] max-w-xl transition-all duration-700 delay-200 ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
             >
               India's first AI-powered platform that predicts trademark approval chances, 
-              finds the right class, and flags legal risks — all before you file.
+              finds the right class, and flags legal risks - all before you file.
             </p>
 
             {/* Search Bar */}

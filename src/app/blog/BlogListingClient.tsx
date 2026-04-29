@@ -25,7 +25,7 @@ const resourceFaqs = [
   },
   {
     question: "How does the AI trademark search work at IPR Karo?",
-    answer: "Our AI-powered trademark search scans the trademark search public database instantly, performing a comprehensive trademark search by name, trademark search by class, and phonetic similarity analysis. It checks trademark availability, runs a brand name availability search, and generates a detailed report with a registerability score — helping you make informed decisions before filing."
+    answer: "Our AI-powered trademark search scans the trademark search public database instantly, performing a comprehensive trademark search by name, trademark search by class, and phonetic similarity analysis. It checks trademark availability, runs a brand name availability search, and generates a detailed report with a registerability score - helping you make informed decisions before filing."
   },
   {
     question: "How long does trademark registration take in India?",

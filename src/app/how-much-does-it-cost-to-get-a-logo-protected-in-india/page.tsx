@@ -336,7 +336,7 @@ export default function LogoProtectionCostPage() {
                                 <section id="professional-fees" className="mb-12 scroll-mt-24 md:scroll-mt-32">
                                     <h2 className="text-2xl md:text-3xl font-bold text-[#0C002B] mb-6">The Professional Variable: Attorney and Agent Fees</h2>
                                     <p className="mb-4 leading-relaxed text-lg text-justify">
-                                        While the portal (ipindia.gov.in) allows for direct filing, most successful registrations in Bharat are handled by registered trademark attorneys or agents. The legal nuance of trademark law—especially regarding Section 9 (Absolute Grounds for Refusal) and Section 11 (Relative Grounds)—requires professional drafting.
+                                        While the portal (ipindia.gov.in) allows for direct filing, most successful registrations in Bharat are handled by registered trademark attorneys or agents. The legal nuance of trademark law-especially regarding Section 9 (Absolute Grounds for Refusal) and Section 11 (Relative Grounds)-requires professional drafting.
                                     </p>
                                     <div className="grid md:grid-cols-3 gap-6 my-10">
                                         <div className="p-8 bg-gray-50 rounded-[2rem] border border-gray-100 flex flex-col h-full text-center">
@@ -360,7 +360,7 @@ export default function LogoProtectionCostPage() {
                                         </div>
                                     </div>
                                     <p className="mb-4 leading-relaxed text-lg text-justify">
-                                        Professional fees are an insurance against rejection. A wrongly filed trademark costs not only the filing fee but also the time—often 18 to 24 months—it takes for the registry to find the error.
+                                        Professional fees are an insurance against rejection. A wrongly filed trademark costs not only the filing fee but also the time-often 18 to 24 months-it takes for the registry to find the error.
                                     </p>
                                 </section>
 

@@ -423,7 +423,7 @@ export default function TrademarkForFabricsPage() {
                                                 <div className="bg-gray-50 p-8 rounded-3xl flex-1 hover:shadow-xl transition-all">
                                                     <h3 className="text-xl font-bold mb-4 text-gray-900">2. Drafting & Strategic E-Filing</h3>
                                                     <p className="text-base text-gray-600 mb-4">
-                                                        The way your application is drafted determines its legal strength over the next 10 years. We focus on the 'User Date' — the date you first started using the brand. If you have been in business since 1995 but file as a 'Proposed to be Used' mark, you lose your prior usage rights. We compile 'User Affidavits' and evidence like sales invoices and ads to prove your history. Once filed, you get your application number and the legal right to use the ™ symbol immediately.
+                                                        The way your application is drafted determines its legal strength over the next 10 years. We focus on the 'User Date' - the date you first started using the brand. If you have been in business since 1995 but file as a 'Proposed to be Used' mark, you lose your prior usage rights. We compile 'User Affidavits' and evidence like sales invoices and ads to prove your history. Once filed, you get your application number and the legal right to use the ™ symbol immediately.
                                                     </p>
                                                 </div>
                                             </div>
@@ -507,7 +507,7 @@ export default function TrademarkForFabricsPage() {
                                                 <h4 className="text-red-600 font-bold uppercase text-xs tracking-widest mb-4">Obstacle A</h4>
                                                 <h3 className="text-xl font-bold mb-4 text-gray-900">Section 9: Descriptive Objections</h3>
                                                 <p className="text-sm text-gray-600 leading-relaxed">
-                                                    This happens when the name describes the product (e.g., 'SilkySmooth Linen'). We counter this by analyzing the 'Surrounding Context' — arguing that the name is 'Suggestive' rather than purely 'Descriptive' or by submitting proof of extensive prior use to establish distinctiveness.
+                                                    This happens when the name describes the product (e.g., 'SilkySmooth Linen'). We counter this by analyzing the 'Surrounding Context' - arguing that the name is 'Suggestive' rather than purely 'Descriptive' or by submitting proof of extensive prior use to establish distinctiveness.
                                                 </p>
                                             </div>
                                             <div className="bg-white border-2 border-gray-100 p-8 rounded-2xl hover:border-orange-100 transition-colors shadow-sm">

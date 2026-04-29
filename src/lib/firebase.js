@@ -21,7 +21,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-// Lazy-load Analytics — defers ~142 KiB gtag download until after page load
+// Lazy-load Analytics - defers ~142 KiB gtag download until after page load
 let analytics;
 if (typeof window !== 'undefined') {
   // Wait for page to finish loading before initializing analytics

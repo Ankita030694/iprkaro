@@ -396,7 +396,7 @@ export default function TrademarkForLaceAndEmbroideryPage() {
                                             </div>
                                         </div>
                                         <p className="mb-6">
-                                            In the modern market, brands are also moving toward 'Smart Trims' — buttons or patches with embedded NFC chips for data or temperature tracking. While the physical item is Class 26, the electronic element might require a filing in Class 9. IPR Karo's multidisciplinary team ensures your high tech textile accessories are protected across all relevant digital and physical classes.
+                                            In the modern market, brands are also moving toward 'Smart Trims' - buttons or patches with embedded NFC chips for data or temperature tracking. While the physical item is Class 26, the electronic element might require a filing in Class 9. IPR Karo's multidisciplinary team ensures your high tech textile accessories are protected across all relevant digital and physical classes.
                                         </p>
                                     </section>
 

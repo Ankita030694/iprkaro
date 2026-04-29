@@ -210,7 +210,7 @@ export default function ExpertTrademarkGuidance() {
                     Your intellectual property is the lifeblood of your business. In India's fiercely competitive market, a unique brand name, a groundbreaking invention, or original creative content is what sets you apart. But owning an idea and legally protecting it are two very different things. Without expert legal backing, your assets are vulnerable to theft, imitation, and misuse.
                   </p>
                   <p className="text-lg leading-relaxed mb-6 text-gray-700">
-                     We see it every day: businesses trying to save money by filing "cheap" trademark applications, only to face rejection months later because of a simple classification error or a missed conflict. The cost of fixing these mistakes—or worse, rebranding entirely—is far higher than getting it right the first time.
+                     We see it every day: businesses trying to save money by filing "cheap" trademark applications, only to face rejection months later because of a simple classification error or a missed conflict. The cost of fixing these mistakes-or worse, rebranding entirely-is far higher than getting it right the first time.
                   </p>
                   <p className="text-lg leading-relaxed mb-6 text-gray-700">
                      IPR Karo provides the specialized legal armor you need. We move beyond basic filing. We scrutinize your business model to build a fortress around your brand. Whether it is navigating the intricacies of the Trade Marks Registry, drafting defensible patent claims, or securing your copyright against digital piracy, our senior attorneys are your strategic partners in growth.

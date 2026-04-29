@@ -26,7 +26,7 @@ const services = [
       },
       {
         heading: 'End-to-End Patent Filing',
-        text: 'From drafting to submission, our experts manage the entire process — helping you secure exclusive rights with confidence.',
+        text: 'From drafting to submission, our experts manage the entire process - helping you secure exclusive rights with confidence.',
       }
     ],
     buttonText: 'File My Patent',

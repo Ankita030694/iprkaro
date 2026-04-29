@@ -381,7 +381,7 @@ export default function TrademarkRegistrationCheckPage() {
                                         A "Zombie Trademark" is a registration that has expired in the registry (status: Removed) but the owner continues to use it in the market, or the registry has not yet officially purged it from the e-register.
                                     </p>
                                     <p className="mb-4 leading-relaxed text-lg text-gray-800">
-                                        During a <strong>trademark registration check</strong>, we look for marks that are nearing their 10-year renewal deadline. If a competitor misses their renewal, their mark becomes a "Zombie". However, caution is required—if the owner files for restoration within 1 year, the mark can "come back to life", potentially killing your new application.
+                                        During a <strong>trademark registration check</strong>, we look for marks that are nearing their 10-year renewal deadline. If a competitor misses their renewal, their mark becomes a "Zombie". However, caution is required-if the owner files for restoration within 1 year, the mark can "come back to life", potentially killing your new application.
                                     </p>
                                 </section>
 

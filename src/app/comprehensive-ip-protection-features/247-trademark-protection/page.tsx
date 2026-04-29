@@ -56,7 +56,7 @@ const tocSections = [
 const faqs = [
   {
     question: "Why is 24/7 trademark monitoring essential for my business?",
-    answer: "Infringement never sleeps. 24/7 monitoring ensures that any unauthorized use of your brand—whether in a new trademark application, on social media, or e-commerce platforms—is detected immediately. This allows for prompt legal action to prevent brand dilution before it causes irreversible damage."
+    answer: "Infringement never sleeps. 24/7 monitoring ensures that any unauthorized use of your brand-whether in a new trademark application, on social media, or e-commerce platforms-is detected immediately. This allows for prompt legal action to prevent brand dilution before it causes irreversible damage."
   },
   {
     question: "What does the trademark registration process in India involve?",
@@ -414,7 +414,7 @@ export default function TwentyFourSevenTrademarkProtection() {
                            <h3 className="text-xl font-bold text-gray-900">Step 2: Civil Litigation (Injunctions)</h3>
                         </div>
                         <p className="text-gray-700 leading-relaxed">
-                           If the infringer is stubborn or the scale of infringement is large, we move to civil court. Our primary objective is to obtain an "ex-parte ad-interim injunction"—a court order stopping them immediately, even before the trial concludes. We also sue for damages (monetary compensation for your loss) and rendition of accounts (claiming the profits they made illegitimately).
+                           If the infringer is stubborn or the scale of infringement is large, we move to civil court. Our primary objective is to obtain an "ex-parte ad-interim injunction"-a court order stopping them immediately, even before the trial concludes. We also sue for damages (monetary compensation for your loss) and rendition of accounts (claiming the profits they made illegitimately).
                         </p>
                      </div>
 
@@ -489,7 +489,7 @@ export default function TwentyFourSevenTrademarkProtection() {
                     A trademark in India is valid for 10 years from the date of application. Unlike a company incorporation which is perpetual, a trademark must be actively renewed. It is surprisingly common for businesses to lose their valuable brands simply because they forgot the renewal deadline. The Registry can remove your mark from the register if renewal fees are not paid.
                   </p>
                   <p className="text-lg leading-relaxed mb-6 text-gray-700">
-                    Our system tracks these critical dates for you. We send reminders well in advance—starting 6 months before expiration. If, for some reason, a deadline is missed, there is still hope. We can file for "Restoration" of the trademark (Form TM-R) within a specific grace period (usually up to one year after expiration) by paying a penalty. We handle this delicate process to resurrect your rights and ensure there is no break in your protection history.
+                    Our system tracks these critical dates for you. We send reminders well in advance-starting 6 months before expiration. If, for some reason, a deadline is missed, there is still hope. We can file for "Restoration" of the trademark (Form TM-R) within a specific grace period (usually up to one year after expiration) by paying a penalty. We handle this delicate process to resurrect your rights and ensure there is no break in your protection history.
                   </p>
                 </section>
 

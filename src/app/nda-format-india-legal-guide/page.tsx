@@ -296,7 +296,7 @@ export default function NDAGuidePage() {
                                                 <FontAwesomeIcon icon={faGavel} className="mr-3 text-[#160049]" /> Meeting of Minds
                                             </h4>
                                             <p className="text-gray-700 leading-relaxed text-lg">
-                                                For an NDA to be valid, there must be "Consensus ad idem"—both parties must understand exactly what the confidential information is. Vague definitions lead to unenforceable contracts.
+                                                For an NDA to be valid, there must be "Consensus ad idem"-both parties must understand exactly what the confidential information is. Vague definitions lead to unenforceable contracts.
                                             </p>
                                         </div>
                                     </div>

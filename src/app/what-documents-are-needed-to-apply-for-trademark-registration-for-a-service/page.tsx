@@ -280,17 +280,17 @@ export default function TrademarkDocumentsPage() {
                                             <h4 className="font-bold text-[#0C002B] text-xl mb-3 flex items-center gap-3">
                                                 <FontAwesomeIcon icon={faShieldAlt} className="text-[#6E5E93]" /> Legal Standing
                                             </h4>
-                                            <p className="text-gray-600 text-sm">Every document must confirm the legal personality of the applicant—whether a natural person or a corporate entity.</p>
+                                            <p className="text-gray-600 text-sm">Every document must confirm the legal personality of the applicant-whether a natural person or a corporate entity.</p>
                                         </div>
                                         <div className="p-6 bg-gray-50 rounded-2xl border border-gray-200">
                                             <h4 className="font-bold text-[#0C002B] text-xl mb-3 flex items-center gap-3">
                                                 <FontAwesomeIcon icon={faSignature} className="text-[#6E5E93]" /> Authorization Path
                                             </h4>
-                                            <p className="text-gray-600 text-sm">The registry requires a clear paper trail of authorization—from the owner to the signatory to the attorney.</p>
+                                            <p className="text-gray-600 text-sm">The registry requires a clear paper trail of authorization-from the owner to the signatory to the attorney.</p>
                                         </div>
                                     </div>
                                     <p className="text-lg leading-relaxed text-justify text-justify mb-4">
-                                        Understanding these nuances—such as the mandatory use of the latest Form TM-A and the specific format for User Affidavits—is what separates a successful applicant from one who receives endless office actions during the formalities check.
+                                        Understanding these nuances-such as the mandatory use of the latest Form TM-A and the specific format for User Affidavits-is what separates a successful applicant from one who receives endless office actions during the formalities check.
                                     </p>
                                 </section>
 

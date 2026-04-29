@@ -65,10 +65,10 @@ export default function AboutContentExpanded() {
                 </h2>
                 <div className="space-y-4 text-gray-600 text-lg leading-relaxed">
                     <p>
-                        In the rapidly evolving landscape of Indian commerce, a quiet revolution has been brewing—one that is not just about economic growth, but about the ownership of ideas. The story of IPR Karo is inextricably linked to this new chapter in India’s business history.
+                        In the rapidly evolving landscape of Indian commerce, a quiet revolution has been brewing-one that is not just about economic growth, but about the ownership of ideas. The story of IPR Karo is inextricably linked to this new chapter in India’s business history.
                     </p>
                     <p>
-                        The founders of IPR Karo recognized a gaping void in the legal ecosystem. Startups, small business owners, and solo creators—the very backbone of the "Make in India" initiative—were consistently sidelined by the traditional IP registration process. The conventional route was marred by opacity, exorbitant legal fees, and terrifying jargon.
+                        The founders of IPR Karo recognized a gaping void in the legal ecosystem. Startups, small business owners, and solo creators-the very backbone of the "Make in India" initiative-were consistently sidelined by the traditional IP registration process. The conventional route was marred by opacity, exorbitant legal fees, and terrifying jargon.
                     </p>
                     <p>
                         We set out to build a platform that would dismantle the barriers of cost and complexity, replacing them with transparency, speed, and accessibility.
@@ -107,7 +107,7 @@ export default function AboutContentExpanded() {
                     {
                         icon: faRobot,
                         title: "Precision through Tech",
-                        desc: "Human error is the nemesis of efficient legal work. We integrated advanced AI to handle the drudgery—searching, classification, tracking—so our experts can focus on strategy."
+                        desc: "Human error is the nemesis of efficient legal work. We integrated advanced AI to handle the drudgery-searching, classification, tracking-so our experts can focus on strategy."
                     },
                     {
                         icon: faHandHoldingHeart,
@@ -154,7 +154,7 @@ export default function AboutContentExpanded() {
                  <GlassCard className="md:col-span-7 flex flex-col justify-center bg-slate-50 border-gray-100">
                      <h3 className="text-xl font-bold text-[#0C002B] mb-3">Commercial Liberation</h3>
                      <p className="text-gray-600 leading-relaxed">
-                        We see IPR not as a legal shackle, but as a commercial liberator—freeing businesses to expand, license, and franchise without fear. Without IP protection, you are building a castle on sand. With it, you are building a fortress.
+                        We see IPR not as a legal shackle, but as a commercial liberator-freeing businesses to expand, license, and franchise without fear. Without IP protection, you are building a castle on sand. With it, you are building a fortress.
                      </p>
                 </GlassCard>
             </div>

@@ -104,7 +104,7 @@ const faqs = [
   },
   {
     question: "Can I trademark a specific green color for my financial app?",
-    answer: "Yes, Color marks are registrable if you can prove 'acquired distinctiveness'—meaning customers associate that specific shade exclusively with your brand."
+    answer: "Yes, Color marks are registrable if you can prove 'acquired distinctiveness'-meaning customers associate that specific shade exclusively with your brand."
   },
   {
     question: "What is the Madrid Protocol for financial firms?",
@@ -285,7 +285,7 @@ export default function TrademarkFinancialServicesPage() {
                       Trust as a Tangible Asset: The Finance Trademark Mandate
                     </h2>
                     <p className="mb-6">
-                      In the financial services ecosystem—whether it's a legacy commercial bank, a hyper-growth fintech unicorn, or a niche wealth advisor—the primary commodity traded is <strong>Trust</strong>. Your brand name is the external manifestation of that trust. If your brand is not legally secured, your credibility is on a permanent discount.
+                      In the financial services ecosystem-whether it's a legacy commercial bank, a hyper-growth fintech unicorn, or a niche wealth advisor-the primary commodity traded is <strong>Trust</strong>. Your brand name is the external manifestation of that trust. If your brand is not legally secured, your credibility is on a permanent discount.
                     </p>
                     <p className="mb-6">
                       A Trademark in the financial sector is not merely a logo; it is a defensive fortress. It signals to regulatory bodies (RBI, SEBI) and your customers that you are a legitimate, stable, and legally accountable entity. In an era of rampant phishing and digital fraud, a registered trademark is your first line of defense against copycat scammers who exploit your reputation to defraud unsuspecting investors.
@@ -327,7 +327,7 @@ export default function TrademarkFinancialServicesPage() {
                       <div className="border border-gray-100 p-8 rounded-3xl bg-gray-50">
                         <h3 className="font-bold text-xl mb-4 text-gray-900 underline decoration-indigo-400">Retail vs Private Banking</h3>
                         <p className="text-sm leading-relaxed text-gray-600">
-                          Retail banking trademarks must focus on <strong>Accessibility and Broad Recognition</strong>. Conversely, Private Banking and Wealth Management brands often utilize "Heritage" elements—serif fonts, family names, and heraldic logos—to convey exclusivity and longevity to High-Net-Worth Individuals (HNIs).
+                          Retail banking trademarks must focus on <strong>Accessibility and Broad Recognition</strong>. Conversely, Private Banking and Wealth Management brands often utilize "Heritage" elements-serif fonts, family names, and heraldic logos-to convey exclusivity and longevity to High-Net-Worth Individuals (HNIs).
                         </p>
                       </div>
                       <div className="border border-gray-100 p-8 rounded-3xl bg-gray-50">
@@ -385,7 +385,7 @@ export default function TrademarkFinancialServicesPage() {
                       </div>
                       <div className="p-8 border-2 border-dashed border-indigo-200 rounded-3xl bg-indigo-50/30">
                         <h3 className="font-bold text-xl mb-3 flex items-center"><FontAwesomeIcon icon={faGlobe} className="w-8 h-8 mr-3 text-indigo-600" /> Metaverse Presence</h3>
-                        <p className="text-sm italic text-gray-600">Virtual banking in environments like Decentraland requires trademarks covering "Financial consultancy in virtual environments"—a new specification for the digital age.</p>
+                        <p className="text-sm italic text-gray-600">Virtual banking in environments like Decentraland requires trademarks covering "Financial consultancy in virtual environments"-a new specification for the digital age.</p>
                       </div>
                     </div>
                   </section>
@@ -400,7 +400,7 @@ export default function TrademarkFinancialServicesPage() {
                   <section id="ai-finance-trademarks" className="scroll-mt-32 pt-12">
                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-gray-900 mb-6">AI-Driven Algorithms & Trading Bots</h2>
                     <p className="mb-6">
-                      When the algorithm is the product, the brand is the only thing the user sees. For AI trading platforms, we focus on trademarking the Bot Names and 'System Sounds'—creating a distinct sensory identifier for your automated financial products.
+                      When the algorithm is the product, the brand is the only thing the user sees. For AI trading platforms, we focus on trademarking the Bot Names and 'System Sounds'-creating a distinct sensory identifier for your automated financial products.
                     </p>
                   </section>
 
@@ -421,7 +421,7 @@ export default function TrademarkFinancialServicesPage() {
                         </div>
                         <div className="p-8 bg-gray-50 rounded-3xl flex-1">
                           <h3 className="text-xl font-bold mb-4">Conflict Clearance</h3>
-                          <p className="text-sm">We don't just check for direct matches. We analyze 'Phonetic Similarity' and 'Trade Channel Overlap'—critical in finance where similar words like 'Wealth' and 'Wealthy' are everywhere.</p>
+                          <p className="text-sm">We don't just check for direct matches. We analyze 'Phonetic Similarity' and 'Trade Channel Overlap'-critical in finance where similar words like 'Wealth' and 'Wealthy' are everywhere.</p>
                         </div>
                       </div>
                       <div className="flex gap-8 items-start relative">
@@ -462,7 +462,7 @@ export default function TrademarkFinancialServicesPage() {
                   <section id="legal-hurdles-objections" className="scroll-mt-32">
                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-gray-900 mb-6">Overcoming Legal Interference</h2>
                     <p className="mb-6">
-                      Section 9 objections in finance are common due to the usage of descriptive terms like "Secure", "Plus", "Growth". Our strategy involves proving 'Acquired Distinctiveness'—submitting Google Analytics data, advertisement expenditure bills, and media clips that prove your brand is the primary source in the public's mind.
+                      Section 9 objections in finance are common due to the usage of descriptive terms like "Secure", "Plus", "Growth". Our strategy involves proving 'Acquired Distinctiveness'-submitting Google Analytics data, advertisement expenditure bills, and media clips that prove your brand is the primary source in the public's mind.
                     </p>
                   </section>
 

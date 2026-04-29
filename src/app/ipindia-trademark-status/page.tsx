@@ -344,7 +344,7 @@ export default function TrademarkStatusPage() {
                                         To truly appreciate the transparency of the current system, one must look at where it began. Before the 1999 Act, the trademark regime in Bharat was a black box. Statuses like "Vienna Codification" or "ABA" were purely internal notations that the public rarely saw. Business owners had to rely on physical letters (sent via post) to know the progress of their applications. A lost letter often meant an "Abandoned" status that the owner wouldn't discover for years.
                                     </p>
                                     <p className="mb-4 leading-relaxed text-lg">
-                                        The digitalization drive of 2013 changed everything. The Registry moved to an e-filing-first model, and the public status tracker became a legally recognized communication channel. The introduction of the "Alert" section on the portal was a revolutionary step, providing a snapshot of pending actions (like filing a TM-48 or a Reply). Understanding this history helps us realize that the <strong>ipindia trademark status</strong> screen is not just a technical tool—it is the result of decades of reform aimed at protecting the Indian entrepreneur's right to their identity.
+                                        The digitalization drive of 2013 changed everything. The Registry moved to an e-filing-first model, and the public status tracker became a legally recognized communication channel. The introduction of the "Alert" section on the portal was a revolutionary step, providing a snapshot of pending actions (like filing a TM-48 or a Reply). Understanding this history helps us realize that the <strong>ipindia trademark status</strong> screen is not just a technical tool-it is the result of decades of reform aimed at protecting the Indian entrepreneur's right to their identity.
                                     </p>
                                 </section>
 
@@ -488,7 +488,7 @@ export default function TrademarkStatusPage() {
                                 <section id="litigation-strategy" className="mb-12 scroll-mt-24 md:scroll-mt-32">
                                     <h2 className="text-2xl md:text-3xl font-bold text-[#0C002B] mb-6">Litigation Strategy: When to Appeal a Refusal</h2>
                                     <p className="mb-4 leading-relaxed text-lg">
-                                        A "Refused" status on the <strong>ipindia trademark status</strong> portal is often seen as a dead end, but in reality, it is just a fork in the road. You have two primary legal remedies: a "Review Petition" (filed before the same examiner) or an "Appeal" (filed before the High Court, following the abolition of the IPAB). A Review is best suited for scenarios where there is a clear "error apparent on the face of the record"—for instance, if the examiner ignored a vital piece of usage evidence you provided.
+                                        A "Refused" status on the <strong>ipindia trademark status</strong> portal is often seen as a dead end, but in reality, it is just a fork in the road. You have two primary legal remedies: a "Review Petition" (filed before the same examiner) or an "Appeal" (filed before the High Court, following the abolition of the IPAB). A Review is best suited for scenarios where there is a clear "error apparent on the face of the record"-for instance, if the examiner ignored a vital piece of usage evidence you provided.
                                     </p>
                                     <p className="mb-4 leading-relaxed text-lg">
                                         An Appeal is a more robust strategy. Since the jurisdiction has moved to the High Courts in 2021, the quality of jurisprudence has increased. Judges are often more receptive to nuanced arguments about "Acquired Distinctiveness" than busy Registry examiners. At IPR Karo, we provide a forensic analysis of every refusal to determine if the Registry's decision stands the test of law. If the refusal is arbitrary or inconsistent with previous precedents, we don't hesitate to recommend an appeal. Protecting your brand status often requires this extra step of legal persistence.
@@ -588,7 +588,7 @@ export default function TrademarkStatusPage() {
                                             role: "Founder, Soulful Organic",
                                             rating: 5,
                                             date: "2024-01-22",
-                                            text: "I was checking my trademark status daily until I found IPR Karo. Their WhatsApp alerts are amazing—they notify you the moment the registry updates your file.",
+                                            text: "I was checking my trademark status daily until I found IPR Karo. Their WhatsApp alerts are amazing-they notify you the moment the registry updates your file.",
                                             avatar: "MI"
                                         },
                                         {

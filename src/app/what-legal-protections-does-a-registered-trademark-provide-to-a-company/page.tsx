@@ -376,7 +376,7 @@ export default function TrademarkLegalProtectionsPage() {
                                 <section id="brand-valuation" className="mb-12 scroll-mt-24 md:scroll-mt-32">
                                     <h2 className="text-2xl md:text-3xl font-bold text-[#0C002B] mb-6">Brand Valuation & Financial Security</h2>
                                     <p className="mb-4 leading-relaxed text-lg text-justify">
-                                        In 2026, a registered trademark is a 'Chose in Action' — an asset that drives your company's net worth.
+                                        In 2026, a registered trademark is a 'Chose in Action' - an asset that drives your company's net worth.
                                     </p>
                                     <div className="space-y-4 my-10">
                                         {[

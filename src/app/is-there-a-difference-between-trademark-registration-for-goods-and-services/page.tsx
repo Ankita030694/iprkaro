@@ -217,7 +217,7 @@ export default function GoodsVsServicesTrademarkPage() {
                             Trademark Difference: <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'rgb(110, 94, 147)' }}>Goods vs Services</span>
                         </h1>
                         <p className="text-sm md:text-xl mb-6 md:mb-8 max-w-4xl mx-auto text-gray-300 px-2 leading-relaxed text-justify">
-                            From tangible products to intangible experiences—master the forensic divide between Class 1-34 and 35-45. Learn how to secure your brand across the entire commercial spectrum in 2026.
+                            From tangible products to intangible experiences-master the forensic divide between Class 1-34 and 35-45. Learn how to secure your brand across the entire commercial spectrum in 2026.
                         </p>
                         <Link href="/contact-us">
                             <button className="bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-2.5 px-6 md:py-3 md:px-8 rounded-full transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(110,94,147,0.3)] text-base md:text-lg">

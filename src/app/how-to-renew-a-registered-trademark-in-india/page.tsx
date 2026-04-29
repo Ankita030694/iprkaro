@@ -249,7 +249,7 @@ export default function TrademarkRenewalPage() {
                                 <section id="introduction" className="mb-12 scroll-mt-24 md:scroll-mt-32">
                                     <h2 className="text-2xl md:text-4xl font-bold text-[#0C002B] mb-6">The Perpetual Legacy of a Trademark</h2>
                                     <p className="mb-4 leading-relaxed text-lg text-justify">
-                                        In the commerce of Bharat, a trademark is not merely a logo; it is an immortal asset of your business. Unlike patents, which expire after 20 years, or copyrights, which expire after the author's lifetime, a trademark can live for centuries—provided its owner navigates the statutory mandate of renewal every decade.
+                                        In the commerce of Bharat, a trademark is not merely a logo; it is an immortal asset of your business. Unlike patents, which expire after 20 years, or copyrights, which expire after the author's lifetime, a trademark can live for centuries-provided its owner navigates the statutory mandate of renewal every decade.
                                     </p>
                                     <p className="mb-4 leading-relaxed text-lg text-justify">
                                         However, many entrepreneurs treat registration as the finish line, when it is actually the beginning of a perpetual protection lifecycle. Failing to understand <strong>"how to renew a registered trademark in india"</strong> is the single most common reason why iconic brands lose their market immunity. In 2026, the Indian Trade Marks Registry has fully digitized the renewal process, but the legal requirements for Form TM-R remain forensic.

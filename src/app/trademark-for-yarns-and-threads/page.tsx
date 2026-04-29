@@ -619,7 +619,7 @@ export default function TrademarkForYarnsAndThreadsPage() {
                                             The future of Class 23 is being written in sustainable fibers and 'Smart Yarns.' As the world moves toward green textiles, brands that focus on recycled polyester, organic hemp, and biodegradable threads are gaining premium market share. Protecting these 'Green Identities' is a priority at IPR Karo. We help you trademark labels that highlight your ecological certifications without falling into the trap of 'Generic Description.'
                                         </p>
                                         <p className="mb-6">
-                                            Moreover, the rise of 'Smart Yarns'—threads embedded with RFID chips or conductive materials—means your IP needs might span both Class 23 and Class 9 (Electronics). Our team is equipped to handle these 'Hybrid Intellectual Property' filings, ensuring that your high tech innovations are fully protected as both a product and a brand.
+                                            Moreover, the rise of 'Smart Yarns'-threads embedded with RFID chips or conductive materials-means your IP needs might span both Class 23 and Class 9 (Electronics). Our team is equipped to handle these 'Hybrid Intellectual Property' filings, ensuring that your high tech innovations are fully protected as both a product and a brand.
                                         </p>
                                     </section>
 

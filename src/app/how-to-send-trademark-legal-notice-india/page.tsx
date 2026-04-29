@@ -444,7 +444,7 @@ export default function HowToSendTrademarkLegalNoticePage() {
                                              Digital Frontiers: Domain Name Legal Notices
                                         </h2>
                                         <p className="mb-6">
-                                            Infringement in the 21st century often starts with a URL. Cybersquatting—where someone registers a domain name identical or deceptively similar to your trademark—is a rampant issue in India. Sending a legal notice for domain name infringement requires a specialized approach. You must cite not just the Trade Marks Act, but also the **Uniform Domain-Name Dispute-Resolution Policy (UDRP)** or the **.IN Domain Name Dispute Resolution Policy (INDRP)**.
+                                            Infringement in the 21st century often starts with a URL. Cybersquatting-where someone registers a domain name identical or deceptively similar to your trademark-is a rampant issue in India. Sending a legal notice for domain name infringement requires a specialized approach. You must cite not just the Trade Marks Act, but also the **Uniform Domain-Name Dispute-Resolution Policy (UDRP)** or the **.IN Domain Name Dispute Resolution Policy (INDRP)**.
                                         </p>
                                         <p className="mb-6">
                                             A domain-specific notice demands the transfer of the domain name to the rightful trademark owner. It must prove that the domain was registered in 'bad faith' and that the registrant has no legitimate interest in the name. Failure to comply with such a notice can lead to an arbitration proceeding before NIXI (National Internet Exchange of India), where the domain can be forcibly transferred. Our team at IPR Karo ensures that your digital real estate is just as protected as your physical storefront.
@@ -525,7 +525,7 @@ export default function HowToSendTrademarkLegalNoticePage() {
                                              Recovering Costs: The Financial Aspect of Notices
                                         </h2>
                                         <p className="mb-6">
-                                            Can you demand that the infringer pay for your lawyer's fees for drafting the notice? In many cases, yes. A firm demand for 'Legal Costs' and 'Pre-litigation Damages' signals to the infringer that they are already in a financial hole. While often settled during negotiations, including a specific amount for the 'Mental Agony' and 'Brand Dilution' caused by the infringement adds significant gravity to the notice. It forces the infringer to realize that 'just stopping' may not be enough—they need to talk to you to avoid a much larger financial penalty in court.
+                                            Can you demand that the infringer pay for your lawyer's fees for drafting the notice? In many cases, yes. A firm demand for 'Legal Costs' and 'Pre-litigation Damages' signals to the infringer that they are already in a financial hole. While often settled during negotiations, including a specific amount for the 'Mental Agony' and 'Brand Dilution' caused by the infringement adds significant gravity to the notice. It forces the infringer to realize that 'just stopping' may not be enough-they need to talk to you to avoid a much larger financial penalty in court.
                                         </p>
                                     </section>
 

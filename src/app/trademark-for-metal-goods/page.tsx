@@ -360,7 +360,7 @@ export default function TrademarkMetalGoodsPage() {
                                             Hardware & Ironmongery: The Battle for the Toolbox
                                         </h2>
                                         <p className="mb-6">
-                                            The hardware market (screws, hinges, locks) is highly fragmented with thousands of small players. In such a market, brand awareness is often the only way to avoid 'Commoditization'—where customers only buy based on the lowest price. A registered trademark allows you to charge a premium because customers recognize your brand as more durable or easier to install.
+                                            The hardware market (screws, hinges, locks) is highly fragmented with thousands of small players. In such a market, brand awareness is often the only way to avoid 'Commoditization'-where customers only buy based on the lowest price. A registered trademark allows you to charge a premium because customers recognize your brand as more durable or easier to install.
                                         </p>
                                         <p className="mb-6">
                                             We assist small and medium scale hardware units in registering their logos. Icons and visual symbols are particularly powerful in the hardware sector where product names are often similar. A unique 'Diamond' or 'Star' logo can become a shorthand for quality in the local market. Protection in this category is also vital to stop competitors from 'Passing Off' their low grade screws and bolts as your premium products.

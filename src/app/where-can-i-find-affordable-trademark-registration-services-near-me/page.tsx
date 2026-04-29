@@ -325,7 +325,7 @@ export default function AffordableTrademarkPage() {
                        Many providers claim to be the fastest by simply filing whatever name you provide. This is a dangerous shortcut. A truly comprehensive trademark search is the only way to ensure your brand name is legally 'available' and 'registrable'. It's the diagnostic testing before a high-stakes surgery.
                     </p>
                     <p className="mb-6">
-                        A search doesn't just look for exact matches. It looks for 'Deceptive Similarities'—names that could lead a consumer to confuse one brand for another. This includes phonetic, visual, and conceptual similarities across multiple classes of goods and services.
+                        A search doesn't just look for exact matches. It looks for 'Deceptive Similarities'-names that could lead a consumer to confuse one brand for another. This includes phonetic, visual, and conceptual similarities across multiple classes of goods and services.
                     </p>
                     <ol className="space-y-4 mb-10">
                        <li className="p-6 border-2 border-gray-100 rounded-xl hover:bg-gray-50 transition-colors">

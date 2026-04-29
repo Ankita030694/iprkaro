@@ -283,7 +283,7 @@ export default function TrademarkFurnitureShopPage() {
                     </p>
                     <div className="bg-amber-50 border-l-8 border-amber-600 p-8 my-10 rounded-r-2xl shadow-sm">
                       <p className="text-xl text-amber-900 italic font-medium">
-                        "In furniture, reputation is everything. A trademark ensures that the reputation you build—one satisfied customer at a time—remains exclusively yours."
+                        "In furniture, reputation is everything. A trademark ensures that the reputation you build-one satisfied customer at a time-remains exclusively yours."
                       </p>
                     </div>
                     <p className="mb-6">

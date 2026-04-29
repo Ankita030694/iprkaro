@@ -33,11 +33,11 @@ export default function Home() {
   const faqs = [
     {
       question: "What is IPR Karo?",
-      answer: "IPR Karo is an AI-powered platform for trademark registration, trademark search, and brand name availability search in India. We help you check trademark availability, conduct a public trademark search by name or class, and complete the entire trademark registration process online — fast and secure."
+      answer: "IPR Karo is an AI-powered platform for trademark registration, trademark search, and brand name availability search in India. We help you check trademark availability, conduct a public trademark search by name or class, and complete the entire trademark registration process online - fast and secure."
     },
     {
       question: "How to register a trademark with IPR Karo?",
-      answer: "To register a trademark, simply enter your brand name for an instant trademark search, review the AI-generated report for conflicts, and proceed with online filing. IPR Karo guides you through the complete trademark registration process in India — from document preparation to govt fee payment and e-filing."
+      answer: "To register a trademark, simply enter your brand name for an instant trademark search, review the AI-generated report for conflicts, and proceed with online filing. IPR Karo guides you through the complete trademark registration process in India - from document preparation to govt fee payment and e-filing."
     },
     {
       question: "What is the trademark registration cost in India?",
@@ -49,7 +49,7 @@ export default function Home() {
     },
     {
       question: "How does AI help in trademark search and registration?",
-      answer: "AI instantly scans trademark databases worldwide, detects similarities and conflicts, checks trademark availability, runs a brand name availability search, generates registerability scores, and guides users through every step — from trademark search to final registration. It also supports trademark search by class and international trademark search."
+      answer: "AI instantly scans trademark databases worldwide, detects similarities and conflicts, checks trademark availability, runs a brand name availability search, generates registerability scores, and guides users through every step - from trademark search to final registration. It also supports trademark search by class and international trademark search."
     }
   ];
 

@@ -413,7 +413,7 @@ export default function SmallCompanyDefinitionPage() {
                                 <section id="fast-track-merger" className="mb-12 scroll-mt-24 md:scroll-mt-32">
                                     <h2 className="text-2xl md:text-3xl font-bold text-[#0C002B] mb-6">Strategic Growth: Fast Track Mergers under Section 233</h2>
                                     <p className="mb-4 leading-relaxed text-lg">
-                                        Growth often involves restructuring. Traditionally, a company merger in India requires the approval of the National Company Law Tribunal (NCLT)—a process that can take 12 to 18 months. However, Small Companies can opt for the <strong>Fast Track Merger</strong> process under Section 233.
+                                        Growth often involves restructuring. Traditionally, a company merger in India requires the approval of the National Company Law Tribunal (NCLT)-a process that can take 12 to 18 months. However, Small Companies can opt for the <strong>Fast Track Merger</strong> process under Section 233.
                                     </p>
                                     <p className="mb-4 leading-relaxed text-lg">
                                         This process bypasses the NCLT entirely. It involves approvals from the Regional Director (RD) and Registrar of Companies (ROC), drastically reducing the timeline to 4-6 months. For founders managing multiple small entities, this is a forensic tool for rapid consolidation.

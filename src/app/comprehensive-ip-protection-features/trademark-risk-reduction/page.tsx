@@ -220,14 +220,14 @@ export default function TrademarkRiskReduction() {
                     <strong>Trademark Risk Reduction</strong> is the proactive art of anticipating legal threats before they manifest into lawsuits. A brand is often a company's most valuable asset, sometimes worth more than its physical inventory. Yet, it faces constant threats: dilution from similar marks, genericization (where your brand becomes the common name for the product), and "naked licensing" (losing rights due to poor quality control).
                   </p>
                   <p className="text-lg leading-relaxed mb-6 text-gray-700">
-                    At IPR Karo, we move beyond simple filing. We act as potential risk managers for your brand. We analyze the entire ecosystem—your competitors, the market, and the legal environment—to construct a perimeter of safety around your intellectual property. Identifying these hidden dangers early is the difference between a thriving monopoly and a costly legal disaster.
+                    At IPR Karo, we move beyond simple filing. We act as potential risk managers for your brand. We analyze the entire ecosystem-your competitors, the market, and the legal environment-to construct a perimeter of safety around your intellectual property. Identifying these hidden dangers early is the difference between a thriving monopoly and a costly legal disaster.
                   </p>
                 </section>
 
                 <section id="comprehensive-audit" className="scroll-mt-32">
                   <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">The IP Health Audit: Diagnosing Vulnerabilities</h2>
                   <p className="text-lg leading-relaxed mb-6 text-gray-700">
-                     You cannot fix what you do not know is broken. Our <strong>IP Audit</strong> is a forensic examination of your current brand portfolio to identify legal gaps. We frequently encounter "phantom assets"—trademarks that companies think they own but actually don't due to procedural errors.
+                     You cannot fix what you do not know is broken. Our <strong>IP Audit</strong> is a forensic examination of your current brand portfolio to identify legal gaps. We frequently encounter "phantom assets"-trademarks that companies think they own but actually don't due to procedural errors.
                   </p>
                   
                   <div className="grid md:grid-cols-2 gap-8 my-8">
@@ -373,7 +373,7 @@ export default function TrademarkRiskReduction() {
                       Receiving a Notice of Opposition can be terrifying. It means someone is formally challenging your right to register your mark. But it is not the end of the road.
                    </p>
                    <p className="text-lg leading-relaxed mb-6 text-gray-700">
-                      We treat oppositions as a negotiation. Often, the opponent is worried about a specific overlap. By negotiating a "Co-existence Agreement"—where you agree to limit your goods or territories—we can often get them to withdraw the opposition without a costly legal battle.
+                      We treat oppositions as a negotiation. Often, the opponent is worried about a specific overlap. By negotiating a "Co-existence Agreement"-where you agree to limit your goods or territories-we can often get them to withdraw the opposition without a costly legal battle.
                    </p>
                    <div className="bg-purple-50 p-6 rounded-xl border border-purple-100">
                       <p className="font-medium text-gray-800 italic">

@@ -401,7 +401,7 @@ export default function FeesComparisonPage() {
                                     </p>
                                     <div className="bg-indigo-50 border-l-8 border-[#160049] p-8 my-10 rounded-r-2xl shadow-inner text-center mx-auto text-center">
                                         <p className="text-xl text-[#0C002B] italic font-medium leading-relaxed">
-                                            "A cheap trademark is like a cheap lock—it works until someone actually tries to break in. True brand value comes from the forensic integrity of its registration, not the lowest price point in the market."
+                                            "A cheap trademark is like a cheap lock-it works until someone actually tries to break in. True brand value comes from the forensic integrity of its registration, not the lowest price point in the market."
                                         </p>
                                     </div>
                                     <p className="mb-4 leading-relaxed text-lg text-center">
@@ -466,7 +466,7 @@ export default function FeesComparisonPage() {
                                                 </div>
                                             </div>
                                             <p className="mb-6 leading-relaxed text-lg text-center">
-                                                IPR Karo typically offers service packages starting from <strong>₹1,499 to ₹4,999</strong> (plus government fees). The value proposition lies in the fact that their 'Standard' package often includes the drafting of a reply to a primary examination report—a service that others charge for separately. This makes their "effective cost" the lowest in the industry for a successful registration.
+                                                IPR Karo typically offers service packages starting from <strong>₹1,499 to ₹4,999</strong> (plus government fees). The value proposition lies in the fact that their 'Standard' package often includes the drafting of a reply to a primary examination report-a service that others charge for separately. This makes their "effective cost" the lowest in the industry for a successful registration.
                                             </p>
                                             <div className="text-center mt-10">
                                                 <Link href="/" className="inline-flex items-center text-[#6E5E93] font-black text-xl hover:underline group">

@@ -275,7 +275,7 @@ export default function TrademarkFormalitiesCheckFailPage() {
                                             The Reality of Trademark Formalities Check Fail Meaning
                                         </h2>
                                         <p className="mb-6">
-                                            The journey of brand registration in India is a multi-stage process governed by the <strong>Trade Marks Act, 1999</strong>. The very first hurdle an application encounters is the "Formalities Check." When your status updates to <strong>Formalities Chk Fail</strong>, it signals that the administrative machinery of the Trademark Registry has flagged a deficiency in your filing. This is not a judgment on the distinctiveness of your logo or the merit of your brand; it is a signal that the "formalities"—the paperwork, the data entries, and the documentation—are not in order.
+                                            The journey of brand registration in India is a multi-stage process governed by the <strong>Trade Marks Act, 1999</strong>. The very first hurdle an application encounters is the "Formalities Check." When your status updates to <strong>Formalities Chk Fail</strong>, it signals that the administrative machinery of the Trademark Registry has flagged a deficiency in your filing. This is not a judgment on the distinctiveness of your logo or the merit of your brand; it is a signal that the "formalities"-the paperwork, the data entries, and the documentation-are not in order.
                                         </p>
                                         <p className="mb-6">
                                             Understanding <strong>Trademark Formalities Check Fail Meaning</strong> is crucial because this status is a ticking time bomb. The Registry provides a strict 30-day window to rectify the errors. If the applicant fails to respond with the correct legal documentation, the application is summarily marked as 'Abandoned.' An abandoned trademark cannot be contested or revived easily; it simply dies, resulting in a loss of the government fee and, more importantly, the 'Priority Date' which protects you against later filers.
@@ -441,7 +441,7 @@ export default function TrademarkFormalitiesCheckFailPage() {
                                             The Strategic Content of a Miscellaneous Reply (MIS-F)
                                         </h2>
                                         <p className="mb-6">
-                                            A 'Miscellaneous Reply' is not just about uploading a file. It is a legal communication to the Registrar. At IPR Karo, we ensure every MIS-F reply includes a formal 'Response Letter' that references the notice number, addresses each point raised by the examiner, and explains—in technical legal terms—why the provided document satisfies the Registry's requirement.
+                                            A 'Miscellaneous Reply' is not just about uploading a file. It is a legal communication to the Registrar. At IPR Karo, we ensure every MIS-F reply includes a formal 'Response Letter' that references the notice number, addresses each point raised by the examiner, and explains-in technical legal terms-why the provided document satisfies the Registry's requirement.
                                         </p>
                                         <p className="mb-6">
                                             If the Registry flags an <strong>Inconsistent Logo</strong>, we don't just upload a new one; we provide a 'Statement of Compliance' stating that the logo exactly mirrors the word mark field. If they flag a <strong>Translation Requirement</strong>, we provide a verified translation in the prescribed format. This level of meticulous drafting is why we achieve a near-100% conversion rate from "Fail" to "Pass".
@@ -453,7 +453,7 @@ export default function TrademarkFormalitiesCheckFailPage() {
                                             Navigating Form TM-M: The Professional Amendment Pathway
                                         </h2>
                                         <p className="mb-6">
-                                            When the error is substantive—like an incorrect class or a legal entity mismatch—a simple reply is not enough. You must file <strong>Form TM-M</strong>. This is a formal petition to the Registrar to amend the data on the register. Because it involves an administrative change to a legal record, it carries a government fee.
+                                            When the error is substantive-like an incorrect class or a legal entity mismatch-a simple reply is not enough. You must file <strong>Form TM-M</strong>. This is a formal petition to the Registrar to amend the data on the register. Because it involves an administrative change to a legal record, it carries a government fee.
                                         </p>
                                         <div className="bg-gray-50 p-8 rounded-3xl border border-gray-100 flex flex-col items-center text-center max-w-3xl mx-auto mb-10">
                                             <div className="w-16 h-16 bg-[rgb(110,94,147)] text-white rounded-full flex items-center justify-center mb-6 shadow-lg">

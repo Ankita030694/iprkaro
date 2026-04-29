@@ -623,7 +623,7 @@ export default function TrademarkApplicationStepsPage() {
                 <section id="conclusion" className="scroll-mt-24 md:scroll-mt-32">
                    <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6">Conclusion</h2>
                    <p className="text-base md:text-lg leading-relaxed mb-4 text-gray-700">
-                      Filing a trademark application online is a structured legal process that grants you ownership of your brand. By following these steps diligently—conducting a search, preparing documents, and filing correctly—you set a strong foundation for your business's intellectual property.
+                      Filing a trademark application online is a structured legal process that grants you ownership of your brand. By following these steps diligently-conducting a search, preparing documents, and filing correctly-you set a strong foundation for your business's intellectual property.
                    </p>
                    <p className="text-base md:text-lg leading-relaxed mb-4 text-gray-700">
                       However, the legal nuances can be tricky. Expert assistance not only saves time but also significantly increases the chances of successful registration. Start your trademark journey today to secure your brand for tomorrow.

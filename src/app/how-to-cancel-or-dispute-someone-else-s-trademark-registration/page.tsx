@@ -242,7 +242,7 @@ export default function TrademarkCancellationPage() {
                                 <section id="introduction" className="mb-12 scroll-mt-24 md:scroll-mt-32">
                                     <h2 className="text-2xl md:text-4xl font-bold text-[#0C002B] mb-6">The Shield and the Sword</h2>
                                     <p className="mb-4 leading-relaxed text-lg text-justify">
-                                        In the vibrant and often litigious marketplace of Bharat, a trademark registration is a powerful asset, but it is not an absolute or eternal right. As we navigate the complex commercial landscape of 2026, many businesses find themselves obstructed by "Zombie Trademarks" — marks that are registered but never used, or marks that were obtained through procedural fraud.
+                                        In the vibrant and often litigious marketplace of Bharat, a trademark registration is a powerful asset, but it is not an absolute or eternal right. As we navigate the complex commercial landscape of 2026, many businesses find themselves obstructed by "Zombie Trademarks" - marks that are registered but never used, or marks that were obtained through procedural fraud.
                                     </p>
                                     <p className="mb-4 leading-relaxed text-lg text-justify">
                                         For a growing company, the question <strong>"how to cancel or dispute someone else's trademark registration"</strong> becomes a strategic necessity. Whether you are facing a "Stop and Desist" notice from a squatter or trying to clear the path for your own brand launch, understanding the mechanisms of Rectification and Cancellation under the Trade Marks Act, 1999, is essential.

@@ -240,7 +240,7 @@ export default function SloganTrademarkPage() {
                                 <section id="introduction" className="mb-12 scroll-mt-24 md:scroll-mt-32">
                                     <h2 className="text-2xl md:text-4xl font-bold text-[#0C002B] mb-6">The Power of the Tagline in Branding</h2>
                                     <p className="mb-4 leading-relaxed text-lg text-justify">
-                                        In the competitive landscape of Bharat, a brand is defined not just by its name or logo, but by its "voice." This voice is often encapsulated in a slogan or tagline—a short, punchy phrase that triggers immediate brand recall.
+                                        In the competitive landscape of Bharat, a brand is defined not just by its name or logo, but by its "voice." This voice is often encapsulated in a slogan or tagline-a short, punchy phrase that triggers immediate brand recall.
                                     </p>
                                     <p className="mb-4 leading-relaxed text-lg text-justify">
                                         For an entrepreneur, the question <strong>"can i trademark a slogan or tagline for my business in india"</strong> is one of the most strategic queries in the brand-building journey. In 2026, the Registry has become increasingly selective about which phrases qualify for protection.

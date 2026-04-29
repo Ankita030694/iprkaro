@@ -570,7 +570,7 @@ export default function TrademarkMusicalInstrumentsPage() {
                          Under the Trade Marks Act, the "shape of goods" can be registered if it is distinctive. However, proving distinctiveness for shapes is harder than for names. You must prove that when a customer sees the outline of your guitar, they immediately think of YOUR brand, even without seeing the logo. This is called "Acquired Distinctiveness".
                      </p>
                      <p className="mb-6">
-                         IPR Karo has expertise in handling such non-conventional trademark applications. We help you compile evidence—sales figures, advertising spend, and media appearances—to build a case that your instrument's shape effectively functions as a brand identifier. Note that functionality cannot be trademarked (e.g., a shape that is purely ergonomic and necessary for playing cannot be monopolized).
+                         IPR Karo has expertise in handling such non-conventional trademark applications. We help you compile evidence-sales figures, advertising spend, and media appearances-to build a case that your instrument's shape effectively functions as a brand identifier. Note that functionality cannot be trademarked (e.g., a shape that is purely ergonomic and necessary for playing cannot be monopolized).
                      </p>
                   </section>
 
@@ -694,7 +694,7 @@ export default function TrademarkMusicalInstrumentsPage() {
                          Exporting Your Sound? Go Global
                      </h2>
                      <p className="mb-6">
-                         Indian instruments—Sitars, Tablas, Harmoniums—are in high demand globally. Also, Indian brands are increasingly manufacturing high-quality guitars and drums for export. If you are exporting, do not assume your Indian trademark protects you abroad.
+                         Indian instruments-Sitars, Tablas, Harmoniums-are in high demand globally. Also, Indian brands are increasingly manufacturing high-quality guitars and drums for export. If you are exporting, do not assume your Indian trademark protects you abroad.
                      </p>
                      <p className="mb-6">
                          To protect your brand in markets like the USA, Germany, or Japan, you should use the <strong>Madrid Protocol</strong>. This allows you to file a single international application from India to cover up to 130 countries. It is cost-effective and streamlined. IPR Karo specializes in helping Indian instrument manufacturers secure their global IP footprint, ensuring your brand name is safe wherever your music travels.

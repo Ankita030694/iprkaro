@@ -411,7 +411,7 @@ export default function OfficialIPWebsitePage() {
                                             </div>
                                             <div>
                                                 <h4 className="font-bold text-[#0C002B] text-xl mb-1">Dynamic Status Tracking</h4>
-                                                <p className="text-gray-600">Enter your application number to track your mark or patent through its lifecycle—from examination to registration.</p>
+                                                <p className="text-gray-600">Enter your application number to track your mark or patent through its lifecycle-from examination to registration.</p>
                                             </div>
                                         </li>
                                     </ul>

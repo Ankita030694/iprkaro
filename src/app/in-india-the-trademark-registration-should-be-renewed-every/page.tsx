@@ -621,7 +621,7 @@ export default function TrademarkRenewalPage() {
                   <div className="bg-[#6E5E93]/10 p-8 rounded-3xl border border-[#6E5E93]/20 my-10">
                     <h4 className="text-[#0C002B] font-bold text-2xl mb-4">The Central Attack Risk</h4>
                     <p className="text-gray-800 leading-relaxed text-lg mb-4">
-                      During these first 5 years, if your Indian trademark expires or is cancelled for any reason—including failure to renew—it triggers a "Central Attack." This means all your international protections across multiple countries will simultaneously collapse. While you can "Transform" these international marks into national ones in each country, the cost of doing so is astronomical compared to a simple ₹9,000 Indian renewal. After the 5-year dependency period, the international mark becomes independent, but the initial risk makes Indian renewals the highest priority in your global IP strategy.
+                      During these first 5 years, if your Indian trademark expires or is cancelled for any reason-including failure to renew-it triggers a "Central Attack." This means all your international protections across multiple countries will simultaneously collapse. While you can "Transform" these international marks into national ones in each country, the cost of doing so is astronomical compared to a simple ₹9,000 Indian renewal. After the 5-year dependency period, the international mark becomes independent, but the initial risk makes Indian renewals the highest priority in your global IP strategy.
                     </p>
                   </div>
                 </section>

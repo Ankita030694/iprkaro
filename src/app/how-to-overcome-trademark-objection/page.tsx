@@ -340,7 +340,7 @@ export default function OvercomeTrademarkObjectionPage() {
                       </div>
                     </div>
                     <p className="mb-6">
-                      The registry typically processes over 50,000 applications per month. To maintain efficiency, examiners often use standardized templates for objections. This means your <strong>Examination Report</strong> might look generic, but your response cannot be. You must prove that your specific brand name has a unique 'secondary meaning'—a term in trademark law where a common word becomes synonymous with your business.
+                      The registry typically processes over 50,000 applications per month. To maintain efficiency, examiners often use standardized templates for objections. This means your <strong>Examination Report</strong> might look generic, but your response cannot be. You must prove that your specific brand name has a unique 'secondary meaning'-a term in trademark law where a common word becomes synonymous with your business.
                     </p>
                     <p className="mb-6">
                       The "Likelihood of Confusion" is the most subjective part of the examiner's logic. What seems confusing to an examiner might be perfectly distinct to a customer. Our role is to bridge this gap by presenting data-driven arguments about market segments, pricing tiers, and consumer sophistication.
@@ -462,7 +462,7 @@ export default function OvercomeTrademarkObjectionPage() {
                        </div>
                     </div>
                     <p className="mb-6 mt-8">
-                       Many brands fail because they provide "junk evidence"—social media posts without dates or blurry photos. We curate your evidence into a "Volume of Documents" that is indexed and paginated. This professional presentation makes the examiner's life easy, increasing your chances of acceptance by over 60%.
+                       Many brands fail because they provide "junk evidence"-social media posts without dates or blurry photos. We curate your evidence into a "Volume of Documents" that is indexed and paginated. This professional presentation makes the examiner's life easy, increasing your chances of acceptance by over 60%.
                     </p>
                   </section>
 
@@ -509,7 +509,7 @@ export default function OvercomeTrademarkObjectionPage() {
                        </div>
                     </div>
                     <p className="mb-6 mt-8">
-                       The most important thing in a hearing is to be respectful and brief. Registrars have to hear 50 cases a day. If your attorney is concise and provides a clear 'rebuttal table', your application is likely to be accepted on the spot. We represent clients in all Jurisdictions—Delhi, Mumbai, Kolkata, Chennai, and Ahmedabad—bringing a local understanding of each Registrar's preferences.
+                       The most important thing in a hearing is to be respectful and brief. Registrars have to hear 50 cases a day. If your attorney is concise and provides a clear 'rebuttal table', your application is likely to be accepted on the spot. We represent clients in all Jurisdictions-Delhi, Mumbai, Kolkata, Chennai, and Ahmedabad-bringing a local understanding of each Registrar's preferences.
                     </p>
                   </section>
 

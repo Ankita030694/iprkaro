@@ -324,7 +324,7 @@ export default function PartnerTrademarkSearchPage() {
                   </div>
                 </div>
                 <p className="text-white/50 text-xs mt-2 font-nunito">
-                  Unsure about classes? Choose the closest match—our AI will suggest adjacent classes to review during analysis.
+                  Unsure about classes? Choose the closest match-our AI will suggest adjacent classes to review during analysis.
                 </p>
               </div>
 

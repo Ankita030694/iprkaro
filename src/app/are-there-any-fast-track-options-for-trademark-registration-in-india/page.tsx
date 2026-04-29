@@ -463,7 +463,7 @@ export default function FastTrackTrademarkPage() {
                                 <section id="conclusion" className="mb-12 scroll-mt-24 md:scroll-mt-32">
                                     <h2 className="text-2xl md:text-4xl font-bold text-[#0C002B] mb-6 text-center text-justify">Accelerating Your Brand Vision</h2>
                                     <p className="mb-4 leading-relaxed text-xl text-center text-justify">
-                                        In 2026, the future belongs to the fast. The fast-track option for trademark registration in India is not a luxury—it's a competitive necessity for high-growth enterprises.
+                                        In 2026, the future belongs to the fast. The fast-track option for trademark registration in India is not a luxury-it's a competitive necessity for high-growth enterprises.
                                     </p>
                                     <p className="mb-4 leading-relaxed text-xl text-center text-justify">
                                         Secure your market immunity today. Partner with the forensic experts at <strong>IPR Karo</strong> to ensures your brand acceleration is handled with surgical precision.

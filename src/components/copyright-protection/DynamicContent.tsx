@@ -45,7 +45,7 @@ export default function DynamicContent({ stateName }: DynamicContentProps) {
 
   const getStateSpecificContent = (stateName: string) => {
     const stateContent: { [key: string]: string } = {
-      'Jharkhand': `Jharkhand's creative economy is growing rapidly with increasing digital content creators, artists, and software developers. Copyright protection in Jharkhand ensures your original works—whether literary, artistic, musical, or digital—receive legal recognition and safeguard against unauthorized use.`,
+      'Jharkhand': `Jharkhand's creative economy is growing rapidly with increasing digital content creators, artists, and software developers. Copyright protection in Jharkhand ensures your original works-whether literary, artistic, musical, or digital-receive legal recognition and safeguard against unauthorized use.`,
       'Delhi': `As India's capital and cultural hub, Delhi hosts countless creators, filmmakers, musicians, and digital artists. Copyright protection in Delhi is essential for safeguarding creative works in this vibrant, competitive market where content theft is a significant concern.`,
       'Maharashtra': `Mumbai, the entertainment capital of India, makes Maharashtra a hotspot for creative industries. Copyright protection in Maharashtra is crucial for filmmakers, musicians, authors, and digital creators to protect their intellectual property in this dynamic ecosystem.`,
       'Karnataka': `Bangalore's thriving tech and creative industry makes copyright protection in Karnataka essential for software developers, content creators, and digital artists. Protect your code, designs, and creative works in this innovation hub.`,
@@ -57,7 +57,7 @@ export default function DynamicContent({ stateName }: DynamicContentProps) {
       'Punjab': `Punjab's vibrant music and creative industry requires strong copyright protection for musicians, filmmakers, and digital creators to prevent unauthorized use of their works.`
     };
 
-    return stateContent[stateName] || `Complete guide to copyright protection in ${stateName}. Protect your creative works—literary, artistic, musical, and digital content—with our expert legal guidance. Our comprehensive copyright services ensure your original creations receive the legal protection they deserve across all creative sectors in ${stateName}.`;
+    return stateContent[stateName] || `Complete guide to copyright protection in ${stateName}. Protect your creative works-literary, artistic, musical, and digital content-with our expert legal guidance. Our comprehensive copyright services ensure your original creations receive the legal protection they deserve across all creative sectors in ${stateName}.`;
   };
 
   return (

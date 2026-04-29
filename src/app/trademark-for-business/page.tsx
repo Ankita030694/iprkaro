@@ -231,7 +231,7 @@ export default function TrademarkForBusinessPage() {
                       Beyond protection, a trademark is a wealth-creation tool. It is an intangible asset that appears on your balance sheet. As your business grows, the value of the trademark can far exceed the value of your physical assets. Think of iconic brands like Tata, Reliance, or Nykaa. Their physical stores and inventory are valuable, but the "Trust" embedded in their trademarked names is what truly drives their multi-billion dollar valuations.
                     </p>
                     <p className="mb-6">
-                      Building a trademark portfolio is equivalent to building a defensive wall. For a product-based business, it protects the SKU names. For a service-based business, it protects the methodology names. For almost all businesses, it protects the core identity—the light at the end of the marketing tunnel that leads customers to your door.
+                      Building a trademark portfolio is equivalent to building a defensive wall. For a product-based business, it protects the SKU names. For a service-based business, it protects the methodology names. For almost all businesses, it protects the core identity-the light at the end of the marketing tunnel that leads customers to your door.
                     </p>
                   </section>
 
@@ -295,7 +295,7 @@ export default function TrademarkForBusinessPage() {
                       Furthermore, a trademark simplifies your marketing efforts. When you own a mark, you can spend money on advertising with the confidence that you are building your own brand, not a category that others can profit from. It also prevents 'Brand Dilution' where inferior products use your name and destroy your reputation.
                     </p>
                     <p className="mb-6">
-                      In many cases, a trademark becomes the most valuable part of an acquisition. When WhatsApp was acquired for $19 Billion, a huge part of that valuation was the global user recognition of the name and the logo—the trademarked identity.
+                      In many cases, a trademark becomes the most valuable part of an acquisition. When WhatsApp was acquired for $19 Billion, a huge part of that valuation was the global user recognition of the name and the logo-the trademarked identity.
                     </p>
                   </section>
 
@@ -364,7 +364,7 @@ export default function TrademarkForBusinessPage() {
                       While the steps seem simple, the time taken for each stage can vary. A smooth application can reach registration in 6-8 months. An application with objections can take 18-24 months. Our role is to minimize this timeframe by ensuring your application is "Clean" and "Bulletproof" right from the first day of filing. We use AI-powered search tools that predict the likelihood of objection based on previous registry behavior.
                     </p>
                     <p className="mb-6">
-                      We also provide real-time tracking. You don't have to check the Registry website every week. Our system monitors your application status and notifies you instantly if there is any movement—whether it is an examination report, a hearing notice, or the final certificate issuance.
+                      We also provide real-time tracking. You don't have to check the Registry website every week. Our system monitors your application status and notifies you instantly if there is any movement-whether it is an examination report, a hearing notice, or the final certificate issuance.
                     </p>
                   </section>
 

@@ -418,7 +418,7 @@ export default function UdyamRegistrationPage() {
                                             <h4 className="font-bold text-[#160049] text-xl mb-3 flex items-center">
                                                 <FontAwesomeIcon icon={faAward} className="mr-3 text-[#6E5E93]" /> Trademark Discount
                                             </h4>
-                                            <p className="text-gray-700 leading-relaxed">The government fee for filing an individual trademark is ₹4,500, but for companies, it is ₹9,000. However, if your company has an <strong>Udyam Certificate</strong>, you qualify for the ₹4,500 rate—a direct 50% saving per application.</p>
+                                            <p className="text-gray-700 leading-relaxed">The government fee for filing an individual trademark is ₹4,500, but for companies, it is ₹9,000. However, if your company has an <strong>Udyam Certificate</strong>, you qualify for the ₹4,500 rate-a direct 50% saving per application.</p>
                                         </div>
                                         <div className="p-8 bg-purple-50 rounded-3xl border border-purple-100">
                                             <h4 className="font-bold text-[#160049] text-xl mb-3 flex items-center">
@@ -506,7 +506,7 @@ export default function UdyamRegistrationPage() {
                                             role: "CEO, TechNova Solutions",
                                             rating: 5,
                                             date: "2023-12-05",
-                                            text: "The 50% subsidy on trademark fees for MSMEs is a great initiative. IPR Karo made the process so simple—they handled the Udyam registration and the discounted TM filing together.",
+                                            text: "The 50% subsidy on trademark fees for MSMEs is a great initiative. IPR Karo made the process so simple-they handled the Udyam registration and the discounted TM filing together.",
                                             avatar: "AV"
                                         }
                                     ]} />

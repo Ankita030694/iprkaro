@@ -512,7 +512,7 @@ export default function TrademarkElectronicsSoftwarePage() {
                                             Tech Brand Valuation: Transforming Name into Capital
                                         </h2>
                                         <p className="mb-6">
-                                            For a tech company, particularly one seeking VC funding or an IPO, the **Trademark** is often one of the largest items on the 'Intangible Asset' valuation. Investors look for 'Proprietary IP'—they want to know that you legally own the brand that users love.
+                                            For a tech company, particularly one seeking VC funding or an IPO, the **Trademark** is often one of the largest items on the 'Intangible Asset' valuation. Investors look for 'Proprietary IP'-they want to know that you legally own the brand that users love.
                                         </p>
                                         <p className="mb-6">
                                             A registered trademark is a transferable asset. It can be licensed, franchised, or used as collateral for 'IP-backed Loans'. Furthermore, in an acquisition scenario, the 'Goodwill' associated with your trademark can be worth significantly more than your physical assets. By registering in Classes 9 and 42 today, you are performing a 'Capital Investment' in your company's future exit value.
@@ -562,7 +562,7 @@ export default function TrademarkElectronicsSoftwarePage() {
                                             Registering in multiple classes is not an 'Extra Cost'; it is 'Essential Insurance'. The logic of the registry is that if a product is in a different class, a similar brand is allowed. We eliminate this loophole for our clients by filing across all relevant technological and service classes, ensuring that no competitor can legally occupy any part of your brand ecosystem.
                                         </p>
                                         <p className="mb-6">
-                                            Furthermore, as the industry moves toward 'Everything as a Service' (XaaS), the boundary between goods and services is blurring. Your trademark shouldn't just protect what you sell today—it should protect what you will scale into tomorrow. We help our clients identify their 'Future IP Roadmap' and file accordingly.
+                                            Furthermore, as the industry moves toward 'Everything as a Service' (XaaS), the boundary between goods and services is blurring. Your trademark shouldn't just protect what you sell today-it should protect what you will scale into tomorrow. We help our clients identify their 'Future IP Roadmap' and file accordingly.
                                         </p>
                                     </section>
 
@@ -574,7 +574,7 @@ export default function TrademarkElectronicsSoftwarePage() {
                                             In the software industry, many companies rely on freelancers and agencies for development. Without a proper 'IP Assignment Agreement' and a 'Registered Trademark', you are in a precarious position. If a freelancer claims they invented the brand name or logo and you don't have a registration, your legal standing is weak.
                                         </p>
                                         <p className="mb-6">
-                                            Trademark registration is the final proof of ownership. It establishes that the company—as a legal entity—owns the identity of the product regardless of who wrote the code. We assist tech startups in cleaning up their 'IP Hygiene', ensuring that all brand rights are legally assigned to the company and registered within the national database.
+                                            Trademark registration is the final proof of ownership. It establishes that the company-as a legal entity-owns the identity of the product regardless of who wrote the code. We assist tech startups in cleaning up their 'IP Hygiene', ensuring that all brand rights are legally assigned to the company and registered within the national database.
                                         </p>
                                     </section>
 

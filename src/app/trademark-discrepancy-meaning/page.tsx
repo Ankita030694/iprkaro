@@ -502,7 +502,7 @@ export default function TrademarkDiscrepancyPage() {
                                             The best way to manage a trademark discrepancy is to never have one. In an era where brand values are worth billions, leaving your trademark filing to chance or unqualified agents is a risk not worth taking. Professional due diligence before clicking 'Submit' on Form TM-A can save you years of legal trouble.
                                         </p>
                                         <p className="mb-6">
-                                            We recommend a 'Triple-Check' policy. First, verify the 'Applicant Name' against the PAN/GST data. Second, verify the 'Mark' (the visual logo) against the 'Word Mark' field. Third, and most importantly, perform a 'Technical Class Audit'. Many items perform multiple functions and could fall into several classes. Choosing the right one—or filing in multiple classes—is the mark of a sophisticated IP strategy.
+                                            We recommend a 'Triple-Check' policy. First, verify the 'Applicant Name' against the PAN/GST data. Second, verify the 'Mark' (the visual logo) against the 'Word Mark' field. Third, and most importantly, perform a 'Technical Class Audit'. Many items perform multiple functions and could fall into several classes. Choosing the right one-or filing in multiple classes-is the mark of a sophisticated IP strategy.
                                         </p>
                                         <div className="flex flex-wrap gap-4 mb-10">
                                             <span className="bg-gray-100 px-4 py-2 rounded-full text-xs font-bold text-gray-600">Pre-Filing Search</span>

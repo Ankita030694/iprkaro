@@ -94,7 +94,7 @@ const faqs = [
     },
     {
         question: "How long does it take to get a trademark registration certificate online?",
-        answer: "While the application filing takes only a few hours, the entire process—including examination, publication in the journal, and the opposition window—typically takes between 6 to 12 months, provided there are no major objections."
+        answer: "While the application filing takes only a few hours, the entire process-including examination, publication in the journal, and the opposition window-typically takes between 6 to 12 months, provided there are no major objections."
     },
     {
         question: "What is the government fee for online trademark filing for a startup?",
@@ -364,7 +364,7 @@ export default function TrademarkStepsPage() {
                                         In 2026, the <strong>format for trademark application</strong> is strictly digital. You cannot 'hand sign' an online form. Instead, you must use a 'Class 3 Digital Signature Certificate'. This is a USB token that contains your encrypted identity. The IPIndia portal uses a 'Signing Component' that validates your DSC every time you submit a form.
                                     </p>
                                     <p className="mb-4 leading-relaxed text-lg text-justify">
-                                        Procuring a DSC is relatively simple through authorized Certifying Authorities (CAs). However, the 'Mapping' is where most users struggle. Once you obtain the DSC, you must 'Register' it on the portal. This links your physical identity to your user account. Every subsequent document—from the initial TM-A to a response to an objection—must be digitally signed. At IPR Karo, we handle the technical setup for our clients, ensuring that Java settings and browser configurations are perfectly aligned for a seamless submission.
+                                        Procuring a DSC is relatively simple through authorized Certifying Authorities (CAs). However, the 'Mapping' is where most users struggle. Once you obtain the DSC, you must 'Register' it on the portal. This links your physical identity to your user account. Every subsequent document-from the initial TM-A to a response to an objection-must be digitally signed. At IPR Karo, we handle the technical setup for our clients, ensuring that Java settings and browser configurations are perfectly aligned for a seamless submission.
                                     </p>
                                 </section>
 
@@ -648,7 +648,7 @@ export default function TrademarkStepsPage() {
                                 <section id="conclusion" className="mb-12 scroll-mt-24 md:scroll-mt-32">
                                     <h2 className="text-2xl md:text-4xl font-bold text-[#0C002B] mb-6 text-center">Conclusion: Securing Your Intellectual Legacy</h2>
                                     <p className="mb-4 leading-relaxed text-xl text-center">
-                                        The journey of <strong>online trademark filing in India</strong> is a transition from a mere idea to a protected legal asset. It is a commitment to your brand's future and a shield against the uncertainties of the market. By adhering to the structured steps—from the forensic search to the final registration—you ensure that your brand stands on the firmest legal ground possible.
+                                        The journey of <strong>online trademark filing in India</strong> is a transition from a mere idea to a protected legal asset. It is a commitment to your brand's future and a shield against the uncertainties of the market. By adhering to the structured steps-from the forensic search to the final registration-you ensure that your brand stands on the firmest legal ground possible.
                                     </p>
                                     <p className="mb-4 leading-relaxed text-xl text-center">
                                         Don't let your hard work be vulnerable to imitation. Whether you are a solo founder or a scaling enterprise, let the experts at IPR Karo navigate the bureaucratic maze for you. Secure your brand, protect your reputation, and start building your legacy today. The trademark of today is the multinational brand of tomorrow.

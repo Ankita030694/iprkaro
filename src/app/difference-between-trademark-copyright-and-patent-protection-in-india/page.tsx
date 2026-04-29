@@ -87,7 +87,7 @@ const faqs = [
     },
     {
         question: "What does a patent actually protect?",
-        answer: "A patent protects 'Inventions'—either a product or a process—that are new, involve an inventive step, and have industrial application."
+        answer: "A patent protects 'Inventions'-either a product or a process-that are new, involve an inventive step, and have industrial application."
     },
     {
         question: "Can a single product have a trademark, copyright, and patent?",
@@ -114,7 +114,7 @@ const faqs = [
         answer: "Yes, distinct sounds (like the Intel chime or the MGM lion roar) can be registered as sound trademarks in India if they identify the source of a product."
     },
     {
-        question: "Who owns a patent—the inventor or the company?",
+        question: "Who owns a patent-the inventor or the company?",
         answer: "By default, the inventor owns the patent. However, if the invention was made during the course of employment, the rights are typically assigned to the employer via a contract."
     }
 ];
