@@ -10,7 +10,9 @@ export function middleware(req: NextRequest) {
 
   // 1. Consolidated Redirect: Force HTTPS and WWW in one step
   const proto = req.headers.get('x-forwarded-proto')
-  const shouldRedirectProto = proto === 'http'
+  const isLocalhost = host?.includes('localhost') || host?.includes('127.0.0.1')
+  
+  const shouldRedirectProto = !isLocalhost && proto === 'http'
   const shouldRedirectHost = host === 'iprkaro.com'
 
   if (shouldRedirectProto || shouldRedirectHost) {

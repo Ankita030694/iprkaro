@@ -1,4 +1,11 @@
-'use client'
+import os
+
+with open("src/app/authority/blogs/page.tsx", "r") as f:
+    original = f.read()
+
+# Instead of complex parsing, I will just output the entire new code.
+# The new code is a combination of the old logic and the new UI.
+new_code = """'use client'
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -20,7 +27,7 @@ const TiptapEditor = dynamic(() => import('./TiptapEditor'), {
   loading: () => (
     <div className="flex items-center justify-center p-8 bg-slate-50 border border-slate-200 rounded-xl min-h-[350px]">
       <div className="flex flex-col items-center gap-2">
-        <span className="animate-spin text-[#FFB400]">💫</span>
+        <span className="animate-spin text-[#B8860B]">💫</span>
         <p className="text-slate-500 text-sm font-semibold">Loading Custom Editor...</p>
       </div>
     </div>
@@ -95,11 +102,14 @@ export default function BlogsDashboard() {
   const [isLoadingRss, setIsLoadingRss] = useState(false);
 
   // AI Generation state
-  const [writeupInput, setWriteupInput] = useState('');
+  const [primaryKeyword, setPrimaryKeyword] = useState('');
+  const [secondaryKeyword, setSecondaryKeyword] = useState('');
   const [isGenerating, setIsGenerating] = useState(false);
-  const [generationStep, setGenerationStep] = useState('');
-  const [generationError, setGenerationError] = useState('');
+  const [imagePrompt, setImagePrompt] = useState('');
   const [isGeneratingImage, setIsGeneratingImage] = useState(false);
+  const [expansionSubtopics, setExpansionSubtopics] = useState('');
+  const [isExpanding, setIsExpanding] = useState(false);
+
   // Check if user is logged in; if not, redirect to login page
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -181,28 +191,30 @@ export default function BlogsDashboard() {
   // Auto-save draft when form changes
   useEffect(() => {
     if (showBlogForm && formMode === 'add') {
-      const hasContent = newBlog.title || newBlog.description || writeupInput;
+      const hasContent = newBlog.title || newBlog.description || primaryKeyword || imagePrompt;
       if (hasContent) {
         const draft = {
           blog: newBlog,
-          primary: writeupInput,
-          
-          
+          primary: primaryKeyword,
+          secondary: secondaryKeyword,
+          image: imagePrompt,
+          expansion: expansionSubtopics
         };
         localStorage.setItem(DRAFT_STORAGE_KEY, JSON.stringify(draft));
       }
     }
-  }, [newBlog, writeupInput, showBlogForm, formMode]);
+  }, [newBlog, primaryKeyword, secondaryKeyword, imagePrompt, expansionSubtopics, showBlogForm, formMode]);
 
   const loadDraft = () => {
     const savedDraft = localStorage.getItem(DRAFT_STORAGE_KEY);
     if (savedDraft) {
       try {
-        const { blog, primary, image, expansion } = JSON.parse(savedDraft);
+        const { blog, primary, secondary, image, expansion } = JSON.parse(savedDraft);
         setNewBlog(blog);
-        setWriteupInput(primary || '');
-        
-        
+        setPrimaryKeyword(primary || '');
+        setSecondaryKeyword(secondary || '');
+        setImagePrompt(image || '');
+        setExpansionSubtopics(expansion || '');
         if (blog.image) {
           setImagePreview(blog.image);
         }
@@ -221,8 +233,8 @@ export default function BlogsDashboard() {
 
   const generateSlug = (title: string) => {
     return title.toLowerCase()
-      .replace(/[^\w\s-]/g, '')
-      .replace(/\s+/g, '-')
+      .replace(/[^\\w\\s-]/g, '')
+      .replace(/\\s+/g, '-')
       .replace(/--+/g, '-')
       .trim();
   };
@@ -421,48 +433,20 @@ export default function BlogsDashboard() {
     }
   };
 
-  const handleGenerateContent = async () => {
-    if (!writeupInput.trim()) {
-      alert("Please paste the writeup first.");
+  const handleGenerate = async () => {
+    if (!primaryKeyword.trim()) {
+      alert('Please enter a primary keyword.');
       return;
     }
-    setIsGenerating(true);
-    setGenerationError("");
-    setGenerationStep("Connecting to ChatGPT...");
-
     try {
-      const steps = [
-        "Analyzing writeup context...",
-        "Drafting click-worthy title & URL slug...",
-        "Structuring 3,000+ words detailed legal analysis...",
-        "Drafting 10+ statutory FAQs...",
-        "Synthesizing 5+ client review snippets...",
-        "Formatting outputs..."
-      ];
-
-      let currentStepIdx = 0;
-      setGenerationStep(steps[0]);
-      
-      const interval = setInterval(() => {
-        if (currentStepIdx < steps.length - 1) {
-          currentStepIdx++;
-          setGenerationStep(steps[currentStepIdx]);
-        }
-      }, 5000);
-
+      setIsGenerating(true);
       const response = await fetch('/api/generate-article', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ primaryKeyword: writeupInput }),
+        body: JSON.stringify({ primaryKeyword, secondaryKeyword }),
       });
 
-      clearInterval(interval);
-
-      if (!response.ok) {
-        const errData = await response.json().catch(()=>({}));
-        throw new Error(errData.error || "Failed to generate blog");
-      }
-      
+      if (!response.ok) throw new Error('Failed to generate blog');
       const generatedData = await response.json();
 
       setNewBlog(prevState => ({
@@ -474,50 +458,35 @@ export default function BlogsDashboard() {
         metaDescription: generatedData.metaDescription || prevState.metaDescription,
         slug: generatedData.slug || (generatedData.title ? generateSlug(generatedData.title) : prevState.slug),
         faqs: generatedData.faqs || prevState.faqs,
-        reviews: generatedData.reviews && generatedData.reviews.length > 0
-          ? generatedData.reviews.map((r: any) => ({ ...r, date: r.date || new Date().toISOString().split('T')[0] }))
-          : prevState.reviews,
+        reviews: generatedData.reviews || prevState.reviews,
       }));
-      alert('✨ Blog contents populated successfully! Please verify fields, upload a cover image, and publish.');
-      setWriteupInput(""); // clear writeup input
-    } catch (err: any) {
-      console.error('Error generating blog:', err);
-      setGenerationError(err.message || 'Failed to generate blog. Please try again.');
+      alert('Blog generated successfully! Please review and add an image.');
+    } catch (error) {
+      console.error('Error generating blog:', error);
+      alert('Failed to generate blog. Please try again.');
     } finally {
       setIsGenerating(false);
-      setGenerationStep("");
     }
   };
 
   const handleGenerateImage = async () => {
-    const finalPrompt = newBlog.title 
-      ? `A professional, modern, corporate legal illustration representing: ${newBlog.title}`
-      : "A professional, modern, corporate legal illustration with premium high-quality digital art";
-
+    if (!imagePrompt.trim()) {
+      alert('Please enter an image prompt.');
+      return;
+    }
     try {
       setIsGeneratingImage(true);
       const response = await fetch('/api/generate-image', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ prompt: finalPrompt }),
+        body: JSON.stringify({ prompt: imagePrompt }),
       });
 
       if (!response.ok) throw new Error('Failed to generate image');
-      let finalImageUrl = await response.json().then(data => data.imageUrl);
+      const { imageUrl } = await response.json();
       
-      if (finalImageUrl.startsWith('data:image/')) {
-        // Base64 image from OpenAI API; upload to Firebase Storage to prevent Firestore 1MB limit crash
-        setGenerationStep("Uploading AI image to cloud...");
-        const responseData = await fetch(finalImageUrl);
-        const blob = await responseData.blob();
-        
-        const storageRef = ref(storage, `blog-images/ai-generated-${Date.now()}.png`);
-        const snapshot = await uploadBytes(storageRef, blob);
-        finalImageUrl = await getDownloadURL(snapshot.ref);
-      }
-      
-      setNewBlog(prevState => ({ ...prevState, image: finalImageUrl }));
-      setImagePreview(finalImageUrl);
+      setNewBlog(prevState => ({ ...prevState, image: imageUrl }));
+      setImagePreview(imageUrl);
       alert('AI image generated successfully!');
     } catch (error) {
       console.error('Error generating image:', error);
@@ -527,7 +496,40 @@ export default function BlogsDashboard() {
     }
   };
 
-  
+  const handleExpandDescription = async () => {
+    if (!expansionSubtopics.trim()) {
+      alert('Please enter subtopics or instructions for expansion.');
+      return;
+    }
+    if (!newBlog.description.trim()) {
+      alert('Cannot expand an empty description.');
+      return;
+    }
+    try {
+      setIsExpanding(true);
+      const response = await fetch('/api/expand-description', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ 
+          currentDescription: newBlog.description, 
+          expansionSubtopics, 
+          primaryKeyword 
+        }),
+      });
+
+      if (!response.ok) throw new Error('Failed to expand description');
+      const { expandedDescription } = await response.json();
+      
+      setNewBlog(prevState => ({ ...prevState, description: expandedDescription }));
+      alert('Description expanded successfully!');
+    } catch (error) {
+      console.error('Error expanding description:', error);
+      alert('Failed to expand description. Please try again.');
+    } finally {
+      setIsExpanding(false);
+    }
+  };
+
   const handleSubmitBlog = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
@@ -656,34 +658,13 @@ export default function BlogsDashboard() {
     }
   };
 
-  const handleAutofillTestData = () => {
-    const uniqueId = Math.floor(1000 + Math.random() * 9000);
-    const mockTitle = `Defeating Bank Harassment & Loan Overdue Settlement in 2026 (Guide ${uniqueId})`;
-    
-    setNewBlog({
-      title: mockTitle,
-      subtitle: "A comprehensive legal analysis of your rights and advocate remedies.",
-      image: "https://via.placeholder.com/1200x630?text=Auto+Generated+Banner",
-      date: new Date().toISOString().split('T')[0],
-      description: `<h2>Understanding Your Rights as a Loan Debtor</h2><p>Many individuals face overwhelming stress when banks employ collection agencies. However, debtors are legally protected.</p>`,
-      slug: `defeating-bank-harassment-${uniqueId}`,
-      metaTitle: `${mockTitle} | AMA Legal Solutions`,
-      metaDescription: `Discover the statutory legal steps to settle outstanding loans and handle bank recovery harassment.`,
-      faqs: [{ question: "What is an OTS?", answer: "One-Time Settlement." }],
-      reviews: [{ name: "Rajesh Kumar", rating: 5, review: "Great service!", date: new Date().toISOString().split('T')[0] }],
-      author: "Anuj Anand Malik",
-      created: Date.now()
-    });
-    setImagePreview("https://via.placeholder.com/1200x630?text=Auto+Generated+Banner");
-  };
-
   const resetForm = () => {
     setNewBlog({
       title: '', subtitle: '', description: '', date: new Date().toISOString().split('T')[0],
       image: '', created: Date.now(), metaTitle: '', metaDescription: '', slug: '',
       faqs: [], reviews: [], author: 'Anuj Anand Malik'
     });
-    setWriteupInput('');
+    setPrimaryKeyword(''); setSecondaryKeyword(''); setImagePrompt(''); setExpansionSubtopics('');
     setImagePreview(null);
     setFormMode('add');
     setShowBlogForm(false);
@@ -710,13 +691,13 @@ export default function BlogsDashboard() {
       const hasEmptyLinks = xml.includes('<link></link>');
       const hasMalformedDates = xml.includes('<pubDate>Invalid Date</pubDate>');
       setRssDebugInfo(
-        `RSS Feed Status: \${response.status === 200 ? '✅ OK' : '❌ Error'}\n` +
-        `Valid XML Structure: \${isValidXml ? '✅ Yes' : '❌ No'}\n` +
-        `Items in Feed: \${itemCount}\n` +
-        `Empty Titles: \${hasEmptyTitles ? '❌ Yes' : '✅ No'}\n` +
-        `Empty Links: \${hasEmptyLinks ? '❌ Yes' : '✅ No'}\n` +
-        `Malformed Dates: \${hasMalformedDates ? '❌ Yes' : '✅ No'}\n\n` +
-        `Sample XML (first 500 chars):\n\${xml.substring(0, 500)}...`
+        `RSS Feed Status: \${response.status === 200 ? '✅ OK' : '❌ Error'}\\n` +
+        `Valid XML Structure: \${isValidXml ? '✅ Yes' : '❌ No'}\\n` +
+        `Items in Feed: \${itemCount}\\n` +
+        `Empty Titles: \${hasEmptyTitles ? '❌ Yes' : '✅ No'}\\n` +
+        `Empty Links: \${hasEmptyLinks ? '❌ Yes' : '✅ No'}\\n` +
+        `Malformed Dates: \${hasMalformedDates ? '❌ Yes' : '✅ No'}\\n\\n` +
+        `Sample XML (first 500 chars):\\n\${xml.substring(0, 500)}...`
       );
     } catch (error: any) {
       console.error('Error testing RSS feed:', error);
@@ -727,7 +708,7 @@ export default function BlogsDashboard() {
   };
 
   return (
-    <div className="p-5 bg-slate-50 min-h-screen text-slate-800 font-sans">
+    <div className="p-6 max-w-7xl mx-auto bg-slate-50 min-h-screen text-slate-800 font-sans mt-20">
       <AnimatePresence mode="wait">
         {!showBlogForm ? (
           <motion.div
@@ -741,7 +722,7 @@ export default function BlogsDashboard() {
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 border-b border-slate-200 pb-5 bg-white p-6 rounded-2xl shadow-sm">
               <div>
                 <h1 className="text-2xl font-black text-slate-900 tracking-tight flex items-center gap-2">
-                  <span className="text-[#FFB400]">📝</span>
+                  <span className="text-[#B8860B]">📝</span>
                   <span>Curated Blog Dashboard</span>
                 </h1>
                 <p className="text-slate-500 text-xs mt-1 font-semibold">
@@ -761,7 +742,7 @@ export default function BlogsDashboard() {
                     resetForm();
                     setShowBlogForm(true);
                   }}
-                  className="bg-[#FFB400] hover:bg-[#E5A200] text-white px-5 py-3 rounded-xl font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition-all cursor-pointer shadow-sm"
+                  className="bg-[#B8860B] hover:bg-[#9E7307] text-white px-5 py-3 rounded-xl font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition-all cursor-pointer shadow-sm"
                 >
                   <FontAwesomeIcon icon={faPlus} />
                   <span>Write Blog Post</span>
@@ -773,7 +754,7 @@ export default function BlogsDashboard() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div className="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm">
                 <span className="text-slate-400 text-[10px] font-bold uppercase tracking-wider">Total Published Blogs</span>
-                <p className="text-3xl font-black text-[#FFB400] mt-1">{blogs.length}</p>
+                <p className="text-3xl font-black text-[#B8860B] mt-1">{blogs.length}</p>
               </div>
               <div className="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm">
                 <span className="text-slate-400 text-[10px] font-bold uppercase tracking-wider">TOC & SEO Enriched</span>
@@ -805,7 +786,7 @@ export default function BlogsDashboard() {
             {isLoading ? (
               <div className="flex justify-center items-center py-20 bg-white rounded-2xl border border-slate-100 shadow-sm">
                 <div className="flex flex-col items-center gap-2">
-                  <span className="animate-spin text-2xl text-[#FFB400]">💫</span>
+                  <span className="animate-spin text-2xl text-[#B8860B]">💫</span>
                   <p className="text-slate-500 text-sm font-semibold">Loading published blogs...</p>
                 </div>
               </div>
@@ -823,7 +804,7 @@ export default function BlogsDashboard() {
                         <th className="p-4 text-xs font-bold text-slate-400 uppercase">Banner</th>
                         <th className="p-4 text-xs font-bold text-slate-400 uppercase">Title & Details</th>
                         <th className="p-4 text-xs font-bold text-slate-400 uppercase">Slug / Link</th>
-                        
+                        <th className="p-4 text-xs font-bold text-slate-400 uppercase">Q&A / Reviews</th>
                         <th className="p-4 text-xs font-bold text-slate-400 uppercase text-right">Actions</th>
                       </tr>
                     </thead>
@@ -838,7 +819,7 @@ export default function BlogsDashboard() {
                             />
                           </td>
                           <td className="p-4 max-w-xs">
-                            <span className="font-extrabold text-slate-900 text-xs sm:text-sm line-clamp-1 hover:text-[#FFB400] transition-colors">
+                            <span className="font-extrabold text-slate-900 text-xs sm:text-sm line-clamp-1 hover:text-[#B8860B] transition-colors">
                               {blog.title}
                             </span>
                             <div className="flex gap-2 items-center text-[10px] text-slate-400 font-semibold mt-1">
@@ -852,12 +833,21 @@ export default function BlogsDashboard() {
                               {blog.slug}
                             </span>
                           </td>
-                          
+                          <td className="p-4">
+                            <div className="flex gap-2 items-center">
+                              <span className="px-2 py-0.5 bg-blue-50 border border-blue-200/50 rounded-md text-[10px] font-extrabold text-blue-700">
+                                {blog.faqs?.length || 0} FAQs
+                              </span>
+                              <span className="px-2 py-0.5 bg-amber-50 border border-amber-200/50 rounded-md text-[10px] font-extrabold text-[#B8860B]">
+                                {blog.reviews?.length || 0} Reviews
+                              </span>
+                            </div>
+                          </td>
                           <td className="p-4 text-right">
                             <div className="flex items-center justify-end gap-2">
                               <button
                                 onClick={() => handleEdit(blog)}
-                                className="w-8 h-8 rounded-lg hover:bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-500 hover:text-[#FFB400] transition-colors cursor-pointer"
+                                className="w-8 h-8 rounded-lg hover:bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-500 hover:text-[#B8860B] transition-colors cursor-pointer"
                                 title="Edit post"
                               >
                                 <FontAwesomeIcon icon={faEdit} className="text-xs" />
@@ -976,20 +966,10 @@ export default function BlogsDashboard() {
               </div>
 
               <div className="flex items-center gap-2 flex-wrap">
-                {formMode === 'add' && (
-                  <button
-                    type="button"
-                    onClick={handleAutofillTestData}
-                    className="bg-amber-50 hover:bg-amber-100 border border-[#D4AF37]/35 text-[#FFB400] px-4 py-2.5 rounded-xl font-bold text-xs flex items-center gap-2 transition-all cursor-pointer"
-                  >
-                    <span>⚡ Autofill Test Data</span>
-                  </button>
-                )}
-
                 <button
                   type="button"
-                  onClick={() => handleRecoverDraft()}
-                  className="bg-slate-100 hover:bg-slate-200 border border-slate-250 text-slate-600 px-4 py-2.5 rounded-xl font-bold text-xs flex items-center gap-2 transition-all cursor-pointer"
+                  onClick={handleRecoverDraft}
+                  className="bg-slate-100 hover:bg-slate-200 border border-slate-200 text-slate-600 px-4 py-2.5 rounded-xl font-bold text-xs flex items-center gap-2 transition-all cursor-pointer"
                   title="Check autosaved version"
                 >
                   <FontAwesomeIcon icon={faClipboardList} className="text-xs" />
@@ -998,77 +978,114 @@ export default function BlogsDashboard() {
               </div>
             </div>
 
-            {/* AI Writeup Generator Card */}
-            {formMode === 'add' && (
-              <div className="p-6 border border-amber-200/80 bg-gradient-to-br from-amber-50/40 to-orange-50/10 rounded-2xl shadow-sm relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-amber-200/10 to-transparent rounded-bl-full pointer-events-none"></div>
+            {/* AI Generator Tools Area */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* AI Magic Generator Section */}
+              <div className="p-6 border border-indigo-200/80 bg-gradient-to-br from-indigo-50/40 to-blue-50/10 rounded-2xl shadow-sm relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-indigo-200/10 to-transparent rounded-bl-full pointer-events-none"></div>
                 
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-2">
-                    <span className="flex items-center justify-center w-7 h-7 rounded-lg bg-amber-100 text-[#FFB400] text-xs font-bold animate-pulse">✨</span>
+                    <span className="flex items-center justify-center w-7 h-7 rounded-lg bg-indigo-100 text-indigo-600 text-xs font-bold animate-pulse">✨</span>
                     <div>
                       <h3 className="text-slate-800 text-sm font-bold uppercase tracking-wider">
-                        AI Writeup Auto-Generator (ChatGPT)
+                        AI Magic Generator
                       </h3>
-                      <p className="text-slate-500 text-[11px] mt-0.5 leading-relaxed normal-case">
-                        Paste the raw writeup below. ChatGPT will automatically draft the title, subtitle, slug, 3,000+ words detailed rich blog post, 10+ FAQ schemas, and 5+ client reviews.
+                      <p className="text-slate-500 text-[10px] mt-0.5 leading-relaxed normal-case">
+                        Crafts a high-converting title, content, meta tags, FAQs, and realistic reviews.
                       </p>
                     </div>
                   </div>
                 </div>
 
                 <div className="flex flex-col gap-3">
-                  <textarea
-                    value={writeupInput}
-                    onChange={(e) => setWriteupInput(e.target.value)}
-                    rows={5}
-                    placeholder="Paste the raw writeup text, draft notes, or transcripts for the legal blog here..."
-                    className="w-full p-4 bg-white border border-slate-200 focus:border-[#FFB400] focus:ring-2 focus:ring-amber-50 rounded-xl text-xs text-slate-800 focus:outline-none placeholder-slate-400 shadow-sm transition-all"
+                  <input
+                    type="text"
+                    value={primaryKeyword}
+                    onChange={(e) => setPrimaryKeyword(e.target.value)}
+                    placeholder="Primary Keyword (e.g., 'Trademark Registration in India')"
+                    className="w-full p-3 bg-white border border-slate-200 focus:border-indigo-400 focus:ring-2 focus:ring-indigo-50 rounded-xl text-xs text-slate-800 focus:outline-none transition-all"
+                    disabled={isGenerating}
+                  />
+                  <input
+                    type="text"
+                    value={secondaryKeyword}
+                    onChange={(e) => setSecondaryKeyword(e.target.value)}
+                    placeholder="Secondary Keyword (Optional)"
+                    className="w-full p-3 bg-white border border-slate-200 focus:border-indigo-400 focus:ring-2 focus:ring-indigo-50 rounded-xl text-xs text-slate-800 focus:outline-none transition-all"
                     disabled={isGenerating}
                   />
 
-                  {generationError && (
-                    <div className="p-3.5 bg-red-50 border border-red-200 text-red-700 text-xs font-semibold rounded-xl flex items-start gap-2">
-                      <span className="text-sm">⚠️</span>
-                      <span>{generationError}</span>
-                    </div>
-                  )}
+                  <button
+                    type="button"
+                    onClick={handleGenerate}
+                    disabled={isGenerating}
+                    className="w-full mt-2 px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white disabled:opacity-40 rounded-xl font-bold text-xs shadow-sm transition-all cursor-pointer flex items-center justify-center gap-2"
+                  >
+                    {isGenerating ? (
+                      <><span className="animate-spin text-xs">💫</span> Generating...</>
+                    ) : (
+                      <><FontAwesomeIcon icon={faMagic} /> Generate SEO-Optimized Blog</>
+                    )}
+                  </button>
+                </div>
+              </div>
 
-                  <div className="flex items-center justify-between mt-1.5">
-                    <div className="flex items-center gap-2.5">
-                      {isGenerating && (
-                        <div className="flex items-center gap-2">
-                          <span className="animate-spin text-[#FFB400] text-sm">💫</span>
-                          <span className="text-[11px] font-bold text-slate-650 animate-pulse">
-                            {generationStep}
-                          </span>
-                        </div>
-                      )}
-                    </div>
-
-                    <motion.button
+              {/* AI Image & Expansion Sections Container */}
+              <div className="flex flex-col gap-6">
+                {/* AI Image Generator Section */}
+                <div className="p-5 border border-emerald-200/80 bg-gradient-to-br from-emerald-50/40 to-teal-50/10 rounded-2xl shadow-sm relative overflow-hidden">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="flex items-center justify-center w-6 h-6 rounded-lg bg-emerald-100 text-emerald-600 text-xs font-bold">📸</span>
+                    <h3 className="text-slate-800 text-xs font-bold uppercase tracking-wider">AI Cover Image</h3>
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <textarea
+                      value={imagePrompt}
+                      onChange={(e) => setImagePrompt(e.target.value)}
+                      placeholder="Image Prompt (e.g. A modern professional law office...)"
+                      rows={2}
+                      className="w-full p-2.5 bg-white border border-slate-200 focus:border-emerald-400 focus:ring-2 focus:ring-emerald-50 rounded-xl text-xs text-slate-800 focus:outline-none transition-all resize-none"
+                      disabled={isGeneratingImage}
+                    />
+                    <button
                       type="button"
-                      onClick={handleGenerateContent}
-                      disabled={isGenerating || !writeupInput.trim()}
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                      className="px-5 py-2.5 bg-[#FFB400] hover:bg-[#E5A200] text-white disabled:opacity-40 rounded-xl font-bold text-xs shadow-sm hover:shadow transition-all cursor-pointer flex items-center gap-1.5"
+                      onClick={handleGenerateImage}
+                      disabled={isGeneratingImage}
+                      className="w-full px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white disabled:opacity-40 rounded-xl font-bold text-xs shadow-sm transition-all cursor-pointer flex items-center justify-center gap-2"
                     >
-                      {isGenerating ? (
-                        <>
-                          <span className="animate-spin text-xs">💫</span>
-                          <span>Generating Content...</span>
-                        </>
-                      ) : (
-                        <>
-                          <span>✨ Generate Blog with AI</span>
-                        </>
-                      )}
-                    </motion.button>
+                      {isGeneratingImage ? '💫 Visualizing...' : 'Generate Image'}
+                    </button>
+                  </div>
+                </div>
+
+                {/* AI Description Expander Section */}
+                <div className="p-5 border border-amber-200/80 bg-gradient-to-br from-amber-50/40 to-orange-50/10 rounded-2xl shadow-sm relative overflow-hidden">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="flex items-center justify-center w-6 h-6 rounded-lg bg-amber-100 text-amber-600 text-xs font-bold">🚀</span>
+                    <h3 className="text-slate-800 text-xs font-bold uppercase tracking-wider">Expand Content</h3>
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <textarea
+                      value={expansionSubtopics}
+                      onChange={(e) => setExpansionSubtopics(e.target.value)}
+                      placeholder="e.g. Add a detailed table on copyright fees..."
+                      rows={2}
+                      className="w-full p-2.5 bg-white border border-slate-200 focus:border-amber-400 focus:ring-2 focus:ring-amber-50 rounded-xl text-xs text-slate-800 focus:outline-none transition-all resize-none"
+                      disabled={isExpanding}
+                    />
+                    <button
+                      type="button"
+                      onClick={handleExpandDescription}
+                      disabled={isExpanding || !newBlog.description}
+                      className="w-full px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white disabled:opacity-40 rounded-xl font-bold text-xs shadow-sm transition-all cursor-pointer flex items-center justify-center gap-2"
+                    >
+                      {isExpanding ? '💫 Expanding...' : 'Expand Blog Description'}
+                    </button>
                   </div>
                 </div>
               </div>
-            )}
+            </div>
 
             {/* Main Form Fields */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
@@ -1082,7 +1099,7 @@ export default function BlogsDashboard() {
                   value={newBlog.title}
                   onChange={handleInputChange}
                   placeholder="e.g. Defeating Bank Harassment & Debt Settlement"
-                  className="p-3.5 border border-slate-200 rounded-xl focus:border-[#FFB400] focus:outline-none text-xs sm:text-sm font-semibold text-slate-700 bg-white"
+                  className="p-3.5 border border-slate-200 rounded-xl focus:border-[#B8860B] focus:outline-none text-xs sm:text-sm font-semibold text-slate-700 bg-white"
                 />
               </div>
 
@@ -1099,7 +1116,7 @@ export default function BlogsDashboard() {
                   value={newBlog.slug}
                   onChange={handleInputChange}
                   placeholder="e.g. defeating-bank-harassment"
-                  className="p-3.5 border border-slate-200 rounded-xl focus:border-[#FFB400] focus:outline-none text-xs sm:text-sm font-semibold text-slate-700 bg-white font-mono"
+                  className="p-3.5 border border-slate-200 rounded-xl focus:border-[#B8860B] focus:outline-none text-xs sm:text-sm font-semibold text-slate-700 bg-white font-mono"
                 />
               </div>
 
@@ -1112,7 +1129,7 @@ export default function BlogsDashboard() {
                   value={newBlog.subtitle}
                   onChange={handleInputChange}
                   placeholder="e.g. A comprehensive guide on debtor legal rights"
-                  className="p-3.5 border border-slate-200 rounded-xl focus:border-[#FFB400] focus:outline-none text-xs sm:text-sm font-semibold text-slate-700 bg-white"
+                  className="p-3.5 border border-slate-200 rounded-xl focus:border-[#B8860B] focus:outline-none text-xs sm:text-sm font-semibold text-slate-700 bg-white"
                 />
               </div>
 
@@ -1123,7 +1140,7 @@ export default function BlogsDashboard() {
                   name="author"
                   value={newBlog.author}
                   onChange={handleInputChange}
-                  className="p-3.5 border border-slate-200 rounded-xl focus:border-[#FFB400] focus:outline-none text-xs sm:text-sm font-semibold text-slate-700 bg-white"
+                  className="p-3.5 border border-slate-200 rounded-xl focus:border-[#B8860B] focus:outline-none text-xs sm:text-sm font-semibold text-slate-700 bg-white"
                 >
                   <option value="Anuj Anand Malik">Anuj Anand Malik</option>
                   <option value="Shrey Arora">Shrey Arora</option>
@@ -1140,11 +1157,11 @@ export default function BlogsDashboard() {
                   required
                   value={newBlog.date}
                   onChange={handleInputChange}
-                  className="p-3.5 border border-slate-200 rounded-xl focus:border-[#FFB400] focus:outline-none text-xs sm:text-sm font-semibold text-slate-700 bg-white"
+                  className="p-3.5 border border-slate-200 rounded-xl focus:border-[#B8860B] focus:outline-none text-xs sm:text-sm font-semibold text-slate-700 bg-white"
                 />
               </div>
 
-              {/* Image Input */}
+              {/* Image Upload */}
               <div className="flex flex-col gap-1.5">
                 <label className="text-xs font-extrabold uppercase text-slate-400 tracking-wider">Cover Image URL *</label>
                 <div className="flex gap-2">
@@ -1155,7 +1172,7 @@ export default function BlogsDashboard() {
                     value={newBlog.image}
                     onChange={handleInputChange}
                     placeholder="URL or upload local file"
-                    className="p-3.5 border border-slate-200 rounded-xl focus:border-[#FFB400] focus:outline-none text-xs sm:text-sm font-semibold text-slate-700 bg-white flex-1"
+                    className="p-3.5 border border-slate-200 rounded-xl focus:border-[#B8860B] focus:outline-none text-xs sm:text-sm font-semibold text-slate-700 bg-white flex-1"
                   />
                   <input
                     type="file"
@@ -1168,24 +1185,14 @@ export default function BlogsDashboard() {
                     type="button"
                     onClick={() => fileInputRef.current?.click()}
                     className="px-4 py-3 bg-slate-100 hover:bg-slate-200 border border-slate-200 text-slate-700 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-1.5 cursor-pointer"
-                    title="Upload cover image"
                   >
                     <FontAwesomeIcon icon={faUpload} />
                     <span>{uploading ? '...' : 'Upload'}</span>
                   </button>
-                  <button
-                    type="button"
-                    onClick={handleGenerateImage}
-                    disabled={isGeneratingImage}
-                    className="px-4 py-3 bg-amber-50 hover:bg-amber-100 border border-[#D4AF37]/35 text-[#FFB400] rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-1.5 cursor-pointer disabled:opacity-50"
-                    title="Generate cover image with AI"
-                  >
-                    <span>{isGeneratingImage ? '💫 Generating...' : '✨ Generate AI'}</span>
-                  </button>
                 </div>
                 {uploading && (
                   <div className="w-full bg-slate-100 rounded-full h-1.5 mt-1 overflow-hidden">
-                    <div className="bg-[#FFB400] h-1.5 rounded-full transition-all" style={{ width: `${uploadProgress}%` }}></div>
+                    <div className="bg-[#B8860B] h-1.5 rounded-full transition-all" style={{ width: `\${uploadProgress}%` }}></div>
                   </div>
                 )}
               </div>
@@ -1218,7 +1225,7 @@ export default function BlogsDashboard() {
             {/* SEO Meta Tags Accordion */}
             <div className="p-5 border border-slate-100 rounded-2xl bg-slate-50/50 flex flex-col gap-4">
               <h3 className="text-xs font-black text-slate-900 uppercase tracking-widest flex items-center gap-1.5">
-                <FontAwesomeIcon icon={faInfoCircle} className="text-[#FFB400]" />
+                <FontAwesomeIcon icon={faInfoCircle} className="text-[#B8860B]" />
                 <span>Google Search SEO Configuration</span>
               </h3>
               
@@ -1231,7 +1238,7 @@ export default function BlogsDashboard() {
                     value={newBlog.metaTitle}
                     onChange={handleInputChange}
                     placeholder="Defaults to post title if left blank"
-                    className="p-3 border border-slate-200 rounded-lg focus:border-[#FFB400] focus:outline-none text-xs font-semibold text-slate-700 bg-white"
+                    className="p-3 border border-slate-200 rounded-lg focus:border-[#B8860B] focus:outline-none text-xs font-semibold text-slate-700 bg-white"
                   />
                 </div>
                 <div className="flex flex-col gap-1.5">
@@ -1242,7 +1249,7 @@ export default function BlogsDashboard() {
                     value={newBlog.metaDescription}
                     onChange={handleInputChange}
                     placeholder="Short description for Google snippet"
-                    className="p-3 border border-slate-200 rounded-lg focus:border-[#FFB400] focus:outline-none text-xs font-semibold text-slate-700 bg-white"
+                    className="p-3 border border-slate-200 rounded-lg focus:border-[#B8860B] focus:outline-none text-xs font-semibold text-slate-700 bg-white"
                   />
                 </div>
               </div>
@@ -1306,13 +1313,13 @@ export default function BlogsDashboard() {
             <div className="p-6 border border-slate-100 rounded-3xl bg-slate-50/30 flex flex-col gap-6">
               <div className="flex justify-between items-center border-b border-slate-100 pb-3">
                 <h3 className="text-xs font-black text-slate-900 uppercase tracking-widest flex items-center gap-1.5">
-                  <FontAwesomeIcon icon={faStar} className="text-[#FFB400]" />
+                  <FontAwesomeIcon icon={faStar} className="text-[#B8860B]" />
                   <span>Review Snippets</span>
                 </h3>
                 <button
                   type="button"
                   onClick={addReview}
-                  className="text-xs font-bold text-[#FFB400] hover:text-[#E5A200] flex items-center gap-1 cursor-pointer"
+                  className="text-xs font-bold text-[#B8860B] hover:text-[#9E7307] flex items-center gap-1 cursor-pointer"
                 >
                   <FontAwesomeIcon icon={faPlus} />
                   <span>Add Review</span>
@@ -1339,7 +1346,7 @@ export default function BlogsDashboard() {
                           required
                           value={review.name}
                           onChange={(e) => handleReviewChange(idx, 'name', e.target.value)}
-                          className="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs font-semibold focus:border-[#FFB400] focus:outline-none"
+                          className="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs font-semibold focus:border-[#B8860B] focus:outline-none"
                         />
                         <div className="flex items-center gap-2">
                           <label className="text-xs text-slate-500">Rating:</label>
@@ -1349,7 +1356,7 @@ export default function BlogsDashboard() {
                             required
                             value={review.rating}
                             onChange={(e) => handleReviewChange(idx, 'rating', parseInt(e.target.value))}
-                            className="w-16 p-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs font-semibold focus:border-[#FFB400] focus:outline-none"
+                            className="w-16 p-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs font-semibold focus:border-[#B8860B] focus:outline-none"
                           />
                         </div>
                         <input
@@ -1357,7 +1364,7 @@ export default function BlogsDashboard() {
                           required
                           value={review.date || ''}
                           onChange={(e) => handleReviewChange(idx, 'date', e.target.value)}
-                          className="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs font-semibold focus:border-[#FFB400] focus:outline-none"
+                          className="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs font-semibold focus:border-[#B8860B] focus:outline-none"
                         />
                         <textarea
                           placeholder="Review Text..."
@@ -1365,7 +1372,7 @@ export default function BlogsDashboard() {
                           value={review.review}
                           onChange={(e) => handleReviewChange(idx, 'review', e.target.value)}
                           rows={2}
-                          className="w-full md:col-span-2 p-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs focus:border-[#FFB400] focus:outline-none resize-none"
+                          className="w-full md:col-span-2 p-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs focus:border-[#B8860B] focus:outline-none resize-none"
                         />
                       </div>
                     </div>
@@ -1397,3 +1404,7 @@ export default function BlogsDashboard() {
     </div>
   );
 }
+"""
+
+with open("src/app/authority/blogs/page.tsx", "w") as f:
+    f.write(new_code)

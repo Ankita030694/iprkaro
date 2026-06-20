@@ -1,4 +1,6 @@
-import { NextRequest, NextResponse } from "next/server";
+import os
+
+new_code = """import { NextRequest, NextResponse } from "next/server";
 import OpenAI from "openai";
 
 export const dynamic = "force-dynamic";
@@ -18,18 +20,18 @@ export async function POST(request: NextRequest) {
     apiKey: apiKey,
   });
 
-  const sanitizeText = (txt: string) => txt.replace(/—/g, "-").replace(/\u2014/g, "-");
+  const sanitizeText = (txt: string) => txt.replace(/—/g, "-").replace(/\\u2014/g, "-");
 
   try {
     const body = await request.json();
-    const contextText = body.primaryKeyword || body.context || body.writeup || body.topic;
+    const primaryKeyword = body.primaryKeyword || body.context || body.writeup;
     const secondaryKeyword = body.secondaryKeyword || body.secondaryKeywords;
 
-    if (!contextText) {
-      return NextResponse.json({ error: "Topic, Context, or Writeup is required" }, { status: 400 });
+    if (!primaryKeyword) {
+      return NextResponse.json({ error: "Primary Keyword, Context, or Writeup is required" }, { status: 400 });
     }
 
-    console.log(`[AI Generator Flow] Step 1: Generating SEO metadata (Title, Subtitle, Slug) for context: [${contextText.substring(0, 30)}...]`);
+    console.log(`[AI Generator Flow] Step 1: Generating SEO metadata (Title, Subtitle, Slug) for: [\${primaryKeyword}]...`);
 
     // STEP 1: Generate Title, Subtitle, Meta Title, Meta Description, Slug
     const step1Completion = await openai.chat.completions.create({
@@ -39,14 +41,15 @@ export async function POST(request: NextRequest) {
           role: "system",
           content: `You are a professional legal SEO and AEO strategist.
 Generate an SEO-optimized H1 Title, engaging subtitle, meta title, meta description, and URL slug for a blog article on IPR Karo.
-Topic or Context Provided: ${contextText}
+Primary Keyword: \${primaryKeyword}
+Secondary Keywords: \${secondaryKeyword || ""}
 
 CRITICAL NEGATIVE CONSTRAINT:
 Under no circumstances should you include any em dashes (—) anywhere in your response. Always use normal hyphens (-), colons (:), commas, parentheses, or rewrite the sentence to avoid them.
 
 Return ONLY a JSON object with this exact structure:
 {
-  "title": "H1 Title based on the topic (max 70 chars)",
+  "title": "H1 Title containing the primary keyword (max 70 chars)",
   "subtitle": "Engaging subtitle (max 120 chars)",
   "metaTitle": "SEO meta title (60-70 chars)",
   "metaDescription": "SEO meta description (150-160 chars)",
@@ -56,27 +59,25 @@ Return ONLY a JSON object with this exact structure:
       ],
       response_format: { type: "json_object" },
       temperature: 0.7,
-      max_tokens: 10000,
     });
 
     const step1ResultStr = sanitizeText(step1Completion.choices[0].message.content || "{}");
     const step1Result = JSON.parse(step1ResultStr);
 
-    console.log(`[AI Generator Flow] Step 1 complete. Title: "${step1Result.title}"`);
+    console.log(`[AI Generator Flow] Step 1 complete. Title: "\${step1Result.title}"`);
     console.log(`[AI Generator Flow] Step 2: Generating description content (4000+ words HTML)...`);
 
     // STEP 2: Generate Description (Complete body in HTML)
     const step2SystemPrompt = `
 You are a professional legal content writer and SEO expert. Write a fully human-written, SEO-optimized, exhaustive legal article body for IPR Karo (https://www.iprkaro.com/).
-Target Topic / Context: ${contextText}
-Title: ${step1Result.title}
-Subtitle: ${step1Result.subtitle}
+Target Primary Keyword: \${primaryKeyword}
+Secondary Keywords: \${secondaryKeyword || ""}
+Title: \${step1Result.title}
+Subtitle: \${step1Result.subtitle}
 
 **CRITICAL WORD COUNT REQUIREMENT**:
 The content MUST be extremely detailed and exceed 4000 words. To achieve this, expand every section, subtopic, and legal concept with 4-6 detailed, comprehensive paragraphs.
 
-**INSTRUCTION ON COMPLETENESS**:
-Do not ask the user for more information or clarification. If the context is sparse or vague, infer the legal topic from the context and generate a comprehensive, professional article about it automatically.
 
 **Requirements**:
 - **Structure**: Use HTML tags: <h2>, <h3>, <h4>, <p>, <ul>, <li>, <table>. Include at least 8 main H2 sections.
@@ -98,7 +99,10 @@ Do not ask the user for more information or clarification. If the context is spa
   Under no circumstances should you include any em dashes (—) anywhere in your entire response. Always use normal hyphens (-), colons, commas, or parentheses if needed instead.
 `;
 
-    const step2UserMessage = `Write an exhaustive, extremely detailed 4000+ words HTML body based on the Target Topic/Context provided. Do not ask for more information or clarification; infer and create professional legal content if the context is sparse.`;
+    const context = body.context || body.writeup;
+    const step2UserMessage = context && context !== primaryKeyword
+      ? `Write an exhaustive, extremely detailed 4000+ words HTML body about: \${primaryKeyword}\\nAdditional context & details: \${context}`
+      : `Write an exhaustive, extremely detailed 4000+ words HTML body about: \${primaryKeyword}`;
 
     const step2Completion = await openai.chat.completions.create({
       model: "gpt-4o",
@@ -107,7 +111,6 @@ Do not ask the user for more information or clarification. If the context is spa
         { role: "user", content: step2UserMessage },
       ],
       temperature: 0.8,
-      max_tokens: 10000,
     });
 
     let rawDescription = sanitizeText(step2Completion.choices[0].message.content || "");
@@ -123,7 +126,7 @@ Do not ask the user for more information or clarification. If the context is spa
       cleanedDescription = cleanedDescription.slice(0, -3).trim();
     }
 
-    console.log(`[AI Generator Flow] Step 2 complete. Description length: ${cleanedDescription.split(/\s+/).length} words.`);
+    console.log(`[AI Generator Flow] Step 2 complete. Description length: \${cleanedDescription.split(/\\s+/).length} words.`);
     console.log(`[AI Generator Flow] Step 3: Generating FAQs, reviews, and image prompt in the context of the description...`);
 
     // STEP 3: Generate FAQs, Reviews, suggestedImagePrompt based on the Title, Subtitle, and Description
@@ -139,11 +142,11 @@ Analyze the following generated article Title, Subtitle, and HTML Description, a
 2. 3-5 realistic customer review snippets (with Indian names) expressing high satisfaction with the legal services.
 3. A suggested image prompt describing a clean, professional, modern corporate infographic/illustration suitable for this article.
 
-Article Title: ${step1Result.title}
-Article Subtitle: ${step1Result.subtitle}
+Article Title: \${step1Result.title}
+Article Subtitle: \${step1Result.subtitle}
 
 Article Description:
-${cleanedDescription}
+\${cleanedDescription}
 
 CRITICAL NEGATIVE CONSTRAINT:
 Under no circumstances should you include any em dashes (—) anywhere in your response. Always use normal hyphens (-), colons (:), commas, parentheses, or rewrite the sentence to avoid them.
@@ -166,7 +169,6 @@ Return ONLY a JSON object with this exact structure:
         ],
         response_format: { type: "json_object" },
         temperature: 0.8,
-        max_tokens: 10000,
       });
 
       const step3ResultStr = sanitizeText(step3Completion.choices[0].message.content || "{}");
@@ -176,7 +178,7 @@ Return ONLY a JSON object with this exact structure:
       reviews = step3Result.reviews || [];
       suggestedImagePrompt = step3Result.suggestedImagePrompt || "Professional legal service illustration";
 
-      console.log(`[AI Generator Flow] Step 3 complete. FAQs: ${faqs.length}, Reviews: ${reviews.length}`);
+      console.log(`[AI Generator Flow] Step 3 complete. FAQs: \${faqs.length}, Reviews: \${reviews.length}`);
     } catch (step3Error) {
       console.error("[AI Generator Flow] Error in Step 3:", step3Error);
     }
@@ -217,3 +219,7 @@ Return ONLY a JSON object with this exact structure:
     );
   }
 }
+"""
+
+with open("src/app/api/generate-article/route.ts", "w") as f:
+    f.write(new_code)
