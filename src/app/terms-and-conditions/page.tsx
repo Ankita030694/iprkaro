@@ -311,7 +311,7 @@ const TermsAndConditions: React.FC = () => {
                 </h3>
                 <ul className="list-disc pl-6 space-y-2 text-gray-700">
                   <li>
-                    <strong>Identity & Contact Data:</strong> Name, PAN, Aadhaar, DIN, address, email, phone.
+                    <strong>Identity & Contact Data:</strong> Name, email, phone, state.
                   </li>
                   <li>
                     <strong>Service Data:</strong> Documents & information for requested services.

@@ -1403,6 +1403,8 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
                     {errors.class && <p className="text-red-400 text-xs mt-1 font-nunito">{errors.class}</p>}
                   </div>
 
+
+
               {/* Submit Button */}
               <button
                 type="submit"
@@ -1685,6 +1687,8 @@ function TrademarkSearchPopup({ isOpen, onClose, searchTerm, trademarkClass = ''
                 </select>
                 {errors.class && <p className="text-red-400 text-xs mt-1 font-nunito">{errors.class}</p>}
               </div>
+
+
 
               {/* Submit Button */}
               <button
