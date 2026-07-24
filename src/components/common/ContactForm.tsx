@@ -10,9 +10,10 @@ import { getUTMParameters } from '@/lib/utils';
 interface ContactFormProps {
   isPopup?: boolean;
   onSuccess?: () => void;
+  onClose?: () => void;
 }
 
-export default function ContactForm({ isPopup = false, onSuccess }: ContactFormProps) {
+export default function ContactForm({ isPopup = false, onSuccess, onClose }: ContactFormProps) {
   const router = useRouter();
   const [formData, setFormData] = useState({
     name: '',
@@ -342,7 +343,7 @@ export default function ContactForm({ isPopup = false, onSuccess }: ContactFormP
           {/* DPDP Disclaimer */}
           <div className="space-y-1 mt-4">
             <p className={`text-center font-nunito text-xs leading-relaxed ${isPopup ? 'text-[#0C002B]' : 'text-gray-600'}`}>
-              By clicking submit, you agree to share these details with us for the purpose of contacting you regarding our services. Please read our <Link href="/privacy-policy" className={`hover:underline font-semibold ${isPopup ? 'text-[#0C002B]' : 'text-[#1952C7]'}`}>Privacy Policy</Link> for more details.
+              By clicking submit, you agree to share these details with us for the purpose of contacting you regarding our services. Please read our <Link href="/privacy-policy" onClick={onClose} className={`hover:underline font-semibold text-red-500`}>Privacy Policy</Link> for more details.
             </p>
           </div>
 

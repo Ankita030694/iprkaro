@@ -75,7 +75,7 @@ export default function GlobalPopupForm() {
 
             {/* The Form - Wrapped in a scrollable div */}
             <div className="w-full overflow-y-auto rounded-xl sm:rounded-2xl custom-scrollbar">
-              <ContactForm isPopup={true} onSuccess={handleClose} />
+              <ContactForm isPopup={true} onSuccess={handleClose} onClose={handleClose} />
             </div>
           </motion.div>
         </div>

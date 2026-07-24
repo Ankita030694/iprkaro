@@ -250,7 +250,7 @@ export default function ContactFormPopup({ isOpen, onClose }: ContactFormPopupPr
             {/* DPDP Disclaimer */}
             <div className="space-y-1 mt-3">
               <p className="text-center text-[rgba(255,255,255,0.8)] font-nunito text-[10px] leading-tight">
-                By clicking submit, you agree to share these details with us for the purpose of contacting you regarding our services. Please read our <Link href="/privacy-policy" className="text-[#FFB703] hover:underline font-semibold">Privacy Policy</Link> for more details.
+                By clicking submit, you agree to share these details with us for the purpose of contacting you regarding our services. Please read our <Link href="/privacy-policy" onClick={onClose} className="text-red-500 hover:underline font-semibold">Privacy Policy</Link> for more details.
               </p>
             </div>
 
