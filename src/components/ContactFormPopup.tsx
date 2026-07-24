@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import Link from 'next/link';
 
 interface ContactFormPopupProps {
   isOpen: boolean;
@@ -244,6 +245,13 @@ export default function ContactFormPopup({ isOpen, onClose }: ContactFormPopupPr
                   placeholder="Tell us about your needs..."
                 />
               </div>
+            </div>
+
+            {/* DPDP Disclaimer */}
+            <div className="space-y-1 mt-3">
+              <p className="text-center text-[rgba(255,255,255,0.8)] font-nunito text-[10px] leading-tight">
+                By clicking submit, you agree to share these details with us for the purpose of contacting you regarding our services. Please read our <Link href="/privacy-policy" className="text-[#FFB703] hover:underline font-semibold">Privacy Policy</Link> for more details.
+              </p>
             </div>
 
             {/* Submit Button */}

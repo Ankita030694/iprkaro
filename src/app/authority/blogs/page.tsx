@@ -100,6 +100,7 @@ export default function BlogsDashboard() {
   const [generationStep, setGenerationStep] = useState('');
   const [generationError, setGenerationError] = useState('');
   const [isGeneratingImage, setIsGeneratingImage] = useState(false);
+  const [suggestedImagePrompt, setSuggestedImagePrompt] = useState('');
   // Check if user is logged in; if not, redirect to login page
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -465,6 +466,8 @@ export default function BlogsDashboard() {
       
       const generatedData = await response.json();
 
+      setSuggestedImagePrompt(generatedData.suggestedImagePrompt || "");
+
       setNewBlog(prevState => ({
         ...prevState,
         title: generatedData.title || prevState.title,
@@ -490,9 +493,11 @@ export default function BlogsDashboard() {
   };
 
   const handleGenerateImage = async () => {
-    const finalPrompt = newBlog.title 
-      ? `A professional, modern, corporate legal illustration representing: ${newBlog.title}`
-      : "A professional, modern, corporate legal illustration with premium high-quality digital art";
+    const finalPrompt = suggestedImagePrompt
+      ? suggestedImagePrompt
+      : newBlog.title 
+        ? `A professional, modern, corporate legal illustration representing: ${newBlog.title}`
+        : "A professional, modern, corporate legal illustration with premium high-quality digital art";
 
     try {
       setIsGeneratingImage(true);
@@ -1144,8 +1149,19 @@ export default function BlogsDashboard() {
                 />
               </div>
 
+              {/* AI Image Prompt (Optional edit) */}
+              <div className="flex flex-col gap-1.5 col-span-1 sm:col-span-2 md:col-span-1 lg:col-span-1">
+                <label className="text-xs font-extrabold uppercase text-slate-400 tracking-wider">AI Image Prompt (Editable)</label>
+                <textarea
+                  value={suggestedImagePrompt}
+                  onChange={(e) => setSuggestedImagePrompt(e.target.value)}
+                  placeholder="Enter a prompt to generate the cover image..."
+                  className="p-3.5 border border-slate-200 rounded-xl focus:border-[#FFB400] focus:outline-none text-xs sm:text-sm font-semibold text-slate-700 bg-white min-h-[80px]"
+                />
+              </div>
+
               {/* Image Input */}
-              <div className="flex flex-col gap-1.5">
+              <div className="flex flex-col gap-1.5 col-span-1 sm:col-span-2 lg:col-span-2">
                 <label className="text-xs font-extrabold uppercase text-slate-400 tracking-wider">Cover Image URL *</label>
                 <div className="flex gap-2">
                   <input

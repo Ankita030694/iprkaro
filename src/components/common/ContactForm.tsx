@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import { db } from '@/lib/firebase';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { getUTMParameters } from '@/lib/utils';
@@ -336,6 +337,13 @@ export default function ContactForm({ isPopup = false, onSuccess }: ContactFormP
                 placeholder="Tell us about your needs..."
               />
             </div>
+          </div>
+
+          {/* DPDP Disclaimer */}
+          <div className="space-y-1 mt-4">
+            <p className={`text-center font-nunito text-xs leading-relaxed ${isPopup ? 'text-[#0C002B]' : 'text-gray-600'}`}>
+              By clicking submit, you agree to share these details with us for the purpose of contacting you regarding our services. Please read our <Link href="/privacy-policy" className={`hover:underline font-semibold ${isPopup ? 'text-[#0C002B]' : 'text-[#1952C7]'}`}>Privacy Policy</Link> for more details.
+            </p>
           </div>
 
           {/* Status Message */}
