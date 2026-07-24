@@ -120,14 +120,14 @@ const PrivacyPolicy: React.FC = () => {
 
               <div>
                 <h2 className="text-2xl font-semibold text-gray-800 mb-3">
-                  6. Your Rights
+                  6. Your Rights & Data Removal
                 </h2>
                 <p className="text-gray-700 leading-relaxed">
-                  You can access, correct, request erasure, or withdraw consent for your personal data. Contact{' '}
+                  You can access, correct, request erasure, or withdraw consent for your personal data. If you want your data removed from our systems, or to exercise any of these rights, please contact us at{' '}
                   <a href="mailto:info@iprkaro.com" className="text-cyan-600 hover:text-cyan-700 underline">
                     info@iprkaro.com
-                  </a>{' '}
-                  to exercise these rights.
+                  </a>
+                  .
                 </p>
               </div>
 
