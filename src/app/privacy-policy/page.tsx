@@ -57,13 +57,10 @@ const PrivacyPolicy: React.FC = () => {
                     <strong>Identity & Contact Data:</strong> Name, email, phone, state.
                   </li>
                   <li>
-                    <strong>Service Data:</strong> Documents & information for requested services.
+                    <strong>Service Data:</strong> Services interested in and messages provided.
                   </li>
                   <li>
-                    <strong>Transactional Data:</strong> Services purchased, payment information, invoices.
-                  </li>
-                  <li>
-                    <strong>Technical & Usage Data:</strong> IP, browser type, device info, navigation data.
+                    <strong>Technical & Usage Data:</strong> Browser type, device info, navigation data.
                   </li>
                 </ul>
               </div>
