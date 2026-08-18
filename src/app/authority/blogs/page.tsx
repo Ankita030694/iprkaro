@@ -51,14 +51,33 @@ interface Blog {
   description: string;
   date: string;
   image: string;
+  infographicImage?: string;
   created: number;
   metaTitle?: string;
   metaDescription?: string;
-  slug: string; // New slug field for URLs
-  faqs?: FAQ[]; // New field for FAQs
-  reviews?: Review[]; // New field for Reviews
-  author: string; // New author field
+  slug: string;
+  category?: string;
+  statutoryFramework?: string;
+  keyTakeaways?: string[];
+  popularSearches?: string[];
+  faqs?: FAQ[];
+  reviews?: Review[];
+  author: string;
 }
+
+const advocateRoster = [
+  'Adv. Priya Sharma',
+  'Adv. Rohan Verma',
+  'Adv. Siddharth Mehra',
+  'Adv. Neha Kapoor',
+  'Adv. Vikram Malhotra',
+  'Adv. Ananya Iyer',
+  'Adv. Pooja Deshmukh',
+  'Adv. Arjun Nambiar',
+];
+
+const getRandomAdvocate = () =>
+  advocateRoster[Math.floor(Math.random() * advocateRoster.length)];
 
 export default function BlogsDashboard() {
   const [activeTab, setActiveTab] = useState('blogs');
@@ -69,21 +88,28 @@ export default function BlogsDashboard() {
     title: '',
     subtitle: '',
     description: '',
-    date: new Date().toISOString().split('T')[0], // Format as YYYY-MM-DD
+    date: new Date().toISOString().split('T')[0],
     image: '',
+    infographicImage: '',
     created: Date.now(),
     metaTitle: '',
     metaDescription: '',
-    slug: '', // Initialize the slug field
-    faqs: [], // Initialize empty FAQs array
-    reviews: [], // Initialize empty Reviews array
-    author: 'Anuj Anand Malik' // Default author
+    slug: '',
+    category: 'Procedural IP & Office Actions',
+    statutoryFramework: 'Trade Marks Act, 1999 & Trade Marks Rules, 2017',
+    keyTakeaways: [],
+    popularSearches: [],
+    faqs: [],
+    reviews: [],
+    author: getRandomAdvocate()
   });
   
   const [uploading, setUploading] = useState(false);
   const [uploadProgress, setUploadProgress] = useState(0);
   const [imagePreview, setImagePreview] = useState<string | null>(null);
+  const [infographicPreview, setInfographicPreview] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const infographicInputRef = useRef<HTMLInputElement>(null);
   const router = useRouter();
   
   const [currentPage, setCurrentPage] = useState(1);
@@ -100,7 +126,9 @@ export default function BlogsDashboard() {
   const [generationStep, setGenerationStep] = useState('');
   const [generationError, setGenerationError] = useState('');
   const [isGeneratingImage, setIsGeneratingImage] = useState(false);
+  const [isGeneratingInfographic, setIsGeneratingInfographic] = useState(false);
   const [suggestedImagePrompt, setSuggestedImagePrompt] = useState('');
+  const [infographicPrompt, setInfographicPrompt] = useState('');
   // Check if user is logged in; if not, redirect to login page
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -429,16 +457,17 @@ export default function BlogsDashboard() {
     }
     setIsGenerating(true);
     setGenerationError("");
-    setGenerationStep("Connecting to ChatGPT...");
+    setGenerationStep("Connecting to OpenAI GPT-4o...");
 
     try {
       const steps = [
-        "Analyzing writeup context...",
-        "Drafting click-worthy title & URL slug...",
-        "Structuring 3,000+ words detailed legal analysis...",
-        "Drafting 10+ statutory FAQs...",
-        "Synthesizing 5+ client review snippets...",
-        "Formatting outputs..."
+        "Analyzing writeup & statutory IP taxonomy...",
+        "Drafting H1 title, subtitle & SEO URL slug...",
+        "Executing parallel section chunking (5-6 sections)...",
+        "Injecting comparison HTML tables & statutory references...",
+        "Synthesizing 8-10 statutory FAQs & 5 verified client reviews...",
+        "Formulating 3D isometric infographic prompt...",
+        "Finalizing editorial output..."
       ];
 
       let currentStepIdx = 0;
@@ -449,7 +478,7 @@ export default function BlogsDashboard() {
           currentStepIdx++;
           setGenerationStep(steps[currentStepIdx]);
         }
-      }, 5000);
+      }, 2500);
 
       const response = await fetch('/api/generate-article', {
         method: 'POST',
@@ -467,6 +496,7 @@ export default function BlogsDashboard() {
       const generatedData = await response.json();
 
       setSuggestedImagePrompt(generatedData.suggestedImagePrompt || "");
+      setInfographicPrompt(generatedData.infographicPrompt || "");
 
       setNewBlog(prevState => ({
         ...prevState,
@@ -476,13 +506,18 @@ export default function BlogsDashboard() {
         metaTitle: generatedData.metaTitle || prevState.metaTitle,
         metaDescription: generatedData.metaDescription || prevState.metaDescription,
         slug: generatedData.slug || (generatedData.title ? generateSlug(generatedData.title) : prevState.slug),
+        category: generatedData.category || prevState.category || 'Procedural IP & Office Actions',
+        statutoryFramework: generatedData.statutoryFramework || prevState.statutoryFramework,
+        keyTakeaways: generatedData.keyTakeaways || prevState.keyTakeaways || [],
+        popularSearches: generatedData.popularSearches || prevState.popularSearches || [],
+        author: generatedData.author || prevState.author || getRandomAdvocate(),
         faqs: generatedData.faqs || prevState.faqs,
         reviews: generatedData.reviews && generatedData.reviews.length > 0
           ? generatedData.reviews.map((r: any) => ({ ...r, date: r.date || new Date().toISOString().split('T')[0] }))
           : prevState.reviews,
       }));
-      alert('✨ Blog contents populated successfully! Please verify fields, upload a cover image, and publish.');
-      setWriteupInput(""); // clear writeup input
+      alert('✨ Blog generated successfully via parallel pipeline! You can now generate cover image & 3D infographic.');
+      setWriteupInput("");
     } catch (err: any) {
       console.error('Error generating blog:', err);
       setGenerationError(err.message || 'Failed to generate blog. Please try again.');
@@ -496,39 +531,85 @@ export default function BlogsDashboard() {
     const finalPrompt = suggestedImagePrompt
       ? suggestedImagePrompt
       : newBlog.title 
-        ? `A professional, modern, corporate legal illustration representing: ${newBlog.title}`
-        : "A professional, modern, corporate legal illustration with premium high-quality digital art";
+        ? `A high-end cinematic editorial photograph of Indian startup founder consulting with senior trademark advocate in a modern high-rise law office in New Delhi with brushed-metal wall plaque reading "IPR KARO - ADVOCATES & IP ATTORNEYS" for: ${newBlog.title}`
+        : "A high-end cinematic editorial photograph of Indian startup founder and senior IP advocate in modern office with wall plaque reading IPR KARO";
 
     try {
       setIsGeneratingImage(true);
       const response = await fetch('/api/generate-image', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ prompt: finalPrompt }),
+        body: JSON.stringify({ prompt: finalPrompt, isInfographic: false }),
       });
 
       if (!response.ok) throw new Error('Failed to generate image');
-      let finalImageUrl = await response.json().then(data => data.imageUrl);
+      const resJson = await response.json();
+      let finalImageUrl = resJson.imageUrl;
       
-      if (finalImageUrl.startsWith('data:image/')) {
-        // Base64 image from OpenAI API; upload to Firebase Storage to prevent Firestore 1MB limit crash
-        setGenerationStep("Uploading AI image to cloud...");
-        const responseData = await fetch(finalImageUrl);
-        const blob = await responseData.blob();
-        
-        const storageRef = ref(storage, `blog-images/ai-generated-${Date.now()}.png`);
-        const snapshot = await uploadBytes(storageRef, blob);
-        finalImageUrl = await getDownloadURL(snapshot.ref);
+      if (finalImageUrl && finalImageUrl.startsWith('data:image/')) {
+        try {
+          const responseData = await fetch(finalImageUrl);
+          const blob = await responseData.blob();
+          
+          const storageRef = ref(storage, `blog-images/ai-cover-${Date.now()}.png`);
+          const snapshot = await uploadBytes(storageRef, blob);
+          finalImageUrl = await getDownloadURL(snapshot.ref);
+        } catch (uploadErr) {
+          console.warn('Firebase Storage upload failed, keeping base64 image data:', uploadErr);
+        }
       }
       
       setNewBlog(prevState => ({ ...prevState, image: finalImageUrl }));
       setImagePreview(finalImageUrl);
-      alert('AI image generated successfully!');
-    } catch (error) {
+      alert('✨ OpenAI gpt-image-2 cover image generated successfully!');
+    } catch (error: any) {
       console.error('Error generating image:', error);
-      alert('Failed to generate image. Please try again.');
+      alert(`Failed to generate image: ${error.message || error}`);
     } finally {
       setIsGeneratingImage(false);
+    }
+  };
+
+  const handleGenerateInfographic = async () => {
+    const finalPrompt = infographicPrompt
+      ? infographicPrompt
+      : newBlog.title
+        ? `Clean modern 4-step legal process roadmap infographic for IPR Karo in royal purple, lilac and white for: ${newBlog.title}`
+        : "Clean modern 4-step legal process roadmap infographic for IPR Karo";
+
+    try {
+      setIsGeneratingInfographic(true);
+      const response = await fetch('/api/generate-image', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ prompt: finalPrompt, isInfographic: true }),
+      });
+
+      if (!response.ok) throw new Error('Failed to generate infographic');
+      const resJson = await response.json();
+      let finalImageUrl = resJson.imageUrl;
+
+      if (finalImageUrl && finalImageUrl.startsWith('data:image/')) {
+        try {
+          const responseData = await fetch(finalImageUrl);
+          const blob = await responseData.blob();
+
+          const storageRef = ref(storage, `blog-images/ai-infographic-${Date.now()}.png`);
+          const snapshot = await uploadBytes(storageRef, blob);
+          finalImageUrl = await getDownloadURL(snapshot.ref);
+        } catch (uploadErr) {
+          console.warn('Firebase Storage upload failed, keeping base64 image data:', uploadErr);
+        }
+      }
+
+      setNewBlog(prevState => ({ ...prevState, infographicImage: finalImageUrl }));
+      setInfographicPreview(finalImageUrl);
+      alert('📊 OpenAI gpt-image-2 3D Infographic generated successfully!');
+    } catch (error: any) {
+      console.error('Error generating infographic:', error);
+      alert(`Failed to generate infographic: ${error.message || error}`);
+    } finally {
+      setIsGeneratingInfographic(false);
     }
   };
 
@@ -663,33 +744,62 @@ export default function BlogsDashboard() {
 
   const handleAutofillTestData = () => {
     const uniqueId = Math.floor(1000 + Math.random() * 9000);
-    const mockTitle = `Defeating Bank Harassment & Loan Overdue Settlement in 2026 (Guide ${uniqueId})`;
+    const mockTitle = `Overcoming Section 9 & 11 Trademark Objections in India (Guide ${uniqueId})`;
     
     setNewBlog({
       title: mockTitle,
-      subtitle: "A comprehensive legal analysis of your rights and advocate remedies.",
-      image: "https://via.placeholder.com/1200x630?text=Auto+Generated+Banner",
+      subtitle: "A comprehensive statutory analysis on drafting objection replies under the Trade Marks Act, 1999.",
+      image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&h=630&q=80",
+      infographicImage: "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=1200&h=630&q=80",
       date: new Date().toISOString().split('T')[0],
-      description: `<h2>Understanding Your Rights as a Loan Debtor</h2><p>Many individuals face overwhelming stress when banks employ collection agencies. However, debtors are legally protected.</p>`,
-      slug: `defeating-bank-harassment-${uniqueId}`,
-      metaTitle: `${mockTitle} | AMA Legal Solutions`,
-      metaDescription: `Discover the statutory legal steps to settle outstanding loans and handle bank recovery harassment.`,
-      faqs: [{ question: "What is an OTS?", answer: "One-Time Settlement." }],
-      reviews: [{ name: "Rajesh Kumar", rating: 5, review: "Great service!", date: new Date().toISOString().split('T')[0] }],
-      author: "Anuj Anand Malik",
+      description: `<h2>Understanding Trademark Examination Reports in India</h2><p>When the Trade Marks Registry issues an examination report raising objections under Section 9 (Absolute grounds for refusal) or Section 11 (Relative grounds for refusal regarding identical/similar prior marks), applicants must file a formal reply within 30 statutory days.</p><div class="overflow-x-auto my-6"><table class="w-full border-collapse"><thead><tr><th>Parameter</th><th>Section / Rule</th><th>Statutory Requirement</th><th>Legal Effect / Remedy</th></tr></thead><tbody><tr><td>Absolute Grounds</td><td>Section 9(1)(a)-(c)</td><td>Lack of distinctive character</td><td>Establish acquired distinctiveness through long prior use</td></tr><tr><td>Relative Grounds</td><td>Section 11(1)</td><td>Similarity with prior existing registered mark</td><td>File comparative distinction affidavit and user proof</td></tr></tbody></table></div><h3>Official Sources, Statutory Portals & Legal References</h3><ul class="official-references-list"><li><a href="https://ipindiaonline.gov.in/" target="_blank" rel="noopener noreferrer"><strong>Trade Marks Registry E-Filing Gateway (CGPDTM)</strong></a> - Official portal for Form TM-A filings.</li><li><a href="https://ipindia.gov.in/" target="_blank" rel="noopener noreferrer"><strong>Intellectual Property India Official Portal</strong></a> - Public search records.</li><li><a href="https://www.wipo.int/" target="_blank" rel="noopener noreferrer"><strong>WIPO Madrid System</strong></a> - International trademark treaty.</li></ul>`,
+      slug: `overcoming-trademark-objections-${uniqueId}`,
+      metaTitle: `${mockTitle} | IPR Karo`,
+      metaDescription: `Statutory guide to overcoming Section 9 and 11 trademark objections with sample reply structures, case laws, and filing timelines in India.`,
+      category: 'Procedural IP & Office Actions',
+      statutoryFramework: 'Trade Marks Act, 1999 & Trade Marks Rules, 2017',
+      keyTakeaways: [
+        'Examination replies must be submitted within 30 days of receiving the official report.',
+        'Section 9 objections require evidence of acquired distinctiveness through continuous prior commercial use.',
+        'Section 11 conflicts can be resolved via honest concurrent use (Section 12) or trademark differentiation.',
+        'Always verify class classification under the 12th Edition of Nice Classification (Classes 1-45).',
+        'Official filing fees for reply on Form TM-M are nominal compared to the cost of abandonment.'
+      ],
+      popularSearches: [
+        'trademark objection reply format',
+        'section 9 absolute grounds trademark',
+        'section 11 trademark objection',
+        'trademark examination report status',
+        'ipr karo trademark lawyer'
+      ],
+      faqs: [
+        { question: "What is the timeline to reply to a Trademark Examination Report in India?", answer: "Under Rule 33 of the Trade Marks Rules 2017, the applicant must submit a written response to the examination report within 30 days from the date of receipt." },
+        { question: "What is the difference between Section 9 and Section 11 objections?", answer: "Section 9 relates to absolute grounds such as generic words, descriptive terms, or lack of distinctiveness. Section 11 relates to relative grounds where the mark is considered similar or identical to an existing earlier mark in the same or related class." }
+      ],
+      reviews: [
+        { name: "Siddharth Mehra", rating: 5, review: "IPR Karo cleared our Section 9 objection swiftly. Highly competent advocates.", date: new Date().toISOString().split('T')[0] },
+        { name: "Ananya Iyer", rating: 5, review: "Outstanding support during our trademark hearing before the Mumbai Registry.", date: new Date().toISOString().split('T')[0] }
+      ],
+      author: "Adv. Anuj Anand Malik",
       created: Date.now()
     });
-    setImagePreview("https://via.placeholder.com/1200x630?text=Auto+Generated+Banner");
+    setImagePreview("https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&h=630&q=80");
+    setInfographicPreview("https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=1200&h=630&q=80");
   };
 
   const resetForm = () => {
     setNewBlog({
       title: '', subtitle: '', description: '', date: new Date().toISOString().split('T')[0],
-      image: '', created: Date.now(), metaTitle: '', metaDescription: '', slug: '',
-      faqs: [], reviews: [], author: 'Anuj Anand Malik'
+      image: '', infographicImage: '', created: Date.now(), metaTitle: '', metaDescription: '', slug: '',
+      category: 'Procedural IP & Office Actions', statutoryFramework: 'Trade Marks Act, 1999 & Trade Marks Rules, 2017',
+      keyTakeaways: [], popularSearches: [],
+      faqs: [], reviews: [], author: getRandomAdvocate()
     });
     setWriteupInput('');
     setImagePreview(null);
+    setInfographicPreview(null);
+    setSuggestedImagePrompt('');
+    setInfographicPrompt('');
     setFormMode('add');
     setShowBlogForm(false);
     clearDraft();
@@ -1121,6 +1231,34 @@ export default function BlogsDashboard() {
                 />
               </div>
 
+              {/* Category */}
+              <div className="flex flex-col gap-1.5">
+                <label className="text-xs font-extrabold uppercase text-slate-400 tracking-wider">Taxonomy Category</label>
+                <select
+                  name="category"
+                  value={newBlog.category || 'Procedural IP & Office Actions'}
+                  onChange={handleInputChange}
+                  className="p-3.5 border border-slate-200 rounded-xl focus:border-[#FFB400] focus:outline-none text-xs sm:text-sm font-semibold text-slate-700 bg-white"
+                >
+                  <option value="Procedural IP & Office Actions">Procedural IP & Office Actions</option>
+                  <option value="Industry & Class Guides">Industry & Class Guides</option>
+                  <option value="Litigation, Infringement & Brand Enforcement">Litigation, Infringement & Brand Enforcement</option>
+                </select>
+              </div>
+
+              {/* Statutory Framework */}
+              <div className="flex flex-col gap-1.5">
+                <label className="text-xs font-extrabold uppercase text-slate-400 tracking-wider">Statutory Framework</label>
+                <input
+                  type="text"
+                  name="statutoryFramework"
+                  value={newBlog.statutoryFramework || ''}
+                  onChange={handleInputChange}
+                  placeholder="e.g. Trade Marks Act, 1999 & Trade Marks Rules, 2017"
+                  className="p-3.5 border border-slate-200 rounded-xl focus:border-[#FFB400] focus:outline-none text-xs sm:text-sm font-semibold text-slate-700 bg-white"
+                />
+              </div>
+
               {/* Author */}
               <div className="flex flex-col gap-1.5">
                 <label className="text-xs font-extrabold uppercase text-slate-400 tracking-wider">Featured Author</label>
@@ -1130,9 +1268,9 @@ export default function BlogsDashboard() {
                   onChange={handleInputChange}
                   className="p-3.5 border border-slate-200 rounded-xl focus:border-[#FFB400] focus:outline-none text-xs sm:text-sm font-semibold text-slate-700 bg-white"
                 >
-                  <option value="Anuj Anand Malik">Anuj Anand Malik</option>
+                  <option value="Adv. Anuj Anand Malik">Adv. Anuj Anand Malik</option>
                   <option value="Shrey Arora">Shrey Arora</option>
-                  <option value="Adv. Ashish Bhay">Adv. Ashish Bhay</option>
+                  <option value="Team IPRKaro">Team IPRKaro</option>
                 </select>
               </div>
 
@@ -1149,19 +1287,30 @@ export default function BlogsDashboard() {
                 />
               </div>
 
-              {/* AI Image Prompt (Optional edit) */}
-              <div className="flex flex-col gap-1.5 col-span-1 sm:col-span-2 md:col-span-1 lg:col-span-1">
-                <label className="text-xs font-extrabold uppercase text-slate-400 tracking-wider">AI Image Prompt (Editable)</label>
+              {/* Cover Image AI Prompt */}
+              <div className="flex flex-col gap-1.5 col-span-1 sm:col-span-2 md:col-span-1">
+                <label className="text-xs font-extrabold uppercase text-slate-400 tracking-wider">Editorial Cover Image Prompt</label>
                 <textarea
                   value={suggestedImagePrompt}
                   onChange={(e) => setSuggestedImagePrompt(e.target.value)}
-                  placeholder="Enter a prompt to generate the cover image..."
+                  placeholder="Prompt for editorial photographic cover image..."
                   className="p-3.5 border border-slate-200 rounded-xl focus:border-[#FFB400] focus:outline-none text-xs sm:text-sm font-semibold text-slate-700 bg-white min-h-[80px]"
                 />
               </div>
 
-              {/* Image Input */}
-              <div className="flex flex-col gap-1.5 col-span-1 sm:col-span-2 lg:col-span-2">
+              {/* 3D Infographic AI Prompt */}
+              <div className="flex flex-col gap-1.5 col-span-1 sm:col-span-2 md:col-span-1">
+                <label className="text-xs font-extrabold uppercase text-slate-400 tracking-wider">3D Isometric Infographic Prompt</label>
+                <textarea
+                  value={infographicPrompt}
+                  onChange={(e) => setInfographicPrompt(e.target.value)}
+                  placeholder="Prompt for 3D isometric procedural flowchart..."
+                  className="p-3.5 border border-slate-200 rounded-xl focus:border-[#FFB400] focus:outline-none text-xs sm:text-sm font-semibold text-slate-700 bg-white min-h-[80px]"
+                />
+              </div>
+
+              {/* Cover Image Input & Generator */}
+              <div className="flex flex-col gap-1.5 col-span-1 sm:col-span-2">
                 <label className="text-xs font-extrabold uppercase text-slate-400 tracking-wider">Cover Image URL *</label>
                 <div className="flex gap-2">
                   <input
@@ -1196,28 +1345,47 @@ export default function BlogsDashboard() {
                     className="px-4 py-3 bg-amber-50 hover:bg-amber-100 border border-[#D4AF37]/35 text-[#FFB400] rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-1.5 cursor-pointer disabled:opacity-50"
                     title="Generate cover image with AI"
                   >
-                    <span>{isGeneratingImage ? '💫 Generating...' : '✨ Generate AI'}</span>
+                    <span>{isGeneratingImage ? '💫 Generating...' : '✨ Generate Cover AI'}</span>
                   </button>
                 </div>
-                {uploading && (
-                  <div className="w-full bg-slate-100 rounded-full h-1.5 mt-1 overflow-hidden">
-                    <div className="bg-[#FFB400] h-1.5 rounded-full transition-all" style={{ width: `${uploadProgress}%` }}></div>
+                {imagePreview && (
+                  <div className="p-3 bg-slate-50 rounded-xl border border-slate-100 mt-2 flex items-center gap-3">
+                    <img src={imagePreview} alt="cover preview" className="w-24 h-14 object-cover rounded-lg border border-slate-200" />
+                    <span className="text-xs text-slate-500 font-semibold">Cover Image Ready</span>
+                  </div>
+                )}
+              </div>
+
+              {/* 3D Infographic Image Input & Generator */}
+              <div className="flex flex-col gap-1.5 col-span-1 sm:col-span-2">
+                <label className="text-xs font-extrabold uppercase text-slate-400 tracking-wider">3D Infographic Image URL (Optional)</label>
+                <div className="flex gap-2">
+                  <input
+                    type="text"
+                    name="infographicImage"
+                    value={newBlog.infographicImage || ''}
+                    onChange={handleInputChange}
+                    placeholder="URL for 3D visual procedure diagram"
+                    className="p-3.5 border border-slate-200 rounded-xl focus:border-[#7C3AED] focus:outline-none text-xs sm:text-sm font-semibold text-slate-700 bg-white flex-1"
+                  />
+                  <button
+                    type="button"
+                    onClick={handleGenerateInfographic}
+                    disabled={isGeneratingInfographic}
+                    className="px-4 py-3 bg-[#F4EFFE] hover:bg-[#DECFFB]/60 border border-[#B8A1E3] text-[#7C3AED] rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-1.5 cursor-pointer disabled:opacity-50"
+                    title="Generate 3D Infographic with AI"
+                  >
+                    <span>{isGeneratingInfographic ? '💫 Rendering...' : '📊 Generate Infographic'}</span>
+                  </button>
+                </div>
+                {infographicPreview && (
+                  <div className="p-3 bg-slate-50 rounded-xl border border-slate-100 mt-2 flex items-center gap-3">
+                    <img src={infographicPreview} alt="infographic preview" className="w-24 h-14 object-cover rounded-lg border border-slate-200" />
+                    <span className="text-xs text-[#7C3AED] font-semibold">Infographic Ready</span>
                   </div>
                 )}
               </div>
             </div>
-
-            {/* Image Preview Block */}
-            {imagePreview && (
-              <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100 flex flex-col items-center gap-2">
-                <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Cover Image Preview</span>
-                <img
-                  src={imagePreview}
-                  alt="cover preview"
-                  className="w-full max-w-sm h-40 object-cover rounded-xl border border-slate-200 shadow-sm"
-                />
-              </div>
-            )}
 
             {/* Tiptap Rich Description Editor */}
             <div className="flex flex-col gap-2">

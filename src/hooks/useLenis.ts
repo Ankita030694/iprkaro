@@ -1,20 +1,21 @@
-import { useEffect, useCallback } from 'react'
-import Lenis from 'lenis'
-
-declare global {
-  interface Window {
-    lenis?: Lenis
-  }
-}
+import { useCallback } from 'react'
 
 export function useLenis() {
+  const getLenis = () => {
+    if (typeof window !== 'undefined') {
+      return (window as any).lenisInstance || null
+    }
+    return null
+  }
+
   const scrollTo = useCallback((target: string | number, options?: any) => {
-    if (typeof window !== 'undefined' && window.lenis) {
-      window.lenis.scrollTo(target, {
+    const lenis = getLenis()
+    if (lenis) {
+      lenis.scrollTo(target, {
         offset: 0,
         duration: 2,
         easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-        ...options
+        ...options,
       })
     }
   }, [])
@@ -28,14 +29,16 @@ export function useLenis() {
   }, [scrollTo])
 
   const start = useCallback(() => {
-    if (typeof window !== 'undefined' && window.lenis) {
-      window.lenis.start()
+    const lenis = getLenis()
+    if (lenis) {
+      lenis.start()
     }
   }, [])
 
   const stop = useCallback(() => {
-    if (typeof window !== 'undefined' && window.lenis) {
-      window.lenis.stop()
+    const lenis = getLenis()
+    if (lenis) {
+      lenis.stop()
     }
   }, [])
 
@@ -45,6 +48,6 @@ export function useLenis() {
     scrollToElement,
     start,
     stop,
-    lenis: typeof window !== 'undefined' ? window.lenis : null
+    lenis: typeof window !== 'undefined' ? getLenis() : null,
   }
 }

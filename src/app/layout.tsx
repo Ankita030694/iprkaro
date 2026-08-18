@@ -58,7 +58,17 @@ export default function RootLayout({
     "name": "IPR Karo",
     "url": "https://www.iprkaro.com",
     "logo": "https://www.iprkaro.com/logo/iprlogo.svg",
+    "image": "https://www.iprkaro.com/logo/iprlogo.svg",
     "description": "Turn Ideas Into Assets - IPR Karo. AI-powered trademark registration, patent services, and copyright protection in India.",
+    "telephone": "+91-9999999999",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "IPR Karo Legal Tower, Barakhamba Road, Connaught Place",
+      "addressLocality": "New Delhi",
+      "addressRegion": "Delhi",
+      "postalCode": "110001",
+      "addressCountry": "IN"
+    },
     "sameAs": [
       "https://www.linkedin.com/company/iprkaro/",
       "https://www.instagram.com/iprkaro",
@@ -66,7 +76,9 @@ export default function RootLayout({
     ],
     "contactPoint": {
       "@type": "ContactPoint",
+      "telephone": "+91-9999999999",
       "contactType": "Customer Service",
+      "areaServed": "IN",
       "availableLanguage": ["English", "Hindi"]
     }
   };
