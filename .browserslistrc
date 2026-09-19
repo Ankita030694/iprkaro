@@ -1,0 +1,15 @@
+# Target modern browsers only — avoids Babel polyfills for
+# Array.prototype.at, Object.fromEntries, String.trimStart etc.
+# These are all Baseline features well-supported in 2023+ browsers.
+# This directly fixes the Lighthouse "Legacy JavaScript" warning.
+
+[production]
+Chrome >= 90
+Firefox >= 90
+Safari >= 14
+Edge >= 90
+
+[development]
+last 1 chrome version
+last 1 firefox version
+last 1 safari version
