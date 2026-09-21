@@ -46,6 +46,8 @@ export default function MetricsSectionPDF({
             <img
               src="/logo/iprlogoblack.svg"
               alt="IPR Logo"
+              width={78}
+              height={59}
               style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block' }}
             />
           </div>

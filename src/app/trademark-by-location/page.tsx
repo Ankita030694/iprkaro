@@ -13,7 +13,9 @@ export async function generateMetadata({
   const currentPage = typeof pageParam === 'string' ? parseInt(pageParam, 10) : 1;
   const validPage = Math.max(1, currentPage || 1);
   
-  const canonicalUrl = "https://www.iprkaro.com/trademark-by-location";
+  const canonicalUrl = validPage > 1
+    ? `https://www.iprkaro.com/trademark-by-location/page/${validPage}`
+    : "https://www.iprkaro.com/trademark-by-location";
 
   return {
     title: validPage > 1 
@@ -85,6 +87,10 @@ export default async function TrademarkByLocationPage({
           </p>
         </div>
 
+        <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+          Trademark Services by Location
+        </h2>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
           {paginatedLocations.map((loc, index) => {
             const slug = toSlug(loc);
@@ -110,7 +116,7 @@ export default async function TrademarkByLocationPage({
           <div className="mt-12 flex justify-center space-x-4">
             {validPage > 1 ? (
               <Link 
-                href={`/trademark-by-location?page=${validPage - 1}`}
+                href={validPage - 1 === 1 ? '/trademark-by-location' : `/trademark-by-location/page/${validPage - 1}`}
                 className="px-6 py-2 border rounded-md bg-white hover:bg-gray-50 text-gray-700 font-medium shadow-sm transition-colors"
               >
                 Previous
@@ -127,7 +133,7 @@ export default async function TrademarkByLocationPage({
 
             {validPage < totalPages ? (
               <Link 
-                href={`/trademark-by-location?page=${validPage + 1}`}
+                href={`/trademark-by-location/page/${validPage + 1}`}
                 className="px-6 py-2 border rounded-md bg-white hover:bg-gray-50 text-gray-700 font-medium shadow-sm transition-colors"
               >
                 Next

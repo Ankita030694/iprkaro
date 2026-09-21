@@ -296,7 +296,7 @@ export default async function LocationTrademarkPage({ params }: Props) {
 
                 {/* Introduction */}
                 <section id="introduction" className="scroll-mt-24 md:scroll-mt-32">
-                  <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6">Comprehensive Guide to Trademark Registration in {location}</h2>
+                  <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6">Trademark Registration in {location}</h2>
                   <p className="text-base md:text-lg leading-relaxed mb-4 text-gray-700">
                     Having a unique identity is very important in today's market. Whether your business is local or national, getting <strong>trademark registration in {location}</strong> is a key legal step. It secures your brand ownership. A trademark serves as the face of your business. It turns your reputation, quality, and consumer trust into a recognizable name, logo, or slogan.
                   </p>

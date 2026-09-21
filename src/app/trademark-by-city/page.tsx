@@ -2,25 +2,35 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { locations, toSlug } from './locations';
 
+type Props = {
+  params: Promise<{ page?: string }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+};
+
 export async function generateMetadata({ 
+  params,
   searchParams 
-}: { 
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }> 
-}): Promise<Metadata> {
+}: Props): Promise<Metadata> {
+  const resolvedRouteParams = await params;
   const resolvedParams = await searchParams;
-  const pageParam = resolvedParams?.page;
+  const pageParam = resolvedRouteParams?.page || resolvedParams?.page;
   const currentPage = typeof pageParam === 'string' ? parseInt(pageParam, 10) : 1;
   const validPage = Math.max(1, currentPage || 1);
   
   const canonicalUrl = validPage > 1 
-    ? `https://www.iprkaro.com/trademark-by-city?page=${validPage}`
+    ? `https://www.iprkaro.com/trademark-by-city/page/${validPage}`
     : "https://www.iprkaro.com/trademark-by-city";
+
+  const baseDescription = "Find the best trademark advocates and lawyers by city with IPR Karo for trademark registration and brand protection across India.";
+  const description = validPage > 1 
+    ? `${baseDescription} - Page ${validPage}`
+    : baseDescription;
 
   return {
     title: validPage > 1 
       ? `Trademark Registration by City - Page ${validPage} | IPR Karo`
       : "Trademark Registration by City | IPR Karo",
-    description: "Find the best trademark advocates and lawyers for trademark registration in major cities across India. Local expertise for your brand protection with IPR Karo.",
+    description,
     alternates: {
       canonical: canonicalUrl,
     },
@@ -28,12 +38,12 @@ export async function generateMetadata({
 }
 
 export default async function TrademarkByCityPage({ 
+  params,
   searchParams 
-}: { 
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }> 
-}) {
+}: Props) {
+  const resolvedRouteParams = await params;
   const resolvedParams = await searchParams;
-  const pageParam = resolvedParams?.page;
+  const pageParam = resolvedRouteParams?.page || resolvedParams?.page;
   const currentPage = typeof pageParam === 'string' ? parseInt(pageParam, 10) : 1;
   const itemsPerPage = 60; // 60 is a good number for grid of 4 or 5
   
@@ -51,12 +61,16 @@ export default async function TrademarkByCityPage({
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-extrabold text-navy-900 sm:text-5xl">
-            Trademark Registration by City
+            {validPage > 1 ? `Trademark Registration by City - Page ${validPage}` : 'Trademark Registration by City'}
           </h1>
           <p className="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">
             Find local trademark lawyers and legal help in your city.
           </p>
         </div>
+
+        <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+          Trademark Lawyers by City
+        </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
           {paginatedLocations.map((loc, index) => (
@@ -76,7 +90,7 @@ export default async function TrademarkByCityPage({
           <div className="mt-12 flex justify-center space-x-4">
             {validPage > 1 ? (
               <Link 
-                href={`/trademark-by-city?page=${validPage - 1}`}
+                href={validPage - 1 === 1 ? '/trademark-by-city' : `/trademark-by-city/page/${validPage - 1}`}
                 className="px-6 py-2 border rounded-md bg-white hover:bg-gray-50 text-gray-700 font-medium shadow-sm transition-colors"
               >
                 Previous
@@ -93,7 +107,7 @@ export default async function TrademarkByCityPage({
 
             {validPage < totalPages ? (
               <Link 
-                href={`/trademark-by-city?page=${validPage + 1}`}
+                href={`/trademark-by-city/page/${validPage + 1}`}
                 className="px-6 py-2 border rounded-md bg-white hover:bg-gray-50 text-gray-700 font-medium shadow-sm transition-colors"
               >
                 Next

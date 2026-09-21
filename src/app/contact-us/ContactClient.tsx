@@ -62,8 +62,9 @@ export default function ContactClient() {
                   <Image
                     src="/logo/iprlogoblack.svg"
                     alt="IPR Karo Logo"
-                    fill
-                    className="object-contain"
+                    width={78}
+                    height={59}
+                    className="w-full h-full object-contain"
                   />
                 </div>
               </div>

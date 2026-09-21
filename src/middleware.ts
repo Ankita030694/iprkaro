@@ -22,6 +22,19 @@ export function middleware(req: NextRequest) {
     return redirectRes
   }
 
+  const pageParam = req.nextUrl.searchParams.get('page')
+  if (pageParam && (pathname === '/trademark-by-city' || pathname === '/trademark-by-location')) {
+    if (pageParam === '1') {
+      const redirectRes = NextResponse.redirect(`https://www.iprkaro.com${pathname}`, 301)
+      redirectRes.headers.set('X-Robots-Tag', 'index, follow')
+      return redirectRes
+    } else {
+      const redirectRes = NextResponse.redirect(`https://www.iprkaro.com${pathname}/page/${pageParam}`, 301)
+      redirectRes.headers.set('X-Robots-Tag', 'index, follow')
+      return redirectRes
+    }
+  }
+
   const res = NextResponse.next()
 
   const isNoIndexReserved = noIndexPaths.some(path => pathname.startsWith(path))

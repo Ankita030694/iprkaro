@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import { imageDimensions } from '@/utils/imageDimensions';
 
 export default function BrandOverviewBox() {
   // Real client and enterprise logos from our project codebase (/public/clientlogos/)
@@ -56,6 +57,8 @@ export default function BrandOverviewBox() {
           <img
             src="/logo/iprlogoblack.svg"
             alt="IPR Karo Logo"
+            width={78}
+            height={59}
             className="h-10 sm:h-11 w-auto object-contain"
           />
         </div>
@@ -88,6 +91,8 @@ export default function BrandOverviewBox() {
                   <img
                     src={logoPath}
                     alt={`Client Logo ${i + 1}`}
+                    width={imageDimensions[logoPath]?.width || 100}
+                    height={imageDimensions[logoPath]?.height || 100}
                     className="h-8 max-w-[100px] w-auto object-contain grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all"
                   />
                 </div>
@@ -104,6 +109,8 @@ export default function BrandOverviewBox() {
                   <img
                     src={logoPath}
                     alt={`Client Logo ${i + 1}`}
+                    width={imageDimensions[logoPath]?.width || 100}
+                    height={imageDimensions[logoPath]?.height || 100}
                     className="h-8 max-w-[100px] w-auto object-contain grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all"
                   />
                 </div>
@@ -120,6 +127,8 @@ export default function BrandOverviewBox() {
                   <img
                     src={logoPath}
                     alt={`Client Logo ${i + 1}`}
+                    width={imageDimensions[logoPath]?.width || 100}
+                    height={imageDimensions[logoPath]?.height || 100}
                     className="h-8 max-w-[100px] w-auto object-contain grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all"
                   />
                 </div>

@@ -8,6 +8,7 @@ import ClientLogoSlider from '@/components/ClientLogoSlider';
 import AboutBento from '@/components/AboutBento';
 import AboutContentExpanded from './AboutContentExpanded';
 import { motion } from 'framer-motion';
+import { imageDimensions } from '@/utils/imageDimensions';
 
 export default function AboutClient() {
   // State for mobile card interactions
@@ -363,7 +364,7 @@ export default function AboutClient() {
       {/* Our Clients Section */}
       <div className="w-full py-16 bg-white">
         <div className="text-center mb-12">
-          <h3 
+          <h2 
             className="text-3xl sm:text-4xl lg:text-[42px] font-bold"
             style={{
               color: '#0C002B',
@@ -373,7 +374,7 @@ export default function AboutClient() {
             }}
           >
             Our Clients
-          </h3>
+          </h2>
         </div>
         
         {/* Mobile: Client Logos Slider */}
@@ -434,6 +435,8 @@ export default function AboutClient() {
                   <img
                     src={logo}
                     alt={`Client Logo ${index}`}
+                    width={imageDimensions[logo]?.width || 100}
+                    height={imageDimensions[logo]?.height || 100}
                     className="max-w-full h-auto object-contain opacity-90"
                     style={{
                       imageRendering: 'crisp-edges',

@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import { imageDimensions } from '@/utils/imageDimensions';
 
 interface ClientLogoSliderProps {
   className?: string;
@@ -89,6 +90,8 @@ export default function ClientLogoSlider({ className = '', useWhiteLogos = false
                   <img
                     src={logo}
                     alt={`Client Logo ${logoIndex}`}
+                    width={imageDimensions[logo]?.width || 100}
+                    height={imageDimensions[logo]?.height || 100}
                     className="w-full h-full object-contain filter-none"
                     loading="eager"
                     decoding="sync"

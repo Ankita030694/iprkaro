@@ -87,9 +87,9 @@ const OurHeadOffice = () => {
         <div className="flex flex-col gap-8 sm:gap-10 md:gap-10 w-full lg:max-w-[374px]">
           <div className="flex flex-col gap-8 sm:gap-8 md:gap-10">
             <div className="flex flex-col gap-8 sm:gap-10 md:gap-12 lg:gap-12">
-              <h3 className="text-[#0C002B] font-nunito text-3xl sm:text-4xl md:text-[42px] lg:text-[42px] font-normal leading-tight sm:leading-tight md:leading-tight lg:leading-tight">
+              <h2 className="text-[#0C002B] font-nunito text-3xl sm:text-4xl md:text-[42px] lg:text-[42px] font-normal leading-tight sm:leading-tight md:leading-tight lg:leading-tight">
                 Our Head Office
-              </h3>
+              </h2>
               <div className="flex flex-col gap-6 sm:gap-7">
                 <a 
                   href="tel:+919289707648" 

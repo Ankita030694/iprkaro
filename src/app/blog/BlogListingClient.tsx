@@ -305,9 +305,9 @@ export default function BlogListingClient() {
       <div className="relative z-10 bg-gray-50/50 py-12 md:py-16 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 md:px-10 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h3 className="text-[#0C002B] font-nunito text-[22px] md:text-[28px] font-bold mb-6">
-              Complete Guide to Trademark Registration and IP Protection in India
-            </h3>
+            <h2 className="text-[#0C002B] font-nunito text-[22px] md:text-[28px] font-bold mb-6">
+              Guide to Trademark Registration & IP Protection
+            </h2>
             <div className="text-[#0C002B]/70 font-nunito text-[15px] md:text-[16px] leading-relaxed space-y-5">
               <p>
                 In today&apos;s competitive business landscape, protecting your intellectual property is more crucial than ever. Our comprehensive blog covers everything you need to know about <strong>trademark registration in India</strong>, copyright protection, and patent filing. Whether you are a startup looking to secure your brand name or an established enterprise managing a vast portfolio of IP assets, our expert insights provide actionable guidance to help you navigate the legal framework with confidence.

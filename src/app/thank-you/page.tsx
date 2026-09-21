@@ -96,8 +96,9 @@ export default function ThankYouPage() {
                 <Image
                   src="/clientlogos/7.png"
                   alt="AMA Legal Solutions"
-                  fill
-                  className="object-contain brightness-0 invert contrast-150"
+                  width={450}
+                  height={450}
+                  className="w-full h-full object-contain brightness-0 invert contrast-150"
                   priority
                 />
               </div>

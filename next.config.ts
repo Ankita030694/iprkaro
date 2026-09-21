@@ -153,6 +153,18 @@ const nextConfig: NextConfig = {
       { source: '/trademark-by-location/indore', destination: '/trademark-registration-in-indore', permanent: true },
     ];
   },
+  async rewrites() {
+    return [
+      {
+        source: '/trademark-by-city/page/:page',
+        destination: '/trademark-by-city?page=:page',
+      },
+      {
+        source: '/trademark-by-location/page/:page',
+        destination: '/trademark-by-location?page=:page',
+      },
+    ];
+  },
   async headers() {
     return [
       {

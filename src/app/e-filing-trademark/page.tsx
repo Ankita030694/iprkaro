@@ -232,9 +232,9 @@ export default function EFilingTrademarkPage() {
               <article className="prose prose-lg max-w-none text-gray-700 leading-relaxed">
 
                 <section id="intro" className="scroll-mt-32">
-                  <h3 className="text-2xl md:text-4xl font-black text-gray-900 mb-6 border-l-8 border-[rgb(110,94,147)] pl-5">
+                  <h2 className="text-2xl md:text-4xl font-black text-gray-900 mb-6 border-l-8 border-[rgb(110,94,147)] pl-5">
                     Introduction: The Digital Transformation of Trademark Law in India
-                  </h3>
+                  </h2>
                   <p className="text-xl leading-relaxed mb-6">
                     The landscape of Intellectual Property Rights in India has undergone a seismic shift with the introduction of the comprehensive e-filing system. Gone are the days of manual submissions, bulky paper trails, and endless queues at the Trademark Registry. Today, the Office of the Controller General of Patents, Designs and Trademarks (CGPDTM) provides a robust, encrypted, and highly efficient portal for <strong>e-filing trademark</strong> applications. This digital revolution is governed by the Trade Marks Act of 1999 and the Trade Marks Rules of 2017, which combined to create a paperless environment that prioritizes speed and transparency.
                   </p>

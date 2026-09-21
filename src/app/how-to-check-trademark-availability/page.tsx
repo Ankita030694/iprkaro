@@ -206,10 +206,10 @@ export default function TrademarkAvailabilityPage() {
                 <article className="prose prose-xl max-w-none text-gray-700 leading-relaxed">
 
                   <section id="introduction" className="mb-20 scroll-mt-28">
-                    <h3 className="text-2xl md:text-4xl font-black text-gray-900 mb-8 flex items-center">
+                    <h2 className="text-2xl md:text-4xl font-black text-gray-900 mb-8 flex items-center">
                       <FontAwesomeIcon icon={faLightbulb} className="text-[#6E5E93] mr-4 w-10 h-10 md:w-12 md:h-12" />
                       Introduction: The Foundation of Brand Ownership
-                    </h3>
+                    </h2>
                     <p className="text-xl md:text-2xl font-light text-gray-500 mb-8 italic border-l-4 border-[#6E5E93] pl-6 py-2">
                       "In the arena of business, a name is not just a label; it's a fortress. Before you build it, you must ensure the ground is entirely yours."
                     </p>

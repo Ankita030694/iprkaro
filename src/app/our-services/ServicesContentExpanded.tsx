@@ -58,7 +58,7 @@ export default function ServicesContentExpanded() {
 
         {/* 1. Introduction: The IP Ecosystem */}
         <section className="text-center space-y-8">
-            <h3 className="text-sm font-bold text-[#1952C7] uppercase tracking-wider mb-2">Comprehensive Solutions</h3>
+            <h2 className="text-sm font-bold text-[#1952C7] uppercase tracking-wider mb-2">Comprehensive IP Solutions</h2>
             <p className="text-4xl md:text-5xl font-bold leading-tight text-[#0C002B]">
                 From Abstract Idea to <br/> 
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1952C7] to-indigo-400"> Legally Protected Asset</span>
