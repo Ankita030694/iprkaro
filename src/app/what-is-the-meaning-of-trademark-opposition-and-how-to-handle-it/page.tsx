@@ -20,7 +20,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Trademark Opposition Guide',
+    title: 'Trademark Opposition Handling Guide',
     description: 'The complete forensic guide to trademark opposition in India. Learn about Section 21, Form TM-O, deadlines, counter-statements, and defense strategies.',
     keywords: [
         'what is the meaning of trademark opposition and how to handle it',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
         'ipr karo opposition management'
     ],
     openGraph: {
-        title: 'Trademark Opposition Guide',
+        title: 'Trademark Opposition Handling Guide',
         description: 'Master the litigation phase of trademark registration. Don\'t let your brand get abandoned. Expert defense strategies for Form TM-O.',
         url: 'https://www.iprkaro.com/what-is-the-meaning-of-trademark-opposition-and-how-to-handle-it',
         type: 'article',
@@ -46,19 +46,19 @@ export const metadata: Metadata = {
 };
 
 const tocSections = [
-    { id: 'introduction', title: 'Trademark Opposition Guide' },
-    { id: 'statutory-framework', title: 'Trademark Opposition Guide' },
-    { id: 'journal-publication', title: 'Trademark Opposition Guide' },
-    { id: 'who-can-oppose', title: 'Trademark Opposition Guide' },
-    { id: 'filing-notice', title: 'Trademark Opposition Guide' },
-    { id: 'counter-statement', title: 'Trademark Opposition Guide' },
-    { id: 'evidence-opposition', title: 'Trademark Opposition Guide' },
-    { id: 'evidence-application', title: 'Trademark Opposition Guide' },
-    { id: 'hearing-procedure', title: 'Trademark Opposition Guide' },
-    { id: 'final-decision', title: 'Trademark Opposition Guide' },
-    { id: 'faqs', title: 'Trademark Opposition Guide' },
-    { id: 'reviews', title: 'Trademark Opposition Guide' },
-    { id: 'conclusion', title: 'Trademark Opposition Guide' },
+    { id: 'introduction', title: 'Trademark Opposition Handling Guide' },
+    { id: 'statutory-framework', title: 'Trademark Opposition Handling Guide' },
+    { id: 'journal-publication', title: 'Trademark Opposition Handling Guide' },
+    { id: 'who-can-oppose', title: 'Trademark Opposition Handling Guide' },
+    { id: 'filing-notice', title: 'Trademark Opposition Handling Guide' },
+    { id: 'counter-statement', title: 'Trademark Opposition Handling Guide' },
+    { id: 'evidence-opposition', title: 'Trademark Opposition Handling Guide' },
+    { id: 'evidence-application', title: 'Trademark Opposition Handling Guide' },
+    { id: 'hearing-procedure', title: 'Trademark Opposition Handling Guide' },
+    { id: 'final-decision', title: 'Trademark Opposition Handling Guide' },
+    { id: 'faqs', title: 'Trademark Opposition Handling Guide' },
+    { id: 'reviews', title: 'Trademark Opposition Handling Guide' },
+    { id: 'conclusion', title: 'Trademark Opposition Handling Guide' },
 ];
 
 const faqs = [
@@ -152,7 +152,7 @@ export default function TrademarkOppositionPage() {
     const articleSchema = {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Trademark Opposition Guide",
+        "headline": "Trademark Opposition Handling Guide",
         "description": "Exhaustive guide to trademark opposition in India. Learn about Form TM-O, the 2-month counter-statement deadline, evidence stages, and hearing procedures.",
         "author": {
             "@type": "Organization",
@@ -552,3 +552,4 @@ export default function TrademarkOppositionPage() {
         </>
     );
 }
+

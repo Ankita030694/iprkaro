@@ -28,10 +28,10 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-  title: 'Win Trademark Objection Case',
+  title: 'How to Win Trademark Objection Case',
   description: 'Learn the advanced legal tactics to win your trademark objection case in India. Expert guide on evidentiary standards, user affidavits, and hearing performance.',
   keywords: [
-    'how to win trademark objection case india',
+    'how to How to Win Trademark Objection Case india',
     'winning trademark hearing strategy',
     'trademark evidence checklist india',
     'trademark user affidavit format',
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     'ip india case winning guide'
   ],
   openGraph: {
-    title: 'Win Trademark Objection Case',
+    title: 'How to Win Trademark Objection Case',
     description: 'Expert-led 5000+ word deep dive into winning trademark hearings and securing your brand rights against Registry objections.',
     url: 'https://www.iprkaro.com/how-to-win-trademark-objection-case',
     type: 'article',
@@ -54,16 +54,16 @@ export const metadata: Metadata = {
 };
 
 const tocSections = [
-  { id: 'introduction', title: 'Win Trademark Objection Case' },
-  { id: 'evidentiary-standards', title: 'Win Trademark Objection Case' },
-  { id: 'user-affidavit-mastery', title: 'Win Trademark Objection Case' },
-  { id: 'winning-case-laws', title: 'Win Trademark Objection Case' },
-  { id: 'hearing-performance', title: 'Win Trademark Objection Case' },
-  { id: 'section-11-triumph', title: 'Win Trademark Objection Case' },
-  { id: 'acquired-reputation', title: 'Win Trademark Objection Case' },
-  { id: 'post-hearing-steps', title: 'Win Trademark Objection Case' },
-  { id: 'faqs', title: 'Win Trademark Objection Case' },
-  { id: 'reviews', title: 'Win Trademark Objection Case' },
+  { id: 'introduction', title: 'How to Win Trademark Objection Case' },
+  { id: 'evidentiary-standards', title: 'How to Win Trademark Objection Case' },
+  { id: 'user-affidavit-mastery', title: 'How to Win Trademark Objection Case' },
+  { id: 'winning-case-laws', title: 'How to Win Trademark Objection Case' },
+  { id: 'hearing-performance', title: 'How to Win Trademark Objection Case' },
+  { id: 'section-11-triumph', title: 'How to Win Trademark Objection Case' },
+  { id: 'acquired-reputation', title: 'How to Win Trademark Objection Case' },
+  { id: 'post-hearing-steps', title: 'How to Win Trademark Objection Case' },
+  { id: 'faqs', title: 'How to Win Trademark Objection Case' },
+  { id: 'reviews', title: 'How to Win Trademark Objection Case' },
 ];
 
 const faqs = [
@@ -151,7 +151,7 @@ export default function WinTrademarkObjectionCasePage() {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Win Trademark Objection Case",
+    "headline": "How to Win Trademark Objection Case",
     "description": "Deep dive into evidentiary standards and legal maneuvers to secure registration after a trademark objection.",
     "author": {
       "@type": "Organization",
@@ -620,3 +620,4 @@ export default function WinTrademarkObjectionCasePage() {
     </>
   );
 }
+

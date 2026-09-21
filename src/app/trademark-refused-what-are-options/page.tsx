@@ -27,7 +27,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Trademark Refused: Options',
+    title: 'Trademark Refused: What are Options',
     description: 'If your trademark application is refused in India, you have legal remedies. Learn about Review Petitions, High Court Appeals, and Statement of Grounds. Expert guide on Section 18(5) and 127.',
     keywords: [
         'trademark refused what are options',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         'intellectual property division high court appeal'
     ],
     openGraph: {
-        title: 'Trademark Refused: Options',
+        title: 'Trademark Refused: What are Options',
         description: 'Do not panic if your trademark is refused. Our IP experts explain the 3 primary legal options to save your brand identity in India.',
         url: 'https://www.iprkaro.com/trademark-refused-what-are-options',
         type: 'article',
@@ -53,16 +53,16 @@ export const metadata: Metadata = {
 };
 
 const tocSections = [
-    { id: 'understanding-refusal', title: 'Trademark Refused: Options' },
-    { id: 'objection-vs-refusal', title: 'Trademark Refused: Options' },
-    { id: 'statement-of-grounds', title: 'Trademark Refused: Options' },
-    { id: 'review-petition', title: 'Trademark Refused: Options' },
-    { id: 'high-court-appeal', title: 'Trademark Refused: Options' },
-    { id: 'strategic-refiling', title: 'Trademark Refused: Options' },
-    { id: 'absolute-grounds', title: 'Trademark Refused: Options' },
-    { id: 'relative-grounds', title: 'Trademark Refused: Options' },
-    { id: 'proving-usage', title: 'Trademark Refused: Options' },
-    { id: 'faqs', title: 'Trademark Refused: Options' },
+    { id: 'understanding-refusal', title: 'Trademark Refused: What are Options' },
+    { id: 'objection-vs-refusal', title: 'Trademark Refused: What are Options' },
+    { id: 'statement-of-grounds', title: 'Trademark Refused: What are Options' },
+    { id: 'review-petition', title: 'Trademark Refused: What are Options' },
+    { id: 'high-court-appeal', title: 'Trademark Refused: What are Options' },
+    { id: 'strategic-refiling', title: 'Trademark Refused: What are Options' },
+    { id: 'absolute-grounds', title: 'Trademark Refused: What are Options' },
+    { id: 'relative-grounds', title: 'Trademark Refused: What are Options' },
+    { id: 'proving-usage', title: 'Trademark Refused: What are Options' },
+    { id: 'faqs', title: 'Trademark Refused: What are Options' },
 ];
 
 const faqs = [
@@ -158,7 +158,7 @@ export default function TrademarkRefusedOptionsPage() {
     const articleSchema = {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Trademark Refused: Options",
+        "headline": "Trademark Refused: What are Options",
         "description": "Comprehensive analysis of legal remedies after trademark refusal in India. Explore Review Petitions, High Court Appeals, and Section 18(5) strategies.",
         "author": {
             "@type": "Organization",
@@ -671,3 +671,4 @@ export default function TrademarkRefusedOptionsPage() {
         </>
     );
 }
+

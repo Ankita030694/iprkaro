@@ -29,7 +29,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Trademark for Yarns & Threads',
+    title: 'Trademark for Yarns and Threads',
     description: 'Complete guide to trademark registration for yarns and threads in India. Secure your Class 23 textile brand with expert legal support and 100% online filing.',
     keywords: [
         'trademark for yarns and threads',
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
         'industrial yarn brand security'
     ],
     openGraph: {
-        title: 'Trademark for Yarns & Threads',
+        title: 'Trademark for Yarns and Threads',
         description: 'Protect your Class 23 textile assets with India\'s top IP legal team. High-authority brand protection for yarn and thread manufacturers.',
         url: 'https://www.iprkaro.com/trademark-for-yarns-and-threads',
         type: 'article',
@@ -55,17 +55,17 @@ export const metadata: Metadata = {
 };
 
 const tocSections = [
-    { id: 'importance-of-trademark', title: 'Trademark for Yarns & Threads' },
-    { id: 'class-23-overview', title: 'Trademark for Yarns & Threads' },
-    { id: 'covered-goods', title: 'Trademark for Yarns & Threads' },
-    { id: 'registration-steps', title: 'Trademark for Yarns & Threads' },
-    { id: 'required-docs', title: 'Trademark for Yarns & Threads' },
-    { id: 'legal-nuances', title: 'Trademark for Yarns & Threads' },
-    { id: 'overcoming-objections', title: 'Trademark for Yarns & Threads' },
-    { id: 'global-strategy', title: 'Trademark for Yarns & Threads' },
-    { id: 'business-valuation', title: 'Trademark for Yarns & Threads' },
-    { id: 'reviews', title: 'Trademark for Yarns & Threads' },
-    { id: 'faqs', title: 'Trademark for Yarns & Threads' },
+    { id: 'importance-of-trademark', title: 'Trademark for Yarns and Threads' },
+    { id: 'class-23-overview', title: 'Trademark for Yarns and Threads' },
+    { id: 'covered-goods', title: 'Trademark for Yarns and Threads' },
+    { id: 'registration-steps', title: 'Trademark for Yarns and Threads' },
+    { id: 'required-docs', title: 'Trademark for Yarns and Threads' },
+    { id: 'legal-nuances', title: 'Trademark for Yarns and Threads' },
+    { id: 'overcoming-objections', title: 'Trademark for Yarns and Threads' },
+    { id: 'global-strategy', title: 'Trademark for Yarns and Threads' },
+    { id: 'business-valuation', title: 'Trademark for Yarns and Threads' },
+    { id: 'reviews', title: 'Trademark for Yarns and Threads' },
+    { id: 'faqs', title: 'Trademark for Yarns and Threads' },
 ];
 
 const faqs = [
@@ -161,7 +161,7 @@ export default function TrademarkForYarnsAndThreadsPage() {
     const articleSchema = {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Trademark for Yarns & Threads",
+        "headline": "Trademark for Yarns and Threads",
         "description": "Exhaustive guide on Class 23 trademark protection for textile manufacturers. Covers registration steps, legal nuances, and global brand strategy.",
         "author": {
             "@type": "Organization",
@@ -753,3 +753,4 @@ export default function TrademarkForYarnsAndThreadsPage() {
         </>
     );
 }
+

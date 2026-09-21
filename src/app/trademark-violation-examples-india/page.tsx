@@ -24,10 +24,10 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Trademark Violation Examples',
+    title: 'Trademark Violation Examples India',
     description: 'Explore detailed examples of trademark violations in India. Learn about phonetic similarity, visual confusion, and trade dress infringement through real legal case studies.',
     keywords: [
-        'trademark violation examples india',
+        'Trademark Violation Examples India india',
         'deceptive similarity cases india',
         'phonetic similarity trademark examples',
         'trade dress infringement examples india',
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         'trademark enforcement examples'
     ],
     openGraph: {
-        title: 'Trademark Violation Examples',
+        title: 'Trademark Violation Examples India',
         description: 'Comprehensive guide showcasing actual cases of trademark misuse, from phonetic copycats to visual packaging fraud in India.',
         url: 'https://www.iprkaro.com/trademark-violation-examples-india',
         type: 'article',
@@ -50,16 +50,16 @@ export const metadata: Metadata = {
 };
 
 const tocSections = [
-    { id: 'introduction', title: 'Trademark Violation Examples' },
-    { id: 'deceptive-similarity', title: 'Trademark Violation Examples' },
-    { id: 'phonetic-examples', title: 'Trademark Violation Examples' },
-    { id: 'visual-packaging', title: 'Trademark Violation Examples' },
-    { id: 'trade-dress', title: 'Trademark Violation Examples' },
-    { id: 'pharma-standard', title: 'Trademark Violation Examples' },
-    { id: 'conceptual-similarity', title: 'Trademark Violation Examples' },
-    { id: 'passing-off', title: 'Trademark Violation Examples' },
-    { id: 'digital-violations', title: 'Trademark Violation Examples' },
-    { id: 'faqs', title: 'Trademark Violation Examples' },
+    { id: 'introduction', title: 'Trademark Violation Examples India' },
+    { id: 'deceptive-similarity', title: 'Trademark Violation Examples India' },
+    { id: 'phonetic-examples', title: 'Trademark Violation Examples India' },
+    { id: 'visual-packaging', title: 'Trademark Violation Examples India' },
+    { id: 'trade-dress', title: 'Trademark Violation Examples India' },
+    { id: 'pharma-standard', title: 'Trademark Violation Examples India' },
+    { id: 'conceptual-similarity', title: 'Trademark Violation Examples India' },
+    { id: 'passing-off', title: 'Trademark Violation Examples India' },
+    { id: 'digital-violations', title: 'Trademark Violation Examples India' },
+    { id: 'faqs', title: 'Trademark Violation Examples India' },
 ];
 
 const faqs = [
@@ -144,7 +144,7 @@ const reviews = [
 
 export default function TrademarkViolationExamplesPage() {
     const breadcrumbItems = [
-        { label: "Trademark Violation Examples India", href: "/trademark-violation-examples-india" },
+        { label: "Trademark Violation Examples India India", href: "/trademark-violation-examples-india" },
     ];
 
     const faqSchema = {
@@ -163,7 +163,7 @@ export default function TrademarkViolationExamplesPage() {
     const articleSchema = {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Trademark Violation Examples",
+        "headline": "Trademark Violation Examples India",
         "description": "Comprehensive analysis of trademark infringement examples in India, including visual, phonetic, and trade dress violations.",
         "author": {
             "@type": "Organization",
@@ -184,7 +184,7 @@ export default function TrademarkViolationExamplesPage() {
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Trademark Violation Examples India",
+                "name": "Trademark Violation Examples India India",
                 "item": "https://www.iprkaro.com/trademark-violation-examples-india"
             }
         ]
@@ -226,7 +226,7 @@ export default function TrademarkViolationExamplesPage() {
                         <h1 className="text-2xl md:text-5xl lg:text-6xl font-extrabold mb-4 md:mb-6 leading-tight mt-20 md:mt-10 text-white">
                             The Anatomy of a Copycat: <br />
                             <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#8A7AB5] to-[#D1C4E9]" style={{ WebkitTextFillColor: 'rgb(110,94,147)' }}>
-                                Trademark Violation Examples India
+                                Trademark Violation Examples India India
                             </span>
                         </h1>
                         <p className="text-sm md:text-xl mb-6 md:mb-8 max-w-4xl mx-auto text-gray-300 font-medium leading-relaxed px-2">
@@ -278,7 +278,7 @@ export default function TrademarkViolationExamplesPage() {
                                             In the contemporary Indian market, the line between healthy competition and blatant imitation is often blurred. As brands invest billions in building consumer trust, a parallel economy of 'copycats' thrives by exploiting the goodwill of established names. A trademark violation is more than just a legal breach; it is a direct assault on a brand's most valuable asset and its connection with the soul of the consumer.
                                         </p>
                                         <p className="mb-6">
-                                            Understanding <strong>Trademark Violation Examples India</strong> is essential for every business owner, from the street-side vendor to the multi-national conglomerate. Indian law, specifically the Trade Marks Act, 1999, has evolved to address various forms of infringement, ranging from identical cloning of logos to the more subtle 'Passing Off' of goods. This guide explores the diverse scenarios where trademarks are violated, supported by landmark judicial precedents that have shaped the Indian intellectual property regime.
+                                            Understanding <strong>Trademark Violation Examples India India</strong> is essential for every business owner, from the street-side vendor to the multi-national conglomerate. Indian law, specifically the Trade Marks Act, 1999, has evolved to address various forms of infringement, ranging from identical cloning of logos to the more subtle 'Passing Off' of goods. This guide explores the diverse scenarios where trademarks are violated, supported by landmark judicial precedents that have shaped the Indian intellectual property regime.
                                         </p>
                                         <div className="bg-blue-50 border-l-8 border-[rgb(110,94,147)] p-8 my-10 rounded-r-2xl shadow-sm">
                                             <p className="text-xl text-blue-900 italic font-medium">
@@ -702,3 +702,4 @@ export default function TrademarkViolationExamplesPage() {
         </>
     );
 }
+

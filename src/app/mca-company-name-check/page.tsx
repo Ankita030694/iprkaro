@@ -36,7 +36,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'MCA Company Name Check Guide',
+    title: 'MCA Company Name Check Guide India',
     description: 'Learn how to check company name availability on MCA V3 portal. Complete guide to name reservation rules, RUN service, and SPICe+ Part A for companies and LLPs.',
     keywords: [
         'mca company name check',
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
         'company name rejection reasons'
     ],
     openGraph: {
-        title: 'MCA Company Name Check Guide',
+        title: 'MCA Company Name Check Guide India',
         description: 'Ensure your proposed company name is unique and compliant. Step-by-step masterclass on MCA naming rules and the RUN reservation service.',
         url: 'https://www.iprkaro.com/mca-company-name-check',
         type: 'article',
@@ -62,23 +62,23 @@ export const metadata: Metadata = {
 };
 
 const tocSections = [
-    { id: 'introduction', title: 'MCA Company Name Check Guide' },
-    { id: 'ai-algorithms', title: 'MCA Company Name Check Guide' },
-    { id: 'how-to-check', title: 'MCA Company Name Check Guide' },
-    { id: 'naming-rules', title: 'MCA Company Name Check Guide' },
-    { id: 'restricted-words', title: 'MCA Company Name Check Guide' },
-    { id: 'capital-requirements', title: 'MCA Company Name Check Guide' },
-    { id: 'identical-names', title: 'MCA Company Name Check Guide' },
-    { id: 'run-service', title: 'MCA Company Name Check Guide' },
-    { id: 'spice-plus', title: 'MCA Company Name Check Guide' },
-    { id: 're-submission', title: 'MCA Company Name Check Guide' },
-    { id: 'trademark-conflict', title: 'MCA Company Name Check Guide' },
-    { id: 'rejection-reasons', title: 'MCA Company Name Check Guide' },
-    { id: 'llp-naming', title: 'MCA Company Name Check Guide' },
-    { id: 'why-iprkaro', title: 'MCA Company Name Check Guide' },
-    { id: 'faqs', title: 'MCA Company Name Check Guide' },
-    { id: 'reviews', title: 'MCA Company Name Check Guide' },
-    { id: 'conclusion', title: 'MCA Company Name Check Guide' },
+    { id: 'introduction', title: 'MCA Company Name Check Guide India' },
+    { id: 'ai-algorithms', title: 'MCA Company Name Check Guide India' },
+    { id: 'how-to-check', title: 'MCA Company Name Check Guide India' },
+    { id: 'naming-rules', title: 'MCA Company Name Check Guide India' },
+    { id: 'restricted-words', title: 'MCA Company Name Check Guide India' },
+    { id: 'capital-requirements', title: 'MCA Company Name Check Guide India' },
+    { id: 'identical-names', title: 'MCA Company Name Check Guide India' },
+    { id: 'run-service', title: 'MCA Company Name Check Guide India' },
+    { id: 'spice-plus', title: 'MCA Company Name Check Guide India' },
+    { id: 're-submission', title: 'MCA Company Name Check Guide India' },
+    { id: 'trademark-conflict', title: 'MCA Company Name Check Guide India' },
+    { id: 'rejection-reasons', title: 'MCA Company Name Check Guide India' },
+    { id: 'llp-naming', title: 'MCA Company Name Check Guide India' },
+    { id: 'why-iprkaro', title: 'MCA Company Name Check Guide India' },
+    { id: 'faqs', title: 'MCA Company Name Check Guide India' },
+    { id: 'reviews', title: 'MCA Company Name Check Guide India' },
+    { id: 'conclusion', title: 'MCA Company Name Check Guide India' },
 ];
 
 const faqs = [
@@ -164,7 +164,7 @@ export default function McaNameCheckPage() {
     const articleSchema = {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "MCA Company Name Check Guide",
+        "headline": "MCA Company Name Check Guide India",
         "description": "Examine the technical rules of company naming in India. Learn about RUN, SPICe+ Part A, and how to avoid name rejections by the Ministry of Corporate Affairs.",
         "author": {
             "@type": "Organization",
@@ -723,3 +723,4 @@ export default function McaNameCheckPage() {
         </>
     );
 }
+

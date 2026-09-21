@@ -406,11 +406,11 @@ export default function AboutClient() {
               }}
             >
               {[
-                ...[1, 2, 3, 4, 5, 6, 7, 8, 13, 14].map(n => `/clientlogos/${n}.png`),
+                ...[1, 2, 4, 5, 6, 7, 8, 13, 14].map(n => `/clientlogos/${n}.png`),
                 '/partner1.jpeg',
                 '/partner2.jpeg',
                 // Duplicate for infinite loop
-                ...[1, 2, 3, 4, 5, 6, 7, 8, 13, 14].map(n => `/clientlogos/${n}.png`),
+                ...[1, 2, 4, 5, 6, 7, 8, 13, 14].map(n => `/clientlogos/${n}.png`),
                 '/partner1.jpeg',
                 '/partner2.jpeg'
               ].map((logo, index) => (

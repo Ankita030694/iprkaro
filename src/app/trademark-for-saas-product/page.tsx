@@ -25,7 +25,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Trademark for SaaS Products',
+    title: 'Trademark for SaaS Products India',
     description: 'Expert guide to trademark registration for SaaS products in India. Secure your software brand under Class 9 & 42. 5000+ words on legal strategy, costs, and protection.',
     keywords: [
         'trademark for SaaS product',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         'protecting software brand assets'
     ],
     openGraph: {
-        title: 'Trademark for SaaS Products',
+        title: 'Trademark for SaaS Products India',
         description: 'Scale your SaaS safely with expert IP protection. Register your software brand name, logo, and icons with India\'s elite tech-focused legal team.',
         url: 'https://www.iprkaro.com/trademark-for-saas-product',
         type: 'article',
@@ -51,17 +51,17 @@ export const metadata: Metadata = {
 };
 
 const tocSections = [
-    { id: 'saas-branding-essentials', title: 'Trademark for SaaS Products' },
-    { id: 'importance-of-trademark', title: 'Trademark for SaaS Products' },
-    { id: 'classification-strategy', title: 'Trademark for SaaS Products' },
-    { id: 'distinctiveness-guide', title: 'Trademark for SaaS Products' },
-    { id: 'registration-timeline', title: 'Trademark for SaaS Products' },
-    { id: 'required-legal-documents', title: 'Trademark for SaaS Products' },
-    { id: 'overcoming-objections', title: 'Trademark for SaaS Products' },
-    { id: 'global-saas-protection', title: 'Trademark for SaaS Products' },
-    { id: 'ip-valuation-funding', title: 'Trademark for SaaS Products' },
-    { id: 'saas-trademark-costs', title: 'Trademark for SaaS Products' },
-    { id: 'faqs', title: 'Trademark for SaaS Products' },
+    { id: 'saas-branding-essentials', title: 'Trademark for SaaS Products India' },
+    { id: 'importance-of-trademark', title: 'Trademark for SaaS Products India' },
+    { id: 'classification-strategy', title: 'Trademark for SaaS Products India' },
+    { id: 'distinctiveness-guide', title: 'Trademark for SaaS Products India' },
+    { id: 'registration-timeline', title: 'Trademark for SaaS Products India' },
+    { id: 'required-legal-documents', title: 'Trademark for SaaS Products India' },
+    { id: 'overcoming-objections', title: 'Trademark for SaaS Products India' },
+    { id: 'global-saas-protection', title: 'Trademark for SaaS Products India' },
+    { id: 'ip-valuation-funding', title: 'Trademark for SaaS Products India' },
+    { id: 'saas-trademark-costs', title: 'Trademark for SaaS Products India' },
+    { id: 'faqs', title: 'Trademark for SaaS Products India' },
 ];
 
 const faqs = [
@@ -149,7 +149,7 @@ export default function TrademarkForSaaSPage() {
     const articleSchema = {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Trademark for SaaS Products",
+        "headline": "Trademark for SaaS Products India",
         "description": "A 5000-word comprehensive guide for software founders on protecting SaaS brand names, logos, and digital assets via professional trademark registration.",
         "author": {
             "@type": "Organization",
@@ -212,7 +212,7 @@ export default function TrademarkForSaaSPage() {
                         <h1 className="text-2xl md:text-5xl lg:text-6xl font-extrabold mb-4 md:mb-6 leading-tight mt-20 md:mt-10 text-white">
                             Command the Digital Market: <br />
                             <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#8A7AB5] to-[#D1C4E9]" style={{ WebkitTextFillColor: 'rgb(110, 94, 147)' }}>
-                                Expert Trademark for SaaS Products
+                                Expert Trademark for SaaS Products India
                             </span>
                         </h1>
                         <p className="text-sm md:text-xl mb-6 md:mb-8 max-w-4xl mx-auto text-blue-100 font-medium leading-relaxed px-2">
@@ -676,3 +676,4 @@ export default function TrademarkForSaaSPage() {
         </>
     );
 }
+

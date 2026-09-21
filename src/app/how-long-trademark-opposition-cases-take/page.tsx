@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
 import { Metadata } from 'next';
@@ -23,10 +23,10 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Trademark Opposition Timeline',
-    description: 'A complete 5000+ word guide on the trademark opposition timeline in India. Understand statutory deadlines, practical delays, and stages from TM-O to final hearing.',
+    title: 'Trademark Opposition Case Timeline',
+    description: 'A complete 5000+ word guide on the Trademark Opposition Case Timeline in India. Understand statutory deadlines, practical delays, and stages from TM-O to final hearing.',
     keywords: [
-        'trademark opposition timeline india',
+        'Trademark Opposition Case Timeline india',
         'how long does trademark opposition take',
         'trademark opposition procedure india',
         'trademark counter statement deadline',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
         'how to speed up trademark opposition'
     ],
     openGraph: {
-        title: 'Trademark Opposition Timeline',
+        title: 'Trademark Opposition Case Timeline',
         description: 'Navigate the multi-year journey of a trademark battle. From initial notice to the final registrar decision.',
         url: 'https://www.iprkaro.com/how-long-trademark-opposition-cases-take',
         type: 'article',
@@ -48,17 +48,17 @@ export const metadata: Metadata = {
 };
 
 const tocSections = [
-    { id: 'introduction', title: 'Trademark Opposition Timeline' },
-    { id: 'statutory-limits', title: 'Trademark Opposition Timeline' },
-    { id: 'stage-1-window', title: 'Trademark Opposition Timeline' },
-    { id: 'stage-2-counter', title: 'Trademark Opposition Timeline' },
-    { id: 'stage-3-evidence', title: 'Trademark Opposition Timeline' },
-    { id: 'stage-4-hearing', title: 'Trademark Opposition Timeline' },
-    { id: 'delay-factors', title: 'Trademark Opposition Timeline' },
-    { id: 'fast-track', title: 'Trademark Opposition Timeline' },
-    { id: 'comparisons', title: 'Trademark Opposition Timeline' },
-    { id: 'reviews', title: 'Trademark Opposition Timeline' },
-    { id: 'faqs', title: 'Trademark Opposition Timeline' },
+    { id: 'introduction', title: 'Trademark Opposition Case Timeline' },
+    { id: 'statutory-limits', title: 'Trademark Opposition Case Timeline' },
+    { id: 'stage-1-window', title: 'Trademark Opposition Case Timeline' },
+    { id: 'stage-2-counter', title: 'Trademark Opposition Case Timeline' },
+    { id: 'stage-3-evidence', title: 'Trademark Opposition Case Timeline' },
+    { id: 'stage-4-hearing', title: 'Trademark Opposition Case Timeline' },
+    { id: 'delay-factors', title: 'Trademark Opposition Case Timeline' },
+    { id: 'fast-track', title: 'Trademark Opposition Case Timeline' },
+    { id: 'comparisons', title: 'Trademark Opposition Case Timeline' },
+    { id: 'reviews', title: 'Trademark Opposition Case Timeline' },
+    { id: 'faqs', title: 'Trademark Opposition Case Timeline' },
 ];
 
 const faqs = [
@@ -146,7 +146,7 @@ export default function TrademarkOppositionTimelinePage() {
     const articleSchema = {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Trademark Opposition Timeline",
+        "headline": "Trademark Opposition Case Timeline",
         "description": "Examine the step-by-step timeline of trademark opposition in India. Learn about statutory deadlines, evidence stages, and the roadmap to registration.",
         "author": {
             "@type": "Organization",
@@ -575,4 +575,5 @@ export default function TrademarkOppositionTimelinePage() {
         </>
     );
 }
+
 

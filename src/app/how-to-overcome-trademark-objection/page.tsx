@@ -28,10 +28,10 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-  title: 'Overcome Trademark Objection',
-  description: 'Master the legal strategies to overcome trademark objections in India. Detailed insights on Section 9 & 11, evidence checklists, and winning rebuttal formats.',
+  title: 'How to Overcome Trademark Objection',
+  description: 'Master the legal strategies to How to Overcome Trademark Objections in India. Detailed insights on Section 9 & 11, evidence checklists, and winning rebuttal formats.',
   keywords: [
-    'how to overcome trademark objection india',
+    'how to How to Overcome Trademark Objection india',
     'trademark objection response strategy',
     'overcoming section 9 trademark objection',
     'overcoming section 11 trademark objection',
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     'ip india objection guide'
   ],
   openGraph: {
-    title: 'Overcome Trademark Objection',
+    title: 'How to Overcome Trademark Objection',
     description: 'The ultimate 5000+ word strategy guide for overcoming trademark objections. Learn how to secure your brand status with legal precision.',
     url: 'https://www.iprkaro.com/how-to-overcome-trademark-objection',
     type: 'article',
@@ -54,16 +54,16 @@ export const metadata: Metadata = {
 };
 
 const tocSections = [
-  { id: 'introduction', title: 'Overcome Trademark Objection' },
-  { id: 'logic-of-objection', title: 'Overcome Trademark Objection' },
-  { id: 'absolute-grounds', title: 'Overcome Trademark Objection' },
-  { id: 'relative-grounds', title: 'Overcome Trademark Objection' },
-  { id: 'strategic-rebuttal', title: 'Overcome Trademark Objection' },
-  { id: 'evidence-mastery', title: 'Overcome Trademark Objection' },
-  { id: 'procedural-hurdles', title: 'Overcome Trademark Objection' },
-  { id: 'hearing-success', title: 'Overcome Trademark Objection' },
-  { id: 'case-studies', title: 'Overcome Trademark Objection' },
-  { id: 'faqs', title: 'Overcome Trademark Objection' },
+  { id: 'introduction', title: 'How to Overcome Trademark Objection' },
+  { id: 'logic-of-objection', title: 'How to Overcome Trademark Objection' },
+  { id: 'absolute-grounds', title: 'How to Overcome Trademark Objection' },
+  { id: 'relative-grounds', title: 'How to Overcome Trademark Objection' },
+  { id: 'strategic-rebuttal', title: 'How to Overcome Trademark Objection' },
+  { id: 'evidence-mastery', title: 'How to Overcome Trademark Objection' },
+  { id: 'procedural-hurdles', title: 'How to Overcome Trademark Objection' },
+  { id: 'hearing-success', title: 'How to Overcome Trademark Objection' },
+  { id: 'case-studies', title: 'How to Overcome Trademark Objection' },
+  { id: 'faqs', title: 'How to Overcome Trademark Objection' },
 ];
 
 const faqs = [
@@ -151,7 +151,7 @@ export default function OvercomeTrademarkObjectionPage() {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Overcome Trademark Objection",
+    "headline": "How to Overcome Trademark Objection",
     "description": "Deep dive into legal techniques for clearing trademark objections. Professional tips on Section 9, Section 11, and hearing successes.",
     "author": {
       "@type": "Organization",
@@ -405,7 +405,7 @@ export default function OvercomeTrademarkObjectionPage() {
                       Another powerful tool is the <strong>"Honest Concurrent Use"</strong> defense under Section 12. If your business has existed for a decade alongside the cited mark without a single lawsuit or consumer complaint, it suggests that the market has enough room for both. The Indian courts have repeatedly held that if confusion hasn't happened in 10 years, it is unlikely to happen tomorrow.
                     </p>
                     <p className="mb-6">
-                      We also analyze the 'Strength of the Cited Mark'. If the cited mark is itself a common word with many registrations, it is considered a 'weak mark'. A weak mark cannot block new applications as effectively as a 'strong', coined word like 'GOOGLE'. Citing the number of similar brands on the register (The Crowded Field Defense) is a proven way to <strong>overcome trademark objections</strong>.
+                      We also analyze the 'Strength of the Cited Mark'. If the cited mark is itself a common word with many registrations, it is considered a 'weak mark'. A weak mark cannot block new applications as effectively as a 'strong', coined word like 'GOOGLE'. Citing the number of similar brands on the register (The Crowded Field Defense) is a proven way to <strong>How to Overcome Trademark Objections</strong>.
                     </p>
                   </section>
 
@@ -438,7 +438,7 @@ export default function OvercomeTrademarkObjectionPage() {
                       Evidence Mastery: The Power of the User Affidavit
                     </h3>
                     <p className="mb-6 font-bold italic">
-                      If your trademark is "Objected," evidence is your only weapon. The Trademark Registry is a "First-to-Use" system. If you used the name in 2010, and a competitor registered it in 2015, you have a superior right! This is the core of the <strong>strategy to overcome trademark objection</strong>.
+                      If your trademark is "Objected," evidence is your only weapon. The Trademark Registry is a "First-to-Use" system. If you used the name in 2010, and a competitor registered it in 2015, you have a superior right! This is the core of the <strong>strategy to How to Overcome Trademark Objection</strong>.
                     </p>
                     <div className="grid md:grid-cols-2 gap-10">
                        <div className="space-y-6">
@@ -648,3 +648,4 @@ export default function OvercomeTrademarkObjectionPage() {
     </>
   );
 }
+

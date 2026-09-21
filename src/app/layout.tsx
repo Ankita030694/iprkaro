@@ -104,17 +104,6 @@ export default function RootLayout({
         {/* Preload LCP video - browser hints to start fetching early */}
         <link rel="preload" href="/hero/bg.mp4" as="video" type="video/mp4" />
 
-        {/* Font Awesome CSS - dynamically injected after page idle to avoid render-blocking */}
-        <Script id="fa-css-loader" strategy="lazyOnload">
-          {`
-            var l = document.createElement('link');
-            l.rel = 'stylesheet';
-            l.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';
-            l.integrity = 'sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==';
-            l.crossOrigin = 'anonymous';
-            document.head.appendChild(l);
-          `}
-        </Script>
         <noscript>
           <link
             rel="stylesheet"
@@ -130,9 +119,24 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
 
+      </head>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}
+      >
+        {/* Font Awesome CSS - dynamically injected after page idle to avoid render-blocking */}
+        <Script id="fa-css-loader" strategy="lazyOnload">
+          {`
+            var l = document.createElement('link');
+            l.rel = 'stylesheet';
+            l.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';
+            l.integrity = 'sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==';
+            l.crossOrigin = 'anonymous';
+            document.head.appendChild(l);
+          `}
+        </Script>
+        
         {/* Third Party Scripts (Delayed for Performance) */}
         <ThirdPartyScripts />
-
         <noscript>
           <img
             height="1"
@@ -142,10 +146,6 @@ export default function RootLayout({
             alt=""
           />
         </noscript>
-      </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}
-      >
         <div className="w-full">
           <ConditionalLayout>
             {children}

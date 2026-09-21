@@ -21,6 +21,7 @@ export default function ConditionalLayout({ children }: { children: React.ReactN
     pathname === path || pathname?.startsWith(`${path}/`)
   );
 
+
   if (shouldHideLayout) {
     return <>{children}</>;
   }

@@ -25,7 +25,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Trademark Opposed: Next Steps',
+    title: 'Trademark Opposed: What are Next Steps',
     description: 'Received a trademark opposition in India? Learn the step-by-step procedure to handle TM-O, file a counter-statement, submit evidence under Rules 45-47, and win your hearing. Comprehensive 5000+ word expert guide.',
     keywords: [
         'trademark opposed what happens next india',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         'respond to trademark opposition notice'
     ],
     openGraph: {
-        title: 'Trademark Opposed: Next Steps',
+        title: 'Trademark Opposed: What are Next Steps',
         description: 'Navigate the complex world of trademark opposition with India\'s top IP legal team. 5000+ words of technical strategy on counter-statements and evidence.',
         url: 'https://www.iprkaro.com/trademark-opposed-what-happens-next-india',
         type: 'article',
@@ -51,20 +51,20 @@ export const metadata: Metadata = {
 };
 
 const tocSections = [
-    { id: 'introduction', title: 'Trademark Opposed: Next Steps' },
-    { id: 'why-opposed', title: 'Trademark Opposed: Next Steps' },
-    { id: 'legal-framework', title: 'Trademark Opposed: Next Steps' },
-    { id: 'who-can-oppose', title: 'Trademark Opposed: Next Steps' },
-    { id: 'procedural-timeline', title: 'Trademark Opposed: Next Steps' },
-    { id: 'counter-statement', title: 'Trademark Opposed: Next Steps' },
-    { id: 'evidence-rule-45', title: 'Trademark Opposed: Next Steps\'s Evidence' },
-    { id: 'evidence-rule-46', title: 'Trademark Opposed: Next Steps\'s Defense' },
-    { id: 'evidence-rule-47', title: 'Trademark Opposed: Next Steps' },
-    { id: 'hearing-process', title: 'Trademark Opposed: Next Steps' },
-    { id: 'strategic-settlements', title: 'Trademark Opposed: Next Steps' },
-    { id: 'appeals-process', title: 'Trademark Opposed: Next Steps' },
-    { id: 'costs-and-fees', title: 'Trademark Opposed: Next Steps' },
-    { id: 'faqs', title: 'Trademark Opposed: Next Steps' },
+    { id: 'introduction', title: 'Trademark Opposed: What are Next Steps' },
+    { id: 'why-opposed', title: 'Trademark Opposed: What are Next Steps' },
+    { id: 'legal-framework', title: 'Trademark Opposed: What are Next Steps' },
+    { id: 'who-can-oppose', title: 'Trademark Opposed: What are Next Steps' },
+    { id: 'procedural-timeline', title: 'Trademark Opposed: What are Next Steps' },
+    { id: 'counter-statement', title: 'Trademark Opposed: What are Next Steps' },
+    { id: 'evidence-rule-45', title: 'Trademark Opposed: What are Next Steps\'s Evidence' },
+    { id: 'evidence-rule-46', title: 'Trademark Opposed: What are Next Steps\'s Defense' },
+    { id: 'evidence-rule-47', title: 'Trademark Opposed: What are Next Steps' },
+    { id: 'hearing-process', title: 'Trademark Opposed: What are Next Steps' },
+    { id: 'strategic-settlements', title: 'Trademark Opposed: What are Next Steps' },
+    { id: 'appeals-process', title: 'Trademark Opposed: What are Next Steps' },
+    { id: 'costs-and-fees', title: 'Trademark Opposed: What are Next Steps' },
+    { id: 'faqs', title: 'Trademark Opposed: What are Next Steps' },
 ];
 
 const faqs = [
@@ -161,7 +161,7 @@ export default function TrademarkOpposedPage() {
     const articleSchema = {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Trademark Opposed: Next Steps",
+        "headline": "Trademark Opposed: What are Next Steps",
         "description": "Comprehensive legal guide covering the entire trademark opposition process in India, including Form TM-O, counter-statements, evidence stages, and hearing procedures.",
         "author": {
             "@type": "Organization",
@@ -719,3 +719,4 @@ export default function TrademarkOpposedPage() {
         </>
     );
 }
+

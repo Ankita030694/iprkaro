@@ -41,10 +41,10 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Small Company Definition',
-    description: 'Understand the Small Company definition in India. Learn about Section 2(85), updated thresholds for capital and turnover, and key compliance exemptions.',
+    title: 'Small Company Definition in India',
+    description: 'Understand the Small Company Definition in India in India. Learn about Section 2(85), updated thresholds for capital and turnover, and key compliance exemptions.',
     keywords: [
-        'small company definition companies act 2013',
+        'Small Company Definition in India companies act 2013',
         'section 2(85) companies act threshold',
         'small company turnover limit 40 crore',
         'paid up capital limit small company',
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
         'mca notification small company 2022'
     ],
     openGraph: {
-        title: 'Small Company Definition',
+        title: 'Small Company Definition in India',
         description: 'Does your startup qualify for reduced compliance? Learn about the increased MCA thresholds and how to claim exemptions for your private limited company.',
         url: 'https://www.iprkaro.com/small-company-definition',
         type: 'article',
@@ -67,22 +67,22 @@ export const metadata: Metadata = {
 };
 
 const tocSections = [
-    { id: 'introduction', title: 'Small Company Definition' },
-    { id: 'legal-definition', title: 'Small Company Definition' },
-    { id: 'updated-thresholds', title: 'Small Company Definition' },
-    { id: 'eligibility-criteria', title: 'Small Company Definition' },
-    { id: 'compliance-benefits', title: 'Small Company Definition' },
-    { id: 'financial-statements', title: 'Small Company Definition' },
-    { id: 'ifc-relief', title: 'Small Company Definition' },
-    { id: 'board-meetings', title: 'Small Company Definition' },
-    { id: 'annual-return', title: 'Small Company Definition' },
-    { id: 'fast-track-merger', title: 'Small Company Definition' },
-    { id: 'penalties-reduction', title: 'Small Company Definition' },
-    { id: 'small-vs-opc', title: 'Small Company Definition' },
-    { id: 'why-iprkaro', title: 'Small Company Definition' },
-    { id: 'faqs', title: 'Small Company Definition' },
-    { id: 'reviews', title: 'Small Company Definition' },
-    { id: 'conclusion', title: 'Small Company Definition' },
+    { id: 'introduction', title: 'Small Company Definition in India' },
+    { id: 'legal-definition', title: 'Small Company Definition in India' },
+    { id: 'updated-thresholds', title: 'Small Company Definition in India' },
+    { id: 'eligibility-criteria', title: 'Small Company Definition in India' },
+    { id: 'compliance-benefits', title: 'Small Company Definition in India' },
+    { id: 'financial-statements', title: 'Small Company Definition in India' },
+    { id: 'ifc-relief', title: 'Small Company Definition in India' },
+    { id: 'board-meetings', title: 'Small Company Definition in India' },
+    { id: 'annual-return', title: 'Small Company Definition in India' },
+    { id: 'fast-track-merger', title: 'Small Company Definition in India' },
+    { id: 'penalties-reduction', title: 'Small Company Definition in India' },
+    { id: 'small-vs-opc', title: 'Small Company Definition in India' },
+    { id: 'why-iprkaro', title: 'Small Company Definition in India' },
+    { id: 'faqs', title: 'Small Company Definition in India' },
+    { id: 'reviews', title: 'Small Company Definition in India' },
+    { id: 'conclusion', title: 'Small Company Definition in India' },
 ];
 
 const faqs = [
@@ -130,7 +130,7 @@ const faqs = [
 
 export default function SmallCompanyDefinitionPage() {
     const breadcrumbItems = [
-        { label: "Small Company Definition", href: "/small-company-definition" },
+        { label: "Small Company Definition in India", href: "/small-company-definition" },
     ];
 
     const breadcrumbSchema = {
@@ -146,7 +146,7 @@ export default function SmallCompanyDefinitionPage() {
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Small Company Definition",
+                "name": "Small Company Definition in India",
                 "item": "https://www.iprkaro.com/small-company-definition"
             }
         ]
@@ -168,7 +168,7 @@ export default function SmallCompanyDefinitionPage() {
     const articleSchema = {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Small Company Definition",
+        "headline": "Small Company Definition in India",
         "description": "Unlock the benefits of Small Company status. A detailed look at Section 2(85), MCA threshold increases, and compliance exemptions for startups.",
         "author": {
             "@type": "Organization",
@@ -636,3 +636,4 @@ export default function SmallCompanyDefinitionPage() {
         </>
     );
 }
+

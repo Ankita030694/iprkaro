@@ -1,14 +1,31 @@
+
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { locations, toSlug } from './locations';
 
-export const metadata: Metadata = {
-  title: "Trademark Registration by Location | IPR Karo",
-  description: "Find expert trademark registration services in your specific location. Protect your brand identity with IPR Karo's localized legal assistance.",
-  alternates: {
-    canonical: "https://www.iprkaro.com/trademark-by-location",
-  },
-};
+export async function generateMetadata({ 
+  searchParams 
+}: { 
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }> 
+}): Promise<Metadata> {
+  const resolvedParams = await searchParams;
+  const pageParam = resolvedParams?.page;
+  const currentPage = typeof pageParam === 'string' ? parseInt(pageParam, 10) : 1;
+  const validPage = Math.max(1, currentPage || 1);
+  
+  const canonicalUrl = validPage > 1 
+    ? `https://www.iprkaro.com/trademark-by-location?page=${validPage}`
+    : "https://www.iprkaro.com/trademark-by-location";
+
+  return {
+    title: "Trademark Registration by Location | IPR Karo",
+    description: "Find expert trademark registration services in your specific location. Protect your brand identity with IPR Karo's localized legal assistance.",
+    alternates: {
+      canonical: canonicalUrl,
+    },
+  };
+}
+
 
 const staticLocationMapping: Record<string, string> = {
   "gujarat": "gujrat",

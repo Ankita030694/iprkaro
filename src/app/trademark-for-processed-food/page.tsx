@@ -37,10 +37,10 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Trademark for Processed Food',
+    title: 'Trademark for Processed Food India',
     description: 'Comprehensive guide to trademark registration for processed food brands in India. Secure your food brand under Class 29, 30, and 32. 100% online legal process.',
     keywords: [
-        'trademark for processed food',
+        'Trademark for Processed Food India',
         'food brand registration india',
         'class 29 trademark india',
         'class 30 trademark registration',
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
         'legal shield for food business'
     ],
     openGraph: {
-        title: 'Trademark for Processed Food',
+        title: 'Trademark for Processed Food India',
         description: 'Protect your culinary innovation with India\'s premier IP law firm. Same-day filing for food and beverage brands.',
         url: 'https://www.iprkaro.com/trademark-for-processed-food',
         type: 'article',
@@ -63,21 +63,21 @@ export const metadata: Metadata = {
 };
 
 const tocSections = [
-    { id: 'introduction', title: 'Trademark for Processed Food' },
-    { id: 'trademark-classes-food', title: 'Trademark for Processed Food' },
-    { id: 'registration-process', title: 'Trademark for Processed Food' },
-    { id: 'documents-required', title: 'Trademark for Processed Food' },
-    { id: 'objections-and-rejections', title: 'Trademark for Processed Food' },
-    { id: 'fssai-vs-trademark', title: 'Trademark for Processed Food' },
-    { id: 'benefits-of-registration', title: 'Trademark for Processed Food' },
-    { id: 'global-expansion', title: 'Trademark for Processed Food' },
-    { id: 'monitoring', title: 'Trademark for Processed Food' },
-    { id: 'trade-dress', title: 'Trademark for Processed Food' },
-    { id: 'ai-impact', title: 'Trademark for Processed Food' },
-    { id: 'counterfeiting', title: 'Trademark for Processed Food' },
-    { id: 'brand-valuation', title: 'Trademark for Processed Food' },
-    { id: 'government-fees', title: 'Trademark for Processed Food' },
-    { id: 'faqs', title: 'Trademark for Processed Food' },
+    { id: 'introduction', title: 'Trademark for Processed Food India' },
+    { id: 'trademark-classes-food', title: 'Trademark for Processed Food India' },
+    { id: 'registration-process', title: 'Trademark for Processed Food India' },
+    { id: 'documents-required', title: 'Trademark for Processed Food India' },
+    { id: 'objections-and-rejections', title: 'Trademark for Processed Food India' },
+    { id: 'fssai-vs-trademark', title: 'Trademark for Processed Food India' },
+    { id: 'benefits-of-registration', title: 'Trademark for Processed Food India' },
+    { id: 'global-expansion', title: 'Trademark for Processed Food India' },
+    { id: 'monitoring', title: 'Trademark for Processed Food India' },
+    { id: 'trade-dress', title: 'Trademark for Processed Food India' },
+    { id: 'ai-impact', title: 'Trademark for Processed Food India' },
+    { id: 'counterfeiting', title: 'Trademark for Processed Food India' },
+    { id: 'brand-valuation', title: 'Trademark for Processed Food India' },
+    { id: 'government-fees', title: 'Trademark for Processed Food India' },
+    { id: 'faqs', title: 'Trademark for Processed Food India' },
 ];
 
 const faqs = [
@@ -170,7 +170,7 @@ const reviews = [
 export default function TrademarkForProcessedFoodPage() {
     const breadcrumbItems = [
         { label: "Services", href: "/our-services" },
-        { label: "Trademark for Processed Food", href: "/trademark-for-processed-food" },
+        { label: "Trademark for Processed Food India", href: "/trademark-for-processed-food" },
     ];
 
     const faqSchema = {
@@ -189,7 +189,7 @@ export default function TrademarkForProcessedFoodPage() {
     const articleSchema = {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Trademark for Processed Food",
+        "headline": "Trademark for Processed Food India",
         "description": "An exhaustive manual on securing your food brand. Covers Class 29, 30, 31, 32, registration steps, costs, and overcoming legal objections.",
         "author": {
             "@type": "Organization",
@@ -224,7 +224,7 @@ export default function TrademarkForProcessedFoodPage() {
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Trademark for Processed Food",
+                "name": "Trademark for Processed Food India",
                 "item": "https://www.iprkaro.com/trademark-for-processed-food"
             }
         ]
@@ -841,3 +841,4 @@ export default function TrademarkForProcessedFoodPage() {
         </>
     );
 }
+

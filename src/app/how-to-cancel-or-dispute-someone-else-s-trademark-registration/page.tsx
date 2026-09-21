@@ -22,7 +22,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Cancel Trademark Registration',
+    title: 'How to Cancel Trademark Registration',
     description: 'Master the process of trademark cancellation and rectification in India. Learn about Section 47 non-use grounds, Section 57 rectification, and High Court procedures.',
     keywords: [
         'how to cancel or dispute someone else\'s trademark registration',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
         'cancelling dormant trademarks india'
     ],
     openGraph: {
-        title: 'Cancel Trademark Registration',
+        title: 'How to Cancel Trademark Registration',
         description: 'Clear the path for your brand. Learn how to remove Zombie Trademarks and fraudulent registrations through forensic legal proceedings in India.',
         url: 'https://www.iprkaro.com/how-to-cancel-or-dispute-someone-else-s-trademark-registration',
         type: 'article',
@@ -48,19 +48,19 @@ export const metadata: Metadata = {
 };
 
 const tocSections = [
-    { id: 'introduction', title: 'Cancel Trademark Registration' },
-    { id: 'section-47', title: 'Cancel Trademark Registration' },
-    { id: 'section-57', title: 'Cancel Trademark Registration' },
-    { id: 'aggrieved-person', title: 'Cancel Trademark Registration' },
-    { id: 'forensic-process', title: 'Cancel Trademark Registration' },
-    { id: 'evidence', title: 'Cancel Trademark Registration' },
-    { id: 'fraud-grounds', title: 'Cancel Trademark Registration' },
-    { id: 'defense-strategy', title: 'Cancel Trademark Registration' },
-    { id: 'suo-motu', title: 'Cancel Trademark Registration' },
-    { id: 'costs-timelines', title: 'Cancel Trademark Registration' },
-    { id: 'faqs', title: 'Cancel Trademark Registration' },
-    { id: 'reviews', title: 'Cancel Trademark Registration' },
-    { id: 'conclusion', title: 'Cancel Trademark Registration' },
+    { id: 'introduction', title: 'How to Cancel Trademark Registration' },
+    { id: 'section-47', title: 'How to Cancel Trademark Registration' },
+    { id: 'section-57', title: 'How to Cancel Trademark Registration' },
+    { id: 'aggrieved-person', title: 'How to Cancel Trademark Registration' },
+    { id: 'forensic-process', title: 'How to Cancel Trademark Registration' },
+    { id: 'evidence', title: 'How to Cancel Trademark Registration' },
+    { id: 'fraud-grounds', title: 'How to Cancel Trademark Registration' },
+    { id: 'defense-strategy', title: 'How to Cancel Trademark Registration' },
+    { id: 'suo-motu', title: 'How to Cancel Trademark Registration' },
+    { id: 'costs-timelines', title: 'How to Cancel Trademark Registration' },
+    { id: 'faqs', title: 'How to Cancel Trademark Registration' },
+    { id: 'reviews', title: 'How to Cancel Trademark Registration' },
+    { id: 'conclusion', title: 'How to Cancel Trademark Registration' },
 ];
 
 const faqs = [
@@ -154,7 +154,7 @@ export default function TrademarkCancellationPage() {
     const articleSchema = {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Cancel Trademark Registration",
+        "headline": "How to Cancel Trademark Registration",
         "description": "Clear your brand path. The authoritative guide to trademark cancellation, rectification, and non-use proceedings in the High Courts of India.",
         "author": {
             "@type": "Organization",
@@ -537,3 +537,4 @@ export default function TrademarkCancellationPage() {
         </>
     );
 }
+

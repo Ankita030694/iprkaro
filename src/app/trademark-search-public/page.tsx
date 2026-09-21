@@ -36,10 +36,10 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Public Trademark Search India',
+    title: 'Public Trademark Search in India',
     description: 'Master the IP India public search portal. Learn how to perform Wordmark, Phonetic, and Vienna code searches to ensure your brand name is available and conflict-free.',
     keywords: [
-        'public trademark search india',
+        'Public Trademark Search in India',
         'ip india online search',
         'wordmark search trademark',
         'phonetic trademark search',
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
         'madrid protocol trademark search india'
     ],
     openGraph: {
-        title: 'Public Trademark Search India',
+        title: 'Public Trademark Search in India',
         description: 'Dont file blindly. Learn how to use the IP India portal to find similar brands and avoid costly legal rejections. Comprehensive Wordmark & Phonetic search guide.',
         url: 'https://www.iprkaro.com/trademark-search-public',
         type: 'article',
@@ -62,21 +62,21 @@ export const metadata: Metadata = {
 };
 
 const tocSections = [
-    { id: 'introduction', title: 'Public Trademark Search India' },
-    { id: 'ip-portal-overview', title: 'Public Trademark Search India' },
-    { id: 'wordmark-search', title: 'Public Trademark Search India' },
-    { id: 'phonetic-search', title: 'Public Trademark Search India' },
-    { id: 'vienna-code', title: 'Public Trademark Search India' },
-    { id: 'nice-classification', title: 'Public Trademark Search India' },
-    { id: 'cross-class-conflicts', title: 'Public Trademark Search India' },
-    { id: 'madrid-international', title: 'Public Trademark Search India' },
-    { id: 'search-status-meaning', title: 'Public Trademark Search India' },
-    { id: 'zombie-trademarks', title: 'Public Trademark Search India' },
-    { id: 'well-known-marks', title: 'Public Trademark Search India' },
-    { id: 'why-iprkaro', title: 'Public Trademark Search India' },
-    { id: 'faqs', title: 'Public Trademark Search India' },
-    { id: 'reviews', title: 'Public Trademark Search India' },
-    { id: 'conclusion', title: 'Public Trademark Search India' },
+    { id: 'introduction', title: 'Public Trademark Search in India' },
+    { id: 'ip-portal-overview', title: 'Public Trademark Search in India' },
+    { id: 'wordmark-search', title: 'Public Trademark Search in India' },
+    { id: 'phonetic-search', title: 'Public Trademark Search in India' },
+    { id: 'vienna-code', title: 'Public Trademark Search in India' },
+    { id: 'nice-classification', title: 'Public Trademark Search in India' },
+    { id: 'cross-class-conflicts', title: 'Public Trademark Search in India' },
+    { id: 'madrid-international', title: 'Public Trademark Search in India' },
+    { id: 'search-status-meaning', title: 'Public Trademark Search in India' },
+    { id: 'zombie-trademarks', title: 'Public Trademark Search in India' },
+    { id: 'well-known-marks', title: 'Public Trademark Search in India' },
+    { id: 'why-iprkaro', title: 'Public Trademark Search in India' },
+    { id: 'faqs', title: 'Public Trademark Search in India' },
+    { id: 'reviews', title: 'Public Trademark Search in India' },
+    { id: 'conclusion', title: 'Public Trademark Search in India' },
 ];
 
 const faqs = [
@@ -162,7 +162,7 @@ export default function TrademarkSearchPublicPage() {
     const articleSchema = {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Public Trademark Search India",
+        "headline": "Public Trademark Search in India",
         "description": "Don't risk a trademark objection. Use our comprehensive guide to master Wordmark, Phonetic, and Vienna searches on the official IP India portal.",
         "author": {
             "@type": "Organization",
@@ -615,3 +615,4 @@ export default function TrademarkSearchPublicPage() {
         </>
     );
 }
+

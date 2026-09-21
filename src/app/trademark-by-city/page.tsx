@@ -2,13 +2,28 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { locations, toSlug } from './locations';
 
-export const metadata: Metadata = {
-  title: "Trademark Registration by City | IPR Karo",
-  description: "Find the best trademark advocates and lawyers for trademark registration in major cities across India. Local expertise for your brand protection with IPR Karo.",
-  alternates: {
-    canonical: "/trademark-by-city",
-  },
-};
+export async function generateMetadata({ 
+  searchParams 
+}: { 
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }> 
+}): Promise<Metadata> {
+  const resolvedParams = await searchParams;
+  const pageParam = resolvedParams?.page;
+  const currentPage = typeof pageParam === 'string' ? parseInt(pageParam, 10) : 1;
+  const validPage = Math.max(1, currentPage || 1);
+  
+  const canonicalUrl = validPage > 1 
+    ? `https://www.iprkaro.com/trademark-by-city?page=${validPage}`
+    : "https://www.iprkaro.com/trademark-by-city";
+
+  return {
+    title: "Trademark Registration by City | IPR Karo",
+    description: "Find the best trademark advocates and lawyers for trademark registration in major cities across India. Local expertise for your brand protection with IPR Karo.",
+    alternates: {
+      canonical: canonicalUrl,
+    },
+  };
+}
 
 export default async function TrademarkByCityPage({ 
   searchParams 

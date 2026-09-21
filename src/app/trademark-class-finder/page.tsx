@@ -27,7 +27,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-  title: 'Trademark Class Finder India',
+  title: 'Free Trademark Class Finder India',
   description: 'Use our comprehensive trademark class finder to identify the correct class for your goods or services in India. Detailed guide on Nice Classification with 5000+ words of expertise.',
   keywords: [
     'trademark class finder',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     'trademark classification guide'
   ],
   openGraph: {
-    title: 'Trademark Class Finder India',
+    title: 'Free Trademark Class Finder India',
     description: 'Avoid registration errors with our deep-dive trademark class search tool and guide. Expert analysis of all 45 classes.',
     url: 'https://www.iprkaro.com/trademark-class-finder',
     type: 'article',
@@ -53,17 +53,17 @@ export const metadata: Metadata = {
 };
 
 const tocSections = [
-  { id: 'introduction', title: 'Trademark Class Finder India' },
-  { id: 'why-classification-matters', title: 'Trademark Class Finder India' },
-  { id: 'nice-classification-system', title: 'Trademark Class Finder India' },
-  { id: 'classes-1-34-goods', title: 'Trademark Class Finder India' },
-  { id: 'classes-35-45-services', title: 'Trademark Class Finder India' },
-  { id: 'how-to-choose-class', title: 'Trademark Class Finder India' },
-  { id: 'common-classification-errors', title: 'Trademark Class Finder India' },
-  { id: 'hybrid-business-models', title: 'Trademark Class Finder India' },
-  { id: 'legal-implications', title: 'Trademark Class Finder India' },
-  { id: 'global-classification', title: 'Trademark Class Finder India' },
-  { id: 'faqs', title: 'Trademark Class Finder India' },
+  { id: 'introduction', title: 'Free Trademark Class Finder India' },
+  { id: 'why-classification-matters', title: 'Free Trademark Class Finder India' },
+  { id: 'nice-classification-system', title: 'Free Trademark Class Finder India' },
+  { id: 'classes-1-34-goods', title: 'Free Trademark Class Finder India' },
+  { id: 'classes-35-45-services', title: 'Free Trademark Class Finder India' },
+  { id: 'how-to-choose-class', title: 'Free Trademark Class Finder India' },
+  { id: 'common-classification-errors', title: 'Free Trademark Class Finder India' },
+  { id: 'hybrid-business-models', title: 'Free Trademark Class Finder India' },
+  { id: 'legal-implications', title: 'Free Trademark Class Finder India' },
+  { id: 'global-classification', title: 'Free Trademark Class Finder India' },
+  { id: 'faqs', title: 'Free Trademark Class Finder India' },
 ];
 
 const faqs = [
@@ -152,7 +152,7 @@ export default function TrademarkClassFinderPage() {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Trademark Class Finder India",
+    "headline": "Free Trademark Class Finder India",
     "description": "Exhaustive legal and strategic guide on finding the right trademark class. Covers Nice Classification, goods and services categories, and multiclass strategies.",
     "author": {
       "@type": "Organization",
@@ -319,7 +319,7 @@ export default function TrademarkClassFinderPage() {
                       </div>
                     </div>
                     <p className="mb-6">
-                      The **Trademark Class Finder India** tool is designed to prevent these outcomes. By using historical data and current legal precedents, we help you map your business activity to the most protective classes. Remember, once a trademark application is filed, the class cannot be changed. You can only narrow down the description within that class. This makes the initial choice the most critical decision in your brand's legal history.
+                      The **Free Trademark Class Finder India** tool is designed to prevent these outcomes. By using historical data and current legal precedents, we help you map your business activity to the most protective classes. Remember, once a trademark application is filed, the class cannot be changed. You can only narrow down the description within that class. This makes the initial choice the most critical decision in your brand's legal history.
                     </p>
                   </section>
 
@@ -708,3 +708,4 @@ export default function TrademarkClassFinderPage() {
     </>
   );
 }
+

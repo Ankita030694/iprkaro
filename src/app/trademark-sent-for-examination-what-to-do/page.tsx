@@ -26,7 +26,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Trademark Sent for Exam Next',
+    title: 'Trademark Sent for Examination Next',
     description: 'Your trademark status shows "Sent for Examination"? Learn exactly what this means, the Registry timeline, and how to prepare for the next steps. 5000+ words of IP expertise.',
     keywords: [
         'trademark sent for examination what to do',
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         'trademark journal publication after examination'
     ],
     openGraph: {
-        title: 'Trademark Sent for Exam Next',
+        title: 'Trademark Sent for Examination Next',
         description: 'Understand the legal review process of your brand. Our experts break down the trademark examination phase and what you must do to ensure successful registration.',
         url: 'https://www.iprkaro.com/trademark-sent-for-examination-what-to-do',
         type: 'article',
@@ -52,16 +52,16 @@ export const metadata: Metadata = {
 };
 
 const tocSections = [
-    { id: 'introduction', title: 'Trademark Sent for Exam Next' },
-    { id: 'registry-workflow', title: 'Trademark Sent for Exam Next' },
-    { id: 'timeline', title: 'Trademark Sent for Exam Next' },
-    { id: 'substantive-review', title: 'Trademark Sent for Exam Next' },
-    { id: 'possible-outcomes', title: 'Trademark Sent for Exam Next' },
-    { id: 'monitoring-guide', title: 'Trademark Sent for Exam Next' },
-    { id: 'objection-preparation', title: 'Trademark Sent for Exam Next' },
-    { id: 'case-laws', title: 'Trademark Sent for Exam Next' },
-    { id: 'common-mistakes', title: 'Trademark Sent for Exam Next' },
-    { id: 'expert-faqs', title: 'Trademark Sent for Exam Next' },
+    { id: 'introduction', title: 'Trademark Sent for Examination Next' },
+    { id: 'registry-workflow', title: 'Trademark Sent for Examination Next' },
+    { id: 'timeline', title: 'Trademark Sent for Examination Next' },
+    { id: 'substantive-review', title: 'Trademark Sent for Examination Next' },
+    { id: 'possible-outcomes', title: 'Trademark Sent for Examination Next' },
+    { id: 'monitoring-guide', title: 'Trademark Sent for Examination Next' },
+    { id: 'objection-preparation', title: 'Trademark Sent for Examination Next' },
+    { id: 'case-laws', title: 'Trademark Sent for Examination Next' },
+    { id: 'common-mistakes', title: 'Trademark Sent for Examination Next' },
+    { id: 'expert-faqs', title: 'Trademark Sent for Examination Next' },
 ];
 
 const faqs = [
@@ -150,7 +150,7 @@ export default function TrademarkSentForExaminationPage() {
     const articleSchema = {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Trademark Sent for Exam Next",
+        "headline": "Trademark Sent for Examination Next",
         "description": "Comprehensive guide on navigating the trademark examination phase in India. Covers timelines, Registry criteria, and outcome strategies.",
         "author": {
             "@type": "Organization",
@@ -636,3 +636,4 @@ export default function TrademarkSentForExaminationPage() {
         </>
     );
 }
+

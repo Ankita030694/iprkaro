@@ -29,10 +29,10 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-    title: 'Trademark for Cloud Kitchen',
+    title: 'Trademark for Cloud Kitchen Business',
     description: 'Expert guide to trademark registration for cloud kitchens in India. Secure your brand on Zomato and Swiggy. Detailed insights on Class 43, 29, 30, and 35. 5000+ words of legal advice.',
     keywords: [
-        'trademark for cloud kitchen',
+        'Trademark for Cloud Kitchen Business',
         'cloud kitchen brand registration india',
         'class 43 trademark india',
         'register restaurant brand name',
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
         'trademark for food business india'
     ],
     openGraph: {
-        title: 'Trademark for Cloud Kitchen',
+        title: 'Trademark for Cloud Kitchen Business',
         description: 'Protect your virtual restaurant brand with India\'s elite IP legal team. 100% online, same-day filing for Class 43 and food classes.',
         url: 'https://www.iprkaro.com/trademark-for-cloud-kitchen',
         type: 'article',
@@ -55,17 +55,17 @@ export const metadata: Metadata = {
 };
 
 const tocSections = [
-    { id: 'cloud-kitchen-revolution', title: 'Trademark for Cloud Kitchen' },
-    { id: 'importance-of-trademark', title: 'Trademark for Cloud Kitchen' },
-    { id: 'class-breakdown', title: 'Trademark for Cloud Kitchen' },
-    { id: 'registration-process', title: 'Trademark for Cloud Kitchen' },
-    { id: 'required-documents', title: 'Trademark for Cloud Kitchen' },
-    { id: 'legal-hurdles', title: 'Trademark for Cloud Kitchen' },
-    { id: 'scaling-and-franchising', title: 'Trademark for Cloud Kitchen' },
-    { id: 'global-protection', title: 'Trademark for Cloud Kitchen' },
-    { id: 'valuation-and-funding', title: 'Trademark for Cloud Kitchen' },
-    { id: 'costs-and-fees', title: 'Trademark for Cloud Kitchen' },
-    { id: 'faqs', title: 'Trademark for Cloud Kitchen' },
+    { id: 'cloud-kitchen-revolution', title: 'Trademark for Cloud Kitchen Business' },
+    { id: 'importance-of-trademark', title: 'Trademark for Cloud Kitchen Business' },
+    { id: 'class-breakdown', title: 'Trademark for Cloud Kitchen Business' },
+    { id: 'registration-process', title: 'Trademark for Cloud Kitchen Business' },
+    { id: 'required-documents', title: 'Trademark for Cloud Kitchen Business' },
+    { id: 'legal-hurdles', title: 'Trademark for Cloud Kitchen Business' },
+    { id: 'scaling-and-franchising', title: 'Trademark for Cloud Kitchen Business' },
+    { id: 'global-protection', title: 'Trademark for Cloud Kitchen Business' },
+    { id: 'valuation-and-funding', title: 'Trademark for Cloud Kitchen Business' },
+    { id: 'costs-and-fees', title: 'Trademark for Cloud Kitchen Business' },
+    { id: 'faqs', title: 'Trademark for Cloud Kitchen Business' },
 ];
 
 const faqs = [
@@ -134,7 +134,7 @@ const reviews = [
 
 export default function TrademarkForCloudKitchenPage() {
     const breadcrumbItems = [
-        { label: "Trademark for Cloud Kitchen", href: "/trademark-for-cloud-kitchen" },
+        { label: "Trademark for Cloud Kitchen Business", href: "/trademark-for-cloud-kitchen" },
     ];
 
     const faqSchema = {
@@ -153,7 +153,7 @@ export default function TrademarkForCloudKitchenPage() {
     const articleSchema = {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Trademark for Cloud Kitchen",
+        "headline": "Trademark for Cloud Kitchen Business",
         "description": "Exhaustive legal guide on protecting your cloud kitchen brand. Covers Class 43, 29, 30, registration steps, costs, and protecting your identity on Zomato/Swiggy.",
         "author": {
             "@type": "Organization",
@@ -174,7 +174,7 @@ export default function TrademarkForCloudKitchenPage() {
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Trademark for Cloud Kitchen",
+                "name": "Trademark for Cloud Kitchen Business",
                 "item": "https://www.iprkaro.com/trademark-for-cloud-kitchen"
             }
         ]
@@ -686,3 +686,4 @@ export default function TrademarkForCloudKitchenPage() {
         </>
     );
 }
+

@@ -22,7 +22,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-  title: 'Stop Brand Name Infringement',
+  title: 'How to Stop Brand Name Infringement',
   description: 'Proactive legal strategies to stop trademark infringement in India. Learn about cease and desist notices, civil suits, criminal penalties, and brand protection under Trademarks Act 1999.',
   keywords: [
     'stop someone using my brand name',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     'passing off action india'
   ],
   openGraph: {
-    title: 'Stop Brand Name Infringement',
+    title: 'How to Stop Brand Name Infringement',
     description: 'Expert legal roadmap to combat trademark infringement. Master the art of brand protection with cease and desist notices and litigation strategies.',
     url: 'https://www.iprkaro.com/how-to-stop-someone-using-your-brand-name',
     type: 'article',
@@ -48,21 +48,21 @@ export const metadata: Metadata = {
 };
 
 const tocSections = [
-  { id: 'legal-framework-infringement', title: 'Stop Brand Name Infringement' },
-  { id: 'identifying-infringement', title: 'Stop Brand Name Infringement' },
-  { id: 'gathering-legal-evidence', title: 'Stop Brand Name Infringement' },
-  { id: 'cease-and-desist-notice', title: 'Stop Brand Name Infringement' },
-  { id: 'jurisdiction-advantage-section134', title: 'Stop Brand Name Infringement' },
-  { id: 'well-known-trademarks-doctrine', title: 'Stop Brand Name Infringement' },
-  { id: 'transborder-reputation-doctrine', title: 'Stop Brand Name Infringement' },
-  { id: 'civil-litigation-remedies', title: 'Stop Brand Name Infringement' },
-  { id: 'criminal-action-provisions', title: 'Stop Brand Name Infringement' },
-  { id: 'administrative-remedies', title: 'Stop Brand Name Infringement' },
-  { id: 'online-brand-protection', title: 'Stop Brand Name Infringement' },
-  { id: 'border-enforcement-customs', title: 'Stop Brand Name Infringement' },
-  { id: 'arbitration-vs-litigation', title: 'Stop Brand Name Infringement' },
-  { id: 'case-studies-india', title: 'Stop Brand Name Infringement' },
-  { id: 'faqs', title: 'Stop Brand Name Infringement' },
+  { id: 'legal-framework-infringement', title: 'How to Stop Brand Name Infringement' },
+  { id: 'identifying-infringement', title: 'How to Stop Brand Name Infringement' },
+  { id: 'gathering-legal-evidence', title: 'How to Stop Brand Name Infringement' },
+  { id: 'cease-and-desist-notice', title: 'How to Stop Brand Name Infringement' },
+  { id: 'jurisdiction-advantage-section134', title: 'How to Stop Brand Name Infringement' },
+  { id: 'well-known-trademarks-doctrine', title: 'How to Stop Brand Name Infringement' },
+  { id: 'transborder-reputation-doctrine', title: 'How to Stop Brand Name Infringement' },
+  { id: 'civil-litigation-remedies', title: 'How to Stop Brand Name Infringement' },
+  { id: 'criminal-action-provisions', title: 'How to Stop Brand Name Infringement' },
+  { id: 'administrative-remedies', title: 'How to Stop Brand Name Infringement' },
+  { id: 'online-brand-protection', title: 'How to Stop Brand Name Infringement' },
+  { id: 'border-enforcement-customs', title: 'How to Stop Brand Name Infringement' },
+  { id: 'arbitration-vs-litigation', title: 'How to Stop Brand Name Infringement' },
+  { id: 'case-studies-india', title: 'How to Stop Brand Name Infringement' },
+  { id: 'faqs', title: 'How to Stop Brand Name Infringement' },
 ];
 
 const faqs = [
@@ -150,7 +150,7 @@ export default function StopBrandMisusePage() {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Stop Brand Name Infringement",
+    "headline": "How to Stop Brand Name Infringement",
     "description": "Exhaustive legal guide on combating trademark infringement in India. Covers legal notices, court injunctions, and criminal actions.",
     "author": {
       "@type": "Organization",
@@ -716,3 +716,4 @@ export default function StopBrandMisusePage() {
     </>
   );
 }
+
