@@ -77,7 +77,7 @@ const tocSections = [
 const faqs = [
     {
         question: "Is the trademark registration search on IP India free?",
-        answer: "Yes, the public search tool provided by the Controller General of Patents, Designs and Trademarks is absolutely free for anyone to use. You can access it via the official portal at ipindiaonline.gov.in."
+        answer: "Yes, the public search tool provided by the Controller General of Patents, Designs and Trademarks is absolutely free for anyone to use. You can access it via the official portal at https://tmrsearch.ipindia.gov.in/tmrpublicsearch/."
     },
     {
         question: "What is a phonetic search in trademarking?",

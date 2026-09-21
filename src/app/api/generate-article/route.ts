@@ -225,7 +225,7 @@ ${
      <h4>Official Sources, Statutory Portals & Legal References</h4>
      <p>For verified statutory records, official e-filings, and case status tracking, consult India's official intellectual property portals:</p>
      <ul class="official-references-list">
-       <li><a href="https://ipindiaonline.gov.in/" target="_blank" rel="noopener noreferrer"><strong>Trade Marks Registry E-Filing Gateway (CGPDTM)</strong></a> - Official portal for Form TM-A filings, Examination Reports, and Trademark Journal publications.</li>
+       <li><a href="https://ipindiaonline.gov.in/trademarkefiling/" target="_blank" rel="noopener noreferrer"><strong>Trade Marks Registry E-Filing Gateway (CGPDTM)</strong></a> - Official portal for Form TM-A filings, Examination Reports, and Trademark Journal publications.</li>
        <li><a href="https://ipindia.gov.in/" target="_blank" rel="noopener noreferrer"><strong>Intellectual Property India Official Portal</strong></a> - Comprehensive public records and Nice Classification schedules.</li>
        <li><a href="https://www.wipo.int/" target="_blank" rel="noopener noreferrer"><strong>World Intellectual Property Organization (WIPO)</strong></a> - Madrid Protocol international trademark search and treaty framework.</li>
        <li><a href="https://copyright.gov.in/" target="_blank" rel="noopener noreferrer"><strong>Copyright Office of India</strong></a> - Statutory registration and literary/artistic copyright documentation.</li>

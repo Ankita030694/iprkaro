@@ -17,11 +17,15 @@ export async function generateMetadata({
     ? `https://www.iprkaro.com/trademark-by-location/page/${validPage}`
     : "https://www.iprkaro.com/trademark-by-location";
 
+  const description = validPage > 1
+    ? `Find expert trademark registration services in your location. Protect your brand identity with IPR Karo's localized legal assistance - Page ${validPage}.`
+    : "Find expert trademark registration services in your specific location. Protect your brand identity with IPR Karo's localized legal assistance.";
+
   return {
     title: validPage > 1 
       ? `Trademark Registration by Location - Page ${validPage} | IPR Karo`
       : "Trademark Registration by Location | IPR Karo",
-    description: "Find expert trademark registration services in your specific location. Protect your brand identity with IPR Karo's localized legal assistance.",
+    description,
     alternates: {
       canonical: canonicalUrl,
     },
@@ -80,7 +84,7 @@ export default async function TrademarkByLocationPage({
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-extrabold text-navy-900 sm:text-5xl">
-            Trademark Registration by Location
+            {validPage > 1 ? `Trademark Registration by Location - Page ${validPage}` : 'Trademark Registration by Location'}
           </h1>
           <p className="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">
             Pick your city below to find local trademark help and services near you.
@@ -88,7 +92,7 @@ export default async function TrademarkByLocationPage({
         </div>
 
         <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-          Trademark Services by Location
+          {validPage > 1 ? `Trademark Services by Location - Page ${validPage}` : 'Trademark Services by Location'}
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">

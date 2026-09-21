@@ -263,7 +263,7 @@ export default function TrademarkApplicationStatusPage() {
                     <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm relative pt-12">
                       <span className="absolute top-4 left-6 text-4xl font-bold text-gray-100">01</span>
                       <h4 className="font-bold text-lg mb-3">Visit IPO Portal</h4>
-                      <p className="text-sm text-gray-600">Navigate to the official e-filing portal at ipindiaonline.gov.in. This is the centralized hub for all trademark related searches and filings in India.</p>
+                      <p className="text-sm text-gray-600">Navigate to the official e-filing portal at https://ipindiaonline.gov.in/trademarkefiling/. This is the centralized hub for all trademark related searches and filings in India.</p>
                     </div>
                     <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm relative pt-12">
                       <span className="absolute top-4 left-6 text-4xl font-bold text-gray-100">02</span>

@@ -277,7 +277,7 @@ export default function TrademarkStatusPage() {
                                 <section id="portal-navigation" className="mb-12 scroll-mt-24 md:scroll-mt-32">
                                     <h3 className="text-2xl md:text-3xl font-bold text-[#0C002B] mb-6">Portal Navigation: Accessing the IP India Status Section</h3>
                                     <p className="mb-6 leading-relaxed text-lg">
-                                        The official website for tracking is `ipindiaonline.gov.in`. Navigating it correctly ensures you get the full history of your mark.
+                                        The official website for tracking is `https://tmrsearch.ipindia.gov.in/tmrpublicsearch/`. Navigating it correctly ensures you get the full history of your mark.
                                     </p>
                                     <div className="grid md:grid-cols-2 gap-8 my-10">
                                         <div className="bg-white border-2 border-[#6E5E93] p-8 rounded-3xl shadow-sm">

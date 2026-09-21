@@ -345,7 +345,7 @@ export default function RegisterTrademarkYourselfPage() {
                       </div>
                       <div className="p-8 space-y-6">
                         <p className="text-gray-700">
-                          Use the <a href="https://ipindiaonline.gov.in/tmrpublicsearch/frmmain.aspx" target="_blank" rel="noopener noreferrer" className="text-blue-600 font-bold underline">Official Public Search Portal</a>. You must perform three levels of searching:
+                          Use the <a href="https://tmrsearch.ipindia.gov.in/tmrpublicsearch/frmmain.aspx" target="_blank" rel="noopener noreferrer" className="text-blue-600 font-bold underline">Official Public Search Portal</a>. You must perform three levels of searching:
                         </p>
                         <ul className="grid md:grid-cols-3 gap-6">
                           <li className="bg-gray-50 p-4 rounded-xl">
@@ -431,7 +431,7 @@ export default function RegisterTrademarkYourselfPage() {
                       <div className="space-y-4">
                         <h4 className="text-xl font-bold">Creating Your User Account</h4>
                         <p className="text-gray-700">
-                          Visit <a href="https://ipindiaonline.gov.in/trademarkefiling/" className="text-blue-600 underline">IP India E-Filing</a> and create a profile. You will need to select 'Proprietor' or 'Startup' – this determines your filing fee. If you are an MSME, make sure to have your Udyam Registration number ready to get a 50% discount.
+                          Visit <a href="https://ipindiaonline.gov.in/trademarkefiling/user/frmlogin1.aspx" className="text-blue-600 underline">IP India E-Filing</a> and create a profile. You will need to select 'Proprietor' or 'Startup' – this determines your filing fee. If you are an MSME, make sure to have your Udyam Registration number ready to get a 50% discount.
                         </p>
                       </div>
                     </div>

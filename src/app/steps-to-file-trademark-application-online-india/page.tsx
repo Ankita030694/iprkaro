@@ -331,7 +331,7 @@ export default function TrademarkApplicationStepsPage() {
                       <div>
                         <h4 className="text-xl font-bold text-gray-900 mb-2">Create an Account on IP India Portal</h4>
                         <p className="text-gray-700 mb-2">
-                           Visit the official e-filing portal (ipindiaonline.gov.in). If you are a new user, click on 'New User Registration'. You will need to select your user type (Proprietor/Agent/Attorney) and fill in your details.
+                           Visit the official e-filing portal (https://ipindiaonline.gov.in/trademarkefiling/). If you are a new user, click on 'New User Registration'. You will need to select your user type (Proprietor/Agent/Attorney) and fill in your details.
                         </p>
                         <p className="text-gray-700">
                            <strong>Crucial Step:</strong> You must map your Digital Signature Certificate (DSC) to your user account during registration. This ensures that any document filed from this account is legally signed by you. Once registered, you will receive a User ID and Password.

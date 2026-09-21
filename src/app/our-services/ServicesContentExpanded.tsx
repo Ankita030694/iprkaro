@@ -58,11 +58,11 @@ export default function ServicesContentExpanded() {
 
         {/* 1. Introduction: The IP Ecosystem */}
         <section className="text-center space-y-8">
-            <h2 className="text-sm font-bold text-[#1952C7] uppercase tracking-wider mb-2">Comprehensive IP Solutions</h2>
-            <p className="text-4xl md:text-5xl font-bold leading-tight text-[#0C002B]">
+            <span className="block text-sm font-bold text-[#1952C7] uppercase tracking-wider mb-2">Comprehensive IP Solutions</span>
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight text-[#0C002B]">
                 From Abstract Idea to <br/> 
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1952C7] to-indigo-400"> Legally Protected Asset</span>
-            </p>
+            </h2>
             <p className="text-xl text-[#6B7280] max-w-4xl mx-auto leading-relaxed">
                 Intellectual Property is not a single filing; it is a lifecycle. At IPR Karo, we don't just register your documents; we build a legal fortress around your business. Whether you are naming a brand, writing code, inventing a machine, or designing a product, we have a specialized legal workflow to secure your ownership.
             </p>

@@ -305,7 +305,7 @@ export default function OnlineTrademarkRegistrationPage() {
                                 <section id="portal-overview" className="mb-12 scroll-mt-24 md:scroll-mt-32">
                                     <h3 className="text-2xl md:text-3xl font-bold text-[#0C002B] mb-6">Navigating the IP India E-Filing Portal</h3>
                                     <p className="mb-6 leading-relaxed text-lg text-gray-800">
-                                        The official e-filing portal (ipindiaonline.gov.in) is the gateway to <strong>online trademark registration</strong>. While powerful, the interface can be technical for first time users. It requires a registered user ID, mapping of a Digital Signature Certificate (DSC), and an understanding of the various modules:
+                                        The official e-filing portal (https://ipindiaonline.gov.in/trademarkefiling/) is the gateway to <strong>online trademark registration</strong>. While powerful, the interface can be technical for first time users. It requires a registered user ID, mapping of a Digital Signature Certificate (DSC), and an understanding of the various modules:
                                     </p>
                                     <div className="grid md:grid-cols-2 gap-6 my-10">
                                         <div className="p-6 bg-gray-50 rounded-2xl border border-gray-200">

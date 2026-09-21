@@ -260,7 +260,7 @@ export default function TrademarkAvailabilityPage() {
                       <div className="flex flex-col md:flex-row gap-6 relative z-10">
                         <div className="flex-1 bg-white/5 border border-white/10 p-6 rounded-2xl backdrop-blur-sm">
                           <h5 className="font-bold text-[#FFD700] mb-2 uppercase tracking-widest text-sm">Official URL</h5>
-                          <p className="text-xl font-mono">ipindiaonline.gov.in/tmrpublicsearch</p>
+                          <p className="text-xl font-mono">https://tmrsearch.ipindia.gov.in/tmrpublicsearch</p>
                         </div>
                         <div className="flex-1 bg-white/5 border border-white/10 p-6 rounded-2xl backdrop-blur-sm">
                           <h5 className="font-bold text-[#FFD700] mb-2 uppercase tracking-widest text-sm">Data Scope</h5>

@@ -284,7 +284,7 @@ export default function IPIndiaPortalPage() {
                                             <h5 className="font-bold text-[#0C002B] text-xl mb-3 flex items-center">
                                                 <FontAwesomeIcon icon={faServer} className="mr-3 text-[#6E5E93]" /> E-Filing URL
                                             </h5>
-                                            <p className="text-gray-600">The actual filing happens on ipindiaonline.gov.in, which is the transactional arm of the main portal used for Form TM-A submissions.</p>
+                                            <p className="text-gray-600">The actual filing happens on https://ipindiaonline.gov.in/trademarkefiling/, which is the transactional arm of the main portal used for Form TM-A submissions.</p>
                                         </div>
                                         <div className="p-6 bg-gray-50 rounded-2xl border border-gray-200">
                                             <h5 className="font-bold text-[#0C002B] text-xl mb-3 flex items-center">
@@ -511,7 +511,7 @@ export default function IPIndiaPortalPage() {
                                 <section id="security-dsc" className="mb-12 scroll-mt-24 md:scroll-mt-32">
                                     <h3 className="text-2xl md:text-3xl font-bold text-[#0C002B] mb-6">Security Protocols: The Role of Class 3 DSC</h3>
                                     <p className="mb-4 leading-relaxed text-lg text-justify">
-                                        Authentication on <strong>ipindiaonline.gov.in</strong> is not limited to simple passwords. To ensure that an application is truly from the rightful owner, the portal uses **Class 3 Digital Signature Certificates (DSC)**.
+                                        Authentication on <strong>https://ipindiaonline.gov.in/trademarkefiling/</strong> is not limited to simple passwords. To ensure that an application is truly from the rightful owner, the portal uses **Class 3 Digital Signature Certificates (DSC)**.
                                     </p>
                                     <p className="mb-4 leading-relaxed text-lg text-justify">
                                         A DSC is a digital equivalent of a notarized signature. It ensures that the person filing Form TM-A is precisely who they claim to be. The portal's backend verifies the DSC data against your PAN or Aadhaar details. In 2026, the portal enforces strict browser compatibility (often requiring specific Java settings) to ensure the DSC cryptographic module functions correctly. IPR Karo takes the technical burden off you by managing this mapping and ensuring your digital credentials are used securely for every submission.

@@ -82,7 +82,7 @@ const tocSections = [
 const faqs = [
     {
         question: "Is the IP India public trademark search free?",
-        answer: "Yes, the official IP India portal (ipindiaonline.gov.in) provides a free public search tool that anyone can use to check the availability of brand names and logos."
+        answer: "Yes, the official IP India portal (https://tmrsearch.ipindia.gov.in/tmrpublicsearch/) provides a free public search tool that anyone can use to check the availability of brand names and logos."
     },
     {
         question: "What is a Phonetic Search?",
@@ -272,7 +272,7 @@ export default function TrademarkSearchPublicPage() {
                                 <section id="ip-portal-overview" className="mb-12 scroll-mt-24 md:scroll-mt-32">
                                     <h3 className="text-2xl md:text-3xl font-bold text-[#0C002B] mb-6">Navigating the IP India Portal: An Introduction</h3>
                                     <p className="mb-6 leading-relaxed text-lg">
-                                        The official <strong>trademark search public</strong> portal is located at `ipindiaonline.gov.in`. It is an enormous database that contains every trademark application filed in India since the enactment of the Trade Marks Act. Navigating it requires an understanding of how data is indexed.
+                                        The official <strong>trademark search public</strong> portal is located at `https://tmrsearch.ipindia.gov.in/tmrpublicsearch/`. It is an enormous database that contains every trademark application filed in India since the enactment of the Trade Marks Act. Navigating it requires an understanding of how data is indexed.
                                     </p>
                                     <div className="bg-white border-2 border-dashed border-[#6E5E93] p-8 my-10 rounded-3xl">
                                         <h5 className="font-bold text-[#0C002B] text-xl mb-4 flex items-center">
