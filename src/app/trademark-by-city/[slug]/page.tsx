@@ -90,6 +90,12 @@ export default async function CityTrademarkPage({ params }: Props) {
   const siteUrl = "https://www.iprkaro.com";
   const pageUrl = `${siteUrl}/trademark-by-city/${slug}`;
 
+  const displayLocationNames: Record<string, string> = {
+    "Indira Gandhi International Airport T1": "Indira Gandhi Airport",
+    "Crossing Republik Paramount Symphony": "Crossing Republik",
+  };
+  const displayLocation = displayLocationNames[location] || location;
+
   const faqs = [
     {
       question: `How can I register a trademark in ${location}?`,
@@ -216,7 +222,7 @@ export default async function CityTrademarkPage({ params }: Props) {
           
           <div className="container mx-auto px-4 py-12 lg:py-32 relative z-10 text-center">
              <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-snug md:leading-tight mt-20 md:mt-10 text-white">
-               Best Advocate | Best Lawyers in <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'rgb(110, 94, 147)' }}>{location} for Trademark Registration</span>
+               Trademark Lawyers in <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'rgb(110, 94, 147)' }}>{displayLocation}</span>
              </h1>
              <p className="text-sm md:text-xl mb-6 md:mb-8 max-w-3xl mx-auto text-gray-300 px-2 leading-relaxed">
                Secure your brand's future in {location} with high-end legal expertise. We provide premium IP protection services, from strategic searches to aggressive defense in opposition hearings. 100% Online process with same-day filing capability.

@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  htmlLimitedBots: /Screaming Frog|Googlebot|bingbot|Slurp|DuckDuckBot|Baiduspider|YandexBot/i,
   compress: true,
   images: {
     unoptimized: false,

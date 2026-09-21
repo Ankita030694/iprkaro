@@ -13,9 +13,7 @@ export async function generateMetadata({
   const currentPage = typeof pageParam === 'string' ? parseInt(pageParam, 10) : 1;
   const validPage = Math.max(1, currentPage || 1);
   
-  const canonicalUrl = validPage > 1 
-    ? `https://www.iprkaro.com/trademark-by-location?page=${validPage}`
-    : "https://www.iprkaro.com/trademark-by-location";
+  const canonicalUrl = "https://www.iprkaro.com/trademark-by-location";
 
   return {
     title: validPage > 1 
