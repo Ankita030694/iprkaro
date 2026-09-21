@@ -33,7 +33,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-  title: 'Is GST Mandatory for Trademark Registration in India? | IPR Karo',
+  title: 'Is GST Required for Trademark? | IPR Karo',
   description: 'Uncover the relationship between GST and Trademark registration. Learn about mandatory requirements, fee reductions for MSMEs, Input Tax Credit benefits, and the step by step process to protect your brand.',
   keywords: [
     'gst required for trademark',

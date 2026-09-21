@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import React, { useState } from 'react';
 import Image from 'next/image';
@@ -94,10 +94,10 @@ const queries = [
   { name: 'How to do a Trademark Search', href: '/how-to-do-a-trademark-search-before-filing' },
   { name: 'Grounds for TM Rejection', href: '/what-are-absolute-and-relative-grounds-for-rejection-section-9-11' },
   { name: 'Madrid Protocol India', href: '/how-to-file-international-trademark-madrid-protocol-from-india' },
-  { name: 'Can two trademarks exist in different classes?', href: '/can-two-trademarks-exist-in-different-classes-in-india' },
-  { name: 'How to avoid trademark objection?', href: '/how-to-avoid-trademark-objection-before-filing' },
-  { name: 'Why are trademarks rejected?', href: '/common-reasons-why-trademark-applications-get-rejected' },
-  { name: 'What happens after opposition?', href: '/what-happens-after-trademark-opposition-is-filed' },
+  { name: 'Can two trademarks exist in different classes?', href: '/understanding-trademark-classes-for-services-and-goods-in-india' },
+  { name: 'How to avoid trademark objection?', href: '/how-to-overcome-trademark-objection' },
+  { name: 'Why are trademarks rejected?', href: '/what-are-the-comman-reasons-for-trademark-application-rejection-in-india' },
+  { name: 'What happens after opposition?', href: '/what-happens-if-someone-opposes-my-trademark' },
   { name: 'Opposition Case Timeline', href: '/how-long-trademark-opposition-cases-take' },
   { name: 'Opposition Documents Checklist', href: '/documents-required-for-trademark-opposition' },
   { name: 'Avoid Trademark Scams', href: '/how-to-avoid-trademark-registration-scams' },
@@ -236,7 +236,7 @@ const NewFooter = () => {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-white/40 text-[13px]">Â© 2025 reserved by IPR KARO</p>
+          <p className="text-white/40 text-[13px]">© 2025 reserved by IPR KARO</p>
           <div className="flex items-center gap-8">
             <Link href="/privacy-policy" className="text-white/40 hover:text-white text-[13px] transition-colors">Privacy Policy</Link>
             <Link href="/terms-and-conditions" className="text-white/40 hover:text-white text-[13px] transition-colors">Term of Service</Link>

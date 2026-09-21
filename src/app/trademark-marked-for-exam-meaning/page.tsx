@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
 import { Metadata } from 'next';
@@ -79,7 +79,7 @@ const faqs = [
     },
     {
         question: "Can I use my brand name while it is 'Marked for Exam'?",
-        answer: "Yes, you can continue using your brand name. You are also entitled to use the TM symbol. However, you should not use the Â® symbol until the registration certificate is officially issued after passing the opposition period."
+        answer: "Yes, you can continue using your brand name. You are also entitled to use the TM symbol. However, you should not use the ® symbol until the registration certificate is officially issued after passing the opposition period."
     },
     {
         question: "Why has my status been 'Marked for Exam' for over a year?",
@@ -490,11 +490,11 @@ export default function TrademarkMarkedForExamPage() {
                                                 <div className="space-y-4 w-full">
                                                     <div className="flex justify-between items-center p-3 bg-white rounded-lg">
                                                         <span className="text-xs font-bold uppercase tracking-tight text-gray-400">Normal Application</span>
-                                                        <span className="text-lg font-black text-gray-900">6 â€“ 12 Months</span>
+                                                        <span className="text-lg font-black text-gray-900">6 – 12 Months</span>
                                                     </div>
                                                     <div className="flex justify-between items-center p-3 bg-white rounded-lg">
                                                         <span className="text-xs font-bold uppercase tracking-tight text-gray-400">Expedited Examination</span>
-                                                        <span className="text-lg font-black text-gray-900">1 â€“ 3 Months</span>
+                                                        <span className="text-lg font-black text-gray-900">1 – 3 Months</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -507,7 +507,7 @@ export default function TrademarkMarkedForExamPage() {
                                                 <div className="space-y-4 w-full">
                                                     <div className="flex justify-between items-center p-3 bg-white/10 rounded-lg backdrop-blur-sm">
                                                         <span className="text-xs font-bold uppercase tracking-tight text-white/70">Expedited Route Fee</span>
-                                                        <span className="text-lg font-black text-white">â‚¹20,000 (Govt)</span>
+                                                        <span className="text-lg font-black text-white">₹20,000 (Govt)</span>
                                                     </div>
                                                     <p className="text-[10px] opacity-60 text-left pt-2 text-white/60">Using Form TM-M with a massive fee increase (5x) skips the queue and guarantees a report within weeks. Ideal for startups with VC funding.</p>
                                                 </div>
@@ -707,7 +707,7 @@ export default function TrademarkMarkedForExamPage() {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/how-to-avoid-trademark-objection-before-filing" className="group flex items-center text-gray-600 hover:text-[rgb(110,94,147)] transition-all">
+                                        <Link href="/how-to-overcome-trademark-objection" className="group flex items-center text-gray-600 hover:text-[rgb(110,94,147)] transition-all">
                                             <div className="w-2 h-2 bg-gray-300 rounded-full mr-4 group-hover:bg-[rgb(110,94,147)] transition-all"></div>
                                             <span className="font-bold text-base">Avoiding Objections</span>
                                         </Link>

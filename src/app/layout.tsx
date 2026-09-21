@@ -113,16 +113,16 @@ export default function RootLayout({
             referrerPolicy="no-referrer"
           />
         </noscript>
+      </head>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}
+      >
 
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
 
-      </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}
-      >
         {/* Font Awesome CSS - dynamically injected after page idle to avoid render-blocking */}
         <Script id="fa-css-loader" strategy="lazyOnload">
           {`

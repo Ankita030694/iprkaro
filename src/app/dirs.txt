@@ -1,4 +1,4 @@
-﻿about-us
+about-us
 actions
 api
 are-there-any-fast-track-options-for-trademark-registration-in-india
@@ -7,10 +7,8 @@ best-legal-firms-specializing-in-intellectual-property-in-india
 can-i-file-a-trademark-application-for-a-mobile-app-name-in-india
 can-i-register-a-sound-or-scent-as-a-trademark-in-india
 can-i-trademark-a-slogan-or-tagline-for-my-business-in-india
-can-two-trademarks-exist-in-different-classes-in-india
-can-you-trademark-your-own-name-in-india
+understanding-trademark-classes-for-services-and-goods-in-india
 common-reasons-why-trademark-applications-get-rejected
-compare-fees-for-various-online-trademark-registration-providers-in-india
 contact-us
 dashboard
 difference-between-trademark-copyright-and-patent-protection-in-india
@@ -26,7 +24,7 @@ guide-to-choosing-a-reliable-online-plarforms-for-ip-services-in-india
 how-long-does-the-trademark-registration-process-take-in-india
 how-long-trademark-opposition-cases-take
 how-much-does-it-cost-to-get-a-logo-protected-in-india
-how-to-avoid-trademark-objection-before-filing
+how-to-overcome-trademark-objection
 how-to-avoid-trademark-registration-scams
 how-to-cancel-or-dispute-someone-else-s-trademark-registration
 how-to-check-trademark-availability
@@ -177,7 +175,7 @@ what-are-the-comman-reasons-for-trademark-application-rejection-in-india
 what-are-the-steps-to-file-a-trademark-application-online-in-india
 what-documents-are-needed-to-apply-for-trademark-registration-for-a-service
 what-does-objected-mean-in-trademark-status
-what-happens-after-trademark-opposition-is-filed
+what-happens-if-someone-opposes-my-trademark
 what-happens-if-someone-opposes-my-trademark
 what-happens-if-trademark-expires
 what-happens-when-someone-infringes-on-my-registered-trademark-in-india

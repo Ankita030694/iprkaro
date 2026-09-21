@@ -1,4 +1,4 @@
-﻿// import React from 'react';
+// import React from 'react';
 // import Image from 'next/image';
 // import ClientLogoSlider from './ClientLogoSlider';
 
@@ -345,7 +345,7 @@
 //         {/* Copyright */}
 //         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
 //           <p className="text-sm text-gray-400">
-//             Â© 2024 reserved by IPR KARO
+//             © 2024 reserved by IPR KARO
 //           </p>
 //         </div>
 //       </div>
@@ -695,10 +695,10 @@ const Footer: React.FC = () => {
             <a href="/what-are-absolute-and-relative-grounds-for-rejection-section-9-11" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Grounds for TM Rejection</a>
             <a href="/what-happens-if-someone-opposes-my-trademark" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Trademark Opposition Guide</a>
             <a href="/how-to-file-international-trademark-madrid-protocol-from-india" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Madrid Protocol India</a>
-            <a href="/can-two-trademarks-exist-in-different-classes-in-india" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Can two trademarks exist in different classes?</a>
-            <a href="/how-to-avoid-trademark-objection-before-filing" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">How to avoid trademark objection?</a>
-            <a href="/common-reasons-why-trademark-applications-get-rejected" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Why are trademarks rejected?</a>
-            <a href="/what-happens-after-trademark-opposition-is-filed" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">What happens after opposition?</a>
+            <a href="/understanding-trademark-classes-for-services-and-goods-in-india" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Can two trademarks exist in different classes?</a>
+            <a href="/how-to-overcome-trademark-objection" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">How to avoid trademark objection?</a>
+            <a href="/what-are-the-comman-reasons-for-trademark-application-rejection-in-india" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Why are trademarks rejected?</a>
+            <a href="/what-happens-if-someone-opposes-my-trademark" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">What happens after opposition?</a>
             <a href="/how-long-trademark-opposition-cases-take" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Opposition Case Timeline</a>
             <a href="/documents-required-for-trademark-opposition" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Opposition Documents Checklist</a>
             <a href="/how-to-avoid-trademark-registration-scams" className="text-sm text-gray-500 hover:text-cyan-300 transition-colors">Avoid Trademark Scams</a>
@@ -730,7 +730,7 @@ const Footer: React.FC = () => {
         {/* Copyright */}
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
           <p className="text-sm text-gray-400">
-            Â© 2024 reserved by IPR KARO
+            © 2024 reserved by IPR KARO
           </p>
         </div>
       </div>

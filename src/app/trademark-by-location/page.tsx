@@ -18,7 +18,9 @@ export async function generateMetadata({
     : "https://www.iprkaro.com/trademark-by-location";
 
   return {
-    title: "Trademark Registration by Location | IPR Karo",
+    title: validPage > 1 
+      ? `Trademark Registration by Location - Page ${validPage} | IPR Karo`
+      : "Trademark Registration by Location | IPR Karo",
     description: "Find expert trademark registration services in your specific location. Protect your brand identity with IPR Karo's localized legal assistance.",
     alternates: {
       canonical: canonicalUrl,

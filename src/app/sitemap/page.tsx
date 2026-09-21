@@ -1,4 +1,4 @@
-﻿import Link from 'next/link';
+import Link from 'next/link';
 import { db } from '@/lib/firebase';
 import { collection, getDocs } from 'firebase/firestore';
 
@@ -188,10 +188,10 @@ const staticUrls: string[] = [
   '/what-are-absolute-and-relative-grounds-for-rejection-section-9-11',
   '/what-happens-if-someone-opposes-my-trademark',
   '/how-to-file-international-trademark-madrid-protocol-from-india',
-  '/can-two-trademarks-exist-in-different-classes-in-india',
-  '/how-to-avoid-trademark-objection-before-filing',
-  '/common-reasons-why-trademark-applications-get-rejected',
-  '/what-happens-after-trademark-opposition-is-filed',
+  '/understanding-trademark-classes-for-services-and-goods-in-india',
+  '/how-to-overcome-trademark-objection',
+  '/what-are-the-comman-reasons-for-trademark-application-rejection-in-india',
+  '/what-happens-if-someone-opposes-my-trademark',
   '/how-long-trademark-opposition-cases-take',
   '/documents-required-for-trademark-opposition',
   '/how-to-avoid-trademark-registration-scams',

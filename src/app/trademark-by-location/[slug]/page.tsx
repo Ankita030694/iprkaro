@@ -71,13 +71,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const location = locations.find(loc => toSlug(loc) === slug) || "your area";
   let title = `TM Registration in ${location} | IPR Karo`;
   
-  if (title.length > 60) {
-    title = `TM Registration in ${location}`;
-    if (title.length > 55) {
-        title = `TM Reg. ${location}`;
+  if (title.length > 50) {
+    title = `TM Registration ${location} | IPR Karo`;
+    if (title.length > 50) {
+        title = `TM Reg. ${location} | IPR Karo`;
     }
-    if (title.length > 60) {
-        title = title.substring(0, 57) + '...';
+    if (title.length > 50) {
+        title = `TM Reg. ${location.substring(0, 31).trim()} | IPR Karo`;
     }
   }
 

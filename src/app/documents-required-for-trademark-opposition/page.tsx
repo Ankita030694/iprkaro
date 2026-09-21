@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
 import { Metadata } from 'next';
@@ -422,7 +422,7 @@ export default function TrademarkOppositionDocumentsPage() {
                                             <FontAwesomeIcon icon={faScaleBalanced} className="text-4xl text-[rgb(110,94,147)] mr-8 opacity-40" />
                                             <div>
                                                 <h5 className="font-black text-gray-900 mb-2">Check the TM-48 for:</h5>
-                                                <p className="text-xs font-bold text-gray-500 uppercase leading-loose">Stamped with correct judicial value â€¢ Signed by an authorized signatory â€¢ Clearly mentions the application number.</p>
+                                                <p className="text-xs font-bold text-gray-500 uppercase leading-loose">Stamped with correct judicial value • Signed by an authorized signatory • Clearly mentions the application number.</p>
                                             </div>
                                         </div>
                                     </section>
@@ -464,10 +464,10 @@ export default function TrademarkOppositionDocumentsPage() {
                                         <div className="bg-red-50 border-2 border-red-500/20 p-10 rounded-[2.5rem] mb-12">
                                             <h5 className="font-black text-red-900 mb-4 uppercase tracking-widest">Document Killers:</h5>
                                             <ul className="space-y-4 text-red-800 text-sm font-medium">
-                                                <li>â€¢ **Unclear Scans**: If the examiner cannot read the date on the invoice, the invoice doesn't exist.</li>
-                                                <li>â€¢ **Mismatched Names**: If the invoice is in the name of a sister concern and there is no assignment deed, it is useless.</li>
-                                                <li>â€¢ **Unnotarized Affidavits**: An affidavit without a notary's stamp and seal is just a piece of paper.</li>
-                                                <li>â€¢ **Irrelevant Goods**: Submitting shoe invoices for a trademark battle over software.</li>
+                                                <li>• **Unclear Scans**: If the examiner cannot read the date on the invoice, the invoice doesn't exist.</li>
+                                                <li>• **Mismatched Names**: If the invoice is in the name of a sister concern and there is no assignment deed, it is useless.</li>
+                                                <li>• **Unnotarized Affidavits**: An affidavit without a notary's stamp and seal is just a piece of paper.</li>
+                                                <li>• **Irrelevant Goods**: Submitting shoe invoices for a trademark battle over software.</li>
                                             </ul>
                                         </div>
                                     </section>
@@ -599,7 +599,7 @@ export default function TrademarkOppositionDocumentsPage() {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/what-happens-after-trademark-opposition-is-filed" className="group flex items-center text-gray-500 hover:text-[rgb(110,94,147)] transition-all">
+                                        <Link href="/what-happens-if-someone-opposes-my-trademark" className="group flex items-center text-gray-500 hover:text-[rgb(110,94,147)] transition-all">
                                             <div className="w-3 h-3 bg-gray-200 rounded-full mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:scale-150 transition-all shrink-0"></div>
                                             <span className="font-bold text-[10px] uppercase tracking-wider">Post-Filing Reality</span>
                                         </Link>

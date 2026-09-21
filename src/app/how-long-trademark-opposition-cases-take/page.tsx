@@ -554,13 +554,13 @@ export default function TrademarkOppositionTimelinePage() {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/what-happens-after-trademark-opposition-is-filed" className="group flex items-center text-gray-500 hover:text-[rgb(110,94,147)] transition-all">
+                                        <Link href="/what-happens-if-someone-opposes-my-trademark" className="group flex items-center text-gray-500 hover:text-[rgb(110,94,147)] transition-all">
                                             <div className="w-3 h-3 bg-gray-200 rounded-full mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:scale-150 transition-all shrink-0"></div>
                                             <span className="font-bold text-[10px] uppercase tracking-wider">Opposition Stages Guide</span>
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/common-reasons-why-trademark-applications-get-rejected" className="group flex items-center text-gray-500 hover:text-[rgb(110,94,147)] transition-all">
+                                        <Link href="/what-are-the-comman-reasons-for-trademark-application-rejection-in-india" className="group flex items-center text-gray-500 hover:text-[rgb(110,94,147)] transition-all">
                                             <div className="w-3 h-3 bg-gray-200 rounded-full mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:scale-150 transition-all shrink-0"></div>
                                             <span className="font-bold text-[10px] uppercase tracking-wider">Avoid Rejection</span>
                                         </Link>

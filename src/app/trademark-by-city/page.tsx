@@ -17,7 +17,9 @@ export async function generateMetadata({
     : "https://www.iprkaro.com/trademark-by-city";
 
   return {
-    title: "Trademark Registration by City | IPR Karo",
+    title: validPage > 1 
+      ? `Trademark Registration by City - Page ${validPage} | IPR Karo`
+      : "Trademark Registration by City | IPR Karo",
     description: "Find the best trademark advocates and lawyers for trademark registration in major cities across India. Local expertise for your brand protection with IPR Karo.",
     alternates: {
       canonical: canonicalUrl,

@@ -101,7 +101,12 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/Common-reasons-why-trademark-applications-get-rejected',
-        destination: '/common-reasons-why-trademark-applications-get-rejected',
+        destination: '/what-are-the-comman-reasons-for-trademark-application-rejection-in-india',
+        permanent: true,
+      },
+      {
+        source: '/common-reasons-why-trademark-applications-get-rejected',
+        destination: '/what-are-the-comman-reasons-for-trademark-application-rejection-in-india',
         permanent: true,
       },
       // Location-based redirects to resolve duplicates

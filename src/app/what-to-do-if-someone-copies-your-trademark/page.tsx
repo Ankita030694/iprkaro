@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
 import { Metadata } from 'next';
@@ -429,10 +429,10 @@ export default function TrademarkCopyingPage() {
                                                 <div className="space-y-4">
                                                     <h5 className="font-black text-xl mb-4 text-[rgb(110,94,147)] uppercase tracking-widest font-normal">Available Reliefs</h5>
                                                     <ul className="space-y-3 text-xs opacity-70 font-bold font-normal">
-                                                        <li>â€¢ Permanent Injunctions (The Stop Order)</li>
-                                                        <li>â€¢ Damages or Account of Profits</li>
-                                                        <li>â€¢ Delivery up of Infringing Material</li>
-                                                        <li>â€¢ Cost of the Lawsuit</li>
+                                                        <li>• Permanent Injunctions (The Stop Order)</li>
+                                                        <li>• Damages or Account of Profits</li>
+                                                        <li>• Delivery up of Infringing Material</li>
+                                                        <li>• Cost of the Lawsuit</li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -719,13 +719,13 @@ export default function TrademarkCopyingPage() {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/common-reasons-why-trademark-applications-get-rejected" className="group flex items-center text-gray-600 hover:text-[rgb(110,94,147)] transition-all">
+                                        <Link href="/what-are-the-comman-reasons-for-trademark-application-rejection-in-india" className="group flex items-center text-gray-600 hover:text-[rgb(110,94,147)] transition-all">
                                             <div className="w-2 h-2 bg-gray-300 rounded-full mr-4 group-hover:bg-[rgb(110,94,147)] transition-all"></div>
                                             <span className="font-bold text-xs uppercase tracking-tighter font-normal">Common Rejection Reasons</span>
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/how-to-avoid-trademark-objection-before-filing" className="group flex items-center text-gray-600 hover:text-[rgb(110,94,147)] transition-all">
+                                        <Link href="/how-to-overcome-trademark-objection" className="group flex items-center text-gray-600 hover:text-[rgb(110,94,147)] transition-all">
                                             <div className="w-2 h-2 bg-gray-300 rounded-full mr-4 group-hover:bg-[rgb(110,94,147)] transition-all"></div>
                                             <span className="font-bold text-xs uppercase tracking-tighter font-normal">Avoid Objections</span>
                                         </Link>

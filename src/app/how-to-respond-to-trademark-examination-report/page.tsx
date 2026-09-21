@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
 import { Metadata } from 'next';
@@ -598,7 +598,7 @@ export default function TrademarkExaminationResponsePage() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/how-to-avoid-trademark-objection-before-filing" className="group flex items-center text-gray-600 hover:text-[rgb(110,94,147)] transition-all">
+                    <Link href="/how-to-overcome-trademark-objection" className="group flex items-center text-gray-600 hover:text-[rgb(110,94,147)] transition-all">
                       <div className="w-2 h-2 bg-gray-300 rounded-full mr-4 group-hover:bg-[rgb(110,94,147)] transition-all"></div>
                       <span className="font-bold text-xs uppercase tracking-tighter">Pre-Filing Protection</span>
                     </Link>

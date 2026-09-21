@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
 import { Metadata } from 'next';
@@ -319,7 +319,7 @@ export default function TrademarkRightsPage() {
 
                                     <section id="introduction" className="scroll-mt-32">
                                         <h2 className="text-2xl md:text-4xl lg:text-5xl font-black text-gray-900 mb-8 leading-tight">
-                                            The Power of Ownership: Beyond the Â® Symbol
+                                            The Power of Ownership: Beyond the ® Symbol
                                         </h2>
                                         <p className="mb-6">
                                             A trademark is often described as the 'soul' of a business. It represents goodwill, quality, and the emotional connection customers have with your products. However, in the eye of the law, it is a 'Chose in Action' a form of intangible property that grants its owner a specific set of rights. In India, these rights are governed by the Trade Marks Act 1999 and the common law of Passing Off.
@@ -702,7 +702,7 @@ export default function TrademarkRightsPage() {
                                 <h4 className="text-lg font-black text-gray-900 mb-6 border-b-2 border-[rgb(110,94,147)] pb-4 uppercase tracking-widest font-normal">Rights Library</h4>
                                 <ul className="space-y-4 font-normal">
                                     <li>
-                                        <Link href="/can-two-trademarks-exist-in-different-classes-in-india" className="group flex items-center text-gray-600 hover:text-[rgb(110,94,147)] transition-all">
+                                        <Link href="/understanding-trademark-classes-for-services-and-goods-in-india" className="group flex items-center text-gray-600 hover:text-[rgb(110,94,147)] transition-all">
                                             <div className="w-2 h-2 bg-gray-300 rounded-full mr-4 group-hover:bg-[rgb(110,94,147)] transition-all"></div>
                                             <span className="font-bold text-xs uppercase tracking-tighter font-normal">Cross-Class Rights</span>
                                         </Link>
