@@ -203,7 +203,7 @@ export default function AboutClient() {
           </h1>
 
           {/* Subtitle with special styling for AI */}
-          <h3 className="flex flex-wrap justify-center items-center gap-1 sm:gap-2 text-center">
+          <div className="flex flex-wrap justify-center items-center gap-1 sm:gap-2 text-center">
             <span
               className="font-semibold"
               style={{
@@ -246,7 +246,7 @@ export default function AboutClient() {
             >
               Registration in India
             </span>
-          </h3>
+          </div>
         </div>
       </div>
 
@@ -283,7 +283,7 @@ export default function AboutClient() {
 
             {/* Right Content - Mobile */}
             <div className="flex-1 max-w-2xl space-y-4">
-              <h4
+              <h2
                 className="text-xl sm:text-2xl font-semibold"
                 style={{
                   color: '#0C002B',
@@ -293,7 +293,7 @@ export default function AboutClient() {
                 }}
               >
                 Advanced AI-Powered Trademark Search
-              </h4>
+              </h2>
 
               <p
                 className="text-base sm:text-lg"
@@ -334,7 +334,7 @@ export default function AboutClient() {
 
           {/* Right Content */}
           <div className="flex-1 max-w-3xl space-y-6">
-            <h4
+            <h2
               className="text-xl sm:text-2xl font-semibold"
               style={{
                 color: '#0C002B',
@@ -344,7 +344,7 @@ export default function AboutClient() {
               }}
             >
               Advanced AI-Powered Trademark Search
-            </h4>
+            </h2>
             
             <p
               className="text-base sm:text-lg"

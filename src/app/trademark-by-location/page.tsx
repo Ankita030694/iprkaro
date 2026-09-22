@@ -88,7 +88,7 @@ export default async function TrademarkByLocationPage({
             {validPage > 1 ? `Trademark Registration by Location - Page ${validPage}` : 'Trademark Registration by Location'}
           </h1>
           <p className="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">
-            Protect your brand identity with our expert legal assistance. Choose your city from the list below. We provide localized trademark registration services across India.
+            Protect your brand identity with our expert legal assistance. Choose your city from the list below. We provide localized trademark services across India.
           </p>
         </div>
 
@@ -110,7 +110,7 @@ export default async function TrademarkByLocationPage({
                   {loc}
                 </div>
                 <p className="text-xs text-gray-600 font-medium">
-                  Find trademark registration services in {loc}.
+                  Trademark services in this area.
                 </p>
               </Link>
             );

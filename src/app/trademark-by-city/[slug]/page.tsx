@@ -258,14 +258,14 @@ export default async function CityTrademarkPage({ params }: Props) {
                 <section id="why-register-trademark" className="scroll-mt-24 md:scroll-mt-32">
                   <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6">Why Trademark Registration in {location}?</h2>
                   <p className="text-base md:text-lg leading-relaxed mb-4 md:mb-6 text-gray-700">
-                    Your brand name, logo, and slogan are the most visible assets of your business in <strong>{location}</strong>. They distinguish you from competitors and carry the trust of your customers. However, in India's competitive market, simply using a name does not guarantee ownership. Without a registered trademark, your {location} business is operating on borrowed time.
+                    Your brand name and logo are vital assets in <strong>{location}</strong>. They distinguish you from competitors. However, just using a name does not guarantee ownership. Without a registered trademark, your {location} business is at risk.
                   </p>
                   <p className="text-base md:text-lg leading-relaxed mb-4 md:mb-6 text-gray-700">
-                    <strong>Trademark Registration</strong> gives you the exclusive legal right to use your brand across {location} and the rest of India. It empowers you to sue infringers for damages and stop them from using similar names. It essentially turns your reputation into a tangible asset that can be licensed, franchised, or sold for profit.
+                    <strong>Trademark Registration</strong> grants you exclusive legal rights. You can sue infringers and stop them from using similar names. It turns your reputation into an asset you can license, franchise, or sell.
                   </p>
                    <div className="bg-blue-50 border-l-4 border-[rgb(110,94,147)] p-4 md:p-8 my-6 md:my-8 rounded-r-lg">
                     <p className="text-base md:text-xl text-blue-900 italic leading-relaxed">
-                      "A trademark is the single most valuable asset a company in {location} can own. It is the bridge between your local product and the customer's trust."
+                      \"A trademark is a highly valuable asset in {location}. It bridges your product with customer trust.\"
                     </p>
                   </div>
                 </section>
@@ -273,7 +273,7 @@ export default async function CityTrademarkPage({ params }: Props) {
                 <section id="types-of-trademarks" className="scroll-mt-24 md:scroll-mt-32">
                   <h3 className="text-xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6">What Can Be Protected Under Trademark Law?</h3>
                   <p className="text-base md:text-lg leading-relaxed mb-4 md:mb-6 text-gray-700">
-                    The Trade Marks Act, 1999, allows for the registration of various types of marks for your business in <strong>{location}</strong>, provided they are capable of being represented graphically.
+                    The Trade Marks Act allows registering various marks in <strong>{location}</strong>. They must be graphically representable.
                   </p>
                   <div className="grid md:grid-cols-2 gap-6">
                      <div className="bg-gray-50 p-6 rounded-lg">
@@ -306,7 +306,7 @@ export default async function CityTrademarkPage({ params }: Props) {
                 <section id="registration-process-detailed" className="scroll-mt-24 md:scroll-mt-32">
                   <h3 className="text-xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6">The Detailed 5-Step Registration Ecosystem in {location}</h3>
                   <p className="text-base md:text-lg leading-relaxed mb-4 md:mb-6 text-gray-700">
-                    Registering a trademark for your business in <strong>{location}</strong> is a legal procedure governed by the Trade Marks Act, 1999. It is not an instant process but a journey that we navigate for you with precision.
+                    Registering a trademark in <strong>{location}</strong> is a legal procedure. It takes time, but we navigate the process for you with precision.
                   </p>
 
                   <div className="space-y-4 md:space-y-8 mt-6 md:mt-8">
@@ -323,7 +323,7 @@ export default async function CityTrademarkPage({ params }: Props) {
                              Comprehensive Brand Search in {location}
                           </h4>
                           <p className="text-sm md:text-base text-gray-700 mb-2 md:mb-3">
-                            We use advanced algorithms to find phonetic and visual look-alikes across {location} and the rest of India. This "Clearance Search" prevents objection risks later. A thorough search reduces the probability of rejection by 80%.
+                            We perform searches to find similar marks across {location}. This \"Clearance Search\" prevents future objection risks. A thorough search reduces rejection probabilities significantly.
                           </p>
                        </div>
                     </div>
@@ -341,7 +341,7 @@ export default async function CityTrademarkPage({ params }: Props) {
                              Application Filing (Form TM-A)
                           </h4>
                           <p className="text-sm md:text-base text-gray-700 mb-2 md:mb-3">
-                             We identify the correct "Class" and draft the application for your {location} brand. We carefully structure your "User Affidavit" to claim prior usage rights. Once filed, you can start using the ™ symbol.
+                             We identify the correct Class and draft your application. We structure your User Affidavit for prior usage rights. Once filed, you can use the ™ symbol.
                           </p>
                        </div>
                     </div>
@@ -359,7 +359,7 @@ export default async function CityTrademarkPage({ params }: Props) {
                              Examination & Reply
                           </h4>
                           <p className="text-sm md:text-base text-gray-700 mb-2 md:mb-3">
-                             The Registrar examines the mark. If objections are raised, our <strong>advocates in {location}</strong> draft a robust legal reply. We cite relevant precedents to overcome Section 9 or 11 objections.
+                             The Registrar examines the mark. If objections arise, our <strong>advocates in {location}</strong> draft a robust reply. We cite precedents to overcome these objections.
                           </p>
                        </div>
                     </div>
@@ -377,7 +377,7 @@ export default async function CityTrademarkPage({ params }: Props) {
                              Journal Publication & Opposition
                           </h4>
                           <p className="text-sm md:text-base text-gray-700 mb-2 md:mb-3">
-                             Once accepted, the mark is published in the Trade Marks Journal. This opens a 4-month window for third parties to oppose. Our litigation team defends your rights aggressively in {location}.
+                             Once accepted, the mark is published. This opens a 4-month opposition window. Our team aggressively defends your rights in {location}.
                           </p>
                        </div>
                     </div>
@@ -394,7 +394,7 @@ export default async function CityTrademarkPage({ params }: Props) {
                              Registration Certificate
                           </h4>
                           <p className="text-sm md:text-base text-gray-700 mb-2 md:mb-3">
-                             The Registration Certificate is issued digitally. You can now use the ® symbol. This certificate acts as prima facie evidence of your ownership for your {location} business.
+                             The Registration Certificate is issued digitally. You can now use the ® symbol. It acts as solid evidence of ownership in {location}.
                           </p>
                        </div>
                     </div>
@@ -486,7 +486,7 @@ export default async function CityTrademarkPage({ params }: Props) {
 
                 <section id="opposition-proceedings" className="scroll-mt-24 md:scroll-mt-32">
                    <h3 className="text-xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6">Opposition Proceedings (Section 21)</h3>
-                   <p className="text-base text-gray-700">Opposition is a 4-month window where third parties can challenge your mark. Our advocates for <strong>{location}</strong> have specialized experience in successfully defending trademarks during this phase.</p>
+                   <p className="text-base text-gray-700">Opposition is a 4-month window for third parties to challenge your mark. Our {location} advocates have extensive experience defending trademarks.</p>
                 </section>
 
                 <section id="renewal-restoration" className="scroll-mt-24 md:scroll-mt-32">

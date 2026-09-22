@@ -300,10 +300,10 @@ export default async function LocationTrademarkPage({ params }: Props) {
                 <section id="introduction" className="scroll-mt-24 md:scroll-mt-32">
                   <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6">Trademark Registration in {location}</h2>
                   <p className="text-base md:text-lg leading-relaxed mb-4 text-gray-700">
-                    Having a unique identity is very important in today's market. Whether your business is local or national, getting <strong>trademark registration in {location}</strong> is a key legal step. It secures your brand ownership. A trademark serves as the face of your business. It turns your reputation, quality, and consumer trust into a recognizable name, logo, or slogan.
+                    A unique brand identity is vital today. <strong>Trademark registration in {location}</strong> is a key legal step. It secures your brand ownership. A trademark acts as the face of your business. It builds trust and loyalty among your consumers.
                   </p>
                   <p className="text-base md:text-lg leading-relaxed mb-4 text-gray-700">
-                    At IPR Karo, we simplify intellectual property laws for entrepreneurs, MSMEs, and large companies. Handling trademark registration in {location} requires a clear understanding of the Trade Marks Act, 1999. Our expert advocates draft your application carefully. This minimizes government objections and gives you maximum legal protection.
+                    We simplify IP laws for all business types. Trademark registration in {location} requires knowing the Trade Marks Act, 1999. Our expert advocates draft your application carefully. This minimizes objections and maximizes your legal protection.
                   </p>
                 </section>
 
@@ -311,10 +311,10 @@ export default async function LocationTrademarkPage({ params }: Props) {
                 <section id="why-register-trademark" className="scroll-mt-24 md:scroll-mt-32">
                   <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6">Why is Trademark Registration in {location} Essential?</h3>
                   <p className="text-base md:text-lg leading-relaxed mb-4 text-gray-700">
-                    Many owners think that incorporating a company or buying a domain name gives them brand ownership. This is a common mistake. Without formal trademark registration in {location}, your business is at risk. Competitors could legally register your brand name. They could then force you to rebrand using a "Cease and Desist" notice.
+                    Many think a company or domain name guarantees brand ownership. This is a costly mistake. Without trademark registration in {location}, your business is at risk. Competitors might register your brand name. They could legally force you to rebrand.
                   </p>
                   <p className="text-base md:text-lg leading-relaxed mb-4 text-gray-700">
-                    Trademark registration in {location} gives you exclusive rights to use that mark for your goods or services. It makes your brand more than just a local name. It turns it into a valuable, legal asset. You can use this asset for funding, franchising, and growing your business.
+                    Trademark registration in {location} grants you exclusive rights. It turns your brand into a valuable legal asset. You can use this asset for funding, franchising, and business growth.
                   </p>
                 </section>
 
@@ -325,22 +325,22 @@ export default async function LocationTrademarkPage({ params }: Props) {
                     <div className="bg-blue-50 p-6 rounded-xl border border-blue-100">
                       <FontAwesomeIcon icon={faUserShield} className="text-3xl text-[rgb(110,94,147)] mb-4" />
                       <h4 className="text-xl font-bold text-gray-900 mb-2">Exclusive Legal Rights</h4>
-                      <p className="text-gray-700 text-sm md:text-base">Upon successful trademark registration in {location}, you gain the exclusive right to use the mark nationwide. You can legally stop unauthorized third parties from using identical or confusingly similar marks.</p>
+                      <p className="text-gray-700 text-sm md:text-base">After trademark registration in {location}, you gain exclusive rights nationwide. You can easily stop others from using confusingly similar marks.</p>
                     </div>
                     <div className="bg-blue-50 p-6 rounded-xl border border-blue-100">
                       <FontAwesomeIcon icon={faChartLine} className="text-3xl text-[rgb(110,94,147)] mb-4" />
                       <h4 className="text-xl font-bold text-gray-900 mb-2">Intangible Asset Creation</h4>
-                      <p className="text-gray-700 text-sm md:text-base">A registered trademark is an intellectual property asset. It can be sold, commercially licensed, or franchised, opening up massive revenue streams for your business headquartered in {location}.</p>
+                      <p className="text-gray-700 text-sm md:text-base">A registered trademark is an important asset. You can sell, license, or franchise it. This opens new revenue streams for your business in {location}.</p>
                     </div>
                     <div className="bg-blue-50 p-6 rounded-xl border border-blue-100">
                       <FontAwesomeIcon icon={faBuilding} className="text-3xl text-[rgb(110,94,147)] mb-4" />
                       <h4 className="text-xl font-bold text-gray-900 mb-2">Consumer Trust & Recognition</h4>
-                      <p className="text-gray-700 text-sm md:text-base">Using the ® symbol next to your brand name builds instant credibility. It signals to your customers in {location} and beyond that your business is legitimate, authentic, and legally compliant.</p>
+                      <p className="text-gray-700 text-sm md:text-base">The ® symbol builds instant credibility. It shows customers in {location} that your business is legitimate and legally compliant.</p>
                     </div>
                     <div className="bg-blue-50 p-6 rounded-xl border border-blue-100">
                       <FontAwesomeIcon icon={faGavel} className="text-3xl text-[rgb(110,94,147)] mb-4" />
                       <h4 className="text-xl font-bold text-gray-900 mb-2">Protection Against Infringement</h4>
-                      <p className="text-gray-700 text-sm md:text-base">If someone copies your registered brand, the legal burden of proof is significantly lower. Trademark registration in {location} allows you to file direct infringement lawsuits and claim statutory damages.</p>
+                      <p className="text-gray-700 text-sm md:text-base">If someone copies your brand, proving it is easier. Trademark registration in {location} lets you file lawsuits and claim damages.</p>
                     </div>
                   </div>
                 </section>
@@ -349,7 +349,7 @@ export default async function LocationTrademarkPage({ params }: Props) {
                 <section id="types-of-trademarks" className="scroll-mt-24 md:scroll-mt-32">
                   <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6">What Can Be Protected Under Trademark Law?</h3>
                   <p className="text-base md:text-lg leading-relaxed mb-6 text-gray-700">
-                    When applying for trademark registration in {location}, it is crucial to understand what exact elements of your brand identity can be protected. The Indian Trade Marks Registry allows for various formats of graphical representation:
+                    When seeking trademark registration in {location}, know what can be protected. The Registry allows various formats:
                   </p>
                   <ul className="space-y-4 text-gray-700 text-base md:text-lg">
                     <li className="flex items-start">
@@ -375,7 +375,7 @@ export default async function LocationTrademarkPage({ params }: Props) {
                 <section id="registration-process-detailed" className="scroll-mt-24 md:scroll-mt-32">
                   <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6">The 5-Step Process for Trademark Registration in {location}</h3>
                   <p className="text-base md:text-lg leading-relaxed mb-8 text-gray-700">
-                    Navigating intellectual property law requires attention to detail. Our process for trademark registration in {location} offers full support. We ensure zero administrative errors.
+                    Navigating IP law requires strict attention to detail. Our process for trademark registration in {location} provides full support. We ensure an error-free filing.
                   </p>
 
                   <div className="space-y-6 md:space-y-10">
@@ -391,10 +391,10 @@ export default async function LocationTrademarkPage({ params }: Props) {
                           Comprehensive Trademark Search
                         </h4>
                         <p className="text-base text-gray-700 leading-relaxed mb-3">
-                          Before filing for trademark registration in {location}, we do a strict clearance search. We check the Trade Marks Registry database for similar marks.
+                          Before filing for trademark registration in {location}, we do a strict clearance search. We check the official database for similar marks.
                         </p>
                         <p className="text-base text-gray-700 leading-relaxed">
-                          We look for phonetic, visual, and conceptual matches. This ensures your brand name is legally available and safe from rejection.
+                          We look for phonetic and visual matches. This ensures your brand name is legally available and safe from rejection.
                         </p>
                       </div>
                     </div>
@@ -411,7 +411,7 @@ export default async function LocationTrademarkPage({ params }: Props) {
                           Filing the Application (Form TM-A)
                         </h4>
                         <p className="text-base text-gray-700 leading-relaxed mb-3">
-                          First, we select the correct Nice Classification for your goods or services. Then, our attorneys draft the TM-A form. We attach a legal User Affidavit if you already use the mark.
+                          First, we select the correct Nice Classification. Then, our attorneys draft the TM-A form. We attach a User Affidavit if you already use the mark.
                         </p>
                         <p className="text-base text-gray-700 leading-relaxed">
                           Once filed, we send you the acknowledgment receipt. Your {location} business can then start using the ™ symbol right away.
@@ -431,10 +431,10 @@ export default async function LocationTrademarkPage({ params }: Props) {
                           Examination & Response to Objections
                         </h4>
                         <p className="text-base text-gray-700 leading-relaxed mb-3">
-                          Next, the Trademark Examiner reviews the application. It is normal to receive objections under Section 9 or Section 11.
+                          Next, the Trademark Examiner reviews your application. It is normal to receive standard objections.
                         </p>
                         <p className="text-base text-gray-700 leading-relaxed">
-                          For trademark registration in {location}, our litigation team drafts a strong legal reply. We use High Court precedents to resolve objections without a hearing.
+                          For trademark registration in {location}, our team drafts a strong legal reply. We use precedents to resolve objections quickly.
                         </p>
                       </div>
                     </div>
@@ -451,10 +451,10 @@ export default async function LocationTrademarkPage({ params }: Props) {
                           Publication in the Trade Marks Journal
                         </h4>
                         <p className="text-base text-gray-700 leading-relaxed mb-3">
-                          After the Examiner accepts your application, it gets published in the Trade Marks Journal. This starts a 4-month opposition period.
+                          After acceptance, your application is published in the Trade Marks Journal. This starts a 4-month opposition period.
                         </p>
                         <p className="text-base text-gray-700 leading-relaxed">
-                          During this time, third parties can file a notice of opposition. They can do this if they feel your trademark registration in {location} harms their prior rights.
+                          During this time, third parties can oppose the mark. They do this if they feel your registration in {location} harms their rights.
                         </p>
                       </div>
                     </div>
@@ -470,10 +470,10 @@ export default async function LocationTrademarkPage({ params }: Props) {
                           Issuance of Registration Certificate
                         </h4>
                         <p className="text-base text-gray-700 leading-relaxed mb-3">
-                          If no one opposes your mark within 4 months, the Registry enters it into the record. You will then receive a digital Registration Certificate.
+                          If no one opposes it within 4 months, the Registry approves it. You then receive your digital Registration Certificate.
                         </p>
                         <p className="text-base text-gray-700 leading-relaxed">
-                          This completes your trademark registration in {location}. You now have the legal right to use the ® symbol next to your brand.
+                          This completes your trademark registration in {location}. You now have the right to use the ® symbol.
                         </p>
                       </div>
                     </div>
@@ -483,7 +483,7 @@ export default async function LocationTrademarkPage({ params }: Props) {
                 {/* Documents Required */}
                 <section id="documents-checklist" className="scroll-mt-24 md:scroll-mt-32 bg-gray-50 p-6 md:p-10 rounded-2xl border border-gray-200">
                   <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Essential Documents for Trademark Registration in {location}</h3>
-                  <p className="text-gray-700 mb-8 text-base md:text-lg">To ensure a seamless filing experience, keep the following digital documents ready. Our platform allows secure uploads for clients undergoing trademark registration in {location}.</p>
+                  <p className="text-gray-700 mb-8 text-base md:text-lg">Keep these digital documents ready for a seamless filing experience. You can securely upload them on our platform.</p>
 
                   <div className="grid md:grid-cols-2 gap-8">
                     <div className="bg-white p-6 rounded-xl shadow-sm">
@@ -528,7 +528,7 @@ export default async function LocationTrademarkPage({ params }: Props) {
                 <section id="trademark-classes" className="scroll-mt-24 md:scroll-mt-32">
                   <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6">Understanding Trademark Classes</h3>
                   <p className="text-base md:text-lg text-gray-700 mb-6">
-                    During trademark registration in {location}, it is mandatory to classify your business activities under the Nice Classification system, which comprises 45 distinct classes (Classes 1-34 for Goods, Classes 35-45 for Services). Incorrect classification can lead to application rejection or inadequate protection.
+                    You must classify your business under the Nice Classification system. It has 45 distinct classes. Incorrect classification can lead to application rejection.
                   </p>
                   <div className="overflow-x-auto mb-6 shadow-sm rounded-lg border border-gray-200">
                     <table className="w-full text-left border-collapse text-base">
@@ -555,7 +555,7 @@ export default async function LocationTrademarkPage({ params }: Props) {
                 {/* Cost and Timeline */}
                 <section id="cost-and-timeline" className="scroll-mt-24 md:scroll-mt-32">
                   <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6">Cost Breakdown for Trademark Registration in {location}</h3>
-                  <p className="text-base md:text-lg text-gray-700 mb-6">We believe in absolute transparency. The fees associated with trademark registration in {location} are divided into statutory government fees and our professional legal service fees.</p>
+                  <p className="text-base md:text-lg text-gray-700 mb-6">We believe in absolute transparency. Fees for trademark registration in {location} include government fees and our professional fees.</p>
 
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="border border-gray-200 rounded-xl p-6 bg-white shadow-sm flex items-start">
@@ -581,7 +581,7 @@ export default async function LocationTrademarkPage({ params }: Props) {
                 {/* Objection Handling */}
                 <section id="objection-handling-mastery" className="scroll-mt-24 md:scroll-mt-32">
                   <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6">Expertly Handling Trademark Objections in {location}</h3>
-                  <p className="text-base md:text-lg text-gray-700 mb-6">Receiving an examination report with objections is a standard part of the process for trademark registration in {location}. It does not mean your application is rejected. Our elite legal team specializes in navigating the complex provisions of the Trade Marks Act to defend your application.</p>
+                  <p className="text-base md:text-lg text-gray-700 mb-6">Receiving an examination report with objections is standard. It does not mean rejection. Our legal team specializes in defending your application.</p>
 
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="bg-red-50 p-6 rounded-xl border-l-4 border-red-500">
@@ -589,14 +589,14 @@ export default async function LocationTrademarkPage({ params }: Props) {
                         <FontAwesomeIcon icon={faShieldAlt} className="mr-3 text-red-500 w-6 h-6" />
                         Section 9 (Absolute Grounds)
                       </h4>
-                      <p className="text-gray-700 text-base">The Examiner may argue your mark lacks distinctiveness, is too descriptive of the goods/services, or contains common laudatory words. Our advocates counter this by drafting exhaustive legal replies proving "acquired distinctiveness" through user affidavits and substantial evidence of secondary meaning generated by your {location} operations.</p>
+                      <p className="text-gray-700 text-base">The Examiner may argue your mark lacks distinctiveness. Our advocates counter this by drafting exhaustive legal replies. We prove acquired distinctiveness using your {location} operations data.</p>
                     </div>
                     <div className="bg-orange-50 p-6 rounded-xl border-l-4 border-orange-500">
                       <h4 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
                         <FontAwesomeIcon icon={faBalanceScale} className="mr-3 text-orange-500 w-6 h-6" />
                         Section 11 (Relative Grounds)
                       </h4>
-                      <p className="text-gray-700 text-base">The Examiner may find your mark phonetically or visually similar to an already registered, existing trademark. We dissect these objections by legally differentiating your brand based on class boundaries, target audience, visual trade dress, and the specific geographic channels of trade originating from {location}.</p>
+                      <p className="text-gray-700 text-base">The Examiner may find your mark similar to an existing one. We legally differentiate your brand based on class, audience, and trade channels in {location}.</p>
                     </div>
                   </div>
                 </section>
@@ -604,18 +604,18 @@ export default async function LocationTrademarkPage({ params }: Props) {
                 {/* Post Registration */}
                 <section id="post-registration" className="scroll-mt-24 md:scroll-mt-32">
                   <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6">Post-Registration: Maintaining Your Trademark</h3>
-                  <p className="text-base md:text-lg text-gray-700 mb-6">Successfully achieving trademark registration in {location} is a major milestone, but intellectual property protection requires ongoing vigilance.</p>
+                  <p className="text-base md:text-lg text-gray-700 mb-6">Achieving trademark registration in {location} is a major milestone. However, IP protection requires ongoing vigilance.</p>
 
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="p-6 border border-gray-200 rounded-xl bg-white shadow-sm hover:border-[rgb(110,94,147)] transition-colors">
                       <FontAwesomeIcon icon={faSync} className="text-3xl text-[rgb(110,94,147)] mb-4" />
                       <h4 className="font-bold text-xl mb-3 text-gray-900">Trademark Renewal</h4>
-                      <p className="text-base text-gray-600">A registered trademark in India is perpetually valid, provided it is renewed every 10 years. We offer renewal tracking services for our {location} clients to ensure you never miss a deadline and risk having your mark removed from the registry.</p>
+                      <p className="text-base text-gray-600">A registered trademark is valid for 10 years. We offer renewal tracking services for our {location} clients to prevent missed deadlines.</p>
                     </div>
                     <div className="p-6 border border-gray-200 rounded-xl bg-white shadow-sm hover:border-[rgb(110,94,147)] transition-colors">
                       <FontAwesomeIcon icon={faExclamationTriangle} className="text-3xl text-[rgb(110,94,147)] mb-4" />
                       <h4 className="font-bold text-xl mb-3 text-gray-900">Trademark Watch Services</h4>
-                      <p className="text-base text-gray-600">The Registry does not police the market for you. Our watch services actively monitor the Trade Marks Journal to spot any third party attempting to register a mark similar to yours in {location} or nationwide, allowing us to file timely oppositions.</p>
+                      <p className="text-base text-gray-600">The Registry does not police the market. Our watch services monitor the Journal to spot similar marks in {location}. We then file timely oppositions.</p>
                     </div>
                   </div>
                 </section>
