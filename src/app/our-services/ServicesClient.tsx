@@ -101,9 +101,9 @@ function ServiceCardsSection() {
               className="h-full p-6 lg:p-8 flex flex-col rounded-[24px] border border-slate-100 bg-white shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group"
             >
               <div className="mb-6">
-                <h3 className="text-[#0C002B] font-sans text-xl lg:text-2xl font-bold mb-2">
+                <div className="text-[#0C002B] font-sans text-xl lg:text-2xl font-bold mb-2">
                   Trademark Registration
-                </h3>
+                </div>
                 <div className="w-12 h-1 bg-[#1952C7] rounded-full"></div>
               </div>
               
@@ -140,9 +140,9 @@ function ServiceCardsSection() {
               className="h-full p-6 lg:p-8 flex flex-col rounded-[24px] border border-slate-100 bg-white shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group"
             >
               <div className="mb-6">
-                <h3 className="text-[#0C002B] font-sans text-xl lg:text-2xl font-bold mb-2">
+                <div className="text-[#0C002B] font-sans text-xl lg:text-2xl font-bold mb-2">
                   Copyright Protection
-                </h3>
+                </div>
                 <div className="w-12 h-1 bg-[#8A38F5] rounded-full"></div>
               </div>
               
@@ -179,9 +179,9 @@ function ServiceCardsSection() {
               className="h-full p-6 lg:p-8 flex flex-col rounded-[24px] border border-slate-100 bg-white shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group"
             >
               <div className="mb-6">
-                <h3 className="text-[#0C002B] font-sans text-xl lg:text-2xl font-bold mb-2">
+                <div className="text-[#0C002B] font-sans text-xl lg:text-2xl font-bold mb-2">
                   Patent Services
-                </h3>
+                </div>
                 <div className="w-12 h-1 bg-[#FFB703] rounded-full"></div>
               </div>
               
