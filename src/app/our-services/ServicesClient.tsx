@@ -249,7 +249,7 @@ export default function ServicesClient() {
         <ServicesContentExpanded />
         <SimplePricing />
 
-        <SmarterDecisions />
+        <SmarterDecisions title={<>Smarter IP Protection <br className="hidden md:block" /> Decisions with AI</>} headingTag="h3" />
         <BuiltToProtect />
         <ReviewSnippets />
         <FaqSection items={servicesFaqs} />

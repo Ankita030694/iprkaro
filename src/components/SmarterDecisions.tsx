@@ -66,15 +66,19 @@ const features = [
   }
 ];
 
-export default function SmarterDecisions() {
+export default function SmarterDecisions({ title, headingTag: HeadingTag = 'h2' }: { title?: React.ReactNode, headingTag?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' }) {
   const [showAll, setShowAll] = useState(false);
 
   return (
     <section className="w-full bg-white py-15 px-4 md:px-8">
       <div className="max-w-6xl mx-auto flex flex-col items-center">
-        <h2 className="text-[#0C002B] font-nunito text-[36px] md:text-[46px] font-semibold text-center mb-16 leading-[1.2] tracking-tight">
-          Smarter Trademark <br className="hidden md:block" /> Decisions with AI
-        </h2>
+        <HeadingTag className="text-[#0C002B] font-nunito text-[36px] md:text-[46px] font-semibold text-center mb-16 leading-[1.2] tracking-tight">
+          {title || (
+            <>
+              Smarter Trademark <br className="hidden md:block" /> Decisions with AI
+            </>
+          )}
+        </HeadingTag>
 
         <div className="w-full grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-12">
           {features.slice(0, showAll ? features.length : undefined).map((feature, index) => {

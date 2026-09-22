@@ -345,7 +345,7 @@ export default function RegisterTrademarkYourselfPage() {
                       </div>
                       <div className="p-8 space-y-6">
                         <p className="text-gray-700">
-                          Use the <a href="https://tmrsearch.ipindia.gov.in/tmrpublicsearch/frmmain.aspx" target="_blank" rel="noopener noreferrer" className="text-blue-600 font-bold underline">Official Public Search Portal</a>. You must perform three levels of searching:
+                          Use the <a href="https://ipindiaservices.gov.in/tmrpublicsearch/frmmain.aspx" target="_blank" rel="noopener noreferrer" className="text-blue-600 font-bold underline">Official Public Search Portal</a>. You must perform three levels of searching:
                         </p>
                         <ul className="grid md:grid-cols-3 gap-6">
                           <li className="bg-gray-50 p-4 rounded-xl">
