@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -28,7 +29,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'How to Renew a Registered Trademark in India | 2026 Guide',
-    description: 'Master the trademark renewal process in India. Learn about Form TM-R, fees, timelines, and restoration procedures in our forensic 4500-word guide.',
+    description: validateAndNormalizeDescription('Master the trademark renewal process in India. Learn about Form TM-R, fees, timelines, and restoration procedures in our forensic 4500-word guide.', "app/how-to-renew-a-registered-trademark-in-india/page.tsx "),
     keywords: [
         'how to renew a registered trademark in india',
         'trademark renewal process india 2026',
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Trademark Renewal: The Forensic 2026 Breakdown of Form TM-R',
-        description: 'Secure your brand legacy for another decade. Learn the step-by-step renewal process and avoid costly restoration fees.',
+        description: validateAndNormalizeDescription('Secure your brand legacy for another decade. Learn the step-by-step renewal process and avoid costly restoration fees.', "app/how-to-renew-a-registered-trademark-in-india/page.tsx "),
         url: 'https://www.iprkaro.com/how-to-renew-a-registered-trademark-in-india',
         type: 'article',
     },

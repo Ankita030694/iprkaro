@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from "react";
 import { Metadata } from "next";
 import Link from "next/link";
@@ -26,7 +27,7 @@ import {
 
 export const metadata: Metadata = {
     title: "Expert TM Registration in Bengaluru | IPR Karo",
-    description: "Secure your brand in Bangalore with IPR Karo. Expertise in tech, biotech, and retail trademark filing at the Chennai Registry. 4000+ words of expert guidance, 4-hour filing, and Startup India benefits.",
+    description: validateAndNormalizeDescription("Secure your brand in Bangalore with IPR Karo. Expertise in tech, biotech, and retail trademark filing at the Chennai Registry. 4000+ words of expert guidance, 4-hour filing, and Startup India benefits.", "app/trademark-registration-in-bengaluru/page.tsx "),
     keywords: [
         "trademark registration in bengaluru",
         "online trademark filing bangalore",

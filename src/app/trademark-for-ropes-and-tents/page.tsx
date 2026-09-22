@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -31,7 +32,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Trademark for Ropes and Tents | Register Class 22 Brand',
-    description: 'Complete guide to trademark registration for ropes, tents, awnings, tarpaulins, and sails in India. Secure your Class 22 brand with expert legal support.',
+    description: validateAndNormalizeDescription('Complete guide to trademark registration for ropes, tents, awnings, tarpaulins, and sails in India. Secure your Class 22 brand with expert legal support.', "app/trademark-for-ropes-and-tents/page.tsx "),
     keywords: [
         'trademark for ropes and tents',
         'register brand for ropes',
@@ -46,7 +47,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Premium Trademark Registration for Ropes and Tents',
-        description: 'Protect your Class 22 industrial and outdoor goods with India\'s top IP legal team. 100% online registration for ropes, tents, and sails.',
+        description: validateAndNormalizeDescription('Protect your Class 22 industrial and outdoor goods with India\'s top IP legal team. 100% online registration for ropes, tents, and sails.', "app/trademark-for-ropes-and-tents/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-for-ropes-and-tents',
         type: 'article',
     },

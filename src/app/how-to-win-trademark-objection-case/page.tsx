@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -29,7 +30,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'How to Win Trademark Objection Case',
-  description: 'Learn the advanced legal tactics to win your trademark objection case in India. Expert guide on evidentiary standards, user affidavits, and hearing performance.',
+  description: validateAndNormalizeDescription('Learn the advanced legal tactics to win your trademark objection case in India. Expert guide on evidentiary standards, user affidavits, and hearing performance.', "app/how-to-win-trademark-objection-case/page.tsx "),
   keywords: [
     'how to How to Win Trademark Objection Case india',
     'winning trademark hearing strategy',
@@ -44,7 +45,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'How to Win Trademark Objection Case',
-    description: 'Expert-led 5000+ word deep dive into winning trademark hearings and securing your brand rights against Registry objections.',
+    description: validateAndNormalizeDescription('Expert-led 5000+ word deep dive into winning trademark hearings and securing your brand rights against Registry objections.', "app/how-to-win-trademark-objection-case/page.tsx "),
     url: 'https://www.iprkaro.com/how-to-win-trademark-objection-case',
     type: 'article',
   },

@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 
 import { Metadata } from 'next';
 import Link from 'next/link';
@@ -17,9 +18,9 @@ export async function generateMetadata({
     ? `https://www.iprkaro.com/trademark-by-location/page/${validPage}`
     : "https://www.iprkaro.com/trademark-by-location";
 
-  const description = validPage > 1
+  const description = validateAndNormalizeDescription(validPage > 1
     ? `Find expert trademark registration services in your location. Protect your brand identity with IPR Karo's localized legal assistance - Page ${validPage}.`
-    : "Find expert trademark registration services in your specific location. Protect your brand identity with IPR Karo's localized legal assistance.";
+    : "Find expert trademark registration services in your specific location. Protect your brand identity with IPR Karo's localized legal assistance.", "app/trademark-by-location/page.tsx ");
 
   return {
     title: validPage > 1 

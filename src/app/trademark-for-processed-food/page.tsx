@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -38,7 +39,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Trademark for Processed Food India',
-    description: 'Comprehensive guide to trademark registration for processed food brands in India. Secure your food brand under Class 29, 30, and 32. 100% online legal process.',
+    description: validateAndNormalizeDescription('Comprehensive guide to trademark registration for processed food brands in India. Secure your food brand under Class 29, 30, and 32. 100% online legal process.', "app/trademark-for-processed-food/page.tsx "),
     keywords: [
         'Trademark for Processed Food India',
         'food brand registration india',
@@ -53,7 +54,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Trademark for Processed Food India',
-        description: 'Protect your culinary innovation with India\'s premier IP law firm. Same-day filing for food and beverage brands.',
+        description: validateAndNormalizeDescription('Protect your culinary innovation with India\'s premier IP law firm. Same-day filing for food and beverage brands.', "app/trademark-for-processed-food/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-for-processed-food',
         type: 'article',
     },

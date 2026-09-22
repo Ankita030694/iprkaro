@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -28,7 +29,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Fastest Trademark Search Service | Turnaround Time',
-  description: 'Discover the fastest trademark search services in 2025. Compare turnaround times for Markify, LegalZoom, IPR Karo, and more. Get AI-powered results now.',
+  description: validateAndNormalizeDescription('Discover the fastest trademark search services in 2025. Compare turnaround times for Markify, LegalZoom, IPR Karo, and more. Get AI-powered results now.', "app/which-trademark-search-service-offers-the-fastest-turnaround-time/page.tsx "),
   keywords: [
     'fastest trademark search service',
     'trademark search turnaround time',
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Which Trademark Search Service Offers the Fastest Turnaround Time?',
-    description: 'A comprehensive comparison of the quickest trademark search providers to help you secure your brand name instantly.',
+    description: validateAndNormalizeDescription('A comprehensive comparison of the quickest trademark search providers to help you secure your brand name instantly.', "app/which-trademark-search-service-offers-the-fastest-turnaround-time/page.tsx "),
     url: 'https://www.iprkaro.com/which-trademark-search-service-offers-the-fastest-turnaround-time',
     type: 'article',
   },

@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -31,7 +32,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Documents for TM Registration for Services | 2026',
-    description: 'Exhaustive checklist of documents required for service trademark registration in India. Individual, Company, MSME, and Startup requirements explained.',
+    description: validateAndNormalizeDescription('Exhaustive checklist of documents required for service trademark registration in India. Individual, Company, MSME, and Startup requirements explained.', "app/what-documents-are-needed-to-apply-for-trademark-registration-for-a-service/page.tsx "),
     keywords: [
         'what documents are needed to apply for trademark registration for a service',
         'trademark registration documents checklist india',
@@ -46,7 +47,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Documents Required for Service Trademark Registration: The Definitive 2026 Manual',
-        description: 'Dont let document errors delay your brand protection. Explore our forensic checklist for every entity type applying for a service mark in Bharat.',
+        description: validateAndNormalizeDescription('Dont let document errors delay your brand protection. Explore our forensic checklist for every entity type applying for a service mark in Bharat.', "app/what-documents-are-needed-to-apply-for-trademark-registration-for-a-service/page.tsx "),
         url: 'https://www.iprkaro.com/what-documents-are-needed-to-apply-for-trademark-registration-for-a-service',
         type: 'article',
     },

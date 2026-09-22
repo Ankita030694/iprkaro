@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -30,7 +31,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'TM Registration for Pharmaceuticals | Class 5 Guide',
-  description: 'Elite guide to trademark registration for pharmaceutical brands in India. Secure your drug names, formulations, and healthcare products under Class 5 with expert legal support.',
+  description: validateAndNormalizeDescription('Elite guide to trademark registration for pharmaceutical brands in India. Secure your drug names, formulations, and healthcare products under Class 5 with expert legal support.', "app/trademark-registration-for-pharmaceuticals/page.tsx "),
   keywords: [
     'trademark for pharmaceuticals',
     'class 5 trademark registration india',
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Pharma Brand Protection | Expert Class 5 Registration',
-    description: 'Protect your pharmaceutical innovation. Secure your medicine brands and drug names with India\'s premier IP legal firm.',
+    description: validateAndNormalizeDescription('Protect your pharmaceutical innovation. Secure your medicine brands and drug names with India\'s premier IP legal firm.', "app/trademark-registration-for-pharmaceuticals/page.tsx "),
     url: 'https://www.iprkaro.com/trademark-registration-for-pharmaceuticals',
     type: 'article',
   },

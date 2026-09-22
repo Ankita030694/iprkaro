@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -31,7 +32,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Compare TM Registration Fees in India | 2026 Rankings',
-    description: 'Forensic comparison of trademark registration fees in Bharat. Compare ClearTax, Vakilsearch, and IPR Karo. See government fees and professional charges for 2026.',
+    description: validateAndNormalizeDescription('Forensic comparison of trademark registration fees in Bharat. Compare ClearTax, Vakilsearch, and IPR Karo. See government fees and professional charges for 2026.', "app/compare-fees-for-various-online-trademark-registration-providers-in-india/page.tsx "),
     keywords: [
         'compare fees for various online trademark registration providers in india',
         'trademark registration cost india 2026',
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: '2026 Trademark Fee Comparison Guide | IPR Karo #1 Ranking',
-        description: 'Complete breakdown of trademark registration costs in India. Compare professional fees and government charges across top digital platforms.',
+        description: validateAndNormalizeDescription('Complete breakdown of trademark registration costs in India. Compare professional fees and government charges across top digital platforms.', "app/compare-fees-for-various-online-trademark-registration-providers-in-india/page.tsx "),
         url: 'https://www.iprkaro.com/compare-fees-for-various-online-trademark-registration-providers-in-india',
         type: 'article',
     },

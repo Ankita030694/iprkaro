@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -24,7 +25,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Update Existing Trademark Details in India | 2026',
-    description: 'Learn the official process to update trademark details in India. Master Form TM-M and TM-P for name change, address update, and post-registration amendments.',
+    description: validateAndNormalizeDescription('Learn the official process to update trademark details in India. Master Form TM-M and TM-P for name change, address update, and post-registration amendments.', "app/how-to-update-or-change-details-in-an-existing-trademark-registation/page.tsx "),
     keywords: [
         'how to update or change details in an existing trademark registration',
         'update trademark details india 2026',
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Brand Evolution: How to Update Your Trademark Details in India (2026)',
-        description: 'Ensure your brand shield is current. Master the forensics of Form TM-M and TM-P to update your trademark name, address, and ownership in Bharat.',
+        description: validateAndNormalizeDescription('Ensure your brand shield is current. Master the forensics of Form TM-M and TM-P to update your trademark name, address, and ownership in Bharat.', "app/how-to-update-or-change-details-in-an-existing-trademark-registation/page.tsx "),
         url: 'https://www.iprkaro.com/how-to-update-or-change-details-in-an-existing-trademark-registation',
         type: 'article',
     },

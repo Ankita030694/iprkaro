@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 
 import React from 'react';
 import Link from 'next/link';
@@ -30,7 +31,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'TM for Non-Metal Building Materials | Class 19 India',
-    description: 'Protect your construction brand under Class 19. Complete guide to trademarking cement, bricks, tiles, and non-metal building materials in India.',
+    description: validateAndNormalizeDescription('Protect your construction brand under Class 19. Complete guide to trademarking cement, bricks, tiles, and non-metal building materials in India.', "app/trademark-for-non-metal-building-materials/page.tsx "),
     keywords: [
         'trademark for non-metal building materials',
         'class 19 trademark india',
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Premium Trademark Registration for Class 19 Building Materials',
-        description: 'Secure your masonry and structural assets with India\'s elite IP team. Expert filing for cement, wood, and stone brands.',
+        description: validateAndNormalizeDescription('Secure your masonry and structural assets with India\'s elite IP team. Expert filing for cement, wood, and stone brands.', "app/trademark-for-non-metal-building-materials/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-for-non-metal-building-materials',
         type: 'article',
     },

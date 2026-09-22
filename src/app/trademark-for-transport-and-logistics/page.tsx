@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -31,7 +32,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'TM for Transport & Logistics (Class 39) Guide',
-    description: 'Comprehensive guide to trademark registration for transport, logistics, warehousing, and courier services in India. Secure your brand under Class 39 today with IPR Karo.',
+    description: validateAndNormalizeDescription('Comprehensive guide to trademark registration for transport, logistics, warehousing, and courier services in India. Secure your brand under Class 39 today with IPR Karo.', "app/trademark-for-transport-and-logistics/page.tsx "),
     keywords: [
         'trademark for transport and logistics',
         'logistics brand registration india',
@@ -46,7 +47,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Expert Trademark Registration for Transport and Logistics Brands',
-        description: 'Secure your logistics identity with India\'s leading IP legal team. 100% online process, same-day filing for transport and supply chain businesses.',
+        description: validateAndNormalizeDescription('Secure your logistics identity with India\'s leading IP legal team. 100% online process, same-day filing for transport and supply chain businesses.', "app/trademark-for-transport-and-logistics/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-for-transport-and-logistics',
         type: 'article',
     },

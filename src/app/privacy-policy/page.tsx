@@ -1,9 +1,10 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
   title: 'Privacy Policy | Data Protection & Your Rights | IPR Karo',
-  description: 'Read IPRKaro.com\'s comprehensive privacy policy to understand how we collect, use, protect, and manage your personal information. Learn about your data rights, security measures, cookie policies, third-party sharing, and how we ensure your privacy during trademark registration and IP services.',
+  description: validateAndNormalizeDescription('Read IPRKaro.com\'s comprehensive privacy policy to understand how we collect, use, protect, and manage your personal information. Learn about your data rights, security measures, cookie policies, third-party sharing, and how we ensure your privacy during trademark registration and IP services.', "app/privacy-policy/page.tsx "),
   alternates: {
     canonical: '/privacy-policy',
   },

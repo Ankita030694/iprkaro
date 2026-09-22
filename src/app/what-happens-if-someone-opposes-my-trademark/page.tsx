@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -33,7 +34,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'What if Someone Opposes My Trademark? | 2024 Guide',
-    description: 'Received a trademark opposition? Don\'t panic. Learn the complete legal process from counter-statement to hearing. Our 5000+ word guide helps you defend your brand.',
+    description: validateAndNormalizeDescription('Received a trademark opposition? Don\'t panic. Learn the complete legal process from counter-statement to hearing. Our 5000+ word guide helps you defend your brand.', "app/what-happens-if-someone-opposes-my-trademark/page.tsx "),
     keywords: [
         'trademark opposition india',
         'notice of opposition',
@@ -48,7 +49,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'The Ultimate Guide to Handling Trademark Opposition in India',
-        description: 'Navigate the complex legal waters of trademark opposition. Understand your rights and the steps to protect your brand identity under the Trade Marks Act.',
+        description: validateAndNormalizeDescription('Navigate the complex legal waters of trademark opposition. Understand your rights and the steps to protect your brand identity under the Trade Marks Act.', "app/what-happens-if-someone-opposes-my-trademark/page.tsx "),
         url: 'https://www.iprkaro.com/what-happens-if-someone-opposes-my-trademark',
         type: 'article',
     },

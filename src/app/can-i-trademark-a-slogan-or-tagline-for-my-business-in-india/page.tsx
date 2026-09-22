@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -21,7 +22,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Trademark a Slogan or Tagline in India | 2026 Guide',
-    description: 'The ultimate forensic guide to trademarking slogans and taglines in India. Learn about distinctiveness, acquired secondary meaning, and case law like P&G vs Anchor.',
+    description: validateAndNormalizeDescription('The ultimate forensic guide to trademarking slogans and taglines in India. Learn about distinctiveness, acquired secondary meaning, and case law like P&G vs Anchor.', "app/can-i-trademark-a-slogan-or-tagline-for-my-business-in-india/page.tsx "),
     keywords: [
         'can i trademark a slogan or tagline for my business in india',
         'trademark slogan india 2026',
@@ -36,7 +37,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Your Voice, Your Brand: Trademarking Slogans in India (2026)',
-        description: 'Master the forensic path to protecting your brand tagline. From distinctiveness tests to enforcement, secure your business voice today.',
+        description: validateAndNormalizeDescription('Master the forensic path to protecting your brand tagline. From distinctiveness tests to enforcement, secure your business voice today.', "app/can-i-trademark-a-slogan-or-tagline-for-my-business-in-india/page.tsx "),
         url: 'https://www.iprkaro.com/can-i-trademark-a-slogan-or-tagline-for-my-business-in-india',
         type: 'article',
     },

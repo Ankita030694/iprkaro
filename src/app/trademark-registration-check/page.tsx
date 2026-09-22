@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -37,7 +38,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Trademark Registration Check | Official Status Tracking 2026',
-    description: 'Perform a trademark registration check on the IP India portal. Learn how to track your application status, interpret registry updates, and respond to objections in Bharat.',
+    description: validateAndNormalizeDescription('Perform a trademark registration check on the IP India portal. Learn how to track your application status, interpret registry updates, and respond to objections in Bharat.', "app/trademark-registration-check/page.tsx "),
     keywords: [
         'trademark registration check',
         'check trademark status india',
@@ -52,7 +53,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Monitor Your Brand: Trademark Registration Check Guide',
-        description: 'Stay updated on your brand\'s legal journey. A comprehensive guide to status monitoring and application tracking in the Indian trademark registry.',
+        description: validateAndNormalizeDescription('Stay updated on your brand\'s legal journey. A comprehensive guide to status monitoring and application tracking in the Indian trademark registry.', "app/trademark-registration-check/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-registration-check',
         type: 'article',
     },

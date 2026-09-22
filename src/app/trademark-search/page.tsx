@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -33,7 +34,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Trademark Search India | Free Brand Availability Check',
-    description: 'Perform a free trademark search on the official IP India database. Check brand name availability, phonetic similarities, and get expert legal reports instantly.',
+    description: validateAndNormalizeDescription('Perform a free trademark search on the official IP India database. Check brand name availability, phonetic similarities, and get expert legal reports instantly.', "app/trademark-search/page.tsx "),
     keywords: [
         'trademark search',
         'free trademark search india',
@@ -48,7 +49,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Complete Guide to Trademark Search in Bharat',
-        description: 'Learn how to verify your brand name availability using the official Indian trademark database. Step by step instructions and expert tips.',
+        description: validateAndNormalizeDescription('Learn how to verify your brand name availability using the official Indian trademark database. Step by step instructions and expert tips.', "app/trademark-search/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-search',
         type: 'article',
     },

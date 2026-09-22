@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -7,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Affordable Trademark Services India | Save 60% on IP',
-  description: 'Secure your brand with affordable trademark services in India. We combine legal expertise with technology to cut costs, not quality. Transparent pricing, no hidden fees.',
+  description: validateAndNormalizeDescription('Secure your brand with affordable trademark services in India. We combine legal expertise with technology to cut costs, not quality. Transparent pricing, no hidden fees.', "app/comprehensive-ip-protection-features/affordable-trademark-services/page.tsx "),
   keywords: [
     'affordable trademark services',
     'low cost trademark registration',
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Affordable Trademark Services India | Save 60% on IP',
-    description: 'Professional trademark services that fit your budget. Expert attorneys, AI-driven efficiency, and complete transparency. Start protecting your brand today.',
+    description: validateAndNormalizeDescription('Professional trademark services that fit your budget. Expert attorneys, AI-driven efficiency, and complete transparency. Start protecting your brand today.', "app/comprehensive-ip-protection-features/affordable-trademark-services/page.tsx "),
     url: 'https://www.iprkaro.com/comprehensive-ip-protection-features/affordable-trademark-services',
     type: 'article',
     images: [

@@ -1,15 +1,16 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import { HeroSection, WhyTrademark, OurServices, SimplePlans, Faq, ReviewSnippets, StatesAndUTs, TrademarkClasses, BrandGrid, ResultsGrid, SmarterDecisions, WhatWeProtect, CtaSection, BuiltToProtect, SimplePricing, FaqSection, NewFooter } from "@/components";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Trademark Registration India | AI Search - IPR Karo",
-  description: "Start your trademark registration online in India with IPR Karo. AI-powered trademark search, brand name availability search, trademark availability check, and complete filing support. Know the trademark registration cost in India, govt fees, documents required, and the step-by-step trademark registration process. Serving Delhi, Noida, Gurgaon & PAN India.",
+  description: validateAndNormalizeDescription("Start your trademark registration online in India with IPR Karo. AI-powered trademark search, brand name availability search, trademark availability check, and complete filing support. Know the trademark registration cost in India, govt fees, documents required, and the step-by-step trademark registration process. Serving Delhi, Noida, Gurgaon & PAN India.", "app/page.tsx "),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "Trademark Registration India | AI Trademark Search – IPR Karo",
-    description: "AI-powered trademark registration, trademark search, brand name availability search, patent services, and copyright protection in India. Check trademark availability and register your trademark online.",
+    description: validateAndNormalizeDescription("AI-powered trademark registration, trademark search, brand name availability search, patent services, and copyright protection in India. Check trademark availability and register your trademark online.", "app/page.tsx "),
     url: "https://www.iprkaro.com",
     siteName: "IPR Karo",
     locale: "en_IN",

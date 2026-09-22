@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -24,7 +25,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'TM Infringement in India: What Happens? | 2026 Guide',
-    description: 'The ultimate forensic guide to trademark infringement remedies in India. Learn about civil injunctions, damages, criminal penalties, and 2026 case law.',
+    description: validateAndNormalizeDescription('The ultimate forensic guide to trademark infringement remedies in India. Learn about civil injunctions, damages, criminal penalties, and 2026 case law.', "app/what-happens-when-someone-infringes-on-my-registered-trademark-in-india/page.tsx "),
     keywords: [
         'what happens when someone infringes on my registered trademark in india',
         'trademark infringement remedies india 2026',
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Brand Under Attack? Trademark Infringement Remedies in India (2026)',
-        description: 'Master the forensic legal path to stop infringers. From injunctions to criminal jail time, protect your brand identity with surgical precision.',
+        description: validateAndNormalizeDescription('Master the forensic legal path to stop infringers. From injunctions to criminal jail time, protect your brand identity with surgical precision.', "app/what-happens-when-someone-infringes-on-my-registered-trademark-in-india/page.tsx "),
         url: 'https://www.iprkaro.com/what-happens-when-someone-infringes-on-my-registered-trademark-in-india',
         type: 'article',
     },

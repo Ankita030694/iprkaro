@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -30,7 +31,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Trademark for Legal Services | Protect Law Firm Brand',
-  description: 'Comprehensive guide to trademark registration for legal services, law firms, and independent practitioners in India. Secure your intellectual property under Class 45 today.',
+  description: validateAndNormalizeDescription('Comprehensive guide to trademark registration for legal services, law firms, and independent practitioners in India. Secure your intellectual property under Class 45 today.', "app/trademark-for-legal-services/page.tsx "),
   keywords: [
     'trademark for legal services',
     'law firm brand registration india',
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Expert Trademark Registration for Legal Services & Law Firms',
-    description: 'Ensure your legal reputation is protected across India. Professional trademark filing for solicitors, advocates, and law firms. 100% online process.',
+    description: validateAndNormalizeDescription('Ensure your legal reputation is protected across India. Professional trademark filing for solicitors, advocates, and law firms. 100% online process.', "app/trademark-for-legal-services/page.tsx "),
     url: 'https://www.iprkaro.com/trademark-for-legal-services',
     type: 'article',
   },

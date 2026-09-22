@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -33,7 +34,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'International TM Filing (Madrid Protocol) India | 2024',
-    description: 'Protect your brand globally with one application. Learn the Madrid Protocol process from India, including fees, forms, and benefits. 5000+ words expert guide.',
+    description: validateAndNormalizeDescription('Protect your brand globally with one application. Learn the Madrid Protocol process from India, including fees, forms, and benefits. 5000+ words expert guide.', "app/how-to-file-international-trademark-madrid-protocol-from-india/page.tsx "),
     keywords: [
         'madrid protocol india',
         'international trademark filing india',
@@ -48,7 +49,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Global Branding: Filing International Trademarks from India via Madrid Protocol',
-        description: 'Scale your business worldwide. A comprehensive guide to the Madrid System for Indian entrepreneurs and startups looking for global IP protection.',
+        description: validateAndNormalizeDescription('Scale your business worldwide. A comprehensive guide to the Madrid System for Indian entrepreneurs and startups looking for global IP protection.', "app/how-to-file-international-trademark-madrid-protocol-from-india/page.tsx "),
         url: 'https://www.iprkaro.com/how-to-file-international-trademark-madrid-protocol-from-india',
         type: 'article',
     },

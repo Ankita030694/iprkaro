@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -27,7 +28,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Trademark Marked for Exam Meaning',
-    description: 'Comprehensive guide to "Marked for Exam" trademark status in India. Understand what happens during examination, Section 9 & 11 objections, and how to proceed. 5000+ words of legal expertise.',
+    description: validateAndNormalizeDescription('Comprehensive guide to "Marked for Exam" trademark status in India. Understand what happens during examination, Section 9 & 11 objections, and how to proceed. 5000+ words of legal expertise.', "app/trademark-marked-for-exam-meaning/page.tsx "),
     keywords: [
         'trademark marked for exam meaning',
         'marked for exam meaning in trademark',
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Trademark Marked for Exam Meaning',
-        description: 'Exhaustive legal guide on the "Marked for Exam" milestone. Learn how to navigate the Indian Trademark Registry examination phase successfully.',
+        description: validateAndNormalizeDescription('Exhaustive legal guide on the "Marked for Exam" milestone. Learn how to navigate the Indian Trademark Registry examination phase successfully.', "app/trademark-marked-for-exam-meaning/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-marked-for-exam-meaning',
         type: 'article',
     },

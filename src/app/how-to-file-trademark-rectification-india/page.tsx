@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -27,7 +28,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'How to File Trademark Rectification',
-    description: 'Master the process of trademark rectification in India. Learn about Section 57, grounds for removal, Form TM-O filing, and legal procedures to correct the trademark register. 5000+ words of expert legal guidance.',
+    description: validateAndNormalizeDescription('Master the process of trademark rectification in India. Learn about Section 57, grounds for removal, Form TM-O filing, and legal procedures to correct the trademark register. 5000+ words of expert legal guidance.', "app/how-to-file-trademark-rectification-india/page.tsx "),
     keywords: [
         'how to How to File Trademark Rectification india',
         'trademark rectification procedure',
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'How to File Trademark Rectification',
-        description: 'Navigate the complexities of correcting the Trademark Register. Detailed guide on grounds, procedures, and legal strategies for successful rectification.',
+        description: validateAndNormalizeDescription('Navigate the complexities of correcting the Trademark Register. Detailed guide on grounds, procedures, and legal strategies for successful rectification.', "app/how-to-file-trademark-rectification-india/page.tsx "),
         url: 'https://www.iprkaro.com/how-to-file-trademark-rectification-india',
         type: 'article',
     },

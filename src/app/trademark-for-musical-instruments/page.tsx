@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -34,7 +35,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Trademark for Musical Instruments | Protect Sound Brand',
-  description: 'Comprehensive guide to trademark registration for musical instruments, audio gear, and music stores. Secure your brand in Class 15 & 9. Expert filing.',
+  description: validateAndNormalizeDescription('Comprehensive guide to trademark registration for musical instruments, audio gear, and music stores. Secure your brand in Class 15 & 9. Expert filing.', "app/trademark-for-musical-instruments/page.tsx "),
   keywords: [
     'trademark for musical instruments',
     'musical instrument brand registration',
@@ -49,7 +50,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Secure Your Musical Instrument Brand | Expert IP Protection',
-    description: 'Don\'t let copycats silence your brand. Register your musical instrument trademark today with India\'s top IP experts. 100% Online process.',
+    description: validateAndNormalizeDescription('Don\'t let copycats silence your brand. Register your musical instrument trademark today with India\'s top IP experts. 100% Online process.', "app/trademark-for-musical-instruments/page.tsx "),
     url: 'https://www.iprkaro.com/trademark-for-musical-instruments',
     type: 'article',
   },

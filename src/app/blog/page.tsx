@@ -1,9 +1,10 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import BlogListingClient from './BlogListingClient';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'IP Resources, Guides & Legal Tools | IPR Karo',
-  description: 'Access comprehensive guides, tools, and resources for trademark registration, copyright protection, and patent filing in India. Empower your brand with IPR Karo.',
+  description: validateAndNormalizeDescription('Access comprehensive guides, tools, and resources for trademark registration, copyright protection, and patent filing in India. Empower your brand with IPR Karo.', "app/blog/page.tsx "),
   alternates: {
     canonical: '/blog',
   },

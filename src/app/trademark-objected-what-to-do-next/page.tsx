@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -26,7 +27,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Trademark Objected: What to Do Next? | Recovery Guide',
-    description: 'Received a trademark objection in India? Learn exactly what to do next. Complete guide on Section 9 and 11 objections, reply drafting, and hearing process. 5000+ words of legal expertise.',
+    description: validateAndNormalizeDescription('Received a trademark objection in India? Learn exactly what to do next. Complete guide on Section 9 and 11 objections, reply drafting, and hearing process. 5000+ words of legal expertise.', "app/trademark-objected-what-to-do-next/page.tsx "),
     keywords: [
         'trademark objected what to do next',
         'trademark objection reply process india',
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Trademark Objected? Here is Your Complete Recovery Blueprint',
-        description: 'Do not let your brand application fail. Our legal experts break down the trademark objection process from reply drafting to successfully winning hearings.',
+        description: validateAndNormalizeDescription('Do not let your brand application fail. Our legal experts break down the trademark objection process from reply drafting to successfully winning hearings.', "app/trademark-objected-what-to-do-next/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-objected-what-to-do-next',
         type: 'article',
     },

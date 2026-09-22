@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -33,7 +34,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Want to Register Trademark for Startup in India? (2026)',
-  description: 'Learn how to register a trademark for your startup in India. Get a 50% discount on government fees, fast-track processing, and expert brand protection strategies.',
+  description: validateAndNormalizeDescription('Learn how to register a trademark for your startup in India. Get a 50% discount on government fees, fast-track processing, and expert brand protection strategies.', "app/want-to-register-trademark-for-startup/page.tsx "),
   keywords: [
     'want to register trademark for startup',
     'trademark for startups india',
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Registering a Trademark for Your Startup: The Ultimate Guide',
-    description: 'Secure your startup\'s future with trademark registration. Learn about fee discounts and fast-track processing for DPIIT recognized startups.',
+    description: validateAndNormalizeDescription('Secure your startup\'s future with trademark registration. Learn about fee discounts and fast-track processing for DPIIT recognized startups.', "app/want-to-register-trademark-for-startup/page.tsx "),
     url: 'https://www.iprkaro.com/want-to-register-trademark-for-startup',
     type: 'article',
   },

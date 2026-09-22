@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -36,7 +37,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'IPIndia Trademark Status Check',
-    description: 'Master the IPIndia trademark status check process. Understand the meanings of statuses like Objected, Abandoned, and Opposed. Complete guide by IPR Karo experts.',
+    description: validateAndNormalizeDescription('Master the IPIndia trademark status check process. Understand the meanings of statuses like Objected, Abandoned, and Opposed. Complete guide by IPR Karo experts.', "app/ipindia-trademark-status/page.tsx "),
     keywords: [
         'ipindia trademark status',
         'check trademark status online',
@@ -51,7 +52,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'IPIndia Trademark Status Check',
-        description: 'Track your application with ease. Learn what every IP India trademark status means and what actions you need to take next.',
+        description: validateAndNormalizeDescription('Track your application with ease. Learn what every IP India trademark status means and what actions you need to take next.', "app/ipindia-trademark-status/page.tsx "),
         url: 'https://www.iprkaro.com/ipindia-trademark-status',
         type: 'article',
     },

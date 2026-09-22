@@ -1,4 +1,6 @@
 'use client';
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
@@ -358,27 +360,27 @@ export default function WhyTrademark() {
   const featureCards = [
     {
       title: "Fast Trademark Registration",
-      description: "Quick trademark registration process in India handled by experienced attorneys. Complete e-filing with govt fees starting at ₹4,500 for swift brand protection."
+      description: validateAndNormalizeDescription("Quick trademark registration process in India handled by experienced attorneys. Complete e-filing with govt fees starting at ₹4,500 for swift brand protection.", "components/WhyTrademark.tsx ")
     },
     {
       title: "Expert Trademark Guidance",
-      description: "Learn how to register a trademark step-by-step. Expert support for trademark registration documents required, trademark registration symbol ® usage, and legal compliance."
+      description: validateAndNormalizeDescription("Learn how to register a trademark step-by-step. Expert support for trademark registration documents required, trademark registration symbol ® usage, and legal compliance.", "components/WhyTrademark.tsx ")
     },
     {
       title: "Affordable Trademark Registration Price",
-      description: "Transparent trademark registration cost in India with no hidden charges. Affordable trademark registration govt fees and professional service plans for every budget."
+      description: validateAndNormalizeDescription("Transparent trademark registration cost in India with no hidden charges. Affordable trademark registration govt fees and professional service plans for every budget.", "components/WhyTrademark.tsx ")
     },
     {
       title: "AI-Powered Trademark Search",
-      description: "Comprehensive trademark search public database scan, trademark search by name and class, brand name availability search, and trademark availability check - all powered by AI."
+      description: validateAndNormalizeDescription("Comprehensive trademark search public database scan, trademark search by name and class, brand name availability search, and trademark availability check - all powered by AI.", "components/WhyTrademark.tsx ")
     },
     {
       title: "Trademark Risk Reduction",
-      description: "Advanced trademark search register analysis lowers the chances of conflicts, objections, and rejections. Includes international trademark search and WIPO trademark search support."
+      description: validateAndNormalizeDescription("Advanced trademark search register analysis lowers the chances of conflicts, objections, and rejections. Includes international trademark search and WIPO trademark search support.", "components/WhyTrademark.tsx ")
     },
     {
       title: "Trademark Registration Delhi & PAN India",
-      description: "Complete trademark registration Delhi, Noida, Gurgaon & across India. Government-certified agents with 24/7 accessibility for the trademark registration mark process nationwide."
+      description: validateAndNormalizeDescription("Complete trademark registration Delhi, Noida, Gurgaon & across India. Government-certified agents with 24/7 accessibility for the trademark registration mark process nationwide.", "components/WhyTrademark.tsx ")
     }
   ];
 

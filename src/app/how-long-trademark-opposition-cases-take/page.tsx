@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -24,7 +25,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Trademark Opposition Case Timeline',
-    description: 'A complete 5000+ word guide on the Trademark Opposition Case Timeline in India. Understand statutory deadlines, practical delays, and stages from TM-O to final hearing.',
+    description: validateAndNormalizeDescription('A complete 5000+ word guide on the Trademark Opposition Case Timeline in India. Understand statutory deadlines, practical delays, and stages from TM-O to final hearing.', "app/how-long-trademark-opposition-cases-take/page.tsx "),
     keywords: [
         'Trademark Opposition Case Timeline india',
         'how long does trademark opposition take',
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Trademark Opposition Case Timeline',
-        description: 'Navigate the multi-year journey of a trademark battle. From initial notice to the final registrar decision.',
+        description: validateAndNormalizeDescription('Navigate the multi-year journey of a trademark battle. From initial notice to the final registrar decision.', "app/how-long-trademark-opposition-cases-take/page.tsx "),
         url: 'https://www.iprkaro.com/how-long-trademark-opposition-cases-take',
         type: 'article',
     },

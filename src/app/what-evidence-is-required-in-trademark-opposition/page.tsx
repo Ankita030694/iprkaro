@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -28,7 +29,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Evidence for Trademark Opposition | Rule 45, 46, 47',
-    description: 'Master the trademark opposition process in India. Learn about evidence requirements under Rules 45, 46, and 47. Comprehensive legal guide on proof of use, affidavits, and winning strategies.',
+    description: validateAndNormalizeDescription('Master the trademark opposition process in India. Learn about evidence requirements under Rules 45, 46, and 47. Comprehensive legal guide on proof of use, affidavits, and winning strategies.', "app/what-evidence-is-required-in-trademark-opposition/page.tsx "),
     keywords: [
         'what evidence is required in trademark opposition',
         'trademark opposition evidence india',
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Evidence in Trademark Opposition: The Definitive Indian Guide',
-        description: 'Detailed insights into the evidentiary burden for trademark opposition. Expert tips on affidavits, invoices, and market reputation proof.',
+        description: validateAndNormalizeDescription('Detailed insights into the evidentiary burden for trademark opposition. Expert tips on affidavits, invoices, and market reputation proof.', "app/what-evidence-is-required-in-trademark-opposition/page.tsx "),
         url: 'https://www.iprkaro.com/what-evidence-is-required-in-trademark-opposition',
         type: 'article',
     },

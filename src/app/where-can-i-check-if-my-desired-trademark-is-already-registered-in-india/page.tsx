@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -23,7 +24,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Check if Trademark is Already Registered | India 2026',
-    description: 'Master the IP India public search portal. Learn how to perform wordmark, phonetic, and Vienna code searches to verify trademark availability in India.',
+    description: validateAndNormalizeDescription('Master the IP India public search portal. Learn how to perform wordmark, phonetic, and Vienna code searches to verify trademark availability in India.', "app/where-can-i-check-if-my-desired-trademark-is-already-registered-in-india/page.tsx "),
     keywords: [
         'where can i check if my desired trademark is already registered in india',
         'trademark public search india 2026',
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Brand Investigation: Where to Check Trademark Registration in India (2026)',
-        description: 'Before you launch, investigate. Master the official forensic search protocols on the IP India portal to secure your brand destiny.',
+        description: validateAndNormalizeDescription('Before you launch, investigate. Master the official forensic search protocols on the IP India portal to secure your brand destiny.', "app/where-can-i-check-if-my-desired-trademark-is-already-registered-in-india/page.tsx "),
         url: 'https://www.iprkaro.com/where-can-i-check-if-my-desired-trademark-is-already-registered-in-india',
         type: 'article',
     },

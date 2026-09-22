@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -34,7 +35,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'How to Register Trademark in India | 2026 Step-by-Step',
-  description: 'Learn how to register a trademark in India with our comprehensive 2026 guide. Step-by-step process, documents required, government fees, and expert tips for 100% success.',
+  description: validateAndNormalizeDescription('Learn how to register a trademark in India with our comprehensive 2026 guide. Step-by-step process, documents required, government fees, and expert tips for 100% success.', "app/how-to-register-trademark/page.tsx "),
   keywords: [
     'how to register trademark',
     'trademark registration process',
@@ -49,7 +50,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Comprehensive Guide: How to Register a Trademark in India',
-    description: 'Master the trademark registration process in India. Secure your brand identity with our expert step-by-step guide covering everything from search to certification.',
+    description: validateAndNormalizeDescription('Master the trademark registration process in India. Secure your brand identity with our expert step-by-step guide covering everything from search to certification.', "app/how-to-register-trademark/page.tsx "),
     url: 'https://www.iprkaro.com/how-to-register-trademark',
     type: 'article',
   },

@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -7,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Fast Trademark Registration India | Impactful IP Services',
-  description: 'Secure your brand in record time. Expert fast trademark registration, expedited patent services, and immediate copyright protection in India. 24/7 Support.',
+  description: validateAndNormalizeDescription('Secure your brand in record time. Expert fast trademark registration, expedited patent services, and immediate copyright protection in India. 24/7 Support.', "app/comprehensive-ip-protection-features/fast-trademark-registration/page.tsx "),
   keywords: [
     'fast trademark registration',
     'expedited trademark filing',
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Fast Trademark Registration India | Speed & Security Combined',
-    description: 'Don\'t let delays risk your brand. Get the fastest trademark registration, patent services, and copyright protection in India with IPR Karo.',
+    description: validateAndNormalizeDescription('Don\'t let delays risk your brand. Get the fastest trademark registration, patent services, and copyright protection in India with IPR Karo.', "app/comprehensive-ip-protection-features/fast-trademark-registration/page.tsx "),
     url: 'https://www.iprkaro.com/comprehensive-ip-protection-features/fast-trademark-registration',
     type: 'article',
     images: [

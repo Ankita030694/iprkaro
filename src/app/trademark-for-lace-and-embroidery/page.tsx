@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -34,7 +35,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'TM for Lace & Embroidery | Class 26 Registration',
-    description: 'Protect your lace, embroidery, ribbons, and textile accessory brand with Class 26 trademark registration in India. Expert legal guidance for textile manufacturers.',
+    description: validateAndNormalizeDescription('Protect your lace, embroidery, ribbons, and textile accessory brand with Class 26 trademark registration in India. Expert legal guidance for textile manufacturers.', "app/trademark-for-lace-and-embroidery/page.tsx "),
     keywords: [
         'trademark for lace',
         'register embroidery brand india',
@@ -49,7 +50,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Premium Trademark Registration for Lace & Embroidery',
-        description: 'Secure your Class 26 assets with India\'s elite IP legal team. High-authority brand protection for lace and embroidery designers.',
+        description: validateAndNormalizeDescription('Secure your Class 26 assets with India\'s elite IP legal team. High-authority brand protection for lace and embroidery designers.', "app/trademark-for-lace-and-embroidery/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-for-lace-and-embroidery',
         type: 'article',
     },

@@ -1,5 +1,6 @@
 'use client';
 
+
 import { faqs } from '@/lib/dashboard-data';
 import FaqSection from '@/components/FaqSection';
 

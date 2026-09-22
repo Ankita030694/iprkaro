@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -28,7 +29,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Trademark Refused: What are Options',
-    description: 'If your trademark application is refused in India, you have legal remedies. Learn about Review Petitions, High Court Appeals, and Statement of Grounds. Expert guide on Section 18(5) and 127.',
+    description: validateAndNormalizeDescription('If your trademark application is refused in India, you have legal remedies. Learn about Review Petitions, High Court Appeals, and Statement of Grounds. Expert guide on Section 18(5) and 127.', "app/trademark-refused-what-are-options/page.tsx "),
     keywords: [
         'trademark refused what are options',
         'trademark refusal india remedies',
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Trademark Refused: What are Options',
-        description: 'Do not panic if your trademark is refused. Our IP experts explain the 3 primary legal options to save your brand identity in India.',
+        description: validateAndNormalizeDescription('Do not panic if your trademark is refused. Our IP experts explain the 3 primary legal options to save your brand identity in India.', "app/trademark-refused-what-are-options/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-refused-what-are-options',
         type: 'article',
     },

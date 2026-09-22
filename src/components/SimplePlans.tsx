@@ -1,4 +1,6 @@
 'use client';
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
+
 
 import React, { useState, useRef, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
@@ -16,7 +18,7 @@ export default function SimplePlans() {
       id: 'standard',
       name: 'AI Trademark Filing Process: Standard',
       subtitle: 'Deeper search with risk insights',
-      description: 'Best for small businesses/startups',
+      description: validateAndNormalizeDescription('Best for small businesses/startups', "components/SimplePlans.tsx "),
       content: 'Essential trademark protection',
       features: [
         'Complete online trademark filing included',
@@ -31,7 +33,7 @@ export default function SimplePlans() {
       id: 'premium',
       name: 'Premium Trademark Registration: With AI Risk Checkup',
       subtitle: 'Complete filing included',
-      description: 'Suited for growing brands',
+      description: validateAndNormalizeDescription('Suited for growing brands', "components/SimplePlans.tsx "),
       content: 'Enhanced trademark services',
       features: [
         'AI-powered trademark registration and risk report',
@@ -46,7 +48,7 @@ export default function SimplePlans() {
       id: 'pro',
       name: 'Brand Monitoring & Protection: AI Powered',
       subtitle: '24/7 brand monitoring',
-      description: 'Enterprises, ongoing protection',
+      description: validateAndNormalizeDescription('Enterprises, ongoing protection', "components/SimplePlans.tsx "),
       content: 'Complete brand protection',
       features: [
         '24/7 AI-powered brand & trademark monitoring',

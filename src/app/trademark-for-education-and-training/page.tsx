@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -29,7 +30,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'TM for Education & Training | Protect Your Brand',
-    description: 'Exhaustive guide to trademark registration for schools, coaching centers, and EdTech platforms in India. Secure your educational brand under Class 41 today.',
+    description: validateAndNormalizeDescription('Exhaustive guide to trademark registration for schools, coaching centers, and EdTech platforms in India. Secure your educational brand under Class 41 today.', "app/trademark-for-education-and-training/page.tsx "),
     keywords: [
         'trademark for education and training',
         'trademark class 41',
@@ -44,7 +45,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Expert Trademark Registration for Your Educational Brand',
-        description: 'Secure your academic identity with India\'s leading IP legal team. 100% online process for schools, coaching centers, and EdTech platforms.',
+        description: validateAndNormalizeDescription('Secure your academic identity with India\'s leading IP legal team. 100% online process for schools, coaching centers, and EdTech platforms.', "app/trademark-for-education-and-training/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-for-education-and-training',
         type: 'article',
     },

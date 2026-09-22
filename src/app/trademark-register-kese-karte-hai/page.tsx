@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -33,7 +34,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Trademark Register Kaise Karte Hai | Online Process',
-  description: 'Bharat mein trademark register kaise karte hai? Janiye step-by-step registration process, documents list, government fees, aur expert tips. Get 100% success with IPR Karo.',
+  description: validateAndNormalizeDescription('Bharat mein trademark register kaise karte hai? Janiye step-by-step registration process, documents list, government fees, aur expert tips. Get 100% success with IPR Karo.', "app/trademark-register-kese-karte-hai/page.tsx "),
   keywords: [
     'trademark register kese karte hai',
     'how to register trademark in india hindi',
@@ -48,7 +49,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Comprehensive Guide: Trademark Register Kaise Karte Hai in Bharat',
-    description: 'Master the brand registration process in India. Hamari ultimate guide se janiye trademark filing se lekar certification tak ka pura safar.',
+    description: validateAndNormalizeDescription('Master the brand registration process in India. Hamari ultimate guide se janiye trademark filing se lekar certification tak ka pura safar.', "app/trademark-register-kese-karte-hai/page.tsx "),
     url: 'https://www.iprkaro.com/trademark-register-kese-karte-hai',
     type: 'article',
   },

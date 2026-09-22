@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -30,7 +31,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Trademark for Yarns and Threads',
-    description: 'Complete guide to trademark registration for yarns and threads in India. Secure your Class 23 textile brand with expert legal support and 100% online filing.',
+    description: validateAndNormalizeDescription('Complete guide to trademark registration for yarns and threads in India. Secure your Class 23 textile brand with expert legal support and 100% online filing.', "app/trademark-for-yarns-and-threads/page.tsx "),
     keywords: [
         'trademark for yarns and threads',
         'register yarn brand india',
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Trademark for Yarns and Threads',
-        description: 'Protect your Class 23 textile assets with India\'s top IP legal team. High-authority brand protection for yarn and thread manufacturers.',
+        description: validateAndNormalizeDescription('Protect your Class 23 textile assets with India\'s top IP legal team. High-authority brand protection for yarn and thread manufacturers.', "app/trademark-for-yarns-and-threads/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-for-yarns-and-threads',
         type: 'article',
     },

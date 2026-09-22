@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -28,7 +29,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Trademark for Machinery | Class 7 Registration Guide India',
-    description: 'The definitive guide to trademark registration for machinery in India. Secure your industrial tools, motors, and engines under Class 7. 5000+ words SEO manual.',
+    description: validateAndNormalizeDescription('The definitive guide to trademark registration for machinery in India. Secure your industrial tools, motors, and engines under Class 7. 5000+ words SEO manual.', "app/trademark-for-machinery/page.tsx "),
     keywords: [
         'trademark for machinery',
         'class 7 trademark registration india',
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Mastering Trademark Registration for Machinery (Class 7)',
-        description: 'Protect your engineering excellence. Secure your industrial and mechanical products with India\'s elite IP legal firm. 100% online process.',
+        description: validateAndNormalizeDescription('Protect your engineering excellence. Secure your industrial and mechanical products with India\'s elite IP legal firm. 100% online process.', "app/trademark-for-machinery/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-for-machinery',
         type: 'article',
     },

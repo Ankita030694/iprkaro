@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -27,7 +28,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Steps to File a Trademark Application Online in India',
-  description: 'Learn the complete step-by-step process to file a trademark application online in India. From trademark search to final registration, get expert guidance.',
+  description: validateAndNormalizeDescription('Learn the complete step-by-step process to file a trademark application online in India. From trademark search to final registration, get expert guidance.', "app/steps-to-file-trademark-application-online-india/page.tsx "),
   keywords: [
     'trademark application online india',
     'file trademark online',
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Steps to File a Trademark Application Online in India (2024 Guide)',
-    description: 'Learn the complete step-by-step process to file a trademark application online in India.',
+    description: validateAndNormalizeDescription('Learn the complete step-by-step process to file a trademark application online in India.', "app/steps-to-file-trademark-application-online-india/page.tsx "),
     url: 'https://www.iprkaro.com/steps-to-file-trademark-application-online-india',
     type: 'article',
     images: [

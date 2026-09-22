@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 
 import React from 'react';
 import Link from 'next/link';
@@ -31,7 +32,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Trademark for Firearms | Class 13 Brand Protection India',
-    description: 'Complete guide to trademark registration for firearms, ammunition, and explosives in India. Secure your Class 13 brand with elite IP legal support.',
+    description: validateAndNormalizeDescription('Complete guide to trademark registration for firearms, ammunition, and explosives in India. Secure your Class 13 brand with elite IP legal support.', "app/trademark-for-firearms/page.tsx "),
     keywords: [
         'trademark for firearms',
         'gun brand registration india',
@@ -46,7 +47,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Elite Trademark Registration for Firearms & Defense Brands',
-        description: 'Protect your weaponry innovation with India\'s leading IP legal team. 100% online process, specialized Class 13 expertise.',
+        description: validateAndNormalizeDescription('Protect your weaponry innovation with India\'s leading IP legal team. 100% online process, specialized Class 13 expertise.', "app/trademark-for-firearms/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-for-firearms',
         type: 'article',
     },

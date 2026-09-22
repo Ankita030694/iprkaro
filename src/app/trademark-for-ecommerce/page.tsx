@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -32,7 +33,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Trademark for Ecommerce | Protect Your Online Brand',
-  description: 'Complete guide to trademark registration for e-commerce businesses. Secure your online store, marketplace, or D2C brand under Class 35 and 42. Expert legal filing from ₹1499.',
+  description: validateAndNormalizeDescription('Complete guide to trademark registration for e-commerce businesses. Secure your online store, marketplace, or D2C brand under Class 35 and 42. Expert legal filing from ₹1499.', "app/trademark-for-ecommerce/page.tsx "),
   keywords: [
     'trademark for ecommerce',
     'class 35 trademark registration india',
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Ecommerce Brand Protection | Expert Class 35 & 42 Registration',
-    description: 'Protect your digital storefront. Secure your e-commerce, marketplace, or D2C brand with India\'s premier IP legal firm.',
+    description: validateAndNormalizeDescription('Protect your digital storefront. Secure your e-commerce, marketplace, or D2C brand with India\'s premier IP legal firm.', "app/trademark-for-ecommerce/page.tsx "),
     url: 'https://www.iprkaro.com/trademark-for-ecommerce',
     type: 'article',
   },

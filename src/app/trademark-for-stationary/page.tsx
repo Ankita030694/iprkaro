@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -31,7 +32,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Trademark for Stationery Brand | Class 16 Guide',
-  description: 'Comprehensive guide to trademark registration for stationery, paper goods, and printed matter in India. Secure your brand name and logo under Class 16 today.',
+  description: validateAndNormalizeDescription('Comprehensive guide to trademark registration for stationery, paper goods, and printed matter in India. Secure your brand name and logo under Class 16 today.', "app/trademark-for-stationary/page.tsx "),
   keywords: [
     'trademark for stationary',
     'stationery brand registration india',
@@ -46,7 +47,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Expert Trademark Registration for Your Stationery Brand',
-    description: 'Secure your creative identity with India\'s leading IP legal team. 100% online process, same-day filing for stationery and paper brands.',
+    description: validateAndNormalizeDescription('Secure your creative identity with India\'s leading IP legal team. 100% online process, same-day filing for stationery and paper brands.', "app/trademark-for-stationary/page.tsx "),
     url: 'https://www.iprkaro.com/trademark-for-stationary',
     type: 'article',
   },

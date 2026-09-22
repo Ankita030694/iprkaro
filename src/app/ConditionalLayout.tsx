@@ -1,5 +1,6 @@
 'use client';
 
+
 import { usePathname } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import { Navbar, NewFooter } from '@/components';

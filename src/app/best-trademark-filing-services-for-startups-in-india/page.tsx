@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -32,7 +33,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Best Trademark Filing Services for Startups | IPR Karo',
-  description: 'Looking for the best trademark filing services for startups in India? Get expert assistance, 50% government fee rebate, and SIPP benefits. Secure your brand now.',
+  description: validateAndNormalizeDescription('Looking for the best trademark filing services for startups in India? Get expert assistance, 50% government fee rebate, and SIPP benefits. Secure your brand now.', "app/best-trademark-filing-services-for-startups-in-india/page.tsx "),
   keywords: [
     'best trademark filing services for startups in india',
     'startup trademark registration',
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Best Trademark Filing Services for Startups | IPR Karo',
-    description: 'Expert-led trademark filing for Indian startups. Avail 50% fee concession and SIPP facilitation. Protect your innovation today.',
+    description: validateAndNormalizeDescription('Expert-led trademark filing for Indian startups. Avail 50% fee concession and SIPP facilitation. Protect your innovation today.', "app/best-trademark-filing-services-for-startups-in-india/page.tsx "),
     url: 'https://www.iprkaro.com/best-trademark-filing-services-for-startups-in-india',
     type: 'article',
     images: [

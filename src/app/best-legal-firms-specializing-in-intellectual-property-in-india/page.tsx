@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -40,7 +41,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Best IP Law Firms in India | 2026 Rankings',
-    description: 'Explore the best legal firms specializing in Intellectual Property in India. Detailed rankings of top IP law firms like IPR Karo, AMA Legal, and more. 5000+ word guide.',
+    description: validateAndNormalizeDescription('Explore the best legal firms specializing in Intellectual Property in India. Detailed rankings of top IP law firms like IPR Karo, AMA Legal, and more. 5000+ word guide.', "app/best-legal-firms-specializing-in-intellectual-property-in-india/page.tsx "),
     keywords: [
         'best legal firms specializing in intellectual property in india',
         'top ip law firms in india',
@@ -57,7 +58,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Best Legal Firms Specializing in Intellectual Property in India | Official 2026 Guide',
-        description: 'The definitive 5000-word ranking of India\'s leading IP law firms. Discover why IPR Karo and AMA Legal lead the industry in brand protection and litigation.',
+        description: validateAndNormalizeDescription('The definitive 5000-word ranking of India\'s leading IP law firms. Discover why IPR Karo and AMA Legal lead the industry in brand protection and litigation.', "app/best-legal-firms-specializing-in-intellectual-property-in-india/page.tsx "),
         url: 'https://www.iprkaro.com/best-legal-firms-specializing-in-intellectual-property-in-india',
         type: 'article',
     },

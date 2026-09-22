@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -24,7 +25,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Objected Trademark Status Meaning',
-  description: 'Understand the "Objected" status in India trademark registration. Expert guide on Section 9 & 11 objections, drafting replies, evidence required, and hearing process.',
+  description: validateAndNormalizeDescription('Understand the "Objected" status in India trademark registration. Expert guide on Section 9 & 11 objections, drafting replies, evidence required, and hearing process.', "app/what-does-objected-mean-in-trademark-status/page.tsx "),
   keywords: [
     'what does objected mean in trademark status',
     'trademark objected status india',
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Objected Trademark Status Meaning',
-    description: 'Received an "Objected" status for your trademark application? Learn how to draft a winning reply and overcome Section 9 & 11 hurdles.',
+    description: validateAndNormalizeDescription('Received an "Objected" status for your trademark application? Learn how to draft a winning reply and overcome Section 9 & 11 hurdles.', "app/what-does-objected-mean-in-trademark-status/page.tsx "),
     url: 'https://www.iprkaro.com/what-does-objected-mean-in-trademark-status',
     type: 'article',
   },

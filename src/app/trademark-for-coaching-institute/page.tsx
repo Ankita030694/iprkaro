@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -30,7 +31,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'TM for Coaching Institute | Protect Your Brand India',
-    description: 'Exhaustive 5000+ word guide on trademarking your coaching institute in India. Secure your institute name, logo, and study materials. Expert legal advice for education entrepreneurs.',
+    description: validateAndNormalizeDescription('Exhaustive 5000+ word guide on trademarking your coaching institute in India. Secure your institute name, logo, and study materials. Expert legal advice for education entrepreneurs.', "app/trademark-for-coaching-institute/page.tsx "),
     keywords: [
         'trademark for coaching institute',
         'education brand registration india',
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Elite Trademark Registration for Coaching Institutes in India',
-        description: 'Secure your educational legacy. Protect your coaching brand name and materials with India\'s leading IP experts. 100% online, same-day filing.',
+        description: validateAndNormalizeDescription('Secure your educational legacy. Protect your coaching brand name and materials with India\'s leading IP experts. 100% online, same-day filing.', "app/trademark-for-coaching-institute/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-for-coaching-institute',
         type: 'article',
     },

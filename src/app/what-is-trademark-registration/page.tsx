@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -27,7 +28,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'How Often to Renew Trademark Registration in India: A Guide',
-  description: 'Navigating trademark registration in India can be complex. Understanding how often to renew your trademark is essential for safeguarding your brand’s identity.',
+  description: validateAndNormalizeDescription('Navigating trademark registration in India can be complex. Understanding how often to renew your trademark is essential for safeguarding your brand’s identity.', "app/what-is-trademark-registration/page.tsx "),
   keywords: [
     'trademark renewal india',
     'how to renew trademark',
@@ -40,7 +41,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'How Often to Renew Trademark Registration in India: A Guide',
-    description: 'Understanding how often to renew your trademark is essential for safeguarding your brand’s identity.',
+    description: validateAndNormalizeDescription('Understanding how often to renew your trademark is essential for safeguarding your brand’s identity.', "app/what-is-trademark-registration/page.tsx "),
     url: 'https://www.iprkaro.com/what-is-trademark-registration',
     type: 'article',
     images: [

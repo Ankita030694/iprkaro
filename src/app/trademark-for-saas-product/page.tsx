@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -26,7 +27,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Trademark for SaaS Products India',
-    description: 'Expert guide to trademark registration for SaaS products in India. Secure your software brand under Class 9 & 42. 5000+ words on legal strategy, costs, and protection.',
+    description: validateAndNormalizeDescription('Expert guide to trademark registration for SaaS products in India. Secure your software brand under Class 9 & 42. 5000+ words on legal strategy, costs, and protection.', "app/trademark-for-saas-product/page.tsx "),
     keywords: [
         'trademark for SaaS product',
         'SaaS brand registration india',
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Trademark for SaaS Products India',
-        description: 'Scale your SaaS safely with expert IP protection. Register your software brand name, logo, and icons with India\'s elite tech-focused legal team.',
+        description: validateAndNormalizeDescription('Scale your SaaS safely with expert IP protection. Register your software brand name, logo, and icons with India\'s elite tech-focused legal team.', "app/trademark-for-saas-product/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-for-saas-product',
         type: 'article',
     },

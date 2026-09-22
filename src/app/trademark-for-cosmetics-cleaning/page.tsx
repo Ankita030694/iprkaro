@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -30,7 +31,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Trademark for Cosmetics & Cleaning',
-    description: 'Exhaustive guide to trademark registration for cosmetics, perfumes, and cleaning products in India. Secure your beauty brand identity under Class 3 today.',
+    description: validateAndNormalizeDescription('Exhaustive guide to trademark registration for cosmetics, perfumes, and cleaning products in India. Secure your beauty brand identity under Class 3 today.', "app/trademark-for-cosmetics-cleaning/page.tsx "),
     keywords: [
         'trademark for cosmetics',
         'trademark for cleaning products',
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Trademark for Cosmetics & Cleaning',
-        description: 'Secure your beauty and hygiene identity with India\'s leading IP legal team. 100% online process, same-day filing for Class 3.',
+        description: validateAndNormalizeDescription('Secure your beauty and hygiene identity with India\'s leading IP legal team. 100% online process, same-day filing for Class 3.', "app/trademark-for-cosmetics-cleaning/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-for-cosmetics-cleaning',
         type: 'article',
     },

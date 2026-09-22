@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -82,6 +83,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   let description = `Looking for trademark registration in ${location}? Get comprehensive legal assistance for brand protection & IPR services. Contact IPR Karo!`;
+description = validateAndNormalizeDescription(description, "app/trademark-by-location/[slug]/page.tsx ");
 
   if (description.length > 150) {
     description = `Trademark registration in ${location}. Comprehensive legal assistance for brand protection, filing & IPR services by IPR Karo.`;

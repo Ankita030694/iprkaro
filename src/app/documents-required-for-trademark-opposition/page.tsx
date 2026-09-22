@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -27,7 +28,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Documents for Trademark Opposition in India | 2024',
-    description: 'The ultimate guide to documents and evidence required for successful trademark opposition in India. Learn about Rule 45 affidavits, proof of prior use, and more.',
+    description: validateAndNormalizeDescription('The ultimate guide to documents and evidence required for successful trademark opposition in India. Learn about Rule 45 affidavits, proof of prior use, and more.', "app/documents-required-for-trademark-opposition/page.tsx "),
     keywords: [
         'documents required for trademark opposition',
         'trademark opposition evidence checklist',
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Documents Required for Trademark Opposition: A Detailed Checklist',
-        description: 'Prepare your evidence like a pro. A 5000+ word deep-dive into the document requirements for winning an IP battle.',
+        description: validateAndNormalizeDescription('Prepare your evidence like a pro. A 5000+ word deep-dive into the document requirements for winning an IP battle.', "app/documents-required-for-trademark-opposition/page.tsx "),
         url: 'https://www.iprkaro.com/documents-required-for-trademark-opposition',
         type: 'article',
     },

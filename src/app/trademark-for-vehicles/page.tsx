@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -34,7 +35,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Trademark for Vehicles | Automotive Brand Protection India',
-    description: 'Exhaustive guide to trademark registration for cars, electric vehicles, auto parts, and drones in India. Secure your Class 12 automotive brand today with expert IP attorneys.',
+    description: validateAndNormalizeDescription('Exhaustive guide to trademark registration for cars, electric vehicles, auto parts, and drones in India. Secure your Class 12 automotive brand today with expert IP attorneys.', "app/trademark-for-vehicles/page.tsx "),
     keywords: [
         'trademark for vehicles',
         'automotive brand registration india',
@@ -49,7 +50,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Elite Trademark Registration for Vehicles & Auto Brands',
-        description: 'Protect your automotive innovation with India\'s leading IP legal bridge. Specialized support for EV startups and component manufacturers.',
+        description: validateAndNormalizeDescription('Protect your automotive innovation with India\'s leading IP legal bridge. Specialized support for EV startups and component manufacturers.', "app/trademark-for-vehicles/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-for-vehicles',
         type: 'article',
     },

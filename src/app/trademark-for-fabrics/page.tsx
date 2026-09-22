@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -34,7 +35,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Trademark for Fabrics | Class 24 Textile Brand Online',
-    description: 'Complete guide to trademark registration for fabrics, textiles, bed covers, and table covers in India. Secure your Class 24 brand with expert legal support.',
+    description: validateAndNormalizeDescription('Complete guide to trademark registration for fabrics, textiles, bed covers, and table covers in India. Secure your Class 24 brand with expert legal support.', "app/trademark-for-fabrics/page.tsx "),
     keywords: [
         'trademark for fabrics',
         'register textile brand india',
@@ -49,7 +50,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Premium Trademark Registration for Fabrics & Textiles',
-        description: 'Protect your Class 24 textile assets with India\'s top IP legal team. High-authority brand protection for fabric and home furnishing manufacturers.',
+        description: validateAndNormalizeDescription('Protect your Class 24 textile assets with India\'s top IP legal team. High-authority brand protection for fabric and home furnishing manufacturers.', "app/trademark-for-fabrics/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-for-fabrics',
         type: 'article',
     },

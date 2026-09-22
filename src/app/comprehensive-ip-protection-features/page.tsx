@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -7,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Comprehensive IP Services India | Trademark & Patent',
-  description: 'A holistic suite of intellectual property services. From fast trademark registration to AI-powered monitoring, we provide end-to-end protection for your brand assets.',
+  description: validateAndNormalizeDescription('A holistic suite of intellectual property services. From fast trademark registration to AI-powered monitoring, we provide end-to-end protection for your brand assets.', "app/comprehensive-ip-protection-features/page.tsx "),
   keywords: [
     'comprehensive ip services',
     'trademark registration india',
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'IPR Karo Features | AI-Powered IP Protection & Strategy',
-    description: 'Explore the powerful features of IPR Karo. From AI trademark searches to expert legal guidance, we provide everything you need to protect your intellectual property in India.',
+    description: validateAndNormalizeDescription('Explore the powerful features of IPR Karo. From AI trademark searches to expert legal guidance, we provide everything you need to protect your intellectual property in India.', "app/comprehensive-ip-protection-features/page.tsx "),
     url: 'https://www.iprkaro.com/comprehensive-ip-protection-features',
     type: 'website',
     images: [

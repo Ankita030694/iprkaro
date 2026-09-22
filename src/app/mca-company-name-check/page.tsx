@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -37,7 +38,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'MCA Company Name Check Guide India',
-    description: 'Learn how to check company name availability on MCA V3 portal. Complete guide to name reservation rules, RUN service, and SPICe+ Part A for companies and LLPs.',
+    description: validateAndNormalizeDescription('Learn how to check company name availability on MCA V3 portal. Complete guide to name reservation rules, RUN service, and SPICe+ Part A for companies and LLPs.', "app/mca-company-name-check/page.tsx "),
     keywords: [
         'mca company name check',
         'company name availability india',
@@ -52,7 +53,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'MCA Company Name Check Guide India',
-        description: 'Ensure your proposed company name is unique and compliant. Step-by-step masterclass on MCA naming rules and the RUN reservation service.',
+        description: validateAndNormalizeDescription('Ensure your proposed company name is unique and compliant. Step-by-step masterclass on MCA naming rules and the RUN reservation service.', "app/mca-company-name-check/page.tsx "),
         url: 'https://www.iprkaro.com/mca-company-name-check',
         type: 'article',
     },

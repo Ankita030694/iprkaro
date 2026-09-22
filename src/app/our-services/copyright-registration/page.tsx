@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -33,7 +34,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Copyright Registration in India | IPR Karo',
-  description: 'Secure your creative work with Online Copyright Registration in India. Protect Books, Music, Software (Source Code), Movies & Art. Affordable fees & Expert Legal Process.',
+  description: validateAndNormalizeDescription('Secure your creative work with Online Copyright Registration in India. Protect Books, Music, Software (Source Code), Movies & Art. Affordable fees & Expert Legal Process.', "app/our-services/copyright-registration/page.tsx "),
   keywords: [
     'copyright registration india',
     'copyright filing fees',
@@ -48,7 +49,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Copyright Registration in India | IPR Karo',
-    description: 'Own your content legally. Comprehensive copyright filing for Authors, Artists, Musicians, and Developers. 60-Year Protection.',
+    description: validateAndNormalizeDescription('Own your content legally. Comprehensive copyright filing for Authors, Artists, Musicians, and Developers. 60-Year Protection.', "app/our-services/copyright-registration/page.tsx "),
     url: 'https://www.iprkaro.com/our-services/copyright-registration',
     type: 'article',
     images: [

@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -30,7 +31,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'TM for Fintech Startup | Class 36, 9 & 42 India',
-    description: 'Complete guide to trademark registration for fintech startups in India. Secure your digital payments, mobile apps, and SaaS platforms under Class 36, 9, and 42. 5000+ words of tech-legal expertise.',
+    description: validateAndNormalizeDescription('Complete guide to trademark registration for fintech startups in India. Secure your digital payments, mobile apps, and SaaS platforms under Class 36, 9, and 42. 5000+ words of tech-legal expertise.', "app/trademark-for-fintech-startup/page.tsx "),
     keywords: [
         'trademark for fintech startup',
         'fintech brand registration india',
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Elite Trademark Registration for the Fintech Ecosystem in India',
-        description: 'Protect your financial technology and brand digital identity with specialized IP legal experts. 100% online, same-day filing for fintech firms.',
+        description: validateAndNormalizeDescription('Protect your financial technology and brand digital identity with specialized IP legal experts. 100% online, same-day filing for fintech firms.', "app/trademark-for-fintech-startup/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-for-fintech-startup',
         type: 'article',
     },

@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -24,7 +25,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Fast Track Trademark Registration',
-    description: 'Learn how to accelerate your trademark registration in India. Explore Rule 34 expedited processing, Form TM-M, fees, and timelines in our 4000+ word guide.',
+    description: validateAndNormalizeDescription('Learn how to accelerate your trademark registration in India. Explore Rule 34 expedited processing, Form TM-M, fees, and timelines in our 4000+ word guide.', "app/are-there-any-fast-track-options-for-trademark-registration-in-india/page.tsx "),
     keywords: [
         'fast track trademark registration in india',
         'expedited trademark examination india 2026',
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Fast Track Trademark Registration',
-        description: 'Slash your trademark wait time from 18 months to 6 months. Master the forensic process of expedited trademark examination.',
+        description: validateAndNormalizeDescription('Slash your trademark wait time from 18 months to 6 months. Master the forensic process of expedited trademark examination.', "app/are-there-any-fast-track-options-for-trademark-registration-in-india/page.tsx "),
         url: 'https://www.iprkaro.com/are-there-any-fast-track-options-for-trademark-registration-in-india',
         type: 'article',
     },

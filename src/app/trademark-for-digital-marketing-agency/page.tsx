@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -30,7 +31,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'TM for Digital Marketing Agency | Class 35 & 42 India',
-    description: 'Expert guide to trademark registration for digital marketing agencies in India. Protect your SEO, SMM, and PPC brand identities under Class 35. 5000+ words of deep legal and strategic insights.',
+    description: validateAndNormalizeDescription('Expert guide to trademark registration for digital marketing agencies in India. Protect your SEO, SMM, and PPC brand identities under Class 35. 5000+ words of deep legal and strategic insights.', "app/trademark-for-digital-marketing-agency/page.tsx "),
     keywords: [
         'trademark for digital marketing agency',
         'digital agency brand registration india',
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Complete Trademark Guide for Digital Marketing Agencies in India',
-        description: 'Secure your marketing agency identity with India\'s elite IP legal team. 100% online, same-day filing for Class 35 digital services.',
+        description: validateAndNormalizeDescription('Secure your marketing agency identity with India\'s elite IP legal team. 100% online, same-day filing for Class 35 digital services.', "app/trademark-for-digital-marketing-agency/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-for-digital-marketing-agency',
         type: 'article',
     },

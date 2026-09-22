@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -27,7 +28,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Trademark Sent for Examination Next',
-    description: 'Your trademark status shows "Sent for Examination"? Learn exactly what this means, the Registry timeline, and how to prepare for the next steps. 5000+ words of IP expertise.',
+    description: validateAndNormalizeDescription('Your trademark status shows "Sent for Examination"? Learn exactly what this means, the Registry timeline, and how to prepare for the next steps. 5000+ words of IP expertise.', "app/trademark-sent-for-examination-what-to-do/page.tsx "),
     keywords: [
         'trademark sent for examination what to do',
         'trademark examination process india',
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Trademark Sent for Examination Next',
-        description: 'Understand the legal review process of your brand. Our experts break down the trademark examination phase and what you must do to ensure successful registration.',
+        description: validateAndNormalizeDescription('Understand the legal review process of your brand. Our experts break down the trademark examination phase and what you must do to ensure successful registration.', "app/trademark-sent-for-examination-what-to-do/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-sent-for-examination-what-to-do',
         type: 'article',
     },

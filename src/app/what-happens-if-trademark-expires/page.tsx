@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -32,7 +33,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'What Happens if Trademark Expires in India? | Guide',
-  description: 'Understand the legal risks of trademark expiry in India. Learn about the O-3 notice, grace periods, removal from registry, and how to protect your brand from abandonment.',
+  description: validateAndNormalizeDescription('Understand the legal risks of trademark expiry in India. Learn about the O-3 notice, grace periods, removal from registry, and how to protect your brand from abandonment.', "app/what-happens-if-trademark-expires/page.tsx "),
   keywords: [
     'what happens if trademark expires india',
     'trademark renewal grace period india',
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Your Trademark Expired? Here is the Legal Blueprint to Save Your Brand',
-    description: 'Expert guide on the consequences of trademark expiry and the 12-month window to save your brand registration in India.',
+    description: validateAndNormalizeDescription('Expert guide on the consequences of trademark expiry and the 12-month window to save your brand registration in India.', "app/what-happens-if-trademark-expires/page.tsx "),
     url: 'https://www.iprkaro.com/what-happens-if-trademark-expires',
     type: 'article',
   },

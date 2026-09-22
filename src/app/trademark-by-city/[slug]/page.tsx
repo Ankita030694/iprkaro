@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -51,7 +52,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title = `TM Lawyers ${location.substring(0, 28).trim()} | IPR Karo`;
     }
   }
-  const description = `Looking for the best trademark advocate in ${location}? Get expert legal assistance for trademark registration, brand protection, and IPR services in ${location}. Contact IPR Karo today!`;
+  const description = validateAndNormalizeDescription(`Looking for the best trademark advocate in ${location}? Get expert legal assistance for trademark registration, brand protection, and IPR services in ${location}. Contact IPR Karo today!`, "app/trademark-by-city/[slug]/page.tsx ");
 
   return {
     title,

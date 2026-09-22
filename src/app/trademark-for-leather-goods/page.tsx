@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 ﻿
 import React from 'react';
 import Link from 'next/link';
@@ -30,7 +31,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Trademark for Leather Goods | Class 18 Registration India',
-    description: 'Complete guide to trademark registration for leather goods, handbags, and luggage in India. Secure your Class 18 brand assets today.',
+    description: validateAndNormalizeDescription('Complete guide to trademark registration for leather goods, handbags, and luggage in India. Secure your Class 18 brand assets today.', "app/trademark-for-leather-goods/page.tsx "),
     keywords: [
         'trademark for leather goods',
         'class 18 trademark india',
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Premium Trademark Registration for Leather & Travel Goods',
-        description: 'Protect your leather craft and luxury travel assets with India\'s leading IP team. 100% online, legal expertise for Class 18.',
+        description: validateAndNormalizeDescription('Protect your leather craft and luxury travel assets with India\'s leading IP team. 100% online, legal expertise for Class 18.', "app/trademark-for-leather-goods/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-for-leather-goods',
         type: 'article',
     },

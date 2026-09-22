@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { locations, toSlug } from './locations';
@@ -22,9 +23,9 @@ export async function generateMetadata({
     : "https://www.iprkaro.com/trademark-by-city";
 
   const baseDescription = "Find the best trademark advocates and lawyers by city with IPR Karo for trademark registration and brand protection across India.";
-  const description = validPage > 1 
+  const description = validateAndNormalizeDescription(validPage > 1 
     ? `${baseDescription} - Page ${validPage}`
-    : baseDescription;
+    : baseDescription, "app/trademark-by-city/page.tsx ");
 
   return {
     title: validPage > 1 

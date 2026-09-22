@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -31,7 +32,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Trademark for Goods vs Services | 2026 India Guide',
-    description: 'Is there a difference between trademark registration for goods and services in India? Learn about Classes 1-45, evidence of use, and legal nuances.',
+    description: validateAndNormalizeDescription('Is there a difference between trademark registration for goods and services in India? Learn about Classes 1-45, evidence of use, and legal nuances.', "app/is-there-a-difference-between-trademark-registration-for-goods-and-services/page.tsx "),
     keywords: [
         'is there a difference between trademark registration for goods and services',
         'trademark for goods vs services india',
@@ -46,7 +47,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Goods vs Services Trademarks: The Forensic 2026 Comparison',
-        description: 'Tangibility vs. Experience. Navigate the complex divide between product and service marks with our exhaustive legal guide for Indian businesses.',
+        description: validateAndNormalizeDescription('Tangibility vs. Experience. Navigate the complex divide between product and service marks with our exhaustive legal guide for Indian businesses.', "app/is-there-a-difference-between-trademark-registration-for-goods-and-services/page.tsx "),
         url: 'https://www.iprkaro.com/is-there-a-difference-between-trademark-registration-for-goods-and-services',
         type: 'article',
     },

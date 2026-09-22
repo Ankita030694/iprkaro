@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -38,7 +39,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'TM for Alcoholic Drinks (Class 33) Guide | India',
-    description: 'Protect your liquor brand with India\'s leading IP firm. Complete guide to Trademark Class 33 for whisky, wine, spirits, and liqueurs. Expert FSSAI & Advertising compliance.',
+    description: validateAndNormalizeDescription('Protect your liquor brand with India\'s leading IP firm. Complete guide to Trademark Class 33 for whisky, wine, spirits, and liqueurs. Expert FSSAI & Advertising compliance.', "app/trademark-for-alcoholic-drinks/page.tsx "),
     keywords: [
         'trademark for alcoholic drinks',
         'liquor brand registration india',
@@ -53,7 +54,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Elite Trademark Registration for Alcoholic Drinks in India',
-        description: 'Secure your spirits, wines, and liqueurs under Class 33. Professional legal assistance for the complex branding landscape of the Indian alcohol industry.',
+        description: validateAndNormalizeDescription('Secure your spirits, wines, and liqueurs under Class 33. Professional legal assistance for the complex branding landscape of the Indian alcohol industry.', "app/trademark-for-alcoholic-drinks/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-for-alcoholic-drinks',
         type: 'article',
     },

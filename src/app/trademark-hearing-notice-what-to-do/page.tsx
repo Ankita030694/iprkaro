@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -26,7 +27,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Trademark Hearing Notice Steps',
-    description: 'Expert guide on handling trademark hearing notices in India. Learn preparation strategies, evidence requirements, virtual hearing protocols, and how to win your registration. 5000+ word technical breakdown.',
+    description: validateAndNormalizeDescription('Expert guide on handling trademark hearing notices in India. Learn preparation strategies, evidence requirements, virtual hearing protocols, and how to win your registration. 5000+ word technical breakdown.', "app/trademark-hearing-notice-what-to-do/page.tsx "),
     keywords: [
         'trademark hearing notice what to do',
         'trademark hearing procedure india',
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Trademark Hearing Notice Steps',
-        description: 'Protect your brand from abandonment. Master the technicalities of trademark hearings with India\'s elite IP attorneys. 5000+ words of expert strategy.',
+        description: validateAndNormalizeDescription('Protect your brand from abandonment. Master the technicalities of trademark hearings with India\'s elite IP attorneys. 5000+ words of expert strategy.', "app/trademark-hearing-notice-what-to-do/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-hearing-notice-what-to-do',
         type: 'article',
     },

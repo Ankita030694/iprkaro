@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import { NextRequest, NextResponse } from "next/server";
 import OpenAI from "openai";
 
@@ -104,12 +105,12 @@ Under no circumstances use em dashes (—). Always use standard hyphens (-), col
           schema: {
             type: "object",
             properties: {
-              title: { type: "string", description: "H1 Title (under 70 chars)" },
-              subtitle: { type: "string", description: "Engaging subtitle (under 140 chars)" },
-              metaTitle: { type: "string", description: "Meta title ending with ' | IPR Karo'" },
-              metaDescription: { type: "string", description: "Meta description (140-160 chars)" },
-              slug: { type: "string", description: "Kebab-case URL slug" },
-              exactTopic: { type: "string", description: "Precise legal topic title" },
+              title: { type: "string", description: validateAndNormalizeDescription("H1 Title (under 70 chars)", "app/api/generate-article/route.ts ") },
+              subtitle: { type: "string", description: validateAndNormalizeDescription("Engaging subtitle (under 140 chars)", "app/api/generate-article/route.ts ") },
+              metaTitle: { type: "string", description: validateAndNormalizeDescription("Meta title ending with ' | IPR Karo'", "app/api/generate-article/route.ts ") },
+              metaDescription: { type: "string", description: validateAndNormalizeDescription("Meta description (140-160 chars)", "app/api/generate-article/route.ts ") },
+              slug: { type: "string", description: validateAndNormalizeDescription("Kebab-case URL slug", "app/api/generate-article/route.ts ") },
+              exactTopic: { type: "string", description: validateAndNormalizeDescription("Precise legal topic title", "app/api/generate-article/route.ts ") },
               category: {
                 type: "string",
                 enum: [
@@ -118,21 +119,21 @@ Under no circumstances use em dashes (—). Always use standard hyphens (-), col
                   "Litigation, Infringement & Brand Enforcement",
                 ],
               },
-              statutoryFramework: { type: "string", description: "Governing Indian statutory laws" },
+              statutoryFramework: { type: "string", description: validateAndNormalizeDescription("Governing Indian statutory laws", "app/api/generate-article/route.ts ") },
               outline: {
                 type: "array",
                 items: { type: "string" },
-                description: "Array of exactly 5 H2 headings",
+                description: validateAndNormalizeDescription("Array of exactly 5 H2 headings", "app/api/generate-article/route.ts "),
               },
               keyTakeaways: {
                 type: "array",
                 items: { type: "string" },
-                description: "Array of exactly 5 actionable bullet points",
+                description: validateAndNormalizeDescription("Array of exactly 5 actionable bullet points", "app/api/generate-article/route.ts "),
               },
               popularSearches: {
                 type: "array",
                 items: { type: "string" },
-                description: "Array of 10 high-intent IP search terms",
+                description: validateAndNormalizeDescription("Array of 10 high-intent IP search terms", "app/api/generate-article/route.ts "),
               },
             },
             required: [

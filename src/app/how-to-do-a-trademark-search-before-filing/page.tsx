@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -38,7 +39,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Trademark Search Before Filing',
-    description: 'Master the art of trademark searching in India. Our 5000+ word guide covers public search, phonetic matches, Vienna codes, and risk assessment to protect your brand.',
+    description: validateAndNormalizeDescription('Master the art of trademark searching in India. Our 5000+ word guide covers public search, phonetic matches, Vienna codes, and risk assessment to protect your brand.', "app/how-to-do-a-trademark-search-before-filing/page.tsx "),
     keywords: [
         'how to do a trademark search',
         'trademark search india',
@@ -53,7 +54,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Trademark Search Before Filing',
-        description: 'Don\'t file your trademark blindly. Learn the professional techniques for conducting a comprehensive trademark search to ensure your brand\'s safety.',
+        description: validateAndNormalizeDescription('Don\'t file your trademark blindly. Learn the professional techniques for conducting a comprehensive trademark search to ensure your brand\'s safety.', "app/how-to-do-a-trademark-search-before-filing/page.tsx "),
         url: 'https://www.iprkaro.com/how-to-do-a-trademark-search-before-filing',
         type: 'article',
     },

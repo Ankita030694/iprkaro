@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -25,7 +26,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Trademark Violation Examples India',
-    description: 'Explore detailed examples of trademark violations in India. Learn about phonetic similarity, visual confusion, and trade dress infringement through real legal case studies.',
+    description: validateAndNormalizeDescription('Explore detailed examples of trademark violations in India. Learn about phonetic similarity, visual confusion, and trade dress infringement through real legal case studies.', "app/trademark-violation-examples-india/page.tsx "),
     keywords: [
         'Trademark Violation Examples India india',
         'deceptive similarity cases india',
@@ -40,7 +41,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Trademark Violation Examples India',
-        description: 'Comprehensive guide showcasing actual cases of trademark misuse, from phonetic copycats to visual packaging fraud in India.',
+        description: validateAndNormalizeDescription('Comprehensive guide showcasing actual cases of trademark misuse, from phonetic copycats to visual packaging fraud in India.', "app/trademark-violation-examples-india/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-violation-examples-india',
         type: 'article',
     },

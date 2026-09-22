@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -28,7 +29,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'TM Accepted but Advertised Meaning | Journal Guide',
-    description: 'Comprehensive guide to "Accepted and Advertised" trademark status in India. Learn about the 4-month opposition period, Trademark Journal publication, and next steps to registration. 5000+ words of expertise.',
+    description: validateAndNormalizeDescription('Comprehensive guide to "Accepted and Advertised" trademark status in India. Learn about the 4-month opposition period, Trademark Journal publication, and next steps to registration. 5000+ words of expertise.', "app/trademark-accepted-but-advertised-meaning/page.tsx "),
     keywords: [
         'trademark accepted but advertised meaning',
         'accepted and advertised meaning in trademark',
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'The Ultimate Guide to Trademark Accepted & Advertised Status',
-        description: 'Exhaustive legal analysis of the advertisement phase in the Indian Trademark Registry. Understand your rights and the risks during the 4-month window.',
+        description: validateAndNormalizeDescription('Exhaustive legal analysis of the advertisement phase in the Indian Trademark Registry. Understand your rights and the risks during the 4-month window.', "app/trademark-accepted-but-advertised-meaning/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-accepted-but-advertised-meaning',
         type: 'article',
     },

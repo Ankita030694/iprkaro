@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -29,7 +30,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'TM for Real Estate Company | Class 36 & 37 India',
-    description: 'Expert guide to trademark registration for real estate developers and agencies in India. Secure your company name and project brands under Class 36 and 37. 5000+ words of professional legal insight.',
+    description: validateAndNormalizeDescription('Expert guide to trademark registration for real estate developers and agencies in India. Secure your company name and project brands under Class 36 and 37. 5000+ words of professional legal insight.', "app/trademark-for-real-estate-company/page.tsx "),
     keywords: [
         'trademark for real estate company',
         'real estate brand registration india',
@@ -44,7 +45,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Elite Trademark Registration for the Real Estate Sector in India',
-        description: 'Protect your property brand and construction innovations with India\'s premier IP legal experts. 100% online, same-day filing for real estate firms.',
+        description: validateAndNormalizeDescription('Protect your property brand and construction innovations with India\'s premier IP legal experts. 100% online, same-day filing for real estate firms.', "app/trademark-for-real-estate-company/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-for-real-estate-company',
         type: 'article',
     },

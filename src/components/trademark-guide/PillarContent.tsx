@@ -1,26 +1,28 @@
 'use client';
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
+
 
 import React from 'react';
 import Link from 'next/link';
 
 export default function PillarContent() {
   const trademarkClasses = [
-    { class: 1, description: "Chemicals, adhesives, fertilizers" },
-    { class: 2, description: "Paints, varnishes, lacquers" },
-    { class: 3, description: "Cosmetics, cleaning preparations" },
-    { class: 4, description: "Industrial oils, lubricants, fuels" },
-    { class: 5, description: "Pharmaceuticals, medical supplies" },
-    { class: 9, description: "Software, electronics, computers" },
-    { class: 16, description: "Paper goods, stationery, publications" },
-    { class: 25, description: "Clothing, footwear, headgear" },
-    { class: 29, description: "Meat, dairy, processed foods" },
-    { class: 30, description: "Coffee, tea, flour, bakery products" },
-    { class: 35, description: "Advertising, business management" },
-    { class: 41, description: "Education, entertainment services" },
-    { class: 42, description: "IT services, scientific research" },
-    { class: 43, description: "Restaurant, hotel services" },
-    { class: 44, description: "Medical, beauty, agriculture services" },
-    { class: 45, description: "Legal, security services" }
+    { class: 1, description: validateAndNormalizeDescription("Chemicals, adhesives, fertilizers", "components/trademark-guide/PillarContent.tsx ") },
+    { class: 2, description: validateAndNormalizeDescription("Paints, varnishes, lacquers", "components/trademark-guide/PillarContent.tsx ") },
+    { class: 3, description: validateAndNormalizeDescription("Cosmetics, cleaning preparations", "components/trademark-guide/PillarContent.tsx ") },
+    { class: 4, description: validateAndNormalizeDescription("Industrial oils, lubricants, fuels", "components/trademark-guide/PillarContent.tsx ") },
+    { class: 5, description: validateAndNormalizeDescription("Pharmaceuticals, medical supplies", "components/trademark-guide/PillarContent.tsx ") },
+    { class: 9, description: validateAndNormalizeDescription("Software, electronics, computers", "components/trademark-guide/PillarContent.tsx ") },
+    { class: 16, description: validateAndNormalizeDescription("Paper goods, stationery, publications", "components/trademark-guide/PillarContent.tsx ") },
+    { class: 25, description: validateAndNormalizeDescription("Clothing, footwear, headgear", "components/trademark-guide/PillarContent.tsx ") },
+    { class: 29, description: validateAndNormalizeDescription("Meat, dairy, processed foods", "components/trademark-guide/PillarContent.tsx ") },
+    { class: 30, description: validateAndNormalizeDescription("Coffee, tea, flour, bakery products", "components/trademark-guide/PillarContent.tsx ") },
+    { class: 35, description: validateAndNormalizeDescription("Advertising, business management", "components/trademark-guide/PillarContent.tsx ") },
+    { class: 41, description: validateAndNormalizeDescription("Education, entertainment services", "components/trademark-guide/PillarContent.tsx ") },
+    { class: 42, description: validateAndNormalizeDescription("IT services, scientific research", "components/trademark-guide/PillarContent.tsx ") },
+    { class: 43, description: validateAndNormalizeDescription("Restaurant, hotel services", "components/trademark-guide/PillarContent.tsx ") },
+    { class: 44, description: validateAndNormalizeDescription("Medical, beauty, agriculture services", "components/trademark-guide/PillarContent.tsx ") },
+    { class: 45, description: validateAndNormalizeDescription("Legal, security services", "components/trademark-guide/PillarContent.tsx ") }
   ];
 
   const documents = [
@@ -39,79 +41,79 @@ export default function PillarContent() {
     {
       step: "Trademark Search",
       timeline: "1-2 days",
-      description: "Comprehensive search in the Indian Trademark Registry database to check for identical or similar existing marks. This includes phonetic, visual, and conceptual similarity analysis."
+      description: validateAndNormalizeDescription("Comprehensive search in the Indian Trademark Registry database to check for identical or similar existing marks. This includes phonetic, visual, and conceptual similarity analysis.", "components/trademark-guide/PillarContent.tsx ")
     },
     {
       step: "Application Preparation",
       timeline: "2-3 days",
-      description: "Drafting TM-A form with accurate classification of goods/services under Nice Classification, preparing trademark representation, and compiling required documents."
+      description: validateAndNormalizeDescription("Drafting TM-A form with accurate classification of goods/services under Nice Classification, preparing trademark representation, and compiling required documents.", "components/trademark-guide/PillarContent.tsx ")
     },
     {
       step: "Filing with IP India",
       timeline: "1 day",
-      description: "Electronic filing of application through the IP India portal. Upon successful submission, an application number is generated immediately."
+      description: validateAndNormalizeDescription("Electronic filing of application through the IP India portal. Upon successful submission, an application number is generated immediately.", "components/trademark-guide/PillarContent.tsx ")
     },
     {
       step: "Formality Check by Registry",
       timeline: "1-2 months",
-      description: "The Trademark Registry conducts an initial formality check to ensure all documents are in order and fees are paid correctly."
+      description: validateAndNormalizeDescription("The Trademark Registry conducts an initial formality check to ensure all documents are in order and fees are paid correctly.", "components/trademark-guide/PillarContent.tsx ")
     },
     {
       step: "Examination Report",
       timeline: "12-18 months",
-      description: "Trademark examiner reviews the application for registrability, checking for conflicts with existing marks, descriptiveness, and compliance with Trademarks Act, 1999."
+      description: validateAndNormalizeDescription("Trademark examiner reviews the application for registrability, checking for conflicts with existing marks, descriptiveness, and compliance with Trademarks Act, 1999.", "components/trademark-guide/PillarContent.tsx ")
     },
     {
       step: "Respond to Objections (if any)",
       timeline: "1 month",
-      description: "If objections are raised, applicant has 30 days to file a reply. May include written submissions and/or hearing before the Trademark Officer."
+      description: validateAndNormalizeDescription("If objections are raised, applicant has 30 days to file a reply. May include written submissions and/or hearing before the Trademark Officer.", "components/trademark-guide/PillarContent.tsx ")
     },
     {
       step: "Publication in Trademark Journal",
       timeline: "1-2 months post-acceptance",
-      description: "After examination clearance, mark is published in the weekly Trademark Journal for public opposition period of 4 months."
+      description: validateAndNormalizeDescription("After examination clearance, mark is published in the weekly Trademark Journal for public opposition period of 4 months.", "components/trademark-guide/PillarContent.tsx ")
     },
     {
       step: "Opposition Period",
       timeline: "4 months",
-      description: "Public can file opposition within 4 months of publication. If opposed, counter-statement and evidence rounds follow."
+      description: validateAndNormalizeDescription("Public can file opposition within 4 months of publication. If opposed, counter-statement and evidence rounds follow.", "components/trademark-guide/PillarContent.tsx ")
     },
     {
       step: "Registration Certificate",
       timeline: "2-3 months post-journal",
-      description: "If no opposition is filed or opposition is decided in favor, registration certificate is issued with 10-year validity from application date."
+      description: validateAndNormalizeDescription("If no opposition is filed or opposition is decided in favor, registration certificate is issued with 10-year validity from application date.", "components/trademark-guide/PillarContent.tsx ")
     }
   ];
 
   const commonObjections = [
     {
       objection: "Descriptive Mark",
-      description: "Mark directly describes the goods/services without distinctive character",
+      description: validateAndNormalizeDescription("Mark directly describes the goods/services without distinctive character", "components/trademark-guide/PillarContent.tsx "),
       response: "Argue acquired distinctiveness through extensive use, submit sales figures, advertising expenses, market surveys, and evidence of consumer recognition"
     },
     {
       objection: "Similar to Existing Mark",
-      description: "Phonetic, visual, or conceptual similarity with earlier registered/pending marks",
+      description: validateAndNormalizeDescription("Phonetic, visual, or conceptual similarity with earlier registered/pending marks", "components/trademark-guide/PillarContent.tsx "),
       response: "Distinguish your mark on grounds of different trade channels, consumer base, co-existence in market, differences in goods/services classification"
     },
     {
       objection: "Generic or Common Term",
-      description: "Mark consists of words commonly used in the trade or generic terms",
+      description: validateAndNormalizeDescription("Mark consists of words commonly used in the trade or generic terms", "components/trademark-guide/PillarContent.tsx "),
       response: "Demonstrate that the mark has acquired secondary meaning, evidence of exclusive use, brand recognition surveys, media coverage"
     },
     {
       objection: "Prohibited Under Section 9",
-      description: "Mark contains elements that are deceptive, scandalous, or against public morality",
+      description: validateAndNormalizeDescription("Mark contains elements that are deceptive, scandalous, or against public morality", "components/trademark-guide/PillarContent.tsx "),
       response: "Clarify the meaning and context, provide evidence that mark is not misleading, reference precedents where similar marks were allowed"
     },
     {
       objection: "Incorrect Classification",
-      description: "Goods/services not properly classified under Nice Classification",
+      description: validateAndNormalizeDescription("Goods/services not properly classified under Nice Classification", "components/trademark-guide/PillarContent.tsx "),
       response: "Amend the specification with correct class and description, cite class headings and explanatory notes from Nice Classification"
     },
     {
       objection: "Prior User/Proprietor",
-      description: "Someone claims prior use or proprietorship of the mark",
+      description: validateAndNormalizeDescription("Someone claims prior use or proprietorship of the mark", "components/trademark-guide/PillarContent.tsx "),
       response: "Submit earliest use evidence, invoices, advertisements, dated samples, registration certificates from other jurisdictions showing seniority"
     }
   ];
@@ -1199,37 +1201,37 @@ export default function PillarContent() {
             {[
               {
                 title: "How to Choose the Right Trademark Class",
-                description: "Complete guide to Nice Classification and class selection strategy",
+                description: validateAndNormalizeDescription("Complete guide to Nice Classification and class selection strategy", "components/trademark-guide/PillarContent.tsx "),
                 icon: "fas fa-layer-group",
                 link: "/blog/trademark-class-selection"
               },
               {
                 title: "Trademark vs Copyright: Key Differences",
-                description: "Understand which intellectual property protection you need",
+                description: validateAndNormalizeDescription("Understand which intellectual property protection you need", "components/trademark-guide/PillarContent.tsx "),
                 icon: "fas fa-balance-scale",
                 link: "/blog/trademark-vs-copyright"
               },
               {
                 title: "Top 10 Trademark Rejection Reasons",
-                description: "Common mistakes to avoid in your trademark application",
+                description: validateAndNormalizeDescription("Common mistakes to avoid in your trademark application", "components/trademark-guide/PillarContent.tsx "),
                 icon: "fas fa-exclamation-triangle",
                 link: "/blog/trademark-rejection-reasons"
               },
               {
                 title: "Trademark Objection Reply Guide",
-                description: "Step-by-step guide to responding to examination reports",
+                description: validateAndNormalizeDescription("Step-by-step guide to responding to examination reports", "components/trademark-guide/PillarContent.tsx "),
                 icon: "fas fa-reply-all",
                 link: "/blog/trademark-objection-reply"
               },
               {
                 title: "International Trademark Registration",
-                description: "Madrid Protocol and multi-country trademark protection",
+                description: validateAndNormalizeDescription("Madrid Protocol and multi-country trademark protection", "components/trademark-guide/PillarContent.tsx "),
                 icon: "fas fa-globe",
                 link: "/blog/international-trademark"
               },
               {
                 title: "Trademark Renewal Process",
-                description: "Keep your trademark alive with timely renewals",
+                description: validateAndNormalizeDescription("Keep your trademark alive with timely renewals", "components/trademark-guide/PillarContent.tsx "),
                 icon: "fas fa-sync-alt",
                 link: "/blog/trademark-renewal"
               }

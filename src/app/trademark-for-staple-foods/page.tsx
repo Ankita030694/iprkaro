@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -35,7 +36,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'TM for Staple Foods (Class 30) | Register Your Brand',
-    description: 'Comprehensive guide to trademark registration for staple foods like rice, flour, spices, coffee, and tea in India. Secure your food brand under Class 30 with expert legal help.',
+    description: validateAndNormalizeDescription('Comprehensive guide to trademark registration for staple foods like rice, flour, spices, coffee, and tea in India. Secure your food brand under Class 30 with expert legal help.', "app/trademark-for-staple-foods/page.tsx "),
     keywords: [
         'trademark for staple foods',
         'class 30 trademark india',
@@ -52,7 +53,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Elite Trademark Registration for Staple Food Brands',
-        description: 'Protect your rice, spices, coffee, or tea brand with India\'s leading IP legal team. 100% online process, comprehensive Class 30 protection.',
+        description: validateAndNormalizeDescription('Protect your rice, spices, coffee, or tea brand with India\'s leading IP legal team. 100% online process, comprehensive Class 30 protection.', "app/trademark-for-staple-foods/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-for-staple-foods',
         type: 'article',
     },

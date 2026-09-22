@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -43,7 +44,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Pharmacist Registration UP Guide | UPPC Online Portal 2026',
-    description: 'Complete guide to pharmacist registration in Uttar Pradesh. Learn about UPPC online application, fees, Form-V training, and mandatory document verification.',
+    description: validateAndNormalizeDescription('Complete guide to pharmacist registration in Uttar Pradesh. Learn about UPPC online application, fees, Form-V training, and mandatory document verification.', "app/registration-of-pharmacist-in-up/page.tsx "),
     keywords: [
         'pharmacist registration in up',
         'uppc online registration 2026',
@@ -58,7 +59,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Mastering the UPPC: The Ultimate Pharmacist Registration Manual',
-        description: 'Ready to practice as a pharmacist in UP? Step-by-step instructions for the UP Pharmacy Council portal, fees, and physical verification in Lucknow.',
+        description: validateAndNormalizeDescription('Ready to practice as a pharmacist in UP? Step-by-step instructions for the UP Pharmacy Council portal, fees, and physical verification in Lucknow.', "app/registration-of-pharmacist-in-up/page.tsx "),
         url: 'https://www.iprkaro.com/registration-of-pharmacist-in-up',
         type: 'article',
     },

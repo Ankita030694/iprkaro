@@ -1,4 +1,6 @@
 'use client';
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
+
 
 import { useEffect, useState, memo, useRef } from 'react';
 import { collection, getDocs, query, orderBy, limit } from 'firebase/firestore';
@@ -64,24 +66,21 @@ const authorBios: Record<
   'Adv. Anuj Anand Malik': {
     name: 'Adv. Anuj Anand Malik',
     title: 'Founder & Lead IP Advocate',
-    description:
-      'Adv. Anuj Anand Malik is the Founder of IPR Karo and an esteemed Intellectual Property Attorney. With extensive experience across Trademark Prosecution, Section 9/11 Objection clearance, TM-O Opposition hearings, and commercial IP litigation before the Trade Marks Registry and Delhi High Court, he has successfully steered thousands of brand registrations for startups and conglomerates.',
+    description: validateAndNormalizeDescription('Adv. Anuj Anand Malik is the Founder of IPR Karo and an esteemed Intellectual Property Attorney. With extensive experience across Trademark Prosecution, Section 9/11 Objection clearance, TM-O Opposition hearings, and commercial IP litigation before the Trade Marks Registry and Delhi High Court, he has successfully steered thousands of brand registrations for startups and conglomerates.', "app/blog/[slug]/ArticleDetail.tsx "),
     image: '/anujbhiya.png',
     linkedInUrl: 'https://www.linkedin.com/in/iamanujmalik/',
   },
   'Shrey Arora': {
     name: 'Shrey Arora',
     title: 'Senior IP Strategist & Trademark Analyst',
-    description:
-      'Senior IP Strategist specializing in Nice Classification (Classes 1-45), cross-border Madrid Protocol filings, and digital brand protection. Advised 500+ tech startups, D2C brands, and SaaS innovators on global trademark clearance strategies.',
+    description: validateAndNormalizeDescription('Senior IP Strategist specializing in Nice Classification (Classes 1-45), cross-border Madrid Protocol filings, and digital brand protection. Advised 500+ tech startups, D2C brands, and SaaS innovators on global trademark clearance strategies.', "app/blog/[slug]/ArticleDetail.tsx "),
     image: '/shreychad.svg',
     linkedInUrl: 'https://www.linkedin.com/in/shrey-arora-b0487b67/',
   },
   'Team IPRKaro': {
     name: 'Team IPRKaro',
     title: 'IP Research & Regulatory Desk',
-    description:
-      'The specialized research and regulatory affairs wing of IPR Karo comprising registered patent agents, trademark attorneys, and IP legal analysts dedicated to tracking Indian Trade Marks Registry precedents and legislative developments.',
+    description: validateAndNormalizeDescription('The specialized research and regulatory affairs wing of IPR Karo comprising registered patent agents, trademark attorneys, and IP legal analysts dedicated to tracking Indian Trade Marks Registry precedents and legislative developments.', "app/blog/[slug]/ArticleDetail.tsx "),
     image: '/logo/iprlogo.svg',
     linkedInUrl: 'https://www.iprkaro.com/about-us',
   },

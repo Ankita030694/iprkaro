@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -29,7 +30,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Trademark Objection Reply Format | Expert Legal Drafts',
-  description: 'Download the official trademark objection reply format for India. Expert guide on responding to Section 9 and Section 11 objections with legal precedents.',
+  description: validateAndNormalizeDescription('Download the official trademark objection reply format for India. Expert guide on responding to Section 9 and Section 11 objections with legal precedents.', "app/trademark-objection-reply-format-india/page.tsx "),
   keywords: [
     'trademark objection reply format india',
     'reply to trademark objection section 9',
@@ -44,7 +45,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Professional Trademark Objection Reply Formats for Indian Brand Owners',
-    description: 'Master the art of overcoming trademark objections with our comprehensive guide and downloadable reply formats. 100% legal compliance.',
+    description: validateAndNormalizeDescription('Master the art of overcoming trademark objections with our comprehensive guide and downloadable reply formats. 100% legal compliance.', "app/trademark-objection-reply-format-india/page.tsx "),
     url: 'https://www.iprkaro.com/trademark-objection-reply-format-india',
     type: 'article',
   },

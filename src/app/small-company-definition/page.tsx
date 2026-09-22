@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -42,7 +43,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Small Company Definition in India',
-    description: 'Understand the Small Company Definition in India in India. Learn about Section 2(85), updated thresholds for capital and turnover, and key compliance exemptions.',
+    description: validateAndNormalizeDescription('Understand the Small Company Definition in India in India. Learn about Section 2(85), updated thresholds for capital and turnover, and key compliance exemptions.', "app/small-company-definition/page.tsx "),
     keywords: [
         'Small Company Definition in India companies act 2013',
         'section 2(85) companies act threshold',
@@ -57,7 +58,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Small Company Definition in India',
-        description: 'Does your startup qualify for reduced compliance? Learn about the increased MCA thresholds and how to claim exemptions for your private limited company.',
+        description: validateAndNormalizeDescription('Does your startup qualify for reduced compliance? Learn about the increased MCA thresholds and how to claim exemptions for your private limited company.', "app/small-company-definition/page.tsx "),
         url: 'https://www.iprkaro.com/small-company-definition',
         type: 'article',
     },

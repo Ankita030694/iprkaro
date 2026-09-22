@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -30,7 +31,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Trademark vs Copyright vs Patent | 2026 India Guide',
-    description: 'Understand the critical differences between Trademark, Copyright, and Patent in India. Full 2026 guide on duration, scope, and statutory frameworks.',
+    description: validateAndNormalizeDescription('Understand the critical differences between Trademark, Copyright, and Patent in India. Full 2026 guide on duration, scope, and statutory frameworks.', "app/difference-between-trademark-copyright-and-patent-protection-in-india/page.tsx "),
     keywords: [
         'difference between trademark copyright and patent protection in india',
         'trademark vs copyright vs patent india 2026',
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Trademark vs Copyright vs Patent: The Forensic 2026 IP Guide',
-        description: 'Navigating the Triple Crown of Business Protection. Learn which shield fits your invention, brand, or creative work.',
+        description: validateAndNormalizeDescription('Navigating the Triple Crown of Business Protection. Learn which shield fits your invention, brand, or creative work.', "app/difference-between-trademark-copyright-and-patent-protection-in-india/page.tsx "),
         url: 'https://www.iprkaro.com/difference-between-trademark-copyright-and-patent-protection-in-india',
         type: 'article',
     },

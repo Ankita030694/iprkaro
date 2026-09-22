@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -32,7 +33,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Govt Portal for TM Registration in India | 2026 Guide',
-    description: 'Find out which government portal is used for trademark registration in India. Detailed guide on ipindia.gov.in, CGPDTM, e-filing services, and public search tools.',
+    description: validateAndNormalizeDescription('Find out which government portal is used for trademark registration in India. Detailed guide on ipindia.gov.in, CGPDTM, e-filing services, and public search tools.', "app/which-government-portal-is-used-for-trademark-registration-in-india/page.tsx "),
     keywords: [
         'which government portal is used for trademark registration in india',
         'ip india portal official website',
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Which Government Portal is Used for Trademark Registration in India? | Official Guide',
-        description: 'The definitive 4000-word guide to the official IP India portal. Learn how to navigate ipindia.gov.in for trademark search and registration.',
+        description: validateAndNormalizeDescription('The definitive 4000-word guide to the official IP India portal. Learn how to navigate ipindia.gov.in for trademark search and registration.', "app/which-government-portal-is-used-for-trademark-registration-in-india/page.tsx "),
         url: 'https://www.iprkaro.com/which-government-portal-is-used-for-trademark-registration-in-india',
         type: 'article',
     },

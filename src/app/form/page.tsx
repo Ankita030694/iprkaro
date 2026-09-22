@@ -1,5 +1,6 @@
 'use client';
 
+
 import { useSearchParams } from 'next/navigation';
 import { Suspense } from 'react';
 import dynamic from 'next/dynamic';

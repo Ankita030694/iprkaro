@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -25,7 +26,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'TM Enforcement Strategies in India | Protect Your Brand',
-  description: 'Discover comprehensive trademark enforcement strategies in India. Learn how to protect your registered brand using civil suits, cease and desist letters, criminal complaints, customs recordal, and online takedowns.',
+  description: validateAndNormalizeDescription('Discover comprehensive trademark enforcement strategies in India. Learn how to protect your registered brand using civil suits, cease and desist letters, criminal complaints, customs recordal, and online takedowns.', "app/trademark-enforcement-strategies/page.tsx "),
   keywords: [
     'trademark enforcement strategies india',
     'how to enforce trademark india',
@@ -40,7 +41,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'The Complete Trademark Enforcement Playbook for Indian Brands',
-    description: 'From cease and desist to High Court injunctions: a 5000+ word expert guide on every legal tool available to stop trademark infringement in India.',
+    description: validateAndNormalizeDescription('From cease and desist to High Court injunctions: a 5000+ word expert guide on every legal tool available to stop trademark infringement in India.', "app/trademark-enforcement-strategies/page.tsx "),
     url: 'https://www.iprkaro.com/trademark-enforcement-strategies',
     type: 'article',
   },

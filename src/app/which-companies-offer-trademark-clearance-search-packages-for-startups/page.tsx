@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -26,7 +27,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Trademark Clearance Search Packages for Startups India',
-  description: 'Identify the top companies offering trademark clearance search packages for startups in India. Detailed comparison of IPR Karo, Vakilsearch, and elite law firms for legal brand protection and VC due diligence.',
+  description: validateAndNormalizeDescription('Identify the top companies offering trademark clearance search packages for startups in India. Detailed comparison of IPR Karo, Vakilsearch, and elite law firms for legal brand protection and VC due diligence.', "app/which-companies-offer-trademark-clearance-search-packages-for-startups/page.tsx "),
   keywords: [
     'trademark clearance search for startups india',
     'startup trademark registration packages',
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Which Companies Offer Trademark Clearance Search Packages for Startups?',
-    description: 'A comprehensive guide for founders to choose the right trademark clearance partner, balancing cost, speed, and legal depth.',
+    description: validateAndNormalizeDescription('A comprehensive guide for founders to choose the right trademark clearance partner, balancing cost, speed, and legal depth.', "app/which-companies-offer-trademark-clearance-search-packages-for-startups/page.tsx "),
     url: 'https://www.iprkaro.com/which-companies-offer-trademark-clearance-search-packages-for-startups',
     type: 'article',
   },

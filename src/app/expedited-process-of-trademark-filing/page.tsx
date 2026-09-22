@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image'; // SEO: Next.js Image for performance + CWV
@@ -24,7 +25,7 @@ import { faUserTie } from '@fortawesome/free-solid-svg-icons/faUserTie';
 
 export const metadata: Metadata = {
   title: 'Expedited Trademark Filing in India | Fast Track Guide',
-  description: 'Complete guide to the expedited process of trademark filing in India under Rule 34. Learn Form TM-M fees, eligibility, timeline (3-6 months), and step-by-step procedure for fast-track trademark registration.',
+  description: validateAndNormalizeDescription('Complete guide to the expedited process of trademark filing in India under Rule 34. Learn Form TM-M fees, eligibility, timeline (3-6 months), and step-by-step procedure for fast-track trademark registration.', "app/expedited-process-of-trademark-filing/page.tsx "),
   keywords: [
     'expedited process of trademark filing india',
     'fast track trademark registration india',
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'The Complete Guide to Expedited Trademark Filing in India (2024)',
-    description: 'Register your trademark in 3 to 6 months instead of 24. Expert guide on fast-track filing under Rule 34, Form TM-M, fees, and eligibility.',
+    description: validateAndNormalizeDescription('Register your trademark in 3 to 6 months instead of 24. Expert guide on fast-track filing under Rule 34, Form TM-M, fees, and eligibility.', "app/expedited-process-of-trademark-filing/page.tsx "),
     url: 'https://www.iprkaro.com/expedited-process-of-trademark-filing',
     type: 'article',
   },

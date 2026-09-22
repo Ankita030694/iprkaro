@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -23,7 +24,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'What to Do if Someone Copies Your Trademark? | India',
-    description: 'A complete legal action plan for trademark owners in India. Learn about cease and desist notices, civil suits, criminal raids, and claiming damages under the Trade Marks Act 1999.',
+    description: validateAndNormalizeDescription('A complete legal action plan for trademark owners in India. Learn about cease and desist notices, civil suits, criminal raids, and claiming damages under the Trade Marks Act 1999.', "app/what-to-do-if-someone-copies-your-trademark/page.tsx "),
     keywords: [
         'someone copied my trademark india',
         'trademark infringement legal action india',
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Protect Your Brand: Legal Steps Against Trademark Copycats in India',
-        description: 'Discover the exact legal steps to take when your logo or brand name is stolen. From police raids to court injunctions, we cover everything.',
+        description: validateAndNormalizeDescription('Discover the exact legal steps to take when your logo or brand name is stolen. From police raids to court injunctions, we cover everything.', "app/what-to-do-if-someone-copies-your-trademark/page.tsx "),
         url: 'https://www.iprkaro.com/what-to-do-if-someone-copies-your-trademark',
         type: 'article',
     },

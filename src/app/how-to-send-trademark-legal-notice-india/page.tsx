@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -26,7 +27,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'How to Send Trademark Legal Notice India | Step-by-Step',
-    description: 'Learn the complete process of sending a trademark legal notice in India. Discover drafting essentials, legal requirements under the Trade Marks Act, and how to use RPAD for proof of service.',
+    description: validateAndNormalizeDescription('Learn the complete process of sending a trademark legal notice in India. Discover drafting essentials, legal requirements under the Trade Marks Act, and how to use RPAD for proof of service.', "app/how-to-send-trademark-legal-notice-india/page.tsx "),
     keywords: [
         'how to send trademark legal notice india',
         'trademark cease and desist notice india',
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Mastering the Trademark Legal Notice Process in India',
-        description: 'Comprehensive guide on drafting and dispatching trademark legal notices to stop infringers and protect your brand equity.',
+        description: validateAndNormalizeDescription('Comprehensive guide on drafting and dispatching trademark legal notices to stop infringers and protect your brand equity.', "app/how-to-send-trademark-legal-notice-india/page.tsx "),
         url: 'https://www.iprkaro.com/how-to-send-trademark-legal-notice-india',
         type: 'article',
     },

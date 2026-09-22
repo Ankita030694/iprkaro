@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -28,7 +29,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Patent Registration India | Process, Cost & Expert Filing',
-  description: 'File your Patent in India with IPR Karo. Low-cost filing for Startups & MSMEs. Expert Patent Agents for Provisional/Complete specifications, Patent Search, and Expedited Examination.',
+  description: validateAndNormalizeDescription('File your Patent in India with IPR Karo. Low-cost filing for Startups & MSMEs. Expert Patent Agents for Provisional/Complete specifications, Patent Search, and Expedited Examination.', "app/our-services/patent-registration/page.tsx "),
   keywords: [
     'patent registration india',
     'patent filing cost india',
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Patent Registration in India (2025) | Secure Your Tech',
-    description: 'Turn your invention into a valuable asset. Comprehensive patent filing, drafting, and prosecution services. 80% Fee Rebate for Startups/MSMEs.',
+    description: validateAndNormalizeDescription('Turn your invention into a valuable asset. Comprehensive patent filing, drafting, and prosecution services. 80% Fee Rebate for Startups/MSMEs.', "app/our-services/patent-registration/page.tsx "),
     url: 'https://www.iprkaro.com/our-services/patent-registration',
     type: 'article',
     images: [

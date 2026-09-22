@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -26,7 +27,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Can You Trademark Your Own Name',
-    description: 'A complete guide to registering your personal name as a trademark in India. Learn about acquired distinctiveness, Section 9(1) provisos, and key case laws.',
+    description: validateAndNormalizeDescription('A complete guide to registering your personal name as a trademark in India. Learn about acquired distinctiveness, Section 9(1) provisos, and key case laws.', "app/can-you-trademark-your-own-name-in-india/page.tsx "),
     keywords: [
         'trademark your name india',
         'registering personal name trademark',
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Can You Trademark Your Own Name',
-        description: 'Can you own the rights to your own name in India? Explore the complexities of distinctiveness, honest concurrent use, and personal name trademarks.',
+        description: validateAndNormalizeDescription('Can you own the rights to your own name in India? Explore the complexities of distinctiveness, honest concurrent use, and personal name trademarks.', "app/can-you-trademark-your-own-name-in-india/page.tsx "),
         url: 'https://www.iprkaro.com/can-you-trademark-your-own-name-in-india',
         type: 'article',
     },

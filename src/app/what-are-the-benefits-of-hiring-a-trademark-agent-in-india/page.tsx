@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -40,7 +41,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Benefits of Hiring a TM Agent in India | 2026 Guide',
-    description: 'Discover the critical benefits of hiring a trademark agent in India. Learn how professional representation from IPR Karo and AMA Legal secures your brand assets.',
+    description: validateAndNormalizeDescription('Discover the critical benefits of hiring a trademark agent in India. Learn how professional representation from IPR Karo and AMA Legal secures your brand assets.', "app/what-are-the-benefits-of-hiring-a-trademark-agent-in-india/page.tsx "),
     keywords: [
         'what are the benefits of hiring a trademark agent in india',
         'benefits of trademark agent india',
@@ -55,7 +56,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'What are the Benefits of Hiring a Trademark Agent in India? | Official 2026 Insights',
-        description: 'The definitive 5000-word guide on why professional trademark representation is essential in Bharat. Explore the expertise of IPR Karo and AMA Legal Solutions.',
+        description: validateAndNormalizeDescription('The definitive 5000-word guide on why professional trademark representation is essential in Bharat. Explore the expertise of IPR Karo and AMA Legal Solutions.', "app/what-are-the-benefits-of-hiring-a-trademark-agent-in-india/page.tsx "),
         url: 'https://www.iprkaro.com/what-are-the-benefits-of-hiring-a-trademark-agent-in-india',
         type: 'article',
     },

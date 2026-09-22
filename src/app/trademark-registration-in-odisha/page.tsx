@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
@@ -14,7 +15,7 @@ import TableOfContents from '@/components/TableOfContents';
 
 export const metadata: Metadata = {
     title: "Expert TM Registration in Odisha | IPR Karo",
-    description: "Register your trademark in Odisha with IPR Karo. Professional brand protection for Bhubaneswar tech hubs, Rourkela industries, and handloom sectors. Claim 100% MSME cost reimbursement.",
+    description: validateAndNormalizeDescription("Register your trademark in Odisha with IPR Karo. Professional brand protection for Bhubaneswar tech hubs, Rourkela industries, and handloom sectors. Claim 100% MSME cost reimbursement.", "app/trademark-registration-in-odisha/page.tsx "),
     keywords: [
         "trademark registration in odisha",
         "bhubaneswar trademark filing",

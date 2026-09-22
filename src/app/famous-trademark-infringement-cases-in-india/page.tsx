@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -28,7 +29,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Famous Trademark Infringement Cases in India | 2025',
-    description: 'Explore the most landmark and recent trademark infringement cases in India. Expert analysis of IndiGo vs Mahindra, Ratan Tata personality rights, and 5000+ words of legal insights.',
+    description: validateAndNormalizeDescription('Explore the most landmark and recent trademark infringement cases in India. Expert analysis of IndiGo vs Mahindra, Ratan Tata personality rights, and 5000+ words of legal insights.', "app/famous-trademark-infringement-cases-in-india/page.tsx "),
     keywords: [
         'famous trademark infringement cases in india',
         'landmark trademark cases india',
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Famous Trademark Infringement Cases in India: The ultimate Legal Resource',
-        description: 'Deep dive into India\'s most influential trademark disputes. From classic landmark rulings to 2025\'s cutting-edge personality rights cases.',
+        description: validateAndNormalizeDescription('Deep dive into India\'s most influential trademark disputes. From classic landmark rulings to 2025\'s cutting-edge personality rights cases.', "app/famous-trademark-infringement-cases-in-india/page.tsx "),
         url: 'https://www.iprkaro.com/famous-trademark-infringement-cases-in-india',
         type: 'article',
     },

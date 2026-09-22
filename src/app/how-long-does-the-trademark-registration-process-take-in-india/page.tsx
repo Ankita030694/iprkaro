@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -31,7 +32,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Trademark Registration Timeline in India | 2026',
-    description: 'Find out exactly how long the trademark registration process takes in India. Stage-by-stage timeline for 2026, from filing to registration certificate.',
+    description: validateAndNormalizeDescription('Find out exactly how long the trademark registration process takes in India. Stage-by-stage timeline for 2026, from filing to registration certificate.', "app/how-long-does-the-trademark-registration-process-take-in-india/page.tsx "),
     keywords: [
         'how long does trademark registration take in india',
         'trademark registration timeline india 2026',
@@ -46,7 +47,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Trademark Registration Timeline India: The 2026 Forensic Guide',
-        description: 'From ™ to ®: Master the chronology of brand protection. Learn about stages, bottlenecks, and acceleration strategies for Indian trademarks.',
+        description: validateAndNormalizeDescription('From ™ to ®: Master the chronology of brand protection. Learn about stages, bottlenecks, and acceleration strategies for Indian trademarks.', "app/how-long-does-the-trademark-registration-process-take-in-india/page.tsx "),
         url: 'https://www.iprkaro.com/how-long-does-the-trademark-registration-process-take-in-india',
         type: 'article',
     },

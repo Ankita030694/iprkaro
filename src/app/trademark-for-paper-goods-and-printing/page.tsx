@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 
 import React from 'react';
 import Link from 'next/link';
@@ -32,7 +33,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'TM for Paper Goods & Printing | Class 16 Protection',
-    description: 'Complete guide to trademark registration for paper products, stationery, books, and printing in India. Secure your Class 16 legacy today.',
+    description: validateAndNormalizeDescription('Complete guide to trademark registration for paper products, stationery, books, and printing in India. Secure your Class 16 legacy today.', "app/trademark-for-paper-goods-and-printing/page.tsx "),
     keywords: [
         'trademark for paper goods',
         'printing business trademark india',
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Elite Trademark Registration for Paper & Printing Brands',
-        description: 'Protect your creative and industrial paper assets with India\'s leading IP team. 100% online, legal expertise for Class 16.',
+        description: validateAndNormalizeDescription('Protect your creative and industrial paper assets with India\'s leading IP team. 100% online, legal expertise for Class 16.', "app/trademark-for-paper-goods-and-printing/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-for-paper-goods-and-printing',
         type: 'article',
     },

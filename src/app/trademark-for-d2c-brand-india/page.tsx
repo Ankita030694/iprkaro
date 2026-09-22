@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -29,7 +30,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'TM for D2C Brand India | Class 35 & Product Guide',
-    description: 'Expert legal guide to trademark registration for D2C brands in India. Protect your digital-first brand on Amazon, Flipkart, and your own website. Detailed insights on Class 35, 3, 25, 30. 5000+ words.',
+    description: validateAndNormalizeDescription('Expert legal guide to trademark registration for D2C brands in India. Protect your digital-first brand on Amazon, Flipkart, and your own website. Detailed insights on Class 35, 3, 25, 30. 5000+ words.', "app/trademark-for-d2c-brand-india/page.tsx "),
     keywords: [
         'trademark for d2c brand india',
         'direct to consumer brand registration',
@@ -44,7 +45,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Complete Trademark Registration Guide for D2C Brands in India',
-        description: 'Secure your D2C brand identity with India\'s elite IP legal team. 100% online, same-day filing for all e-commerce and product classes.',
+        description: validateAndNormalizeDescription('Secure your D2C brand identity with India\'s elite IP legal team. 100% online, same-day filing for all e-commerce and product classes.', "app/trademark-for-d2c-brand-india/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-for-d2c-brand-india',
         type: 'article',
     },

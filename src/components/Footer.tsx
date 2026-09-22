@@ -1,3 +1,4 @@
+'use client';
 // import React from 'react';
 // import Image from 'next/image';
 // import ClientLogoSlider from './ClientLogoSlider';
@@ -357,7 +358,7 @@
 
 // export default Footer;
 
-'use client';
+
 import React, { useState } from 'react';
 import Image from 'next/image';
 import ClientLogoSlider from './ClientLogoSlider';

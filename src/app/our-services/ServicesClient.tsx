@@ -1,5 +1,6 @@
 'use client';
 
+
 import { SimplePricing, FaqSection } from "@/components";
 import Link from "next/link";
 import dynamic from 'next/dynamic';

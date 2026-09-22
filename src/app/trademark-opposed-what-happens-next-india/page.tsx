@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -26,7 +27,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Trademark Opposed: What are Next Steps',
-    description: 'Received a trademark opposition in India? Learn the step-by-step procedure to handle TM-O, file a counter-statement, submit evidence under Rules 45-47, and win your hearing. Comprehensive 5000+ word expert guide.',
+    description: validateAndNormalizeDescription('Received a trademark opposition in India? Learn the step-by-step procedure to handle TM-O, file a counter-statement, submit evidence under Rules 45-47, and win your hearing. Comprehensive 5000+ word expert guide.', "app/trademark-opposed-what-happens-next-india/page.tsx "),
     keywords: [
         'trademark opposed what happens next india',
         'trademark opposition procedure india',
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Trademark Opposed: What are Next Steps',
-        description: 'Navigate the complex world of trademark opposition with India\'s top IP legal team. 5000+ words of technical strategy on counter-statements and evidence.',
+        description: validateAndNormalizeDescription('Navigate the complex world of trademark opposition with India\'s top IP legal team. 5000+ words of technical strategy on counter-statements and evidence.', "app/trademark-opposed-what-happens-next-india/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-opposed-what-happens-next-india',
         type: 'article',
     },

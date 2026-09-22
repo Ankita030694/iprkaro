@@ -1,12 +1,13 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Thank You - IPR Karo | Your Message Has Been Received',
-  description: 'Thank you for contacting IPR Karo. Our trademark registration experts will review your inquiry and respond within 2-4 hours. Get expert guidance for trademark, copyright, and patent services in India.',
+  description: validateAndNormalizeDescription('Thank you for contacting IPR Karo. Our trademark registration experts will review your inquiry and respond within 2-4 hours. Get expert guidance for trademark, copyright, and patent services in India.', "app/thank-you/layout.tsx "),
   keywords: 'IPR Karo contact, trademark registration inquiry, IP services India, thank you',
   openGraph: {
     title: 'Thank You - IPR Karo | Your Message Has Been Received',
-    description: 'Thank you for contacting IPR Karo. Our trademark registration experts will review your inquiry and respond within 2-4 hours.',
+    description: validateAndNormalizeDescription('Thank you for contacting IPR Karo. Our trademark registration experts will review your inquiry and respond within 2-4 hours.', "app/thank-you/layout.tsx "),
     type: 'website',
   },
   alternates: {

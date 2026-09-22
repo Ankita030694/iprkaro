@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -22,7 +23,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Sound or Scent Trademark in India | 2026 Guide',
-    description: 'The definitive forensic guide to sound and scent trademarks in India. Learn about the 2017 Rules, graphical representation of non-visual marks, and the 7-D vector scent map.',
+    description: validateAndNormalizeDescription('The definitive forensic guide to sound and scent trademarks in India. Learn about the 2017 Rules, graphical representation of non-visual marks, and the 7-D vector scent map.', "app/can-i-register-a-sound-or-scent-as-a-trademark-in-india/page.tsx "),
     keywords: [
         'can i register a sound or scent as a trademark in india',
         'sound trademark registration india 2026',
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Sensory Branding: Registering Sound and Scent Trademarks in India (2026)',
-        description: 'From corporate jingles to brand fragrances, master the path to non-conventional trademark protection. Secure your multi-sensory brand today.',
+        description: validateAndNormalizeDescription('From corporate jingles to brand fragrances, master the path to non-conventional trademark protection. Secure your multi-sensory brand today.', "app/can-i-register-a-sound-or-scent-as-a-trademark-in-india/page.tsx "),
         url: 'https://www.iprkaro.com/can-i-register-a-sound-or-scent-as-a-trademark-in-india',
         type: 'article',
     },

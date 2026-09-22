@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -37,7 +38,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Affordable Trademark Registration Services Near Me',
-  description: 'Looking for affordable trademark registration services? Discover how to find the best legal assistance, fastest search turnaround times, and expert filing in India.',
+  description: validateAndNormalizeDescription('Looking for affordable trademark registration services? Discover how to find the best legal assistance, fastest search turnaround times, and expert filing in India.', "app/where-can-i-find-affordable-trademark-registration-services-near-me/page.tsx "),
   keywords: [
     'affordable trademark registration',
     'trademark registration services near me',

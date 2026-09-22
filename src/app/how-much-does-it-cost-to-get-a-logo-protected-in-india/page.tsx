@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -32,7 +33,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Cost of Logo Protection in India | 2026 Fee Guide',
-    description: 'Complete breakdown of logo protection costs in India. Learn about government fees, professional attorney charges, and 50% rebates for MSMEs and Startups.',
+    description: validateAndNormalizeDescription('Complete breakdown of logo protection costs in India. Learn about government fees, professional attorney charges, and 50% rebates for MSMEs and Startups.', "app/how-much-does-it-cost-to-get-a-logo-protected-in-india/page.tsx "),
     keywords: [
         'how much does it cost to get a logo protected in india',
         'trademark registration fees india 2026',
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Logo Protection Costs in India: The Definitive 2026 Guide',
-        description: 'Discover the total investment required to secure your logo. Detailed analysis of statutory fees, professional charges, and cost saving strategies.',
+        description: validateAndNormalizeDescription('Discover the total investment required to secure your logo. Detailed analysis of statutory fees, professional charges, and cost saving strategies.', "app/how-much-does-it-cost-to-get-a-logo-protected-in-india/page.tsx "),
         url: 'https://www.iprkaro.com/how-much-does-it-cost-to-get-a-logo-protected-in-india',
         type: 'article',
     },

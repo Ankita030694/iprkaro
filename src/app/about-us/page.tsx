@@ -1,9 +1,10 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import AboutClient from './AboutClient';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'About IPR Karo | Trademark Platform',
-  description: 'Learn about IPR Karo, India\'s first AI-driven platform for trademark registration. Our mission is to simplify brand protection using cutting-edge technology and expert legal guidance. Trusted by 5,000+ businesses.',
+  description: validateAndNormalizeDescription('Learn about IPR Karo, India\'s first AI-driven platform for trademark registration. Our mission is to simplify brand protection using cutting-edge technology and expert legal guidance. Trusted by 5,000+ businesses.', "app/about-us/page.tsx "),
   alternates: {
     canonical: '/about-us',
   },

@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -30,7 +31,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'TM Formalities Check Fail Meaning & Resolution',
-    description: 'Complete 5000+ word guide on Trademark Formalities Check Fail in India. Learn the common causes, why it happens, the 30-day deadline, and how to resolve it using MIS-F and TM-M.',
+    description: validateAndNormalizeDescription('Complete 5000+ word guide on Trademark Formalities Check Fail in India. Learn the common causes, why it happens, the 30-day deadline, and how to resolve it using MIS-F and TM-M.', "app/trademark-formalities-check-fail-meaning/page.tsx "),
     keywords: [
         'trademark formalities check fail meaning',
         'formalities chk fail status india',
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Solving Trademark Formalities Check Fail: The Complete Legal Guide',
-        description: 'Understand every nuance of the formalities check fail status in India. Expert legal insights on how to secure your trademark from administrative errors.',
+        description: validateAndNormalizeDescription('Understand every nuance of the formalities check fail status in India. Expert legal insights on how to secure your trademark from administrative errors.', "app/trademark-formalities-check-fail-meaning/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-formalities-check-fail-meaning',
         type: 'article',
     },

@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -25,7 +26,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Penalty for Trademark Infringement in India | Guide',
-    description: 'Learn about the severe penalties for trademark infringement in India. Understand civil remedies (injunctions, damages) and criminal punishments under Sections 103, 104, & 105 of the Trademarks Act.',
+    description: validateAndNormalizeDescription('Learn about the severe penalties for trademark infringement in India. Understand civil remedies (injunctions, damages) and criminal punishments under Sections 103, 104, & 105 of the Trademarks Act.', "app/penalty-for-trademark-infringement-india/page.tsx "),
     keywords: [
         'penalty for trademark infringement india',
         'trademark infringement punishment india',
@@ -40,7 +41,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Trademark Infringement Penalties in India: Complete Legal Guide',
-        description: 'Comprehensive guide on the legal consequences of trademark misuse in India. Protect your brand with elite IP enforcement strategies.',
+        description: validateAndNormalizeDescription('Comprehensive guide on the legal consequences of trademark misuse in India. Protect your brand with elite IP enforcement strategies.', "app/penalty-for-trademark-infringement-india/page.tsx "),
         url: 'https://www.iprkaro.com/penalty-for-trademark-infringement-india',
         type: 'article',
     },

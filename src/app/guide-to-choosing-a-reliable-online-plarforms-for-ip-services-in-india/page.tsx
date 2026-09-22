@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -44,7 +45,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Choose Reliable IP Service Platforms in India | 2026',
-    description: 'Expert guide to selecting reliable online platforms for Intellectual Property services in India. 5000+ words on Trademark, Patent & Copyright registration.',
+    description: validateAndNormalizeDescription('Expert guide to selecting reliable online platforms for Intellectual Property services in India. 5000+ words on Trademark, Patent & Copyright registration.', "app/guide-to-choosing-a-reliable-online-plarforms-for-ip-services-in-india/page.tsx "),
     keywords: [
         'guide-to-choosing-a-reliable-online-plarforms-for-ip-services-in-india',
         'reliable online ip services india',
@@ -59,7 +60,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Selecting Reliable Online IP Platforms in India: The Definitive 2026 Guide',
-        description: 'A forensic 5000-word analysis of online IP service providers in India. Learn to identify legitimate platforms like IPR Karo for your brand protection.',
+        description: validateAndNormalizeDescription('A forensic 5000-word analysis of online IP service providers in India. Learn to identify legitimate platforms like IPR Karo for your brand protection.', "app/guide-to-choosing-a-reliable-online-plarforms-for-ip-services-in-india/page.tsx "),
         url: 'https://www.iprkaro.com/guide-to-choosing-a-reliable-online-plarforms-for-ip-services-in-india',
         type: 'article',
     },

@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -23,7 +24,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Trademark for Mobile App Name in India | 2026 Guide',
-    description: 'Learn how to trademark your mobile app name, icon, and logo in India. Discover the dual classification of Class 9 and Class 42 for complete app protection.',
+    description: validateAndNormalizeDescription('Learn how to trademark your mobile app name, icon, and logo in India. Discover the dual classification of Class 9 and Class 42 for complete app protection.', "app/can-i-file-a-trademark-application-for-a-mobile-app-name-in-india/page.tsx "),
     keywords: [
         'can i file a trademark application for a mobile app name in india',
         'mobile app trademark registration india 2026',
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'App Armor: Trademarking Your Mobile Application in India (2026)',
-        description: 'Secure your digital identity. From naming strategies to Play Store takedowns, master the forensics of mobile app trademark registration in India.',
+        description: validateAndNormalizeDescription('Secure your digital identity. From naming strategies to Play Store takedowns, master the forensics of mobile app trademark registration in India.', "app/can-i-file-a-trademark-application-for-a-mobile-app-name-in-india/page.tsx "),
         url: 'https://www.iprkaro.com/can-i-file-a-trademark-application-for-a-mobile-app-name-in-india',
         type: 'article',
     },

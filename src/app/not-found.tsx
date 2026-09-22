@@ -1,9 +1,10 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Page Not Found | IPR Karo',
-  description: 'The page you are looking for does not exist. Return to IPR Karo home for trademark, copyright, and patent registration services.',
+  description: validateAndNormalizeDescription('The page you are looking for does not exist. Return to IPR Karo home for trademark, copyright, and patent registration services.', "app/not-found.tsx "),
   robots: {
     index: false,
     follow: true,

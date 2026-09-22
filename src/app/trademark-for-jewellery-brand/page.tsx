@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -32,7 +33,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Trademark for Jewellery Brands | Protect Your Brand',
-  description: 'Apply for trademark registration for your jewellery brand online. Expert guidance on Class 14 filing, logo protection, and brand name security for jewellery businesses from ₹3,000.',
+  description: validateAndNormalizeDescription('Apply for trademark registration for your jewellery brand online. Expert guidance on Class 14 filing, logo protection, and brand name security for jewellery businesses from ₹3,000.', "app/trademark-for-jewellery-brand/page.tsx "),
   keywords: [
     'trademark for jewellery brand',
     'jewellery brand registration',
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Expert Trademark Registration for Your Jewellery Brand',
-    description: 'Secure your jewellery brand identity with India\'s leading IP legal team. 100% online process, same-day filing.',
+    description: validateAndNormalizeDescription('Secure your jewellery brand identity with India\'s leading IP legal team. 100% online process, same-day filing.', "app/trademark-for-jewellery-brand/page.tsx "),
     url: 'https://www.iprkaro.com/trademark-for-jewellery-brand',
     type: 'article',
   },

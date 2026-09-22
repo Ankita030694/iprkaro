@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -35,7 +36,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Trademark for Appliances | Class 11, 7 & 9 Registration',
-    description: 'Complete guide to trademark registration for home, kitchen, and industrial appliances in India. Secure your appliance brand under Class 11, 7, and 9 today.',
+    description: validateAndNormalizeDescription('Complete guide to trademark registration for home, kitchen, and industrial appliances in India. Secure your appliance brand under Class 11, 7, and 9 today.', "app/trademark-for-appliances/page.tsx "),
     keywords: [
         'trademark for appliances',
         'home appliance brand registration india',
@@ -50,7 +51,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Elite Trademark Registration for Appliance Manufacturers',
-        description: 'Protect your appliance innovation with India\'s leading IP legal team. 100% online process, same-day filing for home and kitchen brands.',
+        description: validateAndNormalizeDescription('Protect your appliance innovation with India\'s leading IP legal team. 100% online process, same-day filing for home and kitchen brands.', "app/trademark-for-appliances/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-for-appliances',
         type: 'article',
     },

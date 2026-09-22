@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -31,7 +32,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Trademark Registration for Furniture Shop in India',
-  description: 'Complete guide to trademark registration for furniture businesses, showrooms, and carpenters in India. Secure your Class 20 & 35 brand identity today. Expert legal filing.',
+  description: validateAndNormalizeDescription('Complete guide to trademark registration for furniture businesses, showrooms, and carpenters in India. Secure your Class 20 & 35 brand identity today. Expert legal filing.', "app/trademark-for-furniture-shop/page.tsx "),
   keywords: [
     'trademark for furniture shop',
     'furniture brand registration india',
@@ -46,7 +47,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Secure Your Furniture Brand Identity | Expert Trademark Registration',
-    description: 'Don\'t let copycats steal your furniture designs and brand name. File your Class 20 trademark application today with India\'s top IP experts.',
+    description: validateAndNormalizeDescription('Don\'t let copycats steal your furniture designs and brand name. File your Class 20 trademark application today with India\'s top IP experts.', "app/trademark-for-furniture-shop/page.tsx "),
     url: 'https://www.iprkaro.com/trademark-for-furniture-shop',
     type: 'article',
   },

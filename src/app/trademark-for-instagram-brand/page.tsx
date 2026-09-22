@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -29,7 +30,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'TM for Instagram Brand | Protect Your Identity India',
-    description: 'The ultimate 5000+ word guide on trademarking your Instagram brand in India. Secure your handle, prevent impersonation, and build digital equity. Expert legal insights for influencers and businesses.',
+    description: validateAndNormalizeDescription('The ultimate 5000+ word guide on trademarking your Instagram brand in India. Secure your handle, prevent impersonation, and build digital equity. Expert legal insights for influencers and businesses.', "app/trademark-for-instagram-brand/page.tsx "),
     keywords: [
         'trademark for instagram brand',
         'social media brand registration india',
@@ -44,7 +45,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Elite Trademark Registration for Instagram Brands in India',
-        description: 'Secure your digital legacy. Protect your Instagram brand name and logo with India\'s premier IP legal experts. 100% online, same-day filing.',
+        description: validateAndNormalizeDescription('Secure your digital legacy. Protect your Instagram brand name and logo with India\'s premier IP legal experts. 100% online, same-day filing.', "app/trademark-for-instagram-brand/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-for-instagram-brand',
         type: 'article',
     },

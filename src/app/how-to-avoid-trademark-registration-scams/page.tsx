@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -27,7 +28,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Avoid Trademark Registration Scams in India | Guide',
-    description: 'Learn how to identify and avoid trademark registration scams, fake invoices, and phishing emails in India. Expert advice on protecting your brand from intellectual property fraud.',
+    description: validateAndNormalizeDescription('Learn how to identify and avoid trademark registration scams, fake invoices, and phishing emails in India. Expert advice on protecting your brand from intellectual property fraud.', "app/how-to-avoid-trademark-registration-scams/page.tsx "),
     keywords: [
         'trademark registration scams india',
         'fake trademark invoices india',
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Protect Your Brand: The Ultimate Guide to Avoiding Trademark Scams',
-        description: 'Scammers are targeting trademark applicants in India. Learn the red flags, verify official notices, and secure your intellectual property rights.',
+        description: validateAndNormalizeDescription('Scammers are targeting trademark applicants in India. Learn the red flags, verify official notices, and secure your intellectual property rights.', "app/how-to-avoid-trademark-registration-scams/page.tsx "),
         url: 'https://www.iprkaro.com/how-to-avoid-trademark-registration-scams',
         type: 'article',
     },

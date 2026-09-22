@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -34,7 +35,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Trademark Renewal in India | Period, Fees & Process',
-  description: 'Learn when trademark registration should be renewed in India. Complete guide on the 10-year renewal cycle, Form TM-R, government fees, and restoration process at IPR Karo.',
+  description: validateAndNormalizeDescription('Learn when trademark registration should be renewed in India. Complete guide on the 10-year renewal cycle, Form TM-R, government fees, and restoration process at IPR Karo.', "app/in-india-the-trademark-registration-should-be-renewed-every/page.tsx "),
   keywords: [
     'in india the trademark registration should be renewed every',
     'trademark renewal period india',
@@ -49,7 +50,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'In India the Trademark Registration Should Be Renewed Every 10 Years',
-    description: 'A comprehensive guide to trademark renewal in India. Learn about the 10-year validity, renewal process, and how to protect your brand identity.',
+    description: validateAndNormalizeDescription('A comprehensive guide to trademark renewal in India. Learn about the 10-year validity, renewal process, and how to protect your brand identity.', "app/in-india-the-trademark-registration-should-be-renewed-every/page.tsx "),
     url: 'https://www.iprkaro.com/in-india-the-trademark-registration-should-be-renewed-every',
     type: 'article',
   },

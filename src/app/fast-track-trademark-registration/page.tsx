@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -30,7 +31,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Fast Track Trademark Registration India | Priority TM',
-  description: 'Accelerate your brand protection with fast track trademark registration in India. Get your trademark examined in 3-5 months under Rule 34. Expert legal assistance for expedited filing.',
+  description: validateAndNormalizeDescription('Accelerate your brand protection with fast track trademark registration in India. Get your trademark examined in 3-5 months under Rule 34. Expert legal assistance for expedited filing.', "app/fast-track-trademark-registration/page.tsx "),
   keywords: [
     'fast track trademark registration',
     'expedited trademark examination india',
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Fast Track Trademark Registration India | Priority TM Filing',
-    description: 'Secure your brand in record time. Professional guidance for expedited trademark examination under Rule 34.',
+    description: validateAndNormalizeDescription('Secure your brand in record time. Professional guidance for expedited trademark examination under Rule 34.', "app/fast-track-trademark-registration/page.tsx "),
     url: 'https://www.iprkaro.com/fast-track-trademark-registration',
     type: 'article',
   },

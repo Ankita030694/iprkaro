@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -37,7 +38,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Public Trademark Search in India',
-    description: 'Master the IP India public search portal. Learn how to perform Wordmark, Phonetic, and Vienna code searches to ensure your brand name is available and conflict-free.',
+    description: validateAndNormalizeDescription('Master the IP India public search portal. Learn how to perform Wordmark, Phonetic, and Vienna code searches to ensure your brand name is available and conflict-free.', "app/trademark-search-public/page.tsx "),
     keywords: [
         'Public Trademark Search in India',
         'ip india online search',
@@ -52,7 +53,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Public Trademark Search in India',
-        description: 'Dont file blindly. Learn how to use the IP India portal to find similar brands and avoid costly legal rejections. Comprehensive Wordmark & Phonetic search guide.',
+        description: validateAndNormalizeDescription('Dont file blindly. Learn how to use the IP India portal to find similar brands and avoid costly legal rejections. Comprehensive Wordmark & Phonetic search guide.', "app/trademark-search-public/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-search-public',
         type: 'article',
     },

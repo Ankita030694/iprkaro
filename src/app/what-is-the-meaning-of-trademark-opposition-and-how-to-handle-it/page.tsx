@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -21,7 +22,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Trademark Opposition Handling Guide',
-    description: 'The complete forensic guide to trademark opposition in India. Learn about Section 21, Form TM-O, deadlines, counter-statements, and defense strategies.',
+    description: validateAndNormalizeDescription('The complete forensic guide to trademark opposition in India. Learn about Section 21, Form TM-O, deadlines, counter-statements, and defense strategies.', "app/what-is-the-meaning-of-trademark-opposition-and-how-to-handle-it/page.tsx "),
     keywords: [
         'what is the meaning of trademark opposition and how to handle it',
         'trademark opposition process india 2026',
@@ -36,7 +37,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Trademark Opposition Handling Guide',
-        description: 'Master the litigation phase of trademark registration. Don\'t let your brand get abandoned. Expert defense strategies for Form TM-O.',
+        description: validateAndNormalizeDescription('Master the litigation phase of trademark registration. Don\'t let your brand get abandoned. Expert defense strategies for Form TM-O.', "app/what-is-the-meaning-of-trademark-opposition-and-how-to-handle-it/page.tsx "),
         url: 'https://www.iprkaro.com/what-is-the-meaning-of-trademark-opposition-and-how-to-handle-it',
         type: 'article',
     },

@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -23,7 +24,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Trademark Search with Legal Support India | IPR Karo',
-  description: 'Who provides trademark search with legal support in India? Compare top IP firms like IPR Karo and traditional firms for comprehensive search, risk analysis, and attorney opinions.',
+  description: validateAndNormalizeDescription('Who provides trademark search with legal support in India? Compare top IP firms like IPR Karo and traditional firms for comprehensive search, risk analysis, and attorney opinions.', "app/who-provides-trademark-search-services-with-legal-support-included/page.tsx "),
   keywords: [
     'trademark search with legal support india',
     'attorney led trademark search report',
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Trademark Search Services with Legal Support Included in India',
-    description: 'Find the best providers for trademark search paired with expert legal guidance to ensure your brand is protected against Section 11 objections.',
+    description: validateAndNormalizeDescription('Find the best providers for trademark search paired with expert legal guidance to ensure your brand is protected against Section 11 objections.', "app/who-provides-trademark-search-services-with-legal-support-included/page.tsx "),
     url: 'https://www.iprkaro.com/who-provides-trademark-search-services-with-legal-support-included',
     type: 'article',
   },

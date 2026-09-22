@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -23,7 +24,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'How to Cancel Trademark Registration',
-    description: 'Master the process of trademark cancellation and rectification in India. Learn about Section 47 non-use grounds, Section 57 rectification, and High Court procedures.',
+    description: validateAndNormalizeDescription('Master the process of trademark cancellation and rectification in India. Learn about Section 47 non-use grounds, Section 57 rectification, and High Court procedures.', "app/how-to-cancel-or-dispute-someone-else-s-trademark-registration/page.tsx "),
     keywords: [
         'how to cancel or dispute someone else\'s trademark registration',
         'trademark cancellation india 2026',
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'How to Cancel Trademark Registration',
-        description: 'Clear the path for your brand. Learn how to remove Zombie Trademarks and fraudulent registrations through forensic legal proceedings in India.',
+        description: validateAndNormalizeDescription('Clear the path for your brand. Learn how to remove Zombie Trademarks and fraudulent registrations through forensic legal proceedings in India.', "app/how-to-cancel-or-dispute-someone-else-s-trademark-registration/page.tsx "),
         url: 'https://www.iprkaro.com/how-to-cancel-or-dispute-someone-else-s-trademark-registration',
         type: 'article',
     },

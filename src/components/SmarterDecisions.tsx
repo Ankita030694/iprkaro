@@ -1,4 +1,6 @@
 'use client';
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
+
 
 import { useState } from 'react';
 import Image from 'next/image';
@@ -6,62 +8,62 @@ import Image from 'next/image';
 const features = [
   {
     title: "Instant Trademark Search",
-    description: "Check availability in seconds before you invest in branding.",
+    description: validateAndNormalizeDescription("Check availability in seconds before you invest in branding.", "components/SmarterDecisions.tsx "),
     icon: "/smart/trademark.png"
   },
   {
     title: "AI Similarity Check",
-    description: "Detect confusingly similar names that may cause rejection.",
+    description: validateAndNormalizeDescription("Detect confusingly similar names that may cause rejection.", "components/SmarterDecisions.tsx "),
     icon: "/smart/ai.png"
   },
   {
     title: "Class Finder Made Easy",
-    description: "Identify the right trademark class without legal confusion.",
+    description: validateAndNormalizeDescription("Identify the right trademark class without legal confusion.", "components/SmarterDecisions.tsx "),
     icon: "/smart/classfinder.png"
   },
   {
     title: "Real-Time Risk Score",
-    description: "Know your chances of approval before filing.",
+    description: validateAndNormalizeDescription("Know your chances of approval before filing.", "components/SmarterDecisions.tsx "),
     icon: "/smart/real-time-risk-score.png"
   },
   {
     title: "Avoid Legal Conflicts",
-    description: "Stay protected from future objections and disputes.",
+    description: validateAndNormalizeDescription("Stay protected from future objections and disputes.", "components/SmarterDecisions.tsx "),
     icon: "/smart/avoid-legal.png"
   },
   {
     title: "Name Availability Alerts",
-    description: "Get notified if similar trademarks are filed.",
+    description: validateAndNormalizeDescription("Get notified if similar trademarks are filed.", "components/SmarterDecisions.tsx "),
     icon: "/smart/name-availability.png"
   },
   {
     title: "Multi-Industry Coverage",
-    description: "Search across all trademark classes in one place.",
+    description: validateAndNormalizeDescription("Search across all trademark classes in one place.", "components/SmarterDecisions.tsx "),
     icon: "/smart/multi-industry.png"
   },
   {
     title: "Expert Filing Support",
-    description: "From search to registration, we handle everything.",
+    description: validateAndNormalizeDescription("From search to registration, we handle everything.", "components/SmarterDecisions.tsx "),
     icon: "/smart/expert-fillin.png"
   },
   {
     title: "Infringement Monitoring",
-    description: "Track copycats and protect your brand identity.",
+    description: validateAndNormalizeDescription("Track copycats and protect your brand identity.", "components/SmarterDecisions.tsx "),
     icon: "/smart/infringement.png"
   },
   {
     title: "Fast & Paperless Process",
-    description: "No complex paperwork, everything online.",
+    description: validateAndNormalizeDescription("No complex paperwork, everything online.", "components/SmarterDecisions.tsx "),
     icon: "/smart/fast-and-paperless.png"
   },
   {
     title: "Built for Startups",
-    description: "Simple, fast, and made for non-legal users.",
+    description: validateAndNormalizeDescription("Simple, fast, and made for non-legal users.", "components/SmarterDecisions.tsx "),
     icon: "/smart/startup.png"
   },
   {
     title: "Secure & Confidential",
-    description: "Your brand ideas stay 100% protected.",
+    description: validateAndNormalizeDescription("Your brand ideas stay 100% protected.", "components/SmarterDecisions.tsx "),
     icon: "/smart/secure.png"
   }
 ];

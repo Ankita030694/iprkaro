@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -38,7 +39,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'TM for Beverages (Class 32 & 33) Guide | India',
-    description: 'Complete legal guide to trademark registration for beverages in India. Secure your soft drinks, juices, beer, and spirits under Class 32 and 33. 100% online filing.',
+    description: validateAndNormalizeDescription('Complete legal guide to trademark registration for beverages in India. Secure your soft drinks, juices, beer, and spirits under Class 32 and 33. 100% online filing.', "app/trademark-for-beverages/page.tsx "),
     keywords: [
         'trademark for beverages',
         'beverage brand registration india',
@@ -53,7 +54,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Elite Trademark Registration for Beverages in India',
-        description: 'Protect your beverage innovation with India\'s premier IP law firm. Same-day filing for non-alcoholic and alcoholic beverage brands.',
+        description: validateAndNormalizeDescription('Protect your beverage innovation with India\'s premier IP law firm. Same-day filing for non-alcoholic and alcoholic beverage brands.', "app/trademark-for-beverages/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-for-beverages',
         type: 'article',
     },

@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -27,7 +28,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Trademark Registration in India | IPR Karo',
-  description: 'Register your trademark online in India with IPR Karo. Expert legal filing, expedited processing, and comprehensive objection handling from ₹1499. Secure your brand now.',
+  description: validateAndNormalizeDescription('Register your trademark online in India with IPR Karo. Expert legal filing, expedited processing, and comprehensive objection handling from ₹1499. Secure your brand now.', "app/our-services/trademark-registration/page.tsx "),
   keywords: [
     'trademark registration',
     'online trademark filing',
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Trademark Registration in India | IPR Karo',
-    description: 'Fast, affordable, and expert-assisted trademark registration services in India. Protect your brand identity today.',
+    description: validateAndNormalizeDescription('Fast, affordable, and expert-assisted trademark registration services in India. Protect your brand identity today.', "app/our-services/trademark-registration/page.tsx "),
     url: 'https://www.iprkaro.com/our-services/trademark-registration',
     type: 'article',
     images: [

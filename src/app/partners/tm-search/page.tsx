@@ -1,4 +1,6 @@
 'use client';
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
+
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
@@ -150,24 +152,24 @@ export default function PartnerTrademarkSearchPage() {
     {
       icon: 'fa-bolt',
       title: 'AI Analysis in 60 Seconds',
-      description: 'Instant registrability scoring with conflict detection before you file.'
+      description: validateAndNormalizeDescription('Instant registrability scoring with conflict detection before you file.', "app/partners/tm-search/page.tsx ")
     },
     {
       icon: 'fa-layer-group',
       title: '45 Trademark Classes Covered',
-      description: 'Comprehensive coverage across every NICE classification in India.'
+      description: validateAndNormalizeDescription('Comprehensive coverage across every NICE classification in India.', "app/partners/tm-search/page.tsx ")
     },
     {
       icon: 'fa-shield-halved',
       title: 'Legal-Ready Reports',
-      description: 'Expert-ready reports that streamline attorney review and filings.'
+      description: validateAndNormalizeDescription('Expert-ready reports that streamline attorney review and filings.', "app/partners/tm-search/page.tsx ")
     }
   ];
 
   const supportBadges = [
-    { icon: 'fa-headset', label: 'Partner Success Desk', description: 'Dedicated support for every search', accent: '#00E5CC' },
-    { icon: 'fa-file-signature', label: 'Attorney Verified', description: 'Reviews by senior IP attorneys', accent: '#FFB703' },
-    { icon: 'fa-lock', label: 'Secure Workspace', description: 'Encrypted and privacy-first data', accent: '#6E5E93' }
+    { icon: 'fa-headset', label: 'Partner Success Desk', description: validateAndNormalizeDescription('Dedicated support for every search', "app/partners/tm-search/page.tsx "), accent: '#00E5CC' },
+    { icon: 'fa-file-signature', label: 'Attorney Verified', description: validateAndNormalizeDescription('Reviews by senior IP attorneys', "app/partners/tm-search/page.tsx "), accent: '#FFB703' },
+    { icon: 'fa-lock', label: 'Secure Workspace', description: validateAndNormalizeDescription('Encrypted and privacy-first data', "app/partners/tm-search/page.tsx "), accent: '#6E5E93' }
   ];
 
   if (!isLoaded) {

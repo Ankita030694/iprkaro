@@ -1,10 +1,11 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import Link from 'next/link';
 import { db } from '@/lib/firebase';
 import { collection, getDocs } from 'firebase/firestore';
 
 export const metadata = {
   title: 'Sitemap | IPRKARO',
-  description: 'Sitemap for IPRKARO containing all available pages.',
+  description: validateAndNormalizeDescription('Sitemap for IPRKARO containing all available pages.', "app/sitemap/page.tsx "),
   alternates: {
     canonical: '/sitemap',
   },

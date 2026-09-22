@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -28,7 +29,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Types of Trademark Classes | IPR Karo',
-  description: 'Understand the 45 types of trademark classes in India. Comprehensive list of goods and service classes for SEO-optimized trademark registration. Protect your brand correctly.',
+  description: validateAndNormalizeDescription('Understand the 45 types of trademark classes in India. Comprehensive list of goods and service classes for SEO-optimized trademark registration. Protect your brand correctly.', "app/types-of-trademark-classes/page.tsx "),
   keywords: [
     'types of trademark classes',
     'trademark classification india',

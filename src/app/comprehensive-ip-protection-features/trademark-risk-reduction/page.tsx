@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -7,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Trademark Risk Reduction India | IP Audit & Safety',
-  description: 'Minimize your legal liability. Expert trademark risk assessment, IP audit, infringement protection, and brand safety strategies. 24/7 Monitoring.',
+  description: validateAndNormalizeDescription('Minimize your legal liability. Expert trademark risk assessment, IP audit, infringement protection, and brand safety strategies. 24/7 Monitoring.', "app/comprehensive-ip-protection-features/trademark-risk-reduction/page.tsx "),
   keywords: [
     'trademark risk reduction',
     'trademark risk assessment',
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Trademark Risk Reduction | Secure Your Brand Future',
-    description: 'Don\'t gamble with your brand. Comprehensive trademark risk assessment and mitigation strategies by IPR Karo.',
+    description: validateAndNormalizeDescription('Don\'t gamble with your brand. Comprehensive trademark risk assessment and mitigation strategies by IPR Karo.', "app/comprehensive-ip-protection-features/trademark-risk-reduction/page.tsx "),
     url: 'https://www.iprkaro.com/comprehensive-ip-protection-features/trademark-risk-reduction',
     type: 'article',
     images: [

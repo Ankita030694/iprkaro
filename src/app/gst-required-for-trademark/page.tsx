@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -34,7 +35,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Is GST Required for Trademark? | IPR Karo',
-  description: 'Uncover the relationship between GST and Trademark registration. Learn about mandatory requirements, fee reductions for MSMEs, Input Tax Credit benefits, and the step by step process to protect your brand.',
+  description: validateAndNormalizeDescription('Uncover the relationship between GST and Trademark registration. Learn about mandatory requirements, fee reductions for MSMEs, Input Tax Credit benefits, and the step by step process to protect your brand.', "app/gst-required-for-trademark/page.tsx "),
   keywords: [
     'gst required for trademark',
     'is gst mandatory for trademark registration',
@@ -49,7 +50,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Is GST Required for Trademark Registration? | Expert Guide by IPR Karo',
-    description: 'Everything you need to know about GST requirements for brand registration. Save on fees and secure your brand legally.',
+    description: validateAndNormalizeDescription('Everything you need to know about GST requirements for brand registration. Save on fees and secure your brand legally.', "app/gst-required-for-trademark/page.tsx "),
     url: 'https://www.iprkaro.com/gst-required-for-trademark',
     type: 'article',
   },

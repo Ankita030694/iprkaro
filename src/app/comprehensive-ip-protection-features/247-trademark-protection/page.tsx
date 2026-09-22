@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -8,7 +9,7 @@ import CitiesAndTerritories from '@/components/CitiesAndTerritories';
 
 export const metadata: Metadata = {
   title: '24/7 Trademark Protection | IPR Karo',
-  description: 'Unrelenting 24/7 trademark protection services in India. Secure your brand identity with continuous monitoring, rapid legal enforcement, and expert objection handling.',
+  description: validateAndNormalizeDescription('Unrelenting 24/7 trademark protection services in India. Secure your brand identity with continuous monitoring, rapid legal enforcement, and expert objection handling.', "app/comprehensive-ip-protection-features/247-trademark-protection/page.tsx "),
   keywords: [
     '24/7 trademark protection',
     'semper vigilans trademark',
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: '24/7 Trademark Protection | IPR Karo',
-    description: 'Secure your brand with our 24/7 trademark protection services in India. Comprehensive monitoring and expert legal support.',
+    description: validateAndNormalizeDescription('Secure your brand with our 24/7 trademark protection services in India. Comprehensive monitoring and expert legal support.', "app/comprehensive-ip-protection-features/247-trademark-protection/page.tsx "),
     url: 'https://www.iprkaro.com/comprehensive-ip-protection-features/247-trademark-protection',
     type: 'article',
     images: [

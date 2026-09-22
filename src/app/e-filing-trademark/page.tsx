@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -29,7 +30,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'E-Filing Trademark India | Online Registration Guide',
-  description: 'Complete guide to e-filing trademark in India. Learn the process, documents, costs, and benefits of online trademark registration. File your TM application today.',
+  description: validateAndNormalizeDescription('Complete guide to e-filing trademark in India. Learn the process, documents, costs, and benefits of online trademark registration. File your TM application today.', "app/e-filing-trademark/page.tsx "),
   keywords: [
     'e-filing trademark',
     'online trademark registration',
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'E-Filing Trademark India | Step-by-Step Online Guide',
-    description: 'Master the process of e-filing your trademark in India. Fast, secure, and expert-backed registration services.',
+    description: validateAndNormalizeDescription('Master the process of e-filing your trademark in India. Fast, secure, and expert-backed registration services.', "app/e-filing-trademark/page.tsx "),
     url: 'https://www.iprkaro.com/e-filing-trademark',
     type: 'article',
   },

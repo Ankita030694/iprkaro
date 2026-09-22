@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -29,7 +30,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Trademark for Metal Goods | Class 6 Registration Guide India',
-    description: 'Pro guide to trademark registration for metal goods in India. Secure your iron, steel, aluminum, and metal building materials under Class 6. 5000+ words SEO guide.',
+    description: validateAndNormalizeDescription('Pro guide to trademark registration for metal goods in India. Secure your iron, steel, aluminum, and metal building materials under Class 6. 5000+ words SEO guide.', "app/trademark-for-metal-goods/page.tsx "),
     keywords: [
         'trademark for metal goods',
         'class 6 trademark registration india',
@@ -44,7 +45,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Expert Trademark Registration for Metal Goods (Class 6)',
-        description: 'Protect your metal manufacturing brand. Secure your steel, aluminum, and hardware products with India\'s premier IP legal firm. 100% online process.',
+        description: validateAndNormalizeDescription('Protect your metal manufacturing brand. Secure your steel, aluminum, and hardware products with India\'s premier IP legal firm. 100% online process.', "app/trademark-for-metal-goods/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-for-metal-goods',
         type: 'article',
     },

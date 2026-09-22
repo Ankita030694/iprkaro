@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -29,7 +30,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'TM for Electronics & Software (Class 9 & 42) India',
-    description: 'Expert guide to trademark registration for electronics hardware, downloadable software, and SaaS in India. Secure your tech assets under Class 9 and 42. 5000+ words SEO manual.',
+    description: validateAndNormalizeDescription('Expert guide to trademark registration for electronics hardware, downloadable software, and SaaS in India. Secure your tech assets under Class 9 and 42. 5000+ words SEO manual.', "app/trademark-for-electronics-and-software/page.tsx "),
     keywords: [
         'trademark for electronics',
         'software trademark registration india',
@@ -44,7 +45,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Complete Guide to Trademark Registration for Electronics & Software (Class 9 & 42)',
-        description: 'Protect your code and hardware. Secure your tech innovation with India\'s elite IP legal firm. 100% online process.',
+        description: validateAndNormalizeDescription('Protect your code and hardware. Secure your tech innovation with India\'s elite IP legal firm. 100% online process.', "app/trademark-for-electronics-and-software/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-for-electronics-and-software',
         type: 'article',
     },

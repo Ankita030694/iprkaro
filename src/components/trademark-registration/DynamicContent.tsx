@@ -1,4 +1,6 @@
 'use client';
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
+
 
 import React from 'react';
 
@@ -23,23 +25,23 @@ export default function DynamicContent({ stateName }: DynamicContentProps) {
   const processSteps = [
     {
       step: "Trademark examination and selection",
-      description: "Choosing the appropriate trademark to avoid repetition"
+      description: validateAndNormalizeDescription("Choosing the appropriate trademark to avoid repetition", "components/trademark-registration/DynamicContent.tsx ")
     },
     {
       step: "Choosing the appropriate trademark to avoid repetition",
-      description: "Regular follow-up with the trademark office"
+      description: validateAndNormalizeDescription("Regular follow-up with the trademark office", "components/trademark-registration/DynamicContent.tsx ")
     },
     {
       step: "Regular follow-up with the trademark office",
-      description: "Tracking the trademark and obtaining status"
+      description: validateAndNormalizeDescription("Tracking the trademark and obtaining status", "components/trademark-registration/DynamicContent.tsx ")
     },
     {
       step: "Tracking the trademark and obtaining status",
-      description: "Response to the trademark office on time"
+      description: validateAndNormalizeDescription("Response to the trademark office on time", "components/trademark-registration/DynamicContent.tsx ")
     },
     {
       step: "Response to the trademark office on time",
-      description: "Getting the trademark done"
+      description: validateAndNormalizeDescription("Getting the trademark done", "components/trademark-registration/DynamicContent.tsx ")
     }
   ];
 

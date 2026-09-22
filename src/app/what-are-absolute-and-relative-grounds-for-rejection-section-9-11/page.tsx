@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -31,7 +32,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Section 9 & 11: Grounds for Trademark Rejection',
-    description: 'Exhaustive 5000+ word guide on Sections 9 and 11 of the Trade Marks Act 1999. Learn how to overcome objections and avoid generic or conflicting marks.',
+    description: validateAndNormalizeDescription('Exhaustive 5000+ word guide on Sections 9 and 11 of the Trade Marks Act 1999. Learn how to overcome objections and avoid generic or conflicting marks.', "app/what-are-absolute-and-relative-grounds-for-rejection-section-9-11/page.tsx "),
     keywords: [
         'absolute grounds for rejection',
         'relative grounds for rejection',
@@ -46,7 +47,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Mastering Sections 9 & 11: The Definitive Guide for Indian Trademarks',
-        description: 'Understand the legal barriers to trademark registration. Our comprehensive guide explains how to navigate absolute and relative grounds for refusal.',
+        description: validateAndNormalizeDescription('Understand the legal barriers to trademark registration. Our comprehensive guide explains how to navigate absolute and relative grounds for refusal.', "app/what-are-absolute-and-relative-grounds-for-rejection-section-9-11/page.tsx "),
         url: 'https://www.iprkaro.com/what-are-absolute-and-relative-grounds-for-rejection-section-9-11',
         type: 'article',
     },

@@ -1,9 +1,10 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import ContactClient from './ContactClient';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Contact Us | Expert IP Legal Support | IPR Karo',
-  description: 'Get in touch with IPR Karo for expert legal assistance with trademark registration, copyright filing, and patent applications in India. 24/7 support available.',
+  description: validateAndNormalizeDescription('Get in touch with IPR Karo for expert legal assistance with trademark registration, copyright filing, and patent applications in India. 24/7 support available.', "app/contact-us/page.tsx "),
   alternates: {
     canonical: '/contact-us',
   },

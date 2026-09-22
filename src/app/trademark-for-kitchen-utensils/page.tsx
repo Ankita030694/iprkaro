@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -31,7 +32,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Trademark for Kitchen Utensils | Register Class 21 Brand',
-    description: 'Complete guide to trademark registration for kitchen utensils, cookware, and household containers in India. Secure your brand under Class 21 with expert support.',
+    description: validateAndNormalizeDescription('Complete guide to trademark registration for kitchen utensils, cookware, and household containers in India. Secure your brand under Class 21 with expert support.', "app/trademark-for-kitchen-utensils/page.tsx "),
     keywords: [
         'trademark for kitchen utensils',
         'kitchenware brand registration india',
@@ -46,7 +47,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Elite Trademark Registration for Kitchen Utensil Brands',
-        description: 'Protect your kitchenware innovation with India\'s top IP legal team. 100% online registration for Class 21 goods.',
+        description: validateAndNormalizeDescription('Protect your kitchenware innovation with India\'s top IP legal team. 100% online registration for Class 21 goods.', "app/trademark-for-kitchen-utensils/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-for-kitchen-utensils',
         type: 'article',
     },

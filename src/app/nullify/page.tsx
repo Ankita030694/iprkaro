@@ -1,5 +1,6 @@
 'use client';
 
+
 import { useState, FormEvent } from 'react';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '@/lib/firebase';

@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -29,7 +30,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Respond to TM Examination Report',
-  description: 'Step-by-step guide on how to respond to a trademark examination report in India. Learn legal strategies, drafting tips, and online filing procedures.',
+  description: validateAndNormalizeDescription('Step-by-step guide on how to respond to a trademark examination report in India. Learn legal strategies, drafting tips, and online filing procedures.', "app/how-to-respond-to-trademark-examination-report/page.tsx "),
   keywords: [
     'how to respond to trademark examination report india',
     'trademark examination report response online',
@@ -44,7 +45,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Respond to TM Examination Report',
-    description: 'Master the response process for trademark examination reports. Detailed legal insights, evidence checklists, and step-by-step filing guide.',
+    description: validateAndNormalizeDescription('Master the response process for trademark examination reports. Detailed legal insights, evidence checklists, and step-by-step filing guide.', "app/how-to-respond-to-trademark-examination-report/page.tsx "),
     url: 'https://www.iprkaro.com/how-to-respond-to-trademark-examination-report',
     type: 'article',
   },

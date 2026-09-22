@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -28,7 +29,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Trademark for Oils & Lubricants | Protect Energy Brand',
-    description: 'Comprehensive guide to trademark registration for oils, lubricants, grease, and fuels in India. Secure your Class 4 brand identity with IPR Karo experts today.',
+    description: validateAndNormalizeDescription('Comprehensive guide to trademark registration for oils, lubricants, grease, and fuels in India. Secure your Class 4 brand identity with IPR Karo experts today.', "app/trademark-for-oils-and-lubricants/page.tsx "),
     keywords: [
         'trademark for oils and lubricants',
         'class 4 trademark registration india',
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Expert Trademark Registration for Oils & Lubricants Brands',
-        description: 'Secure your fuels and lubricants identity with India\'s leading IP legal team. 100% online process, expert filing for oil retailers and manufacturers.',
+        description: validateAndNormalizeDescription('Secure your fuels and lubricants identity with India\'s leading IP legal team. 100% online process, expert filing for oil retailers and manufacturers.', "app/trademark-for-oils-and-lubricants/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-for-oils-and-lubricants',
         type: 'article',
     },

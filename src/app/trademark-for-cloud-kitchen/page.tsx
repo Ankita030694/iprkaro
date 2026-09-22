@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -30,7 +31,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Trademark for Cloud Kitchen Business',
-    description: 'Expert guide to trademark registration for cloud kitchens in India. Secure your brand on Zomato and Swiggy. Detailed insights on Class 43, 29, 30, and 35. 5000+ words of legal advice.',
+    description: validateAndNormalizeDescription('Expert guide to trademark registration for cloud kitchens in India. Secure your brand on Zomato and Swiggy. Detailed insights on Class 43, 29, 30, and 35. 5000+ words of legal advice.', "app/trademark-for-cloud-kitchen/page.tsx "),
     keywords: [
         'Trademark for Cloud Kitchen Business',
         'cloud kitchen brand registration india',
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Trademark for Cloud Kitchen Business',
-        description: 'Protect your virtual restaurant brand with India\'s elite IP legal team. 100% online, same-day filing for Class 43 and food classes.',
+        description: validateAndNormalizeDescription('Protect your virtual restaurant brand with India\'s elite IP legal team. 100% online, same-day filing for Class 43 and food classes.', "app/trademark-for-cloud-kitchen/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-for-cloud-kitchen',
         type: 'article',
     },

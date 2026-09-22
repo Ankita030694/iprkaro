@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -38,7 +39,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Steps to File Trademark Online in India | 2026 Guide',
-    description: 'Learn the exact steps to file a trademark application online in India via the IPIndia portal. A comprehensive 4000-word guide on Search, Classes, DSC, Form TM-A, and more.',
+    description: validateAndNormalizeDescription('Learn the exact steps to file a trademark application online in India via the IPIndia portal. A comprehensive 4000-word guide on Search, Classes, DSC, Form TM-A, and more.', "app/what-are-the-steps-to-file-a-trademark-application-online-in-india/page.tsx "),
     keywords: [
         'what are the steps to file a trademark application online in india',
         'trademark registration process india 2026',
@@ -53,7 +54,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'The Definitive Guide: How to File a Trademark Application Online in India',
-        description: 'Secure your brand identity with our exhaustive step by step guide. From pre-filing search to final certificate, learn how to navigate the IPIndia portal like a pro.',
+        description: validateAndNormalizeDescription('Secure your brand identity with our exhaustive step by step guide. From pre-filing search to final certificate, learn how to navigate the IPIndia portal like a pro.', "app/what-are-the-steps-to-file-a-trademark-application-online-in-india/page.tsx "),
         url: 'https://www.iprkaro.com/what-are-the-steps-to-file-a-trademark-application-online-in-india',
         type: 'article',
     },

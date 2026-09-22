@@ -1,4 +1,6 @@
 'use client';
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
+
 
 import React from 'react';
 
@@ -23,23 +25,23 @@ export default function DynamicContent({ stateName }: DynamicContentProps) {
   const processSteps = [
     {
       step: "Prior art search and patentability assessment",
-      description: "Comprehensive search to assess novelty and inventiveness"
+      description: validateAndNormalizeDescription("Comprehensive search to assess novelty and inventiveness", "components/patent-services/DynamicContent.tsx ")
     },
     {
       step: "Patent specification drafting",
-      description: "Preparing detailed technical and legal documentation"
+      description: validateAndNormalizeDescription("Preparing detailed technical and legal documentation", "components/patent-services/DynamicContent.tsx ")
     },
     {
       step: "Patent application filing",
-      description: "Submission to Indian Patent Office with required forms"
+      description: validateAndNormalizeDescription("Submission to Indian Patent Office with required forms", "components/patent-services/DynamicContent.tsx ")
     },
     {
       step: "Publication and examination request",
-      description: "Application published and examination initiated"
+      description: validateAndNormalizeDescription("Application published and examination initiated", "components/patent-services/DynamicContent.tsx ")
     },
     {
       step: "Examination and grant",
-      description: "Patent office examines claims and grants patent"
+      description: validateAndNormalizeDescription("Patent office examines claims and grants patent", "components/patent-services/DynamicContent.tsx ")
     }
   ];
 

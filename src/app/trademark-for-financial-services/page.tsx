@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -44,7 +45,7 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
   title: 'Trademark Registration for Financial Services | Class 36',
-  description: 'Exhaustive guide to financial brand protection. Covering Banking, Fintech, NBFCs, Crypto, and SEBI/RBI compliance. Secure your trust capital with India\'s elite IP team.',
+  description: validateAndNormalizeDescription('Exhaustive guide to financial brand protection. Covering Banking, Fintech, NBFCs, Crypto, and SEBI/RBI compliance. Secure your trust capital with India\'s elite IP team.', "app/trademark-for-financial-services/page.tsx "),
   keywords: [
     'trademark for financial services',
     'class 36 trademark registration',
@@ -59,7 +60,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Financial Brand Security | Expert Trademark Registration',
-    description: 'In finance, trust is the only currency. Protect your banking, fintech, or consultancy brand from dilution and copycats.',
+    description: validateAndNormalizeDescription('In finance, trust is the only currency. Protect your banking, fintech, or consultancy brand from dilution and copycats.', "app/trademark-for-financial-services/page.tsx "),
     url: 'https://www.iprkaro.com/trademark-for-financial-services',
     type: 'article',
   },

@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -43,7 +44,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Indian Patent Office Search Guide',
-    description: 'Master the Indian Patent Advanced Search System (InPASS). Learn how to perform full-text searches, check patent status, and use IPC classification codes.',
+    description: validateAndNormalizeDescription('Master the Indian Patent Advanced Search System (InPASS). Learn how to perform full-text searches, check patent status, and use IPC classification codes.', "app/indian-patent-office-search/page.tsx "),
     keywords: [
         'indian patent office search',
         'inpass portal guide',
@@ -58,7 +59,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Indian Patent Office Search Guide',
-        description: 'Dont reinvent the wheel. Learn how to use the official Indian Patent Office portal to find prior art, check competitor filings, and verify patent validity.',
+        description: validateAndNormalizeDescription('Dont reinvent the wheel. Learn how to use the official Indian Patent Office portal to find prior art, check competitor filings, and verify patent validity.', "app/indian-patent-office-search/page.tsx "),
         url: 'https://www.iprkaro.com/indian-patent-office-search',
         type: 'article',
     },

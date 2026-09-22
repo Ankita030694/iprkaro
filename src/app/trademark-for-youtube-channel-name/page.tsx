@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -29,7 +30,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'TM for YouTube Channel Name | Protect Your Brand',
-    description: 'Comprehensive 5000+ word guide on trademarking your YouTube channel name in India. Secure your brand, prevent impersonation, and build digital equity. Expert legal insights for creators.',
+    description: validateAndNormalizeDescription('Comprehensive 5000+ word guide on trademarking your YouTube channel name in India. Secure your brand, prevent impersonation, and build digital equity. Expert legal insights for creators.', "app/trademark-for-youtube-channel-name/page.tsx "),
     keywords: [
         'trademark for youtube channel name',
         'youtube brand registration india',
@@ -44,7 +45,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Elite Trademark Registration for YouTube Creators in India',
-        description: 'Secure your digital future. Protect your YouTube channel name and logo with India\'s premier IP legal experts. 100% online, same-day filing.',
+        description: validateAndNormalizeDescription('Secure your digital future. Protect your YouTube channel name and logo with India\'s premier IP legal experts. 100% online, same-day filing.', "app/trademark-for-youtube-channel-name/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-for-youtube-channel-name',
         type: 'article',
     },

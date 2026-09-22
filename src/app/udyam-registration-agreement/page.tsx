@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -37,7 +38,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Udyam (MSME) Registration 2026',
-    description: 'Complete guide to Udyam Registration for MSMEs in India. Learn the new classification criteria, benefits like collateral-free loans, and step-by-step Aadhaar-based registration.',
+    description: validateAndNormalizeDescription('Complete guide to Udyam Registration for MSMEs in India. Learn the new classification criteria, benefits like collateral-free loans, and step-by-step Aadhaar-based registration.', "app/udyam-registration-agreement/page.tsx "),
     keywords: [
         'udyam registration msme',
         'msme registration benefits india',
@@ -52,7 +53,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Udyam (MSME) Registration 2026',
-        description: 'Empower your small business with Udyam registration. Expert guide on MSME benefits, loan subsidies, and protection against delayed payments.',
+        description: validateAndNormalizeDescription('Empower your small business with Udyam registration. Expert guide on MSME benefits, loan subsidies, and protection against delayed payments.', "app/udyam-registration-agreement/page.tsx "),
         url: 'https://www.iprkaro.com/udyam-registration-agreement',
         type: 'article',
     },

@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -42,7 +43,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Online Return Filing Guide India | ITR and GST E-Filing 2026',
-    description: 'Complete guide to online return filing in India. Learn about ITR-1 to ITR-7, GSTR-1, GSTR-3B, due dates, penalties, and e-verification procedures.',
+    description: validateAndNormalizeDescription('Complete guide to online return filing in India. Learn about ITR-1 to ITR-7, GSTR-1, GSTR-3B, due dates, penalties, and e-verification procedures.', "app/return-filling-online/page.tsx "),
     keywords: [
         'online return filing india',
         'itr filing process 2026',
@@ -57,7 +58,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Tax Compliance Simplified: The Online Return Filing Masterclass',
-        description: 'Dont miss your tax deadlines. Our comprehensive guide covers everything from ITR selection to GST compliance for individuals and businesses.',
+        description: validateAndNormalizeDescription('Dont miss your tax deadlines. Our comprehensive guide covers everything from ITR selection to GST compliance for individuals and businesses.', "app/return-filling-online/page.tsx "),
         url: 'https://www.iprkaro.com/return-filling-online',
         type: 'article',
     },

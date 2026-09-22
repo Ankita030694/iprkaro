@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -9,7 +10,7 @@ import { faCheckCircle, faShieldAlt, faBalanceScale, faGavel, faFileSignature, f
 
 export const metadata: Metadata = {
   title: 'Protect Company Name with Trademark in India | 2024',
-  description: 'Learn how to protect your company name with a trademark in India. Detailed guide on registration process, legal benefits, documents required, and professional strategies for brand protection.',
+  description: validateAndNormalizeDescription('Learn how to protect your company name with a trademark in India. Detailed guide on registration process, legal benefits, documents required, and professional strategies for brand protection.', "app/protect-company-name-with-trademark/page.tsx "),
   keywords: 'protect company name with trademark, trademark registration india, brand name protection, trademark search india, intellectual property india, company name trademark law',
   alternates: {
     canonical: '/protect-company-name-with-trademark',

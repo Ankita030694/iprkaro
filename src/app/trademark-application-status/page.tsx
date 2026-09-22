@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -36,7 +37,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Trademark Application Status | IPR Karo',
-  description: 'How to check trademark application status online in India. Detailed guide on meanings of statuses like Objected, Exam Report Issued, Advertised and Registered. Track TM status now.',
+  description: validateAndNormalizeDescription('How to check trademark application status online in India. Detailed guide on meanings of statuses like Objected, Exam Report Issued, Advertised and Registered. Track TM status now.', "app/trademark-application-status/page.tsx "),
   keywords: [
     'trademark application status',
     'check trademark status online',
@@ -52,7 +53,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Monitor Your Trademark Application Status Online | IPR Karo',
-    description: 'A comprehensive guide to understanding and tracking your trademark application status in India. Decipher statuses like Objected, Abandoned, and Registered.',
+    description: validateAndNormalizeDescription('A comprehensive guide to understanding and tracking your trademark application status in India. Decipher statuses like Objected, Abandoned, and Registered.', "app/trademark-application-status/page.tsx "),
     url: 'https://www.iprkaro.com/trademark-application-status',
     type: 'article',
     images: [

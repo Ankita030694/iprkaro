@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -27,7 +28,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Trademark for Chemicals | Class 1, 2, 3, & 5 Register',
-    description: 'Complete guide to trademark registration for chemicals in India. Secure your brand for industrial chemicals, agricultural products, and laboratory reagents under Class 1 and more. 5000+ words of expert legal insights.',
+    description: validateAndNormalizeDescription('Complete guide to trademark registration for chemicals in India. Secure your brand for industrial chemicals, agricultural products, and laboratory reagents under Class 1 and more. 5000+ words of expert legal insights.', "app/trademark-for-chemicals/page.tsx "),
     keywords: [
         'trademark for chemicals',
         'chemical brand registration india',
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Expert Trademark Registration for Chemical Industry in India',
-        description: 'Protect your chemical inventions and brand identity with India\'s elite IP legal team. 100% online, same-day filing for Class 1 chemicals.',
+        description: validateAndNormalizeDescription('Protect your chemical inventions and brand identity with India\'s elite IP legal team. 100% online, same-day filing for Class 1 chemicals.', "app/trademark-for-chemicals/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-for-chemicals',
         type: 'article',
     },

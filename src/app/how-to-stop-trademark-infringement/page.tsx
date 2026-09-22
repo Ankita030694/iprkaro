@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -25,7 +26,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Stop Trademark Infringement in India | Legal Guide',
-  description: 'Discover how to stop trademark infringement in India with expert legal steps: cease and desist notice, interim injunction, criminal complaint, and evidence gathering. Protect your brand today.',
+  description: validateAndNormalizeDescription('Discover how to stop trademark infringement in India with expert legal steps: cease and desist notice, interim injunction, criminal complaint, and evidence gathering. Protect your brand today.', "app/how-to-stop-trademark-infringement/page.tsx "),
   keywords: [
     'how to stop trademark infringement in india',
     'trademark infringement how to stop',
@@ -40,7 +41,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'How to Stop Trademark Infringement in India: The Full Legal Playbook',
-    description: 'A 5000+ word legal guide on stopping trademark infringement in India, from sending a legal notice to securing High Court injunctions. Updated for 2024.',
+    description: validateAndNormalizeDescription('A 5000+ word legal guide on stopping trademark infringement in India, from sending a legal notice to securing High Court injunctions. Updated for 2024.', "app/how-to-stop-trademark-infringement/page.tsx "),
     url: 'https://www.iprkaro.com/how-to-stop-trademark-infringement',
     type: 'article',
   },

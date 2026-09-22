@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -26,7 +27,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Civil vs Criminal TM Infringement',
-    description: 'Comprehensive 5000+ word guide on civil and criminal remedies for trademark infringement in India. Learn about injunctions, police raids, Section 103 penalties, and strategic enforcement.',
+    description: validateAndNormalizeDescription('Comprehensive 5000+ word guide on civil and criminal remedies for trademark infringement in India. Learn about injunctions, police raids, Section 103 penalties, and strategic enforcement.', "app/civil-vs-criminal-trademark-infringement-india/page.tsx "),
     keywords: [
         'civil vs criminal trademark infringement india',
         'trademark infringement remedies india',
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Civil vs Criminal TM Infringement',
-        description: 'Detailed analysis of India\'s IP legal framework. Protect your brand with expert insights on civil suits and criminal prosecution.',
+        description: validateAndNormalizeDescription('Detailed analysis of India\'s IP legal framework. Protect your brand with expert insights on civil suits and criminal prosecution.', "app/civil-vs-criminal-trademark-infringement-india/page.tsx "),
         url: 'https://www.iprkaro.com/civil-vs-criminal-trademark-infringement-india',
         type: 'article',
     },

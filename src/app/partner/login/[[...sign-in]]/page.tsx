@@ -2,6 +2,7 @@
 
 
 
+
 export default function PartnerLoginPage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0c002b] via-[#190a3c] to-[#0c002b] px-4 py-12">

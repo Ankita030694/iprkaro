@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -28,7 +29,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Trademark Discrepancy Meaning & Resolution in India',
-    description: 'Comprehensive 5000+ word guide on Trademark Discrepancy in India. Learn about causes, legal implications, Section 57 rectification, and how to resolve discrepancies using Form TM-P.',
+    description: validateAndNormalizeDescription('Comprehensive 5000+ word guide on Trademark Discrepancy in India. Learn about causes, legal implications, Section 57 rectification, and how to resolve discrepancies using Form TM-P.', "app/trademark-discrepancy-meaning/page.tsx "),
     keywords: [
         'trademark discrepancy meaning',
         'trademark rectification india',
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Complete Guide to Trademark Discrepancies and Rectification',
-        description: 'Understand every nuance of trademark discrepancies in India. Expert legal insights on how to safeguard your brand from administrative and legal errors.',
+        description: validateAndNormalizeDescription('Understand every nuance of trademark discrepancies in India. Expert legal insights on how to safeguard your brand from administrative and legal errors.', "app/trademark-discrepancy-meaning/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-discrepancy-meaning',
         type: 'article',
     },

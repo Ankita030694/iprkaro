@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -31,7 +32,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Official Govt Website for IP in India | 2026 Guide',
-    description: 'Comprehensive guide to ipindia.gov.in - the official government website for intellectual property in India. Learn about Patents, Trademarks, Designs, and GI registration.',
+    description: validateAndNormalizeDescription('Comprehensive guide to ipindia.gov.in - the official government website for intellectual property in India. Learn about Patents, Trademarks, Designs, and GI registration.', "app/official-government-website-for-intellectual-property-in-india/page.tsx "),
     keywords: [
         'official government website for intellectual property in india',
         'ipindia.gov.in guide',
@@ -46,7 +47,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Exploring the Official IP Website of India: The Definitive Guide',
-        description: 'Navigate the complex world of Indian Intellectual Property with our exhaustive guide to the official gov.in portal. Services, divisions, and legal tools explained.',
+        description: validateAndNormalizeDescription('Navigate the complex world of Indian Intellectual Property with our exhaustive guide to the official gov.in portal. Services, divisions, and legal tools explained.', "app/official-government-website-for-intellectual-property-in-india/page.tsx "),
         url: 'https://www.iprkaro.com/official-government-website-for-intellectual-property-in-india',
         type: 'article',
     },

@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -24,7 +25,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Trademark Classes for Goods & Services | 2026 Guide',
-    description: 'The ultimate forensic guide to trademark classes in India. Explore Nice Classification 2026 (NCL 13), goods classes 1-34, and service classes 35-45.',
+    description: validateAndNormalizeDescription('The ultimate forensic guide to trademark classes in India. Explore Nice Classification 2026 (NCL 13), goods classes 1-34, and service classes 35-45.', "app/understanding-trademark-classes-for-services-and-goods-in-india/page.tsx "),
     keywords: [
         'understanding trademark classes for services and goods in india',
         'trademark classes india 2026',
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'The DNA of Brand Protection: Trademark Classes 2026 Breakdown',
-        description: 'Master the 45 trademark classes in India. Learn the forensic strategy for goods and services to ensure bulletproof brand registration.',
+        description: validateAndNormalizeDescription('Master the 45 trademark classes in India. Learn the forensic strategy for goods and services to ensure bulletproof brand registration.', "app/understanding-trademark-classes-for-services-and-goods-in-india/page.tsx "),
         url: 'https://www.iprkaro.com/understanding-trademark-classes-for-services-and-goods-in-india',
         type: 'article',
     },

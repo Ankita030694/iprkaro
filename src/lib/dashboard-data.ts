@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 export const faqs = [
   {
     question: "What is IPR Karo?",
@@ -35,7 +36,7 @@ export const plans = [
     id: 'standard',
     name: 'AI Trademark Filing: Standard',
     subtitle: 'Deeper search with risk insights',
-    description: 'Best for small businesses/startups',
+    description: validateAndNormalizeDescription('Best for small businesses/startups', "lib/dashboard-data.ts "),
     content: 'Essential trademark protection',
     features: [
       'Complete online trademark filing included',
@@ -50,7 +51,7 @@ export const plans = [
     id: 'premium',
     name: 'Premium Trademark Registration: With AI Risk Checkup',
     subtitle: 'Complete filing included',
-    description: 'Suited for growing brands',
+    description: validateAndNormalizeDescription('Suited for growing brands', "lib/dashboard-data.ts "),
     content: 'Enhanced trademark services',
     features: [
       'AI-powered trademark registration and risk report',
@@ -65,7 +66,7 @@ export const plans = [
     id: 'pro',
     name: 'Brand Monitoring & Protection: AI Powered',
     subtitle: '24/7 brand monitoring',
-    description: 'Enterprises, ongoing protection',
+    description: validateAndNormalizeDescription('Enterprises, ongoing protection', "lib/dashboard-data.ts "),
     content: 'Complete brand protection',
     features: [
       '24/7 AI-powered brand & trademark monitoring',

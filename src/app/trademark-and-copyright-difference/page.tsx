@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -43,7 +44,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Difference Between TM & Copyright',
-    description: 'Understand the legal differences between Trademark and Copyright in India. Learn about the Trade Marks Act 1999 vs Copyright Act 1957, protection scope, and Section 45 NOC.',
+    description: validateAndNormalizeDescription('Understand the legal differences between Trademark and Copyright in India. Learn about the Trade Marks Act 1999 vs Copyright Act 1957, protection scope, and Section 45 NOC.', "app/trademark-and-copyright-difference/page.tsx "),
     keywords: [
         'difference between trademark and copyright india',
         'trade marks act 1999 vs copyright act 1957',
@@ -58,7 +59,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Difference Between TM & Copyright',
-        description: 'Dont confuse your brand with your art. Learn the specific legal protections afforded by Trademarks and Copyrights to avoid costly legal pitfalls.',
+        description: validateAndNormalizeDescription('Dont confuse your brand with your art. Learn the specific legal protections afforded by Trademarks and Copyrights to avoid costly legal pitfalls.', "app/trademark-and-copyright-difference/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-and-copyright-difference',
         type: 'article',
     },

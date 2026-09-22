@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -38,7 +39,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Trademark Registration for Business in India',
-  description: 'Comprehensive 5000+ word guide to trademark registration for businesses in India. Secure your company name, logo, and brand identity under relevant trademark classes.',
+  description: validateAndNormalizeDescription('Comprehensive 5000+ word guide to trademark registration for businesses in India. Secure your company name, logo, and brand identity under relevant trademark classes.', "app/trademark-for-business/page.tsx "),
   keywords: [
     'trademark for business',
     'business brand registration india',
@@ -53,7 +54,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Expert Trademark Registration for Your Business Brand',
-    description: 'Secure your business identity with India\'s leading IP legal team. 100% online process, same-day filing for startups and established companies.',
+    description: validateAndNormalizeDescription('Secure your business identity with India\'s leading IP legal team. 100% online process, same-day filing for startups and established companies.', "app/trademark-for-business/page.tsx "),
     url: 'https://www.iprkaro.com/trademark-for-business',
     type: 'article',
   },

@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -38,7 +39,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Trademark for Raw Ag. Products',
-    description: 'Complete guide to trademark registration for raw agricultural products in India. Secure your seeds, fresh produce, and livestock under Class 31. 100% online legal process.',
+    description: validateAndNormalizeDescription('Complete guide to trademark registration for raw agricultural products in India. Secure your seeds, fresh produce, and livestock under Class 31. 100% online legal process.', "app/trademark-for-raw-agricultural-products/page.tsx "),
     keywords: [
         'trademark for raw agricultural products',
         'agricultural brand registration india',
@@ -53,7 +54,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Trademark for Raw Ag. Products',
-        description: 'Protect your agricultural innovation with India\'s premier IP law firm. Same-day filing for seeds, produce, and forestry brands.',
+        description: validateAndNormalizeDescription('Protect your agricultural innovation with India\'s premier IP law firm. Same-day filing for seeds, produce, and forestry brands.', "app/trademark-for-raw-agricultural-products/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-for-raw-agricultural-products',
         type: 'article',
     },

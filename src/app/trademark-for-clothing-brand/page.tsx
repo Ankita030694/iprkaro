@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -33,7 +34,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Trademark Registration for Clothing Brands in India',
-  description: 'Apply for trademark registration for your clothing brand online. Expert guidance on Class 25 filing, logo protection, and brand name security for fashion businesses from ₹3,000.',
+  description: validateAndNormalizeDescription('Apply for trademark registration for your clothing brand online. Expert guidance on Class 25 filing, logo protection, and brand name security for fashion businesses from ₹3,000.', "app/trademark-for-clothing-brand/page.tsx "),
   keywords: [
     'trademark for clothing brand',
     'garment brand registration',
@@ -48,7 +49,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Expert Trademark Registration for Your Clothing Brand',
-    description: 'Secure your clothing brand identity with India\'s leading IP legal team. 100% online process, same-day filing.',
+    description: validateAndNormalizeDescription('Secure your clothing brand identity with India\'s leading IP legal team. 100% online process, same-day filing.', "app/trademark-for-clothing-brand/page.tsx "),
     url: 'https://www.iprkaro.com/trademark-for-clothing-brand',
     type: 'article',
   },

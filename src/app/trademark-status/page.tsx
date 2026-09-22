@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -42,7 +43,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Check Trademark Status Online | IP India Guide 2026',
-    description: 'Master the art of tracking your trademark application. Understand every status code from Objected to Registered on the official IP India portal.',
+    description: validateAndNormalizeDescription('Master the art of tracking your trademark application. Understand every status code from Objected to Registered on the official IP India portal.', "app/trademark-status/page.tsx "),
     keywords: [
         'check trademark status online india',
         'ip india trademark status guide',
@@ -57,7 +58,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Decoding Your Brand Protection: The Trademark Status Manual',
-        description: 'Dont let your application get abandoned. Learn how to monitor your trademark status and take forensic action on objections and oppositions.',
+        description: validateAndNormalizeDescription('Dont let your application get abandoned. Learn how to monitor your trademark status and take forensic action on objections and oppositions.', "app/trademark-status/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-status',
         type: 'article',
     },

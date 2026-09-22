@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -22,7 +23,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Legal Rights of Trademark Owners',
-    description: 'Understand the comprehensive statutory and common law rights of trademark owners in India. Learn about exclusive use, assignment, licensing, and legal protection against infringement.',
+    description: validateAndNormalizeDescription('Understand the comprehensive statutory and common law rights of trademark owners in India. Learn about exclusive use, assignment, licensing, and legal protection against infringement.', "app/legal-rights-of-trademark-owner-in-india/page.tsx "),
     keywords: [
         'legal rights of trademark owner india',
         'rights of registered trademark owner trade marks act 1999',
@@ -35,7 +36,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Legal Rights of Trademark Owners',
-        description: 'From exclusive usage to the right to sue for infringement, explore every legal power granted to you by Indian IP laws.',
+        description: validateAndNormalizeDescription('From exclusive usage to the right to sue for infringement, explore every legal power granted to you by Indian IP laws.', "app/legal-rights-of-trademark-owner-in-india/page.tsx "),
         url: 'https://www.iprkaro.com/legal-rights-of-trademark-owner-in-india',
         type: 'article',
     },

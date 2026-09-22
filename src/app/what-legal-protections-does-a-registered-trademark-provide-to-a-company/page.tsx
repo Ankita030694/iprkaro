@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -23,7 +24,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Legal Protections of a Registered Trademark | 2026',
-    description: 'Discover the comprehensive legal protections of a registered trademark in India. Learn about exclusive rights, civil/criminal remedies, and brand valuation benefits.',
+    description: validateAndNormalizeDescription('Discover the comprehensive legal protections of a registered trademark in India. Learn about exclusive rights, civil/criminal remedies, and brand valuation benefits.', "app/what-legal-protections-does-a-registered-trademark-provide-to-a-company/page.tsx "),
     keywords: [
         'what legal protections does a registered trademark provide to a company',
         'trademark legal protections india 2026',
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'The Legal Fortress: Trademark Protections for Your Business (2026)',
-        description: 'From exclusive use to criminal remedies, master the legal landscape of registered trademarks in India. Secure your brand legacy today.',
+        description: validateAndNormalizeDescription('From exclusive use to criminal remedies, master the legal landscape of registered trademarks in India. Secure your brand legacy today.', "app/what-legal-protections-does-a-registered-trademark-provide-to-a-company/page.tsx "),
         url: 'https://www.iprkaro.com/what-legal-protections-does-a-registered-trademark-provide-to-a-company',
         type: 'article',
     },

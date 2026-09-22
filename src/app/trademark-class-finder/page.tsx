@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -28,7 +29,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Free Trademark Class Finder India',
-  description: 'Use our comprehensive trademark class finder to identify the correct class for your goods or services in India. Detailed guide on Nice Classification with 5000+ words of expertise.',
+  description: validateAndNormalizeDescription('Use our comprehensive trademark class finder to identify the correct class for your goods or services in India. Detailed guide on Nice Classification with 5000+ words of expertise.', "app/trademark-class-finder/page.tsx "),
   keywords: [
     'trademark class finder',
     'trademark search by class',
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Free Trademark Class Finder India',
-    description: 'Avoid registration errors with our deep-dive trademark class search tool and guide. Expert analysis of all 45 classes.',
+    description: validateAndNormalizeDescription('Avoid registration errors with our deep-dive trademark class search tool and guide. Expert analysis of all 45 classes.', "app/trademark-class-finder/page.tsx "),
     url: 'https://www.iprkaro.com/trademark-class-finder',
     type: 'article',
   },

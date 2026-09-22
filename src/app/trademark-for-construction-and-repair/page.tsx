@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -41,7 +42,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'TM for Construction & Repair (Class 37) Guide',
-    description: 'Protect your building, infrastructure, and repair brand with India\'s leading IP firm. Comprehensive guide to Trademark Class 37 for construction, installation, and maintenance.',
+    description: validateAndNormalizeDescription('Protect your building, infrastructure, and repair brand with India\'s leading IP firm. Comprehensive guide to Trademark Class 37 for construction, installation, and maintenance.', "app/trademark-for-construction-and-repair/page.tsx "),
     keywords: [
         'trademark for construction services',
         'class 37 trademark india',
@@ -56,7 +57,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Elite Trademark Registration for Construction & Repair Brands in India',
-        description: 'Secure your construction and repair business under Class 37. Expert legal assistance for infrastructure and service providers in India.',
+        description: validateAndNormalizeDescription('Secure your construction and repair business under Class 37. Expert legal assistance for infrastructure and service providers in India.', "app/trademark-for-construction-and-repair/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-for-construction-and-repair',
         type: 'article',
     },

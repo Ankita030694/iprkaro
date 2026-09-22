@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -7,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Expert Trademark Guidance | IPR Karo',
-  description: 'Unparalleled trademark registration, patent services, and copyright protection in India. Get expert legal guidance, comprehensive IP management, and 24/7 support from IPR Karo.',
+  description: validateAndNormalizeDescription('Unparalleled trademark registration, patent services, and copyright protection in India. Get expert legal guidance, comprehensive IP management, and 24/7 support from IPR Karo.', "app/comprehensive-ip-protection-features/expert-trademark-guidance/page.tsx "),
   keywords: [
     'expert trademark guidance',
     'trademark registration',
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Expert Trademark Guidance | IPR Karo',
-    description: 'Get expert guidance for trademark registration, patent services, and copyright protection. Secure your IP assets with India\'s leading attorneys.',
+    description: validateAndNormalizeDescription('Get expert guidance for trademark registration, patent services, and copyright protection. Secure your IP assets with India\'s leading attorneys.', "app/comprehensive-ip-protection-features/expert-trademark-guidance/page.tsx "),
     url: 'https://www.iprkaro.com/comprehensive-ip-protection-features/expert-trademark-guidance',
     type: 'article',
     images: [

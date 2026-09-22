@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import { Metadata } from 'next';
 import { collection, getDocs, query, where, limit } from 'firebase/firestore';
 import { db } from '../../../lib/firebase';
@@ -76,11 +77,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     if (!querySnapshot.empty) {
       const blogData = querySnapshot.docs[0].data() as Blog;
       const title = blogData.metaTitle || `${blogData.title} | IPR Karo`;
-      const description =
-        blogData.metaDescription ||
+      const description = validateAndNormalizeDescription(blogData.metaDescription ||
         blogData.subtitle ||
         blogData.description?.replace(/<[^>]*>?/gm, '').substring(0, 160) ||
-        'Read expert intellectual property and trademark law insights from IPR Karo';
+        'Read expert intellectual property and trademark law insights from IPR Karo', "app/blog/[slug]/page.tsx ");
       const images = getAbsoluteImageUrl(blogData.image);
 
       return {
@@ -143,7 +143,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   return {
     title: 'IP Legal Resources & Guides | IPR Karo',
-    description: 'Expert guidance on trademark registration, objection replies, copyright, and patent filings in India.',
+    description: validateAndNormalizeDescription('Expert guidance on trademark registration, objection replies, copyright, and patent filings in India.', "app/blog/[slug]/page.tsx "),
     alternates: {
       canonical: `https://www.iprkaro.com/blog/${slug}`,
     },

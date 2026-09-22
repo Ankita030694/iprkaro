@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -33,7 +34,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Trademark for Telecom Services | Class 38 Registration',
-  description: 'Exhaustive guide to trademark registration for telecommunications. Secure 5G, Satellite, ISP, and Streaming identities. Expert Class 38 legal filing in India.',
+  description: validateAndNormalizeDescription('Exhaustive guide to trademark registration for telecommunications. Secure 5G, Satellite, ISP, and Streaming identities. Expert Class 38 legal filing in India.', "app/trademark-for-telecommunication-services/page.tsx "),
   keywords: [
     'trademark for telecommunication services',
     'class 38 trademark registration india',
@@ -48,7 +49,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Telecommunication Brand Security | Expert Class 38 Registration',
-    description: 'Protect your network frequency. Secure your ISP, Mobile Network, or Streaming brand with India\'s elite IP legal team.',
+    description: validateAndNormalizeDescription('Protect your network frequency. Secure your ISP, Mobile Network, or Streaming brand with India\'s elite IP legal team.', "app/trademark-for-telecommunication-services/page.tsx "),
     url: 'https://www.iprkaro.com/trademark-for-telecommunication-services',
     type: 'article',
   },

@@ -1,4 +1,6 @@
 'use client';
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
+
 
 import React from 'react';
 
@@ -23,23 +25,23 @@ export default function DynamicContent({ stateName }: DynamicContentProps) {
   const processSteps = [
     {
       step: "Work identification and classification",
-      description: "Identifying the type of creative work and appropriate category"
+      description: validateAndNormalizeDescription("Identifying the type of creative work and appropriate category", "components/copyright-protection/DynamicContent.tsx ")
     },
     {
       step: "Application preparation (Form XIV)",
-      description: "Drafting copyright application with all required details"
+      description: validateAndNormalizeDescription("Drafting copyright application with all required details", "components/copyright-protection/DynamicContent.tsx ")
     },
     {
       step: "Submission to Copyright Office",
-      description: "Filing application with supporting documents and fees"
+      description: validateAndNormalizeDescription("Filing application with supporting documents and fees", "components/copyright-protection/DynamicContent.tsx ")
     },
     {
       step: "Diary number issuance",
-      description: "Acknowledgment received with tracking number"
+      description: validateAndNormalizeDescription("Acknowledgment received with tracking number", "components/copyright-protection/DynamicContent.tsx ")
     },
     {
       step: "Examination and registration",
-      description: "Copyright Office reviews and issues certificate"
+      description: validateAndNormalizeDescription("Copyright Office reviews and issues certificate", "components/copyright-protection/DynamicContent.tsx ")
     }
   ];
 

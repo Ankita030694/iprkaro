@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 ﻿
 import React from 'react';
 import Link from 'next/link';
@@ -31,7 +32,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Trademark for Rubber Products | Class 17 Registration India',
-    description: 'Complete guide to trademark registration for rubber products, insulators, and flexible pipes in India. Secure your Class 17 brand assets today.',
+    description: validateAndNormalizeDescription('Complete guide to trademark registration for rubber products, insulators, and flexible pipes in India. Secure your Class 17 brand assets today.', "app/trademark-for-rubber-products/page.tsx "),
     keywords: [
         'trademark for rubber products',
         'class 17 trademark india',
@@ -46,7 +47,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Premium Trademark Registration for Rubber & Plastic Industrial Goods',
-        description: 'Protect your industrial rubber and insulating assets with India\'s leading IP team. 100% online, legal expertise for Class 17.',
+        description: validateAndNormalizeDescription('Protect your industrial rubber and insulating assets with India\'s leading IP team. 100% online, legal expertise for Class 17.', "app/trademark-for-rubber-products/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-for-rubber-products',
         type: 'article',
     },

@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -38,7 +39,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'NOC Format India | No Objection Certificate Templates 2026',
-    description: 'Get professional NOC formats for GST, Trademark, and Property registration. Learn about legal validity, mandatory clauses, and stamping requirements in India.',
+    description: validateAndNormalizeDescription('Get professional NOC formats for GST, Trademark, and Property registration. Learn about legal validity, mandatory clauses, and stamping requirements in India.', "app/format-for-no-objection-certificate/page.tsx "),
     keywords: [
         'noc format for business',
         'gst registration noc template',
@@ -53,7 +54,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'The Blueprint of Consent: Professional NOC Formats & Legal Guide',
-        description: 'Dont let missing consent delay your registration. Complete guide to No Objection Certificates with templates for GST, TM, and Property usage.',
+        description: validateAndNormalizeDescription('Dont let missing consent delay your registration. Complete guide to No Objection Certificates with templates for GST, TM, and Property usage.', "app/format-for-no-objection-certificate/page.tsx "),
         url: 'https://www.iprkaro.com/format-for-no-objection-certificate',
         type: 'article',
     },

@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -29,7 +30,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Trademark for Hand Tools | Class 8 Registration Guide India',
-    description: 'Expert guide to trademark registration for hand tools, cutlery, and gardening implements in India. Secure your manual tools under Class 8. 5000+ words SEO manual.',
+    description: validateAndNormalizeDescription('Expert guide to trademark registration for hand tools, cutlery, and gardening implements in India. Secure your manual tools under Class 8. 5000+ words SEO manual.', "app/trademark-for-hand-tools/page.tsx "),
     keywords: [
         'trademark for hand tools',
         'class 8 trademark registration india',
@@ -44,7 +45,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Complete Guide to Trademark Registration for Hand Tools (Class 8)',
-        description: 'Protect your craftsmanship. Secure your manual tools and implements with India\'s elite IP legal firm. 100% online process.',
+        description: validateAndNormalizeDescription('Protect your craftsmanship. Secure your manual tools and implements with India\'s elite IP legal firm. 100% online process.', "app/trademark-for-hand-tools/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-for-hand-tools',
         type: 'article',
     },

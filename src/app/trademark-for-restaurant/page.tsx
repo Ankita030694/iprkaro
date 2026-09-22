@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -29,7 +30,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Trademark for Restaurant | Protect Your Food Brand',
-  description: 'Exhaustive guide to trademark registration for restaurants, cafes, and cloud kitchens in India. Secure your brand name, logo, and menu under Class 43 today.',
+  description: validateAndNormalizeDescription('Exhaustive guide to trademark registration for restaurants, cafes, and cloud kitchens in India. Secure your brand name, logo, and menu under Class 43 today.', "app/trademark-for-restaurant/page.tsx "),
   keywords: [
     'trademark for restaurant',
     'restaurant brand registration india',
@@ -44,7 +45,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Expert Trademark Registration for Your Restaurant Brand',
-    description: 'Secure your culinary identity with India\'s leading IP legal team. 100% online process, same-day filing for restaurants and cafes.',
+    description: validateAndNormalizeDescription('Secure your culinary identity with India\'s leading IP legal team. 100% online process, same-day filing for restaurants and cafes.', "app/trademark-for-restaurant/page.tsx "),
     url: 'https://www.iprkaro.com/trademark-for-restaurant',
     type: 'article',
   },

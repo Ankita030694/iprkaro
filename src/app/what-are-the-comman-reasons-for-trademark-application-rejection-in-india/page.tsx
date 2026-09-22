@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -30,7 +31,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Reasons for Trademark Rejection',
-    description: 'Learn exactly why trademark applications are rejected in India. Explore Section 9 (Absolute Grounds) and Section 11 (Relative Grounds) with forensic case studies.',
+    description: validateAndNormalizeDescription('Learn exactly why trademark applications are rejected in India. Explore Section 9 (Absolute Grounds) and Section 11 (Relative Grounds) with forensic case studies.', "app/what-are-the-comman-reasons-for-trademark-application-rejection-in-india/page.tsx "),
     keywords: [
         'what are the comman reasons for trademark application rejection in india',
         'trademark rejection reasons india 2026',
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Reasons for Trademark Rejection',
-        description: 'Navigate the complex minefield of Section 9 and 11. Learn from recent high court precedents and protect your brand from rejection.',
+        description: validateAndNormalizeDescription('Navigate the complex minefield of Section 9 and 11. Learn from recent high court precedents and protect your brand from rejection.', "app/what-are-the-comman-reasons-for-trademark-application-rejection-in-india/page.tsx "),
         url: 'https://www.iprkaro.com/what-are-the-comman-reasons-for-trademark-application-rejection-in-india',
         type: 'article',
     },

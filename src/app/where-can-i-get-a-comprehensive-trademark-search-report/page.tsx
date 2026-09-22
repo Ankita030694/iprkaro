@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -28,7 +29,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Comprehensive Trademark Search Report India | IPR Karo',
-  description: 'Need a comprehensive trademark search report in India? Compare top IP India search providers for federal, common law, and phonetic searches. Secure your brand now.',
+  description: validateAndNormalizeDescription('Need a comprehensive trademark search report in India? Compare top IP India search providers for federal, common law, and phonetic searches. Secure your brand now.', "app/where-can-i-get-a-comprehensive-trademark-search-report/page.tsx "),
   keywords: [
     'comprehensive trademark search report india',
     'where to get trademark search in india',
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Where Can I Get a Comprehensive Trademark Search Report in India?',
-    description: 'A deep dive into obtaining the most reliable trademark search reports to protect your brand identity within the Indian jurisdiction.',
+    description: validateAndNormalizeDescription('A deep dive into obtaining the most reliable trademark search reports to protect your brand identity within the Indian jurisdiction.', "app/where-can-i-get-a-comprehensive-trademark-search-report/page.tsx "),
     url: 'https://www.iprkaro.com/where-can-i-get-a-comprehensive-trademark-search-report',
     type: 'article',
   },

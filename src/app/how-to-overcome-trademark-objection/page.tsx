@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -29,7 +30,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'How to Overcome Trademark Objection',
-  description: 'Master the legal strategies to How to Overcome Trademark Objections in India. Detailed insights on Section 9 & 11, evidence checklists, and winning rebuttal formats.',
+  description: validateAndNormalizeDescription('Master the legal strategies to How to Overcome Trademark Objections in India. Detailed insights on Section 9 & 11, evidence checklists, and winning rebuttal formats.', "app/how-to-overcome-trademark-objection/page.tsx "),
   keywords: [
     'how to How to Overcome Trademark Objection india',
     'trademark objection response strategy',
@@ -44,7 +45,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'How to Overcome Trademark Objection',
-    description: 'The ultimate 5000+ word strategy guide for overcoming trademark objections. Learn how to secure your brand status with legal precision.',
+    description: validateAndNormalizeDescription('The ultimate 5000+ word strategy guide for overcoming trademark objections. Learn how to secure your brand status with legal precision.', "app/how-to-overcome-trademark-objection/page.tsx "),
     url: 'https://www.iprkaro.com/how-to-overcome-trademark-objection',
     type: 'article',
   },

@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -27,7 +28,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Trademark for Paints & Coatings | Protect Your Paint Brand',
-    description: 'Exhaustive guide to trademark registration for paints, coatings, and varnishes in India. Secure your brand name and logo under Class 2 with IPR Karo experts.',
+    description: validateAndNormalizeDescription('Exhaustive guide to trademark registration for paints, coatings, and varnishes in India. Secure your brand name and logo under Class 2 with IPR Karo experts.', "app/trademark-for-paints-coatings/page.tsx "),
     keywords: [
         'trademark for paints',
         'paints and coatings trademark india',
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Expert Trademark Registration for Paints & Coatings Brands',
-        description: 'Secure your chemical identity with India\'s leading IP legal team. 100% online process, expert filing for paint manufacturers.',
+        description: validateAndNormalizeDescription('Secure your chemical identity with India\'s leading IP legal team. 100% online process, expert filing for paint manufacturers.', "app/trademark-for-paints-coatings/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-for-paints-coatings',
         type: 'article',
     },

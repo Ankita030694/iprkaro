@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -38,7 +39,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Leave and License Agreement Guide | Fees & Rules 2026',
-    description: 'Master the Leave and License agreement process in India. Learn the difference between lease and license, mandatory registration, and stamp duty calculation.',
+    description: validateAndNormalizeDescription('Master the Leave and License agreement process in India. Learn the difference between lease and license, mandatory registration, and stamp duty calculation.', "app/leave-and-license-agreement/page.tsx "),
     keywords: [
         'leave and license agreement',
         'difference between lease and license',
@@ -53,7 +54,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Expert Guide: Drafting and Registering Leave and License Agreements',
-        description: 'Protect your property rights. Learn how to draft a legally sound leave and license agreement and navigate the registration process efficiently.',
+        description: validateAndNormalizeDescription('Protect your property rights. Learn how to draft a legally sound leave and license agreement and navigate the registration process efficiently.', "app/leave-and-license-agreement/page.tsx "),
         url: 'https://www.iprkaro.com/leave-and-license-agreement',
         type: 'article',
     },

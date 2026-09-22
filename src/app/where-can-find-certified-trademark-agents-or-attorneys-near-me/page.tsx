@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -38,7 +39,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Find Certified TM Agents or Attorneys Near Me | India',
-    description: 'Find certified trademark agents and attorneys near you in India. Expert guide on verifying CGPDTM registered professionals and choosing top IP law firms.',
+    description: validateAndNormalizeDescription('Find certified trademark agents and attorneys near you in India. Expert guide on verifying CGPDTM registered professionals and choosing top IP law firms.', "app/where-can-find-certified-trademark-agents-or-attorneys-near-me/page.tsx "),
     keywords: [
         'certified trademark agents near me',
         'trademark attorneys india',
@@ -53,7 +54,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Finding Certified Trademark Agents & Attorneys in India: The Forensic Guide',
-        description: 'A 5000-word analysis on locating and verifying registered Trademark Agents and Advocates in Bharat. Secure your brand with authorized experts.',
+        description: validateAndNormalizeDescription('A 5000-word analysis on locating and verifying registered Trademark Agents and Advocates in Bharat. Secure your brand with authorized experts.', "app/where-can-find-certified-trademark-agents-or-attorneys-near-me/page.tsx "),
         url: 'https://www.iprkaro.com/where-can-find-certified-trademark-agents-or-attorneys-near-me',
         type: 'article',
     },

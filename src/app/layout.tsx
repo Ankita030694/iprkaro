@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
@@ -32,7 +33,7 @@ export const viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.iprkaro.com'),
   title: "Trademark Registration India | IPR Karo",
-  description: "Instant trademark search, risk checks, and online registration. Register your trademark with AI-powered reports for fast, secure brand protection. Start in under 60 seconds with IPR Karo.",
+  description: validateAndNormalizeDescription("Instant trademark search, risk checks, and online registration. Register your trademark with AI-powered reports for fast, secure brand protection. Start in under 60 seconds with IPR Karo.", "app/layout.tsx "),
 
   robots: {
     index: true,

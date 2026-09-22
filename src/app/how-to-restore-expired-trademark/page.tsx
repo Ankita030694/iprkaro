@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -32,7 +33,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Restore Expired Trademark in India | Fees & Process',
-  description: 'Step-by-step guide to restore an expired trademark in India. Learn the Form TM-R procedure, restoration fees (Rs 18,000), and the 1-year revival deadline.',
+  description: validateAndNormalizeDescription('Step-by-step guide to restore an expired trademark in India. Learn the Form TM-R procedure, restoration fees (Rs 18,000), and the 1-year revival deadline.', "app/how-to-restore-expired-trademark/page.tsx "),
   keywords: [
     'how to restore expired trademark india',
     'trademark restoration procedure india',
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Restore Your Expired Trademark: The 2024 Restoration Blueprint',
-    description: 'A professional legal guide on reviving a trademark once it has been removed from the register. Master the Form TM-R filing and secure your brand continuity.',
+    description: validateAndNormalizeDescription('A professional legal guide on reviving a trademark once it has been removed from the register. Master the Form TM-R filing and secure your brand continuity.', "app/how-to-restore-expired-trademark/page.tsx "),
     url: 'https://www.iprkaro.com/how-to-restore-expired-trademark',
     type: 'article',
   },

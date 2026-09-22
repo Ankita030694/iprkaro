@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -33,7 +34,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Trademark for Carpets | Register Class 27 Rugs & Mats Online',
-    description: 'Expert guide to trademark registration for carpets, rugs, mats, and floor coverings in Class 27. Secure your brand identity with India\'s top IP firm IPR Karo.',
+    description: validateAndNormalizeDescription('Expert guide to trademark registration for carpets, rugs, mats, and floor coverings in Class 27. Secure your brand identity with India\'s top IP firm IPR Karo.', "app/trademark-for-carpets/page.tsx "),
     keywords: [
         'trademark for carpets',
         'register rugs brand india',
@@ -48,7 +49,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Premium Trademark Registration for Carpets & Rugs',
-        description: 'Secure your Class 27 assets with India\'s leading IP legal team. High-authority brand protection for carpet and flooring manufacturers.',
+        description: validateAndNormalizeDescription('Secure your Class 27 assets with India\'s leading IP legal team. High-authority brand protection for carpet and flooring manufacturers.', "app/trademark-for-carpets/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-for-carpets',
         type: 'article',
     },

@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -7,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'AI Powered Trademark Solutions India | Future of IP',
-  description: 'Experience the future of intellectual property with our AI powered trademark solutions. unmatched accuracy in trademark registration, patent services, and copyright protection.',
+  description: validateAndNormalizeDescription('Experience the future of intellectual property with our AI powered trademark solutions. unmatched accuracy in trademark registration, patent services, and copyright protection.', "app/comprehensive-ip-protection-features/ai-powered-trademark-solutions/page.tsx "),
   keywords: [
     'ai powered trademark solutions',
     'trademark registration',
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'AI Powered Trademark Solutions India | Future of IP',
-    description: 'Revolutionizing trademark registration and IP protection with advanced Artificial Intelligence. Faster searches, higher accuracy, and zero human error.',
+    description: validateAndNormalizeDescription('Revolutionizing trademark registration and IP protection with advanced Artificial Intelligence. Faster searches, higher accuracy, and zero human error.', "app/comprehensive-ip-protection-features/ai-powered-trademark-solutions/page.tsx "),
     url: 'https://www.iprkaro.com/comprehensive-ip-protection-features/ai-powered-trademark-solutions',
     type: 'article',
     images: [

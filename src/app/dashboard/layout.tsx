@@ -1,8 +1,9 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Dashboard - IPR Karo',
-  description: 'Trademark search dashboard',
+  description: validateAndNormalizeDescription('Trademark search dashboard', "app/dashboard/layout.tsx "),
   alternates: {
     canonical: 'https://www.iprkaro.com/dashboard',
   },

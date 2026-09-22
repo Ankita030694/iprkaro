@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -23,7 +24,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'How to Stop Brand Name Infringement',
-  description: 'Proactive legal strategies to stop trademark infringement in India. Learn about cease and desist notices, civil suits, criminal penalties, and brand protection under Trademarks Act 1999.',
+  description: validateAndNormalizeDescription('Proactive legal strategies to stop trademark infringement in India. Learn about cease and desist notices, civil suits, criminal penalties, and brand protection under Trademarks Act 1999.', "app/how-to-stop-someone-using-your-brand-name/page.tsx "),
   keywords: [
     'stop someone using my brand name',
     'trademark infringement india',
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'How to Stop Brand Name Infringement',
-    description: 'Expert legal roadmap to combat trademark infringement. Master the art of brand protection with cease and desist notices and litigation strategies.',
+    description: validateAndNormalizeDescription('Expert legal roadmap to combat trademark infringement. Master the art of brand protection with cease and desist notices and litigation strategies.', "app/how-to-stop-someone-using-your-brand-name/page.tsx "),
     url: 'https://www.iprkaro.com/how-to-stop-someone-using-your-brand-name',
     type: 'article',
   },

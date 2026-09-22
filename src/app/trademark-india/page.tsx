@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -36,7 +37,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Trademark India | Comprehensive Brand Protection Guide 2026',
-    description: 'The definitive guide to trademarks in India. Explore the legal landscape, registration benefits, and strategic importance of protecting your brand in Bharat.',
+    description: validateAndNormalizeDescription('The definitive guide to trademarks in India. Explore the legal landscape, registration benefits, and strategic importance of protecting your brand in Bharat.', "app/trademark-india/page.tsx "),
     keywords: [
         'trademark india',
         'indian trademark law',
@@ -51,7 +52,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Protecting Brands in Bharat: The Global Guide to Trademark India',
-        description: 'Secure your legacy in one of the world\'s fastest growing economies. A deep dive into the Indian trademark ecosystem for founders and investors.',
+        description: validateAndNormalizeDescription('Secure your legacy in one of the world\'s fastest growing economies. A deep dive into the Indian trademark ecosystem for founders and investors.', "app/trademark-india/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-india',
         type: 'article',
     },

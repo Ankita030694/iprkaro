@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -35,7 +36,7 @@ import {
 
 export const metadata: Metadata = {
    title: 'Trademark for Medical Services | Protect Clinic Brand',
-   description: 'Comprehensive guide to trademark registration for hospitals, clinics, diagnostic centers, and healthcare professionals. Secure your medical brand under Class 44.',
+   description: validateAndNormalizeDescription('Comprehensive guide to trademark registration for hospitals, clinics, diagnostic centers, and healthcare professionals. Secure your medical brand under Class 44.', "app/trademark-for-medical-services/page.tsx "),
    keywords: [
       'trademark for medical services',
       'class 44 trademark registration india',
@@ -50,7 +51,7 @@ export const metadata: Metadata = {
    ],
    openGraph: {
       title: 'Medical Brand Protection | Expert Class 44 Registration',
-      description: 'Protect your legacy of care. Secure your hospital, clinic, or healthcare brand with India\'s premier IP legal firm.',
+      description: validateAndNormalizeDescription('Protect your legacy of care. Secure your hospital, clinic, or healthcare brand with India\'s premier IP legal firm.', "app/trademark-for-medical-services/page.tsx "),
       url: 'https://www.iprkaro.com/trademark-for-medical-services',
       type: 'article',
    },

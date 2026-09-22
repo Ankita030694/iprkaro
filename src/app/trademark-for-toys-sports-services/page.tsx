@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -32,7 +33,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Trademark for Toys & Sports | Brand Registration India',
-  description: 'Register your trademark for toys, games, and sports services in India. Class 28 & 41 legal protection for sporting goods, academies, and recreational brands.',
+  description: validateAndNormalizeDescription('Register your trademark for toys, games, and sports services in India. Class 28 & 41 legal protection for sporting goods, academies, and recreational brands.', "app/trademark-for-toys-sports-services/page.tsx "),
   keywords: [
     'trademark registration for toys',
     'sports services trademark class 41',

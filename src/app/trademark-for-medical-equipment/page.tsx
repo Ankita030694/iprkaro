@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -33,7 +34,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'Trademark for Medical Equipment | Class 10 Registration',
-    description: 'Complete guide to trademark registration for medical devices, surgical instruments, and healthcare equipment in India. Secure your medical brand under Class 10 today.',
+    description: validateAndNormalizeDescription('Complete guide to trademark registration for medical devices, surgical instruments, and healthcare equipment in India. Secure your medical brand under Class 10 today.', "app/trademark-for-medical-equipment/page.tsx "),
     keywords: [
         'trademark for medical equipment',
         'medical device brand registration india',
@@ -48,7 +49,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Elite Trademark Registration for Medical Equipment Manufacturers',
-        description: 'Protect your healthcare innovation with India\'s leading IP legal team. 100% online process, same-day filing for medical device brands.',
+        description: validateAndNormalizeDescription('Protect your healthcare innovation with India\'s leading IP legal team. 100% online process, same-day filing for medical device brands.', "app/trademark-for-medical-equipment/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-for-medical-equipment',
         type: 'article',
     },

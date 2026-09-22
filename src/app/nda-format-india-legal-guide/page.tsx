@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -43,7 +44,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'NDA Guide India | Formats & Legalities 2026',
-    description: 'Protect your trade secrets with a legally binding NDA in India. Learn about essential clauses, stamp duty, and the Indian Contract Act validity.',
+    description: validateAndNormalizeDescription('Protect your trade secrets with a legally binding NDA in India. Learn about essential clauses, stamp duty, and the Indian Contract Act validity.', "app/nda-format-india-legal-guide/page.tsx "),
     keywords: [
         'non-disclosure agreement format india',
         'nda legal validity indian contract act',
@@ -58,7 +59,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Confidentiality Forensics: The Ultimate NDA Guide for Indian Businesses',
-        description: 'Dont let your ideas leak. Our deep dive into Non-Disclosure Agreements explains how to draft a watertight contract that protects your intellectual property.',
+        description: validateAndNormalizeDescription('Dont let your ideas leak. Our deep dive into Non-Disclosure Agreements explains how to draft a watertight contract that protects your intellectual property.', "app/nda-format-india-legal-guide/page.tsx "),
         url: 'https://www.iprkaro.com/nda-format-india-legal-guide',
         type: 'article',
     },

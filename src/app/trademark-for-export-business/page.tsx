@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -27,7 +28,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'TM for Export Business | Global Brand Protection India',
-    description: 'Comprehensive 5000+ word guide on trademark registration for export businesses in India. Learn about Madrid Protocol, Class 35 registration, and international brand security. Rank #1 today.',
+    description: validateAndNormalizeDescription('Comprehensive 5000+ word guide on trademark registration for export businesses in India. Learn about Madrid Protocol, Class 35 registration, and international brand security. Rank #1 today.', "app/trademark-for-export-business/page.tsx "),
     keywords: [
         'trademark for export business',
         'international trademark registration india',
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Elite Trademark Registration for Export Businesses in India',
-        description: 'Secure your global export empire with India\'s premier IP legal experts. 100% online, Madrid Protocol specialized, and highly SEO optimized.',
+        description: validateAndNormalizeDescription('Secure your global export empire with India\'s premier IP legal experts. 100% online, Madrid Protocol specialized, and highly SEO optimized.', "app/trademark-for-export-business/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-for-export-business',
         type: 'article',
     },

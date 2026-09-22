@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -36,7 +37,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'What is Trademark? | Complete Guide to Brand Identity 2026',
-    description: 'Understand the core concepts of trademarks. Learn what is a trademark, why it matters for your business, and the different types of marks protected under Indian law.',
+    description: validateAndNormalizeDescription('Understand the core concepts of trademarks. Learn what is a trademark, why it matters for your business, and the different types of marks protected under Indian law.', "app/what-is-trademark/page.tsx "),
     keywords: [
         'what is trademark',
         'trademark definition',
@@ -51,7 +52,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Defining Identity: What is a Trademark?',
-        description: 'Explore the foundations of branding. A deep dive into the legal definition, historical context, and business value of a registered trademark.',
+        description: validateAndNormalizeDescription('Explore the foundations of branding. A deep dive into the legal definition, historical context, and business value of a registered trademark.', "app/what-is-trademark/page.tsx "),
         url: 'https://www.iprkaro.com/what-is-trademark',
         type: 'article',
     },

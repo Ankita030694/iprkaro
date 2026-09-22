@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -38,7 +39,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'TM for Tobacco & Smoking Products (Class 34) Guide',
-    description: 'Protect your tobacco brand with India\'s top IP law firm. Expert guide to Trademark Class 34 for cigarettes, cigars, chewing tobacco, and smoking accessories.',
+    description: validateAndNormalizeDescription('Protect your tobacco brand with India\'s top IP law firm. Expert guide to Trademark Class 34 for cigarettes, cigars, chewing tobacco, and smoking accessories.', "app/trademark-for-tobacco/page.tsx "),
     keywords: [
         'trademark for tobacco',
         'cigarette brand registration india',
@@ -53,7 +54,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'Elite Trademark Registration for Tobacco Brands in India',
-        description: 'Secure your cigarettes, cigars, and tobacco products under Class 34. Professional legal assistance for the complex regulatory landscape of India.',
+        description: validateAndNormalizeDescription('Secure your cigarettes, cigars, and tobacco products under Class 34. Professional legal assistance for the complex regulatory landscape of India.', "app/trademark-for-tobacco/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-for-tobacco',
         type: 'article',
     },

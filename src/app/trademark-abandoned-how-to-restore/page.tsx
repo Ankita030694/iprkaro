@@ -1,3 +1,4 @@
+import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -28,7 +29,7 @@ import {
 
 export const metadata: Metadata = {
     title: 'How to Restore Abandoned Trademark',
-    description: 'If your trademark application is abandoned or removed in India, you can still restore it. Learn about Form TM-M (Revival) and Form TM-R (Restoration) under Section 25(4). Expert legal guide.',
+    description: validateAndNormalizeDescription('If your trademark application is abandoned or removed in India, you can still restore it. Learn about Form TM-M (Revival) and Form TM-R (Restoration) under Section 25(4). Expert legal guide.', "app/trademark-abandoned-how-to-restore/page.tsx "),
     keywords: [
         'trademark abandoned how to restore',
         'revive abandoned trademark application india',
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'How to Restore Abandoned Trademark',
-        description: 'Lost your trademark due to a missed deadline? Discover the legal path to restoration and revival with our comprehensive 5000-word guide.',
+        description: validateAndNormalizeDescription('Lost your trademark due to a missed deadline? Discover the legal path to restoration and revival with our comprehensive 5000-word guide.', "app/trademark-abandoned-how-to-restore/page.tsx "),
         url: 'https://www.iprkaro.com/trademark-abandoned-how-to-restore',
         type: 'article',
     },
