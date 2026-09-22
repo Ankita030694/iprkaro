@@ -192,7 +192,8 @@ Article Context:
 
 SECTION CONTENT REQUIREMENTS:
 1. Target Word Count: Strictly 350 to 380 words for this section chunk. (The overall compiled article across all sections MUST strictly total between 1,800 and 2,000 words). Be razor-sharp, dense, practical, and eliminate unnecessary preamble or fluff.
-2. Structure:
+2. Readability & Tone: Write for an 8th-grade reading level (Flesch Reading Ease > 60). Use short, clear, and concise sentences. Avoid run-on clauses, overly complex vocabulary, and excessive passive voice. Keep paragraphs short (maximum 3-4 sentences) and highly focused.
+3. Structure:
    - Start immediately with the section heading: <h3>${heading}</h3>
    - Provide 3 to 4 comprehensive paragraphs using <strong>, <em>, <ul>, <ol>, <li> for high readability.
    - Reference exact statutory provisions (e.g. Sections 9, 11, 21, 23, 29, 30, 57, 134, 135 of Trade Marks Act 1999; TM Rules 2017; Forms TM-A, TM-O, TM-M, TM-R; CGPDTM Registry guidelines; official fees ₹4,500 for individuals/startups vs ₹9,000 for companies).

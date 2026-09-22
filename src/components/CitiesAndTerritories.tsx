@@ -100,23 +100,24 @@ const CitiesAndTerritories: React.FC<CitiesAndTerritoriesProps> = ({ serviceType
             <i className="fas fa-map-marker-alt mr-3" aria-hidden="true"></i>
             Nationwide Coverage ({allLocations.length} Locations)
           </h4>
-          <div className="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-5 lg:grid-cols-7 xl:grid-cols-7 gap-2 sm:gap-3">
+          <ul className="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-5 lg:grid-cols-7 xl:grid-cols-7 gap-2 sm:gap-3">
             {allLocations.map((location, index) => (
-              <Link
-                href={`/our-services/${basePath}?location=${generateLocationSlug(location)}`}
-                className="group cursor-pointer"
-              >
-                {/* Minimal Card Design */}
-                <div className="bg-[#0C002B] rounded-lg px-3 py-4 text-center border border-gray-800 hover:border-[#FFB703] hover:bg-[#1a0033] hover:scale-105 transition-all duration-300">
-
-                  {/* Simple Text Only */}
-                  <span className="text-white font-nunito text-sm font-medium leading-tight group-hover:text-[#FFB703] transition-colors duration-300">
-                    {location}
-                  </span>
-                </div>
-              </Link>
+              <li key={index}>
+                <Link
+                  href={`/our-services/${basePath}?location=${generateLocationSlug(location)}`}
+                  className="group cursor-pointer block h-full"
+                >
+                  {/* Minimal Card Design */}
+                  <div className="bg-[#0C002B] rounded-lg px-3 py-4 text-center border border-gray-800 hover:border-[#FFB703] hover:bg-[#1a0033] hover:scale-105 transition-all duration-300 h-full flex items-center justify-center">
+                    {/* Simple Text Only */}
+                    <span className="text-white font-nunito text-sm font-medium leading-tight group-hover:text-[#FFB703] transition-colors duration-300">
+                      {location}
+                    </span>
+                  </div>
+                </Link>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
 
         {/* SEO Content */}

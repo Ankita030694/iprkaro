@@ -1,0 +1,482 @@
+[
+  {
+    "file": "src\\app\\about-us\\layout.tsx",
+    "oldDesc": "Learn about IPR Karo - India's leading AI-powered trademark registration platform. Our story, mission, and commitment to making IP protection accessible to all businesses.",
+    "newDesc": "Discover IPR Karo, India's leading AI-powered trademark registration platform. Learn about our mission to make IP protection accessible to all.",
+    "quote": "\""
+  },
+  {
+    "file": "src\\app\\about-us\\page.tsx",
+    "oldDesc": "Learn about IPR Karo, India\\'s first AI-driven platform for trademark registration. Our mission is to simplify brand protection using cutting-edge technology and expert legal guidance. Trusted by 5,000+ businesses.",
+    "newDesc": "Discover IPR Karo, India's first AI-driven trademark registration platform. Simplify brand protection with expert guidance. Trusted by 5,000+ businesses.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\authority\\blogs\\page.tsx",
+    "oldDesc": "<h2>Understanding Trademark Examination Reports</h2><p>When the Trade Marks Registry issues an examination report raising objections under Section 9 (Absolute grounds for refusal) or Section 11 (Relative grounds for refusal regarding identical/similar prior marks), applicants must file a formal reply within 30 statutory days.</p><div class=\"overflow-x-auto my-6\"><table class=\"w-full border-collapse\"><thead><tr><th>Parameter</th><th>Section / Rule</th><th>Statutory Requirement</th><th>Legal Effect / Remedy</th></tr></thead><tbody><tr><td>Absolute Grounds</td><td>Section 9(1)(a)-(c)</td><td>Lack of distinctive character</td><td>Establish acquired distinctiveness through long prior use</td></tr><tr><td>Relative Grounds</td><td>Section 11(1)</td><td>Similarity with prior existing registered mark</td><td>File comparative distinction affidavit and user proof</td></tr></tbody></table></div><h4>Official Sources, Statutory Portals & Legal References</h4><ul class=\"official-references-list\"><li><a href=\"https://ipindiaonline.gov.in/trademarkefiling/\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>Trade Marks Registry E-Filing Gateway (CGPDTM)</strong></a> - Official portal for Form TM-A filings.</li><li><a href=\"https://ipindia.gov.in/\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>Intellectual Property India Official Portal</strong></a> - Public search records.</li><li><a href=\"https://www.wipo.int/\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>WIPO Madrid System</strong></a> - International trademark treaty.</li></ul>",
+    "newDesc": "Understand trademark examination reports under Section 9 & 11. Learn how to file a formal reply to the Trade Marks Registry within 30 statutory days.",
+    "quote": "`"
+  },
+  {
+    "file": "src\\app\\best-legal-firms-specializing-in-intellectual-property-in-india\\page.tsx",
+    "oldDesc": "Explore the best legal firms specializing in Intellectual Property in India. Detailed rankings of top IP law firms like IPR Karo, AMA Legal, and more. 5000+ word guide.",
+    "newDesc": "Explore India's best intellectual property law firms. Read our detailed rankings featuring top firms like IPR Karo and AMA Legal in this expert guide.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\best-legal-firms-specializing-in-intellectual-property-in-india\\page.tsx",
+    "oldDesc": "The definitive 5000-word ranking of India\\'s leading IP law firms. Discover why IPR Karo and AMA Legal lead the industry in brand protection and litigation.",
+    "newDesc": "Read our definitive ranking of India's leading IP law firms. Discover why IPR Karo and AMA Legal lead the industry in brand protection and litigation.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\best-trademark-filing-services-for-startups-in-india\\page.tsx",
+    "oldDesc": "Looking for the best trademark filing services for startups in India? Get expert assistance, 50% government fee rebate, and SIPP benefits. Secure your brand now.",
+    "newDesc": "Looking for the best trademark filing services for Indian startups? Get expert help, a 50% government fee rebate, and SIPP benefits to secure your brand.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\blog\\layout.tsx",
+    "oldDesc": "Expert insights on trademark registration, intellectual property protection, and AI-powered brand protection strategies. Stay updated with the latest IP news and guides.",
+    "newDesc": "Get expert insights on trademark registration, IP protection, and AI-powered brand strategies. Stay updated with the latest industry news and guides.",
+    "quote": "\""
+  },
+  {
+    "file": "src\\app\\blog\\page.tsx",
+    "oldDesc": "Access comprehensive guides, tools, and resources for trademark registration, copyright protection, and patent filing in India. Empower your brand with IPR Karo.",
+    "newDesc": "Access comprehensive guides, tools, and resources for trademark registration, copyright, and patent filing in India. Empower your brand with IPR Karo.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\blog\\[slug]\\ArticleDetail.tsx",
+    "oldDesc": "Adv. Anuj Anand Malik is the Founder of IPR Karo and an esteemed Intellectual Property Attorney. With extensive experience across Trademark Prosecution, Section 9/11 Objection clearance, TM-O Opposition hearings, and commercial IP litigation before the Trade Marks Registry and Delhi High Court, he has successfully steered thousands of brand registrations for startups and conglomerates.",
+    "newDesc": "Meet Adv. Anuj Anand Malik, Founder of IPR Karo and IP Attorney. Expert in trademark prosecution, Section 9/11 objections, and commercial IP litigation.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\blog\\[slug]\\ArticleDetail.tsx",
+    "oldDesc": "Senior IP Strategist specializing in Nice Classification (Classes 1-45), cross-border Madrid Protocol filings, and digital brand protection. Advised 500+ tech startups, D2C brands, and SaaS innovators on global trademark clearance strategies.",
+    "newDesc": "Senior IP Strategist specializing in Nice Classification, Madrid Protocol, and digital brand protection. Advised 500+ startups on global trademark strategies.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\blog\\[slug]\\ArticleDetail.tsx",
+    "oldDesc": "The specialized research and regulatory affairs wing of IPR Karo comprising registered patent agents, trademark attorneys, and IP legal analysts dedicated to tracking Indian Trade Marks Registry precedents and legislative developments.",
+    "newDesc": "Meet IPR Karo's research wing of patent agents and trademark attorneys tracking Indian Trade Marks Registry precedents and legislative updates.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\can-i-register-a-sound-or-scent-as-a-trademark-in-india\\page.tsx",
+    "oldDesc": "The definitive forensic guide to sound and scent trademarks in India. Learn about the 2017 Rules, graphical representation of non-visual marks, and the 7-D vector scent map.",
+    "newDesc": "Read the forensic guide to sound and scent trademarks in India. Learn about the 2017 Rules, graphical representation, and the 7-D vector scent map.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\can-i-trademark-a-slogan-or-tagline-for-my-business-in-india\\page.tsx",
+    "oldDesc": "The ultimate forensic guide to trademarking slogans and taglines in India. Learn about distinctiveness, acquired secondary meaning, and case law like P&G vs Anchor.",
+    "newDesc": "Forensic guide to trademarking slogans and taglines in India. Learn about distinctiveness, acquired secondary meaning, and case law like P&G vs Anchor.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\civil-vs-criminal-trademark-infringement-india\\page.tsx",
+    "oldDesc": "Comprehensive 5000+ word guide on civil and criminal remedies for trademark infringement in India. Learn about injunctions, police raids, Section 103 penalties, and strategic enforcement.",
+    "newDesc": "Comprehensive guide to civil and criminal remedies for trademark infringement in India. Learn about injunctions, police raids, and Section 103 penalties.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\compare-fees-for-various-online-trademark-registration-providers-in-india\\page.tsx",
+    "oldDesc": "Forensic comparison of trademark registration fees in Bharat. Compare ClearTax, Vakilsearch, and IPR Karo. See government fees and professional charges for 2026.",
+    "newDesc": "Forensic comparison of trademark registration fees in Bharat. Compare ClearTax, Vakilsearch, and IPR Karo's government and professional fees for 2026.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\comprehensive-ip-protection-features\\247-trademark-protection\\layout.tsx",
+    "oldDesc": "Get 24/7 trademark protection in India with certified trademark agents. Continuous monitoring, emergency response, and round-the-clock accessibility for comprehensive brand protection.",
+    "newDesc": "Get 24/7 trademark protection in India with certified agents. Benefit from continuous monitoring, emergency response, and round-the-clock support.",
+    "quote": "\""
+  },
+  {
+    "file": "src\\app\\comprehensive-ip-protection-features\\247-trademark-protection\\page.tsx",
+    "oldDesc": "Unrelenting 24/7 trademark protection services in India. Secure your brand identity with continuous monitoring, rapid legal enforcement, and expert objection handling.",
+    "newDesc": "Secure your brand with 24/7 trademark protection services in India. Benefit from continuous monitoring, rapid enforcement, and expert objection handling.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\comprehensive-ip-protection-features\\affordable-trademark-services\\layout.tsx",
+    "oldDesc": "Get affordable trademark registration services in India with transparent pricing. Professional trademark filing at competitive rates with no hidden fees. Save up to 60% compared to traditional law firms.",
+    "newDesc": "Get affordable trademark registration in India with transparent pricing. Save up to 60% with our professional filing services and zero hidden fees.",
+    "quote": "\""
+  },
+  {
+    "file": "src\\app\\comprehensive-ip-protection-features\\affordable-trademark-services\\page.tsx",
+    "oldDesc": "Secure your brand with affordable trademark services in India. We combine legal expertise with technology to cut costs, not quality. Transparent pricing, no hidden fees.",
+    "newDesc": "Secure your brand with affordable trademark services in India. We combine legal expertise and tech to cut costs, not quality. Enjoy transparent pricing.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\comprehensive-ip-protection-features\\ai-powered-trademark-solutions\\layout.tsx",
+    "oldDesc": "Revolutionary AI-powered trademark solutions in India. Get intelligent trademark search, risk assessment, and automated reporting with 98.5% accuracy. Advanced machine learning for brand protection.",
+    "newDesc": "Get AI-powered trademark solutions in India. Enjoy intelligent trademark search, risk assessment, and automated reporting with 98.5% accuracy.",
+    "quote": "\""
+  },
+  {
+    "file": "src\\app\\comprehensive-ip-protection-features\\ai-powered-trademark-solutions\\page.tsx",
+    "oldDesc": "Experience the future of intellectual property with our AI powered trademark solutions. unmatched accuracy in trademark registration, patent services, and copyright protection.",
+    "newDesc": "Experience the future of IP with AI-powered trademark solutions. Get unmatched accuracy in trademark registration, patent, and copyright protection.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\comprehensive-ip-protection-features\\expert-trademark-guidance\\layout.tsx",
+    "oldDesc": "Get expert trademark guidance from experienced attorneys in India. 24/7 consultation, legal support, and professional advice for trademark registration, opposition, and protection.",
+    "newDesc": "Get expert trademark guidance from top attorneys in India. 24/7 legal support and professional advice for registration, opposition, and brand protection.",
+    "quote": "\""
+  },
+  {
+    "file": "src\\app\\comprehensive-ip-protection-features\\expert-trademark-guidance\\page.tsx",
+    "oldDesc": "Unparalleled trademark registration, patent services, and copyright protection in India. Get expert legal guidance, comprehensive IP management, and 24/7 support from IPR Karo.",
+    "newDesc": "Get unparalleled trademark registration, patent services, and copyright protection in India. Enjoy expert legal guidance and 24/7 support from IPR Karo.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\comprehensive-ip-protection-features\\fast-trademark-registration\\layout.tsx",
+    "oldDesc": "Get your trademark registered fast in India with IPRKaro's expedited service. Professional trademark filing, priority processing, and expert attorney support. Register your brand in 8-12 weeks.",
+    "newDesc": "Register your trademark fast in India with IPRKaro's expedited service. Get expert attorney support and secure your brand registration in just 8-12 weeks.",
+    "quote": "\""
+  },
+  {
+    "file": "src\\app\\comprehensive-ip-protection-features\\page.tsx",
+    "oldDesc": "A holistic suite of intellectual property services. From fast trademark registration to AI-powered monitoring, we provide end-to-end protection for your brand assets.",
+    "newDesc": "Get a holistic suite of intellectual property services. From fast trademark registration to AI monitoring, we provide end-to-end brand asset protection.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\comprehensive-ip-protection-features\\page.tsx",
+    "oldDesc": "Explore the powerful features of IPR Karo. From AI trademark searches to expert legal guidance, we provide everything you need to protect your intellectual property in India.",
+    "newDesc": "Explore IPR Karo's powerful features. From AI trademark searches to expert legal guidance, we help you protect your intellectual property in India.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\comprehensive-ip-protection-features\\trademark-risk-reduction\\layout.tsx",
+    "oldDesc": "Reduce trademark registration risks in India with comprehensive risk assessment, advanced search methodologies, and expert legal analysis. Maximize approval chances and minimize conflicts.",
+    "newDesc": "Reduce trademark registration risks in India with comprehensive risk assessments, advanced searches, and expert legal analysis to maximize your approval.",
+    "quote": "\""
+  },
+  {
+    "file": "src\\app\\contact-us\\layout.tsx",
+    "oldDesc": "Contact IPR Karo for trademark registration assistance. Connect with our expert team for AI-powered trademark search, filing support, and brand protection guidance.",
+    "newDesc": "Contact IPR Karo for expert trademark registration assistance. Connect with us for AI-powered trademark searches, filing support, and brand protection.",
+    "quote": "\""
+  },
+  {
+    "file": "src\\app\\contact-us\\page.tsx",
+    "oldDesc": "Get in touch with IPR Karo for expert legal assistance with trademark registration, copyright filing, and patent applications in India. 24/7 support available.",
+    "newDesc": "Contact IPR Karo for expert legal assistance with trademark registration, copyright filing, and patent applications in India. 24/7 support is available.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\documents-required-for-trademark-opposition\\page.tsx",
+    "oldDesc": "The ultimate guide to documents and evidence required for successful trademark opposition in India. Learn about Rule 45 affidavits, proof of prior use, and more.",
+    "newDesc": "The ultimate guide to documents and evidence for trademark opposition in India. Learn about Rule 45 affidavits, proof of prior use, and key requirements.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\e-filing-trademark\\page.tsx",
+    "oldDesc": "Complete guide to e-filing trademark in India. Learn the process, documents, costs, and benefits of online trademark registration. File your TM application today.",
+    "newDesc": "Complete guide to e-filing trademark in India. Learn the process, documents, costs, and benefits of online trademark registration. File today.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\expedited-process-of-trademark-filing\\page.tsx",
+    "oldDesc": "Complete guide to the expedited process of trademark filing in India under Rule 34. Learn Form TM-M fees, eligibility, timeline (3-6 months), and step-by-step procedure for fast-track trademark registration.",
+    "newDesc": "Guide to expedited trademark filing in India under Rule 34. Learn TM-M fees, eligibility, 3-6 months timeline, and fast-track registration steps.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\famous-trademark-infringement-cases-in-india\\page.tsx",
+    "oldDesc": "Explore the most landmark and recent trademark infringement cases in India. Expert analysis of IndiGo vs Mahindra, Ratan Tata personality rights, and 5000+ words of legal insights.",
+    "newDesc": "Explore landmark trademark infringement cases in India. Expert analysis of IndiGo vs Mahindra, Ratan Tata personality rights, and deep legal insights.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\fast-track-trademark-registration\\page.tsx",
+    "oldDesc": "Accelerate your brand protection with fast track trademark registration in India. Get your trademark examined in 3-5 months under Rule 34. Expert legal assistance for expedited filing.",
+    "newDesc": "Protect your brand with fast track trademark registration in India. Get examined in 3-5 months under Rule 34. Expert help for expedited filing.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\format-for-no-objection-certificate\\page.tsx",
+    "oldDesc": "Get professional NOC formats for GST, Trademark, and Property registration. Learn about legal validity, mandatory clauses, and stamping requirements in India.",
+    "newDesc": "Get professional NOC formats for GST, Trademark, and Property registration. Learn about legal validity, mandatory clauses, and stamping in India.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\gst-required-for-trademark\\page.tsx",
+    "oldDesc": "Uncover the relationship between GST and Trademark registration. Learn about mandatory requirements, fee reductions for MSMEs, Input Tax Credit benefits, and the step by step process to protect your brand.",
+    "newDesc": "Explore the link between GST and Trademark registration. Learn about MSME fee reductions, Input Tax Credit benefits, and steps to protect your brand.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\how-long-trademark-opposition-cases-take\\page.tsx",
+    "oldDesc": "A complete 5000+ word guide on the Trademark Opposition Case Timeline in India. Understand statutory deadlines, practical delays, and stages from TM-O to final hearing.",
+    "newDesc": "Complete guide to the Trademark Opposition Case Timeline in India. Understand statutory deadlines, practical delays, and stages from TM-O to hearing.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\how-to-avoid-trademark-registration-scams\\page.tsx",
+    "oldDesc": "Learn how to identify and avoid trademark registration scams, fake invoices, and phishing emails in India. Expert advice on protecting your brand from intellectual property fraud.",
+    "newDesc": "Learn how to identify and avoid trademark registration scams, fake invoices, and phishing in India. Protect your brand from intellectual property fraud.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\how-to-cancel-or-dispute-someone-else-s-trademark-registration\\page.tsx",
+    "oldDesc": "Master the process of trademark cancellation and rectification in India. Learn about Section 47 non-use grounds, Section 57 rectification, and High Court procedures.",
+    "newDesc": "Master trademark cancellation and rectification in India. Learn about Section 47 non-use grounds, Section 57 rectification, and High Court procedures.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\how-to-check-trademark-availability\\page.tsx",
+    "oldDesc": "Learn how to check trademark availability in India using the official IP India portal. Step-by-step guide for wordmark, phonetic, and Vienna code searches to secure your brand.",
+    "newDesc": "Learn how to check trademark availability in India via the IP India portal. Step-by-step guide for wordmark, phonetic, and Vienna code searches.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\how-to-do-a-trademark-search-before-filing\\page.tsx",
+    "oldDesc": "Master the art of trademark searching in India. Our 5000+ word guide covers public search, phonetic matches, Vienna codes, and risk assessment to protect your brand.",
+    "newDesc": "Master trademark searching in India. Our expert guide covers public search, phonetic matches, Vienna codes, and risk assessment to protect your brand.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\how-to-file-international-trademark-madrid-protocol-from-india\\page.tsx",
+    "oldDesc": "Protect your brand globally with one application. Learn the Madrid Protocol process from India, including fees, forms, and benefits. 5000+ words expert guide.",
+    "newDesc": "Protect your brand globally with one application. Learn the Madrid Protocol process from India, including fees, forms, benefits, and expert legal tips.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\how-to-file-trademark-rectification-india\\page.tsx",
+    "oldDesc": "Master the process of trademark rectification in India. Learn about Section 57, grounds for removal, Form TM-O filing, and legal procedures to correct the trademark register. 5000+ words of expert legal guidance.",
+    "newDesc": "Master trademark rectification in India. Learn about Section 57, grounds for removal, Form TM-O filing, and legal steps to correct the trademark register.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\how-to-overcome-trademark-objection\\page.tsx",
+    "oldDesc": "Master the legal strategies to How to Overcome Trademark Objections in India. Detailed insights on Section 9 & 11, evidence checklists, and winning rebuttal formats.",
+    "newDesc": "Master legal strategies to overcome trademark objections in India. Get detailed insights on Section 9 & 11, evidence checklists, and rebuttal formats.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\how-to-register-trademark\\page.tsx",
+    "oldDesc": "Learn how to register a trademark in India with our comprehensive 2026 guide. Step-by-step process, documents required, government fees, and expert tips for 100% success.",
+    "newDesc": "Learn how to register a trademark in India with our 2026 guide. Get the step-by-step process, documents required, government fees, and expert success tips.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\how-to-register-trademark\\page.tsx",
+    "oldDesc": "Master the trademark registration process in India. Secure your brand identity with our expert step-by-step guide covering everything from search to certification.",
+    "newDesc": "Master the trademark registration process in India. Secure your brand identity with our expert guide covering everything from search to certification.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\how-to-register-trademark-yourself\\page.tsx",
+    "oldDesc": "Learn how to register a trademark yourself in India. A comprehensive 5000+ word guide on online TM-A filing, class selection, user dates, and overcoming objections.",
+    "newDesc": "Learn how to register a trademark yourself in India. Our expert guide covers online TM-A filing, class selection, user dates, and overcoming objections.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\how-to-restore-expired-trademark\\page.tsx",
+    "oldDesc": "A professional legal guide on reviving a trademark once it has been removed from the register. Master the Form TM-R filing and secure your brand continuity.",
+    "newDesc": "Get a professional legal guide on reviving a trademark removed from the register. Master the Form TM-R filing and secure your brand continuity.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\how-to-send-trademark-legal-notice-india\\page.tsx",
+    "oldDesc": "Learn the complete process of sending a trademark legal notice in India. Discover drafting essentials, legal requirements under the Trade Marks Act, and how to use RPAD for proof of service.",
+    "newDesc": "Learn how to send a trademark legal notice in India. Discover drafting essentials, Trade Marks Act rules, and using RPAD for proof of service.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\how-to-stop-someone-using-your-brand-name\\page.tsx",
+    "oldDesc": "Proactive legal strategies to stop trademark infringement in India. Learn about cease and desist notices, civil suits, criminal penalties, and brand protection under Trademarks Act 1999.",
+    "newDesc": "Stop trademark infringement in India. Learn about cease and desist notices, civil suits, criminal penalties, and protection under Trademarks Act 1999.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\how-to-stop-trademark-infringement\\page.tsx",
+    "oldDesc": "Discover how to stop trademark infringement in India with expert legal steps: cease and desist notice, interim injunction, criminal complaint, and evidence gathering. Protect your brand today.",
+    "newDesc": "Stop trademark infringement in India. Learn expert legal steps like cease & desist, injunctions, and evidence gathering to protect your brand today.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\how-to-update-or-change-details-in-an-existing-trademark-registation\\page.tsx",
+    "oldDesc": "Learn the official process to update trademark details in India. Master Form TM-M and TM-P for name change, address update, and post-registration amendments.",
+    "newDesc": "Learn how to update trademark details in India. Master Form TM-M and TM-P for name changes, address updates, and post-registration amendments easily.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\how-to-win-trademark-objection-case\\page.tsx",
+    "oldDesc": "Learn the advanced legal tactics to win your trademark objection case in India. Expert guide on evidentiary standards, user affidavits, and hearing performance.",
+    "newDesc": "Discover advanced legal tactics to win your trademark objection in India. Expert guide on evidentiary standards, user affidavits, and hearings.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\in-india-the-trademark-registration-should-be-renewed-every\\page.tsx",
+    "oldDesc": "Learn when trademark registration should be renewed in India. Complete guide on the 10-year renewal cycle, Form TM-R, government fees, and restoration process at IPR Karo.",
+    "newDesc": "Learn how to renew trademark registration in India. Guide on the 10-year cycle, Form TM-R, fees, and the restoration process with IPR Karo experts.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\ipindia-trademark-status\\page.tsx",
+    "oldDesc": "Master the IPIndia trademark status check process. Understand the meanings of statuses like Objected, Abandoned, and Opposed. Complete guide by IPR Karo experts.",
+    "newDesc": "Master the IPIndia trademark status check. Understand meanings of statuses like Objected, Abandoned, and Opposed with this guide by IPR Karo.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\layout.tsx",
+    "oldDesc": "Instant trademark search, risk checks, and online registration. Register your trademark with AI-powered reports for fast, secure brand protection. Start in under 60 seconds with IPR Karo.",
+    "newDesc": "Get instant trademark search, risk checks, and online registration. Secure your brand with AI-powered reports in under 60 seconds with IPR Karo.",
+    "quote": "\""
+  },
+  {
+    "file": "src\\app\\leave-and-license-agreement\\page.tsx",
+    "oldDesc": "Master the Leave and License agreement process in India. Learn the difference between lease and license, mandatory registration, and stamp duty calculation.",
+    "newDesc": "Master the Leave and License agreement process in India. Learn the lease vs license difference, mandatory registration, and stamp duty calculation.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\legal-rights-of-trademark-owner-in-india\\page.tsx",
+    "oldDesc": "Understand the comprehensive statutory and common law rights of trademark owners in India. Learn about exclusive use, assignment, licensing, and legal protection against infringement.",
+    "newDesc": "Understand the statutory and common law rights of trademark owners in India. Learn about exclusive use, licensing, and protection from infringement.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\mca-company-name-check\\page.tsx",
+    "oldDesc": "Learn how to check company name availability on MCA V3 portal. Complete guide to name reservation rules, RUN service, and SPICe+ Part A for companies and LLPs.",
+    "newDesc": "Learn how to check company name availability on MCA V3. Complete guide to name reservation rules, RUN service, and SPICe+ Part A for LLPs & firms.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\nda-format-india-legal-guide\\page.tsx",
+    "oldDesc": "Dont let your ideas leak. Our deep dive into Non-Disclosure Agreements explains how to draft a watertight contract that protects your intellectual property.",
+    "newDesc": "Don't let your ideas leak. Our guide to Non-Disclosure Agreements explains how to draft a watertight contract to protect your intellectual property.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\official-government-website-for-intellectual-property-in-india\\page.tsx",
+    "oldDesc": "Comprehensive guide to ipindia.gov.in - the official government website for intellectual property in India. Learn about Patents, Trademarks, Designs, and GI registration.",
+    "newDesc": "Guide to ipindia.gov.in, India's official intellectual property portal. Learn how to register Patents, Trademarks, Designs, and GI online easily.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\official-government-website-for-intellectual-property-in-india\\page.tsx",
+    "oldDesc": "Navigate the complex world of Indian Intellectual Property with our exhaustive guide to the official gov.in portal. Services, divisions, and legal tools explained.",
+    "newDesc": "Navigate Indian Intellectual Property with our complete guide to the official gov.in portal. Learn about services, divisions, and legal tools.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\online-trademark-registration\\page.tsx",
+    "oldDesc": "Apply for online trademark registration in India. Get step-by-step guidance on e-filing, digital certificates, government fees, and 24-hour processing with IPR Karo.",
+    "newDesc": "Apply for online trademark registration in India. Get expert guidance on e-filing, digital certificates, fees, and fast processing with IPR Karo.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\our-services\\copyright-registration\\page.tsx",
+    "oldDesc": "Secure your creative work with Online Copyright Registration in India. Protect Books, Music, Software (Source Code), Movies & Art. Affordable fees & Expert Legal Process.",
+    "newDesc": "Secure your creative work with Online Copyright Registration in India. Protect books, music, software, movies, and art with our expert legal help.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\our-services\\page.tsx",
+    "oldDesc": "Explore IPR Karo\\'s full range of IP services - trademark registration, copyright filing, and patent applications in India. Expert legal support from ₹1499.",
+    "newDesc": "Explore IPR Karo's full range of IP services, including trademark registration, copyright filing, and patent applications in India from just ₹1499.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\our-services\\patent-registration\\page.tsx",
+    "oldDesc": "File your Patent in India with IPR Karo. Low-cost filing for Startups & MSMEs. Expert Patent Agents for Provisional/Complete specifications, Patent Search, and Expedited Examination.",
+    "newDesc": "File your patent in India with IPR Karo. Low-cost filing for startups & MSMEs. Expert patent agents for search, specifications, and fast filing.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\our-services\\trademark-registration\\page.tsx",
+    "oldDesc": "Register your trademark online in India with IPR Karo. Expert legal filing, expedited processing, and comprehensive objection handling from ₹1499. Secure your brand now.",
+    "newDesc": "Register your trademark online in India with IPR Karo. Get expert legal filing, fast processing, and complete objection handling from just ₹1499.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\page.tsx",
+    "oldDesc": "Start your trademark registration online in India with IPR Karo. AI-powered trademark search, brand name availability search, trademark availability check, and complete filing support. Know the trademark registration cost in India, govt fees, documents required, and the step-by-step trademark registration process. Serving Delhi, Noida, Gurgaon & PAN India.",
+    "newDesc": "Start your trademark registration online in India with IPR Karo. Get AI-powered brand search, cost details, required documents, and expert support.",
+    "quote": "\""
+  },
+  {
+    "file": "src\\app\\page.tsx",
+    "oldDesc": "AI-powered trademark registration, trademark search, brand name availability search, patent services, and copyright protection in India. Check trademark availability and register your trademark online.",
+    "newDesc": "Get AI-powered trademark registration, brand search, patent services, and copyright protection in India. Check availability and register online now.",
+    "quote": "\""
+  },
+  {
+    "file": "src\\app\\penalty-for-trademark-infringement-india\\page.tsx",
+    "oldDesc": "Learn about the severe penalties for trademark infringement in India. Understand civil remedies (injunctions, damages) and criminal punishments under Sections 103, 104, & 105 of the Trademarks Act.",
+    "newDesc": "Learn about penalties for trademark infringement in India. Understand civil remedies and criminal punishments under the Trademarks Act, 1999.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\privacy-policy\\page.tsx",
+    "oldDesc": "Read IPRKaro.com\\'s comprehensive privacy policy to understand how we collect, use, protect, and manage your personal information. Learn about your data rights, security measures, cookie policies, third-party sharing, and how we ensure your privacy during trademark registration and IP services.",
+    "newDesc": "Read IPRKaro.com's privacy policy to learn how we collect, protect, and manage your personal data during trademark registration and IP services.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\protect-company-name-with-trademark\\page.tsx",
+    "oldDesc": "Learn how to protect your company name with a trademark in India. Detailed guide on registration process, legal benefits, documents required, and professional strategies for brand protection.",
+    "newDesc": "Learn how to protect your company name with a trademark in India. Our guide covers the registration process, required documents, and legal benefits.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\registration-of-pharmacist-in-up\\page.tsx",
+    "oldDesc": "Complete guide to pharmacist registration in Uttar Pradesh. Learn about UPPC online application, fees, Form-V training, and mandatory document verification.",
+    "newDesc": "Complete guide to pharmacist registration in Uttar Pradesh. Learn about the UPPC online application process, fees, training, and document verification.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\registration-of-trademark\\page.tsx",
+    "oldDesc": "Master the registration of trademark process in Bharat. Get step-by-step guidance on filing, documents, fees, and legal protection. Secure your brand today with IPR Karo.",
+    "newDesc": "Master the registration of trademark process in Bharat. Get step-by-step guidance on filing, fees, and protection. Secure your brand today with IPR Karo.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\small-company-definition\\page.tsx",
+    "oldDesc": "Understand the Small Company Definition in India in India. Learn about Section 2(85), updated thresholds for capital and turnover, and key compliance exemptions.",
+    "newDesc": "Understand the Small Company Definition in India. Learn about Section 2(85), updated capital and turnover thresholds, and key compliance exemptions.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\terms-and-conditions\\page.tsx",
+    "oldDesc": "Review IPRKaro.com\\'s complete terms and conditions, including terms of use, service agreements, cancellation policy, and refund guidelines. Understand your rights and obligations when using our trademark registration, copyright protection, and patent filing services in India.",
+    "newDesc": "Review IPRKaro.com's terms and conditions, including our refund policy. Understand your rights for trademark, copyright, and patent services in India.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\thank-you\\layout.tsx",
+    "oldDesc": "Thank you for contacting IPR Karo. Our trademark registration experts will review your inquiry and respond within 2-4 hours. Get expert guidance for trademark, copyright, and patent services in India.",
+    "newDesc": "Thank you for contacting IPR Karo. Our experts will review your inquiry and respond within 2-4 hours. Get expert guidance for IP services in India.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\trade-mark-registration\\page.tsx",
+    "oldDesc": "Secure your corporate identity with expert trade mark registration in India. A comprehensive guide to legal filings, government fees, and protection strategies for Bharat.",
+    "newDesc": "Secure your corporate identity with expert trade mark registration in India. Read our guide to legal filings, government fees, and protection in Bharat.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\trademark-abandoned-how-to-restore\\page.tsx",
+    "oldDesc": "If your trademark application is abandoned or removed in India, you can still restore it. Learn about Form TM-M (Revival) and Form TM-R (Restoration) under Section 25(4). Expert legal guide.",
+    "newDesc": "If your trademark application is abandoned or removed in India, learn how to restore it using Form TM-M and Form TM-R under Section 25(4) in our guide.",
+    "quote": "'"
+  },
+  {
+    "file": "src\\app\\trademark-accepted-but-advertised-meaning\\page.tsx",
+    "oldDesc": "Comprehensive guide to \"Accepted and Advertised\" trademark status in India. Learn about the 4-month opposition period, Trademark Journal publication, and next steps to registration. 5000+ words of expertise.",
+    "newDesc": "Guide to \"Accepted and Advertised\" trademark status in India. Learn about the 4-month opposition, Trademark Journal, and next steps to registration.",
+    "quote": "'"
+  }
+]

@@ -151,10 +151,10 @@ const NewFooter = () => {
     <footer className="w-full bg-[#05030E] text-white pt-24 pb-8 overflow-hidden font-nunito home-page-font">
       {/* Top CTA Section */}
       <div className="max-w-[1200px] mx-auto px-6 mb-24 flex flex-col items-center">
-        <h3 className="text-white font-nunito text-[40px] md:text-[56px] font-bold text-center leading-[1.1] mb-12 tracking-tight">
+        <h2 className="text-white font-nunito text-[40px] md:text-[56px] font-bold text-center leading-[1.1] mb-12 tracking-tight">
           Make Your Brand <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1A56DB] via-[#DAB6FC] to-[#059669] animate-gradient">Future-Proof</span><br />
           with AI
-        </h3>
+        </h2>
 
         <SearchClient variant="dark" />
       </div>
@@ -179,19 +179,19 @@ const NewFooter = () => {
           </div>
 
           <div>
-            <h5 className="text-3xl md:text-xl font-bold mb-6">Product</h5>
+            <h3 className="text-3xl md:text-xl font-bold mb-6">Product</h3>
             <ul className="space-y-1">
               <li><Link href="/our-services/trademark-registration" className="text-white/60 hover:text-white transition-colors">AI Trademark Search</Link></li>
               <li><Link href="/our-services/trademark-registration" className="text-white/60 hover:text-white transition-colors">Trademark Filing</Link></li>
               <li><Link href="/our-services/patent-registration" className="text-white/60 hover:text-white transition-colors">Patent Filing</Link></li>
               <li><Link href="/our-services/copyright-registration" className="text-white/60 hover:text-white transition-colors">Copyright Filing</Link></li>
               <li><Link href="/trademark-by-location" className="text-white/60 hover:text-white transition-colors">Trademark by Location</Link></li>
-              
+
             </ul>
           </div>
 
           <div>
-            <h5 className="text-3xl md:text-xl font-bold mb-6">Why IPRKARO</h5>
+            <h3 className="text-3xl md:text-xl font-bold mb-6">Why IPRKARO</h3>
             <ul className="space-y-1">
               <li><Link href="/about-us" className="text-white/60 hover:text-white transition-colors">About Us</Link></li>
               <li><Link href="/about-us" className="text-white/60 hover:text-white transition-colors">Our Vision</Link></li>
@@ -201,7 +201,7 @@ const NewFooter = () => {
           </div>
 
           <div>
-            <h5 className="text-3xl md:text-xl font-bold mb-6">Blog</h5>
+            <h3 className="text-3xl md:text-xl font-bold mb-6">Blog</h3>
             <ul className="space-y-1">
               <li><Link href="/blog" className="text-white/60 hover:text-white transition-colors">Blog</Link></li>
               <li><Link href="/blog" className="text-white/60 hover:text-white transition-colors">Trademark Guide</Link></li>
@@ -213,25 +213,26 @@ const NewFooter = () => {
 
         {/* Explore More Section */}
         <div className="mb-24">
-          <button 
+          <button
             onClick={() => setIsExpanded(!isExpanded)}
             className="flex items-center gap-4 mb-10 w-full group cursor-pointer focus:outline-none"
           >
-            <h5 className="text-3xl md:text-xl font-bold whitespace-nowrap group-hover:text-white transition-colors">Explore More</h5>
+            <h3 className="text-3xl md:text-xl font-bold whitespace-nowrap group-hover:text-white transition-colors">Explore More</h3>
             <div className="w-full h-px bg-white/10 group-hover:bg-white/20 transition-colors"></div>
             <i className={`fas fa-chevron-down text-white/40 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}></i>
           </button>
-          <div className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-4 transition-all duration-500 ease-in-out overflow-hidden ${isExpanded ? 'max-h-[5000px] opacity-100' : 'max-h-0 opacity-0'}`}>
+          <ul className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-4 transition-all duration-500 ease-in-out overflow-hidden ${isExpanded ? 'max-h-[5000px] opacity-100' : 'max-h-0 opacity-0'}`}>
             {queries.map((q, i) => (
-              <Link
-                key={i}
-                href={q.href}
-                className="text-[13px] text-white/40 hover:text-white transition-all hover:translate-x-1 inline-block"
-              >
-                {q.name}
-              </Link>
+              <li key={i}>
+                <Link
+                  href={q.href}
+                  className="text-[13px] text-white/40 hover:text-white transition-all hover:translate-x-1 inline-block"
+                >
+                  {q.name}
+                </Link>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
 
         {/* Bottom Bar */}
@@ -248,4 +249,3 @@ const NewFooter = () => {
 };
 
 export default NewFooter;
-

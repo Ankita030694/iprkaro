@@ -40,6 +40,7 @@ export async function POST(request: NextRequest) {
         7. Use <h3>, <h4>, <h5>, <p>, <ul>, <li>, and <table> tags as appropriate.
         8. The target word count for the entire expanded blog is 4000-5000 words. Be extremely detailed, adding deep legal analysis, step-by-step procedures, and case references.
         9. Do NOT replace the existing content unless necessary for flow; focus on ADDING massive value and length.
+        10. STRICT READABILITY REQUIREMENT: Write for an 8th-grade reading level (Flesch Reading Ease > 60). Use short, clear, concise sentences. Avoid run-on sentences, overly complex vocabulary, and excessive passive voice. Keep paragraphs short (3-4 sentences max).
         
         Return the updated description as a pure HTML string.`;
 

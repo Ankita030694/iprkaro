@@ -158,9 +158,9 @@ export default function ContactForm({ isPopup = false, onSuccess, onClose }: Con
         }}
       >
         {isPopup && (
-          <h3 className="text-[#0C002B] text-lg sm:text-2xl font-nunito font-bold mb-3 text-center">
+          <p className="text-[#0C002B] text-lg sm:text-2xl font-nunito font-bold mb-3 text-center block">
             Get <span className="text-[#0C002B]">Free Expert</span> Advice
-          </h3>
+          </p>
         )}
         <form onSubmit={handleSubmit} className={`space-y-4 sm:space-y-5 ${isPopup ? 'md:space-y-3' : 'md:space-y-6'}`}>
           {/* Basic Input Fields */}
