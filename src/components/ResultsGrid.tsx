@@ -36,9 +36,9 @@ export default function ResultsGrid() {
   return (
     <section className="w-full bg-white py-20 px-4 md:px-8">
       <div className="max-w-6xl mx-auto flex flex-col items-center">
-        <h2 className="text-[#0C002B] font-nunito text-[32px] md:text-[46px] font-bold text-center mb-12 leading-[1.2] tracking-tight">
+        <h3 className="text-[#0C002B] font-nunito text-[32px] md:text-[46px] font-bold text-center mb-12 leading-[1.2] tracking-tight">
           Results that speak louder <br className="hidden md:block" /> than claims
-        </h2>
+        </h3>
 
         {/* 4-Column Grid Layout */}
         {/* Desktop Grid (Hidden on Mobile) */}

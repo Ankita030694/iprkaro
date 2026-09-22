@@ -283,7 +283,7 @@ export default function AboutClient() {
 
             {/* Right Content - Mobile */}
             <div className="flex-1 max-w-2xl space-y-4">
-              <h2
+              <h3
                 className="text-xl sm:text-2xl font-semibold"
                 style={{
                   color: '#0C002B',
@@ -293,7 +293,7 @@ export default function AboutClient() {
                 }}
               >
                 Advanced AI-Powered Trademark Search
-              </h2>
+              </h3>
 
               <p
                 className="text-base sm:text-lg"
@@ -334,7 +334,7 @@ export default function AboutClient() {
 
           {/* Right Content */}
           <div className="flex-1 max-w-3xl space-y-6">
-            <h2
+            <h3
               className="text-xl sm:text-2xl font-semibold"
               style={{
                 color: '#0C002B',
@@ -344,7 +344,7 @@ export default function AboutClient() {
               }}
             >
               Advanced AI-Powered Trademark Search
-            </h2>
+            </h3>
             
             <p
               className="text-base sm:text-lg"

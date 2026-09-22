@@ -85,9 +85,9 @@ export default function BrandGrid() {
   return (
     <section className="w-full bg-white py-12 md:py-24 px-2 md:px-4">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-[#0C002B] font-nunito text-[26px] md:text-[42px] font-extrabold text-center mb-12 md:mb-20 leading-[1.2] tracking-tight">
+        <h3 className="text-[#0C002B] font-nunito text-[26px] md:text-[42px] font-extrabold text-center mb-12 md:mb-20 leading-[1.2] tracking-tight">
           Chosen by businesses <br className="md:hidden" /> that move fast
-        </h2>
+        </h3>
 
         <div className="flex flex-nowrap border-y border-blue-100 bg-white shadow-sm">
           {columns.map((logos, index) => (
