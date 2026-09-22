@@ -151,10 +151,10 @@ const NewFooter = () => {
     <footer className="w-full bg-[#05030E] text-white pt-24 pb-8 overflow-hidden font-nunito home-page-font">
       {/* Top CTA Section */}
       <div className="max-w-[1200px] mx-auto px-6 mb-24 flex flex-col items-center">
-        <h2 className="text-white font-nunito text-[40px] md:text-[56px] font-bold text-center leading-[1.1] mb-12 tracking-tight">
+        <p className="text-white font-nunito text-[40px] md:text-[56px] font-bold text-center leading-[1.1] mb-12 tracking-tight">
           Make Your Brand <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1A56DB] via-[#DAB6FC] to-[#059669] animate-gradient">Future-Proof</span><br />
           with AI
-        </h2>
+        </p>
 
         <SearchClient variant="dark" />
       </div>
