@@ -1,0 +1,770 @@
+IPR KARO — SCREAMING FROG SEO AUDIT PREVENTION RULES
+========================================================
+
+PURPOSE
+-------
+This file is a permanent SEO implementation checklist for Antigravity/AI coding
+agents working on IPR Karo Next.js pages.
+
+Before creating or modifying ANY SEO page, use this file as a mandatory
+pre-deployment checklist. The goal is to prevent recurring Screaming Frog
+issues instead of fixing them after the page has already been created.
+
+IMPORTANT:
+- Do not remove useful content just to make an SEO warning disappear.
+- Do not keyword-stuff titles, headings, descriptions, links, or body copy.
+- Do not invent URLs, schema data, reviews, ratings, legal claims, or statistics.
+- Preserve relevant legal/business information while improving SEO.
+- Search the existing codebase before creating internal links, authors, assets,
+  components, APIs, or routes.
+- Validate the final rendered page, not only the source component.
+
+========================================================
+A. PAGE TITLE / TITLE TAG
+========================================================
+
+EVERY indexable page MUST have:
+- Exactly one <title>.
+- A unique title across the website.
+- A descriptive title that accurately represents the page.
+- The primary search topic/keyword naturally included where appropriate.
+- No keyword stuffing.
+- No unnecessary repetition.
+- No placeholder text.
+- No title generated only on the client after JavaScript execution.
+- The title must be present in the server-rendered <head>.
+- The title must NOT be outside <head>.
+
+PREVENT:
+- Page Title Missing
+- Page Title Duplicate
+- Multiple Page Titles
+- Page Title Outside <head>
+- Page Title Too Long
+- Page Title Too Short
+- Unclear/irrelevant Page Title
+- JavaScript-only title
+- Raw HTML vs rendered title mismatch
+
+PROJECT STANDARD:
+- Aim for approximately 30–60 characters where practical.
+- Prioritize SERP pixel width and clarity over blindly hitting a character count.
+- Do not force a keyword if it makes the title unnatural.
+
+NEXT.JS RULE:
+Use Next.js Metadata API in the Server Component/page.tsx.
+Do not manually inject <title> from a Client Component.
+
+========================================================
+B. META DESCRIPTION
+========================================================
+
+EVERY important indexable page MUST have:
+- Exactly one meta description.
+- A unique description.
+- A concise and descriptive summary of the page.
+- Primary keyword/topic used naturally.
+- Clear search-intent alignment.
+- No keyword stuffing.
+- No duplicate descriptions.
+- Description present in server-rendered <head>.
+- Description must NOT be outside <head>.
+- Description must not depend only on client-side JavaScript.
+
+PREVENT:
+- Meta Description Missing
+- Duplicate Meta Description
+- Multiple Meta Descriptions
+- Meta Description Outside <head>
+- Meta Description Too Long
+- Meta Description Too Short
+- Meta Description over project pixel limit
+- Meta Description only in rendered HTML
+- Meta Description changed by JavaScript
+
+PROJECT STANDARD:
+- Prefer approximately 140–160 characters as a practical drafting range,
+  but validate the actual Screaming Frog pixel-width result.
+- The current Screaming Frog estimated over-width filter may use approximately
+  985 pixels; keep descriptions below the project's configured pixel limit.
+- Do not add filler words merely to reach a character count.
+
+NOTE:
+Screaming Frog's character and pixel thresholds are configurable. Treat the
+configured project crawl settings as the final audit threshold.
+
+========================================================
+C. H1
+========================================================
+
+EVERY indexable content page MUST have:
+- Exactly one visible H1.
+- H1 accurately describing the main topic.
+- Primary keyword/topic included naturally.
+- H1 visible in the rendered page.
+- H1 not duplicated elsewhere as another H1.
+- H1 not used only for styling.
+
+PREVENT:
+- H1 Missing
+- Multiple H1s
+- Duplicate H1
+- H1 Too Long
+- H1 unrelated to page title
+- H1 hidden from users
+- H1 generated only after unnecessary client-side rendering
+
+PROJECT STANDARD:
+- Keep H1 concise and readable.
+- Never repeat the same keyword several times in the H1.
+
+========================================================
+D. H2 / H3 / HEADING HIERARCHY
+========================================================
+
+Use headings to describe content structure, not merely to create visual text.
+
+RULES:
+- H1 → H2 → H3 hierarchy should be logical.
+- Do not skip levels without a genuine structural reason.
+- H2s must describe meaningful sections.
+- H2s must not be unnecessarily long.
+- H2s should naturally include relevant entities/topics when appropriate.
+- Do not stuff keywords into every heading.
+- Do not use headings as hidden SEO text.
+- Avoid duplicate H2s unless repeated sections are genuinely necessary.
+
+PROJECT STANDARD:
+- Keep H2 headings concise.
+- For the recurring IPR Karo audit, avoid H2s longer than the project's
+  configured Screaming Frog threshold (commonly audited around 70 characters).
+- Prefer short, descriptive H2s over sentence-length headings.
+
+PREVENT:
+- H2 Too Long
+- H2 Missing where section structure requires it
+- H2/H3 hierarchy problems
+- Duplicate/unhelpful headings
+- Keyword-stuffed headings
+
+========================================================
+E. CANONICAL URL
+========================================================
+
+EVERY indexable page MUST have one correct canonical URL.
+
+RULES:
+- Canonical must be present.
+- Canonical must be inside <head>.
+- Canonical must use HTTPS.
+- Canonical must be the preferred absolute URL.
+- Canonical must normally be self-referencing for a unique indexable page.
+- Canonical target must return HTTP 200.
+- Canonical target must be indexable.
+- Canonical target must not be noindex.
+- Canonical target must not be blocked by robots.txt.
+- Canonical target must not redirect.
+- Canonical target must not be a 4xx/5xx URL.
+- Canonical must not change between raw HTML and rendered HTML.
+- Internal links should normally point directly to the canonical URL.
+
+PREVENT:
+- Canonical Missing
+- Canonical Outside <head>
+- Canonicalised
+- Non-Indexable Canonical
+- Canonical Redirect
+- Canonical 4xx
+- Canonical 5xx
+- Canonical Blocked by robots.txt
+- Canonical Noindex
+- Canonical Mismatch after JavaScript
+
+NEXT.JS RULE:
+Use metadata.alternates.canonical in the Server Component.
+Do not dynamically change canonical URLs from the Client Component.
+
+========================================================
+F. INDEXABILITY / ROBOTS
+========================================================
+
+For pages intended to rank:
+
+- index, follow
+- No accidental noindex.
+- No accidental nofollow.
+- No robots.txt block.
+- No conflicting robots directives.
+- Canonical must point to the indexable version.
+- HTTP status should be 200.
+
+PREVENT:
+- Noindex
+- Nofollow where not intended
+- Robots.txt blocked page
+- Canonical/noindex conflict
+- Canonical/robots conflict
+- Non-indexable primary landing page
+
+For intentionally non-indexable pages, do not force indexability just to
+remove a Screaming Frog warning. The SEO intent of the page must be respected.
+
+========================================================
+G. URL STRUCTURE
+========================================================
+
+SEO URLs MUST:
+- Be lowercase.
+- Use hyphens.
+- Be descriptive.
+- Match the page's actual topic.
+- Avoid unnecessary parameters.
+- Avoid duplicate URL versions.
+- Avoid accidental trailing-slash inconsistencies when the project has a
+  defined canonical convention.
+- Avoid unnecessary dates when evergreen content is intended.
+- Avoid keyword stuffing.
+
+PREVENT:
+- Non-descriptive URLs
+- Duplicate URL variants
+- URL parameter duplication
+- Incorrect canonical/URL mismatch
+- Internal links pointing to alternate non-canonical URL variants
+
+========================================================
+H. INTERNAL LINKS
+========================================================
+
+Before adding any internal link:
+1. Search the codebase for the actual route.
+2. Confirm the route exists.
+3. Use the canonical version of the route.
+4. Use descriptive anchor text.
+5. Link only where contextually useful.
+
+PREVENT:
+- Broken internal links
+- 404 internal links
+- Redirecting internal links where direct links are available
+- Empty anchors
+- "#" placeholder anchors
+- "click here" overuse
+- Non-descriptive anchor text
+- Links to non-canonical URLs
+- Invented routes
+- Links to deleted pages
+
+IMPORTANT:
+Do not invent routes such as /trademark-registration, /patent-services, etc.
+unless those routes actually exist in the codebase.
+
+========================================================
+I. EXTERNAL LINKS
+========================================================
+
+External references should:
+- Point to real URLs.
+- Use authoritative sources for legal/technical claims.
+- Use HTTPS.
+- Avoid broken destinations.
+- Use target="_blank" and rel="noopener noreferrer" where appropriate.
+- Never use fabricated government/judicial URLs.
+
+For IPR/legal pages, prefer authoritative government sources such as
+official IP India resources when they genuinely support the statement.
+
+PREVENT:
+- Broken external links
+- 4xx external links
+- 5xx external links
+- Fake URLs
+- Unnecessary external links
+- Unsupported legal claims
+
+========================================================
+J. IMAGE SEO
+========================================================
+
+Every meaningful image MUST:
+- Exist at the referenced path.
+- Load successfully.
+- Have descriptive alt text.
+- Use an appropriate filename.
+- Be relevant to the surrounding content.
+- Avoid keyword-stuffed alt text.
+
+PREVENT:
+- Missing image
+- Broken image
+- Missing alt attribute
+- Empty alt for meaningful images
+- Generic alt such as "image", "photo", "picture"
+- Keyword-stuffed alt
+- Decorative image incorrectly used as meaningful content
+
+Examples:
+GOOD:
+alt="Free AI powered trademark search workflow"
+
+BAD:
+alt="free ai trademark search free trademark search India best trademark"
+
+Decorative images may use alt="" when they are genuinely decorative.
+
+========================================================
+K. CONTENT QUALITY / READABILITY
+========================================================
+
+Every SEO page MUST be useful to humans.
+
+RULES:
+- Match the actual search intent.
+- Answer the main query directly.
+- Use concise paragraphs.
+- Use descriptive headings.
+- Use bullet lists where useful.
+- Use numbered lists for processes.
+- Use tables where comparisons improve comprehension.
+- Explain legal terminology in clear language.
+- Avoid unnecessary repetition.
+- Avoid keyword stuffing.
+- Avoid filler paragraphs.
+- Preserve important legal/business details.
+
+PREVENT:
+- Thin content
+- Duplicate content
+- Keyword stuffing
+- Excessive repetition
+- Extremely long paragraphs
+- Excessive sentence length
+- Unnecessary passive voice
+- Unclear wording
+- Generic AI filler
+- Headings that do not match the content
+- Content that does not satisfy the page's search intent
+
+========================================================
+L. SEO CONTENT STRUCTURE / GEO
+========================================================
+
+For informational and commercial pages:
+
+- Provide a direct answer near the top.
+- Use a dedicated Quick Answer block where appropriate.
+- Use question-based headings for real user questions.
+- Provide definitions before lengthy explanations.
+- Use lists and tables for extractable information.
+- Use explicit entities and relationships.
+- Cite authoritative sources where legal facts are discussed.
+- Make important answers understandable when extracted independently.
+
+QUICK ANSWER:
+Use:
+
+<div id="quick-answer">
+
+when the page specification requires it.
+
+The Quick Answer should:
+- directly answer the primary query
+- be concise
+- be self-contained
+- avoid vague pronouns
+- not contain unsupported guarantees
+
+========================================================
+M. FAQ
+========================================================
+
+When FAQs are included:
+
+- Questions must be genuinely useful.
+- Answers must be visible on the page.
+- FAQ schema must exactly match visible FAQ text.
+- Do not create hidden FAQ content for search engines.
+- Do not use duplicate questions.
+- Do not stuff keywords.
+- Keep answers concise and factually accurate.
+
+If the project specification requires exactly 8 FAQs, create exactly 8.
+Do not accidentally create 9 or 10.
+
+PREVENT:
+- FAQ/schema mismatch
+- Duplicate FAQ questions
+- Hidden FAQ content
+- Invalid FAQ JSON-LD
+- Unsupported FAQ claims
+
+========================================================
+N. STRUCTURED DATA / JSON-LD
+========================================================
+
+Use structured data only when it accurately represents visible page content.
+
+RULES:
+- Valid JSON.
+- No undefined variables.
+- No placeholder values.
+- No fake ratings.
+- No fake reviews.
+- No fake prices.
+- No contradictory URLs.
+- Visible content and structured data must agree.
+- Use absolute URLs.
+- Validate JSON-LD before completion.
+
+Where multiple schema types are required, prefer one coherent @graph when
+appropriate.
+
+COMMON PAGE SCHEMAS:
+- Article
+- WebPage
+- BreadcrumbList
+- FAQPage, only when visible FAQ content qualifies
+- Organization, where appropriate
+- ItemList, only when a corresponding visible list exists
+
+DO NOT add Product/Review/AggregateRating markup simply to obtain rich results
+unless the page genuinely represents the relevant entity and the data is
+real and visible.
+
+PREVENT:
+- Invalid JSON-LD
+- Missing required properties
+- Schema/visible-content mismatch
+- Fake reviews
+- Fake ratings
+- Fake organization details
+- Fake product information
+- Duplicate/conflicting schema
+
+========================================================
+O. BREADCRUMBS
+========================================================
+
+For pages using breadcrumbs:
+
+VISIBLE:
+Home → Services → Current Page
+
+RULES:
+- Breadcrumbs must reflect actual site hierarchy.
+- Links must be valid.
+- Breadcrumb schema must match visible breadcrumbs.
+- URLs must be absolute in JSON-LD.
+- Current page URL must match canonical.
+
+PREVENT:
+- Broken breadcrumb links
+- Breadcrumb/schema mismatch
+- Wrong hierarchy
+- Wrong canonical URL
+
+========================================================
+P. JAVASCRIPT / NEXT.JS RENDERING
+========================================================
+
+This is especially important for Next.js.
+
+SEO-critical content MUST be available in server-rendered HTML where practical.
+
+Do not rely unnecessarily on client-side JavaScript for:
+- title
+- meta description
+- canonical
+- robots
+- H1
+- primary content
+- important internal links
+- important structured data
+
+Architecture:
+- page.tsx = Server Component for metadata.
+- SlugClient.tsx = interactive UI.
+- Metadata must be generated server-side.
+- Avoid JavaScript changing SEO metadata after initial render.
+
+PREVENT:
+- Title only in rendered HTML
+- Meta description only in rendered HTML
+- Meta description changed by JavaScript
+- Canonical mismatch after JavaScript
+- H1/content missing from raw HTML when not necessary
+- Client-only SEO metadata
+
+========================================================
+Q. HTML HEAD VALIDATION
+========================================================
+
+Keep the HTML <head> clean.
+
+SEO elements that belong in <head> must remain there:
+- <title>
+- meta description
+- canonical
+- robots
+- Open Graph metadata
+- Twitter metadata
+
+Do not accidentally place head elements inside body content.
+
+PREVENT:
+- Title Outside <head>
+- Meta Description Outside <head>
+- Canonical Outside <head>
+- Invalid HTML elements inside <head>
+- Duplicate head metadata
+
+========================================================
+R. OPEN GRAPH / SOCIAL METADATA
+========================================================
+
+For important pages include:
+- og:title
+- og:description
+- og:url
+- og:type
+- og:image
+
+Twitter metadata where applicable.
+
+Rules:
+- OG URL should match canonical.
+- OG image must exist.
+- OG title should match the page topic.
+- OG description should match the page.
+- Do not use broken image URLs.
+
+PREVENT:
+- Missing OG image
+- Broken OG image
+- Wrong OG URL
+- OG title/topic mismatch
+
+========================================================
+S. RESPONSE STATUS / CRAWLABILITY
+========================================================
+
+Every intended indexable page must:
+- Return HTTP 200.
+- Render successfully.
+- Avoid unexpected redirects.
+- Avoid 4xx errors.
+- Avoid 5xx errors.
+- Avoid server exceptions.
+- Avoid infinite redirect chains.
+
+Validate with:
+
+curl -I http://localhost:3000/<slug>
+
+Expected:
+HTTP 200
+
+Also test the production URL when available.
+
+========================================================
+T. LINK DEPTH / ORPHAN PREVENTION
+========================================================
+
+Important pages should be discoverable through internal links.
+
+For new SEO pages:
+- Add relevant contextual internal links from existing pages where appropriate.
+- Ensure the page is reachable from a relevant directory/hub/navigation structure.
+- Do not create an orphan page.
+
+Do not add excessive sitewide links solely for SEO.
+
+========================================================
+U. PERFORMANCE / RESOURCE SAFETY
+========================================================
+
+Avoid introducing unnecessary SEO/performance problems.
+
+- Optimize large images.
+- Do not load unnecessary JavaScript.
+- Avoid blocking the main content with heavy client-side logic.
+- Use Next.js image optimization where appropriate.
+- Lazy-load below-the-fold images where appropriate.
+- Do not lazy-load critical above-the-fold content incorrectly.
+
+Performance warnings should not be solved by removing useful content.
+
+========================================================
+V. MOBILE / RESPONSIVE SEO
+========================================================
+
+Every page must work on:
+- mobile
+- tablet
+- desktop
+
+Check:
+- H1 does not overflow.
+- Tables can scroll horizontally when necessary.
+- Buttons do not overlap.
+- Navigation remains usable.
+- Text remains readable.
+- Important content remains visible.
+- No horizontal page overflow.
+
+========================================================
+W. CONTENT DUPLICATION
+========================================================
+
+Prevent:
+- Duplicate page titles.
+- Duplicate meta descriptions.
+- Duplicate H1s.
+- Duplicate page content.
+- Copying another page with only keyword substitutions.
+- Multiple URLs serving the same page without correct canonicalization.
+
+Every SEO landing page must have a distinct search intent and useful unique content.
+
+========================================================
+X. HREFLANG / INTERNATIONAL SEO
+========================================================
+
+Only implement hreflang if the project actually has alternate language/region
+versions.
+
+If hreflang is used:
+- Every language URL must exist.
+- URLs must be valid and indexable.
+- Return links must be correct.
+- Language/region codes must be valid.
+- Canonicals must not conflict with hreflang.
+
+Do not add hreflang just to eliminate a warning.
+
+========================================================
+Y. PAGINATION / PARAMETERS
+========================================================
+
+Do not accidentally create indexable duplicate pages through:
+- query parameters
+- filters
+- sorting URLs
+- pagination variants
+- tracking parameters
+
+Use the project's established canonical/indexation strategy.
+
+========================================================
+Z. FINAL SCREAMING FROG PRE-DEPLOYMENT CHECKLIST
+========================================================
+
+Before saying a new page is SEO-ready, verify:
+
+[ ] Unique page title
+[ ] Title in <head>
+[ ] Title not duplicated
+[ ] Title not too long
+[ ] Title not too short
+[ ] Unique meta description
+[ ] Meta description in <head>
+[ ] Meta description not duplicated
+[ ] Meta description within configured pixel width
+[ ] Meta description not too short
+[ ] Exactly one H1
+[ ] H1 relevant to search intent
+[ ] H1 not excessively long
+[ ] H2s are concise
+[ ] H2 hierarchy is logical
+[ ] Canonical exists
+[ ] Canonical is inside <head>
+[ ] Canonical is self-referencing when appropriate
+[ ] Canonical returns 200
+[ ] Canonical is indexable
+[ ] Canonical is not blocked
+[ ] Raw/rendered canonical matches
+[ ] Page is indexable
+[ ] No accidental noindex
+[ ] No accidental robots block
+[ ] URL is clean and descriptive
+[ ] Internal links use valid routes
+[ ] No broken internal links
+[ ] No empty href links
+[ ] No unnecessary redirecting internal links
+[ ] External links verified
+[ ] Images load
+[ ] Images have appropriate alt text
+[ ] No keyword-stuffed alt text
+[ ] Search intent is satisfied
+[ ] Content is useful and sufficiently comprehensive
+[ ] No obvious duplicate content
+[ ] Readability checked
+[ ] Quick Answer present when required
+[ ] FAQ count matches specification
+[ ] FAQ visible text matches schema
+[ ] Structured data is valid
+[ ] Structured data matches visible content
+[ ] No fake review/rating/price data
+[ ] Breadcrumbs are valid
+[ ] Breadcrumb schema matches visible breadcrumbs
+[ ] OG metadata is correct
+[ ] Twitter metadata is correct
+[ ] SEO metadata is server-rendered
+[ ] No SEO-critical metadata depends unnecessarily on JavaScript
+[ ] Page returns HTTP 200
+[ ] Page works on mobile
+[ ] Page is internally discoverable
+[ ] No placeholder text
+[ ] No placeholder URLs
+[ ] No invented routes
+[ ] No unsupported legal claims
+[ ] No accidental price/fee information where the page specification prohibits it
+[ ] TypeScript passes
+[ ] Production build/crawl checked where available
+
+========================================================
+AA. MANDATORY ANTIGRAVITY INSTRUCTION
+========================================================
+
+Whenever creating or modifying an IPR Karo SEO page:
+
+1. READ THIS FILE FIRST.
+2. SEARCH THE CODEBASE for existing components, routes, metadata patterns,
+   schema patterns, and approved links.
+3. Implement SEO metadata server-side.
+4. Implement semantic HTML.
+5. Prevent all applicable issues listed above BEFORE completion.
+6. Do not wait for Screaming Frog to discover an avoidable problem.
+7. Run TypeScript validation.
+8. Run a local HTTP 200 check.
+9. Inspect the final rendered HTML for title, description, canonical, robots,
+   H1, links and JSON-LD.
+10. If a Screaming Frog issue cannot logically be eliminated because the page
+    intentionally requires it, document the reason instead of hiding or
+    deleting useful content.
+
+IMPORTANT:
+A Screaming Frog "Issue", "Warning", or "Opportunity" is not automatically a
+reason to change a page. Use SEO judgment and preserve legitimate page intent.
+Screaming Frog itself describes its Issues tab as guidance rather than a
+substitute for expert SEO prioritisation.
+
+========================================================
+REFERENCE
+========================================================
+
+This checklist is based on the recurring IPR Karo SEO problems discussed in
+the project and on Screaming Frog's current SEO Spider issue categories.
+
+Screaming Frog currently documents 300+ issues, warnings and opportunities.
+The exact filters and thresholds can vary by SEO Spider configuration.
+
+Relevant official references:
+- https://www.screamingfrog.co.uk/seo-spider/issues/
+- https://www.screamingfrog.co.uk/seo-spider/user-guide/tabs/
+- https://www.screamingfrog.co.uk/seo-spider/issues/page-titles/
+- https://www.screamingfrog.co.uk/seo-spider/issues/meta-description/
+- https://www.screamingfrog.co.uk/seo-spider/issues/canonicals/
+- https://www.screamingfrog.co.uk/seo-spider/user-guide/configuration/
+
+END OF IPR KARO SCREAMING FROG SEO AUDIT PREVENTION RULES

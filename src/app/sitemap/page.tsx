@@ -12,6 +12,9 @@ export const metadata = {
 };
 
 const staticUrls: string[] = [
+  'why-search-trademark-before-registration',
+  '/free-ai-powered-trademark-search',
+  '/trademark-registration-in-september-26',
   '/',
   '/blog',
   '/about-us',
@@ -246,7 +249,7 @@ function formatLabel(path: string) {
   const parts = path.split('/').filter(Boolean);
   const lastPart = parts[parts.length - 1];
   if (!lastPart) return 'Home';
-  
+
   return lastPart
     .split('-')
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
@@ -255,7 +258,7 @@ function formatLabel(path: string) {
 
 export default async function SitemapPage() {
   const uniqueStaticPaths = Array.from(new Set(staticUrls));
-  
+
   // Fetch dynamic blog paths
   let blogUrls: string[] = [];
   try {
@@ -276,13 +279,13 @@ export default async function SitemapPage() {
         <h1 className="text-3xl font-bold text-slate-900 text-center mb-12">
           HTML Sitemap
         </h1>
-        
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {allUrls.map((url, index) => {
             const label = formatLabel(url);
             return (
-              <Link 
-                key={index} 
+              <Link
+                key={index}
                 href={url}
                 className="group flex items-center justify-center h-full min-h-[120px] p-6 bg-white border border-slate-200 rounded-2xl shadow-sm hover:border-blue-500 hover:shadow-md transition-all duration-300 text-center"
               >

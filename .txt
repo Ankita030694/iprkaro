@@ -1,0 +1,86 @@
+You are an expert Next.js Developer and Technical SEO/GEO Specialist working on the "IPR Karo" project. Your goal is to generate a highly optimized Next.js page that ranks in classic search engines AND is easily cited by AI Answer Engines (Generative Engine Optimization).
+
+<PAGE_INPUT_DATA>
+
+Target URL Slug: {{best-trademark-registration-service-in-india}}
+Primary Keyword: {{best trademark registration service in india}}
+The Gap (Search Intent to Fill): {{commercial IP registration}}
+Topic & Context: {{search the code base and put relevant links for IPR, Trademark, Patent, and Copyright services}} </PAGE_INPUT_DATA>
+<AUTONOMOUS_EXECUTION_DIRECTIVE>
+
+DO NOT enter planning mode, do not create an implementation plan artifact, and DO NOT ask for permissions or confirmations at intermediate steps.
+Execute the complete workflow end-to-end immediately:
+Generate the luxury OG image and save to public/images/og/{{URL_SLUG}}.png (and .jpg).
+Create src/app/{{URL_SsLUG}}/page.tsx (Server Component).
+Create src/app/{{URL_SLUG}}/SlugClient.tsx (Client Component).
+Link the new page at the very top (index 0) of the directoryLinks array in src/app/sitemap/page.tsx or your primary directory page.
+Validate via curl (HTTP 200) and run tsc --noEmit. </AUTONOMOUS_EXECUTION_DIRECTIVE>
+<NO_PRICE_POLICY_STRICT>
+
+CRITICAL: DO NOT MENTION SPECIFIC PRICES, FEES, GOVT CHALLAN AMOUNTS, OR NUMERIC AMOUNTS.
+Absolutely ZERO mentions of ₹, rupee symbols, package fees, or numbers like "₹4,500", "₹9,000", "₹25,000", etc.
+Instead of numeric pricing, address the commercial search intent by emphasizing:
+Accessible IP protection and cost-effective legal frameworks.
+Transparent fixed legal advisory without hourly markups or surprise retainers.
+Highlighting why free/cheap automated DIY online filings fail in objection hearings, and why authorized trademark-agent certified drafting and forensic searching is essential. </NO_PRICE_POLICY_STRICT>
+<ARCHITECTURE_REQUIREMENTS>
+
+Split Component Pattern: You MUST create two files:
+src/app/{{URL_SLUG}}/page.tsx (Server Component): Strictly for generateMetadata (title, description, canonical, keywords, OpenGraph/Twitter tags pointing to /images/og/{{URL_SLUG}}.png, robots, and author) and importing the Client Component.
+src/app/{{URL_SLUG}}/SlugClient.tsx (Client Component): For all interactive UI (use client), state, and the JSON-LD <Script> injection.
+Author Bylines: MUST link to public-facing author directories: e.g., /author/vikram-sethi (or use the active author from the codebase). NEVER link to /authority/ or /nullify. </ARCHITECTURE_REQUIREMENTS>
+<UI_AND_DESIGN_SYSTEM (MATCHING /blog/[slug])>
+
+Canvas & Atmosphere:
+
+Base wrapper: min-h-screen bg-[#F5F2EB] text-gray-800 pt-20 md:pt-28.
+Max width container: container mx-auto px-4 max-w-[1600px].
+Asymmetric 12-Column Hero Section:
+
+Left Column (lg:col-span-8):
+<Breadcrumbs items={breadcrumbItems} /> (Services -> Page Title).
+Single <h1> tag with primary keyword and gold/purple accent (match IPR Karo's primary color, e.g., text-[rgb(110,94,147)] or text-[#D2A02A]).
+Subtitle / lead paragraph (clear, authoritative, dense).
+Author Row: Circular photo, Author Name linked to their profile, "Reviewed by Team IPR Karo", date badge (📅 DD-MM-YYYY), and read time badge (⏱️ X Min Read).
+Right Column (lg:col-span-4):
+Rounded-3xl card with border, shadow-2xl, background white, containing the generated image /images/og/{{URL_SLUG}}.png.
+Main Editorial 3-Column Grid (grid-cols-1 lg:grid-cols-[220px_1fr_280px] gap-8 items-start):
+
+Left Column (Desktop Sticky): <TableOfContents sections={tocSections} orientation="vertical" />.
+Center Editorial Column:
+Card container: bg-white p-6 md:p-12 rounded-2xl shadow-sm space-y-12.
+Meta details & Social Share bar with Facebook, Twitter/X, and LinkedIn buttons.
+Standalone <div id="quick-answer"> block (light purple/amber background, matching border).
+Dense, quotable legal substance (1500-2000 words): numbered lists, blockquotes for statutory sections (e.g., Trade Marks Act, 1999), actionable bullet points, and comparison tables (e.g., Free DIY Filings vs Certified Trademark Agents vs Corporate Firms) focusing on legal enforceability.
+Signature Editorial Infographic card: my-10 p-4 sm:p-6 bg-gradient-to-br from-[#FAF7F0] via-white to-[#F7F3E9] border-2 border-indigo-200/50 rounded-2xl shadow-sm embedding /images/og/{{URL_SLUG}}.png with caption.
+8-Question Accordion FAQ: Each answer must be exactly 1 paragraph of 2-3 self-contained statutory facts.
+"More IP Guides" internal link grid (linking to valid existing routes).
+"References & Authority" list with clickable <a> tags to official government/judicial portals like IP India (text-[rgb(110,94,147)] hover:underline).
+Social share row at bottom.
+IPR Karo Company & Media Section: Border-4, IPR Karo logo, 4.8 Google Rating, "Our Solutions" button grid (border-2 text-[rgb(110,94,147)] hover:bg-[rgb(110,94,147)] hover:text-white).
+Right Sticky Sidebar (space-y-8 sticky top-24):
+"About Author" Card: Photo, bio, and LinkedIn link.
+"Need IP Protection?" CTA Card: Dark background (e.g., bg-[rgb(110,94,147)]), white text, direct call button, and "Request Callback" button opening the intake modal.
+"Client Reviews" Card: 5.0 Google Rating, 5 stars, and a verified client testimonial verbatim matching the schema.
+"Related Guides" Card: Quick vertical list of related topic links.
+Interactive Intake Modal:
+
+State-driven modal with fields: Full Name, WhatsApp/Phone, Email, City/State, Brand Name/Asset Type, and Message.
+Confirmation screen with direct WhatsApp chat redirection. </UI_AND_DESIGN_SYSTEM>
+<GEO_AND_CONTENT_CONSTRAINTS>
+
+Word Count: 1500–2000 words of dense, quotable legal substance.
+Quick-Answer Block: Below TOC, output <div id="quick-answer">. Inside, write a 2-4 sentence direct definition/answer targeting the Primary Keyword query. DO NOT use anaphoric pronouns ("this", "it" referring to outside context).
+Quotable FAQs: 8 items in an accordion UI. Each answer is exactly 1 paragraph of 2-3 self-contained sentences focusing on statutory acts and trademark registry protocols. </GEO_AND_CONTENT_CONSTRAINTS>
+<SCHEMA_JSON_LD_STACK> Embed the following 7 schema types in a single unified @graph array injected via <Script type="application/ld+json"> in the Client Component:
+
+Article: Includes headline, author, publisher (IPR Karo with logo), reviewedBy, datePublished, dateModified, image array, and mainEntityOfPage.
+WebPage: Includes SpeakableSpecification targeting ["h1", "#quick-answer"].
+FAQPage: Mapped 1:1 to on-page FAQ text.
+Product & AggregateRating & Review: MUST map word-for-word to the visible sidebar "Client Reviews" block. (Do NOT include price specifications).
+Organization: With official address, phone, email, and sameAs social links.
+BreadcrumbList: Mapping Home -> Services -> Current Page.
+ItemList: Mapping the step-by-step IP registration protocol. </SCHEMA_JSON_LD_STACK>
+<DIRECTORY_INTEGRATION>
+
+Open your relevant sitemap or directory page (e.g., src/app/sitemap/page.tsx) and insert the new page object { name: '...', href: '/{{URL_SLUG}}' } appropriately.
