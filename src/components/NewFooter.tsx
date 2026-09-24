@@ -149,10 +149,10 @@ const queries = [
 const NewFooter = () => {
   const [isExpanded, setIsExpanded] = useState(false);
   return (
-    <footer className="w-full bg-[#05030E] text-white pt-24 pb-8 overflow-hidden font-nunito home-page-font">
+    <footer className="w-full bg-[#05030E] text-white pt-12 md:pt-16 pb-8 overflow-hidden font-nunito home-page-font">
       {/* Top CTA Section */}
-      <div className="max-w-[1200px] mx-auto px-6 mb-24 flex flex-col items-center">
-        <p className="text-white font-nunito text-[40px] md:text-[56px] font-bold text-center leading-[1.1] mb-12 tracking-tight">
+      <div className="max-w-[1200px] mx-auto px-6 mb-12 md:mb-16 flex flex-col items-center">
+        <p className="text-white font-nunito text-[40px] md:text-[56px] font-bold text-center leading-[1.1] mb-8 tracking-tight">
           Make Your Brand <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1A56DB] via-[#DAB6FC] to-[#059669] animate-gradient">Future-Proof</span><br />
           with AI
         </p>
@@ -161,10 +161,10 @@ const NewFooter = () => {
       </div>
 
       <div className="max-w-[1200px] mx-auto px-6">
-        <div className="w-full h-px bg-white/5 mb-16"></div>
+        <div className="w-full h-px bg-white/5 mb-10 md:mb-12"></div>
 
         {/* Navigation Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-12 md:gap-8 mb-24">
+        <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-12 md:gap-8 mb-12 md:mb-16">
           <div className="lg:col-span-2">
             <Link href="/" className="inline-block mb-10">
               <div className="relative w-[240px] h-[60px]">
@@ -213,10 +213,10 @@ const NewFooter = () => {
         </div>
 
         {/* Explore More Section */}
-        <div className="mb-24">
+        <div className="mb-12 md:mb-16">
           <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="flex items-center gap-4 mb-10 w-full group cursor-pointer focus:outline-none"
+            className="flex items-center gap-4 mb-6 w-full group cursor-pointer focus:outline-none"
           >
             <h3 className="text-3xl md:text-xl font-bold whitespace-nowrap group-hover:text-white transition-colors">Explore More</h3>
             <div className="w-full h-px bg-white/10 group-hover:bg-white/20 transition-colors"></div>

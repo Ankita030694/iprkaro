@@ -3,6 +3,9 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import TableOfContents from '@/components/TableOfContents';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShieldHalved, faPhone } from '@fortawesome/free-solid-svg-icons';
 
 export default function SlugClient() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -48,7 +51,7 @@ export default function SlugClient() {
         datePublished: '2026-09-23',
         dateModified: '2026-09-23',
         image: [
-          'https://www.iprkaro.com/images/og/best-trademark-registration-service-in-india.png',
+          'https://www.iprkaro.com/images/og/trademark-registration-in-september-2026.png',
         ],
         mainEntityOfPage:
           'https://www.iprkaro.com/trademark-registration-in-september-26',
@@ -242,40 +245,100 @@ export default function SlugClient() {
 
       {/* =========================================================
           HERO SECTION
-          KEPT FROM ORIGINAL
       ========================================================== */}
-      <div
-        className="relative w-full overflow-hidden"
-        style={{
-          background:
-            'linear-gradient(to bottom, #0C002B 0%, #160049 45%, #6E5E93 80%, #E8E8E8 100%)',
-        }}
-      >
-        <div className="container mx-auto px-4 pt-28 pb-12 lg:pt-40 lg:pb-32 relative z-10 text-center">
-          <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-snug md:leading-tight text-white">
-            <span
-              className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]"
-              style={{
-                WebkitTextFillColor: 'rgb(110, 94, 147)',
-              }}
-            >
-              Trademark registration
-            </span>{' '}
-            in September 2026
-          </h1>
+      <div className="relative w-full overflow-hidden bg-[#FAF9F6]">
+        <div className="container mx-auto px-4 pt-24 pb-8 lg:pt-32 lg:pb-12 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-8 lg:gap-12 items-center justify-between">
+            <div className="text-left mt-8 lg:mt-0 w-full">
+              <div className="inline-flex items-center bg-indigo-50 border border-indigo-100 rounded-full px-3 py-1.5 mb-4 shadow-sm">
+                <FontAwesomeIcon icon={faShieldHalved} className="w-3.5 h-3.5 text-[#6E5E93] mr-2" />
+                <span className="text-[10px] sm:text-xs font-bold tracking-wider text-[#6E5E93] uppercase">
+                  Official Brand Protection & Filing Guide
+                </span>
+              </div>
 
-          <p className="text-sm md:text-xl mb-6 md:mb-8 max-w-3xl mx-auto text-gray-300 px-2 leading-relaxed">
-            Secure your commercial IP with advocate-certified drafting and
-            transparent fixed legal advisory. Don't risk your brand on free
-            DIY filings.
-          </p>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-3 leading-tight text-gray-900 tracking-tighter">
+                <span
+                  className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]"
+                  style={{ WebkitTextFillColor: 'transparent' }}
+                >
+                  Trademark Registration
+                </span>{' '}
+                in September 2026 in India:<br />
+                Advocate-Certified Drafting & Legal Advisory
+              </h1>
 
-          <Link
-            href="/contact-us"
-            className="inline-block bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-2.5 px-6 md:py-3 md:px-8 rounded-full transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(110,94,147,0.3)] text-base md:text-lg"
-          >
-            Book Trademark Consultation
-          </Link>
+              <p className="text-base md:text-lg mb-5 text-gray-700 font-medium leading-relaxed">
+                Secure your commercial IP with advocate-certified drafting and transparent fixed legal advisory. Don&apos;t risk your brand on free DIY filings. Protect your brand identity under the Trade Marks Act, 1999 with our comprehensive guide for September 2026—covering availability searches, accurate NICE classification, documentation, official registry filing, examination report replies, and hearing representations to safeguard your business nationwide.
+              </p>
+
+              <div className="flex flex-wrap items-center gap-4 mb-6">
+                <div className="flex items-center mr-2">
+                  <img
+                    src="/images/author/rahul-roy.jpg"
+                    alt="Rahul Roy"
+                    className="w-10 h-10 rounded-full border-2 border-gray-200 mr-3 object-cover shadow-sm"
+                  />
+                  <div>
+                    <p className="text-sm font-bold text-gray-900 m-0 leading-tight">Rahul Roy</p>
+                    <p className="text-[10px] sm:text-xs text-gray-500 m-0 mt-0.5">Senior Trademark Attorney</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-2">
+                  <div className="flex items-center bg-white rounded-full px-3 py-1 border border-gray-200 shadow-sm">
+                    <span className="text-[10px] sm:text-xs font-medium text-gray-600">📅 September 2026</span>
+                  </div>
+                  <div className="flex items-center bg-white rounded-full px-3 py-1 border border-gray-200 shadow-sm">
+                    <span className="text-[10px] sm:text-xs font-medium text-gray-600">⏱️ 12 Min Read</span>
+                  </div>
+                  <div className="flex items-center bg-amber-50 rounded-full px-3 py-1 border border-amber-200 shadow-sm">
+                    <span className="text-[10px] sm:text-xs font-medium text-amber-800">🛡️ Advocate Verified</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
+                <Link href="/contact-us" className="w-full sm:w-auto">
+                  <button className="bg-[#6E5E93] hover:bg-[#5a4c7a] text-white font-bold py-3 px-6 rounded-xl transition-all shadow-lg text-sm uppercase tracking-wider flex items-center justify-center w-full">
+                    Book Trademark Consultation <span className="ml-2 font-black">&rarr;</span>
+                  </button>
+                </Link>
+                <a
+                  href="tel:+918700343611"
+                  className="bg-[#1A1A24] hover:bg-[#2A2A34] text-white font-bold py-3 px-6 rounded-xl border border-transparent transition-all shadow-lg text-sm flex items-center justify-center w-full sm:w-auto tracking-wide"
+                >
+                  <FontAwesomeIcon icon={faPhone} className="w-4 h-4 mr-2 text-pink-400" />
+                  Call Expert: +91-8700343611
+                </a>
+              </div>
+            </div>
+
+            <div className="relative mx-auto lg:ml-auto lg:mr-0 w-full max-w-md lg:max-w-[420px] xl:max-w-[480px] mt-8 lg:mt-4">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-200 group">
+                <div className="absolute inset-0 bg-gradient-to-tr from-[rgb(110,94,147)]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                <img
+                  src="/images/og/trademark-registration-in-september-2026.png"
+                  alt="Trademark Registration in September 2026"
+                  className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-gray-50 border-b border-gray-200 py-4">
+        <div className="container mx-auto px-4 max-w-[1600px]">
+          <Breadcrumbs
+            items={[
+              { label: 'Services', href: '/services' },
+              {
+                label: 'Trademark Registration in September 2026',
+                href: '/trademark-registration-in-september-26',
+              },
+            ]}
+          />
         </div>
       </div>
 

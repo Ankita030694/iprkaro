@@ -12,7 +12,12 @@ export const metadata = {
 };
 
 const staticUrls: string[] = [
-  'why-search-trademark-before-registration',
+  '/process-and-steps-of-trademark-registration',
+  '/how-to-search-for-existing-trademark',
+  '/difference-between-trademark-registration-and-copyright-registration',
+  '/what-will-happen-if-i-register-trademark-without-researching-it',
+  '/best-trademark-registration-company-in-gurgaon',
+  '/why-search-trademark-before-registration',
   '/free-ai-powered-trademark-search',
   '/trademark-registration-in-september-26',
   '/',

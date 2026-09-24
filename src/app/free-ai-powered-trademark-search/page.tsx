@@ -51,7 +51,7 @@ export const metadata: Metadata = {
         type: "website",
         images: [
             {
-                url: "https://www.iprkaro.com/assets/ai-trademark-search-og.jpg",
+                url: "https://www.iprkaro.com/images/og/free-ai-powered-trademark-search.png",
                 width: 1200,
                 height: 630,
                 alt: "Free AI Powered Trademark Search",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Free AI Powered Trademark Search in India | IPR Karo",
         description: "Learn how a free AI powered trademark search helps users identify potential brand conflicts and similarities before starting the registration process.",
-        images: ["https://www.iprkaro.com/assets/ai-trademark-search-og.jpg"],
+        images: ["https://www.iprkaro.com/images/og/free-ai-powered-trademark-search.jpg"],
     }
 };
 
@@ -107,10 +107,15 @@ export default function FreeAiTrademarkSearchPage() {
         "@type": "Article",
         "headline": "Free AI Powered Trademark Search",
         "description": "Learn how a free AI powered trademark search helps users identify potential brand conflicts and similarities before starting the registration process.",
-        "image": "https://www.iprkaro.com/assets/ai-trademark-search-og.jpg",
+        "image": "https://www.iprkaro.com/images/og/free-ai-powered-trademark-search.png",
         "datePublished": "2024-03-24T08:00:00+05:30",
         "dateModified": new Date().toISOString(),
-        "author": { "@type": "Organization", "name": "IPR Karo" },
+        "author": {
+            "@type": "Person",
+            "name": "Rahul Roy",
+            "url": "https://www.iprkaro.com/author/rahul-roy",
+            "image": "https://www.iprkaro.com/images/author/rahul-roy.jpg"
+        },
         "publisher": {
             "@type": "Organization",
             "name": "IPR Karo",
@@ -167,21 +172,67 @@ export default function FreeAiTrademarkSearchPage() {
             <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
             <Script id="itemlist-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(workflowListSchema) }} />
 
-            <div className="relative w-full overflow-hidden"
-                style={{ background: 'linear-gradient(to bottom, #0C002B 0%, #160049 45%, #6E5E93 80%, #E8E8E8 100%)' }}>
-                <div className="container mx-auto px-4 py-12 lg:py-32 relative z-10 text-center">
-                    <h1 className="text-2xl md:text-5xl lg:text-6xl font-extrabold mb-4 md:mb-6 leading-tight mt-20 md:mt-10 text-white uppercase tracking-tighter">
-                        Free AI Powered <br />
-                        <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#8A7AB5] to-[#D1C4E9]" style={{ WebkitTextFillColor: 'rgb(110, 94, 147)' }}>Trademark Search</span>
-                    </h1>
-                    <p className="text-sm md:text-xl mb-6 md:mb-8 max-w-4xl mx-auto text-gray-300 font-medium leading-relaxed px-2">
-                        Discover potential brand conflicts early. Understand how preliminary AI screening evaluates availability before navigating official registry records and legal clearance.
-                    </p>
-                    <Link href="/trademark-search">
-                        <button className="bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-3 px-8 md:py-4 md:px-12 rounded-full transition-all transform hover:scale-105 shadow-[0_0_30px_rgba(110,94,147,0.4)] text-base md:text-xl uppercase tracking-wider">
-                            Start Preliminary Search
-                        </button>
-                    </Link>
+            <div className="relative w-full overflow-hidden bg-[#FAF9F6]">
+                <div className="container mx-auto px-4 pt-24 pb-8 lg:pt-32 lg:pb-12 relative z-10">
+                    <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-8 lg:gap-12 items-center justify-between">
+                        <div className="text-left mt-8 lg:mt-0 w-full">
+                            <div className="inline-flex items-center bg-indigo-50 border border-indigo-100 rounded-full px-3 py-1.5 mb-4 shadow-sm">
+                                <FontAwesomeIcon icon={faShieldHalved} className="w-3.5 h-3.5 text-[#6E5E93] mr-2" />
+                                <span className="text-[10px] sm:text-xs font-bold tracking-wider text-[#6E5E93] uppercase">Preliminary Trademark Screening Tool</span>
+                            </div>
+                            <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-3 leading-tight text-gray-900 tracking-tighter">
+                                Free <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'transparent' }}>AI Powered Trademark Search</span> in India:<br />
+                                Instant Similarity & Conflict Analysis
+                            </h1>
+                            <p className="text-base md:text-lg mb-5 text-gray-700 font-medium leading-relaxed">
+                                Discover potential brand conflicts early and secure your intellectual property with confidence. Understand how preliminary AI screening evaluates trademark availability before navigating official registry records and legal clearance. Protect your brand identity instantly by analyzing millions of global databases for exact matches, phonetic similarities, and visual conflicts. Make informed decisions and eliminate the risk of facing sudden objections or opposition during the official registration process.
+                            </p>
+
+                            <div className="flex flex-wrap items-center gap-4 mb-6">
+                                <div className="flex items-center mr-2">
+                                    <img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-10 h-10 rounded-full border-2 border-gray-200 mr-3 object-cover shadow-sm" />
+                                    <div>
+                                        <p className="text-sm font-bold text-gray-900 m-0 leading-tight">Rahul Roy</p>
+                                        <p className="text-[10px] sm:text-xs text-gray-500 m-0 mt-0.5">Trademark Research Specialist</p>
+                                    </div>
+                                </div>
+
+                                <div className="flex items-center gap-2">
+                                    <div className="flex items-center bg-white rounded-full px-3 py-1 border border-gray-200 shadow-sm">
+                                        <span className="text-[10px] sm:text-xs font-medium text-gray-600">📅 23-09-2026</span>
+                                    </div>
+                                    <div className="flex items-center bg-white rounded-full px-3 py-1 border border-gray-200 shadow-sm">
+                                        <span className="text-[10px] sm:text-xs font-medium text-gray-600">⏱️ 10 Min Read</span>
+                                    </div>
+                                    <div className="flex items-center bg-amber-50 rounded-full px-3 py-1 border border-amber-200 shadow-sm">
+                                        <span className="text-[10px] sm:text-xs font-medium text-amber-800">🛡️ Verified Specialist</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
+                                <Link href="/trademark-search" className="w-full sm:w-auto">
+                                    <button className="bg-[#6E5E93] hover:bg-[#5a4c7a] text-white font-bold py-3 px-6 rounded-xl transition-all shadow-lg text-sm uppercase tracking-wider flex items-center justify-center w-full">
+                                        Start Preliminary Search <span className="ml-2 font-black">&rarr;</span>
+                                    </button>
+                                </Link>
+                                <a href="tel:+919289707648" className="bg-[#1A1A24] hover:bg-[#2A2A34] text-white font-bold py-3 px-6 rounded-xl border border-transparent transition-all shadow-lg text-sm flex items-center justify-center w-full sm:w-auto tracking-wide">
+                                    <FontAwesomeIcon icon={faPhone} className="w-4 h-4 mr-2 text-pink-400" />
+                                    Call Expert: +91-9289707648
+                                </a>
+                            </div>
+                        </div>
+                        <div className="relative mx-auto lg:ml-auto lg:mr-0 w-full max-w-md lg:max-w-[420px] xl:max-w-[480px] mt-8 lg:mt-4">
+                            <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-200 group">
+                                <div className="absolute inset-0 bg-gradient-to-tr from-[rgb(110,94,147)]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                                <img
+                                    src="/images/og/free-ai-powered-trademark-search.png"
+                                    alt="Free AI Powered Trademark Search"
+                                    className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
+                                />
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -214,9 +265,18 @@ export default function FreeAiTrademarkSearchPage() {
                             <div className="bg-white p-4 md:p-12 rounded-2xl shadow-sm border border-gray-100 space-y-12 md:space-y-20 article-content">
                                 <article className="prose prose-lg max-w-none text-gray-700 leading-relaxed font-normal">
 
+                                    {/* Author Row */}
+                                    <div className="flex items-center space-x-4 mb-10 p-4 bg-gray-50 rounded-xl border border-gray-100 not-prose">
+                                        <img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-12 h-12 rounded-full object-cover m-0" />
+                                        <div>
+                                            <p className="text-sm font-bold text-gray-900 m-0">Written by <Link href="/author/rahul-roy" className="text-[rgb(110,94,147)] hover:underline">Rahul Roy</Link></p>
+                                            <p className="text-xs text-gray-500 m-0">Trademark Research Specialist</p>
+                                        </div>
+                                    </div>
+
                                     <section id="what-is" className="scroll-mt-32">
-                                        <h2 className="text-2xl md:text-4xl font-black text-gray-900 mb-8 flex items-center">
-                                            <FontAwesomeIcon icon={faMagnifyingGlass} className="w-12 h-12 mr-4 text-[rgb(110,94,147)]" />
+                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                            <FontAwesomeIcon icon={faMagnifyingGlass} className="w-8 h-5 mr-3 text-[rgb(110,94,147)]" />
                                             What Is a Free AI Powered Trademark Search?
                                         </h2>
 
@@ -238,8 +298,8 @@ export default function FreeAiTrademarkSearchPage() {
                                     </section>
 
                                     <section id="how-it-works" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-2xl md:text-4xl font-black text-gray-900 mb-8 flex items-center">
-                                            <FontAwesomeIcon icon={faMicrochip} className="w-12 h-12 mr-4 text-[rgb(110,94,147)]" />
+                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                            <FontAwesomeIcon icon={faMicrochip} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             How AI Trademark Search Works
                                         </h2>
                                         <p className="mb-6">
@@ -254,8 +314,8 @@ export default function FreeAiTrademarkSearchPage() {
                                     </section>
 
                                     <section id="what-it-detects" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-2xl md:text-4xl font-black text-gray-900 mb-8 flex items-center">
-                                            <FontAwesomeIcon icon={faShieldHalved} className="w-12 h-12 mr-4 text-[rgb(110,94,147)]" />
+                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                            <FontAwesomeIcon icon={faShieldHalved} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             What an AI Trademark Search Can Detect
                                         </h2>
                                         <p className="mb-6">
@@ -284,8 +344,8 @@ export default function FreeAiTrademarkSearchPage() {
                                     </section>
 
                                     <section id="comparison" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-2xl md:text-4xl font-black text-gray-900 mb-8 flex items-center">
-                                            <FontAwesomeIcon icon={faTable} className="w-12 h-12 mr-4 text-[rgb(110,94,147)]" />
+                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                            <FontAwesomeIcon icon={faTable} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Free AI Trademark Search vs IP India Public Search
                                         </h2>
                                         <p className="mb-6">
@@ -335,8 +395,8 @@ export default function FreeAiTrademarkSearchPage() {
                                     </section>
 
                                     <section id="similarity" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-2xl md:text-4xl font-black text-gray-900 mb-8 flex items-center">
-                                            <FontAwesomeIcon icon={faScaleBalanced} className="w-12 h-12 mr-4 text-[rgb(110,94,147)]" />
+                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                            <FontAwesomeIcon icon={faScaleBalanced} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Why Trademark Similarity Matters
                                         </h2>
                                         <p className="mb-6">
@@ -348,8 +408,8 @@ export default function FreeAiTrademarkSearchPage() {
                                     </section>
 
                                     <section id="how-to-search" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-2xl md:text-4xl font-black text-gray-900 mb-8 flex items-center">
-                                            <FontAwesomeIcon icon={faListUl} className="w-12 h-12 mr-4 text-[rgb(110,94,147)]" />
+                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                            <FontAwesomeIcon icon={faListUl} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             How to Search a Trademark Before Registration
                                         </h2>
                                         <p className="mb-6">
@@ -371,8 +431,8 @@ export default function FreeAiTrademarkSearchPage() {
                                     </section>
 
                                     <section id="limitations" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-2xl md:text-4xl font-black text-gray-900 mb-8 flex items-center">
-                                            <FontAwesomeIcon icon={faExclamationTriangle} className="w-12 h-12 mr-4 text-[rgb(110,94,147)]" />
+                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                            <FontAwesomeIcon icon={faExclamationTriangle} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Limitations of Free AI Trademark Search
                                         </h2>
                                         <p className="mb-6">
@@ -387,8 +447,8 @@ export default function FreeAiTrademarkSearchPage() {
                                     </section>
 
                                     <section id="professional-clearance" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-2xl md:text-4xl font-black text-gray-900 mb-8 flex items-center">
-                                            <FontAwesomeIcon icon={faFileContract} className="w-12 h-12 mr-4 text-[rgb(110,94,147)]" />
+                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                            <FontAwesomeIcon icon={faFileContract} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             When Professional Trademark Clearance Is Needed
                                         </h2>
                                         <p className="mb-6">
@@ -400,8 +460,8 @@ export default function FreeAiTrademarkSearchPage() {
                                     </section>
 
                                     <section id="checklist" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-2xl md:text-4xl font-black text-gray-900 mb-8 flex items-center">
-                                            <FontAwesomeIcon icon={faCheckCircle} className="w-12 h-12 mr-4 text-[rgb(110,94,147)]" />
+                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                            <FontAwesomeIcon icon={faCheckCircle} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Trademark Search Checklist
                                         </h2>
                                         <ul className="list-none space-y-4 mb-8">
@@ -433,7 +493,7 @@ export default function FreeAiTrademarkSearchPage() {
                                     </section>
 
                                     <section id="faqs" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-gray-900 mb-12 text-center text-[rgb(110,94,147)]">
+                                        <h2 className="text-xl md:text-2xl lg:text-3xl font-black text-gray-900 mb-8 text-center text-[rgb(110,94,147)]">
                                             Frequently Asked Questions
                                         </h2>
                                         <div className="space-y-4">
@@ -449,8 +509,8 @@ export default function FreeAiTrademarkSearchPage() {
                                     </section>
 
                                     <section id="final-takeaway" className="scroll-mt-32 pt-16">
-                                        <h2 className="text-3xl font-black text-gray-900 mb-8 flex items-center">
-                                            <FontAwesomeIcon icon={faLightbulb} className="w-12 h-12 mr-4 text-yellow-500" />
+                                        <h2 className="text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                            <FontAwesomeIcon icon={faLightbulb} className="w-8 h-8 mr-3 text-yellow-500" />
                                             Final Takeaway
                                         </h2>
                                         <p className="mb-6">
@@ -514,13 +574,22 @@ export default function FreeAiTrademarkSearchPage() {
                         </main>
 
                         <aside className="hidden lg:block space-y-8 sticky top-32">
-                            <div className="bg-[#0C002B] p-10 rounded-[2.5rem] shadow-2xl border border-white/5 text-white relative overflow-hidden group">
+                            {/* About Author */}
+                            <div className="bg-white p-6 rounded-[2.5rem] shadow-sm border border-gray-100 flex flex-col items-center text-center">
+                                <img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-24 h-24 rounded-full mb-4 shadow-md object-cover" />
+                                <h3 className="text-xl font-bold text-gray-900 mb-2">Rahul Roy</h3>
+                                <p className="text-sm text-gray-600 mb-4 font-medium">Trademark Research Specialist</p>
+                                <p className="text-sm text-gray-700 leading-relaxed mb-6">Rahul specializes in preliminary trademark clearance, brand protection strategy, and IP portfolio management. He helps businesses identify potential trademark conflicts early in the brand creation process.</p>
+
+                            </div>
+
+                            <div className="bg-[#0C002B] p-8 rounded-[2.5rem] shadow-2xl border border-white/5 text-white relative overflow-hidden group">
                                 <div className="absolute top-0 right-0 w-40 h-40 bg-[rgb(110,94,147)] rounded-full blur-[100px] opacity-30 group-hover:opacity-50 transition-opacity"></div>
-                                <h3 className="text-2xl font-black mb-6 relative z-10 leading-tight">Start Your Search</h3>
-                                <p className="text-sm opacity-70 mb-10 leading-relaxed relative z-10 font-medium">Use our intelligent tools to analyze potential brand conflicts before filing your application.</p>
-                                <Link href="/contact-us" className="block relative z-10">
-                                    <button className="w-full bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-black py-5 px-4 rounded-2xl transition-all shadow-xl text-sm uppercase tracking-widest">
-                                        Talk to us
+                                <h3 className="text-xl font-black mb-4 relative z-10 leading-tight">Check Your Trademark</h3>
+                                <p className="text-sm opacity-70 mb-8 leading-relaxed relative z-10 font-medium">Use our intelligent tools to analyze potential brand conflicts before filing your application.</p>
+                                <Link href="/trademark-search" className="block relative z-10">
+                                    <button className="w-full bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-3.5 px-4 rounded-xl transition-all shadow-xl text-xs uppercase tracking-wider">
+                                        Start Trademark Search
                                     </button>
                                 </Link>
                             </div>
@@ -543,6 +612,14 @@ export default function FreeAiTrademarkSearchPage() {
                                             <span className="font-black text-xs uppercase tracking-widest">Class Guide</span>
                                         </Link>
                                     </li>
+                                    <li>
+                                        <Link href="/process-and-steps-of-trademark-registration" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
+                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
+                                                <FontAwesomeIcon icon={faFileContract} className="w-5 h-5" />
+                                            </div>
+                                            <span className="font-black text-xs uppercase tracking-widest">Process &amp; Steps</span>
+                                        </Link>
+                                    </li>
                                 </ul>
                             </div>
                         </aside>
@@ -552,3 +629,4 @@ export default function FreeAiTrademarkSearchPage() {
         </>
     );
 }
+

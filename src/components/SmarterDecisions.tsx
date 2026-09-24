@@ -72,17 +72,17 @@ export default function SmarterDecisions({ title, headingTag: HeadingTag = 'h2' 
   const [showAll, setShowAll] = useState(false);
 
   return (
-    <section className="w-full bg-white py-15 px-4 md:px-8">
+    <section className="w-full bg-white py-8 md:py-12 px-4 md:px-8">
       <div className="max-w-6xl mx-auto flex flex-col items-center">
-        <HeadingTag className="text-[#0C002B] font-nunito text-[36px] md:text-[46px] font-semibold text-center mb-16 leading-[1.2] tracking-tight">
+        <HeadingTag className="text-[#0C002B] font-nunito text-[36px] md:text-[46px] font-semibold text-center mb-8 md:mb-10 leading-[1.2] tracking-tight">
           {title || (
             <>
-              Smarter Trademark <br className="hidden md:block" /> Decisions with AI
+              Smarter Trademark <br className="hidden md:block" /> Decisions with <span className="text-[#1952C7]">AI</span>
             </>
           )}
         </HeadingTag>
 
-        <div className="w-full grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-12">
+        <div className="w-full grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-7 md:gap-y-9">
           {features.slice(0, showAll ? features.length : undefined).map((feature, index) => {
             const isHiddenOnMobile = !showAll && index >= 6;
             return (
@@ -102,7 +102,7 @@ export default function SmarterDecisions({ title, headingTag: HeadingTag = 'h2' 
                 <h4 className="text-[#0C002B] font-nunito text-[16px] md:text-[18px] font-bold mb-2">
                   {feature.title}
                 </h4>
-                <p className="text-[#0C002B]/60 text-[14px] leading-relaxed max-w-[240px]">
+                <p className="text-[#334155] text-[14px] leading-relaxed max-w-[240px]">
                   {feature.description}
                 </p>
               </div>
@@ -113,7 +113,7 @@ export default function SmarterDecisions({ title, headingTag: HeadingTag = 'h2' 
         {!showAll && (
           <button
             onClick={() => setShowAll(true)}
-            className="md:hidden mt-12 mb-[-28px] bg-[#0C002B] text-white px-8 py-3.5 rounded-[12px] font-semibold text-[15px] transition-all duration-300 hover:bg-[#1A0B42] active:scale-[0.98]"
+            className="md:hidden mt-8 bg-[#0C002B] text-white px-8 py-3.5 rounded-[12px] font-semibold text-[15px] transition-all duration-300 hover:bg-[#1952C7] active:scale-[0.98]"
           >
             View more
           </button>

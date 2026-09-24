@@ -28,6 +28,10 @@ export async function GET() {
 
   // 3. Features and Services
   const staticUrls: string[] = [
+    '/process-and-steps-of-trademark-registration',
+    '/how-to-search-for-existing-trademark',
+    '/difference-between-trademark-registration-and-copyright-registration',
+    '/what-will-happen-if-i-register-trademark-without-researching-it',
     '/our-services',
     '/our-services/trademark-registration',
     '/our-services/patent-registration',
@@ -49,6 +53,8 @@ export async function GET() {
     '/trademark-class-finder',
     '/trademark-registration-in-delhi',
     '/trademark-registration-in-gurgaon',
+    '/best-trademark-registration-company-in-gurgaon',
+    '/free-ai-powered-trademark-search',
     '/trademark-application-status',
     '/e-filing-trademark',
     '/trademark-for-clothing-brand',
@@ -249,7 +255,9 @@ export async function GET() {
     '/trademark-for-digital-marketing-agency',
     '/trademark-for-fintech-startup',
     '/trademark-for-real-estate-company',
-    '/best-trademark-filing-services-for-startups-in-india'
+    '/best-trademark-filing-services-for-startups-in-india',
+    '/why-search-trademark-before-registration',
+    '/difference-between-trademark-registration-and-copyright-registration'
   ];
 
   // 4. Clean and Deduplicate Static URLs

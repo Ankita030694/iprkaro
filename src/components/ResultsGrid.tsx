@@ -34,17 +34,17 @@ const testimonials = [
 
 export default function ResultsGrid() {
   return (
-    <section className="w-full bg-white py-20 px-4 md:px-8">
+    <section className="w-full bg-white py-8 md:py-12 px-4 md:px-8">
       <div className="max-w-6xl mx-auto flex flex-col items-center">
-        <div className="text-[#0C002B] font-nunito text-[32px] md:text-[46px] font-bold text-center mb-12 leading-[1.2] tracking-tight">
-          Results that speak louder <br className="hidden md:block" /> than claims
+        <div className="text-[#0C002B] font-nunito text-[32px] md:text-[46px] font-semibold text-center mb-6 md:mb-8 leading-[1.2] tracking-tight">
+          Results that speak louder <br className="hidden md:block" /> than <span className="text-[#1952C7]">claims</span>
         </div>
 
         {/* 4-Column Grid Layout */}
         {/* Desktop Grid (Hidden on Mobile) */}
         <div className="hidden md:grid w-full grid-cols-4 gap-5">
           {/* Row 1 */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -57,7 +57,7 @@ export default function ResultsGrid() {
             </div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -70,7 +70,7 @@ export default function ResultsGrid() {
             </div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -95,7 +95,7 @@ export default function ResultsGrid() {
           </motion.div>
 
           {/* Row 2 */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -119,7 +119,7 @@ export default function ResultsGrid() {
             </div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -132,7 +132,7 @@ export default function ResultsGrid() {
             </div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -146,7 +146,7 @@ export default function ResultsGrid() {
           </motion.div>
 
           {/* Row 3 */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -159,7 +159,7 @@ export default function ResultsGrid() {
             </div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -172,7 +172,7 @@ export default function ResultsGrid() {
             </div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -277,7 +277,7 @@ export default function ResultsGrid() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="mt-12 bg-[#0C002B] text-white px-8 py-3.5 rounded-[12px] font-semibold text-[15px] transition-all duration-300 hover:bg-[#1A0B42] active:scale-[0.98]"
+            className="mt-6 md:mt-8 bg-[#0C002B] text-white px-8 py-3.5 rounded-[12px] font-semibold text-[15px] transition-all duration-300 hover:bg-[#1952C7] active:scale-[0.98]"
           >
             View more stories
           </motion.button>

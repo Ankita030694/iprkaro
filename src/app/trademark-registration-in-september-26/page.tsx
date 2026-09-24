@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     url: 'https://www.iprkaro.com/trademark-registration-in-september-26',
     images: [
       {
-        url: '/images/og/best-trademark-registration-service-in-india.png',
+        url: '/images/og/trademark-registration-in-september-2026.png',
         width: 1200,
         height: 630,
         alt: 'Trademark Registration in September 2026',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Trademark Registration in September 2026 | IPR Karo',
     description: 'Practical guide to trademark registration in India (September 2026). Learn about search, classification, documents, filing, objections, cost & timeline.',
-    images: ['/images/og/best-trademark-registration-service-in-india.png'],
+    images: ['/images/og/trademark-registration-in-september-2026.png'],
   },
 };
 

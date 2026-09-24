@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" width="100%" height="100%">
+  <defs>
+    <filter id="shadow-brand" x="-10%" y="-10%" width="120%" height="120%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000000" flood-opacity="0.08" />
+    </filter>
+    <linearGradient id="scallop-grad" x1="50" y1="12" x2="50" y2="78" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FCD34D" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </linearGradient>
+  </defs>
+
+  <!-- Blue Ribbon Behind -->
+  <path d="M12 40 L88 40 L88 56 L12 56 Z" fill="#1E293B" />
+  <path d="M12 40 L6 48 L12 56 L18 56 L18 40 Z" fill="#0F172A" />
+  <path d="M88 40 L94 48 L88 56 L82 56 L82 40 Z" fill="#0F172A" />
+
+  <!-- Scalloped Sunburst Seal -->
+  <g filter="url(#shadow-brand)">
+    <!-- 16-point scalloped seal -->
+    <path d="
+      M 50 14 
+      C 53 14, 56 16, 58 18 
+      C 61 17, 65 18, 67 21 
+      C 70 21, 73 23, 75 26 
+      C 78 28, 80 31, 80 35 
+      C 83 37, 84 41, 84 45 
+      C 85 49, 84 53, 83 56 
+      C 82 60, 80 63, 77 66 
+      C 75 69, 72 71, 69 72 
+      C 66 75, 62 76, 58 76 
+      C 55 78, 51 78, 48 78 
+      C 44 77, 40 76, 37 74 
+      C 34 72, 31 70, 28 67 
+      C 26 64, 24 61, 23 57 
+      C 21 54, 21 50, 21 46 
+      C 22 42, 23 38, 26 35 
+      C 27 31, 30 28, 33 26 
+      C 36 23, 40 21, 44 20 
+      Z" 
+      fill="url(#scallop-grad)" 
+      stroke="#D97706" 
+      stroke-width="1.5"
+    />
+    <!-- Inner dotted / stitched ring -->
+    <circle cx="50" cy="46" r="26" fill="#FBBF24" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="2.5 2" />
+  </g>
+
+  <!-- BRAND Text Banner -->
+  <g>
+    <!-- Ribbon banner overlay -->
+    <rect x="18" y="38" width="64" height="18" rx="3" fill="#EF4444" />
+    <path d="M18 38 L14 47 L18 56 Z" fill="#DC2626" />
+    <path d="M82 38 L86 47 L82 56 Z" fill="#DC2626" />
+    <!-- White text BRAND -->
+    <text 
+      x="50" 
+      y="51.5" 
+      fill="#FFFFFF" 
+      font-family="system-ui, -apple-system, sans-serif" 
+      font-weight="900" 
+      font-size="12" 
+      letter-spacing="2" 
+      text-anchor="middle"
+    >BRAND</text>
+  </g>
+</svg>

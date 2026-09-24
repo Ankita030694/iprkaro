@@ -3,6 +3,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const tabs = [
@@ -98,10 +99,10 @@ export default function BuiltToProtect() {
   const [expandedId, setExpandedId] = useState<number | null>(null);
 
   return (
-    <section className="w-full bg-white py-16 md:py-24 px-4 md:px-8">
+    <section className="w-full bg-white py-8 md:py-12 px-4 md:px-8">
       <div className="max-w-[1000px] mx-auto flex flex-col items-center">
-        <h3 className="text-[#0C002B] font-nunito text-[32px] md:text-[50px] font-bold text-center mb-12 md:mb-16 leading-[1.1] tracking-tight max-w-[500px]">
-          Built to protect what you&apos;re building
+        <h3 className="text-[#0C002B] font-nunito text-[32px] md:text-[50px] font-semibold text-center mb-6 md:mb-8 leading-[1.1] tracking-tight max-w-[500px]">
+          Built to protect what <span className="text-[#1952C7]">you&apos;re building</span>
         </h3>
 
         {/* MOBILE VIEW: Accordion/Expanded Cards */}
@@ -109,23 +110,23 @@ export default function BuiltToProtect() {
           {tabs.map((tab) => {
             const isExpanded = expandedId === tab.id;
             return (
-              <div 
+              <div
                 key={tab.id}
                 className="w-full bg-[#F7F7F7] rounded-[20px] overflow-hidden transition-all duration-300 border border-gray-100"
               >
-                <div 
+                <div
                   className="p-6 flex flex-col items-start relative cursor-pointer"
                   onClick={() => !isExpanded && setExpandedId(tab.id)}
                 >
                   <div className="flex justify-between items-center w-full mb-3">
-                    <span className="text-[#6B7280] font-nunito text-[16px]">{tab.category}</span>
-                    <button 
+                    <span className="text-[#1952C7] font-nunito font-semibold text-[15px]">{tab.category}</span>
+                    <button
                       onClick={(e) => {
                         if (isExpanded) {
                           e.stopPropagation();
                           setExpandedId(null);
                         }
-                      }} 
+                      }}
                       className="text-[#0C002B]"
                     >
                       <motion.div
@@ -139,21 +140,27 @@ export default function BuiltToProtect() {
                       </motion.div>
                     </button>
                   </div>
-                  
+
                   <h4 className="text-[#0C002B] font-nunito text-[24px] font-bold leading-[1.2] mb-4 max-w-[280px]">
                     {tab.title}
                   </h4>
-                  
-                  <motion.button 
-                    animate={{ marginBottom: isExpanded ? '20px' : '0px' }}
-                    className="border border-[#0C002B] text-[#0C002B] font-bold px-6 py-2.5 rounded-[12px] text-[14px]"
+
+                  <Link
+                    href="/contact-us"
+                    onClick={(e) => e.stopPropagation()}
                   >
-                    {tab.buttonText}
-                  </motion.button>
+                    <motion.button
+                      type="button"
+                      animate={{ marginBottom: isExpanded ? '20px' : '0px' }}
+                      className="border-2 border-[#0C002B] text-[#0C002B] font-bold px-6 py-2.5 rounded-[12px] text-[14px] hover:bg-[#1952C7] hover:border-[#1952C7] hover:text-white transition-colors duration-200"
+                    >
+                      {tab.buttonText}
+                    </motion.button>
+                  </Link>
 
                   <motion.div
                     initial={false}
-                    animate={{ 
+                    animate={{
                       height: isExpanded ? 'auto' : 0,
                       opacity: isExpanded ? 1 : 0,
                       marginTop: isExpanded ? 20 : 0
@@ -167,7 +174,7 @@ export default function BuiltToProtect() {
                           <h5 className="text-[#0C002B] font-nunito text-[18px] font-bold mb-1.5">
                             {feature.heading}
                           </h5>
-                          <p className="text-[#0C002B]/60 text-[14px] leading-relaxed">
+                          <p className="text-[#334155] text-[14px] leading-relaxed font-normal">
                             {feature.desc}
                           </p>
                           {i === 0 && <div className="w-full h-[1px] bg-gray-200 mt-6" />}
@@ -177,9 +184,9 @@ export default function BuiltToProtect() {
 
                     <div className="w-full flex justify-center mt-8 pb-4">
                       <div className="relative w-32 h-32">
-                        <Image 
-                          src={tab.icon} 
-                          alt="Illustration" 
+                        <Image
+                          src={tab.icon}
+                          alt="Illustration"
                           width={400}
                           height={400}
                           className="w-full h-full object-cover"
@@ -199,14 +206,14 @@ export default function BuiltToProtect() {
             {tabs.map((tab, index) => {
               const isActive = activeTab === index;
               return (
-                <div 
+                <div
                   key={tab.id}
                   onClick={() => setActiveTab(index)}
                   className={`relative cursor-pointer transition-all duration-300 bg-white rounded-[24px] flex-shrink-0 md:flex-1 aspect-[4/5] flex items-center justify-center snap-center}`}
                 >
-                  <Image 
-                    src={tab.icon} 
-                    alt={tab.title} 
+                  <Image
+                    src={tab.icon}
+                    alt={tab.title}
                     width={400}
                     height={500}
                     className="w-full h-full object-cover rounded-lg"
@@ -230,9 +237,14 @@ export default function BuiltToProtect() {
                   <h4 className="text-[#0C002B] font-nunito text-[40px] font-medium leading-[1.15] mb-8">
                     {tabs[activeTab].title}
                   </h4>
-                  <button className="border border-[#0C002B] text-[#0C002B] font-medium px-6 py-2.5 rounded-[10px] hover:bg-[#0C002B] hover:text-white transition-colors duration-300">
-                    {tabs[activeTab].buttonText}
-                  </button>
+                  <Link href="/contact-us">
+                    <button
+                      type="button"
+                      className="border-2 border-[#0C002B] text-[#0C002B] font-bold px-6 py-2.5 rounded-[10px] hover:bg-[#1952C7] hover:border-[#1952C7] hover:text-white transition-colors duration-300"
+                    >
+                      {tabs[activeTab].buttonText}
+                    </button>
+                  </Link>
                 </div>
 
                 <div className="flex-1 flex flex-col gap-8 max-w-[420px] mr-4 mb-6 pt-4">
@@ -241,7 +253,7 @@ export default function BuiltToProtect() {
                       <h5 className="text-[#0C002B] font-nunito text-[19px] mb-2.5 font-semibold">
                         {feature.heading}
                       </h5>
-                      <p className="text-[#0C002B]/60 text-[15px] leading-relaxed">
+                      <p className="text-[#334155] text-[15px] leading-relaxed font-normal">
                         {feature.desc}
                       </p>
                       {i === 0 && <div className="w-full h-[1px] bg-gray-200 mt-8" />}

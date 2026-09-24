@@ -1,6 +1,5 @@
 'use client';
 
-
 import Image from 'next/image';
 
 const block1Logos = [
@@ -26,30 +25,32 @@ const block3Logos = [
 
 interface LogoItem { src: string; alt: string; }
 
-function SlotMachineColumn({ logos }: { logos: LogoItem[] }) {
-  // 4 unique logos -> Reel [L1, L2, L3, L4, L1] (5 items)
-  // Upward motion: y = 0 -> -20% -> -40% -> -60% -> -80%
-  const reel = [...logos.slice(0, 4), logos[0]];
-  
+function MarqueeRow({ logos, direction = 'left' }: { logos: LogoItem[], direction?: 'left' | 'right' }) {
+  // Duplicate the array multiple times to create a seamless infinite loop
+  const duplicatedLogos = [...logos, ...logos, ...logos, ...logos];
+
   return (
-    <div className="relative w-full h-full overflow-hidden bg-white">
+    <div className="relative w-full overflow-hidden flex bg-white py-2.5 md:py-4 border-y border-blue-100 mt-[-1px]">
       <div
-        className="flex flex-col items-center"
+        className="flex whitespace-nowrap"
         style={{
-          animation: 'brandSlotUp 12s cubic-bezier(0.65, 0, 0.35, 1) infinite',
+          animation: direction === 'left'
+            ? 'marqueeLeft 30s linear infinite'
+            : 'marqueeRight 30s linear infinite',
+          width: 'max-content'
         }}
       >
-        {reel.map((logo, i) => (
+        {duplicatedLogos.map((logo, i) => (
           <div
             key={i}
-            className="w-full h-20 md:h-36 flex-shrink-0 flex items-center justify-center p-4 md:p-8"
+            className="w-40 md:w-64 flex-shrink-0 flex items-center justify-center px-4 md:px-8"
           >
             <Image
               src={logo.src}
               alt={logo.alt}
               width={160}
               height={64}
-              className="object-contain w-auto h-auto max-h-full transition-all duration-300"
+              className="object-contain w-auto h-12 md:h-20 transition-all duration-300"
               style={{
                 filter: 'brightness(0)', // Force black color
                 opacity: 0.9,
@@ -63,48 +64,33 @@ function SlotMachineColumn({ logos }: { logos: LogoItem[] }) {
 }
 
 const keyframes = `
-@keyframes brandSlotUp {
-  0%, 18%   { transform: translateY(0); }
-  22%, 40%  { transform: translateY(-20%); }
-  44%, 62%  { transform: translateY(-40%); }
-  66%, 84%  { transform: translateY(-60%); }
-  88%, 98%  { transform: translateY(-80%); }
-  100%      { transform: translateY(0); }
+@keyframes marqueeLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marqueeRight {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
 }
 `;
 
 export default function BrandGrid() {
-  const columns = [
-    block1Logos,
-    block2Logos,
-    block3Logos,
-    [...block1Logos].reverse(),
-    [...block2Logos.slice(2), ...block2Logos.slice(0, 2)],
-  ];
+  const allLogos = [...block1Logos, ...block2Logos, ...block3Logos];
+  const row1Logos = allLogos.slice(0, 6);
+  const row2Logos = allLogos.slice(6, 12);
 
   return (
-    <section className="w-full bg-white py-12 md:py-24 px-2 md:px-4">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-[#0C002B] font-nunito text-[26px] md:text-[42px] font-extrabold text-center mb-12 md:mb-20 leading-[1.2] tracking-tight">
-          Chosen by businesses <br className="md:hidden" /> that move fast
+    <section className="w-full bg-white py-6 md:py-10 px-0">
+      <div className="max-w-7xl mx-auto mb-5 md:mb-7 px-2 md:px-4">
+        <div className="text-[#0C002B] font-nunito text-[26px] md:text-[42px] font-semibold text-center leading-[1.2] tracking-tight">
+          Chosen by businesses <br className="md:hidden" /> that <span className="text-[#1952C7]">move fast</span>
         </div>
+      </div>
 
-        <div className="flex flex-nowrap border-y border-blue-100 bg-white shadow-sm">
-          {columns.map((logos, index) => (
-            <div
-              key={index}
-              className={`
-                h-20 md:h-36 flex-1
-                border-blue-100
-                ${index === 0 ? 'border-l' : ''}
-                border-r
-                overflow-hidden
-              `}
-            >
-              <SlotMachineColumn logos={logos} />
-            </div>
-          ))}
-        </div>
+      <div className="w-full overflow-hidden flex flex-col">
+        <MarqueeRow logos={row1Logos} direction="right" />
+        <MarqueeRow logos={row2Logos} direction="left" />
       </div>
 
       <style jsx global>{keyframes}</style>

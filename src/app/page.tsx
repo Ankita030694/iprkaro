@@ -1,5 +1,5 @@
 import { validateAndNormalizeDescription } from '@/lib/seo-utils';
-import { HeroSection, WhyTrademark, OurServices, SimplePlans, Faq, ReviewSnippets, StatesAndUTs, TrademarkClasses, BrandGrid, ResultsGrid, SmarterDecisions, WhatWeProtect, CtaSection, BuiltToProtect, SimplePricing, FaqSection, NewFooter } from "@/components";
+import { HeroSection, WhyTrademark, OurServices, SimplePlans, Faq, ReviewSnippets, BrandGrid, WhatCanYouTrademark, WhatYouNeedToGetStarted, ResultsGrid, SmarterDecisions, WhatWeProtect, CtaSection, BuiltToProtect, SimplePricing, FaqSection, NewFooter } from "@/components";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -148,34 +148,29 @@ export default function Home() {
       />
 
       <HeroSection />
-      
+
       {/* Wrapper to prevent dark subpixel bleeding between white sections on mobile */}
       <div className="w-full bg-white flex flex-col">
         <BrandGrid />
+        <WhatCanYouTrademark />
+        <WhatYouNeedToGetStarted />
         <ResultsGrid />
         <SmarterDecisions />
         <WhatWeProtect />
+        <ReviewSnippets />
+        <BuiltToProtect />
+        <FaqSection />
       </div>
-      
-      <CtaSection />
-      <BuiltToProtect />
-      <SimplePricing />
-      <FaqSection />
-      
-      {/* Wrapper to handle white sections cleanly */}
-      <div className="w-full bg-white flex flex-col">
-          <StatesAndUTs />
-          <TrademarkClasses />
-      </div>
+
+
 
       {/* <WhyTrademark />
       <div className="-mt-10">
         <OurServices />
 
       </div>
-      <ReviewSnippets />
       <SimplePlans />
      <Faq />*/}
-    </div> 
+    </div>
   );
 }

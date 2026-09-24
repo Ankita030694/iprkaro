@@ -126,7 +126,7 @@ export default function SearchClient({
 
   return (
     <div className="w-full max-w-[700px] mx-auto flex flex-col items-center relative z-20">
-      <div className="w-full rounded-[12px] shadow-[0_15px_30px_rgba(0,0,0,0.06)] border border-white/10 relative">
+      <div className={`w-full rounded-[12px] shadow-[0_15px_30px_rgba(0,0,0,0.06)] border ${variant === 'dark' ? 'border-white/10' : 'border-slate-200/90'} relative`}>
 
         {/* ── MOBILE: input+select row ── DESKTOP: single flex row with button ── */}
         <div className={`rounded-t-[12px] ${variant === 'dark' ? 'bg-[#2D2D2D]' : 'bg-white'}`}>
@@ -230,7 +230,7 @@ export default function SearchClient({
         </div>
 
         {/* Bottom Row: Trust Badges */}
-        <div className={`rounded-b-[12px] ${variant === 'dark' ? 'bg-[#191919]' : 'bg-white/20 backdrop-blur-[20px] saturate-150 shadow-inner'} px-5 md:px-8 py-0.5 md:py-2.5 flex flex-wrap items-center justify-center md:justify-between gap-3 border-t border-white/5 overflow-hidden`}>
+        <div className={`rounded-b-[12px] ${variant === 'dark' ? 'bg-[#191919] border-white/5' : 'bg-slate-50/90 border-slate-200/70'} px-5 md:px-8 py-0.5 md:py-2.5 flex flex-wrap items-center justify-center md:justify-between gap-3 border-t overflow-hidden`}>
           <div className="flex items-center gap-3">
             {/* Google Logo */}
             <div className="flex items-center text-[23px] font-bold tracking-tighter" style={{ fontFamily: 'Product Sans, sans-serif' }}>

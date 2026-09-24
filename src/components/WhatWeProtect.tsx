@@ -1,7 +1,6 @@
 'use client';
 
-
-import { useState, useRef } from 'react';
+import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Link from 'next/link';
 
@@ -12,25 +11,24 @@ const SparkIcon = ({ color }: { color: string }) => (
   </svg>
 );
 
-
-
 const services = [
   {
-    id: 'patent',
-    tabTitle: 'Patent Service',
-    sparkColor: '#FF8A65', // soft orange/red
-    title: 'Turn ideas into protected assets',
+    id: 'trademark',
+    tabTitle: 'Trademark Service',
+    sparkColor: '#CE93D8', // soft purple
+    title: 'Own your brand before someone else does',
     features: [
       {
-        heading: 'Patent Search & Analysis',
-        text: 'Validate your idea with in-depth research and AI insights. Ensure your invention is unique before filing.',
+        heading: 'AI Trademark Search',
+        text: 'Instantly check name availability with our AI-powered system. Avoid rejections and choose a brand that’s unique, strong, and legally safe.',
       },
       {
-        heading: 'End-to-End Patent Filing',
-        text: 'From drafting to submission, our experts manage the entire process - helping you secure exclusive rights with confidence.',
+        heading: 'Hassle-Free Registration',
+        text: 'From application to approval, we handle everything. Get expert support and fast filing so your brand is protected without delays.',
       }
     ],
-    buttonText: 'File My Patent',
+    buttonText: 'Protect My Brand',
+    href: '/our-services/trademark-registration',
   },
   {
     id: 'copyright',
@@ -48,28 +46,29 @@ const services = [
       }
     ],
     buttonText: 'Start Copyright Filing',
+    href: '/our-services/copyright-registration',
   },
   {
-    id: 'trademark',
-    tabTitle: 'Trademark Service',
-    sparkColor: '#CE93D8', // soft purple
-    title: 'Own your brand before someone else does',
+    id: 'patent',
+    tabTitle: 'Patent Service',
+    sparkColor: '#FF8A65', // soft orange/red
+    title: 'Turn ideas into protected assets',
     features: [
       {
-        heading: 'AI Trademark Search',
-        text: 'Instantly check name availability with our AI-powered system. Avoid rejections and choose a brand that’s unique, strong, and legally safe.',
+        heading: 'Patent Search & Analysis',
+        text: 'Validate your idea with in-depth research and AI insights. Ensure your invention is unique before filing.',
       },
       {
-        heading: 'Hassle-Free Registration',
-        text: 'From application to approval, we handle everything. Get expert support and fast filing so your brand is protected without delays.',
+        heading: 'End-to-End Patent Filing',
+        text: 'From drafting to submission, our experts manage the entire process - helping you secure exclusive rights with confidence.',
       }
     ],
-    buttonText: 'Protect My Brand',
+    buttonText: 'File My Patent',
+    href: '/our-services/patent-registration',
   }
 ];
 
 export default function WhatWeProtect() {
-  const [activeTab, setActiveTab] = useState(2); // trademark is front by default
   const scrollRef = useRef<HTMLDivElement>(null);
   const { scrollXProgress } = useScroll({
     container: scrollRef
@@ -78,155 +77,79 @@ export default function WhatWeProtect() {
   // Small initial width (0.2) to show it's a bar even at start
   const scaleX = useTransform(scrollXProgress, [0, 1], [0.2, 1]);
 
-  const getSlot = (index: number, active: number) => {
-    if (index === active) return 2;
-    if (active === 2) return index === 0 ? 0 : 1;
-    if (active === 1) return index === 0 ? 0 : 1;
-    if (active === 0) return index === 1 ? 0 : 1;
-    return 0;
-  };
-
-  const slotStyles = {
-    0: { width: '88%', y: 0, zIndex: 10 },
-    1: { width: '94%', y: 35, zIndex: 20 },
-    2: { width: '100%', y: 70, zIndex: 30 },
-  };
-
   return (
-    <section className="w-full bg-white py-18 px-4 md:px-8">
-      <div className="max-w-[1000px] mx-auto flex flex-col items-center">
-        <h3 className="text-[#0C002B] font-nunito text-[40px] md:text-[52px] font-semibold text-center mb-12 md:mb-24 leading-[1.1] tracking-tight">
-          What we protect,<br />we perfect
+    <section className="w-full bg-white py-8 md:py-12 px-4 md:px-8">
+      <div className="max-w-6xl mx-auto flex flex-col items-center">
+        <h3 className="text-[#0C002B] font-nunito text-[36px] sm:text-[44px] md:text-[52px] font-semibold text-center mb-6 md:mb-8 leading-[1.15] tracking-tight">
+          What we protect,<br />we <span className="text-[#1952C7]">perfect</span>
         </h3>
 
-        <div className="w-full relative h-auto md:h-[680px] lg:h-[650px]">
-          <div 
-            ref={scrollRef}
-            className="md:hidden flex overflow-x-auto snap-x snap-mandatory gap-4 pb-8 scrollbar-hide -mx-4 px-4"
-          >
-            {services.map((service) => (
-              <div
-                key={service.id}
-                className="flex-shrink-0 w-[90vw] snap-center rounded-xl overflow-hidden flex flex-col"
-                style={{
-                  boxShadow: '0 20px 40px -10px rgba(0,0,0,0.1)',
-                  border: '1px solid rgba(0,0,0,0.06)'
-                }}
-              >
-                {/* Header Tab */}
-                <div className="bg-[#EAF8F9] px-6 py-4 flex items-center gap-3 border-b border-[rgba(0,0,0,0.03)] h-[60px]">
-                  <SparkIcon color={service.sparkColor} />
-                  <span className="text-[#0C002B] font-nunito text-[16px] -mt-0.5 font-semibold">{service.tabTitle}</span>
-                </div>
-                
-                {/* Content Body */}
-                <div className="bg-white px-6 py-10 flex flex-col items-start min-h-[450px]">
-                  <h4 className="text-[#0C002B] font-nunito text-[28px] font-bold leading-[1.15] mb-8">
+        {/* 3 Static Service Cards */}
+        <div 
+          ref={scrollRef}
+          className="w-full flex md:grid md:grid-cols-3 overflow-x-auto md:overflow-x-visible snap-x snap-mandatory gap-6 lg:gap-8 pb-6 md:pb-0 scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0 items-stretch"
+        >
+          {services.map((service, index) => (
+            <motion.div
+              key={service.id}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="flex-shrink-0 w-[88vw] sm:w-[350px] md:w-auto snap-center rounded-[24px] overflow-hidden flex flex-col justify-between bg-white border border-gray-200/90 shadow-[0_4px_24px_rgba(0,0,0,0.04)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.08)] hover:-translate-y-1.5 transition-all duration-300 h-full group"
+            >
+              {/* Header Tab */}
+              <div className="bg-[#F0F5FF] px-6 sm:px-7 py-4 flex items-center gap-3 border-b border-[#1952C7]/10 h-[62px]">
+                <SparkIcon color={service.sparkColor} />
+                <span className="text-[#1952C7] font-nunito text-[16px] sm:text-[17px] font-bold -mt-0.5 tracking-tight">
+                  {service.tabTitle}
+                </span>
+              </div>
+
+              {/* Content Body */}
+              <div className="bg-[#F8F9FA] p-6 sm:p-8 flex flex-col flex-1 justify-between">
+                <div>
+                  <h4 className="text-[#0C002B] font-nunito text-[24px] lg:text-[26px] xl:text-[28px] font-bold leading-[1.2] mb-6 min-h-[58px] flex items-start tracking-tight">
                     {service.title}
                   </h4>
-                  <div className="flex flex-col gap-8 w-full">
+
+                  <div className="flex flex-col gap-6 w-full mb-8">
                     {service.features.map((feature, i) => (
                       <div key={i} className="flex flex-col">
-                        <h5 className="text-[#0C002B] font-nunito text-[18px] font-bold mb-2">
+                        <h5 className="text-[#0C002B] font-nunito text-[17px] lg:text-[18px] font-bold mb-2 text-[#0C002B]">
                           {feature.heading}
                         </h5>
-                        <p className="text-[#0C002B]/70 text-[14px] leading-relaxed font-medium">
+                        <p className="text-[#334155] text-[14px] leading-relaxed font-normal">
                           {feature.text}
                         </p>
-                        {i === 0 && <div className="w-[100%] h-[1px] bg-gray-100 mt-8" />}
+                        {i === 0 && <div className="w-full h-[1px] bg-gray-200/80 mt-6" />}
                       </div>
                     ))}
                   </div>
-                  <div className="mt-10">
-                    <button className="border-2 border-[#0C002B] text-[#0C002B] font-bold px-8 py-3 rounded-[12px] active:bg-[#0C002B] active:text-white transition-all">
+                </div>
+
+                <div className="mt-auto pt-2">
+                  <Link href={service.href} className="w-full block">
+                    <button className="w-full border-2 border-[#0C002B] text-[#0C002B] font-bold py-3 px-6 rounded-[12px] hover:bg-[#1952C7] hover:border-[#1952C7] hover:text-white active:scale-[0.98] transition-all duration-200 text-center font-nunito text-[15px]">
                       {service.buttonText}
                     </button>
-                  </div>
+                  </Link>
                 </div>
               </div>
-            ))}
-          </div>
+            </motion.div>
+          ))}
+        </div>
 
-          {/* Mobile Scroll Progress Indicator */}
-          <div className="md:hidden w-full max-w-[120px] h-[4px] bg-[#0C002B]/5 rounded-full mx-auto mb-10 overflow-hidden">
-            <motion.div 
-              className="h-full bg-[#0C002B] origin-left"
-              style={{ scaleX }}
-            />
-          </div>
-
-
-          
-          {services.map((service, index) => {
-            const slot = getSlot(index, activeTab);
-            const isActive = activeTab === index;
-            
-            return (
-              <motion.div
-                key={service.id}
-                className="hidden md:flex absolute left-0 right-0 mx-auto rounded-xl overflow-hidden cursor-pointer flex-col"
-                initial={false}
-                animate={{
-                  width: slotStyles[slot as keyof typeof slotStyles].width,
-                  y: slotStyles[slot as keyof typeof slotStyles].y,
-                  zIndex: slotStyles[slot as keyof typeof slotStyles].zIndex,
-                }}
-                transition={{ type: "spring", stiffness: 250, damping: 25 }}
-                style={{
-                  boxShadow: isActive ? '0 20px 50px -10px rgba(0,0,0,0.1)' : '0 4px 20px rgba(0,0,0,0.03)',
-                  border: '1px solid rgba(0,0,0,0.06)'
-                }}
-                onClick={() => setActiveTab(index)}
-              >
-                {/* Header Tab */}
-                <div 
-                  className="bg-[#EAF8F9] px-8 py-5 flex items-center gap-3 transition-colors duration-300 border-b border-[rgba(0,0,0,0.03)] h-[65px]"
-                >
-                  <SparkIcon color={service.sparkColor} />
-                  <span className="text-[#0C002B] font-nunito text-[16px] xl:text-[17px] -mt-0.5">{service.tabTitle}</span>
-                </div>
-                
-                {/* Content Body */}
-                <div 
-                  className="bg-[#F3F3F3] px-8 py-10 md:px-14 md:py-14 flex flex-col items-start min-h-[480px] w-full"
-                >
-                  <motion.div
-                    animate={{ opacity: isActive ? 1 : 0, filter: isActive ? 'blur(0px)' : 'blur(4px)' }}
-                    transition={{ duration: 0.3 }}
-                    className="w-full h-full flex flex-col justify-start"
-                  >
-                    <h4 className="text-[#0C002B] font-nunito text-[32px] md:text-[38px] font-medium leading-[1.1] mb-10 max-w-[450px]">
-                      {service.title}
-                    </h4>
-
-                    <div className="flex flex-col gap-8 w-full max-w-[480px]">
-                      {service.features.map((feature, i) => (
-                        <div key={i} className="flex flex-col">
-                          <h5 className="text-[#0C002B] font-nunito text-[19px] mb-2.5">
-                            {feature.heading}
-                          </h5>
-                          <p className="text-[#0C002B]/60 text-[15px] leading-relaxed">
-                            {feature.text}
-                          </p>
-                          {i === 0 && <div className="w-[100%] h-[1px] bg-gray-200 mt-8" />}
-                        </div>
-                      ))}
-                    </div>
-
-                    <div className="mt-12 flex-1 flex items-start">
-                      <button className="border border-[#0C002B] text-[#0C002B] font-medium px-6 py-2.5 rounded-[12px] hover:bg-[#0C002B] hover:text-white transition-colors duration-300">
-                        {service.buttonText}
-                      </button>
-                    </div>
-                  </motion.div>
-                </div>
-              </motion.div>
-            );
-          })}
+        {/* Mobile Scroll Progress Indicator */}
+        <div className="md:hidden w-full max-w-[120px] h-[4px] bg-[#0C002B]/5 rounded-full mx-auto mt-4 overflow-hidden">
+          <motion.div 
+            className="h-full bg-[#0C002B] origin-left"
+            style={{ scaleX }}
+          />
         </div>
 
         <Link href="/our-services">
-          <button className="mt-6 md:mt-24 bg-[#0C002B] text-white px-8 py-3.5 rounded-[12px] font-medium text-[16px] transition-all duration-300 hover:bg-[#1A0B42] active:scale-[0.98]">
+          <button className="mt-6 md:mt-8 bg-[#0C002B] text-white px-8 py-3.5 rounded-[12px] font-medium text-[16px] transition-all duration-300 hover:bg-[#1952C7] active:scale-[0.98] shadow-md hover:shadow-lg">
             Explore Everything
           </button>
         </Link>
