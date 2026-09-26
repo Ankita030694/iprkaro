@@ -115,21 +115,21 @@ export default function WhatYouNeedToGetStarted() {
         {/* Bottom Section: What You Get After Filing */}
         <div className="w-full max-w-6xl mt-10 md:mt-14 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Left Column: Heading, description, bullet points */}
-          <div className="lg:col-span-6 flex flex-col items-start">
+          <div className="lg:col-span-6 flex flex-col items-center lg:items-start text-center lg:text-left">
             <h2
               id="what-you-get-heading"
-              className="text-[#0C002B] font-nunito text-[34px] sm:text-[42px] md:text-[46px] font-extrabold leading-[1.15] tracking-tight mb-5"
+              className="text-[#0C002B] font-nunito text-[32px] sm:text-[40px] md:text-[46px] font-extrabold leading-[1.15] tracking-tight mb-4 sm:mb-5 text-center lg:text-left"
             >
               What You Get <br />
               <span className="text-[#1952C7]">After Filing</span>
             </h2>
 
-            <p className="text-[#334155] font-nunito text-[16px] sm:text-[17px] leading-relaxed mb-8 max-w-lg">
+            <p className="text-[#334155] font-nunito text-[16px] sm:text-[17px] leading-relaxed mb-6 sm:mb-8 max-w-lg text-center lg:text-left mx-auto lg:mx-0">
               Once your trademark is filed, you receive official documents
               confirming your application and enabling status tracking.
             </p>
 
-            <ul className="space-y-4 w-full" role="list">
+            <ul className="space-y-4 w-full max-w-md lg:max-w-none text-left mx-auto lg:mx-0" role="list">
               <li className="flex items-start gap-3.5">
                 <span
                   className="w-2.5 h-2.5 rounded-full bg-[#1952C7] mt-2 flex-shrink-0"

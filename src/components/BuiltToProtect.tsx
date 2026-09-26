@@ -145,18 +145,17 @@ export default function BuiltToProtect() {
                     {tab.title}
                   </h4>
 
-                  <Link
-                    href="/contact-us"
-                    onClick={(e) => e.stopPropagation()}
+                  <motion.div
+                    animate={{ marginBottom: isExpanded ? '20px' : '0px' }}
                   >
-                    <motion.button
-                      type="button"
-                      animate={{ marginBottom: isExpanded ? '20px' : '0px' }}
-                      className="border-2 border-[#0C002B] text-[#0C002B] font-bold px-6 py-2.5 rounded-[12px] text-[14px] hover:bg-[#1952C7] hover:border-[#1952C7] hover:text-white transition-colors duration-200"
+                    <Link
+                      href="/contact-us"
+                      onClick={(e) => e.stopPropagation()}
+                      className="inline-block border-2 border-[#0C002B] text-[#0C002B] font-bold px-6 py-2.5 rounded-[12px] text-[14px] hover:bg-[#1952C7] hover:border-[#1952C7] hover:text-white transition-colors duration-200 text-center"
                     >
                       {tab.buttonText}
-                    </motion.button>
-                  </Link>
+                    </Link>
+                  </motion.div>
 
                   <motion.div
                     initial={false}
@@ -237,13 +236,11 @@ export default function BuiltToProtect() {
                   <h4 className="text-[#0C002B] font-nunito text-[40px] font-medium leading-[1.15] mb-8">
                     {tabs[activeTab].title}
                   </h4>
-                  <Link href="/contact-us">
-                    <button
-                      type="button"
-                      className="border-2 border-[#0C002B] text-[#0C002B] font-bold px-6 py-2.5 rounded-[10px] hover:bg-[#1952C7] hover:border-[#1952C7] hover:text-white transition-colors duration-300"
-                    >
-                      {tabs[activeTab].buttonText}
-                    </button>
+                  <Link
+                    href="/contact-us"
+                    className="inline-block border-2 border-[#0C002B] text-[#0C002B] font-bold px-6 py-2.5 rounded-[10px] hover:bg-[#1952C7] hover:border-[#1952C7] hover:text-white transition-colors duration-300"
+                  >
+                    {tabs[activeTab].buttonText}
                   </Link>
                 </div>
 

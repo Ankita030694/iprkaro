@@ -271,17 +271,19 @@ export default function ResultsGrid() {
 
         </div>
 
-        <Link href="/blog">
-          <motion.button
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="mt-6 md:mt-8 bg-[#0C002B] text-white px-8 py-3.5 rounded-[12px] font-semibold text-[15px] transition-all duration-300 hover:bg-[#1952C7] active:scale-[0.98]"
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
+          <Link
+            href="/blog"
+            className="mt-6 md:mt-8 inline-block bg-[#0C002B] text-white px-8 py-3.5 rounded-[12px] font-semibold text-[15px] transition-all duration-300 hover:bg-[#1952C7] active:scale-[0.98] text-center"
           >
             View more stories
-          </motion.button>
-        </Link>
+          </Link>
+        </motion.div>
       </div>
     </section>
   );

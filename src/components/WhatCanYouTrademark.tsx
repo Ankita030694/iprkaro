@@ -107,14 +107,9 @@ export default function WhatCanYouTrademark() {
                 <Link
                   href="/contact-us"
                   aria-label={item.linkAriaLabel}
-                  className="w-full block"
+                  className="w-full block bg-[#0C002B] hover:bg-[#1952C7] text-white py-3 px-4 rounded-[12px] font-nunito font-semibold text-[14.5px] text-center tracking-wide transition-all duration-200 active:scale-[0.98] shadow-sm hover:shadow"
                 >
-                  <button
-                    type="button"
-                    className="w-full bg-[#0C002B] hover:bg-[#1952C7] text-white py-3 px-4 rounded-[12px] font-nunito font-semibold text-[14.5px] tracking-wide transition-all duration-200 active:scale-[0.98] shadow-sm hover:shadow"
-                  >
-                    Start Filing
-                  </button>
+                  Start Filing
                 </Link>
               </div>
             </div>

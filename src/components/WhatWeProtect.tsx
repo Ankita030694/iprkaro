@@ -129,10 +129,11 @@ export default function WhatWeProtect() {
                 </div>
 
                 <div className="mt-auto pt-2">
-                  <Link href={service.href} className="w-full block">
-                    <button className="w-full border-2 border-[#0C002B] text-[#0C002B] font-bold py-3 px-6 rounded-[12px] hover:bg-[#1952C7] hover:border-[#1952C7] hover:text-white active:scale-[0.98] transition-all duration-200 text-center font-nunito text-[15px]">
-                      {service.buttonText}
-                    </button>
+                  <Link
+                    href={service.href}
+                    className="w-full block border-2 border-[#0C002B] text-[#0C002B] font-bold py-3 px-6 rounded-[12px] hover:bg-[#1952C7] hover:border-[#1952C7] hover:text-white active:scale-[0.98] transition-all duration-200 text-center font-nunito text-[15px]"
+                  >
+                    {service.buttonText}
                   </Link>
                 </div>
               </div>
@@ -148,10 +149,11 @@ export default function WhatWeProtect() {
           />
         </div>
 
-        <Link href="/our-services">
-          <button className="mt-6 md:mt-8 bg-[#0C002B] text-white px-8 py-3.5 rounded-[12px] font-medium text-[16px] transition-all duration-300 hover:bg-[#1952C7] active:scale-[0.98] shadow-md hover:shadow-lg">
-            Explore Everything
-          </button>
+        <Link
+          href="/our-services"
+          className="mt-6 md:mt-8 inline-block bg-[#0C002B] text-white px-8 py-3.5 rounded-[12px] font-medium text-[16px] transition-all duration-300 hover:bg-[#1952C7] active:scale-[0.98] shadow-md hover:shadow-lg text-center"
+        >
+          Explore Everything
         </Link>
       </div>
     </section>
