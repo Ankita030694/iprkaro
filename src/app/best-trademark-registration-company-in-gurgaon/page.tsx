@@ -319,11 +319,48 @@ export default function BestTrademarkRegistrationCompanyGurgaonPage() {
 
                         {/* CENTER CONTENT */}
                         <main className="min-w-0">
-                            {/* MOBILE TABLE OF CONTENTS */}
-                            <div className="lg:hidden mb-6 sticky top-24 z-20">
-                                <div className="bg-white shadow-lg rounded-xl border border-gray-100 p-2">
-                                    <TableOfContents sections={tocSections} orientation="horizontal" />
-                                </div>
+                            {/* MOBILE TABLE OF CONTENTS - COLLAPSIBLE ACCORDION (NO OVERLAPPING) */}
+                            <div className="lg:hidden mb-6 not-prose">
+                                <details className="group bg-gradient-to-br from-purple-50/70 via-white to-indigo-50/40 border border-purple-100 rounded-2xl shadow-sm overflow-hidden transition-all duration-300 open:shadow-md">
+                                    <summary className="flex items-center justify-between p-4 cursor-pointer select-none bg-white hover:bg-purple-50/40 transition-colors">
+                                        <div className="flex items-center space-x-3">
+                                            <span className="w-8 h-8 rounded-lg bg-[#6E5E93]/10 text-[#6E5E93] flex items-center justify-center font-bold text-sm">
+                                                <FontAwesomeIcon icon={faListUl} className="w-4 h-4" />
+                                            </span>
+                                            <div>
+                                                <span className="text-sm font-bold text-gray-900 block">Table of Contents</span>
+                                                <span className="text-[11px] text-gray-500 font-medium">Quick Navigation ({tocSections.length} Topics)</span>
+                                            </div>
+                                        </div>
+                                        <div className="flex items-center space-x-2">
+                                            <span className="text-xs font-semibold text-[#6E5E93] bg-[#6E5E93]/10 px-2.5 py-1 rounded-full group-open:hidden">
+                                                Tap to Expand
+                                            </span>
+                                            <span className="text-xs font-semibold text-gray-600 bg-gray-100 px-2.5 py-1 rounded-full hidden group-open:inline-block">
+                                                Close
+                                            </span>
+                                            <svg className="w-4 h-4 text-gray-500 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                                            </svg>
+                                        </div>
+                                    </summary>
+                                    <div className="p-3.5 pt-2 border-t border-purple-50 bg-white/70">
+                                        <nav className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+                                            {tocSections.map((section, idx) => (
+                                                <a
+                                                    key={section.id}
+                                                    href={`#${section.id}`}
+                                                    className="flex items-center p-2 rounded-xl text-xs font-medium text-gray-700 hover:text-[#6E5E93] hover:bg-purple-50/80 transition-all border border-transparent hover:border-purple-100"
+                                                >
+                                                    <span className="w-5 h-5 rounded-full bg-purple-100 text-[#6E5E93] flex items-center justify-center text-[10px] font-bold mr-2 flex-shrink-0">
+                                                        {idx + 1}
+                                                    </span>
+                                                    <span className="truncate">{section.title}</span>
+                                                </a>
+                                            ))}
+                                        </nav>
+                                    </div>
+                                </details>
                             </div>
 
                             <div className="bg-white p-4 md:p-12 rounded-2xl shadow-sm border border-gray-100 space-y-12 md:space-y-20 article-content">

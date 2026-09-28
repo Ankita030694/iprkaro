@@ -372,7 +372,7 @@ export default function TrademarkEcommercePage() {
                       Without a trademark, a seller on Amazon is essentially defenseless against hijackers. You cannot lock your listings, you cannot use A+ Content to improve your conversion rates, and you cannot access the advanced brand analytics.
                     </p>
                     <p className="mb-6">
-                      At IPR Karo, we fast-track the trademark filing process, providing you with the application number in 24 hours so that you can apply for Amazon Brand Registry and secure your listings immediately. We have helped thousands of merchants reclaim their listings from shadow sellers and establish dominance in their niches.
+                      At IPR Karo, we fast-track the trademark filing process, providing you with the application number in 24 hours so that you can apply for Amazon Brand Registry and secure your listings immediately. Read our comprehensive guide on <Link href="/amazon-brand-registry-trademark-requirements-india" className="text-indigo-600 hover:underline font-bold">Amazon Brand Registry Trademark Requirements in India</Link> to understand pending TM rules, packaging criteria, and attorney verification steps.
                     </p>
                   </section>
 

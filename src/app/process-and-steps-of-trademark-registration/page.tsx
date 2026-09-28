@@ -18,7 +18,9 @@ import {
     faLightbulb,
     faShieldHalved,
     faCheck,
-    faPhone
+    faPhone,
+    faRocket,
+    faGlobe
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata: Metadata = {
@@ -278,10 +280,48 @@ export default function TrademarkProcessStepsPage() {
                         </aside>
 
                         <main className="min-w-0">
-                            <div className="lg:hidden mb-6 sticky top-24 z-20">
-                                <div className="bg-white shadow-lg rounded-xl border border-gray-100 p-2">
-                                    <TableOfContents sections={tocSections} orientation="horizontal" />
-                                </div>
+                            {/* MOBILE TABLE OF CONTENTS - COLLAPSIBLE ACCORDION (NO OVERLAPPING) */}
+                            <div className="lg:hidden mb-6 not-prose">
+                                <details className="group bg-gradient-to-br from-purple-50/70 via-white to-indigo-50/40 border border-purple-100 rounded-2xl shadow-sm overflow-hidden transition-all duration-300 open:shadow-md">
+                                    <summary className="flex items-center justify-between p-4 cursor-pointer select-none bg-white hover:bg-purple-50/40 transition-colors">
+                                        <div className="flex items-center space-x-3">
+                                            <span className="w-8 h-8 rounded-lg bg-[#6E5E93]/10 text-[#6E5E93] flex items-center justify-center font-bold text-sm">
+                                                <FontAwesomeIcon icon={faListUl} className="w-4 h-4" />
+                                            </span>
+                                            <div>
+                                                <span className="text-sm font-bold text-gray-900 block">Table of Contents</span>
+                                                <span className="text-[11px] text-gray-500 font-medium">Quick Navigation ({tocSections.length} Topics)</span>
+                                            </div>
+                                        </div>
+                                        <div className="flex items-center space-x-2">
+                                            <span className="text-xs font-semibold text-[#6E5E93] bg-[#6E5E93]/10 px-2.5 py-1 rounded-full group-open:hidden">
+                                                Tap to Expand
+                                            </span>
+                                            <span className="text-xs font-semibold text-gray-600 bg-gray-100 px-2.5 py-1 rounded-full hidden group-open:inline-block">
+                                                Close
+                                            </span>
+                                            <svg className="w-4 h-4 text-gray-500 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                                            </svg>
+                                        </div>
+                                    </summary>
+                                    <div className="p-3.5 pt-2 border-t border-purple-50 bg-white/70">
+                                        <nav className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+                                            {tocSections.map((section, idx) => (
+                                                <a
+                                                    key={section.id}
+                                                    href={`#${section.id}`}
+                                                    className="flex items-center p-2 rounded-xl text-xs font-medium text-gray-700 hover:text-[#6E5E93] hover:bg-purple-50/80 transition-all border border-transparent hover:border-purple-100"
+                                                >
+                                                    <span className="w-5 h-5 rounded-full bg-purple-100 text-[#6E5E93] flex items-center justify-center text-[10px] font-bold mr-2 flex-shrink-0">
+                                                        {idx + 1}
+                                                    </span>
+                                                    <span className="truncate">{section.title}</span>
+                                                </a>
+                                            ))}
+                                        </nav>
+                                    </div>
+                                </details>
                             </div>
 
                             <div className="bg-white p-4 md:p-12 rounded-2xl shadow-sm border border-gray-100 space-y-12 md:space-y-20 article-content">
@@ -312,7 +352,7 @@ export default function TrademarkProcessStepsPage() {
                                             A trademark serves as the commercial fingerprint of an enterprise. It differentiates your products, services, and digital platforms from competitors in the marketplace. While unregistered marks receive limited common-law protection through passing-off actions, formal statutory registration under the Trade Marks Act, 1999 empowers brand owners with prima facie evidence of ownership, nationwide enforceability, and deterrence against counterfeiters.
                                         </p>
                                         <p className="mb-6">
-                                            The Indian Trade Marks Registry, functioning under the Controller General of Patents, Designs and Trade Marks (CGPDTM), operates through five administrative jurisdictions: Mumbai, Delhi, Kolkata, Chennai, and Ahmedabad. Modern filings are processed almost entirely through the comprehensive e-filing gateway, drastically accelerating turnaround times and enhancing transparent tracking for applicants across India and international markets.
+                                            The Indian Trade Marks Registry, functioning under the Controller General of Patents, Designs and Trade Marks (CGPDTM), operates through five administrative jurisdictions: Mumbai, Delhi, Kolkata, Chennai, and Ahmedabad. Modern filings are processed almost entirely through the comprehensive e-filing gateway, drastically accelerating turnaround times and enhancing transparent tracking for applicants across India and international markets. For enterprises expanding globally, an Indian registration also serves as the mandatory anchor for <Link href="/international-trademark-registration" className="text-[rgb(110,94,147)] hover:underline font-medium">international trademark registration</Link> under the Madrid Protocol.
                                         </p>
                                         <p className="mb-6">
                                             However, navigating the registration process requires thorough legal precision. Minor clerical discrepancies in applicant details, misclassification of goods, or failure to anticipate conflicting prior marks can trigger prolonged objections, formal hearings, or outright refusal. Understanding each progressive phase enables businesses to plan their branding milestones strategically and protect capital investments.
@@ -336,7 +376,7 @@ export default function TrademarkProcessStepsPage() {
                                                     Applicant Classification
                                                 </h3>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    Determine whether the applicant is an Individual, Startup (recognized by DPIIT), Small Enterprise (with a valid Udyam Registration Certificate), or a Large Corporate entity. Startups and MSMEs receive a 50% concession on government filing fees.
+                                                    Determine whether the applicant is an Individual, Startup (recognized by DPIIT), Small Enterprise (with a valid Udyam Registration Certificate), or a Large Corporate entity. Founders can follow our dedicated guide on <Link href="/how-to-register-a-trademark-for-my-startup" className="text-[rgb(110,94,147)] hover:underline font-medium">how to register a trademark for my startup</Link> to claim a 50% concession on government filing fees.
                                                 </p>
                                             </div>
 
@@ -498,7 +538,7 @@ export default function TrademarkProcessStepsPage() {
                                                 At this stage, you may officially replace the TM symbol with the registered <strong>&reg;</strong> symbol. The certificate guarantees exclusive commercial rights nationwide, retroactive to the original date of application, valid for 10 years.
                                             </p>
                                             <p className="text-gray-700 leading-relaxed m-0">
-                                                Protection can be preserved indefinitely through timely <Link href="/how-to-renew-a-registered-trademark-in-india" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark renewals</Link> filed every 10 years via Form TM-R.
+                                                Protection can be preserved indefinitely through timely <Link href="/how-to-renew-a-trademark" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark renewals</Link> filed every 10 years via Form TM-R.
                                             </p>
                                         </div>
                                     </section>
@@ -821,6 +861,22 @@ export default function TrademarkProcessStepsPage() {
                                                 <FontAwesomeIcon icon={faShieldHalved} className="w-5 h-5" />
                                             </div>
                                             <span className="font-black text-xs uppercase tracking-widest">AI Search Tool</span>
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href="/how-to-register-a-trademark-for-my-startup" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
+                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
+                                                <FontAwesomeIcon icon={faRocket} className="w-5 h-5" />
+                                            </div>
+                                            <span className="font-black text-xs uppercase tracking-widest">Startup Guide</span>
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href="/international-trademark-registration" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
+                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
+                                                <FontAwesomeIcon icon={faGlobe} className="w-5 h-5" />
+                                            </div>
+                                            <span className="font-black text-xs uppercase tracking-widest">Global TM Guide</span>
                                         </Link>
                                     </li>
                                 </ul>

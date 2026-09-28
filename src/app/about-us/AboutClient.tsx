@@ -4,9 +4,9 @@
 import Image from 'next/image';
 import React, { useState, useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown, faPaperPlane, faCheck, faTimes, faBolt, faShieldAlt } from '@fortawesome/free-solid-svg-icons';
 import ClientLogoSlider from '@/components/ClientLogoSlider';
-import AboutBento from '@/components/AboutBento';
+import AboutHeroHealthScoreVisual from '@/components/about/AboutHeroHealthScoreVisual';
 import AboutContentExpanded from './AboutContentExpanded';
 import { motion } from 'framer-motion';
 import { imageDimensions } from '@/utils/imageDimensions';
@@ -159,34 +159,29 @@ export default function AboutClient() {
 
   return (
     <div className="home-page-font min-h-screen relative overflow-x-hidden bg-white">
-      {/* Global styles for yellow hover effect */}
-      <style jsx global>{`
-        .icon-hover-yellow {
-          filter: grayscale(0%);
-          transition: all 0.5s ease;
-        }
-        .group:hover .icon-hover-yellow {
-          filter: brightness(0) saturate(100%) invert(64%) sepia(77%) saturate(458%) hue-rotate(1deg) brightness(98%) contrast(92%);
-        }
-      `}</style>
-      
-      {/* SVG Filter for yellow color transformation */}
-      <svg width="0" height="0" style={{ position: 'absolute' }}>
-        <defs>
-          <filter id="yellow-filter">
-            <feColorMatrix
-              type="matrix"
-              values="2.2 0.8 0 0 0
-                      0.8 2.2 0 0 0
-                      0 0 0.2 0 0
-                      0 0 0 1 0"
-            />
-          </filter>
-        </defs>
-      </svg>
+      {/* Soft Ambient Radial Glow at Top Center matching the light theme */}
+      <div 
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] max-w-full h-[450px] pointer-events-none -z-0 opacity-70"
+        style={{
+          background: 'radial-gradient(ellipse 65% 55% at 50% 10%, rgba(186, 230, 253, 0.45), rgba(219, 234, 254, 0.35) 40%, rgba(255, 255, 255, 0) 80%)'
+        }}
+      />
+
       {/* Heading Section - Just below navbar */}
-      <div className="w-full px-6 sm:px-12 lg:px-24 pt-32 pb-4">
+      <div className="w-full px-6 sm:px-12 lg:px-24 pt-32 pb-4 relative z-10">
         <div className="text-center space-y-4">
+          {/* Header Badges */}
+          <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50/90 border border-blue-200/80 text-[#1952C7] text-xs font-bold uppercase tracking-wider">
+              <span className="w-2 h-2 rounded-full bg-[#1952C7]" />
+              <span>ABOUT IPR KARO</span>
+            </div>
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50/90 border border-emerald-200/80 text-emerald-800 text-xs font-semibold">
+              <span className="w-2 h-2 rounded-full bg-emerald-500" />
+              <span>AI-Powered Trademark Platform</span>
+            </div>
+          </div>
+
           {/* Main Heading */}
           <h1
             className="font-bold text-center"
@@ -196,7 +191,7 @@ export default function AboutClient() {
               fontStyle: 'normal',
               fontWeight: 700,
               lineHeight: '1.2',
-              fontSize: 'clamp(22px, 3vw, 67px)' /* Scaled down 30% from 32px, 48px, 72px, 96px */
+              fontSize: 'clamp(28px, 4vw, 56px)'
             }}
           >
             About IPR Karo
@@ -215,7 +210,7 @@ export default function AboutClient() {
                 fontStyle: 'italic',
                 fontWeight: 600,
                 lineHeight: '1.2',
-                fontSize: 'clamp(13px, 2vw, 24px)' /* Scaled down 30% from 18px, 24px, 32px, 35px */
+                fontSize: 'clamp(14px, 2vw, 22px)'
               }}
             >
               AI
@@ -228,7 +223,7 @@ export default function AboutClient() {
                 fontStyle: 'italic',
                 fontWeight: 600,
                 lineHeight: '1.2',
-                fontSize: 'clamp(13px, 2vw, 24px)' /* Scaled down 30% from 18px, 24px, 32px, 35px */
+                fontSize: 'clamp(14px, 2vw, 22px)'
               }}
             >
               Driven Platform for Fast, Accurate Trademark
@@ -241,7 +236,7 @@ export default function AboutClient() {
                 fontStyle: 'italic',
                 fontWeight: 500,
                 lineHeight: '1.2',
-                fontSize: 'clamp(13px, 2vw, 24px)' /* Scaled down 30% from 18px, 24px, 32px, 35px */
+                fontSize: 'clamp(14px, 2vw, 22px)'
               }}
             >
               Registration in India
@@ -251,14 +246,13 @@ export default function AboutClient() {
       </div>
 
 
-      {/* About Bento Section */}
-      <div className="hidden md:block">
-      <AboutBento />
-
+      {/* Hero Visual Section: Trademark Health Score with Bottom Gradient Fade (Desktop Only) */}
+      <div className="hidden md:block w-full relative z-10 my-4 sm:my-8">
+        <AboutHeroHealthScoreVisual />
       </div>
 
-      {/* IPR KARO Section - Under Bento */}
-      <div className="w-full px-6 sm:px-12 lg:px-24 -mt-20 mt-1 sm:mt-15">
+      {/* IPR KARO Section - Under Hero Visual */}
+      <div className="w-full px-6 sm:px-12 lg:px-24 mt-2 sm:mt-6">
         {/* Mobile Layout - IPR KARO vertical on left, content on right */}
         <div className="block lg:hidden">
           <div className="flex items-center justify-center gap-4">
@@ -268,7 +262,7 @@ export default function AboutClient() {
                 style={{
                   writingMode: 'vertical-lr',
                   textOrientation: 'mixed',
-                  color: '#FFB703',
+                  color: '#1952C7',
                   fontFamily: 'Aileron',
                   fontSize: '24px',
                   fontWeight: 700,
@@ -319,7 +313,7 @@ export default function AboutClient() {
               style={{
                 writingMode: 'vertical-lr',
                 textOrientation: 'mixed',
-                color: '#FFB703',
+                color: '#1952C7',
                 fontFamily: 'Aileron',
                 fontSize: '40px',
                 fontWeight: 700,
@@ -456,8 +450,12 @@ export default function AboutClient() {
       </div>
 
       {/* Our Story Timeline Section */}
-      <div className="w-full md:py-8 relative -mt-10 md:mt-0 bg-white">
-        <div className="text-center mb-16">
+      <div className="w-full md:py-12 relative -mt-10 md:mt-0 bg-white">
+        <div className="text-center mb-16 px-4">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200/80 text-[#1952C7] text-xs font-bold uppercase tracking-wider mb-3">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#1952C7]" />
+            <span>OUR JOURNEY</span>
+          </div>
           <h3 
             className="text-3xl sm:text-4xl lg:text-[42px] font-bold"
             style={{
@@ -467,20 +465,23 @@ export default function AboutClient() {
               lineHeight: '1.2'
             }}
           >
-            Our Story
+            Our Story: From Inception to Ecosystem
           </h3>
+          <p className="text-gray-500 text-sm sm:text-base max-w-2xl mx-auto mt-2">
+            How a commitment to democratizing Indian intellectual property transformed into a national LegalTech engine.
+          </p>
         </div>
         
         {/* Decorative "Our" Text - Left Side - Desktop Only */}
         <div
-          className="hidden lg:block absolute top-1/2 transform -translate-y-1/2 -rotate-90 -translate-x-25"
+          className="hidden xl:block absolute top-1/2 transform -translate-y-1/2 -rotate-90 -translate-x-28"
           style={{
             left: '0',
-            fontSize: '200px',
+            fontSize: '180px',
             fontFamily: 'Aileron',
             fontWeight: 700,
             color: 'transparent',
-            WebkitTextStroke: '1px rgba(12, 0, 43, 0.1)',
+            WebkitTextStroke: '1px rgba(12, 0, 43, 0.08)',
             letterSpacing: '2px',
             userSelect: 'none',
             pointerEvents: 'none',
@@ -494,14 +495,14 @@ export default function AboutClient() {
 
         {/* Decorative "Story" Text - Right Side - Desktop Only */}
         <div
-          className="hidden lg:block absolute top-1/2 transform -translate-y-1/2 -rotate-90 translate-x-35"
+          className="hidden xl:block absolute top-1/2 transform -translate-y-1/2 -rotate-90 translate-x-32"
           style={{
             right: '0',
-            fontSize: '200px',
+            fontSize: '180px',
             fontFamily: 'Aileron',
             fontWeight: 700,
             color: 'transparent',
-            WebkitTextStroke: '1px rgba(12, 0, 43, 0.1)',
+            WebkitTextStroke: '1px rgba(12, 0, 43, 0.08)',
             letterSpacing: '2px',
             userSelect: 'none',
             pointerEvents: 'none',
@@ -514,252 +515,165 @@ export default function AboutClient() {
         </div>
         
         {/* Desktop Timeline Section */}
-        <div className="hidden lg:block max-w-6xl mx-auto relative" ref={timelineDesktopRef}>
+        <div className="hidden lg:block max-w-5xl mx-auto relative px-6" ref={timelineDesktopRef}>
 
-          {/* Vertical Line */}
+          {/* Vertical Track Line */}
           <div
-            className="absolute left-1/2 transform -translate-x-1/2 h-full w-2"
+            className="absolute left-1/2 transform -translate-x-1/2 h-full w-1.5"
             style={{
               background: 'linear-gradient(to bottom, rgba(12, 0, 43, 0.05), rgba(12, 0, 43, 0.1), rgba(12, 0, 43, 0.05))',
               borderRadius: '2px'
             }}
           />
 
-          {/* Purple Progress Line - Fills up on scroll */}
+          {/* Blue Dynamic Progress Line - Fills up on scroll */}
           <div
-            className="absolute left-1/2 transform -translate-x-1/2 top-0 w-2"
+            className="absolute left-1/2 transform -translate-x-1/2 top-0 w-1.5"
             style={{
               height: `${timelineProgress}%`,
-              background: 'linear-gradient(to bottom, #8A38F5, #a855f7)',
+              background: 'linear-gradient(to bottom, #1345C3, #1952C7)',
               borderRadius: '2px',
-              boxShadow: '0 0 10px rgba(138, 56, 245, 0.4)',
+              boxShadow: '0 0 12px rgba(25, 82, 199, 0.45)',
               willChange: 'height'
             }}
           />
 
-          {/* Timeline Items - Desktop Original Layout */}
-          <div className="space-y-16">
-            {/* Timeline Item 1 - Left Year, Right Heading & Description */}
-            <div>
-                <div className="relative flex items-start">
-                  {/* Year (Left) */}
-                  <div className="w-1/2 pr-8 text-right pt-2">
-                    <h4
-                      style={{
-                        color: '#FFB703',
-                        fontFamily: 'Aileron',
-                        fontSize: '28px',
-                        fontWeight: 700
-                      }}
-                    >
-                      2019
-                    </h4>
-                  </div>
+          {/* Timeline Items - Desktop Pictographic Cards */}
+          <div className="space-y-20">
+            
+            {/* Timeline Item 1 - 2019 */}
+            <div className="relative flex items-center">
+              {/* Year (Left) */}
+              <div className="w-1/2 pr-12 text-right">
+                <span className="text-xs font-bold text-[#1952C7] uppercase tracking-wider bg-blue-50 px-2.5 py-1 rounded-full border border-blue-200/60">
+                  PHASE 01 • INCEPTION
+                </span>
+                <h4 className="text-3xl font-extrabold text-[#0C002B] mt-1" style={{ fontFamily: 'Aileron' }}>
+                  2019
+                </h4>
+                <p className="text-xs text-gray-500 font-medium mt-1">Foundation & LegalTech Blueprint</p>
+              </div>
 
-                  {/* Dot */}
-                  <div
-                    className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full border-2 mt-2 z-10"
-                    style={{
-                      background: '#FFFFFF',
-                      borderColor: '#8A38F5',
-                      boxShadow: '0 0 8px rgba(138, 56, 245, 0.2)'
-                    }}
-                  />
+              {/* Pulsing Dot */}
+              <div className="absolute left-1/2 transform -translate-x-1/2 w-7 h-7 rounded-full border-4 border-white bg-[#1952C7] shadow-[0_0_12px_rgba(25,82,199,0.35)] z-10" />
 
-                  {/* Heading & Description (Right) */}
-                  <div className="w-1/2 pl-8">
-                    <h5
-                      style={{
-                        color: '#0C002B',
-                        fontFamily: 'Aileron',
-                        fontSize: '20px',
-                        fontWeight: 600,
-                        marginBottom: '8px'
-                      }}
-                    >
-                      The Foundation
-                    </h5>
-                  <p
-                      style={{
-                        color: '#0C002B',
-                        fontFamily: 'Aileron',
-                        fontSize: '16px',
-                        fontWeight: 400,
-                        lineHeight: '1.6',
-                        opacity: 0.8
-                      }}
-                    >
-                    IPR Karo began with a mission: to simplify and democratize trademark registration for businesses of all sizes in India. We focused on making it easy for anyone to understand how to register a trademark and get expert help online.
+              {/* Card (Right) */}
+              <div className="w-1/2 pl-12">
+                <div className="p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300">
+                  <h5 className="text-xl font-bold text-[#0C002B] mb-2" style={{ fontFamily: 'Aileron' }}>
+                    The Foundation: Democratizing IP
+                  </h5>
+                  <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                    IPR Karo began with an urgent mission: to eliminate traditional legal opacity and simplify trademark registration for India's growing startup generation.
                   </p>
+                  <div className="flex flex-wrap gap-1.5">
+                    <span className="text-[11px] font-semibold bg-slate-50 text-[#1952C7] px-2.5 py-1 rounded-lg border border-gray-100">🛡️ 100% Online Vision</span>
+                    <span className="text-[11px] font-semibold bg-slate-50 text-gray-700 px-2.5 py-1 rounded-lg border border-gray-100">⚡ Zero Hidden Jargon</span>
+                    <span className="text-[11px] font-semibold bg-slate-50 text-emerald-700 px-2.5 py-1 rounded-lg border border-gray-100">🇮🇳 PAN-India Access</span>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Timeline Item 2 - Right Year, Left Heading & Description */}
-            <div>
-                <div className="relative flex items-start">
-                  {/* Heading & Description (Left) */}
-                  <div className="w-1/2 pr-8 text-right">
-                    <h5
-                      style={{
-                        color: '#0C002B',
-                        fontFamily: 'Aileron',
-                        fontSize: '20px',
-                        fontWeight: 600,
-                        marginBottom: '8px'
-                      }}
-                    >
-                      AI Revolution
-                    </h5>
-                  <p
-                      style={{
-                        color: '#0C002B',
-                        fontFamily: 'Aileron',
-                        fontSize: '16px',
-                        fontWeight: 400,
-                        lineHeight: '1.6',
-                        opacity: 0.8
-                      }}
-                    >
-                    We launched India's first AI-powered trademark search, instantly scanning millions of trademarks for similarity and conflicts. This breakthrough helped users quickly check if their brand name is available, receive an AI-powered risk report, and improve their chances to register a trademark successfully.
+            {/* Timeline Item 2 - 2020 */}
+            <div className="relative flex items-center">
+              {/* Card (Left) */}
+              <div className="w-1/2 pr-12 text-right">
+                <div className="p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-left">
+                  <h5 className="text-xl font-bold text-[#0C002B] mb-2" style={{ fontFamily: 'Aileron' }}>
+                    The AI Revolution: India's 1st Engine
+                  </h5>
+                  <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                    We developed and launched India's first proprietary AI-powered trademark search, scanning millions of registered and pending records to detect phonetic, visual, and semantic conflicts in seconds.
                   </p>
+                  <div className="flex flex-wrap gap-1.5">
+                    <span className="text-[11px] font-semibold bg-blue-50 text-[#1952C7] px-2.5 py-1 rounded-lg border border-blue-100">🧠 10M+ Database</span>
+                    <span className="text-[11px] font-semibold bg-slate-50 text-gray-700 px-2.5 py-1 rounded-lg border border-gray-100">⏱️ &lt; 3s Scan Speed</span>
+                    <span className="text-[11px] font-semibold bg-emerald-50 text-emerald-700 px-2.5 py-1 rounded-lg border border-emerald-100">🔍 Phonetic AI Matching</span>
                   </div>
+                </div>
+              </div>
 
-                  {/* Dot */}
-                  <div
-                    className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full border-2 mt-2 z-10"
-                    style={{
-                      background: '#FFFFFF',
-                      borderColor: '#8A38F5',
-                      boxShadow: '0 0 8px rgba(138, 56, 245, 0.2)'
-                    }}
-                  />
+              {/* Pulsing Dot */}
+              <div className="absolute left-1/2 transform -translate-x-1/2 w-7 h-7 rounded-full border-4 border-white bg-[#1952C7] shadow-[0_0_12px_rgba(25,82,199,0.35)] z-10" />
 
-                  {/* Year (Right) */}
-                  <div className="w-1/2 pl-8 pt-2">
-                    <h4
-                      style={{
-                        color: '#FFB703',
-                        fontFamily: 'Aileron',
-                        fontSize: '28px',
-                        fontWeight: 700
-                      }}
-                    >
-                      2020
-                    </h4>
+              {/* Year (Right) */}
+              <div className="w-1/2 pl-12">
+                <span className="text-xs font-bold text-[#1952C7] uppercase tracking-wider bg-blue-50 px-2.5 py-1 rounded-full border border-blue-200/60">
+                  PHASE 02 • TECH BREAKTHROUGH
+                </span>
+                <h4 className="text-3xl font-extrabold text-[#0C002B] mt-1" style={{ fontFamily: 'Aileron' }}>
+                  2020
+                </h4>
+                <p className="text-xs text-gray-500 font-medium mt-1">Proprietary NLP & Similarity Algorithms</p>
+              </div>
+            </div>
+
+            {/* Timeline Item 3 - 2021 */}
+            <div className="relative flex items-center">
+              {/* Year (Left) */}
+              <div className="w-1/2 pr-12 text-right">
+                <span className="text-xs font-bold text-[#1952C7] uppercase tracking-wider bg-blue-50 px-2.5 py-1 rounded-full border border-blue-200/60">
+                  PHASE 03 • NATIONAL SCALE
+                </span>
+                <h4 className="text-3xl font-extrabold text-[#0C002B] mt-1" style={{ fontFamily: 'Aileron' }}>
+                  2021
+                </h4>
+                <p className="text-xs text-gray-500 font-medium mt-1">Trust Milestone & Enterprise Adoption</p>
+              </div>
+
+              {/* Pulsing Dot */}
+              <div className="absolute left-1/2 transform -translate-x-1/2 w-7 h-7 rounded-full border-4 border-white bg-[#1952C7] shadow-[0_0_12px_rgba(25,82,199,0.35)] z-10" />
+
+              {/* Card (Right) */}
+              <div className="w-1/2 pl-12">
+                <div className="p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300">
+                  <h5 className="text-xl font-bold text-[#0C002B] mb-2" style={{ fontFamily: 'Aileron' }}>
+                    Scale & Trust: 5,000+ Filings Secured
+                  </h5>
+                  <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                    Crossing 5,000 successful registrations, IPR Karo became a household brand for Indian startups, MSMEs, and digital creators seeking guaranteed, attorney-backed defense.
+                  </p>
+                  <div className="flex flex-wrap gap-1.5">
+                    <span className="text-[11px] font-semibold bg-emerald-50 text-emerald-700 px-2.5 py-1 rounded-lg border border-emerald-100">🏆 5,000+ Filings</span>
+                    <span className="text-[11px] font-semibold bg-slate-50 text-[#1952C7] px-2.5 py-1 rounded-lg border border-gray-100">📈 94.5% Approval Rate</span>
+                    <span className="text-[11px] font-semibold bg-slate-50 text-gray-700 px-2.5 py-1 rounded-lg border border-gray-100">🏛️ 28 States & 8 UTs</span>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Timeline Item 3 - Left Year, Right Heading & Description */}
-            <div>
-                <div className="relative flex items-start">
-                  {/* Year (Left) */}
-                  <div className="w-1/2 pr-8 text-right pt-2">
-                    <h4
-                      style={{
-                        color: '#FFB703',
-                        fontFamily: 'Aileron',
-                        fontSize: '28px',
-                        fontWeight: 700
-                      }}
-                    >
-                      2021
-                    </h4>
-                  </div>
-
-                  {/* Dot */}
-                  <div
-                    className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full border-2 mt-2 z-10"
-                    style={{
-                      background: '#FFFFFF',
-                      borderColor: '#8A38F5',
-                      boxShadow: '0 0 8px rgba(138, 56, 245, 0.2)'
-                    }}
-                  />
-
-                  {/* Heading & Description (Right) */}
-                  <div className="w-1/2 pl-8">
-                    <h5
-                      style={{
-                        color: '#0C002B',
-                        fontFamily: 'Aileron',
-                        fontSize: '20px',
-                        fontWeight: 600,
-                        marginBottom: '8px'
-                      }}
-                    >
-                      Trust & Growth
-                    </h5>
-                  <p
-                      style={{
-                        color: '#0C002B',
-                        fontFamily: 'Aileron',
-                        fontSize: '16px',
-                        fontWeight: 400,
-                        lineHeight: '1.6',
-                        opacity: 0.8
-                      }}
-                    >
-                    With over 5,000 trademark registrations, IPR Karo became known for reliable, AI-driven brand protection. Our platform delivered accurate legal results, faster registration, and ongoing trademark monitoring.
+            {/* Timeline Item 4 - 2025 to Present */}
+            <div className="relative flex items-center">
+              {/* Card (Left) */}
+              <div className="w-1/2 pr-12 text-right">
+                <div className="p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-left">
+                  <h5 className="text-xl font-bold text-[#0C002B] mb-2" style={{ fontFamily: 'Aileron' }}>
+                    360° Brand Protection Ecosystem
+                  </h5>
+                  <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                    Today, IPR Karo offers end-to-end protection: instant CGPDTM e-filing within 24 hours, Madrid Protocol cross-border filings across 130+ nations, and 24/7 automated Trademark Journal Watchdogs.
                   </p>
+                  <div className="flex flex-wrap gap-1.5">
+                    <span className="text-[11px] font-semibold bg-blue-50 text-[#1952C7] px-2.5 py-1 rounded-lg border border-blue-100">🌐 Madrid Protocol (130+ Countries)</span>
+                    <span className="text-[11px] font-semibold bg-emerald-50 text-emerald-700 px-2.5 py-1 rounded-lg border border-emerald-100">🤖 24/7 Journal Watchdog</span>
+                    <span className="text-[11px] font-semibold bg-slate-50 text-gray-700 px-2.5 py-1 rounded-lg border border-gray-100">⚡ 24h E-Filing Guarantee</span>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            {/* Timeline Item 4 - Right Year, Left Heading & Description */}
-            <div>
-                <div className="relative flex items-start">
-                  {/* Heading & Description (Left) */}
-                  <div className="w-1/2 pr-8 text-right">
-                    <h5
-                      style={{
-                        color: '#0C002B',
-                        fontFamily: 'Aileron',
-                        fontSize: '20px',
-                        fontWeight: 600,
-                        marginBottom: '8px'
-                      }}
-                    >
-                      Service Expansion
-                    </h5>
-                  <p
-                      style={{
-                        color: '#0C002B',
-                        fontFamily: 'Aileron',
-                        fontSize: '16px',
-                        fontWeight: 400,
-                        lineHeight: '1.6',
-                        opacity: 0.8
-                      }}
-                    >
-                    Today, IPR Karo is India's leading online partner for trademark registration. Startups and enterprises rely on our AI search reports, expert legal support, and full-service brand protection, making how to register a trademark in India easier than ever.
-                  </p>
-                  </div>
+              {/* Pulsing Dot */}
+              <div className="absolute left-1/2 transform -translate-x-1/2 w-7 h-7 rounded-full border-4 border-white bg-emerald-500 shadow-[0_0_12px_rgba(16,185,129,0.45)] z-10" />
 
-                  {/* Dot */}
-                  <div
-                    className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full border-2 mt-2 z-10"
-                    style={{
-                      background: '#FFFFFF',
-                      borderColor: '#8A38F5',
-                      boxShadow: '0 0 8px rgba(138, 56, 245, 0.2)'
-                    }}
-                  />
-
-                  {/* Year (Right) */}
-                  <div className="w-1/2 pl-8 pt-2">
-                    <h4
-                      style={{
-                        color: '#FFB703',
-                        fontFamily: 'Aileron',
-                        fontSize: '28px',
-                        fontWeight: 700
-                      }}
-                    >
-                      2021 to Present
-                    </h4>
-                </div>
+              {/* Year (Right) */}
+              <div className="w-1/2 pl-12">
+                <span className="text-xs font-bold text-emerald-700 uppercase tracking-wider bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200/60">
+                  PHASE 04 • ENTERPRISE ECOSYSTEM
+                </span>
+                <h4 className="text-3xl font-extrabold text-[#0C002B] mt-1" style={{ fontFamily: 'Aileron' }}>
+                  2025 to Present
+                </h4>
+                <p className="text-xs text-gray-500 font-medium mt-1">Full-Lifecycle Global Brand Defense</p>
               </div>
             </div>
 
@@ -767,255 +681,99 @@ export default function AboutClient() {
         </div>
 
         {/* Mobile Timeline Section */}
-        <div className="block lg:hidden">
-          <div className="max-w-4xl mx-auto relative px-4" ref={timelineMobileRef}>
-            {/* Vertical Line - Left Side for Mobile */}
+        <div className="block lg:hidden px-4">
+          <div className="max-w-2xl mx-auto relative pl-8" ref={timelineMobileRef}>
+            {/* Vertical Track Line */}
             <div
-              className="absolute left-7.5 top-0 bottom-0 w-2"
+              className="absolute left-3 top-0 bottom-0 w-1"
               style={{
-                background: 'linear-gradient(to bottom, rgba(12, 0, 43, 0.05), rgba(12, 0, 43, 0.1), rgba(12, 0, 43, 0.05))',
-                borderRadius: '2px'
+                background: 'linear-gradient(to bottom, rgba(12, 0, 43, 0.05), rgba(12, 0, 43, 0.1), rgba(12, 0, 43, 0.05))'
               }}
             />
             
-            {/* Purple Progress Line - Fills up on scroll */}
+            {/* Blue Progress Line */}
             <div
-              className="absolute left-7.5 top-0 w-2"
+              className="absolute left-3 top-0 w-1"
               style={{
                 height: `${timelineProgress}%`,
-                background: 'linear-gradient(to bottom, #8A38F5, #a855f7)',
-                borderRadius: '2px',
-                boxShadow: '0 0 10px rgba(138, 56, 245, 0.4)',
+                background: 'linear-gradient(to bottom, #1345C3, #1952C7)',
                 willChange: 'height'
               }}
             />
 
-            {/* Timeline Items - Mobile Layout */}
-            <div className="space-y-16 relative">
-              {/* Timeline Item 1 - Year and Content on Right for Mobile */}
-              <div>
-                  <div className="relative flex items-start">
-                    {/* Dot - Left for Mobile */}
-                    <div
-                      className="absolute left-5.5 w-6 h-6 rounded-full border-2 -mt-2 z-10"
-                      style={{
-                        background: '#FFFFFF',
-                        borderColor: '#8A38F5',
-                        boxShadow: '0 0 8px rgba(138, 56, 245, 0.2)'
-                      }}
-                    />
-
-                    {/* Year - Right for Mobile */}
-                    <div className="w-full pl-16">
-                      <div className="flex items-center gap-4 mb-4">
-                        <h4
-                          className="text-xl sm:text-2xl font-bold"
-                          style={{
-                            color: '#FFB703',
-                            fontFamily: 'Aileron',
-                            fontWeight: 700
-                          }}
-                        >
-                          2019
-                        </h4>
-                      </div>
-
-                      {/* Heading & Description */}
-                      <div>
-                        <h5
-                          className="text-lg sm:text-xl font-semibold mb-2"
-                          style={{
-                            color: '#0C002B',
-                            fontFamily: 'Aileron',
-                            fontWeight: 600
-                          }}
-                        >
-                          The Foundation
-                        </h5>
-                      <p
-                          className="text-sm sm:text-base"
-                          style={{
-                            color: '#0C002B',
-                            fontFamily: 'Aileron',
-                            fontWeight: 400,
-                            lineHeight: '1.6',
-                            opacity: 0.8
-                          }}
-                        >
-                        IPR Karo began with a mission: to simplify and democratize trademark registration for businesses of all sizes in India. We focused on making it easy for anyone to understand how to register a trademark and get expert help online.
-                      </p>
-                    </div>
+            <div className="space-y-10 relative">
+              {/* Item 1 */}
+              <div className="relative">
+                <div className="absolute -left-[27px] top-1.5 w-5 h-5 rounded-full border-3 border-white bg-[#1952C7] shadow-sm z-10" />
+                <div className="p-5 rounded-xl bg-white border border-gray-100 shadow-sm">
+                  <div className="flex items-center justify-between mb-1.5">
+                    <span className="text-xl font-bold text-[#1952C7]">2019</span>
+                    <span className="text-[10px] font-bold text-gray-500 bg-gray-100 px-2 py-0.5 rounded">INCEPTION</span>
+                  </div>
+                  <h5 className="text-base font-bold text-[#0C002B] mb-2">The Foundation: Democratizing IP</h5>
+                  <p className="text-xs text-gray-600 leading-relaxed mb-3">
+                    IPR Karo began with a mission: to eliminate traditional legal opacity and make online trademark registration fast and accessible for all.
+                  </p>
+                  <div className="flex flex-wrap gap-1 text-[10px]">
+                    <span className="px-2 py-0.5 bg-slate-50 text-[#1952C7] rounded border border-gray-100">100% Online</span>
+                    <span className="px-2 py-0.5 bg-slate-50 text-gray-600 rounded border border-gray-100">Zero Jargon</span>
                   </div>
                 </div>
               </div>
 
-              {/* Timeline Item 2 - Year and Content on Right for Mobile */}
-              <div>
-                  <div className="relative flex items-start">
-                    {/* Dot - Left for Mobile */}
-                    <div
-                      className="absolute left-5.5 w-6 h-6 rounded-full border-2 -mt-2 z-10"
-                      style={{
-                        background: '#FFFFFF',
-                        borderColor: '#8A38F5',
-                        boxShadow: '0 0 8px rgba(138, 56, 245, 0.2)'
-                      }}
-                    />
-
-                    {/* Year - Right for Mobile */}
-                    <div className="w-full pl-16">
-                      <div className="flex items-center gap-4 mb-4">
-                        <h4
-                          className="text-xl sm:text-2xl font-bold"
-                          style={{
-                            color: '#FFB703',
-                            fontFamily: 'Aileron',
-                            fontWeight: 700
-                          }}
-                        >
-                          2020
-                        </h4>
-                      </div>
-
-                      {/* Heading & Description */}
-                      <div>
-                        <h5
-                          className="text-lg sm:text-xl font-semibold mb-2"
-                          style={{
-                            color: '#0C002B',
-                            fontFamily: 'Aileron',
-                            fontWeight: 600
-                          }}
-                        >
-                          AI Revolution
-                        </h5>
-                      <p
-                          className="text-sm sm:text-base"
-                          style={{
-                            color: '#0C002B',
-                            fontFamily: 'Aileron',
-                            fontWeight: 400,
-                            lineHeight: '1.6',
-                            opacity: 0.8
-                          }}
-                        >
-                        We launched India's first AI-powered trademark search, instantly scanning millions of trademarks for similarity and conflicts. This breakthrough helped users quickly check if their brand name is available, receive an AI-powered risk report, and improve their chances to register a trademark successfully.
-                      </p>
-                    </div>
+              {/* Item 2 */}
+              <div className="relative">
+                <div className="absolute -left-[27px] top-1.5 w-5 h-5 rounded-full border-3 border-white bg-[#1952C7] shadow-sm z-10" />
+                <div className="p-5 rounded-xl bg-white border border-gray-100 shadow-sm">
+                  <div className="flex items-center justify-between mb-1.5">
+                    <span className="text-xl font-bold text-[#1952C7]">2020</span>
+                    <span className="text-[10px] font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded">AI LAUNCH</span>
+                  </div>
+                  <h5 className="text-base font-bold text-[#0C002B] mb-2">The AI Revolution</h5>
+                  <p className="text-xs text-gray-600 leading-relaxed mb-3">
+                    We launched India's first AI-powered trademark search, scanning millions of marks in seconds for phonetic and semantic similarity.
+                  </p>
+                  <div className="flex flex-wrap gap-1 text-[10px]">
+                    <span className="px-2 py-0.5 bg-blue-50 text-[#1952C7] rounded border border-blue-100">10M+ Database</span>
+                    <span className="px-2 py-0.5 bg-slate-50 text-gray-600 rounded border border-gray-100">&lt;3s Scan</span>
                   </div>
                 </div>
               </div>
 
-              {/* Timeline Item 3 - Year and Content on Right for Mobile */}
-              <div>
-                  <div className="relative flex items-start">
-                    {/* Dot - Left for Mobile */}
-                    <div
-                      className="absolute left-5.5 w-6 h-6 rounded-full border-2 -mt-2 z-10"
-                      style={{
-                        background: '#FFFFFF',
-                        borderColor: '#8A38F5',
-                        boxShadow: '0 0 8px rgba(138, 56, 245, 0.2)'
-                      }}
-                    />
-
-                    {/* Year - Right for Mobile */}
-                    <div className="w-full pl-16">
-                      <div className="flex items-center gap-4 mb-4">
-                        <h4
-                          className="text-xl sm:text-2xl font-bold"
-                          style={{
-                            color: '#FFB703',
-                            fontFamily: 'Aileron',
-                            fontWeight: 700
-                          }}
-                        >
-                          2021
-                        </h4>
-                      </div>
-
-                      {/* Heading & Description */}
-                      <div>
-                        <h5
-                          className="text-lg sm:text-xl font-semibold mb-2"
-                          style={{
-                            color: '#0C002B',
-                            fontFamily: 'Aileron',
-                            fontWeight: 600
-                          }}
-                        >
-                          Trust & Growth
-                        </h5>
-                      <p
-                          className="text-sm sm:text-base"
-                          style={{
-                            color: '#0C002B',
-                            fontFamily: 'Aileron',
-                            fontWeight: 400,
-                            lineHeight: '1.6',
-                            opacity: 0.8
-                          }}
-                        >
-                        With over 5,000 trademark registrations, IPR Karo became known for reliable, AI-driven brand protection. Our platform delivered accurate legal results, faster registration, and ongoing trademark monitoring.
-                      </p>
-                    </div>
+              {/* Item 3 */}
+              <div className="relative">
+                <div className="absolute -left-[27px] top-1.5 w-5 h-5 rounded-full border-3 border-white bg-[#1952C7] shadow-sm z-10" />
+                <div className="p-5 rounded-xl bg-white border border-gray-100 shadow-sm">
+                  <div className="flex items-center justify-between mb-1.5">
+                    <span className="text-xl font-bold text-[#1952C7]">2021</span>
+                    <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">5,000+ MARKS</span>
+                  </div>
+                  <h5 className="text-base font-bold text-[#0C002B] mb-2">National Scale & Trust</h5>
+                  <p className="text-xs text-gray-600 leading-relaxed mb-3">
+                    Trusted across 28 states and union territories, achieving a 94.5% success rate for startups and enterprises alike.
+                  </p>
+                  <div className="flex flex-wrap gap-1 text-[10px]">
+                    <span className="px-2 py-0.5 bg-emerald-50 text-emerald-700 rounded border border-emerald-100">94.5% Success</span>
+                    <span className="px-2 py-0.5 bg-slate-50 text-gray-600 rounded border border-gray-100">PAN-India</span>
                   </div>
                 </div>
               </div>
 
-              {/* Timeline Item 4 - Year and Content on Right for Mobile */}
-              <div>
-                  <div className="relative flex items-start">
-                    {/* Dot - Left for Mobile */}
-                    <div
-                      className="absolute left-5.5 w-6 h-6 rounded-full border-2 -mt-2 z-10"
-                      style={{
-                        background: '#FFFFFF',
-                        borderColor: '#8A38F5',
-                        boxShadow: '0 0 8px rgba(138, 56, 245, 0.2)'
-                      }}
-                    />
-
-                    {/* Year - Right for Mobile */}
-                    <div className="w-full pl-16">
-                      <div className="flex items-center gap-4 mb-4">
-                        <h4
-                          className="text-xl sm:text-2xl font-bold"
-                          style={{
-                            color: '#FFB703',
-                            fontFamily: 'Aileron',
-                            fontWeight: 700
-                          }}
-                        >
-                          2021 to Present
-                        </h4>
-                      </div>
-
-                      {/* Heading & Description */}
-                      <div>
-                        <h5
-                          className="text-lg sm:text-xl font-semibold mb-2"
-                          style={{
-                            color: '#0C002B',
-                            fontFamily: 'Aileron',
-                            fontWeight: 600
-                          }}
-                        >
-                          Service Expansion
-                        </h5>
-                      <p
-                          className="text-sm sm:text-base"
-                          style={{
-                            color: '#0C002B',
-                            fontFamily: 'Aileron',
-                            fontWeight: 400,
-                            lineHeight: '1.6',
-                            opacity: 0.8
-                          }}
-                        >
-                        Today, IPR Karo is India's leading online partner for trademark registration. Startups and enterprises rely on our AI search reports, expert legal support, and full-service brand protection, making how to register a trademark in India easier than ever.
-                      </p>
-                    </div>
+              {/* Item 4 */}
+              <div className="relative">
+                <div className="absolute -left-[27px] top-1.5 w-5 h-5 rounded-full border-3 border-white bg-emerald-500 shadow-sm z-10" />
+                <div className="p-5 rounded-xl bg-white border border-gray-100 shadow-sm">
+                  <div className="flex items-center justify-between mb-1.5">
+                    <span className="text-xl font-bold text-emerald-600">Present</span>
+                    <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">ECOSYSTEM</span>
+                  </div>
+                  <h5 className="text-base font-bold text-[#0C002B] mb-2">360° Brand Protection</h5>
+                  <p className="text-xs text-gray-600 leading-relaxed mb-3">
+                    From 24h e-filing to Madrid Protocol international filings and 24/7 Trademark Journal Watchdogs.
+                  </p>
+                  <div className="flex flex-wrap gap-1 text-[10px]">
+                    <span className="px-2 py-0.5 bg-blue-50 text-[#1952C7] rounded border border-blue-100">130+ Countries</span>
+                    <span className="px-2 py-0.5 bg-emerald-50 text-emerald-700 rounded border border-emerald-100">Journal Watchdog</span>
                   </div>
                 </div>
               </div>
@@ -1025,10 +783,14 @@ export default function AboutClient() {
       </div>
 
       {/* What makes IPR Karo Different Section */}
-      <div className="w-full py-[30px] sm:py-[45px] lg:py-[60px] mt-[15px] sm:mt-[20px] lg:mt-[30px] px-4 sm:px-8 lg:px-20 bg-white">
-        <div className="text-center mb-[24px] sm:mb-[36px] lg:mb-[48px] px-[12px] sm:px-[18px] lg:px-[72px]">
+      <div className="w-full py-16 px-4 sm:px-8 lg:px-20 bg-slate-50/50">
+        <div className="text-center mb-12 max-w-4xl mx-auto">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200/80 text-[#1952C7] text-xs font-bold uppercase tracking-wider mb-3">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#1952C7]" />
+            <span>THE IPR KARO ADVANTAGE</span>
+          </div>
           <h3
-            className="text-[18px] sm:text-[30px] lg:text-[31.5px] font-bold mb-[8px] sm:mb-[10px] lg:mb-[12px]"
+            className="text-2xl sm:text-3xl lg:text-[40px] font-bold mb-3"
             style={{
               color: '#0C002B',
               fontFamily: 'Aileron',
@@ -1036,493 +798,254 @@ export default function AboutClient() {
               lineHeight: '1.2'
             }}
           >
-            What makes IPR Karo Different
+            What Makes IPR Karo Different
           </h3>
-          <p 
-            className="text-[12px] sm:text-[13.5px] max-w-3xl mx-auto"
-            style={{
-              color: '#0C002B',
-              fontFamily: 'Aileron',
-              fontWeight: 400,
-              lineHeight: '1.6',
-              opacity: 0.7
-            }}
-          >
-            Experience the perfect blend of AI technology and expert guidance for comprehensive trademark protection
+          <p className="text-gray-500 text-sm sm:text-base leading-relaxed">
+            See how our AI-powered legal infrastructure outclasses traditional, manual trademark processing across every critical metric.
           </p>
         </div>
 
-        {/* Cards Container */}
-        <div className="w-full">
-          {/* Main Grid - Full width layout */}
-          <div className="flex flex-col gap-[12px] sm:gap-[15px] lg:gap-[24px] px-[12px] sm:px-[24px] lg:px-[72px]">
-            {/* Mobile Layout - Professional Card Design */}
-            <div className="block lg:hidden space-y-[12px]">
-              {/* Card 1 - AI-Powered Trademark Search */}
-              <div
-                className="relative group cursor-pointer overflow-hidden transition-all duration-300 hover:scale-[1.02]"
-                style={{
-                  borderRadius: '18px',
-                  background: '#F8F9FA',
-                  border: '1px solid rgba(12, 0, 43, 0.05)',
-                  boxShadow: '0 4px 15px rgba(0, 0, 0, 0.05)'
-                }}
-                onClick={() => setActiveCard(activeCard === 1 ? null : 1)}
-              >
-                {/* Content */}
-                <div className="relative z-10 p-[16px] sm:p-[20px] lg:p-[24px]">
-                  <h4 className="text-[15px] font-bold mb-[6px] sm:mb-[8px] lg:mb-[9px] text-[#0C002B]" style={{fontFamily: 'Aileron', fontWeight: 700}}>
-                    AI-Powered Trademark Search
-                  </h4>
-                  <p className="text-[10.5px] mb-[12px] sm:mb-[15px] lg:mb-[18px]" style={{color: 'rgba(12, 0, 43, 0.7)', fontFamily: 'Aileron', lineHeight: '1.6'}}>
-                    Instantly scan millions of records. Our AI-powered search report finds identical and confusingly similar marks so you can decide whether to register or tweak your brand.
+        {/* ========================================================================= */}
+        {/* PICTOGRAPHIC COMPARISON MATRIX: TRADITIONAL VS IPR KARO                    */}
+        {/* ========================================================================= */}
+        <div className="max-w-5xl mx-auto mb-16 overflow-hidden rounded-2xl border border-gray-200/80 bg-white shadow-sm">
+          <div className="grid grid-cols-12 bg-slate-100/80 py-4 px-6 border-b border-gray-200 text-xs sm:text-sm font-bold text-[#0C002B]">
+            <div className="col-span-5 sm:col-span-4">Evaluation Metric</div>
+            <div className="col-span-3 sm:col-span-4 text-gray-500">Traditional Law Firm 🏛️</div>
+            <div className="col-span-4 sm:col-span-4 text-[#1952C7] font-extrabold flex items-center gap-1.5">
+              <span>IPR Karo AI Platform</span>
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse hidden sm:inline-block" />
+            </div>
+          </div>
+
+          <div className="divide-y divide-gray-100 text-xs sm:text-sm">
+            {[
+              {
+                metric: "Clearance Search Speed",
+                traditional: "3 to 7 Days (Manual Query)",
+                iprkaro: "Instant < 3 Seconds (10M+ Database Scan)",
+                positive: true
+              },
+              {
+                metric: "Conflict Detection Depth",
+                traditional: "Exact Word Match Only",
+                iprkaro: "Phonetic + Visual + Semantic AI Algorithm",
+                positive: true
+              },
+              {
+                metric: "Attorney Verification",
+                traditional: "Expensive hourly billing (₹15,000+)",
+                iprkaro: "Senior Certified IP Attorney Included in Fee",
+                positive: true
+              },
+              {
+                metric: "Government E-Filing Turnaround",
+                traditional: "2 to 3 Weeks Delay",
+                iprkaro: "Guaranteed Form TM-A Filed in 24 Hours",
+                positive: true
+              },
+              {
+                metric: "Post-Filing Watchdog Defense",
+                traditional: "None (You only find out when sued)",
+                iprkaro: "Automated 24/7 Trademark Journal Watchdog",
+                positive: true
+              },
+              {
+                metric: "Pricing & Invoicing Transparency",
+                traditional: "Hidden surcharges & unexpected legal bills",
+                iprkaro: "100% Flat Transparent Pricing with No Hidden Fees",
+                positive: true
+              }
+            ].map((row, idx) => (
+              <div key={idx} className="grid grid-cols-12 py-4 px-6 items-center hover:bg-blue-50/30 transition-colors">
+                <div className="col-span-5 sm:col-span-4 font-bold text-[#0C002B]">
+                  {row.metric}
+                </div>
+                <div className="col-span-3 sm:col-span-4 text-gray-500 flex items-center gap-1.5">
+                  <FontAwesomeIcon icon={faTimes} className="text-red-400 text-xs flex-shrink-0" />
+                  <span className="truncate">{row.traditional}</span>
+                </div>
+                <div className="col-span-4 sm:col-span-4 font-bold text-[#1952C7] flex items-center gap-1.5">
+                  <FontAwesomeIcon icon={faCheck} className="text-emerald-500 text-xs flex-shrink-0" />
+                  <span>{row.iprkaro}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* 5 Enhanced Feature Cards */}
+        <div className="max-w-6xl mx-auto">
+          {/* Mobile Layout */}
+          <div className="block lg:hidden space-y-4">
+            {/* Card 1 */}
+            <div 
+              className="p-6 rounded-2xl bg-white border border-gray-100 shadow-sm cursor-pointer"
+              onClick={() => setActiveCard(activeCard === 1 ? null : 1)}
+            >
+              <h4 className="text-lg font-bold text-[#0C002B] mb-2">AI-Powered Trademark Search</h4>
+              <p className="text-xs text-gray-600 leading-relaxed mb-4">
+                Instantly scan 10M+ records. Our AI finds identical, sound-alike, and confusingly similar marks before you spend government fees.
+              </p>
+              <div className="flex justify-center">
+                <Image src="/figmacomp/searchabout.svg" alt="Search Icon" width={200} height={55} className="h-auto opacity-80" />
+              </div>
+            </div>
+
+            {/* Card 2 */}
+            <div 
+              className="p-6 rounded-2xl bg-white border border-gray-100 shadow-sm cursor-pointer"
+              onClick={() => setActiveCard(activeCard === 2 ? null : 2)}
+            >
+              <h4 className="text-lg font-bold text-[#0C002B] mb-2">Expert-Led Guidance</h4>
+              <p className="text-xs text-gray-600 leading-relaxed">
+                Certified IP attorneys review your AI clearance report, advise on Nice classification (Classes 1–45), and prepare defense affidavits.
+              </p>
+            </div>
+
+            {/* Card 3 */}
+            <div 
+              className="p-6 rounded-2xl bg-white border border-gray-100 shadow-sm cursor-pointer"
+              onClick={() => setActiveCard(activeCard === 3 ? null : 3)}
+            >
+              <h4 className="text-lg font-bold text-[#0C002B] mb-2">Fast 24-Hour Processing</h4>
+              <p className="text-xs text-gray-600 leading-relaxed">
+                Optimized digital workflows cut filing turnaround to deliver search reports in 3 seconds and guaranteed Form TM-A e-filing within 24 hours.
+              </p>
+            </div>
+
+            {/* Card 4 */}
+            <div 
+              className="p-6 rounded-2xl bg-white border border-gray-100 shadow-sm cursor-pointer"
+              onClick={() => setActiveCard(activeCard === 4 ? null : 4)}
+            >
+              <h4 className="text-lg font-bold text-[#0C002B] mb-2">Affordable & Transparent Pricing</h4>
+              <p className="text-xs text-gray-600 leading-relaxed">
+                Zero hidden surcharges. Clear, upfront packages with single-page invoices that detail every official government fee and professional cost.
+              </p>
+            </div>
+
+            {/* Card 5 */}
+            <div 
+              className="p-6 rounded-2xl bg-white border border-blue-100 shadow-sm cursor-pointer"
+              onClick={() => setActiveCard(activeCard === 5 ? null : 5)}
+            >
+              <h4 className="text-lg font-bold text-[#1952C7] mb-2">End-to-End Brand Protection</h4>
+              <p className="text-xs text-gray-600 leading-relaxed mb-4">
+                From initial search to official filing, hearing replies, and post-registration renewals, we manage the complete lifecycle.
+              </p>
+              <div className="space-y-2 text-xs text-[#0C002B]">
+                <div className="flex items-center gap-2"><span className="w-5 h-5 rounded-full bg-blue-50 text-[#1952C7] font-bold flex items-center justify-center text-[10px]">1</span> AI Trademark Search & Analysis</div>
+                <div className="flex items-center gap-2"><span className="w-5 h-5 rounded-full bg-blue-50 text-[#1952C7] font-bold flex items-center justify-center text-[10px]">2</span> Attorney Consultation & Drafting</div>
+                <div className="flex items-center gap-2"><span className="w-5 h-5 rounded-full bg-blue-50 text-[#1952C7] font-bold flex items-center justify-center text-[10px]">3</span> Complete CGPDTM E-Filing</div>
+                <div className="flex items-center gap-2"><span className="w-5 h-5 rounded-full bg-blue-50 text-[#1952C7] font-bold flex items-center justify-center text-[10px]">4</span> 24/7 Journal Watchdog & Renewal</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop Layout */}
+          <div className="hidden lg:flex flex-row gap-6">
+            {/* Left 2x2 Grid */}
+            <div className="flex-1 grid grid-cols-2 gap-6">
+              {/* Card 1 */}
+              <div className="p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-lg hover:border-blue-200 transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                  <h4 className="text-xl font-bold text-[#0C002B] mb-2">AI-Powered Trademark Search</h4>
+                  <p className="text-xs text-gray-600 leading-relaxed">
+                    Instantly scan 10M+ records. Our AI finds identical, sound-alike, and confusingly similar marks before you pay government fees.
                   </p>
-                  
-                  {/* Icon Container */}
-                  <div className="flex justify-center mt-[12px]">
-                    <Image
-                      src="/figmacomp/searchabout.svg"
-                      alt="Search Icon"
-                      width={210}
-                      height={60}
-                      className={`w-full max-w-[210px] h-auto object-contain transition-all duration-500 ${
-                        activeCard === 1 ? 'opacity-100 scale-110 brightness-[0.8]' : 'opacity-60'
-                      }`}
-                      style={{
-                        filter: activeCard === 1 ? 'brightness(0.8)' : 'none'
-                      }}
-                    />
-                  </div>
+                </div>
+                <div className="mt-4 flex justify-center">
+                  <Image src="/figmacomp/searchabout.svg" alt="Search Icon" width={220} height={60} className="w-auto h-12 object-contain opacity-70 group-hover:opacity-100 transition-opacity" />
                 </div>
               </div>
 
-              {/* Card 2 - Expert-Led Guidance */}
-              <div
-                className="relative group cursor-pointer overflow-hidden transition-all duration-300 hover:scale-[1.02]"
-                style={{
-                  borderRadius: '18px',
-                  background: '#F8F9FA',
-                  border: '1px solid rgba(12, 0, 43, 0.05)',
-                  boxShadow: '0 4px 15px rgba(0, 0, 0, 0.05)'
-                }}
-                onClick={() => setActiveCard(activeCard === 2 ? null : 2)}
-              >
-                {/* Icon - top right */}
-                <div className="absolute top-0 right-0">
-                  <Image
-                    src="/figmacomp/expert-guidance.svg"
-                    alt="Expert Guidance Icon"
-                    width={75}
-                    height={105}
-                    className="w-auto h-24 object-contain opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 brightness-0"
-                  />
+              {/* Card 2 */}
+              <div className="p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-lg hover:border-blue-200 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden">
+                <div className="absolute top-2 right-2 opacity-30 group-hover:opacity-100 transition-opacity">
+                  <Image src="/figmacomp/expert-guidance.svg" alt="Expert Icon" width={70} height={70} className="w-14 h-14 object-contain" />
                 </div>
-
-                {/* Content */}
-                <div className="relative z-10 p-[16px] sm:p-[20px] lg:p-[24px]">
-                  <h4 className="text-[15px] font-bold mb-[6px] sm:mb-[8px] lg:mb-[9px] text-[#0C002B]" style={{fontFamily: 'Aileron', fontWeight: 700}}>
-                    Expert-Led Guidance
-                  </h4>
-                  <p className="text-[10.5px] max-w-[180px]" style={{color: 'rgba(12, 0, 43, 0.7)', fontFamily: 'Aileron', lineHeight: '1.6'}}>
-                    Certified IP lawyers review your AI report, advise on registrability, and prepare filing documents. Clear legal answers with no jargon.
+                <div>
+                  <h4 className="text-xl font-bold text-[#0C002B] mb-2">Expert-Led Guidance</h4>
+                  <p className="text-xs text-gray-600 leading-relaxed max-w-[200px]">
+                    Certified IP attorneys review your AI clearance report, advise on Nice classification (Classes 1–45), and prepare defense affidavits.
                   </p>
                 </div>
               </div>
 
-              {/* Card 3 - Fast Processing */}
-              <div
-                className="relative group cursor-pointer overflow-hidden transition-all duration-300 hover:scale-[1.02]"
-                style={{
-                  borderRadius: '18px',
-                  background: '#F8F9FA',
-                  border: '1px solid rgba(12, 0, 43, 0.05)',
-                  boxShadow: '0 4px 15px rgba(0, 0, 0, 0.05)'
-                }}
-                onClick={() => setActiveCard(activeCard === 3 ? null : 3)}
-              >
-                {/* Icon - top right */}
-                <div className="absolute top-0 right-0">
-                  <Image
-                    src="/figmacomp/fast-processing.svg"
-                    alt="Fast Processing Icon"
-                    width={75}
-                    height={135}
-                    className="w-auto h-30 object-contain opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 brightness-0"
-                  />
+              {/* Card 3 */}
+              <div className="p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-lg hover:border-blue-200 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden">
+                <div className="absolute top-2 right-2 opacity-30 group-hover:opacity-100 transition-opacity">
+                  <Image src="/figmacomp/fast-processing.svg" alt="Fast Processing Icon" width={70} height={70} className="w-14 h-14 object-contain" />
                 </div>
-
-                {/* Content */}
-                <div className="relative z-10 p-[16px] sm:p-[20px] lg:p-[24px]">
-                  <h4 className="text-[15px] font-bold mb-[6px] sm:mb-[8px] lg:mb-[9px] text-[#0C002B]" style={{fontFamily: 'Aileron', fontWeight: 700}}>
-                    Fast Processing
-                  </h4>
-                  <p className="text-[10.5px] max-w-[180px]" style={{color: 'rgba(12, 0, 43, 0.7)', fontFamily: 'Aileron', lineHeight: '1.6'}}>
-                    Optimised workflows cut filing time to get search results within minutes and an expert review within 24 to 48 hours.
+                <div>
+                  <h4 className="text-xl font-bold text-[#0C002B] mb-2">Fast 24-Hour Processing</h4>
+                  <p className="text-xs text-gray-600 leading-relaxed max-w-[200px]">
+                    Optimized digital workflows cut filing turnaround to deliver search reports in 3 seconds and guaranteed Form TM-A e-filing within 24 hours.
                   </p>
                 </div>
               </div>
 
-              {/* Card 4 - Affordable & Transparent Pricing */}
-              <div
-                className="relative group cursor-pointer overflow-hidden transition-all duration-300 hover:scale-[1.02]"
-                style={{
-                  borderRadius: '18px',
-                  background: '#F8F9FA',
-                  border: '1px solid rgba(12, 0, 43, 0.05)',
-                  boxShadow: '0 4px 15px rgba(0, 0, 0, 0.05)'
-                }}
-                onClick={() => setActiveCard(activeCard === 4 ? null : 4)}
-              >
-                {/* Icon - bottom right */}
-                <div className="absolute bottom-0 right-0">
-                  <Image
-                    src="/figmacomp/affordable-pricing.svg"
-                    alt="Affordable Pricing Icon"
-                    width={120}
-                    height={90}
-                    className="w-auto h-21 object-contain opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 brightness-0"
-                  />
+              {/* Card 4 */}
+              <div className="p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-lg hover:border-blue-200 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden">
+                <div className="absolute bottom-2 right-2 opacity-30 group-hover:opacity-100 transition-opacity">
+                  <Image src="/figmacomp/affordable-pricing.svg" alt="Pricing Icon" width={100} height={80} className="w-20 h-auto object-contain" />
                 </div>
-
-                {/* Content */}
-                <div className="relative z-10 p-[16px] sm:p-[20px] lg:p-[24px]">
-                  <h4 className="text-[15px] font-bold mb-[6px] sm:mb-[8px] lg:mb-[9px] text-[#0C002B]" style={{fontFamily: 'Aileron', fontWeight: 700}}>
-                    Affordable & Transparent Pricing
-                  </h4>
-                  <p className="text-[10.5px] max-w-[180px]" style={{color: 'rgba(12, 0, 43, 0.7)', fontFamily: 'Aileron', lineHeight: '1.6'}}>
-                    No hidden fees. Choose a plan that fits your needs (search report, filing, or full legal package) with one-page invoices that explain every cost.
+                <div>
+                  <h4 className="text-xl font-bold text-[#0C002B] mb-2">Affordable Flat Pricing</h4>
+                  <p className="text-xs text-gray-600 leading-relaxed max-w-[200px]">
+                    Zero hidden surcharges. Clear, upfront packages with single-page invoices that detail every official government fee and professional cost.
                   </p>
-                </div>
-              </div>
-
-              {/* Card 5 - End-to-End Support */}
-              <div
-                className="relative group cursor-pointer overflow-hidden transition-all duration-300 hover:scale-[1.02]"
-                style={{
-                  borderRadius: '18px',
-                  background: '#F8F9FA',
-                  border: '1px solid rgba(12, 0, 43, 0.05)',
-                  boxShadow: '0 4px 15px rgba(0, 0, 0, 0.05)'
-                }}
-                onClick={() => setActiveCard(activeCard === 5 ? null : 5)}
-              >
-                {/* Content */}
-                <div className="relative z-10 p-[16px] sm:p-[20px] lg:p-[24px]">
-                  <h4 className="text-[15px] font-bold mb-[6px] sm:mb-[8px] lg:mb-[9px] text-[#0C002B]" style={{fontFamily: 'Aileron', fontWeight: 700}}>
-                    End-to-End Support
-                  </h4>
-                  <p className="text-[10.5px] mb-[12px] sm:mb-[15px] lg:mb-[18px]" style={{color: 'rgba(12, 0, 43, 0.7)', fontFamily: 'Aileron', lineHeight: '1.6'}}>
-                    From search to filing to post-registration monitoring, we handle filings, replies, and renewals so your brand stays protected.
-                  </p>
-
-                  {/* Process List */}
-                  <div className={`bg-white/50 backdrop-blur-sm rounded-2xl p-[12px] sm:p-[14px] lg:p-[16px] transition-all duration-500 border border-gray-100 ${
-                    activeCard === 5 ? 'opacity-100 scale-100 shadow-sm' : 'opacity-70 scale-95'
-                  }`}>
-                    <div className="text-[10px] sm:text-[11px] lg:text-[12px] font-semibold mb-[8px] sm:mb-[10px] lg:mb-[12px] text-[#FFB703]" style={{fontFamily: 'Aileron'}}>Complete Process:</div>
-                    <ul className="space-y-[6px] sm:space-y-[7px] lg:space-y-[8px] text-[9px] sm:text-[10px] lg:text-[11px]">
-                      <li className="flex items-start">
-                        <span className="w-[6px] h-[6px] bg-[#FFB703] rounded-full mt-1.5 mr-[12px] flex-shrink-0"></span>
-                        <span style={{color: '#0C002B', fontFamily: 'Aileron', lineHeight: '1.4'}}>AI-powered trademark search & analysis</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="w-[6px] h-[6px] bg-[#FFB703] rounded-full mt-1.5 mr-[12px] flex-shrink-0"></span>
-                        <span style={{color: '#0C002B', fontFamily: 'Aileron', lineHeight: '1.4'}}>Expert legal review & consultation</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="w-[6px] h-[6px] bg-[#FFB703] rounded-full mt-1.5 mr-[12px] flex-shrink-0"></span>
-                        <span style={{color: '#0C002B', fontFamily: 'Aileron', lineHeight: '1.4'}}>Complete filing & documentation</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="w-[6px] h-[6px] bg-[#FFB703] rounded-full mt-1.5 mr-[12px] flex-shrink-0"></span>
-                        <span style={{color: '#0C002B', fontFamily: 'Aileron', lineHeight: '1.4'}}>Post-registration monitoring & renewals</span>
-                      </li>
-                    </ul>
-                  </div>
                 </div>
               </div>
             </div>
-            {/* Desktop Layout - Professional Grid Design */}
-            <div className="hidden lg:flex flex-row gap-[24px]">
-              {/* Left Section - 2x2 Grid for Cards 1-4 */}
-              <div className="flex-1 grid grid-cols-2 gap-[24px]">
-                {/* Card 1 - AI-Powered Trademark Search */}
-                <div
-                  className="relative text-center h-60 flex flex-col group cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-xl"
-                  style={{
-                    borderRadius: '18px',
-                    background: '#F8F9FA',
-                    border: '1px solid rgba(12, 0, 43, 0.05)',
-                    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.05)'
-                  }}
-                >
-                  {/* Content */}
-                  <div className="z-10 p-[24px] flex-1 flex flex-col">
-                    <h4
-                      className="text-[22px] font-bold mb-[12px]"
-                      style={{
-                        color: '#0C002B',
-                        fontFamily: 'Aileron',
-                        fontWeight: 700,
-                        lineHeight: '1.3'
-                      }}
-                    >
-                      AI-Powered Trademark Search
-                    </h4>
-                    <p
-                      className="text-[13px] px-[12px] mb-[18px]"
-                      style={{
-                        color: 'rgba(12, 0, 43, 0.7)',
-                        fontFamily: 'Aileron',
-                        fontWeight: 400,
-                        lineHeight: '1.6'
-                      }}
-                    >
-                      Instantly scan millions of records. Our AI-powered search report finds identical and confusingly similar marks.
-                    </p>
-                    
-                    {/* Icon Container */}
-                    <div className="flex justify-center mt-auto">
-                      <Image
-                        src="/figmacomp/searchabout.svg"
-                        alt="Search Icon"
-                        width={262}
-                        height={75}
-                        className="w-full max-w-[225px] h-auto object-contain group-hover:scale-110 opacity-70 group-hover:opacity-100 brightness-[0.8]"
-                      />
+
+            {/* Right Card 5 - End to End Support */}
+            <div className="w-80 flex-shrink-0">
+              <div className="h-full p-8 rounded-2xl bg-gradient-to-b from-blue-50/70 via-white to-slate-50 border border-blue-200 shadow-md flex flex-col justify-between">
+                <div>
+                  <div className="w-10 h-10 rounded-xl bg-[#1952C7] text-white flex items-center justify-center font-bold mb-4 shadow-sm">
+                    <FontAwesomeIcon icon={faShieldAlt} />
+                  </div>
+                  <h4 className="text-2xl font-bold text-[#0C002B] mb-2">End-to-End Brand Protection</h4>
+                  <p className="text-xs text-gray-600 leading-relaxed mb-6">
+                    From search to e-filing and 24/7 Trademark Journal Watchdogs, we handle filings, replies, and renewals so your brand stays protected forever.
+                  </p>
+
+                  <div className="space-y-3.5 text-xs text-[#0C002B]">
+                    <div className="flex items-center gap-3">
+                      <div className="w-6 h-6 rounded-full bg-[#1952C7] text-white font-bold flex items-center justify-center text-[10px] flex-shrink-0">1</div>
+                      <span className="font-semibold">AI Trademark Search & Risk Analysis</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-6 h-6 rounded-full bg-[#1952C7] text-white font-bold flex items-center justify-center text-[10px] flex-shrink-0">2</div>
+                      <span className="font-semibold">Certified IP Attorney Consultation</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-6 h-6 rounded-full bg-[#1952C7] text-white font-bold flex items-center justify-center text-[10px] flex-shrink-0">3</div>
+                      <span className="font-semibold">Form TM-A Filing in 24 Hours</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-6 h-6 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center text-[10px] flex-shrink-0">4</div>
+                      <span className="font-semibold text-emerald-700">24/7 Journal Watchdog & Renewal</span>
                     </div>
                   </div>
                 </div>
 
-                {/* Card 2 - Expert-Led Guidance */}
-                <div
-                  className="relative h-60 group cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-xl overflow-hidden"
-                  style={{
-                    borderRadius: '18px',
-                    background: '#F8F9FA',
-                    border: '1px solid rgba(12, 0, 43, 0.05)',
-                    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.05)'
-                  }}
-                >
-                  {/* Icon - top right */}
-                  <div className="absolute top-0 right-0 z-10">
-                    <Image
-                      src="/figmacomp/expert-guidance.svg"
-                      alt="Expert Guidance Icon"
-                      width={90}
-                      height={135}
-                      className="w-auto h-33 object-contain opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 brightness-0"
-                    />
-                  </div>
-
-                  {/* Content */}
-                  <div className="relative z-10 p-[24px]">
-                    <h4
-                      className="text-[22px] font-bold mb-[9px]"
-                      style={{
-                        color: '#0C002B',
-                        fontFamily: 'Aileron',
-                        fontWeight: 700,
-                        lineHeight: '1.3'
-                      }}
-                    >
-                      Expert-Led Guidance
-                    </h4>
-                    <p
-                      className="text-[13px] max-w-[150px]"
-                      style={{
-                        color: 'rgba(12, 0, 43, 0.7)',
-                        fontFamily: 'Aileron',
-                        fontWeight: 400,
-                        lineHeight: '1.6'
-                      }}
-                    >
-                      Certified IP lawyers review your AI report, advise on registrability, and prepare filing documents. Clear legal answers with no jargon.
-                    </p>
-                  </div>
-                </div>
-
-                {/* Card 3 - Fast Processing */}
-                <div
-                  className="relative h-60 group cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-xl overflow-hidden"
-                  style={{
-                    borderRadius: '18px',
-                    background: '#F8F9FA',
-                    border: '1px solid rgba(12, 0, 43, 0.05)',
-                    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.05)'
-                  }}
-                >
-                  {/* Icon - top right */}
-                  <div className="absolute top-0 right-0 z-10">
-                    <Image
-                      src="/figmacomp/fast-processing.svg"
-                      alt="Fast Processing Icon"
-                      width={90}
-                      height={180}
-                      className="w-auto h-36 object-contain opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 brightness-0"
-                    />
-                  </div>
-
-                  {/* Content */}
-                  <div className="relative z-10 p-[24px]">
-                    <h4
-                      className="text-[22px] font-bold mb-[9px]"
-                      style={{
-                        color: '#0C002B',
-                        fontFamily: 'Aileron',
-                        fontWeight: 700,
-                        lineHeight: '1.3'
-                      }}
-                    >
-                      Fast Processing
-                    </h4>
-                    <p
-                      className="text-[13px] max-w-[150px]"
-                      style={{
-                        color: 'rgba(12, 0, 43, 0.7)',
-                        fontFamily: 'Aileron',
-                        fontWeight: 400,
-                        lineHeight: '1.6'
-                      }}
-                    >
-                      Optimised workflows cut filing time to get search results within minutes and an expert review within 24 to 48 hours.
-                    </p>
-                  </div>
-                </div>
-
-                {/* Card 4 - Affordable & Transparent Pricing */}
-                <div
-                  className="relative h-60 group cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-xl overflow-hidden"
-                  style={{
-                    borderRadius: '18px',
-                    background: '#F8F9FA',
-                    border: '1px solid rgba(12, 0, 43, 0.05)',
-                    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.05)'
-                  }}
-                >
-                  {/* Icon - bottom right */}
-                  <div className="absolute bottom-0 right-0 z-10">
-                    <Image
-                      src="/figmacomp/affordable-pricing.svg"
-                      alt="Affordable Pricing Icon"
-                      width={150}
-                      height={112}
-                      className="w-auto h-27 object-contain opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 brightness-0"
-                    />
-                  </div>
-
-                  {/* Content */}
-                  <div className="relative z-10 p-[24px]">
-                    <h4
-                      className="text-[22px] font-bold mb-[9px]"
-                      style={{
-                        color: '#0C002B',
-                        fontFamily: 'Aileron',
-                        fontWeight: 700,
-                        lineHeight: '1.3'
-                      }}
-                    >
-                      Affordable & Transparent Pricing
-                    </h4>
-                    <p
-                        className="text-[13px] max-w-[150px]"
-                      style={{
-                        color: 'rgba(12, 0, 43, 0.7)',
-                        fontFamily: 'Aileron',
-                        fontWeight: 400,
-                        lineHeight: '1.6'
-                      }}
-                    >
-                      No hidden fees. Choose a plan that fits your needs (search report, filing, or full legal package) with one-page invoices that explain every cost.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Right Section - Card 5 (End-to-End Support) */}
-              <div className="w-72 flex-shrink-0">
-                <div
-                  className="relative h-[31.125rem] group cursor-pointer overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl"
-                  style={{
-                    borderRadius: '18px',
-                    background: '#F8F9FA',
-                    border: '1px solid rgba(12, 0, 43, 0.1)',
-                    boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)'
-                  }}
-                >
-                  {/* Main content */}
-                  <div className="relative z-20 p-[24px] h-full flex flex-col">
-                    <h4
-                      className="text-[22px] font-bold mb-[12px] text-center"
-                      style={{
-                        color: '#0C002B',
-                        fontFamily: 'Aileron',
-                        fontWeight: 700,
-                        lineHeight: '1.3'
-                      }}
-                    >
-                      End-to-End Support
-                    </h4>
-                    <p
-                      className="text-[13px] mb-[24px] text-center"
-                      style={{
-                        color: 'rgba(12, 0, 43, 0.7)',
-                        fontFamily: 'Aileron',
-                        fontWeight: 400,
-                        lineHeight: '1.6'
-                      }}
-                    >
-                      From search to filing to post-registration monitoring, we handle filings, replies, and renewals so your brand stays protected.
-                    </p>
-
-                    {/* Process Steps - Always Visible */}
-                    <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-[18px] flex-1 flex flex-col justify-center border border-gray-100 shadow-sm">
-                      <div className="text-[12px] font-bold mb-[18px] text-[#FFB703] text-center" style={{fontFamily: 'Aileron'}}>Complete Process</div>
-                      <ul className="space-y-[12px]">
-                        <li className="flex items-start group/item">
-                          <div className="w-6 h-6 bg-gradient-to-br from-[#FFB703] to-orange-400 rounded-full flex items-center justify-center mt-0.5 mr-[9px] flex-shrink-0 group-hover/item:scale-110 transition-transform shadow-sm">
-                            <span className="text-white font-bold text-[10.5px]" style={{fontFamily: 'Aileron'}}>1</span>
-                          </div>
-                          <span className="text-[10.5px] leading-relaxed" style={{color: '#0C002B', fontFamily: 'Aileron'}}>AI-powered trademark search & analysis</span>
-                        </li>
-                        <li className="flex items-start group/item">
-                          <div className="w-6 h-6 bg-gradient-to-br from-[#FFB703] to-orange-400 rounded-full flex items-center justify-center mt-0.5 mr-[9px] flex-shrink-0 group-hover/item:scale-110 transition-transform shadow-sm">
-                            <span className="text-white font-bold text-[10.5px]" style={{fontFamily: 'Aileron'}}>2</span>
-                          </div>
-                          <span className="text-[10.5px] leading-relaxed" style={{color: '#0C002B', fontFamily: 'Aileron'}}>Expert legal review & consultation</span>
-                        </li>
-                        <li className="flex items-start group/item">
-                          <div className="w-6 h-6 bg-gradient-to-br from-[#FFB703] to-orange-400 rounded-full flex items-center justify-center mt-0.5 mr-[9px] flex-shrink-0 group-hover/item:scale-110 transition-transform shadow-sm">
-                            <span className="text-white font-bold text-[10.5px]" style={{fontFamily: 'Aileron'}}>3</span>
-                          </div>
-                          <span className="text-[10.5px] leading-relaxed" style={{color: '#0C002B', fontFamily: 'Aileron'}}>Complete filing & documentation</span>
-                        </li>
-                        <li className="flex items-start group/item">
-                          <div className="w-6 h-6 bg-gradient-to-br from-[#FFB703] to-orange-400 rounded-full flex items-center justify-center mt-0.5 mr-[9px] flex-shrink-0 group-hover/item:scale-110 transition-transform shadow-sm">
-                            <span className="text-white font-bold text-[10.5px]" style={{fontFamily: 'Aileron'}}>4</span>
-                          </div>
-                          <span className="text-[10.5px] leading-relaxed" style={{color: '#0C002B', fontFamily: 'Aileron'}}>Post-registration monitoring & renewals</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
+                <div className="pt-6 border-t border-gray-200 text-center">
+                  <span className="text-[11px] font-bold text-[#1952C7] uppercase tracking-wider">
+                    Full Legal Lifespan Covered
+                  </span>
                 </div>
               </div>
             </div>
           </div>
-          {/* Trust & Proof line */}
-          <div className="w-full text-center mt-[24px] sm:mt-[32px] lg:mt-[40px] px-[16px] sm:px-[20px] lg:px-[24px]">
-            <div 
-              className="inline-flex items-center gap-[8px] sm:gap-[10px] lg:gap-[12px] px-[20px] sm:px-[24px] lg:px-[28px] py-[12px] sm:py-[14px] lg:py-[16px] rounded-full max-w-4xl"
-              style={{
-                background: '#F8F9FA',
-                border: '1px solid rgba(12, 0, 43, 0.05)',
-                boxShadow: '0 3px 12px rgba(0, 0, 0, 0.05)'
-              }}
-            >
-              <span className="text-[10px] sm:text-[11px] lg:text-[12px] font-medium leading-relaxed" style={{color: '#0C002B', fontFamily: 'Aileron', lineHeight: '1.5', opacity: 0.8}}>
-                Trusted by 5,000+ entrepreneurs and startups with official filings, attorney review, and secure document handling.
-              </span>
+
+          {/* Trust Badge Line */}
+          <div className="w-full text-center mt-10">
+            <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white border border-gray-200/80 shadow-xs max-w-4xl text-xs font-semibold text-gray-700">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
+              <span>Trusted by 5,000+ entrepreneurs, startups, and enterprises with official filings, attorney review, and secure document handling.</span>
             </div>
           </div>
         </div>
@@ -1546,13 +1069,13 @@ export default function AboutClient() {
                 <h3 className="text-[#0C002B] text-left font-sans text-[23.4px] md:text-[36px] font-bold leading-[28.8px] md:leading-[39.6px] w-full">
                   Have Question?
                   <br />
-                  <span style={{ color: '#FFB703' }}>
+                  <span className="text-[#1952C7]">
                     We've Got Answers.
                   </span>
                 </h3>
 
                 <p className="text-gray-500 font-sans text-[10.8px] md:text-[12.6px] lg:text-[13.5px] xl:text-[14.4px] font-medium">
-                  Still have questions? <span style={{ color: '#FFB703' }} className="font-bold">Contact us</span> anytime.
+                  Still have questions? <span className="text-[#1952C7] font-bold">Contact us</span> anytime.
                 </p>
               </div>
 
@@ -1568,8 +1091,7 @@ export default function AboutClient() {
                   />
                   <button
                     type="submit"
-                    className="absolute right-[14.4px] top-1/2 transform -translate-y-1/2 transition-colors"
-                    style={{ color: '#FFB703' }}
+                    className="absolute right-[14.4px] top-1/2 transform -translate-y-1/2 transition-colors text-[#1952C7] hover:text-[#1345C3]"
                   >
                     <FontAwesomeIcon icon={faPaperPlane} className="w-[18px] h-[18px]" />
                   </button>
@@ -1583,7 +1105,7 @@ export default function AboutClient() {
                   className="p-[18px] rounded-[10.8px] max-w-lg animate-fade-in-up bg-white border border-gray-100 shadow-lg"
                 >
                   <div className="flex justify-between items-start mb-[10.8px]">
-                    <h5 className="text-[#FFB703] font-sans text-[14.4px] md:text-[16.2px] font-bold leading-snug">
+                    <h5 className="text-[#1952C7] font-sans text-[14.4px] md:text-[16.2px] font-bold leading-snug">
                       {searchResult.question}
                     </h5>
                     <button
@@ -1633,19 +1155,19 @@ export default function AboutClient() {
                     style={{
                       borderRadius: '10.8px',
                       background: openFaq === index ? '#FFFFFF' : 'rgba(255, 255, 255, 0.5)',
-                      borderColor: openFaq === index ? '#FFB70340' : 'transparent',
+                      borderColor: openFaq === index ? '#1952C740' : 'transparent',
                       ...(openFaq === index ? { boxShadow: `0 4px 15px rgba(0, 0, 0, 0.05)` } : {})
                     }}
                     onClick={() => toggleFaq(index)}
                   >
                     <div className="flex justify-between items-center mb-[10.8px]">
-                      <h4 className={`font-sans text-[13.5px] md:text-[16.2px] lg:text-[18px] font-bold pr-[14.4px] leading-snug transition-colors duration-300 ${openFaq === index ? 'text-[#FFB703]' : 'text-[#0C002B]'}`}>
+                      <h4 className={`font-sans text-[13.5px] md:text-[16.2px] lg:text-[18px] font-bold pr-[14.4px] leading-snug transition-colors duration-300 ${openFaq === index ? 'text-[#1952C7]' : 'text-[#0C002B]'}`}>
                         {faq.question}
                       </h4>
                       <FontAwesomeIcon
                         icon={faChevronDown}
                         className={`w-[14px] h-[14px] transition-all duration-500 ease-in-out flex-shrink-0 ${
-                          openFaq === index ? 'rotate-180 text-[#FFB703]' : 'rotate-0 text-[#0C002B] opacity-50'
+                          openFaq === index ? 'rotate-180 text-[#1952C7]' : 'rotate-0 text-[#0C002B] opacity-50'
                         }`}
                       />
                     </div>

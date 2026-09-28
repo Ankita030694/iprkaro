@@ -1,6 +1,5 @@
 'use client';
 
-
 import React from 'react';
 
 const AboutBento = () => {
@@ -14,25 +13,25 @@ const AboutBento = () => {
           border-radius: 10px;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb {
-          background: rgba(255, 183, 3, 0.5);
+          background: rgba(25, 82, 199, 0.4);
           border-radius: 10px;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-          background: rgba(255, 183, 3, 0.8);
+          background: rgba(25, 82, 199, 0.7);
         }
       `}</style>
-      <div className="w-full h-[650px] px-4 relative" style={{scale: '0.90',marginTop: '-50px' }}>
+      <div className="w-full h-[650px] px-4 relative" style={{ scale: '0.90', marginTop: '-50px' }}>
         <div className="max-w-7xl mx-auto h-full">
           {/* Desktop Version - 4 Column Grid */}
           <div className="hidden md:grid grid-cols-4 gap-4 lg:gap-6 h-screen py-6">
             
             {/* Column 1 - Dashboard Preview Snippet */}
             <div className="col-span-1">
-              <div className="bg-white rounded-xl p-3 border border-gray-100 h-full max-h-[600px] flex flex-col overflow-y-auto custom-scrollbar hover:border-[#FFB703]/50 hover:shadow-lg hover:shadow-[#FFB703]/10 transition-all duration-300 cursor-pointer">
+              <div className="bg-white rounded-xl p-3 border border-gray-100 h-full max-h-[600px] flex flex-col overflow-y-auto custom-scrollbar hover:border-blue-300 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300 cursor-pointer">
                 {/* Header */}
                 <div className="mb-2">
                   <div className="flex items-center gap-2">
-                    <div className="w-5 h-5 bg-gradient-to-br from-yellow-600 to-yellow-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <div className="w-5 h-5 bg-gradient-to-br from-[#1345C3] to-[#1952C7] rounded-full flex items-center justify-center flex-shrink-0">
                       <i className="fas fa-chart-line text-white text-[10px]"></i>
                     </div>
                     <div className="text-[#0C002B] font-semibold text-xs">Your Dashboard</div>
@@ -66,35 +65,35 @@ const AboutBento = () => {
                   <div className="flex justify-center">
                     <div className="relative w-14 h-14">
                       <svg className="transform -rotate-90 w-14 h-14">
-                          <circle
+                        <circle
                           cx="28"
                           cy="28"
                           r="20"
-                            stroke="currentColor"
+                          stroke="currentColor"
                           strokeWidth="5"
-                            fill="transparent"
-                            className="text-gray-100"
-                          />
-                          <circle
+                          fill="transparent"
+                          className="text-gray-100"
+                        />
+                        <circle
                           cx="28"
                           cy="28"
                           r="20"
-                            stroke="currentColor"
+                          stroke="currentColor"
                           strokeWidth="5"
-                            fill="transparent"
+                          fill="transparent"
                           strokeDasharray={`${2 * Math.PI * 20 * 0.75} ${2 * Math.PI * 20}`}
-                          className="text-blue-500"
-                          />
-                        </svg>
-                        <div className="absolute inset-0 flex items-center justify-center">
-                        <span className="text-sm font-bold text-blue-500">75%</span>
+                          className="text-[#1952C7]"
+                        />
+                      </svg>
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <span className="text-sm font-bold text-[#1952C7]">75%</span>
                       </div>
                     </div>
                   </div>
                 </div>
 
                 {/* Registration Info */}
-                <div className="bg-yellow-500/5 rounded-lg p-1.5 border border-yellow-500/20 mb-2">
+                <div className="bg-blue-50/80 rounded-lg p-1.5 border border-blue-100 mb-2">
                   <p className="text-gray-600 text-[9px]">Est. Completion</p>
                   <p className="text-[#0C002B] font-bold text-[10px]">25 Dec 2025</p>
                 </div>
@@ -110,7 +109,7 @@ const AboutBento = () => {
                       </div>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-blue-500 rounded-full flex-shrink-0 animate-pulse"></div>
+                      <div className="w-2 h-2 bg-[#1952C7] rounded-full flex-shrink-0 animate-pulse"></div>
                       <div className="flex-1 min-w-0">
                         <p className="text-[#0C002B] text-[9px] truncate">Under Examination</p>
                       </div>
@@ -127,12 +126,12 @@ const AboutBento = () => {
                 {/* Quick Stats */}
                 <div className="grid grid-cols-3 gap-1 mb-2">
                   <div className="bg-slate-50 rounded p-1 text-center border border-gray-100">
-                    <i className="fas fa-file text-yellow-500 text-[8px]"></i>
+                    <i className="fas fa-file text-[#1952C7] text-[8px]"></i>
                     <p className="text-[#0C002B] text-[9px] font-bold">12</p>
                     <p className="text-gray-500 text-[7px]">Docs</p>
                   </div>
                   <div className="bg-slate-50 rounded p-1 text-center border border-gray-100">
-                    <i className="fas fa-clock text-cyan-500 text-[8px]"></i>
+                    <i className="fas fa-clock text-cyan-600 text-[8px]"></i>
                     <p className="text-[#0C002B] text-[9px] font-bold">45d</p>
                     <p className="text-gray-500 text-[7px]">Days</p>
                   </div>
@@ -161,11 +160,11 @@ const AboutBento = () => {
                       <i className="fas fa-certificate text-green-500"></i>
                       Trademark Status
                     </span>
-                    <span className="text-yellow-600 font-medium">Active</span>
+                    <span className="text-emerald-600 font-medium">Active</span>
                   </div>
                   <div className="flex items-center justify-between text-[8px] mt-1">
                     <span className="text-gray-500 flex items-center gap-1">
-                      <i className="fas fa-shield-alt text-blue-500"></i>
+                      <i className="fas fa-shield-alt text-[#1952C7]"></i>
                       Copyright Protection
                     </span>
                     <span className="text-green-600 font-medium">Verified</span>
@@ -174,7 +173,7 @@ const AboutBento = () => {
 
                 {/* Call to Action */}
                 <div className="mt-auto">
-                  <button className="w-full bg-[#FFB703] hover:bg-[#FFB703]/90 text-[#0C002B] font-semibold py-1.5 px-2 rounded-lg transition-colors duration-200 text-[10px]">
+                  <button className="w-full bg-[#1952C7] hover:bg-[#1345C3] text-white font-semibold py-1.5 px-2 rounded-lg transition-colors duration-200 text-[10px] shadow-sm">
                     <i className="fas fa-rocket mr-1"></i>
                     View Dashboard
                   </button>
@@ -185,18 +184,18 @@ const AboutBento = () => {
             {/* Column 2 - 2 rows: 1st row 200px, 2nd row 400px */}
             <div className="col-span-1 space-y-4">
               {/* Row 1 - 200px - Our Services */}
-              <div className="bg-white rounded-xl p-3 border border-gray-100 h-[200px] flex flex-col justify-center overflow-hidden hover:border-[#FFB703]/50 hover:shadow-lg hover:shadow-[#FFB703]/10 transition-all duration-300 cursor-pointer">
+              <div className="bg-white rounded-xl p-3 border border-gray-100 h-[200px] flex flex-col justify-center overflow-hidden hover:border-blue-300 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300 cursor-pointer">
                 <div className="text-[#0C002B] font-medium text-xs mb-2">Our Services</div>
                 <div className="space-y-1.5">
                   <div className="flex items-center gap-2 p-1.5 bg-slate-50 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer border border-gray-50">
-                    <i className="fas fa-trademark text-yellow-500 text-[10px] flex-shrink-0"></i>
+                    <i className="fas fa-trademark text-[#1952C7] text-[10px] flex-shrink-0"></i>
                     <div className="min-w-0">
                       <p className="text-[#0C002B] text-[10px] font-medium truncate">Trademark Registration</p>
                       <p className="text-gray-500 text-[9px] truncate">Fast Brand Protection</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-2 p-1.5 bg-slate-50 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer border border-gray-50">
-                    <i className="fas fa-lightbulb text-cyan-500 text-[10px] flex-shrink-0"></i>
+                    <i className="fas fa-lightbulb text-cyan-600 text-[10px] flex-shrink-0"></i>
                     <div className="min-w-0">
                       <p className="text-[#0C002B] text-[10px] font-medium truncate">Patent Services</p>
                       <p className="text-gray-500 text-[9px] truncate">Protect Innovation</p>
@@ -213,9 +212,9 @@ const AboutBento = () => {
               </div>
 
               {/* Row 2 - 400px - SEO Optimized Blogs Section */}
-              <div className="bg-slate-50 rounded-xl p-3 border border-gray-100 h-[400px] flex flex-col overflow-hidden hover:border-[#FFB703]/50 hover:shadow-lg hover:shadow-[#FFB703]/10 transition-all duration-300 cursor-pointer">
+              <div className="bg-slate-50 rounded-xl p-3 border border-gray-100 h-[400px] flex flex-col overflow-hidden hover:border-blue-300 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300 cursor-pointer">
                 <div className="mb-2 flex-shrink-0">
-                  <span className="text-[#FFB703] text-[10px] font-semibold">IPR Resources</span>
+                  <span className="text-[#1952C7] text-[10px] font-semibold">IPR Resources</span>
                   <div className="text-[#0C002B] font-semibold text-xs mt-0.5">Knowledge Hub</div>
                 </div>
 
@@ -224,8 +223,8 @@ const AboutBento = () => {
                   <div className="text-[#0C002B] font-medium text-[10px] mb-1 line-clamp-2">Trademark Registration Guide</div>
                   <p className="text-gray-600 text-[9px] mb-1 line-clamp-2">Register trademarks in India with AI-powered search and expert guidance...</p>
                   <div className="flex gap-1">
-                    <span className="text-yellow-600 text-[8px] bg-yellow-500/10 px-1.5 py-0.5 rounded">Trademark</span>
-                    <span className="text-cyan-600 text-[8px] bg-cyan-500/10 px-1.5 py-0.5 rounded">AI Tools</span>
+                    <span className="text-[#1952C7] text-[8px] bg-blue-50 border border-blue-100 px-1.5 py-0.5 rounded font-medium">Trademark</span>
+                    <span className="text-cyan-700 text-[8px] bg-cyan-50 border border-cyan-100 px-1.5 py-0.5 rounded font-medium">AI Tools</span>
                   </div>
                 </div>
 
@@ -241,18 +240,18 @@ const AboutBento = () => {
                   <div className="text-[#0C002B] font-medium text-[10px] mb-1.5">Popular Topics</div>
                   <div className="space-y-1">
                     <div className="bg-white rounded p-1.5 text-[#0C002B] text-[9px] cursor-pointer hover:bg-gray-100 transition-colors border border-gray-100">
-                      <i className="fas fa-search mr-1 text-yellow-500 text-[8px]"></i>
+                      <i className="fas fa-search mr-1 text-[#1952C7] text-[8px]"></i>
                       AI Trademark Search
                     </div>
                     <div className="bg-white rounded p-1.5 text-[#0C002B] text-[9px] cursor-pointer hover:bg-gray-100 transition-colors border border-gray-100">
-                      <i className="fas fa-shield-alt mr-1 text-cyan-500 text-[8px]"></i>
+                      <i className="fas fa-shield-alt mr-1 text-cyan-600 text-[8px]"></i>
                       IP Protection India
                     </div>
                     <div className="bg-white rounded p-1.5 text-[#0C002B] text-[9px] cursor-pointer hover:bg-gray-100 transition-colors border border-gray-100">
                       <i className="fas fa-certificate mr-1 text-green-500 text-[8px]"></i>
                       Brand Registration
                     </div>
-                    <div className="bg-yellow-500 rounded p-1.5 text-white text-[9px] font-medium cursor-pointer hover:bg-yellow-600 transition-colors">
+                    <div className="bg-[#1952C7] rounded p-1.5 text-white text-[9px] font-medium cursor-pointer hover:bg-[#1345C3] transition-colors">
                       <i className="fas fa-file-contract mr-1 text-[8px]"></i>
                       Filing Process 2025
                     </div>
@@ -263,25 +262,23 @@ const AboutBento = () => {
 
             {/* Column 3 - 1 row, 600px max height */}
             <div className="col-span-1">
-              <div className="bg-white rounded-xl p-3 border border-gray-100 h-full max-h-[600px] flex flex-col overflow-hidden hover:border-cyan-500/50 hover:shadow-lg hover:shadow-cyan-500/20 transition-all duration-300 cursor-pointer">
-                {/* Yellow AI Icon */}
+              <div className="bg-white rounded-xl p-3 border border-gray-100 h-full max-h-[600px] flex flex-col overflow-hidden hover:border-blue-300 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300 cursor-pointer">
+                {/* AI Brand Icon */}
                 <div className="mb-2 relative flex justify-center">
                   <div className="relative">
-                    {/* Main yellow icon shape */}
-                    <svg width="40" height="40" viewBox="0 0 100 100" className="text-yellow-500">
+                    <svg width="40" height="40" viewBox="0 0 100 100" className="text-[#1952C7]">
                       <path
                         d="M20 50 L35 20 L50 35 L40 50 L50 65 L35 80 Z"
                         fill="currentColor"
                       />
                     </svg>
-                    {/* Small decorative elements */}
-                    <div className="absolute -right-2 top-2 w-2 h-2 bg-yellow-500 rounded-full"></div>
-                    <div className="absolute -right-1 top-0 w-1.5 h-1.5 bg-yellow-500 rounded-sm transform rotate-45"></div>
+                    <div className="absolute -right-2 top-2 w-2 h-2 bg-[#1952C7] rounded-full"></div>
+                    <div className="absolute -right-1 top-0 w-1.5 h-1.5 bg-[#069A81] rounded-sm transform rotate-45"></div>
                   </div>
                 </div>
 
                 {/* AI Text */}
-                <div className="text-3xl font-bold text-cyan-500 mb-2 text-center">AI</div>
+                <div className="text-3xl font-bold text-[#1952C7] mb-2 text-center">AI</div>
 
                 {/* Main Description */}
                 <p className="text-gray-600 text-[9px] leading-relaxed text-center mb-3 px-2">
@@ -290,9 +287,9 @@ const AboutBento = () => {
 
                 {/* AI Features */}
                 <div className="space-y-1.5 mb-3">
-                  <div className="bg-cyan-500/5 border border-cyan-500/20 rounded-lg p-2">
+                  <div className="bg-blue-50/70 border border-blue-100 rounded-lg p-2">
                     <div className="flex items-center gap-2 mb-1">
-                      <i className="fas fa-brain text-cyan-600 text-[10px]"></i>
+                      <i className="fas fa-brain text-[#1952C7] text-[10px]"></i>
                       <div className="text-[#0C002B] font-medium text-[10px]">Smart Analysis</div>
                     </div>
                     <p className="text-gray-500 text-[8px] leading-relaxed">
@@ -300,9 +297,9 @@ const AboutBento = () => {
                     </p>
                   </div>
 
-                  <div className="bg-yellow-500/5 border border-yellow-500/20 rounded-lg p-2">
+                  <div className="bg-indigo-50/60 border border-indigo-100 rounded-lg p-2">
                     <div className="flex items-center gap-2 mb-1">
-                      <i className="fas fa-search-plus text-yellow-600 text-[10px]"></i>
+                      <i className="fas fa-search-plus text-indigo-600 text-[10px]"></i>
                       <div className="text-[#0C002B] font-medium text-[10px]">Deep Search</div>
                     </div>
                     <p className="text-gray-500 text-[8px] leading-relaxed">
@@ -310,9 +307,9 @@ const AboutBento = () => {
                     </p>
                   </div>
 
-                  <div className="bg-green-500/5 border border-green-500/20 rounded-lg p-2">
+                  <div className="bg-emerald-50/60 border border-emerald-100 rounded-lg p-2">
                     <div className="flex items-center gap-2 mb-1">
-                      <i className="fas fa-chart-bar text-green-600 text-[10px]"></i>
+                      <i className="fas fa-chart-bar text-emerald-600 text-[10px]"></i>
                       <div className="text-[#0C002B] font-medium text-[10px]">Risk Scoring</div>
                     </div>
                     <p className="text-gray-500 text-[8px] leading-relaxed">
@@ -330,7 +327,7 @@ const AboutBento = () => {
                       <p className="text-gray-500 text-[7px]">Records Scanned</p>
                     </div>
                     <div className="text-center">
-                      <p className="text-yellow-600 font-bold text-sm">98%</p>
+                      <p className="text-[#1952C7] font-bold text-sm">98%</p>
                       <p className="text-gray-500 text-[7px]">Accuracy Rate</p>
                     </div>
                     <div className="text-center">
@@ -350,10 +347,10 @@ const AboutBento = () => {
                   <div className="space-y-1">
                      <div className="flex items-center justify-between text-[8px]">
                       <span className="text-gray-600 flex items-center gap-1">
-                        <i className="fas fa-robot text-cyan-500 text-[7px]"></i>
+                        <i className="fas fa-robot text-[#1952C7] text-[7px]"></i>
                         Machine Learning
                       </span>
-                      <span className="text-cyan-600 font-medium">Active</span>
+                      <span className="text-[#1952C7] font-medium">Active</span>
                     </div>
                     <div className="flex items-center justify-between text-[8px]">
                       <span className="text-gray-600 flex items-center gap-1">
@@ -386,15 +383,15 @@ const AboutBento = () => {
             {/* Column 4 - 2 rows: 1st row 400px, 2nd row 200px */}
             <div className="col-span-1 space-y-4">
               {/* Row 1 - 400px - Why Choose Us */}
-              <div className="bg-white rounded-xl p-3 border border-gray-100 h-[400px] flex flex-col overflow-y-auto custom-scrollbar hover:border-[#FFB703]/50 hover:shadow-lg hover:shadow-[#FFB703]/10 transition-all duration-300 cursor-pointer">
+              <div className="bg-white rounded-xl p-3 border border-gray-100 h-[400px] flex flex-col overflow-y-auto custom-scrollbar hover:border-blue-300 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300 cursor-pointer">
                 <div className="mb-2 flex-shrink-0">
                   <div className="text-[#0C002B] font-medium text-xs mb-2 flex items-center gap-1.5">
-                    <i className="fas fa-star text-yellow-500 text-[10px]"></i>
+                    <i className="fas fa-star text-[#1952C7] text-[10px]"></i>
                     Why Choose IPR Karo
                   </div>
                   <div className="space-y-1.5">
                     <div className="flex items-start gap-1.5 bg-slate-50 p-1.5 rounded-lg border border-gray-50">
-                      <i className="fas fa-bolt text-yellow-500 text-[9px] mt-0.5 flex-shrink-0"></i>
+                      <i className="fas fa-bolt text-[#1952C7] text-[9px] mt-0.5 flex-shrink-0"></i>
                       <div className="min-w-0">
                         <p className="text-[#0C002B] text-[10px] font-medium">Fast Processing</p>
                         <p className="text-gray-500 text-[8px] line-clamp-2">Quick trademark registration with AI tools</p>
@@ -402,7 +399,7 @@ const AboutBento = () => {
                     </div>
                     
                     <div className="flex items-start gap-1.5 bg-slate-50 p-1.5 rounded-lg border border-gray-50">
-                      <i className="fas fa-users text-cyan-500 text-[9px] mt-0.5 flex-shrink-0"></i>
+                      <i className="fas fa-users text-cyan-600 text-[9px] mt-0.5 flex-shrink-0"></i>
                       <div className="min-w-0">
                         <p className="text-[#0C002B] text-[10px] font-medium">Expert Guidance</p>
                         <p className="text-gray-500 text-[8px] line-clamp-2">Legal support from trademark attorneys</p>
@@ -431,8 +428,8 @@ const AboutBento = () => {
                       <p className="text-blue-600 font-bold text-sm">1.25L+</p>
                       <p className="text-gray-500 text-[8px]">Happy Clients</p>
                     </div>
-                    <div className="bg-yellow-500/5 border border-yellow-500/20 rounded p-1.5 text-center">
-                      <p className="text-yellow-600 font-bold text-sm">18 Days</p>
+                    <div className="bg-blue-50/80 border border-blue-100 rounded p-1.5 text-center">
+                      <p className="text-[#1952C7] font-bold text-sm">18 Days</p>
                       <p className="text-gray-500 text-[8px]">Avg. Time</p>
                     </div>
                     <div className="bg-purple-500/5 border border-purple-500/20 rounded p-1.5 text-center">
@@ -444,10 +441,10 @@ const AboutBento = () => {
               </div>
 
               {/* Row 2 - 200px - Testimonial */}
-              <div className="bg-white rounded-xl p-3 border border-gray-100 h-[200px] flex flex-col justify-between overflow-hidden hover:border-[#FFB703]/50 hover:shadow-lg hover:shadow-[#FFB703]/10 transition-all duration-300 cursor-pointer">
+              <div className="bg-white rounded-xl p-3 border border-gray-100 h-[200px] flex flex-col justify-between overflow-hidden hover:border-blue-300 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300 cursor-pointer">
                 <div>
                   <div className="flex items-center gap-1 mb-2">
-                    <div className="flex text-yellow-500">
+                    <div className="flex text-amber-400">
                       {[...Array(5)].map((_, i) => (
                         <i key={i} className="fas fa-star text-[8px]"></i>
                       ))}
@@ -460,12 +457,12 @@ const AboutBento = () => {
                   
                   <div className="flex items-center justify-between mb-2">
                     <div>
-                      <p className="text-[#FFB703] font-bold text-[10px]">Verified User</p>
+                      <p className="text-[#1952C7] font-bold text-[10px]">Verified User</p>
                       <p className="text-[#0C002B] text-[8px] opacity-70">Business Owner</p>
                     </div>
                     
                     <div className="relative w-5 h-5 flex-shrink-0">
-                      <svg width="20" height="20" viewBox="0 0 48 48" className="text-yellow-500">
+                      <svg width="20" height="20" viewBox="0 0 48 48" className="text-[#1952C7]">
                         <path
                           d="M12 24 L18 12 L24 18 L20 24 L24 30 L18 36 Z"
                           fill="currentColor"
@@ -487,7 +484,7 @@ const AboutBento = () => {
                     <p className="text-gray-500 text-[7px]">ISO</p>
                   </div>
                   <div className="text-center">
-                    <i className="fas fa-lock text-yellow-500 text-[10px] mb-0.5"></i>
+                    <i className="fas fa-lock text-[#1952C7] text-[10px] mb-0.5"></i>
                     <p className="text-gray-500 text-[7px]">Secure</p>
                   </div>
                 </div>
@@ -500,10 +497,10 @@ const AboutBento = () => {
             <div className="grid grid-cols-2 grid-rows-3 gap-2 h-full">
             
               {/* Cell 1 - Dashboard Stats (Row 1, Col 1) */}
-              <div className="bg-white rounded-lg p-3 border border-gray-100 flex flex-col justify-center hover:border-[#FFB703]/50 hover:shadow-lg hover:shadow-[#FFB703]/10 transition-all duration-300 cursor-pointer">
+              <div className="bg-white rounded-lg p-3 border border-gray-100 flex flex-col justify-center hover:border-blue-300 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300 cursor-pointer">
                 <div className="flex items-center gap-2 mb-2">
-                  <div className="w-5 h-5 bg-yellow-500 rounded-full flex items-center justify-center">
-                    <i className="fas fa-chart-line text-black text-[10px]"></i>
+                  <div className="w-5 h-5 bg-[#1952C7] rounded-full flex items-center justify-center">
+                    <i className="fas fa-chart-line text-white text-[10px]"></i>
                   </div>
                   <div className="text-[#0C002B] font-semibold text-xs">Dashboard</div>
                 </div>
@@ -524,14 +521,14 @@ const AboutBento = () => {
               </div>
 
               {/* Cell 2 - AI Section (Row 1, Col 2 - Spans 2 rows) */}
-              <div className="row-span-2 bg-white rounded-lg p-3 border border-gray-100 flex flex-col justify-center items-center hover:border-cyan-500/50 hover:shadow-lg hover:shadow-cyan-500/20 transition-all duration-300 cursor-pointer">
+              <div className="row-span-2 bg-white rounded-lg p-3 border border-gray-100 flex flex-col justify-center items-center hover:border-blue-300 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300 cursor-pointer">
                 <div className="relative mb-2">
-                  <svg width="35" height="35" viewBox="0 0 100 100" className="text-yellow-500">
+                  <svg width="35" height="35" viewBox="0 0 100 100" className="text-[#1952C7]">
                     <path d="M20 50 L35 20 L50 35 L40 50 L50 65 L35 80 Z" fill="currentColor" />
                   </svg>
-                  <div className="absolute -right-1.5 top-1.5 w-2 h-2 bg-yellow-500 rounded-full"></div>
+                  <div className="absolute -right-1.5 top-1.5 w-2 h-2 bg-[#1952C7] rounded-full"></div>
                 </div>
-                <div className="text-3xl font-bold text-cyan-500 mb-2">AI</div>
+                <div className="text-3xl font-bold text-[#1952C7] mb-2">AI</div>
                 <p className="text-gray-600 text-[9px] text-center mb-3 leading-tight">
                   AI-powered trademark analysis with 98% accuracy for instant brand protection
                 </p>
@@ -540,27 +537,27 @@ const AboutBento = () => {
                     <p className="text-cyan-600 font-bold text-sm">10M+</p>
                     <p className="text-gray-500 text-[7px]">Records</p>
                   </div>
-                  <div className="bg-yellow-500/5 rounded p-1.5 text-center border border-yellow-500/20">
-                    <p className="text-yellow-600 font-bold text-sm">98%</p>
+                  <div className="bg-blue-50/80 rounded p-1.5 text-center border border-blue-100">
+                    <p className="text-[#1952C7] font-bold text-sm">98%</p>
                     <p className="text-gray-500 text-[7px]">Accuracy</p>
                   </div>
                 </div>
                 <div className="flex gap-1 mt-2 flex-wrap justify-center">
-                  <span className="text-[7px] bg-cyan-500/10 text-cyan-600 px-1.5 py-0.5 rounded border border-cyan-500/10">AI Search</span>
-                  <span className="text-[7px] bg-yellow-500/10 text-yellow-600 px-1.5 py-0.5 rounded border border-yellow-500/10">Smart Detect</span>
+                  <span className="text-[7px] bg-cyan-500/10 text-cyan-700 px-1.5 py-0.5 rounded border border-cyan-500/20 font-medium">AI Search</span>
+                  <span className="text-[7px] bg-blue-50 text-[#1952C7] px-1.5 py-0.5 rounded border border-blue-100 font-medium">Smart Detect</span>
                 </div>
               </div>
 
               {/* Cell 3 - Services (Row 2, Col 1) */}
-              <div className="bg-white rounded-lg p-3 border border-gray-100 flex flex-col justify-center hover:border-cyan-500/50 hover:shadow-lg hover:shadow-cyan-500/20 transition-all duration-300 cursor-pointer">
+              <div className="bg-white rounded-lg p-3 border border-gray-100 flex flex-col justify-center hover:border-blue-300 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300 cursor-pointer">
                 <div className="text-[#0C002B] font-semibold text-xs mb-2">Our Services</div>
                 <div className="space-y-1.5">
                   <div className="flex items-center gap-2 bg-slate-50 rounded p-1.5 border border-gray-100">
-                    <i className="fas fa-trademark text-yellow-500 text-xs"></i>
+                    <i className="fas fa-trademark text-[#1952C7] text-xs"></i>
                     <p className="text-[#0C002B] text-[9px] font-medium">Trademark Registration</p>
                   </div>
                   <div className="flex items-center gap-2 bg-slate-50 rounded p-1.5 border border-gray-100">
-                    <i className="fas fa-lightbulb text-cyan-500 text-xs"></i>
+                    <i className="fas fa-lightbulb text-cyan-600 text-xs"></i>
                     <p className="text-[#0C002B] text-[9px] font-medium">Patent Services</p>
                   </div>
                   <div className="flex items-center gap-2 bg-slate-50 rounded p-1.5 border border-gray-100">
@@ -571,24 +568,24 @@ const AboutBento = () => {
               </div>
 
               {/* Cell 4 - Knowledge Hub (Row 3, Col 1) */}
-              <div className="bg-slate-50 rounded-lg p-3 border border-gray-100 flex flex-col hover:border-[#FFB703]/50 hover:shadow-lg hover:shadow-[#FFB703]/10 transition-all duration-300 cursor-pointer">
+              <div className="bg-slate-50 rounded-lg p-3 border border-gray-100 flex flex-col hover:border-blue-300 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300 cursor-pointer">
                 <div className="mb-2">
-                  <span className="text-[#FFB703] text-[8px] font-semibold">IPR Resources</span>
+                  <span className="text-[#1952C7] text-[8px] font-semibold">IPR Resources</span>
                   <div className="text-[#0C002B] font-semibold text-xs text-opacity-80">Knowledge Hub</div>
                 </div>
                 <div className="bg-white rounded p-2 mb-2 border border-gray-100 shadow-sm">
                   <div className="text-[#0C002B] font-medium text-[9px] mb-1">Trademark Guide 2025</div>
                   <div className="flex gap-1">
-                    <span className="text-[7px] bg-yellow-500/10 text-yellow-600 px-1.5 py-0.5 rounded">Trademark</span>
-                    <span className="text-[7px] bg-cyan-500/10 text-cyan-600 px-1.5 py-0.5 rounded">AI Tools</span>
+                    <span className="text-[7px] bg-blue-50 text-[#1952C7] border border-blue-100 px-1.5 py-0.5 rounded font-medium">Trademark</span>
+                    <span className="text-[7px] bg-cyan-50 text-cyan-700 border border-cyan-100 px-1.5 py-0.5 rounded font-medium">AI Tools</span>
                   </div>
                 </div>
                 <div className="space-y-1">
                   <div className="bg-[#0C002B]/5 rounded p-1.5 text-[#0C002B] text-[8px] border border-[#0C002B]/5">
-                    <i className="fas fa-search mr-1 text-yellow-500 text-[7px]"></i>
+                    <i className="fas fa-search mr-1 text-[#1952C7] text-[7px]"></i>
                     AI Trademark Search
                   </div>
-                  <div className="bg-yellow-500 rounded p-1.5 text-white text-[8px] font-medium">
+                  <div className="bg-[#1952C7] rounded p-1.5 text-white text-[8px] font-medium">
                     <i className="fas fa-file-contract mr-1 text-[7px]"></i>
                     Filing Process
                   </div>
@@ -596,18 +593,18 @@ const AboutBento = () => {
               </div>
 
               {/* Cell 5 - Why Choose Us (Row 3, Col 2) */}
-              <div className="bg-white rounded-lg p-3 border border-gray-100 flex flex-col hover:border-green-500/50 hover:shadow-lg hover:shadow-green-500/20 transition-all duration-300 cursor-pointer">
+              <div className="bg-white rounded-lg p-3 border border-gray-100 flex flex-col hover:border-blue-300 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300 cursor-pointer">
                 <div className="text-[#0C002B] font-semibold text-xs mb-2 flex items-center gap-1">
-                  <i className="fas fa-star text-yellow-500 text-[10px]"></i>
+                  <i className="fas fa-star text-[#1952C7] text-[10px]"></i>
                   Why IPR Karo
                 </div>
                 <div className="space-y-1.5 mb-2">
                   <div className="flex items-center gap-1.5 bg-slate-50 rounded p-1.5 border border-gray-100">
-                    <i className="fas fa-bolt text-yellow-500 text-[9px]"></i>
+                    <i className="fas fa-bolt text-[#1952C7] text-[9px]"></i>
                     <p className="text-[#0C002B] text-[9px]">Fast Processing</p>
                   </div>
                   <div className="flex items-center gap-1.5 bg-slate-50 rounded p-1.5 border border-gray-100">
-                    <i className="fas fa-users text-cyan-500 text-[9px]"></i>
+                    <i className="fas fa-users text-cyan-600 text-[9px]"></i>
                     <p className="text-[#0C002B] text-[9px]">Expert Guidance</p>
                   </div>
                   <div className="flex items-center gap-1.5 bg-slate-50 rounded p-1.5 border border-gray-100">
@@ -625,7 +622,7 @@ const AboutBento = () => {
                     <p className="text-gray-500 text-[7px]">ISO</p>
                   </div>
                   <div className="text-center">
-                    <i className="fas fa-lock text-yellow-500 text-xs"></i>
+                    <i className="fas fa-lock text-[#1952C7] text-xs"></i>
                     <p className="text-gray-500 text-[7px]">Secure</p>
                   </div>
                 </div>

@@ -41,6 +41,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: '/how-much-time-does-trademark-filling-takes',
+        destination: '/how-much-time-does-trademark-filing-take',
+        permanent: true,
+      },
+      {
         source: '/terms',
         destination: '/terms-and-conditions',
         permanent: true,
