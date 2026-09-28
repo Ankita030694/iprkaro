@@ -38,9 +38,9 @@ const SectionTitle = ({
   title: string;
   subtitle?: string;
 }) => (
-  <div className="text-center mb-8 sm:mb-12">
+  <div className="text-center mb-6 sm:mb-10">
     <h3
-      className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4"
+      className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4"
       style={{ color: '#0C002B', fontFamily: 'Aileron', lineHeight: '1.2' }}
     >
       {title}
@@ -214,7 +214,7 @@ export default function AboutContentExpanded() {
   };
 
   return (
-    <div className="w-full px-6 sm:px-12 lg:px-24 pt-8 sm:pt-12 pb-0 text-[#0C002B] font-sans relative bg-white overflow-hidden">
+    <div className="w-full px-6 sm:px-12 lg:px-24 py-7 sm:py-12 text-[#0C002B] font-sans relative bg-white overflow-hidden">
 
       {/* Subtle Ambient Background Gradients */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
@@ -223,7 +223,7 @@ export default function AboutContentExpanded() {
         <div className="absolute bottom-[10%] left-[-5%] w-[35%] h-[35%] bg-emerald-50/30 rounded-full blur-[120px]" />
       </div>
 
-      <div className="max-w-7xl mx-auto space-y-12 sm:space-y-24 relative z-10">
+      <div className="max-w-7xl mx-auto space-y-14 sm:space-y-24 relative z-10">
 
 
 

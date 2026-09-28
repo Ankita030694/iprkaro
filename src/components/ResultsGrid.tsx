@@ -34,9 +34,9 @@ const testimonials = [
 
 export default function ResultsGrid() {
   return (
-    <section className="w-full bg-white py-8 md:py-12 px-4 md:px-8">
+    <section className="w-full bg-white py-8 sm:py-10 md:py-14 px-4 sm:px-6 md:px-8">
       <div className="max-w-6xl mx-auto flex flex-col items-center">
-        <div className="text-[#0C002B] font-nunito text-[32px] md:text-[46px] font-semibold text-center mb-6 md:mb-8 leading-[1.2] tracking-tight">
+        <div className="text-[#0C002B] font-nunito text-[32px] md:text-[46px] font-semibold text-center mb-6 sm:mb-8 md:mb-10 leading-[1.2] tracking-tight">
           Results that speak louder <br className="hidden md:block" /> than <span className="text-[#1952C7]">claims</span>
         </div>
 

@@ -60,13 +60,13 @@ export default function WhatYouNeedToGetStarted() {
     <section
       id="what-you-need-to-get-started"
       aria-labelledby="get-started-heading"
-      className="w-full bg-white py-8 md:py-12 px-4 sm:px-6 lg:px-8 border-t border-slate-100/80"
+      className="w-full bg-white py-8 sm:py-10 md:py-14 px-4 sm:px-6 lg:px-8 border-t border-slate-100/80"
     >
       <div className="max-w-7xl mx-auto flex flex-col items-center">
         {/* Top Heading */}
         <h2
           id="get-started-heading"
-          className="text-[#0C002B] font-nunito text-[32px] sm:text-[42px] md:text-[48px] font-semibold text-center leading-[1.18] tracking-tight mb-7 md:mb-9"
+          className="text-[#0C002B] font-nunito text-[32px] sm:text-[42px] md:text-[48px] font-semibold text-center leading-[1.18] tracking-tight mb-6 sm:mb-8 md:mb-10"
         >
           What You’ll Need to
           <br />

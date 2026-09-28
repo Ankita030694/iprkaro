@@ -122,9 +122,9 @@ export default function BuiltToProtect() {
   };
 
   return (
-    <section className="w-full bg-white py-8 md:py-12 px-4 md:px-8">
+    <section className="w-full bg-white py-8 sm:py-10 md:py-14 px-4 sm:px-6 md:px-8">
       <div className="max-w-[1000px] mx-auto flex flex-col items-center">
-        <h3 className="text-[#0C002B] font-nunito text-[32px] md:text-[50px] font-semibold text-center mb-6 md:mb-8 leading-[1.1] tracking-tight max-w-[500px]">
+        <h3 className="text-[#0C002B] font-nunito text-[32px] md:text-[50px] font-semibold text-center mb-6 sm:mb-8 md:mb-10 leading-[1.1] tracking-tight max-w-[500px]">
           Built to protect what <span className="text-[#1952C7]">you&apos;re building</span>
         </h3>
 

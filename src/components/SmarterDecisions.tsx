@@ -1,7 +1,6 @@
 'use client';
 import { validateAndNormalizeDescription } from '@/lib/seo-utils';
 
-
 import { useState } from 'react';
 import Image from 'next/image';
 
@@ -72,9 +71,9 @@ export default function SmarterDecisions({ title, headingTag: HeadingTag = 'h2' 
   const [showAll, setShowAll] = useState(false);
 
   return (
-    <section className="w-full bg-white py-8 md:py-12 px-4 md:px-8">
+    <section className="w-full bg-white py-8 sm:py-10 md:py-14 px-4 sm:px-6 md:px-8">
       <div className="max-w-6xl mx-auto flex flex-col items-center">
-        <HeadingTag className="text-[#0C002B] font-nunito text-[36px] md:text-[46px] font-semibold text-center mb-8 md:mb-10 leading-[1.2] tracking-tight">
+        <HeadingTag className="text-[#0C002B] font-nunito text-[36px] md:text-[46px] font-semibold text-center mb-6 sm:mb-8 md:mb-10 leading-[1.2] tracking-tight">
           {title || (
             <>
               Smarter Trademark <br className="hidden md:block" /> Decisions with <span className="text-[#1952C7]">AI</span>

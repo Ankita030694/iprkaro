@@ -240,7 +240,7 @@ export default function AboutClient() {
       </div>
 
       {/* IPR KARO Section - Under Hero Visual */}
-      <div className="w-full px-6 sm:px-12 lg:px-24 mt-2 sm:mt-6">
+      <div className="w-full px-6 sm:px-12 lg:px-24 py-7 sm:py-12">
         {/* Mobile Layout - Content only (IPR KARO vertical text hidden on mobile) */}
         <div className="block lg:hidden">
           <div className="max-w-2xl mx-auto space-y-4">
@@ -323,8 +323,8 @@ export default function AboutClient() {
       </div>
 
       {/* Our Clients Section */}
-      <div className="w-full py-16 bg-white">
-        <div className="text-center mb-12">
+      <div className="w-full py-7 sm:py-12 bg-white">
+        <div className="text-center mb-6 sm:mb-10">
           <h2
             className="text-3xl sm:text-4xl lg:text-[42px] font-bold"
             style={{
@@ -416,8 +416,8 @@ export default function AboutClient() {
       </div>
 
       {/* Our Story Timeline Section */}
-      <div className="w-full md:py-12 relative -mt-10 md:mt-0 bg-white">
-        <div className="text-center mb-16 px-4">
+      <div className="w-full py-7 sm:py-12 relative bg-white">
+        <div className="text-center mb-6 sm:mb-10 px-4">
           <h3
             className="text-3xl sm:text-4xl lg:text-[42px] font-bold"
             style={{
@@ -745,8 +745,8 @@ export default function AboutClient() {
       </div>
 
       {/* What makes IPR Karo Different Section */}
-      <div className="w-full pt-10 sm:pt-14 pb-8 sm:pb-10 px-4 sm:px-8 lg:px-20 bg-slate-50/50">
-        <div className="text-center mb-8 sm:mb-10 max-w-4xl mx-auto">
+      <div className="w-full py-7 sm:py-12 px-4 sm:px-8 lg:px-20 bg-slate-50/50">
+        <div className="text-center mb-6 sm:mb-10 max-w-4xl mx-auto">
           <h3
             className="text-2xl sm:text-3xl lg:text-[40px] font-bold mb-3"
             style={{
@@ -1010,7 +1010,7 @@ export default function AboutClient() {
       <AboutContentExpanded />
 
       {/* FAQ Section */}
-      <div className="pt-12 sm:pt-24 pb-12 sm:pb-16 relative overflow-hidden w-full bg-white">
+      <div className="pt-7 sm:pt-12 pb-12 sm:pb-20 relative overflow-hidden w-full bg-white">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-0 left-0 w-full h-full" style={{ background: 'linear-gradient(to right, #0C002B05, transparent)' }}></div>

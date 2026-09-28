@@ -88,8 +88,8 @@ export default function BrandGrid() {
   const row2Logos = allLogos.slice(6, 12);
 
   return (
-    <section className="w-full bg-white py-5 md:py-10 px-0">
-      <div className="max-w-7xl mx-auto mb-4 md:mb-7 px-2 md:px-4">
+    <section className="w-full bg-white py-8 sm:py-10 md:py-14 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto mb-6 sm:mb-8 md:mb-10 px-2 md:px-4">
         <div className="text-[#0C002B] font-nunito text-[22px] sm:text-[26px] md:text-[42px] font-semibold text-center leading-[1.2] tracking-tight">
           Chosen by businesses <br className="md:hidden" /> that <span className="text-[#1952C7]">move fast</span>
         </div>

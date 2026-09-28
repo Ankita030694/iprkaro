@@ -116,7 +116,7 @@ export default function FaqSection({ items, title, badge, categories }: FaqSecti
         )}
 
         {/* Heading */}
-        <h2 className="text-center font-nunito mb-6 md:mb-8 font-bold tracking-tight text-[32px] sm:text-[40px] md:text-[46px] leading-[1.15] text-[#0C002B]">
+        <h2 className="text-center font-nunito mb-6 sm:mb-8 md:mb-10 font-bold tracking-tight text-[32px] sm:text-[40px] md:text-[46px] leading-[1.15] text-[#0C002B]">
           {title ? (
             title
           ) : (
