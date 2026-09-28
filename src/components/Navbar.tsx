@@ -7,12 +7,39 @@ import { useState, useEffect } from 'react';
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
+    let lastScrollY = typeof window !== 'undefined' ? window.scrollY : 0;
+
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      const currentScrollY = window.scrollY;
+
+      // Scrolled state for compact styling
+      setScrolled(currentScrollY > 20);
+
+      // Always show navbar at the very top of the page
+      if (currentScrollY < 50) {
+        setIsVisible(true);
+        lastScrollY = currentScrollY;
+        return;
+      }
+
+      // Check scroll direction with a threshold to avoid micro-scroll jitter
+      const scrollDiff = currentScrollY - lastScrollY;
+      if (Math.abs(scrollDiff) > 8) {
+        if (scrollDiff > 0) {
+          // Scrolling DOWN -> swipe up / hide navbar
+          setIsVisible(false);
+        } else {
+          // Scrolling UP -> swipe down / show navbar
+          setIsVisible(true);
+        }
+        lastScrollY = currentScrollY;
+      }
     };
-    window.addEventListener('scroll', handleScroll);
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -25,7 +52,15 @@ export default function Navbar() {
 
   return (
     <>
-      <div className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${scrolled ? 'pt-2' : 'pt-6'}`}>
+      <div
+        className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ease-in-out ${
+          scrolled ? 'pt-2' : 'pt-6'
+        } ${
+          isVisible || isMobileMenuOpen
+            ? 'translate-y-0 opacity-100'
+            : '-translate-y-full opacity-0 pointer-events-none'
+        }`}
+      >
         <div className="max-w-3xl mx-auto px-4 md:px-6">
           <nav className="bg-[#05030E]/90 backdrop-blur-md border border-white/10 rounded-[15px] md:rounded-[12px] px-6 py-3 md:py-2 flex items-center justify-between shadow-2xl">
             {/* Logo */}
