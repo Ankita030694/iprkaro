@@ -218,9 +218,6 @@ export default function ContactClient() {
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6 md:px-8">
           
           <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-8">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200/80 text-[11px] font-bold text-[#1952C7] uppercase tracking-wider mb-2">
-              Simple &amp; Transparent
-            </div>
             <h2 className="font-nunito text-2xl sm:text-3xl md:text-[34px] font-extrabold text-[#0C002B] tracking-tight leading-tight">
               How Consultation &amp; Filing Works
             </h2>
@@ -264,9 +261,6 @@ export default function ContactClient() {
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6 md:px-8">
           
           <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-8">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200/80 text-[11px] font-bold text-[#1952C7] uppercase tracking-wider mb-2">
-              Headquarters &amp; Support Desk
-            </div>
             <h2 className="font-nunito text-2xl sm:text-3xl md:text-[34px] font-extrabold text-[#0C002B] tracking-tight leading-tight">
               Visit Our Head Office
             </h2>
@@ -368,7 +362,6 @@ export default function ContactClient() {
             Frequently Asked <span className="text-[#1952C7]">Questions</span>
           </>
         } 
-        badge="NEED HELP?"
       />
 
     </div>
