@@ -22,14 +22,14 @@ function ServicesHeroSection() {
   }, []);
 
   return (
-    <section className="w-full relative overflow-hidden flex flex-col justify-center items-center pt-24 md:pt-32 pb-16 md:pb-24 bg-white">
+    <section className="w-full relative overflow-hidden flex flex-col justify-center items-center pt-24 sm:pt-28 md:pt-32 pb-8 sm:pb-10 md:pb-14 px-4 sm:px-6 md:px-8 bg-white">
       {/* Background Ambience */}
       <div className="absolute inset-x-0 top-0 h-96 bg-gradient-to-b from-slate-50 to-white pointer-events-none"></div>
       
       {/* Container */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-8">
+      <div className="relative z-10 w-full max-w-6xl mx-auto">
         {/* Our Services Heading */}
-        <div className="text-center mb-10 md:mb-16">
+        <div className="text-center mb-6 sm:mb-8 md:mb-10">
           <h1 
             className={`text-[#0C002B] font-sans text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 transition-all duration-1000 transform ${mounted ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
           >
@@ -44,7 +44,7 @@ function ServicesHeroSection() {
 
         {/* Search Bar */}
         <div 
-          className={`w-full flex justify-center mb-16 md:mb-20 transition-all duration-1000 delay-500 transform ${mounted ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'} ${isDropdownOpen ? 'z-[110]' : ''}`}
+          className={`w-full flex justify-center mb-8 sm:mb-10 md:mb-12 transition-all duration-1000 delay-500 transform ${mounted ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'} ${isDropdownOpen ? 'z-[110]' : ''}`}
         >
           <div className="w-full max-w-2xl">
             <SearchClient onDropdownToggle={setIsDropdownOpen} />
@@ -52,7 +52,7 @@ function ServicesHeroSection() {
         </div>
 
         {/* Stat Cards - Above Services */}
-        <div className={`w-full mb-12 transition-all duration-1000 delay-700 transform ${mounted ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+        <div className={`w-full mb-0 transition-all duration-1000 delay-700 transform ${mounted ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
             {/* Stat Card 1 */}
             <div className="group flex items-center gap-4 p-4 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300">
@@ -92,8 +92,8 @@ function ServicesHeroSection() {
 
 function ServiceCardsSection() {
   return (
-    <section className="w-full bg-white pb-20">
-      <div className="w-full max-w-7xl mx-auto px-4 md:px-8">
+    <section className="w-full bg-white py-8 sm:py-10 md:py-14 px-4 sm:px-6 md:px-8">
+      <div className="w-full max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {/* Service 1 - Trademark Registration */}
           <Link href="/our-services/trademark-registration" className="h-full">
@@ -246,7 +246,7 @@ export default function ServicesClient() {
       <ServicesHeroSection />
       <ServiceCardsSection />
       
-      <div className="w-full bg-white flex flex-col pt-10">
+      <div className="w-full bg-white flex flex-col">
         <ServicesContentExpanded />
         <SimplePricing />
 

@@ -17,9 +17,9 @@ const LightCard = ({ children, className = "", hoverEffect = true }: { children:
 );
 
 const SectionTitle = ({ title, subtitle }: { title: string, subtitle?: string }) => (
-  <div className="text-center mb-16">
+  <div className="text-center mb-6 sm:mb-8 md:mb-10">
     <h3 
-      className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-[#0C002B]"
+      className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 text-[#0C002B]"
       style={{ fontFamily: 'Aileron', lineHeight: '1.2' }}
     >
       {title}
@@ -46,7 +46,7 @@ export default function ServicesContentExpanded() {
   const [activeTab, setActiveTab] = useState('trademark');
 
   return (
-    <div className="w-full px-6 sm:px-12 lg:px-24 py-20 text-[#0C002B] font-sans relative overflow-hidden bg-white">
+    <div className="w-full px-4 sm:px-6 md:px-8 py-8 sm:py-10 md:py-14 text-[#0C002B] font-sans relative overflow-hidden bg-white">
       
        {/* Background Ambience */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
@@ -54,16 +54,16 @@ export default function ServicesContentExpanded() {
           <div className="absolute bottom-[10%] left-[-10%] w-[40%] h-[40%] bg-amber-50/50 rounded-full blur-[100px]" />
       </div>
 
-      <div className="max-w-7xl mx-auto space-y-24 relative z-10">
+      <div className="max-w-6xl mx-auto space-y-12 sm:space-y-16 md:space-y-20 relative z-10">
 
         {/* 1. Introduction: The IP Ecosystem */}
-        <section className="text-center space-y-8">
-            <span className="block text-sm font-bold text-[#1952C7] uppercase tracking-wider mb-2">Comprehensive IP Solutions</span>
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight text-[#0C002B]">
+        <section className="text-center space-y-4 sm:space-y-6">
+            <span className="block text-xs sm:text-sm font-bold text-[#1952C7] uppercase tracking-wider">Comprehensive IP Solutions</span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-[#0C002B]">
                 From Abstract Idea to <br/> 
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1952C7] to-indigo-400"> Legally Protected Asset</span>
             </h2>
-            <p className="text-xl text-[#6B7280] max-w-4xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-[#6B7280] max-w-4xl mx-auto leading-relaxed">
                 Intellectual Property is not a single filing; it is a lifecycle. At IPR Karo, we don't just register your documents; we build a legal fortress around your business. Whether you are naming a brand, writing code, inventing a machine, or designing a product, we have a specialized legal workflow to secure your ownership.
             </p>
         </section>
@@ -360,8 +360,8 @@ export default function ServicesContentExpanded() {
         </section>
 
         {/* Call to Action Wrapper */}
-        <section className="text-center py-12">
-            <p className="text-[#6B7280] text-sm italic mb-6">
+        <section className="text-center pt-2 sm:pt-4 pb-0">
+            <p className="text-[#6B7280] text-sm italic mb-4">
                 Ready to secure your assets? Choose a plan below or consult our experts.
             </p>
             <FontAwesomeIcon icon={faChevronDown} className="text-[#1952C7] text-2xl animate-bounce" />
