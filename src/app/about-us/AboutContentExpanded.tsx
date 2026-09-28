@@ -3,50 +3,43 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { 
-  faBalanceScale, faRobot, faHandHoldingHeart, faGlobe, 
-  faShieldAlt, faLightbulb, faChartLine, faGavel, 
+import {
+  faBalanceScale, faRobot, faHandHoldingHeart, faGlobe,
+  faShieldAlt, faLightbulb, faChartLine, faGavel,
   faFingerprint, faVrCardboard, faBolt, faChevronDown,
+  faChevronLeft, faChevronRight,
   faCheck, faFileContract, faSearch, faClock, faStar, faShieldHalved
 } from '@fortawesome/free-solid-svg-icons';
 
 // Reusable Glass Card Component - Light Mode with smooth hover
-const GlassCard = ({ 
-  children, 
-  className = "", 
-  hoverEffect = true 
-}: { 
-  children: React.ReactNode; 
-  className?: string; 
-  hoverEffect?: boolean; 
+const GlassCard = ({
+  children,
+  className = "",
+  hoverEffect = true
+}: {
+  children: React.ReactNode;
+  className?: string;
+  hoverEffect?: boolean;
 }) => (
-  <div 
-    className={`relative overflow-hidden p-6 sm:p-8 rounded-[20px] border border-gray-100 bg-slate-50/70 backdrop-blur-sm shadow-sm ${
-      hoverEffect ? 'transition-all duration-300 hover:scale-[1.015] hover:shadow-lg hover:border-blue-200 hover:bg-white' : ''
-    } ${className}`}
+  <div
+    className={`relative overflow-hidden p-6 sm:p-8 rounded-[20px] border border-gray-100 bg-slate-50/70 backdrop-blur-sm shadow-sm ${hoverEffect ? 'transition-all duration-300 hover:scale-[1.015] hover:shadow-lg hover:border-blue-200 hover:bg-white' : ''
+      } ${className}`}
   >
     {children}
   </div>
 );
 
 // Section Title Component
-const SectionTitle = ({ 
-  badge,
-  title, 
-  subtitle 
-}: { 
+const SectionTitle = ({
+  title,
+  subtitle
+}: {
   badge?: string;
-  title: string; 
-  subtitle?: string; 
+  title: string;
+  subtitle?: string;
 }) => (
   <div className="text-center mb-8 sm:mb-12">
-    {badge && (
-      <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200/80 text-[#1952C7] text-xs font-bold uppercase tracking-wider mb-3">
-        <span className="w-1.5 h-1.5 rounded-full bg-[#1952C7]" />
-        <span>{badge}</span>
-      </div>
-    )}
-    <h3 
+    <h3
       className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4"
       style={{ color: '#0C002B', fontFamily: 'Aileron', lineHeight: '1.2' }}
     >
@@ -60,13 +53,70 @@ const SectionTitle = ({
   </div>
 );
 
+const caseStudiesData = [
+  {
+    title: "D2C Beverage Brand",
+    sector: "FMCG / Retail",
+    before: "AI flagged 94% phonetic conflict with a multinational mark in Class 32. Direct risk of ₹15L rebranding loss.",
+    strategy: "Attorneys devised an 'Honest Concurrent Use' affidavit establishing territorial non-overlap.",
+    result: "Trademark granted registration in 8 months with zero opposition filings.",
+    metric: "₹15 Lakhs Saved"
+  },
+  {
+    title: "Fintech SaaS Scale-Up",
+    sector: "Cloud & Banking",
+    before: "Urgent enterprise fundraising round stalled due to unfiled proprietary algorithms and cross-border risks.",
+    strategy: "Expedited Form TM-A e-filing combined with copyright registration for core software code.",
+    result: "Secured formal investor sign-off with clear IP valuation moat within 72 hours.",
+    metric: "Closed $2M Seed"
+  },
+  {
+    title: "Jaipur Textile Artisans",
+    sector: "Apparel & Handicrafts",
+    before: "50+ counterfeit digital sellers scraping authentic hand-block prints across leading marketplaces.",
+    strategy: "Secured Copyright & Industrial Design registration followed by legal automated takedown notices.",
+    result: "100% of counterfeit listings removed within 24 hours of notice delivery.",
+    metric: "50+ Takedowns in 24h"
+  }
+];
+
 export default function AboutContentExpanded() {
   const [activeMyth, setActiveMyth] = useState<number | null>(null);
   const [activeStage, setActiveStage] = useState<number>(0);
   const [activeIpAsset, setActiveIpAsset] = useState<'trademark' | 'copyright' | 'patent' | 'design'>('trademark');
+  const [activeCaseStudy, setActiveCaseStudy] = useState<number>(0);
+  const [touchStartX, setTouchStartX] = useState<number | null>(null);
+  const [touchStartY, setTouchStartY] = useState<number | null>(null);
 
   const toggleMyth = (index: number) => {
     setActiveMyth(activeMyth === index ? null : index);
+  };
+
+  const handleCaseStudyTouchStart = (e: React.TouchEvent) => {
+    setTouchStartX(e.touches[0].clientX);
+    setTouchStartY(e.touches[0].clientY);
+  };
+
+  const handleCaseStudyTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX === null || touchStartY === null) return;
+    const diffX = touchStartX - e.changedTouches[0].clientX;
+    const diffY = touchStartY - e.changedTouches[0].clientY;
+
+    if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 40) {
+      if (diffX > 0) {
+        setActiveCaseStudy((prev) => (prev + 1) % caseStudiesData.length);
+      } else {
+        setActiveCaseStudy((prev) => (prev - 1 + caseStudiesData.length) % caseStudiesData.length);
+      }
+    } else if (Math.abs(diffY) > 50) {
+      if (diffY > 0) {
+        setActiveCaseStudy((prev) => (prev + 1) % caseStudiesData.length);
+      } else {
+        setActiveCaseStudy((prev) => (prev - 1 + caseStudiesData.length) % caseStudiesData.length);
+      }
+    }
+    setTouchStartX(null);
+    setTouchStartY(null);
   };
 
   const pipelineStages = [
@@ -164,8 +214,8 @@ export default function AboutContentExpanded() {
   };
 
   return (
-    <div className="w-full px-6 sm:px-12 lg:px-24 pt-8 sm:pt-12 pb-16 text-[#0C002B] font-sans relative bg-white overflow-hidden">
-        
+    <div className="w-full px-6 sm:px-12 lg:px-24 pt-8 sm:pt-12 pb-0 text-[#0C002B] font-sans relative bg-white overflow-hidden">
+
       {/* Subtle Ambient Background Gradients */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
         <div className="absolute top-[8%] left-[-8%] w-[45%] h-[45%] bg-blue-50/40 rounded-full blur-[120px]" />
@@ -173,20 +223,20 @@ export default function AboutContentExpanded() {
         <div className="absolute bottom-[10%] left-[-5%] w-[35%] h-[35%] bg-emerald-50/30 rounded-full blur-[120px]" />
       </div>
 
-      <div className="max-w-7xl mx-auto space-y-28 relative z-10">
-        
+      <div className="max-w-7xl mx-auto space-y-12 sm:space-y-24 relative z-10">
+
 
 
         {/* ========================================================================= */}
         {/* SECTION 2: THE 3 CORE PILLARS                                             */}
         {/* ========================================================================= */}
         <section>
-          <SectionTitle 
+          <SectionTitle
             badge="Our Foundation"
-            title="The Three Pillars of IPR Karo" 
+            title="The Three Pillars of IPR Karo"
             subtitle="Built from the ground up to defy the traditional stiffness and opacity of the legal industry."
           />
-          
+
           <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
             {[
               {
@@ -241,9 +291,9 @@ export default function AboutContentExpanded() {
         {/* SECTION 3: THE 4-STAGE BRAND PROTECTION PIPELINE (PICTOGRAPHIC INFOGRAPHIC) */}
         {/* ========================================================================= */}
         <section className="bg-slate-50/80 rounded-[32px] p-6 sm:p-12 border border-gray-100 shadow-sm relative overflow-hidden">
-          <SectionTitle 
+          <SectionTitle
             badge="Proprietary Technology"
-            title="The 4-Stage Brand Protection Engine" 
+            title="The 4-Stage Brand Protection Engine"
             subtitle="How our intelligent system moves your brand safely from an initial idea to an official registered trademark."
           />
 
@@ -257,7 +307,7 @@ export default function AboutContentExpanded() {
               className="w-full h-auto object-cover group-hover:scale-[1.01] transition-transform duration-500"
               priority
             />
-            <div className="absolute bottom-3 right-3 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-lg border border-gray-200 text-xs font-bold text-[#1952C7] shadow-sm flex items-center gap-1.5">
+            <div className="hidden sm:flex absolute bottom-3 right-3 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-lg border border-gray-200 text-xs font-bold text-[#1952C7] shadow-sm items-center gap-1.5">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
               <span>Full-Lifecycle End-to-End Architecture</span>
             </div>
@@ -269,11 +319,10 @@ export default function AboutContentExpanded() {
               <button
                 key={idx}
                 onClick={() => setActiveStage(idx)}
-                className={`p-4 rounded-xl text-left transition-all duration-300 border ${
-                  activeStage === idx
+                className={`p-4 rounded-xl text-left transition-all duration-300 border ${activeStage === idx
                     ? 'bg-white border-[#1952C7] shadow-md scale-[1.02]'
                     : 'bg-white/60 border-gray-200/70 hover:bg-white hover:border-blue-200'
-                }`}
+                  }`}
               >
                 <div className="flex items-center justify-between mb-2">
                   <span className={`text-xs font-bold px-2 py-0.5 rounded ${activeStage === idx ? 'bg-blue-50 text-[#1952C7]' : 'bg-gray-100 text-gray-500'}`}>
@@ -336,9 +385,9 @@ export default function AboutContentExpanded() {
         {/* SECTION 4: INTERACTIVE IP ASSET BLUEPRINT (WHY IP MATTERS)                 */}
         {/* ========================================================================= */}
         <section>
-          <SectionTitle 
+          <SectionTitle
             badge="Strategic Value"
-            title="The IP Asset Blueprint: Building Your Moat" 
+            title="The IP Asset Blueprint: Building Your Moat"
             subtitle="In the 21st-century knowledge economy, intellectual property is your primary valuation multiplier. Here is how we protect every facet of your business."
           />
 
@@ -348,11 +397,10 @@ export default function AboutContentExpanded() {
               <button
                 key={type}
                 onClick={() => setActiveIpAsset(type)}
-                className={`py-3 px-4 rounded-xl font-bold text-sm transition-all duration-300 border flex items-center justify-center gap-2 ${
-                  activeIpAsset === type
+                className={`py-3 px-4 rounded-xl font-bold text-sm transition-all duration-300 border flex items-center justify-center gap-2 ${activeIpAsset === type
                     ? 'bg-[#1952C7] text-white border-[#1952C7] shadow-md'
                     : 'bg-white text-gray-700 border-gray-200 hover:border-blue-200'
-                }`}
+                  }`}
               >
                 <span>{ipAssetsData[type].title.split(' ')[0]}</span>
                 <span className="text-xs opacity-80">({ipAssetsData[type].symbol})</span>
@@ -372,7 +420,7 @@ export default function AboutContentExpanded() {
                     Validity: {ipAssetsData[activeIpAsset].validity}
                   </span>
                 </div>
-                
+
                 <h4 className="text-2xl sm:text-3xl font-bold text-[#0C002B]">
                   {ipAssetsData[activeIpAsset].title}
                 </h4>
@@ -425,39 +473,97 @@ export default function AboutContentExpanded() {
         {/* SECTION 5: REAL CASE STUDIES (BEFORE VS AFTER BADGES)                     */}
         {/* ========================================================================= */}
         <section>
-          <SectionTitle 
+          <SectionTitle
             badge="Proven Track Record"
-            title="Real Brands, Real Legal Defense" 
+            title="Real Brands, Real Legal Defense"
             subtitle="How our AI conflict detection and veteran attorneys saved enterprises from catastrophic rebranding battles."
           />
 
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              {
-                title: "D2C Beverage Brand",
-                sector: "FMCG / Retail",
-                before: "AI flagged 94% phonetic conflict with a multinational mark in Class 32. Direct risk of ₹15L rebranding loss.",
-                strategy: "Attorneys devised an 'Honest Concurrent Use' affidavit establishing territorial non-overlap.",
-                result: "Trademark granted registration in 8 months with zero opposition filings.",
-                metric: "₹15 Lakhs Saved"
-              },
-              {
-                title: "Fintech SaaS Scale-Up",
-                sector: "Cloud & Banking",
-                before: "Urgent enterprise fundraising round stalled due to unfiled proprietary algorithms and cross-border risks.",
-                strategy: "Expedited Form TM-A e-filing combined with copyright registration for core software code.",
-                result: "Secured formal investor sign-off with clear IP valuation moat within 72 hours.",
-                metric: "Closed $2M Seed"
-              },
-              {
-                title: "Jaipur Textile Artisans",
-                sector: "Apparel & Handicrafts",
-                before: "50+ counterfeit digital sellers scraping authentic hand-block prints across leading marketplaces.",
-                strategy: "Secured Copyright & Industrial Design registration followed by legal automated takedown notices.",
-                result: "100% of counterfeit listings removed within 24 hours of notice delivery.",
-                metric: "50+ Takedowns in 24h"
-              }
-            ].map((study, idx) => (
+          {/* Mobile Swipeable Card Carousel with Navigation Arrows */}
+          <div className="block md:hidden">
+            <div
+              className="relative touch-pan-y"
+              onTouchStart={handleCaseStudyTouchStart}
+              onTouchEnd={handleCaseStudyTouchEnd}
+            >
+              <GlassCard className="flex flex-col justify-between bg-white border border-gray-200/90 shadow-md min-h-[380px] transition-all duration-300">
+                <div>
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-[11px] font-bold text-[#1952C7] uppercase tracking-wider bg-blue-50 px-2.5 py-0.5 rounded border border-blue-100">
+                      Case Study 0{activeCaseStudy + 1} of 0{caseStudiesData.length}
+                    </span>
+                    <span className="text-xs font-semibold text-gray-500">
+                      {caseStudiesData[activeCaseStudy].sector}
+                    </span>
+                  </div>
+
+                  <h4 className="text-xl font-bold text-[#0C002B] mb-3" style={{ fontFamily: 'Aileron' }}>
+                    {caseStudiesData[activeCaseStudy].title}
+                  </h4>
+
+                  <div className="space-y-3 text-xs leading-relaxed">
+                    <div className="p-3 bg-red-50/70 rounded-xl border border-red-100/80">
+                      <span className="font-bold text-red-700 block mb-0.5">THE RISK (BEFORE):</span>
+                      <p className="text-gray-700">{caseStudiesData[activeCaseStudy].before}</p>
+                    </div>
+
+                    <div className="p-3 bg-blue-50/70 rounded-xl border border-blue-100/80">
+                      <span className="font-bold text-[#1952C7] block mb-0.5">IPR KARO STRATEGY:</span>
+                      <p className="text-gray-700">{caseStudiesData[activeCaseStudy].strategy}</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-5 pt-3.5 border-t border-gray-100 flex items-center justify-between gap-2">
+                  <div className="text-emerald-700 text-xs font-bold flex items-center gap-1.5 flex-1 pr-1">
+                    <FontAwesomeIcon icon={faCheck} className="text-emerald-600 flex-shrink-0" />
+                    <span>{caseStudiesData[activeCaseStudy].result}</span>
+                  </div>
+                  <span className="text-xs font-extrabold text-[#1952C7] bg-blue-50 px-2.5 py-1 rounded-md border border-blue-100 flex-shrink-0">
+                    {caseStudiesData[activeCaseStudy].metric}
+                  </span>
+                </div>
+              </GlassCard>
+            </div>
+
+            {/* Mobile Navigation Controls: Arrows & Dot Indicators */}
+            <div className="flex items-center justify-between mt-4 px-2">
+              <button
+                type="button"
+                onClick={() => setActiveCaseStudy((prev) => (prev - 1 + caseStudiesData.length) % caseStudiesData.length)}
+                className="w-10 h-10 rounded-full bg-white border border-gray-200 shadow-sm flex items-center justify-center text-[#1952C7] hover:bg-blue-50 active:scale-95 transition-all"
+                aria-label="Previous Case Study"
+              >
+                <FontAwesomeIcon icon={faChevronLeft} className="text-sm" />
+              </button>
+
+              <div className="flex items-center gap-1.5">
+                {caseStudiesData.map((_, idx) => (
+                  <button
+                    key={idx}
+                    type="button"
+                    onClick={() => setActiveCaseStudy(idx)}
+                    className={`h-2 rounded-full transition-all duration-300 ${activeCaseStudy === idx ? 'w-6 bg-[#1952C7]' : 'w-2 bg-gray-300 hover:bg-gray-400'
+                      }`}
+                    aria-label={`Go to Case Study ${idx + 1}`}
+                  />
+                ))}
+              </div>
+
+              <button
+                type="button"
+                onClick={() => setActiveCaseStudy((prev) => (prev + 1) % caseStudiesData.length)}
+                className="w-10 h-10 rounded-full bg-white border border-gray-200 shadow-sm flex items-center justify-center text-[#1952C7] hover:bg-blue-50 active:scale-95 transition-all"
+                aria-label="Next Case Study"
+              >
+                <FontAwesomeIcon icon={faChevronRight} className="text-sm" />
+              </button>
+            </div>
+          </div>
+
+          {/* Desktop 3-Column Grid */}
+          <div className="hidden md:grid md:grid-cols-3 gap-6">
+            {caseStudiesData.map((study, idx) => (
               <GlassCard key={idx} className="flex flex-col justify-between bg-white border border-gray-100 shadow-md">
                 <div>
                   <div className="flex items-center justify-between mb-3">
@@ -500,9 +606,9 @@ export default function AboutContentExpanded() {
         {/* SECTION 6: GLOBAL REACH & MADRID PROTOCOL (MAP INFOGRAPHIC)              */}
         {/* ========================================================================= */}
         <section className="bg-gradient-to-br from-blue-50/80 via-white to-indigo-50/60 rounded-[32px] p-6 sm:p-12 border border-blue-100 shadow-sm relative overflow-hidden">
-          <SectionTitle 
+          <SectionTitle
             badge="Global Expansion"
-            title="From India to 130+ Countries: The Madrid Protocol" 
+            title="From India to 130+ Countries: The Madrid Protocol"
             subtitle="Never let national borders cap your commercial ambition. Protect your brand in the world's most lucrative markets through one streamlined application."
           />
 
@@ -516,7 +622,7 @@ export default function AboutContentExpanded() {
               className="w-full h-auto object-cover group-hover:scale-[1.01] transition-transform duration-500"
               priority
             />
-            <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-3 py-1.5 rounded-lg border border-gray-200 text-xs font-bold text-[#1952C7] shadow-sm flex items-center gap-1.5">
+            <div className="hidden sm:flex absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-3 py-1.5 rounded-lg border border-gray-200 text-xs font-bold text-[#1952C7] shadow-sm items-center gap-1.5">
               <span className="w-2 h-2 rounded-full bg-[#1952C7]" />
               <span>WIPO Madrid System Authorized Coordinator</span>
             </div>
@@ -542,15 +648,17 @@ export default function AboutContentExpanded() {
             </div>
           </div>
 
-          {/* Country Node Chips */}
-          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs font-semibold text-gray-700">
-            <span className="px-3 py-1.5 rounded-full bg-white border border-gray-200 shadow-xs">🇺🇸 United States (USPTO)</span>
-            <span className="px-3 py-1.5 rounded-full bg-white border border-gray-200 shadow-xs">🇪🇺 European Union (EUIPO)</span>
-            <span className="px-3 py-1.5 rounded-full bg-white border border-gray-200 shadow-xs">🇬🇧 United Kingdom (UKIPO)</span>
-            <span className="px-3 py-1.5 rounded-full bg-white border border-gray-200 shadow-xs">🇦🇪 United Arab Emirates</span>
-            <span className="px-3 py-1.5 rounded-full bg-white border border-gray-200 shadow-xs">🇸🇬 Singapore (IPOS)</span>
-            <span className="px-3 py-1.5 rounded-full bg-white border border-gray-200 shadow-xs">🇯🇵 Japan (JPO)</span>
-            <span className="px-3 py-1.5 rounded-full bg-white border border-gray-200 shadow-xs">🇦🇺 Australia (IP Australia)</span>
+          {/* Madrid Protocol Country Chips */}
+          <div className="w-full overflow-x-auto py-1 -mx-2 px-2 sm:mx-0 sm:px-0">
+            <div className="flex items-center justify-start lg:justify-center gap-2 sm:gap-2.5 text-xs font-semibold text-gray-700 whitespace-nowrap min-w-max mx-auto">
+              <span className="px-3.5 py-1.5 rounded-full bg-white border border-gray-200 shadow-xs hover:border-blue-300 transition-colors">🇺🇸 United States (USPTO)</span>
+              <span className="px-3.5 py-1.5 rounded-full bg-white border border-gray-200 shadow-xs hover:border-blue-300 transition-colors">🇪🇺 European Union (EUIPO)</span>
+              <span className="px-3.5 py-1.5 rounded-full bg-white border border-gray-200 shadow-xs hover:border-blue-300 transition-colors">🇬🇧 United Kingdom (UKIPO)</span>
+              <span className="px-3.5 py-1.5 rounded-full bg-white border border-gray-200 shadow-xs hover:border-blue-300 transition-colors">🇦🇪 United Arab Emirates</span>
+              <span className="px-3.5 py-1.5 rounded-full bg-white border border-gray-200 shadow-xs hover:border-blue-300 transition-colors">🇸🇬 Singapore (IPOS)</span>
+              <span className="px-3.5 py-1.5 rounded-full bg-white border border-gray-200 shadow-xs hover:border-blue-300 transition-colors">🇯🇵 Japan (JPO)</span>
+              <span className="px-3.5 py-1.5 rounded-full bg-white border border-gray-200 shadow-xs hover:border-blue-300 transition-colors">🇦🇺 Australia (IP Australia)</span>
+            </div>
           </div>
         </section>
 
@@ -558,63 +666,67 @@ export default function AboutContentExpanded() {
         {/* SECTION 7: BUSTING COMMON IP MYTHS                                        */}
         {/* ========================================================================= */}
         <section>
-          <SectionTitle 
+          <SectionTitle
             badge="Legal Reality Check"
-            title="Busting Dangerous IP Myths" 
+            title="Busting Dangerous IP Myths"
             subtitle="Common misconceptions that cost Indian business owners millions in legal disputes."
           />
 
-          <div className="space-y-4 max-w-4xl mx-auto">
+          <div className="space-y-2.5 sm:space-y-4 max-w-4xl mx-auto">
             {[
-              { 
-                myth: "I registered my company name with MCA / Registrar of Companies, so my trademark is automatically protected.", 
-                fact: "False. Company name registration (MCA) only registers a corporate entity. Only a trademark under the Trademarks Act 1999 gives you the exclusive commercial right to stop competitors from using your brand name." 
+              {
+                myth: "I registered my company name with MCA / Registrar of Companies, so my trademark is automatically protected.",
+                fact: "False. Company name registration (MCA) only registers a corporate entity. Only a trademark under the Trademarks Act 1999 gives you the exclusive commercial right to stop competitors from using your brand name."
               },
-              { 
-                myth: "I can tweak the spelling slightly to avoid infringing an existing brand.", 
-                fact: "False. Section 11 of the Trademarks Act strictly enforces the 'Phonetic Similarity' doctrine. 'Nike' and 'Nyke' or 'Zomato' and 'Zomaatoo' are legally judged as confusingly similar." 
+              {
+                myth: "I can tweak the spelling slightly to avoid infringing an existing brand.",
+                fact: "False. Section 11 of the Trademarks Act strictly enforces the 'Phonetic Similarity' doctrine. 'Nike' and 'Nyke' or 'Zomato' and 'Zomaatoo' are legally judged as confusingly similar."
               },
-              { 
-                myth: "I should wait until my business becomes large before registering my trademark.", 
-                fact: "Dangerous mistake. India is a 'First to File' priority jurisdiction. Trademark squatters regularly monitor rising brands and file ahead of you, holding your hard-earned reputation hostage." 
+              {
+                myth: "I should wait until my business becomes large before registering my trademark.",
+                fact: "Dangerous mistake. India is a 'First to File' priority jurisdiction. Trademark squatters regularly monitor rising brands and file ahead of you, holding your hard-earned reputation hostage."
               },
-              { 
-                myth: "Trademark registration takes too long to offer any immediate protection.", 
-                fact: "False. The moment your Form TM-A is submitted electronically, you gain immediate legal rights to display the ™ symbol, putting counterfeiters and copycats on formal notice." 
+              {
+                myth: "Trademark registration takes too long to offer any immediate protection.",
+                fact: "False. The moment your Form TM-A is submitted electronically, you gain immediate legal rights to display the ™ symbol, putting counterfeiters and copycats on formal notice."
               },
-              { 
-                myth: "A trademark covers every kind of business activity automatically.", 
-                fact: "False. Trademarks are strictly classified into 45 NICE Classes (Classes 1–34 for Goods, Classes 35–45 for Services). You must correctly designate classes to prevent competitor encroachment." 
+              {
+                myth: "A trademark covers every kind of business activity automatically.",
+                fact: "False. Trademarks are strictly classified into 45 NICE Classes (Classes 1–34 for Goods, Classes 35–45 for Services). You must correctly designate classes to prevent competitor encroachment."
               }
             ].map((item, idx) => (
               <div key={idx} className="group relative">
-                <div 
-                  className={`p-6 rounded-2xl border transition-all duration-300 ${
-                    activeMyth === idx 
-                      ? 'bg-white border-blue-300 shadow-md scale-[1.01]' 
+                <div
+                  className={`p-3.5 sm:p-5 rounded-xl sm:rounded-2xl border transition-all duration-300 ${
+                    activeMyth === idx
+                      ? 'bg-white border-blue-300 shadow-md scale-[1.01]'
                       : 'bg-slate-50/70 border-gray-100 hover:bg-white hover:border-gray-200'
                   }`}
                   onClick={() => toggleMyth(idx)}
                 >
-                  <div className="flex justify-between items-center cursor-pointer gap-4">
-                    <h4 className={`text-base sm:text-lg font-bold flex items-center gap-3 transition-colors ${activeMyth === idx ? 'text-[#1952C7]' : 'text-[#0C002B]'}`}>
-                      <span className="text-red-600 font-bold text-xs uppercase px-2.5 py-1 rounded bg-red-50 border border-red-100 flex-shrink-0">
+                  <div className="flex justify-between items-center cursor-pointer gap-2 sm:gap-4">
+                    <h4 className={`text-[13px] sm:text-base font-bold flex items-center gap-2 sm:gap-3 transition-colors leading-snug ${
+                      activeMyth === idx ? 'text-[#1952C7]' : 'text-[#0C002B]'
+                    }`}>
+                      <span className="text-red-600 font-bold text-[10px] sm:text-xs uppercase px-2 py-0.5 sm:px-2.5 sm:py-1 rounded bg-red-50 border border-red-100 flex-shrink-0">
                         Myth
                       </span>
                       <span>{item.myth}</span>
                     </h4>
-                    <FontAwesomeIcon 
-                      icon={faChevronDown} 
-                      className={`text-gray-400 transition-transform duration-300 flex-shrink-0 ${activeMyth === idx ? 'rotate-180 text-[#1952C7]' : ''}`} 
+                    <FontAwesomeIcon
+                      icon={faChevronDown}
+                      className={`text-gray-400 text-xs transition-transform duration-300 flex-shrink-0 ${
+                        activeMyth === idx ? 'rotate-180 text-[#1952C7]' : ''
+                      }`}
                     />
                   </div>
-                  
-                  <div className={`overflow-hidden transition-all duration-500 ${activeMyth === idx ? 'max-h-48 opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
-                    <div className="flex items-start gap-3 pl-4 border-l-4 border-emerald-500 bg-emerald-50/40 p-3.5 rounded-r-xl">
-                      <span className="text-emerald-700 font-bold text-xs uppercase mt-0.5 px-2 py-0.5 bg-emerald-100 rounded">
+
+                  <div className={`overflow-hidden transition-all duration-500 ${activeMyth === idx ? 'max-h-64 opacity-100 mt-2.5 sm:mt-4' : 'max-h-0 opacity-0'}`}>
+                    <div className="flex items-start gap-2.5 sm:gap-3 pl-3 sm:pl-4 border-l-3 sm:border-l-4 border-emerald-500 bg-emerald-50/40 p-2.5 sm:p-3.5 rounded-r-xl">
+                      <span className="text-emerald-700 font-bold text-[10px] sm:text-xs uppercase mt-0.5 px-1.5 py-0.5 bg-emerald-100 rounded flex-shrink-0">
                         Fact
                       </span>
-                      <p className="text-gray-700 text-sm font-medium leading-relaxed">{item.fact}</p>
+                      <p className="text-gray-700 text-xs sm:text-sm font-medium leading-relaxed">{item.fact}</p>
                     </div>
                   </div>
                 </div>
@@ -626,20 +738,20 @@ export default function AboutContentExpanded() {
         {/* ========================================================================= */}
         {/* SECTION 8: CLOSING MANIFESTO                                              */}
         {/* ========================================================================= */}
-        <section className="pb-8">
-          <div className="p-8 sm:p-14 rounded-[32px] bg-gradient-to-r from-[#0C002B] via-[#1345C3] to-[#1952C7] shadow-xl text-center relative overflow-hidden group">
+        <section className="pb-0">
+          <div className="p-5 sm:p-12 rounded-2xl sm:rounded-[32px] bg-gradient-to-r from-[#0C002B] via-[#1345C3] to-[#1952C7] shadow-xl text-center relative overflow-hidden group">
             <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.2),transparent_70%)] opacity-40 pointer-events-none" />
-            <div className="relative z-10 max-w-4xl mx-auto space-y-6">
-              <span className="text-xs font-bold text-cyan-300 uppercase tracking-widest bg-white/10 px-3 py-1 rounded-full border border-white/20">
+            <div className="relative z-10 max-w-4xl mx-auto space-y-3.5 sm:space-y-6">
+              <span className="text-[10px] sm:text-xs font-bold text-cyan-300 uppercase tracking-widest bg-white/10 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full border border-white/20 inline-block">
                 The IPR Karo Promise
               </span>
-              <p className="text-white text-2xl sm:text-3xl lg:text-4xl font-extrabold italic leading-tight drop-shadow-sm" style={{ fontFamily: 'Aileron' }}>
+              <p className="text-white text-base sm:text-2xl lg:text-3xl font-extrabold italic leading-snug sm:leading-tight drop-shadow-sm px-1 sm:px-4" style={{ fontFamily: 'Aileron' }}>
                 "Intellectual property is not just a defensive shield—it is your offensive sword in the marketplace. We arm you for the battle of ideas."
               </p>
-              <div className="flex flex-wrap items-center justify-center gap-6 pt-2 text-white/80 text-xs sm:text-sm font-semibold">
-                <span className="flex items-center gap-1.5"><FontAwesomeIcon icon={faCheck} className="text-emerald-400" /> 100% Online Process</span>
-                <span className="flex items-center gap-1.5"><FontAwesomeIcon icon={faCheck} className="text-emerald-400" /> Dedicated IP Attorney</span>
-                <span className="flex items-center gap-1.5"><FontAwesomeIcon icon={faCheck} className="text-emerald-400" /> Transparent Pricing</span>
+              <div className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-6 pt-1 sm:pt-2 text-white/90 text-xs sm:text-sm font-semibold">
+                <span className="flex items-center gap-1.5"><FontAwesomeIcon icon={faCheck} className="text-emerald-400 text-xs" /> 100% Online Process</span>
+                <span className="flex items-center gap-1.5"><FontAwesomeIcon icon={faCheck} className="text-emerald-400 text-xs" /> Dedicated IP Attorney</span>
+                <span className="flex items-center gap-1.5"><FontAwesomeIcon icon={faCheck} className="text-emerald-400 text-xs" /> Transparent Pricing</span>
               </div>
             </div>
           </div>

@@ -1,7 +1,7 @@
 'use client';
 
-import { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { useRef, useState } from 'react';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 
 const SparkIcon = ({ color }: { color: string }) => (
@@ -70,21 +70,27 @@ const services = [
 
 export default function WhatWeProtect() {
   const scrollRef = useRef<HTMLDivElement>(null);
-  const { scrollXProgress } = useScroll({
-    container: scrollRef
-  });
+  const [activeCardIndex, setActiveCardIndex] = useState(0);
 
-  // Small initial width (0.2) to show it's a bar even at start
-  const scaleX = useTransform(scrollXProgress, [0, 1], [0.2, 1]);
+  const handleScroll = () => {
+    if (scrollRef.current) {
+      const { scrollLeft } = scrollRef.current;
+      const card = scrollRef.current.firstElementChild as HTMLElement | null;
+      const cardWidth = card ? card.offsetWidth + 24 : 320;
+      const index = Math.round(scrollLeft / cardWidth);
+      setActiveCardIndex(Math.min(Math.max(index, 0), services.length - 1));
+    }
+  };
 
-  const scroll = (direction: 'left' | 'right') => {
+  const scrollToCard = (index: number) => {
     if (scrollRef.current) {
       const card = scrollRef.current.firstElementChild as HTMLElement | null;
-      const cardWidth = card ? card.offsetWidth + 16 : 300;
-      scrollRef.current.scrollBy({
-        left: direction === 'left' ? -cardWidth : cardWidth,
+      const cardWidth = card ? card.offsetWidth + 24 : 320;
+      scrollRef.current.scrollTo({
+        left: index * cardWidth,
         behavior: 'smooth',
       });
+      setActiveCardIndex(index);
     }
   };
 
@@ -98,6 +104,7 @@ export default function WhatWeProtect() {
         {/* 3 Static Service Cards */}
         <div 
           ref={scrollRef}
+          onScroll={handleScroll}
           className="w-full flex md:grid md:grid-cols-3 overflow-x-auto md:overflow-x-visible snap-x snap-mandatory gap-6 lg:gap-8 pb-6 md:pb-0 scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0 items-stretch scroll-smooth"
         >
           {services.map((service, index) => (
@@ -152,33 +159,40 @@ export default function WhatWeProtect() {
           ))}
         </div>
 
-        {/* Mobile Navigation Controls (Arrows + Progress Bar) */}
-        <div className="md:hidden flex items-center justify-center gap-3 mt-4 w-full">
+        {/* Mobile Navigation Controls: Arrows & Dot Indicators */}
+        <div className="md:hidden flex items-center justify-between w-full max-w-[340px] mx-auto mt-4 px-2">
           <button
             type="button"
-            onClick={() => scroll('left')}
-            aria-label="Previous service"
-            className="w-7 h-7 rounded-full bg-white border border-slate-200 text-[#0C002B] hover:text-[#1952C7] hover:border-[#1952C7]/40 flex items-center justify-center shadow-xs active:scale-90 transition-all duration-150"
+            onClick={() => scrollToCard((activeCardIndex - 1 + services.length) % services.length)}
+            className="w-10 h-10 rounded-full bg-white border border-gray-200 shadow-sm flex items-center justify-center text-[#1952C7] hover:bg-blue-50 active:scale-95 transition-all"
+            aria-label="Previous Service"
           >
-            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
             </svg>
           </button>
 
-          <div className="w-[84px] h-[4px] bg-[#0C002B]/10 rounded-full overflow-hidden">
-            <motion.div 
-              className="h-full bg-[#1952C7] origin-left rounded-full"
-              style={{ scaleX }}
-            />
+          <div className="flex items-center gap-1.5">
+            {services.map((_, idx) => (
+              <button
+                key={idx}
+                type="button"
+                onClick={() => scrollToCard(idx)}
+                className={`h-2 rounded-full transition-all duration-300 ${
+                  activeCardIndex === idx ? 'w-6 bg-[#1952C7]' : 'w-2 bg-gray-300 hover:bg-gray-400'
+                }`}
+                aria-label={`Go to service ${idx + 1}`}
+              />
+            ))}
           </div>
 
           <button
             type="button"
-            onClick={() => scroll('right')}
-            aria-label="Next service"
-            className="w-7 h-7 rounded-full bg-white border border-slate-200 text-[#0C002B] hover:text-[#1952C7] hover:border-[#1952C7]/40 flex items-center justify-center shadow-xs active:scale-90 transition-all duration-150"
+            onClick={() => scrollToCard((activeCardIndex + 1) % services.length)}
+            className="w-10 h-10 rounded-full bg-white border border-gray-200 shadow-sm flex items-center justify-center text-[#1952C7] hover:bg-blue-50 active:scale-95 transition-all"
+            aria-label="Next Service"
           >
-            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
             </svg>
           </button>

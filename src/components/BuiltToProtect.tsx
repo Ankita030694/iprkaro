@@ -4,7 +4,7 @@
 import { useState, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const tabs = [
   {
@@ -96,20 +96,28 @@ const tabs = [
 
 export default function BuiltToProtect() {
   const [activeTab, setActiveTab] = useState(0);
+  const [activeMobileTab, setActiveMobileTab] = useState(0);
   const mobileScrollRef = useRef<HTMLDivElement>(null);
-  const { scrollXProgress: mobileScrollXProgress } = useScroll({
-    container: mobileScrollRef
-  });
-  const mobileScaleX = useTransform(mobileScrollXProgress, [0, 1], [0.2, 1]);
 
-  const scrollMobile = (direction: 'left' | 'right') => {
+  const handleMobileScroll = () => {
+    if (mobileScrollRef.current) {
+      const { scrollLeft } = mobileScrollRef.current;
+      const card = mobileScrollRef.current.firstElementChild as HTMLElement | null;
+      const cardWidth = card ? card.offsetWidth + 16 : 300;
+      const index = Math.round(scrollLeft / cardWidth);
+      setActiveMobileTab(Math.min(Math.max(index, 0), tabs.length - 1));
+    }
+  };
+
+  const scrollToMobileTab = (index: number) => {
     if (mobileScrollRef.current) {
       const card = mobileScrollRef.current.firstElementChild as HTMLElement | null;
       const cardWidth = card ? card.offsetWidth + 16 : 300;
-      mobileScrollRef.current.scrollBy({
-        left: direction === 'left' ? -cardWidth : cardWidth,
+      mobileScrollRef.current.scrollTo({
+        left: index * cardWidth,
         behavior: 'smooth',
       });
+      setActiveMobileTab(index);
     }
   };
 
@@ -124,6 +132,7 @@ export default function BuiltToProtect() {
         <div className="md:hidden w-full">
           <div
             ref={mobileScrollRef}
+            onScroll={handleMobileScroll}
             className="w-full flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 -mx-4 px-4 items-stretch scroll-smooth no-scrollbar"
             style={{
               scrollbarWidth: 'none',
@@ -186,33 +195,40 @@ export default function BuiltToProtect() {
             ))}
           </div>
 
-          {/* Mobile Navigation Controls (Arrows + Progress Bar) */}
-          <div className="flex items-center justify-center gap-3 mt-3 w-full">
+          {/* Mobile Navigation Controls: Arrows & Dot Indicators */}
+          <div className="flex items-center justify-between w-full max-w-[340px] mx-auto mt-4 px-2">
             <button
               type="button"
-              onClick={() => scrollMobile('left')}
+              onClick={() => scrollToMobileTab((activeMobileTab - 1 + tabs.length) % tabs.length)}
               aria-label="Previous card"
-              className="w-7 h-7 rounded-full bg-white border border-slate-200 text-[#0C002B] hover:text-[#1952C7] hover:border-[#1952C7]/40 flex items-center justify-center shadow-xs active:scale-90 transition-all duration-150"
+              className="w-10 h-10 rounded-full bg-white border border-gray-200 shadow-sm flex items-center justify-center text-[#1952C7] hover:bg-blue-50 active:scale-95 transition-all"
             >
-              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
               </svg>
             </button>
 
-            <div className="w-[84px] h-[4px] bg-[#0C002B]/10 rounded-full overflow-hidden">
-              <motion.div
-                className="h-full bg-[#1952C7] origin-left rounded-full"
-                style={{ scaleX: mobileScaleX }}
-              />
+            <div className="flex items-center gap-1.5">
+              {tabs.map((_, idx) => (
+                <button
+                  key={idx}
+                  type="button"
+                  onClick={() => scrollToMobileTab(idx)}
+                  className={`h-2 rounded-full transition-all duration-300 ${
+                    activeMobileTab === idx ? 'w-6 bg-[#1952C7]' : 'w-2 bg-gray-300 hover:bg-gray-400'
+                  }`}
+                  aria-label={`Go to category ${idx + 1}`}
+                />
+              ))}
             </div>
 
             <button
               type="button"
-              onClick={() => scrollMobile('right')}
+              onClick={() => scrollToMobileTab((activeMobileTab + 1) % tabs.length)}
               aria-label="Next card"
-              className="w-7 h-7 rounded-full bg-white border border-slate-200 text-[#0C002B] hover:text-[#1952C7] hover:border-[#1952C7]/40 flex items-center justify-center shadow-xs active:scale-90 transition-all duration-150"
+              className="w-10 h-10 rounded-full bg-white border border-gray-200 shadow-sm flex items-center justify-center text-[#1952C7] hover:bg-blue-50 active:scale-95 transition-all"
             >
-              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
               </svg>
             </button>

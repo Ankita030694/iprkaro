@@ -418,10 +418,6 @@ export default function AboutClient() {
       {/* Our Story Timeline Section */}
       <div className="w-full md:py-12 relative -mt-10 md:mt-0 bg-white">
         <div className="text-center mb-16 px-4">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200/80 text-[#1952C7] text-xs font-bold uppercase tracking-wider mb-3">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#1952C7]" />
-            <span>OUR JOURNEY</span>
-          </div>
           <h3
             className="text-3xl sm:text-4xl lg:text-[42px] font-bold"
             style={{
@@ -751,10 +747,6 @@ export default function AboutClient() {
       {/* What makes IPR Karo Different Section */}
       <div className="w-full pt-10 sm:pt-14 pb-8 sm:pb-10 px-4 sm:px-8 lg:px-20 bg-slate-50/50">
         <div className="text-center mb-8 sm:mb-10 max-w-4xl mx-auto">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200/80 text-[#1952C7] text-xs font-bold uppercase tracking-wider mb-3">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#1952C7]" />
-            <span>THE IPR KARO ADVANTAGE</span>
-          </div>
           <h3
             className="text-2xl sm:text-3xl lg:text-[40px] font-bold mb-3"
             style={{
@@ -1018,19 +1010,19 @@ export default function AboutClient() {
       <AboutContentExpanded />
 
       {/* FAQ Section */}
-      <div className="py-[57.6px] relative overflow-hidden w-full bg-white">
+      <div className="pt-12 sm:pt-24 pb-12 sm:pb-16 relative overflow-hidden w-full bg-white">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-0 left-0 w-full h-full" style={{ background: 'linear-gradient(to right, #0C002B05, transparent)' }}></div>
         </div>
 
         <div className="mx-4 lg:mx-20 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-10 items-start">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 items-start">
 
             {/* Left Section - Questions */}
-            <div className="space-y-[28.8px] flex flex-col justify-start">
-              <div className="space-y-[18px]">
-                <h3 className="text-[#0C002B] text-left font-sans text-[23.4px] md:text-[36px] font-bold leading-[28.8px] md:leading-[39.6px] w-full">
+            <div className="space-y-[20px] sm:space-y-[28.8px] flex flex-col justify-start">
+              <div className="space-y-[12px] sm:space-y-[18px]">
+                <h3 className="text-[#0C002B] text-center lg:text-left font-sans text-[23.4px] md:text-[36px] font-bold leading-[28.8px] md:leading-[39.6px] w-full">
                   Have Question?
                   <br />
                   <span className="text-[#1952C7]">
@@ -1038,13 +1030,13 @@ export default function AboutClient() {
                   </span>
                 </h3>
 
-                <p className="text-gray-500 font-sans text-[10.8px] md:text-[12.6px] lg:text-[13.5px] xl:text-[14.4px] font-medium">
+                <p className="text-gray-500 text-center lg:text-left font-sans text-[11px] md:text-[12.6px] lg:text-[13.5px] xl:text-[14.4px] font-medium">
                   Still have questions? <span className="text-[#1952C7] font-bold">Contact us</span> anytime.
                 </p>
               </div>
 
               {/* AI Input */}
-              <form onSubmit={handleAiSubmit} className="relative">
+              <form onSubmit={handleAiSubmit} className="relative max-w-lg mx-auto lg:mx-0 w-full">
                 <div className="relative bg-slate-50 border border-gray-100 rounded-[10.8px] p-[14.4px] max-w-lg shadow-sm">
                   <input
                     type="text"
