@@ -69,9 +69,9 @@ export default function ContactClient() {
     <div className="w-full bg-white text-[#0C002B]">
       
       {/* ─────────────────────────────────────────────────────────────
-          1. HERO & CONTACT FORM SECTION (SEAMLESS INTEGRATED VISUAL)
+          1. HERO & CONTACT FORM SECTION (FORM FIRST ON MOBILE)
       ───────────────────────────────────────────────────────────── */}
-      <section className="relative w-full pt-[115px] sm:pt-[130px] md:pt-[140px] pb-10 sm:pb-12 md:pb-14 overflow-hidden bg-gradient-to-b from-[#F0F5FF] via-[#F8FAFC] to-[#FFFFFF]">
+      <section className="relative w-full pt-[125px] sm:pt-[135px] md:pt-[140px] lg:pt-[140px] pb-8 sm:pb-12 md:pb-14 overflow-hidden bg-gradient-to-b from-[#F0F5FF] via-[#F8FAFC] to-[#FFFFFF]">
         
         {/* Ambient Top Glow Mesh */}
         <div 
@@ -81,42 +81,30 @@ export default function ContactClient() {
           }}
         />
 
-        <div className="relative max-w-[1320px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 z-10">
+        <div className="relative max-w-[1320px] mx-auto px-3.5 sm:px-6 md:px-8 lg:px-10 z-10">
           
-          {/* Main Grid: Header, Form, and Visual System */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-x-8 lg:gap-y-3 items-start">
+          {/* Main Grid: Form First on Mobile (order-1), Left Column (order-2) on Mobile; Side-by-side on Desktop */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-x-8 lg:gap-y-3 items-start">
             
-            {/* 1. Header Badges & Main Title (Mobile: 1st | Desktop: Left Col, Row 1) */}
-            <div className="lg:col-span-7 lg:col-start-1 lg:row-start-1 space-y-2 sm:space-y-2.5 text-center flex flex-col items-center">
-              {/* Badges */}
-              <div className="flex flex-wrap items-center justify-center gap-2">
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50/90 border border-blue-200/80 text-[#1952C7] text-xs font-bold uppercase tracking-wider">
-                  <span className="w-2 h-2 rounded-full bg-[#1952C7]" />
-                  <span>CONNECT WITH IPR KARO</span>
-                </div>
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50/90 border border-emerald-200/80 text-emerald-800 text-xs font-semibold">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                  <span>IP Attorneys Available Online</span>
-                </div>
-              </div>
-
-              {/* Main H1 */}
-              <h1 className="font-nunito text-[28px] sm:text-[38px] md:text-[44px] lg:text-[46px] font-extrabold leading-[1.12] text-[#0C002B] tracking-tight text-center">
-                Protect Your Brand <br className="hidden sm:inline" />
-                <span className="text-[#1952C7]">Before Someone Else Does.</span>
-              </h1>
-              <p className="text-[#475569] font-nunito text-[14.5px] sm:text-[15.5px] leading-[1.55] max-w-xl mx-auto font-normal text-center">
-                AI-powered trademark search combined with experienced IP attorneys to help protect your brand, trademark, copyright, and intellectual property in India.
-              </p>
-            </div>
-
-            {/* 2. Contact Form (Mobile: 2nd - RIGHT AFTER HEADER TEXT! | Desktop: Right Col, Rows 1-2) */}
-            <div className="lg:col-span-5 lg:col-start-8 lg:row-start-1 lg:row-span-2 w-full flex justify-center lg:justify-end my-1 lg:my-0">
+            {/* 1. Contact Form (Mobile: 1st - FIRST THING VISIBLE ON MOBILE SCREEN! | Desktop: Right Col) */}
+            <div className="order-1 lg:order-2 lg:col-span-5 lg:col-start-8 lg:row-start-1 lg:row-span-2 w-full flex justify-center lg:justify-end my-0">
               <ContactForm />
             </div>
 
-            {/* 3. Visual & Trust Indicators (Mobile: 3rd - AFTER FORM | Desktop: Left Col, Row 2) */}
-            <div className="lg:col-span-7 lg:col-start-1 lg:row-start-2 space-y-3 sm:space-y-3.5">
+            {/* 2. Header, Visual & Trust Indicators (Mobile: 2nd - ON SCROLL BELOW FORM | Desktop: Left Col) */}
+            <div className="order-2 lg:order-1 lg:col-span-7 lg:col-start-1 lg:row-start-1 space-y-4 sm:space-y-5">
+              
+              {/* Main Heading Text */}
+              <div className="space-y-2 sm:space-y-2.5 text-center lg:text-left flex flex-col items-center lg:items-start">
+                <h1 className="font-nunito text-[24px] sm:text-[34px] md:text-[42px] lg:text-[46px] font-extrabold leading-[1.15] text-[#0C002B] tracking-tight">
+                  Protect Your Brand <br className="hidden sm:inline" />
+                  <span className="text-[#1952C7]">Before Someone Else Does.</span>
+                </h1>
+                <p className="text-[#475569] font-nunito text-[13.5px] sm:text-[15.5px] leading-[1.55] max-w-xl font-normal">
+                  AI-powered trademark search combined with experienced IP attorneys to help protect your brand, trademark, copyright, and intellectual property in India.
+                </p>
+              </div>
+
               {/* Seamless Integrated Brand Protection Visual */}
               <IntegratedBrandProtectionVisual />
 

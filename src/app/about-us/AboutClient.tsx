@@ -17,7 +17,7 @@ export default function AboutClient() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [timelineProgress, setTimelineProgress] = useState(0);
   const [aiQuestion, setAiQuestion] = useState('');
-  const [searchResult, setSearchResult] = useState<{question: string, answer: string} | null>(null);
+  const [searchResult, setSearchResult] = useState<{ question: string, answer: string } | null>(null);
   const [showNoMatch, setShowNoMatch] = useState(false);
   const timelineDesktopRef = useRef<HTMLDivElement>(null);
   const timelineMobileRef = useRef<HTMLDivElement>(null);
@@ -29,14 +29,14 @@ export default function AboutClient() {
   // Handle scroll progress for timeline - smooth pixel by pixel
   useEffect(() => {
     let rafId: number | null = null;
-    
+
     const handleScroll = () => {
       if (rafId) return; // Throttle using requestAnimationFrame
-      
+
       rafId = requestAnimationFrame(() => {
         // Determine which timeline is visible (desktop or mobile)
         const timelineRef = window.innerWidth >= 1024 ? timelineDesktopRef : timelineMobileRef;
-        
+
         if (!timelineRef.current) {
           rafId = null;
           return;
@@ -46,16 +46,16 @@ export default function AboutClient() {
         const windowHeight = window.innerHeight;
         const timelineTop = rect.top + window.scrollY;
         const timelineHeight = rect.height;
-        
+
         // Start filling when the timeline section enters the viewport (top of timeline hits bottom of viewport)
         // End filling when the timeline section is about to leave the viewport
         const fillStart = timelineTop - windowHeight + 200; // Start when timeline is just visible
         const fillEnd = timelineTop + timelineHeight - 200; // End near the bottom of timeline
-        
+
         const currentScroll = window.scrollY;
-        
+
         let progress = 0;
-        
+
         if (currentScroll >= fillStart && currentScroll <= fillEnd) {
           // Calculate smooth pixel-by-pixel progress
           const scrolledIntoSection = currentScroll - fillStart;
@@ -66,10 +66,10 @@ export default function AboutClient() {
         } else {
           progress = 0; // Before the timeline section
         }
-        
+
         // Clamp between 0 and 100
         progress = Math.min(Math.max(progress, 0), 100);
-        
+
         setTimelineProgress(progress);
         rafId = null;
       });
@@ -114,16 +114,16 @@ export default function AboutClient() {
     if (aiQuestion.trim()) {
       setSearchResult(null);
       setShowNoMatch(false);
-      
+
       const query = aiQuestion.toLowerCase().trim();
-      
+
       const scoredFaqs = aboutFaqs.map(faq => {
         const questionLower = faq.question.toLowerCase();
         const answerLower = faq.answer.toLowerCase();
         let score = 0;
-        
+
         const queryWords = query.split(' ').filter(word => word.length > 2);
-        
+
         queryWords.forEach(word => {
           if (questionLower.includes(query)) {
             score += 100;
@@ -135,14 +135,14 @@ export default function AboutClient() {
             score += 3;
           }
         });
-        
+
         return { faq, score };
       });
-      
-      const bestMatch = scoredFaqs.reduce((best, current) => 
+
+      const bestMatch = scoredFaqs.reduce((best, current) =>
         current.score > best.score ? current : best
       );
-      
+
       setTimeout(() => {
         if (bestMatch.score > 0) {
           setSearchResult(bestMatch.faq);
@@ -152,7 +152,7 @@ export default function AboutClient() {
           setShowNoMatch(true);
         }
       }, 50);
-      
+
       setAiQuestion('');
     }
   };
@@ -160,7 +160,7 @@ export default function AboutClient() {
   return (
     <div className="home-page-font min-h-screen relative overflow-x-hidden bg-white">
       {/* Soft Ambient Radial Glow at Top Center matching the light theme */}
-      <div 
+      <div
         className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] max-w-full h-[450px] pointer-events-none -z-0 opacity-70"
         style={{
           background: 'radial-gradient(ellipse 65% 55% at 50% 10%, rgba(186, 230, 253, 0.45), rgba(219, 234, 254, 0.35) 40%, rgba(255, 255, 255, 0) 80%)'
@@ -170,18 +170,6 @@ export default function AboutClient() {
       {/* Heading Section - Just below navbar */}
       <div className="w-full px-6 sm:px-12 lg:px-24 pt-32 pb-4 relative z-10">
         <div className="text-center space-y-4">
-          {/* Header Badges */}
-          <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50/90 border border-blue-200/80 text-[#1952C7] text-xs font-bold uppercase tracking-wider">
-              <span className="w-2 h-2 rounded-full bg-[#1952C7]" />
-              <span>ABOUT IPR KARO</span>
-            </div>
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50/90 border border-emerald-200/80 text-emerald-800 text-xs font-semibold">
-              <span className="w-2 h-2 rounded-full bg-emerald-500" />
-              <span>AI-Powered Trademark Platform</span>
-            </div>
-          </div>
-
           {/* Main Heading */}
           <h1
             className="font-bold text-center"
@@ -253,55 +241,33 @@ export default function AboutClient() {
 
       {/* IPR KARO Section - Under Hero Visual */}
       <div className="w-full px-6 sm:px-12 lg:px-24 mt-2 sm:mt-6">
-        {/* Mobile Layout - IPR KARO vertical on left, content on right */}
+        {/* Mobile Layout - Content only (IPR KARO vertical text hidden on mobile) */}
         <div className="block lg:hidden">
-          <div className="flex items-center justify-center gap-4">
-            {/* Vertical IPR Karo Text - Left Side for Mobile */}
-            <div className="flex flex-col items-center flex-shrink-0">
-              <div
-                style={{
-                  writingMode: 'vertical-lr',
-                  textOrientation: 'mixed',
-                  color: '#1952C7',
-                  fontFamily: 'Aileron',
-                  fontSize: '24px',
-                  fontWeight: 700,
-                  lineHeight: '1.2',
-                  letterSpacing: '2px',
-                  transform: 'rotate(180deg)'
-                }}
-              >
-                IPR KARO
-              </div>
+          <div className="max-w-2xl mx-auto space-y-4">
+            <div
+              className="text-xl sm:text-2xl font-semibold"
+              style={{
+                color: '#0C002B',
+                fontFamily: 'Aileron',
+                fontWeight: 600,
+                lineHeight: '1.3'
+              }}
+            >
+              Advanced AI-Powered Trademark Search
             </div>
 
-            {/* Right Content - Mobile */}
-            <div className="flex-1 max-w-2xl space-y-4">
-              <div
-                className="text-xl sm:text-2xl font-semibold"
-                style={{
-                  color: '#0C002B',
-                  fontFamily: 'Aileron',
-                  fontWeight: 600,
-                  lineHeight: '1.3'
-                }}
-              >
-                Advanced AI-Powered Trademark Search
-              </div>
-
-              <p
-                className="text-base sm:text-lg"
-                style={{
-                  color: '#0C002B',
-                  fontFamily: 'Aileron',
-                  fontWeight: 400,
-                  lineHeight: '1.6',
-                  opacity: 0.9
-                }}
-              >
-                IPR Karo uses cutting-edge AI to scan millions of trademarks instantly, providing clear risk reports and similarity analyses. Our platform guides you step-by-step with smart filing recommendations, making online trademark registration fast, safe, and hassle-free.
-              </p>
-            </div>
+            <p
+              className="text-base sm:text-lg"
+              style={{
+                color: '#0C002B',
+                fontFamily: 'Aileron',
+                fontWeight: 400,
+                lineHeight: '1.6',
+                opacity: 0.9
+              }}
+            >
+              IPR Karo uses cutting-edge AI to scan millions of trademarks instantly, providing clear risk reports and similarity analyses. Our platform guides you step-by-step with smart filing recommendations, making online trademark registration fast, safe, and hassle-free.
+            </p>
           </div>
         </div>
 
@@ -309,7 +275,7 @@ export default function AboutClient() {
         <div className="hidden lg:flex items-center justify-center gap-4 mt-0">
           {/* Vertical IPR Karo Text - Flipped */}
           <div className="flex flex-col items-center">
-            <div 
+            <div
               style={{
                 writingMode: 'vertical-lr',
                 textOrientation: 'mixed',
@@ -339,7 +305,7 @@ export default function AboutClient() {
             >
               Advanced AI-Powered Trademark Search
             </div>
-            
+
             <p
               className="text-base sm:text-lg"
               style={{
@@ -359,7 +325,7 @@ export default function AboutClient() {
       {/* Our Clients Section */}
       <div className="w-full py-16 bg-white">
         <div className="text-center mb-12">
-          <h2 
+          <h2
             className="text-3xl sm:text-4xl lg:text-[42px] font-bold"
             style={{
               color: '#0C002B',
@@ -371,7 +337,7 @@ export default function AboutClient() {
             Our Clients
           </h2>
         </div>
-        
+
         {/* Mobile: Client Logos Slider */}
         <div className="block lg:hidden">
           <ClientLogoSlider useWhiteLogos={false} />
@@ -380,10 +346,10 @@ export default function AboutClient() {
         {/* Desktop: Client Logos Carousel */}
         <div className="hidden lg:block w-full overflow-hidden">
           <div className="flex relative overflow-hidden">
-             {/* Gradient Masks for smooth fade effect */}
+            {/* Gradient Masks for smooth fade effect */}
             <div className="absolute left-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-white to-transparent pointer-events-none" />
             <div className="absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-l from-white to-transparent pointer-events-none" />
-            
+
             <motion.div
               className="flex gap-12 py-4"
               animate={{
@@ -456,7 +422,7 @@ export default function AboutClient() {
             <span className="w-1.5 h-1.5 rounded-full bg-[#1952C7]" />
             <span>OUR JOURNEY</span>
           </div>
-          <h3 
+          <h3
             className="text-3xl sm:text-4xl lg:text-[42px] font-bold"
             style={{
               color: '#0C002B',
@@ -471,7 +437,7 @@ export default function AboutClient() {
             How a commitment to democratizing Indian intellectual property transformed into a national LegalTech engine.
           </p>
         </div>
-        
+
         {/* Decorative "Our" Text - Left Side - Desktop Only */}
         <div
           className="hidden xl:block absolute top-1/2 transform -translate-y-1/2 -rotate-90 -translate-x-28"
@@ -513,7 +479,7 @@ export default function AboutClient() {
         >
           Story
         </div>
-        
+
         {/* Desktop Timeline Section */}
         <div className="hidden lg:block max-w-5xl mx-auto relative px-6" ref={timelineDesktopRef}>
 
@@ -540,7 +506,7 @@ export default function AboutClient() {
 
           {/* Timeline Items - Desktop Pictographic Cards */}
           <div className="space-y-20">
-            
+
             {/* Timeline Item 1 - 2019 */}
             <div className="relative flex items-center">
               {/* Year (Left) */}
@@ -690,7 +656,7 @@ export default function AboutClient() {
                 background: 'linear-gradient(to bottom, rgba(12, 0, 43, 0.05), rgba(12, 0, 43, 0.1), rgba(12, 0, 43, 0.05))'
               }}
             />
-            
+
             {/* Blue Progress Line */}
             <div
               className="absolute left-3 top-0 w-1"
@@ -783,8 +749,8 @@ export default function AboutClient() {
       </div>
 
       {/* What makes IPR Karo Different Section */}
-      <div className="w-full py-16 px-4 sm:px-8 lg:px-20 bg-slate-50/50">
-        <div className="text-center mb-12 max-w-4xl mx-auto">
+      <div className="w-full pt-10 sm:pt-14 pb-8 sm:pb-10 px-4 sm:px-8 lg:px-20 bg-slate-50/50">
+        <div className="text-center mb-8 sm:mb-10 max-w-4xl mx-auto">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200/80 text-[#1952C7] text-xs font-bold uppercase tracking-wider mb-3">
             <span className="w-1.5 h-1.5 rounded-full bg-[#1952C7]" />
             <span>THE IPR KARO ADVANTAGE</span>
@@ -808,78 +774,87 @@ export default function AboutClient() {
         {/* ========================================================================= */}
         {/* PICTOGRAPHIC COMPARISON MATRIX: TRADITIONAL VS IPR KARO                    */}
         {/* ========================================================================= */}
-        <div className="max-w-5xl mx-auto mb-16 overflow-hidden rounded-2xl border border-gray-200/80 bg-white shadow-sm">
-          <div className="grid grid-cols-12 bg-slate-100/80 py-4 px-6 border-b border-gray-200 text-xs sm:text-sm font-bold text-[#0C002B]">
-            <div className="col-span-5 sm:col-span-4">Evaluation Metric</div>
-            <div className="col-span-3 sm:col-span-4 text-gray-500">Traditional Law Firm 🏛️</div>
-            <div className="col-span-4 sm:col-span-4 text-[#1952C7] font-extrabold flex items-center gap-1.5">
-              <span>IPR Karo AI Platform</span>
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse hidden sm:inline-block" />
-            </div>
-          </div>
+        <div className="max-w-5xl mx-auto mb-0">
+          {/* Mobile swipe hint */}
+          {/* <div className="flex md:hidden items-center justify-end gap-1.5 text-xs text-gray-500 mb-2 px-1">
+            <span>Swipe horizontally to compare</span>
+            <span className="animate-pulse">👉</span>
+          </div> */}
 
-          <div className="divide-y divide-gray-100 text-xs sm:text-sm">
-            {[
-              {
-                metric: "Clearance Search Speed",
-                traditional: "3 to 7 Days (Manual Query)",
-                iprkaro: "Instant < 3 Seconds (10M+ Database Scan)",
-                positive: true
-              },
-              {
-                metric: "Conflict Detection Depth",
-                traditional: "Exact Word Match Only",
-                iprkaro: "Phonetic + Visual + Semantic AI Algorithm",
-                positive: true
-              },
-              {
-                metric: "Attorney Verification",
-                traditional: "Expensive hourly billing (₹15,000+)",
-                iprkaro: "Senior Certified IP Attorney Included in Fee",
-                positive: true
-              },
-              {
-                metric: "Government E-Filing Turnaround",
-                traditional: "2 to 3 Weeks Delay",
-                iprkaro: "Guaranteed Form TM-A Filed in 24 Hours",
-                positive: true
-              },
-              {
-                metric: "Post-Filing Watchdog Defense",
-                traditional: "None (You only find out when sued)",
-                iprkaro: "Automated 24/7 Trademark Journal Watchdog",
-                positive: true
-              },
-              {
-                metric: "Pricing & Invoicing Transparency",
-                traditional: "Hidden surcharges & unexpected legal bills",
-                iprkaro: "100% Flat Transparent Pricing with No Hidden Fees",
-                positive: true
-              }
-            ].map((row, idx) => (
-              <div key={idx} className="grid grid-cols-12 py-4 px-6 items-center hover:bg-blue-50/30 transition-colors">
-                <div className="col-span-5 sm:col-span-4 font-bold text-[#0C002B]">
-                  {row.metric}
-                </div>
-                <div className="col-span-3 sm:col-span-4 text-gray-500 flex items-center gap-1.5">
-                  <FontAwesomeIcon icon={faTimes} className="text-red-400 text-xs flex-shrink-0" />
-                  <span className="truncate">{row.traditional}</span>
-                </div>
-                <div className="col-span-4 sm:col-span-4 font-bold text-[#1952C7] flex items-center gap-1.5">
-                  <FontAwesomeIcon icon={faCheck} className="text-emerald-500 text-xs flex-shrink-0" />
-                  <span>{row.iprkaro}</span>
+          <div className="w-full overflow-x-auto rounded-2xl border border-gray-200/80 bg-white shadow-sm">
+            <div className="min-w-[720px]">
+              <div className="grid grid-cols-12 bg-slate-100/80 py-4 px-6 border-b border-gray-200 text-xs sm:text-sm font-bold text-[#0C002B]">
+                <div className="col-span-4">Evaluation Metric</div>
+                <div className="col-span-4 text-gray-500">Traditional Law Firm 🏛️</div>
+                <div className="col-span-4 text-[#1952C7] font-extrabold flex items-center gap-1.5">
+                  <span>IPR Karo AI Platform</span>
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                 </div>
               </div>
-            ))}
+
+              <div className="divide-y divide-gray-100 text-xs sm:text-sm">
+                {[
+                  {
+                    metric: "Clearance Search Speed",
+                    traditional: "3 to 7 Days (Manual Query)",
+                    iprkaro: "Instant < 3 Seconds (10M+ Database Scan)",
+                    positive: true
+                  },
+                  {
+                    metric: "Conflict Detection Depth",
+                    traditional: "Exact Word Match Only",
+                    iprkaro: "Phonetic + Visual + Semantic AI Algorithm",
+                    positive: true
+                  },
+                  {
+                    metric: "Attorney Verification",
+                    traditional: "Expensive hourly billing (₹15,000+)",
+                    iprkaro: "Senior Certified IP Attorney Included in Fee",
+                    positive: true
+                  },
+                  {
+                    metric: "Government E-Filing Turnaround",
+                    traditional: "2 to 3 Weeks Delay",
+                    iprkaro: "Guaranteed Form TM-A Filed in 24 Hours",
+                    positive: true
+                  },
+                  {
+                    metric: "Post-Filing Watchdog Defense",
+                    traditional: "None (You only find out when sued)",
+                    iprkaro: "Automated 24/7 Trademark Journal Watchdog",
+                    positive: true
+                  },
+                  {
+                    metric: "Pricing & Invoicing Transparency",
+                    traditional: "Hidden surcharges & unexpected legal bills",
+                    iprkaro: "100% Flat Transparent Pricing with No Hidden Fees",
+                    positive: true
+                  }
+                ].map((row, idx) => (
+                  <div key={idx} className="grid grid-cols-12 py-4 px-6 items-center hover:bg-blue-50/30 transition-colors">
+                    <div className="col-span-4 font-bold text-[#0C002B] pr-2">
+                      {row.metric}
+                    </div>
+                    <div className="col-span-4 text-gray-500 flex items-center gap-1.5 pr-2">
+                      <FontAwesomeIcon icon={faTimes} className="text-red-400 text-xs flex-shrink-0" />
+                      <span>{row.traditional}</span>
+                    </div>
+                    <div className="col-span-4 font-bold text-[#1952C7] flex items-center gap-1.5">
+                      <FontAwesomeIcon icon={faCheck} className="text-emerald-500 text-xs flex-shrink-0" />
+                      <span>{row.iprkaro}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
 
         {/* 5 Enhanced Feature Cards */}
+        {/* 
         <div className="max-w-6xl mx-auto">
-          {/* Mobile Layout */}
           <div className="block lg:hidden space-y-4">
-            {/* Card 1 */}
-            <div 
+            <div
               className="p-6 rounded-2xl bg-white border border-gray-100 shadow-sm cursor-pointer"
               onClick={() => setActiveCard(activeCard === 1 ? null : 1)}
             >
@@ -892,8 +867,7 @@ export default function AboutClient() {
               </div>
             </div>
 
-            {/* Card 2 */}
-            <div 
+            <div
               className="p-6 rounded-2xl bg-white border border-gray-100 shadow-sm cursor-pointer"
               onClick={() => setActiveCard(activeCard === 2 ? null : 2)}
             >
@@ -903,8 +877,7 @@ export default function AboutClient() {
               </p>
             </div>
 
-            {/* Card 3 */}
-            <div 
+            <div
               className="p-6 rounded-2xl bg-white border border-gray-100 shadow-sm cursor-pointer"
               onClick={() => setActiveCard(activeCard === 3 ? null : 3)}
             >
@@ -914,8 +887,7 @@ export default function AboutClient() {
               </p>
             </div>
 
-            {/* Card 4 */}
-            <div 
+            <div
               className="p-6 rounded-2xl bg-white border border-gray-100 shadow-sm cursor-pointer"
               onClick={() => setActiveCard(activeCard === 4 ? null : 4)}
             >
@@ -925,8 +897,7 @@ export default function AboutClient() {
               </p>
             </div>
 
-            {/* Card 5 */}
-            <div 
+            <div
               className="p-6 rounded-2xl bg-white border border-blue-100 shadow-sm cursor-pointer"
               onClick={() => setActiveCard(activeCard === 5 ? null : 5)}
             >
@@ -943,11 +914,8 @@ export default function AboutClient() {
             </div>
           </div>
 
-          {/* Desktop Layout */}
           <div className="hidden lg:flex flex-row gap-6">
-            {/* Left 2x2 Grid */}
             <div className="flex-1 grid grid-cols-2 gap-6">
-              {/* Card 1 */}
               <div className="p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-lg hover:border-blue-200 transition-all duration-300 flex flex-col justify-between group">
                 <div>
                   <h4 className="text-xl font-bold text-[#0C002B] mb-2">AI-Powered Trademark Search</h4>
@@ -960,7 +928,6 @@ export default function AboutClient() {
                 </div>
               </div>
 
-              {/* Card 2 */}
               <div className="p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-lg hover:border-blue-200 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden">
                 <div className="absolute top-2 right-2 opacity-30 group-hover:opacity-100 transition-opacity">
                   <Image src="/figmacomp/expert-guidance.svg" alt="Expert Icon" width={70} height={70} className="w-14 h-14 object-contain" />
@@ -973,7 +940,6 @@ export default function AboutClient() {
                 </div>
               </div>
 
-              {/* Card 3 */}
               <div className="p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-lg hover:border-blue-200 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden">
                 <div className="absolute top-2 right-2 opacity-30 group-hover:opacity-100 transition-opacity">
                   <Image src="/figmacomp/fast-processing.svg" alt="Fast Processing Icon" width={70} height={70} className="w-14 h-14 object-contain" />
@@ -986,7 +952,6 @@ export default function AboutClient() {
                 </div>
               </div>
 
-              {/* Card 4 */}
               <div className="p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-lg hover:border-blue-200 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden">
                 <div className="absolute bottom-2 right-2 opacity-30 group-hover:opacity-100 transition-opacity">
                   <Image src="/figmacomp/affordable-pricing.svg" alt="Pricing Icon" width={100} height={80} className="w-20 h-auto object-contain" />
@@ -1000,7 +965,6 @@ export default function AboutClient() {
               </div>
             </div>
 
-            {/* Right Card 5 - End to End Support */}
             <div className="w-80 flex-shrink-0">
               <div className="h-full p-8 rounded-2xl bg-gradient-to-b from-blue-50/70 via-white to-slate-50 border border-blue-200 shadow-md flex flex-col justify-between">
                 <div>
@@ -1041,7 +1005,6 @@ export default function AboutClient() {
             </div>
           </div>
 
-          {/* Trust Badge Line */}
           <div className="w-full text-center mt-10">
             <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white border border-gray-200/80 shadow-xs max-w-4xl text-xs font-semibold text-gray-700">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
@@ -1049,12 +1012,13 @@ export default function AboutClient() {
             </div>
           </div>
         </div>
+        */}
       </div>
 
       <AboutContentExpanded />
 
-        {/* FAQ Section */}
-        <div className="py-[57.6px] relative overflow-hidden w-full bg-white">
+      {/* FAQ Section */}
+      <div className="py-[57.6px] relative overflow-hidden w-full bg-white">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-0 left-0 w-full h-full" style={{ background: 'linear-gradient(to right, #0C002B05, transparent)' }}></div>
@@ -1100,7 +1064,7 @@ export default function AboutClient() {
 
               {/* Search Result Display */}
               {searchResult && (
-                <div 
+                <div
                   key={searchResult.question}
                   className="p-[18px] rounded-[10.8px] max-w-lg animate-fade-in-up bg-white border border-gray-100 shadow-lg"
                 >
@@ -1123,7 +1087,7 @@ export default function AboutClient() {
 
               {/* No Match Message */}
               {showNoMatch && (
-                <div 
+                <div
                   className="p-[18px] rounded-[10.8px] max-w-lg animate-fade-in-up bg-slate-50 border border-gray-100 shadow-sm"
                 >
                   <div className="flex justify-between items-start">
@@ -1166,16 +1130,14 @@ export default function AboutClient() {
                       </h4>
                       <FontAwesomeIcon
                         icon={faChevronDown}
-                        className={`w-[14px] h-[14px] transition-all duration-500 ease-in-out flex-shrink-0 ${
-                          openFaq === index ? 'rotate-180 text-[#1952C7]' : 'rotate-0 text-[#0C002B] opacity-50'
-                        }`}
+                        className={`w-[14px] h-[14px] transition-all duration-500 ease-in-out flex-shrink-0 ${openFaq === index ? 'rotate-180 text-[#1952C7]' : 'rotate-0 text-[#0C002B] opacity-50'
+                          }`}
                       />
                     </div>
 
                     <div
-                      className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                        openFaq === index ? 'max-h-[345.6px] opacity-100 mt-0' : 'max-h-0 opacity-0 -mt-[14.4px]'
-                      }`}
+                      className={`overflow-hidden transition-all duration-500 ease-in-out ${openFaq === index ? 'max-h-[345.6px] opacity-100 mt-0' : 'max-h-0 opacity-0 -mt-[14.4px]'
+                        }`}
                     >
                       <div className="mt-[14.4px] pt-[14.4px] border-t border-gray-100 transform transition-all duration-500 ease-in-out">
                         <p className="text-[#0C002B] font-sans text-[11.7px] md:text-[12.6px] lg:text-[13.5px] font-medium leading-relaxed opacity-80">

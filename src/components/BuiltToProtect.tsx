@@ -1,10 +1,10 @@
 'use client';
 
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
 
 const tabs = [
   {
@@ -96,7 +96,22 @@ const tabs = [
 
 export default function BuiltToProtect() {
   const [activeTab, setActiveTab] = useState(0);
-  const [expandedId, setExpandedId] = useState<number | null>(null);
+  const mobileScrollRef = useRef<HTMLDivElement>(null);
+  const { scrollXProgress: mobileScrollXProgress } = useScroll({
+    container: mobileScrollRef
+  });
+  const mobileScaleX = useTransform(mobileScrollXProgress, [0, 1], [0.2, 1]);
+
+  const scrollMobile = (direction: 'left' | 'right') => {
+    if (mobileScrollRef.current) {
+      const card = mobileScrollRef.current.firstElementChild as HTMLElement | null;
+      const cardWidth = card ? card.offsetWidth + 16 : 300;
+      mobileScrollRef.current.scrollBy({
+        left: direction === 'left' ? -cardWidth : cardWidth,
+        behavior: 'smooth',
+      });
+    }
+  };
 
   return (
     <section className="w-full bg-white py-8 md:py-12 px-4 md:px-8">
@@ -105,98 +120,103 @@ export default function BuiltToProtect() {
           Built to protect what <span className="text-[#1952C7]">you&apos;re building</span>
         </h3>
 
-        {/* MOBILE VIEW: Accordion/Expanded Cards */}
-        <div className="md:hidden w-full flex flex-col gap-4">
-          {tabs.map((tab) => {
-            const isExpanded = expandedId === tab.id;
-            return (
+        {/* MOBILE VIEW: Horizontal Swipeable Cards */}
+        <div className="md:hidden w-full">
+          <div
+            ref={mobileScrollRef}
+            className="w-full flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 -mx-4 px-4 items-stretch scroll-smooth no-scrollbar"
+            style={{
+              scrollbarWidth: 'none',
+              msOverflowStyle: 'none',
+            }}
+          >
+            {tabs.map((tab) => (
               <div
                 key={tab.id}
-                className="w-full bg-[#F7F7F7] rounded-[20px] overflow-hidden transition-all duration-300 border border-gray-100"
+                className="flex-shrink-0 w-[88vw] sm:w-[350px] snap-center bg-[#F7F7F7] rounded-[24px] p-6 border border-gray-100 flex flex-col justify-between shadow-[0_4px_20px_rgba(0,0,0,0.03)]"
               >
-                <div
-                  className="p-6 flex flex-col items-start relative cursor-pointer"
-                  onClick={() => !isExpanded && setExpandedId(tab.id)}
-                >
+                <div>
+                  {/* Category Header */}
                   <div className="flex justify-between items-center w-full mb-3">
-                    <span className="text-[#1952C7] font-nunito font-semibold text-[15px]">{tab.category}</span>
-                    <button
-                      onClick={(e) => {
-                        if (isExpanded) {
-                          e.stopPropagation();
-                          setExpandedId(null);
-                        }
-                      }}
-                      className="text-[#0C002B]"
-                    >
-                      <motion.div
-                        animate={{ rotate: isExpanded ? 45 : 0 }}
-                        transition={{ duration: 0.3 }}
-                      >
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                          <line x1="12" y1="5" x2="12" y2="19"></line>
-                          <line x1="5" y1="12" x2="19" y2="12"></line>
-                        </svg>
-                      </motion.div>
-                    </button>
+                    <span className="text-[#1952C7] bg-[#EAF2FC] font-nunito font-bold text-[13px] px-3 py-1 rounded-full">
+                      {tab.category}
+                    </span>
+                    <div className="w-9 h-9 rounded-full bg-white flex items-center justify-center p-1.5 shadow-sm">
+                      <Image
+                        src={tab.icon}
+                        alt={tab.category}
+                        width={32}
+                        height={32}
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
                   </div>
 
-                  <h4 className="text-[#0C002B] font-nunito text-[24px] font-bold leading-[1.2] mb-4 max-w-[280px]">
+                  {/* Title */}
+                  <h4 className="text-[#0C002B] font-nunito text-[22px] font-bold leading-[1.22] mb-4">
                     {tab.title}
                   </h4>
 
-                  <motion.div
-                    animate={{ marginBottom: isExpanded ? '20px' : '0px' }}
-                  >
-                    <Link
-                      href="/contact-us"
-                      onClick={(e) => e.stopPropagation()}
-                      className="inline-block border-2 border-[#0C002B] text-[#0C002B] font-bold px-6 py-2.5 rounded-[12px] text-[14px] hover:bg-[#1952C7] hover:border-[#1952C7] hover:text-white transition-colors duration-200 text-center"
-                    >
-                      {tab.buttonText}
-                    </Link>
-                  </motion.div>
-
-                  <motion.div
-                    initial={false}
-                    animate={{
-                      height: isExpanded ? 'auto' : 0,
-                      opacity: isExpanded ? 1 : 0,
-                      marginTop: isExpanded ? 20 : 0
-                    }}
-                    transition={{ duration: 0.4, ease: [0.04, 0.62, 0.23, 0.98] }}
-                    className="overflow-hidden w-full"
-                  >
-                    <div className="w-full flex flex-col gap-6">
-                      {tab.features.map((feature, i) => (
-                        <div key={i} className="flex flex-col">
-                          <h5 className="text-[#0C002B] font-nunito text-[18px] font-bold mb-1.5">
-                            {feature.heading}
-                          </h5>
-                          <p className="text-[#334155] text-[14px] leading-relaxed font-normal">
-                            {feature.desc}
-                          </p>
-                          {i === 0 && <div className="w-full h-[1px] bg-gray-200 mt-6" />}
-                        </div>
-                      ))}
-                    </div>
-
-                    <div className="w-full flex justify-center mt-8 pb-4">
-                      <div className="relative w-32 h-32">
-                        <Image
-                          src={tab.icon}
-                          alt="Illustration"
-                          width={400}
-                          height={400}
-                          className="w-full h-full object-cover"
-                        />
+                  {/* Features */}
+                  <div className="flex flex-col gap-4 mb-6">
+                    {tab.features.map((feature, i) => (
+                      <div key={i} className="flex flex-col">
+                        <h5 className="text-[#0C002B] font-nunito text-[15px] font-bold mb-1">
+                          {feature.heading}
+                        </h5>
+                        <p className="text-[#334155] text-[13.5px] leading-relaxed font-normal">
+                          {feature.desc}
+                        </p>
+                        {i === 0 && <div className="w-full h-[1px] bg-gray-200/80 mt-4" />}
                       </div>
-                    </div>
-                  </motion.div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Button */}
+                <div className="pt-2">
+                  <Link
+                    href="/contact-us"
+                    className="w-full block border-2 border-[#0C002B] text-[#0C002B] font-bold py-2.5 px-4 rounded-[12px] text-[14px] hover:bg-[#1952C7] hover:border-[#1952C7] hover:text-white active:scale-[0.98] transition-colors duration-200 text-center"
+                  >
+                    {tab.buttonText}
+                  </Link>
                 </div>
               </div>
-            );
-          })}
+            ))}
+          </div>
+
+          {/* Mobile Navigation Controls (Arrows + Progress Bar) */}
+          <div className="flex items-center justify-center gap-3 mt-3 w-full">
+            <button
+              type="button"
+              onClick={() => scrollMobile('left')}
+              aria-label="Previous card"
+              className="w-7 h-7 rounded-full bg-white border border-slate-200 text-[#0C002B] hover:text-[#1952C7] hover:border-[#1952C7]/40 flex items-center justify-center shadow-xs active:scale-90 transition-all duration-150"
+            >
+              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+
+            <div className="w-[84px] h-[4px] bg-[#0C002B]/10 rounded-full overflow-hidden">
+              <motion.div
+                className="h-full bg-[#1952C7] origin-left rounded-full"
+                style={{ scaleX: mobileScaleX }}
+              />
+            </div>
+
+            <button
+              type="button"
+              onClick={() => scrollMobile('right')}
+              aria-label="Next card"
+              className="w-7 h-7 rounded-full bg-white border border-slate-200 text-[#0C002B] hover:text-[#1952C7] hover:border-[#1952C7]/40 flex items-center justify-center shadow-xs active:scale-90 transition-all duration-150"
+            >
+              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
         </div>
 
         {/* DESKTOP VIEW: Original Tabs */}

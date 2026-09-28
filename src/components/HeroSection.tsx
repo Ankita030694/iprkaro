@@ -189,11 +189,14 @@ export default function HeroSection() {
 
         {/* Main Heading */}
         <h1 
-          className={`max-w-[850px] text-[#0C002B] font-extrabold text-[34px] sm:text-[44px] md:text-[54px] lg:text-[62px] leading-[1.08] tracking-tight uppercase mb-3 transition-all duration-1000 transform ${mounted ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+          className={`max-w-[850px] text-[#0C002B] font-extrabold text-[27px] xs:text-[32px] sm:text-[44px] md:text-[54px] lg:text-[62px] leading-[1.12] sm:leading-[1.08] tracking-tight uppercase mb-3 transition-all duration-1000 transform ${mounted ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
         >
-          AI-Driven <br className="hidden sm:inline" />
+          <span>AI-Driven</span>
+          <span className="sm:hidden">&nbsp;</span>
+          <br className="hidden sm:inline" />
           <span className="text-[#1952C7]">
-            Trademark Protection
+            Trademark <br className="sm:hidden" />
+            Protection
           </span>
         </h1>
 
@@ -210,35 +213,6 @@ export default function HeroSection() {
         >
           <SearchClient onDropdownToggle={setIsDropdownOpen} />
         </div>
-
-        {/* Mobile & Tablet Feature Preview Cards (Visible on screens < lg) */}
-        <div className="lg:hidden w-full max-w-[700px] grid grid-cols-2 gap-2.5 mt-6 px-1">
-          <div className="bg-white border border-slate-200 rounded-xl p-3 text-left shadow-sm flex flex-col justify-between">
-            <div className="text-[11px] font-bold text-[#0C002B] mb-1">Class Availability</div>
-            <div className="text-[10px] text-emerald-700 font-semibold bg-emerald-50 px-1.5 py-0.5 rounded w-max">
-              99% Unique
-            </div>
-          </div>
-          <div className="bg-white border border-slate-200 rounded-xl p-3 text-left shadow-sm flex flex-col justify-between">
-            <div className="text-[11px] font-bold text-[#0C002B] mb-1">AI Conflict Scan</div>
-            <div className="text-[10px] text-blue-700 font-semibold bg-blue-50 px-1.5 py-0.5 rounded w-max">
-              Phonetic + Logo
-            </div>
-          </div>
-          <div className="bg-white border border-slate-200 rounded-xl p-3 text-left shadow-sm flex flex-col justify-between">
-            <div className="text-[11px] font-bold text-[#0C002B] mb-1">Government Filing</div>
-            <div className="text-[10px] text-purple-700 font-semibold bg-purple-50 px-1.5 py-0.5 rounded w-max">
-              Auto Form TM-48
-            </div>
-          </div>
-          <div className="bg-white border border-slate-200 rounded-xl p-3 text-left shadow-sm flex flex-col justify-between">
-            <div className="text-[11px] font-bold text-[#0C002B] mb-1">Trademark Watch</div>
-            <div className="text-[10px] text-emerald-700 font-semibold bg-emerald-50 px-1.5 py-0.5 rounded w-max">
-              24/7 Monitoring
-            </div>
-          </div>
-        </div>
-
       </div>
     </section>
   );

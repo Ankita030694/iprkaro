@@ -30,9 +30,9 @@ function MarqueeRow({ logos, direction = 'left' }: { logos: LogoItem[], directio
   const duplicatedLogos = [...logos, ...logos, ...logos, ...logos];
 
   return (
-    <div className="relative w-full overflow-hidden flex bg-white py-2.5 md:py-4 border-y border-blue-100 mt-[-1px]">
+    <div className="relative w-full overflow-hidden flex bg-white py-2 sm:py-2.5 md:py-3 border-y-0 md:border-y border-slate-100 mt-[-1px]">
       <div
-        className="flex whitespace-nowrap"
+        className="flex whitespace-nowrap items-center"
         style={{
           animation: direction === 'left'
             ? 'marqueeLeft 30s linear infinite'
@@ -43,18 +43,25 @@ function MarqueeRow({ logos, direction = 'left' }: { logos: LogoItem[], directio
         {duplicatedLogos.map((logo, i) => (
           <div
             key={i}
-            className="w-40 md:w-64 flex-shrink-0 flex items-center justify-center px-4 md:px-8"
+            className="flex-shrink-0 flex items-center justify-center px-4 sm:px-6 md:px-8"
           >
             <Image
               src={logo.src}
               alt={logo.alt}
-              width={160}
-              height={64}
-              className="object-contain w-auto h-12 md:h-20 transition-all duration-300"
-              style={{
-                filter: 'brightness(0)', // Force black color
-                opacity: 0.9,
-              }}
+              width={100}
+              height={32}
+              className={`object-contain w-auto transition-all duration-300 opacity-90 hover:opacity-100 ${
+                logo.src.includes('Group 136') || logo.src.includes('Group 216')
+                  ? 'h-6 sm:h-7 md:h-8 max-h-6 sm:max-h-7 md:max-h-8 max-w-[42px] sm:max-w-[50px]'
+                  : logo.src.includes('jivologo')
+                  ? 'h-3.5 sm:h-4 md:h-5 max-h-5 max-w-[90px] sm:max-w-[110px] md:max-w-[130px]'
+                  : 'h-4 sm:h-5 md:h-6 max-h-4 sm:max-h-5 md:max-h-6 max-w-[70px] sm:max-w-[85px] md:max-w-[105px]'
+              }`}
+              style={
+                logo.src.toLowerCase().includes('white')
+                  ? { filter: 'brightness(0)' }
+                  : undefined
+              }
             />
           </div>
         ))}
@@ -81,9 +88,9 @@ export default function BrandGrid() {
   const row2Logos = allLogos.slice(6, 12);
 
   return (
-    <section className="w-full bg-white py-6 md:py-10 px-0">
-      <div className="max-w-7xl mx-auto mb-5 md:mb-7 px-2 md:px-4">
-        <div className="text-[#0C002B] font-nunito text-[26px] md:text-[42px] font-semibold text-center leading-[1.2] tracking-tight">
+    <section className="w-full bg-white py-5 md:py-10 px-0">
+      <div className="max-w-7xl mx-auto mb-4 md:mb-7 px-2 md:px-4">
+        <div className="text-[#0C002B] font-nunito text-[22px] sm:text-[26px] md:text-[42px] font-semibold text-center leading-[1.2] tracking-tight">
           Chosen by businesses <br className="md:hidden" /> that <span className="text-[#1952C7]">move fast</span>
         </div>
       </div>

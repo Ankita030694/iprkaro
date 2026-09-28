@@ -152,7 +152,7 @@ export default function Home() {
       {/* Wrapper to prevent dark subpixel bleeding between white sections on mobile */}
       <div className="w-full bg-white flex flex-col">
         <BrandGrid />
-        <WhatCanYouTrademark />
+        {/* <WhatCanYouTrademark /> */}
         <WhatYouNeedToGetStarted />
         <ResultsGrid />
         <SmarterDecisions />

@@ -1,7 +1,6 @@
 'use client';
 
-
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
@@ -19,6 +18,17 @@ export default function ContactFormPopup({ isOpen, onClose }: ContactFormPopupPr
     interest: '',
     message: ''
   });
+
+  // Lock background scroll when popup is open
+  useEffect(() => {
+    if (isOpen) {
+      const originalOverflow = document.body.style.overflow;
+      document.body.style.overflow = 'hidden';
+      return () => {
+        document.body.style.overflow = originalOverflow || 'unset';
+      };
+    }
+  }, [isOpen]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -81,6 +91,7 @@ export default function ContactFormPopup({ isOpen, onClose }: ContactFormPopupPr
         interest: '',
         message: ''
       });
+      document.body.style.overflow = 'unset';
       onClose();
     }
   };
@@ -105,7 +116,10 @@ export default function ContactFormPopup({ isOpen, onClose }: ContactFormPopupPr
       <div className="relative w-full max-w-md">
         {/* Close Button */}
         <button
-          onClick={onClose}
+          onClick={() => {
+            document.body.style.overflow = 'unset';
+            onClose();
+          }}
           className="absolute top-2 right-2 w-7 h-7 flex items-center justify-center rounded-full bg-black/20 hover:bg-black/40 transition-colors z-[210]"
           aria-label="Close form"
         >
@@ -270,4 +284,3 @@ export default function ContactFormPopup({ isOpen, onClose }: ContactFormPopupPr
     </div>
   );
 }
-

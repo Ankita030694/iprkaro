@@ -1,6 +1,5 @@
 'use client';
 
-
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -39,10 +38,22 @@ export default function GlobalPopupForm() {
     return () => clearTimeout(timer);
   }, [pathname, hasBeenDismissed]);
 
+  // Lock background scroll when popup is open
+  useEffect(() => {
+    if (isOpen) {
+      const originalOverflow = document.body.style.overflow;
+      document.body.style.overflow = 'hidden';
+      return () => {
+        document.body.style.overflow = originalOverflow || 'unset';
+      };
+    }
+  }, [isOpen]);
+
   const handleClose = () => {
     setIsOpen(false);
     setHasBeenDismissed(true);
     sessionStorage.setItem('popupFormDismissed', 'true');
+    document.body.style.overflow = 'unset';
   };
 
   return (

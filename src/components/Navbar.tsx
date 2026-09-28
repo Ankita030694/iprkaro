@@ -60,7 +60,7 @@ export default function Navbar() {
             <div className="flex items-center gap-2 md:gap-4">
               <Link
                 href="/contact-us"
-                className="bg-white text-[#05030E] px-4 md:px-6 py-1.5 rounded-[10px] text-[12px] md:text-[14px] lg:text-base font-bold hover:bg-gray-100 transition-all duration-200 shadow-xl active:scale-95 whitespace-nowrap"
+                className="hidden md:inline-flex bg-white text-[#05030E] px-4 md:px-6 py-1.5 rounded-[10px] text-[12px] md:text-[14px] lg:text-base font-bold hover:bg-gray-100 transition-all duration-200 shadow-xl active:scale-95 whitespace-nowrap"
               >
                 Get in Touch
               </Link>

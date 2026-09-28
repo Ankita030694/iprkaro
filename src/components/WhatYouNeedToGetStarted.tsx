@@ -81,14 +81,16 @@ export default function WhatYouNeedToGetStarted() {
             aria-hidden="true"
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6 relative z-10">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-x-3 sm:gap-x-6 gap-y-7 md:gap-6 relative z-10">
             {steps.map((step) => (
               <div
                 key={step.id}
-                className="flex flex-col items-center text-center group"
+                className={`flex flex-col items-center text-center group ${
+                  step.id === 'power-of-attorney' ? 'col-span-2 md:col-span-1 max-w-[240px] sm:max-w-[260px] mx-auto' : 'col-span-1'
+                }`}
               >
                 {/* Icon Card */}
-                <div className="relative z-10 w-[90px] h-[90px] sm:w-[96px] sm:h-[96px] bg-white rounded-[22px] border border-[#CBD5E1]/80 shadow-[0_4px_20px_rgba(12,0,43,0.04)] group-hover:shadow-[0_10px_28px_rgba(12,0,43,0.08)] group-hover:border-[#1952C7]/40 group-hover:-translate-y-1 transition-all duration-300 flex items-center justify-center p-3 mb-5">
+                <div className="relative z-10 w-[78px] h-[78px] sm:w-[88px] sm:h-[88px] md:w-[96px] md:h-[96px] bg-white rounded-[20px] md:rounded-[22px] border border-[#CBD5E1]/80 shadow-[0_4px_20px_rgba(12,0,43,0.04)] group-hover:shadow-[0_10px_28px_rgba(12,0,43,0.08)] group-hover:border-[#1952C7]/40 group-hover:-translate-y-1 transition-all duration-300 flex items-center justify-center p-2.5 sm:p-3 mb-3 md:mb-5">
                   <Image
                     src={step.iconSrc}
                     alt={step.iconAlt}
@@ -99,12 +101,12 @@ export default function WhatYouNeedToGetStarted() {
                 </div>
 
                 {/* Step Title */}
-                <h3 className="text-[#0C002B] group-hover:text-[#1952C7] font-nunito text-[20px] sm:text-[21px] font-bold mb-2 tracking-tight transition-colors duration-200">
+                <h3 className="text-[#0C002B] group-hover:text-[#1952C7] font-nunito text-[18px] sm:text-[20px] md:text-[21px] font-bold mb-1.5 md:mb-2 tracking-tight transition-colors duration-200">
                   {step.title}
                 </h3>
 
                 {/* Step Description */}
-                <p className="text-[#334155] font-nunito text-[14px] sm:text-[14.5px] leading-relaxed max-w-[250px]">
+                <p className="text-[#334155] font-nunito text-[12.5px] sm:text-[13.5px] md:text-[14.5px] leading-relaxed max-w-[200px] sm:max-w-[240px] md:max-w-[250px]">
                   {step.description}
                 </p>
               </div>

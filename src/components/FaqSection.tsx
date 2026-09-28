@@ -108,21 +108,20 @@ export default function FaqSection({ items, title, badge, categories }: FaqSecti
   return (
     <section className="w-full bg-white py-8 sm:py-10 md:py-14 px-4 sm:px-6 md:px-8">
       <div className="max-w-[860px] mx-auto flex flex-col items-center">
-        {/* Pill Badge */}
-        <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full border border-[#1952C7]/30 bg-blue-50 text-[#1952C7] text-[11px] sm:text-xs font-bold tracking-wider uppercase mb-3">
-          {badge || 'GOT QUESTIONS?'}
-        </div>
+        {/* Pill Badge (Optional) */}
+        {badge && (
+          <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full border border-[#1952C7]/30 bg-blue-50 text-[#1952C7] text-[11px] sm:text-xs font-bold tracking-wider uppercase mb-3">
+            {badge}
+          </div>
+        )}
 
         {/* Heading */}
-        <h2 className="text-center font-nunito mb-6 md:mb-8 font-bold tracking-tight text-[32px] sm:text-[40px] md:text-[46px] leading-[1.15]">
+        <h2 className="text-center font-nunito mb-6 md:mb-8 font-bold tracking-tight text-[32px] sm:text-[40px] md:text-[46px] leading-[1.15] text-[#0C002B]">
           {title ? (
             title
           ) : (
             <>
-              <span className="block text-[#475569] font-semibold">You ask.</span>
-              <span className="block text-[#0C002B] font-extrabold">
-                We make it <span className="text-[#1952C7]">simple.</span>
-              </span>
+              Frequently Asked <span className="text-[#1952C7]">Questions</span>
             </>
           )}
         </h2>
@@ -131,24 +130,32 @@ export default function FaqSection({ items, title, badge, categories }: FaqSecti
         <div className="w-full bg-white rounded-[24px] sm:rounded-[32px] md:rounded-[36px] p-4 sm:p-6 md:p-8 lg:p-10 border border-slate-200/90 shadow-[0_8px_30px_rgba(12,0,43,0.05)]">
           {/* Category Tabs */}
           {faqCategories && faqCategories.length > 1 && (
-            <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 mb-6 md:mb-8 bg-slate-100/90 p-1.5 rounded-full border border-slate-200/80 w-fit mx-auto">
-              {faqCategories.map((cat, idx) => {
-                const isActive = activeCategoryIndex === idx;
-                return (
-                  <button
-                    key={cat.name}
-                    type="button"
-                    onClick={() => handleCategoryChange(idx)}
-                    className={`px-4 sm:px-5 py-1.5 sm:py-2 rounded-full text-[13px] sm:text-[14px] font-semibold transition-all duration-200 cursor-pointer select-none ${
-                      isActive
-                        ? 'bg-[#1952C7] text-white shadow-sm'
-                        : 'text-[#0C002B] hover:text-[#1952C7] hover:bg-white/70'
-                    }`}
-                  >
-                    {cat.name}
-                  </button>
-                );
-              })}
+            <div className="w-full flex justify-center mb-6 md:mb-8">
+              <div
+                className="flex flex-nowrap items-center justify-start sm:justify-center gap-1 sm:gap-2 bg-slate-100/90 p-1 sm:p-1.5 rounded-full border border-slate-200/80 max-w-full overflow-x-auto no-scrollbar"
+                style={{
+                  scrollbarWidth: 'none',
+                  msOverflowStyle: 'none',
+                }}
+              >
+                {faqCategories.map((cat, idx) => {
+                  const isActive = activeCategoryIndex === idx;
+                  return (
+                    <button
+                      key={cat.name}
+                      type="button"
+                      onClick={() => handleCategoryChange(idx)}
+                      className={`px-3 sm:px-5 py-1.5 sm:py-2 rounded-full text-[12px] sm:text-[14px] font-semibold transition-all duration-200 cursor-pointer select-none whitespace-nowrap flex-shrink-0 ${
+                        isActive
+                          ? 'bg-[#1952C7] text-white shadow-sm'
+                          : 'text-[#0C002B] hover:text-[#1952C7] hover:bg-white/70'
+                      }`}
+                    >
+                      {cat.name}
+                    </button>
+                  );
+                })}
+              </div>
             </div>
           )}
 

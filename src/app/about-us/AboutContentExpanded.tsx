@@ -39,7 +39,7 @@ const SectionTitle = ({
   title: string; 
   subtitle?: string; 
 }) => (
-  <div className="text-center mb-12 sm:mb-16">
+  <div className="text-center mb-8 sm:mb-12">
     {badge && (
       <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200/80 text-[#1952C7] text-xs font-bold uppercase tracking-wider mb-3">
         <span className="w-1.5 h-1.5 rounded-full bg-[#1952C7]" />
@@ -164,7 +164,7 @@ export default function AboutContentExpanded() {
   };
 
   return (
-    <div className="w-full px-6 sm:px-12 lg:px-24 py-16 text-[#0C002B] font-sans relative bg-white overflow-hidden">
+    <div className="w-full px-6 sm:px-12 lg:px-24 pt-8 sm:pt-12 pb-16 text-[#0C002B] font-sans relative bg-white overflow-hidden">
         
       {/* Subtle Ambient Background Gradients */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">

@@ -89,9 +89,9 @@ export default function CompactContactForm() {
       {/* Decorative elements */}
       <div className="absolute top-0 right-0 w-24 h-24 rounded-full bg-[#FFB703] opacity-5 blur-3xl" />
       <div className="absolute bottom-0 left-0 w-24 h-24 rounded-full bg-[#FFB703] opacity-5 blur-3xl" />
-      
+
       <div className="relative text-center mb-4">
-        <div 
+        <div
           className="inline-flex items-center justify-center w-10 h-10 rounded-full mb-2"
           style={{
             background: 'linear-gradient(135deg, #FFB703, #FFA000)',
@@ -179,29 +179,29 @@ export default function CompactContactForm() {
                 style={
                   formData.interest === option
                     ? {
-                        background: 'rgba(255, 183, 3, 0.15)',
-                        border: '1px solid rgba(255, 183, 3, 0.3)'
-                      }
+                      background: 'rgba(255, 183, 3, 0.15)',
+                      border: '1px solid rgba(255, 183, 3, 0.3)'
+                    }
                     : {
-                        background: 'rgba(255, 255, 255, 0.05)',
-                        border: '1px solid rgba(255, 255, 255, 0.1)'
-                      }
+                      background: 'rgba(255, 255, 255, 0.05)',
+                      border: '1px solid rgba(255, 255, 255, 0.1)'
+                    }
                 }
                 onClick={() => handleRadioChange(option)}
               >
                 <div className="relative flex-shrink-0">
-                  <div 
+                  <div
                     className="w-4 h-4 rounded-full flex items-center justify-center transition-all"
                     style={
                       formData.interest === option
                         ? {
-                            background: 'linear-gradient(135deg, #FFB703, #FFA000)',
-                            boxShadow: '0 0 10px rgba(255, 183, 3, 0.5)'
-                          }
+                          background: 'linear-gradient(135deg, #FFB703, #FFA000)',
+                          boxShadow: '0 0 10px rgba(255, 183, 3, 0.5)'
+                        }
                         : {
-                            background: 'rgba(255, 255, 255, 0.1)',
-                            border: '1px solid rgba(255, 255, 255, 0.3)'
-                          }
+                          background: 'rgba(255, 255, 255, 0.1)',
+                          border: '1px solid rgba(255, 255, 255, 0.3)'
+                        }
                     }
                   >
                     {formData.interest === option && (

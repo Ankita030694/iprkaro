@@ -12,6 +12,11 @@ export const metadata = {
 };
 
 const staticUrls: string[] = [
+  '/anti-counterfeiting-police-raid-procedure-section-115-india',
+  '/competitor-bidding-on-my-trademark-google-ads-india',
+  '/trade-dress-protection-under-indian-trademark-law',
+  '/flipkart-brand-approval-trademark-requirements-india',
+  '/how-to-respond-to-trademark-infringement-legal-notice-in-india',
   '/can-you-trademark-book-title-movie-name-character-india',
   '/trademark-disclaimer-condition-meaning-in-india',
   '/how-to-get-well-known-trademark-status-india',

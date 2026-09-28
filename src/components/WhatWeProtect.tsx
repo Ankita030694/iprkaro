@@ -77,6 +77,17 @@ export default function WhatWeProtect() {
   // Small initial width (0.2) to show it's a bar even at start
   const scaleX = useTransform(scrollXProgress, [0, 1], [0.2, 1]);
 
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollRef.current) {
+      const card = scrollRef.current.firstElementChild as HTMLElement | null;
+      const cardWidth = card ? card.offsetWidth + 16 : 300;
+      scrollRef.current.scrollBy({
+        left: direction === 'left' ? -cardWidth : cardWidth,
+        behavior: 'smooth',
+      });
+    }
+  };
+
   return (
     <section className="w-full bg-white py-8 md:py-12 px-4 md:px-8">
       <div className="max-w-6xl mx-auto flex flex-col items-center">
@@ -87,7 +98,7 @@ export default function WhatWeProtect() {
         {/* 3 Static Service Cards */}
         <div 
           ref={scrollRef}
-          className="w-full flex md:grid md:grid-cols-3 overflow-x-auto md:overflow-x-visible snap-x snap-mandatory gap-6 lg:gap-8 pb-6 md:pb-0 scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0 items-stretch"
+          className="w-full flex md:grid md:grid-cols-3 overflow-x-auto md:overflow-x-visible snap-x snap-mandatory gap-6 lg:gap-8 pb-6 md:pb-0 scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0 items-stretch scroll-smooth"
         >
           {services.map((service, index) => (
             <motion.div
@@ -141,12 +152,36 @@ export default function WhatWeProtect() {
           ))}
         </div>
 
-        {/* Mobile Scroll Progress Indicator */}
-        <div className="md:hidden w-full max-w-[120px] h-[4px] bg-[#0C002B]/5 rounded-full mx-auto mt-4 overflow-hidden">
-          <motion.div 
-            className="h-full bg-[#0C002B] origin-left"
-            style={{ scaleX }}
-          />
+        {/* Mobile Navigation Controls (Arrows + Progress Bar) */}
+        <div className="md:hidden flex items-center justify-center gap-3 mt-4 w-full">
+          <button
+            type="button"
+            onClick={() => scroll('left')}
+            aria-label="Previous service"
+            className="w-7 h-7 rounded-full bg-white border border-slate-200 text-[#0C002B] hover:text-[#1952C7] hover:border-[#1952C7]/40 flex items-center justify-center shadow-xs active:scale-90 transition-all duration-150"
+          >
+            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+
+          <div className="w-[84px] h-[4px] bg-[#0C002B]/10 rounded-full overflow-hidden">
+            <motion.div 
+              className="h-full bg-[#1952C7] origin-left rounded-full"
+              style={{ scaleX }}
+            />
+          </div>
+
+          <button
+            type="button"
+            onClick={() => scroll('right')}
+            aria-label="Next service"
+            className="w-7 h-7 rounded-full bg-white border border-slate-200 text-[#0C002B] hover:text-[#1952C7] hover:border-[#1952C7]/40 flex items-center justify-center shadow-xs active:scale-90 transition-all duration-150"
+          >
+            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
         </div>
 
         <Link
