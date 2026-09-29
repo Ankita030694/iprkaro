@@ -359,7 +359,7 @@ export default function DomainNameDisputeIndrpPage() {
                                     </div>
                                     <div>
                                         <p className="text-xs font-bold uppercase tracking-wider text-[#6E5E93] m-0">Quick Answer</p>
-                                        <h3 className="text-base sm:text-lg font-bold text-gray-900 m-0">How Are Domain Trademark Disputes Resolved in India?</h3>
+                                        <p className="text-base sm:text-lg font-bold text-gray-900 m-0">How Are Domain Trademark Disputes Resolved in India?</p>
                                     </div>
                                 </div>
                                 <p className="text-xs sm:text-sm text-gray-700 leading-relaxed m-0">
@@ -384,7 +384,7 @@ export default function DomainNameDisputeIndrpPage() {
                                         <div className="w-8 h-8 rounded-lg bg-[#6E5E93] text-white flex items-center justify-center font-bold text-sm mb-3">
                                             <FontAwesomeIcon icon={faLock} className="w-4 h-4" />
                                         </div>
-                                        <h4 className="text-sm font-bold text-gray-900 mb-1">Ransom & Extortion</h4>
+                                        <h3 className="text-sm font-bold text-gray-900 mb-1">Ransom & Extortion</h3>
                                         <p className="text-xs text-gray-600 leading-relaxed">
                                             Squatters purchase your brand&apos;s dot-in domain name to sell it back to you at exorbitant, extortionate prices.
                                         </p>
@@ -393,7 +393,7 @@ export default function DomainNameDisputeIndrpPage() {
                                         <div className="w-8 h-8 rounded-lg bg-indigo-600 text-white flex items-center justify-center font-bold text-sm mb-3">
                                             <FontAwesomeIcon icon={faTowerBroadcast} className="w-4 h-4" />
                                         </div>
-                                        <h4 className="text-sm font-bold text-gray-900 mb-1">Traffic Diversion</h4>
+                                        <h3 className="text-sm font-bold text-gray-900 mb-1">Traffic Diversion</h3>
                                         <p className="text-xs text-gray-600 leading-relaxed">
                                             Hijacking legitimate customer traffic to display paid advertisement parking pages or direct users to rival businesses.
                                         </p>
@@ -402,7 +402,7 @@ export default function DomainNameDisputeIndrpPage() {
                                         <div className="w-8 h-8 rounded-lg bg-rose-600 text-white flex items-center justify-center font-bold text-sm mb-3">
                                             <FontAwesomeIcon icon={faBan} className="w-4 h-4" />
                                         </div>
-                                        <h4 className="text-sm font-bold text-gray-900 mb-1">Phishing & Impersonation</h4>
+                                        <h3 className="text-sm font-bold text-gray-900 mb-1">Phishing & Impersonation</h3>
                                         <p className="text-xs text-gray-600 leading-relaxed">
                                             Setting up spoofed corporate email addresses (e.g., invoices@yourbrand-india.in) to commit wire fraud and brand destruction.
                                         </p>
@@ -542,10 +542,10 @@ export default function DomainNameDisputeIndrpPage() {
                                 </div>
 
                                 <div className="bg-indigo-50/70 border border-indigo-100 rounded-2xl p-5 my-6">
-                                    <h4 className="text-sm font-bold text-indigo-900 mb-2 flex items-center">
+                                    <h3 className="text-sm font-bold text-indigo-900 mb-2 flex items-center">
                                         <FontAwesomeIcon icon={faGavel} className="w-4 h-4 mr-2 text-[#6E5E93]" />
                                         Legal Status of INDRP: Binding Arbitration
-                                    </h4>
+                                    </h3>
                                     <p className="text-xs sm:text-sm text-gray-700 leading-relaxed m-0">
                                         Unlike informal mediation, an INDRP proceeding constitutes an <strong>official statutory arbitration</strong> governed by the <strong>Arbitration and Conciliation Act, 1996</strong> and INDRP Rules of Procedure. Every person registering a .in domain enters into a mandatory contract agreeing to submit to INDRP arbitration in case of a trademark dispute. The arbitral award passed by the appointed sole arbitrator is legally binding and enforceable.
                                     </p>
@@ -1015,7 +1015,7 @@ export default function DomainNameDisputeIndrpPage() {
                                     <FontAwesomeIcon icon={faUserShield} className="w-3.5 h-3.5" />
                                     <span>Expert Domain Audit</span>
                                 </div>
-                                <h3 className="text-base font-bold text-gray-900 mb-2">Is Your Domain Squatted?</h3>
+                                <p className="text-base font-bold text-gray-900 mb-2">Is Your Domain Squatted?</p>
                                 <p className="text-xs text-gray-600 leading-relaxed mb-4">
                                     Get an instant legal evaluation of your WHOIS record, trademark prior-use rights, and bad-faith evidence from senior cyber advocates.
                                 </p>
@@ -1032,7 +1032,7 @@ export default function DomainNameDisputeIndrpPage() {
                                     <FontAwesomeIcon icon={faClock} className="w-3.5 h-3.5" />
                                     <span>Fast-Track Resolution</span>
                                 </div>
-                                <h3 className="text-base font-bold text-white mb-2">30–60 Day NIXI Process</h3>
+                                <p className="text-base font-bold text-white mb-2">30–60 Day NIXI Process</p>
                                 <p className="text-xs text-gray-300 leading-relaxed mb-4">
                                     Recover dot-in domains without prolonged High Court court battles through binding arbitral awards.
                                 </p>

@@ -1,4 +1,4 @@
-import { validateAndNormalizeDescription } from '@/lib/seo-utils';
+import { validateAndNormalizeDescription, validateAndNormalizeTitle } from '@/lib/seo-utils';
 import React from "react";
 import { Metadata } from "next";
 import Link from "next/link";
@@ -34,7 +34,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata: Metadata = {
-    title: "Can You Trademark Book Title, Movie Name or Character in India?",
+    title: validateAndNormalizeTitle("Can You Trademark a Book, Movie or Character?", "app/can-you-trademark-book-title-movie-name-character-india/page.tsx"),
     description: validateAndNormalizeDescription(
         "Trademark a book title, movie name, or character in India. Learn the single-work rule, series protection, IMPAA vs Trade Marks Registry, and classes.",
         "app/can-you-trademark-book-title-movie-name-character-india/page.tsx"
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
         follow: true,
     },
     openGraph: {
-        title: "Can You Trademark Book Title, Movie Name or Character in India?",
+        title: "Can You Trademark a Book, Movie or Character?",
         description: "Trademark a book title, movie name, or character in India. Learn the single-work rule, series protection, IMPAA vs Trade Marks Registry, and classes.",
         url: "https://www.iprkaro.com/can-you-trademark-book-title-movie-name-character-india",
         type: "article",
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Can You Trademark Book Title, Movie Name or Character in India?",
+        title: "Can You Trademark a Book, Movie or Character?",
         description: "Trademark a book title, movie name, or character in India. Learn the single-work rule, series protection, IMPAA vs Trade Marks Registry, and classes.",
         images: ["https://www.iprkaro.com/images/og/can-you-trademark-book-title-movie-name-character-india.jpg"],
     }

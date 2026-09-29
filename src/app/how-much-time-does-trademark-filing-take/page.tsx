@@ -1,4 +1,4 @@
-import { validateAndNormalizeDescription } from '@/lib/seo-utils';
+import { validateAndNormalizeDescription, validateAndNormalizeTitle } from '@/lib/seo-utils';
 import React from "react";
 import { Metadata } from "next";
 import Link from "next/link";
@@ -27,7 +27,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata: Metadata = {
-    title: "How Much Time Does Trademark Filing Take in India? | IPR Karo",
+    title: validateAndNormalizeTitle("How Long Does Trademark Filing Take in India?", "app/how-much-time-does-trademark-filing-take/page.tsx"),
     description: validateAndNormalizeDescription(
         "How much time does trademark filing take in India? Explore the complete timeline from 24-hr e-filing to examination, publication, and registration.",
         "app/how-much-time-does-trademark-filing-take/page.tsx"
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
         follow: true,
     },
     openGraph: {
-        title: "How Much Time Does Trademark Filing Take in India? | IPR Karo",
+        title: "How Long Does Trademark Filing Take in India?",
         description: "How much time does trademark filing take in India? Explore the complete timeline from 24-hr e-filing to examination, publication, and registration.",
         url: "https://www.iprkaro.com/how-much-time-does-trademark-filing-take",
         type: "website",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "How Much Time Does Trademark Filing Take in India? | IPR Karo",
+        title: "How Long Does Trademark Filing Take in India?",
         description: "How much time does trademark filing take in India? Explore the complete timeline from 24-hr e-filing to examination, publication, and registration.",
         images: ["https://www.iprkaro.com/images/og/how-much-time-does-trademark-filing-take.jpg"],
     }

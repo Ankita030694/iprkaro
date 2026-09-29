@@ -1,4 +1,4 @@
-import { validateAndNormalizeDescription } from '@/lib/seo-utils';
+import { validateAndNormalizeDescription, validateAndNormalizeTitle } from '@/lib/seo-utils';
 import React from "react";
 import { Metadata } from "next";
 import Link from "next/link";
@@ -33,7 +33,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata: Metadata = {
-    title: "Competitor Trademark Bidding in Google Ads: India Legal Guide",
+    title: validateAndNormalizeTitle("Competitor Trademark Bidding on Google Ads", "app/competitor-bidding-on-my-trademark-google-ads-india/page.tsx"),
     description: validateAndNormalizeDescription(
         "Stop competitors bidding on your trademark in Google Ads in India. Master Trade Marks Act remedies, Delhi HC rulings, takedown notices, and Google complaints.",
         "app/competitor-bidding-on-my-trademark-google-ads-india/page.tsx"
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
         follow: true,
     },
     openGraph: {
-        title: "Competitor Trademark Bidding in Google Ads: India Legal Guide",
+        title: "Competitor Trademark Bidding on Google Ads",
         description: "Stop competitors bidding on your trademark in Google Ads in India. Master Trade Marks Act remedies, Delhi HC rulings, takedown notices, and Google complaints.",
         url: "https://www.iprkaro.com/competitor-bidding-on-my-trademark-google-ads-india",
         type: "website",
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Competitor Trademark Bidding in Google Ads: India Legal Guide",
+        title: "Competitor Trademark Bidding on Google Ads",
         description: "Stop competitors bidding on your trademark in Google Ads in India. Master Trade Marks Act remedies, Delhi HC rulings, takedown notices, and Google complaints.",
         images: ["https://www.iprkaro.com/images/og/competitor-bidding-on-my-trademark-google-ads-india.png"],
     }

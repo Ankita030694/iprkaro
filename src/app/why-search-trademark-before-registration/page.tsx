@@ -1,4 +1,4 @@
-import { validateAndNormalizeDescription } from '@/lib/seo-utils';
+import { validateAndNormalizeDescription, validateAndNormalizeTitle } from '@/lib/seo-utils';
 import React from "react";
 import { Metadata } from "next";
 import Link from "next/link";
@@ -23,7 +23,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata: Metadata = {
-    title: "Why Search a Trademark Before Registration in India? | IPR Karo",
+    title: validateAndNormalizeTitle("Why Search a Trademark Before Registration? | IPR Karo", "app/why-search-trademark-before-registration/page.tsx"),
     description: validateAndNormalizeDescription("Learn why searching a trademark before registration helps identify similar marks, avoid Section 11 conflicts, prevent objections, and make informed filing decisions in India.", "app/why-search-trademark-before-registration/page.tsx"),
     keywords: [
         "why search trademark before registration",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
         follow: true,
     },
     openGraph: {
-        title: "Why Search a Trademark Before Registration in India? | IPR Karo",
+        title: "Why Search a Trademark Before Registration? | IPR Karo",
         description: "Learn why searching a trademark before registration helps identify similar marks, avoid Section 11 conflicts, prevent objections, and make informed filing decisions in India.",
         url: "https://www.iprkaro.com/why-search-trademark-before-registration",
         type: "website",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Why Search a Trademark Before Registration in India? | IPR Karo",
+        title: "Why Search a Trademark Before Registration? | IPR Karo",
         description: "Learn why searching a trademark before registration helps identify similar marks, avoid Section 11 conflicts, prevent objections, and make informed filing decisions in India.",
         images: ["https://www.iprkaro.com/images/og/why-search-trademark-before-registration.jpg"],
     }

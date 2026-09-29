@@ -1,4 +1,4 @@
-import { validateAndNormalizeDescription } from '@/lib/seo-utils';
+import { validateAndNormalizeDescription, validateAndNormalizeTitle } from '@/lib/seo-utils';
 import React from "react";
 import { Metadata } from "next";
 import Link from "next/link";
@@ -31,7 +31,11 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata: Metadata = {
-    title: "How to Respond to a Trademark Infringement Legal Notice in India",
+    title: validateAndNormalizeTitle(
+        "How to Respond to a Trademark Legal Notice | IPR Karo",
+        "app/how-to-respond-to-trademark-infringement-legal-notice-in-india/page.tsx",
+        "How to Respond to a Trademark Infringement Legal Notice in India"
+    ),
     description: validateAndNormalizeDescription(
         "Received a trademark infringement notice in India? Learn how to respond, statutory defenses under Section 30 & 34, reply drafting, and caveat rules.",
         "app/how-to-respond-to-trademark-infringement-legal-notice-in-india/page.tsx"
@@ -55,7 +59,7 @@ export const metadata: Metadata = {
         follow: true,
     },
     openGraph: {
-        title: "How to Respond to a Trademark Infringement Legal Notice in India",
+        title: "How to Respond to a Trademark Legal Notice | IPR Karo",
         description: "Received a trademark infringement notice in India? Learn how to respond, statutory defenses under Section 30 & 34, reply drafting, and caveat rules.",
         url: "https://www.iprkaro.com/how-to-respond-to-trademark-infringement-legal-notice-in-india",
         type: "website",
@@ -70,7 +74,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "How to Respond to a Trademark Infringement Legal Notice in India",
+        title: "How to Respond to a Trademark Legal Notice | IPR Karo",
         description: "Received a trademark infringement notice in India? Learn how to respond, statutory defenses under Section 30 & 34, reply drafting, and caveat rules.",
         images: ["https://www.iprkaro.com/images/og/how-to-respond-to-trademark-infringement-legal-notice-in-india.png"],
     }

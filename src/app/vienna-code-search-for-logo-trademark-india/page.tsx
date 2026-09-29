@@ -1,4 +1,4 @@
-import { validateAndNormalizeDescription } from '@/lib/seo-utils';
+import { validateAndNormalizeDescription, validateAndNormalizeTitle } from '@/lib/seo-utils';
 import React from "react";
 import { Metadata } from "next";
 import Link from "next/link";
@@ -32,7 +32,11 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata: Metadata = {
-    title: "Vienna Code Search for Logo Trademark on IP India Portal",
+    title: validateAndNormalizeTitle(
+        "Vienna Code Search for Logo Trademarks | IPR Karo",
+        "app/vienna-code-search-for-logo-trademark-india/page.tsx",
+        "Vienna Code Search for Logo Trademark on IP India Portal"
+    ),
     description: validateAndNormalizeDescription(
         "Master Vienna Code search for logo trademarks on the IP India portal. Learn 6-digit classification, Rule 33 codification, and visual clearance methods.",
         "app/vienna-code-search-for-logo-trademark-india/page.tsx"
@@ -57,7 +61,7 @@ export const metadata: Metadata = {
         follow: true,
     },
     openGraph: {
-        title: "Vienna Code Search for Logo Trademark on IP India Portal",
+        title: "Vienna Code Search for Logo Trademarks | IPR Karo",
         description: "Master Vienna Code search for logo trademarks on the IP India portal. Learn 6-digit classification, Rule 33 codification, and visual clearance methods.",
         url: "https://www.iprkaro.com/vienna-code-search-for-logo-trademark-india",
         type: "article",
@@ -72,7 +76,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Vienna Code Search for Logo Trademark on IP India Portal",
+        title: "Vienna Code Search for Logo Trademarks | IPR Karo",
         description: "Master Vienna Code search for logo trademarks on the IP India portal. Learn 6-digit classification, Rule 33 codification, and visual clearance methods.",
         images: ["https://www.iprkaro.com/images/og/vienna-code-search-for-logo-trademark-india.jpg"],
     }

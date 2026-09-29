@@ -1,4 +1,4 @@
-import { validateAndNormalizeDescription } from '@/lib/seo-utils';
+import { validateAndNormalizeDescription, validateAndNormalizeTitle } from '@/lib/seo-utils';
 import React from "react";
 import { Metadata } from "next";
 import Link from "next/link";
@@ -36,7 +36,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata: Metadata = {
-    title: "Trademark Disclaimer Meaning & Impact on Certificate | IPR Karo",
+    title: validateAndNormalizeTitle("Trademark Disclaimer Meaning & Impact | IPR Karo", "app/trademark-disclaimer-condition-meaning-in-india/page.tsx"),
     description: validateAndNormalizeDescription(
         "Understand trademark disclaimer conditions in Indian registration certificates under Section 17. Learn their legal impact on infringement and passing off rights.",
         "app/trademark-disclaimer-condition-meaning-in-india/page.tsx"
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
         follow: true,
     },
     openGraph: {
-        title: "Trademark Disclaimer Meaning & Impact on Certificate | IPR Karo",
+        title: "Trademark Disclaimer Meaning & Impact | IPR Karo",
         description: "Understand trademark disclaimer conditions in Indian registration certificates under Section 17. Learn their legal impact on infringement and passing off rights.",
         url: "https://www.iprkaro.com/trademark-disclaimer-condition-meaning-in-india",
         type: "article",
@@ -76,9 +76,9 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Trademark Disclaimer Meaning & Impact on Certificate | IPR Karo",
+        title: "Trademark Disclaimer Meaning & Impact | IPR Karo",
         description: "Understand trademark disclaimer conditions in Indian registration certificates under Section 17. Learn their legal impact on infringement and passing off rights.",
-        images: ["https://www.iprkaro.com/images/og/trademark-disclaimer-condition-meaning-in-india.jpg"],
+        images: ["https://www.iprkaro.com/images/og/trademark-disclaimer-condition-meaning-in-india.png"],
     }
 };
 

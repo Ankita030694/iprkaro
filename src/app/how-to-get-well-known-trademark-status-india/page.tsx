@@ -359,7 +359,7 @@ export default function WellKnownTrademarkGuidePage() {
                                     </div>
                                     <div>
                                         <p className="text-xs font-bold uppercase tracking-wider text-amber-800 m-0">Quick Answer</p>
-                                        <h3 className="text-base sm:text-lg font-bold text-gray-900 m-0">How to Obtain Well-Known Trademark Status in India?</h3>
+                                        <p className="text-base sm:text-lg font-bold text-gray-900 m-0">How to Obtain Well-Known Trademark Status in India?</p>
                                     </div>
                                 </div>
                                 <p className="text-xs sm:text-sm text-gray-700 leading-relaxed m-0">
@@ -388,7 +388,7 @@ export default function WellKnownTrademarkGuidePage() {
                                         <div className="w-8 h-8 rounded-lg bg-amber-600 text-white flex items-center justify-center font-bold text-sm mb-3">
                                             <FontAwesomeIcon icon={faCrown} className="w-4 h-4" />
                                         </div>
-                                        <h4 className="text-sm font-bold text-gray-900 mb-1">Universal Exclusivity</h4>
+                                        <h3 className="text-sm font-bold text-gray-900 mb-1">Universal Exclusivity</h3>
                                         <p className="text-xs text-gray-600 leading-relaxed">
                                             Complete protection across all 45 classes of goods and services, regardless of your primary line of trade.
                                         </p>
@@ -397,7 +397,7 @@ export default function WellKnownTrademarkGuidePage() {
                                         <div className="w-8 h-8 rounded-lg bg-[#6E5E93] text-white flex items-center justify-center font-bold text-sm mb-3">
                                             <FontAwesomeIcon icon={faShieldHalved} className="w-4 h-4" />
                                         </div>
-                                        <h4 className="text-sm font-bold text-gray-900 mb-1">Anti-Dilution Shield</h4>
+                                        <h3 className="text-sm font-bold text-gray-900 mb-1">Anti-Dilution Shield</h3>
                                         <p className="text-xs text-gray-600 leading-relaxed">
                                             Prevents dilution by blurring (loss of distinctiveness) and tarnishment (use on low-quality, offensive goods).
                                         </p>
@@ -406,7 +406,7 @@ export default function WellKnownTrademarkGuidePage() {
                                         <div className="w-8 h-8 rounded-lg bg-emerald-600 text-white flex items-center justify-center font-bold text-sm mb-3">
                                             <FontAwesomeIcon icon={faAward} className="w-4 h-4" />
                                         </div>
-                                        <h4 className="text-sm font-bold text-gray-900 mb-1">Official Registry Listing</h4>
+                                        <h3 className="text-sm font-bold text-gray-900 mb-1">Official Registry Listing</h3>
                                         <p className="text-xs text-gray-600 leading-relaxed">
                                             Published in the prestigious &ldquo;List of Well-Known Trade Marks&rdquo; maintained on the official IP India registry portal.
                                         </p>
@@ -531,7 +531,7 @@ export default function WellKnownTrademarkGuidePage() {
                                             <FontAwesomeIcon icon={faBan} className="w-3.5 h-3.5" />
                                             <span>Standard Registered Trademark</span>
                                         </div>
-                                        <h4 className="text-sm font-bold text-gray-900 mb-2">Restricted Class Monopoly</h4>
+                                        <h3 className="text-sm font-bold text-gray-900 mb-2">Restricted Class Monopoly</h3>
                                         <p className="text-xs text-gray-600 leading-relaxed mb-2">
                                             A standard trademark registered in Class 9 (Software) cannot prevent a competitor from registering the exact same name in Class 33 (Alcohol) or Class 43 (Restaurants) unless the owner proves confusing similarity or passing off in court.
                                         </p>
@@ -545,7 +545,7 @@ export default function WellKnownTrademarkGuidePage() {
                                             <FontAwesomeIcon icon={faCrown} className="w-3.5 h-3.5" />
                                             <span>Rule 124 Well-Known Trademark</span>
                                         </div>
-                                        <h4 className="text-sm font-bold text-gray-900 mb-2">Omnipresent 45-Class Monopoly</h4>
+                                        <h3 className="text-sm font-bold text-gray-900 mb-2">Omnipresent 45-Class Monopoly</h3>
                                         <p className="text-xs text-gray-600 leading-relaxed mb-2">
                                             Once listed as well-known, the Trade Marks Registry&apos;s automated examination software directly flags and refuses any third-party application across all 45 classes during initial examination, saving millions in litigation costs.
                                         </p>
@@ -830,7 +830,7 @@ export default function WellKnownTrademarkGuidePage() {
                                 <div className="space-y-4 my-6">
                                     <div className="bg-purple-50/40 border border-purple-100 rounded-xl p-4">
                                         <div className="flex items-center justify-between mb-2">
-                                            <h4 className="text-sm font-bold text-gray-900 m-0">1. Daimler Benz v. Hybo Hindustan (Delhi HC)</h4>
+                                            <h3 className="text-sm font-bold text-gray-900 m-0">1. Daimler Benz v. Hybo Hindustan (Delhi HC)</h3>
                                             <span className="text-[10px] font-bold bg-[#6E5E93] text-white px-2 py-0.5 rounded">Mercedes-Benz</span>
                                         </div>
                                         <p className="text-xs text-gray-700 leading-relaxed">
@@ -840,7 +840,7 @@ export default function WellKnownTrademarkGuidePage() {
 
                                     <div className="bg-purple-50/40 border border-purple-100 rounded-xl p-4">
                                         <div className="flex items-center justify-between mb-2">
-                                            <h4 className="text-sm font-bold text-gray-900 m-0">2. Tata Sons Ltd. v. Manoj Dodia (Delhi HC)</h4>
+                                            <h3 className="text-sm font-bold text-gray-900 m-0">2. Tata Sons Ltd. v. Manoj Dodia (Delhi HC)</h3>
                                             <span className="text-[10px] font-bold bg-[#6E5E93] text-white px-2 py-0.5 rounded">TATA Mark</span>
                                         </div>
                                         <p className="text-xs text-gray-700 leading-relaxed">
@@ -850,7 +850,7 @@ export default function WellKnownTrademarkGuidePage() {
 
                                     <div className="bg-purple-50/40 border border-purple-100 rounded-xl p-4">
                                         <div className="flex items-center justify-between mb-2">
-                                            <h4 className="text-sm font-bold text-gray-900 m-0">3. Rolex SA v. Alex Jewellery Pvt. Ltd. (Delhi HC)</h4>
+                                            <h3 className="text-sm font-bold text-gray-900 m-0">3. Rolex SA v. Alex Jewellery Pvt. Ltd. (Delhi HC)</h3>
                                             <span className="text-[10px] font-bold bg-[#6E5E93] text-white px-2 py-0.5 rounded">ROLEX</span>
                                         </div>
                                         <p className="text-xs text-gray-700 leading-relaxed">
@@ -860,7 +860,7 @@ export default function WellKnownTrademarkGuidePage() {
 
                                     <div className="bg-purple-50/40 border border-purple-100 rounded-xl p-4">
                                         <div className="flex items-center justify-between mb-2">
-                                            <h4 className="text-sm font-bold text-gray-900 m-0">4. N.R. Dongre v. Whirlpool Corporation (Supreme Court)</h4>
+                                            <h3 className="text-sm font-bold text-gray-900 m-0">4. N.R. Dongre v. Whirlpool Corporation (Supreme Court)</h3>
                                             <span className="text-[10px] font-bold bg-[#6E5E93] text-white px-2 py-0.5 rounded">Whirlpool</span>
                                         </div>
                                         <p className="text-xs text-gray-700 leading-relaxed">
@@ -987,7 +987,7 @@ export default function WellKnownTrademarkGuidePage() {
                                     <FontAwesomeIcon icon={faCrown} className="w-3.5 h-3.5" />
                                     <span>Rule 124 Eligibility Check</span>
                                 </div>
-                                <h3 className="text-base font-bold text-gray-900 mb-2">Is Your Mark Eligible?</h3>
+                                <p className="text-base font-bold text-gray-900 mb-2">Is Your Mark Eligible?</p>
                                 <p className="text-xs text-gray-600 leading-relaxed mb-4">
                                     Get an instant, confidential evaluation of your brand turnover, promotional evidence, and Section 11 criteria by senior IP litigators.
                                 </p>
@@ -1004,7 +1004,7 @@ export default function WellKnownTrademarkGuidePage() {
                                     <FontAwesomeIcon icon={faCoins} className="w-3.5 h-3.5" />
                                     <span>Rule 124 Statutory Fee</span>
                                 </div>
-                                <h3 className="text-base font-bold text-white mb-2">₹1,00,000 Govt. Fee</h3>
+                                <p className="text-base font-bold text-white mb-2">₹1,00,000 Govt. Fee</p>
                                 <p className="text-xs text-gray-300 leading-relaxed mb-4">
                                     Form TM-M online e-filing fee for determination of well-known trademark across all 45 classes.
                                 </p>

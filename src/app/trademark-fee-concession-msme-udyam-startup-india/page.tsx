@@ -1,4 +1,4 @@
-import { validateAndNormalizeDescription } from '@/lib/seo-utils';
+import { validateAndNormalizeDescription, validateAndNormalizeTitle } from '@/lib/seo-utils';
 import React from "react";
 import { Metadata } from "next";
 import Link from "next/link";
@@ -30,7 +30,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata: Metadata = {
-    title: "How to Get 50% Discount on Trademark Fees with MSME / Udyam",
+    title: validateAndNormalizeTitle("Trademark Fee Concessions for MSMEs & Startups", "app/trademark-fee-concession-msme-udyam-startup-india/page.tsx"),
     description: validateAndNormalizeDescription(
         "Learn how to get a 50% discount on trademark fees in India with MSME / Udyam registration. Save ₹4,500 per class on Form TM-A with our legal guide.",
         "app/trademark-fee-concession-msme-udyam-startup-india/page.tsx"
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
         follow: true,
     },
     openGraph: {
-        title: "How to Get 50% Discount on Trademark Fees with MSME / Udyam",
+        title: "Trademark Fee Concessions for MSMEs & Startups",
         description: "Learn how to get a 50% discount on trademark fees in India with MSME / Udyam registration. Save ₹4,500 per class on Form TM-A with our legal guide.",
         url: "https://www.iprkaro.com/trademark-fee-concession-msme-udyam-startup-india",
         type: "article",
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "How to Get 50% Discount on Trademark Fees with MSME / Udyam",
+        title: "Trademark Fee Concessions for MSMEs & Startups",
         description: "Learn how to get a 50% discount on trademark fees in India with MSME / Udyam registration. Save ₹4,500 per class on Form TM-A with our legal guide.",
         images: ["https://www.iprkaro.com/images/og/trademark-fee-concession-msme-udyam-startup-india.jpg"],
     }

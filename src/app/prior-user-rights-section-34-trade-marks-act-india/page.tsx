@@ -113,7 +113,7 @@ const faqs = [
 ];
 
 const tocSections = [
-    { id: "overview", title: "Overview & Quick Answer" },
+    { id: "overview", title: "Overview: Section 34 Rights" },
     { id: "first-to-use-doctrine", title: "First to Use vs First to File" },
     { id: "section-34-statutory-analysis", title: "Section 34 Statutory Elements" },
     { id: "interplay-with-act", title: "Interplay with Sections 27 & 28" },
@@ -349,7 +349,7 @@ export default function PriorUserRightsSection34Page() {
                                     <section id="overview" className="scroll-mt-32">
                                         <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faShieldHalved} className="w-8 h-5 mr-3 text-[rgb(110,94,147)]" />
-                                            Overview &amp; Quick Legal Answer
+                                            Overview: Prior User Rights Under Section 34
                                         </h2>
 
                                         <div id="quick-answer" className="bg-purple-50 border-l-4 border-[rgb(110,94,147)] p-6 rounded-r-xl mb-8">

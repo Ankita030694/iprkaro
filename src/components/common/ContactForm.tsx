@@ -209,13 +209,13 @@ export default function ContactForm({ isPopup = false, onSuccess, onClose }: Con
 
         {/* Form Header */}
         <div className="mb-3.5 sm:mb-5">
-          <h2 className="font-nunito text-xl sm:text-[24px] md:text-[26px] font-extrabold text-[#0C002B] leading-tight tracking-tight">
+          <p role="heading" aria-level={3} className="font-nunito text-xl sm:text-[24px] md:text-[26px] font-extrabold text-[#0C002B] leading-tight tracking-tight">
             {isPopup ? (
               <>Get <span className="text-[#1952C7]">Free Expert</span> Advice</>
             ) : (
               <>Get Your <span className="text-[#1952C7]">Brand Protected</span></>
             )}
-          </h2>
+          </p>
           <p className="text-[#64748B] font-nunito text-xs sm:text-[13px] mt-1 leading-normal">
             {isPopup 
               ? 'Fill in your details below to speak with a Senior Trademark & IP Attorney.'

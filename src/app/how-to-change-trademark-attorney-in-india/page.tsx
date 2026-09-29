@@ -112,7 +112,7 @@ const faqs = [
 ];
 
 const tocSections = [
-    { id: "overview", title: "Overview & Quick Answer" },
+    { id: "overview", title: "Overview: Changing Attorney" },
     { id: "why-change-attorney", title: "Why Revoke an Attorney?" },
     { id: "legal-framework", title: "Statutory Legal Framework" },
     { id: "noc-legal-position", title: "Is an NOC Mandatory?" },
@@ -348,7 +348,7 @@ export default function ChangeTrademarkAttorneyPage() {
                                     <section id="overview" className="scroll-mt-32">
                                         <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faShieldHalved} className="w-8 h-5 mr-3 text-[rgb(110,94,147)]" />
-                                            Overview &amp; Quick Legal Answer
+                                            Overview: Changing Trademark Attorney in India
                                         </h2>
 
                                         <div id="quick-answer" className="bg-purple-50 border-l-4 border-[rgb(110,94,147)] p-6 rounded-r-xl mb-8">

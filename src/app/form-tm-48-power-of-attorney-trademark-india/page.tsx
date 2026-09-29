@@ -1,4 +1,4 @@
-import { validateAndNormalizeDescription } from '@/lib/seo-utils';
+import { validateAndNormalizeDescription, validateAndNormalizeTitle } from '@/lib/seo-utils';
 import React from "react";
 import { Metadata } from "next";
 import Link from "next/link";
@@ -33,7 +33,11 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata: Metadata = {
-    title: "What is Form TM-48 (Power of Attorney) in Trademark Filing?",
+    title: validateAndNormalizeTitle(
+        "Form TM-48 Power of Attorney for Trademarks | IPR Karo",
+        "app/form-tm-48-power-of-attorney-trademark-india/page.tsx",
+        "What is Form TM-48 (Power of Attorney) in Trademark Filing?"
+    ),
     description: validateAndNormalizeDescription(
         "Understand Form TM-48 (Power of Attorney) for trademark filing in India. Learn Rule 19 rules, stamp duty costs, who can sign, GPA vs SPA, and e-filing steps.",
         "app/form-tm-48-power-of-attorney-trademark-india/page.tsx"
@@ -58,7 +62,7 @@ export const metadata: Metadata = {
         follow: true,
     },
     openGraph: {
-        title: "What is Form TM-48 (Power of Attorney) in Trademark Filing?",
+        title: "Form TM-48 Power of Attorney for Trademarks | IPR Karo",
         description: "Understand Form TM-48 (Power of Attorney) for trademark filing in India. Learn Rule 19 rules, stamp duty costs, who can sign, GPA vs SPA, and e-filing steps.",
         url: "https://www.iprkaro.com/form-tm-48-power-of-attorney-trademark-india",
         type: "article",
@@ -73,7 +77,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "What is Form TM-48 (Power of Attorney) in Trademark Filing?",
+        title: "Form TM-48 Power of Attorney for Trademarks | IPR Karo",
         description: "Understand Form TM-48 (Power of Attorney) for trademark filing in India. Learn Rule 19 rules, stamp duty costs, who can sign, GPA vs SPA, and e-filing steps.",
         images: ["https://www.iprkaro.com/images/og/form-tm-48-power-of-attorney-trademark-india.jpg"],
     }

@@ -1,4 +1,4 @@
-import { validateAndNormalizeDescription } from '@/lib/seo-utils';
+import { validateAndNormalizeDescription, validateAndNormalizeTitle } from '@/lib/seo-utils';
 import React from "react";
 import { Metadata } from "next";
 import Link from "next/link";
@@ -30,7 +30,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata: Metadata = {
-    title: "Trademark Consent Letter & Coexistence Agreement India | Guide",
+    title: validateAndNormalizeTitle("Trademark Consent & Coexistence Agreement | IPR Karo", "app/trademark-consent-letter-coexistence-agreement-india/page.tsx"),
     description: validateAndNormalizeDescription(
         "Overcome Section 11 objections with a trademark consent letter & coexistence agreement in India. Learn legal formats, Section 12 honest concurrent use & rules.",
         "app/trademark-consent-letter-coexistence-agreement-india/page.tsx"
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
         follow: true,
     },
     openGraph: {
-        title: "Trademark Consent Letter & Coexistence Agreement India | Guide",
+        title: "Trademark Consent & Coexistence Agreement | IPR Karo",
         description: "Overcome Section 11 objections with a trademark consent letter & coexistence agreement in India. Learn legal formats, Section 12 honest concurrent use & rules.",
         url: "https://www.iprkaro.com/trademark-consent-letter-coexistence-agreement-india",
         type: "website",
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Trademark Consent Letter & Coexistence Agreement India | Guide",
+        title: "Trademark Consent & Coexistence Agreement | IPR Karo",
         description: "Overcome Section 11 objections with a trademark consent letter & coexistence agreement in India. Learn legal formats, Section 12 honest concurrent use & rules.",
         images: ["https://www.iprkaro.com/images/og/trademark-consent-letter-coexistence-agreement-india.jpg"],
     }

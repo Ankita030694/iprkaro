@@ -1,4 +1,4 @@
-import { validateAndNormalizeDescription } from '@/lib/seo-utils';
+import { validateAndNormalizeDescription, validateAndNormalizeTitle } from '@/lib/seo-utils';
 import React from "react";
 import { Metadata } from "next";
 import Link from "next/link";
@@ -22,7 +22,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata: Metadata = {
-    title: "What Happens If You Register a Trademark Without Researching It? | IPR Karo",
+    title: validateAndNormalizeTitle("Risks of Registering a Trademark Without Research", "app/what-will-happen-if-i-register-trademark-without-researching-it/page.tsx"),
     description: validateAndNormalizeDescription("Learn the critical risks of registering a trademark without research: Section 9 and 11 objections, third-party oppositions, wasted fees, and forced rebranding.", "app/what-will-happen-if-i-register-trademark-without-researching-it/page.tsx"),
     keywords: [
         "what happens if you register trademark without research",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         follow: true,
     },
     openGraph: {
-        title: "What Happens If You Register a Trademark Without Researching It? | IPR Karo",
+        title: "Risks of Registering a Trademark Without Research",
         description: "Learn the critical risks of registering a trademark without research: Section 9 and 11 objections, third-party oppositions, wasted fees, and forced rebranding.",
         url: "https://www.iprkaro.com/what-will-happen-if-i-register-trademark-without-researching-it",
         type: "website",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "What Happens If You Register a Trademark Without Researching It? | IPR Karo",
+        title: "Risks of Registering a Trademark Without Research",
         description: "Learn the critical risks of registering a trademark without research: Section 9 and 11 objections, third-party oppositions, wasted fees, and forced rebranding.",
         images: ["https://www.iprkaro.com/images/og/what-will-happen-if-i-register-trademark-without-researching-it.jpg"],
     }
