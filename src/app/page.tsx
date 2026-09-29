@@ -1,5 +1,5 @@
 import { validateAndNormalizeDescription } from '@/lib/seo-utils';
-import { HeroSection, WhyTrademark, OurServices, SimplePlans, Faq, ReviewSnippets, BrandGrid, WhatCanYouTrademark, WhatYouNeedToGetStarted, ResultsGrid, SmarterDecisions, WhatWeProtect, CtaSection, BuiltToProtect, SimplePricing, FaqSection, NewFooter } from "@/components";
+import { HeroSection, WhyTrademark, OurServices, SimplePlans, Faq, ReviewSnippets, BrandGrid, WhatCanYouTrademark, WhatYouNeedToGetStarted, ResultsGrid, SmarterDecisions, WhatWeProtect, FormalAssessmentCTA, CtaSection, BuiltToProtect, SimplePricing, FaqSection, NewFooter } from "@/components";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -157,6 +157,7 @@ export default function Home() {
         <ResultsGrid />
         <SmarterDecisions headingTag="h3" />
         <WhatWeProtect />
+        <FormalAssessmentCTA headingTag="h3" />
         <ReviewSnippets />
         <BuiltToProtect />
         <FaqSection headingTag="h3" />

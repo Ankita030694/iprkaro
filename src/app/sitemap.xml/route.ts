@@ -28,6 +28,13 @@ export async function GET() {
 
   // 3. Features and Services
   const staticUrls: string[] = [
+    '/single-colour-combination-trademark-registration-india',
+    '/how-to-file-trademark-opposition-counter-statement-form-tm-o',
+    '/joint-trademark-ownership-co-founders-india',
+    '/trademark-licensing-agreement-for-franchise-business-india',
+    '/how-to-request-adjournment-trademark-hearing-india',
+    '/trademark-registration-for-dropshipping-print-on-demand-india',
+    '/how-to-download-trademark-registration-certificate-ip-india-portal',
     '/can-you-trademark-a-city-or-geographical-name-in-india',
     '/comparative-advertising-vs-trademark-disparagement-india',
     '/reclaim-squatted-social-media-username-trademark-india',

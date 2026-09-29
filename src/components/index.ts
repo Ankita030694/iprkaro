@@ -32,3 +32,5 @@ export { default as NewFooter } from './NewFooter';
 export { default as ThirdPartyScripts } from './ThirdPartyScripts';
 export { default as WhatCanYouTrademark } from './WhatCanYouTrademark';
 export { default as WhatYouNeedToGetStarted } from './WhatYouNeedToGetStarted';
+export { default as FormalAssessmentCTA } from './assessment/FormalAssessmentCTA';
+export { default as FormalAssessmentModal } from './assessment/FormalAssessmentModal';
