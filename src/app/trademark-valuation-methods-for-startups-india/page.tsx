@@ -218,7 +218,7 @@ export default function TrademarkValuationStartupsPage() {
                                 <span className="text-[10px] sm:text-xs font-bold tracking-wider text-[#6E5E93] uppercase">Corporate Finance &amp; IP Valuation</span>
                             </div>
                             <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-3 leading-tight text-gray-900 tracking-tighter">
-                                Trademark Valuation Methods for <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'transparent' }}>Startups in India</span>
+                                Trademark Valuations Methods for <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'transparent' }}>Startups in India</span>
                             </h1>
                             <p className="text-base md:text-lg mb-5 text-gray-700 font-medium leading-relaxed">For high-growth Indian startups, D2C brands, and SaaS enterprises, proprietary trademarks and brand reputation constitute up to 80% of total enterprise value. Mastering trademark valuation methodologies—including the<strong>Relief from Royalty (RfR)</strong>method,<strong>Ind AS 38</strong>balance sheet capitalization rules,<strong>IBBI Registered Valuer</strong>mandates under Section 247 of the Companies Act, and<strong>Section 32/55 Income Tax</strong>implications—is vital for successful venture fundraising, M&amp;A exits, and balance sheet structuring.</p>
 
