@@ -154,24 +154,26 @@ export default function FormalAssessmentCTA({ headingTag = 'h3' }: FormalAssessm
           {/* Top Accent Line (Brand Gradient: Emerald to Blue) */}
           <div className="absolute top-0 left-0 right-0 h-1 sm:h-1.5 bg-gradient-to-r from-[#10B981] via-[#0066FF] to-[#1952C7]" />
 
-          {/* Section Header */}
-          <div className="mb-5 sm:mb-7 space-y-2">
-            {/* Blue Brand Pill Badge (No Yellow) */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EAF2FC] border border-[#BFDBFE] text-[#1952C7]">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#1952C7] animate-pulse" />
-              <span className="text-[10.5px] sm:text-[11px] font-extrabold tracking-wider uppercase font-nunito">
-                IPR KARO • ADVOCATE INTAKE
-              </span>
+          {/* Section Header (Steps 1, 2, 3 only) */}
+          {currentStep < 4 && (
+            <div className="mb-5 sm:mb-7 space-y-2">
+              {/* Blue Brand Pill Badge (No Yellow) */}
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EAF2FC] border border-[#BFDBFE] text-[#1952C7]">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#1952C7] animate-pulse" />
+                <span className="text-[10.5px] sm:text-[11px] font-extrabold tracking-wider uppercase font-nunito">
+                  IPR KARO • ADVOCATE INTAKE
+                </span>
+              </div>
+
+              <HeadingTag className="font-nunito text-2xl sm:text-3xl md:text-[32px] font-extrabold text-[#0C002B] tracking-tight leading-tight">
+                Schedule a Formal Case Assessment
+              </HeadingTag>
+
+              <p className="text-slate-600 font-nunito text-xs sm:text-sm leading-relaxed max-w-2xl font-normal">
+                Consult directly with experienced IP attorneys for trademark registration, objections, opposition defense, copyright protection, and patent advisory.
+              </p>
             </div>
-
-            <HeadingTag className="font-nunito text-2xl sm:text-3xl md:text-[32px] font-extrabold text-[#0C002B] tracking-tight leading-tight">
-              Schedule a Formal Case Assessment
-            </HeadingTag>
-
-            <p className="text-slate-600 font-nunito text-xs sm:text-sm leading-relaxed max-w-2xl font-normal">
-              Consult directly with experienced IP attorneys for trademark registration, objections, opposition defense, copyright protection, and patent advisory.
-            </p>
-          </div>
+          )}
 
           {/* Step Progress Bar (Steps 1, 2, 3) */}
           {currentStep < 4 && <AssessmentProgress currentStep={currentStep} totalSteps={3} />}
