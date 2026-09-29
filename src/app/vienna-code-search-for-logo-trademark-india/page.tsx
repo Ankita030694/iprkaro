@@ -230,9 +230,7 @@ export default function ViennaCodeSearchPage() {
                             <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-3 leading-tight text-gray-900 tracking-tighter">
                                 Vienna Code Search for <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'transparent' }}>Logo Trademark</span> on IP India Portal
                             </h1>
-                            <p className="text-base md:text-lg mb-5 text-gray-700 font-medium leading-relaxed">
-                                A simple wordmark search is entirely blind to figurative artwork, emblems, monograms, and brand symbols. Under Rule 33 of the Trade Marks Rules, 2017, the Indian Trade Marks Registry classifies all device marks using the international 6-digit Vienna Codification hierarchy. Failing to conduct a thorough Vienna Code clearance search leaves your logo vulnerable to statutory objections under Section 11(1), conflicting registry citations, and costly trademark infringement battles. Discover how to identify your logo's Vienna codes, execute advanced device mark searches on IP India, and secure absolute visual exclusivity.
-                            </p>
+                            <p className="text-base md:text-lg mb-5 text-gray-700 font-medium leading-relaxed">A simple wordmark search is entirely blind to figurative artwork, emblems, monograms, and brand symbols. Under Rule 33 of the Trade Marks Rules, 2017, the Indian Trade Marks Registry classifies all device marks using the international 6-digit Vienna Codification hierarchy. Failing to conduct a thorough Vienna Code clearance search leaves your logo vulnerable to statutory objections under Section 11(1), conflicting registry citations, and costly trademark infringement battles. Discover how to identify your logo's Vienna codes, execute advanced device mark searches on IP India, and secure absolute visual exclusivity.</p>
 
                             <div className="flex flex-wrap items-center gap-4 mb-6">
                                 <div className="flex items-center mr-2">
@@ -323,36 +321,11 @@ export default function ViennaCodeSearchPage() {
                                                 Close
                                             </span>
                                             <svg className="w-4 h-4 text-gray-500 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                                            </svg>
-                                        </div>
-                                    </summary>
-                                    <div className="p-3.5 pt-2 border-t border-purple-50 bg-white/70">
-                                        <nav className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
-                                            {tocSections.map((section, idx) => (
-                                                <a
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg></div></summary><div className="p-3.5 pt-2 border-t border-purple-50 bg-white/70"><nav className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">{tocSections.map((section, idx) => (<a
                                                     key={section.id}
                                                     href={`#${section.id}`}
                                                     className="flex items-center p-2 rounded-xl text-xs font-medium text-gray-700 hover:text-[#6E5E93] hover:bg-purple-50/80 transition-all border border-transparent hover:border-purple-100"
-                                                >
-                                                    <span className="w-5 h-5 rounded-full bg-purple-100 text-[#6E5E93] flex items-center justify-center text-[10px] font-bold mr-2 flex-shrink-0">
-                                                        {idx + 1}
-                                                    </span>
-                                                    <span className="truncate">{section.title}</span>
-                                                </a>
-                                            ))}
-                                        </nav>
-                                    </div>
-                                </details>
-                            </div>
-
-                            <div className="bg-white p-4 md:p-12 rounded-2xl shadow-sm border border-gray-100 space-y-12 md:space-y-20 article-content">
-                                <article className="prose prose-lg max-w-none text-gray-700 leading-relaxed font-normal">
-
-                                    <div className="flex items-center space-x-4 mb-10 p-4 bg-gray-50 rounded-xl border border-gray-100 not-prose">
-                                        <img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-12 h-12 rounded-full object-cover m-0" />
-                                        <div>
-                                            <p className="text-sm font-bold text-gray-900 m-0">Written by <Link href="/about-us" className="text-[rgb(110,94,147)] hover:underline">Rahul Roy</Link></p>
+                                                ><span className="w-5 h-5 rounded-full bg-purple-100 text-[#6E5E93] flex items-center justify-center text-[10px] font-bold mr-2 flex-shrink-0">{idx + 1}</span><span className="truncate">{section.title}</span></a>))}</nav></div></details></div><div className="bg-white p-4 md:p-12 rounded-2xl shadow-sm border border-gray-100 space-y-12 md:space-y-20 article-content"><article className="prose prose-lg max-w-none text-gray-700 leading-relaxed font-normal"><div className="flex items-center space-x-4 mb-10 p-4 bg-gray-50 rounded-xl border border-gray-100 not-prose"><img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-12 h-12 rounded-full object-cover m-0" /><div><p className="text-sm font-bold text-gray-900 m-0">Written by<Link href="/about-us" className="text-[rgb(110,94,147)] hover:underline">Rahul Roy</Link></p>
                                             <p className="text-xs text-gray-500 m-0">Trademark Research Specialist</p>
                                         </div>
                                     </div>
@@ -364,13 +337,9 @@ export default function ViennaCodeSearchPage() {
                                             <span>Understanding Vienna Classification in India</span>
                                         </h2>
 
-                                        <p className="text-base leading-relaxed mb-6">
-                                            In the realm of brand identity, a logo often carries greater commercial recall than a brand's textual name. From iconic swooshes and bitten apples to intricate crests and geometric monograms, graphical elements form the psychological core of consumer trust. However, while searching textual wordmarks is straightforward, indexing and searching purely visual designs across millions of registered trademarks presents a complex challenge.
-                                        </p>
+                                        <p className="text-base leading-relaxed mb-6">In the realm of brand identity, a logo often carries greater commercial recall than a brand's textual name. From iconic swooshes and bitten apples to intricate crests and geometric monograms, graphical elements form the psychological core of consumer trust. However, while searching textual wordmarks is straightforward, indexing and searching purely visual designs across millions of registered trademarks presents a complex challenge.</p>
 
-                                        <p className="text-base leading-relaxed mb-6">
-                                            To solve this, intellectual property offices globally rely on the <strong>Vienna Agreement Establishing an International Classification of the Figurative Elements of Marks (1973)</strong>, administered by the World Intellectual Property Organization (WIPO). India adopted the Vienna System under <strong>Rule 33 of the Trade Marks Rules, 2017</strong>. Under this statutory mandate, whenever an applicant files a <Link href="/word-mark-vs-device-mark-trademark-india" className="text-[#6E5E93] font-bold hover:underline">Device Mark, Logo, Label, or Composite Mark</Link> on Form TM-A, the Trade Marks Registry deconstructs the artwork into standardized 6-digit numerical codes representing every graphical component.
-                                        </p>
+                                        <p className="text-base leading-relaxed mb-6">To solve this, intellectual property offices globally rely on the<strong>Vienna Agreement Establishing an International Classification of the Figurative Elements of Marks (1973)</strong>, administered by the World Intellectual Property Organization (WIPO). India adopted the Vienna System under<strong>Rule 33 of the Trade Marks Rules, 2017</strong>. Under this statutory mandate, whenever an applicant files a<Link href="/word-mark-vs-device-mark-trademark-india" className="text-[#6E5E93] font-bold hover:underline">Device Mark, Logo, Label, or Composite Mark</Link>on Form TM-A, the Trade Marks Registry deconstructs the artwork into standardized 6-digit numerical codes representing every graphical component.</p>
 
                                         {/* Quick Highlight Box */}
                                         <div className="bg-purple-50/60 border border-purple-200 rounded-2xl p-6 mb-8 not-prose">
@@ -378,9 +347,7 @@ export default function ViennaCodeSearchPage() {
                                                 <FontAwesomeIcon icon={faLightbulb} className="w-6 h-6 text-[#6E5E93] flex-shrink-0 mt-1" />
                                                 <div>
                                                     <h3 className="text-base font-bold text-gray-900 mb-1">The Critical Blind Spot of Wordmark Searches</h3>
-                                                    <p className="text-sm text-gray-700 leading-relaxed m-0">
-                                                        A traditional trademark search looks exclusively for text strings. If Company A registers an emblem of a roaring tiger without any textual wording, and Company B searches for the brand name &quot;Apex Enterprises&quot; accompanied by an identical tiger graphic, a standard wordmark search will return <strong>zero conflicts</strong>. Conducting a Vienna Code search for Category 03 (Animals) is the <em>only</em> mechanism to unearth preexisting visual collisions before filing.
-                                                    </p>
+                                                    <p className="text-sm text-gray-700 leading-relaxed m-0">A traditional trademark search looks exclusively for text strings. If Company A registers an emblem of a roaring tiger without any textual wording, and Company B searches for the brand name &quot;Apex Enterprises&quot. Accompanied by an identical tiger graphic, a standard wordmark search will return<strong>zero conflicts</strong>. Conducting a Vienna Code search for Category 03 (Animals) is the<em>only</em>mechanism to unearth preexisting visual collisions before filing.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -391,27 +358,21 @@ export default function ViennaCodeSearchPage() {
                                                     <FontAwesomeIcon icon={faGlobe} className="w-5 h-5" />
                                                 </div>
                                                 <h3 className="text-sm font-bold text-gray-900 mb-1">WIPO International Standard</h3>
-                                                <p className="text-xs text-gray-600 leading-relaxed m-0">
-                                                    Standardized across 35+ member nations, enabling seamless international brand clearance under the Madrid Protocol.
-                                                </p>
+                                                <p className="text-xs text-gray-600 leading-relaxed m-0">Standardized across 35+ member nations. This enables seamless international brand clearance under the Madrid Protocol.</p>
                                             </div>
                                             <div className="bg-gray-50 p-5 rounded-2xl border border-gray-200/80">
                                                 <div className="w-10 h-10 rounded-xl bg-purple-100 text-[#6E5E93] flex items-center justify-center font-bold text-lg mb-3">
                                                     <FontAwesomeIcon icon={faGavel} className="w-5 h-5" />
                                                 </div>
                                                 <h3 className="text-sm font-bold text-gray-900 mb-1">Rule 33 Statutory Mandate</h3>
-                                                <p className="text-xs text-gray-600 leading-relaxed m-0">
-                                                    Enforces mandatory figurative codification by Trade Marks Registry examiners during initial application scrutiny.
-                                                </p>
+                                                <p className="text-xs text-gray-600 leading-relaxed m-0">Enforces mandatory figurative codification by Trade Marks Registry examiners during initial application scrutiny.</p>
                                             </div>
                                             <div className="bg-gray-50 p-5 rounded-2xl border border-gray-200/80">
                                                 <div className="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-lg mb-3">
                                                     <FontAwesomeIcon icon={faShieldHalved} className="w-5 h-5" />
                                                 </div>
                                                 <h3 className="text-sm font-bold text-gray-900 mb-1">Section 11 Defense</h3>
-                                                <p className="text-xs text-gray-600 leading-relaxed m-0">
-                                                    Eliminates relative grounds objections and prevents devastating trademark infringement notices from incumbent logo owners.
-                                                </p>
+                                                <p className="text-xs text-gray-600 leading-relaxed m-0">Eliminates relative grounds objections and prevents devastating trademark infringement notices from incumbent logo owners.</p>
                                             </div>
                                         </div>
                                     </section>
@@ -423,9 +384,7 @@ export default function ViennaCodeSearchPage() {
                                             <span>The 6-Digit Vienna Code Hierarchy Explained</span>
                                         </h2>
 
-                                        <p className="text-base leading-relaxed mb-6">
-                                            The Vienna Classification assigns a 6-digit numerical tag composed of three hierarchical pairs of numbers: <strong>Category</strong>, <strong>Division</strong>, and <strong>Section</strong>. Understanding this taxonomy enables legal professionals and designers to navigate the IP India database with mathematical precision.
-                                        </p>
+                                        <p className="text-base leading-relaxed mb-6">The Vienna Classification assigns a 6-digit numerical tag composed of three hierarchical pairs of numbers:<strong>Category</strong>,<strong>Division</strong>, and<strong>Section</strong>. Understanding this taxonomy enables legal professionals and designers to navigate the IP India database with mathematical precision.</p>
 
                                         {/* Visual Architecture Card */}
                                         <div className="bg-gradient-to-br from-gray-900 via-[#1A1A2E] to-gray-900 text-white p-6 md:p-8 rounded-3xl shadow-xl not-prose mb-8 border border-gray-800">
@@ -436,34 +395,26 @@ export default function ViennaCodeSearchPage() {
                                                 <h3 className="text-xl md:text-2xl font-bold mt-3 text-white">
                                                     Anatomy of a Vienna Classification Code
                                                 </h3>
-                                                <p className="text-xs text-gray-300 mt-2">
-                                                    Example: Code <span className="font-mono text-amber-400 font-bold">03.01.08</span> (Representing a stylized dog, wolf, or fox silhouette)
-                                                </p>
+                                                <p className="text-xs text-gray-300 mt-2">Example: Code<span className="font-mono text-amber-400 font-bold">03.01.08</span>(Representing a stylized dog, wolf, or fox silhouette)</p>
                                             </div>
 
                                             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
                                                 <div className="bg-white/5 backdrop-blur-sm p-5 rounded-2xl border border-white/10">
                                                     <div className="text-3xl font-black text-purple-400 font-mono mb-1">03</div>
                                                     <div className="text-xs font-bold uppercase tracking-wider text-purple-200 mb-2">Category (1st Tier)</div>
-                                                    <p className="text-[11px] text-gray-300 m-0">
-                                                        Broad subject matter grouping. Category 03 encompasses all <strong>Animals and Animal Kingdom figures</strong> (29 total categories globally).
-                                                    </p>
+                                                    <p className="text-[11px] text-gray-300 m-0">Broad subject matter grouping. Category 03 encompasses all<strong>Animals and Animal Kingdom figures</strong>(29 total categories globally).</p>
                                                 </div>
 
                                                 <div className="bg-white/5 backdrop-blur-sm p-5 rounded-2xl border border-white/10">
                                                     <div className="text-3xl font-black text-indigo-400 font-mono mb-1">01</div>
                                                     <div className="text-xs font-bold uppercase tracking-wider text-indigo-200 mb-2">Division (2nd Tier)</div>
-                                                    <p className="text-[11px] text-gray-300 m-0">
-                                                        Intermediate biological/physical subfamily. Division 01 represents <strong>Quadrupeds (four-legged mammals)</strong>.
-                                                    </p>
+                                                    <p className="text-[11px] text-gray-300 m-0">Intermediate biological/physical subfamily. Division 01 represents<strong>Quadrupeds (four-legged mammals)</strong>.</p>
                                                 </div>
 
                                                 <div className="bg-white/5 backdrop-blur-sm p-5 rounded-2xl border border-white/10">
                                                     <div className="text-3xl font-black text-amber-400 font-mono mb-1">08</div>
                                                     <div className="text-xs font-bold uppercase tracking-wider text-amber-200 mb-2">Section (3rd Tier)</div>
-                                                    <p className="text-[11px] text-gray-300 m-0">
-                                                        Highly granular graphic specification. Section 08 specifically indexes <strong>Dogs, wolves, and foxes</strong>.
-                                                    </p>
+                                                    <p className="text-[11px] text-gray-300 m-0">Highly granular graphic specification. Section 08 specifically indexes<strong>Dogs, wolves, and foxes</strong>.</p>
                                                 </div>
                                             </div>
 
@@ -472,27 +423,13 @@ export default function ViennaCodeSearchPage() {
                                             </div>
                                         </div>
 
-                                        <p className="text-base leading-relaxed mb-6">
-                                            A single logo mark frequently warrants <strong>multiple Vienna codes</strong>. For instance, if your brand logo depicts a golden eagle perched atop a circular shield containing geometric letterforms, the Trade Marks Registry will assign four distinct codes:
-                                        </p>
+                                        <p className="text-base leading-relaxed mb-6">A single logo mark frequently warrants<strong>multiple Vienna codes</strong>. For instance, if your brand logo depicts a golden eagle perched atop a circular shield containing geometric letterforms, the Trade Marks Registry will assign four distinct codes:</p>
 
                                         <ul className="space-y-3 mb-8">
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheckCircle} className="w-5 h-5 text-[#6E5E93] mr-3 mt-1 flex-shrink-0" />
-                                                <span><strong>03.07.01 & 03.07.16:</strong> Birds (Eagles, falcons, raptors in flight or perched).</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheckCircle} className="w-5 h-5 text-[#6E5E93] mr-3 mt-1 flex-shrink-0" />
-                                                <span><strong>24.01.05:</strong> Shields containing other figurative elements or inscriptions.</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheckCircle} className="w-5 h-5 text-[#6E5E93] mr-3 mt-1 flex-shrink-0" />
-                                                <span><strong>26.01.01:</strong> Circles (one or more concentric circular borders).</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheckCircle} className="w-5 h-5 text-[#6E5E93] mr-3 mt-1 flex-shrink-0" />
-                                                <span><strong>27.05.01:</strong> Letters presenting a special form of writing (stylized monograms).</span>
-                                            </li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheckCircle} className="w-5 h-5 text-[#6E5E93] mr-3 mt-1 flex-shrink-0" /><span><strong>03.07.01 & 03.07.16:</strong>Birds (Eagles, falcons, raptors in flight or perched).</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheckCircle} className="w-5 h-5 text-[#6E5E93] mr-3 mt-1 flex-shrink-0" /><span><strong>24.01.05:</strong>Shields containing other figurative elements or inscriptions.</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheckCircle} className="w-5 h-5 text-[#6E5E93] mr-3 mt-1 flex-shrink-0" /><span><strong>26.01.01:</strong>Circles (one or more concentric circular borders).</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheckCircle} className="w-5 h-5 text-[#6E5E93] mr-3 mt-1 flex-shrink-0" /><span><strong>27.05.01:</strong>Letters presenting a special form of writing (stylized monograms).</span></li>
                                         </ul>
                                     </section>
 
@@ -503,9 +440,7 @@ export default function ViennaCodeSearchPage() {
                                             <span>Master Vienna Code Category Cheatsheet</span>
                                         </h2>
 
-                                        <p className="text-base leading-relaxed mb-6">
-                                            The Vienna Classification comprises 29 overarching categories. Below is an exhaustive reference cheatsheet detailing the most critical categories and frequent divisions encountered during Indian trademark searches:
-                                        </p>
+                                        <p className="text-base leading-relaxed mb-6">The Vienna Classification comprises 29 overarching categories. Below is an exhaustive reference cheatsheet detailing the most critical categories and frequent divisions encountered during Indian trademark searches:</p>
 
                                         <div className="overflow-x-auto not-prose mb-8 rounded-2xl border border-gray-200 shadow-sm">
                                             <table className="w-full text-left border-collapse text-sm">
@@ -521,65 +456,49 @@ export default function ViennaCodeSearchPage() {
                                                     <tr className="hover:bg-purple-50/40 transition-colors">
                                                         <td className="p-4 font-mono font-bold text-[#6E5E93]">Cat 01</td>
                                                         <td className="p-4 font-semibold text-gray-900">Celestial Bodies & Natural Phenomena</td>
-                                                        <td className="p-4 text-xs">
-                                                            <strong>01.01</strong> (Stars, comets), <strong>01.03</strong> (Sun, rays), <strong>01.05</strong> (Globe, maps), <strong>01.15</strong> (Water droplets, waves)
-                                                        </td>
+                                                        <td className="p-4 text-xs"> <strong>01.01</strong> (Stars, comets), <strong>01.03</strong> (Sun, rays), <strong>01.05</strong> (Globe, maps), <strong>01.15</strong> (Water droplets, waves) </td>
                                                         <td className="p-4 text-xs">Fintech, Energy, Aerospace, Logistics</td>
                                                     </tr>
                                                     <tr className="hover:bg-purple-50/40 transition-colors">
                                                         <td className="p-4 font-mono font-bold text-[#6E5E93]">Cat 02</td>
                                                         <td className="p-4 font-semibold text-gray-900">Human Beings & Anatomy</td>
-                                                        <td className="p-4 text-xs">
-                                                            <strong>02.01</strong> (Men), <strong>02.03</strong> (Women), <strong>02.05</strong> (Children), <strong>02.09</strong> (Heads, silhouettes, facial profiles)
-                                                        </td>
+                                                        <td className="p-4 text-xs"> <strong>02.01</strong> (Men), <strong>02.03</strong> (Women), <strong>02.05</strong> (Children), <strong>02.09</strong> (Heads, silhouettes, facial profiles) </td>
                                                         <td className="p-4 text-xs">Cosmetics, Healthcare, Apparel, Education</td>
                                                     </tr>
                                                     <tr className="hover:bg-purple-50/40 transition-colors">
                                                         <td className="p-4 font-mono font-bold text-[#6E5E93]">Cat 03</td>
                                                         <td className="p-4 font-semibold text-gray-900">Animals & Wildlife</td>
-                                                        <td className="p-4 text-xs">
-                                                            <strong>03.01</strong> (Lions, dogs, bears), <strong>03.02</strong> (Tigers, panthers), <strong>03.07</strong> (Birds, eagles), <strong>03.13</strong> (Fish, marine life)
-                                                        </td>
+                                                        <td className="p-4 text-xs"> <strong>03.01</strong> (Lions, dogs, bears), <strong>03.02</strong> (Tigers, panthers), <strong>03.07</strong> (Birds, eagles), <strong>03.13</strong> (Fish, marine life) </td>
                                                         <td className="p-4 text-xs">Automotive, Sports, Beverages, Security</td>
                                                     </tr>
                                                     <tr className="hover:bg-purple-50/40 transition-colors">
                                                         <td className="p-4 font-mono font-bold text-[#6E5E93]">Cat 05</td>
                                                         <td className="p-4 font-semibold text-gray-900">Plants & Botanical Elements</td>
-                                                        <td className="p-4 text-xs">
-                                                            <strong>05.01</strong> (Trees, branches), <strong>05.03</strong> (Leaves), <strong>05.05</strong> (Flowers, blossoms), <strong>05.07</strong> (Grain, wheat stalks)
-                                                        </td>
+                                                        <td className="p-4 text-xs"> <strong>05.01</strong> (Trees, branches), <strong>05.03</strong> (Leaves), <strong>05.05</strong> (Flowers, blossoms), <strong>05.07</strong> (Grain, wheat stalks) </td>
                                                         <td className="p-4 text-xs">Organic Food, Agriculture, Wellness, Pharma</td>
                                                     </tr>
                                                     <tr className="hover:bg-purple-50/40 transition-colors">
                                                         <td className="p-4 font-mono font-bold text-[#6E5E93]">Cat 24</td>
                                                         <td className="p-4 font-semibold text-gray-900">Heraldry, Crests, Emblems & Symbols</td>
-                                                        <td className="p-4 text-xs">
-                                                            <strong>24.01</strong> (Shields, crests), <strong>24.09</strong> (Crowns, tiaras), <strong>24.15</strong> (Arrows), <strong>24.17</strong> (Crosses, symbols)
-                                                        </td>
+                                                        <td className="p-4 text-xs"> <strong>24.01</strong> (Shields, crests), <strong>24.09</strong> (Crowns, tiaras), <strong>24.15</strong> (Arrows), <strong>24.17</strong> (Crosses, symbols) </td>
                                                         <td className="p-4 text-xs">Luxury Brands, Universities, Financial Firms</td>
                                                     </tr>
                                                     <tr className="hover:bg-purple-50/40 transition-colors">
                                                         <td className="p-4 font-mono font-bold text-[#6E5E93]">Cat 26</td>
                                                         <td className="p-4 font-semibold text-gray-900">Geometrical Figures & Shapes</td>
-                                                        <td className="p-4 text-xs">
-                                                            <strong>26.01</strong> (Circles, ovals), <strong>26.04</strong> (Quadrilaterals, rectangles), <strong>26.05</strong> (Triangles), <strong>26.11</strong> (Lines, bands)
-                                                        </td>
+                                                        <td className="p-4 text-xs"> <strong>26.01</strong> (Circles, ovals), <strong>26.04</strong> (Quadrilaterals, rectangles), <strong>26.05</strong> (Triangles), <strong>26.11</strong> (Lines, bands) </td>
                                                         <td className="p-4 text-xs">Tech Startups, SaaS, Modern Minimalist Logos</td>
                                                     </tr>
                                                     <tr className="hover:bg-purple-50/40 transition-colors">
                                                         <td className="p-4 font-mono font-bold text-[#6E5E93]">Cat 27</td>
                                                         <td className="p-4 font-semibold text-gray-900">Forms of Writing & Numerals</td>
-                                                        <td className="p-4 text-xs">
-                                                            <strong>27.01</strong> (Single letters), <strong>27.05</strong> (Stylized typography, monograms), <strong>27.07</strong> (Numerals, roman figures)
-                                                        </td>
+                                                        <td className="p-4 text-xs"> <strong>27.01</strong> (Single letters), <strong>27.05</strong> (Stylized typography, monograms), <strong>27.07</strong> (Numerals, roman figures) </td>
                                                         <td className="p-4 text-xs">All Brand Logos with stylized font initials</td>
                                                     </tr>
                                                     <tr className="hover:bg-purple-50/40 transition-colors">
                                                         <td className="p-4 font-mono font-bold text-[#6E5E93]">Cat 29</td>
                                                         <td className="p-4 font-semibold text-gray-900">Colours & Colour Combinations</td>
-                                                        <td className="p-4 text-xs">
-                                                            <strong>29.01</strong> (Specific colour combinations claimed as a distinctive trademark element)
-                                                        </td>
+                                                        <td className="p-4 text-xs"> <strong>29.01</strong> (Specific colour combinations claimed as a distinctive trademark element) </td>
                                                         <td className="p-4 text-xs">Brand packaging marks claiming colour exclusivity</td>
                                                     </tr>
                                                 </tbody>
@@ -594,9 +513,7 @@ export default function ViennaCodeSearchPage() {
                                             <span>7-Step Protocol for Vienna Logo Search</span>
                                         </h2>
 
-                                        <p className="text-base leading-relaxed mb-6">
-                                            Executing an airtight visual trademark clearance search requires a systematic, multi-layered methodology. Follow this 7-step protocol used by senior intellectual property attorneys on the official IP India portal:
-                                        </p>
+                                        <p className="text-base leading-relaxed mb-6">Executing an airtight visual trademark clearance search requires a systematic, multi-layered methodology. Follow this 7-step protocol used by senior intellectual property attorneys on the official IP India portal:</p>
 
                                         <div className="space-y-6 not-prose mb-8">
                                             {/* Step 1 */}
@@ -606,9 +523,7 @@ export default function ViennaCodeSearchPage() {
                                                 </div>
                                                 <div>
                                                     <h3 className="text-base font-bold text-gray-900 mb-1">Visual Deconstruction of Artwork</h3>
-                                                    <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                        Break down your proposed logo into every standalone graphical component. Identify primary subjects (e.g., animal, humanoid, tree), secondary containers (e.g., shields, badges, concentric circles), and typographic styling (e.g., bespoke ligature letters, stylized calligraphy).
-                                                    </p>
+                                                    <p className="text-sm text-gray-600 leading-relaxed m-0">Break down your proposed logo into every standalone graphical component. Identify primary subjects (e.g., animal, humanoid, tree), secondary containers (e.g., shields, badges, concentric circles), and typographic styling (e.g., bespoke ligature letters, stylized calligraphy).</p>
                                                 </div>
                                             </div>
 
@@ -619,9 +534,7 @@ export default function ViennaCodeSearchPage() {
                                                 </div>
                                                 <div>
                                                     <h3 className="text-base font-bold text-gray-900 mb-1">Mapping to 6-Digit Vienna Classifications</h3>
-                                                    <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                        Consult the WIPO Vienna Classification manual or the IP India classification index. List every plausible 6-digit code for each identified visual element. Never limit your search to just one code—capture related sub-divisions (e.g., searching both 03.01.01 for lions and 03.01.02 for tigers).
-                                                    </p>
+                                                    <p className="text-sm text-gray-600 leading-relaxed m-0">Consult the WIPO Vienna Classification manual or the IP India classification index. List every plausible 6-digit code for each identified visual element. Never limit your search to just one code—capture related sub-divisions (e.g., searching both 03.01.01 for lions and 03.01.02 for tigers).</p>
                                                 </div>
                                             </div>
 
@@ -632,9 +545,7 @@ export default function ViennaCodeSearchPage() {
                                                 </div>
                                                 <div>
                                                     <h3 className="text-base font-bold text-gray-900 mb-1">Accessing IP India Public Search Portal</h3>
-                                                    <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                        Visit the official Trade Marks Registry search portal (<em>ipindiaonline.gov.in</em>). On the search dashboard, change the top dropdown filter from <strong>&quot;Wordmark&quot;</strong> to <strong>&quot;Device Mark&quot;</strong>. This unlocks the dedicated Vienna Code search parameters.
-                                                    </p>
+                                                    <p className="text-sm text-gray-600 leading-relaxed m-0">Visit the official Trade Marks Registry search portal (<em>ipindiaonline.gov.in</em>). On the search dashboard, change the top dropdown filter from<strong>&quot;Wordmark&quot;</strong>to<strong>&quot;Device Mark&quot;</strong>. This unlocks the dedicated Vienna Code search parameters.</p>
                                                 </div>
                                             </div>
 
@@ -645,9 +556,7 @@ export default function ViennaCodeSearchPage() {
                                                 </div>
                                                 <div>
                                                     <h3 className="text-base font-bold text-gray-900 mb-1">Executing Class-Filtered Primary Queries</h3>
-                                                    <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                        Enter your relevant <Link href="/trademark-class-finder" className="text-[#6E5E93] font-bold hover:underline">Trademark Nice Class</Link> (e.g., Class 25 for apparel or Class 9 for software). Input your primary 6-digit Vienna code into the &quot;Vienna Code&quot; box. Set the search filter to &quot;Contains&quot; or &quot;Match With&quot; and execute the search.
-                                                    </p>
+                                                    <p className="text-sm text-gray-600 leading-relaxed m-0">Enter your relevant<Link href="/trademark-class-finder" className="text-[#6E5E93] font-bold hover:underline">Trademark Nice Class</Link>(e.g., Class 25 for apparel or Class 9 for software). Input your primary 6-digit Vienna code into the &quot;Vienna Code&quot; box. Set the search filter to &quot;Contains&quot; or &quot;Match With&quot; and execute the search.</p>
                                                 </div>
                                             </div>
 
@@ -658,9 +567,7 @@ export default function ViennaCodeSearchPage() {
                                                 </div>
                                                 <div>
                                                     <h3 className="text-base font-bold text-gray-900 mb-1">Composite Hybrid Wildcard Searches</h3>
-                                                    <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                        If your device mark includes both a logo and text initials, execute hybrid searches by combining the Vienna Code with wildcard character strings (e.g., typing &quot;AP%&quot; in the Wordmark box alongside Vienna Code 26.01.01 in Class 35). This isolates directly competing composite brand identities.
-                                                    </p>
+                                                    <p className="text-sm text-gray-600 leading-relaxed m-0">If your device mark includes both a logo and text initials, execute hybrid searches by combining the Vienna Code with wildcard character strings (e.g., typing &quot;AP%&quot. In the Wordmark box alongside Vienna Code 26.01.01 in Class 35). This isolates directly competing composite brand identities.</p>
                                                 </div>
                                             </div>
 
@@ -671,9 +578,7 @@ export default function ViennaCodeSearchPage() {
                                                 </div>
                                                 <div>
                                                     <h3 className="text-base font-bold text-gray-900 mb-1">Visual Similarity & Imperfect Recollection Test</h3>
-                                                    <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                        Inspect the image thumbnail of every active, registered, and opposed mark returned. Evaluate whether an average customer possessing imperfect recollection would confuse the visual silhouette, spatial layout, or overall commercial impression under Section 11(1).
-                                                    </p>
+                                                    <p className="text-sm text-gray-600 leading-relaxed m-0">Inspect the image thumbnail of every active, registered, and opposed mark returned. Evaluate whether an average customer possessing imperfect recollection would confuse the visual silhouette, spatial layout, or overall commercial impression under Section 11(1).</p>
                                                 </div>
                                             </div>
 
@@ -684,9 +589,7 @@ export default function ViennaCodeSearchPage() {
                                                 </div>
                                                 <div>
                                                     <h3 className="text-base font-bold text-gray-900 mb-1">Clearance Report & Design Optimization</h3>
-                                                    <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                        Document all visual citations in a Search Clearance Report. If high-risk collisions are discovered, collaborate with your graphic design team to pivot distinctive angles, modify geometric curvature, or alter visual weights before filing <Link href="/e-filing-trademark" className="text-[#6E5E93] font-bold hover:underline">Form TM-A</Link>.
-                                                    </p>
+                                                    <p className="text-sm text-gray-600 leading-relaxed m-0">Document all visual citations in a Search Clearance Report. If high-risk collisions are discovered, collaborate with your graphic design team to pivot distinctive angles, modify geometric curvature, or alter visual weights before filing<Link href="/e-filing-trademark" className="text-[#6E5E93] font-bold hover:underline">Form TM-A</Link>.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -699,9 +602,7 @@ export default function ViennaCodeSearchPage() {
                                             <span>Wordmark Search vs Vienna Device Search</span>
                                         </h2>
 
-                                        <p className="text-base leading-relaxed mb-6">
-                                            To build an unassailable trademark fortress, applicants must comprehend the distinct legal and technical roles of Wordmark searches versus Vienna Code Device Mark searches:
-                                        </p>
+                                        <p className="text-base leading-relaxed mb-6">To build an unassailable trademark fortress, applicants must comprehend the distinct legal and technical roles of Wordmark searches versus Vienna Code Device Mark searches:</p>
 
                                         <div className="overflow-x-auto not-prose mb-8 rounded-2xl border border-gray-200 shadow-sm">
                                             <table className="w-full text-left border-collapse text-sm">
@@ -740,9 +641,7 @@ export default function ViennaCodeSearchPage() {
                                                     </tr>
                                                     <tr className="hover:bg-purple-50/40 transition-colors">
                                                         <td className="p-4 font-bold text-gray-900">Recommended Strategy</td>
-                                                        <td className="p-4" colSpan={2}>
-                                                            <strong>Hybrid Dual-Search Strategy:</strong> Execute a comprehensive wordmark search first for brand name clearance, followed immediately by multi-code Vienna searches for logo clearance prior to filing.
-                                                        </td>
+                                                        <td className="p-4" colSpan={2}> <strong>Hybrid Dual-Search Strategy:</strong> Execute a comprehensive wordmark search first for brand name clearance, followed immediately by multi-code Vienna searches for logo clearance before filing. </td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -756,50 +655,31 @@ export default function ViennaCodeSearchPage() {
                                             <span>Send to Vienna Codification Status Guide</span>
                                         </h2>
 
-                                        <p className="text-base leading-relaxed mb-6">
-                                            After submitting Form TM-A for a logo or device mark, applicants tracking their application on the IP India portal frequently encounter the status: <Link href="/trademark-application-status" className="text-[#6E5E93] font-bold hover:underline">&quot;Send to Vienna Codification&quot;</Link>.
-                                        </p>
+                                        <p className="text-base leading-relaxed mb-6">After submitting Form TM-A for a logo or device mark, applicants tracking their application on the IP India portal frequently encounter the status:<Link href="/trademark-application-status" className="text-[#6E5E93] font-bold hover:underline">&quot;Send to Vienna Codification&quot;</Link>.</p>
 
                                         <div className="bg-amber-50/70 border border-amber-200 rounded-2xl p-6 mb-8 not-prose">
                                             <div className="flex items-start space-x-3">
                                                 <FontAwesomeIcon icon={faExclamationTriangle} className="w-6 h-6 text-amber-600 flex-shrink-0 mt-1" />
                                                 <div>
                                                     <h3 className="text-base font-bold text-gray-900 mb-1">Is &quot;Send to Vienna Codification&quot; an Objection?</h3>
-                                                    <p className="text-sm text-gray-700 leading-relaxed m-0">
-                                                        <strong>No.</strong> &quot;Send to Vienna Codification&quot; is NOT an objection, rejection, or formality check failure. It is a mandatory administrative routing step where the Trade Marks Registry's technical officers tag your mark's figurative elements. Once codification is complete, the application automatically progresses to <em>&quot;Formalities Check Pass&quot;</em> or <em>&quot;Marked for Exam&quot;</em>.
-                                                    </p>
+                                                    <p className="text-sm text-gray-700 leading-relaxed m-0"><strong>No.</strong>&quot;Send to Vienna Codification&quot; is NOT an objection, rejection, or formality check failure. It is a mandatory administrative routing step where the Trade Marks Registry's technical officers tag your mark's figurative elements. Once codification is complete, the application automatically progresses to<em>&quot;Formalities Check Pass&quot;</em>or<em>&quot;Marked for Exam&quot;</em>.</p>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <h3 className="text-lg font-bold text-gray-900 mb-4">Why Does Vienna Codification Sometimes Get Delayed?</h3>
-                                        <p className="text-base leading-relaxed mb-4">
-                                            While this internal step normally resolves within 3 to 10 days, applications can remain stuck in Vienna Codification for several weeks due to:
-                                        </p>
+                                        <p className="text-base leading-relaxed mb-4">While this internal step normally resolves within 3 to 10 days, applications can remain stuck in Vienna Codification for several weeks due to:</p>
 
                                         <ul className="space-y-3 mb-8">
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheckCircle} className="w-5 h-5 text-[#6E5E93] mr-3 mt-1 flex-shrink-0" />
-                                                <span><strong>Low-Resolution or Illegible Artwork:</strong> If the uploaded JPEG/PDF is pixelated, blurred, or distorted, examiners struggle to discern specific figurative details.</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheckCircle} className="w-5 h-5 text-[#6E5E93] mr-3 mt-1 flex-shrink-0" />
-                                                <span><strong>Overly Complex Composite Artwork:</strong> Marks containing dozens of crowded figurative symbols require multi-examiner classification reviews.</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheckCircle} className="w-5 h-5 text-[#6E5E93] mr-3 mt-1 flex-shrink-0" />
-                                                <span><strong>Registry Processing Backlog:</strong> Periods of heavy filing volume across the 5 regional trademark offices (Mumbai, Delhi, Chennai, Kolkata, Ahmedabad).</span>
-                                            </li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheckCircle} className="w-5 h-5 text-[#6E5E93] mr-3 mt-1 flex-shrink-0" /><span><strong>Low-Resolution or Illegible Artwork:</strong>If the uploaded JPEG/PDF is pixelated, blurred, or distorted, examiners struggle to discern specific figurative details.</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheckCircle} className="w-5 h-5 text-[#6E5E93] mr-3 mt-1 flex-shrink-0" /><span><strong>Overly Complex Composite Artwork:</strong>Marks containing dozens of crowded figurative symbols require multi-examiner classification reviews.</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheckCircle} className="w-5 h-5 text-[#6E5E93] mr-3 mt-1 flex-shrink-0" /><span><strong>Registry Processing Backlog:</strong>Periods of heavy filing volume across the 5 regional trademark offices (Mumbai, Delhi, Chennai, Kolkata, Ahmedabad).</span></li>
                                         </ul>
 
                                         <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 mb-8 not-prose">
                                             <h3 className="text-base font-bold text-gray-900 mb-2">How to Rectify Incorrect Vienna Codes Assigned by Examiners</h3>
-                                            <p className="text-sm text-gray-700 leading-relaxed mb-3">
-                                                If an examiner accidentally miscodes your logo (e.g., categorizing an abstract mechanical gear as a floral plant), it can result in an erroneous Examination Report citing irrelevant plant-related marks while overlooking actual mechanical gear competitors.
-                                            </p>
-                                            <p className="text-sm text-gray-700 leading-relaxed m-0 font-medium text-[#6E5E93]">
-                                                <strong>Legal Remedy:</strong> Your trademark attorney can file a formal clarification under <strong>Form TM-M</strong> requesting rectification of the Vienna Classification data on the Trade Marks Register with an attached visual breakdown sheet.
-                                            </p>
+                                            <p className="text-sm text-gray-700 leading-relaxed mb-3">If an examiner accidentally miscodes your logo (e.g., categorizing an abstract mechanical gear as a floral plant), it can result in an erroneous Examination Report citing irrelevant plant-related marks while overlooking actual mechanical gear competitors.</p>
+                                            <p className="text-sm text-gray-700 leading-relaxed m-0 font-medium text-[#6E5E93]"><strong>Legal Remedy:</strong>Your trademark attorney can file a formal clarification under<strong>Form TM-M</strong>requesting rectification of the Vienna Classification data on the Trade Marks Register with an attached visual breakdown sheet.</p>
                                         </div>
                                     </section>
 
@@ -810,9 +690,7 @@ export default function ViennaCodeSearchPage() {
                                             <span>Section 11(1) Visual Conflict & Likelihood of Confusion</span>
                                         </h2>
 
-                                        <p className="text-base leading-relaxed mb-6">
-                                            The ultimate objective of conducting a Vienna Code search is ensuring compliance with <strong>Section 11(1) of the Trade Marks Act, 1999</strong> (Relative Grounds for Refusal of Registration). Section 11(1) bars registration of any trademark that is identical or deceptively similar to an earlier mark for similar goods or services, creating a likelihood of public confusion.
-                                        </p>
+                                        <p className="text-base leading-relaxed mb-6">The ultimate objective of conducting a Vienna Code search is ensuring compliance with<strong>Section 11(1) of the Trade Marks Act, 1999</strong>(Relative Grounds for Refusal of Registration). Section 11(1) bars registration of any trademark that is identical or deceptively similar to an earlier mark for similar goods or services. This creates a likelihood of public confusion.</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 not-prose mb-8">
                                             <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
@@ -820,9 +698,7 @@ export default function ViennaCodeSearchPage() {
                                                     <FontAwesomeIcon icon={faEye} className="w-5 h-5" />
                                                 </div>
                                                 <h3 className="text-base font-bold text-gray-900 mb-2">The Imperfect Recollection Test</h3>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    As established by the Supreme Court of India in landmark precedents like <em>Cadila Healthcare Ltd. v. Cadila Pharmaceuticals Ltd.</em> and <em>Amritdhara Pharmacy v. Satyadeo Gupta</em>, visual similarity is not evaluated by placing two logos side-by-side. Instead, the court assesses whether a consumer with an average memory and imperfect recollection would confuse the marks when encountered at different times.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">As established by the Supreme Court of India in landmark precedents like<em>Cadila Healthcare Ltd. V. Cadila Pharmaceuticals Ltd.</em>and<em>Amritdhara Pharmacy v. Satyadeo Gupta</em>, visual similarity is not evaluated by placing two logos side-by-side. Instead, the court assesses whether a consumer with an average memory and imperfect recollection would confuse the marks when encountered at different times.</p>
                                             </div>
 
                                             <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
@@ -830,9 +706,7 @@ export default function ViennaCodeSearchPage() {
                                                     <FontAwesomeIcon icon={faPalette} className="w-5 h-5" />
                                                 </div>
                                                 <h3 className="text-base font-bold text-gray-900 mb-2">The Anti-Dissection Rule</h3>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    Under Section 17 of the Act, a trademark must be judged as a whole. While Vienna Code searches deconstruct logos into discrete pieces for indexing, judicial scrutiny compares the <strong>overall commercial impression</strong> created by the combination of colors, shapes, typographic arrangements, and dominant visual features.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">Under Section 17 of the Act, a trademark must be judged as a whole. While Vienna Code searches deconstruct logos into discrete pieces for indexing, judicial scrutiny compares the<strong>overall commercial impression</strong>created by the combination of colors, shapes, typographic arrangements, and dominant visual features.</p>
                                             </div>
                                         </div>
                                     </section>
@@ -844,9 +718,7 @@ export default function ViennaCodeSearchPage() {
                                             <span>Logo Clearance Checklist Before Filing TM-A</span>
                                         </h2>
 
-                                        <p className="text-base leading-relaxed mb-6">
-                                            Before finalizing your brand's visual identity or submitting Form TM-A, ensure your legal and design teams execute this comprehensive clearance checklist:
-                                        </p>
+                                        <p className="text-base leading-relaxed mb-6">Before finalizing your brand's visual identity or submitting Form TM-A, ensure your legal and design teams execute this comprehensive clearance checklist:</p>
 
                                         <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 not-prose mb-8">
                                             <div className="space-y-4">
@@ -886,7 +758,7 @@ export default function ViennaCodeSearchPage() {
                                                     <input type="checkbox" defaultChecked readOnly className="mt-1 h-4 w-4 text-[#6E5E93] rounded border-gray-300 focus:ring-[#6E5E93]" />
                                                     <div>
                                                         <p className="text-sm font-bold text-gray-900 m-0">5. User Date / Prior Use Evidence Audit</p>
-                                                        <p className="text-xs text-gray-600 m-0 mt-0.5">Verified if brand has prior commercial use to support a <Link href="/trademark-user-affidavit-format-and-rules-india" className="text-[#6E5E93] font-bold hover:underline">User Affidavit (Rule 25)</Link>.</p>
+                                                        <p className="text-xs text-gray-600 m-0 mt-0.5">Verified if brand has prior commercial use to support a<Link href="/trademark-user-affidavit-format-and-rules-india" className="text-[#6E5E93] font-bold hover:underline">User Affidavit (Rule 25)</Link>.</p>
                                                     </div>
                                                 </div>
 
@@ -894,7 +766,7 @@ export default function ViennaCodeSearchPage() {
                                                     <input type="checkbox" defaultChecked readOnly className="mt-1 h-4 w-4 text-[#6E5E93] rounded border-gray-300 focus:ring-[#6E5E93]" />
                                                     <div>
                                                         <p className="text-sm font-bold text-gray-900 m-0">6. MSME / Udyam 50% Fee Subsidy Verification</p>
-                                                        <p className="text-xs text-gray-600 m-0 mt-0.5">Claimed eligible <Link href="/trademark-fee-concession-msme-udyam-startup-india" className="text-[#6E5E93] font-bold hover:underline">50% MSME fee discount</Link> (₹4,500 govt fee instead of ₹9,000).</p>
+                                                        <p className="text-xs text-gray-600 m-0 mt-0.5">Claimed eligible<Link href="/trademark-fee-concession-msme-udyam-startup-india" className="text-[#6E5E93] font-bold hover:underline">50% MSME fee discount</Link>(₹4,500 govt fee instead of ₹9,000).</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -935,9 +807,7 @@ export default function ViennaCodeSearchPage() {
                                             <span>Strategic Takeaways for Brand Protection</span>
                                         </h2>
 
-                                        <p className="text-base leading-relaxed mb-6">
-                                            Conducting a meticulous Vienna Code search is not merely an administrative formality—it is an indispensable risk mitigation strategy for modern brand owners. A visually conflicted trademark filed today can invite severe opposition proceedings in the Trade Marks Journal 6 months later, court injunctions, and mandatory rebranding after investing millions in packaging and advertising.
-                                        </p>
+                                        <p className="text-base leading-relaxed mb-6">Conducting a meticulous Vienna Code search is not merely an administrative formality—it is an indispensable risk mitigation strategy for modern brand owners. A visually conflicted trademark filed today can invite severe opposition proceedings in the Trade Marks Journal 6 months later, court injunctions, and mandatory rebranding after investing millions in packaging and advertising.</p>
 
                                         <div className="rounded-3xl bg-gradient-to-br from-[#0C002B] via-[#1A0B3B] to-[#2D1254] p-8 md:p-12 text-white shadow-2xl relative overflow-hidden not-prose border border-purple-500/20">
                                             <div className="absolute -right-10 -bottom-10 w-60 h-60 bg-purple-600/20 rounded-full blur-3xl pointer-events-none"></div>
@@ -954,9 +824,7 @@ export default function ViennaCodeSearchPage() {
                                                     Protect Your Brand Logo with Certified IP Attorneys
                                                 </h3>
 
-                                                <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">
-                                                    Get comprehensive Vienna classification audits, AI-driven visual similarity checks, and strategic Form TM-A e-filing. We safeguard your brand identity across all 45 trademark classes with zero compliance errors.
-                                                </p>
+                                                <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">Get comprehensive Vienna classification audits, AI-driven visual similarity checks, and strategic Form TM-A e-filing. We safeguard your brand identity across all 45 trademark classes with zero compliance errors.</p>
 
                                                 <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
                                                     <Link
@@ -974,9 +842,7 @@ export default function ViennaCodeSearchPage() {
                                                     </a>
                                                 </div>
 
-                                                <p className="mt-6 text-xs font-medium tracking-wide text-white/50 sm:text-sm">
-                                                    Certified IP Advocates • Same-Day Vienna Search Clearance • Transparent Filing Invoicing
-                                                </p>
+                                                <p className="mt-6 text-xs font-medium tracking-wide text-white/50 sm:text-sm">Certified IP Advocates • Same-Day Vienna Search Clearance • Transparent Filing Invoicing</p>
                                             </div>
                                         </div>
                                     </section>
@@ -1009,70 +875,14 @@ export default function ViennaCodeSearchPage() {
                             <div className="bg-gray-50 p-10 rounded-[2.5rem] shadow-sm border border-gray-100">
                                 <h3 className="text-sm font-black text-gray-400 mb-8 uppercase tracking-[0.3em]">Related Resources</h3>
                                 <ul className="space-y-6">
-                                    <li>
-                                        <Link href="/word-mark-vs-device-mark-trademark-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faShapes} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Word vs Device Mark</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/how-to-search-for-existing-trademark" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faSearch} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">TM Search Guide</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/trademark-class-finder" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faTable} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Class Finder</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/trademark-application-status" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faCheckCircle} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">TM Status Tracker</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/process-and-steps-of-trademark-registration" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faListUl} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Filing Process</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/trademark-fee-concession-msme-udyam-startup-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faBuilding} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">50% MSME Discount</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/trademark-user-affidavit-format-and-rules-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faFileContract} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">User Affidavit</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/form-tm-48-power-of-attorney-trademark-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faScaleBalanced} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Form TM-48</span>
-                                        </Link>
-                                    </li>
+                                    <li><Link href="/word-mark-vs-device-mark-trademark-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faShapes} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Word vs Device Mark</span></Link></li>
+                                    <li><Link href="/how-to-search-for-existing-trademark" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faSearch} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">TM Search Guide</span></Link></li>
+                                    <li><Link href="/trademark-class-finder" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faTable} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Class Finder</span></Link></li>
+                                    <li><Link href="/trademark-application-status" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faCheckCircle} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">TM Status Tracker</span></Link></li>
+                                    <li><Link href="/process-and-steps-of-trademark-registration" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faListUl} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Filing Process</span></Link></li>
+                                    <li><Link href="/trademark-fee-concession-msme-udyam-startup-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faBuilding} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">50% MSME Discount</span></Link></li>
+                                    <li><Link href="/trademark-user-affidavit-format-and-rules-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faFileContract} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">User Affidavit</span></Link></li>
+                                    <li><Link href="/form-tm-48-power-of-attorney-trademark-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faScaleBalanced} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Form TM-48</span></Link></li>
                                 </ul>
                             </div>
                         </aside>

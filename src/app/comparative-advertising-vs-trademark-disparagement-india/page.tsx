@@ -96,11 +96,11 @@ const faqs = [
     },
     {
         question: "What three-factor test was laid down in Pepsi Co. v. Hindustan Coca Cola?",
-        answer: "In Pepsi Co. Inc. v. Hindustan Coca Cola Ltd. (2003 (27) PTC 305 Del DB), the Delhi High Court established a seminal three-factor test for determining advertising disparagement: (1) The Manner of the commercial (is it ridiculing, mocking, or honestly comparing?), (2) The Intent of the commercial (is it to inform consumers or discredit a competitor?), and (3) The Storyline and overall message conveyed to the average viewer."
+        answer: "In Pepsi Co. Inc. V. Hindustan Coca Cola Ltd. (2003 (27) PTC 305 Del DB), the Delhi High Court established a seminal three-factor test for determining advertising disparagement: (1) The Manner of the commercial (is it ridiculing, mocking, or honestly comparing?), (2) The Intent of the commercial (is it to inform consumers or discredit a competitor?), and (3) The Storyline and overall message conveyed to the average viewer."
     },
     {
         question: "Can an advertiser compare specific parameters like price or ingredients?",
-        answer: "Yes. In Havells India Ltd. v. Amritanshu Khaitan (2015) and Horlicks Ltd. v. Heinz India (2018), the Delhi High Court confirmed that advertisers are fully entitled to highlight specific factual advantages, such as price differences, lumen output, energy efficiency, or protein grams per serving, provided the data is backed by independent scientific testing and does not falsely imply the competitor's product is unsafe or inferior overall."
+        answer: "Yes. In Havells India Ltd. V. Amritanshu Khaitan (2015) and Horlicks Ltd. V. Heinz India (2018), the Delhi High Court confirmed that advertisers are fully entitled to highlight specific factual advantages, such as price differences, lumen output, energy efficiency, or protein grams per serving, provided the data is backed by independent scientific testing and does not falsely imply the competitor's product is unsafe or inferior overall."
     },
     {
         question: "What role does the ASCI Code play in comparative advertising?",
@@ -218,11 +218,9 @@ export default function ComparativeAdvertisingDisparagementPage() {
                                 <span className="text-[10px] sm:text-xs font-bold tracking-wider text-[#6E5E93] uppercase">Advertising &amp; Trademark Law</span>
                             </div>
                             <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-3 leading-tight text-gray-900 tracking-tighter">
-                                Comparative Advertising vs Trademark Disparagement in India: <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'transparent' }}>Legal Boundaries &amp; Rules</span>
+                                Comparative Advertising vs <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'transparent' }}>Trademark Disparagement in India</span>
                             </h1>
-                            <p className="text-base md:text-lg mb-5 text-gray-700 font-medium leading-relaxed">
-                                Fierce commercial competition frequently leads brand managers to launch high-octane comparative advertising campaigns. Under <strong>Sections 29(8) and 30(1) of the Trade Marks Act, 1999</strong>, advertisers walk a razor-thin line between legitimate commercial comparison and illegal trademark disparagement. Master the puffery doctrine, generic denigration rules, Delhi High Court jurisprudence, ASCI codes, and CCPA 2022 guidelines to protect your brand from crippling injunctions.
-                            </p>
+                            <p className="text-base md:text-lg mb-5 text-gray-700 font-medium leading-relaxed">Fierce commercial competition frequently leads brand managers to launch high-octane comparative advertising campaigns. Under<strong>Sections 29(8) and 30(1) of the Trade Marks Act, 1999</strong>, advertisers walk a razor-thin line between legitimate commercial comparison and illegal trademark disparagement. Master the puffery doctrine, generic denigration rules, Delhi High Court jurisprudence, ASCI codes, and CCPA 2022 guidelines to protect your brand from crippling injunctions.</p>
 
                             <div className="flex flex-wrap items-center gap-4 mb-6">
                                 <div className="flex items-center mr-2">
@@ -313,36 +311,11 @@ export default function ComparativeAdvertisingDisparagementPage() {
                                                 Close
                                             </span>
                                             <svg className="w-4 h-4 text-gray-500 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                                            </svg>
-                                        </div>
-                                    </summary>
-                                    <div className="p-3.5 pt-2 border-t border-purple-50 bg-white/70">
-                                        <nav className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
-                                            {tocSections.map((section, idx) => (
-                                                <a
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg></div></summary><div className="p-3.5 pt-2 border-t border-purple-50 bg-white/70"><nav className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">{tocSections.map((section, idx) => (<a
                                                     key={section.id}
                                                     href={`#${section.id}`}
                                                     className="flex items-center p-2 rounded-xl text-xs font-medium text-gray-700 hover:text-[#6E5E93] hover:bg-purple-50/80 transition-all border border-transparent hover:border-purple-100"
-                                                >
-                                                    <span className="w-5 h-5 rounded-full bg-purple-100 text-[#6E5E93] flex items-center justify-center text-[10px] font-bold mr-2 flex-shrink-0">
-                                                        {idx + 1}
-                                                    </span>
-                                                    <span className="truncate">{section.title}</span>
-                                                </a>
-                                            ))}
-                                        </nav>
-                                    </div>
-                                </details>
-                            </div>
-
-                            <div className="bg-white p-4 md:p-12 rounded-2xl shadow-sm border border-gray-100 space-y-12 md:space-y-20 article-content">
-                                <article className="prose prose-lg max-w-none text-gray-700 leading-relaxed font-normal">
-
-                                    <div className="flex items-center space-x-4 mb-10 p-4 bg-gray-50 rounded-xl border border-gray-100 not-prose">
-                                        <img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-12 h-12 rounded-full object-cover m-0" />
-                                        <div>
-                                            <p className="text-sm font-bold text-gray-900 m-0">Written by <Link href="/about-us" className="text-[rgb(110,94,147)] hover:underline">Rahul Roy</Link></p>
+                                                ><span className="w-5 h-5 rounded-full bg-purple-100 text-[#6E5E93] flex items-center justify-center text-[10px] font-bold mr-2 flex-shrink-0">{idx + 1}</span><span className="truncate">{section.title}</span></a>))}</nav></div></details></div><div className="bg-white p-4 md:p-12 rounded-2xl shadow-sm border border-gray-100 space-y-12 md:space-y-20 article-content"><article className="prose prose-lg max-w-none text-gray-700 leading-relaxed font-normal"><div className="flex items-center space-x-4 mb-10 p-4 bg-gray-50 rounded-xl border border-gray-100 not-prose"><img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-12 h-12 rounded-full object-cover m-0" /><div><p className="text-sm font-bold text-gray-900 m-0">Written by<Link href="/about-us" className="text-[rgb(110,94,147)] hover:underline">Rahul Roy</Link></p>
                                             <p className="text-xs text-gray-500 m-0">Trademark Research Specialist</p>
                                         </div>
                                     </div>
@@ -355,20 +328,12 @@ export default function ComparativeAdvertisingDisparagementPage() {
                                         </h2>
 
                                         <div id="quick-answer" className="bg-purple-50 border-l-4 border-[rgb(110,94,147)] p-6 rounded-r-xl mb-8">
-                                            <p className="font-semibold text-gray-900 m-0">
-                                                Comparative advertising is legally permissible in India under Section 30(1) of the Trade Marks Act, 1999 and constitutional commercial speech protections. Advertisers may reference a competitor&apos;s trademark to highlight honest, verifiable, and truthful product differences. However, under Section 29(8), advertising becomes illegal trademark disparagement if it takes unfair advantage, defames or ridicules the competitor, makes unsubstantiated claims, or asserts that the competitor&apos;s product is inferior, substandard, or toxic.
-                                            </p>
+                                            <p className="font-semibold text-gray-900 m-0">Comparative advertising is legally permissible in India under Section 30(1) of the Trade Marks Act, 1999 and constitutional commercial speech protections. Advertisers may reference a competitor&apos;s trademark to highlight honest, verifiable, and truthful product differences. However, under Section 29(8), advertising becomes illegal trademark disparagement if it takes unfair advantage, defames or ridicules the competitor, makes unsubstantiated claims, or asserts that the competitor&apos;s product is inferior, substandard, or toxic.</p>
                                         </div>
 
-                                        <p className="mb-6">
-                                            From television commercials (TVCs) and billboard wars between FMCG giants (like HUL vs Reckitt Benckiser or Pepsi vs Coca-Cola) to aggressive digital comparison campaigns by modern D2C startups, comparative advertising is a high-stakes marketing battleground.
-                                        </p>
-                                        <p className="mb-6">
-                                            While consumers benefit from transparent price, ingredient, and performance comparisons, brand owners invest immense capital building brand goodwill and trademark equity. When an aggressive competitor crosses the boundary from trade puffery into product denigration, Indian Commercial Courts step in decisively with swift interim injunctions, mandatory takedowns, and heavy punitive damages.
-                                        </p>
-                                        <p className="mb-6">
-                                            Understanding the statutory interplay between <strong>Section 29(8)</strong> and <strong>Section 30(1)</strong>, the judicial three-factor disparagement test, ASCI codes, and the 2022 CCPA Guidelines is essential for chief marketing officers, creative agencies, and in-house legal counsels. For related digital marketing IP rules, review our guides on <Link href="/competitor-bidding-on-my-trademark-google-ads-india" className="text-[rgb(110,94,147)] hover:underline font-medium">competitor bidding on trademarks in Google Ads</Link> and <Link href="/trade-dress-protection-under-indian-trademark-law" className="text-[rgb(110,94,147)] hover:underline font-medium">trade dress protection under Indian law</Link>.
-                                        </p>
+                                        <p className="mb-6">From television commercials (TVCs) and billboard wars between FMCG giants (like HUL vs Reckitt Benckiser or Pepsi vs Coca-Cola) to aggressive digital comparison campaigns by modern D2C startups, comparative advertising is a high-stakes marketing battleground.</p>
+                                        <p className="mb-6">While consumers benefit from transparent price, ingredient, and performance comparisons, brand owners invest immense capital building brand goodwill and trademark equity. When an aggressive competitor crosses the boundary from trade puffery into product denigration, Indian Commercial Courts step in decisively with swift interim injunctions, mandatory takedowns, and heavy punitive damages.</p>
+                                        <p className="mb-6">Understanding the statutory interplay between<strong>Section 29(8)</strong>and<strong>Section 30(1)</strong>, the judicial three-factor disparagement test, ASCI codes, and the 2022 CCPA Guidelines is essential for chief marketing officers, creative agencies, and in-house legal counsels. For related digital marketing IP rules, review our guides on<Link href="/competitor-bidding-on-my-trademark-google-ads-india" className="text-[rgb(110,94,147)] hover:underline font-medium">competitor bidding on trademarks in Google Ads</Link>and<Link href="/trade-dress-protection-under-indian-trademark-law" className="text-[rgb(110,94,147)] hover:underline font-medium">trade dress protection under Indian law</Link>.</p>
                                     </section>
 
                                     {/* SECTION 2: CONSTITUTIONAL SPEECH VS IP RIGHTS */}
@@ -377,9 +342,7 @@ export default function ComparativeAdvertisingDisparagementPage() {
                                             <FontAwesomeIcon icon={faScaleBalanced} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Commercial Speech vs Intellectual Property
                                         </h2>
-                                        <p className="mb-6">
-                                            The legal foundation of comparative advertising in India rests on the constitutional balance between two competing legal rights:
-                                        </p>
+                                        <p className="mb-6">The legal foundation of comparative advertising in India rests on the constitutional balance between two competing legal rights:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
                                             <div className="bg-purple-50/50 p-6 rounded-2xl border border-purple-100">
@@ -387,12 +350,8 @@ export default function ComparativeAdvertisingDisparagementPage() {
                                                     <span className="w-3 h-3 bg-[#6E5E93] rounded-full mr-2"></span>
                                                     Commercial Speech (Article 19(1)(a))
                                                 </h3>
-                                                <p className="text-xs text-gray-600 leading-relaxed mb-3">
-                                                    In the historic <em>Tata Press Ltd. v. MTNL (1995 5 SCC 139)</em> ruling, the Supreme Court of India held that commercial advertising is a protected form of commercial speech under <strong>Article 19(1)(a)</strong> of the Constitution.
-                                                </p>
-                                                <p className="text-xs text-gray-700 font-semibold m-0">
-                                                    Consumers have a fundamental right to receive truthful commercial information regarding product quality, price, efficiency, and comparative specifications.
-                                                </p>
+                                                <p className="text-xs text-gray-600 leading-relaxed mb-3">In the historic<em>Tata Press Ltd. V. MTNL (1995 5 SCC 139)</em>ruling, the Supreme Court of India held that commercial advertising is a protected form of commercial speech under<strong>Article 19(1)(a)</strong>of the Constitution.</p>
+                                                <p className="text-xs text-gray-700 font-semibold m-0">Consumers have a fundamental right to receive truthful commercial information regarding product quality, price, efficiency, and comparative specifications.</p>
                                             </div>
 
                                             <div className="bg-indigo-50/50 p-6 rounded-2xl border border-indigo-100">
@@ -400,12 +359,8 @@ export default function ComparativeAdvertisingDisparagementPage() {
                                                     <span className="w-3 h-3 bg-indigo-600 rounded-full mr-2"></span>
                                                     Trademark Protection (Section 28 &amp; 29)
                                                 </h3>
-                                                <p className="text-xs text-gray-600 leading-relaxed mb-3">
-                                                    Under the Trade Marks Act, 1999, registration grants exclusive commercial monopoly and protects proprietary brand goodwill against unfair competition, trademark dilution, and tortious slander of goods.
-                                                </p>
-                                                <p className="text-xs text-gray-700 font-semibold m-0">
-                                                    Competitors cannot piggyback on established reputation, create consumer confusion, or damage brand value through defamatory commercials.
-                                                </p>
+                                                <p className="text-xs text-gray-600 leading-relaxed mb-3">Under the Trade Marks Act, 1999, registration grants exclusive commercial monopoly and protects proprietary brand goodwill against unfair competition, trademark dilution, and tortious slander of goods.</p>
+                                                <p className="text-xs text-gray-700 font-semibold m-0">Competitors cannot piggyback on established reputation, create consumer confusion, or damage brand value through defamatory commercials.</p>
                                             </div>
                                         </div>
                                     </section>
@@ -416,15 +371,11 @@ export default function ComparativeAdvertisingDisparagementPage() {
                                             <FontAwesomeIcon icon={faBan} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Section 29(8): Statutory Disparagement
                                         </h2>
-                                        <p className="mb-6">
-                                            Section 29(8) of the Trade Marks Act, 1999 explicitly defines when advertising constitutes statutory trademark infringement:
-                                        </p>
+                                        <p className="mb-6">Section 29(8) of the Trade Marks Act, 1999 explicitly defines when advertising constitutes statutory trademark infringement:</p>
 
                                         <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 my-6 not-prose">
                                             <div className="border-l-4 border-red-500 pl-4">
-                                                <p className="text-sm font-semibold text-gray-900 italic mb-2">
-                                                    &ldquo;Section 29(8) — A registered trade mark is infringed by any advertising of that trade mark if such advertising—
-                                                </p>
+                                                <p className="text-sm font-semibold text-gray-900 italic mb-2">&ldquo;Section 29(8) — A registered trade mark is infringed by any advertising of that trade mark if such advertising—</p>
                                                 <ul className="text-xs text-gray-800 space-y-1.5 list-disc list-inside italic mb-2">
                                                     <li>(a) takes unfair advantage of and is contrary to honest practices in industrial or commercial matters; or</li>
                                                     <li>(b) is detrimental to its distinctive character; or</li>
@@ -433,9 +384,7 @@ export default function ComparativeAdvertisingDisparagementPage() {
                                             </div>
                                         </div>
 
-                                        <p className="mb-6">
-                                            If an advertisement satisfies any of these three prongs, the plaintiff does not need to prove actual confusion among consumers; the statutory violation of Section 29(8) itself establishes actionable infringement and entitles the trademark owner to immediate interim relief.
-                                        </p>
+                                        <p className="mb-6">If an advertisement satisfies any of these three prongs, the plaintiff does not need to prove actual confusion among consumers. The statutory violation of Section 29(8) itself establishes actionable infringement and entitles the trademark owner to immediate interim relief.</p>
                                     </section>
 
                                     {/* SECTION 4: SECTION 30(1) SAFE HARBOR */}
@@ -444,20 +393,14 @@ export default function ComparativeAdvertisingDisparagementPage() {
                                             <FontAwesomeIcon icon={faHandshake} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Section 30(1): Honest Practice Safe Harbor
                                         </h2>
-                                        <p className="mb-6">
-                                            To prevent trademark rights from creating anticompetitive monopolies that silence fair market comparisons, <strong>Section 30(1) of the Trade Marks Act, 1999</strong> carves out a statutory safe harbor for legitimate comparative advertising:
-                                        </p>
+                                        <p className="mb-6">To prevent trademark rights from creating anticompetitive monopolies that silence fair market comparisons,<strong>Section 30(1) of the Trade Marks Act, 1999</strong>carves out a statutory safe harbor for legitimate comparative advertising:</p>
 
                                         <div className="bg-emerald-50/70 border-l-4 border-emerald-600 p-6 rounded-r-2xl mb-8 not-prose">
                                             <h3 className="text-sm font-bold text-emerald-900 uppercase tracking-wider mb-2">Section 30(1) Statutory Exception</h3>
-                                            <p className="text-sm text-emerald-950 leading-relaxed m-0">
-                                                <em>&ldquo;Nothing in Section 29 shall be construed as preventing the use of a registered trade mark by any person for the purposes of identifying goods or services as those of the proprietor, provided the use is in accordance with honest practices in industrial or commercial matters, and is not such as to take unfair advantage of or be detrimental to the distinctive character or repute of the trade mark.&rdquo;</em>
-                                            </p>
+                                            <p className="text-sm text-emerald-950 leading-relaxed m-0"><em>&ldquo;Nothing in Section 29 shall be construed as preventing the use of a registered trade mark by any person for the purposes of identifying goods or services as those of the proprietor, provided the use is under honest practices in industrial or commercial matters, and is not such as to take unfair advantage of or be detrimental to the distinctive character or repute of the trade mark.&rdquo;</em></p>
                                         </div>
 
-                                        <p className="mb-6">
-                                            Under Section 30(1), naming a rival brand (e.g., &ldquo;Brand X costs ₹500 while our product delivers the same active ingredient for ₹250&rdquo;) does not infringe the rival&apos;s trademark as long as the comparison is strictly factual, substantiated, and free of pejorative or ridiculing undertones.
-                                        </p>
+                                        <p className="mb-6">Under Section 30(1), naming a rival brand (e.g., &ldquo;Brand X costs ₹500 while our product delivers the same active ingredient for ₹250&rdquo;) does not infringe the rival&apos;s trademark as long as the comparison is strictly factual, substantiated, and free of pejorative or ridiculing undertones.</p>
                                     </section>
 
                                     {/* SECTION 5: PUFFERY VS PRODUCT DENIGRATION */}
@@ -466,9 +409,7 @@ export default function ComparativeAdvertisingDisparagementPage() {
                                             <FontAwesomeIcon icon={faScaleBalanced} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Puffery vs Product Denigration Rules
                                         </h2>
-                                        <p className="mb-6">
-                                            Indian courts draw a sharp distinction between permissible marketing puffery and unlawful product disparagement:
-                                        </p>
+                                        <p className="mb-6">Indian courts draw a sharp distinction between permissible marketing puffery and unlawful product disparagement:</p>
 
                                         <div className="overflow-x-auto my-8">
                                             <table className="min-w-full text-left border border-gray-200 rounded-xl overflow-hidden shadow-sm">
@@ -516,26 +457,18 @@ export default function ComparativeAdvertisingDisparagementPage() {
                                             <FontAwesomeIcon icon={faEye} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             The Generic Disparagement Doctrine
                                         </h2>
-                                        <p className="mb-6">
-                                            Advertisers often attempt to evade trademark infringement lawsuits by blurring out the competitor&apos;s registered logo or labeling the rival product simply as &ldquo;Ordinary Product X&rdquo; or &ldquo;Leading Market Brand&rdquo;.
-                                        </p>
-                                        <p className="mb-6">
-                                            Under the <strong>Doctrine of Generic Disparagement</strong>, established in landmark rulings including <em>Dabur India Ltd. v. Colgate Palmolive (India) Ltd.</em> and <em>Reckitt Benckiser v. HUL</em>, Indian courts hold that:
-                                        </p>
+                                        <p className="mb-6">Advertisers often attempt to evade trademark infringement lawsuits by blurring out the competitor&apos;s registered logo or labeling the rival product simply as &ldquo;Ordinary Product X&rdquo. Or &ldquo;Leading Market Brand&rdquo;.</p>
+                                        <p className="mb-6">Under the<strong>Doctrine of Generic Disparagement</strong>, established in landmark rulings including<em>Dabur India Ltd. V. Colgate Palmolive (India) Ltd.</em>and<em>Reckitt Benckiser v. HUL</em>, Indian courts hold that:</p>
 
                                         <div className="space-y-4 not-prose">
                                             <div className="p-4 bg-purple-50/50 rounded-xl border border-purple-100">
                                                 <h3 className="text-sm font-bold text-gray-900 mb-1">1. Attack on Entire Product Genre is Actionable</h3>
-                                                <p className="text-xs text-gray-600 m-0">
-                                                    An advertiser cannot trash an entire class or genre of goods (e.g., claiming all Ayurvedic toothpowders cause dental abrasion) when the market leader accounts for the vast majority of that market share.
-                                                </p>
+                                                <p className="text-xs text-gray-600 m-0">An advertiser cannot trash an entire class or genre of goods (e.g., claiming all Ayurvedic toothpowders cause dental abrasion) when the market leader accounts for the vast majority of that market share.</p>
                                             </div>
 
                                             <div className="p-4 bg-indigo-50/50 rounded-xl border border-indigo-100">
                                                 <h3 className="text-sm font-bold text-gray-900 mb-1">2. Distinctive Trade Dress Mimicry Constitutes Disparagement</h3>
-                                                <p className="text-xs text-gray-600 m-0">
-                                                    If the commercial depicts an unnamed product whose packaging shape, distinctive bottle silhouette, cap contour, or color combination is identical to the market leader, viewers instantly identify the rival, making the denigration actionable.
-                                                </p>
+                                                <p className="text-xs text-gray-600 m-0">If the commercial depicts an unnamed product whose packaging shape, distinctive bottle silhouette, cap contour, or color combination is identical to the market leader, viewers instantly identify the rival, making the denigration actionable.</p>
                                             </div>
                                         </div>
                                     </section>
@@ -546,9 +479,7 @@ export default function ComparativeAdvertisingDisparagementPage() {
                                             <FontAwesomeIcon icon={faGavel} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Landmark Delhi High Court Judgments
                                         </h2>
-                                        <p className="mb-6">
-                                            The Delhi High Court is the premier intellectual property forum shaping comparative advertising jurisprudence in India:
-                                        </p>
+                                        <p className="mb-6">The Delhi High Court is the premier intellectual property forum shaping comparative advertising jurisprudence in India:</p>
 
                                         <div className="space-y-6 not-prose">
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -556,12 +487,8 @@ export default function ComparativeAdvertisingDisparagementPage() {
                                                     <h3 className="text-base font-bold text-gray-900">Pepsi Co. Inc. v. Hindustan Coca Cola Ltd. (2003 (27) PTC 305 Del DB)</h3>
                                                     <span className="text-xs bg-purple-100 text-[#6E5E93] font-bold px-2.5 py-1 rounded-full">3-Factor Test</span>
                                                 </div>
-                                                <p className="text-xs text-gray-600 leading-relaxed mb-3">
-                                                    <strong>The Dispute:</strong> Coca-Cola ran a commercial mocking Pepsi&apos;s tagline &ldquo;Yeh Dil Maange More&rdquo; by depicting a boy calling Pepsi a drink meant for children while choosing Thums Up as a &ldquo;grown-up&rdquo; drink.
-                                                </p>
-                                                <p className="text-xs text-gray-700 leading-relaxed mb-0">
-                                                    <strong>The Ruling:</strong> The Division Bench granted an injunction, establishing the definitive 3-Factor Test for disparagement: (1) <strong>Manner</strong> of the commercial (is it ridiculing?), (2) <strong>Intent</strong> of the commercial, and (3) <strong>Storyline</strong> and overall impact on average viewers.
-                                                </p>
+                                                <p className="text-xs text-gray-600 leading-relaxed mb-3"><strong>The Dispute:</strong>Coca-Cola ran a commercial mocking Pepsi&apos;s tagline &ldquo;Yeh Dil Maange More&rdquo. By depicting a boy calling Pepsi a drink meant for children while choosing Thums Up as a &ldquo;grown-up&rdquo. Drink.</p>
+                                                <p className="text-xs text-gray-700 leading-relaxed mb-0"><strong>The Ruling:</strong>The Division Bench granted an injunction. This establishes the definitive 3-Factor Test for disparagement: (1)<strong>Manner</strong>of the commercial (is it ridiculing?), (2)<strong>Intent</strong>of the commercial, and (3)<strong>Storyline</strong>and overall impact on average viewers.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -569,12 +496,8 @@ export default function ComparativeAdvertisingDisparagementPage() {
                                                     <h3 className="text-base font-bold text-gray-900">Havells India Ltd. v. Amritanshu Khaitan (2015 SCC OnLine Del 8115)</h3>
                                                     <span className="text-xs bg-emerald-100 text-emerald-800 font-bold px-2.5 py-1 rounded-full">Truthful Comparison</span>
                                                 </div>
-                                                <p className="text-xs text-gray-600 leading-relaxed mb-3">
-                                                    <strong>The Dispute:</strong> Havells challenged an advertisement by Eveready comparing LED bulb brightness (lumens) and pricing.
-                                                </p>
-                                                <p className="text-xs text-gray-700 leading-relaxed mb-0">
-                                                    <strong>The Ruling:</strong> The Delhi High Court held that advertisers are entitled to highlight specific factual advantages, provided the claims are truthful, verifiable, and do not falsely misrepresent the competitor&apos;s product as defective.
-                                                </p>
+                                                <p className="text-xs text-gray-600 leading-relaxed mb-3"><strong>The Dispute:</strong>Havells challenged an advertisement by Eveready comparing LED bulb brightness (lumens) and pricing.</p>
+                                                <p className="text-xs text-gray-700 leading-relaxed mb-0"><strong>The Ruling:</strong>The Delhi High Court held that advertisers are entitled to highlight specific factual advantages, provided the claims are truthful, verifiable, and do not falsely misrepresent the competitor&apos;s product as defective.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -582,12 +505,8 @@ export default function ComparativeAdvertisingDisparagementPage() {
                                                     <h3 className="text-base font-bold text-gray-900">Reckitt Benckiser v. Hindustan Unilever Ltd. (Dettol vs Lifebuoy/Domex Wars)</h3>
                                                     <span className="text-xs bg-red-100 text-red-800 font-bold px-2.5 py-1 rounded-full">FMCG Injunctions</span>
                                                 </div>
-                                                <p className="text-xs text-gray-600 leading-relaxed mb-3">
-                                                    <strong>The Dispute:</strong> Multiple battles regarding soap bars, dishwashing liquids, and toilet cleaners depicting competitors&apos; distinctive amber antiseptic bottles or iconic red soap shapes.
-                                                </p>
-                                                <p className="text-xs text-gray-700 leading-relaxed mb-0">
-                                                    <strong>The Ruling:</strong> The High Court repeatedly restrained commercials that visually denigrated competitors by portraying their products as ineffective or hazardous, reiterating that while a trader can claim superiority, they cannot defame rival formulations.
-                                                </p>
+                                                <p className="text-xs text-gray-600 leading-relaxed mb-3"><strong>The Dispute:</strong>Multiple battles regarding soap bars, dishwashing liquids, and toilet cleaners depicting competitors&apos; distinctive amber antiseptic bottles or iconic red soap shapes.</p>
+                                                <p className="text-xs text-gray-700 leading-relaxed mb-0"><strong>The Ruling:</strong>The High Court repeatedly restrained commercials that visually denigrated competitors by portraying their products as ineffective or hazardous, reiterating that while a trader can claim superiority, they cannot defame rival formulations.</p>
                                             </div>
                                         </div>
                                     </section>
@@ -598,23 +517,17 @@ export default function ComparativeAdvertisingDisparagementPage() {
                                             <FontAwesomeIcon icon={faStamp} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             ASCI Code &amp; CCPA 2022 Regulatory Guidelines
                                         </h2>
-                                        <p className="mb-6">
-                                            In addition to judicial litigation under the Trade Marks Act, advertisers must comply with strict self-regulatory and statutory guidelines:
-                                        </p>
+                                        <p className="mb-6">In addition to judicial litigation under the Trade Marks Act, advertisers must comply with strict self-regulatory and statutory guidelines:</p>
 
                                         <div className="space-y-6">
                                             <div className="border-l-4 border-[#6E5E93] pl-4 py-2 bg-purple-50/40 rounded-r-xl">
                                                 <h3 className="text-lg font-bold text-gray-900 mb-1">ASCI Code Chapter IV (Comparative Advertising)</h3>
-                                                <p className="text-sm text-gray-700 leading-relaxed m-0">
-                                                    The Advertising Standards Council of India (ASCI) mandates that comparative advertisements must: (1) compare products meeting identical consumer needs, (2) compare relevant, verifiable, and representative features, (3) not create consumer confusion between the advertiser and competitors, and (4) not discredit, ridicule, or denigrate other products, trademarks, or trade names.
-                                                </p>
+                                                <p className="text-sm text-gray-700 leading-relaxed m-0">The Advertising Standards Council of India (ASCI) mandates that comparative advertisements must: (1) compare products meeting identical consumer needs, (2) compare relevant, verifiable, and representative features, (3) not create consumer confusion between the advertiser and competitors, and (4) not discredit, ridicule, or denigrate other products, trademarks, or trade names.</p>
                                             </div>
 
                                             <div className="border-l-4 border-indigo-500 pl-4 py-2 bg-indigo-50/40 rounded-r-xl">
                                                 <h3 className="text-lg font-bold text-gray-900 mb-1">CCPA Guidelines for Misleading Advertisements, 2022</h3>
-                                                <p className="text-sm text-gray-700 leading-relaxed m-0">
-                                                    Issued under the <strong>Consumer Protection Act, 2019</strong>, the Central Consumer Protection Authority (CCPA) penalizes comparative advertisements that mislead consumers regarding performance, warranty, or test certifications. Disclaimers must be clearly legible, presented in the same font size and language as the primary claim, and must not contradict the main advertisement message.
-                                                </p>
+                                                <p className="text-sm text-gray-700 leading-relaxed m-0">Issued under the<strong>Consumer Protection Act, 2019</strong>, the Central Consumer Protection Authority (CCPA) penalizes comparative advertisements that mislead consumers regarding performance, warranty, or test certifications. Disclaimers must be clearly legible, presented in the same font size and language as the primary claim, and must not contradict the main advertisement message.</p>
                                             </div>
                                         </div>
                                     </section>
@@ -625,9 +538,7 @@ export default function ComparativeAdvertisingDisparagementPage() {
                                             <FontAwesomeIcon icon={faShieldHalved} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Injunctions &amp; Legal Remedies for Disparagement
                                         </h2>
-                                        <p className="mb-6">
-                                            When a competitor launches a disparaging ad campaign, aggrieved brand owners have immediate civil and commercial remedies:
-                                        </p>
+                                        <p className="mb-6">When a competitor launches a disparaging ad campaign, aggrieved brand owners have immediate civil and commercial remedies:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
                                             <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
@@ -635,9 +546,7 @@ export default function ComparativeAdvertisingDisparagementPage() {
                                                     <FontAwesomeIcon icon={faCheckCircle} className="w-4 h-4 text-emerald-600 mr-2" />
                                                     Ex-Parte Ad-Interim Injunctions
                                                 </h3>
-                                                <p className="text-xs text-gray-600 leading-relaxed m-0">
-                                                    Under Order 39 Rules 1 &amp; 2 CPC read with the Commercial Courts Act 2015, courts grant emergency injunctions restraining TV broadcast, OTT streaming, and digital distribution within 24 to 48 hours of filing.
-                                                </p>
+                                                <p className="text-xs text-gray-600 leading-relaxed m-0">Under Order 39 Rules 1 &amp. 2 CPC read with the Commercial Courts Act 2015, courts grant emergency injunctions restraining TV broadcast, OTT streaming, and digital distribution within 24 to 48 hours of filing.</p>
                                             </div>
 
                                             <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
@@ -645,9 +554,7 @@ export default function ComparativeAdvertisingDisparagementPage() {
                                                     <FontAwesomeIcon icon={faCheckCircle} className="w-4 h-4 text-emerald-600 mr-2" />
                                                     Mandatory Digital Takedown Orders
                                                 </h3>
-                                                <p className="text-xs text-gray-600 leading-relaxed m-0">
-                                                    Directing social media platforms (YouTube, Meta, X, Instagram) and intermediary ad servers to immediately take down the offending video or banner assets.
-                                                </p>
+                                                <p className="text-xs text-gray-600 leading-relaxed m-0">Directing social media platforms (YouTube, Meta, X, Instagram) and intermediary ad servers to immediately take down the offending video or banner assets.</p>
                                             </div>
 
                                             <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
@@ -655,9 +562,7 @@ export default function ComparativeAdvertisingDisparagementPage() {
                                                     <FontAwesomeIcon icon={faCheckCircle} className="w-4 h-4 text-emerald-600 mr-2" />
                                                     Compensatory &amp; Punitive Damages
                                                 </h3>
-                                                <p className="text-xs text-gray-600 leading-relaxed m-0">
-                                                    Awarding actual commercial losses, loss of goodwill, and exemplary punitive damages under Section 135 of the Trade Marks Act against repeat offenders.
-                                                </p>
+                                                <p className="text-xs text-gray-600 leading-relaxed m-0">Awarding actual commercial losses, loss of goodwill, and exemplary punitive damages under Section 135 of the Trade Marks Act against repeat offenders.</p>
                                             </div>
 
                                             <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
@@ -665,15 +570,11 @@ export default function ComparativeAdvertisingDisparagementPage() {
                                                     <FontAwesomeIcon icon={faCheckCircle} className="w-4 h-4 text-emerald-600 mr-2" />
                                                     ASCI Fast-Track Complaint Panel
                                                 </h3>
-                                                <p className="text-xs text-gray-600 leading-relaxed m-0">
-                                                    Filing an expedited industry complaint with ASCI for swift ad modification or suspension within 5 working days.
-                                                </p>
+                                                <p className="text-xs text-gray-600 leading-relaxed m-0">Filing an expedited industry complaint with ASCI for swift ad modification or suspension within 5 working days.</p>
                                             </div>
                                         </div>
 
-                                        <p className="mb-6">
-                                            Learn how to draft formal notices and court pleadings in our guide on <Link href="/how-to-send-trademark-legal-notice-india" className="text-[rgb(110,94,147)] hover:underline font-medium">how to send trademark legal notices</Link> and <Link href="/how-to-respond-to-trademark-infringement-legal-notice-in-india" className="text-[rgb(110,94,147)] hover:underline font-medium">how to respond to trademark infringement notices</Link>.
-                                        </p>
+                                        <p className="mb-6">Learn how to draft formal notices and court pleadings in our guide on<Link href="/how-to-send-trademark-legal-notice-india" className="text-[rgb(110,94,147)] hover:underline font-medium">how to send trademark legal notices</Link>and<Link href="/how-to-respond-to-trademark-infringement-legal-notice-in-india" className="text-[rgb(110,94,147)] hover:underline font-medium">how to respond to trademark infringement notices</Link>.</p>
                                     </section>
 
                                     {/* SECTION 10: COMPARATIVE RISK MATRIX */}
@@ -682,9 +583,7 @@ export default function ComparativeAdvertisingDisparagementPage() {
                                             <FontAwesomeIcon icon={faTable} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Comparative Advertising Risk Matrix
                                         </h2>
-                                        <p className="mb-6">
-                                            Evaluate proposed advertising storylines against Indian judicial risk benchmarks:
-                                        </p>
+                                        <p className="mb-6">Evaluate proposed advertising storylines against Indian judicial risk benchmarks:</p>
 
                                         <div className="overflow-x-auto my-8">
                                             <table className="min-w-full text-left border border-gray-200 rounded-xl overflow-hidden shadow-sm">
@@ -727,9 +626,7 @@ export default function ComparativeAdvertisingDisparagementPage() {
                                             <FontAwesomeIcon icon={faListUl} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             7-Step Brand Pre-Clearance Checklist
                                         </h2>
-                                        <p className="mb-6">
-                                            Brand marketing teams and creative agencies should execute this legal clearance protocol before broadcasting comparative ads:
-                                        </p>
+                                        <p className="mb-6">Brand marketing teams and creative agencies should execute this legal clearance protocol before broadcasting comparative ads:</p>
 
                                         <div className="space-y-6 not-prose">
                                             <div className="flex items-start p-6 bg-gray-50 rounded-2xl border border-gray-200">
@@ -814,12 +711,8 @@ export default function ComparativeAdvertisingDisparagementPage() {
                                             <FontAwesomeIcon icon={faBuildingShield} className="w-8 h-8 mr-3 text-[#6E5E93]" />
                                             Strategic Advisory for Brand Marketing Teams
                                         </h2>
-                                        <p className="mb-6">
-                                            Comparative advertising can rapidly expand market share when executed with factual accuracy and scientific rigor. However, crossing the line into trademark disparagement risks crippling commercial injunctions, costly media write-offs, and severe reputational fallout in High Court litigation.
-                                        </p>
-                                        <p className="mb-6">
-                                            Partner with intellectual property litigators at IPR Karo to conduct pre-broadcast ad audits, vet comparative scripts, defend against aggressive competitor lawsuits, and secure commercial injunctions against disparaging competitor campaigns. Review our guides on <Link href="/passing-off-vs-trademark-infringement-india" className="text-[rgb(110,94,147)] hover:underline font-medium">passing off vs trademark infringement</Link>, <Link href="/penalty-for-trademark-infringement-india" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark penalties in India</Link>, and <Link href="/how-to-stop-trademark-infringement" className="text-[rgb(110,94,147)] hover:underline font-medium">how to stop trademark infringement</Link>.
-                                        </p>
+                                        <p className="mb-6">Comparative advertising can rapidly expand market share when executed with factual accuracy and scientific rigor. However, crossing the line into trademark disparagement risks crippling commercial injunctions, costly media write-offs, and severe reputational fallout in High Court litigation.</p>
+                                        <p className="mb-6">Partner with intellectual property litigators at IPR Karo to conduct pre-broadcast ad audits, vet comparative scripts, defend against aggressive competitor lawsuits, and secure commercial injunctions against disparaging competitor campaigns. Review our guides on<Link href="/passing-off-vs-trademark-infringement-india" className="text-[rgb(110,94,147)] hover:underline font-medium">passing off vs trademark infringement</Link>,<Link href="/penalty-for-trademark-infringement-india" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark penalties in India</Link>, and<Link href="/how-to-stop-trademark-infringement" className="text-[rgb(110,94,147)] hover:underline font-medium">how to stop trademark infringement</Link>.</p>
                                     </section>
 
                                     {/* BOTTOM CTA SECTION */}
@@ -836,9 +729,7 @@ export default function ComparativeAdvertisingDisparagementPage() {
                                                     Protect Your Brand from Disparagement &amp; Injunctions
                                                 </h3>
 
-                                                <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">
-                                                    Deploy veteran IP litigators to pre-clear comparative advertising campaigns, obtain emergency High Court injunctions, and safeguard market reputation.
-                                                </p>
+                                                <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">Deploy veteran IP litigators to pre-clear comparative advertising campaigns, obtain emergency High Court injunctions, and safeguard market reputation.</p>
 
                                                 <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
                                                     <Link
@@ -856,9 +747,7 @@ export default function ComparativeAdvertisingDisparagementPage() {
                                                     </a>
                                                 </div>
 
-                                                <p className="mt-6 text-xs font-medium tracking-wide text-white/50 sm:text-sm">
-                                                    Registered IP Advocates • High Court Injunctions • ASCI Fast-Track Defense • Pan-India Commercial Litigation
-                                                </p>
+                                                <p className="mt-6 text-xs font-medium tracking-wide text-white/50 sm:text-sm">Registered IP Advocates • High Court Injunctions • ASCI Fast-Track Defense • Pan-India Commercial Litigation</p>
                                             </div>
                                         </div>
                                     </section>
@@ -891,86 +780,16 @@ export default function ComparativeAdvertisingDisparagementPage() {
                             <div className="bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-100">
                                 <h3 className="text-xs font-black text-gray-400 mb-5 uppercase tracking-[0.25em]">Related Resources</h3>
                                 <ul className="space-y-6">
-                                    <li>
-                                        <Link href="/competitor-bidding-on-my-trademark-google-ads-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faSearch} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Google Ads TM Bidding</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/trade-dress-protection-under-indian-trademark-law" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faBoxOpen} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Trade Dress Guide</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/passing-off-vs-trademark-infringement-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faScaleBalanced} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Passing Off vs TM</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/penalty-for-trademark-infringement-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faGavel} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">TM Penalties India</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/how-to-send-trademark-legal-notice-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faFileContract} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Send Legal Notice</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/how-to-respond-to-trademark-infringement-legal-notice-in-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faShieldHalved} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">TM Notice Reply</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/how-to-stop-trademark-infringement" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faBan} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Stop Infringement</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/deceptive-similarity-trademark-test-in-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faEye} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Deceptive Similarity</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/how-to-get-well-known-trademark-status-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faBuildingShield} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Well-Known TM Status</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/civil-vs-criminal-trademark-infringement-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faScaleBalanced} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Civil vs Criminal TM</span>
-                                        </Link>
-                                    </li>
+                                    <li><Link href="/competitor-bidding-on-my-trademark-google-ads-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faSearch} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Google Ads TM Bidding</span></Link></li>
+                                    <li><Link href="/trade-dress-protection-under-indian-trademark-law" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faBoxOpen} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Trade Dress Guide</span></Link></li>
+                                    <li><Link href="/passing-off-vs-trademark-infringement-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faScaleBalanced} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Passing Off vs TM</span></Link></li>
+                                    <li><Link href="/penalty-for-trademark-infringement-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faGavel} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">TM Penalties India</span></Link></li>
+                                    <li><Link href="/how-to-send-trademark-legal-notice-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faFileContract} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Send Legal Notice</span></Link></li>
+                                    <li><Link href="/how-to-respond-to-trademark-infringement-legal-notice-in-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faShieldHalved} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">TM Notice Reply</span></Link></li>
+                                    <li><Link href="/how-to-stop-trademark-infringement" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faBan} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Stop Infringement</span></Link></li>
+                                    <li><Link href="/deceptive-similarity-trademark-test-in-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faEye} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Deceptive Similarity</span></Link></li>
+                                    <li><Link href="/how-to-get-well-known-trademark-status-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faBuildingShield} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Well-Known TM Status</span></Link></li>
+                                    <li><Link href="/civil-vs-criminal-trademark-infringement-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faScaleBalanced} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Civil vs Criminal TM</span></Link></li>
                                 </ul>
                             </div>
                         </aside>

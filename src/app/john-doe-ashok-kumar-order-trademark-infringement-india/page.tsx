@@ -97,7 +97,7 @@ const faqs = [
     },
     {
         question: "What is a Dynamic Injunction and how does it apply to rogue online portals?",
-        answer: "Originating in the Delhi High Court's landmark judgment in 'UTV Software Communication Ltd. v. 1337x.to (2019)', a Dynamic Injunction allows a trademark or copyright proprietor to block mirror, redirect, or alphanumeric variations of infringing websites without filing a fresh commercial suit each time. The plaintiff simply files an affidavit before the Court Registrar or Department of Telecommunications (DoT) to extend the existing injunction to newly surfaced rogue domain variations."
+        answer: "Originating in the Delhi High Court's landmark judgment in 'UTV Software Communication Ltd. V. 1337x.to (2019)', a Dynamic Injunction allows a trademark or copyright proprietor to block mirror, redirect, or alphanumeric variations of infringing websites without filing a fresh commercial suit each time. The plaintiff simply files an affidavit before the Court Registrar or Department of Telecommunications (DoT) to extend the existing injunction to newly surfaced rogue domain variations."
     },
     {
         question: "Can an Ashok Kumar order direct banks, payment gateways, and telecom providers?",
@@ -109,7 +109,7 @@ const faqs = [
     },
     {
         question: "How does a John Doe civil injunction differ from a Section 115 criminal police raid?",
-        answer: "A Section 115 criminal police raid is conducted by state police officers (DSP rank) resulting in arrest, FIR registration, and state criminal prosecution. An Ashok Kumar John Doe civil action is filed in the High Court / Commercial Court, granting broader equitable remedies including nationwide website blocking, freezing of bank accounts, appointment of advocate Local Commissioners, and substantial financial damages and profits."
+        answer: "A Section 115 criminal police raid is conducted by state police officers (DSP rank) resulting in arrest, FIR registration, and state criminal prosecution. An Ashok Kumar John Doe civil action is filed in the High Court / Commercial Court. This grants broader equitable remedies including nationwide website blocking, freezing of bank accounts, appointment of advocate Local Commissioners, and substantial financial damages and profits."
     }
 ];
 
@@ -219,11 +219,9 @@ export default function JohnDoeAshokKumarOrdersPage() {
                                 <span className="text-[10px] sm:text-xs font-bold tracking-wider text-[#6E5E93] uppercase">Ex-Parte Court Injunctions &amp; Litigations</span>
                             </div>
                             <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-3 leading-tight text-gray-900 tracking-tighter">
-                                John Doe (Ashok Kumar) Orders in Indian Trademark Law: <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'transparent' }}>Ex-Parte Injunctions Guide</span>
+                                John Doe Orders in Indian Trademark Law: <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'transparent' }}>Ex-Parte Injunctions</span>
                             </h1>
-                            <p className="text-base md:text-lg mb-5 text-gray-700 font-medium leading-relaxed">
-                                Anonymous counterfeiters, fly-by-night operators, and rogue phishing domains operate in secrecy to evade traditional trademark litigation. Under <strong>Section 135 of the Trade Marks Act, 1999</strong> and <strong>Order 39 Rules 1 &amp; 2 of the CPC</strong>, Indian High Courts grant powerful <strong>John Doe (Ashok Kumar) orders</strong>. Secure ex-parte ad-interim injunctions, dynamic website blocking, bank account freezes, and surprise Local Commissioner search-and-seizure raids against unidentified infringers nationwide.
-                            </p>
+                            <p className="text-base md:text-lg mb-5 text-gray-700 font-medium leading-relaxed">Anonymous counterfeiters, fly-by-night operators, and rogue phishing domains operate in secrecy to evade traditional trademark litigation. Under<strong>Section 135 of the Trade Marks Act, 1999</strong>and<strong>Order 39 Rules 1 &amp; 2 of the CPC</strong>, Indian High Courts grant powerful<strong>John Doe (Ashok Kumar) orders</strong>. Secure ex-parte ad-interim injunctions, dynamic website blocking, bank account freezes, and surprise Local Commissioner search-and-seizure raids against unidentified infringers nationwide.</p>
 
                             <div className="flex flex-wrap items-center gap-4 mb-6">
                                 <div className="flex items-center mr-2">
@@ -314,36 +312,11 @@ export default function JohnDoeAshokKumarOrdersPage() {
                                                 Close
                                             </span>
                                             <svg className="w-4 h-4 text-gray-500 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                                            </svg>
-                                        </div>
-                                    </summary>
-                                    <div className="p-3.5 pt-2 border-t border-purple-50 bg-white/70">
-                                        <nav className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
-                                            {tocSections.map((section, idx) => (
-                                                <a
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg></div></summary><div className="p-3.5 pt-2 border-t border-purple-50 bg-white/70"><nav className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">{tocSections.map((section, idx) => (<a
                                                     key={section.id}
                                                     href={`#${section.id}`}
                                                     className="flex items-center p-2 rounded-xl text-xs font-medium text-gray-700 hover:text-[#6E5E93] hover:bg-purple-50/80 transition-all border border-transparent hover:border-purple-100"
-                                                >
-                                                    <span className="w-5 h-5 rounded-full bg-purple-100 text-[#6E5E93] flex items-center justify-center text-[10px] font-bold mr-2 flex-shrink-0">
-                                                        {idx + 1}
-                                                    </span>
-                                                    <span className="truncate">{section.title}</span>
-                                                </a>
-                                            ))}
-                                        </nav>
-                                    </div>
-                                </details>
-                            </div>
-
-                            <div className="bg-white p-4 md:p-12 rounded-2xl shadow-sm border border-gray-100 space-y-12 md:space-y-20 article-content">
-                                <article className="prose prose-lg max-w-none text-gray-700 leading-relaxed font-normal">
-
-                                    <div className="flex items-center space-x-4 mb-10 p-4 bg-gray-50 rounded-xl border border-gray-100 not-prose">
-                                        <img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-12 h-12 rounded-full object-cover m-0" />
-                                        <div>
-                                            <p className="text-sm font-bold text-gray-900 m-0">Written by <Link href="/about-us" className="text-[rgb(110,94,147)] hover:underline">Rahul Roy</Link></p>
+                                                ><span className="w-5 h-5 rounded-full bg-purple-100 text-[#6E5E93] flex items-center justify-center text-[10px] font-bold mr-2 flex-shrink-0">{idx + 1}</span><span className="truncate">{section.title}</span></a>))}</nav></div></details></div><div className="bg-white p-4 md:p-12 rounded-2xl shadow-sm border border-gray-100 space-y-12 md:space-y-20 article-content"><article className="prose prose-lg max-w-none text-gray-700 leading-relaxed font-normal"><div className="flex items-center space-x-4 mb-10 p-4 bg-gray-50 rounded-xl border border-gray-100 not-prose"><img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-12 h-12 rounded-full object-cover m-0" /><div><p className="text-sm font-bold text-gray-900 m-0">Written by<Link href="/about-us" className="text-[rgb(110,94,147)] hover:underline">Rahul Roy</Link></p>
                                             <p className="text-xs text-gray-500 m-0">Trademark Research Specialist</p>
                                         </div>
                                     </div>
@@ -356,20 +329,12 @@ export default function JohnDoeAshokKumarOrdersPage() {
                                         </h2>
 
                                         <div id="quick-answer" className="bg-purple-50 border-l-4 border-[rgb(110,94,147)] p-6 rounded-r-xl mb-8">
-                                            <p className="font-semibold text-gray-900 m-0">
-                                                A John Doe order in Indian trademark law—judicially termed an &ldquo;Ashok Kumar&rdquo; order—is an ex-parte ad-interim injunction granted under Section 135 of the Trade Marks Act, 1999 and Order 39 Rules 1 &amp; 2 of the Code of Civil Procedure, 1908 (CPC). It restrains anonymous, unidentified, or clandestine infringers from manufacturing, selling, broadcasting, or digitally distributing counterfeit goods or impersonating brands. Indian High Courts pair John Doe injunctions with Local Commissioner search-and-seizure appointments, dynamic website blocking orders to ISPs, and bank account freeze directives.
-                                            </p>
+                                            <p className="font-semibold text-gray-900 m-0">A John Doe order in Indian trademark law—judicially termed an &ldquo;Ashok Kumar&rdquo. Order—is an ex-parte ad-interim injunction granted under Section 135 of the Trade Marks Act, 1999 and Order 39 Rules 1 &amp. 2 of the Code of Civil Procedure, 1908 (CPC). It restrains anonymous, unidentified, or clandestine infringers from manufacturing, selling, broadcasting, or digitally distributing counterfeit goods or impersonating brands. Indian High Courts pair John Doe injunctions with Local Commissioner search-and-seizure appointments, dynamic website blocking orders to ISPs, and bank account freeze directives.</p>
                                         </div>
 
-                                        <p className="mb-6">
-                                            In the modern globalized economy, intellectual property infringement has evolved into a sophisticated, decentralized enterprise. Counterfeiting syndicates, illicit broadcast streamers, and cyber-fraud networks operate anonymously through proxy domain registrations, encrypted messaging applications (Telegram, WhatsApp), shell trading companies, and clandestine physical godowns.
-                                        </p>
-                                        <p className="mb-6">
-                                            Under traditional civil litigation, a plaintiff must identify the full legal name and physical address of every defendant before serving a summons. If brand owners were required to identify every rogue distributor or clandestine manufacturer before approaching the court, infringers would simply move inventory, scrub electronic servers, and alter digital domain names before a hearing could occur.
-                                        </p>
-                                        <p className="mb-6">
-                                            The <strong>Ashok Kumar John Doe order</strong> bridges this critical enforcement gap. It provides immediate judicial relief against the infringement itself, arming brand owners with court-backed enforcement tools to hunt down infringers, freeze assets, and dismantle illegal operations. Learn how this interacts with broader enforcement options in our comprehensive guide on <Link href="/passing-off-vs-trademark-infringement-india" className="text-[rgb(110,94,147)] hover:underline font-medium">passing off vs trademark infringement</Link> and <Link href="/civil-vs-criminal-trademark-infringement-india" className="text-[rgb(110,94,147)] hover:underline font-medium">civil vs criminal trademark infringement</Link>.
-                                        </p>
+                                        <p className="mb-6">In the modern globalized economy, intellectual property infringement has evolved into a sophisticated, decentralized enterprise. Counterfeiting syndicates, illicit broadcast streamers, and cyber-fraud networks operate anonymously through proxy domain registrations, encrypted messaging applications (Telegram, WhatsApp), shell trading companies, and clandestine physical godowns.</p>
+                                        <p className="mb-6">Under traditional civil litigation, a plaintiff must identify the full legal name and physical address of every defendant before serving a summons. If brand owners were required to identify every rogue distributor or clandestine manufacturer before approaching the court, infringers would simply move inventory, scrub electronic servers, and alter digital domain names before a hearing could occur.</p>
+                                        <p className="mb-6">The<strong>Ashok Kumar John Doe order</strong>bridges this critical enforcement gap. It provides immediate judicial relief against the infringement itself, arming brand owners with court-backed enforcement tools to hunt down infringers, freeze assets, and dismantle illegal operations. Learn how this interacts with broader enforcement options in our comprehensive guide on<Link href="/passing-off-vs-trademark-infringement-india" className="text-[rgb(110,94,147)] hover:underline font-medium">passing off vs trademark infringement</Link>and<Link href="/civil-vs-criminal-trademark-infringement-india" className="text-[rgb(110,94,147)] hover:underline font-medium">civil vs criminal trademark infringement</Link>.</p>
                                     </section>
 
                                     {/* SECTION 2: ORIGINS & ASHOK KUMAR CONCEPT */}
@@ -378,30 +343,22 @@ export default function JohnDoeAshokKumarOrdersPage() {
                                             <FontAwesomeIcon icon={faLandmark} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Origins of John Doe &amp; Ashok Kumar Jurisprudence
                                         </h2>
-                                        <p className="mb-6">
-                                            The legal concept of issuing injunctions against unidentified parties traces its roots back to English equity courts and landmark common-law decisions:
-                                        </p>
+                                        <p className="mb-6">The legal concept of issuing injunctions against unidentified parties traces its roots back to English equity courts and landmark common-law decisions:</p>
 
                                         <div className="space-y-6">
                                             <div className="border-l-4 border-[#6E5E93] pl-4 py-2 bg-purple-50/40 rounded-r-xl">
                                                 <h3 className="text-lg font-bold text-gray-900 mb-1">1. The English Precedents: Anton Piller &amp; Mareva Injunctions</h3>
-                                                <p className="text-sm text-gray-700 leading-relaxed m-0">
-                                                    In <em>Anton Piller KG v. Manufacturing Processes Ltd. [1976]</em>, the English Court of Appeal established the right of a court to order unannounced search and preservation of evidence. Paired with <em>Mareva Compania Naviera SA v. International Bulkcarriers SA [1975]</em> (asset-freezing orders), equity jurisprudence recognized that stealth operations require pre-emptive, ex-parte judicial intervention.
-                                                </p>
+                                                <p className="text-sm text-gray-700 leading-relaxed m-0">In<em>Anton Piller KG v. Manufacturing Processes Ltd. [1976]</em>, the English Court of Appeal established the right of a court to order unannounced search and preservation of evidence. Paired with<em>Mareva Compania Naviera SA v. International Bulkcarriers SA [1975]</em>(asset-freezing orders), equity jurisprudence recognized that stealth operations require pre-emptive, ex-parte judicial intervention.</p>
                                             </div>
 
                                             <div className="border-l-4 border-indigo-500 pl-4 py-2 bg-indigo-50/40 rounded-r-xl">
                                                 <h3 className="text-lg font-bold text-gray-900 mb-1">2. India&apos;s Genesis: Taj Television Ltd. v. Rajan Mandal (2002)</h3>
-                                                <p className="text-sm text-gray-700 leading-relaxed m-0">
-                                                    The Delhi High Court introduced John Doe jurisprudence to India in the historic <em>Taj Television Ltd. v. Rajan Mandal (2002)</em> case. Taj Television (Ten Sports) held exclusive broadcast rights for the FIFA Football World Cup, which was being illegally transmitted by rogue, unregistered local cable operators across India. The Delhi High Court passed the country&apos;s first ex-parte ad-interim injunction against unidentified cable operators, establishing the precedent.
-                                                </p>
+                                                <p className="text-sm text-gray-700 leading-relaxed m-0">The Delhi High Court introduced John Doe jurisprudence to India in the historic<em>Taj Television Ltd. V. Rajan Mandal (2002)</em>case. Taj Television (Ten Sports) held exclusive broadcast rights for the FIFA Football World Cup, which was being illegally transmitted by rogue, unregistered local cable operators across India. The Delhi High Court passed the country&apos;s first ex-parte ad-interim injunction against unidentified cable operators. This establishes the precedent.</p>
                                             </div>
 
                                             <div className="border-l-4 border-purple-500 pl-4 py-2 bg-purple-50/40 rounded-r-xl">
                                                 <h3 className="text-lg font-bold text-gray-900 mb-1">3. Why the Name &ldquo;Ashok Kumar&rdquo;?</h3>
-                                                <p className="text-sm text-gray-700 leading-relaxed m-0">
-                                                    While American and British courts use &ldquo;John Doe&rdquo; or &ldquo;Jane Doe&rdquo;, Indian litigators and judges adopted &ldquo;Ashok Kumar&rdquo; as the standard generic Indian pseudonym. When filing a commercial plaint where certain infringers are unidentified, the caption reads: <em>&ldquo;[Plaintiff Brand] v. Ashok Kumar &amp; Ors.&rdquo;</em>
-                                                </p>
+                                                <p className="text-sm text-gray-700 leading-relaxed m-0">While American and British courts use &ldquo;John Doe&rdquo; or &ldquo;Jane Doe&rdquo;, Indian litigators and judges adopted &ldquo;Ashok Kumar&rdquo; as the standard generic Indian pseudonym. When filing a commercial plaint where certain infringers are unidentified, the caption reads:<em>&ldquo;[Plaintiff Brand] v. Ashok Kumar &amp; Ors.&rdquo;</em></p>
                                             </div>
                                         </div>
                                     </section>
@@ -412,9 +369,7 @@ export default function JohnDoeAshokKumarOrdersPage() {
                                             <FontAwesomeIcon icon={faGavel} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Statutory Grounding under Indian Law
                                         </h2>
-                                        <p className="mb-6">
-                                            Ashok Kumar orders in India are backed by explicit statutory provisions spanning the Trade Marks Act, the Code of Civil Procedure, and the Commercial Courts Act:
-                                        </p>
+                                        <p className="mb-6">Ashok Kumar orders in India are backed by explicit statutory provisions spanning the Trade Marks Act, the Code of Civil Procedure, and the Commercial Courts Act:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -422,9 +377,7 @@ export default function JohnDoeAshokKumarOrdersPage() {
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2"></span>
                                                     Section 135(1) &amp; (2) Trade Marks Act, 1999
                                                 </h3>
-                                                <p className="text-xs text-gray-600 leading-relaxed m-0">
-                                                    Authorizes courts in trademark infringement or passing-off suits to grant ex-parte injunctions, order discovery of documents, preserve infringing goods/materials, and direct the seizure and destruction of counterfeit inventory.
-                                                </p>
+                                                <p className="text-xs text-gray-600 leading-relaxed m-0">Authorizes courts in trademark infringement or passing-off suits to grant ex-parte injunctions, order discovery of documents, preserve infringing goods/materials, and direct the seizure and destruction of counterfeit inventory.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -432,9 +385,7 @@ export default function JohnDoeAshokKumarOrdersPage() {
                                                     <span className="w-2.5 h-2.5 bg-indigo-500 rounded-full mr-2"></span>
                                                     Order 39 Rules 1 &amp; 2 read with Section 151 CPC
                                                 </h3>
-                                                <p className="text-xs text-gray-600 leading-relaxed m-0">
-                                                    Empowers the court to grant temporary restraining orders to prevent property from being damaged, alienated, or sold in bad faith. Section 151 enables inherent powers to ensure complete justice.
-                                                </p>
+                                                <p className="text-xs text-gray-600 leading-relaxed m-0">Empowers the court to grant temporary restraining orders to prevent property from being damaged, alienated, or sold in bad faith. Section 151 enables inherent powers to ensure complete justice.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -442,9 +393,7 @@ export default function JohnDoeAshokKumarOrdersPage() {
                                                     <span className="w-2.5 h-2.5 bg-purple-500 rounded-full mr-2"></span>
                                                     Order 26 Rule 9 CPC (Local Commissioners)
                                                 </h3>
-                                                <p className="text-xs text-gray-600 leading-relaxed m-0">
-                                                    Empowers the Court to issue a commission appointing an independent advocate to execute on-the-spot physical investigations, take photographic evidence, and seize infringing stock without prior notice.
-                                                </p>
+                                                <p className="text-xs text-gray-600 leading-relaxed m-0">Empowers the Court to issue a commission appointing an independent advocate to execute on-the-spot physical investigations, take photographic evidence, and seize infringing stock without prior notice.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -452,9 +401,7 @@ export default function JohnDoeAshokKumarOrdersPage() {
                                                     <span className="w-2.5 h-2.5 bg-emerald-500 rounded-full mr-2"></span>
                                                     Section 12A Commercial Courts Act, 2015
                                                 </h3>
-                                                <p className="text-xs text-gray-600 leading-relaxed m-0">
-                                                    While mandatory pre-institution mediation is generally required for commercial suits, Section 12A explicitly exempts suits that contemplate &ldquo;urgent interim relief&rdquo;, allowing direct listing of John Doe applications.
-                                                </p>
+                                                <p className="text-xs text-gray-600 leading-relaxed m-0">While mandatory pre-institution mediation is generally required for commercial suits, Section 12A explicitly exempts suits that contemplate &ldquo;urgent interim relief&rdquo;. This allows direct listing of John Doe applications.</p>
                                             </div>
                                         </div>
                                     </section>
@@ -465,30 +412,22 @@ export default function JohnDoeAshokKumarOrdersPage() {
                                             <FontAwesomeIcon icon={faScaleBalanced} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             The Three-Prong Injunction Test in India
                                         </h2>
-                                        <p className="mb-6">
-                                            Because John Doe injunctions are granted <em>ex-parte</em> (without hearing the defendants in advance), Indian High Courts apply strict judicial standards before passing such extraordinary orders:
-                                        </p>
+                                        <p className="mb-6">Because John Doe injunctions are granted<em>ex-parte</em>(without hearing the defendants in advance), Indian High Courts apply strict judicial standards before passing such extraordinary orders:</p>
 
                                         <div className="space-y-6">
                                             <div className="border-l-4 border-[#6E5E93] pl-4 py-2 bg-purple-50/40 rounded-r-xl">
                                                 <h3 className="text-base font-bold text-gray-900 mb-1">1. Irrefutable Prima Facie Case</h3>
-                                                <p className="text-sm text-gray-700 leading-relaxed m-0">
-                                                    The plaintiff must furnish unimpeachable proof of trademark registration (Legal Proceedings Certificate under Section 31), market goodwill, extensive sales figures, and clear photographic or digital evidence of the counterfeit mark being applied to inferior goods.
-                                                </p>
+                                                <p className="text-sm text-gray-700 leading-relaxed m-0">The plaintiff must furnish unimpeachable proof of trademark registration (Legal Proceedings Certificate under Section 31), market goodwill, extensive sales figures, and clear photographic or digital evidence of the counterfeit mark being applied to inferior goods.</p>
                                             </div>
 
                                             <div className="border-l-4 border-indigo-500 pl-4 py-2 bg-indigo-50/40 rounded-r-xl">
                                                 <h3 className="text-base font-bold text-gray-900 mb-1">2. Balance of Convenience</h3>
-                                                <p className="text-sm text-gray-700 leading-relaxed m-0">
-                                                    The plaintiff must demonstrate that the balance of convenience lies overwhelmingly in their favour. An anonymous infringer has no legitimate right to trade on stolen brand equity, whereas the genuine proprietor suffers acute erosion of reputation and brand equity.
-                                                </p>
+                                                <p className="text-sm text-gray-700 leading-relaxed m-0">The plaintiff must demonstrate that the balance of convenience lies overwhelmingly in their favour. An anonymous infringer has no legitimate right to trade on stolen brand equity. In contrast, the genuine proprietor suffers acute erosion of reputation and brand equity.</p>
                                             </div>
 
                                             <div className="border-l-4 border-red-500 pl-4 py-2 bg-red-50/40 rounded-r-xl">
                                                 <h3 className="text-base font-bold text-gray-900 mb-1">3. Irreparable Injury &amp; Extreme Urgency</h3>
-                                                <p className="text-sm text-gray-700 leading-relaxed m-0">
-                                                    The plaintiff must convince the bench that issuing advance notice under Order 39 Rule 3 CPC would defeat the very purpose of the injunction. If warned in advance, rogue operators will instantly delete domain DNS records, transfer bank balances, or relocate counterfeit warehouses overnight.
-                                                </p>
+                                                <p className="text-sm text-gray-700 leading-relaxed m-0">The plaintiff must convince the bench that issuing advance notice under Order 39 Rule 3 CPC would defeat the very purpose of the injunction. If warned in advance, rogue operators will instantly delete domain DNS records, transfer bank balances, or relocate counterfeit warehouses overnight.</p>
                                             </div>
                                         </div>
                                     </section>
@@ -499,9 +438,7 @@ export default function JohnDoeAshokKumarOrdersPage() {
                                             <FontAwesomeIcon icon={faTowerBroadcast} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             4 Modern Types of Ashok Kumar Injunction Relief
                                         </h2>
-                                        <p className="mb-6">
-                                            In contemporary Indian litigation, Ashok Kumar orders are customized to combat both physical manufacturing cartels and cyber-enabled fraud:
-                                        </p>
+                                        <p className="mb-6">In contemporary Indian litigation, Ashok Kumar orders are customized to combat both physical manufacturing cartels and cyber-enabled fraud:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -509,9 +446,7 @@ export default function JohnDoeAshokKumarOrdersPage() {
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2"></span>
                                                     1. Physical Anton Piller Seizure Orders
                                                 </h3>
-                                                <p className="text-xs text-gray-600 leading-relaxed m-0">
-                                                    Directs court-appointed Local Commissioners to conduct unannounced raids on physical factories, markets, and godowns, confiscate spurious finished goods, packaging labels, and printing dies, and inventory financial registers.
-                                                </p>
+                                                <p className="text-xs text-gray-600 leading-relaxed m-0">Directs court-appointed Local Commissioners to conduct unannounced raids on physical factories, markets, and godowns, confiscate spurious finished goods, packaging labels, and printing dies, and inventory financial registers.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -519,9 +454,7 @@ export default function JohnDoeAshokKumarOrdersPage() {
                                                     <span className="w-2.5 h-2.5 bg-indigo-500 rounded-full mr-2"></span>
                                                     2. Dynamic Injunctions (Mirror Domain Blocking)
                                                 </h3>
-                                                <p className="text-xs text-gray-600 leading-relaxed m-0">
-                                                    Directs the Department of Telecommunications (DoT), MeitY, and Internet Service Providers (Jio, Airtel, Vodafone) to block rogue piracy websites and automatically extend blocking to future mirror, redirect, and alphanumeric variations.
-                                                </p>
+                                                <p className="text-xs text-gray-600 leading-relaxed m-0">Directs the Department of Telecommunications (DoT), MeitY, and Internet Service Providers (Jio, Airtel, Vodafone) to block rogue piracy websites and automatically extend blocking to future mirror, redirect, and alphanumeric variations.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -529,9 +462,7 @@ export default function JohnDoeAshokKumarOrdersPage() {
                                                     <span className="w-2.5 h-2.5 bg-purple-500 rounded-full mr-2"></span>
                                                     3. Financial &amp; Payment Gateway Freeze Orders
                                                 </h3>
-                                                <p className="text-xs text-gray-600 leading-relaxed m-0">
-                                                    Restrains payment aggregators (Razorpay, Paytm, Cashfree, PhonePe) and scheduled banks from disbursing illicit customer funds collected through phishing websites impersonating the plaintiff brand.
-                                                </p>
+                                                <p className="text-xs text-gray-600 leading-relaxed m-0">Restrains payment aggregators (Razorpay, Paytm, Cashfree, PhonePe) and scheduled banks from disbursing illicit customer funds collected through phishing websites impersonating the plaintiff brand.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -539,9 +470,7 @@ export default function JohnDoeAshokKumarOrdersPage() {
                                                     <span className="w-2.5 h-2.5 bg-emerald-500 rounded-full mr-2"></span>
                                                     4. Telecom &amp; Domain Registrar Lockdown
                                                 </h3>
-                                                <p className="text-xs text-gray-600 leading-relaxed m-0">
-                                                    Directs Domain Name Registrars (GoDaddy, Namecheap, Tucows) to lock and suspend infringing domain names, and compels Telecom Service Providers (TSPs) to deactivate fraudulent WhatsApp/calling numbers.
-                                                </p>
+                                                <p className="text-xs text-gray-600 leading-relaxed m-0">Directs Domain Name Registrars (GoDaddy, Namecheap, Tucows) to lock and suspend infringing domain names, and compels Telecom Service Providers (TSPs) to deactivate fraudulent WhatsApp/calling numbers.</p>
                                             </div>
                                         </div>
                                     </section>
@@ -552,9 +481,7 @@ export default function JohnDoeAshokKumarOrdersPage() {
                                             <FontAwesomeIcon icon={faFileContract} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             7-Step Ashok Kumar Injunction Procedure
                                         </h2>
-                                        <p className="mb-6">
-                                            Executing an Ashok Kumar commercial litigation before an Indian High Court involves strict adherence to procedural milestones:
-                                        </p>
+                                        <p className="mb-6">Executing an Ashok Kumar commercial litigation before an Indian High Court involves strict adherence to procedural milestones:</p>
 
                                         <div className="space-y-6">
                                             <div className="flex items-start bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -563,9 +490,7 @@ export default function JohnDoeAshokKumarOrdersPage() {
                                                 </div>
                                                 <div>
                                                     <h3 className="text-lg font-bold text-gray-900 mb-1">Pre-Suit Cyber Forensics &amp; Mystery Purchases</h3>
-                                                    <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                        Private investigators capture timestamped screenshots, WHOIS records, IP server hosts, payment transaction UPI IDs, and execute test purchases with tax invoices to establish an unbroken chain of commercial infringement.
-                                                    </p>
+                                                    <p className="text-sm text-gray-600 leading-relaxed m-0">Private investigators capture timestamped screenshots, WHOIS records, IP server hosts, payment transaction UPI IDs, and execute test purchases with tax invoices to establish an unbroken chain of commercial infringement.</p>
                                                 </div>
                                             </div>
 
@@ -575,9 +500,7 @@ export default function JohnDoeAshokKumarOrdersPage() {
                                                 </div>
                                                 <div>
                                                     <h3 className="text-lg font-bold text-gray-900 mb-1">Drafting Commercial Plaint &amp; Interim Applications</h3>
-                                                    <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                        Legal counsel drafts the commercial plaint naming known entities alongside &ldquo;Ashok Kumar / John Doe&rdquo;. Applications are filed under Order 39 Rules 1 &amp; 2 (Interim Injunction), Order 26 Rule 9 (Local Commissioner), and Order 39 Rule 3 (Exemption from Prior Notice).
-                                                    </p>
+                                                    <p className="text-sm text-gray-600 leading-relaxed m-0">Legal counsel drafts the commercial plaint naming known entities alongside &ldquo;Ashok Kumar / John Doe&rdquo;. Applications are filed under Order 39 Rules 1 &amp; 2 (Interim Injunction), Order 26 Rule 9 (Local Commissioner), and Order 39 Rule 3 (Exemption from Prior Notice).</p>
                                                 </div>
                                             </div>
 
@@ -587,9 +510,7 @@ export default function JohnDoeAshokKumarOrdersPage() {
                                                 </div>
                                                 <div>
                                                     <h3 className="text-lg font-bold text-gray-900 mb-1">Section 12A Mediation Exemption Application</h3>
-                                                    <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                        File an urgent application under Section 12A of the Commercial Courts Act, 2015, satisfying the court that pre-institution mediation must be dispensed with due to imminent irreparable harm and ongoing fraud.
-                                                    </p>
+                                                    <p className="text-sm text-gray-600 leading-relaxed m-0">File an urgent application under Section 12A of the Commercial Courts Act, 2015, satisfying the court that pre-institution mediation must be dispensed with due to imminent irreparable harm and ongoing fraud.</p>
                                                 </div>
                                             </div>
 
@@ -599,9 +520,7 @@ export default function JohnDoeAshokKumarOrdersPage() {
                                                 </div>
                                                 <div>
                                                     <h3 className="text-lg font-bold text-gray-900 mb-1">Ex-Parte Oral Arguments before High Court Bench</h3>
-                                                    <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                        Senior counsel argues the ex-parte motion before the Commercial Division Bench. Present side-by-side authenticity comparisons, trademark certificates, and forensic evidence to satisfy the three-prong test.
-                                                    </p>
+                                                    <p className="text-sm text-gray-600 leading-relaxed m-0">Senior counsel argues the ex-parte motion before the Commercial Division Bench. Present side-by-side authenticity comparisons, trademark certificates, and forensic evidence to satisfy the three-prong test.</p>
                                                 </div>
                                             </div>
 
@@ -611,9 +530,7 @@ export default function JohnDoeAshokKumarOrdersPage() {
                                                 </div>
                                                 <div>
                                                     <h3 className="text-lg font-bold text-gray-900 mb-1">Passing of Injunction Order &amp; LC Appointment</h3>
-                                                    <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                        The High Court passes an ex-parte ad-interim restraining order, directs DoT/MeitY/ISPs/banks to block assets, and appoints Local Commissioners with directions to the local Station House Officer (SHO) to provide armed police protection.
-                                                    </p>
+                                                    <p className="text-sm text-gray-600 leading-relaxed m-0">The High Court passes an ex-parte ad-interim restraining order, directs DoT/MeitY/ISPs/banks to block assets, and appoints Local Commissioners with directions to the local Station House Officer (SHO) to provide armed police protection.</p>
                                                 </div>
                                             </div>
 
@@ -623,9 +540,7 @@ export default function JohnDoeAshokKumarOrdersPage() {
                                                 </div>
                                                 <div>
                                                     <h3 className="text-lg font-bold text-gray-900 mb-1">Execution of Local Commission &amp; Evidence Seizure</h3>
-                                                    <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                        The Local Commissioner arrives unannounced at target premises, serves the court order, inventories counterfeit goods, seizes machinery and computers, and seals the spurious stock under superdari.
-                                                    </p>
+                                                    <p className="text-sm text-gray-600 leading-relaxed m-0">The Local Commissioner arrives unannounced at target premises, serves the court order, inventories counterfeit goods, seizes machinery and computers, and seals the spurious stock under superdari.</p>
                                                 </div>
                                             </div>
 
@@ -635,9 +550,7 @@ export default function JohnDoeAshokKumarOrdersPage() {
                                                 </div>
                                                 <div>
                                                     <h3 className="text-lg font-bold text-gray-900 mb-1">LC Report Filing &amp; Impleadment under Order 1 Rule 10</h3>
-                                                    <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                        The LC files their official report with photographs in High Court. The plaintiff amends the memo of parties under Order 1 Rule 10 CPC, substituting &ldquo;Ashok Kumar&rdquo; with the actual names of the infringers to pursue permanent injunctions and punitive damages.
-                                                    </p>
+                                                    <p className="text-sm text-gray-600 leading-relaxed m-0">The LC files their official report with photographs in High Court. The plaintiff amends the memo of parties under Order 1 Rule 10 CPC, substituting &ldquo;Ashok Kumar&rdquo. With the actual names of the infringers to pursue permanent injunctions and punitive damages.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -649,9 +562,7 @@ export default function JohnDoeAshokKumarOrdersPage() {
                                             <FontAwesomeIcon icon={faBoxOpen} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Local Commissioner Raids &amp; Powers
                                         </h2>
-                                        <p className="mb-6">
-                                            The Court-appointed Local Commissioner (LC) acts as the eyes and ears of the High Court. Their contemporaneous report is treated as prima facie evidence under Order 26 Rule 10(2) CPC:
-                                        </p>
+                                        <p className="mb-6">The Court-appointed Local Commissioner (LC) acts as the eyes and ears of the High Court. Their contemporaneous report is treated as prima facie evidence under Order 26 Rule 10(2) CPC:</p>
 
                                         <div className="bg-gray-50 p-6 md:p-8 rounded-2xl border border-gray-200 mb-8 not-prose">
                                             <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
@@ -659,36 +570,16 @@ export default function JohnDoeAshokKumarOrdersPage() {
                                                 Key Powers Conferred on Local Commissioners
                                             </h3>
                                             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm text-gray-700">
-                                                <li className="flex items-start">
-                                                    <span className="w-2 h-2 bg-[#6E5E93] rounded-full mt-1.5 mr-2 shrink-0"></span>
-                                                    <span><strong>Unannounced Entry:</strong> Right to enter premises without prior notice or search warrant.</span>
-                                                </li>
-                                                <li className="flex items-start">
-                                                    <span className="w-2 h-2 bg-[#6E5E93] rounded-full mt-1.5 mr-2 shrink-0"></span>
-                                                    <span><strong>Breaking Open Locks:</strong> Power to break open locks and godowns if the infringer refuses entry.</span>
-                                                </li>
-                                                <li className="flex items-start">
-                                                    <span className="w-2 h-2 bg-[#6E5E93] rounded-full mt-1.5 mr-2 shrink-0"></span>
-                                                    <span><strong>Police Assistance:</strong> Mandatory police protection from local SHO / ACP as directed by the court.</span>
-                                                </li>
-                                                <li className="flex items-start">
-                                                    <span className="w-2 h-2 bg-[#6E5E93] rounded-full mt-1.5 mr-2 shrink-0"></span>
-                                                    <span><strong>Digital Device Mirroring:</strong> Authority to copy hard drives, billing software, and customer ledgers.</span>
-                                                </li>
-                                                <li className="flex items-start">
-                                                    <span className="w-2 h-2 bg-[#6E5E93] rounded-full mt-1.5 mr-2 shrink-0"></span>
-                                                    <span><strong>Seizure &amp; Sealing:</strong> Confiscation of all spurious goods, packaging materials, and manufacturing dies.</span>
-                                                </li>
-                                                <li className="flex items-start">
-                                                    <span className="w-2 h-2 bg-[#6E5E93] rounded-full mt-1.5 mr-2 shrink-0"></span>
-                                                    <span><strong>Superdari Custody:</strong> Releasing sealed stock to the plaintiff or defendant on undertaking for trial production.</span>
-                                                </li>
+                                                <li className="flex items-start"><span className="w-2 h-2 bg-[#6E5E93] rounded-full mt-1.5 mr-2 shrink-0"></span><span><strong>Unannounced Entry:</strong>Right to enter premises without prior notice or search warrant.</span></li>
+                                                <li className="flex items-start"><span className="w-2 h-2 bg-[#6E5E93] rounded-full mt-1.5 mr-2 shrink-0"></span><span><strong>Breaking Open Locks:</strong>Power to break open locks and godowns if the infringer refuses entry.</span></li>
+                                                <li className="flex items-start"><span className="w-2 h-2 bg-[#6E5E93] rounded-full mt-1.5 mr-2 shrink-0"></span><span><strong>Police Assistance:</strong>Mandatory police protection from local SHO / ACP as directed by the court.</span></li>
+                                                <li className="flex items-start"><span className="w-2 h-2 bg-[#6E5E93] rounded-full mt-1.5 mr-2 shrink-0"></span><span><strong>Digital Device Mirroring:</strong>Authority to copy hard drives, billing software, and customer ledgers.</span></li>
+                                                <li className="flex items-start"><span className="w-2 h-2 bg-[#6E5E93] rounded-full mt-1.5 mr-2 shrink-0"></span><span><strong>Seizure &amp; Sealing:</strong>Confiscation of all spurious goods, packaging materials, and manufacturing dies.</span></li>
+                                                <li className="flex items-start"><span className="w-2 h-2 bg-[#6E5E93] rounded-full mt-1.5 mr-2 shrink-0"></span><span><strong>Superdari Custody:</strong>Releasing sealed stock to the plaintiff or defendant on undertaking for trial production.</span></li>
                                             </ul>
                                         </div>
 
-                                        <p className="mb-6">
-                                            For parallel criminal enforcement strategies, examine our detailed manual on <Link href="/anti-counterfeiting-police-raid-procedure-section-115-india" className="text-[rgb(110,94,147)] hover:underline font-medium">anti-counterfeiting police raid procedure under Section 115</Link>.
-                                        </p>
+                                        <p className="mb-6">For parallel criminal enforcement strategies, examine our detailed manual on<Link href="/anti-counterfeiting-police-raid-procedure-section-115-india" className="text-[rgb(110,94,147)] hover:underline font-medium">anti-counterfeiting police raid procedure under Section 115</Link>.</p>
                                     </section>
 
                                     {/* SECTION 8: DYNAMIC INJUNCTIONS & ISP BLOCKING */}
@@ -697,18 +588,14 @@ export default function JohnDoeAshokKumarOrdersPage() {
                                             <FontAwesomeIcon icon={faGlobe} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Dynamic Injunctions &amp; Website Blocking
                                         </h2>
-                                        <p className="mb-6">
-                                            Online brand piracy often involves rogue digital portals that instantly clone their operations across alphanumeric URL permutations whenever an original domain is blocked:
-                                        </p>
+                                        <p className="mb-6">Online brand piracy often involves rogue digital portals that instantly clone their operations across alphanumeric URL permutations whenever an original domain is blocked:</p>
 
                                         <div className="bg-gradient-to-br from-indigo-50/60 to-purple-50/60 p-6 md:p-8 rounded-2xl border border-purple-100 mb-8 not-prose">
                                             <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
                                                 <FontAwesomeIcon icon={faBuildingShield} className="w-5 h-5 mr-2 text-[#6E5E93]" />
                                                 The UTV Software &ldquo;Dynamic Injunction&rdquo; Doctrine
                                             </h3>
-                                            <p className="text-xs sm:text-sm text-gray-700 leading-relaxed mb-4">
-                                                In <em>UTV Software Communication Ltd. v. 1337x.to (2019)</em>, the Delhi High Court resolved the &ldquo;whack-a-mole&rdquo; problem. Instead of requiring brand owners to file fresh suits or amend plaints every time an infringer launches a mirror domain (e.g., brand-fake1.com, brand-fake2.com), the court created the <strong>Dynamic Injunction</strong>.
-                                            </p>
+                                            <p className="text-xs sm:text-sm text-gray-700 leading-relaxed mb-4">In<em>UTV Software Communication Ltd. V. 1337x.to (2019)</em>, the Delhi High Court resolved the &ldquo;whack-a-mole&rdquo; problem. Instead of requiring brand owners to file fresh suits or amend plaints every time an infringer launches a mirror domain (e.g., brand-fake1.com, brand-fake2.com), the court created the<strong>Dynamic Injunction</strong>.</p>
                                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm text-gray-700">
                                                 <div className="bg-white p-4 rounded-xl border border-gray-200">
                                                     <p className="font-bold text-gray-900 mb-1">Affidavit before Court Joint Registrar</p>
@@ -721,9 +608,7 @@ export default function JohnDoeAshokKumarOrdersPage() {
                                             </div>
                                         </div>
 
-                                        <p className="mb-6">
-                                            Learn more about resolving domain squatting through administrative arbitration in our guide on <Link href="/domain-name-trademark-dispute-cybersquatting-indrp-india" className="text-[rgb(110,94,147)] hover:underline font-medium">domain name trademark disputes &amp; INDRP rules</Link>.
-                                        </p>
+                                        <p className="mb-6">Learn more about resolving domain squatting through administrative arbitration in our guide on<Link href="/domain-name-trademark-dispute-cybersquatting-indrp-india" className="text-[rgb(110,94,147)] hover:underline font-medium">domain name trademark disputes &amp; INDRP rules</Link>.</p>
                                     </section>
 
                                     {/* SECTION 9: LANDMARK HIGH COURT PRECEDENTS */}
@@ -732,9 +617,7 @@ export default function JohnDoeAshokKumarOrdersPage() {
                                             <FontAwesomeIcon icon={faStamp} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Landmark Indian Ashok Kumar Precedents
                                         </h2>
-                                        <p className="mb-6">
-                                            Indian jurisprudence on John Doe injunctions has developed through landmark judgments that expanded protection across diverse commercial sectors:
-                                        </p>
+                                        <p className="mb-6">Indian jurisprudence on John Doe injunctions has developed through landmark judgments that expanded protection across diverse commercial sectors:</p>
 
                                         <div className="overflow-x-auto my-8 not-prose">
                                             <table className="w-full text-left border-collapse bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden text-xs sm:text-sm">
@@ -766,7 +649,7 @@ export default function JohnDoeAshokKumarOrdersPage() {
                                                         <td className="px-5 py-4 text-[#6E5E93] font-semibold">Created Dynamic Injunctions for automatic mirror domain blocking.</td>
                                                     </tr>
                                                     <tr className="hover:bg-gray-50 transition-colors">
-                                                        <td className="px-5 py-4 font-bold text-gray-900">Tata Sky Ltd. v. Nimble TV</td>
+                                                        <td className="px-5 py-4 font-bold text-gray-900">Tata Sky Ltd. V. Nimble TV</td>
                                                         <td className="px-5 py-4">Delhi HC (2016)</td>
                                                         <td className="px-5 py-4">Brand Impersonation &amp; Over-the-Top App</td>
                                                         <td className="px-5 py-4">Restrained anonymous mobile app developers from using registered marks.</td>
@@ -788,9 +671,7 @@ export default function JohnDoeAshokKumarOrdersPage() {
                                             <FontAwesomeIcon icon={faTable} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Ashok Kumar Suits vs Traditional Litigation
                                         </h2>
-                                        <p className="mb-6">
-                                            Evaluate how John Doe actions compare with named commercial suits and criminal raids:
-                                        </p>
+                                        <p className="mb-6">Evaluate how John Doe actions compare with named commercial suits and criminal raids:</p>
 
                                         <div className="overflow-x-auto my-8 not-prose">
                                             <table className="w-full text-left border-collapse bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden text-xs sm:text-sm">
@@ -845,34 +726,13 @@ export default function JohnDoeAshokKumarOrdersPage() {
                                             John Doe Litigation Action Checklist
                                         </h2>
                                         <ul className="list-none space-y-4 mb-8">
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Establish Statutory Title:</strong> Obtain certified Legal Proceedings Certificates from IP India verifying trademark validity.</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Collate Forensic Digital &amp; Physical Evidence:</strong> Secure timestamped screen recordings, WHOIS logs, bank transaction trails, and mystery test purchases.</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Draft Urgent Interim Applications:</strong> Frame applications under Order 39 Rules 1 &amp; 2, Order 26 Rule 9 (Local Commission), and Order 39 Rule 3 (Notice Exemption).</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>File Section 12A Mediation Exemption:</strong> Plead urgent interim relief before the Commercial Court to dispense with mandatory pre-institution mediation.</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Serve Orders on Intermediaries:</strong> Transmit certified copies to DoT, MeitY, ISPs, Domain Registrars, and Payment Gateways for immediate compliance.</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Execute Local Commission Raids:</strong> Coordinate with court-appointed Local Commissioners and local police to seize physical counterfeit inventory.</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Implead Real Infringers:</strong> File Order 1 Rule 10 CPC applications substituting &ldquo;Ashok Kumar&rdquo; with actual accused entities for final trial and damages.</span>
-                                            </li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Establish Statutory Title:</strong>Obtain certified Legal Proceedings Certificates from IP India verifying trademark validity.</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Collate Forensic Digital &amp; Physical Evidence:</strong>Secure timestamped screen recordings, WHOIS logs, bank transaction trails, and mystery test purchases.</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Draft Urgent Interim Applications:</strong>Frame applications under Order 39 Rules 1 &amp; 2, Order 26 Rule 9 (Local Commission), and Order 39 Rule 3 (Notice Exemption).</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>File Section 12A Mediation Exemption:</strong>Plead urgent interim relief before the Commercial Court to dispense with mandatory pre-institution mediation.</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Serve Orders on Intermediaries:</strong>Transmit certified copies to DoT, MeitY, ISPs, Domain Registrars, and Payment Gateways for immediate compliance.</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Execute Local Commission Raids:</strong>Coordinate with court-appointed Local Commissioners and local police to seize physical counterfeit inventory.</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Implead Real Infringers:</strong>File Order 1 Rule 10 CPC applications substituting &ldquo;Ashok Kumar&rdquo; with actual accused entities for final trial and damages.</span></li>
                                         </ul>
                                     </section>
 
@@ -899,12 +759,8 @@ export default function JohnDoeAshokKumarOrdersPage() {
                                             <FontAwesomeIcon icon={faLightbulb} className="w-8 h-8 mr-3 text-yellow-500" />
                                             Strategic Litigation Advice
                                         </h2>
-                                        <p className="mb-6">
-                                            John Doe (Ashok Kumar) orders represent the pinnacle of judicial agility in Indian commercial jurisprudence. When anonymous infringers threaten your brand equity or defraud consumers through counterfeit physical goods or fraudulent websites, waiting to identify every infringer guarantees defeat.
-                                        </p>
-                                        <p className="mb-6">
-                                            By securing an ex-parte Ashok Kumar order from the High Court, you take immediate control of the battlefield: paralyzing rogue websites, freezing illicit bank accounts, and deploying Local Commissioners to seize counterfeit inventory unannounced. Partner with seasoned IP litigators to draft airtight pleadings, coordinate with cyber investigators, argue urgent ex-parte motions, and secure permanent commercial injunctions. For related enforcement workflows, review our guides on <Link href="/how-to-send-trademark-legal-notice-india" className="text-[rgb(110,94,147)] hover:underline font-medium">how to send trademark legal notices</Link>, <Link href="/how-to-respond-to-trademark-infringement-legal-notice-in-india" className="text-[rgb(110,94,147)] hover:underline font-medium">how to respond to trademark notices</Link>, and <Link href="/trade-dress-protection-under-indian-trademark-law" className="text-[rgb(110,94,147)] hover:underline font-medium">trade dress protection in India</Link>.
-                                        </p>
+                                        <p className="mb-6">John Doe (Ashok Kumar) orders represent the pinnacle of judicial agility in Indian commercial jurisprudence. When anonymous infringers threaten your brand equity or defraud consumers through counterfeit physical goods or fraudulent websites, waiting to identify every infringer guarantees defeat.</p>
+                                        <p className="mb-6">By securing an ex-parte Ashok Kumar order from the High Court, you take immediate control of the battlefield: paralyzing rogue websites, freezing illicit bank accounts, and deploying Local Commissioners to seize counterfeit inventory unannounced. Partner with seasoned IP litigators to draft airtight pleadings, coordinate with cyber investigators, argue urgent ex-parte motions, and secure permanent commercial injunctions. For related enforcement workflows, review our guides on<Link href="/how-to-send-trademark-legal-notice-india" className="text-[rgb(110,94,147)] hover:underline font-medium">how to send trademark legal notices</Link>,<Link href="/how-to-respond-to-trademark-infringement-legal-notice-in-india" className="text-[rgb(110,94,147)] hover:underline font-medium">how to respond to trademark notices</Link>, and<Link href="/trade-dress-protection-under-indian-trademark-law" className="text-[rgb(110,94,147)] hover:underline font-medium">trade dress protection in India</Link>.</p>
                                     </section>
 
                                     {/* BOTTOM CTA SECTION */}
@@ -921,9 +777,7 @@ export default function JohnDoeAshokKumarOrdersPage() {
                                                     Shut Down Anonymous Infringers with Ashok Kumar Orders
                                                 </h3>
 
-                                                <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">
-                                                    Deploy veteran High Court IP litigators to secure ex-parte John Doe injunctions, dynamic website blocking, Local Commissioner search raids, and multi-crore damages.
-                                                </p>
+                                                <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">Deploy veteran High Court IP litigators to secure ex-parte John Doe injunctions, dynamic website blocking, Local Commissioner search raids, and multi-crore damages.</p>
 
                                                 <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
                                                     <Link
@@ -941,9 +795,7 @@ export default function JohnDoeAshokKumarOrdersPage() {
                                                     </a>
                                                 </div>
 
-                                                <p className="mt-6 text-xs font-medium tracking-wide text-white/50 sm:text-sm">
-                                                    High Court Advocates • Ex-Parte Injunctions • Local Commissioners • Dynamic Blocking • Pan-India Relief
-                                                </p>
+                                                <p className="mt-6 text-xs font-medium tracking-wide text-white/50 sm:text-sm">High Court Advocates • Ex-Parte Injunctions • Local Commissioners • Dynamic Blocking • Pan-India Relief</p>
                                             </div>
                                         </div>
                                     </section>
@@ -976,86 +828,16 @@ export default function JohnDoeAshokKumarOrdersPage() {
                             <div className="bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-100">
                                 <h3 className="text-xs font-black text-gray-400 mb-5 uppercase tracking-[0.25em]">Related Resources</h3>
                                 <ul className="space-y-6">
-                                    <li>
-                                        <Link href="/anti-counterfeiting-police-raid-procedure-section-115-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faShieldHalved} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Section 115 Police Raids</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/civil-vs-criminal-trademark-infringement-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faGavel} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Civil vs Criminal TM</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/customs-recordation-of-trademark-in-india-ipr-rules" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faBuildingShield} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Customs Port Recordation</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/domain-name-trademark-dispute-cybersquatting-indrp-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faGlobe} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">INDRP Domain Disputes</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/penalty-for-trademark-infringement-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faHandcuffs} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">TM Penalties India</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/how-to-stop-trademark-infringement" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faBan} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Stop Infringement</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/how-to-send-trademark-legal-notice-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faFileContract} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Send Legal Notice</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/passing-off-vs-trademark-infringement-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faScaleBalanced} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Passing Off vs TM</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/trade-dress-protection-under-indian-trademark-law" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faBoxOpen} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Trade Dress Guide</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/competitor-bidding-on-my-trademark-google-ads-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faSearch} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Google Ads TM Bidding</span>
-                                        </Link>
-                                    </li>
+                                    <li><Link href="/anti-counterfeiting-police-raid-procedure-section-115-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faShieldHalved} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Section 115 Police Raids</span></Link></li>
+                                    <li><Link href="/civil-vs-criminal-trademark-infringement-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faGavel} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Civil vs Criminal TM</span></Link></li>
+                                    <li><Link href="/customs-recordation-of-trademark-in-india-ipr-rules" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faBuildingShield} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Customs Port Recordation</span></Link></li>
+                                    <li><Link href="/domain-name-trademark-dispute-cybersquatting-indrp-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faGlobe} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">INDRP Domain Disputes</span></Link></li>
+                                    <li><Link href="/penalty-for-trademark-infringement-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faHandcuffs} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">TM Penalties India</span></Link></li>
+                                    <li><Link href="/how-to-stop-trademark-infringement" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faBan} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Stop Infringement</span></Link></li>
+                                    <li><Link href="/how-to-send-trademark-legal-notice-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faFileContract} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Send Legal Notice</span></Link></li>
+                                    <li><Link href="/passing-off-vs-trademark-infringement-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faScaleBalanced} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Passing Off vs TM</span></Link></li>
+                                    <li><Link href="/trade-dress-protection-under-indian-trademark-law" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faBoxOpen} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Trade Dress Guide</span></Link></li>
+                                    <li><Link href="/competitor-bidding-on-my-trademark-google-ads-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faSearch} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Google Ads TM Bidding</span></Link></li>
                                 </ul>
                             </div>
                         </aside>

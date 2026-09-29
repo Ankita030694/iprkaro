@@ -228,9 +228,7 @@ export default function FormTM48PowerOfAttorneyPage() {
                             <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-3 leading-tight text-gray-900 tracking-tighter">
                                 What is <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'transparent' }}>Form TM-48 (Power of Attorney)</span> in Trademark Filing?
                             </h1>
-                            <p className="text-base md:text-lg mb-5 text-gray-700 font-medium leading-relaxed">
-                                When engaging a registered trademark agent or legal counsel to protect your brand, executing an official Power of Attorney is a mandatory statutory requirement. Under Rule 19 of the Trade Marks Rules, 2017 and Section 145 of the Trade Marks Act, 1999, Form TM-48 legally empowers your representative to file applications, manage examination objections, attend show-cause hearings, and defend oppositions without compromising your brand ownership. Discover statutory drafting rules, state-wise stamp duty rates, signatory authorities, and procedural workflows to ensure flawless legal compliance.
-                            </p>
+                            <p className="text-base md:text-lg mb-5 text-gray-700 font-medium leading-relaxed">When engaging a registered trademark agent or legal counsel to protect your brand, executing an official Power of Attorney is a mandatory statutory requirement. Under Rule 19 of the Trade Marks Rules, 2017 and Section 145 of the Trade Marks Act, 1999, Form TM-48 legally empowers your representative to file applications, manage examination objections, attend show-cause hearings, and defend oppositions without compromising your brand ownership. Discover statutory drafting rules, state-wise stamp duty rates, signatory authorities, and procedural workflows to ensure flawless legal compliance.</p>
 
                             <div className="flex flex-wrap items-center gap-4 mb-6">
                                 <div className="flex items-center mr-2">
@@ -321,36 +319,11 @@ export default function FormTM48PowerOfAttorneyPage() {
                                                 Close
                                             </span>
                                             <svg className="w-4 h-4 text-gray-500 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                                            </svg>
-                                        </div>
-                                    </summary>
-                                    <div className="p-3.5 pt-2 border-t border-purple-50 bg-white/70">
-                                        <nav className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
-                                            {tocSections.map((section, idx) => (
-                                                <a
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg></div></summary><div className="p-3.5 pt-2 border-t border-purple-50 bg-white/70"><nav className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">{tocSections.map((section, idx) => (<a
                                                     key={section.id}
                                                     href={`#${section.id}`}
                                                     className="flex items-center p-2 rounded-xl text-xs font-medium text-gray-700 hover:text-[#6E5E93] hover:bg-purple-50/80 transition-all border border-transparent hover:border-purple-100"
-                                                >
-                                                    <span className="w-5 h-5 rounded-full bg-purple-100 text-[#6E5E93] flex items-center justify-center text-[10px] font-bold mr-2 flex-shrink-0">
-                                                        {idx + 1}
-                                                    </span>
-                                                    <span className="truncate">{section.title}</span>
-                                                </a>
-                                            ))}
-                                        </nav>
-                                    </div>
-                                </details>
-                            </div>
-
-                            <div className="bg-white p-4 md:p-12 rounded-2xl shadow-sm border border-gray-100 space-y-12 md:space-y-20 article-content">
-                                <article className="prose prose-lg max-w-none text-gray-700 leading-relaxed font-normal">
-
-                                    <div className="flex items-center space-x-4 mb-10 p-4 bg-gray-50 rounded-xl border border-gray-100 not-prose">
-                                        <img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-12 h-12 rounded-full object-cover m-0" />
-                                        <div>
-                                            <p className="text-sm font-bold text-gray-900 m-0">Written by <Link href="/about-us" className="text-[rgb(110,94,147)] hover:underline">Rahul Roy</Link></p>
+                                                ><span className="w-5 h-5 rounded-full bg-purple-100 text-[#6E5E93] flex items-center justify-center text-[10px] font-bold mr-2 flex-shrink-0">{idx + 1}</span><span className="truncate">{section.title}</span></a>))}</nav></div></details></div><div className="bg-white p-4 md:p-12 rounded-2xl shadow-sm border border-gray-100 space-y-12 md:space-y-20 article-content"><article className="prose prose-lg max-w-none text-gray-700 leading-relaxed font-normal"><div className="flex items-center space-x-4 mb-10 p-4 bg-gray-50 rounded-xl border border-gray-100 not-prose"><img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-12 h-12 rounded-full object-cover m-0" /><div><p className="text-sm font-bold text-gray-900 m-0">Written by<Link href="/about-us" className="text-[rgb(110,94,147)] hover:underline">Rahul Roy</Link></p>
                                             <p className="text-xs text-gray-500 m-0">Trademark Research Specialist</p>
                                         </div>
                                     </div>
@@ -363,20 +336,12 @@ export default function FormTM48PowerOfAttorneyPage() {
                                         </h2>
 
                                         <div id="quick-answer" className="bg-indigo-50 border-l-4 border-[rgb(110,94,147)] p-6 rounded-r-xl mb-8">
-                                            <p className="font-semibold text-gray-900 m-0">
-                                                Form TM-48 is the statutory Power of Attorney form prescribed under Rule 19 of the Trade Marks Rules, 2017 and Section 145 of the Trade Marks Act, 1999. It officially authorizes a registered trademark agent, advocate, or legal attorney to act on behalf of the applicant before the Trade Marks Registry. It must be executed on non-judicial stamp paper (typically ₹100 in most states or ₹500 in Maharashtra), signed by the authorized signatory with the company stamp, and uploaded to the IP India portal. TM-48 grants procedural representation rights only; it never transfers brand ownership.
-                                            </p>
+                                            <p className="font-semibold text-gray-900 m-0">Form TM-48 is the statutory Power of Attorney form prescribed under Rule 19 of the Trade Marks Rules, 2017 and Section 145 of the Trade Marks Act, 1999. It officially authorizes a registered trademark agent, advocate, or legal attorney to act on behalf of the applicant before the Trade Marks Registry. It must be executed on non-judicial stamp paper (typically ₹100 in most states or ₹500 in Maharashtra), signed by the authorized signatory with the company stamp, and uploaded to the IP India portal. TM-48 grants procedural representation rights only; it never transfers brand ownership.</p>
                                         </div>
 
-                                        <p className="mb-6">
-                                            Navigating the official <Link href="/process-and-steps-of-trademark-registration" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark registration process</Link> in India involves complex statutory filings, drafting technical specifications, responding to examination reports, and presenting oral arguments during show-cause hearings. While Section 18 of the Trade Marks Act, 1999 permits individuals and corporate entities to file applications directly, most businesses partner with certified IP attorneys and registered trademark agents to avoid procedural errors.
-                                        </p>
-                                        <p className="mb-6">
-                                            To legally represent an applicant before the Registrar of Trade Marks, the law mandates a formal letter of authority. Codified under <strong>Section 145 of the Trade Marks Act, 1999</strong> and executed under <strong>Rule 19 of the Trade Marks Rules, 2017</strong>, this instrument is known throughout Indian IP practice as <strong>Form TM-48</strong>.
-                                        </p>
-                                        <p className="mb-6">
-                                            Without a validly executed and stamped Form TM-48 on record, the Trade Marks Registry will not recognize your legal representative. The portal will flag the application with a <em>&ldquo;Formality Check Fail&rdquo;</em> status, hearing notices will fail to reach your counsel, and your attorney will be barred from appearing on your behalf during scheduled hearings.
-                                        </p>
+                                        <p className="mb-6">Navigating the official<Link href="/process-and-steps-of-trademark-registration" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark registration process</Link>in India involves complex statutory filings, drafting technical specifications, responding to examination reports, and presenting oral arguments during show-cause hearings. While Section 18 of the Trade Marks Act, 1999 permits individuals and corporate entities to file applications directly, most businesses partner with certified IP attorneys and registered trademark agents to avoid procedural errors.</p>
+                                        <p className="mb-6">To legally represent an applicant before the Registrar of Trade Marks, the law mandates a formal letter of authority. Codified under<strong>Section 145 of the Trade Marks Act, 1999</strong>and executed under<strong>Rule 19 of the Trade Marks Rules, 2017</strong>, this instrument is known throughout Indian IP practice as<strong>Form TM-48</strong>.</p>
+                                        <p className="mb-6">Without a validly executed and stamped Form TM-48 on record, the Trade Marks Registry will not recognize your legal representative. The portal will flag the application with a<em>&ldquo;Formality Check Fail&rdquo;</em>status, hearing notices will fail to reach your counsel, and your attorney will be barred from appearing on your behalf during scheduled hearings.</p>
                                     </section>
 
                                     {/* SECTION 2: WHAT IS FORM TM-48 */}
@@ -385,9 +350,7 @@ export default function FormTM48PowerOfAttorneyPage() {
                                             <FontAwesomeIcon icon={faSignature} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             What is Form TM-48 in India?
                                         </h2>
-                                        <p className="mb-6">
-                                            Form TM-48 is a specialized legal document that establishes a formal principal-agent relationship between the trademark applicant (the Principal) and the legal practitioner or registered trademark agent (the Agent). It serves four vital administrative and legal functions:
-                                        </p>
+                                        <p className="mb-6">Form TM-48 is a specialized legal document that establishes a formal principal-agent relationship between the trademark applicant (the Principal) and the legal practitioner or registered trademark agent (the Agent). It serves four vital administrative and legal functions:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -395,9 +358,7 @@ export default function FormTM48PowerOfAttorneyPage() {
                                                     <FontAwesomeIcon icon={faScaleBalanced} className="w-4 h-4 text-[#6E5E93] mr-2" />
                                                     Section 145 Statutory Recognition
                                                 </h3>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    Section 145 provides that any act required to be done by an applicant before the Trade Marks Registry may be performed by an authorized agent. Form TM-48 is the sole statutory vehicle recognized to activate this representation.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">Section 145 provides that any act required to be done by an applicant before the Trade Marks Registry may be performed by an authorized agent. Form TM-48 is the sole statutory vehicle recognized to activate this representation.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -405,9 +366,7 @@ export default function FormTM48PowerOfAttorneyPage() {
                                                     <FontAwesomeIcon icon={faShieldHalved} className="w-4 h-4 text-[#6E5E93] mr-2" />
                                                     Address for Service (Rule 18 &amp; 21)
                                                 </h3>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    Under Rules 18 and 21, the attorney&apos;s registered office becomes the official &ldquo;Address for Service&rdquo;. All official registry communications, examination reports, and third-party opposition notices are legally served there.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">Under Rules 18 and 21, the attorney&apos;s registered office becomes the official &ldquo;Address for Service&rdquo;. All official registry communications, examination reports, and third-party opposition notices are legally served there.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -415,9 +374,7 @@ export default function FormTM48PowerOfAttorneyPage() {
                                                     <FontAwesomeIcon icon={faHandshake} className="w-4 h-4 text-[#6E5E93] mr-2" />
                                                     Ownership Protection Shield
                                                 </h3>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    Executing Form TM-48 does <em>not</em> assign or alienate your brand rights. The applicant remains 100% legal proprietor of the mark. The attorney merely receives procedural authority to act on your instruction.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">Executing Form TM-48 does<em>not</em>assign or alienate your brand rights. The applicant remains 100% legal proprietor of the mark. The attorney merely receives procedural authority to act on your instruction.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -425,9 +382,7 @@ export default function FormTM48PowerOfAttorneyPage() {
                                                     <FontAwesomeIcon icon={faGavel} className="w-4 h-4 text-[#6E5E93] mr-2" />
                                                     Hearing &amp; Opposition Locus Standi
                                                 </h3>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    During show-cause hearings or opposition trials before the Hearing Officer, the Registry verifies the advocate&apos;s locus standi solely through the executed Form TM-48 attached to the digital file docket.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">During show-cause hearings or opposition trials before the Hearing Officer, the Registry verifies the advocate&apos;s locus standi solely through the executed Form TM-48 attached to the digital file docket.</p>
                                             </div>
                                         </div>
                                     </section>
@@ -438,9 +393,7 @@ export default function FormTM48PowerOfAttorneyPage() {
                                             <FontAwesomeIcon icon={faTable} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             General vs Specific Power of Attorney
                                         </h2>
-                                        <p className="mb-6">
-                                            Depending on the operational scale and commercial strategy of the applicant entity, Form TM-48 can be executed either as a <strong>Specific Power of Attorney (SPA)</strong> or as a <strong>General Power of Attorney (GPA)</strong>:
-                                        </p>
+                                        <p className="mb-6">Depending on the operational scale and commercial strategy of the applicant entity, Form TM-48 can be executed either as a<strong>Specific Power of Attorney (SPA)</strong>or as a<strong>General Power of Attorney (GPA)</strong>:</p>
 
                                         <div className="overflow-x-auto my-8 border border-gray-200 rounded-2xl shadow-sm not-prose">
                                             <table className="min-w-full divide-y divide-gray-200 bg-white text-left text-sm">
@@ -488,9 +441,7 @@ export default function FormTM48PowerOfAttorneyPage() {
                                             <FontAwesomeIcon icon={faListUl} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Statutory Format &amp; Key Contents
                                         </h2>
-                                        <p className="mb-6">
-                                            Under Rule 19 of the Trade Marks Rules, 2017, Form TM-48 must follow a strict statutory architecture. Any material omissions or ambiguous phrasing will cause the Trade Marks Registry to issue a discrepancy notice. The essential statutory clauses include:
-                                        </p>
+                                        <p className="mb-6">Under Rule 19 of the Trade Marks Rules, 2017, Form TM-48 must follow a strict statutory architecture. Any material omissions or ambiguous phrasing will cause the Trade Marks Registry to issue a discrepancy notice. The essential statutory clauses include:</p>
 
                                         <div className="space-y-6 not-prose mb-8">
                                             <div className="border border-gray-200 rounded-2xl p-5 bg-white shadow-sm">
@@ -498,9 +449,7 @@ export default function FormTM48PowerOfAttorneyPage() {
                                                     <span className="w-7 h-7 rounded-full bg-[#6E5E93] text-white flex items-center justify-center text-xs font-bold">1</span>
                                                     <h3 className="text-base font-bold text-gray-900 m-0">Principal &amp; Applicant Particulars</h3>
                                                 </div>
-                                                <p className="text-sm text-gray-600 pl-10 m-0">
-                                                    Full legal name of the individual proprietor, partnership firm, LLP, or company, including registered principal place of business, nationality, and trading name (e.g., &ldquo;Mr. John Doe trading as ABC Enterprises&rdquo; or &ldquo;XYZ Innovations Private Limited&rdquo;).
-                                                </p>
+                                                <p className="text-sm text-gray-600 pl-10 m-0">Full legal name of the individual proprietor, partnership firm, LLP, or company, including registered principal place of business, nationality, and trading name (e.g., &ldquo;Mr. John Doe trading as ABC Enterprises&rdquo; or &ldquo;XYZ Innovations Private Limited&rdquo;).</p>
                                             </div>
 
                                             <div className="border border-gray-200 rounded-2xl p-5 bg-white shadow-sm">
@@ -508,9 +457,7 @@ export default function FormTM48PowerOfAttorneyPage() {
                                                     <span className="w-7 h-7 rounded-full bg-[#6E5E93] text-white flex items-center justify-center text-xs font-bold">2</span>
                                                     <h3 className="text-base font-bold text-gray-900 m-0">Agent &amp; Advocate Identification</h3>
                                                 </div>
-                                                <p className="text-sm text-gray-600 pl-10 m-0">
-                                                    Full legal name of the advocate or registered trademark agent, law firm name, professional Bar Council Enrollment Number or Registered Trademark Agent Code (e.g., Agent Code 12345), and complete office address for service.
-                                                </p>
+                                                <p className="text-sm text-gray-600 pl-10 m-0">Full legal name of the advocate or registered trademark agent, law firm name, professional Bar Council Enrollment Number or Registered Trademark Agent Code (e.g., Agent Code 12345), and complete office address for service.</p>
                                             </div>
 
                                             <div className="border border-gray-200 rounded-2xl p-5 bg-white shadow-sm">
@@ -518,9 +465,7 @@ export default function FormTM48PowerOfAttorneyPage() {
                                                     <span className="w-7 h-7 rounded-full bg-[#6E5E93] text-white flex items-center justify-center text-xs font-bold">3</span>
                                                     <h3 className="text-base font-bold text-gray-900 m-0">Empowering Grant of Powers</h3>
                                                 </div>
-                                                <p className="text-sm text-gray-600 pl-10 m-0">
-                                                    Express authority to sign Form TM-A, draft and lodge replies to examination reports, appear before the Registrar during show-cause hearings, file and defend oppositions (Form TM-O), execute <Link href="/how-to-renew-a-trademark" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark renewal</Link> filings (Form TM-R), file rectifications, and appoint substitute counsel.
-                                                </p>
+                                                <p className="text-sm text-gray-600 pl-10 m-0">Express authority to sign Form TM-A, draft and lodge replies to examination reports, appear before the Registrar during show-cause hearings, file and defend oppositions (Form TM-O), execute<Link href="/how-to-renew-a-trademark" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark renewal</Link>filings (Form TM-R), file rectifications, and appoint substitute counsel.</p>
                                             </div>
 
                                             <div className="border border-gray-200 rounded-2xl p-5 bg-white shadow-sm">
@@ -528,9 +473,7 @@ export default function FormTM48PowerOfAttorneyPage() {
                                                     <span className="w-7 h-7 rounded-full bg-[#6E5E93] text-white flex items-center justify-center text-xs font-bold">4</span>
                                                     <h3 className="text-base font-bold text-gray-900 m-0">Ratification of Prior Lawful Acts</h3>
                                                 </div>
-                                                <p className="text-sm text-gray-600 pl-10 m-0">
-                                                    A statutory ratification clause declaring that the applicant agrees to ratify and confirm all lawful acts, deeds, and submissions executed by the agent in furtherance of the trademark proceedings prior to the formal execution date.
-                                                </p>
+                                                <p className="text-sm text-gray-600 pl-10 m-0">A statutory ratification clause declaring that the applicant agrees to ratify and confirm all lawful acts, deeds, and submissions executed by the agent in furtherance of the trademark proceedings before the formal execution date.</p>
                                             </div>
 
                                             <div className="border border-gray-200 rounded-2xl p-5 bg-white shadow-sm">
@@ -538,9 +481,7 @@ export default function FormTM48PowerOfAttorneyPage() {
                                                     <span className="w-7 h-7 rounded-full bg-[#6E5E93] text-white flex items-center justify-center text-xs font-bold">5</span>
                                                     <h3 className="text-base font-bold text-gray-900 m-0">Revocation &amp; Supersession Clause</h3>
                                                 </div>
-                                                <p className="text-sm text-gray-600 pl-10 m-0">
-                                                    Express clause revoking all previous authorizations granted to earlier agents or attorneys regarding the specified trademark matters, ensuring singular clarity on who possesses the legal mandate of record.
-                                                </p>
+                                                <p className="text-sm text-gray-600 pl-10 m-0">Express clause revoking all previous authorizations granted to earlier agents or attorneys regarding the specified trademark matters. This ensures singular clarity on who possesses the legal mandate of record.</p>
                                             </div>
 
                                             <div className="border border-gray-200 rounded-2xl p-5 bg-white shadow-sm">
@@ -548,9 +489,7 @@ export default function FormTM48PowerOfAttorneyPage() {
                                                     <span className="w-7 h-7 rounded-full bg-[#6E5E93] text-white flex items-center justify-center text-xs font-bold">6</span>
                                                     <h3 className="text-base font-bold text-gray-900 m-0">Execution, Date, Place &amp; Seal</h3>
                                                 </div>
-                                                <p className="text-sm text-gray-600 pl-10 m-0">
-                                                    Original physical or digital signature of the authorized signatory, company/LLP rubber stamp or seal, date of execution, place of execution, and counter-signature / acceptance by the authorized advocate or trademark agent.
-                                                </p>
+                                                <p className="text-sm text-gray-600 pl-10 m-0">Original physical or digital signature of the authorized signatory, company/LLP rubber stamp or seal, date of execution, place of execution, and counter-signature / acceptance by the authorized advocate or trademark agent.</p>
                                             </div>
                                         </div>
                                     </section>
@@ -561,9 +500,7 @@ export default function FormTM48PowerOfAttorneyPage() {
                                             <FontAwesomeIcon icon={faFileLines} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Sample Form TM-48 Legal Draft
                                         </h2>
-                                        <p className="mb-6">
-                                            Below is the standard statutory draft of Form TM-48 under Rule 19 of the Trade Marks Rules, 2017 utilized by practitioners across India. This template illustrates how principal details, powers, and agent credentials are structured:
-                                        </p>
+                                        <p className="mb-6">Below is the standard statutory draft of Form TM-48 under Rule 19 of the Trade Marks Rules, 2017 used by practitioners across India. This template illustrates how principal details, powers, and agent credentials are structured:</p>
 
                                         <div className="bg-slate-900 text-slate-100 p-6 md:p-8 rounded-2xl shadow-xl font-mono text-xs sm:text-sm leading-relaxed overflow-x-auto not-prose mb-8 border border-slate-800">
                                             <div className="text-center font-bold text-amber-400 mb-6 border-b border-slate-700 pb-4">
@@ -573,32 +510,17 @@ export default function FormTM48PowerOfAttorneyPage() {
                                                 [See Rule 19 of Trade Marks Rules, 2017]
                                             </div>
 
-                                            <p className="mb-4">
-                                                I / We, <span className="text-emerald-400">[FULL NAME OF APPLICANT / COMPANY NAME]</span>, an Indian national / Company incorporated under the Companies Act, having registered office at <span className="text-emerald-400">[COMPLETE REGISTERED ADDRESS OF PRINCIPAL]</span>, do hereby authorize:
-                                            </p>
+                                            <p className="mb-4">I / We,<span className="text-emerald-400">[FULL NAME OF APPLICANT / COMPANY NAME]</span>, an Indian national / Company incorporated under the Companies Act, having registered office at<span className="text-emerald-400">[COMPLETE REGISTERED ADDRESS OF PRINCIPAL]</span>, do hereby authorize:</p>
 
-                                            <p className="mb-4 text-amber-300 font-semibold">
-                                                [NAME OF ADVOCATE / TRADEMARK AGENT]<br />
-                                                Advocate / Registered Trademark Agent (Agent Code: [AGENT CODE])<br />
-                                                [LAW FIRM NAME / OFFICE ADDRESS FOR SERVICE]<br />
-                                                Mobile: +91-[PHONE NUMBER] | Email: [EMAIL ADDRESS]
-                                            </p>
+                                            <p className="mb-4 text-amber-300 font-semibold">[NAME OF ADVOCATE / TRADEMARK AGENT]<br />Advocate / Registered Trademark Agent (Agent Code: [AGENT CODE])<br />[LAW FIRM NAME / OFFICE ADDRESS FOR SERVICE]<br />Mobile: +91-[PHONE NUMBER] | Email: [EMAIL ADDRESS]</p>
 
-                                            <p className="mb-4">
-                                                to act as my / our Agent / Advocate for the registration, protection, renewal, opposition, rectification, and general maintenance of all my / our Trade Marks, and in all matters and proceedings before the Registrar of Trade Marks, Government of India.
-                                            </p>
+                                            <p className="mb-4">to act as my / our Agent / Advocate for the registration, protection, renewal, opposition, rectification, and general maintenance of all my / our Trade Marks, and in all matters and proceedings before the Registrar of Trade Marks, Government of India.</p>
 
-                                            <p className="mb-4">
-                                                I / We further authorize the said Agent / Advocate to sign all applications, notices, replies, affidavits, counter-statements, appeals, petitions, and other documents; to attend hearings; to appoint substitute(s); to pay statutory fees; and to receive all notices, requisitions, orders, and certificates in connection therewith.
-                                            </p>
+                                            <p className="mb-4">I / We further authorize the said Agent / Advocate to sign all applications, notices, replies, affidavits, counter-statements, appeals, petitions, and other documents. To attend hearings. To appoint substitute(s). To pay statutory fees. And to receive all notices, requisitions, orders, and certificates in connection therewith.</p>
 
-                                            <p className="mb-4">
-                                                I / We hereby revoke all previous authorizations, if any, in respect of the matters aforesaid, and ratify and confirm all lawful acts already done or to be done by the said Agent / Advocate by virtue of this authority.
-                                            </p>
+                                            <p className="mb-4">I / We hereby revoke all previous authorizations, if any, for the matters aforesaid, and ratify and confirm all lawful acts already done or to be done by the said Agent / Advocate under this authority.</p>
 
-                                            <p className="mb-6">
-                                                I / We request that all official communications relating thereto be sent to the Address for Service of the said Agent / Advocate mentioned hereinabove.
-                                            </p>
+                                            <p className="mb-6">I / We request that all official communications relating thereto be sent to the Address for Service of the said Agent / Advocate mentioned hereinabove.</p>
 
                                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 border-t border-slate-700 text-xs">
                                                 <div>
@@ -622,9 +544,7 @@ export default function FormTM48PowerOfAttorneyPage() {
                                             <FontAwesomeIcon icon={faStamp} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             State-Wise Stamp Duty on TM-48
                                         </h2>
-                                        <p className="mb-6">
-                                            Because Form TM-48 is a Power of Attorney instrument, it falls under the jurisdiction of the Indian Stamp Act, 1899 and respective State Stamp Acts. Stamp duty is determined by the state where the document is physically executed or where the agent&apos;s registered office is located. Insufficient stamp duty is a leading cause of <em>&ldquo;Formality Check Fail&rdquo;</em> notices across the Registry branches:
-                                        </p>
+                                        <p className="mb-6">Because Form TM-48 is a Power of Attorney instrument, it falls under the jurisdiction of the Indian Stamp Act, 1899 and respective State Stamp Acts. Stamp duty is determined by the state where the document is physically executed or where the agent&apos;s registered office is located. Insufficient stamp duty is a leading cause of<em>&ldquo;Formality Check Fail&rdquo;</em>notices across the Registry branches:</p>
 
                                         <div className="overflow-x-auto my-8 border border-gray-200 rounded-2xl shadow-sm not-prose">
                                             <table className="min-w-full divide-y divide-gray-200 bg-white text-left text-sm">
@@ -696,9 +616,7 @@ export default function FormTM48PowerOfAttorneyPage() {
                                             <FontAwesomeIcon icon={faUserCheck} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Who Can Sign Form TM-48?
                                         </h2>
-                                        <p className="mb-6">
-                                            The Trade Marks Registry strictly scrutinizes the legal capacity of the signatory on Form TM-48. An unauthorized signature invalidates the entire agency mandate. The rules governing signatory authority across different legal entities are:
-                                        </p>
+                                        <p className="mb-6">The Trade Marks Registry strictly scrutinizes the legal capacity of the signatory on Form TM-48. An unauthorized signature invalidates the entire agency mandate. The rules governing signatory authority across different legal entities are:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -706,9 +624,7 @@ export default function FormTM48PowerOfAttorneyPage() {
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     Sole Proprietorship
                                                 </h3>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    The individual proprietor must personally sign the TM-48 with their name and affix the proprietorship rubber stamp. A manager or employee cannot sign without a registered sub-delegation power.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">The individual proprietor must personally sign the TM-48 with their name and affix the proprietorship rubber stamp. A manager or employee cannot sign without a registered sub-delegation power.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -716,9 +632,7 @@ export default function FormTM48PowerOfAttorneyPage() {
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     Partnership Firm
                                                 </h3>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    Any Managing Partner or Partner authorized under the registered Partnership Deed may execute the form with their signature and the official partnership seal.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">Any Managing Partner or Partner authorized under the registered Partnership Deed may execute the form with their signature and the official partnership seal.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -726,9 +640,7 @@ export default function FormTM48PowerOfAttorneyPage() {
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     Limited Liability Partnership (LLP)
                                                 </h3>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    A Designated Partner must sign on behalf of the LLP with their Designated Partner Identification Number (DPIN) and affix the official LLP stamp.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">A Designated Partner must sign on behalf of the LLP with their Designated Partner Identification Number (DPIN) and affix the official LLP stamp.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -736,9 +648,7 @@ export default function FormTM48PowerOfAttorneyPage() {
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     Private / Public Limited Company
                                                 </h3>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    A Director or authorized signatory authorized via a Board Resolution under the Companies Act, 2013 signs with the corporate common seal / rubber stamp.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">A Director or authorized signatory authorized via a Board Resolution under the Companies Act, 2013 signs with the corporate common seal / rubber stamp.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200 md:col-span-2">
@@ -746,9 +656,7 @@ export default function FormTM48PowerOfAttorneyPage() {
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     Foreign Applicants &amp; Multinational Corporations
                                                 </h3>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    An authorized corporate officer (e.g., President, CEO, General Counsel) signs abroad. Under Indian evidentiary rules, the document must be notarized in the home country and apostilled (for Hague Convention signatory nations) or legalized by the Indian Embassy / Consulate before submission to IP India.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">An authorized corporate officer (e.g., President, CEO, General Counsel) signs abroad. Under Indian evidentiary rules, the document must be notarized in the home country and apostilled (for Hague Convention signatory nations) or legalized by the Indian Embassy / Consulate before submission to IP India.</p>
                                             </div>
                                         </div>
                                     </section>
@@ -759,18 +667,16 @@ export default function FormTM48PowerOfAttorneyPage() {
                                             <FontAwesomeIcon icon={faClock} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             When is Form TM-48 Mandatory?
                                         </h2>
-                                        <p className="mb-6">
-                                            Form TM-48 is required at every crucial junction of trademark prosecution where a third-party legal representative acts on behalf of the principal:
-                                        </p>
+                                        <p className="mb-6">Form TM-48 is required at every crucial junction of trademark prosecution where a third-party legal representative acts on behalf of the principal:</p>
 
                                         <ul className="list-disc list-inside space-y-3 text-gray-700 mb-8">
-                                            <li><strong>Initial Application Filing (Form TM-A):</strong> Mandatory attachment when a registered agent or attorney files on your behalf.</li>
-                                            <li><strong>Filing Examination Report Response:</strong> Required if a new attorney is engaged to draft and submit the legal reply to Section 9 or Section 11 objections.</li>
-                                            <li><strong>Attending Show-Cause Hearings:</strong> Hearing Officers will refuse audience to an advocate unless a valid TM-48 is visible in the electronic registry docket.</li>
-                                            <li><strong>Filing or Defending Opposition (Form TM-O):</strong> Mandatory when filing a Notice of Opposition or lodging a Counter-Statement against rival brands.</li>
-                                            <li><strong>Trademark Renewal &amp; Restoration (Form TM-R):</strong> Needed when legal counsel executes decennial renewals on behalf of the proprietor.</li>
-                                            <li><strong>Recordal of Assignment or Merger (Form TM-P):</strong> Required to transfer ownership or record corporate structural changes.</li>
-                                            <li><strong>Change / Substitution of Legal Counsel (Form TM-M):</strong> Required along with a revocation notice when switching law firms or attorneys.</li>
+                                            <li><strong>Initial Application Filing (Form TM-A):</strong>Mandatory attachment when a registered agent or attorney files on your behalf.</li>
+                                            <li><strong>Filing Examination Report Response:</strong>Required if a new attorney is engaged to draft and submit the legal reply to Section 9 or Section 11 objections.</li>
+                                            <li><strong>Attending Show-Cause Hearings:</strong>Hearing Officers will refuse audience to an advocate unless a valid TM-48 is visible in the electronic registry docket.</li>
+                                            <li><strong>Filing or Defending Opposition (Form TM-O):</strong>Mandatory when filing a Notice of Opposition or lodging a Counter-Statement against rival brands.</li>
+                                            <li><strong>Trademark Renewal &amp; Restoration (Form TM-R):</strong>Needed when legal counsel executes decennial renewals on behalf of the proprietor.</li>
+                                            <li><strong>Recordal of Assignment or Merger (Form TM-P):</strong>Required to transfer ownership or record corporate structural changes.</li>
+                                            <li><strong>Change / Substitution of Legal Counsel (Form TM-M):</strong>Required along with a revocation notice when switching law firms or attorneys.</li>
                                         </ul>
                                     </section>
 
@@ -780,9 +686,7 @@ export default function FormTM48PowerOfAttorneyPage() {
                                             <FontAwesomeIcon icon={faListUl} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Step-by-Step Execution &amp; Filing
                                         </h2>
-                                        <p className="mb-6">
-                                            Executing and lodging Form TM-48 follows a streamlined 7-stage compliance workflow on the official IP India gateway:
-                                        </p>
+                                        <p className="mb-6">Executing and lodging Form TM-48 follows a streamlined 7-stage compliance workflow on the official IP India gateway:</p>
 
                                         {/* STEP 1 */}
                                         <div className="border border-gray-200 rounded-2xl p-6 md:p-8 mb-8 bg-white shadow-sm hover:border-[rgb(110,94,147)] transition-colors">
@@ -791,12 +695,8 @@ export default function FormTM48PowerOfAttorneyPage() {
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Legal Drafting</span>
                                             </div>
                                             <h3 className="text-xl font-bold text-gray-900 mb-3">Drafting Particulars &amp; Agent Code Integration</h3>
-                                            <p className="text-gray-700 leading-relaxed mb-4">
-                                                Prepare the draft of Form TM-48 ensuring exact alignment with the applicant&apos;s legal name, corporate entity structure, and official address as declared in Form TM-A.
-                                            </p>
-                                            <p className="text-gray-700 leading-relaxed m-0">
-                                                Include the advocate&apos;s registered Trade Marks Agent Code or Bar Council registration to facilitate seamless database linking on the <a href="https://ipindia.gov.in/" target="_blank" rel="noopener noreferrer" className="text-[rgb(110,94,147)] hover:underline font-medium">IP India Portal</a>.
-                                            </p>
+                                            <p className="text-gray-700 leading-relaxed mb-4">Prepare the draft of Form TM-48 ensuring exact alignment with the applicant&apos;s legal name, corporate entity structure, and official address as declared in Form TM-A.</p>
+                                            <p className="text-gray-700 leading-relaxed m-0">Include the advocate&apos;s registered Trade Marks Agent Code or Bar Council registration to facilitate seamless database linking on the<a href="https://ipindia.gov.in/" target="_blank" rel="noopener noreferrer" className="text-[rgb(110,94,147)] hover:underline font-medium">IP India Portal</a>.</p>
                                         </div>
 
                                         {/* STEP 2 */}
@@ -806,12 +706,8 @@ export default function FormTM48PowerOfAttorneyPage() {
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Stamp Duty Payment</span>
                                             </div>
                                             <h3 className="text-xl font-bold text-gray-900 mb-3">Procuring Non-Judicial Stamp Paper or E-Stamp</h3>
-                                            <p className="text-gray-700 leading-relaxed mb-4">
-                                                Purchase an official Non-Judicial Stamp Paper or generate an E-Stamp Certificate corresponding to the state stamp schedule (e.g., ₹100 for Delhi, UP, Karnataka; ₹500 for Maharashtra).
-                                            </p>
-                                            <p className="text-gray-700 leading-relaxed m-0">
-                                                Ensure the first party name is the applicant entity and the second party name is the appointed trademark attorney or law firm.
-                                            </p>
+                                            <p className="text-gray-700 leading-relaxed mb-4">Purchase an official Non-Judicial Stamp Paper or generate an E-Stamp Certificate corresponding to the state stamp schedule (e.g., ₹100 for Delhi, UP, Karnataka; ₹500 for Maharashtra).</p>
+                                            <p className="text-gray-700 leading-relaxed m-0">Ensure the first party name is the applicant entity and the second party name is the appointed trademark attorney or law firm.</p>
                                         </div>
 
                                         {/* STEP 3 */}
@@ -821,12 +717,8 @@ export default function FormTM48PowerOfAttorneyPage() {
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Legal Execution</span>
                                             </div>
                                             <h3 className="text-xl font-bold text-gray-900 mb-3">Signing, Stamping &amp; Corporate Sealing</h3>
-                                            <p className="text-gray-700 leading-relaxed mb-4">
-                                                Print the statutory TM-48 text onto the stamp paper (or attach the e-stamp certificate as the front page). The authorized signatory signs physically or digitally and affixes the official company seal.
-                                            </p>
-                                            <p className="text-gray-700 leading-relaxed m-0">
-                                                The appointed attorney or advocate counter-signs in acceptance of the representation mandate.
-                                            </p>
+                                            <p className="text-gray-700 leading-relaxed mb-4">Print the statutory TM-48 text onto the stamp paper (or attach the e-stamp certificate as the front page). The authorized signatory signs physically or digitally and affixes the official company seal.</p>
+                                            <p className="text-gray-700 leading-relaxed m-0">The appointed attorney or advocate counter-signs in acceptance of the representation mandate.</p>
                                         </div>
 
                                         {/* STEP 4 */}
@@ -836,12 +728,8 @@ export default function FormTM48PowerOfAttorneyPage() {
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Notarization / Legalization</span>
                                             </div>
                                             <h3 className="text-xl font-bold text-gray-900 mb-3">Notarization &amp; Cross-Border Legalization</h3>
-                                            <p className="text-gray-700 leading-relaxed mb-4">
-                                                For domestic applicants, notarization is strongly recommended. For foreign applicants executing TM-48 outside India, obtain mandatory notarization and apostille under the Hague Convention (or Indian consular attestation).
-                                            </p>
-                                            <p className="text-gray-700 leading-relaxed m-0">
-                                                Verify that the notary seal, stamp date, and registration number are crisply legible.
-                                            </p>
+                                            <p className="text-gray-700 leading-relaxed mb-4">For domestic applicants, notarization is strongly recommended. For foreign applicants executing TM-48 outside India, obtain mandatory notarization and apostille under the Hague Convention (or Indian consular attestation).</p>
+                                            <p className="text-gray-700 leading-relaxed m-0">Verify that the notary seal, stamp date, and registration number are crisply legible.</p>
                                         </div>
 
                                         {/* STEP 5 */}
@@ -851,12 +739,8 @@ export default function FormTM48PowerOfAttorneyPage() {
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Digital Digitization</span>
                                             </div>
                                             <h3 className="text-xl font-bold text-gray-900 mb-3">High-Resolution PDF Scanning</h3>
-                                            <p className="text-gray-700 leading-relaxed mb-4">
-                                                Scan the complete document (e-stamp certificate, TM-48 body, signatory pages, and notary stamps) into a single high-resolution PDF file under 6MB.
-                                            </p>
-                                            <p className="text-gray-700 leading-relaxed m-0">
-                                                Ensure all text, signatures, and stamps are fully legible without blurriness or compression artifacts.
-                                            </p>
+                                            <p className="text-gray-700 leading-relaxed mb-4">Scan the complete document (e-stamp certificate, TM-48 body, signatory pages, and notary stamps) into a single high-resolution PDF file under 6MB.</p>
+                                            <p className="text-gray-700 leading-relaxed m-0">Ensure all text, signatures, and stamps are fully legible without blurriness or compression artifacts.</p>
                                         </div>
 
                                         {/* STEP 6 */}
@@ -866,12 +750,8 @@ export default function FormTM48PowerOfAttorneyPage() {
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Portal E-Filing</span>
                                             </div>
                                             <h3 className="text-xl font-bold text-gray-900 mb-3">Uploading on Comprehensive E-Filing Gateway</h3>
-                                            <p className="text-gray-700 leading-relaxed mb-4">
-                                                Log in to the IP India portal using the attorney&apos;s Class 3 Digital Signature Certificate (DSC). Attach the scanned Form TM-48 under the &ldquo;Power of Attorney&rdquo; document tab during Form TM-A submission.
-                                            </p>
-                                            <p className="text-gray-700 leading-relaxed m-0">
-                                                If filing for an existing matter or substituting counsel, submit the form under <strong>Form TM-M</strong> along with the statutory fee of ₹900.
-                                            </p>
+                                            <p className="text-gray-700 leading-relaxed mb-4">Log in to the IP India portal using the attorney&apos;s Class 3 Digital Signature Certificate (DSC). Attach the scanned Form TM-48 under the &ldquo;Power of Attorney&rdquo; document tab during Form TM-A submission.</p>
+                                            <p className="text-gray-700 leading-relaxed m-0">If filing for an existing matter or substituting counsel, submit the form under<strong>Form TM-M</strong>along with the statutory fee of ₹900.</p>
                                         </div>
 
                                         {/* STEP 7 */}
@@ -881,12 +761,8 @@ export default function FormTM48PowerOfAttorneyPage() {
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Docket Verification</span>
                                             </div>
                                             <h3 className="text-xl font-bold text-gray-900 mb-3">Address for Service Linking &amp; Verification</h3>
-                                            <p className="text-gray-700 leading-relaxed mb-4">
-                                                The Trade Marks Registry scrutinizes the submission during formality check. Once verified, the digital docket links the attorney&apos;s Agent Code, updating the official &ldquo;Address for Service&rdquo;.
-                                            </p>
-                                            <p className="text-gray-700 leading-relaxed m-0">
-                                                All subsequent examination reports, hearing notices, and registration certificates will automatically route to your authorized counsel.
-                                            </p>
+                                            <p className="text-gray-700 leading-relaxed mb-4">The Trade Marks Registry scrutinizes the submission during formality check. Once verified, the digital docket links the attorney&apos;s Agent Code, updating the official &ldquo;Address for Service&rdquo;.</p>
+                                            <p className="text-gray-700 leading-relaxed m-0">All subsequent examination reports, hearing notices, and registration certificates will automatically route to your authorized counsel.</p>
                                         </div>
                                     </section>
 
@@ -896,37 +772,27 @@ export default function FormTM48PowerOfAttorneyPage() {
                                             <FontAwesomeIcon icon={faExclamationTriangle} className="w-8 h-8 mr-3 text-amber-500" />
                                             Consequences of Defective TM-48
                                         </h2>
-                                        <p className="mb-6">
-                                            Failing to submit Form TM-48 or filing a defectively executed document creates severe legal and operational bottlenecks:
-                                        </p>
+                                        <p className="mb-6">Failing to submit Form TM-48 or filing a defectively executed document creates severe legal and operational bottlenecks:</p>
 
                                         <div className="space-y-6">
                                             <div className="border-l-4 border-red-500 pl-4 py-2">
                                                 <h3 className="text-lg font-bold text-gray-900 mb-1">1. Immediate &ldquo;Formalities Check Fail&rdquo; Status</h3>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    The Registry examiners halt the application at the initial screening phase. The application will not proceed to substantive examination until a defect reply is filed, delaying registration by months.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">The Registry examiners halt the application at the initial screening phase. The application will not proceed to substantive examination until a defect reply is filed, delaying registration by months.</p>
                                             </div>
 
                                             <div className="border-l-4 border-red-500 pl-4 py-2">
                                                 <h3 className="text-lg font-bold text-gray-900 mb-1">2. Denial of Representation at Show-Cause Hearings</h3>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    Hearing Officers will strictly refuse to hear arguments from an advocate whose TM-48 is missing or improperly stamped, potentially leading to immediate refusal of the mark under Section 9 or 11.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">Hearing Officers will strictly refuse to hear arguments from an advocate whose TM-48 is missing or improperly stamped, potentially leading to immediate refusal of the mark under Section 9 or 11.</p>
                                             </div>
 
                                             <div className="border-l-4 border-red-500 pl-4 py-2">
                                                 <h3 className="text-lg font-bold text-gray-900 mb-1">3. Missed Examination &amp; Opposition Deadlines</h3>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    If the Address for Service is not correctly updated via Form TM-48, statutory notices sent to outdated addresses will go unnoticed, leading to automatic abandonment under Rule 33.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">If the Address for Service is not correctly updated via Form TM-48, statutory notices sent to outdated addresses will go unnoticed. This leads to automatic abandonment under Rule 33.</p>
                                             </div>
 
                                             <div className="border-l-4 border-red-500 pl-4 py-2">
                                                 <h3 className="text-lg font-bold text-gray-900 mb-1">4. Additional Statutory Rectification Costs</h3>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    Curing a defective or missing TM-48 post-filing requires submitting Form TM-M along with government fees of ₹900 per application, adding unnecessary compliance costs.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">Curing a defective or missing TM-48 post-filing requires submitting Form TM-M along with government fees of ₹900 per application, adding unnecessary compliance costs.</p>
                                             </div>
                                         </div>
                                     </section>
@@ -937,37 +803,27 @@ export default function FormTM48PowerOfAttorneyPage() {
                                             <FontAwesomeIcon icon={faShieldHalved} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Common Mistakes to Avoid
                                         </h2>
-                                        <p className="mb-6">
-                                            Trademark applicants frequently commit avoidable errors when preparing Form TM-48. Ensure your legal documentation avoids these pitfalls:
-                                        </p>
+                                        <p className="mb-6">Trademark applicants frequently commit avoidable errors when preparing Form TM-48. Ensure your legal documentation avoids these pitfalls:</p>
 
                                         <div className="space-y-4 not-prose mb-8">
                                             <div className="bg-red-50/70 p-5 rounded-2xl border border-red-200">
                                                 <h3 className="text-base font-bold text-red-900 mb-1">Mismatch in Applicant Name or Corporate Entity</h3>
-                                                <p className="text-sm text-red-800 m-0">
-                                                    The applicant name on Form TM-48 must exactly match the name on Form TM-A. Discrepancies (e.g., omitting &ldquo;Private Limited&rdquo; or misspelling partner names) trigger instant discrepancy notices.
-                                                </p>
+                                                <p className="text-sm text-red-800 m-0">The applicant name on Form TM-48 must exactly match the name on Form TM-A. Discrepancies (e.g., omitting &ldquo;Private Limited&rdquo; or misspelling partner names) trigger instant discrepancy notices.</p>
                                             </div>
 
                                             <div className="bg-red-50/70 p-5 rounded-2xl border border-red-200">
                                                 <h3 className="text-base font-bold text-red-900 mb-1">Executing on Plain Paper Without Stamp Duty</h3>
-                                                <p className="text-sm text-red-800 m-0">
-                                                    Form TM-48 printed on plain white letterhead without non-judicial stamp paper or e-stamp is legally invalid under the Indian Stamp Act, 1899.
-                                                </p>
+                                                <p className="text-sm text-red-800 m-0">Form TM-48 printed on plain white letterhead without non-judicial stamp paper or e-stamp is legally invalid under the Indian Stamp Act, 1899.</p>
                                             </div>
 
                                             <div className="bg-red-50/70 p-5 rounded-2xl border border-red-200">
                                                 <h3 className="text-base font-bold text-red-900 mb-1">Missing Official Rubber Stamp / Corporate Seal</h3>
-                                                <p className="text-sm text-red-800 m-0">
-                                                    For companies, LLPs, and partnership firms, an individual signature without the entity rubber stamp will be questioned by the Registry during formality checks.
-                                                </p>
+                                                <p className="text-sm text-red-800 m-0">For companies, LLPs, and partnership firms, an individual signature without the entity rubber stamp will be questioned by the Registry during formality checks.</p>
                                             </div>
 
                                             <div className="bg-red-50/70 p-5 rounded-2xl border border-red-200">
                                                 <h3 className="text-base font-bold text-red-900 mb-1">Un-apostilled Foreign Power of Attorney</h3>
-                                                <p className="text-sm text-red-800 m-0">
-                                                    Foreign applicants submitting TM-48 executed outside India without notary attestation and apostille / embassy legalization face mandatory formality objections.
-                                                </p>
+                                                <p className="text-sm text-red-800 m-0">Foreign applicants submitting TM-48 executed outside India without notary attestation and apostille / embassy legalization face mandatory formality objections.</p>
                                             </div>
                                         </div>
                                     </section>
@@ -978,9 +834,7 @@ export default function FormTM48PowerOfAttorneyPage() {
                                             <FontAwesomeIcon icon={faScaleBalanced} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Form TM-48 vs Assignment (TM-P)
                                         </h2>
-                                        <p className="mb-6">
-                                            Entrepreneurs often confuse agency authorization with ownership transfer. It is crucial to understand the clear legal distinction between Form TM-48 and other statutory trademark instruments:
-                                        </p>
+                                        <p className="mb-6">Entrepreneurs often confuse agency authorization with ownership transfer. It is crucial to understand the clear legal distinction between Form TM-48 and other statutory trademark instruments:</p>
 
                                         <div className="overflow-x-auto my-8 border border-gray-200 rounded-2xl shadow-sm not-prose">
                                             <table className="min-w-full divide-y divide-gray-200 bg-white text-left text-sm">
@@ -1028,35 +882,15 @@ export default function FormTM48PowerOfAttorneyPage() {
                                             <FontAwesomeIcon icon={faCheckCircle} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Pre-Filing Document Checklist
                                         </h2>
-                                        <p className="mb-6">
-                                            Before uploading Form TM-48 to the IP India portal, verify every item on this pre-submission compliance checklist:
-                                        </p>
+                                        <p className="mb-6">Before uploading Form TM-48 to the IP India portal, verify every item on this pre-submission compliance checklist:</p>
 
                                         <ul className="list-none space-y-4 mb-8">
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Applicant Name Alignment:</strong> Ensure the applicant entity name matches Form TM-A letter-for-letter.</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Attorney Code &amp; Credentials:</strong> Confirm the attorney&apos;s registered Agent Code and Bar Council details are included.</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Appropriate Stamp Paper:</strong> Verify the stamp duty value complies with state rules (₹100 standard / ₹500 Maharashtra).</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Authorized Signatory &amp; Stamp:</strong> Ensure the director, partner, or proprietor has signed with the company rubber stamp.</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Foreign Legalization:</strong> For overseas entities, check that the document is duly notarized and apostilled.</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Clear PDF Scan:</strong> Ensure the complete PDF document is crisp, legible, and under the 6MB portal upload limit.</span>
-                                            </li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Applicant Name Alignment:</strong>Ensure the applicant entity name matches Form TM-A letter-for-letter.</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Attorney Code &amp; Credentials:</strong>Confirm the attorney&apos;s registered Agent Code and Bar Council details are included.</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Appropriate Stamp Paper:</strong>Verify the stamp duty value complies with state rules (₹100 standard / ₹500 Maharashtra).</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Authorized Signatory &amp; Stamp:</strong>Ensure the director, partner, or proprietor has signed with the company rubber stamp.</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Foreign Legalization:</strong>For overseas entities, check that the document is duly notarized and apostilled.</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Clear PDF Scan:</strong>Ensure the complete PDF document is crisp, legible, and under the 6MB portal upload limit.</span></li>
                                         </ul>
                                     </section>
 
@@ -1083,12 +917,8 @@ export default function FormTM48PowerOfAttorneyPage() {
                                             <FontAwesomeIcon icon={faLightbulb} className="w-8 h-8 mr-3 text-yellow-500" />
                                             Strategic Legal Takeaways
                                         </h2>
-                                        <p className="mb-6">
-                                            Form TM-48 is not a mere bureaucratic formality; it is the cornerstone of professional trademark representation in India. Executing a comprehensive General Power of Attorney ensures that your legal counsel can swiftly defend your brand against aggressive third-party oppositions, attend urgent show-cause hearings, and maintain continuous docket oversight without administrative friction.
-                                        </p>
-                                        <p className="mb-6">
-                                            Before lodging your trademark application, ensure that you conduct a thorough <Link href="/trademark-search" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark search</Link>, correctly classify your commercial offerings using our <Link href="/trademark-class-finder" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark class finder</Link>, and execute Form TM-48 with proper stamp duty. Clean documentation from day one guarantees a smooth, obstacle-free path to securing your registered trademark certificate.
-                                        </p>
+                                        <p className="mb-6">Form TM-48 is not a mere bureaucratic formality; it is the cornerstone of professional trademark representation in India. Executing a comprehensive General Power of Attorney ensures that your legal counsel can swiftly defend your brand against aggressive third-party oppositions, attend urgent show-cause hearings, and maintain continuous docket oversight without administrative friction.</p>
+                                        <p className="mb-6">Before lodging your trademark application, ensure that you conduct a thorough<Link href="/trademark-search" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark search</Link>, correctly classify your commercial offerings using our<Link href="/trademark-class-finder" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark class finder</Link>, and execute Form TM-48 with proper stamp duty. Clean documentation from day one guarantees a smooth, obstacle-free path to securing your registered trademark certificate.</p>
                                     </section>
 
                                     {/* BOTTOM CTA SECTION */}
@@ -1105,9 +935,7 @@ export default function FormTM48PowerOfAttorneyPage() {
                                                     Protect Your Brand with Certified IP Counsel
                                                 </h3>
 
-                                                <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">
-                                                    Partner with expert trademark advocates to draft Form TM-48, file Form TM-A, and represent your brand across all examination hearings and opposition proceedings.
-                                                </p>
+                                                <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">Partner with expert trademark advocates to draft Form TM-48, file Form TM-A, and represent your brand across all examination hearings and opposition proceedings.</p>
 
                                                 <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
                                                     <Link
@@ -1125,9 +953,7 @@ export default function FormTM48PowerOfAttorneyPage() {
                                                     </a>
                                                 </div>
 
-                                                <p className="mt-6 text-xs font-medium tracking-wide text-white/50 sm:text-sm">
-                                                    Certified Trademark Agents • Same-Day Form TM-48 Drafting • Comprehensive IP Protection
-                                                </p>
+                                                <p className="mt-6 text-xs font-medium tracking-wide text-white/50 sm:text-sm">Certified Trademark Agents • Same-Day Form TM-48 Drafting • Comprehensive IP Protection</p>
                                             </div>
                                         </div>
                                     </section>
@@ -1160,70 +986,14 @@ export default function FormTM48PowerOfAttorneyPage() {
                             <div className="bg-gray-50 p-10 rounded-[2.5rem] shadow-sm border border-gray-100">
                                 <h3 className="text-sm font-black text-gray-400 mb-8 uppercase tracking-[0.3em]">Related Resources</h3>
                                 <ul className="space-y-6">
-                                    <li>
-                                        <Link href="/process-and-steps-of-trademark-registration" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faListUl} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Filing Steps</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/trademark-user-affidavit-format-and-rules-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faStamp} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">User Affidavit</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/how-to-renew-a-trademark" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faRotate} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Renew Trademark</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/word-mark-vs-device-mark-trademark-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faScaleBalanced} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Word vs Logo</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/amazon-brand-registry-trademark-requirements-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faBuilding} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Amazon Registry</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/difference-between-tm-and-r-symbol-in-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faShieldHalved} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">TM vs R Symbol</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/how-to-register-a-trademark-for-my-startup" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faRocket} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Startup Guide</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/international-trademark-registration" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faGlobe} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Global TM</span>
-                                        </Link>
-                                    </li>
+                                    <li><Link href="/process-and-steps-of-trademark-registration" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faListUl} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Filing Steps</span></Link></li>
+                                    <li><Link href="/trademark-user-affidavit-format-and-rules-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faStamp} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">User Affidavit</span></Link></li>
+                                    <li><Link href="/how-to-renew-a-trademark" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faRotate} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Renew Trademark</span></Link></li>
+                                    <li><Link href="/word-mark-vs-device-mark-trademark-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faScaleBalanced} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Word vs Logo</span></Link></li>
+                                    <li><Link href="/amazon-brand-registry-trademark-requirements-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faBuilding} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Amazon Registry</span></Link></li>
+                                    <li><Link href="/difference-between-tm-and-r-symbol-in-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faShieldHalved} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">TM vs R Symbol</span></Link></li>
+                                    <li><Link href="/how-to-register-a-trademark-for-my-startup" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faRocket} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Startup Guide</span></Link></li>
+                                    <li><Link href="/international-trademark-registration" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faGlobe} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Global TM</span></Link></li>
                                 </ul>
                             </div>
                         </aside>

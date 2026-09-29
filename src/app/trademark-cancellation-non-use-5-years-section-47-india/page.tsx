@@ -240,7 +240,7 @@ export default function TrademarkCancellationNonUsePage() {
                                 <span className="text-[10px] sm:text-xs font-bold tracking-wider text-[#6E5E93] uppercase">Trade Marks Act, 1999 • Section 47 Rectification</span>
                             </div>
                             <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-3 leading-tight text-gray-900 tracking-tighter">
-                                Trademark Cancellation on Grounds of <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'transparent' }}>Non-Use for 5 Years</span> (Section 47 India)
+                                Trademark Cancellation for <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'transparent' }}>Non-Use Under Section 47</span>
                             </h1>
                             <p className="text-base md:text-lg mb-5 text-gray-700 font-medium leading-relaxed">
                                 Is an abandoned, dormant, or unused trademark blocking your brand registration in India? Under <strong>Section 47 of the Trade Marks Act, 1999</strong>, Indian law enforces the foundational doctrine of <em>&ldquo;Use it or Lose it&rdquo;</em>. Any registered trademark that has remained unused for a continuous period of <strong>5 years and 3 months</strong> can be removed or expunged from the Trade Marks Register upon application by a person aggrieved. Explore the statutory grounds, 5-year calculation rules, market evidence standards, High Court IPD procedure, and strategic defense mechanisms.

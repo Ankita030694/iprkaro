@@ -184,12 +184,9 @@ export default function WhySearchTrademarkBeforeRegistrationPage() {
                                 <span className="text-[10px] sm:text-xs font-bold tracking-wider text-[#6E5E93] uppercase">Pre-Filing Trademark Clearance Guide</span>
                             </div>
                             <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-3 leading-tight text-gray-900 tracking-tighter">
-                                Why Search a <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'transparent' }}>Trademark Before Registration</span> in India:<br />
-                                Prevent Conflicts, Objections & Brand Risk
+                                Why Search a <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'transparent' }}>Trademark Before Registration</span> in India
                             </h1>
-                            <p className="text-base md:text-lg mb-5 text-gray-700 font-medium leading-relaxed">
-                                Discover why conducting a comprehensive trademark search before filing is the single most vital step in securing your brand identity in India. Evaluating Trade Marks Registry records early helps you identify identical marks, phonetic resemblances, and deceptive similarities under Section 11 of the Trade Marks Act, 1999. Eliminate the risk of costly examination objections, trademark journal oppositions, or forced rebranding after launch. Protect your marketing investments and establish uncontested ownership with proactive clearance and strategic pre-filing intelligence.
-                            </p>
+                            <p className="text-base md:text-lg mb-5 text-gray-700 font-medium leading-relaxed">Discover why conducting a comprehensive trademark search before filing is the single most vital step in securing your brand identity in India. Evaluating Trade Marks Registry records early helps you identify identical marks, phonetic resemblances, and deceptive similarities under Section 11 of the Trade Marks Act, 1999. Eliminate the risk of costly examination objections, trademark journal oppositions, or forced rebranding after launch. Protect your marketing investments and establish uncontested ownership with proactive clearance and strategic pre-filing intelligence.</p>
 
                             <div className="flex flex-wrap items-center gap-4 mb-6">
                                 <div className="flex items-center mr-2">
@@ -286,37 +283,11 @@ export default function WhySearchTrademarkBeforeRegistrationPage() {
                                                 Close
                                             </span>
                                             <svg className="w-4 h-4 text-gray-500 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                                            </svg>
-                                        </div>
-                                    </summary>
-                                    <div className="p-3.5 pt-2 border-t border-purple-50 bg-white/70">
-                                        <nav className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
-                                            {tocSections.map((section, idx) => (
-                                                <a
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg></div></summary><div className="p-3.5 pt-2 border-t border-purple-50 bg-white/70"><nav className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">{tocSections.map((section, idx) => (<a
                                                     key={section.id}
                                                     href={`#${section.id}`}
                                                     className="flex items-center p-2 rounded-xl text-xs font-medium text-gray-700 hover:text-[#6E5E93] hover:bg-purple-50/80 transition-all border border-transparent hover:border-purple-100"
-                                                >
-                                                    <span className="w-5 h-5 rounded-full bg-purple-100 text-[#6E5E93] flex items-center justify-center text-[10px] font-bold mr-2 flex-shrink-0">
-                                                        {idx + 1}
-                                                    </span>
-                                                    <span className="truncate">{section.title}</span>
-                                                </a>
-                                            ))}
-                                        </nav>
-                                    </div>
-                                </details>
-                            </div>
-
-                            <div className="bg-white p-4 md:p-12 rounded-2xl shadow-sm border border-gray-100 space-y-12 md:space-y-20 article-content">
-                                <article className="prose prose-lg max-w-none text-gray-700 leading-relaxed font-normal">
-
-                                    {/* Author Row */}
-                                    <div className="flex items-center space-x-4 mb-10 p-4 bg-gray-50 rounded-xl border border-gray-100 not-prose">
-                                        <img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-12 h-12 rounded-full object-cover m-0" />
-                                        <div>
-                                            <p className="text-sm font-bold text-gray-900 m-0">Written by <Link href="/author/rahul-roy" className="text-[rgb(110,94,147)] hover:underline">Rahul Roy</Link></p>
+                                                ><span className="w-5 h-5 rounded-full bg-purple-100 text-[#6E5E93] flex items-center justify-center text-[10px] font-bold mr-2 flex-shrink-0">{idx + 1}</span><span className="truncate">{section.title}</span></a>))}</nav></div></details></div><div className="bg-white p-4 md:p-12 rounded-2xl shadow-sm border border-gray-100 space-y-12 md:space-y-20 article-content"><article className="prose prose-lg max-w-none text-gray-700 leading-relaxed font-normal">{/* Author Row */}<div className="flex items-center space-x-4 mb-10 p-4 bg-gray-50 rounded-xl border border-gray-100 not-prose"><img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-12 h-12 rounded-full object-cover m-0" /><div><p className="text-sm font-bold text-gray-900 m-0">Written by<Link href="/author/rahul-roy" className="text-[rgb(110,94,147)] hover:underline">Rahul Roy</Link></p>
                                             <p className="text-xs text-gray-500 m-0">Trademark Research Specialist</p>
                                         </div>
                                     </div>
@@ -325,22 +296,16 @@ export default function WhySearchTrademarkBeforeRegistrationPage() {
                                     <section id="why-search-matters" className="scroll-mt-32">
                                         <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faMagnifyingGlass} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
-                                            Why Trademark Search Matters
+                                            Why Searching a Trademark Before Registration Matters
                                         </h2>
 
                                         {/* QUICK ANSWER BOX */}
                                         <div id="quick-answer" className="bg-indigo-50 border-l-4 border-[rgb(110,94,147)] p-6 rounded-r-xl mb-8">
-                                            <p className="font-semibold text-gray-900 m-0">
-                                                Why should you search a trademark before registering it? A trademark search helps identify identical existing marks, similar names, and potentially conflicting applications in your relevant goods and services. It helps uncover possible registration obstacles and opposition risks before you invest in filing. However, a preliminary search does not guarantee registration or eliminate all legal risks.
-                                            </p>
+                                            <p className="font-semibold text-gray-900 m-0">Why should you search a trademark before registering it? A trademark search helps identify identical existing marks, similar names, and potentially conflicting applications in your relevant goods and services. It helps uncover possible registration obstacles and opposition risks before you invest in filing. However, a preliminary search does not guarantee registration or eliminate all legal risks.</p>
                                         </div>
 
-                                        <p className="mb-6">
-                                            Undertaking a trademark search before registration is an essential preliminary step for any business. Before investing in branding, marketing materials, and legal fees, it is critical to know whether the name you have chosen is available. Checking for existing identical or similar marks helps avoid obvious conflicts from day one.
-                                        </p>
-                                        <p className="mb-6">
-                                            A thorough search reduces wasted filing effort. It helps brand owners identify alternative names early if the original choice is legally unavailable. Understanding the competitive trademark landscape can significantly improve your filing strategy, allowing you to choose distinct elements that are more likely to pass official examination.
-                                        </p>
+                                        <p className="mb-6">Undertaking a trademark search before registration is an essential preliminary step for any business. Before investing in branding, marketing materials, and legal fees, it is critical to know whether the name you have chosen is available. Checking for existing identical or similar marks helps avoid obvious conflicts from day one.</p>
+                                        <p className="mb-6">A thorough search reduces wasted filing effort. It helps brand owners identify alternative names early if the original choice is legally unavailable. Understanding the competitive trademark landscape can significantly improve your filing strategy. This allows you to choose distinct elements that are more likely to pass official examination.</p>
                                     </section>
 
                                     {/* SECTION 2 */}
@@ -349,12 +314,8 @@ export default function WhySearchTrademarkBeforeRegistrationPage() {
                                             <FontAwesomeIcon icon={faExclamationTriangle} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             What Happens If You Skip the Search?
                                         </h2>
-                                        <p className="mb-6">
-                                            Skipping a trademark search before registration can have serious practical consequences. You may discover an existing similar mark only after making significant branding investments. This oversight can lead to unexpected <Link href="/how-to-overcome-trademark-objection" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark objections</Link> from the Trade Marks Registry examiner during the review phase.
-                                        </p>
-                                        <p className="mb-6">
-                                            Beyond examination, failing to search can invite potential opposition from prior trademark owners. Depending on the facts, you could face disputes that require costly legal defense or forced rebranding. Rebranding costs and marketing disruptions are often far more expensive than conducting a preliminary check. While skipping a search does not automatically cause refusal, it introduces unnecessary risk, wasted time, and uncertainty around brand expansion.
-                                        </p>
+                                        <p className="mb-6">Skipping a trademark search before registration can have serious practical consequences. You may discover an existing similar mark only after making significant branding investments. This oversight can lead to unexpected<Link href="/how-to-overcome-trademark-objection" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark objections</Link>from the Trade Marks Registry examiner during the review phase.</p>
+                                        <p className="mb-6">Beyond examination, failing to search can invite potential opposition from prior trademark owners. Depending on the facts, you could face disputes that require costly legal defense or forced rebranding. Rebranding costs and marketing disruptions are often far more expensive than conducting a preliminary check. While skipping a search does not automatically cause refusal, it introduces unnecessary risk, wasted time, and uncertainty around brand expansion.</p>
                                     </section>
 
                                     {/* SECTION 3 */}
@@ -365,48 +326,32 @@ export default function WhySearchTrademarkBeforeRegistrationPage() {
                                         </h2>
 
                                         <h3 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 mb-4">Exact Matches</h3>
-                                        <p className="mb-6">
-                                            Identical marks are an obvious first screening point. A search immediately flags if the exact spelling of your brand is already registered or pending.
-                                        </p>
+                                        <p className="mb-6">Identical marks are an obvious first screening point. A search immediately flags if the exact spelling of your brand is already registered or pending.</p>
 
                                         <h3 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 mb-4">Similar Names</h3>
-                                        <p className="mb-6">
-                                            Similarity goes beyond exact spelling. A search will reveal variations, common misspellings, or words that look visually akin to your proposed mark.
-                                        </p>
+                                        <p className="mb-6">Similarity goes beyond exact spelling. A search will reveal variations, common misspellings, or words that look visually akin to your proposed mark.</p>
 
                                         <h3 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 mb-4">Phonetic Similarity</h3>
-                                        <p className="mb-6">
-                                            Marks can sound similar even when spelled differently (e.g., "Kwik" vs "Quick"). Identifying these phonetic similarities is critical, as they can cause confusion among consumers.
-                                        </p>
+                                        <p className="mb-6">Marks can sound similar even when spelled differently (e.g., "Kwik" vs "Quick"). Identifying these phonetic similarities is critical, as they can cause confusion among consumers.</p>
 
                                         <h3 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 mb-4">Similar Goods and Services</h3>
-                                        <p className="mb-6">
-                                            The relevant goods or services matter deeply when assessing possible conflicts. A mark identical to yours might exist, but if it belongs to an entirely unrelated industry, it may not pose an issue. A proper search evaluates these overlapping <Link href="/trademark-class-finder" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark classes</Link>.
-                                        </p>
+                                        <p className="mb-6">The relevant goods or services matter deeply when assessing possible conflicts. A mark identical to yours might exist. However, if it belongs to an entirely unrelated industry, it may not pose an issue. A proper search evaluates these overlapping<Link href="/trademark-class-finder" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark classes</Link>.</p>
 
                                         <h3 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 mb-4">Existing Applications and Registrations</h3>
-                                        <p className="mb-6">
-                                            A search will reveal the legal status of similar marks. An "Abandoned" or "Refused" application may present less risk than an active "Registered" or "Objected" status.
-                                        </p>
+                                        <p className="mb-6">A search will reveal the legal status of similar marks. An "Abandoned" or "Refused" application may present less risk than an active "Registered" or "Objected" status.</p>
 
                                         <h3 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 mb-4">Potentially Conflicting Marks</h3>
-                                        <p className="mb-6">
-                                            While a search brings potentially conflicting marks to light, a search result alone does not legally determine whether a mark is registrable. A professional review may still be necessary for borderline cases to assess the actual legal risk.
-                                        </p>
+                                        <p className="mb-6">While a search brings potentially conflicting marks to light, a search result alone does not legally determine whether a mark is registrable. A professional review may still be necessary for borderline cases to assess the actual legal risk.</p>
                                     </section>
 
                                     {/* SECTION 4 */}
                                     <section id="trademark-similarity" className="scroll-mt-32 pt-12">
                                         <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faScaleBalanced} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
-                                            Why Trademark Similarity Matters
+                                            Understanding Trademark Similarity and Section 11 Conflicts
                                         </h2>
-                                        <p className="mb-6">
-                                            Trademark law is designed to prevent consumer confusion. Confusing similarity evaluates whether a reasonable consumer might mistake your brand for an earlier mark. This assessment encompasses visual similarity (how the marks look), phonetic similarity (how they sound), and sometimes conceptual similarity (the meaning they convey).
-                                        </p>
-                                        <p className="mb-6">
-                                            Under Section 11 of India's Trade Marks Act, 1999, a trademark may be refused registration on relative grounds if it conflicts with earlier trademarks. Registration is not determined simply by matching letters; it depends on the facts, the visual or phonetic closeness of the marks, the similarity of the goods or services involved, and the applicable legal standards. An equation of "similar trademark = automatic rejection" is an oversimplification. Each application is uniquely evaluated by the Controller General of Patents, Designs & Trade Marks (IP India) based on the likelihood of confusion.
-                                        </p>
+                                        <p className="mb-6">Trademark law is designed to prevent consumer confusion. Confusing similarity evaluates whether a reasonable consumer might mistake your brand for an earlier mark. This assessment encompasses visual similarity (how the marks look), phonetic similarity (how they sound), and sometimes conceptual similarity (the meaning they convey).</p>
+                                        <p className="mb-6">Under Section 11 of India's Trade Marks Act, 1999, a trademark may be refused registration on relative grounds if it conflicts with earlier trademarks. Registration is not determined simply by matching letters. It depends on the facts, the visual or phonetic closeness of the marks, the similarity of the goods or services involved, and the applicable legal standards. An equation of "similar trademark = automatic rejection" is an oversimplification. Each application is uniquely evaluated by the Controller General of Patents, Designs & Trade Marks (IP India) based on the likelihood of confusion.</p>
                                     </section>
 
                                     {/* SECTION 5 */}
@@ -415,16 +360,14 @@ export default function WhySearchTrademarkBeforeRegistrationPage() {
                                             <FontAwesomeIcon icon={faListUl} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Search Before Filing: Step-by-Step
                                         </h2>
-                                        <p className="mb-6">
-                                            Following a structured process helps ensure you don't miss critical conflicts.
-                                        </p>
+                                        <p className="mb-6">Following a structured process helps ensure you don't miss critical conflicts.</p>
 
                                         <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm mb-8">
                                             <h3 className="text-xl font-bold mb-4 border-b pb-2">Trademark Search Workflow</h3>
                                             <ol className="list-decimal list-inside space-y-3 text-gray-700">
                                                 <li><strong>Identify the proposed trademark</strong>: Define your primary mark, slogan, and potential name candidates.</li>
                                                 <li><strong>Identify goods and services</strong>: Clarify the exact scope of current and upcoming business offerings.</li>
-                                                <li><strong>Determine relevant <Link href="/trademark-class-finder" className="text-[rgb(110,94,147)] hover:underline">trademark classes</Link></strong>: Select matching categories under the Nice classification system.</li>
+                                                <li><strong>Determine relevant<Link href="/trademark-class-finder" className="text-[rgb(110,94,147)] hover:underline">trademark classes</Link></strong>: Select matching categories under the Nice classification system.</li>
                                                 <li><strong>Search exact name matches</strong>: Detect identical registered marks or pending applications in the target classes.</li>
                                                 <li><strong>Search spelling variations</strong>: Test alternative spellings, plurals, prefixes, and compound words.</li>
                                                 <li><strong>Search phonetic variations</strong>: Discover sounds-alike marks to prevent Section 11 likelihood of confusion refusals.</li>
@@ -443,12 +386,8 @@ export default function WhySearchTrademarkBeforeRegistrationPage() {
                                             <FontAwesomeIcon icon={faTable} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Official Registry Search vs Preliminary Search
                                         </h2>
-                                        <p className="mb-6">
-                                            Preliminary online searching, including automated or AI-assisted screening, is a useful first step to catch obvious conflicts. However, it is distinct from an official trademark registry search on the government portal, which directly accesses the live database of the Trade Marks Registry.
-                                        </p>
-                                        <p className="mb-6">
-                                            No preliminary tool can claim 100% accuracy, guarantee registration, or ensure zero conflict or rejection. These tools are meant for initial risk assessment, whereas professional clearance involves a legal review of registry data.
-                                        </p>
+                                        <p className="mb-6">Preliminary online searching, including automated or AI-assisted screening, is a useful first step to catch obvious conflicts. However, it is distinct from an official trademark registry search on the government portal. This directly accesses the live database of the Trade Marks Registry.</p>
+                                        <p className="mb-6">No preliminary tool can claim 100% accuracy, guarantee registration, or ensure zero conflict or rejection. These tools are meant for initial risk assessment. In contrast, professional clearance involves a legal review of registry data.</p>
 
                                         <div className="overflow-x-auto mb-8 shadow-sm rounded-xl border border-gray-200 mt-6">
                                             <table className="min-w-full bg-white text-left text-sm text-gray-700">
@@ -494,57 +433,26 @@ export default function WhySearchTrademarkBeforeRegistrationPage() {
                                             <FontAwesomeIcon icon={faFileContract} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             When a Professional Trademark Search Is Useful
                                         </h2>
-                                        <p className="mb-6">
-                                            Professional trademark clearance is a factual and practical step that can be highly beneficial under specific circumstances. It goes beyond merely identifying identical names by applying legal interpretation to borderline similarity.
-                                        </p>
-                                        <p className="mb-6">
-                                            A professional review may be useful when preparing for an important business launch or establishing a highly valuable brand. It is also advised when dealing with borderline similarity against prior marks, filing across multiple classes, or expanding into related goods and services where boundaries blur. If there are potential opposition concerns or complex ownership histories attached to similar marks, consulting an expert helps navigate the nuances of trademark law.
-                                        </p>
+                                        <p className="mb-6">Professional trademark clearance is a factual and practical step that can be highly beneficial under specific circumstances. It goes beyond merely identifying identical names by applying legal interpretation to borderline similarity.</p>
+                                        <p className="mb-6">A professional review may be useful when preparing for an important business launch or establishing a highly valuable brand. It is also advised when dealing with borderline similarity against prior marks, filing across multiple classes, or expanding into related goods and services where boundaries blur. If there are potential opposition concerns or complex ownership histories attached to similar marks, consulting an expert helps navigate the nuances of trademark law.</p>
                                     </section>
 
                                     {/* SECTION 8 */}
                                     <section id="search-checklist" className="scroll-mt-32 pt-12">
                                         <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faCheckCircle} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
-                                            Trademark Search Checklist
+                                            Pre-Filing Trademark Search Checklist
                                         </h2>
                                         <ul className="list-none space-y-4 mb-8">
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Proposed Mark Finalized:</strong> Exact wordmark, logo styling, and candidate variations documented.</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Goods & Services Scope Mapped:</strong> Clear identification of present and prospective product offerings.</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Trademark Classes Identified:</strong> Appropriate classes chosen from the Nice classification system (Classes 1–45).</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Exact-Name Screening Performed:</strong> Checked for identical marks across registered and pending files.</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Phonetic Similarity Analyzed:</strong> Identified sounds-alike marks to prevent Section 11 confusion claims.</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Visual & Logo Comparison Done:</strong> Evaluated design elements, shapes, and device marks.</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Registry Legal Status Verified:</strong> Reviewed whether similar marks are Live, Objected, Opposed, or Abandoned.</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Commercial Overlap Assessed:</strong> Evaluated related goods/services and potential cross-class conflicts.</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Professional Clearance Obtained:</strong> Legal opinion consulted for borderline conflicts and risk mitigation.</span>
-                                            </li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Proposed Mark Finalized:</strong>Exact wordmark, logo styling, and candidate variations documented.</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Goods & Services Scope Mapped:</strong>Clear identification of present and prospective product offerings.</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Trademark Classes Identified:</strong>Appropriate classes chosen from the Nice classification system (Classes 1–45).</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Exact-Name Screening Performed:</strong>Checked for identical marks across registered and pending files.</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Phonetic Similarity Analyzed:</strong>Identified sounds-alike marks to prevent Section 11 confusion claims.</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Visual & Logo Comparison Done:</strong>Evaluated design elements, shapes, and device marks.</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Registry Legal Status Verified:</strong>Reviewed whether similar marks are Live, Objected, Opposed, or Abandoned.</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Commercial Overlap Assessed:</strong>Evaluated related goods/services and potential cross-class conflicts.</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Professional Clearance Obtained:</strong>Legal opinion consulted for borderline conflicts and risk mitigation.</span></li>
                                         </ul>
                                     </section>
 
@@ -570,14 +478,10 @@ export default function WhySearchTrademarkBeforeRegistrationPage() {
                                     <section id="final-takeaway" className="scroll-mt-32 pt-16">
                                         <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLightbulb} className="w-8 h-8 mr-3 text-yellow-500" />
-                                            Final Takeaway
+                                            Final Takeaway on Pre-Filing Clearance
                                         </h2>
-                                        <p className="mb-6">
-                                            A trademark search before registration is an essential preliminary risk-checking step for every ambitious brand. It helps identify existing identical or similar marks and allows businesses to investigate potential conflicts before committing heavily to branding and marketing campaigns.
-                                        </p>
-                                        <p className="mb-6">
-                                            While searching is not a guarantee of registration—as examination involves subjective legal thresholds under the Trade Marks Act—it dramatically minimizes the likelihood of objections, oppositions, or sudden rebranding demands. To consult official records, always refer to authoritative sources like the <a href="https://ipindia.gov.in/" target="_blank" rel="noopener noreferrer" className="text-[rgb(110,94,147)] hover:underline font-medium">IP India Portal</a>. Protecting your intellectual property requires a proactive approach, pairing thorough preliminary search with specialized legal clearance.
-                                        </p>
+                                        <p className="mb-6">A trademark search before registration is an essential preliminary risk-checking step for every ambitious brand. It helps identify existing identical or similar marks and allows businesses to investigate potential conflicts before committing heavily to branding and marketing campaigns.</p>
+                                        <p className="mb-6">While searching is not a guarantee of registration—as examination involves subjective legal thresholds under the Trade Marks Act—it dramatically minimizes the likelihood of objections, oppositions, or sudden rebranding demands. To consult official records, always refer to authoritative sources like the<a href="https://ipindia.gov.in/" target="_blank" rel="noopener noreferrer" className="text-[rgb(110,94,147)] hover:underline font-medium">IP India Portal</a>. Protecting your intellectual property requires a proactive approach, pairing thorough preliminary search with specialized legal clearance.</p>
                                     </section>
 
                                     {/* BOTTOM CTA SECTION */}
@@ -597,9 +501,7 @@ export default function WhySearchTrademarkBeforeRegistrationPage() {
                                                 </h3>
 
                                                 {/* Description */}
-                                                <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">
-                                                    Identify identical and phonetically similar trademarks, assess conflict risks under Section 11, and secure seamless brand registration in India.
-                                                </p>
+                                                <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">Identify identical and phonetically similar trademarks, assess conflict risks under Section 11, and secure seamless brand registration in India.</p>
 
                                                 {/* CTA Buttons */}
                                                 <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -621,9 +523,7 @@ export default function WhySearchTrademarkBeforeRegistrationPage() {
                                                 </div>
 
                                                 {/* Trust / Supporting Text */}
-                                                <p className="mt-6 text-xs font-medium tracking-wide text-white/50 sm:text-sm">
-                                                    IP India Database Verification • Phonetic & Similarity Analysis • Zero Conflict Guidance
-                                                </p>
+                                                <p className="mt-6 text-xs font-medium tracking-wide text-white/50 sm:text-sm">IP India Database Verification • Phonetic & Similarity Analysis • Zero Conflict Guidance</p>
                                             </div>
                                         </div>
                                     </section>
@@ -657,30 +557,9 @@ export default function WhySearchTrademarkBeforeRegistrationPage() {
                             <div className="bg-gray-50 p-10 rounded-[2.5rem] shadow-sm border border-gray-100">
                                 <h3 className="text-sm font-black text-gray-400 mb-8 uppercase tracking-[0.3em]">Related Resources</h3>
                                 <ul className="space-y-6">
-                                    <li>
-                                        <Link href="/trademark-registration-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faSearch} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Registration Services</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/trademark-class-finder" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faListUl} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Class Guide</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/free-ai-powered-trademark-search" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faShieldHalved} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">AI Trademark Search</span>
-                                        </Link>
-                                    </li>
+                                    <li><Link href="/trademark-registration-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faSearch} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Registration Services</span></Link></li>
+                                    <li><Link href="/trademark-class-finder" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faListUl} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Class Guide</span></Link></li>
+                                    <li><Link href="/free-ai-powered-trademark-search" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faShieldHalved} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">AI Trademark Search</span></Link></li>
                                 </ul>
                             </div>
                         </aside>

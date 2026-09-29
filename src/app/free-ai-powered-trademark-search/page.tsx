@@ -181,12 +181,9 @@ export default function FreeAiTrademarkSearchPage() {
                                 <span className="text-[10px] sm:text-xs font-bold tracking-wider text-[#6E5E93] uppercase">Preliminary Trademark Screening Tool</span>
                             </div>
                             <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-3 leading-tight text-gray-900 tracking-tighter">
-                                Free <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'transparent' }}>AI Powered Trademark Search</span> in India:<br />
-                                Instant Similarity & Conflict Analysis
+                                Free <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'transparent' }}>AI-Powered Trademark Search</span> in India
                             </h1>
-                            <p className="text-base md:text-lg mb-5 text-gray-700 font-medium leading-relaxed">
-                                Discover potential brand conflicts early and secure your intellectual property with confidence. Understand how preliminary AI screening evaluates trademark availability before navigating official registry records and legal clearance. Protect your brand identity instantly by analyzing millions of global databases for exact matches, phonetic similarities, and visual conflicts. Make informed decisions and eliminate the risk of facing sudden objections or opposition during the official registration process.
-                            </p>
+                            <p className="text-base md:text-lg mb-5 text-gray-700 font-medium leading-relaxed">Discover potential brand conflicts early and secure your intellectual property with confidence. Understand how preliminary AI screening evaluates trademark availability before navigating official registry records and legal clearance. Protect your brand identity instantly by analyzing millions of global databases for exact matches, phonetic similarities, and visual conflicts. Make informed decisions and eliminate the risk of facing sudden objections or opposition during the official registration process.</p>
 
                             <div className="flex flex-wrap items-center gap-4 mb-6">
                                 <div className="flex items-center mr-2">
@@ -277,37 +274,11 @@ export default function FreeAiTrademarkSearchPage() {
                                                 Close
                                             </span>
                                             <svg className="w-4 h-4 text-gray-500 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                                            </svg>
-                                        </div>
-                                    </summary>
-                                    <div className="p-3.5 pt-2 border-t border-purple-50 bg-white/70">
-                                        <nav className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
-                                            {tocSections.map((section, idx) => (
-                                                <a
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg></div></summary><div className="p-3.5 pt-2 border-t border-purple-50 bg-white/70"><nav className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">{tocSections.map((section, idx) => (<a
                                                     key={section.id}
                                                     href={`#${section.id}`}
                                                     className="flex items-center p-2 rounded-xl text-xs font-medium text-gray-700 hover:text-[#6E5E93] hover:bg-purple-50/80 transition-all border border-transparent hover:border-purple-100"
-                                                >
-                                                    <span className="w-5 h-5 rounded-full bg-purple-100 text-[#6E5E93] flex items-center justify-center text-[10px] font-bold mr-2 flex-shrink-0">
-                                                        {idx + 1}
-                                                    </span>
-                                                    <span className="truncate">{section.title}</span>
-                                                </a>
-                                            ))}
-                                        </nav>
-                                    </div>
-                                </details>
-                            </div>
-
-                            <div className="bg-white p-4 md:p-12 rounded-2xl shadow-sm border border-gray-100 space-y-12 md:space-y-20 article-content">
-                                <article className="prose prose-lg max-w-none text-gray-700 leading-relaxed font-normal">
-
-                                    {/* Author Row */}
-                                    <div className="flex items-center space-x-4 mb-10 p-4 bg-gray-50 rounded-xl border border-gray-100 not-prose">
-                                        <img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-12 h-12 rounded-full object-cover m-0" />
-                                        <div>
-                                            <p className="text-sm font-bold text-gray-900 m-0">Written by <Link href="/author/rahul-roy" className="text-[rgb(110,94,147)] hover:underline">Rahul Roy</Link></p>
+                                                ><span className="w-5 h-5 rounded-full bg-purple-100 text-[#6E5E93] flex items-center justify-center text-[10px] font-bold mr-2 flex-shrink-0">{idx + 1}</span><span className="truncate">{section.title}</span></a>))}</nav></div></details></div><div className="bg-white p-4 md:p-12 rounded-2xl shadow-sm border border-gray-100 space-y-12 md:space-y-20 article-content"><article className="prose prose-lg max-w-none text-gray-700 leading-relaxed font-normal">{/* Author Row */}<div className="flex items-center space-x-4 mb-10 p-4 bg-gray-50 rounded-xl border border-gray-100 not-prose"><img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-12 h-12 rounded-full object-cover m-0" /><div><p className="text-sm font-bold text-gray-900 m-0">Written by<Link href="/author/rahul-roy" className="text-[rgb(110,94,147)] hover:underline">Rahul Roy</Link></p>
                                             <p className="text-xs text-gray-500 m-0">Trademark Research Specialist</p>
                                         </div>
                                     </div>
@@ -319,20 +290,12 @@ export default function FreeAiTrademarkSearchPage() {
                                         </h2>
 
                                         <div id="quick-answer" className="bg-indigo-50 border-l-4 border-[rgb(110,94,147)] p-6 rounded-r-xl mb-8">
-                                            <p className="font-semibold text-gray-900 m-0">
-                                                An AI-powered trademark search helps users rapidly screen proposed brand names against large databases of existing marks. Artificial intelligence analyzes textual, phonetic, and visual elements to identify potential conflicts and similarities. This preliminary step assists businesses in estimating trademark availability risks before pursuing formal registration, though it does not replace a comprehensive legal clearance.
-                                            </p>
+                                            <p className="font-semibold text-gray-900 m-0">An AI-powered trademark search helps users rapidly screen proposed brand names against large databases of existing marks. Artificial intelligence analyzes textual, phonetic, and visual elements to identify potential conflicts and similarities. This preliminary step assists businesses in estimating trademark availability risks before pursuing formal registration, though it does not replace a comprehensive legal clearance.</p>
                                         </div>
 
-                                        <p className="mb-6">
-                                            Securing a brand identity is one of the most critical steps for any growing business. A free AI powered trademark search provides an accessible starting point for this journey. In the past, searching for prior marks required extensive manual effort, sifting through complex registry databases and analyzing potential conflicts purely through human interpretation. Today, advanced algorithms can instantly evaluate a brand's unique footprint across thousands of existing records.
-                                        </p>
-                                        <p className="mb-6">
-                                            This technology fundamentally changes how founders approach brand creation. Instead of falling in love with a name only to discover it's already taken months later during the <Link href="/trademark-registration-india" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark registration</Link> process, businesses can perform immediate triage. An AI trademark checker can reveal obvious conflicts early on, saving both time and financial resources that might otherwise be spent on filing fees for doomed applications.
-                                        </p>
-                                        <p className="mb-6">
-                                            However, it is crucial to understand the boundaries of this technology. While AI is exceptionally fast and increasingly accurate at spotting patterns, it operates within the realm of preliminary screening. It offers a snapshot of potential risk, not a legally binding guarantee of availability. The ultimate determination of whether a mark can be registered rests with the examiner at the Trade Marks Registry, guided by the principles laid out in the Trade Marks Act, 1999.
-                                        </p>
+                                        <p className="mb-6">Securing a brand identity is one of the most critical steps for any growing business. A free AI powered trademark search provides an accessible starting point for this journey. In the past, searching for prior marks required extensive manual effort, sifting through complex registry databases and analyzing potential conflicts purely through human interpretation. Today, advanced algorithms can instantly evaluate a brand's unique footprint across thousands of existing records.</p>
+                                        <p className="mb-6">This technology fundamentally changes how founders approach brand creation. Instead of falling in love with a name only to discover it's already taken months later during the<Link href="/trademark-registration-india" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark registration</Link>process, businesses can perform immediate triage. An AI trademark checker can reveal obvious conflicts early on, saving both time and financial resources that might otherwise be spent on filing fees for doomed applications.</p>
+                                        <p className="mb-6">However, it is crucial to understand the boundaries of this technology. While AI is exceptionally fast and increasingly accurate at spotting patterns, it operates within the realm of preliminary screening. It offers a snapshot of potential risk, not a legally binding guarantee of availability. The ultimate determination of whether a mark can be registered rests with the examiner at the Trade Marks Registry, guided by the principles laid out in the Trade Marks Act, 1999.</p>
                                     </section>
 
                                     <section id="how-it-works" className="scroll-mt-32 pt-12">
@@ -340,15 +303,9 @@ export default function FreeAiTrademarkSearchPage() {
                                             <FontAwesomeIcon icon={faMicrochip} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             How AI Trademark Search Works
                                         </h2>
-                                        <p className="mb-6">
-                                            The underlying mechanics of an AI trademark search involve sophisticated natural language processing (NLP) and machine learning models. When you input a proposed brand name, the system does not merely look for exact string matches. Instead, it breaks the word down into its phonetic components, evaluates the sequence of characters, and analyzes the semantic meaning behind the term.
-                                        </p>
-                                        <p className="mb-6">
-                                            These models are trained on massive datasets of historical trademark applications, including those that were successfully registered and those that faced a <Link href="/how-to-overcome-trademark-objection" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark objection</Link>. By learning from past decisions, the AI attempts to predict which variations might trigger a conflict. For instance, if you search for "KwikFix," the AI is intelligent enough to surface "QuickFix" or "QwikFiks" as highly relevant results, recognizing the phonetic equivalence despite the orthographic differences.
-                                        </p>
-                                        <p className="mb-6">
-                                            Furthermore, AI systems often incorporate <Link href="/trademark-class-finder" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark classes</Link> into their evaluation. A trademark availability checker will cross-reference your proposed mark against the specific goods and services you intend to offer, acknowledging that identical names can sometimes coexist if they operate in entirely distinct commercial sectors.
-                                        </p>
+                                        <p className="mb-6">The underlying mechanics of an AI trademark search involve sophisticated natural language processing (NLP) and machine learning models. When you input a proposed brand name, the system does not merely look for exact string matches. Instead, it breaks the word down into its phonetic components, evaluates the sequence of characters, and analyzes the semantic meaning behind the term.</p>
+                                        <p className="mb-6">These models are trained on massive datasets of historical trademark applications, including those that were successfully registered and those that faced a<Link href="/how-to-overcome-trademark-objection" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark objection</Link>. By learning from past decisions, the AI attempts to predict which variations might trigger a conflict. For instance, if you search for "KwikFix," the AI is intelligent enough to surface "QuickFix" or "QwikFiks" as highly relevant results, recognizing the phonetic equivalence despite the orthographic differences.</p>
+                                        <p className="mb-6">Furthermore, AI systems often incorporate<Link href="/trademark-class-finder" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark classes</Link>into their evaluation. A trademark availability checker will cross-reference your proposed mark against the specific goods and services you intend to offer, acknowledging that identical names can sometimes coexist if they operate in entirely distinct commercial sectors.</p>
                                     </section>
 
                                     <section id="what-it-detects" className="scroll-mt-32 pt-12">
@@ -356,29 +313,19 @@ export default function FreeAiTrademarkSearchPage() {
                                             <FontAwesomeIcon icon={faShieldHalved} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             What an AI Trademark Search Can Detect
                                         </h2>
-                                        <p className="mb-6">
-                                            A robust free AI trademark search evaluates several dimensions of similarity to construct a comprehensive risk profile for your proposed mark.
-                                        </p>
+                                        <p className="mb-6">A robust free AI trademark search evaluates several dimensions of similarity to construct a comprehensive risk profile for your proposed mark.</p>
 
                                         <h3 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 mb-4">Exact Name Matches</h3>
-                                        <p className="mb-6">
-                                            The most straightforward conflict is an identical match. The AI immediately identifies if the exact character sequence is already registered or pending within the same trademark class. This is the clearest signal that a proposed name should be abandoned in favor of a unique alternative.
-                                        </p>
+                                        <p className="mb-6">The most straightforward conflict is an identical match. The AI immediately identifies if the exact character sequence is already registered or pending within the same trademark class. This is the clearest signal that a proposed name should be abandoned in favor of a unique alternative.</p>
 
                                         <h3 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 mb-4">Phonetic Similarities</h3>
-                                        <p className="mb-6">
-                                            One of the most valuable capabilities of AI screening is detecting phonetic similarity. Many trademark disputes arise not from identical spellings, but from names that sound alike when spoken aloud. An AI system analyzes phonetic structures to catch conflicts like "Cynthex" versus "Sinthex," which a simple database query might completely miss.
-                                        </p>
+                                        <p className="mb-6">One of the most valuable capabilities of AI screening is detecting phonetic similarity. Many trademark disputes arise not from identical spellings, but from names that sound alike when spoken aloud. An AI system analyzes phonetic structures to catch conflicts like "Cynthex" versus "Sinthex," which a simple database query might completely miss.</p>
 
                                         <h3 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 mb-4">Visual Similarities</h3>
-                                        <p className="mb-6">
-                                            Advanced systems also evaluate visual similarities, particularly for design marks and logos. By employing computer vision, the AI can compare geometric shapes, color palettes, and structural layouts. If your logo shares substantial visual elements with a prior mark, the AI will highlight this as a potential risk factor.
-                                        </p>
+                                        <p className="mb-6">Advanced systems also evaluate visual similarities, particularly for design marks and logos. By employing computer vision, the AI can compare geometric shapes, color palettes, and structural layouts. If your logo shares substantial visual elements with a prior mark, the AI will highlight this as a potential risk factor.</p>
 
                                         <h3 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 mb-4">Related Goods and Services</h3>
-                                        <p className="mb-6">
-                                            Trademark protection is generally tied to specific categories of commerce. AI tools can analyze descriptions of goods and services to determine if two marks, even if similar, operate in related fields. If a prior mark exists for "clothing" (Class 25) and you are applying for "footwear" (also Class 25), the AI will correctly identify the high likelihood of commercial overlap.
-                                        </p>
+                                        <p className="mb-6">Trademark protection is generally tied to specific categories of commerce. AI tools can analyze descriptions of goods and services to determine if two marks, even if similar, operate in related fields. If a prior mark exists for "clothing" (Class 25) and you are applying for "footwear" (also Class 25), the AI will correctly identify the high likelihood of commercial overlap.</p>
                                     </section>
 
                                     <section id="comparison" className="scroll-mt-32 pt-12">
@@ -386,9 +333,7 @@ export default function FreeAiTrademarkSearchPage() {
                                             <FontAwesomeIcon icon={faTable} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Free AI Trademark Search vs IP India Public Search
                                         </h2>
-                                        <p className="mb-6">
-                                            While AI tools offer speed and pattern recognition, they do not replace official government records. Understanding the difference between a free AI screening, the official trademark public search India provides, and comprehensive legal clearance is vital for sound decision-making.
-                                        </p>
+                                        <p className="mb-6">While AI tools offer speed and pattern recognition, they do not replace official government records. Understanding the difference between a free AI screening, the official trademark public search India provides, and comprehensive legal clearance is vital for sound decision-making.</p>
 
                                         <div className="overflow-x-auto mb-8 shadow-sm rounded-xl border border-gray-200">
                                             <table className="min-w-full bg-white text-left text-sm text-gray-700">
@@ -435,14 +380,10 @@ export default function FreeAiTrademarkSearchPage() {
                                     <section id="similarity" className="scroll-mt-32 pt-12">
                                         <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faScaleBalanced} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
-                                            Why Trademark Similarity Matters
+                                            Why AI Trademark Similarity Screening Matters
                                         </h2>
-                                        <p className="mb-6">
-                                            When evaluating a brand name, understanding trademark similarity is paramount. Section 11 of the Trade Marks Act, 1999, specifically addresses the relative grounds for refusal of registration. A mark may be refused if it is identical with or similar to an earlier trademark, and if the goods or services are also identical or similar, leading to a likelihood of confusion among the public.
-                                        </p>
-                                        <p className="mb-6">
-                                            The term "confusingly similar marks" represents a critical legal threshold. If an average consumer with imperfect recollection might mistakenly assume that two products originate from the same source due to their similar branding, an infringement risk exists. A trademark conflict search aims to uncover these prior marks before you commit resources to building your brand. Failing to identify similar marks can result in official objections, oppositions from competitors, or costly litigation later in the business lifecycle.
-                                        </p>
+                                        <p className="mb-6">When evaluating a brand name, understanding trademark similarity is paramount. Section 11 of the Trade Marks Act, 1999, specifically addresses the relative grounds for refusal of registration. A mark may be refused if it is identical with or similar to an earlier trademark, and if the goods or services are also identical or similar. This leads to a likelihood of confusion among the public.</p>
+                                        <p className="mb-6">The term "confusingly similar marks" represents a critical legal threshold. If an average consumer with imperfect recollection might mistakenly assume that two products originate from the same source due to their similar branding, an infringement risk exists. A trademark conflict search aims to uncover these prior marks before you commit resources to building your brand. Failing to identify similar marks can result in official objections, oppositions from competitors, or costly litigation later in the business lifecycle.</p>
                                     </section>
 
                                     <section id="how-to-search" className="scroll-mt-32 pt-12">
@@ -450,15 +391,13 @@ export default function FreeAiTrademarkSearchPage() {
                                             <FontAwesomeIcon icon={faListUl} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             How to Search a Trademark Before Registration
                                         </h2>
-                                        <p className="mb-6">
-                                            A systematic approach is essential when performing a trademark search before registration. Relying on a single tool or a casual glance at a search engine is insufficient for brand protection.
-                                        </p>
+                                        <p className="mb-6">A systematic approach is essential when performing a trademark search before registration. Relying on a single tool or a casual glance at a search engine is insufficient for brand protection.</p>
 
                                         <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm mb-8">
                                             <h3 className="text-xl font-bold mb-4 border-b pb-2">Trademark Search Workflow</h3>
                                             <ol className="list-decimal list-inside space-y-3 text-gray-700">
                                                 <li><strong>Enter the proposed brand name</strong>: Start with your primary choice and alternative names.</li>
-                                                <li><strong>Define relevant goods/services</strong>: Accurately identify your <Link href="/trademark-class-finder" className="text-[rgb(110,94,147)] hover:underline">trademark classes</Link>.</li>
+                                                <li><strong>Define relevant goods/services</strong>: Accurately identify your<Link href="/trademark-class-finder" className="text-[rgb(110,94,147)] hover:underline">trademark classes</Link>.</li>
                                                 <li><strong>Run preliminary AI screening</strong>: Use an AI tool to rapidly surface obvious phonetic and visual similarities.</li>
                                                 <li><strong>Review similar marks</strong>: Analyze the results generated by the AI to discard non-viable names.</li>
                                                 <li><strong>Check official registry records</strong>: Cross-reference promising names directly on the IP India database.</li>
@@ -473,15 +412,9 @@ export default function FreeAiTrademarkSearchPage() {
                                             <FontAwesomeIcon icon={faExclamationTriangle} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Limitations of Free AI Trademark Search
                                         </h2>
-                                        <p className="mb-6">
-                                            While powerful, a free AI trademark search has inherent limitations that users must recognize. Artificial intelligence provides computational probability, not legal certainty.
-                                        </p>
-                                        <p className="mb-6">
-                                            First, an AI screening cannot guarantee registration. The Trade Marks Registry exercises subjective human judgment when evaluating the distinctiveness of a mark and the likelihood of confusion. An AI tool might flag a name as "available," but an examiner could still raise an objection based on absolute grounds (e.g., the mark being too descriptive).
-                                        </p>
-                                        <p className="mb-6">
-                                            Second, AI systems are only as accurate as their underlying data. If there is a delay in synchronizing data from the official IP India registry, a recently filed application might not immediately appear in the AI's results. Therefore, an AI tool should never be relied upon as the sole justification for claiming zero infringement risk. Preliminary screening is a filter, not a final verdict.
-                                        </p>
+                                        <p className="mb-6">While powerful, a free AI trademark search has inherent limitations that users must recognize. Artificial intelligence provides computational probability, not legal certainty.</p>
+                                        <p className="mb-6">First, an AI screening cannot guarantee registration. The Trade Marks Registry exercises subjective human judgment when evaluating the distinctiveness of a mark and the likelihood of confusion. An AI tool might flag a name as "available," but an examiner could still raise an objection based on absolute grounds (e.g., the mark being too descriptive).</p>
+                                        <p className="mb-6">Second, AI systems are only as accurate as their underlying data. If there is a delay in synchronizing data from the official IP India registry, a recently filed application might not immediately appear in the AI's results. Therefore, an AI tool should never be relied upon as the sole justification for claiming zero infringement risk. Preliminary screening is a filter, not a final verdict.</p>
                                     </section>
 
                                     <section id="professional-clearance" className="scroll-mt-32 pt-12">
@@ -489,44 +422,22 @@ export default function FreeAiTrademarkSearchPage() {
                                             <FontAwesomeIcon icon={faFileContract} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             When Professional Trademark Clearance Is Needed
                                         </h2>
-                                        <p className="mb-6">
-                                            Professional trademark clearance becomes necessary when a business moves from casual brainstorming to serious investment. If your AI screening reveals borderline similarities or marks in adjacent classes, a trademark attorney is required to interpret the nuanced legal landscape.
-                                        </p>
-                                        <p className="mb-6">
-                                            Legal professionals understand the historical precedents and interpretative guidelines used by the Trade Marks Registry. They can evaluate the "strength" of prior marks, investigate whether a conflicting mark is actually in active commercial use, and formulate strategies to overcome potential objections. If you are preparing for a major product launch, seeking investor funding, or planning international expansion, professional clearance transcends AI screening to provide an actionable, legally sound risk assessment. Proper clearance ensures your brand is built on a solid foundation, ready for eventual <Link href="/how-to-renew-a-registered-trademark-in-india" className="text-[rgb(110,94,147)] hover:underline">trademark renewal</Link> decades into the future.
-                                        </p>
+                                        <p className="mb-6">Professional trademark clearance becomes necessary when a business moves from casual brainstorming to serious investment. If your AI screening reveals borderline similarities or marks in adjacent classes, a trademark attorney is required to interpret the nuanced legal landscape.</p>
+                                        <p className="mb-6">Legal professionals understand the historical precedents and interpretative guidelines used by the Trade Marks Registry. They can evaluate the "strength" of prior marks, investigate whether a conflicting mark is actually in active commercial use, and formulate strategies to overcome potential objections. If you are preparing for a major product launch, seeking investor funding, or planning international expansion, professional clearance transcends AI screening to provide an actionable, legally sound risk assessment. Proper clearance ensures your brand is built on a solid foundation, ready for eventual<Link href="/how-to-renew-a-registered-trademark-in-india" className="text-[rgb(110,94,147)] hover:underline">trademark renewal</Link>decades into the future.</p>
                                     </section>
 
                                     <section id="checklist" className="scroll-mt-32 pt-12">
                                         <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faCheckCircle} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
-                                            Trademark Search Checklist
+                                            AI Trademark Search &amp; Clearance Checklist
                                         </h2>
                                         <ul className="list-none space-y-4 mb-8">
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Identify Core Terms:</strong> List the primary words, variations, and design elements of your brand.</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Determine Classes:</strong> Specify all relevant goods and services categories.</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Execute AI Screen:</strong> Run the name through a free AI trademark search to catch immediate phonetic conflicts.</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Consult Official Registry:</strong> Verify the status of similar marks on the IP India public portal.</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Assess Risk:</strong> Evaluate whether prior marks pose a genuine legal obstacle under Section 11.</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Seek Counsel:</strong> Engage professional legal review for borderline cases or high-value brands.</span>
-                                            </li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Identify Core Terms:</strong>List the primary words, variations, and design elements of your brand.</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Determine Classes:</strong>Specify all relevant goods and services categories.</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Execute AI Screen:</strong>Run the name through a free AI trademark search to catch immediate phonetic conflicts.</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Consult Official Registry:</strong>Verify the status of similar marks on the IP India public portal.</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Assess Risk:</strong>Evaluate whether prior marks pose a genuine legal obstacle under Section 11.</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Seek Counsel:</strong>Engage professional legal review for borderline cases or high-value brands.</span></li>
                                         </ul>
                                     </section>
 
@@ -549,14 +460,10 @@ export default function FreeAiTrademarkSearchPage() {
                                     <section id="final-takeaway" className="scroll-mt-32 pt-16">
                                         <h2 className="text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLightbulb} className="w-8 h-8 mr-3 text-yellow-500" />
-                                            Final Takeaway
+                                            Final Takeaway on AI Trademark Searching
                                         </h2>
-                                        <p className="mb-6">
-                                            A free AI powered trademark search is an invaluable tool for modern entrepreneurs, offering immediate insights into brand availability and potential conflicts. By leveraging advanced pattern recognition, founders can confidently navigate the initial stages of brand creation. However, this technology serves as a preliminary guide, not a definitive legal conclusion.
-                                        </p>
-                                        <p className="mb-6">
-                                            Always supplement AI screening with verification on official registry databases and, when necessary, professional legal clearance. For official guidelines and registry access, you can refer to the <a href="https://ipindia.gov.in/" target="_blank" rel="noopener noreferrer" className="text-[rgb(110,94,147)] hover:underline font-medium">IP India Portal</a>. Protecting your intellectual property requires a balanced approach, utilizing the speed of AI alongside the precision of human legal expertise.
-                                        </p>
+                                        <p className="mb-6">A free AI powered trademark search is an invaluable tool for modern entrepreneurs, offering immediate insights into brand availability and potential conflicts. By leveraging advanced pattern recognition, founders can confidently navigate the initial stages of brand creation. However, this technology serves as a preliminary guide, not a definitive legal conclusion.</p>
+                                        <p className="mb-6">Always supplement AI screening with verification on official registry databases and, when necessary, professional legal clearance. For official guidelines and registry access, you can refer to the<a href="https://ipindia.gov.in/" target="_blank" rel="noopener noreferrer" className="text-[rgb(110,94,147)] hover:underline font-medium">IP India Portal</a>. Protecting your intellectual property requires a balanced approach, using the speed of AI alongside the precision of human legal expertise.</p>
                                     </section>
 
                                     {/* BOTTOM CTA SECTION */}
@@ -576,10 +483,7 @@ export default function FreeAiTrademarkSearchPage() {
                                                 </h3>
 
                                                 {/* Description */}
-                                                <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">
-                                                    Search your brand name with AI, discover potential trademark conflicts,
-                                                    and take the first step toward stronger brand protection.
-                                                </p>
+                                                <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">Search your brand name with AI, discover potential trademark conflicts, and take the first step toward stronger brand protection.</p>
 
                                                 {/* CTA Buttons */}
                                                 <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -601,9 +505,7 @@ export default function FreeAiTrademarkSearchPage() {
                                                 </div>
 
                                                 {/* Trust / Supporting Text */}
-                                                <p className="mt-6 text-xs font-medium tracking-wide text-white/50 sm:text-sm">
-                                                    AI-assisted preliminary screening • Smarter brand research • Better-informed decisions
-                                                </p>
+                                                <p className="mt-6 text-xs font-medium tracking-wide text-white/50 sm:text-sm">AI-assisted preliminary screening • Smarter brand research • Better-informed decisions</p>
                                             </div>
                                         </div>
                                     </section>
@@ -634,30 +536,9 @@ export default function FreeAiTrademarkSearchPage() {
                             <div className="bg-gray-50 p-10 rounded-[2.5rem] shadow-sm border border-gray-100">
                                 <h3 className="text-sm font-black text-gray-400 mb-8 uppercase tracking-[0.3em]">Related Resources</h3>
                                 <ul className="space-y-6">
-                                    <li>
-                                        <Link href="/trademark-registration-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faSearch} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Registration Services</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/trademark-class-finder" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faListUl} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Class Guide</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/process-and-steps-of-trademark-registration" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faFileContract} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Process &amp; Steps</span>
-                                        </Link>
-                                    </li>
+                                    <li><Link href="/trademark-registration-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faSearch} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Registration Services</span></Link></li>
+                                    <li><Link href="/trademark-class-finder" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faListUl} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Class Guide</span></Link></li>
+                                    <li><Link href="/process-and-steps-of-trademark-registration" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faFileContract} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Process &amp; Steps</span></Link></li>
                                 </ul>
                             </div>
                         </aside>

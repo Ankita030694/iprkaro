@@ -215,7 +215,7 @@ export default function TrademarkTaxationPage() {
                                 <span className="text-[10px] sm:text-xs font-bold tracking-wider text-[#6E5E93] uppercase">IP Taxation &amp; Corporate Finance</span>
                             </div>
                             <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-3 leading-tight text-gray-900 tracking-tighter">
-                                GST, TDS, and Tax Rules on Trademark Royalties &amp; Brand Sale: <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'transparent' }}>SAC Code 9973 &amp; Direct Tax Guide</span>
+                                GST, TDS &amp; Tax Rules on <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'transparent' }}>Trademark Royalties and Brand Sales</span>
                             </h1>
                             <p className="text-base md:text-lg mb-5 text-gray-700 font-medium leading-relaxed">
                                 Licensing brand rights, collecting recurring royalties, or executing a permanent trademark assignment carries intricate indirect and direct tax obligations under Indian tax laws. Master <strong>SAC Code 997336 (18% GST)</strong>, <strong>Reverse Charge Mechanism (RCM)</strong> on cross-border licensing, <strong>Section 194J TDS (10%)</strong> withholding rules, <strong>Section 55(2)(a) capital gains</strong> on self-generated brand transfers, and <strong>25% depreciation</strong> on acquired intangible assets under Section 32 of the Income Tax Act, 1961.

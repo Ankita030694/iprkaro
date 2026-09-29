@@ -87,7 +87,7 @@ const faqs = [
     },
     {
         question: "Can I expedite the trademark registration process in India?",
-        answer: "Yes. Under Rule 34 of the Trade Marks Rules 2017, eligible applicants can request expedited examination by submitting Form TM-M with the prescribed statutory fee. Expedited processing accelerates examination and show-cause hearings, reducing the time required to secure publication and registration to roughly 3 to 6 months in non-contested matters."
+        answer: "Yes. Under Rule 34 of the Trade Marks Rules 2017, eligible applicants can request expedited examination by submitting Form TM-M with the prescribed statutory fee. Expedited processing accelerates examination and show-cause hearings. This reduces the time required to secure publication and registration to roughly 3 to 6 months in non-contested matters."
     },
     {
         question: "How long does the trademark examination stage take?",
@@ -95,7 +95,7 @@ const faqs = [
     },
     {
         question: "How long does the trademark journal publication period last?",
-        answer: "Once accepted, the trademark is published in the weekly Trade Marks Journal. Under Section 21(1) of the Trade Marks Act 1999, the statutory opposition window remains open for exactly 4 months from the publication date. This 4-month period cannot be shortened or extended by the Registrar, providing third parties statutory notice to contest registration."
+        answer: "Once accepted, the trademark is published in the weekly Trade Marks Journal. Under Section 21(1) of the Trade Marks Act 1999, the statutory opposition window remains open for exactly 4 months from the publication date. This 4-month period cannot be shortened or extended by the Registrar. This provides third parties statutory notice to contest registration."
     },
     {
         question: "What causes the biggest delays in trademark processing?",
@@ -210,9 +210,7 @@ export default function TrademarkFilingTimePage() {
                             <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-3 leading-tight text-gray-900 tracking-tighter">
                                 How Much Time Does <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'transparent' }}>Trademark Filing Take</span> in India?
                             </h1>
-                            <p className="text-base md:text-lg mb-5 text-gray-700 font-medium leading-relaxed">
-                                Understanding the exact chronology of securing a trademark in India helps entrepreneurs schedule product launches, guard investments, and assert brand exclusivity. While submitting Form TM-A online takes less than 24 hours to secure your application number and immediate ™ status, complete end-to-end registration generally requires 6 to 12 months for smooth applications, or 18 to 24 months if objections or oppositions arise. Explore this complete timeline breakdown, stage-wise milestones, fast-track options, and tactical steps to fast-track your approval.
-                            </p>
+                            <p className="text-base md:text-lg mb-5 text-gray-700 font-medium leading-relaxed">Understanding the exact chronology of securing a trademark in India helps entrepreneurs schedule product launches, guard investments, and assert brand exclusivity. While submitting Form TM-A online takes less than 24 hours to secure your application number and immediate ™ status, complete end-to-end registration generally requires 6 to 12 months for smooth applications, or 18 to 24 months if objections or oppositions arise. Explore this complete timeline breakdown, stage-wise milestones, fast-track options, and tactical steps to fast-track your approval.</p>
 
                             <div className="flex flex-wrap items-center gap-4 mb-6">
                                 <div className="flex items-center mr-2">
@@ -303,36 +301,11 @@ export default function TrademarkFilingTimePage() {
                                                 Close
                                             </span>
                                             <svg className="w-4 h-4 text-gray-500 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                                            </svg>
-                                        </div>
-                                    </summary>
-                                    <div className="p-3.5 pt-2 border-t border-purple-50 bg-white/70">
-                                        <nav className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
-                                            {tocSections.map((section, idx) => (
-                                                <a
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg></div></summary><div className="p-3.5 pt-2 border-t border-purple-50 bg-white/70"><nav className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">{tocSections.map((section, idx) => (<a
                                                     key={section.id}
                                                     href={`#${section.id}`}
                                                     className="flex items-center p-2 rounded-xl text-xs font-medium text-gray-700 hover:text-[#6E5E93] hover:bg-purple-50/80 transition-all border border-transparent hover:border-purple-100"
-                                                >
-                                                    <span className="w-5 h-5 rounded-full bg-purple-100 text-[#6E5E93] flex items-center justify-center text-[10px] font-bold mr-2 flex-shrink-0">
-                                                        {idx + 1}
-                                                    </span>
-                                                    <span className="truncate">{section.title}</span>
-                                                </a>
-                                            ))}
-                                        </nav>
-                                    </div>
-                                </details>
-                            </div>
-
-                            <div className="bg-white p-4 md:p-12 rounded-2xl shadow-sm border border-gray-100 space-y-12 md:space-y-20 article-content">
-                                <article className="prose prose-lg max-w-none text-gray-700 leading-relaxed font-normal">
-
-                                    <div className="flex items-center space-x-4 mb-10 p-4 bg-gray-50 rounded-xl border border-gray-100 not-prose">
-                                        <img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-12 h-12 rounded-full object-cover m-0" />
-                                        <div>
-                                            <p className="text-sm font-bold text-gray-900 m-0">Written by <Link href="/about-us" className="text-[rgb(110,94,147)] hover:underline">Rahul Roy</Link></p>
+                                                ><span className="w-5 h-5 rounded-full bg-purple-100 text-[#6E5E93] flex items-center justify-center text-[10px] font-bold mr-2 flex-shrink-0">{idx + 1}</span><span className="truncate">{section.title}</span></a>))}</nav></div></details></div><div className="bg-white p-4 md:p-12 rounded-2xl shadow-sm border border-gray-100 space-y-12 md:space-y-20 article-content"><article className="prose prose-lg max-w-none text-gray-700 leading-relaxed font-normal"><div className="flex items-center space-x-4 mb-10 p-4 bg-gray-50 rounded-xl border border-gray-100 not-prose"><img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-12 h-12 rounded-full object-cover m-0" /><div><p className="text-sm font-bold text-gray-900 m-0">Written by<Link href="/about-us" className="text-[rgb(110,94,147)] hover:underline">Rahul Roy</Link></p>
                                             <p className="text-xs text-gray-500 m-0">Trademark Research Specialist</p>
                                         </div>
                                     </div>
@@ -345,20 +318,12 @@ export default function TrademarkFilingTimePage() {
                                         </h2>
 
                                         <div id="quick-answer" className="bg-indigo-50 border-l-4 border-[rgb(110,94,147)] p-6 rounded-r-xl mb-8">
-                                            <p className="font-semibold text-gray-900 m-0">
-                                                Filing a trademark application in India takes less than 24 hours online on Form TM-A, granting immediate entitlement to use the ™ symbol once the official filing receipt is issued. However, achieving complete legal registration and receiving the registered ® certificate typically requires 6 to 12 months for smooth applications, or 18 to 24 months if objections or third-party oppositions occur. Eligible applicants can expedite the examination process to 3 to 6 months under Rule 34 by paying the prescribed government fees.
-                                            </p>
+                                            <p className="font-semibold text-gray-900 m-0">Filing a trademark application in India takes less than 24 hours online on Form TM-A. This grants immediate entitlement to use the ™ symbol once the official filing receipt is issued. However, achieving complete legal registration and receiving the registered ® certificate typically requires 6 to 12 months for smooth applications, or 18 to 24 months if objections or third-party oppositions occur. Eligible applicants can expedite the examination process to 3 to 6 months under Rule 34 by paying the prescribed government fees.</p>
                                         </div>
 
-                                        <p className="mb-6">
-                                            When brand owners ask &ldquo;how much time does trademark filing take,&rdquo; they are usually asking two distinct questions: First, how quickly can an enterprise legally establish an official filing date and start displaying the ™ sign? Second, how long does the statutory review cycle take until the Trade Marks Registry seals the mark with full ® registration status?
-                                        </p>
-                                        <p className="mb-6">
-                                            The initial filing step itself is fast and streamlined through the electronic gateway of the Controller General of Patents, Designs and Trade Marks (CGPDTM). With proper preparation, professional attorneys can perform clearance searches, draft documentation, and remit statutory e-filing fees within a single business day. To explore the broader procedural milestones, review our comprehensive walkthrough on <Link href="/process-and-steps-of-trademark-registration" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark registration processes</Link>.
-                                        </p>
-                                        <p className="mb-6">
-                                            Conversely, the journey from pending application to definitive registration is a structured administrative and quasi-judicial procedure governed by the Trade Marks Act, 1999 and the Trade Marks Rules, 2017. Because intellectual property grants exclusive commercial monopolies, the registry enforces mandatory statutory windows for verification, public advertisement, and potential third-party objections.
-                                        </p>
+                                        <p className="mb-6">When brand owners ask &ldquo;how much time does trademark filing take,&rdquo. They are usually asking two distinct questions: First, how quickly can an enterprise legally establish an official filing date and start displaying the ™ sign? Second, how long does the statutory review cycle take until the Trade Marks Registry seals the mark with full ® registration status?</p>
+                                        <p className="mb-6">The initial filing step itself is fast and streamlined through the electronic gateway of the Controller General of Patents, Designs and Trade Marks (CGPDTM). With proper preparation, professional attorneys can perform clearance searches, draft documentation, and remit statutory e-filing fees within a single business day. To explore the broader procedural milestones, review our comprehensive walkthrough on<Link href="/process-and-steps-of-trademark-registration" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark registration processes</Link>.</p>
+                                        <p className="mb-6">Conversely, the journey from pending application to definitive registration is a structured administrative and quasi-judicial procedure governed by the Trade Marks Act, 1999 and the Trade Marks Rules, 2017. Because intellectual property grants exclusive commercial monopolies, the registry enforces mandatory statutory windows for verification, public advertisement, and potential third-party objections.</p>
                                     </section>
 
                                     {/* SECTION 2: 24-HOUR E-FILING */}
@@ -367,9 +332,7 @@ export default function TrademarkFilingTimePage() {
                                             <FontAwesomeIcon icon={faBolt} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Preparation and 24-Hour E-Filing
                                         </h2>
-                                        <p className="mb-6">
-                                            The preliminary phase—from selecting your mark to securing your formal application acknowledgment—can be finished within hours when executed systematically. Here is the operational timeline for the filing stage:
-                                        </p>
+                                        <p className="mb-6">The preliminary phase—from selecting your mark to securing your formal application acknowledgment—can be finished within hours when executed systematically. Here is the operational timeline for the filing stage:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -377,9 +340,7 @@ export default function TrademarkFilingTimePage() {
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     Clearance Search (2–6 Hours)
                                                 </h3>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    Before filling out forms, comprehensive search across phonetic, visual, and semantic registers must be performed on the IP India database. Proper preliminary clearance prevents instant refusal. Perform a detailed scan using our <Link href="/how-to-search-for-existing-trademark" className="text-[#6E5E93] hover:underline font-semibold">trademark search guide</Link>.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">Before filling out forms, comprehensive search across phonetic, visual, and semantic registers must be performed on the IP India database. Proper preliminary clearance prevents instant refusal. Perform a detailed scan using our<Link href="/how-to-search-for-existing-trademark" className="text-[#6E5E93] hover:underline font-semibold">trademark search guide</Link>.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -387,9 +348,7 @@ export default function TrademarkFilingTimePage() {
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     Classification Audit (1–2 Hours)
                                                 </h3>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    Identifying the precise Nice Classification classes (Classes 1–34 for goods and Classes 35–45 for services) is vital. Drafting accurate specifications prevents classification objections. Check your industry segments using our <Link href="/trademark-class-finder" className="text-[#6E5E93] hover:underline font-semibold">trademark class finder</Link>.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">Identifying the precise Nice Classification classes (Classes 1–34 for goods and Classes 35–45 for services) is vital. Drafting accurate specifications prevents classification objections. Check your industry segments using our<Link href="/trademark-class-finder" className="text-[#6E5E93] hover:underline font-semibold">trademark class finder</Link>.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -397,9 +356,7 @@ export default function TrademarkFilingTimePage() {
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     Document Execution (2–4 Hours)
                                                 </h3>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    Gathering the applicant KYC details, executing the Power of Attorney on Form TM-48, and drafting a User Affidavit (if claiming prior commercial use with documentary invoices) ensures zero procedural deficiencies.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">Gathering the applicant KYC details, executing the Power of Attorney on Form TM-48, and drafting a User Affidavit (if claiming prior commercial use with documentary invoices) ensures zero procedural deficiencies.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -407,15 +364,11 @@ export default function TrademarkFilingTimePage() {
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     E-Filing &amp; Receipt (Immediate)
                                                 </h3>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    Submitting Form TM-A on the IP India e-filing gateway with a Class 3 Digital Signature Certificate (DSC) generates your official filing number and timestamped receipt instantaneously upon fee clearance.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">Submitting Form TM-A on the IP India e-filing gateway with a Class 3 Digital Signature Certificate (DSC) generates your official filing number and timestamped receipt instantaneously upon fee clearance.</p>
                                             </div>
                                         </div>
 
-                                        <p className="mb-6">
-                                            The moment the e-receipt is downloaded, the applicant acquires a permanent statutory priority date. This date anchors ownership rights across India and provides the foundation for international expansion under the Madrid Protocol.
-                                        </p>
+                                        <p className="mb-6">The moment the e-receipt is downloaded, the applicant acquires a permanent statutory priority date. This date anchors ownership rights across India and provides the foundation for international expansion under the Madrid Protocol.</p>
                                     </section>
 
                                     {/* SECTION 3: STAGE-BY-STAGE TIMELINE */}
@@ -424,9 +377,7 @@ export default function TrademarkFilingTimePage() {
                                             <FontAwesomeIcon icon={faListUl} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Stage-by-Stage Registration Timeline
                                         </h2>
-                                        <p className="mb-6">
-                                            Once Form TM-A is safely lodged, the application progresses through distinct statutory checkpoints. Knowing what happens at each milestone eliminates uncertainty and allows you to track progress accurately on the <Link href="/trademark-application-status" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark application status</Link> portal.
-                                        </p>
+                                        <p className="mb-6">Once Form TM-A is safely lodged, the application progresses through distinct statutory checkpoints. Knowing what happens at each milestone eliminates uncertainty and allows you to track progress accurately on the<Link href="/trademark-application-status" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark application status</Link>portal.</p>
 
                                         <div className="space-y-6 my-8 not-prose">
                                             <div className="p-6 bg-white rounded-2xl border border-gray-200 shadow-sm flex flex-col md:flex-row gap-5 items-start">
@@ -437,9 +388,7 @@ export default function TrademarkFilingTimePage() {
                                                     <h3 className="text-lg font-bold text-gray-900 mb-2">
                                                         Formalities Check Pass (10 to 30 Days)
                                                     </h3>
-                                                    <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                        The registry verifies administrative compliance: correct applicant name, valid legal address, proper Power of Attorney on stamp paper, and accurate classification of goods or services. If all technical criteria are met, the status updates to &ldquo;Formalities Chk Pass&rdquo;.
-                                                    </p>
+                                                    <p className="text-sm text-gray-600 leading-relaxed m-0">The registry verifies administrative compliance: correct applicant name, valid legal address, proper Power of Attorney on stamp paper, and accurate classification of goods or services. If all technical criteria are met, the status updates to &ldquo;Formalities Chk Pass&rdquo;.</p>
                                                 </div>
                                             </div>
 
@@ -451,9 +400,7 @@ export default function TrademarkFilingTimePage() {
                                                     <h3 className="text-lg font-bold text-gray-900 mb-2">
                                                         Substantive Examination (1 to 3 Months)
                                                     </h3>
-                                                    <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                        An allocated examiner reviews the mark under Section 9 (distinctiveness, generic terms, deceptive matter) and Section 11 (conflict with prior registered or pending marks). The examiner either accepts the mark or issues a formal Examination Report.
-                                                    </p>
+                                                    <p className="text-sm text-gray-600 leading-relaxed m-0">An allocated examiner reviews the mark under Section 9 (distinctiveness, generic terms, deceptive matter) and Section 11 (conflict with prior registered or pending marks). The examiner either accepts the mark or issues a formal Examination Report.</p>
                                                 </div>
                                             </div>
 
@@ -465,9 +412,7 @@ export default function TrademarkFilingTimePage() {
                                                     <h3 className="text-lg font-bold text-gray-900 mb-2">
                                                         Objection Response &amp; Show Cause Hearing (1 to 3 Months)
                                                     </h3>
-                                                    <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                        If an examination report raises concerns, the applicant must file a formal written rebuttal within 30 days. To prepare an effective submission, consult our guide on <Link href="/how-to-respond-to-trademark-examination-report" className="text-[#6E5E93] hover:underline font-semibold">responding to trademark examination reports</Link>. If the reply is not accepted on paper, an oral show-cause hearing before the Hearing Officer is scheduled.
-                                                    </p>
+                                                    <p className="text-sm text-gray-600 leading-relaxed m-0">If an examination report raises concerns, the applicant must file a formal written rebuttal within 30 days. To prepare an effective submission, consult our guide on<Link href="/how-to-respond-to-trademark-examination-report" className="text-[#6E5E93] hover:underline font-semibold">responding to trademark examination reports</Link>. If the reply is not accepted on paper, an oral show-cause hearing before the Hearing Officer is scheduled.</p>
                                                 </div>
                                             </div>
 
@@ -479,9 +424,7 @@ export default function TrademarkFilingTimePage() {
                                                     <h3 className="text-lg font-bold text-gray-900 mb-2">
                                                         Trade Marks Journal Advertisement (Statutory 4 Months)
                                                     </h3>
-                                                    <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                        Once accepted, the trademark is published in the weekly Trade Marks Journal. Under Section 21 of the Trade Marks Act 1999, the general public and competitors have a mandatory, non-extendable window of exactly 4 months to oppose the registration by filing Form TM-O.
-                                                    </p>
+                                                    <p className="text-sm text-gray-600 leading-relaxed m-0">Once accepted, the trademark is published in the weekly Trade Marks Journal. Under Section 21 of the Trade Marks Act 1999, the general public and competitors have a mandatory, non-extendable window of exactly 4 months to oppose the registration by filing Form TM-O.</p>
                                                 </div>
                                             </div>
 
@@ -493,9 +436,7 @@ export default function TrademarkFilingTimePage() {
                                                     <h3 className="text-lg font-bold text-gray-900 mb-2">
                                                         Certificate Issuance &amp; Sealing (2 to 4 Weeks)
                                                     </h3>
-                                                    <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                        If no opposition notice is submitted during the 4-month advertisement period, the registry generates the official Trademark Registration Certificate bearing the seal of the Trade Marks Registry. The proprietor can now legitimately affix the coveted &reg; symbol.
-                                                    </p>
+                                                    <p className="text-sm text-gray-600 leading-relaxed m-0">If no opposition notice is submitted during the 4-month advertisement period, the registry generates the official Trademark Registration Certificate bearing the seal of the Trade Marks Registry. The proprietor can now legitimately affix the coveted &reg; symbol.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -507,12 +448,8 @@ export default function TrademarkFilingTimePage() {
                                             <FontAwesomeIcon icon={faRocket} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Standard vs Expedited Fast-Track Filing
                                         </h2>
-                                        <p className="mb-6">
-                                            For commercial ventures preparing funding rounds, initial public offerings, international licensing, or immediate anti-counterfeiting enforcement, waiting 12 to 18 months may prove impractical. The Trade Marks Rules, 2017 offer an official fast-track route under Rule 34.
-                                        </p>
-                                        <p className="mb-6">
-                                            Under Rule 34, an applicant can request expedited examination by submitting Form TM-M accompanied by statutory fast-track fees. The Registrar is obligated to issue the examination report within roughly 30 days of receiving the request. Detailed parameters and qualification criteria can be checked in our analysis of <Link href="/are-there-any-fast-track-options-for-trademark-registration-in-india" className="text-[rgb(110,94,147)] hover:underline font-medium">fast track trademark registration options</Link>.
-                                        </p>
+                                        <p className="mb-6">For commercial ventures preparing funding rounds, initial public offerings, international licensing, or immediate anti-counterfeiting enforcement, waiting 12 to 18 months may prove impractical. The Trade Marks Rules, 2017 offer an official fast-track route under Rule 34.</p>
+                                        <p className="mb-6">Under Rule 34, an applicant can request expedited examination by submitting Form TM-M accompanied by statutory fast-track fees. The Registrar is obligated to issue the examination report within roughly 30 days of receiving the request. Detailed parameters and qualification criteria can be checked in our analysis of<Link href="/are-there-any-fast-track-options-for-trademark-registration-in-india" className="text-[rgb(110,94,147)] hover:underline font-medium">fast track trademark registration options</Link>.</p>
 
                                         <div className="overflow-x-auto my-8 not-prose">
                                             <table className="w-full text-left border-collapse bg-white rounded-xl shadow-sm border border-gray-200">
@@ -553,9 +490,7 @@ export default function TrademarkFilingTimePage() {
                                             </table>
                                         </div>
 
-                                        <p className="mb-6">
-                                            Crucially, while Rule 34 dramatically accelerates registry review and hearing scheduling, it cannot legally curtail the mandatory 4-month public opposition period under Section 21. Third-party statutory rights to notice remain preserved under constitutional due process.
-                                        </p>
+                                        <p className="mb-6">Crucially, while Rule 34 dramatically accelerates registry review and hearing scheduling, it cannot legally curtail the mandatory 4-month public opposition period under Section 21. Third-party statutory rights to notice remain preserved under constitutional due process.</p>
                                     </section>
 
                                     {/* SECTION 5: FACTORS INFLUENCING SPEED */}
@@ -564,9 +499,7 @@ export default function TrademarkFilingTimePage() {
                                             <FontAwesomeIcon icon={faExclamationTriangle} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Factors Influencing Processing Speed
                                         </h2>
-                                        <p className="mb-6">
-                                            The wide variance between a 6-month registration and a 24-month battle is rarely accidental. Several legal, administrative, and strategic variables dictate how swiftly an application navigates the registry:
-                                        </p>
+                                        <p className="mb-6">The wide variance between a 6-month registration and a 24-month battle is rarely accidental. Several legal, administrative, and strategic variables dictate how swiftly an application navigates the registry:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -574,9 +507,7 @@ export default function TrademarkFilingTimePage() {
                                                     <span className="w-2.5 h-2.5 bg-red-500 rounded-full mr-2.5"></span>
                                                     Distinctiveness of the Mark
                                                 </h3>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    Invented words, arbitrary combinations, and distinctive visual insignias pass examination smoothly. In contrast, descriptive, geographical, or praise-laden terms trigger Section 9 objections, requiring detailed legal replies and evidence of acquired distinctiveness.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">Invented words, arbitrary combinations, and distinctive visual insignias pass examination smoothly. In contrast, descriptive, geographical, or praise-laden terms trigger Section 9 objections. This requires detailed legal replies and evidence of acquired distinctiveness.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -584,9 +515,7 @@ export default function TrademarkFilingTimePage() {
                                                     <span className="w-2.5 h-2.5 bg-red-500 rounded-full mr-2.5"></span>
                                                     Prior Conflicting Trademarks
                                                 </h3>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    If the examiner identifies phonetically or conceptually identical pending marks under Section 11, the process pauses. Overcoming citation citations requires distinguishing business lines or seeking co-existence agreements, extending timelines by several months.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">If the examiner identifies phonetically or conceptually identical pending marks under Section 11, the process pauses. Overcoming citation citations requires distinguishing business lines or seeking co-existence agreements, extending timelines by several months.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -594,9 +523,7 @@ export default function TrademarkFilingTimePage() {
                                                     <span className="w-2.5 h-2.5 bg-amber-500 rounded-full mr-2.5"></span>
                                                     Jurisdiction &amp; Registry Load
                                                 </h3>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    India maintains five regional Trade Marks Registries in Mumbai, Delhi, Kolkata, Chennai, and Ahmedabad. Workload distribution, pending hearing backlogs, and examiner availability can cause variance across jurisdictional branches.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">India maintains five regional Trade Marks Registries in Mumbai, Delhi, Kolkata, Chennai, and Ahmedabad. Workload distribution, pending hearing backlogs, and examiner availability can cause variance across jurisdictional branches.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -604,9 +531,7 @@ export default function TrademarkFilingTimePage() {
                                                     <span className="w-2.5 h-2.5 bg-purple-500 rounded-full mr-2.5"></span>
                                                     Third-Party Oppositions
                                                 </h3>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    If a competitor files Form TM-O during the 4-month advertisement stage, the matter enters quasi-judicial proceedings involving counter-statements, evidence under Rules 45–47, and formal cross-hearings, taking 18 to 36 months to adjudicate.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">If a competitor files Form TM-O during the 4-month advertisement stage, the matter enters quasi-judicial proceedings involving counter-statements, evidence under Rules 45–47, and formal cross-hearings, taking 18 to 36 months to adjudicate.</p>
                                             </div>
                                         </div>
                                     </section>
@@ -617,9 +542,7 @@ export default function TrademarkFilingTimePage() {
                                             <FontAwesomeIcon icon={faTable} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Timeline Summary and Registry Stages
                                         </h2>
-                                        <p className="mb-6">
-                                            Here is an at-a-glance reference breakdown summarizing the entire chronology of Indian trademark filing from initiation to registration certificate sealing:
-                                        </p>
+                                        <p className="mb-6">Here is an at-a-glance reference breakdown summarizing the entire chronology of Indian trademark filing from initiation to registration certificate sealing:</p>
 
                                         <div className="overflow-x-auto my-8 not-prose">
                                             <table className="w-full text-left border-collapse bg-white rounded-xl shadow-sm border border-gray-200">
@@ -678,9 +601,7 @@ export default function TrademarkFilingTimePage() {
                                             </table>
                                         </div>
 
-                                        <p className="mb-6">
-                                            Once issued, remember that your trademark registration remains valid for 10 years calculated from the application filing date. Keep your brand secure over decades by reviewing our decennial guide on <Link href="/how-to-renew-a-trademark" className="text-[rgb(110,94,147)] hover:underline font-medium">how to renew a trademark</Link>.
-                                        </p>
+                                        <p className="mb-6">Once issued, remember that your trademark registration remains valid for 10 years calculated from the application filing date. Keep your brand secure over decades by reviewing our decennial guide on<Link href="/how-to-renew-a-trademark" className="text-[rgb(110,94,147)] hover:underline font-medium">how to renew a trademark</Link>.</p>
                                     </section>
 
                                     {/* SECTION 7: PREVENTING DELAYS */}
@@ -689,18 +610,14 @@ export default function TrademarkFilingTimePage() {
                                             <FontAwesomeIcon icon={faShieldHalved} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             How to Avoid Trademark Filing Delays
                                         </h2>
-                                        <p className="mb-6">
-                                            Unnecessary procedural roadblocks consume valuable months. Proactive founders and corporate legal counsels adopt specific operational measures to ensure rapid and hitch-free registration:
-                                        </p>
+                                        <p className="mb-6">Unnecessary procedural roadblocks consume valuable months. Proactive founders and corporate legal counsels adopt specific operational measures to ensure rapid and hitch-free registration:</p>
 
                                         <div className="space-y-4 my-8 not-prose">
                                             <div className="flex items-start p-4 bg-gray-50 rounded-xl border border-gray-200">
                                                 <FontAwesomeIcon icon={faCheckCircle} className="w-5 h-5 text-emerald-600 mt-1 mr-3 flex-shrink-0" />
                                                 <div>
                                                     <h3 className="font-bold text-gray-900 text-base mb-1">Conduct Pre-Filing Clearance Searches</h3>
-                                                    <p className="text-sm text-gray-600 m-0 leading-relaxed">
-                                                        Never file blindly. A meticulous multi-class search identifying identical, phonetic, and conceptually overlapping marks prevents automatic Section 11 citations that stall proceedings for 6 to 12 months.
-                                                    </p>
+                                                    <p className="text-sm text-gray-600 m-0 leading-relaxed">Never file blindly. A meticulous multi-class search identifying identical, phonetic, and conceptually overlapping marks prevents automatic Section 11 citations that stall proceedings for 6 to 12 months.</p>
                                                 </div>
                                             </div>
 
@@ -708,9 +625,7 @@ export default function TrademarkFilingTimePage() {
                                                 <FontAwesomeIcon icon={faCheckCircle} className="w-5 h-5 text-emerald-600 mt-1 mr-3 flex-shrink-0" />
                                                 <div>
                                                     <h3 className="font-bold text-gray-900 text-base mb-1">Draft Precise Specifications of Goods &amp; Services</h3>
-                                                    <p className="text-sm text-gray-600 m-0 leading-relaxed">
-                                                        Vague, overly expansive item descriptions trigger classification objections. Use approved Nice Classification terminology and avoid vague descriptions like &ldquo;all related goods&rdquo;.
-                                                    </p>
+                                                    <p className="text-sm text-gray-600 m-0 leading-relaxed">Vague, overly expansive item descriptions trigger classification objections. Use approved Nice Classification terminology and avoid vague descriptions like &ldquo;all related goods&rdquo;.</p>
                                                 </div>
                                             </div>
 
@@ -718,9 +633,7 @@ export default function TrademarkFilingTimePage() {
                                                 <FontAwesomeIcon icon={faCheckCircle} className="w-5 h-5 text-emerald-600 mt-1 mr-3 flex-shrink-0" />
                                                 <div>
                                                     <h3 className="font-bold text-gray-900 text-base mb-1">Verify User Claim Dates and Affidavits</h3>
-                                                    <p className="text-sm text-gray-600 m-0 leading-relaxed">
-                                                        If claiming prior use before the application date, submit a notarized User Affidavit accompanied by dated invoices and tax receipts. If commercial use cannot be conclusively proven, file as &ldquo;Proposed to be used&rdquo; to avoid evidence deficiency notices.
-                                                    </p>
+                                                    <p className="text-sm text-gray-600 m-0 leading-relaxed">If claiming prior use before the application date, submit a notarized User Affidavit accompanied by dated invoices and tax receipts. If commercial use cannot be conclusively proven, file as &ldquo;Proposed to be used&rdquo; to avoid evidence deficiency notices.</p>
                                                 </div>
                                             </div>
 
@@ -728,9 +641,7 @@ export default function TrademarkFilingTimePage() {
                                                 <FontAwesomeIcon icon={faCheckCircle} className="w-5 h-5 text-emerald-600 mt-1 mr-3 flex-shrink-0" />
                                                 <div>
                                                     <h3 className="font-bold text-gray-900 text-base mb-1">Monitor Application Status Bi-Weekly</h3>
-                                                    <p className="text-sm text-gray-600 m-0 leading-relaxed">
-                                                        Statutory deadlines to respond to examination reports (30 days) and opposition notices are rigid. Routine status tracking guarantees you never miss a compliance window, preventing the mark from being marked &ldquo;Abandoned&rdquo;.
-                                                    </p>
+                                                    <p className="text-sm text-gray-600 m-0 leading-relaxed">Statutory deadlines to respond to examination reports (30 days) and opposition notices are rigid. Routine status tracking guarantees you never miss a compliance window. This prevents the mark from being marked &ldquo;Abandoned&rdquo;.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -749,9 +660,7 @@ export default function TrademarkFilingTimePage() {
                                                         <span className="text-[#6E5E93] mr-2">Q:</span>
                                                         <span>{faq.question}</span>
                                                     </h3>
-                                                    <p className="text-sm text-gray-700 leading-relaxed pl-6 m-0">
-                                                        {faq.answer}
-                                                    </p>
+                                                    <p className="text-sm text-gray-700 leading-relaxed pl-6 m-0">{faq.answer}</p>
                                                 </div>
                                             ))}
                                         </div>
@@ -763,12 +672,8 @@ export default function TrademarkFilingTimePage() {
                                             <FontAwesomeIcon icon={faScaleBalanced} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Strategic Advice for Brand Proprietors
                                         </h2>
-                                        <p className="mb-6">
-                                            Securing a registered trademark is not a passive waiting game—it is an active legal process. While the immediate 24-hour filing confers priority and TM authorization, protecting the mark through the subsequent 6 to 12 months requires diligent docketing, proactive legal replies, and ongoing status surveillance.
-                                        </p>
-                                        <p className="mb-6">
-                                            Working with experienced intellectual property attorneys ensures your filing is fortified against Section 9 and Section 11 rejections from day one. Take decisive action today to safeguard your commercial legacy across India.
-                                        </p>
+                                        <p className="mb-6">Securing a registered trademark is not a passive waiting game—it is an active legal process. While the immediate 24-hour filing confers priority and TM authorization. This protects the mark through the subsequent 6 to 12 months requires diligent docketing, proactive legal replies, and ongoing status surveillance.</p>
+                                        <p className="mb-6">Working with experienced intellectual property attorneys ensures your filing is fortified against Section 9 and Section 11 rejections from day one. Take decisive action today to safeguard your commercial legacy across India.</p>
                                     </section>
 
                                     {/* BOTTOM CTA SECTION */}
@@ -785,9 +690,7 @@ export default function TrademarkFilingTimePage() {
                                                     File Your Trademark in 24 Hours
                                                 </h3>
 
-                                                <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">
-                                                    Partner with verified trademark attorneys to file Form TM-A with zero errors. Get instant ™ symbol entitlement, priority date protection, and ongoing registry docket tracking.
-                                                </p>
+                                                <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">Partner with verified trademark attorneys to file Form TM-A with zero errors. Get instant ™ symbol entitlement, priority date protection, and ongoing registry docket tracking.</p>
 
                                                 <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
                                                     <Link
@@ -805,9 +708,7 @@ export default function TrademarkFilingTimePage() {
                                                     </a>
                                                 </div>
 
-                                                <p className="mt-6 text-xs font-medium tracking-wide text-white/50 sm:text-sm">
-                                                    Certified IP Advocates • Same-Day Form TM-A Filing • Transparent Government Invoicing
-                                                </p>
+                                                <p className="mt-6 text-xs font-medium tracking-wide text-white/50 sm:text-sm">Certified IP Advocates • Same-Day Form TM-A Filing • Transparent Government Invoicing</p>
                                             </div>
                                         </div>
                                     </section>
@@ -840,62 +741,13 @@ export default function TrademarkFilingTimePage() {
                             <div className="bg-gray-50 p-10 rounded-[2.5rem] shadow-sm border border-gray-100">
                                 <h3 className="text-sm font-black text-gray-400 mb-8 uppercase tracking-[0.3em]">Related Resources</h3>
                                 <ul className="space-y-6">
-                                    <li>
-                                        <Link href="/process-and-steps-of-trademark-registration" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faListUl} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Filing Steps</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/trademark-application-status" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faClock} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Check Status</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/are-there-any-fast-track-options-for-trademark-registration-in-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faRocket} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Fast Track TM</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/how-to-search-for-existing-trademark" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faSearch} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">TM Search</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/trademark-class-finder" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faTable} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Class Guide</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/how-to-respond-to-trademark-examination-report" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faExclamationTriangle} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Exam Reply</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/how-to-renew-a-trademark" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faCalendarCheck} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">TM Renewal</span>
-                                        </Link>
-                                    </li>
+                                    <li><Link href="/process-and-steps-of-trademark-registration" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faListUl} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Filing Steps</span></Link></li>
+                                    <li><Link href="/trademark-application-status" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faClock} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Check Status</span></Link></li>
+                                    <li><Link href="/are-there-any-fast-track-options-for-trademark-registration-in-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faRocket} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Fast Track TM</span></Link></li>
+                                    <li><Link href="/how-to-search-for-existing-trademark" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faSearch} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">TM Search</span></Link></li>
+                                    <li><Link href="/trademark-class-finder" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faTable} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Class Guide</span></Link></li>
+                                    <li><Link href="/how-to-respond-to-trademark-examination-report" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faExclamationTriangle} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Exam Reply</span></Link></li>
+                                    <li><Link href="/how-to-renew-a-trademark" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faCalendarCheck} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">TM Renewal</span></Link></li>
                                 </ul>
                             </div>
                         </aside>

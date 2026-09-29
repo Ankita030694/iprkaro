@@ -76,7 +76,7 @@ const faqs = [
     },
     {
         question: "What is the difference between 'Formalities Check Pass' and 'Formalities Check Fail'?",
-        answer: "'Formalities Check Pass' signifies that your initial application satisfied procedural verification under Rule 37, including correct applicant details, class classification, power of attorney (Form TM-48), and user affidavit. Conversely, 'Formalities Check Fail' indicates clerical defects such as incorrect stamp duty, missing documents, or classification ambiguities, requiring a formal rectification response within 30 days."
+        answer: "'Formalities Check Pass' signifies that your initial application satisfied procedural verification under Rule 37, including correct applicant details, class classification, power of attorney (Form TM-48), and user affidavit. Conversely, 'Formalities Check Fail' indicates clerical defects such as incorrect stamp duty, missing documents, or classification ambiguities. This requires a formal rectification response within 30 days."
     },
     {
         question: "What does 'Marked for Exam' mean and how long does examination take?",
@@ -88,7 +88,7 @@ const faqs = [
     },
     {
         question: "What does 'Accepted & Advertised' mean and what is the opposition window?",
-        answer: "'Accepted & Advertised' means the Registrar has approved your mark for registration, and it has been published in the weekly Trade Marks Journal under Section 20. This triggers a mandatory 4-month statutory opposition period. If no third party files an opposition on Form TM-O within this 4-month window, the application automatically progresses to Certificate Issuance."
+        answer: "'Accepted & Advertised' means the Registrar has approved your mark for registration. It has been published in the weekly Trade Marks Journal under Section 20. This triggers a mandatory 4-month statutory opposition period. If no third party files an opposition on Form TM-O within this 4-month window, the application automatically progresses to Certificate Issuance."
     },
     {
         question: "What causes a trademark status to become 'Abandoned' and can it be revived?",
@@ -207,9 +207,7 @@ export default function TrademarkApplicationStatusPage() {
                             <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-3 leading-tight text-gray-900 tracking-tighter">
                                 Check <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'transparent' }}>Trademark Application Status</span> in India
                             </h1>
-                            <p className="text-base md:text-lg mb-5 text-gray-700 font-medium leading-relaxed">
-                                Submitting your trademark application on Form TM-A marks only the beginning of your legal journey. From Formalities Check Pass and Marked for Exam to Objected, Advertised in Journal, and Registered, each statutory transition demands vigilant tracking. Under the Trade Marks Act, 1999, missing a single 30-day response window or show-cause hearing notice results in deemed abandonment and forfeiture of priority rights. Master the official IP India tracking gateway, decode status updates, and take prompt legal action.
-                            </p>
+                            <p className="text-base md:text-lg mb-5 text-gray-700 font-medium leading-relaxed">Submitting your trademark application on Form TM-A marks only the beginning of your legal journey. From Formalities Check Pass and Marked for Exam to Objected, Advertised in Journal, and Registered, each statutory transition demands vigilant tracking. Under the Trade Marks Act, 1999, missing a single 30-day response window or show-cause hearing notice results in deemed abandonment and forfeiture of priority rights. Master the official IP India tracking gateway, decode status updates, and take prompt legal action.</p>
 
                             <div className="flex flex-wrap items-center gap-4 mb-6">
                                 <div className="flex items-center mr-2">
@@ -300,36 +298,11 @@ export default function TrademarkApplicationStatusPage() {
                                                 Close
                                             </span>
                                             <svg className="w-4 h-4 text-gray-500 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                                            </svg>
-                                        </div>
-                                    </summary>
-                                    <div className="p-3.5 pt-2 border-t border-purple-50 bg-white/70">
-                                        <nav className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
-                                            {tocSections.map((section, idx) => (
-                                                <a
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg></div></summary><div className="p-3.5 pt-2 border-t border-purple-50 bg-white/70"><nav className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">{tocSections.map((section, idx) => (<a
                                                     key={section.id}
                                                     href={`#${section.id}`}
                                                     className="flex items-center p-2 rounded-xl text-xs font-medium text-gray-700 hover:text-[#6E5E93] hover:bg-purple-50/80 transition-all border border-transparent hover:border-purple-100"
-                                                >
-                                                    <span className="w-5 h-5 rounded-full bg-purple-100 text-[#6E5E93] flex items-center justify-center text-[10px] font-bold mr-2 flex-shrink-0">
-                                                        {idx + 1}
-                                                    </span>
-                                                    <span className="truncate">{section.title}</span>
-                                                </a>
-                                            ))}
-                                        </nav>
-                                    </div>
-                                </details>
-                            </div>
-
-                            <div className="bg-white p-4 md:p-12 rounded-2xl shadow-sm border border-gray-100 space-y-12 md:space-y-20 article-content">
-                                <article className="prose prose-lg max-w-none text-gray-700 leading-relaxed font-normal">
-
-                                    <div className="flex items-center space-x-4 mb-10 p-4 bg-gray-50 rounded-xl border border-gray-100 not-prose">
-                                        <img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-12 h-12 rounded-full object-cover m-0" />
-                                        <div>
-                                            <p className="text-sm font-bold text-gray-900 m-0">Written by <Link href="/about-us" className="text-[rgb(110,94,147)] hover:underline">Rahul Roy</Link></p>
+                                                ><span className="w-5 h-5 rounded-full bg-purple-100 text-[#6E5E93] flex items-center justify-center text-[10px] font-bold mr-2 flex-shrink-0">{idx + 1}</span><span className="truncate">{section.title}</span></a>))}</nav></div></details></div><div className="bg-white p-4 md:p-12 rounded-2xl shadow-sm border border-gray-100 space-y-12 md:space-y-20 article-content"><article className="prose prose-lg max-w-none text-gray-700 leading-relaxed font-normal"><div className="flex items-center space-x-4 mb-10 p-4 bg-gray-50 rounded-xl border border-gray-100 not-prose"><img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-12 h-12 rounded-full object-cover m-0" /><div><p className="text-sm font-bold text-gray-900 m-0">Written by<Link href="/about-us" className="text-[rgb(110,94,147)] hover:underline">Rahul Roy</Link></p>
                                             <p className="text-xs text-gray-500 m-0">Trademark Research Specialist</p>
                                         </div>
                                     </div>
@@ -342,20 +315,12 @@ export default function TrademarkApplicationStatusPage() {
                                         </h2>
 
                                         <div id="quick-answer" className="bg-indigo-50 border-l-4 border-[rgb(110,94,147)] p-6 rounded-r-xl mb-8">
-                                            <p className="font-semibold text-gray-900 m-0">
-                                                Trademark application status reflects the exact procedural standing of your mark on the IP India Trade Marks Registry e-portal. Key statutory stages include Formalities Check Pass, Marked for Exam, Objected (under Section 9 or 11), Under Show Cause Hearing, Accepted &amp; Advertised in Journal, and Registered. Tracking your status is mandatory because legal notices, such as examination reports, carry an unforgiving 30-day statutory response deadline to prevent deemed abandonment.
-                                            </p>
+                                            <p className="font-semibold text-gray-900 m-0">Trademark application status reflects the exact procedural standing of your mark on the IP India Trade Marks Registry e-portal. Key statutory stages include Formalities Check Pass, Marked for Exam, Objected (under Section 9 or 11), Under Show Cause Hearing, Accepted &amp; Advertised in Journal, and Registered. Tracking your status is mandatory because legal notices, such as examination reports, carry an unforgiving 30-day statutory response deadline to prevent deemed abandonment.</p>
                                         </div>
 
-                                        <p className="mb-6">
-                                            When an entrepreneur or enterprise files an application for trademark registration on Form TM-A, the Trade Marks Registry issues an official electronic acknowledgment receipt bearing a unique 5 to 7-digit trademark application number. While filing grants an immediate legal priority date, it does not confer instant registration or exclusive statutory monopoly rights.
-                                        </p>
-                                        <p className="mb-6">
-                                            Between application submission and final certificate issuance, every file undergoes systematic scrutiny by the Registrar of Trade Marks under the statutory roadmap outlined in our <Link href="/process-and-steps-of-trademark-registration" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark registration process guide</Link>. Applications pass through administrative verification, substantive legal examination, public opposition scrutiny, and digital certificate generation.
-                                        </p>
-                                        <p className="mb-6">
-                                            Understanding each status entry on the electronic register enables brand owners to react swiftly. Whether addressing an examination query, uploading a Power of Attorney on Form TM-48, or defending against a third-party competitor notice, timely tracking prevents permanent forfeiture of valuable commercial goodwill.
-                                        </p>
+                                        <p className="mb-6">When an entrepreneur or enterprise files an application for trademark registration on Form TM-A, the Trade Marks Registry issues an official electronic acknowledgment receipt bearing a unique 5 to 7-digit trademark application number. While filing grants an immediate legal priority date, it does not confer instant registration or exclusive statutory monopoly rights.</p>
+                                        <p className="mb-6">Between application submission and final certificate issuance, every file undergoes systematic scrutiny by the Registrar of Trade Marks under the statutory roadmap outlined in our<Link href="/process-and-steps-of-trademark-registration" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark registration process guide</Link>. Applications pass through administrative verification, substantive legal examination, public opposition scrutiny, and digital certificate generation.</p>
+                                        <p className="mb-6">Understanding each status entry on the electronic register enables brand owners to react swiftly. Whether addressing an examination query, uploading a Power of Attorney on Form TM-48, or defending against a third-party competitor notice, timely tracking prevents permanent forfeiture of valuable commercial goodwill.</p>
                                     </section>
 
                                     {/* SECTION 2: HOW TO CHECK STATUS ONLINE */}
@@ -364,9 +329,7 @@ export default function TrademarkApplicationStatusPage() {
                                             <FontAwesomeIcon icon={faMagnifyingGlass} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             How to Check Status Online
                                         </h2>
-                                        <p className="mb-6">
-                                            The Trade Marks Registry provides a public e-register portal where any applicant, attorney, or business owner can check real-time dossier records free of cost. Follow this verified step-by-step navigation protocol:
-                                        </p>
+                                        <p className="mb-6">The Trade Marks Registry provides a public e-register portal where any applicant, attorney, or business owner can check real-time dossier records free of cost. Follow this verified step-by-step navigation protocol:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -374,9 +337,7 @@ export default function TrademarkApplicationStatusPage() {
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     1. Access the IP India E-Register
                                                 </h3>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    Visit the official electronic register portal at <a href="https://ipindiaonline.gov.in/eregister/eregister.aspx" target="_blank" rel="noopener noreferrer" className="text-[rgb(110,94,147)] hover:underline font-semibold">IP India E-Register Gateway</a>. Choose the &ldquo;Trade Mark Application/Registered Mark&rdquo; option.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">Visit the official electronic register portal at<a href="https://ipindiaonline.gov.in/eregister/eregister.aspx" target="_blank" rel="noopener noreferrer" className="text-[rgb(110,94,147)] hover:underline font-semibold">IP India E-Register Gateway</a>. Choose the &ldquo;Trade Mark Application/Registered Mark&rdquo; option.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -384,9 +345,7 @@ export default function TrademarkApplicationStatusPage() {
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     2. Select National / IRDI Number
                                                 </h3>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    Choose the &ldquo;National IRDI Number&rdquo; radio button. Enter your designated application number exactly as printed on your filing CBR receipt without adding spaces or slashes.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">Choose the &ldquo;National IRDI Number&rdquo; radio button. Enter your designated application number exactly as printed on your filing CBR receipt without adding spaces or slashes.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -394,9 +353,7 @@ export default function TrademarkApplicationStatusPage() {
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     3. Solve Security Captcha &amp; Submit
                                                 </h3>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    Enter the visual security verification code shown on the screen and click &ldquo;View&rdquo;. The system will fetch the matching record from the centralized Trade Marks Registry database.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">Enter the visual security verification code shown on the screen and click &ldquo;View&rdquo;. The system will fetch the matching record from the centralized Trade Marks Registry database.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -404,9 +361,7 @@ export default function TrademarkApplicationStatusPage() {
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     4. Review Dossier &amp; Download Documents
                                                 </h3>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    Click on the hyperlinked application number to open the full dossier. Click &ldquo;View Examination Report&rdquo;, &ldquo;Notices&rdquo;, or &ldquo;Uploaded Documents&rdquo; to download official registry correspondence.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">Click on the hyperlinked application number to open the full dossier. Click &ldquo;View Examination Report&rdquo;, &ldquo;Notices&rdquo;, or &ldquo;Uploaded Documents&rdquo; to download official registry correspondence.</p>
                                             </div>
                                         </div>
                                     </section>
@@ -417,9 +372,7 @@ export default function TrademarkApplicationStatusPage() {
                                             <FontAwesomeIcon icon={faListUl} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             All Trademark Status Stages
                                         </h2>
-                                        <p className="mb-6">
-                                            Each status entry on the IP India portal communicates a distinct legal milestone under the Trade Marks Rules, 2017. Here is what every procedural status indicates:
-                                        </p>
+                                        <p className="mb-6">Each status entry on the IP India portal communicates a distinct legal milestone under the Trade Marks Rules, 2017. Here is what every procedural status indicates:</p>
 
                                         {/* STAGE 1 */}
                                         <div className="border border-gray-200 rounded-2xl p-6 md:p-8 mb-8 bg-white shadow-sm hover:border-[rgb(110,94,147)] transition-colors">
@@ -428,12 +381,8 @@ export default function TrademarkApplicationStatusPage() {
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Pre-Examination Intake</span>
                                             </div>
                                             <h3 className="text-xl font-bold text-gray-900 mb-3">New Application &amp; Send to Vienna Codification</h3>
-                                            <p className="text-gray-700 leading-relaxed mb-4">
-                                                Upon filing, the initial status displays as <strong>New Application</strong>. The application details are digitized and indexed into the Trade Marks Registry intranet.
-                                            </p>
-                                            <p className="text-gray-700 leading-relaxed m-0">
-                                                If your filing includes a figurative device, logo, or label mark, the status updates to <strong>Send to Vienna Codification</strong>. Under the Vienna Agreement, registry officers assign standardized international numerical codes to visual elements (such as shapes, animals, geometric patterns, or human figures) to facilitate relative similarity searches. For word marks without graphic logos, this stage is bypassed automatically.
-                                            </p>
+                                            <p className="text-gray-700 leading-relaxed mb-4">Upon filing, the initial status displays as<strong>New Application</strong>. The application details are digitized and indexed into the Trade Marks Registry intranet.</p>
+                                            <p className="text-gray-700 leading-relaxed m-0">If your filing includes a figurative device, logo, or label mark, the status updates to<strong>Send to Vienna Codification</strong>. Under the Vienna Agreement, registry officers assign standardized international numerical codes to visual elements (such as shapes, animals, geometric patterns, or human figures) to facilitate relative similarity searches. For word marks without graphic logos, this stage is bypassed automatically.</p>
                                         </div>
 
                                         {/* STAGE 2 */}
@@ -443,16 +392,10 @@ export default function TrademarkApplicationStatusPage() {
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Administrative Scrutiny</span>
                                             </div>
                                             <h3 className="text-xl font-bold text-gray-900 mb-3">Formalities Check Pass vs. Formalities Check Fail</h3>
-                                            <p className="text-gray-700 leading-relaxed mb-4">
-                                                The registry conducts an initial clerical audit of filing documents under Rule 37. If all mandatory forms, applicant identification proof, stamped Power of Attorney (Form TM-48), and user affidavits are compliant, your mark receives <strong>Formalities Check Pass</strong>.
-                                            </p>
-                                            <p className="text-gray-700 leading-relaxed mb-4">
-                                                Conversely, if there are discrepancies—such as submitting an unstamped Form TM-48, unclear goods descriptions, or choosing an ineligible startup fee concession without an MSME certificate—the status reflects <Link href="/trademark-formalities-check-fail-meaning" className="text-[rgb(110,94,147)] hover:underline font-semibold">Formalities Check Fail</Link>.
-                                            </p>
+                                            <p className="text-gray-700 leading-relaxed mb-4">The registry conducts an initial clerical audit of filing documents under Rule 37. If all mandatory forms, applicant identification proof, stamped Power of Attorney (Form TM-48), and user affidavits are compliant, your mark receives<strong>Formalities Check Pass</strong>.</p>
+                                            <p className="text-gray-700 leading-relaxed mb-4">Conversely, if there are discrepancies—such as submitting an unstamped Form TM-48, unclear goods descriptions, or choosing an ineligible startup fee concession without an MSME certificate—the status reflects<Link href="/trademark-formalities-check-fail-meaning" className="text-[rgb(110,94,147)] hover:underline font-semibold">Formalities Check Fail</Link>.</p>
                                             <div className="bg-amber-50 p-4 rounded-xl border border-amber-200">
-                                                <p className="text-xs sm:text-sm text-amber-950 font-medium m-0">
-                                                    <strong>Statutory Rectification Window:</strong> When a formalities check fails, the applicant must file a formal clarification or Form TM-M within 30 days. Failure to cure clerical defects leads to immediate file abandonment.
-                                                </p>
+                                                <p className="text-xs sm:text-sm text-amber-950 font-medium m-0"><strong>Statutory Rectification Window:</strong>When a formalities check fails, the applicant must file a formal clarification or Form TM-M within 30 days. Failure to cure clerical defects leads to immediate file abandonment.</p>
                                             </div>
                                         </div>
 
@@ -463,19 +406,13 @@ export default function TrademarkApplicationStatusPage() {
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Legal Examination</span>
                                             </div>
                                             <h3 className="text-xl font-bold text-gray-900 mb-3">Marked for Exam &amp; Examination Report Issued</h3>
-                                            <p className="text-gray-700 leading-relaxed mb-4">
-                                                Once clerical formalities pass, the application updates to <Link href="/trademark-marked-for-exam-meaning" className="text-[rgb(110,94,147)] hover:underline font-semibold">Marked for Exam</Link>. It is allocated to an Examiner who evaluates whether the brand qualifies for statutory registration under the Trade Marks Act, 1999.
-                                            </p>
-                                            <p className="text-gray-700 leading-relaxed mb-4">
-                                                The Examiner scrutinizes the mark for:
-                                            </p>
+                                            <p className="text-gray-700 leading-relaxed mb-4">Once clerical formalities pass, the application updates to<Link href="/trademark-marked-for-exam-meaning" className="text-[rgb(110,94,147)] hover:underline font-semibold">Marked for Exam</Link>. It is allocated to an Examiner who evaluates whether the brand qualifies for statutory registration under the Trade Marks Act, 1999.</p>
+                                            <p className="text-gray-700 leading-relaxed mb-4">The Examiner scrutinizes the mark for:</p>
                                             <ul className="list-disc list-inside space-y-2 text-gray-700 mb-4">
-                                                <li><strong>Absolute Grounds for Refusal (Section 9):</strong> Lack of distinctiveness, purely descriptive terms, laudatory adjectives, or generic trade expressions.</li>
-                                                <li><strong>Relative Grounds for Refusal (Section 11):</strong> Confusing similarity or phonetic identity with earlier registered trademarks or pending applications in the same or complementary Nice classes. Discover how to inspect competing names using our <Link href="/trademark-search" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark search tool</Link>.</li>
+                                                <li><strong>Absolute Grounds for Refusal (Section 9):</strong>Lack of distinctiveness, purely descriptive terms, laudatory adjectives, or generic trade expressions.</li>
+                                                <li><strong>Relative Grounds for Refusal (Section 11):</strong>Confusing similarity or phonetic identity with earlier registered trademarks or pending applications in the same or complementary Nice classes. Discover how to inspect competing names using our<Link href="/trademark-search" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark search tool</Link>.</li>
                                             </ul>
-                                            <p className="text-gray-700 leading-relaxed m-0">
-                                                If objections are raised, the status updates to <strong>Objected</strong> or <strong>Exam Report Issued</strong>. The applicant must file a formal legal reply via our guide on <Link href="/how-to-respond-to-trademark-examination-report" className="text-[rgb(110,94,147)] hover:underline font-semibold">how to respond to trademark examination report</Link> within 30 days.
-                                            </p>
+                                            <p className="text-gray-700 leading-relaxed m-0">If objections are raised, the status updates to<strong>Objected</strong>or<strong>Exam Report Issued</strong>. The applicant must file a formal legal reply via our guide on<Link href="/how-to-respond-to-trademark-examination-report" className="text-[rgb(110,94,147)] hover:underline font-semibold">how to respond to trademark examination report</Link>within 30 days.</p>
                                         </div>
 
                                         {/* STAGE 4 */}
@@ -485,15 +422,9 @@ export default function TrademarkApplicationStatusPage() {
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Hearing &amp; Rebuttal</span>
                                             </div>
                                             <h3 className="text-xl font-bold text-gray-900 mb-3">Under Show Cause Hearing &amp; Ready for Hearing</h3>
-                                            <p className="text-gray-700 leading-relaxed mb-4">
-                                                If your written examination response does not completely satisfy the Examiner, the Registrar will not immediately refuse the mark. In accordance with the principles of natural justice, the file moves to <Link href="/trademark-hearing-notice-what-to-do" className="text-[rgb(110,94,147)] hover:underline font-semibold">Show Cause Hearing</Link>.
-                                            </p>
-                                            <p className="text-gray-700 leading-relaxed mb-4">
-                                                A digital hearing notice is dispatched outlining the date and virtual conference link. During the hearing, your trademark attorney presents oral legal arguments, commercial turnover invoices, and judicial precedents to justify registration.
-                                            </p>
-                                            <p className="text-gray-700 leading-relaxed m-0">
-                                                Following the hearing, the Hearing Officer either accepts the mark, orders an amendment on Form TM-M (such as adding a disclaimer or pruning goods descriptions), or marks the application as <strong>Refused</strong>.
-                                            </p>
+                                            <p className="text-gray-700 leading-relaxed mb-4">If your written examination response does not completely satisfy the Examiner, the Registrar will not immediately refuse the mark. Under the principles of natural justice, the file moves to<Link href="/trademark-hearing-notice-what-to-do" className="text-[rgb(110,94,147)] hover:underline font-semibold">Show Cause Hearing</Link>.</p>
+                                            <p className="text-gray-700 leading-relaxed mb-4">A digital hearing notice is dispatched outlining the date and virtual conference link. During the hearing, your trademark attorney presents oral legal arguments, commercial turnover invoices, and judicial precedents to justify registration.</p>
+                                            <p className="text-gray-700 leading-relaxed m-0">Following the hearing, the Hearing Officer either accepts the mark, orders an amendment on Form TM-M (such as adding a disclaimer or pruning goods descriptions), or marks the application as<strong>Refused</strong>.</p>
                                         </div>
 
                                         {/* STAGE 5 */}
@@ -503,15 +434,9 @@ export default function TrademarkApplicationStatusPage() {
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Public Gazette Scrutiny</span>
                                             </div>
                                             <h3 className="text-xl font-bold text-gray-900 mb-3">Accepted &amp; Advertised vs. Advertised Before Acceptance</h3>
-                                            <p className="text-gray-700 leading-relaxed mb-4">
-                                                When the mark clears examination or hearing, it is published in the bilingual weekly Trade Marks Journal. The status reflects <Link href="/trademark-accepted-but-advertised-meaning" className="text-[rgb(110,94,147)] hover:underline font-semibold">Accepted &amp; Advertised</Link> or <strong>Advertised Before Acceptance</strong> under Section 20.
-                                            </p>
-                                            <p className="text-gray-700 leading-relaxed mb-4">
-                                                This publication invites the general public and competing brand owners to inspect the mark. Section 21 of the Trade Marks Act provides a strict <strong>4-month opposition window</strong> from the date of journal publication.
-                                            </p>
-                                            <p className="text-gray-700 leading-relaxed m-0">
-                                                If a competitor files a notice of opposition on Form TM-O, the status transitions to <Link href="/trademark-opposed-what-happens-next-india" className="text-[rgb(110,94,147)] hover:underline font-semibold">Opposed</Link>, initiating inter-partes quasi-judicial litigation. The applicant must file a counter-statement within two months or forfeit the application.
-                                            </p>
+                                            <p className="text-gray-700 leading-relaxed mb-4">When the mark clears examination or hearing, it is published in the bilingual weekly Trade Marks Journal. The status reflects<Link href="/trademark-accepted-but-advertised-meaning" className="text-[rgb(110,94,147)] hover:underline font-semibold">Accepted &amp; Advertised</Link>or<strong>Advertised Before Acceptance</strong>under Section 20.</p>
+                                            <p className="text-gray-700 leading-relaxed mb-4">This publication invites the general public and competing brand owners to inspect the mark. Section 21 of the Trade Marks Act provides a strict<strong>4-month opposition window</strong>from the date of journal publication.</p>
+                                            <p className="text-gray-700 leading-relaxed m-0">If a competitor files a notice of opposition on Form TM-O, the status transitions to<Link href="/trademark-opposed-what-happens-next-india" className="text-[rgb(110,94,147)] hover:underline font-semibold">Opposed</Link>, initiating inter-partes quasi-judicial litigation. The applicant must file a counter-statement within two months or forfeit the application.</p>
                                         </div>
 
                                         {/* STAGE 6 */}
@@ -521,15 +446,9 @@ export default function TrademarkApplicationStatusPage() {
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Final Registration</span>
                                             </div>
                                             <h3 className="text-xl font-bold text-gray-900 mb-3">Registered &amp; Certificate Issuance</h3>
-                                            <p className="text-gray-700 leading-relaxed mb-4">
-                                                If no opposition is filed during the 4-month advertisement period (or if third-party opposition proceedings are decided in the applicant&apos;s favor), the status transitions to <strong>Registered</strong> under Section 23.
-                                            </p>
-                                            <p className="text-gray-700 leading-relaxed mb-4">
-                                                The Registrar issues a digitally signed, authentic <strong>Certificate of Registration</strong> bearing the official seal of the Trade Marks Registry. The registration is valid for exactly 10 years from the original application date and can be renewed indefinitely via <Link href="/how-to-renew-a-trademark" className="text-[rgb(110,94,147)] hover:underline font-semibold">trademark renewal on Form TM-R</Link>.
-                                            </p>
-                                            <p className="text-gray-700 leading-relaxed m-0">
-                                                If a mark lapses due to unheeded notices, explore our guide on <Link href="/trademark-abandoned-how-to-restore" className="text-[rgb(110,94,147)] hover:underline font-semibold">how to restore abandoned trademark</Link> to evaluate emergency procedural relief.
-                                            </p>
+                                            <p className="text-gray-700 leading-relaxed mb-4">If no opposition is filed during the 4-month advertisement period (or if third-party opposition proceedings are decided in the applicant&apos;s favor), the status transitions to<strong>Registered</strong>under Section 23.</p>
+                                            <p className="text-gray-700 leading-relaxed mb-4">The Registrar issues a digitally signed, authentic<strong>Certificate of Registration</strong>bearing the official seal of the Trade Marks Registry. The registration is valid for exactly 10 years from the original application date and can be renewed indefinitely via<Link href="/how-to-renew-a-trademark" className="text-[rgb(110,94,147)] hover:underline font-semibold">trademark renewal on Form TM-R</Link>.</p>
+                                            <p className="text-gray-700 leading-relaxed m-0">If a mark lapses due to unheeded notices, explore our guide on<Link href="/trademark-abandoned-how-to-restore" className="text-[rgb(110,94,147)] hover:underline font-semibold">how to restore abandoned trademark</Link>to evaluate emergency procedural relief.</p>
                                         </div>
                                     </section>
 
@@ -539,9 +458,7 @@ export default function TrademarkApplicationStatusPage() {
                                             <FontAwesomeIcon icon={faTable} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Status &amp; Action Matrix
                                         </h2>
-                                        <p className="mb-6">
-                                            Use this comprehensive statutory matrix to understand the exact procedural implications, mandatory deadlines, and necessary actions for each IP India portal status update:
-                                        </p>
+                                        <p className="mb-6">Use this comprehensive statutory matrix to understand the exact procedural implications, mandatory deadlines, and necessary actions for each IP India portal status update:</p>
 
                                         <div className="overflow-x-auto mb-8 shadow-sm rounded-xl border border-gray-200">
                                             <table className="min-w-full bg-white text-left text-sm text-gray-700">
@@ -639,37 +556,27 @@ export default function TrademarkApplicationStatusPage() {
                                             <FontAwesomeIcon icon={faExclamationTriangle} className="w-8 h-8 mr-3 text-amber-500" />
                                             Critical Deadlines &amp; Monitoring Pitfalls
                                         </h2>
-                                        <p className="mb-6">
-                                            The Trade Marks Registry enforces rigid statutory timelines. Unlike civil litigation where procedural condonation of delay is routinely granted, registry clocks under the Trade Marks Act, 1999 are unforgiving:
-                                        </p>
+                                        <p className="mb-6">The Trade Marks Registry enforces rigid statutory timelines. Unlike civil litigation where procedural condonation of delay is routinely granted, registry clocks under the Trade Marks Act, 1999 are unforgiving:</p>
 
                                         <div className="space-y-6">
                                             <div className="border-l-4 border-red-500 pl-4 py-2">
                                                 <h3 className="text-lg font-bold text-gray-900 mb-1">1. Missing the 30-Day Examination Response Window</h3>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    Under Rule 33(1), when an Examination Report is generated, the applicant has strictly 30 days to submit a formal written rebuttal. Missing this 30-day window triggers an automated order of abandonment under Section 132. Never wait for a physical letter—registry notices are issued electronically.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">Under Rule 33(1), when an Examination Report is generated, the applicant has strictly 30 days to submit a formal written rebuttal. Missing this 30-day window triggers an automated order of abandonment under Section 132. Never wait for a physical letter—registry notices are issued electronically.</p>
                                             </div>
 
                                             <div className="border-l-4 border-red-500 pl-4 py-2">
                                                 <h3 className="text-lg font-bold text-gray-900 mb-1">2. Relying on Unmonitored Email Inboxes</h3>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    Registry hearing notices and examination reports are dispatched to the correspondence email recorded on Form TM-A. If the filing was handled by a third-party agency or the applicant&apos;s email filters route government emails to spam, notices can go unread for months until the file is abandoned.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">Registry hearing notices and examination reports are dispatched to the correspondence email recorded on Form TM-A. If the filing was handled by a third-party agency or the applicant&apos;s email filters route government emails to spam, notices can go unread for months until the file is abandoned.</p>
                                             </div>
 
                                             <div className="border-l-4 border-red-500 pl-4 py-2">
                                                 <h3 className="text-lg font-bold text-gray-900 mb-1">3. Non-Appearance at Scheduled Virtual Show Cause Hearings</h3>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    If a hearing is scheduled before the Hearing Officer and neither the applicant nor their authorized trademark counsel logs in via video conference, the application is marked &ldquo;Refused for Non-Appearance&rdquo;. Restoring a refused application requires an expensive review petition on Form TM-M or a High Court appeal.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">If a hearing is scheduled before the Hearing Officer and neither the applicant nor their authorized trademark counsel logs in via video conference, the application is marked &ldquo;Refused for Non-Appearance&rdquo;. Restoring a refused application requires an expensive review petition on Form TM-M or a High Court appeal.</p>
                                             </div>
 
                                             <div className="border-l-4 border-red-500 pl-4 py-2">
                                                 <h3 className="text-lg font-bold text-gray-900 mb-1">4. Failing to File Counter-Statement Within 2 Months of Opposition</h3>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    Under Section 21(2), when a notice of opposition is served, the applicant must file a formal counter-statement on Form TM-O within exactly two months. The Trade Marks Act specifies that if no counter-statement is filed within this 2-month period, the applicant &ldquo;shall be deemed to have abandoned his application&rdquo;. The Registrar has zero statutory discretion to extend this deadline.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">Under Section 21(2), when a notice of opposition is served, the applicant must file a formal counter-statement on Form TM-O within exactly two months. The Trade Marks Act specifies that if no counter-statement is filed within this 2-month period, the applicant &ldquo;shall be deemed to have abandoned his application&rdquo;. The Registrar has zero statutory discretion to extend this deadline.</p>
                                             </div>
                                         </div>
                                     </section>
@@ -680,18 +587,10 @@ export default function TrademarkApplicationStatusPage() {
                                             <FontAwesomeIcon icon={faScaleBalanced} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Legal Rights &amp; Commercial Risks
                                         </h2>
-                                        <p className="mb-6">
-                                            Your trademark status directly impacts your legal standing and your ability to enforce commercial exclusivity in commerce:
-                                        </p>
-                                        <p className="mb-6">
-                                            <strong>Transition from ™ to ® Symbol:</strong> While your application status is &ldquo;New Application&rdquo;, &ldquo;Marked for Exam&rdquo;, &ldquo;Objected&rdquo;, or &ldquo;Advertised&rdquo;, you are legally permitted to affix the <strong>™ (trademark)</strong> symbol to your brand. This puts competitors on notice of your common-law claim. However, using the <strong>® (registered)</strong> symbol prior to actual certificate issuance is a punishable criminal offence under Section 107 of the Trade Marks Act, 1999.
-                                        </p>
-                                        <p className="mb-6">
-                                            <strong>Evidentiary Injunctions in Court:</strong> A status of &ldquo;Registered&rdquo; grants statutory rights under Section 28 and Section 29, enabling you to file infringement suits, obtain ex-parte interim injunctions, and secure damages in civil court without having to prove continuous commercial goodwill under common-law passing off.
-                                        </p>
-                                        <p className="mb-6">
-                                            <strong>Madrid Protocol Protection Abroad:</strong> For companies expanding internationally under our <Link href="/international-trademark-registration" className="text-[rgb(110,94,147)] hover:underline font-semibold">international trademark registration guide</Link>, the home country Indian application serves as the foundation. If your Indian base status collapses due to unaddressed objections, all linked foreign registrations across the United States, Europe, and Asia will automatically fall under the Madrid Protocol dependency principle.
-                                        </p>
+                                        <p className="mb-6">Your trademark status directly impacts your legal standing and your ability to enforce commercial exclusivity in commerce:</p>
+                                        <p className="mb-6"><strong>Transition from ™ to ® Symbol:</strong>While your application status is &ldquo;New Application&rdquo;, &ldquo;Marked for Exam&rdquo;, &ldquo;Objected&rdquo;, or &ldquo;Advertised&rdquo;, you are legally permitted to affix the<strong>™ (trademark)</strong>symbol to your brand. This puts competitors on notice of your common-law claim. However, using the<strong>® (registered)</strong>symbol before actual certificate issuance is a punishable criminal offence under Section 107 of the Trade Marks Act, 1999.</p>
+                                        <p className="mb-6"><strong>Evidentiary Injunctions in Court:</strong>A status of &ldquo;Registered&rdquo. Grants statutory rights under Section 28 and Section 29. This enables you to file infringement suits, obtain ex-parte interim injunctions, and secure damages in civil court without having to prove continuous commercial goodwill under common-law passing off.</p>
+                                        <p className="mb-6"><strong>Madrid Protocol Protection Abroad:</strong>For companies expanding internationally under our<Link href="/international-trademark-registration" className="text-[rgb(110,94,147)] hover:underline font-semibold">international trademark registration guide</Link>, the home country Indian application serves as the foundation. If your Indian base status collapses due to unaddressed objections, all linked foreign registrations across the United States, Europe, and Asia will automatically fall under the Madrid Protocol dependency principle.</p>
                                     </section>
 
                                     {/* SECTION 7: MONITORING CHECKLIST */}
@@ -701,34 +600,13 @@ export default function TrademarkApplicationStatusPage() {
                                             Status Tracking Checklist
                                         </h2>
                                         <ul className="list-none space-y-4 mb-8">
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Record Application &amp; CBR Numbers:</strong> Secure your official filing receipt and note the exact 5 to 7-digit trademark number and priority date.</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Establish Monthly Docket Audits:</strong> Log in to the IP India e-register at least once every 15 to 30 days to check for real-time status transitions.</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Download Examination Reports Promptly:</strong> When &ldquo;Objected&rdquo; appears, download the full examination report PDF immediately and note the 30-day deadline.</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Verify Attorney Representation:</strong> Ensure your Power of Attorney (Form TM-48) is properly docketed on the portal so notices reach authorized counsel.</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Track Journal Publication:</strong> When &ldquo;Accepted &amp; Advertised&rdquo; appears, record the Journal Number and calculate the 4-month opposition window.</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Secure Registration Certificate:</strong> Upon reaching &ldquo;Registered&rdquo;, immediately download the digitally signed certificate and backup the PDF.</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Set 10-Year Decennial Renewal Alerts:</strong> Calendar automated reminders for 9 years from the filing date to prepare for timely decennial renewal.</span>
-                                            </li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Record Application &amp; CBR Numbers:</strong>Secure your official filing receipt and note the exact 5 to 7-digit trademark number and priority date.</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Establish Monthly Docket Audits:</strong>Log in to the IP India e-register at least once every 15 to 30 days to check for real-time status transitions.</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Download Examination Reports Promptly:</strong>When &ldquo;Objected&rdquo; appears, download the full examination report PDF immediately and note the 30-day deadline.</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Verify Attorney Representation:</strong>Ensure your Power of Attorney (Form TM-48) is properly docketed on the portal so notices reach authorized counsel.</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Track Journal Publication:</strong>When &ldquo;Accepted &amp; Advertised&rdquo; appears, record the Journal Number and calculate the 4-month opposition window.</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Secure Registration Certificate:</strong>Upon reaching &ldquo;Registered&rdquo;, immediately download the digitally signed certificate and backup the PDF.</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Set 10-Year Decennial Renewal Alerts:</strong>Calendar automated reminders for 9 years from the filing date to prepare for timely decennial renewal.</span></li>
                                         </ul>
                                     </section>
 
@@ -753,14 +631,10 @@ export default function TrademarkApplicationStatusPage() {
                                     <section id="strategic-advice" className="scroll-mt-32 pt-16">
                                         <h2 className="text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLightbulb} className="w-8 h-8 mr-3 text-yellow-500" />
-                                            Strategic Portfolio Advice
+                                            Strategic Application Tracking Advice
                                         </h2>
-                                        <p className="mb-6">
-                                            A trademark application is not a passive filing—it is an active legal asset undergoing rigorous state examination. In high-growth startups and established commercial enterprises, managing multiple filings across distinct Nice classes requires institutional docketing hygiene.
-                                        </p>
-                                        <p className="mb-6">
-                                            Never leave status tracking to chance or rely solely on physical postal communications. By engaging registered trademark attorneys and setting up systematic tracking protocols, you safeguard your brand from unmerited objections, competitor poaching, and administrative abandonment. Take proactive control of your trademark portfolio today.
-                                        </p>
+                                        <p className="mb-6">A trademark application is not a passive filing—it is an active legal asset undergoing rigorous state examination. In high-growth startups and established commercial enterprises, managing multiple filings across distinct Nice classes requires institutional docketing hygiene.</p>
+                                        <p className="mb-6">Never leave status tracking to chance or rely solely on physical postal communications. By engaging registered trademark attorneys and setting up systematic tracking protocols, you safeguard your brand from unmerited objections, competitor poaching, and administrative abandonment. Take proactive control of your trademark portfolio today.</p>
                                     </section>
 
                                     {/* BOTTOM CTA SECTION */}
@@ -777,9 +651,7 @@ export default function TrademarkApplicationStatusPage() {
                                                     Is Your Trademark Status Stuck or Objected?
                                                 </h3>
 
-                                                <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">
-                                                    Overcome examination objections, draft authoritative legal replies, and represent your brand before the Trade Marks Registry. Partner with expert IP advocates to secure your registration certificate.
-                                                </p>
+                                                <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">Overcome examination objections, draft authoritative legal replies, and represent your brand before the Trade Marks Registry. Partner with expert IP advocates to secure your registration certificate.</p>
 
                                                 <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
                                                     <Link
@@ -797,9 +669,7 @@ export default function TrademarkApplicationStatusPage() {
                                                     </a>
                                                 </div>
 
-                                                <p className="mt-6 text-xs font-medium tracking-wide text-white/50 sm:text-sm">
-                                                    Certified IP Advocates • Same-Day Objection Replies • Virtual Show Cause Hearing Representation
-                                                </p>
+                                                <p className="mt-6 text-xs font-medium tracking-wide text-white/50 sm:text-sm">Certified IP Advocates • Same-Day Objection Replies • Virtual Show Cause Hearing Representation</p>
                                             </div>
                                         </div>
                                     </section>
@@ -832,62 +702,13 @@ export default function TrademarkApplicationStatusPage() {
                             <div className="bg-gray-50 p-10 rounded-[2.5rem] shadow-sm border border-gray-100">
                                 <h3 className="text-sm font-black text-gray-400 mb-8 uppercase tracking-[0.3em]">Related Resources</h3>
                                 <ul className="space-y-6">
-                                    <li>
-                                        <Link href="/process-and-steps-of-trademark-registration" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faListUl} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Filing Steps</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/how-to-respond-to-trademark-examination-report" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faFileLines} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Exam Reply</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/trademark-objected-what-to-do-next" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faExclamationTriangle} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">TM Objected</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/trademark-hearing-notice-what-to-do" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faGavel} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Hearing Guide</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/trademark-search" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faSearch} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">TM Search</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/trademark-class-finder" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faTable} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Class Guide</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/how-to-renew-a-trademark" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faRotate} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">TM Renewal</span>
-                                        </Link>
-                                    </li>
+                                    <li><Link href="/process-and-steps-of-trademark-registration" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faListUl} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Filing Steps</span></Link></li>
+                                    <li><Link href="/how-to-respond-to-trademark-examination-report" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faFileLines} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Exam Reply</span></Link></li>
+                                    <li><Link href="/trademark-objected-what-to-do-next" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faExclamationTriangle} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">TM Objected</span></Link></li>
+                                    <li><Link href="/trademark-hearing-notice-what-to-do" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faGavel} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Hearing Guide</span></Link></li>
+                                    <li><Link href="/trademark-search" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faSearch} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">TM Search</span></Link></li>
+                                    <li><Link href="/trademark-class-finder" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faTable} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Class Guide</span></Link></li>
+                                    <li><Link href="/how-to-renew-a-trademark" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faRotate} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">TM Renewal</span></Link></li>
                                 </ul>
                             </div>
                         </aside>

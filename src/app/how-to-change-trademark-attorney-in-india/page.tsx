@@ -215,11 +215,9 @@ export default function ChangeTrademarkAttorneyPage() {
                                 <span className="text-[10px] sm:text-xs font-bold tracking-wider text-[#6E5E93] uppercase">Trademark Representation &amp; Migration</span>
                             </div>
                             <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-3 leading-tight text-gray-900 tracking-tighter">
-                                How to Change or Revoke a Trademark Attorney in India: <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'transparent' }}>Cancelling Form TM-48 Guide</span>
+                                How to Change or Revoke a <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'transparent' }}>Trademark Attorney in India</span>
                             </h1>
-                            <p className="text-base md:text-lg mb-5 text-gray-700 font-medium leading-relaxed">
-                                Trapped with an unresponsive trademark agent, a ghosting consultant, or missed Registry deadlines? Under <strong>Section 145 of the Trade Marks Act, 1999</strong> and <strong>Rule 19 of the Trade Marks Rules, 2017</strong>, you hold the sovereign right to revoke your Power of Attorney, cancel Form TM-48, file Form TM-M, and appoint veteran trademark advocates to rescue your pending brand application.
-                            </p>
+                            <p className="text-base md:text-lg mb-5 text-gray-700 font-medium leading-relaxed">Trapped with an unresponsive trademark agent, a ghosting consultant, or missed Registry deadlines? Under<strong>Section 145 of the Trade Marks Act, 1999</strong>and<strong>Rule 19 of the Trade Marks Rules, 2017</strong>, you hold the sovereign right to revoke your Power of Attorney, cancel Form TM-48, file Form TM-M, and appoint veteran trademark advocates to rescue your pending brand application.</p>
 
                             <div className="flex flex-wrap items-center gap-4 mb-6">
                                 <div className="flex items-center mr-2">
@@ -310,36 +308,11 @@ export default function ChangeTrademarkAttorneyPage() {
                                                 Close
                                             </span>
                                             <svg className="w-4 h-4 text-gray-500 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                                            </svg>
-                                        </div>
-                                    </summary>
-                                    <div className="p-3.5 pt-2 border-t border-purple-50 bg-white/70">
-                                        <nav className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
-                                            {tocSections.map((section, idx) => (
-                                                <a
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg></div></summary><div className="p-3.5 pt-2 border-t border-purple-50 bg-white/70"><nav className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">{tocSections.map((section, idx) => (<a
                                                     key={section.id}
                                                     href={`#${section.id}`}
                                                     className="flex items-center p-2 rounded-xl text-xs font-medium text-gray-700 hover:text-[#6E5E93] hover:bg-purple-50/80 transition-all border border-transparent hover:border-purple-100"
-                                                >
-                                                    <span className="w-5 h-5 rounded-full bg-purple-100 text-[#6E5E93] flex items-center justify-center text-[10px] font-bold mr-2 flex-shrink-0">
-                                                        {idx + 1}
-                                                    </span>
-                                                    <span className="truncate">{section.title}</span>
-                                                </a>
-                                            ))}
-                                        </nav>
-                                    </div>
-                                </details>
-                            </div>
-
-                            <div className="bg-white p-4 md:p-12 rounded-2xl shadow-sm border border-gray-100 space-y-12 md:space-y-20 article-content">
-                                <article className="prose prose-lg max-w-none text-gray-700 leading-relaxed font-normal">
-
-                                    <div className="flex items-center space-x-4 mb-10 p-4 bg-gray-50 rounded-xl border border-gray-100 not-prose">
-                                        <img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-12 h-12 rounded-full object-cover m-0" />
-                                        <div>
-                                            <p className="text-sm font-bold text-gray-900 m-0">Written by <Link href="/about-us" className="text-[rgb(110,94,147)] hover:underline">Rahul Roy</Link></p>
+                                                ><span className="w-5 h-5 rounded-full bg-purple-100 text-[#6E5E93] flex items-center justify-center text-[10px] font-bold mr-2 flex-shrink-0">{idx + 1}</span><span className="truncate">{section.title}</span></a>))}</nav></div></details></div><div className="bg-white p-4 md:p-12 rounded-2xl shadow-sm border border-gray-100 space-y-12 md:space-y-20 article-content"><article className="prose prose-lg max-w-none text-gray-700 leading-relaxed font-normal"><div className="flex items-center space-x-4 mb-10 p-4 bg-gray-50 rounded-xl border border-gray-100 not-prose"><img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-12 h-12 rounded-full object-cover m-0" /><div><p className="text-sm font-bold text-gray-900 m-0">Written by<Link href="/about-us" className="text-[rgb(110,94,147)] hover:underline">Rahul Roy</Link></p>
                                             <p className="text-xs text-gray-500 m-0">Trademark Research Specialist</p>
                                         </div>
                                     </div>
@@ -352,20 +325,12 @@ export default function ChangeTrademarkAttorneyPage() {
                                         </h2>
 
                                         <div id="quick-answer" className="bg-purple-50 border-l-4 border-[rgb(110,94,147)] p-6 rounded-r-xl mb-8">
-                                            <p className="font-semibold text-gray-900 m-0">
-                                                To change or revoke a trademark attorney in India, the applicant must revoke the existing Power of Attorney (Form TM-48) and appoint a new trademark agent or advocate by filing Form TM-M (Request for Alteration of Agent of Record and Address for Service) on the IP India e-filing portal. The official government fee for Form TM-M is ₹900 for Individuals/Startups/MSMEs and ₹1,800 for other entities. A formal No Objection Certificate (NOC) from the former attorney is NOT mandatory under the Trade Marks Act, 1999 or Trade Marks Rules, 2017.
-                                            </p>
+                                            <p className="font-semibold text-gray-900 m-0">To change or revoke a trademark attorney in India, the applicant must revoke the existing Power of Attorney (Form TM-48) and appoint a new trademark agent or advocate by filing Form TM-M (Request for Alteration of Agent of Record and Address for Service) on the IP India e-filing portal. The official government fee for Form TM-M is ₹900 for Individuals/Startups/MSMEs and ₹1,800 for other entities. A formal No Objection Certificate (NOC) from the former attorney is NOT mandatory under the Trade Marks Act, 1999 or Trade Marks Rules, 2017.</p>
                                         </div>
 
-                                        <p className="mb-6">
-                                            Securing trademark registration in India is a multi-stage legal journey that spans months or years, requiring timely responses to <Link href="/how-to-respond-to-trademark-examination-report" className="text-[rgb(110,94,147)] hover:underline font-medium">Examination Reports</Link>, representation at <Link href="/trademark-hearing-video-conferencing-procedure-india" className="text-[rgb(110,94,147)] hover:underline font-medium">video conferencing hearings</Link>, and robust defenses against third-party <Link href="/trademark-opposed-what-happens-next-india" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark oppositions</Link>.
-                                        </p>
-                                        <p className="mb-6">
-                                            Unfortunately, hundreds of startup founders, business owners, and corporate enterprises discover that their initial filing agent, chartered accountant, or budget registration portal has gone completely non-responsive, failed to inform them of objection deadlines, or lacked the IP litigation expertise necessary to argue contentious hearings. Left unaddressed, procedural inaction leads directly to the permanent abandonment and loss of your brand monopoly under <strong>Section 132 of the Trade Marks Act, 1999</strong>.
-                                        </p>
-                                        <p className="mb-6">
-                                            The law empowers brand owners with complete autonomy over their legal representation. Discover how to properly revoke <Link href="/form-tm-48-power-of-attorney-trademark-india" className="text-[rgb(110,94,147)] hover:underline font-medium">Form TM-48 Power of Attorney</Link>, execute new attorney mandates, alter your official Address for Service, and protect your commercial identity.
-                                        </p>
+                                        <p className="mb-6">Securing trademark registration in India is a multi-stage legal journey that spans months or years. This requires timely responses to<Link href="/how-to-respond-to-trademark-examination-report" className="text-[rgb(110,94,147)] hover:underline font-medium">Examination Reports</Link>, representation at<Link href="/trademark-hearing-video-conferencing-procedure-india" className="text-[rgb(110,94,147)] hover:underline font-medium">video conferencing hearings</Link>, and robust defenses against third-party<Link href="/trademark-opposed-what-happens-next-india" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark oppositions</Link>.</p>
+                                        <p className="mb-6">Unfortunately, hundreds of startup founders, business owners, and corporate enterprises discover that their initial filing agent, chartered accountant, or budget registration portal has gone completely non-responsive, failed to inform them of objection deadlines, or lacked the IP litigation expertise necessary to argue contentious hearings. Left unaddressed, procedural inaction leads directly to the permanent abandonment and loss of your brand monopoly under<strong>Section 132 of the Trade Marks Act, 1999</strong>.</p>
+                                        <p className="mb-6">The law empowers brand owners with complete autonomy over their legal representation. Discover how to properly revoke<Link href="/form-tm-48-power-of-attorney-trademark-india" className="text-[rgb(110,94,147)] hover:underline font-medium">Form TM-48 Power of Attorney</Link>, execute new attorney mandates, alter your official Address for Service, and protect your commercial identity.</p>
                                     </section>
 
                                     {/* SECTION 2: WHY REVOKE AN ATTORNEY */}
@@ -374,9 +339,7 @@ export default function ChangeTrademarkAttorneyPage() {
                                             <FontAwesomeIcon icon={faExclamationTriangle} className="w-8 h-8 mr-3 text-amber-500" />
                                             Why Applicants Revoke Trademark Agents
                                         </h2>
-                                        <p className="mb-6">
-                                            A Power of Attorney is a fiduciary relationship founded entirely on trust, diligence, and competence. When your representative fails to uphold their professional obligations, continuing with them endangers your entire business valuation. Common triggers for attorney substitution include:
-                                        </p>
+                                        <p className="mb-6">A Power of Attorney is a fiduciary relationship founded entirely on trust, diligence, and competence. When your representative fails to uphold their professional obligations, continuing with them endangers your entire business valuation. Common triggers for attorney substitution include:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -384,9 +347,7 @@ export default function ChangeTrademarkAttorneyPage() {
                                                     <span className="w-2.5 h-2.5 bg-red-500 rounded-full mr-2"></span>
                                                     Unresponsiveness &amp; Ghosting
                                                 </h3>
-                                                <p className="text-xs text-gray-600 leading-relaxed mb-0">
-                                                    Many low-cost mass-filing agencies file the initial application and then disappear. When the Registry issues formal Examination Reports or Hearing Notices, the applicant receives zero communication, risking automatic dismissal.
-                                                </p>
+                                                <p className="text-xs text-gray-600 leading-relaxed mb-0">Many low-cost mass-filing agencies file the initial application and then disappear. When the Registry issues formal Examination Reports or Hearing Notices, the applicant receives zero communication, risking automatic dismissal.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -394,9 +355,7 @@ export default function ChangeTrademarkAttorneyPage() {
                                                     <span className="w-2.5 h-2.5 bg-amber-500 rounded-full mr-2"></span>
                                                     Missed Statutory Deadlines
                                                 </h3>
-                                                <p className="text-xs text-gray-600 leading-relaxed mb-0">
-                                                    Under Rule 33, applicants have strictly 30 days to reply to Section 9 (absolute grounds) and Section 11 (relative grounds) objections. Incompetent representatives frequently miss this cutoff, pushing files into &ldquo;Abandoned&rdquo; status.
-                                                </p>
+                                                <p className="text-xs text-gray-600 leading-relaxed mb-0">Under Rule 33, applicants have strictly 30 days to reply to Section 9 (absolute grounds) and Section 11 (relative grounds) objections. Incompetent representatives frequently miss this cutoff, pushing files into &ldquo;Abandoned&rdquo; status.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -404,9 +363,7 @@ export default function ChangeTrademarkAttorneyPage() {
                                                     <span className="w-2.5 h-2.5 bg-indigo-500 rounded-full mr-2"></span>
                                                     Incompetent Hearing Advocacy
                                                 </h3>
-                                                <p className="text-xs text-gray-600 leading-relaxed mb-0">
-                                                    Non-lawyer filing agents often lack the courtroom advocacy skills and case law citations necessary to overcome Senior Hearing Officers during virtual show-cause hearings, leading to premature trademark refusals.
-                                                </p>
+                                                <p className="text-xs text-gray-600 leading-relaxed mb-0">Non-lawyer filing agents often lack the courtroom advocacy skills and case law citations necessary to overcome Senior Hearing Officers during virtual show-cause hearings. This leads to premature trademark refusals.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -414,9 +371,7 @@ export default function ChangeTrademarkAttorneyPage() {
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2"></span>
                                                     Exorbitant Hidden Demands
                                                 </h3>
-                                                <p className="text-xs text-gray-600 leading-relaxed mb-0">
-                                                    Rogue agents quote unrealistic ₹499 filing fees upfront, only to hold the applicant hostage later with inflated ₹15,000 to ₹30,000 demands for standard examination replies or hearing attendance.
-                                                </p>
+                                                <p className="text-xs text-gray-600 leading-relaxed mb-0">Rogue agents quote unrealistic ₹499 filing fees upfront, only to hold the applicant hostage later with inflated ₹15,000 to ₹30,000 demands for standard examination replies or hearing attendance.</p>
                                             </div>
                                         </div>
                                     </section>
@@ -427,30 +382,22 @@ export default function ChangeTrademarkAttorneyPage() {
                                             <FontAwesomeIcon icon={faScaleBalanced} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Statutory Framework: Act &amp; Rules
                                         </h2>
-                                        <p className="mb-6">
-                                            The substitution and revocation of trademark counsel is governed by specific statutory provisions within the <strong>Trade Marks Act, 1999</strong>, the <strong>Trade Marks Rules, 2017</strong>, and the <strong>Powers of Attorney Act, 1882</strong>:
-                                        </p>
+                                        <p className="mb-6">The substitution and revocation of trademark counsel is governed by specific statutory provisions within the<strong>Trade Marks Act, 1999</strong>, the<strong>Trade Marks Rules, 2017</strong>, and the<strong>Powers of Attorney Act, 1882</strong>:</p>
 
                                         <div className="space-y-6">
                                             <div className="border-l-4 border-[#6E5E93] pl-4 py-2 bg-purple-50/40 rounded-r-xl">
                                                 <h3 className="text-lg font-bold text-gray-900 mb-1">1. Section 145 — Authorization of Agents</h3>
-                                                <p className="text-sm text-gray-700 leading-relaxed m-0">
-                                                    Section 145 of the Trade Marks Act, 1999 establishes that any act required to be done by an applicant may be executed by a registered trademark agent, legal practitioner, or duly authorized person. Because the authority emanates solely from the principal (the applicant), the principal possesses the inherent legal power to terminate the mandate at will.
-                                                </p>
+                                                <p className="text-sm text-gray-700 leading-relaxed m-0">Section 145 of the Trade Marks Act, 1999 establishes that any act required to be done by an applicant may be executed by a registered trademark agent, legal practitioner, or duly authorized person. Because the authority emanates solely from the principal (the applicant), the principal possesses the inherent legal power to end the mandate at will.</p>
                                             </div>
 
                                             <div className="border-l-4 border-indigo-500 pl-4 py-2 bg-indigo-50/40 rounded-r-xl">
                                                 <h3 className="text-lg font-bold text-gray-900 mb-1">2. Rule 19 &amp; Rule 21 — Form TM-48 &amp; Agency Agency Record</h3>
-                                                <p className="text-sm text-gray-700 leading-relaxed m-0">
-                                                    Rule 19 of the Trade Marks Rules, 2017 specifies that authorization of an agent must be executed on <strong>Form TM-48</strong>. Rule 21 governs the Address for Service. Whenever an applicant revokes an agency or substitutes legal counsel, Form TM-M must be filed to formally amend the agency record and Address for Service on the Registry&apos;s electronic portal.
-                                                </p>
+                                                <p className="text-sm text-gray-700 leading-relaxed m-0">Rule 19 of the Trade Marks Rules, 2017 specifies that authorization of an agent must be executed on<strong>Form TM-48</strong>. Rule 21 governs the Address for Service. Whenever an applicant revokes an agency or substitutes legal counsel, Form TM-M must be filed to formally amend the agency record and Address for Service on the Registry&apos;s electronic portal.</p>
                                             </div>
 
                                             <div className="border-l-4 border-emerald-500 pl-4 py-2 bg-emerald-50/40 rounded-r-xl">
                                                 <h3 className="text-lg font-bold text-gray-900 mb-1">3. Section 201 of the Indian Contract Act, 1872</h3>
-                                                <p className="text-sm text-gray-700 leading-relaxed m-0">
-                                                    Under general agency law in India, an agency is terminated by the principal revoking his authority. An agent cannot compel a client to remain represented against their express consent, nor can an agent claim a proprietary lien over the trademark title itself.
-                                                </p>
+                                                <p className="text-sm text-gray-700 leading-relaxed m-0">Under general agency law in India, an agency is ended by the principal revoking his authority. An agent cannot compel a client to remain represented against their express consent, nor can an agent claim a proprietary lien over the trademark title itself.</p>
                                             </div>
                                         </div>
                                     </section>
@@ -461,26 +408,20 @@ export default function ChangeTrademarkAttorneyPage() {
                                             <FontAwesomeIcon icon={faFileSignature} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Is an NOC from Previous Attorney Mandatory?
                                         </h2>
-                                        <p className="mb-6">
-                                            A pervasive myth in the Indian IP ecosystem is that an applicant cannot hire a new trademark lawyer unless their previous attorney signs a formal &ldquo;No Objection Certificate&rdquo; (NOC). This belief is legally unfounded and contrary to statutory law.
-                                        </p>
+                                        <p className="mb-6">A pervasive myth in the Indian IP ecosystem is that an applicant cannot hire a new trademark lawyer unless their previous attorney signs a formal &ldquo;No Objection Certificate&rdquo. (NOC). This belief is legally unfounded and contrary to statutory law.</p>
 
                                         <div className="bg-amber-50 border-l-4 border-amber-500 p-6 rounded-r-xl mb-6">
                                             <h3 className="text-base font-bold text-gray-900 mb-2">The Definitive Legal Position:</h3>
-                                            <p className="text-sm text-gray-700 leading-relaxed m-0">
-                                                <strong>Neither the Trade Marks Act, 1999 nor the Trade Marks Rules, 2017 contains any statutory requirement mandating an NOC from the former attorney as a condition precedent for filing Form TM-M.</strong> The Registrar of Trade Marks is legally bound to record the applicant&apos;s fresh Form TM-48 upon submission of a formal Letter of Revocation.
-                                            </p>
+                                            <p className="text-sm text-gray-700 leading-relaxed m-0"><strong>Neither the Trade Marks Act, 1999 nor the Trade Marks Rules, 2017 contains any statutory requirement mandating an NOC from the former attorney as a condition precedent for filing Form TM-M.</strong>The Registrar of Trade Marks is legally bound to record the applicant&apos;s fresh Form TM-48 upon submission of a formal Letter of Revocation.</p>
                                         </div>
 
-                                        <p className="mb-6">
-                                            Under the Bar Council of India Rules, while advocates observe professional courtesy by informing previous counsel, an uncooperative or ghosting agent cannot hold an applicant hostage by withholding an NOC. If the previous agent refuses to respond, your newly engaged advocate simply files:
-                                        </p>
+                                        <p className="mb-6">Under the Bar Council of India Rules, while advocates observe professional courtesy by informing previous counsel, an uncooperative or ghosting agent cannot hold an applicant hostage by withholding an NOC. If the previous agent refuses to respond, your newly engaged advocate simply files:</p>
 
                                         <ul className="list-disc pl-6 space-y-2 mb-6">
-                                            <li><strong>A Formal Revocation Notice:</strong> Sent via email/registered post terminating the prior agent&apos;s mandate.</li>
-                                            <li><strong>A Self-Declaration / Revocation Letter:</strong> Signed by the applicant stating that the prior agent&apos;s authority stands cancelled.</li>
-                                            <li><strong>Fresh Form TM-48:</strong> Authorizing the new trademark attorney on non-judicial stamp paper.</li>
-                                            <li><strong>Form TM-M:</strong> Uploaded on the IP India e-filing gateway requesting alteration of agent of record.</li>
+                                            <li><strong>A Formal Revocation Notice:</strong>Sent via email/registered post ending the prior agent&apos;s mandate.</li>
+                                            <li><strong>A Self-Declaration / Revocation Letter:</strong>Signed by the applicant stating that the prior agent&apos;s authority stands cancelled.</li>
+                                            <li><strong>Fresh Form TM-48:</strong>Authorizing the new trademark attorney on non-judicial stamp paper.</li>
+                                            <li><strong>Form TM-M:</strong>Uploaded on the IP India e-filing gateway requesting alteration of agent of record.</li>
                                         </ul>
                                     </section>
 
@@ -490,9 +431,7 @@ export default function ChangeTrademarkAttorneyPage() {
                                             <FontAwesomeIcon icon={faUserTie} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             7-Step Procedure to Change Trademark Attorney
                                         </h2>
-                                        <p className="mb-6">
-                                            Follow this standardized legal procedure to execute a seamless attorney transition on the IP India portal without administrative delays:
-                                        </p>
+                                        <p className="mb-6">Follow this standardized legal procedure to execute a seamless attorney transition on the IP India portal without administrative delays:</p>
 
                                         <div className="space-y-6">
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -500,9 +439,7 @@ export default function ChangeTrademarkAttorneyPage() {
                                                     <span className="w-8 h-8 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-sm">1</span>
                                                     <h3 className="text-lg font-bold text-gray-900 m-0">Audit Trademark Application Status</h3>
                                                 </div>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    Check your application number on the public IP India Trade Mark Status portal. Review the current stage (e.g., &ldquo;Marked for Exam&rdquo;, &ldquo;Objected&rdquo;, &ldquo;Ready for Show Cause Hearing&rdquo;, &ldquo;Opposed&rdquo;) and note pending deadlines.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">Check your application number on the public IP India Trade Mark Status portal. Review the current stage (e.g., &ldquo;Marked for Exam&rdquo;, &ldquo;Objected&rdquo;, &ldquo;Ready for Show Cause Hearing&rdquo;, &ldquo;Opposed&rdquo;) and note pending deadlines.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -510,9 +447,7 @@ export default function ChangeTrademarkAttorneyPage() {
                                                     <span className="w-8 h-8 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-sm">2</span>
                                                     <h3 className="text-lg font-bold text-gray-900 m-0">Issue Written Revocation Notice to Former Agent</h3>
                                                 </div>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    Send a formal email or registered letter to the previous attorney or agency stating that their services and Power of Attorney stand terminated with immediate effect. Request them to hand over all case papers.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">Send a formal email or registered letter to the previous attorney or agency stating that their services and Power of Attorney stand ended with immediate effect. Request them to hand over all case papers.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -520,9 +455,7 @@ export default function ChangeTrademarkAttorneyPage() {
                                                     <span className="w-8 h-8 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-sm">3</span>
                                                     <h3 className="text-lg font-bold text-gray-900 m-0">Execute Fresh Form TM-48 with New Counsel</h3>
                                                 </div>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    Draft a comprehensive Form TM-48 (Power of Attorney) in favor of the newly appointed registered trademark agent or advocate. Print on appropriate State non-judicial stamp paper (typically ₹100), sign, and execute.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">Draft a comprehensive Form TM-48 (Power of Attorney) in favor of the newly appointed registered trademark agent or advocate. Print on appropriate State non-judicial stamp paper (typically ₹100), sign, and execute.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -530,9 +463,7 @@ export default function ChangeTrademarkAttorneyPage() {
                                                     <span className="w-8 h-8 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-sm">4</span>
                                                     <h3 className="text-lg font-bold text-gray-900 m-0">Prepare Revocation Affidavit / Formal Cancellation Letter</h3>
                                                 </div>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    Draft a formal Letter of Revocation addressed to the Registrar of Trade Marks, clearly stating that the previous Form TM-48 executed in favor of the former agent is null, void, and revoked.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">Draft a formal Letter of Revocation addressed to the Registrar of Trade Marks, clearly stating that the previous Form TM-48 executed in favor of the former agent is null, void, and revoked.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -540,9 +471,7 @@ export default function ChangeTrademarkAttorneyPage() {
                                                     <span className="w-8 h-8 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-sm">5</span>
                                                     <h3 className="text-lg font-bold text-gray-900 m-0">File Form TM-M on IP India Gateway</h3>
                                                 </div>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    The new attorney logs into the IP India e-filing portal, selects <strong>Form TM-M</strong>, chooses &ldquo;Request for Alteration of Agent of Record / Address for Service&rdquo;, and uploads the new TM-48, Revocation Letter, and proof of applicant identity.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">The new attorney logs into the IP India e-filing portal, selects<strong>Form TM-M</strong>, chooses &ldquo;Request for Alteration of Agent of Record / Address for Service&rdquo;, and uploads the new TM-48, Revocation Letter, and proof of applicant identity.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -550,9 +479,7 @@ export default function ChangeTrademarkAttorneyPage() {
                                                     <span className="w-8 h-8 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-sm">6</span>
                                                     <h3 className="text-lg font-bold text-gray-900 m-0">Remit Official Registry Fees</h3>
                                                 </div>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    Pay the mandatory statutory fee online (₹900 for MSME/Startup/Individual; ₹1,800 for non-MSME corporate bodies). Retain the generated electronic CBR receipt.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">Pay the mandatory statutory fee online (₹900 for MSME/Startup/Individual; ₹1,800 for non-MSME corporate bodies). Retain the generated electronic CBR receipt.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -560,9 +487,7 @@ export default function ChangeTrademarkAttorneyPage() {
                                                     <span className="w-8 h-8 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-sm">7</span>
                                                     <h3 className="text-lg font-bold text-gray-900 m-0">Verify Docket Entry &amp; Take Substantive Action</h3>
                                                 </div>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    The Registry updates the electronic register to reflect the new agent&apos;s code and digital signature. The new counsel can now immediately file examination responses or attend scheduled hearings.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">The Registry updates the electronic register to reflect the new agent&apos;s code and digital signature. The new counsel can now immediately file examination responses or attend scheduled hearings.</p>
                                             </div>
                                         </div>
                                     </section>
@@ -573,9 +498,7 @@ export default function ChangeTrademarkAttorneyPage() {
                                             <FontAwesomeIcon icon={faFolderOpen} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Form TM-M Specifications &amp; Fees
                                         </h2>
-                                        <p className="mb-6">
-                                            Under the Trade Marks Rules, 2017, miscellaneous requests—including changing the agent of record and altering the Address for Service—are consolidated under <strong>Form TM-M</strong>. The official statutory fee schedule is structured as follows:
-                                        </p>
+                                        <p className="mb-6">Under the Trade Marks Rules, 2017, miscellaneous requests—including changing the agent of record and altering the Address for Service—are consolidated under<strong>Form TM-M</strong>. The official statutory fee schedule is structured as follows:</p>
 
                                         <div className="overflow-x-auto my-8">
                                             <table className="w-full text-left border-collapse border border-gray-200 rounded-xl overflow-hidden shadow-sm min-w-[600px]">
@@ -616,9 +539,7 @@ export default function ChangeTrademarkAttorneyPage() {
                                             </table>
                                         </div>
 
-                                        <p className="text-sm text-gray-600 italic">
-                                            Note: If your business possesses a valid MSME Udyam Certificate, ensure your attorney attaches it to claim the 50% government fee concession. Learn more in our guide on <Link href="/trademark-fee-concession-msme-udyam-startup-india" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark fee concession for MSME and startups</Link>.
-                                        </p>
+                                        <p className="text-sm text-gray-600 italic">Note: If your business possesses a valid MSME Udyam Certificate, ensure your attorney attaches it to claim the 50% government fee concession. Learn more in our guide on<Link href="/trademark-fee-concession-msme-udyam-startup-india" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark fee concession for MSME and startups</Link>.</p>
                                     </section>
 
                                     {/* SECTION 7: RISKS OF DELAY & ABANDONMENT */}
@@ -627,9 +548,7 @@ export default function ChangeTrademarkAttorneyPage() {
                                             <FontAwesomeIcon icon={faClock} className="w-8 h-8 mr-3 text-red-500" />
                                             Dangers of Inaction &amp; Abandonment
                                         </h2>
-                                        <p className="mb-6">
-                                            Remaining passive while an attorney fails to act triggers catastrophic legal consequences. Under the Trade Marks Act, statutory timers operate automatically:
-                                        </p>
+                                        <p className="mb-6">Remaining passive while an attorney fails to act triggers catastrophic legal consequences. Under the Trade Marks Act, statutory timers operate automatically:</p>
 
                                         <div className="space-y-4 mb-8">
                                             <div className="p-5 bg-red-50/60 rounded-xl border border-red-200">
@@ -637,9 +556,7 @@ export default function ChangeTrademarkAttorneyPage() {
                                                     <FontAwesomeIcon icon={faBan} className="w-4 h-4 mr-2 text-red-600" />
                                                     1. 30-Day Examination Reply Default — Rule 33
                                                 </h3>
-                                                <p className="text-xs text-gray-700 leading-relaxed m-0">
-                                                    When an Examination Report is issued under Section 9 or 11, the formal reply must be submitted within 30 days. If your ghosting agent fails to reply, the Registry marks the application as <strong>&ldquo;Abandoned&rdquo;</strong>. Restoring an abandoned mark requires costly condonation of delay petitions under Section 131. Learn how in our guide on <Link href="/trademark-abandoned-how-to-restore" className="text-[rgb(110,94,147)] hover:underline font-medium">how to restore abandoned trademarks</Link>.
-                                                </p>
+                                                <p className="text-xs text-gray-700 leading-relaxed m-0">When an Examination Report is issued under Section 9 or 11, the formal reply must be submitted within 30 days. If your ghosting agent fails to reply, the Registry marks the application as<strong>&ldquo;Abandoned&rdquo;</strong>. Restoring an abandoned mark requires costly condonation of delay petitions under Section 131. Learn how in our guide on<Link href="/trademark-abandoned-how-to-restore" className="text-[rgb(110,94,147)] hover:underline font-medium">how to restore abandoned trademarks</Link>.</p>
                                             </div>
 
                                             <div className="p-5 bg-red-50/60 rounded-xl border border-red-200">
@@ -647,9 +564,7 @@ export default function ChangeTrademarkAttorneyPage() {
                                                     <FontAwesomeIcon icon={faBan} className="w-4 h-4 mr-2 text-red-600" />
                                                     2. Non-Appearance at Virtual Show Cause Hearings
                                                 </h3>
-                                                <p className="text-xs text-gray-700 leading-relaxed m-0">
-                                                    If your agent fails to join the virtual hearing via Cisco Webex or fails to file an adjournment request via Form TM-M, the Hearing Officer passes a summary order <strong>Refusing</strong> the trademark under Section 18(4).
-                                                </p>
+                                                <p className="text-xs text-gray-700 leading-relaxed m-0">If your agent fails to join the virtual hearing via Cisco Webex or fails to file an adjournment request via Form TM-M, the Hearing Officer passes a summary order<strong>Refusing</strong>the trademark under Section 18(4).</p>
                                             </div>
 
                                             <div className="p-5 bg-red-50/60 rounded-xl border border-red-200">
@@ -657,9 +572,7 @@ export default function ChangeTrademarkAttorneyPage() {
                                                     <FontAwesomeIcon icon={faBan} className="w-4 h-4 mr-2 text-red-600" />
                                                     3. Missing Opposition Counter-Statement — Section 21(2)
                                                 </h3>
-                                                <p className="text-xs text-gray-700 leading-relaxed m-0">
-                                                    When a competitor opposes your mark on Form TM-O, the applicant has strictly <strong>2 months</strong> to file a Counter-Statement on Form TM-O. This 2-month deadline is <em>non-extendable by law</em>. An unnotified applicant permanently loses their trademark right.
-                                                </p>
+                                                <p className="text-xs text-gray-700 leading-relaxed m-0">When a competitor opposes your mark on Form TM-O, the applicant has strictly<strong>2 months</strong>to file a Counter-Statement on Form TM-O. This 2-month deadline is<em>non-extendable by law</em>. An unnotified applicant permanently loses their trademark right.</p>
                                             </div>
                                         </div>
                                     </section>
@@ -670,9 +583,7 @@ export default function ChangeTrademarkAttorneyPage() {
                                             <FontAwesomeIcon icon={faTable} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Representation Comparison Matrix
                                         </h2>
-                                        <p className="mb-6">
-                                            Compare the operational advantages of migrating to specialized IP litigators versus retaining an uncommunicative agent or self-filing:
-                                        </p>
+                                        <p className="mb-6">Compare the operational advantages of migrating to specialized IP litigators versus retaining an uncommunicative agent or self-filing:</p>
 
                                         <div className="overflow-x-auto my-8">
                                             <table className="w-full text-left border-collapse border border-gray-200 rounded-xl overflow-hidden shadow-sm min-w-[650px]">
@@ -727,30 +638,12 @@ export default function ChangeTrademarkAttorneyPage() {
                                             Attorney Migration Document Checklist
                                         </h2>
                                         <ul className="list-none space-y-4 mb-8">
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Trademark Application Number &amp; Class:</strong> Provide the exact 7-digit trademark filing number and associated class.</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Applicant KYC Documents:</strong> PAN card and Aadhaar card of the proprietor/director, or Certificate of Incorporation/LLP Agreement.</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>MSME / Startup Certificate (If Applicable):</strong> Udyam Registration or DPIIT certificate to claim the 50% government fee concession.</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Signed Form TM-48 (Power of Attorney):</strong> Executed on ₹100 non-judicial stamp paper in favor of your new trademark advocate.</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Revocation Declaration Letter:</strong> Formal statement signed by the applicant revoking the previous attorney&apos;s authority.</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Copy of Past Examination Reports / Hearing Notices:</strong> Any correspondence received from the Trade Marks Registry.</span>
-                                            </li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Trademark Application Number &amp; Class:</strong>Provide the exact 7-digit trademark filing number and associated class.</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Applicant KYC Documents:</strong>PAN card and Aadhaar card of the proprietor/director, or Certificate of Incorporation/LLP Agreement.</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>MSME / Startup Certificate (If Applicable):</strong>Udyam Registration or DPIIT certificate to claim the 50% government fee concession.</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Signed Form TM-48 (Power of Attorney):</strong>Executed on ₹100 non-judicial stamp paper in favor of your new trademark advocate.</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Revocation Declaration Letter:</strong>Formal statement signed by the applicant revoking the previous attorney&apos;s authority.</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Copy of Past Examination Reports / Hearing Notices:</strong>Any correspondence received from the Trade Marks Registry.</span></li>
                                         </ul>
                                     </section>
 
@@ -775,14 +668,10 @@ export default function ChangeTrademarkAttorneyPage() {
                                     <section id="final-takeaway" className="scroll-mt-32 pt-16">
                                         <h2 className="text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLightbulb} className="w-8 h-8 mr-3 text-yellow-500" />
-                                            Strategic Legal Advice for Brand Owners
+                                            Strategic Attorney Transition Advice
                                         </h2>
-                                        <p className="mb-6">
-                                            Your brand name, logo, and commercial identity represent the goodwill and enterprise value of your company. Never allow bureaucratic negligence, uncommunicative agents, or missed statutory deadlines to compromise your intellectual property rights.
-                                        </p>
-                                        <p className="mb-6">
-                                            Migrating your trademark portfolio to dedicated IP litigators ensures institutional deadline management, rigorous legal drafting, and aggressive representation before Hearing Officers. For comprehensive guidance on related trademark procedures, review our resources on <Link href="/how-to-overcome-trademark-objection" className="text-[rgb(110,94,147)] hover:underline font-medium">how to overcome trademark objections</Link>, <Link href="/trademark-user-affidavit-format-and-rules-india" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark user affidavit rules</Link>, and <Link href="/how-to-send-trademark-legal-notice-india" className="text-[rgb(110,94,147)] hover:underline font-medium">how to send trademark legal notices</Link>.
-                                        </p>
+                                        <p className="mb-6">Your brand name, logo, and commercial identity represent the goodwill and enterprise value of your company. Never allow bureaucratic negligence, uncommunicative agents, or missed statutory deadlines to compromise your intellectual property rights.</p>
+                                        <p className="mb-6">Migrating your trademark portfolio to dedicated IP litigators ensures institutional deadline management, rigorous legal drafting, and aggressive representation before Hearing Officers. For comprehensive guidance on related trademark procedures, review our resources on<Link href="/how-to-overcome-trademark-objection" className="text-[rgb(110,94,147)] hover:underline font-medium">how to overcome trademark objections</Link>,<Link href="/trademark-user-affidavit-format-and-rules-india" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark user affidavit rules</Link>, and<Link href="/how-to-send-trademark-legal-notice-india" className="text-[rgb(110,94,147)] hover:underline font-medium">how to send trademark legal notices</Link>.</p>
                                     </section>
 
                                     {/* BOTTOM CTA SECTION */}
@@ -799,9 +688,7 @@ export default function ChangeTrademarkAttorneyPage() {
                                                     Rescue Your Pending Trademark Application Today
                                                 </h3>
 
-                                                <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">
-                                                    Substitute unresponsive agents in 24 hours. Our senior trademark advocates file Form TM-M, update your Address for Service, and draft winning Examination Replies.
-                                                </p>
+                                                <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">Substitute unresponsive agents in 24 hours. Our senior trademark advocates file Form TM-M, update your Address for Service, and draft winning Examination Replies.</p>
 
                                                 <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
                                                     <Link
@@ -819,9 +706,7 @@ export default function ChangeTrademarkAttorneyPage() {
                                                     </a>
                                                 </div>
 
-                                                <p className="mt-6 text-xs font-medium tracking-wide text-white/50 sm:text-sm">
-                                                    Registered IP Advocates • Form TM-M e-Filing • Examination Responses • Show Cause Hearing Representation
-                                                </p>
+                                                <p className="mt-6 text-xs font-medium tracking-wide text-white/50 sm:text-sm">Registered IP Advocates • Form TM-M e-Filing • Examination Responses • Show Cause Hearing Representation</p>
                                             </div>
                                         </div>
                                     </section>
@@ -854,70 +739,14 @@ export default function ChangeTrademarkAttorneyPage() {
                             <div className="bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-100">
                                 <h3 className="text-xs font-black text-gray-400 mb-5 uppercase tracking-[0.25em]">Related Resources</h3>
                                 <ul className="space-y-6">
-                                    <li>
-                                        <Link href="/form-tm-48-power-of-attorney-trademark-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faFileContract} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Form TM-48 Guide</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/how-to-respond-to-trademark-examination-report" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faGavel} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Examination Reply</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/trademark-hearing-video-conferencing-procedure-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faStamp} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">TM Virtual Hearing</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/trademark-abandoned-how-to-restore" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faArrowsRotate} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Restore Abandoned TM</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/how-to-overcome-trademark-objection" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faShieldHalved} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Overcome Objections</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/trademark-opposed-what-happens-next-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faScaleBalanced} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">TM Opposition Guide</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/trademark-fee-concession-msme-udyam-startup-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faBuildingShield} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">MSME TM Fee Concession</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/trademark-user-affidavit-format-and-rules-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faFileSignature} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">User Affidavit Rules</span>
-                                        </Link>
-                                    </li>
+                                    <li><Link href="/form-tm-48-power-of-attorney-trademark-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faFileContract} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Form TM-48 Guide</span></Link></li>
+                                    <li><Link href="/how-to-respond-to-trademark-examination-report" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faGavel} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Examination Reply</span></Link></li>
+                                    <li><Link href="/trademark-hearing-video-conferencing-procedure-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faStamp} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">TM Virtual Hearing</span></Link></li>
+                                    <li><Link href="/trademark-abandoned-how-to-restore" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faArrowsRotate} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Restore Abandoned TM</span></Link></li>
+                                    <li><Link href="/how-to-overcome-trademark-objection" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faShieldHalved} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Overcome Objections</span></Link></li>
+                                    <li><Link href="/trademark-opposed-what-happens-next-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faScaleBalanced} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">TM Opposition Guide</span></Link></li>
+                                    <li><Link href="/trademark-fee-concession-msme-udyam-startup-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faBuildingShield} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">MSME TM Fee Concession</span></Link></li>
+                                    <li><Link href="/trademark-user-affidavit-format-and-rules-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faFileSignature} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">User Affidavit Rules</span></Link></li>
                                 </ul>
                             </div>
                         </aside>

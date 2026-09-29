@@ -83,7 +83,7 @@ export const metadata: Metadata = {
 const faqs = [
     {
         question: "Can I trademark a single standalone book title or movie name in India?",
-        answer: "Generally, no. Under Indian trademark jurisprudence established in Kanungo Media (P) Ltd. v. RGV Film Factory, a single standalone literary or cinematographic title is viewed as descriptive of the work rather than a source identifier. However, if you can prove that the title has acquired immense secondary meaning and distinctive brand goodwill through extensive commercial success, publicity, and public recognition, the Trade Marks Registry may grant registration."
+        answer: "Generally, no. Under Indian trademark jurisprudence established in Kanungo Media (P) Ltd. V. RGV Film Factory, a single standalone literary or cinematographic title is viewed as descriptive of the work rather than a source identifier. However, if you can prove that the title has acquired immense secondary meaning and distinctive brand goodwill through extensive commercial success, publicity, and public recognition, the Trade Marks Registry may grant registration."
     },
     {
         question: "Why is it easier to trademark a book series or movie franchise title?",
@@ -111,7 +111,7 @@ const faqs = [
     },
     {
         question: "Can I trademark a character's catchphrase or signature dialogue in India?",
-        answer: "Yes, provided the catchphrase is distinctive, non-generic, and has acquired widespread commercial association with the entertainment franchise or character. Iconic phrases can be registered as word marks in Class 41 (entertainment services) and Class 25/28 (merchandising), establishing exclusive rights to print them on merchandise or use them in commercial advertisements."
+        answer: "Yes, provided the catchphrase is distinctive, non-generic, and has acquired widespread commercial association with the entertainment franchise or character. Iconic phrases can be registered as word marks in Class 41 (entertainment services) and Class 25/28 (merchandising). This establishes exclusive rights to print them on merchandise or use them in commercial advertisements."
     }
 ];
 
@@ -221,9 +221,7 @@ export default function TrademarkBookTitleMovieNameCharacterPage() {
                             <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-3 leading-tight text-gray-900 tracking-tighter">
                                 Can You Trademark a <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'transparent' }}>Book Title, Movie Name, or Character</span> in India?
                             </h1>
-                            <p className="text-base md:text-lg mb-5 text-gray-700 font-medium leading-relaxed">
-                                In the booming entertainment, publishing, and OTT landscape of India, brand identity extends far beyond corporate logos. Authors, film directors, gaming studios, and production houses invest millions into creating memorable book titles, blockbuster movie franchises, and iconic fictional characters. Learn the exact statutory rules governing single creative works versus franchises, character merchandising rights, why IMPAA guild registration falls short in court, and how the Trade Marks Act, 1999 shields your media assets.
-                            </p>
+                            <p className="text-base md:text-lg mb-5 text-gray-700 font-medium leading-relaxed">In the booming entertainment, publishing, and OTT landscape of India, brand identity extends far beyond corporate logos. Authors, film directors, gaming studios, and production houses invest millions into creating memorable book titles, blockbuster movie franchises, and iconic fictional characters. Learn the exact statutory rules governing single creative works versus franchises, character merchandising rights, why IMPAA guild registration falls short in court, and how the Trade Marks Act, 1999 shields your media assets.</p>
 
                             <div className="flex flex-wrap items-center gap-4 mb-6">
                                 <div className="flex items-center mr-2">
@@ -314,36 +312,11 @@ export default function TrademarkBookTitleMovieNameCharacterPage() {
                                                 Close
                                             </span>
                                             <svg className="w-4 h-4 text-gray-500 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                                            </svg>
-                                        </div>
-                                    </summary>
-                                    <div className="p-3.5 pt-2 border-t border-purple-50 bg-white/70">
-                                        <nav className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
-                                            {tocSections.map((section, idx) => (
-                                                <a
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg></div></summary><div className="p-3.5 pt-2 border-t border-purple-50 bg-white/70"><nav className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">{tocSections.map((section, idx) => (<a
                                                     key={section.id}
                                                     href={`#${section.id}`}
                                                     className="flex items-center p-2 rounded-xl text-xs font-medium text-gray-700 hover:text-[#6E5E93] hover:bg-purple-50/80 transition-all border border-transparent hover:border-purple-100"
-                                                >
-                                                    <span className="w-5 h-5 rounded-full bg-purple-100 text-[#6E5E93] flex items-center justify-center text-[10px] font-bold mr-2 flex-shrink-0">
-                                                        {idx + 1}
-                                                    </span>
-                                                    <span className="truncate">{section.title}</span>
-                                                </a>
-                                            ))}
-                                        </nav>
-                                    </div>
-                                </details>
-                            </div>
-
-                            <div className="bg-white p-4 md:p-12 rounded-2xl shadow-sm border border-gray-100 space-y-12 md:space-y-20 article-content">
-                                <article className="prose prose-lg max-w-none text-gray-700 leading-relaxed font-normal">
-
-                                    <div className="flex items-center space-x-4 mb-10 p-4 bg-gray-50 rounded-xl border border-gray-100 not-prose">
-                                        <img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-12 h-12 rounded-full object-cover m-0" />
-                                        <div>
-                                            <p className="text-sm font-bold text-gray-900 m-0">Written by <Link href="/about-us" className="text-[rgb(110,94,147)] hover:underline">Rahul Roy</Link></p>
+                                                ><span className="w-5 h-5 rounded-full bg-purple-100 text-[#6E5E93] flex items-center justify-center text-[10px] font-bold mr-2 flex-shrink-0">{idx + 1}</span><span className="truncate">{section.title}</span></a>))}</nav></div></details></div><div className="bg-white p-4 md:p-12 rounded-2xl shadow-sm border border-gray-100 space-y-12 md:space-y-20 article-content"><article className="prose prose-lg max-w-none text-gray-700 leading-relaxed font-normal"><div className="flex items-center space-x-4 mb-10 p-4 bg-gray-50 rounded-xl border border-gray-100 not-prose"><img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-12 h-12 rounded-full object-cover m-0" /><div><p className="text-sm font-bold text-gray-900 m-0">Written by<Link href="/about-us" className="text-[rgb(110,94,147)] hover:underline">Rahul Roy</Link></p>
                                             <p className="text-xs text-gray-500 m-0">Media &amp; Trademark Specialist</p>
                                         </div>
                                     </div>
@@ -356,20 +329,12 @@ export default function TrademarkBookTitleMovieNameCharacterPage() {
                                         </h2>
 
                                         <div id="quick-answer" className="bg-indigo-50 border-l-4 border-[rgb(110,94,147)] p-6 rounded-r-xl mb-8">
-                                            <p className="font-semibold text-gray-900 m-0">
-                                                Yes, you can trademark book titles, movie names, and fictional characters in India, but with critical legal distinctions. A single standalone book or movie title cannot be registered as a trademark unless it has acquired strong secondary meaning through massive publicity and public recognition. In contrast, titles of a series or franchise (such as Harry Potter, Dhoom, or Singham) and fictional characters (such as Chhota Bheem, Shaktimaan, or Krrish) are readily registrable under the Trade Marks Act, 1999 across Class 9, Class 16, Class 25, Class 28, and Class 41 to protect brand exclusivity and commercial merchandising rights.
-                                            </p>
+                                            <p className="font-semibold text-gray-900 m-0">Yes, you can trademark book titles, movie names, and fictional characters in India, but with critical legal distinctions. A single standalone book or movie title cannot be registered as a trademark unless it has acquired strong secondary meaning through massive publicity and public recognition. In contrast, titles of a series or franchise (such as Harry Potter, Dhoom, or Singham) and fictional characters (such as Chhota Bheem, Shaktimaan, or Krrish) are readily registrable under the Trade Marks Act, 1999 across Class 9, Class 16, Class 25, Class 28, and Class 41 to protect brand exclusivity and commercial merchandising rights.</p>
                                         </div>
 
-                                        <p className="mb-6">
-                                            The Indian creative industry produces thousands of novels, feature films, OTT web series, and video games every year. When an author writes a bestseller or a film studio produces a blockbuster, immense commercial goodwill crystallizes around the title and characters. However, many creative professionals remain confused about whether their intellectual property is protected by copyright law, trademark law, or industry guild registrations like IMPAA or WIFPA.
-                                        </p>
-                                        <p className="mb-6">
-                                            A fundamental rule of entertainment law in India is that <strong>copyright does not protect titles, names, or short phrases</strong>. If another producer copies your movie title or an unauthorized manufacturer prints your fictional superhero onto t-shirts and action figures, your primary statutory weapon is not the Copyright Act, 1957, but the <Link href="/process-and-steps-of-trademark-registration" className="text-[rgb(110,94,147)] hover:underline font-medium">Trade Marks Act, 1999</Link>.
-                                        </p>
-                                        <p className="mb-6">
-                                            Securing trademark protection transforms your artistic creation into an institutional commercial asset. It gives you the exclusive right to prevent deceptive copycats, license merchandise, negotiate lucrative OTT spin-offs, and enforce your brand identity across nationwide and global markets.
-                                        </p>
+                                        <p className="mb-6">The Indian creative industry produces thousands of novels, feature films, OTT web series, and video games every year. When an author writes a bestseller or a film studio produces a blockbuster, immense commercial goodwill crystallizes around the title and characters. However, many creative professionals remain confused about whether their intellectual property is protected by copyright law, trademark law, or industry guild registrations like IMPAA or WIFPA.</p>
+                                        <p className="mb-6">A fundamental rule of entertainment law in India is that<strong>copyright does not protect titles, names, or short phrases</strong>. If another producer copies your movie title or an unauthorized manufacturer prints your fictional superhero onto t-shirts and action figures, your primary statutory weapon is not the Copyright Act, 1957. However, the<Link href="/process-and-steps-of-trademark-registration" className="text-[rgb(110,94,147)] hover:underline font-medium">Trade Marks Act, 1999</Link>.</p>
+                                        <p className="mb-6">Securing trademark protection transforms your artistic creation into an institutional commercial asset. It gives you the exclusive right to prevent deceptive copycats, license merchandise, negotiate lucrative OTT spin-offs, and enforce your brand identity across nationwide and global markets.</p>
                                     </section>
 
                                     {/* SECTION 2: COPYRIGHT VS TRADEMARK */}
@@ -378,9 +343,7 @@ export default function TrademarkBookTitleMovieNameCharacterPage() {
                                             <FontAwesomeIcon icon={faScaleBalanced} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Copyright vs Trademark for Entertainment IP
                                         </h2>
-                                        <p className="mb-6">
-                                            Understanding the interplay between copyright and trademark law is essential for creators. While both are forms of intellectual property, they protect entirely different dimensions of creative output:
-                                        </p>
+                                        <p className="mb-6">Understanding the interplay between copyright and trademark law is essential for creators. While both are forms of intellectual property, they protect entirely different dimensions of creative output:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -388,13 +351,9 @@ export default function TrademarkBookTitleMovieNameCharacterPage() {
                                                     <span className="w-2.5 h-2.5 bg-blue-600 rounded-full mr-2.5"></span>
                                                     The Role of Copyright (Copyright Act, 1957)
                                                 </h3>
-                                                <p className="text-sm text-gray-600 leading-relaxed mb-3">
-                                                    Copyright protects original literary, dramatic, musical, artistic, and cinematographic works. It protects the actual text of your book, the screenplay, the soundtrack, the filmed footage, and the visual character illustrations.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed mb-3">Copyright protects original literary, dramatic, musical, artistic, and cinematographic works. It protects the actual text of your book, the screenplay, the soundtrack, the filmed footage, and the visual character illustrations.</p>
                                                 <div className="bg-red-50 p-3 rounded-xl border border-red-100">
-                                                    <p className="text-xs text-red-800 font-semibold m-0">
-                                                        <strong>Key Limitation:</strong> Indian courts consistently rule that copyright does NOT protect bare titles or single words because they lack sufficient literary substance.
-                                                    </p>
+                                                    <p className="text-xs text-red-800 font-semibold m-0"><strong>Key Limitation:</strong>Indian courts consistently rule that copyright does NOT protect bare titles or single words because they lack sufficient literary substance.</p>
                                                 </div>
                                             </div>
 
@@ -403,20 +362,14 @@ export default function TrademarkBookTitleMovieNameCharacterPage() {
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     The Role of Trademark (Trade Marks Act, 1999)
                                                 </h3>
-                                                <p className="text-sm text-gray-600 leading-relaxed mb-3">
-                                                    Trademark protects words, titles, names, logos, symbols, and character representations that act as <em>source identifiers</em>. It indicates to the consuming public that goods or entertainment services originate from a specific creator or studio.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed mb-3">Trademark protects words, titles, names, logos, symbols, and character representations that act as<em>source identifiers</em>. It indicates to the consuming public that goods or entertainment services originate from a specific creator or studio.</p>
                                                 <div className="bg-green-50 p-3 rounded-xl border border-green-100">
-                                                    <p className="text-xs text-green-800 font-semibold m-0">
-                                                        <strong>Key Advantage:</strong> Trademark registration grants exclusive rights to the title or character name across books, films, toys, clothing, games, and streaming services.
-                                                    </p>
+                                                    <p className="text-xs text-green-800 font-semibold m-0"><strong>Key Advantage:</strong>Trademark registration grants exclusive rights to the title or character name across books, films, toys, clothing, games, and streaming services.</p>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <p className="mb-6">
-                                            For a deeper exploration of how these regimes differ across commercial enterprises, read our detailed comparison on the <Link href="/difference-between-trademark-registration-and-copyright-registration" className="text-[rgb(110,94,147)] hover:underline font-medium">difference between trademark registration and copyright registration</Link>.
-                                        </p>
+                                        <p className="mb-6">For a deeper exploration of how these regimes differ across commercial enterprises, read our detailed comparison on the<Link href="/difference-between-trademark-registration-and-copyright-registration" className="text-[rgb(110,94,147)] hover:underline font-medium">difference between trademark registration and copyright registration</Link>.</p>
                                     </section>
 
                                     {/* SECTION 3: SINGLE WORK VS SERIES */}
@@ -425,25 +378,17 @@ export default function TrademarkBookTitleMovieNameCharacterPage() {
                                             <FontAwesomeIcon icon={faBookOpen} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             The Single Work Rule vs Series Franchises
                                         </h2>
-                                        <p className="mb-6">
-                                            Under Indian trademark jurisprudence, creative titles are divided into two distinct legal classifications: titles of single standalone works and titles of a series of works.
-                                        </p>
+                                        <p className="mb-6">Under Indian trademark jurisprudence, creative titles are divided into two distinct legal classifications: titles of single standalone works and titles of a series of works.</p>
 
                                         <div className="border border-gray-200 rounded-2xl p-6 md:p-8 mb-8 bg-white shadow-sm">
                                             <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
                                                 <span className="w-8 h-8 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-sm mr-3">1</span>
                                                 Single Standalone Literary or Cinematic Works
                                             </h3>
-                                            <p className="text-gray-700 leading-relaxed mb-4">
-                                                A single standalone novel, one-off movie, or standalone documentary title is generally viewed by the Trade Marks Registry as merely descriptive of the subject matter of the book or film itself, rather than pointing to who made it.
-                                            </p>
-                                            <p className="text-gray-700 leading-relaxed mb-4">
-                                                <strong>The Legal Rule:</strong> You cannot register the title of a single standalone book or movie unless you prove that the title has acquired substantial <strong>secondary meaning</strong>. Secondary meaning means the public has come to associate that specific title exclusively with your production house or authorship through extensive marketing, critical acclaim, and commercial prominence before another party adopted it.
-                                            </p>
+                                            <p className="text-gray-700 leading-relaxed mb-4">A single standalone novel, one-off movie, or standalone documentary title is generally viewed by the Trade Marks Registry as merely descriptive of the subject matter of the book or film itself, rather than pointing to who made it.</p>
+                                            <p className="text-gray-700 leading-relaxed mb-4"><strong>The Legal Rule:</strong>You cannot register the title of a single standalone book or movie unless you prove that the title has acquired substantial<strong>secondary meaning</strong>. Secondary meaning means the public has come to associate that specific title exclusively with your production house or authorship through extensive marketing, critical acclaim, and commercial prominence before another party adopted it.</p>
                                             <div className="bg-amber-50 p-4 rounded-xl border border-amber-200">
-                                                <p className="text-xs sm:text-sm text-amber-950 font-medium m-0">
-                                                    <strong>Example:</strong> Legendary movie titles like <em>Sholay</em>, <em>Mughal-e-Azam</em>, and <em>Lagaan</em> have acquired monumental secondary meaning in India. The courts have protected them as well-known marks even as single standalone original productions.
-                                                </p>
+                                                <p className="text-xs sm:text-sm text-amber-950 font-medium m-0"><strong>Example:</strong>Legendary movie titles like<em>Sholay</em>,<em>Mughal-e-Azam</em>, and<em>Lagaan</em>have acquired monumental secondary meaning in India. The courts have protected them as well-known marks even as single standalone original productions.</p>
                                             </div>
                                         </div>
 
@@ -452,16 +397,10 @@ export default function TrademarkBookTitleMovieNameCharacterPage() {
                                                 <span className="w-8 h-8 rounded-lg bg-green-100 text-green-800 flex items-center justify-center font-bold text-sm mr-3">2</span>
                                                 Series, Sequels, and Media Franchises
                                             </h3>
-                                            <p className="text-gray-700 leading-relaxed mb-4">
-                                                When a creative title spans across a series of books, film sequels, television seasons, or an expanded cinematic universe, the title functions as a true trademark. It signals to consumers that each successive installment comes from the same creative universe and maintains consistent quality standards.
-                                            </p>
-                                            <p className="text-gray-700 leading-relaxed mb-4">
-                                                <strong>The Legal Rule:</strong> Titles of a series (such as <em>Harry Potter</em>, <em>The Lord of the Rings</em>, <em>Dhoom</em>, <em>Golmaal</em>, <em>Singham</em>, <em>Baahubali</em>, <em>KGF</em>, or <em>Panchayat</em>) are readily registrable as trademarks without having to overcome the stringent descriptive hurdles faced by single works.
-                                            </p>
+                                            <p className="text-gray-700 leading-relaxed mb-4">When a creative title spans across a series of books, film sequels, television seasons, or an expanded cinematic universe, the title functions as a true trademark. It signals to consumers that each successive installment comes from the same creative universe and maintains consistent quality standards.</p>
+                                            <p className="text-gray-700 leading-relaxed mb-4"><strong>The Legal Rule:</strong>Titles of a series (such as<em>Harry Potter</em>,<em>The Lord of the Rings</em>,<em>Dhoom</em>,<em>Golmaal</em>,<em>Singham</em>,<em>Baahubali</em>,<em>KGF</em>, or<em>Panchayat</em>) are readily registrable as trademarks without having to overcome the stringent descriptive hurdles faced by single works.</p>
                                             <div className="bg-green-50 p-4 rounded-xl border border-green-200">
-                                                <p className="text-xs sm:text-sm text-green-950 font-medium m-0">
-                                                    <strong>Proactive Strategy:</strong> If you plan a book trilogy or a movie franchise with sequels, file your trademark applications under Class 9, 16, and 41 early to secure priority over the franchise title before public release.
-                                                </p>
+                                                <p className="text-xs sm:text-sm text-green-950 font-medium m-0"><strong>Proactive Strategy:</strong>If you plan a book trilogy or a movie franchise with sequels, file your trademark applications under Class 9, 16, and 41 early to secure priority over the franchise title before public release.</p>
                                             </div>
                                         </div>
                                     </section>
@@ -472,30 +411,22 @@ export default function TrademarkBookTitleMovieNameCharacterPage() {
                                             <FontAwesomeIcon icon={faMask} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Protecting Fictional Characters &amp; Merchandising
                                         </h2>
-                                        <p className="mb-6">
-                                            Fictional characters often outlive the original storylines in which they appear. From Indian comic legends like <em>Chhota Bheem</em>, <em>Nagraj</em>, and <em>Shaktimaan</em> to cinematic characters like <em>Krrish</em>, <em>Gabbar Singh</em>, and <em>Chulbul Pandey</em>, fictional characters represent massive commercial licensing value.
-                                        </p>
+                                        <p className="mb-6">Fictional characters often outlive the original storylines in which they appear. From Indian comic legends like<em>Chhota Bheem</em>,<em>Nagraj</em>, and<em>Shaktimaan</em>to cinematic characters like<em>Krrish</em>,<em>Gabbar Singh</em>, and<em>Chulbul Pandey</em>, fictional characters represent massive commercial licensing value.</p>
 
                                         <div className="space-y-6 mb-8">
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
                                                 <h3 className="text-lg font-bold text-gray-900 mb-2">Dual-Layer Character Protection</h3>
-                                                <p className="text-sm text-gray-700 leading-relaxed m-0">
-                                                    Creators protect characters through two complementary legal mechanisms. Under copyright law, the graphic artwork, character drawings, voice recordings, and original backstory are protected against direct artistic copying. Under trademark law, the character name, physical appearance, costume, mask, insignia, and signature catchphrases are registered as trademarks to monopolize commercial licensing and prevent unauthorized merchandise.
-                                                </p>
+                                                <p className="text-sm text-gray-700 leading-relaxed m-0">Creators protect characters through two complementary legal mechanisms. Under copyright law, the graphic artwork, character drawings, voice recordings, and original backstory are protected against direct artistic copying. Under trademark law, the character name, physical appearance, costume, mask, insignia, and signature catchphrases are registered as trademarks to monopolize commercial licensing and prevent unauthorized merchandise.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
                                                 <h3 className="text-lg font-bold text-gray-900 mb-2">Character Merchandising Rights</h3>
-                                                <p className="text-sm text-gray-700 leading-relaxed m-0">
-                                                    Character merchandising is the commercial exploitation of a fictional persona on consumer goods. Under Indian trademark law, character owners register their marks across diverse goods classes—such as action figures (Class 28), themed t-shirts and apparel (Class 25), school bags and stationery (Class 16), video games (Class 9), and confectionery (Class 30). This ensures that third parties cannot manufacture counterfeit toys or apparel without a formal license agreement.
-                                                </p>
+                                                <p className="text-sm text-gray-700 leading-relaxed m-0">Character merchandising is the commercial exploitation of a fictional persona on consumer goods. Under Indian trademark law, character owners register their marks across diverse goods classes—such as action figures (Class 28), themed t-shirts and apparel (Class 25), school bags and stationery (Class 16), video games (Class 9), and confectionery (Class 30). This ensures that third parties cannot manufacture counterfeit toys or apparel without a formal license agreement.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
                                                 <h3 className="text-lg font-bold text-gray-900 mb-2">Protecting Real Celebrity Personas vs Fictional Personas</h3>
-                                                <p className="text-sm text-gray-700 leading-relaxed m-0">
-                                                    While fictional characters are protected through copyright and trademark registration, real living personalities (actors, authors, sports icons) protect their personal names, signatures, and likeness through personality rights, right of publicity, and personal name trademarks. To learn more about registering individual names, see our guide on <Link href="/can-you-trademark-your-own-name-in-india" className="text-[rgb(110,94,147)] hover:underline font-medium">can you trademark your own name in India</Link>.
-                                                </p>
+                                                <p className="text-sm text-gray-700 leading-relaxed m-0">While fictional characters are protected through copyright and trademark registration, real living personalities (actors, authors, sports icons) protect their personal names, signatures, and likeness through personality rights, right of publicity, and personal name trademarks. To learn more about registering individual names, see our guide on<Link href="/can-you-trademark-your-own-name-in-india" className="text-[rgb(110,94,147)] hover:underline font-medium">can you trademark your own name in India</Link>.</p>
                                             </div>
                                         </div>
                                     </section>
@@ -506,23 +437,17 @@ export default function TrademarkBookTitleMovieNameCharacterPage() {
                                             <FontAwesomeIcon icon={faBuildingColumns} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Film Guild Registration vs Trademark Registry
                                         </h2>
-                                        <p className="mb-6">
-                                            A widespread misconception in the Indian film and television industry is that registering a script title with an industry association—such as the Indian Motion Picture Producers&apos; Association (IMPAA), the Western India Film Producers&apos; Association (WIFPA), the Producers Guild of India, or the Film Writers Association (Screenwriters Association)—provides complete legal ownership over the title.
-                                        </p>
+                                        <p className="mb-6">A widespread misconception in the Indian film and television industry is that registering a script title with an industry association—such as the Indian Motion Picture Producers&apos. Association (IMPAA), the Western India Film Producers&apos. Association (WIFPA), the Producers Guild of India, or the Film Writers Association (Screenwriters Association)—provides complete legal ownership over the title.</p>
 
                                         <div className="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-2xl mb-8 not-prose">
                                             <h3 className="text-base font-bold text-red-900 mb-2 flex items-center">
                                                 <FontAwesomeIcon icon={faExclamationTriangle} className="w-5 h-5 mr-2 text-red-600" />
                                                 The Reality: Guild Registrations Have Zero Statutory Standing
                                             </h3>
-                                            <p className="text-sm text-red-800 leading-relaxed m-0">
-                                                Film trade associations operate as voluntary, private societies. Their title registration registers are merely internal industry conventions designed to resolve disputes amicably between registered guild members. Indian High Courts have repeatedly held that guild title registration creates <strong>no statutory monopoly</strong> and cannot be used to restrain non-members or secure judicial injunctions under the Trade Marks Act, 1999.
-                                            </p>
+                                            <p className="text-sm text-red-800 leading-relaxed m-0">Film trade associations operate as voluntary, private societies. Their title registration registers are merely internal industry conventions designed to resolve disputes amicably between registered guild members. Indian High Courts have repeatedly held that guild title registration creates<strong>no statutory monopoly</strong>and cannot be used to restrain non-members or secure judicial injunctions under the Trade Marks Act, 1999.</p>
                                         </div>
 
-                                        <p className="mb-6">
-                                            If a competing studio or an OTT platform outside your association uses your film title, your IMPAA certificate is legally unenforceable in a commercial court. To obtain nationwide legal exclusivity, seek interim injunctions, and claim statutory damages, you must hold a valid trademark registration on Form TM-A with the Trade Marks Registry.
-                                        </p>
+                                        <p className="mb-6">If a competing studio or an OTT platform outside your association uses your film title, your IMPAA certificate is legally unenforceable in a commercial court. To obtain nationwide legal exclusivity, seek interim injunctions, and claim statutory damages, you must hold a valid trademark registration on Form TM-A with the Trade Marks Registry.</p>
                                     </section>
 
                                     {/* SECTION 6: TRADEMARK CLASSES */}
@@ -531,9 +456,7 @@ export default function TrademarkBookTitleMovieNameCharacterPage() {
                                             <FontAwesomeIcon icon={faTable} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Trademark Classes for Media &amp; Characters
                                         </h2>
-                                        <p className="mb-6">
-                                            When applying for a trademark for an entertainment title or character, selecting the appropriate Nice Classification classes is vital. Entertainment IP spans both creative content and consumer merchandise:
-                                        </p>
+                                        <p className="mb-6">When applying for a trademark for an entertainment title or character, selecting the appropriate Nice Classification classes is vital. Entertainment IP spans both creative content and consumer merchandise:</p>
 
                                         <div className="overflow-x-auto mb-8 shadow-sm rounded-xl border border-gray-200">
                                             <table className="min-w-full bg-white text-left text-sm text-gray-700">
@@ -585,9 +508,7 @@ export default function TrademarkBookTitleMovieNameCharacterPage() {
                                                 </tbody>
                                             </table>
                                         </div>
-                                        <p className="mb-6">
-                                            To determine the precise commercial classes for your entertainment brand, check out our interactive <Link href="/trademark-class-finder" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark class finder</Link> and read our guide on <Link href="/single-class-vs-multi-class-trademark-application-india" className="text-[rgb(110,94,147)] hover:underline font-medium">single-class vs multi-class trademark applications</Link>.
-                                        </p>
+                                        <p className="mb-6">To determine the precise commercial classes for your entertainment brand, check out our interactive<Link href="/trademark-class-finder" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark class finder</Link>and read our guide on<Link href="/single-class-vs-multi-class-trademark-application-india" className="text-[rgb(110,94,147)] hover:underline font-medium">single-class vs multi-class trademark applications</Link>.</p>
                                     </section>
 
                                     {/* SECTION 7: LANDMARK JUDGMENTS */}
@@ -596,9 +517,7 @@ export default function TrademarkBookTitleMovieNameCharacterPage() {
                                             <FontAwesomeIcon icon={faGavel} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Landmark Indian Court Cases on Title IP
                                         </h2>
-                                        <p className="mb-6">
-                                            Indian High Courts and the Supreme Court of India have developed substantial jurisprudence clarifying how film titles, book names, and characters are legally protected:
-                                        </p>
+                                        <p className="mb-6">Indian High Courts and the Supreme Court of India have developed substantial jurisprudence clarifying how film titles, book names, and characters are legally protected:</p>
 
                                         <div className="space-y-6 mb-8">
                                             {/* CASE 1 */}
@@ -607,12 +526,8 @@ export default function TrademarkBookTitleMovieNameCharacterPage() {
                                                     <h3 className="text-lg font-bold text-gray-900">Kanungo Media (P) Ltd. v. RGV Film Factory (Delhi High Court, 2007)</h3>
                                                     <span className="text-xs bg-purple-100 text-purple-900 font-bold px-3 py-1 rounded-full">&ldquo;Nisshabd&rdquo; Case</span>
                                                 </div>
-                                                <p className="text-sm text-gray-700 leading-relaxed mb-3">
-                                                    <strong>The Dispute:</strong> The plaintiff produced an award-winning Bengali film titled <em>Nisshabd</em>. Later, Ram Gopal Varma produced a Hindi feature film with the same title, <em>Nishabd</em>.
-                                                </p>
-                                                <p className="text-sm text-gray-700 leading-relaxed m-0">
-                                                    <strong>The Ruling:</strong> The Delhi High Court established the foundational test for movie titles in India. The Court held that a single literary work title cannot be protected unless the plaintiff proves it has acquired strong secondary meaning. Because the Bengali film had limited commercial release, the public had not associated the word exclusively with the plaintiff, and the injunction was refused.
-                                                </p>
+                                                <p className="text-sm text-gray-700 leading-relaxed mb-3"><strong>The Dispute:</strong>The plaintiff produced an award-winning Bengali film titled<em>Nisshabd</em>. Later, Ram Gopal Varma produced a Hindi feature film with the same title,<em>Nishabd</em>.</p>
+                                                <p className="text-sm text-gray-700 leading-relaxed m-0"><strong>The Ruling:</strong>The Delhi High Court established the foundational test for movie titles in India. The Court held that a single literary work title cannot be protected unless the plaintiff proves it has acquired strong secondary meaning. Because the Bengali film had limited commercial release, the public had not associated the word exclusively with the plaintiff, and the injunction was refused.</p>
                                             </div>
 
                                             {/* CASE 2 */}
@@ -621,12 +536,8 @@ export default function TrademarkBookTitleMovieNameCharacterPage() {
                                                     <h3 className="text-lg font-bold text-gray-900">Krishika Lulla &amp; Ors. v. Shyam Vithalrao Devkatta (Supreme Court of India, 2016)</h3>
                                                     <span className="text-xs bg-purple-100 text-purple-900 font-bold px-3 py-1 rounded-full">&ldquo;Desi Boyz&rdquo; Case</span>
                                                 </div>
-                                                <p className="text-sm text-gray-700 leading-relaxed mb-3">
-                                                    <strong>The Dispute:</strong> The complainant authored a synopsis titled <em>Desi Boyz</em> and claimed copyright infringement against the producers of the Bollywood movie <em>Desi Boyz</em>.
-                                                </p>
-                                                <p className="text-sm text-gray-700 leading-relaxed m-0">
-                                                    <strong>The Ruling:</strong> The Supreme Court affirmed that copyright does not subsist in a bare title. A title is not an independent &apos;literary work&apos; under Section 13 of the Copyright Act. Title protection can only be sought under trademark principles or through a passing off claim.
-                                                </p>
+                                                <p className="text-sm text-gray-700 leading-relaxed mb-3"><strong>The Dispute:</strong>The complainant authored a synopsis titled<em>Desi Boyz</em>and claimed copyright infringement against the producers of the Bollywood movie<em>Desi Boyz</em>.</p>
+                                                <p className="text-sm text-gray-700 leading-relaxed m-0"><strong>The Ruling:</strong>The Supreme Court affirmed that copyright does not subsist in a bare title. A title is not an independent &apos;literary work&apos; under Section 13 of the Copyright Act. Title protection can only be sought under trademark principles or through a passing off claim.</p>
                                             </div>
 
                                             {/* CASE 3 */}
@@ -635,12 +546,8 @@ export default function TrademarkBookTitleMovieNameCharacterPage() {
                                                     <h3 className="text-lg font-bold text-gray-900">Sholay Media &amp; Entertainment Pvt. Ltd. v. Yogesh Patel &amp; Ors. (Delhi High Court, 2022)</h3>
                                                     <span className="text-xs bg-purple-100 text-purple-900 font-bold px-3 py-1 rounded-full">&ldquo;Sholay&rdquo; Trademark</span>
                                                 </div>
-                                                <p className="text-sm text-gray-700 leading-relaxed mb-3">
-                                                    <strong>The Dispute:</strong> The defendants used the registered trademark <em>Sholay</em> on a domain name (sholay.com) and associated digital entertainment services.
-                                                </p>
-                                                <p className="text-sm text-gray-700 leading-relaxed m-0">
-                                                    <strong>The Ruling:</strong> The Delhi High Court recognized <em>Sholay</em> as a well-known registered trademark, granted a permanent injunction, and awarded ₹25 Lakh in damages. The Court held that iconic cinematic titles that achieve legendary status are entitled to cross-industry trademark protection against dilution.
-                                                </p>
+                                                <p className="text-sm text-gray-700 leading-relaxed mb-3"><strong>The Dispute:</strong>The defendants used the registered trademark<em>Sholay</em>on a domain name (sholay.com) and associated digital entertainment services.</p>
+                                                <p className="text-sm text-gray-700 leading-relaxed m-0"><strong>The Ruling:</strong>The Delhi High Court recognized<em>Sholay</em>as a well-known registered trademark, granted a permanent injunction, and awarded ₹25 Lakh in damages. The Court held that iconic cinematic titles that achieve legendary status are entitled to cross-industry trademark protection against dilution.</p>
                                             </div>
 
                                             {/* CASE 4 */}
@@ -649,12 +556,8 @@ export default function TrademarkBookTitleMovieNameCharacterPage() {
                                                     <h3 className="text-lg font-bold text-gray-900">Disney Enterprises Inc. &amp; Anr. v. Santosh Kumar &amp; Anr. (Delhi High Court)</h3>
                                                     <span className="text-xs bg-purple-100 text-purple-900 font-bold px-3 py-1 rounded-full">Character Protection</span>
                                                 </div>
-                                                <p className="text-sm text-gray-700 leading-relaxed mb-3">
-                                                    <strong>The Dispute:</strong> Defendants manufactured and sold counterfeit school bags, pencil boxes, and merchandise bearing Disney characters including <em>Mickey Mouse</em>, <em>Donald Duck</em>, and <em>Winnie the Pooh</em>.
-                                                </p>
-                                                <p className="text-sm text-gray-700 leading-relaxed m-0">
-                                                    <strong>The Ruling:</strong> The Court protected Disney&apos;s dual trademark and copyright registrations, noting that fictional characters represent immense commercial goodwill and unauthorized merchandising constitutes both trademark infringement and copyright piracy.
-                                                </p>
+                                                <p className="text-sm text-gray-700 leading-relaxed mb-3"><strong>The Dispute:</strong>Defendants manufactured and sold counterfeit school bags, pencil boxes, and merchandise bearing Disney characters including<em>Mickey Mouse</em>,<em>Donald Duck</em>, and<em>Winnie the Pooh</em>.</p>
+                                                <p className="text-sm text-gray-700 leading-relaxed m-0"><strong>The Ruling:</strong>The Court protected Disney&apos;s dual trademark and copyright registrations, noting that fictional characters represent immense commercial goodwill and unauthorized merchandising constitutes both trademark infringement and copyright piracy.</p>
                                             </div>
                                         </div>
                                     </section>
@@ -665,9 +568,7 @@ export default function TrademarkBookTitleMovieNameCharacterPage() {
                                             <FontAwesomeIcon icon={faListUl} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             7-Step Trademark Strategy for Media Works
                                         </h2>
-                                        <p className="mb-6">
-                                            To ensure seamless legal protection for your book title, movie franchise, or fictional character in India, follow this structured 7-step legal roadmap:
-                                        </p>
+                                        <p className="mb-6">To ensure seamless legal protection for your book title, movie franchise, or fictional character in India, follow this structured 7-step legal roadmap:</p>
 
                                         {/* STEP 1 */}
                                         <div className="border border-gray-200 rounded-2xl p-6 md:p-8 mb-6 bg-white shadow-sm hover:border-[rgb(110,94,147)] transition-colors">
@@ -676,9 +577,7 @@ export default function TrademarkBookTitleMovieNameCharacterPage() {
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Pre-Filing Clearance</span>
                                             </div>
                                             <h3 className="text-xl font-bold text-gray-900 mb-2">Conduct Comprehensive Multi-Class Trademark Search</h3>
-                                            <p className="text-gray-700 leading-relaxed m-0">
-                                                Before announcing a title or producing promotional material, conduct an in-depth clearance search on the IP India Trade Marks database across Classes 9, 16, 25, 28, and 41. Verify whether identical or phonetically similar marks exist for entertainment and media. You can initiate this clearance using our <Link href="/trademark-search" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark search</Link> portal.
-                                            </p>
+                                            <p className="text-gray-700 leading-relaxed m-0">Before announcing a title or producing promotional material, conduct an in-depth clearance search on the IP India Trade Marks database across Classes 9, 16, 25, 28, and 41. Verify whether identical or phonetically similar marks exist for entertainment and media. You can initiate this clearance using our<Link href="/trademark-search" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark search</Link>portal.</p>
                                         </div>
 
                                         {/* STEP 2 */}
@@ -688,9 +587,7 @@ export default function TrademarkBookTitleMovieNameCharacterPage() {
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: IP Classification</span>
                                             </div>
                                             <h3 className="text-xl font-bold text-gray-900 mb-2">Classify Creative Property (Single Work vs Franchise Series)</h3>
-                                            <p className="text-gray-700 leading-relaxed m-0">
-                                                Determine whether the title will represent a single standalone production or a serialized franchise (e.g., book series, multi-part film universe, video game spin-off). For franchise projects, frame the goods and services specifications to reflect expanding entertainment properties.
-                                            </p>
+                                            <p className="text-gray-700 leading-relaxed m-0">Determine whether the title will represent a single standalone production or a serialized franchise (e.g., book series, multi-part film universe, video game spin-off). For franchise projects, frame the goods and services specifications to reflect expanding entertainment properties.</p>
                                         </div>
 
                                         {/* STEP 3 */}
@@ -700,9 +597,7 @@ export default function TrademarkBookTitleMovieNameCharacterPage() {
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Chain of Title</span>
                                             </div>
                                             <h3 className="text-xl font-bold text-gray-900 mb-2">Execute Clear Chain-of-Title &amp; Creator Assignment Deeds</h3>
-                                            <p className="text-gray-700 leading-relaxed m-0">
-                                                Ensure complete chain-of-title documentation. If screenwriters, illustrators, or freelance concept artists created the character or suggested the title, execute robust IP assignment agreements under Section 18 and 19 of the Copyright Act and the Trade Marks Act. Read more about structuring agreements in our guide on <Link href="/trademark-assignment-vs-licensing-in-india" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark assignment vs licensing in India</Link>.
-                                            </p>
+                                            <p className="text-gray-700 leading-relaxed m-0">Ensure complete chain-of-title documentation. If screenwriters, illustrators, or freelance concept artists created the character or suggested the title, execute robust IP assignment agreements under Section 18 and 19 of the Copyright Act and the Trade Marks Act. Read more about structuring agreements in our guide on<Link href="/trademark-assignment-vs-licensing-in-india" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark assignment vs licensing in India</Link>.</p>
                                         </div>
 
                                         {/* STEP 4 */}
@@ -712,9 +607,7 @@ export default function TrademarkBookTitleMovieNameCharacterPage() {
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Statutory Filing</span>
                                             </div>
                                             <h3 className="text-xl font-bold text-gray-900 mb-2">File Multi-Class Form TM-A for Word Marks &amp; Character Logos</h3>
-                                            <p className="text-gray-700 leading-relaxed m-0">
-                                                Submit online trademark applications on Form TM-A on the IP India gateway. Apply for the text title as a standalone <strong>Word Mark</strong> (to prevent any phonetic variation) and register character drawings, movie title typography, and costumes as <strong>Device / Logo Marks</strong>.
-                                            </p>
+                                            <p className="text-gray-700 leading-relaxed m-0">Submit online trademark applications on Form TM-A on the IP India gateway. Apply for the text title as a standalone<strong>Word Mark</strong>(to prevent any phonetic variation) and register character drawings, movie title typography, and costumes as<strong>Device / Logo Marks</strong>.</p>
                                         </div>
 
                                         {/* STEP 5 */}
@@ -724,9 +617,7 @@ export default function TrademarkBookTitleMovieNameCharacterPage() {
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Evidentiary Proof</span>
                                             </div>
                                             <h3 className="text-xl font-bold text-gray-900 mb-2">Compile User Affidavit &amp; Evidence of Publicity</h3>
-                                            <p className="text-gray-700 leading-relaxed m-0">
-                                                If claiming prior commercial use or secondary meaning, submit a comprehensive <Link href="/trademark-user-affidavit-format-and-rules-india" className="text-[rgb(110,94,147)] hover:underline font-medium">Trademark User Affidavit</Link> under Rule 25 accompanied by promotional expenditure receipts, box office collections, OTT viewership statistics, book sales figures, trailer views, and press clippings.
-                                            </p>
+                                            <p className="text-gray-700 leading-relaxed m-0">If claiming prior commercial use or secondary meaning, submit a comprehensive<Link href="/trademark-user-affidavit-format-and-rules-india" className="text-[rgb(110,94,147)] hover:underline font-medium">Trademark User Affidavit</Link>under Rule 25 accompanied by promotional expenditure receipts, box office collections, OTT viewership statistics, book sales figures, trailer views, and press clippings.</p>
                                         </div>
 
                                         {/* STEP 6 */}
@@ -736,9 +627,7 @@ export default function TrademarkBookTitleMovieNameCharacterPage() {
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Dual-Layer Shield</span>
                                             </div>
                                             <h3 className="text-xl font-bold text-gray-900 mb-2">Secure Dual-Layer Protection (Copyright + Trademark)</h3>
-                                            <p className="text-gray-700 leading-relaxed m-0">
-                                                Concurrently register the underlying literary manuscript, screenplay, cinematographic film, and character graphic art with the Copyright Office. For film titles, complete voluntary guild registrations (IMPAA/WIFPA) to maintain good standing within the industry while relying on your trademark for statutory enforcement.
-                                            </p>
+                                            <p className="text-gray-700 leading-relaxed m-0">Concurrently register the underlying literary manuscript, screenplay, cinematographic film, and character graphic art with the Copyright Office. For film titles, complete voluntary guild registrations (IMPAA/WIFPA) to maintain good standing within the industry while relying on your trademark for statutory enforcement.</p>
                                         </div>
 
                                         {/* STEP 7 */}
@@ -748,9 +637,7 @@ export default function TrademarkBookTitleMovieNameCharacterPage() {
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Commercial Enforcement</span>
                                             </div>
                                             <h3 className="text-xl font-bold text-gray-900 mb-2">Deploy Brand Surveillance &amp; Merchandising Licensing</h3>
-                                            <p className="text-gray-700 leading-relaxed m-0">
-                                                Once registered, monitor trade journals, e-commerce portals, and media releases for copycat titles or counterfeit merchandise. Structure formal merchandising license agreements to monetize the brand safely. If infringement occurs, enforce your rights through cease-and-desist notices and commercial court injunctions. Learn about remedies in our guide on <Link href="/passing-off-vs-trademark-infringement-india" className="text-[rgb(110,94,147)] hover:underline font-medium">passing off vs trademark infringement in India</Link>.
-                                            </p>
+                                            <p className="text-gray-700 leading-relaxed m-0">Once registered, monitor trade journals, e-commerce portals, and media releases for copycat titles or counterfeit merchandise. Structure formal merchandising license agreements to monetize the brand safely. If infringement occurs, enforce your rights through cease-and-desist notices and commercial court injunctions. Learn about remedies in our guide on<Link href="/passing-off-vs-trademark-infringement-india" className="text-[rgb(110,94,147)] hover:underline font-medium">passing off vs trademark infringement in India</Link>.</p>
                                         </div>
                                     </section>
 
@@ -760,9 +647,7 @@ export default function TrademarkBookTitleMovieNameCharacterPage() {
                                             <FontAwesomeIcon icon={faShieldHalved} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Entertainment IP Protection Comparison
                                         </h2>
-                                        <p className="mb-6">
-                                            Compare the three primary protection systems for entertainment properties in India:
-                                        </p>
+                                        <p className="mb-6">Compare the three primary protection systems for entertainment properties in India:</p>
 
                                         <div className="overflow-x-auto mb-8 shadow-sm rounded-xl border border-gray-200">
                                             <table className="min-w-full bg-white text-left text-sm text-gray-700">
@@ -839,12 +724,8 @@ export default function TrademarkBookTitleMovieNameCharacterPage() {
                                             <FontAwesomeIcon icon={faLightbulb} className="w-8 h-8 mr-3 text-yellow-500" />
                                             Strategic IP Advice for Creators &amp; Studios
                                         </h2>
-                                        <p className="mb-6">
-                                            In today&apos;s digital content economy, creative storytelling and brand monetisation go hand-in-hand. Relying solely on script copyright or informal film guild registrations leaves your million-dollar title and iconic characters vulnerable to commercial piracy and franchise hijacking.
-                                        </p>
-                                        <p className="mb-6">
-                                            Securing trademark registrations across Class 9, 16, 25, 28, and 41 transforms your creative property into an unassailable commercial asset. It empowers your studio to sign global merchandising deals, license OTT streaming rights with confidence, and command top valuation in media financing. Partner with experienced trademark attorneys to conduct thorough clearance searches, draft strategic multi-class applications, and lock down your entertainment IP legacy.
-                                        </p>
+                                        <p className="mb-6">In today&apos;s digital content economy, creative storytelling and brand monetisation go hand-in-hand. Relying solely on script copyright or informal film guild registrations leaves your million-dollar title and iconic characters vulnerable to commercial piracy and franchise hijacking.</p>
+                                        <p className="mb-6">Securing trademark registrations across Class 9, 16, 25, 28, and 41 transforms your creative property into an unassailable commercial asset. It empowers your studio to sign global merchandising deals, license OTT streaming rights with confidence, and command top valuation in media financing. Partner with experienced trademark attorneys to conduct thorough clearance searches, draft strategic multi-class applications, and lock down your entertainment IP legacy.</p>
                                     </section>
 
                                     {/* BOTTOM CTA SECTION */}
@@ -861,9 +742,7 @@ export default function TrademarkBookTitleMovieNameCharacterPage() {
                                                     Protect Your Movie, Book, or Character Today
                                                 </h3>
 
-                                                <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">
-                                                    Safeguard your creative titles, franchise names, and fictional characters with certified IP attorneys. From multi-class clearance searches and Form TM-A e-filing to character merchandising licensing and court enforcement.
-                                                </p>
+                                                <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">Safeguard your creative titles, franchise names, and fictional characters with certified IP attorneys. From multi-class clearance searches and Form TM-A e-filing to character merchandising licensing and court enforcement.</p>
 
                                                 <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
                                                     <Link
@@ -881,9 +760,7 @@ export default function TrademarkBookTitleMovieNameCharacterPage() {
                                                     </a>
                                                 </div>
 
-                                                <p className="mt-6 text-xs font-medium tracking-wide text-white/50 sm:text-sm">
-                                                    Certified IP Advocates • Same-Day E-Filing • End-to-End Media IP Protection
-                                                </p>
+                                                <p className="mt-6 text-xs font-medium tracking-wide text-white/50 sm:text-sm">Certified IP Advocates • Same-Day E-Filing • End-to-End Media IP Protection</p>
                                             </div>
                                         </div>
                                     </section>
@@ -916,70 +793,14 @@ export default function TrademarkBookTitleMovieNameCharacterPage() {
                             <div className="bg-gray-50 p-10 rounded-[2.5rem] shadow-sm border border-gray-100">
                                 <h3 className="text-sm font-black text-gray-400 mb-8 uppercase tracking-[0.3em]">Related Resources</h3>
                                 <ul className="space-y-6">
-                                    <li>
-                                        <Link href="/difference-between-trademark-registration-and-copyright-registration" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faScaleBalanced} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">TM vs Copyright</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/trademark-class-finder" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faTable} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Class Finder</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/single-class-vs-multi-class-trademark-application-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faListUl} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Multi-Class TM</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/trademark-assignment-vs-licensing-in-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faFileContract} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">TM Licensing</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/passing-off-vs-trademark-infringement-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faGavel} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Passing Off</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/can-you-trademark-your-own-name-in-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faAward} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Name Trademark</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/trademark-search" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faSearch} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">TM Search</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/how-to-register-a-trademark-for-my-startup" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faRocket} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Startup Guide</span>
-                                        </Link>
-                                    </li>
+                                    <li><Link href="/difference-between-trademark-registration-and-copyright-registration" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faScaleBalanced} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">TM vs Copyright</span></Link></li>
+                                    <li><Link href="/trademark-class-finder" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faTable} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Class Finder</span></Link></li>
+                                    <li><Link href="/single-class-vs-multi-class-trademark-application-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faListUl} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Multi-Class TM</span></Link></li>
+                                    <li><Link href="/trademark-assignment-vs-licensing-in-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faFileContract} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">TM Licensing</span></Link></li>
+                                    <li><Link href="/passing-off-vs-trademark-infringement-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faGavel} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Passing Off</span></Link></li>
+                                    <li><Link href="/can-you-trademark-your-own-name-in-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faAward} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Name Trademark</span></Link></li>
+                                    <li><Link href="/trademark-search" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faSearch} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">TM Search</span></Link></li>
+                                    <li><Link href="/how-to-register-a-trademark-for-my-startup" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faRocket} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Startup Guide</span></Link></li>
                                 </ul>
                             </div>
                         </aside>

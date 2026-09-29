@@ -264,13 +264,10 @@ export default function SlugClient() {
                 >
                   Trademark Registration
                 </span>{' '}
-                in September 2026 in India:<br />
-                Advocate-Certified Drafting & Legal Advisory
+                in September 2026 in India
               </h1>
 
-              <p className="text-base md:text-lg mb-5 text-gray-700 font-medium leading-relaxed">
-                Secure your commercial IP with advocate-certified drafting and transparent fixed legal advisory. Don&apos;t risk your brand on free DIY filings. Protect your brand identity under the Trade Marks Act, 1999 with our comprehensive guide for September 2026—covering availability searches, accurate NICE classification, documentation, official registry filing, examination report replies, and hearing representations to safeguard your business nationwide.
-              </p>
+              <p className="text-base md:text-lg mb-5 text-gray-700 font-medium leading-relaxed">Secure your commercial IP with advocate-certified drafting and transparent fixed legal advisory. Don&apos;t risk your brand on free DIY filings. Protect your brand identity under the Trade Marks Act, 1999 with our comprehensive guide for September 2026—covering availability searches, accurate NICE classification, documentation, official registry filing, examination report replies, and hearing representations to safeguard your business nationwide.</p>
 
               <div className="flex flex-wrap items-center gap-4 mb-6">
                 <div className="flex items-center mr-2">
@@ -377,61 +374,14 @@ export default function SlugClient() {
                     Close
                   </span>
                   <svg className="w-4 h-4 text-gray-500 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                  </svg>
-                </div>
-              </summary>
-              <div className="p-3.5 pt-2 border-t border-purple-50 bg-white/70">
-                <nav className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
-                  {tocSections.map((section, idx) => (
-                    <a
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg></div></summary><div className="p-3.5 pt-2 border-t border-purple-50 bg-white/70"><nav className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">{tocSections.map((section, idx) => (<a
                       key={section.id}
                       href={`#${section.id}`}
                       className="flex items-center p-2 rounded-xl text-xs font-medium text-gray-700 hover:text-[#6E5E93] hover:bg-purple-50/80 transition-all border border-transparent hover:border-purple-100"
-                    >
-                      <span className="w-5 h-5 rounded-full bg-purple-100 text-[#6E5E93] flex items-center justify-center text-[10px] font-bold mr-2 flex-shrink-0">
-                        {idx + 1}
-                      </span>
-                      <span className="truncate">{section.title}</span>
-                    </a>
-                  ))}
-                </nav>
-              </div>
-            </details>
-          </div>
-
-          {/* =======================================================
-              CENTER EDITORIAL COLUMN
-          ======================================================== */}
-          <div className="bg-white p-6 md:p-12 rounded-2xl shadow-sm space-y-12 border border-gray-50">
-
-            {/* Meta details */}
-            <div className="flex flex-wrap items-center justify-between border-b pb-6">
-              <h2 className="text-xl font-bold text-gray-800">
-                Trademark Registration in September 2026 Guide
-              </h2>
-            </div>
-
-            {/* =====================================================
-                QUICK ANSWER
-            ====================================================== */}
-            <div
+                    ><span className="w-5 h-5 rounded-full bg-purple-100 text-[#6E5E93] flex items-center justify-center text-[10px] font-bold mr-2 flex-shrink-0">{idx + 1}</span><span className="truncate">{section.title}</span></a>))}</nav></div></details></div>{/* ======================================================= CENTER EDITORIAL COLUMN ======================================================== */}<div className="bg-white p-6 md:p-12 rounded-2xl shadow-sm space-y-12 border border-gray-50">{/* Meta details */}<div className="flex flex-wrap items-center justify-between border-b pb-6"><span className="text-xl font-bold text-gray-800">Trademark Registration in September 2026 Guide</span></div>{/* ===================================================== QUICK ANSWER ====================================================== */}<div
               id="quick-answer"
               className="bg-gray-50 border-l-4 border-[rgb(110,94,147)] p-6 rounded-r-xl shadow-inner"
-            >
-              <h2 className="font-bold text-xl mb-3 text-gray-900">
-                Quick Answer
-              </h2>
-
-              <p className="text-gray-800 font-medium leading-relaxed">
-                Trademark registration in September 2026 involves selecting a
-                distinctive trademark, conducting a proper search, identifying
-                the relevant trademark class, preparing accurate applicant and
-                mark information and filing the application through the
-                applicable Registry process. After filing, the application may
-                proceed through examination, publication and registration, or
-                may require a response if the Registry raises an objection.
-              </p>
+            ><h2 className="font-bold text-xl mb-3 text-gray-900">Quick Answer</h2><p className="text-gray-800 font-medium leading-relaxed">Trademark registration in September 2026 involves selecting a distinctive trademark, conducting a proper search, identifying the relevant trademark class, preparing accurate applicant and mark information and filing the application through the applicable Registry process. After filing, the application may proceed through examination, publication and registration, or may require a response if the Registry raises an objection.</p>
             </div>
 
             {/* =====================================================
@@ -445,29 +395,11 @@ export default function SlugClient() {
                 Trademark Registration in September 2026
               </h2>
 
-              <p>
-                Trademark registration is an important part of protecting a
-                business brand. A trademark can identify the source of goods
-                or services and, when registered, can provide statutory
-                protection subject to the applicable law and registration
-                scope.
-              </p>
+              <p>Trademark registration is an important part of protecting a business brand. A trademark can identify the source of goods or services and, when registered, can provide statutory protection subject to the applicable law and registration scope.</p>
 
-              <p>
-                If you are planning to register a trademark in September 2026,
-                the filing month itself should not be the only consideration.
-                Proper preparation before filing is important. This includes
-                assessing the proposed mark, searching existing trademarks,
-                selecting the relevant goods or services classification and
-                ensuring that the application information is accurate.
-              </p>
+              <p>If you are planning to register a trademark in September 2026, the filing month itself should not be the only consideration. Proper preparation before filing is important. This includes assessing the proposed mark, searching existing trademarks, selecting the relevant goods or services classification and ensuring that the application information is accurate.</p>
 
-              <p>
-                Businesses should also understand what happens after filing.
-                A trademark application can be examined by the Registry and
-                may receive an examination report or other communication that
-                requires an appropriate response.
-              </p>
+              <p>Businesses should also understand what happens after filing. A trademark application can be examined by the Registry and may receive an examination report or other communication that requires an appropriate response.</p>
 
               <div className="grid md:grid-cols-2 gap-5">
                 <div className="border border-gray-200 rounded-xl p-6 bg-white">
@@ -511,19 +443,9 @@ export default function SlugClient() {
                 Trademark Search Before Filing
               </h2>
 
-              <p>
-                A trademark search should generally be performed before filing
-                an application. Searching only for an identical name may not
-                provide a complete picture because similar, phonetic or
-                visually comparable marks can also be relevant.
-              </p>
+              <p>A trademark search should generally be performed before filing an application. Searching only for an identical name may not provide a complete picture because similar, phonetic or visually comparable marks can also be relevant.</p>
 
-              <p>
-                The search should be considered together with the goods and
-                services for which the proposed trademark will be used. This
-                allows an applicant to identify potentially relevant existing
-                marks before investing further in a brand.
-              </p>
+              <p>The search should be considered together with the goods and services for which the proposed trademark will be used. This allows an applicant to identify potentially relevant existing marks before investing further in a brand.</p>
 
               <blockquote className="border-l-4 border-[rgb(110,94,147)] pl-6 py-3 italic text-gray-600 bg-gray-50 rounded-r-lg">
                 A proper pre-filing search helps identify potentially
@@ -555,18 +477,9 @@ export default function SlugClient() {
                 Choosing the Correct Trademark Class
               </h2>
 
-              <p>
-                Trademark protection is connected to the goods and services
-                covered by an application. Selecting an appropriate class is
-                therefore an important part of trademark registration.
-              </p>
+              <p>Trademark protection is connected to the goods and services covered by an application. Selecting an appropriate class is therefore an important part of trademark registration.</p>
 
-              <p>
-                Businesses should identify what they actually sell, provide or
-                genuinely intend to provide. The description of goods and
-                services should accurately reflect the commercial activities
-                associated with the trademark.
-              </p>
+              <p>Businesses should identify what they actually sell, provide or genuinely intend to provide. The description of goods and services should accurately reflect the commercial activities associated with the trademark.</p>
 
               <div className="overflow-x-auto">
                 <table className="w-full border-collapse bg-white shadow-sm rounded-lg overflow-hidden border border-gray-200">
@@ -584,35 +497,21 @@ export default function SlugClient() {
 
                   <tbody className="divide-y divide-gray-100">
                     <tr>
-                      <td className="p-4 font-medium text-gray-800">
-                        Goods / Services
-                      </td>
+                      <td className="p-4 font-medium text-gray-800"> Goods / Services </td>
 
-                      <td className="p-4 text-gray-600">
-                        Defines the commercial scope covered by the application.
-                      </td>
+                      <td className="p-4 text-gray-600"> Defines the commercial scope covered by the application. </td>
                     </tr>
 
                     <tr>
-                      <td className="p-4 font-medium text-gray-800">
-                        Correct Class
-                      </td>
+                      <td className="p-4 font-medium text-gray-800"> Correct Class </td>
 
-                      <td className="p-4 text-gray-600">
-                        Aligns the application with the relevant
-                        classification.
-                      </td>
+                      <td className="p-4 text-gray-600"> Aligns the application with the relevant classification. </td>
                     </tr>
 
                     <tr>
-                      <td className="p-4 font-medium text-gray-800">
-                        Description
-                      </td>
+                      <td className="p-4 font-medium text-gray-800"> Description </td>
 
-                      <td className="p-4 text-gray-600">
-                        Should accurately describe the applicant's commercial
-                        activity.
-                      </td>
+                      <td className="p-4 text-gray-600"> Should accurately describe the applicant's commercial activity. </td>
                     </tr>
                   </tbody>
                 </table>
@@ -630,12 +529,7 @@ export default function SlugClient() {
                 Documents Required for Trademark Registration
               </h2>
 
-              <p>
-                The exact documents and supporting information can vary
-                depending on the applicant and the circumstances of the
-                filing. The application should contain accurate and consistent
-                applicant and trademark information.
-              </p>
+              <p>The exact documents and supporting information can vary depending on the applicant and the circumstances of the filing. The application should contain accurate and consistent applicant and trademark information.</p>
 
               <div className="grid md:grid-cols-2 gap-4">
                 {[
@@ -657,11 +551,7 @@ export default function SlugClient() {
                 ))}
               </div>
 
-              <p>
-                Applicants should review all information before filing because
-                incorrect or inconsistent details can create avoidable
-                administrative complications.
-              </p>
+              <p>Applicants should review all information before filing because incorrect or inconsistent details can create avoidable administrative complications.</p>
             </div>
 
             {/* =====================================================
@@ -675,11 +565,7 @@ export default function SlugClient() {
                 Trademark Registration Process in India
               </h2>
 
-              <p>
-                The trademark registration journey involves several stages.
-                While the exact path can vary between applications, applicants
-                should understand the general process before filing.
-              </p>
+              <p>The trademark registration journey involves several stages. While the exact path can vary between applications, applicants should understand the general process before filing.</p>
 
               <div className="space-y-4">
                 {[
@@ -737,9 +623,7 @@ export default function SlugClient() {
                         {title}
                       </h3>
 
-                      <p className="text-gray-600 text-base mt-1">
-                        {description}
-                      </p>
+                      <p className="text-gray-600 text-base mt-1">{description}</p>
                     </div>
                   </div>
                 ))}
@@ -757,17 +641,9 @@ export default function SlugClient() {
                 Trademark Examination and Objection
               </h2>
 
-              <p>
-                Filing a trademark application does not automatically mean
-                that the mark will be registered. The application may undergo
-                examination by the Trademark Registry.
-              </p>
+              <p>Filing a trademark application does not automatically mean that the mark will be registered. The application may undergo examination by the Trademark Registry.</p>
 
-              <p>
-                Depending on the application and the applicable legal
-                provisions, an examination report may raise objections that
-                require the applicant to submit an appropriate response.
-              </p>
+              <p>Depending on the application and the applicable legal provisions, an examination report may raise objections that require the applicant to submit an appropriate response.</p>
 
               <div className="grid md:grid-cols-3 gap-5">
                 <div className="bg-gray-50 border rounded-xl p-6">
@@ -775,10 +651,7 @@ export default function SlugClient() {
                     Review
                   </h3>
 
-                  <p className="text-base text-gray-600">
-                    Understand the specific issues mentioned in the examination
-                    report.
-                  </p>
+                  <p className="text-base text-gray-600">Understand the specific issues mentioned in the examination report.</p>
                 </div>
 
                 <div className="bg-gray-50 border rounded-xl p-6">
@@ -786,10 +659,7 @@ export default function SlugClient() {
                     Respond
                   </h3>
 
-                  <p className="text-base text-gray-600">
-                    Prepare the appropriate response within the applicable
-                    procedural period.
-                  </p>
+                  <p className="text-base text-gray-600">Prepare the appropriate response within the applicable procedural period.</p>
                 </div>
 
                 <div className="bg-gray-50 border rounded-xl p-6">
@@ -797,9 +667,7 @@ export default function SlugClient() {
                     Follow Up
                   </h3>
 
-                  <p className="text-base text-gray-600">
-                    Monitor subsequent Registry communications and proceedings.
-                  </p>
+                  <p className="text-base text-gray-600">Monitor subsequent Registry communications and proceedings.</p>
                 </div>
               </div>
             </div>
@@ -815,18 +683,9 @@ export default function SlugClient() {
                 What to Do When a Trademark Objection Is Raised
               </h2>
 
-              <p>
-                A trademark objection should be reviewed carefully rather than
-                treated as an automatic rejection. The applicant should first
-                understand the specific grounds mentioned by the Registry.
-              </p>
+              <p>A trademark objection should be reviewed carefully rather than treated as an automatic rejection. The applicant should first understand the specific grounds mentioned by the Registry.</p>
 
-              <p>
-                The appropriate response depends on the grounds raised and the
-                facts surrounding the application. The response should address
-                the relevant issues and be filed within the applicable
-                procedural deadline.
-              </p>
+              <p>The appropriate response depends on the grounds raised and the facts surrounding the application. The response should address the relevant issues and be filed within the applicable procedural deadline.</p>
 
               <ol className="list-decimal pl-6 space-y-3">
                 <li>Read the examination report carefully.</li>
@@ -849,12 +708,7 @@ export default function SlugClient() {
                 Trademark Registration Timeline
               </h2>
 
-              <p>
-                There is no single guaranteed timeline that applies to every
-                trademark application. The time involved can depend on
-                examination, objections, hearings, opposition proceedings and
-                other Registry processes.
-              </p>
+              <p>There is no single guaranteed timeline that applies to every trademark application. The time involved can depend on examination, objections, hearings, opposition proceedings and other Registry processes.</p>
 
               <div className="bg-gray-50 border border-gray-200 rounded-xl p-6">
                 <h3 className="font-bold text-gray-900 mb-4">
@@ -883,18 +737,9 @@ export default function SlugClient() {
                 Trademark Registration Cost
               </h2>
 
-              <p>
-                The overall cost of trademark registration can depend on
-                several factors, including the applicant category, number of
-                classes, professional assistance and whether additional
-                proceedings become necessary.
-              </p>
+              <p>The overall cost of trademark registration can depend on several factors, including the applicant category, number of classes, professional assistance and whether additional proceedings become necessary.</p>
 
-              <p>
-                Applicants should distinguish between official government
-                fees and professional service charges when evaluating the
-                overall cost of registration.
-              </p>
+              <p>Applicants should distinguish between official government fees and professional service charges when evaluating the overall cost of registration.</p>
 
               <div className="grid md:grid-cols-3 gap-4">
                 <div className="border rounded-xl p-5">
@@ -902,10 +747,7 @@ export default function SlugClient() {
                     Government Fees
                   </h3>
 
-                  <p className="text-sm text-gray-600 mt-2">
-                    Applicable statutory filing and related government
-                    charges.
-                  </p>
+                  <p className="text-sm text-gray-600 mt-2">Applicable statutory filing and related government charges.</p>
                 </div>
 
                 <div className="border rounded-xl p-5">
@@ -913,9 +755,7 @@ export default function SlugClient() {
                     Professional Fees
                   </h3>
 
-                  <p className="text-sm text-gray-600 mt-2">
-                    Charges for professional preparation and assistance.
-                  </p>
+                  <p className="text-sm text-gray-600 mt-2">Charges for professional preparation and assistance.</p>
                 </div>
 
                 <div className="border rounded-xl p-5">
@@ -923,10 +763,7 @@ export default function SlugClient() {
                     Additional Proceedings
                   </h3>
 
-                  <p className="text-sm text-gray-600 mt-2">
-                    Additional work may arise if objections, hearings or other
-                    proceedings occur.
-                  </p>
+                  <p className="text-sm text-gray-600 mt-2">Additional work may arise if objections, hearings or other proceedings occur.</p>
                 </div>
               </div>
             </div>
@@ -943,39 +780,17 @@ export default function SlugClient() {
               </h2>
 
               <ul className="list-decimal pl-6 space-y-4">
-                <li>
-                  <strong>Skipping the trademark search:</strong> Filing
-                  without checking potentially conflicting marks can create
-                  avoidable risks.
-                </li>
+                <li><strong>Skipping the trademark search:</strong>Filing without checking potentially conflicting marks can create avoidable risks.</li>
 
-                <li>
-                  <strong>Choosing the wrong class:</strong> The selected
-                  class should correspond with the actual goods or services.
-                </li>
+                <li><strong>Choosing the wrong class:</strong>The selected class should correspond with the actual goods or services.</li>
 
-                <li>
-                  <strong>Incorrect applicant information:</strong> Ownership
-                  and applicant details should be carefully reviewed before
-                  filing.
-                </li>
+                <li><strong>Incorrect applicant information:</strong>Ownership and applicant details should be carefully reviewed before filing.</li>
 
-                <li>
-                  <strong>Using an unclear description:</strong> Goods and
-                  services should be described accurately.
-                </li>
+                <li><strong>Using an unclear description:</strong>Goods and services should be described accurately.</li>
 
-                <li>
-                  <strong>Ignoring Registry communications:</strong> Applicants
-                  should monitor their application and respond within
-                  applicable deadlines.
-                </li>
+                <li><strong>Ignoring Registry communications:</strong>Applicants should monitor their application and respond within applicable deadlines.</li>
 
-                <li>
-                  <strong>Forgetting renewal:</strong> Registered trademark
-                  owners should maintain records and monitor renewal
-                  requirements.
-                </li>
+                <li><strong>Forgetting renewal:</strong>Registered trademark owners should maintain records and monitor renewal requirements.</li>
               </ul>
             </div>
 
@@ -990,43 +805,27 @@ export default function SlugClient() {
                 Trademark Renewal and Long-Term Protection
               </h2>
 
-              <p>
-                Trademark protection requires ongoing management after
-                registration. Businesses should maintain accurate records of
-                their registrations and monitor applicable renewal requirements.
-              </p>
+              <p>Trademark protection requires ongoing management after registration. Businesses should maintain accurate records of their registrations and monitor applicable renewal requirements.</p>
 
-              <p>
-                Businesses should also keep track of changes in their branding,
-                commercial activities and trademark portfolio so that their
-                intellectual property strategy continues to reflect their
-                business.
-              </p>
+              <p>Businesses should also keep track of changes in their branding, commercial activities and trademark portfolio so that their intellectual property strategy continues to reflect their business.</p>
 
               <div className="grid md:grid-cols-3 gap-4">
                 <div className="bg-gray-50 border rounded-xl p-5">
                   <h3 className="font-bold">Track Registration</h3>
 
-                  <p className="text-sm text-gray-600 mt-2">
-                    Keep registration details and important dates organized.
-                  </p>
+                  <p className="text-sm text-gray-600 mt-2">Keep registration details and important dates organized.</p>
                 </div>
 
                 <div className="bg-gray-50 border rounded-xl p-5">
                   <h3 className="font-bold">Monitor Usage</h3>
 
-                  <p className="text-sm text-gray-600 mt-2">
-                    Maintain relevant records of commercial use where
-                    appropriate.
-                  </p>
+                  <p className="text-sm text-gray-600 mt-2">Maintain relevant records of commercial use where appropriate.</p>
                 </div>
 
                 <div className="bg-gray-50 border rounded-xl p-5">
                   <h3 className="font-bold">Plan Renewal</h3>
 
-                  <p className="text-sm text-gray-600 mt-2">
-                    Monitor applicable renewal requirements in advance.
-                  </p>
+                  <p className="text-sm text-gray-600 mt-2">Monitor applicable renewal requirements in advance.</p>
                 </div>
               </div>
             </div>
@@ -1042,30 +841,16 @@ export default function SlugClient() {
                 International Trademark Protection
               </h2>
 
-              <p>
-                Indian trademark registration provides protection in India.
-                Businesses expanding into foreign markets should separately
-                consider trademark protection in those jurisdictions.
-              </p>
+              <p>Indian trademark registration provides protection in India. Businesses expanding into foreign markets should separately consider trademark protection in those jurisdictions.</p>
 
-              <p>
-                Depending on the countries involved, businesses may consider
-                applicable national filing systems or international mechanisms
-                such as the Madrid System, subject to the relevant
-                requirements.
-              </p>
+              <p>Depending on the countries involved, businesses may consider applicable national filing systems or international mechanisms such as the Madrid System, subject to the relevant requirements.</p>
 
               <div className="bg-gray-50 border border-gray-200 rounded-xl p-6">
                 <h3 className="font-bold text-gray-900 mb-3">
                   Important distinction
                 </h3>
 
-                <p className="text-gray-600">
-                  Registration in India should not be treated as automatic
-                  worldwide trademark protection. International expansion
-                  requires consideration of the protection available in each
-                  relevant market.
-                </p>
+                <p className="text-gray-600">Registration in India should not be treated as automatic worldwide trademark protection. International expansion requires consideration of the protection available in each relevant market.</p>
               </div>
             </div>
 
@@ -1080,11 +865,7 @@ export default function SlugClient() {
                 September 2026 Trademark Registration Checklist
               </h2>
 
-              <p>
-                Before filing your trademark application in September 2026,
-                review the following checklist to make sure the major
-                preparation steps have been considered.
-              </p>
+              <p>Before filing your trademark application in September 2026, review the following checklist to make sure the major preparation steps have been considered.</p>
 
               <div className="border border-gray-200 rounded-xl overflow-hidden">
                 {[
@@ -1220,28 +1001,19 @@ export default function SlugClient() {
               </h3>
 
               <ul className="list-disc pl-5 space-y-1 text-sm">
-                <li>
-                  <a
+                <li><a
                     href="https://ipindia.gov.in"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-[rgb(110,94,147)] hover:underline"
-                  >
-                    Office of the Controller General of Patents, Designs &
-                    Trade Marks (IP India)
-                  </a>
-                </li>
+                  >Office of the Controller General of Patents, Designs & Trade Marks (IP India)</a></li>
 
-                <li>
-                  <a
+                <li><a
                     href="https://ipindia.gov.in/trade-marks.htm"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-[rgb(110,94,147)] hover:underline"
-                  >
-                    The Trade Marks Act, 1999
-                  </a>
-                </li>
+                  >The Trade Marks Act, 1999</a></li>
               </ul>
             </div>
 
@@ -1253,12 +1025,7 @@ export default function SlugClient() {
                   Secure Your Trademark's Future
                 </h2>
 
-                <p className="text-base md:text-xl lg:text-2xl text-gray-200 max-w-4xl mx-auto leading-relaxed mb-10">
-                  Don't leave your brand protection to chance. Search for potential
-                  conflicts, choose the right trademark class, prepare your application
-                  correctly, and build stronger protection for your brand in September
-                  2026.
-                </p>
+                <p className="text-base md:text-xl lg:text-2xl text-gray-200 max-w-4xl mx-auto leading-relaxed mb-10">Don't leave your brand protection to chance. Search for potential conflicts, choose the right trademark class, prepare your application correctly, and build stronger protection for your brand in September 2026.</p>
 
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
                   <Link
@@ -1292,10 +1059,7 @@ export default function SlugClient() {
                 Need Expert Advice?
               </h3>
 
-              <p className="text-sm font-medium opacity-90 leading-relaxed">
-                Speak with our trademark attorneys today. Get a free
-                consultation and secure your brand.
-              </p>
+              <p className="text-sm font-medium opacity-90 leading-relaxed">Speak with our trademark attorneys today. Get a free consultation and secure your brand.</p>
 
               <Link
                 href="/contact-us"
@@ -1312,70 +1076,35 @@ export default function SlugClient() {
 
             {/* Related Services Card */}
             <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-              <h4 className="font-bold text-gray-900 mb-4 text-lg">
+              <h3 className="font-bold text-gray-900 mb-4 text-lg">
                 Related Services
-              </h4>
+              </h3>
 
               <ul className="space-y-4 text-[15px]">
-                <li>
-                  <Link
+                <li><Link
                     href="/our-services/trademark-registration"
                     className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center font-medium"
-                  >
-                    <span className="mr-3 text-gray-400 text-lg leading-none">
-                      {'>'}
-                    </span>
-                    Trademark Registration
-                  </Link>
-                </li>
+                  ><span className="mr-3 text-gray-400 text-lg leading-none">{'>'}</span>Trademark Registration</Link></li>
 
-                <li>
-                  <Link
+                <li><Link
                     href="/our-services/patent-registration"
                     className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center font-medium"
-                  >
-                    <span className="mr-3 text-gray-400 text-lg leading-none">
-                      {'>'}
-                    </span>
-                    Patent Services
-                  </Link>
-                </li>
+                  ><span className="mr-3 text-gray-400 text-lg leading-none">{'>'}</span>Patent Services</Link></li>
 
-                <li>
-                  <Link
+                <li><Link
                     href="/our-services/copyright-registration"
                     className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center font-medium"
-                  >
-                    <span className="mr-3 text-gray-400 text-lg leading-none">
-                      {'>'}
-                    </span>
-                    Copyright Protection
-                  </Link>
-                </li>
+                  ><span className="mr-3 text-gray-400 text-lg leading-none">{'>'}</span>Copyright Protection</Link></li>
 
-                <li>
-                  <Link
+                <li><Link
                     href="/comprehensive-ip-protection-features/expert-trademark-guidance"
                     className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center font-medium"
-                  >
-                    <span className="mr-3 text-gray-400 text-lg leading-none">
-                      {'>'}
-                    </span>
-                    Expert Guidance
-                  </Link>
-                </li>
+                  ><span className="mr-3 text-gray-400 text-lg leading-none">{'>'}</span>Expert Guidance</Link></li>
 
-                <li>
-                  <Link
+                <li><Link
                     href="/how-to-register-trademark"
                     className="text-gray-600 hover:text-[rgb(110,94,147)] flex items-center font-medium"
-                  >
-                    <span className="mr-3 text-gray-400 text-lg leading-none">
-                      {'>'}
-                    </span>
-                    Registration Guide
-                  </Link>
-                </li>
+                  ><span className="mr-3 text-gray-400 text-lg leading-none">{'>'}</span>Registration Guide</Link></li>
               </ul>
             </div>
           </div>
@@ -1400,9 +1129,7 @@ export default function SlugClient() {
               Request Legal Advisory
             </h3>
 
-            <p className="text-sm text-gray-500 mb-6 font-medium">
-              Our certified advocates will contact you shortly.
-            </p>
+            <p className="text-sm text-gray-500 mb-6 font-medium">Our certified advocates will contact you shortly.</p>
 
             <form className="space-y-4">
               <input

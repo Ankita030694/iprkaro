@@ -92,7 +92,7 @@ const faqs = [
     },
     {
         question: "What is the difference between INDRP and UDRP domain disputes?",
-        answer: "INDRP (.IN Domain Dispute Resolution Policy) is managed by NIXI for all .in and .bharat ccTLDs under the Indian Arbitration and Conciliation Act, 1996, requiring proof that the domain was registered OR used in bad faith (disjunctive test). In contrast, UDRP (Uniform Domain-Name Dispute-Resolution Policy) is administered globally by WIPO or FORUM for generic TLDs like .com or .net, requiring conjunctive proof of BOTH bad faith registration AND bad faith use."
+        answer: "INDRP (.IN Domain Dispute Resolution Policy) is managed by NIXI for all .in and .bharat ccTLDs under the Indian Arbitration and Conciliation Act, 1996. This requires proof that the domain was registered OR used in bad faith (disjunctive test). In contrast, UDRP (Uniform Domain-Name Dispute-Resolution Policy) is administered globally by WIPO or FORUM for generic TLDs like .com or .net. This requires conjunctive proof of BOTH bad faith registration AND bad faith use."
     },
     {
         question: "How long does it take to recover a squatted .IN domain under INDRP?",
@@ -100,7 +100,7 @@ const faqs = [
     },
     {
         question: "What are the three mandatory conditions to win an INDRP dispute?",
-        answer: "Under Paragraph 4 of the INDRP Policy, the complainant must prove all three elements: (1) The registrant's domain name is identical or confusingly similar to a trademark or service mark in which the complainant has rights; (2) The registrant has no rights or legitimate interests in respect of the domain name; and (3) The domain name was registered or is being used in bad faith."
+        answer: "Under Paragraph 4 of the INDRP Policy, the complainant must prove all three elements: (1) The registrant's domain name is identical or confusingly similar to a trademark or service mark in which the complainant has rights. (2) The registrant has no rights or legitimate interests for the domain name. And (3) The domain name was registered or is being used in bad faith."
     },
     {
         question: "What is the official NIXI fee structure for filing an INDRP complaint?",
@@ -228,9 +228,7 @@ export default function DomainNameDisputeIndrpPage() {
                             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4 leading-tight text-gray-900 tracking-tight break-words">
                                 Domain Name Trademark Dispute & <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'transparent' }}>Cybersquatting in India (INDRP Rules)</span>
                             </h1>
-                            <p className="text-sm sm:text-base md:text-lg mb-6 text-gray-700 font-medium leading-relaxed break-words">
-                                Has someone registered your brand name, company trade name, or trademark as a <strong>.in</strong> or <strong>.co.in</strong> domain? Under the landmark Supreme Court ruling in <em>Satyam Infoway</em>, domain names are recognized as valuable business identifiers entitled to full legal protection against passing off. Discover how to recover hijacked web domains within 30 to 60 days through the <strong>INDRP (.IN Domain Dispute Resolution Policy)</strong> managed by <strong>NIXI</strong>.
-                            </p>
+                            <p className="text-sm sm:text-base md:text-lg mb-6 text-gray-700 font-medium leading-relaxed break-words">Has someone registered your brand name, company trade name, or trademark as a<strong>.in</strong>or<strong>.co.in</strong>domain? Under the landmark Supreme Court ruling in<em>Satyam Infoway</em>, domain names are recognized as valuable business identifiers entitled to full legal protection against passing off. Discover how to recover hijacked web domains within 30 to 60 days through the<strong>INDRP (.IN Domain Dispute Resolution Policy)</strong>managed by<strong>NIXI</strong>.</p>
 
                             <div className="flex flex-wrap items-center gap-3 sm:gap-4 mb-6">
                                 <div className="flex items-center mr-2">
@@ -328,43 +326,15 @@ export default function DomainNameDisputeIndrpPage() {
                                                 Close
                                             </span>
                                             <svg className="w-4 h-4 text-gray-500 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                                            </svg>
-                                        </div>
-                                    </summary>
-                                    <div className="p-3.5 pt-2 border-t border-purple-50 bg-white/70">
-                                        <nav className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
-                                            {tocSections.map((sec, idx) => (
-                                                <a
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg></div></summary><div className="p-3.5 pt-2 border-t border-purple-50 bg-white/70"><nav className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">{tocSections.map((sec, idx) => (<a
                                                     key={sec.id}
                                                     href={`#${sec.id}`}
                                                     className="flex items-center space-x-2.5 p-2 rounded-xl text-xs font-medium text-gray-700 hover:text-[#6E5E93] hover:bg-purple-50/60 transition-all border border-transparent hover:border-purple-100"
-                                                >
-                                                    <span className="w-5 h-5 rounded-md bg-purple-100/80 text-[#6E5E93] flex items-center justify-center text-[10px] font-bold flex-shrink-0">
-                                                        {idx + 1}
-                                                    </span>
-                                                    <span className="truncate">{sec.title}</span>
-                                                </a>
-                                            ))}
-                                        </nav>
-                                    </div>
-                                </details>
-                            </div>
-
-                            {/* QUICK ANSWER BLOCK */}
-                            <div id="quick-answer" className="bg-gradient-to-br from-indigo-50/80 via-white to-purple-50/50 border-2 border-[#6E5E93]/30 rounded-2xl p-5 sm:p-6 mb-8 shadow-sm">
-                                <div className="flex items-start space-x-3 mb-3">
-                                    <div className="p-2 bg-[#6E5E93] text-white rounded-lg flex-shrink-0 mt-0.5">
-                                        <FontAwesomeIcon icon={faLightbulb} className="w-4 h-4" />
-                                    </div>
-                                    <div>
-                                        <p className="text-xs font-bold uppercase tracking-wider text-[#6E5E93] m-0">Quick Answer</p>
+                                                ><span className="w-5 h-5 rounded-md bg-purple-100/80 text-[#6E5E93] flex items-center justify-center text-[10px] font-bold flex-shrink-0">{idx + 1}</span><span className="truncate">{sec.title}</span></a>))}</nav></div></details></div>{/* QUICK ANSWER BLOCK */}<div id="quick-answer" className="bg-gradient-to-br from-indigo-50/80 via-white to-purple-50/50 border-2 border-[#6E5E93]/30 rounded-2xl p-5 sm:p-6 mb-8 shadow-sm"><div className="flex items-start space-x-3 mb-3"><div className="p-2 bg-[#6E5E93] text-white rounded-lg flex-shrink-0 mt-0.5"><FontAwesomeIcon icon={faLightbulb} className="w-4 h-4" /></div><div><p className="text-xs font-bold uppercase tracking-wider text-[#6E5E93] m-0">Quick Answer</p>
                                         <p className="text-base sm:text-lg font-bold text-gray-900 m-0">How Are Domain Trademark Disputes Resolved in India?</p>
                                     </div>
                                 </div>
-                                <p className="text-xs sm:text-sm text-gray-700 leading-relaxed m-0">
-                                    In India, domain names are recognized as <strong>corporate business identifiers</strong> entitled to the same legal protection as registered trademarks under the Supreme Court precedent <em>Satyam Infoway v. Sifynet Solutions</em>. If an unauthorized third party registers your trademark as a <strong>.in</strong> or <strong>.co.in</strong> domain (cybersquatting), you can recover it within <strong>30 to 60 days</strong> by filing an arbitration complaint under the <strong>INDRP (.IN Domain Dispute Resolution Policy)</strong> managed by the <strong>National Internet eXchange of India (NIXI)</strong>. You must prove confusing similarity, absence of legitimate interest, and bad-faith registration or use.
-                                </p>
+                                <p className="text-xs sm:text-sm text-gray-700 leading-relaxed m-0">In India, domain names are recognized as<strong>corporate business identifiers</strong>entitled to the same legal protection as registered trademarks under the Supreme Court precedent<em>Satyam Infoway v. Sifynet Solutions</em>. If an unauthorized third party registers your trademark as a<strong>.in</strong>or<strong>.co.in</strong>domain (cybersquatting), you can recover it within<strong>30 to 60 days</strong>by filing an arbitration complaint under the<strong>INDRP (.IN Domain Dispute Resolution Policy)</strong>managed by the<strong>National Internet eXchange of India (NIXI)</strong>. You must prove confusing similarity, absence of legitimate interest, and bad-faith registration or use.</p>
                             </div>
 
                             {/* SECTION 1 */}
@@ -372,12 +342,8 @@ export default function DomainNameDisputeIndrpPage() {
                                 <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">
                                     Understanding Cybersquatting & Domain Disputes
                                 </h2>
-                                <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed mb-4">
-                                    In the digital economy, a domain name is the primary digital gateway to any enterprise. However, while trademark registration requires rigorous scrutiny regarding distinctiveness and prior use under the <Link href="/passing-off-vs-trademark-infringement-india" className="text-[#6E5E93] font-semibold underline hover:text-[#5a4c7a]">Trade Marks Act, 1999</Link>, domain registrars operate strictly on an automated, <strong>&ldquo;first-come, first-served&rdquo;</strong> basis.
-                                </p>
-                                <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed mb-4">
-                                    This fundamental disconnect creates an opportunistic environment for bad-faith actors known as <strong>cybersquatters</strong>. Cybersquatting refers to the unauthorized registration, trafficking in, or use of an internet domain name that is identical or confusingly similar to a trademark, service mark, or trading name owned by another business.
-                                </p>
+                                <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed mb-4">In the digital economy, a domain name is the primary digital gateway to any enterprise. However, while trademark registration requires rigorous scrutiny regarding distinctiveness and prior use under the<Link href="/passing-off-vs-trademark-infringement-india" className="text-[#6E5E93] font-semibold underline hover:text-[#5a4c7a]">Trade Marks Act, 1999</Link>, domain registrars operate strictly on an automated,<strong>&ldquo;first-come, first-served&rdquo;</strong>basis.</p>
+                                <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed mb-4">This fundamental disconnect creates an opportunistic environment for bad-faith actors known as<strong>cybersquatters</strong>. Cybersquatting refers to the unauthorized registration, trafficking in, or use of an internet domain name that is identical or confusingly similar to a trademark, service mark, or trading name owned by another business.</p>
 
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-6">
                                     <div className="bg-purple-50/60 border border-purple-100 rounded-xl p-4">
@@ -385,27 +351,21 @@ export default function DomainNameDisputeIndrpPage() {
                                             <FontAwesomeIcon icon={faLock} className="w-4 h-4" />
                                         </div>
                                         <h3 className="text-sm font-bold text-gray-900 mb-1">Ransom & Extortion</h3>
-                                        <p className="text-xs text-gray-600 leading-relaxed">
-                                            Squatters purchase your brand&apos;s dot-in domain name to sell it back to you at exorbitant, extortionate prices.
-                                        </p>
+                                        <p className="text-xs text-gray-600 leading-relaxed">Squatters purchase your brand&apos;s dot-in domain name to sell it back to you at exorbitant, extortionate prices.</p>
                                     </div>
                                     <div className="bg-indigo-50/60 border border-indigo-100 rounded-xl p-4">
                                         <div className="w-8 h-8 rounded-lg bg-indigo-600 text-white flex items-center justify-center font-bold text-sm mb-3">
                                             <FontAwesomeIcon icon={faTowerBroadcast} className="w-4 h-4" />
                                         </div>
                                         <h3 className="text-sm font-bold text-gray-900 mb-1">Traffic Diversion</h3>
-                                        <p className="text-xs text-gray-600 leading-relaxed">
-                                            Hijacking legitimate customer traffic to display paid advertisement parking pages or direct users to rival businesses.
-                                        </p>
+                                        <p className="text-xs text-gray-600 leading-relaxed">Hijacking legitimate customer traffic to display paid advertisement parking pages or direct users to rival businesses.</p>
                                     </div>
                                     <div className="bg-rose-50/60 border border-rose-100 rounded-xl p-4">
                                         <div className="w-8 h-8 rounded-lg bg-rose-600 text-white flex items-center justify-center font-bold text-sm mb-3">
                                             <FontAwesomeIcon icon={faBan} className="w-4 h-4" />
                                         </div>
                                         <h3 className="text-sm font-bold text-gray-900 mb-1">Phishing & Impersonation</h3>
-                                        <p className="text-xs text-gray-600 leading-relaxed">
-                                            Setting up spoofed corporate email addresses (e.g., invoices@yourbrand-india.in) to commit wire fraud and brand destruction.
-                                        </p>
+                                        <p className="text-xs text-gray-600 leading-relaxed">Setting up spoofed corporate email addresses (e.g., invoices@yourbrand-india.in) to commit wire fraud and brand destruction.</p>
                                     </div>
                                 </div>
                             </section>
@@ -415,12 +375,8 @@ export default function DomainNameDisputeIndrpPage() {
                                 <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">
                                     Domain Name vs Trademark: Indian Legal Position
                                 </h2>
-                                <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed mb-4">
-                                    A frequent misconception among business founders in India is assuming that registering a web domain with a registrar like GoDaddy or BigRock gives them statutory trademark ownership. Conversely, brand owners often believe having a trademark automatically prevents third parties from purchasing their domain name.
-                                </p>
-                                <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed mb-4">
-                                    Here is how Indian statutory law and global Internet governance contrast:
-                                </p>
+                                <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed mb-4">A frequent misconception among business founders in India is assuming that registering a web domain with a registrar like GoDaddy or BigRock gives them statutory trademark ownership. Conversely, brand owners often believe having a trademark automatically prevents third parties from purchasing their domain name.</p>
+                                <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed mb-4">Here is how Indian statutory law and global Internet governance contrast:</p>
 
                                 <div className="overflow-x-auto my-6">
                                     <table className="w-full text-left border-collapse border border-gray-200 rounded-xl overflow-hidden shadow-sm text-xs sm:text-sm">
@@ -467,9 +423,7 @@ export default function DomainNameDisputeIndrpPage() {
                                 <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">
                                     Satyam Infoway Case: Landmark Supreme Court Law
                                 </h2>
-                                <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed mb-4">
-                                    The cornerstone of Indian domain name jurisprudence is the historic Supreme Court judgment in <strong><em>Satyam Infoway Ltd. v. Sifynet Solutions Pvt. Ltd. (2004) 6 SCC 145</em></strong>. Prior to this ruling, squatters argued that domain names were merely technical internet addresses governed by contractual rules, not intellectual property protected under Indian trademark law.
-                                </p>
+                                <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed mb-4">The cornerstone of Indian domain name jurisprudence is the historic Supreme Court judgment in<strong><em>Satyam Infoway Ltd. V. Sifynet Solutions Pvt. Ltd. (2004) 6 SCC 145</em></strong>. Before this ruling, squatters argued that domain names were merely technical internet addresses governed by contractual rules, not intellectual property protected under Indian trademark law.</p>
 
                                 <div className="bg-amber-50/80 border-l-4 border-amber-500 rounded-r-2xl p-5 my-6">
                                     <div className="flex items-center space-x-2 text-amber-900 font-bold mb-2">
@@ -484,28 +438,16 @@ export default function DomainNameDisputeIndrpPage() {
                                 <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-3">Other Key Precedents Established by Indian High Courts</h3>
                                 <div className="space-y-3 mb-6">
                                     <div className="p-3.5 rounded-xl border border-gray-200 bg-white shadow-sm">
-                                        <p className="text-xs sm:text-sm font-bold text-gray-900 mb-1">
-                                            1. Yahoo! Inc. v. Akash Arora & Anr. (1999) - Delhi High Court
-                                        </p>
-                                        <p className="text-xs text-gray-600 m-0">
-                                            The first landmark Indian cybersquatting case where the defendant registered <em>yahooindia.com</em>. The Delhi High Court held that internet users would be deceptively confused, issuing a permanent injunction under the common law of passing off.
-                                        </p>
+                                        <p className="text-xs sm:text-sm font-bold text-gray-900 mb-1">1. Yahoo! Inc. V. Akash Arora & Anr. (1999) - Delhi High Court</p>
+                                        <p className="text-xs text-gray-600 m-0">The first landmark Indian cybersquatting case where the defendant registered<em>yahooindia.com</em>. The Delhi High Court held that internet users would be deceptively confused, issuing a permanent injunction under the common law of passing off.</p>
                                     </div>
                                     <div className="p-3.5 rounded-xl border border-gray-200 bg-white shadow-sm">
-                                        <p className="text-xs sm:text-sm font-bold text-gray-900 mb-1">
-                                            2. Tata Sons Ltd. v. Manu Kishori & Ors. (2001) - Delhi High Court
-                                        </p>
-                                        <p className="text-xs text-gray-600 m-0">
-                                            The court held that famous and well-known trademarks enjoy trans-border reputation across all top-level domains, ordering squatters to surrender multiple infringing domain names.
-                                        </p>
+                                        <p className="text-xs sm:text-sm font-bold text-gray-900 mb-1">2. Tata Sons Ltd. V. Manu Kishori & Ors. (2001) - Delhi High Court</p>
+                                        <p className="text-xs text-gray-600 m-0">The court held that famous and well-known trademarks enjoy trans-border reputation across all top-level domains, ordering squatters to surrender multiple infringing domain names.</p>
                                     </div>
                                     <div className="p-3.5 rounded-xl border border-gray-200 bg-white shadow-sm">
-                                        <p className="text-xs sm:text-sm font-bold text-gray-900 mb-1">
-                                            3. Rediff Communication Ltd. v. Cyberbooth (2000) - Bombay High Court
-                                        </p>
-                                        <p className="text-xs text-gray-600 m-0">
-                                            The Bombay High Court held that typosquatting (registering <em>radiff.com</em> to copy <em>rediff.com</em>) constitutes intentional bad-faith deception and trademark infringement.
-                                        </p>
+                                        <p className="text-xs sm:text-sm font-bold text-gray-900 mb-1">3. Rediff Communication Ltd. V. Cyberbooth (2000) - Bombay High Court</p>
+                                        <p className="text-xs text-gray-600 m-0">The Bombay High Court held that typosquatting (registering<em>radiff.com</em>to copy<em>rediff.com</em>) constitutes intentional bad-faith deception and trademark infringement.</p>
                                     </div>
                                 </div>
                             </section>
@@ -515,12 +457,8 @@ export default function DomainNameDisputeIndrpPage() {
                                 <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">
                                     What is INDRP? (.IN Domain Dispute Policy)
                                 </h2>
-                                <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed mb-4">
-                                    The <strong>INDRP (.IN Domain Name Dispute Resolution Policy)</strong> is the specialized administrative framework created by the <strong>National Internet eXchange of India (NIXI)</strong>, which operates the official <strong>.IN Registry</strong> under the Ministry of Electronics and Information Technology (MeitY), Government of India.
-                                </p>
-                                <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed mb-4">
-                                    INDRP applies to all domain names registered under the Indian country-code top-level domain (ccTLD) ecosystem, including:
-                                </p>
+                                <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed mb-4">The<strong>INDRP (.IN Domain Name Dispute Resolution Policy)</strong>is the specialized administrative framework created by the<strong>National Internet eXchange of India (NIXI)</strong>, which operates the official<strong>.IN Registry</strong>under the Ministry of Electronics and Information Technology (MeitY), Government of India.</p>
+                                <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed mb-4">INDRP applies to all domain names registered under the Indian country-code top-level domain (ccTLD) ecosystem, including:</p>
 
                                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 my-4">
                                     <div className="p-3 bg-gray-50 border border-gray-200 rounded-xl text-center">
@@ -546,9 +484,7 @@ export default function DomainNameDisputeIndrpPage() {
                                         <FontAwesomeIcon icon={faGavel} className="w-4 h-4 mr-2 text-[#6E5E93]" />
                                         Legal Status of INDRP: Binding Arbitration
                                     </h3>
-                                    <p className="text-xs sm:text-sm text-gray-700 leading-relaxed m-0">
-                                        Unlike informal mediation, an INDRP proceeding constitutes an <strong>official statutory arbitration</strong> governed by the <strong>Arbitration and Conciliation Act, 1996</strong> and INDRP Rules of Procedure. Every person registering a .in domain enters into a mandatory contract agreeing to submit to INDRP arbitration in case of a trademark dispute. The arbitral award passed by the appointed sole arbitrator is legally binding and enforceable.
-                                    </p>
+                                    <p className="text-xs sm:text-sm text-gray-700 leading-relaxed m-0">Unlike informal mediation, an INDRP proceeding constitutes an<strong>official statutory arbitration</strong>governed by the<strong>Arbitration and Conciliation Act, 1996</strong>and INDRP Rules of Procedure. Every person registering a .in domain enters into a mandatory contract agreeing to submit to INDRP arbitration in case of a trademark dispute. The arbitral award passed by the appointed sole arbitrator is legally binding and enforceable.</p>
                                 </div>
                             </section>
 
@@ -557,9 +493,7 @@ export default function DomainNameDisputeIndrpPage() {
                                 <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">
                                     The 3-Part Mandatory Test under INDRP Rules
                                 </h2>
-                                <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed mb-4">
-                                    To succeed in an INDRP arbitration and obtain an order for the transfer or cancellation of the squatted domain, the brand owner (Complainant) must satisfy the <strong>3-Part Test</strong> set out in <strong>Paragraph 4 of the INDRP Policy</strong>:
-                                </p>
+                                <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed mb-4">To succeed in an INDRP arbitration and obtain an order for the transfer or cancellation of the squatted domain, the brand owner (Complainant) must satisfy the<strong>3-Part Test</strong>set out in<strong>Paragraph 4 of the INDRP Policy</strong>:</p>
 
                                 <div className="space-y-4 my-6">
                                     <div className="bg-white border-2 border-indigo-100 rounded-2xl p-5 shadow-sm hover:border-[#6E5E93]/40 transition-colors">
@@ -571,9 +505,7 @@ export default function DomainNameDisputeIndrpPage() {
                                                 <h3 className="text-sm sm:text-base font-bold text-gray-900 mb-1">
                                                     Identical or Confusingly Similar Mark
                                                 </h3>
-                                                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed mb-2">
-                                                    The registrant&apos;s domain name must be identical or deceptively similar to a name, trademark, or service mark in which the complainant has legal rights (either via statutory <Link href="/e-filing-trademark" className="text-[#6E5E93] underline font-semibold">trademark registration</Link> or established common law prior commercial use).
-                                                </p>
+                                                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed mb-2">The registrant&apos;s domain name must be identical or deceptively similar to a name, trademark, or service mark in which the complainant has legal rights (either via statutory<Link href="/e-filing-trademark" className="text-[#6E5E93] underline font-semibold">trademark registration</Link>or established common law prior commercial use).</p>
                                                 <span className="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200 inline-block">
                                                     Proof: Trademark Certificate, User Invoices, Brand Awareness Evidence
                                                 </span>
@@ -590,9 +522,7 @@ export default function DomainNameDisputeIndrpPage() {
                                                 <h3 className="text-sm sm:text-base font-bold text-gray-900 mb-1">
                                                     No Rights or Legitimate Interests
                                                 </h3>
-                                                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed mb-2">
-                                                    The registrant has no legitimate business interest, license, or bona fide commercial use of the domain name prior to notice of the dispute. The registrant is not commonly known by that name and is not making legitimate non-commercial fair use.
-                                                </p>
+                                                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed mb-2">The registrant has no legitimate business interest, license, or bona fide commercial use of the domain name before notice of the dispute. The registrant is not commonly known by that name and is not making legitimate non-commercial fair use.</p>
                                                 <span className="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200 inline-block">
                                                     Proof: Absence of MCA Company Name, No Trade License, Parking Page Screens
                                                 </span>
@@ -609,9 +539,7 @@ export default function DomainNameDisputeIndrpPage() {
                                                 <h3 className="text-sm sm:text-base font-bold text-gray-900 mb-1">
                                                     Registered OR Used in Bad Faith (Crucial INDRP Advantage)
                                                 </h3>
-                                                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed mb-2">
-                                                    Under INDRP Paragraph 4(c), the test is <strong>disjunctive (&ldquo;OR&rdquo;)</strong>. Proving either bad-faith registration (e.g. buying to extort money) OR bad-faith use (e.g. parking page, phishing) is sufficient to win the award.
-                                                </p>
+                                                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed mb-2">Under INDRP Paragraph 4(c), the test is<strong>disjunctive (&ldquo;OR&rdquo;)</strong>. Proving either bad-faith registration (e.g. Buying to extort money) OR bad-faith use (e.g. Parking page, phishing) is sufficient to win the award.</p>
                                                 <span className="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200 inline-block">
                                                     Proof: Extortion Offer Emails, Parking Ads, Competing Business Links
                                                 </span>
@@ -626,9 +554,7 @@ export default function DomainNameDisputeIndrpPage() {
                                 <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">
                                     Types of Cybersquatting & Domain Brand Theft
                                 </h2>
-                                <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed mb-4">
-                                    Modern domain hijacking extends far beyond simple domain holding. Understanding the exact method of cyber infringement is essential to drafting an airtight complaint:
-                                </p>
+                                <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed mb-4">Modern domain hijacking extends far beyond simple domain holding. Understanding the exact method of cyber infringement is essential to drafting an airtight complaint:</p>
 
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
                                     <div className="p-4 rounded-xl border border-gray-200 bg-white hover:shadow-md transition-shadow">
@@ -636,9 +562,7 @@ export default function DomainNameDisputeIndrpPage() {
                                             <FontAwesomeIcon icon={faTriangleExclamation} className="w-4 h-4" />
                                             <h3 className="text-sm font-bold text-gray-900 m-0">1. Typosquatting / URL Spoofing</h3>
                                         </div>
-                                        <p className="text-xs text-gray-600 leading-relaxed m-0">
-                                            Registering common keyboard typing errors or misspelled variants of popular brands (e.g. <em>amazonn.co.in</em>, <em>flipkartt.in</em>) to intercept mistyped browser navigation.
-                                        </p>
+                                        <p className="text-xs text-gray-600 leading-relaxed m-0">Registering common keyboard typing errors or misspelled variants of popular brands (e.g.<em>amazonn.co.in</em>,<em>flipkartt.in</em>) to intercept mistyped browser navigation.</p>
                                     </div>
 
                                     <div className="p-4 rounded-xl border border-gray-200 bg-white hover:shadow-md transition-shadow">
@@ -646,9 +570,7 @@ export default function DomainNameDisputeIndrpPage() {
                                             <FontAwesomeIcon icon={faHourglassHalf} className="w-4 h-4" />
                                             <h3 className="text-sm font-bold text-gray-900 m-0">2. Domain Warehousing & Drop Catching</h3>
                                         </div>
-                                        <p className="text-xs text-gray-600 leading-relaxed m-0">
-                                            Using automated software bots to immediately register a brand&apos;s expired domain the millisecond it lapses, holding it hostage for tens of thousands of dollars.
-                                        </p>
+                                        <p className="text-xs text-gray-600 leading-relaxed m-0">Using automated software bots to immediately register a brand&apos;s expired domain the millisecond it lapses, holding it hostage for tens of thousands of dollars.</p>
                                     </div>
 
                                     <div className="p-4 rounded-xl border border-gray-200 bg-white hover:shadow-md transition-shadow">
@@ -656,9 +578,7 @@ export default function DomainNameDisputeIndrpPage() {
                                             <FontAwesomeIcon icon={faTowerBroadcast} className="w-4 h-4" />
                                             <h3 className="text-sm font-bold text-gray-900 m-0">3. Competitor Disruption Squatting</h3>
                                         </div>
-                                        <p className="text-xs text-gray-600 leading-relaxed m-0">
-                                            A business rival registering your prospective startup&apos;s or product&apos;s dot-in domain to prevent your product launch and divert your prospective clients.
-                                        </p>
+                                        <p className="text-xs text-gray-600 leading-relaxed m-0">A business rival registering your prospective startup&apos;s or product&apos;s dot-in domain to prevent your product launch and divert your prospective clients.</p>
                                     </div>
 
                                     <div className="p-4 rounded-xl border border-gray-200 bg-white hover:shadow-md transition-shadow">
@@ -666,9 +586,7 @@ export default function DomainNameDisputeIndrpPage() {
                                             <FontAwesomeIcon icon={faUserShield} className="w-4 h-4" />
                                             <h3 className="text-sm font-bold text-gray-900 m-0">4. Reverse Domain Name Hijacking (RDNH)</h3>
                                         </div>
-                                        <p className="text-xs text-gray-600 leading-relaxed m-0">
-                                            When a large corporate trademark owner abuses legal proceedings in bad faith to harass a legitimate small business registrant who registered a generic domain honestly.
-                                        </p>
+                                        <p className="text-xs text-gray-600 leading-relaxed m-0">When a large corporate trademark owner abuses legal proceedings in bad faith to harass a legitimate small business registrant who registered a generic domain honestly.</p>
                                     </div>
                                 </div>
                             </section>
@@ -678,9 +596,7 @@ export default function DomainNameDisputeIndrpPage() {
                                 <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">
                                     Step-by-Step Procedure to Recover a .IN Domain
                                 </h2>
-                                <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed mb-4">
-                                    Recovering a squatted domain under NIXI INDRP involves a structured, legally audited process:
-                                </p>
+                                <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed mb-4">Recovering a squatted domain under NIXI INDRP involves a structured, legally audited process:</p>
 
                                 <div className="space-y-4 my-6">
                                     {/* STEP 1 */}
@@ -692,9 +608,7 @@ export default function DomainNameDisputeIndrpPage() {
                                             <h3 className="text-sm sm:text-base font-bold text-gray-900 mb-1">
                                                 WHOIS Audit & Digital Evidence Preservation
                                             </h3>
-                                            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed m-0">
-                                                Extract historical WHOIS records, IP addresses, web hosting details, and time-stamped screenshots of parking advertisements, pay-per-click links, or extortion sale prices before alerting the squatter.
-                                            </p>
+                                            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed m-0">Extract historical WHOIS records, IP addresses, web hosting details, and time-stamped screenshots of parking advertisements, pay-per-click links, or extortion sale prices before alerting the squatter.</p>
                                         </div>
                                     </div>
 
@@ -707,9 +621,7 @@ export default function DomainNameDisputeIndrpPage() {
                                             <h3 className="text-sm sm:text-base font-bold text-gray-900 mb-1">
                                                 Issuance of Cease & Desist Legal Notice
                                             </h3>
-                                            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed m-0">
-                                                Serve a formal legal notice via an IP advocate giving the registrant a 7-day window to voluntarily transfer the domain. This firmly establishes constructive knowledge of your trademark rights and proves bad-faith intent.
-                                            </p>
+                                            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed m-0">Serve a formal legal notice via an IP advocate giving the registrant a 7-day window to voluntarily transfer the domain. This firmly establishes constructive knowledge of your trademark rights and proves bad-faith intent.</p>
                                         </div>
                                     </div>
 
@@ -722,9 +634,7 @@ export default function DomainNameDisputeIndrpPage() {
                                             <h3 className="text-sm sm:text-base font-bold text-gray-900 mb-1">
                                                 Drafting & Submitting INDRP Complaint with NIXI
                                             </h3>
-                                            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed m-0">
-                                                Prepare an INDRP complaint along with Annexures (trademark certificates, user affidavits, corporate incorporation documents) and remit official arbitration fees to NIXI (.IN Registry).
-                                            </p>
+                                            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed m-0">Prepare an INDRP complaint along with Annexures (trademark certificates, user affidavits, corporate incorporation documents) and remit official arbitration fees to NIXI (.IN Registry).</p>
                                         </div>
                                     </div>
 
@@ -737,9 +647,7 @@ export default function DomainNameDisputeIndrpPage() {
                                             <h3 className="text-sm sm:text-base font-bold text-gray-900 mb-1">
                                                 Administrative Review & Mandatory Registry Domain Lock
                                             </h3>
-                                            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed m-0">
-                                                NIXI audits the complaint for procedural compliance and immediately notifies the registrar to place a <strong>Registrar Lock</strong> on the domain, preventing cyber-flight (unauthorized transfer or sale during proceedings).
-                                            </p>
+                                            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed m-0">NIXI audits the complaint for procedural compliance and immediately notifies the registrar to place a<strong>Registrar Lock</strong>on the domain. This prevents cyber-flight (unauthorized transfer or sale during proceedings).</p>
                                         </div>
                                     </div>
 
@@ -752,9 +660,7 @@ export default function DomainNameDisputeIndrpPage() {
                                             <h3 className="text-sm sm:text-base font-bold text-gray-900 mb-1">
                                                 Appointment of Sole Arbitrator & Service on Respondent
                                             </h3>
-                                            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed m-0">
-                                                NIXI appoints an independent sole arbitrator from its empaneled roster of senior IP advocates and serves notice along with the complaint dossier upon the respondent registrant.
-                                            </p>
+                                            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed m-0">NIXI appoints an independent sole arbitrator from its empaneled roster of senior IP advocates and serves notice along with the complaint dossier upon the respondent registrant.</p>
                                         </div>
                                     </div>
 
@@ -767,9 +673,7 @@ export default function DomainNameDisputeIndrpPage() {
                                             <h3 className="text-sm sm:text-base font-bold text-gray-900 mb-1">
                                                 Exchange of Written Pleadings (14-Day Window)
                                             </h3>
-                                            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed m-0">
-                                                The Respondent is granted 14 days to submit a written response. The proceedings are conducted strictly on written electronic records without cumbersome oral hearings unless the arbitrator deems it extraordinary.
-                                            </p>
+                                            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed m-0">The Respondent is granted 14 days to submit a written response. The proceedings are conducted strictly on written electronic records without cumbersome oral hearings unless the arbitrator deems it extraordinary.</p>
                                         </div>
                                     </div>
 
@@ -782,9 +686,7 @@ export default function DomainNameDisputeIndrpPage() {
                                             <h3 className="text-sm sm:text-base font-bold text-gray-900 mb-1">
                                                 Passing of Arbitral Award & Direct Registry Transfer
                                             </h3>
-                                            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed m-0">
-                                                The Arbitrator delivers a reasoned arbitral award within 60 days. Upon receipt of a transfer order, NIXI directly instructs the registrar to change registrant credentials and hand over the domain to the Complainant.
-                                            </p>
+                                            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed m-0">The Arbitrator delivers a reasoned arbitral award within 60 days. Upon receipt of a transfer order, NIXI directly instructs the registrar to change registrant credentials and hand over the domain to the Complainant.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -795,9 +697,7 @@ export default function DomainNameDisputeIndrpPage() {
                                 <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">
                                     INDRP vs UDRP vs High Court Civil Lawsuit
                                 </h2>
-                                <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed mb-4">
-                                    When facing cybersquatting in India, brand owners have multiple legal pathways. Here is how administrative arbitration compares with global policies and commercial court litigation:
-                                </p>
+                                <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed mb-4">When facing cybersquatting in India, brand owners have multiple legal pathways. Here is how administrative arbitration compares with global policies and commercial court litigation:</p>
 
                                 <div className="overflow-x-auto my-6">
                                     <table className="w-full text-left border-collapse border border-gray-200 rounded-xl overflow-hidden shadow-sm text-xs sm:text-sm">
@@ -856,9 +756,7 @@ export default function DomainNameDisputeIndrpPage() {
                                 <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">
                                     NIXI Filing Fees & Arbitration Cost Schedule
                                 </h2>
-                                <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed mb-4">
-                                    The statutory fee structure established by NIXI for INDRP proceedings is highly affordable and transparent:
-                                </p>
+                                <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed mb-4">The statutory fee structure established by NIXI for INDRP proceedings is highly affordable and transparent:</p>
 
                                 <div className="overflow-x-auto my-6">
                                     <table className="w-full text-left border-collapse border border-gray-200 rounded-xl overflow-hidden shadow-sm text-xs sm:text-sm">
@@ -893,9 +791,7 @@ export default function DomainNameDisputeIndrpPage() {
                                         </tbody>
                                     </table>
                                 </div>
-                                <p className="text-[11px] text-gray-500 italic">
-                                    *Note: Official statutory fee amounts are subject to applicable GST and professional attorney drafting charges.
-                                </p>
+                                <p className="text-[11px] text-gray-500 italic">*Note: Official statutory fee amounts are subject to applicable GST and professional attorney drafting charges.</p>
                             </section>
 
                             {/* SECTION 10 */}
@@ -903,18 +799,14 @@ export default function DomainNameDisputeIndrpPage() {
                                 <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">
                                     Defensive Domain Strategies to Prevent Hijacks
                                 </h2>
-                                <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed mb-4">
-                                    Proactive domain portfolio management is infinitely more cost-effective than engaging in post-infringement dispute resolution. Implement these 5 enterprise brand defense rules:
-                                </p>
+                                <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed mb-4">Proactive domain portfolio management is infinitely more cost-effective than engaging in post-infringement dispute resolution. Implement these 5 enterprise brand defense rules:</p>
 
                                 <div className="space-y-3 my-6">
                                     <div className="flex items-start space-x-3 p-3.5 bg-gray-50 border border-gray-200 rounded-xl">
                                         <FontAwesomeIcon icon={faCheckCircle} className="w-4 h-4 text-emerald-600 mt-1 flex-shrink-0" />
                                         <div>
                                             <p className="text-xs sm:text-sm font-bold text-gray-900 m-0">1. Synchronize Trademark Filing with Multi-TLD Registration</p>
-                                            <p className="text-xs text-gray-600 m-0 mt-0.5">
-                                                The day you submit your <Link href="/how-to-register-a-trademark-for-my-startup" className="text-[#6E5E93] underline">trademark application for your startup</Link>, defensively register primary TLDs (.in, .co.in, .com, .org) before your trademark publication appears in the public Trade Marks Journal.
-                                            </p>
+                                            <p className="text-xs text-gray-600 m-0 mt-0.5">The day you submit your<Link href="/how-to-register-a-trademark-for-my-startup" className="text-[#6E5E93] underline">trademark application for your startup</Link>, defensively register primary TLDs (.in, .co.in, .com, .org) before your trademark publication appears in the public Trade Marks Journal.</p>
                                         </div>
                                     </div>
 
@@ -922,9 +814,7 @@ export default function DomainNameDisputeIndrpPage() {
                                         <FontAwesomeIcon icon={faCheckCircle} className="w-4 h-4 text-emerald-600 mt-1 flex-shrink-0" />
                                         <div>
                                             <p className="text-xs sm:text-sm font-bold text-gray-900 m-0">2. Register Key Phonetic & Typographical Variations</p>
-                                            <p className="text-xs text-gray-600 m-0 mt-0.5">
-                                                Acquire obvious typographical misspellings and common keyword variations (e.g. yourbrandapp.in, yourbrandonline.in) and redirect them directly to your primary website.
-                                            </p>
+                                            <p className="text-xs text-gray-600 m-0 mt-0.5">Acquire obvious typographical misspellings and common keyword variations (e.g. Yourbrandapp.in, yourbrandonline.in) and redirect them directly to your primary website.</p>
                                         </div>
                                     </div>
 
@@ -932,9 +822,7 @@ export default function DomainNameDisputeIndrpPage() {
                                         <FontAwesomeIcon icon={faCheckCircle} className="w-4 h-4 text-emerald-600 mt-1 flex-shrink-0" />
                                         <div>
                                             <p className="text-xs sm:text-sm font-bold text-gray-900 m-0">3. Activate Registrar Transfer Lock & Multi-Year Auto-Renewal</p>
-                                            <p className="text-xs text-gray-600 m-0 mt-0.5">
-                                                Enable 10-year domain renewals and activate Registry / Registrar Locks to avoid accidental expiration drop-catching by malicious automated bots.
-                                            </p>
+                                            <p className="text-xs text-gray-600 m-0 mt-0.5">Enable 10-year domain renewals and activate Registry / Registrar Locks to avoid accidental expiration drop-catching by malicious automated bots.</p>
                                         </div>
                                     </div>
 
@@ -942,9 +830,7 @@ export default function DomainNameDisputeIndrpPage() {
                                         <FontAwesomeIcon icon={faCheckCircle} className="w-4 h-4 text-emerald-600 mt-1 flex-shrink-0" />
                                         <div>
                                             <p className="text-xs sm:text-sm font-bold text-gray-900 m-0">4. Set Up Automated Trademark & Domain Watch Alerts</p>
-                                            <p className="text-xs text-gray-600 m-0 mt-0.5">
-                                                Subscribe to an AI-powered domain monitoring service that immediately alerts your legal team whenever a domain containing your brand name is registered with any registrar worldwide.
-                                            </p>
+                                            <p className="text-xs text-gray-600 m-0 mt-0.5">Subscribe to an AI-powered domain monitoring service that immediately alerts your legal team whenever a domain containing your brand name is registered with any registrar worldwide.</p>
                                         </div>
                                     </div>
 
@@ -952,9 +838,7 @@ export default function DomainNameDisputeIndrpPage() {
                                         <FontAwesomeIcon icon={faCheckCircle} className="w-4 h-4 text-emerald-600 mt-1 flex-shrink-0" />
                                         <div>
                                             <p className="text-xs sm:text-sm font-bold text-gray-900 m-0">5. Enroll in Amazon Brand Registry & E-Commerce Watch</p>
-                                            <p className="text-xs text-gray-600 m-0 mt-0.5">
-                                                Leverage your registered trademark to enroll in <Link href="/amazon-brand-registry-trademark-requirements-india" className="text-[#6E5E93] underline">Amazon Brand Registry</Link> to prevent counterfeiters from misusing your domain handle across major marketplaces.
-                                            </p>
+                                            <p className="text-xs text-gray-600 m-0 mt-0.5">Leverage your registered trademark to enroll in<Link href="/amazon-brand-registry-trademark-requirements-india" className="text-[#6E5E93] underline">Amazon Brand Registry</Link>to prevent counterfeiters from misusing your domain handle across major marketplaces.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -972,9 +856,7 @@ export default function DomainNameDisputeIndrpPage() {
                                                 <span className="text-[#6E5E93] mr-2 font-extrabold flex-shrink-0">Q{index + 1}.</span>
                                                 <span>{faq.question}</span>
                                             </h3>
-                                            <p className="text-xs sm:text-sm text-gray-700 leading-relaxed m-0 pl-6 border-l-2 border-purple-100">
-                                                {faq.answer}
-                                            </p>
+                                            <p className="text-xs sm:text-sm text-gray-700 leading-relaxed m-0 pl-6 border-l-2 border-purple-100">{faq.answer}</p>
                                         </div>
                                     ))}
                                 </div>
@@ -987,9 +869,7 @@ export default function DomainNameDisputeIndrpPage() {
                                     <h2 className="text-lg sm:text-2xl font-extrabold mb-3 text-white">
                                         Strategic Legal Action to Reclaim Your Domain
                                     </h2>
-                                    <p className="text-xs sm:text-sm text-gray-300 mb-6 leading-relaxed">
-                                        Allowing a cybersquatter or hostile third party to hold your brand&apos;s .in domain damages your search engine visibility, bleeds valuable customers, and exposes your company to dangerous phishing scams. With the expert IP litigation team at IPR Karo, you can serve immediate cease-and-desist notices and initiate fast-track NIXI INDRP arbitration to transfer your domain back to where it belongs.
-                                    </p>
+                                    <p className="text-xs sm:text-sm text-gray-300 mb-6 leading-relaxed">Allowing a cybersquatter or hostile third party to hold your brand&apos;s .in domain damages your search engine visibility, bleeds valuable customers, and exposes your company to dangerous phishing scams. With the expert IP litigation team at IPR Karo, you can serve immediate cease-and-desist notices and initiate fast-track NIXI INDRP arbitration to transfer your domain back to where it belongs.</p>
 
                                     <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
                                         <Link href="/e-filing-trademark" className="w-full sm:w-auto">
@@ -1016,9 +896,7 @@ export default function DomainNameDisputeIndrpPage() {
                                     <span>Expert Domain Audit</span>
                                 </div>
                                 <p className="text-base font-bold text-gray-900 mb-2">Is Your Domain Squatted?</p>
-                                <p className="text-xs text-gray-600 leading-relaxed mb-4">
-                                    Get an instant legal evaluation of your WHOIS record, trademark prior-use rights, and bad-faith evidence from senior cyber advocates.
-                                </p>
+                                <p className="text-xs text-gray-600 leading-relaxed mb-4">Get an instant legal evaluation of your WHOIS record, trademark prior-use rights, and bad-faith evidence from senior cyber advocates.</p>
                                 <Link href="/e-filing-trademark" className="block w-full">
                                     <button className="w-full bg-[#6E5E93] hover:bg-[#5a4c7a] text-white font-bold py-2.5 px-4 rounded-xl text-xs transition-colors shadow-sm uppercase tracking-wider">
                                         Free Dispute Review
@@ -1033,9 +911,7 @@ export default function DomainNameDisputeIndrpPage() {
                                     <span>Fast-Track Resolution</span>
                                 </div>
                                 <p className="text-base font-bold text-white mb-2">30–60 Day NIXI Process</p>
-                                <p className="text-xs text-gray-300 leading-relaxed mb-4">
-                                    Recover dot-in domains without prolonged High Court court battles through binding arbitral awards.
-                                </p>
+                                <p className="text-xs text-gray-300 leading-relaxed mb-4">Recover dot-in domains without prolonged High Court court battles through binding arbitral awards.</p>
                                 <a href="tel:+919289707648" className="flex items-center justify-center w-full bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold py-2.5 px-4 rounded-xl text-xs transition-colors">
                                     <FontAwesomeIcon icon={faPhone} className="w-3.5 h-3.5 mr-2 text-pink-400" />
                                     +91-9289707648
@@ -1046,30 +922,10 @@ export default function DomainNameDisputeIndrpPage() {
                             <div className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm">
                                 <p className="text-xs font-bold uppercase tracking-wider text-gray-500 mb-3">Related Legal Guides</p>
                                 <ul className="space-y-2.5 text-xs">
-                                    <li>
-                                        <Link href="/passing-off-vs-trademark-infringement-india" className="text-gray-700 hover:text-[#6E5E93] font-medium flex items-center transition-colors">
-                                            <span className="mr-2 text-purple-400">&rarr;</span>
-                                            Passing Off vs Infringement
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/how-to-register-a-trademark-for-my-startup" className="text-gray-700 hover:text-[#6E5E93] font-medium flex items-center transition-colors">
-                                            <span className="mr-2 text-purple-400">&rarr;</span>
-                                            Startup Trademark Filing
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/trademark-cancellation-non-use-5-years-section-47-india" className="text-gray-700 hover:text-[#6E5E93] font-medium flex items-center transition-colors">
-                                            <span className="mr-2 text-purple-400">&rarr;</span>
-                                            Trademark Rectification & Non-Use
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/trademark-hearing-video-conferencing-procedure-india" className="text-gray-700 hover:text-[#6E5E93] font-medium flex items-center transition-colors">
-                                            <span className="mr-2 text-purple-400">&rarr;</span>
-                                            Attend Trademark Video Hearing
-                                        </Link>
-                                    </li>
+                                    <li><Link href="/passing-off-vs-trademark-infringement-india" className="text-gray-700 hover:text-[#6E5E93] font-medium flex items-center transition-colors"><span className="mr-2 text-purple-400">&rarr;</span>Passing Off vs Infringement</Link></li>
+                                    <li><Link href="/how-to-register-a-trademark-for-my-startup" className="text-gray-700 hover:text-[#6E5E93] font-medium flex items-center transition-colors"><span className="mr-2 text-purple-400">&rarr;</span>Startup Trademark Filing</Link></li>
+                                    <li><Link href="/trademark-cancellation-non-use-5-years-section-47-india" className="text-gray-700 hover:text-[#6E5E93] font-medium flex items-center transition-colors"><span className="mr-2 text-purple-400">&rarr;</span>Trademark Rectification & Non-Use</Link></li>
+                                    <li><Link href="/trademark-hearing-video-conferencing-procedure-india" className="text-gray-700 hover:text-[#6E5E93] font-medium flex items-center transition-colors"><span className="mr-2 text-purple-400">&rarr;</span>Attend Trademark Video Hearing</Link></li>
                                 </ul>
                             </div>
                         </aside>

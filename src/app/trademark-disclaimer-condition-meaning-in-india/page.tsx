@@ -105,7 +105,7 @@ const faqs = [
     },
     {
         question: "Can I file a passing off lawsuit if my certificate contains a disclaimer?",
-        answer: "Yes. As held by the Supreme Court of India in the landmark Registrar of Trade Marks v. Ashok Chandra Rakhit Ltd. case, a disclaimer on the register affects only statutory infringement rights under the Trade Marks Act. It does not extinguish common law rights under Section 27(2). If a competitor deceives the public by copying your trade dress or commercial reputation, you can still file a common law passing off suit."
+        answer: "Yes. As held by the Supreme Court of India in the landmark Registrar of Trade Marks v. Ashok Chandra Rakhit Ltd. Case, a disclaimer on the register affects only statutory infringement rights under the Trade Marks Act. It does not extinguish common law rights under Section 27(2). If a competitor deceives the public by copying your trade dress or commercial reputation, you can still file a common law passing off suit."
     },
     {
         question: "Can I remove a disclaimer condition from my trademark certificate after registration?",
@@ -221,9 +221,7 @@ export default function TrademarkDisclaimerMeaningPage() {
                             <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-3 leading-tight text-gray-900 tracking-tighter">
                                 Trademark <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'transparent' }}>Disclaimer Condition</span> in Registration Certificate
                             </h1>
-                            <p className="text-base md:text-lg mb-5 text-gray-700 font-medium leading-relaxed">
-                                When your official Trademark Registration Certificate (Form TM-RG) arrives from the Trade Marks Registry, you may discover a note in the &ldquo;Condition &amp; Limitations&rdquo; column stating: <em>&ldquo;Registration shall give no right to the exclusive use of the word...&rdquo;</em> What does this disclaimer actually mean for your business? Does it weaken your brand protection? Explore how Section 17, Section 28, the Anti-Dissection Rule, and Indian Supreme Court precedents define your rights against infringers and counterfeiters.
-                            </p>
+                            <p className="text-base md:text-lg mb-5 text-gray-700 font-medium leading-relaxed">When your official Trademark Registration Certificate (Form TM-RG) arrives from the Trade Marks Registry, you may discover a note in the &ldquo;Condition &amp; Limitations&rdquo; column stating:<em>&ldquo;Registration shall give no right to the exclusive use of the word.&rdquo;</em>What does this disclaimer actually mean for your business? Does it weaken your brand protection? Explore how Section 17, Section 28, the Anti-Dissection Rule, and Indian Supreme Court precedents define your rights against infringers and counterfeiters.</p>
 
                             <div className="flex flex-wrap items-center gap-4 mb-6">
                                 <div className="flex items-center mr-2">
@@ -318,36 +316,11 @@ export default function TrademarkDisclaimerMeaningPage() {
                                                 Close
                                             </span>
                                             <svg className="w-4 h-4 text-gray-500 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                                            </svg>
-                                        </div>
-                                    </summary>
-                                    <div className="p-3.5 pt-2 border-t border-purple-50 bg-white/70">
-                                        <nav className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
-                                            {tocSections.map((section, idx) => (
-                                                <a
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg></div></summary><div className="p-3.5 pt-2 border-t border-purple-50 bg-white/70"><nav className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">{tocSections.map((section, idx) => (<a
                                                     key={section.id}
                                                     href={`#${section.id}`}
                                                     className="flex items-center p-2 rounded-xl text-xs font-medium text-gray-700 hover:text-[#6E5E93] hover:bg-purple-50/80 transition-all border border-transparent hover:border-purple-100"
-                                                >
-                                                    <span className="w-5 h-5 rounded-full bg-purple-100 text-[#6E5E93] flex items-center justify-center text-[10px] font-bold mr-2 flex-shrink-0">
-                                                        {idx + 1}
-                                                    </span>
-                                                    <span className="truncate">{section.title}</span>
-                                                </a>
-                                            ))}
-                                        </nav>
-                                    </div>
-                                </details>
-                            </div>
-
-                            <div className="bg-white p-4 md:p-12 rounded-2xl shadow-sm border border-gray-100 space-y-12 md:space-y-20 article-content">
-                                <article className="prose prose-lg max-w-none text-gray-700 leading-relaxed font-normal">
-
-                                    <div className="flex items-center space-x-4 mb-10 p-4 bg-gray-50 rounded-xl border border-gray-100 not-prose">
-                                        <img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-12 h-12 rounded-full object-cover m-0" />
-                                        <div>
-                                            <p className="text-sm font-bold text-gray-900 m-0">Written by <Link href="/about-us" className="text-[rgb(110,94,147)] hover:underline">Rahul Roy</Link></p>
+                                                ><span className="w-5 h-5 rounded-full bg-purple-100 text-[#6E5E93] flex items-center justify-center text-[10px] font-bold mr-2 flex-shrink-0">{idx + 1}</span><span className="truncate">{section.title}</span></a>))}</nav></div></details></div><div className="bg-white p-4 md:p-12 rounded-2xl shadow-sm border border-gray-100 space-y-12 md:space-y-20 article-content"><article className="prose prose-lg max-w-none text-gray-700 leading-relaxed font-normal"><div className="flex items-center space-x-4 mb-10 p-4 bg-gray-50 rounded-xl border border-gray-100 not-prose"><img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-12 h-12 rounded-full object-cover m-0" /><div><p className="text-sm font-bold text-gray-900 m-0">Written by<Link href="/about-us" className="text-[rgb(110,94,147)] hover:underline">Rahul Roy</Link></p>
                                             <p className="text-xs text-gray-500 m-0">Senior Trademark &amp; IP Attorney • Verified Expert</p>
                                         </div>
                                     </div>
@@ -360,33 +333,23 @@ export default function TrademarkDisclaimerMeaningPage() {
                                         </h2>
 
                                         <div id="quick-answer" className="bg-indigo-50 border-l-4 border-[rgb(110,94,147)] p-6 rounded-r-xl mb-8">
-                                            <p className="font-semibold text-gray-900 m-0">
-                                                A trademark disclaimer is an official statutory condition entered by the Trade Marks Registry on your Trademark Registration Certificate (Form TM-RG). It expressly clarifies that the proprietor holds exclusive ownership over the combined trademark <em>as a whole</em>, but claims no separate or standalone monopoly over non-distinctive, generic, descriptive, or common dictionary elements (such as &ldquo;Pure&rdquo;, &ldquo;India&rdquo;, &ldquo;Herbal&rdquo;, or &ldquo;Tech&rdquo;) contained within the composite logo or label.
-                                            </p>
+                                            <p className="font-semibold text-gray-900 m-0">A trademark disclaimer is an official statutory condition entered by the Trade Marks Registry on your Trademark Registration Certificate (Form TM-RG). It expressly clarifies that the proprietor holds exclusive ownership over the combined trademark<em>as a whole</em>, but claims no separate or standalone monopoly over non-distinctive, generic, descriptive, or common dictionary elements (such as &ldquo;Pure&rdquo;, &ldquo;India&rdquo;, &ldquo;Herbal&rdquo;, or &ldquo;Tech&rdquo;) contained within the composite logo or label.</p>
                                         </div>
 
-                                        <p className="mb-6">
-                                            Receiving your official <Link href="/process-and-steps-of-trademark-registration" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark registration certificate</Link> is a landmark milestone for any business founder or enterprise. However, many trademark owners are surprised and concerned when they read the fine print in the box titled <strong>&ldquo;Condition &amp; Limitations&rdquo;</strong>.
-                                        </p>
-                                        <p className="mb-6">
-                                            A typical entry reads:
-                                        </p>
+                                        <p className="mb-6">Receiving your official<Link href="/process-and-steps-of-trademark-registration" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark registration certificate</Link>is a landmark milestone for any business founder or enterprise. However, many trademark owners are surprised and concerned when they read the fine print in the box titled<strong>&ldquo;Condition &amp; Limitations&rdquo;</strong>.</p>
+                                        <p className="mb-6">A typical entry reads:</p>
 
                                         <div className="bg-amber-50/80 border border-amber-200 rounded-2xl p-6 mb-8 not-prose">
                                             <div className="flex items-start">
                                                 <FontAwesomeIcon icon={faStamp} className="w-6 h-6 text-amber-700 mt-1 mr-4 shrink-0" />
                                                 <div>
-                                                    <h4 className="text-sm font-bold text-amber-900 uppercase tracking-wider mb-1">Standard Certificate Disclaimer Condition</h4>
-                                                    <p className="text-sm text-amber-950 font-mono italic leading-relaxed m-0">
-                                                        &ldquo;Registration of this Trade Mark shall give no right to the exclusive use of the word(s) &lsquo;ORGANIC CARE&rsquo; separately and the device of &lsquo;LEAF&rsquo; apart from the mark as shown.&rdquo;
-                                                    </p>
+                                                    <h3 className="text-sm font-bold text-amber-900 uppercase tracking-wider mb-1">Standard Certificate Disclaimer Condition</h3>
+                                                    <p className="text-sm text-amber-950 font-mono italic leading-relaxed m-0">&ldquo;Registration of this Trade Mark shall give no right to the exclusive use of the word(s) &lsquo;ORGANIC CARE&rsquo. Separately and the device of &lsquo;LEAF&rsquo. Apart from the mark as shown.&rdquo.</p>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <p className="mb-6">
-                                            This condition does <strong>not</strong> mean your registration is defective, invalid, or inferior. Rather, it represents the delicate balance struck by the Trade Marks Act, 1999: granting commercial exclusivity to your brand&rsquo;s distinctive identity while safeguarding the public domain so honest competitors can freely describe their own products.
-                                        </p>
+                                        <p className="mb-6">This condition does<strong>not</strong>mean your registration is defective, invalid, or inferior. Rather, it represents the delicate balance struck by the Trade Marks Act, 1999: granting commercial exclusivity to your brand&rsquo;s distinctive identity while safeguarding the public domain so honest competitors can freely describe their own products.</p>
                                     </section>
 
                                     {/* SECTION 2: STATUTORY FRAMEWORK & SECTION 17 */}
@@ -395,9 +358,7 @@ export default function TrademarkDisclaimerMeaningPage() {
                                             <FontAwesomeIcon icon={faLandmark} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Statutory Law: Section 17 &amp; Section 28
                                         </h2>
-                                        <p className="mb-6">
-                                            To fully understand the legal scope of a disclaimer, one must examine the statutory foundation established under the <strong>Trade Marks Act, 1999</strong>:
-                                        </p>
+                                        <p className="mb-6">To fully understand the legal scope of a disclaimer, one must examine the statutory foundation established under the<strong>Trade Marks Act, 1999</strong>:</p>
 
                                         <div className="space-y-6 my-8 not-prose">
                                             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6">
@@ -405,9 +366,7 @@ export default function TrademarkDisclaimerMeaningPage() {
                                                     <span className="w-3 h-3 bg-[#6E5E93] rounded-full mr-3"></span>
                                                     <h3 className="text-lg font-bold text-gray-900 m-0">Section 17(1): The Anti-Dissection Mandate</h3>
                                                 </div>
-                                                <p className="text-sm text-gray-700 leading-relaxed m-0">
-                                                    Section 17(1) enacts the fundamental rule of trademark law: When a trademark consists of several matters, its registration confers upon the proprietor the exclusive right to use the mark <strong>taken as a whole</strong>. You cannot isolate syllables or dissect the mark to claim exclusive ownership over fragments unless registered separately under Section 15.
-                                                </p>
+                                                <p className="text-sm text-gray-700 leading-relaxed m-0">Section 17(1) enacts the fundamental rule of trademark law: When a trademark consists of several matters, its registration confers upon the proprietor the exclusive right to use the mark<strong>taken as a whole</strong>. You cannot isolate syllables or dissect the mark to claim exclusive ownership over fragments unless registered separately under Section 15.</p>
                                             </div>
 
                                             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6">
@@ -415,9 +374,7 @@ export default function TrademarkDisclaimerMeaningPage() {
                                                     <span className="w-3 h-3 bg-red-600 rounded-full mr-3"></span>
                                                     <h3 className="text-lg font-bold text-gray-900 m-0">Section 17(2): No Exclusivity in Descriptive Parts</h3>
                                                 </div>
-                                                <p className="text-sm text-gray-700 leading-relaxed m-0">
-                                                    Section 17(2) explicitly provides that where a trademark contains any matter that is <em>not registered separately</em>, or contains matter that is <em>common to the trade (publici juris)</em> or is otherwise of a <em>non-distinctive character</em>, registration does <strong>not</strong> confer exclusive rights in that individual part.
-                                                </p>
+                                                <p className="text-sm text-gray-700 leading-relaxed m-0">Section 17(2) explicitly provides that where a trademark contains any matter that is<em>not registered separately</em>, or contains matter that is<em>common to the trade (publici juris)</em>or is otherwise of a<em>non-distinctive character</em>, registration does<strong>not</strong>confer exclusive rights in that individual part.</p>
                                             </div>
 
                                             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6">
@@ -425,9 +382,7 @@ export default function TrademarkDisclaimerMeaningPage() {
                                                     <span className="w-3 h-3 bg-indigo-600 rounded-full mr-3"></span>
                                                     <h3 className="text-lg font-bold text-gray-900 m-0">Section 28(2): Rights Subject to Certificate Conditions</h3>
                                                 </div>
-                                                <p className="text-sm text-gray-700 leading-relaxed m-0">
-                                                    While Section 28(1) gives you the exclusive statutory right to use the mark and obtain relief against <Link href="/passing-off-vs-trademark-infringement-india" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark infringement</Link>, Section 28(2) makes this right strictly <em>subject to any conditions and limitations entered on the register</em>.
-                                                </p>
+                                                <p className="text-sm text-gray-700 leading-relaxed m-0">While Section 28(1) gives you the exclusive statutory right to use the mark and obtain relief against<Link href="/passing-off-vs-trademark-infringement-india" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark infringement</Link>, Section 28(2) makes this right strictly<em>subject to any conditions and limitations entered on the register</em>.</p>
                                             </div>
 
                                             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6">
@@ -435,9 +390,7 @@ export default function TrademarkDisclaimerMeaningPage() {
                                                     <span className="w-3 h-3 bg-emerald-600 rounded-full mr-3"></span>
                                                     <h3 className="text-lg font-bold text-gray-900 m-0">Section 18(4) &amp; Section 23: Registrar&rsquo;s Discretion</h3>
                                                 </div>
-                                                <p className="text-sm text-gray-700 leading-relaxed m-0">
-                                                    The Registrar of Trade Marks is vested with wide statutory discretion under Section 18(4) and Section 23 to accept an application subject to conditions, amendments, modifications, or disclaimers as deemed appropriate to prevent unjust monopolies.
-                                                </p>
+                                                <p className="text-sm text-gray-700 leading-relaxed m-0">The Registrar of Trade Marks is vested with wide statutory discretion under Section 18(4) and Section 23 to accept an application subject to conditions, amendments, modifications, or disclaimers as deemed appropriate to prevent unjust monopolies.</p>
                                             </div>
                                         </div>
                                     </section>
@@ -448,9 +401,7 @@ export default function TrademarkDisclaimerMeaningPage() {
                                             <FontAwesomeIcon icon={faLightbulb} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Why the Registrar Imposes Disclaimers
                                         </h2>
-                                        <p className="mb-6">
-                                            The Trade Marks Registry never imposes disclaimers arbitrarily. Disclaimers serve critical public policy purposes in commercial intellectual property:
-                                        </p>
+                                        <p className="mb-6">The Trade Marks Registry never imposes disclaimers arbitrarily. Disclaimers serve critical public policy purposes in commercial intellectual property:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
                                             <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
@@ -458,9 +409,7 @@ export default function TrademarkDisclaimerMeaningPage() {
                                                     <FontAwesomeIcon icon={faBan} className="w-5 h-5" />
                                                 </div>
                                                 <h3 className="text-base font-bold text-gray-900 mb-2">Preventing Monopolies on Language</h3>
-                                                <p className="text-xs text-gray-600 leading-relaxed m-0">
-                                                    No single enterprise should monopolize ordinary English or vernacular words (such as &ldquo;Fast&rdquo;, &ldquo;Pure&rdquo;, &ldquo;Super&rdquo;, &ldquo;Desi&rdquo;, or &ldquo;Royal&rdquo;) that other honest businessmen require to describe their goods.
-                                                </p>
+                                                <p className="text-xs text-gray-600 leading-relaxed m-0">No single enterprise should monopolize ordinary English or vernacular words (such as &ldquo;Fast&rdquo;, &ldquo;Pure&rdquo;, &ldquo;Super&rdquo;, &ldquo;Desi&rdquo;, or &ldquo;Royal&rdquo;) that other honest businessmen require to describe their goods.</p>
                                             </div>
 
                                             <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
@@ -468,9 +417,7 @@ export default function TrademarkDisclaimerMeaningPage() {
                                                     <FontAwesomeIcon icon={faGlobe} className="w-5 h-5" />
                                                 </div>
                                                 <h3 className="text-base font-bold text-gray-900 mb-2">Preserving Geographical Names</h3>
-                                                <p className="text-xs text-gray-600 leading-relaxed m-0">
-                                                    Geographical indicators (such as &ldquo;Himalaya&rdquo;, &ldquo;Delhi&rdquo;, &ldquo;Kashmir&rdquo;, or &ldquo;Bengal&rdquo;) belong to the public domain. Disclaimers ensure multiple regional manufacturers can use origin names truthfully.
-                                                </p>
+                                                <p className="text-xs text-gray-600 leading-relaxed m-0">Geographical indicators (such as &ldquo;Himalaya&rdquo;, &ldquo;Delhi&rdquo;, &ldquo;Kashmir&rdquo;, or &ldquo;Bengal&rdquo;) belong to the public domain. Disclaimers ensure multiple regional manufacturers can use origin names truthfully.</p>
                                             </div>
 
                                             <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
@@ -478,9 +425,7 @@ export default function TrademarkDisclaimerMeaningPage() {
                                                     <FontAwesomeIcon icon={faShieldHalved} className="w-5 h-5" />
                                                 </div>
                                                 <h3 className="text-base font-bold text-gray-900 mb-2">Protecting Generic Trade Terms</h3>
-                                                <p className="text-xs text-gray-600 leading-relaxed m-0">
-                                                    Terms common to an industry—such as &ldquo;Pharma&rdquo; for medicines, &ldquo;Chai&rdquo; for tea, or &ldquo;Tech&rdquo; for software—are <em>publici juris</em>. Disclaimers prevent groundless infringement threats against legitimate traders.
-                                                </p>
+                                                <p className="text-xs text-gray-600 leading-relaxed m-0">Terms common to an industry—such as &ldquo;Pharma&rdquo; for medicines, &ldquo;Chai&rdquo; for tea, or &ldquo;Tech&rdquo; for software—are<em>publici juris</em>. Disclaimers prevent groundless infringement threats against legitimate traders.</p>
                                             </div>
 
                                             <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
@@ -488,9 +433,7 @@ export default function TrademarkDisclaimerMeaningPage() {
                                                     <FontAwesomeIcon icon={faFileContract} className="w-5 h-5" />
                                                 </div>
                                                 <h3 className="text-base font-bold text-gray-900 mb-2">Enabling Logo Approvals</h3>
-                                                <p className="text-xs text-gray-600 leading-relaxed m-0">
-                                                    Without disclaimers, composite labels containing descriptive taglines or common graphics would be summarily rejected under Section 9. Disclaimers allow composite marks to get registered.
-                                                </p>
+                                                <p className="text-xs text-gray-600 leading-relaxed m-0">Without disclaimers, composite labels containing descriptive taglines or common graphics would be summarily rejected under Section 9. Disclaimers allow composite marks to get registered.</p>
                                             </div>
                                         </div>
                                     </section>
@@ -501,21 +444,15 @@ export default function TrademarkDisclaimerMeaningPage() {
                                             <FontAwesomeIcon icon={faGavel} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Anti-Dissection Rule vs. Dominant Feature
                                         </h2>
-                                        <p className="mb-6">
-                                            In trademark litigation, Indian courts frequently address the tension between the <strong>Anti-Dissection Rule</strong> and the <strong>Dominant Feature Test</strong>. How does a disclaimer interact with these two judicial doctrines?
-                                        </p>
+                                        <p className="mb-6">In trademark litigation, Indian courts frequently address the tension between the<strong>Anti-Dissection Rule</strong>and the<strong>Dominant Feature Test</strong>. How does a disclaimer interact with these two judicial doctrines?</p>
 
                                         <div className="bg-white border border-gray-200 rounded-2xl p-6 md:p-8 mb-8 shadow-sm">
                                             <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
                                                 <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                 The Anti-Dissection Rule (*Whole Mark Rule*)
                                             </h3>
-                                            <p className="text-sm text-gray-700 leading-relaxed mb-4">
-                                                Under established jurisprudence (including the Supreme Court ruling in <em>Kaviraj Pandit Durga Dutt Sharma v. Navaratna Pharmaceutical Laboratories</em>), a commercial trademark cannot be dissected into distinct elements for microscopic comparison. The average consumer of imperfect recollection perceives a brand as an integrated visual, phonetic, and commercial unit.
-                                            </p>
-                                            <p className="text-sm text-gray-700 leading-relaxed m-0">
-                                                Therefore, even if your certificate contains a disclaimer on &ldquo;SOLUTIONS&rdquo;, another party cannot escape infringement if they copy your overall unique logo, identical color palette, distinctive font typography, and core coined prefix.
-                                            </p>
+                                            <p className="text-sm text-gray-700 leading-relaxed mb-4">Under established jurisprudence (including the Supreme Court ruling in<em>Kaviraj Pandit Durga Dutt Sharma v. Navaratna Pharmaceutical Laboratories</em>), a commercial trademark cannot be dissected into distinct elements for microscopic comparison. The average consumer of imperfect recollection perceives a brand as an integrated visual, phonetic, and commercial unit.</p>
+                                            <p className="text-sm text-gray-700 leading-relaxed m-0">Therefore, even if your certificate contains a disclaimer on &ldquo;SOLUTIONS&rdquo;, another party cannot escape infringement if they copy your overall unique logo, identical color palette, distinctive font typography, and core coined prefix.</p>
                                         </div>
 
                                         <div className="bg-white border border-gray-200 rounded-2xl p-6 md:p-8 mb-8 shadow-sm">
@@ -523,15 +460,11 @@ export default function TrademarkDisclaimerMeaningPage() {
                                                 <span className="w-2.5 h-2.5 bg-indigo-600 rounded-full mr-2.5"></span>
                                                 The Dominant Feature Rule (*South India Beverages Case*)
                                             </h3>
-                                            <p className="text-sm text-gray-700 leading-relaxed mb-4">
-                                                In the landmark judgment <em>South India Beverages Pvt. Ltd. v. General Mills Marketing Inc. (2014)</em>, the Delhi High Court Division Bench reconciled the Anti-Dissection Rule with practical commercial reality:
-                                            </p>
+                                            <p className="text-sm text-gray-700 leading-relaxed mb-4">In the landmark judgment<em>South India Beverages Pvt. Ltd. V. General Mills Marketing Inc. (2014)</em>, the Delhi High Court Division Bench reconciled the Anti-Dissection Rule with practical commercial reality:</p>
                                             <div className="bg-indigo-50/70 border-l-4 border-indigo-500 p-4 rounded-r-xl my-4 text-xs text-indigo-950 font-medium leading-relaxed">
                                                 &ldquo;While a mark must be considered in its entirety, it is not an absolute rule that all parts of a composite mark possess equal commercial significance. Greater weight can be accorded to the dominant, prominent, or essential features of a mark, whereas disclaimed or descriptive elements cannot form the foundation of exclusivity.&rdquo;
                                             </div>
-                                            <p className="text-sm text-gray-700 leading-relaxed m-0">
-                                                <strong>Practical Rule:</strong> If your mark is &ldquo;AURORA INFORMATICS&rdquo; with a disclaimer on &ldquo;INFORMATICS&rdquo;, &ldquo;AURORA&rdquo; is the distinctive dominant feature. A rival using &ldquo;AURORA TECH&rdquo; infringes your dominant mark, but a rival using &ldquo;ZENITH INFORMATICS&rdquo; does not!
-                                            </p>
+                                            <p className="text-sm text-gray-700 leading-relaxed m-0"><strong>Practical Rule:</strong>If your mark is &ldquo;AURORA INFORMATICS&rdquo; with a disclaimer on &ldquo;INFORMATICS&rdquo;, &ldquo;AURORA&rdquo; is the distinctive dominant feature. A rival using &ldquo;AURORA TECH&rdquo; infringes your dominant mark, but a rival using &ldquo;ZENITH INFORMATICS&rdquo; does not!</p>
                                         </div>
                                     </section>
 
@@ -541,9 +474,7 @@ export default function TrademarkDisclaimerMeaningPage() {
                                             <FontAwesomeIcon icon={faShieldCat} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Impact on Infringement vs. Passing Off
                                         </h2>
-                                        <p className="mb-6">
-                                            A crucial legal distinction lies between <strong>Statutory Infringement (Section 29)</strong> and <strong>Common Law Passing Off (Section 27(2))</strong> when a disclaimer exists:
-                                        </p>
+                                        <p className="mb-6">A crucial legal distinction lies between<strong>Statutory Infringement (Section 29)</strong>and<strong>Common Law Passing Off (Section 27(2))</strong>when a disclaimer exists:</p>
 
                                         {/* COMPARISON TABLE */}
                                         <div className="overflow-x-auto my-8 not-prose">
@@ -586,13 +517,11 @@ export default function TrademarkDisclaimerMeaningPage() {
                                         </div>
 
                                         <div className="bg-purple-50 border border-purple-200 rounded-2xl p-6 mb-8 not-prose">
-                                            <h4 className="text-sm font-bold text-[#6E5E93] uppercase tracking-wider mb-2 flex items-center">
+                                            <h3 className="text-sm font-bold text-[#6E5E93] uppercase tracking-wider mb-2 flex items-center">
                                                 <FontAwesomeIcon icon={faLandmark} className="w-4 h-4 mr-2" />
                                                 The Landmark &ldquo;Shree&rdquo; Ruling: Ashok Chandra Rakhit Case
-                                            </h4>
-                                            <p className="text-xs text-gray-700 leading-relaxed m-0">
-                                                In <em>Registrar of Trade Marks v. Ashok Chandra Rakhit Ltd. (1955)</em>, the Supreme Court of India established the definitive law on trademark disclaimers. The Court held that entering a disclaimer on the Register is an administrative measure to prevent false claims of statutory monopoly, but <strong>it does not destroy or diminish the proprietor&rsquo;s common law rights</strong>. If the disclaimed word has acquired secondary meaning in the minds of consumers, the owner can still sue for passing off if a competitor attempts to deceive the trade.
-                                            </p>
+                                            </h3>
+                                            <p className="text-xs text-gray-700 leading-relaxed m-0">In<em>Registrar of Trade Marks v. Ashok Chandra Rakhit Ltd. (1955)</em>, the Supreme Court of India established the definitive law on trademark disclaimers. The Court held that entering a disclaimer on the Register is an administrative measure to prevent false claims of statutory monopoly, but<strong>it does not destroy or diminish the proprietor&rsquo;s common law rights</strong>. If the disclaimed word has acquired secondary meaning in the minds of consumers, the owner can still sue for passing off if a competitor attempts to deceive the trade.</p>
                                         </div>
                                     </section>
 
@@ -602,9 +531,7 @@ export default function TrademarkDisclaimerMeaningPage() {
                                             <FontAwesomeIcon icon={faTable} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Common Types of Disclaimers &amp; Real Examples
                                         </h2>
-                                        <p className="mb-6">
-                                            The Trade Marks Registry enters several categories of conditions on registration certificates depending on the nature of the application:
-                                        </p>
+                                        <p className="mb-6">The Trade Marks Registry enters several categories of conditions on registration certificates depending on the nature of the application:</p>
 
                                         <div className="space-y-6 my-8 not-prose">
                                             {/* TYPE 1 */}
@@ -614,9 +541,7 @@ export default function TrademarkDisclaimerMeaningPage() {
                                                     <span className="text-xs text-gray-500 font-semibold">Descriptive &amp; Quality Words</span>
                                                 </div>
                                                 <h3 className="text-lg font-bold text-gray-900 mb-2">Disclaimers on Descriptive &amp; Laudatory Terms</h3>
-                                                <p className="text-xs text-gray-700 leading-relaxed mb-3">
-                                                    Applied when a mark incorporates terms describing product attributes, quality, or ingredients (e.g., &ldquo;Organic&rdquo;, &ldquo;Herbal&rdquo;, &ldquo;Pure&rdquo;, &ldquo;Fresh&rdquo;, &ldquo;Crisp&rdquo;, &ldquo;Super&rdquo;, &ldquo;Bio&rdquo;).
-                                                </p>
+                                                <p className="text-xs text-gray-700 leading-relaxed mb-3">Applied when a mark incorporates terms describing product attributes, quality, or ingredients (e.g., &ldquo;Organic&rdquo;, &ldquo;Herbal&rdquo;, &ldquo;Pure&rdquo;, &ldquo;Fresh&rdquo;, &ldquo;Crisp&rdquo;, &ldquo;Super&rdquo;, &ldquo;Bio&rdquo;).</p>
                                                 <div className="bg-gray-50 p-3 rounded-xl text-xs font-mono text-gray-800">
                                                     <strong>Certificate Text:</strong> &ldquo;Registration shall give no right to the exclusive use of the descriptive matter &lsquo;NATURAL HERBAL REMEDIES&rsquo;.&rdquo;
                                                 </div>
@@ -629,9 +554,7 @@ export default function TrademarkDisclaimerMeaningPage() {
                                                     <span className="text-xs text-gray-500 font-semibold">Geographical Names</span>
                                                 </div>
                                                 <h3 className="text-lg font-bold text-gray-900 mb-2">Disclaimers on Geographical &amp; Territorial Names</h3>
-                                                <p className="text-xs text-gray-700 leading-relaxed mb-3">
-                                                    Applied when a logo includes city, state, or regional names (e.g., &ldquo;Delhi&rdquo;, &ldquo;Mumbai&rdquo;, &ldquo;India&rdquo;, &ldquo;Himalayan&rdquo;, &ldquo;American&rdquo;, &ldquo;Kolkata&rdquo;).
-                                                </p>
+                                                <p className="text-xs text-gray-700 leading-relaxed mb-3">Applied when a logo includes city, state, or regional names (e.g., &ldquo;Delhi&rdquo;, &ldquo;Mumbai&rdquo;, &ldquo;India&rdquo;, &ldquo;Himalayan&rdquo;, &ldquo;American&rdquo;, &ldquo;Kolkata&rdquo;).</p>
                                                 <div className="bg-gray-50 p-3 rounded-xl text-xs font-mono text-gray-800">
                                                     <strong>Certificate Text:</strong> &ldquo;Registration of this Trade Mark shall give no right to the exclusive use of the geographical name &lsquo;BENGALURU&rsquo;.&rdquo;
                                                 </div>
@@ -644,9 +567,7 @@ export default function TrademarkDisclaimerMeaningPage() {
                                                     <span className="text-xs text-gray-500 font-semibold">Common Devices &amp; Symbols</span>
                                                 </div>
                                                 <h3 className="text-lg font-bold text-gray-900 mb-2">Disclaimers on Generic Artwork &amp; Symbols</h3>
-                                                <p className="text-xs text-gray-700 leading-relaxed mb-3">
-                                                    Applied when a label contains common industry graphics such as a green leaf for agricultural goods, a medical caduceus for clinics, a coffee cup for cafes, or a tooth icon for dental services.
-                                                </p>
+                                                <p className="text-xs text-gray-700 leading-relaxed mb-3">Applied when a label contains common industry graphics such as a green leaf for agricultural goods, a medical caduceus for clinics, a coffee cup for cafes, or a tooth icon for dental services.</p>
                                                 <div className="bg-gray-50 p-3 rounded-xl text-xs font-mono text-gray-800">
                                                     <strong>Certificate Text:</strong> &ldquo;Subject to no exclusive right over the device of &lsquo;TOOTH&rsquo; and &lsquo;CROSS SYMBOL&rsquo; appearing in the label.&rdquo;
                                                 </div>
@@ -659,9 +580,7 @@ export default function TrademarkDisclaimerMeaningPage() {
                                                     <span className="text-xs text-gray-500 font-semibold">Numerals &amp; Letters</span>
                                                 </div>
                                                 <h3 className="text-lg font-bold text-gray-900 mb-2">Disclaimers on Single Letters &amp; Numbers</h3>
-                                                <p className="text-xs text-gray-700 leading-relaxed mb-3">
-                                                    Applied to standard single letters or general numerals (e.g., &ldquo;24/7&rdquo;, &ldquo;100%&rdquo;, &ldquo;A1&rdquo;, &ldquo;360&rdquo;, &ldquo;99&rdquo;) unless they possess verified stylized copyright distinctiveness.
-                                                </p>
+                                                <p className="text-xs text-gray-700 leading-relaxed mb-3">Applied to standard single letters or general numerals (e.g., &ldquo;24/7&rdquo;, &ldquo;100%&rdquo;, &ldquo;A1&rdquo;, &ldquo;360&rdquo;, &ldquo;99&rdquo;) unless they possess verified stylized copyright distinctiveness.</p>
                                                 <div className="bg-gray-50 p-3 rounded-xl text-xs font-mono text-gray-800">
                                                     <strong>Certificate Text:</strong> &ldquo;Registration shall give no right to the exclusive use of the numeral &lsquo;100&rsquo; separately.&rdquo;
                                                 </div>
@@ -675,12 +594,8 @@ export default function TrademarkDisclaimerMeaningPage() {
                                             <FontAwesomeIcon icon={faFileLines} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             How to Respond to Disclaimer Objections
                                         </h2>
-                                        <p className="mb-6">
-                                            During the trademark examination stage or during an official <Link href="/trademark-hearing-video-conferencing-procedure-india" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark hearing</Link>, an examiner or Hearing Officer may propose a disclaimer condition as a prerequisite for advertisement in the Trade Marks Journal.
-                                        </p>
-                                        <p className="mb-6">
-                                            How should you and your trademark attorney respond?
-                                        </p>
+                                        <p className="mb-6">During the trademark examination stage or during an official<Link href="/trademark-hearing-video-conferencing-procedure-india" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark hearing</Link>, an examiner or Hearing Officer may propose a disclaimer condition as a prerequisite for advertisement in the Trade Marks Journal.</p>
+                                        <p className="mb-6">How should you and your trademark attorney respond?</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
                                             <div className="bg-green-50/60 border border-green-200 rounded-2xl p-6">
@@ -703,16 +618,14 @@ export default function TrademarkDisclaimerMeaningPage() {
                                                 </div>
                                                 <ul className="text-xs text-amber-900 space-y-2 m-0 pl-4 list-disc">
                                                     <li>The word is suggestive or arbitrary, not directly descriptive of the goods.</li>
-                                                    <li>You have established extensive prior commercial user backed by a <Link href="/trademark-user-affidavit-format-and-rules-india" className="text-[rgb(110,94,147)] hover:underline font-medium">User Affidavit under Rule 25</Link>.</li>
+                                                    <li>You have established extensive prior commercial user backed by a<Link href="/trademark-user-affidavit-format-and-rules-india" className="text-[rgb(110,94,147)] hover:underline font-medium">User Affidavit under Rule 25</Link>.</li>
                                                     <li>The term has acquired immense secondary meaning and exclusive customer recognition.</li>
                                                     <li>Accepting the disclaimer would leave the core essence of your word mark unprotected.</li>
                                                 </ul>
                                             </div>
                                         </div>
 
-                                        <p className="mb-6">
-                                            <strong>Removing Disclaimers in the Future:</strong> A disclaimer condition entered on a granted certificate cannot be removed retroactively via Form TM-M. If your brand grows and that particular word acquires standalone secondary distinctiveness, the correct statutory procedure is to file a fresh standalone <Link href="/word-mark-vs-device-mark-trademark-india" className="text-[rgb(110,94,147)] hover:underline font-medium">word mark application</Link> on Form TM-A with audited turnover certificates, advertising receipts, and nationwide user proof.
-                                        </p>
+                                        <p className="mb-6"><strong>Removing Disclaimers in the Future:</strong>A disclaimer condition entered on a granted certificate cannot be removed retroactively via Form TM-M. If your brand grows and that particular word acquires standalone secondary distinctiveness, the correct statutory procedure is to file a fresh standalone<Link href="/word-mark-vs-device-mark-trademark-india" className="text-[rgb(110,94,147)] hover:underline font-medium">word mark application</Link>on Form TM-A with audited turnover certificates, advertising receipts, and nationwide user proof.</p>
                                     </section>
 
                                     {/* SECTION 8: FAQS (EXACTLY 8 MATCHING SCHEMA) */}
@@ -738,38 +651,15 @@ export default function TrademarkDisclaimerMeaningPage() {
                                             <FontAwesomeIcon icon={faCheckCircle} className="w-8 h-8 mr-3 text-green-600" />
                                             Trademark Disclaimer Action Checklist
                                         </h2>
-                                        <p className="mb-6">
-                                            When auditing your trademark registration certificate or formulating an enforcement campaign against infringers, follow this 7-point strategic checklist:
-                                        </p>
+                                        <p className="mb-6">When auditing your trademark registration certificate or formulating an enforcement campaign against infringers, follow this 7-point strategic checklist:</p>
                                         <ul className="list-none space-y-4 mb-8 not-prose">
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span className="text-sm text-gray-700"><strong>Inspect Form TM-RG Certificate:</strong> Examine the &ldquo;Condition &amp; Limitations&rdquo; column to identify any disclaimed words, graphics, or geographical terms.</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span className="text-sm text-gray-700"><strong>Identify Your Dominant Distinctive Mark:</strong> Isolate the non-disclaimed coined, arbitrary, or stylized element that serves as your primary brand identifier.</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span className="text-sm text-gray-700"><strong>Apply Whole Mark Evaluation:</strong> Evaluate competitor infringements against your composite label as an indivisible unit under Section 17(1).</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span className="text-sm text-gray-700"><strong>Avoid Groundless Legal Threats:</strong> Do not issue cease-and-desist notices against competitors purely for using the disclaimed generic word in a different logo format.</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span className="text-sm text-gray-700"><strong>Preserve Passing Off Evidence:</strong> Archive sales invoices, promotional expenditures, and social media engagement to support common law passing off claims under Section 27(2).</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span className="text-sm text-gray-700"><strong>Execute Multi-Mark Protection Strategy:</strong> Register separate word marks and standalone device marks under Section 15 to secure comprehensive protection.</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span className="text-sm text-gray-700"><strong>Maintain Decennial Renewal Docket:</strong> Ensure your registered trademark is renewed every 10 years by filing <Link href="/how-to-renew-a-trademark" className="text-[rgb(110,94,147)] hover:underline font-medium">Form TM-R</Link> on time.</span>
-                                            </li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span className="text-sm text-gray-700"><strong>Inspect Form TM-RG Certificate:</strong>Examine the &ldquo;Condition &amp; Limitations&rdquo; column to identify any disclaimed words, graphics, or geographical terms.</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span className="text-sm text-gray-700"><strong>Identify Your Dominant Distinctive Mark:</strong>Isolate the non-disclaimed coined, arbitrary, or stylized element that serves as your primary brand identifier.</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span className="text-sm text-gray-700"><strong>Apply Whole Mark Evaluation:</strong>Evaluate competitor infringements against your composite label as an indivisible unit under Section 17(1).</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span className="text-sm text-gray-700"><strong>Avoid Groundless Legal Threats:</strong>Do not issue cease-and-desist notices against competitors purely for using the disclaimed generic word in a different logo format.</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span className="text-sm text-gray-700"><strong>Preserve Passing Off Evidence:</strong>Archive sales invoices, promotional expenditures, and social media engagement to support common law passing off claims under Section 27(2).</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span className="text-sm text-gray-700"><strong>Execute Multi-Mark Protection Strategy:</strong>Register separate word marks and standalone device marks under Section 15 to secure comprehensive protection.</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span className="text-sm text-gray-700"><strong>Maintain Decennial Renewal Docket:</strong>Ensure your registered trademark is renewed every 10 years by filing<Link href="/how-to-renew-a-trademark" className="text-[rgb(110,94,147)] hover:underline font-medium">Form TM-R</Link>on time.</span></li>
                                         </ul>
                                     </section>
 
@@ -787,9 +677,7 @@ export default function TrademarkDisclaimerMeaningPage() {
                                                     Protect Your Brand with Precision
                                                 </h3>
 
-                                                <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">
-                                                    Need clarity on your Trademark Certificate conditions or facing infringement issues? Consult certified IP attorneys to evaluate your brand rights under Section 17 and enforce your intellectual property nationwide.
-                                                </p>
+                                                <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">Need clarity on your Trademark Certificate conditions or facing infringement issues? Consult certified IP attorneys to evaluate your brand rights under Section 17 and enforce your intellectual property nationwide.</p>
 
                                                 <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
                                                     <Link
@@ -807,9 +695,7 @@ export default function TrademarkDisclaimerMeaningPage() {
                                                     </a>
                                                 </div>
 
-                                                <p className="mt-6 text-xs font-medium tracking-wide text-white/50 sm:text-sm">
-                                                    Certified IP Advocates • Supreme Court &amp; High Court IPD Representation • 100% Confidential
-                                                </p>
+                                                <p className="mt-6 text-xs font-medium tracking-wide text-white/50 sm:text-sm">Certified IP Advocates • Supreme Court &amp; High Court IPD Representation • 100% Confidential</p>
                                             </div>
                                         </div>
                                     </section>
@@ -843,54 +729,12 @@ export default function TrademarkDisclaimerMeaningPage() {
                             <div className="bg-gray-50 p-10 rounded-[2.5rem] shadow-sm border border-gray-100">
                                 <h3 className="text-sm font-black text-gray-400 mb-8 uppercase tracking-[0.3em]">Related Resources</h3>
                                 <ul className="space-y-6">
-                                    <li>
-                                        <Link href="/passing-off-vs-trademark-infringement-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faScaleBalanced} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Infringement vs Passing Off</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/word-mark-vs-device-mark-trademark-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faFileContract} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Word Mark vs Device Mark</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/what-is-associated-trademark-in-india-section-16" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faAward} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Associated Trademarks</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/trademark-user-affidavit-format-and-rules-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faStamp} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">User Affidavit Rules</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/trademark-hearing-video-conferencing-procedure-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faGavel} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Show Cause Hearing</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/how-to-renew-a-trademark" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faRotate} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Renew Trademark</span>
-                                        </Link>
-                                    </li>
+                                    <li><Link href="/passing-off-vs-trademark-infringement-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faScaleBalanced} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Infringement vs Passing Off</span></Link></li>
+                                    <li><Link href="/word-mark-vs-device-mark-trademark-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faFileContract} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Word Mark vs Device Mark</span></Link></li>
+                                    <li><Link href="/what-is-associated-trademark-in-india-section-16" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faAward} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Associated Trademarks</span></Link></li>
+                                    <li><Link href="/trademark-user-affidavit-format-and-rules-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faStamp} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">User Affidavit Rules</span></Link></li>
+                                    <li><Link href="/trademark-hearing-video-conferencing-procedure-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faGavel} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Show Cause Hearing</span></Link></li>
+                                    <li><Link href="/how-to-renew-a-trademark" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faRotate} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Renew Trademark</span></Link></li>
                                 </ul>
                             </div>
                         </aside>

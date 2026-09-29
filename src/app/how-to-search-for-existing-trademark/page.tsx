@@ -80,7 +80,7 @@ const faqs = [
     },
     {
         question: "What does it mean if my trademark search returns zero results?",
-        answer: "Zero results on an exact wordmark query is a positive preliminary indicator, but it does not guarantee legal availability. You must still execute phonetic searches for sound-alike words, check cross-class registrations in related goods or services, review Vienna classifications for logos, and check market registries for common-law prior use."
+        answer: "Zero results on an exact wordmark query is a positive preliminary indicator. However, it does not guarantee legal availability. You must still execute phonetic searches for sound-alike words, check cross-class registrations in related goods or services, review Vienna classifications for logos, and check market registries for common-law prior use."
     },
     {
         question: "Why is a phonetic trademark search essential before filing?",
@@ -208,9 +208,7 @@ export default function HowToSearchForExistingTrademarkPage() {
                             <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-3 leading-tight text-gray-900 tracking-tighter">
                                 How to Search for <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'transparent' }}>Existing Trademark</span> in India
                             </h1>
-                            <p className="text-base md:text-lg mb-5 text-gray-700 font-medium leading-relaxed">
-                                Conducting an exhaustive trademark search is the single most critical pre-filing safeguard under the Trade Marks Act, 1999. A systematic clearance search prevents devastating objections under Section 9 and Section 11, shields your enterprise from expensive third-party oppositions, and ensures your brand name, logo, and slogan enjoy undisputed commercial exclusivity. Learn how to interrogate the official IP India registry using wordmark, phonetic, and Vienna classification filters to protect your intellectual assets.
-                            </p>
+                            <p className="text-base md:text-lg mb-5 text-gray-700 font-medium leading-relaxed">Conducting an exhaustive trademark search is the single most critical pre-filing safeguard under the Trade Marks Act, 1999. A systematic clearance search prevents devastating objections under Section 9 and Section 11, shields your enterprise from expensive third-party oppositions, and ensures your brand name, logo, and slogan enjoy undisputed commercial exclusivity. Learn how to interrogate the official IP India registry using wordmark, phonetic, and Vienna classification filters to protect your intellectual assets.</p>
 
                             <div className="flex flex-wrap items-center gap-4 mb-6">
                                 <div className="flex items-center mr-2">
@@ -301,36 +299,11 @@ export default function HowToSearchForExistingTrademarkPage() {
                                                 Close
                                             </span>
                                             <svg className="w-4 h-4 text-gray-500 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                                            </svg>
-                                        </div>
-                                    </summary>
-                                    <div className="p-3.5 pt-2 border-t border-purple-50 bg-white/70">
-                                        <nav className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
-                                            {tocSections.map((section, idx) => (
-                                                <a
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg></div></summary><div className="p-3.5 pt-2 border-t border-purple-50 bg-white/70"><nav className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">{tocSections.map((section, idx) => (<a
                                                     key={section.id}
                                                     href={`#${section.id}`}
                                                     className="flex items-center p-2 rounded-xl text-xs font-medium text-gray-700 hover:text-[#6E5E93] hover:bg-purple-50/80 transition-all border border-transparent hover:border-purple-100"
-                                                >
-                                                    <span className="w-5 h-5 rounded-full bg-purple-100 text-[#6E5E93] flex items-center justify-center text-[10px] font-bold mr-2 flex-shrink-0">
-                                                        {idx + 1}
-                                                    </span>
-                                                    <span className="truncate">{section.title}</span>
-                                                </a>
-                                            ))}
-                                        </nav>
-                                    </div>
-                                </details>
-                            </div>
-
-                            <div className="bg-white p-4 md:p-12 rounded-2xl shadow-sm border border-gray-100 space-y-12 md:space-y-20 article-content">
-                                <article className="prose prose-lg max-w-none text-gray-700 leading-relaxed font-normal">
-
-                                    <div className="flex items-center space-x-4 mb-10 p-4 bg-gray-50 rounded-xl border border-gray-100 not-prose">
-                                        <img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-12 h-12 rounded-full object-cover m-0" />
-                                        <div>
-                                            <p className="text-sm font-bold text-gray-900 m-0">Written by <Link href="/about-us" className="text-[rgb(110,94,147)] hover:underline">Rahul Roy</Link></p>
+                                                ><span className="w-5 h-5 rounded-full bg-purple-100 text-[#6E5E93] flex items-center justify-center text-[10px] font-bold mr-2 flex-shrink-0">{idx + 1}</span><span className="truncate">{section.title}</span></a>))}</nav></div></details></div><div className="bg-white p-4 md:p-12 rounded-2xl shadow-sm border border-gray-100 space-y-12 md:space-y-20 article-content"><article className="prose prose-lg max-w-none text-gray-700 leading-relaxed font-normal"><div className="flex items-center space-x-4 mb-10 p-4 bg-gray-50 rounded-xl border border-gray-100 not-prose"><img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-12 h-12 rounded-full object-cover m-0" /><div><p className="text-sm font-bold text-gray-900 m-0">Written by<Link href="/about-us" className="text-[rgb(110,94,147)] hover:underline">Rahul Roy</Link></p>
                                             <p className="text-xs text-gray-500 m-0">Trademark Research Specialist</p>
                                         </div>
                                     </div>
@@ -343,20 +316,12 @@ export default function HowToSearchForExistingTrademarkPage() {
                                         </h2>
 
                                         <div id="quick-answer" className="bg-indigo-50 border-l-4 border-[rgb(110,94,147)] p-6 rounded-r-xl mb-8">
-                                            <p className="font-semibold text-gray-900 m-0">
-                                                To search for an existing trademark in India, access the official IP India public portal (ipindiaonline.gov.in) and navigate to the Trade Marks Public Search section. Select your search type (Wordmark, Phonetic, or Vienna Code), enter the relevant Nice classification (Classes 1–45), and execute queries using &lsquo;Start With&rsquo; and &lsquo;Contains&rsquo; filters. A thorough search must examine registered marks, pending applications, phonetic equivalents, and common-law business directories before filing Form TM-A.
-                                            </p>
+                                            <p className="font-semibold text-gray-900 m-0">To search for an existing trademark in India, access the official IP India public portal (ipindiaonline.gov.in) and navigate to the Trade Marks Public Search section. Select your search type (Wordmark, Phonetic, or Vienna Code), enter the relevant Nice classification (Classes 1–45), and execute queries using &lsquo;Start With&rsquo; and &lsquo;Contains&rsquo; filters. A thorough search must examine registered marks, pending applications, phonetic equivalents, and common-law business directories before filing Form TM-A.</p>
                                         </div>
 
-                                        <p className="mb-6">
-                                            A trademark clearance search is the foundation of any enduring brand strategy. Under the Trade Marks Act, 1999, trademark registration in India is not merely an administrative rubber stamp; it is a rigorous statutory process where the Trade Marks Registry actively examines every application against hundreds of thousands of prior marks. If an identical or confusingly similar mark already occupies the register for related goods or services, your application will face refusal under Section 11 of the Act.
-                                        </p>
-                                        <p className="mb-6">
-                                            The Indian Trade Marks Registry, under the Controller General of Patents, Designs and Trade Marks (CGPDTM), maintains an exhaustive public database accessible free of charge. However, many business owners perform only a cursory search for exact spelling matches, mistakenly believing that a zero-result page guarantees safe passage. In reality, trademark conflicts frequently hinge upon phonetic similarities, conceptual likenesses, visual logo resemblances, and cross-class consumer confusion.
-                                        </p>
-                                        <p className="mb-6">
-                                            To execute a truly comprehensive search, brand owners must master both the official government search interface and modern AI-driven search engines, such as our <Link href="/free-ai-powered-trademark-search" className="text-[rgb(110,94,147)] hover:underline font-medium">free AI powered trademark search</Link>. This multi-layered approach unearths homophones, subtle misspellings, translated terms, and conflicting graphic elements long before substantial investments are committed to product packaging, marketing campaigns, and legal filing fees.
-                                        </p>
+                                        <p className="mb-6">A trademark clearance search is the foundation of any enduring brand strategy. Under the Trade Marks Act, 1999, trademark registration in India is not merely an administrative rubber stamp. It is a rigorous statutory process where the Trade Marks Registry actively examines every application against hundreds of thousands of prior marks. If an identical or confusingly similar mark already occupies the register for related goods or services, your application will face refusal under Section 11 of the Act.</p>
+                                        <p className="mb-6">The Indian Trade Marks Registry, under the Controller General of Patents, Designs and Trade Marks (CGPDTM), maintains an exhaustive public database accessible free of charge. However, many business owners perform only a cursory search for exact spelling matches, mistakenly believing that a zero-result page guarantees safe passage. In reality, trademark conflicts frequently hinge upon phonetic similarities, conceptual likenesses, visual logo resemblances, and cross-class consumer confusion.</p>
+                                        <p className="mb-6">To execute a truly comprehensive search, brand owners must master both the official government search interface and modern AI-driven search engines, such as our<Link href="/free-ai-powered-trademark-search" className="text-[rgb(110,94,147)] hover:underline font-medium">free AI powered trademark search</Link>. This multi-layered approach unearths homophones, subtle misspellings, translated terms, and conflicting graphic elements long before substantial investments are committed to product packaging, marketing campaigns, and legal filing fees.</p>
                                     </section>
 
                                     {/* SECTION 2: WHY SEARCH FIRST */}
@@ -365,9 +330,7 @@ export default function HowToSearchForExistingTrademarkPage() {
                                             <FontAwesomeIcon icon={faShieldHalved} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Why Search Before Filing?
                                         </h2>
-                                        <p className="mb-6">
-                                            Filing a trademark application without a prior clearance search is among the costliest mistakes an entrepreneur can make. Understanding the legal, financial, and strategic imperatives highlights why clearance searching is non-negotiable. Discover more insights on <Link href="/why-search-trademark-before-registration" className="text-[rgb(110,94,147)] hover:underline font-medium">why to search trademark before registration</Link>.
-                                        </p>
+                                        <p className="mb-6">Filing a trademark application without a prior clearance search is among the costliest mistakes an entrepreneur can make. Understanding the legal, financial, and strategic imperatives highlights why clearance searching is non-negotiable. Discover more insights on<Link href="/why-search-trademark-before-registration" className="text-[rgb(110,94,147)] hover:underline font-medium">why to search trademark before registration</Link>.</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -375,9 +338,7 @@ export default function HowToSearchForExistingTrademarkPage() {
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     Section 11 Rejection Prevention
                                                 </h3>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    Section 11 of the Trade Marks Act prohibits registration of marks identical or deceptively similar to earlier registered marks or pending applications for similar goods and services. A prior search flags these citations before official examination.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">Section 11 of the Trade Marks Act prohibits registration of marks identical or deceptively similar to earlier registered marks or pending applications for similar goods and services. A prior search flags these citations before official examination.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -385,9 +346,7 @@ export default function HowToSearchForExistingTrademarkPage() {
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     Avoiding Cease &amp; Desist Lawsuits
                                                 </h3>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    Adopting a name without clearance exposes your firm to passing-off suits under common law and statutory infringement claims under Section 29, risking court injunctions, product recalls, and punitive damages. Learn <Link href="/what-will-happen-if-i-register-trademark-without-researching-it" className="text-[rgb(110,94,147)] hover:underline font-medium">what happens if you register without research</Link>.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">Adopting a name without clearance exposes your firm to passing-off suits under common law and statutory infringement claims under Section 29, risking court injunctions, product recalls, and punitive damages. Learn<Link href="/what-will-happen-if-i-register-trademark-without-researching-it" className="text-[rgb(110,94,147)] hover:underline font-medium">what happens if you register without research</Link>.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -395,9 +354,7 @@ export default function HowToSearchForExistingTrademarkPage() {
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     Saving Capital &amp; Rebranding Costs
                                                 </h3>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    Official filing fees (₹4,500 to ₹9,000 per class) are strictly non-refundable once Form TM-A is submitted. Forcing a rebrand after printing collateral, establishing websites, and running digital advertisements burns valuable enterprise runway.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">Official filing fees (₹4,500 to ₹9,000 per class) are strictly non-refundable once Form TM-A is submitted. Forcing a rebrand after printing collateral. This establishes websites, and running digital advertisements burns valuable enterprise runway.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -405,9 +362,7 @@ export default function HowToSearchForExistingTrademarkPage() {
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     Expediting Overall Registration
                                                 </h3>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    Applications that undergo rigorous pre-clearance sail through examination without objections, bypassing the 30-day objection response window and multi-month show-cause hearing backlogs. Review the entire <Link href="/process-and-steps-of-trademark-registration" className="text-[rgb(110,94,147)] hover:underline font-medium">process and steps of trademark registration</Link>.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">Applications that undergo rigorous pre-clearance sail through examination without objections, bypassing the 30-day objection response window and multi-month show-cause hearing backlogs. Review the entire<Link href="/process-and-steps-of-trademark-registration" className="text-[rgb(110,94,147)] hover:underline font-medium">process and steps of trademark registration</Link>.</p>
                                             </div>
                                         </div>
                                     </section>
@@ -418,9 +373,7 @@ export default function HowToSearchForExistingTrademarkPage() {
                                             <FontAwesomeIcon icon={faListUl} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Core Search Types Explained
                                         </h2>
-                                        <p className="mb-6">
-                                            The Indian Trade Marks Registry database categorizes queries into three distinct modalities. A complete clearance assessment requires interrogating all three modules to evaluate text, acoustics, and graphical elements.
-                                        </p>
+                                        <p className="mb-6">The Indian Trade Marks Registry database categorizes queries into three distinct modalities. A complete clearance assessment requires interrogating all three modules to evaluate text, acoustics, and graphical elements.</p>
 
                                         {/* SEARCH TYPE 1 */}
                                         <div className="border border-gray-200 rounded-2xl p-6 md:p-8 mb-8 bg-white shadow-sm hover:border-[rgb(110,94,147)] transition-colors">
@@ -429,17 +382,13 @@ export default function HowToSearchForExistingTrademarkPage() {
                                                 <span className="text-xs text-gray-500 font-semibold">Scope: Literal Text &amp; Spelling</span>
                                             </div>
                                             <h3 className="text-xl font-bold text-gray-900 mb-3">Wordmark Search</h3>
-                                            <p className="text-gray-700 leading-relaxed mb-4">
-                                                The Wordmark search examines the literal character string of your proposed brand name, slogan, or acronym. The IP India portal provides three operational drop-down modes for wordmark searches:
-                                            </p>
+                                            <p className="text-gray-700 leading-relaxed mb-4">The Wordmark search examines the literal character string of your proposed brand name, slogan, or acronym. The IP India portal provides three operational drop-down modes for wordmark searches:</p>
                                             <ul className="list-disc list-inside space-y-2 text-gray-700 mb-4">
-                                                <li><strong>Start With:</strong> Retrieves all marks whose first letters match your query string. For instance, searching &lsquo;AURA&rsquo; returns &lsquo;AURASOFT&rsquo;, &lsquo;AURACARE&rsquo;, and &lsquo;AURAGEM&rsquo;.</li>
-                                                <li><strong>Contains:</strong> Retrieves all marks containing your query substring anywhere within the word. Searching &lsquo;AURA&rsquo; will unearth &lsquo;BIOAURA&rsquo;, &lsquo;GOLDEN AURA&rsquo;, and &lsquo;RESTAURANT&rsquo;. This is critical for uncovering compound names.</li>
-                                                <li><strong>Match With:</strong> Strictly matches the exact string. While useful to see if the identical name exists, relying solely on this mode is extremely hazardous because minor character variations are missed.</li>
+                                                <li><strong>Start With:</strong>Retrieves all marks whose first letters match your query string. For instance, searching &lsquo;AURA&rsquo; returns &lsquo;AURASOFT&rsquo;, &lsquo;AURACARE&rsquo;, and &lsquo;AURAGEM&rsquo;.</li>
+                                                <li><strong>Contains:</strong>Retrieves all marks containing your query substring anywhere within the word. Searching &lsquo;AURA&rsquo; will unearth &lsquo;BIOAURA&rsquo;, &lsquo;GOLDEN AURA&rsquo;, and &lsquo;RESTAURANT&rsquo;. This is critical for uncovering compound names.</li>
+                                                <li><strong>Match With:</strong>Strictly matches the exact string. While useful to see if the identical name exists, relying solely on this mode is extremely hazardous because minor character variations are missed.</li>
                                             </ul>
-                                            <p className="text-gray-700 leading-relaxed m-0">
-                                                Run wordmark searches across your primary class using our quick <Link href="/trademark-search" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark search tool</Link>.
-                                            </p>
+                                            <p className="text-gray-700 leading-relaxed m-0">Run wordmark searches across your primary class using our quick<Link href="/trademark-search" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark search tool</Link>.</p>
                                         </div>
 
                                         {/* SEARCH TYPE 2 */}
@@ -449,21 +398,15 @@ export default function HowToSearchForExistingTrademarkPage() {
                                                 <span className="text-xs text-gray-500 font-semibold">Scope: Acoustic &amp; Homophone Likeness</span>
                                             </div>
                                             <h3 className="text-xl font-bold text-gray-900 mb-3">Phonetic Search</h3>
-                                            <p className="text-gray-700 leading-relaxed mb-4">
-                                                Under Indian trademark jurisprudence, phonetic similarity is treated with the same legal weight as visual likeness. In landmark rulings such as <em>Cadila Health Care v. Cadila Pharmaceuticals</em>, the Supreme Court of India emphasized that acoustic similarity is particularly lethal in creating public confusion.
-                                            </p>
-                                            <p className="text-gray-700 leading-relaxed mb-4">
-                                                The Phonetic search utilizes advanced Soundex and Metaphone algorithms to index words based on how they sound when spoken aloud in English and Indian accents. It flags deceptive phonetic equivalents such as:
-                                            </p>
+                                            <p className="text-gray-700 leading-relaxed mb-4">Under Indian trademark jurisprudence, phonetic similarity is treated with the same legal weight as visual likeness. In landmark rulings such as<em>Cadila Health Care v. Cadila Pharmaceuticals</em>, the Supreme Court of India emphasized that acoustic similarity is particularly lethal in creating public confusion.</p>
+                                            <p className="text-gray-700 leading-relaxed mb-4">The Phonetic search utilizes advanced Soundex and Metaphone algorithms to index words based on how they sound when spoken aloud in English and Indian accents. It flags deceptive phonetic equivalents such as:</p>
                                             <ul className="list-disc list-inside space-y-2 text-gray-700 mb-4">
                                                 <li>&lsquo;PH&rsquo; versus &lsquo;F&rsquo; (e.g., &lsquo;PharmEasy&rsquo; vs &lsquo;FarmEasy&rsquo;)</li>
                                                 <li>&lsquo;C&rsquo; versus &lsquo;K&rsquo; or &lsquo;Q&rsquo; (e.g., &lsquo;Kool&rsquo; vs &lsquo;Cool&rsquo;, &lsquo;Quick&rsquo; vs &lsquo;Kwik&rsquo;)</li>
                                                 <li>&lsquo;X&rsquo; versus &lsquo;Z&rsquo; or &lsquo;EX&rsquo; (e.g., &lsquo;Xpress&rsquo; vs &lsquo;Express&rsquo;)</li>
                                                 <li>Silent letters and vowel variations (e.g., &lsquo;Lyt&rsquo; vs &lsquo;Light&rsquo;, &lsquo;Brite&rsquo; vs &lsquo;Bright&rsquo;)</li>
                                             </ul>
-                                            <p className="text-gray-700 leading-relaxed m-0">
-                                                Ignoring phonetic clearance invites severe Section 11 examination objections from the Trade Marks Registry.
-                                            </p>
+                                            <p className="text-gray-700 leading-relaxed m-0">Ignoring phonetic clearance invites severe Section 11 examination objections from the Trade Marks Registry.</p>
                                         </div>
 
                                         {/* SEARCH TYPE 3 */}
@@ -473,21 +416,15 @@ export default function HowToSearchForExistingTrademarkPage() {
                                                 <span className="text-xs text-gray-500 font-semibold">Scope: Figurative &amp; Logo Elements</span>
                                             </div>
                                             <h3 className="text-xl font-bold text-gray-900 mb-3">Vienna Code Search</h3>
-                                            <p className="text-gray-700 leading-relaxed mb-4">
-                                                When applying to register a device mark, logo, emblem, or packaging label, searching by wordmark alone is insufficient. If a competitor has registered a visually identical lion crest or circular geometric badge without text, a wordmark search will never surface it.
-                                            </p>
-                                            <p className="text-gray-700 leading-relaxed mb-4">
-                                                India adheres to the international <strong>Vienna Agreement Establishing an International Classification of the Figurative Elements of Marks</strong>. The Vienna Classification system divides visual components into 29 categories, further subdivided into divisions and sections. Examples include:
-                                            </p>
+                                            <p className="text-gray-700 leading-relaxed mb-4">When applying to register a device mark, logo, emblem, or packaging label, searching by wordmark alone is insufficient. If a competitor has registered a visually identical lion crest or circular geometric badge without text, a wordmark search will never surface it.</p>
+                                            <p className="text-gray-700 leading-relaxed mb-4">India adheres to the international<strong>Vienna Agreement Establishing an International Classification of the Figurative Elements of Marks</strong>. The Vienna Classification system divides visual components into 29 categories, further subdivided into divisions and sections. Examples include:</p>
                                             <ul className="list-disc list-inside space-y-2 text-gray-700 mb-4">
-                                                <li><strong>Category 01:</strong> Celestial bodies, natural phenomena, geographical maps.</li>
-                                                <li><strong>Category 03:</strong> Animals, quadrupeds, birds, felines (e.g., leaping puma, majestic lions).</li>
-                                                <li><strong>Category 26:</strong> Geometrical figures, concentric circles, intersecting triangles, polygons.</li>
-                                                <li><strong>Category 27:</strong> Forms of writing, stylized monograms, numerals, punctuation marks.</li>
+                                                <li><strong>Category 01:</strong>Celestial bodies, natural phenomena, geographical maps.</li>
+                                                <li><strong>Category 03:</strong>Animals, quadrupeds, birds, felines (e.g., leaping puma, majestic lions).</li>
+                                                <li><strong>Category 26:</strong>Geometrical figures, concentric circles, intersecting triangles, polygons.</li>
+                                                <li><strong>Category 27:</strong>Forms of writing, stylized monograms, numerals, punctuation marks.</li>
                                             </ul>
-                                            <p className="text-gray-700 leading-relaxed m-0">
-                                                By entering the six-digit Vienna code (e.g., 26.01.01 for circles) alongside your relevant Nice class, you can inspect all graphically conflicting registered logos.
-                                            </p>
+                                            <p className="text-gray-700 leading-relaxed m-0">By entering the six-digit Vienna code (e.g., 26.01.01 for circles) alongside your relevant Nice class, you can inspect all graphically conflicting registered logos.</p>
                                         </div>
                                     </section>
 
@@ -497,9 +434,7 @@ export default function HowToSearchForExistingTrademarkPage() {
                                             <FontAwesomeIcon icon={faLaptopCode} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Step-by-Step Search Guide
                                         </h2>
-                                        <p className="mb-6">
-                                            Follow this comprehensive 7-step procedure to execute an authoritative trademark availability search on the official IP India registry portal.
-                                        </p>
+                                        <p className="mb-6">Follow this comprehensive 7-step procedure to execute an authoritative trademark availability search on the official IP India registry portal.</p>
 
                                         {/* STEP 1 */}
                                         <div className="border border-gray-200 rounded-2xl p-6 md:p-8 mb-8 bg-white shadow-sm hover:border-[rgb(110,94,147)] transition-colors">
@@ -508,12 +443,8 @@ export default function HowToSearchForExistingTrademarkPage() {
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Pre-Search Setup</span>
                                             </div>
                                             <h3 className="text-xl font-bold text-gray-900 mb-3">Define the Mark Nature and Exact Commercial Scope</h3>
-                                            <p className="text-gray-700 leading-relaxed mb-4">
-                                                Clarify exactly what elements you seek to protect. Are you registering a standalone wordmark (the plain name), a stylized logo, a catchy marketing tagline, or a composite mark combining graphic icons and text? Wordmarks provide the broadest protection because they cover the name regardless of color, font, or design changes.
-                                            </p>
-                                            <p className="text-gray-700 leading-relaxed m-0">
-                                                Document all potential variations of your name, including shortened abbreviations, prefix-suffix combinations, and phonetic respellings that competitors might employ.
-                                            </p>
+                                            <p className="text-gray-700 leading-relaxed mb-4">Clarify exactly what elements you seek to protect. Are you registering a standalone wordmark (the plain name), a stylized logo, a catchy marketing tagline, or a composite mark combining graphic icons and text? Wordmarks provide the broadest protection because they cover the name regardless of color, font, or design changes.</p>
+                                            <p className="text-gray-700 leading-relaxed m-0">Document all potential variations of your name, including shortened abbreviations, prefix-suffix combinations, and phonetic respellings that competitors might employ.</p>
                                         </div>
 
                                         {/* STEP 2 */}
@@ -523,12 +454,8 @@ export default function HowToSearchForExistingTrademarkPage() {
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Classification</span>
                                             </div>
                                             <h3 className="text-xl font-bold text-gray-900 mb-3">Identify Correct Nice Classes and Cross-Class Conflicts</h3>
-                                            <p className="text-gray-700 leading-relaxed mb-4">
-                                                Trademarks are filed under 45 Nice classes: Classes 1 to 34 represent tangible goods, while Classes 35 to 45 cover services. Searching only one class is often insufficient. For instance, a software startup must search both <strong>Class 9</strong> (recorded computer software) and <strong>Class 42</strong> (Software as a Service / cloud hosting).
-                                            </p>
-                                            <p className="text-gray-700 leading-relaxed m-0">
-                                                Similarly, a fashion brand should search <strong>Class 25</strong> (clothing and footwear), <strong>Class 18</strong> (leather bags and accessories), and <strong>Class 35</strong> (retail and e-commerce store services). Use our interactive <Link href="/trademark-class-finder" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark class finder</Link> to pinpoint every overlapping class.
-                                            </p>
+                                            <p className="text-gray-700 leading-relaxed mb-4">Trademarks are filed under 45 Nice classes: Classes 1 to 34 represent tangible goods, while Classes 35 to 45 cover services. Searching only one class is often insufficient. For instance, a software startup must search both<strong>Class 9</strong>(recorded computer software) and<strong>Class 42</strong>(Software as a Service / cloud hosting).</p>
+                                            <p className="text-gray-700 leading-relaxed m-0">Similarly, a fashion brand should search<strong>Class 25</strong>(clothing and footwear),<strong>Class 18</strong>(leather bags and accessories), and<strong>Class 35</strong>(retail and e-commerce store services). Use our interactive<Link href="/trademark-class-finder" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark class finder</Link>to pinpoint every overlapping class.</p>
                                         </div>
 
                                         {/* STEP 3 */}
@@ -538,12 +465,8 @@ export default function HowToSearchForExistingTrademarkPage() {
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Portal Navigation</span>
                                             </div>
                                             <h3 className="text-xl font-bold text-gray-900 mb-3">Access the IP India Public Search Gateway</h3>
-                                            <p className="text-gray-700 leading-relaxed mb-4">
-                                                Navigate to the official government trademark search portal at <a href="https://ipindiaonline.gov.in/eregister/eregister.aspx" target="_blank" rel="noopener noreferrer" className="text-[rgb(110,94,147)] hover:underline font-medium">ipindiaonline.gov.in</a> and select &lsquo;Public Search of Trade Marks&rsquo;. The search interface does not require user registration, login credentials, or payment.
-                                            </p>
-                                            <p className="text-gray-700 leading-relaxed m-0">
-                                                Ensure your browser supports secure HTTPS connections. Because the portal experiences heavy server traffic, searching during early morning or late evening hours often yields faster response times.
-                                            </p>
+                                            <p className="text-gray-700 leading-relaxed mb-4">Navigate to the official government trademark search portal at<a href="https://ipindiaonline.gov.in/eregister/eregister.aspx" target="_blank" rel="noopener noreferrer" className="text-[rgb(110,94,147)] hover:underline font-medium">ipindiaonline.gov.in</a>and select &lsquo;Public Search of Trade Marks&rsquo;. The search interface does not require user registration, login credentials, or payment.</p>
+                                            <p className="text-gray-700 leading-relaxed m-0">Ensure your browser supports secure HTTPS connections. Because the portal experiences heavy server traffic, searching during early morning or late evening hours often yields faster response times.</p>
                                         </div>
 
                                         {/* STEP 4 */}
@@ -553,17 +476,13 @@ export default function HowToSearchForExistingTrademarkPage() {
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Wordmark Queries</span>
                                             </div>
                                             <h3 className="text-xl font-bold text-gray-900 mb-3">Execute Wordmark Queries with Filter Modifiers</h3>
-                                            <p className="text-gray-700 leading-relaxed mb-4">
-                                                Under the &lsquo;Search Type&rsquo; dropdown, select &lsquo;Wordmark&rsquo;. Enter your target class number in the &lsquo;Class&rsquo; input field. In the &lsquo;Wordmark&rsquo; box, conduct consecutive searches using multiple filter conditions:
-                                            </p>
+                                            <p className="text-gray-700 leading-relaxed mb-4">Under the &lsquo;Search Type&rsquo; dropdown, select &lsquo;Wordmark&rsquo;. Enter your target class number in the &lsquo;Class&rsquo; input field. In the &lsquo;Wordmark&rsquo; box, conduct consecutive searches using multiple filter conditions:</p>
                                             <ul className="list-disc list-inside space-y-2 text-gray-700 mb-4">
                                                 <li>First, run &lsquo;Start With&rsquo; using the core root word.</li>
                                                 <li>Second, run &lsquo;Contains&rsquo; using the primary syllable or distinctive element.</li>
                                                 <li>Third, search for common truncated stems (e.g., if searching &lsquo;NutriPure&rsquo;, search &lsquo;Nutri&rsquo; and &lsquo;Pure&rsquo; separately).</li>
                                             </ul>
-                                            <p className="text-gray-700 leading-relaxed m-0">
-                                                Review the search results table. Click on individual application numbers to inspect the detailed status report, goods description, applicant name, and user date claim.
-                                            </p>
+                                            <p className="text-gray-700 leading-relaxed m-0">Review the search results table. Click on individual application numbers to inspect the detailed status report, goods description, applicant name, and user date claim.</p>
                                         </div>
 
                                         {/* STEP 5 */}
@@ -573,12 +492,8 @@ export default function HowToSearchForExistingTrademarkPage() {
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Phonetic Screening</span>
                                             </div>
                                             <h3 className="text-xl font-bold text-gray-900 mb-3">Run Phonetic Similarity and Soundex Analysis</h3>
-                                            <p className="text-gray-700 leading-relaxed mb-4">
-                                                Switch the &lsquo;Search Type&rsquo; dropdown to &lsquo;Phonetic&rsquo;. Re-enter the class number and your proposed brand name. The system will process the acoustic signature of your term and display all registered or pending marks that sound identical or deceptively similar.
-                                            </p>
-                                            <p className="text-gray-700 leading-relaxed m-0">
-                                                If your phonetic query returns identical sounding marks in your class—even with completely divergent spellings—trademark examiners will almost certainly raise an objection under Section 11(1).
-                                            </p>
+                                            <p className="text-gray-700 leading-relaxed mb-4">Switch the &lsquo;Search Type&rsquo; dropdown to &lsquo;Phonetic&rsquo;. Re-enter the class number and your proposed brand name. The system will process the acoustic signature of your term and display all registered or pending marks that sound identical or deceptively similar.</p>
+                                            <p className="text-gray-700 leading-relaxed m-0">If your phonetic query returns identical sounding marks in your class—even with completely divergent spellings—trademark examiners will almost certainly raise an objection under Section 11(1).</p>
                                         </div>
 
                                         {/* STEP 6 */}
@@ -588,12 +503,8 @@ export default function HowToSearchForExistingTrademarkPage() {
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Figurative Clearance</span>
                                             </div>
                                             <h3 className="text-xl font-bold text-gray-900 mb-3">Conduct Vienna Classification Logo Search</h3>
-                                            <p className="text-gray-700 leading-relaxed mb-4">
-                                                If your mark contains a visual emblem, crest, or character, change the &lsquo;Search Type&rsquo; dropdown to &lsquo;Vienna Code&rsquo;. Enter the six-digit Vienna code corresponding to your visual motif alongside your Nice class number.
-                                            </p>
-                                            <p className="text-gray-700 leading-relaxed m-0">
-                                                The registry will display thumbnails and application entries for all logos indexed under that graphical classification. Inspect each record to ensure your emblem does not visually mimic an established brand insignia.
-                                            </p>
+                                            <p className="text-gray-700 leading-relaxed mb-4">If your mark contains a visual emblem, crest, or character, change the &lsquo;Search Type&rsquo; dropdown to &lsquo;Vienna Code&rsquo;. Enter the six-digit Vienna code corresponding to your visual motif alongside your Nice class number.</p>
+                                            <p className="text-gray-700 leading-relaxed m-0">The registry will display thumbnails and application entries for all logos indexed under that graphical classification. Inspect each record to ensure your emblem does not visually mimic an established brand insignia.</p>
                                         </div>
 
                                         {/* STEP 7 */}
@@ -603,18 +514,14 @@ export default function HowToSearchForExistingTrademarkPage() {
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Legal Analysis &amp; Status Check</span>
                                             </div>
                                             <h3 className="text-xl font-bold text-gray-900 mb-3">Scrutinize Application Statuses and Market Registries</h3>
-                                            <p className="text-gray-700 leading-relaxed mb-4">
-                                                When potential conflicts appear in the search results, evaluate their official legal status:
-                                            </p>
+                                            <p className="text-gray-700 leading-relaxed mb-4">When potential conflicts appear in the search results, evaluate their official legal status:</p>
                                             <ul className="list-disc list-inside space-y-2 text-gray-700 mb-4">
-                                                <li><strong>Registered:</strong> High barrier. Direct bar to registration under Section 11 unless you can prove prior continuous commercial use under Section 34.</li>
-                                                <li><strong>Objected / Hearing:</strong> An earlier applicant is actively contesting an objection. If they overcome it, their prior application date will block your mark.</li>
-                                                <li><strong>Advertised / Accepted:</strong> The mark has passed examination and is in the 4-month Trade Marks Journal opposition window.</li>
-                                                <li><strong>Abandoned / Refused / Removed:</strong> The mark is inactive, but verify whether a restoration petition or appeal is pending.</li>
+                                                <li><strong>Registered:</strong>High barrier. Direct bar to registration under Section 11 unless you can prove prior continuous commercial use under Section 34.</li>
+                                                <li><strong>Objected / Hearing:</strong>An earlier applicant is actively contesting an objection. If they overcome it, their prior application date will block your mark.</li>
+                                                <li><strong>Advertised / Accepted:</strong>The mark has passed examination and is in the 4-month Trade Marks Journal opposition window.</li>
+                                                <li><strong>Abandoned / Refused / Removed:</strong>The mark is inactive, but verify whether a restoration petition or appeal is pending.</li>
                                             </ul>
-                                            <p className="text-gray-700 leading-relaxed m-0">
-                                                Finally, perform a common-law search across the Ministry of Corporate Affairs (MCA) company name database, domain registrars (.in, .com), and major e-commerce marketplaces to ensure no unregistered entity commands senior user rights.
-                                            </p>
+                                            <p className="text-gray-700 leading-relaxed m-0">Finally, perform a common-law search across the Ministry of Corporate Affairs (MCA) company name database, domain registrars (.in, .com), and major e-commerce marketplaces to ensure no unregistered entity commands senior user rights.</p>
                                         </div>
                                     </section>
 
@@ -624,9 +531,7 @@ export default function HowToSearchForExistingTrademarkPage() {
                                             <FontAwesomeIcon icon={faTable} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Search Types Comparison
                                         </h2>
-                                        <p className="mb-6">
-                                            Each search methodology examines brand assets through a distinct analytical lens. Below is a comparative breakdown detailing operational parameters, coverage scope, and strategic limitations.
-                                        </p>
+                                        <p className="mb-6">Each search methodology examines brand assets through a distinct analytical lens. Below is a comparative breakdown detailing operational parameters, coverage scope, and strategic limitations.</p>
 
                                         <div className="overflow-x-auto mb-8 shadow-sm rounded-xl border border-gray-200">
                                             <table className="min-w-full bg-white text-left text-sm text-gray-700">
@@ -686,37 +591,27 @@ export default function HowToSearchForExistingTrademarkPage() {
                                             <FontAwesomeIcon icon={faExclamationTriangle} className="w-8 h-8 mr-3 text-amber-500" />
                                             Common Trademark Search Mistakes
                                         </h2>
-                                        <p className="mb-6">
-                                            A substantial proportion of trademark rejections stem from common search errors. Avoiding these methodological flaws ensures an accurate risk assessment before filing Form TM-A.
-                                        </p>
+                                        <p className="mb-6">A substantial proportion of trademark rejections stem from common search errors. Avoiding these methodological flaws ensures an accurate risk assessment before filing Form TM-A.</p>
 
                                         <div className="space-y-6">
                                             <div className="border-l-4 border-red-500 pl-4 py-2">
                                                 <h3 className="text-lg font-bold text-gray-900 mb-1">1. Exact-Spelling Bias</h3>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    Searching only the exact spelling of your brand gives a false sense of security. Section 11 explicitly penalizes deceptive visual, phonetic, and conceptual resemblances. Changing one letter (e.g., &lsquo;Zomato&rsquo; to &lsquo;Xomato&rsquo;) does not overcome trademark infringement.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">Searching only the exact spelling of your brand gives a false sense of security. Section 11 explicitly penalizes deceptive visual, phonetic, and conceptual resemblances. Changing one letter (e.g., &lsquo;Zomato&rsquo; to &lsquo;Xomato&rsquo;) does not overcome trademark infringement.</p>
                                             </div>
 
                                             <div className="border-l-4 border-red-500 pl-4 py-2">
                                                 <h3 className="text-lg font-bold text-gray-900 mb-1">2. Overlooking Cross-Class and Related Goods</h3>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    Assuming that your brand is completely safe simply because your primary class has no conflicts is dangerous. Under Section 11(2), marks with established reputation can prevent registration in completely distinct classes if consumer association or dilution arises.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">Assuming that your brand is completely safe simply because your primary class has no conflicts is dangerous. Under Section 11(2), marks with established reputation can prevent registration in completely distinct classes if consumer association or dilution arises.</p>
                                             </div>
 
                                             <div className="border-l-4 border-red-500 pl-4 py-2">
                                                 <h3 className="text-lg font-bold text-gray-900 mb-1">3. Ignoring Pending and Opposed Applications</h3>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    Checking only the &lsquo;Registered&rsquo; tab is a critical error. Pending applications enjoy priority based on their original filing date. If a pending application filed six months ago receives approval, it holds legal superiority over your later-filed application.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">Checking only the &lsquo;Registered&rsquo; tab is a critical error. Pending applications enjoy priority based on their original filing date. If a pending application filed six months ago receives approval, it holds legal superiority over your later-filed application.</p>
                                             </div>
 
                                             <div className="border-l-4 border-red-500 pl-4 py-2">
                                                 <h3 className="text-lg font-bold text-gray-900 mb-1">4. Disregarding Common-Law Unregistered Trademarks</h3>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    India operates on a &lsquo;first-to-use&rsquo; common-law principle under Section 34 of the Act. An unregistered business that has continuously sold products under a mark since 2015 can successfully file an opposition or passing-off lawsuit against a registered owner who adopted the name in 2024.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">India operates on a &lsquo;first-to-use&rsquo; common-law principle under Section 34 of the Act. An unregistered business that has continuously sold products under a mark since 2015 can successfully file an opposition or passing-off lawsuit against a registered owner who adopted the name in 2024.</p>
                                             </div>
                                         </div>
                                     </section>
@@ -727,38 +622,15 @@ export default function HowToSearchForExistingTrademarkPage() {
                                             <FontAwesomeIcon icon={faCheckCircle} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Trademark Clearance Checklist
                                         </h2>
-                                        <p className="mb-6">
-                                            Ensure you check every box before submitting your trademark application on the official IP India gateway.
-                                        </p>
+                                        <p className="mb-6">Ensure you check every box before submitting your trademark application on the official IP India gateway.</p>
                                         <ul className="list-none space-y-4 mb-8">
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Run Wordmark Exact &amp; Prefix Searches:</strong> Interrogate IP India portal using &lsquo;Start With&rsquo; and &lsquo;Contains&rsquo; filters across target classes.</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Execute Soundex Phonetic Screen:</strong> Verify that no acoustic homophones exist in identical or complementary product classes.</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Inspect Vienna Code Figurative Elements:</strong> Check graphic logos, geometric crests, and emblems under the 29 Vienna categories.</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Audit Overlapping Nice Classes:</strong> Cover primary product classes (1–34) and complementary service classes (35–45).</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Review Application Status Histories:</strong> Scrutinize pending applications, marks under examination, and active journal advertisements.</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Verify Corporate &amp; Domain Availability:</strong> Search MCA company names, .in/.com domains, and social media handles for prior market use.</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Obtain Legal Clearance Opinion:</strong> Review potential Section 9 distinctiveness and Section 11 relative risks with an experienced IP advocate.</span>
-                                            </li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Run Wordmark Exact &amp; Prefix Searches:</strong>Interrogate IP India portal using &lsquo;Start With&rsquo; and &lsquo;Contains&rsquo; filters across target classes.</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Execute Soundex Phonetic Screen:</strong>Verify that no acoustic homophones exist in identical or complementary product classes.</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Inspect Vienna Code Figurative Elements:</strong>Check graphic logos, geometric crests, and emblems under the 29 Vienna categories.</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Audit Overlapping Nice Classes:</strong>Cover primary product classes (1–34) and complementary service classes (35–45).</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Review Application Status Histories:</strong>Scrutinize pending applications, marks under examination, and active journal advertisements.</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Verify Corporate &amp; Domain Availability:</strong>Search MCA company names, .in/.com domains, and social media handles for prior market use.</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Obtain Legal Clearance Opinion:</strong>Review potential Section 9 distinctiveness and Section 11 relative risks with an experienced IP advocate.</span></li>
                                         </ul>
                                     </section>
 
@@ -785,12 +657,8 @@ export default function HowToSearchForExistingTrademarkPage() {
                                             <FontAwesomeIcon icon={faLightbulb} className="w-8 h-8 mr-3 text-yellow-500" />
                                             Strategic Clearance Advice
                                         </h2>
-                                        <p className="mb-6">
-                                            A meticulous trademark search is not an optional clerical exercise—it is the strategic cornerstone of brand valuation and commercial resilience. Conducting multi-class wordmark, phonetic, and Vienna classification searches ensures your brand name stands on unshakeable legal bedrock from day one.
-                                        </p>
-                                        <p className="mb-6">
-                                            If your clearance search uncovers borderline conflicts, do not despair. Early detection allows you to tweak naming syllables, add distinctive graphic badges, or pivot your brand architecture before filing Form TM-A. Partnering with seasoned trademark attorneys ensures that legal risks are interpreted accurately and your path to obtaining the registered &reg; symbol remains unimpeded. If objections do arise, learn <Link href="/how-to-overcome-trademark-objection" className="text-[rgb(110,94,147)] hover:underline font-medium">how to overcome trademark objections</Link>.
-                                        </p>
+                                        <p className="mb-6">A meticulous trademark search is not an optional clerical exercise—it is the strategic cornerstone of brand valuation and commercial resilience. Conducting multi-class wordmark, phonetic, and Vienna classification searches ensures your brand name stands on unshakeable legal bedrock from day one.</p>
+                                        <p className="mb-6">If your clearance search uncovers borderline conflicts, do not despair. Early detection allows you to tweak naming syllables, add distinctive graphic badges, or pivot your brand architecture before filing Form TM-A. Partnering with seasoned trademark attorneys ensures that legal risks are interpreted accurately and your path to obtaining the registered &reg; symbol remains unimpeded. If objections do arise, learn<Link href="/how-to-overcome-trademark-objection" className="text-[rgb(110,94,147)] hover:underline font-medium">how to overcome trademark objections</Link>.</p>
                                     </section>
 
                                     {/* BOTTOM CTA SECTION */}
@@ -807,9 +675,7 @@ export default function HowToSearchForExistingTrademarkPage() {
                                                     Verify Your Brand Name Before You File
                                                 </h3>
 
-                                                <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">
-                                                    Conduct deep phonetic, wordmark, and Vienna code searches across all 45 classes with certified trademark attorneys. Protect your brand from costly objections and oppositions.
-                                                </p>
+                                                <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">Conduct deep phonetic, wordmark, and Vienna code searches across all 45 classes with certified trademark attorneys. Protect your brand from costly objections and oppositions.</p>
 
                                                 <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
                                                     <Link
@@ -827,9 +693,7 @@ export default function HowToSearchForExistingTrademarkPage() {
                                                     </a>
                                                 </div>
 
-                                                <p className="mt-6 text-xs font-medium tracking-wide text-white/50 sm:text-sm">
-                                                    AI-Powered Intelligence • Senior IP Attorneys • Zero Filing Blindspots
-                                                </p>
+                                                <p className="mt-6 text-xs font-medium tracking-wide text-white/50 sm:text-sm">AI-Powered Intelligence • Senior IP Attorneys • Zero Filing Blindspots</p>
                                             </div>
                                         </div>
                                     </section>
@@ -862,46 +726,11 @@ export default function HowToSearchForExistingTrademarkPage() {
                             <div className="bg-gray-50 p-10 rounded-[2.5rem] shadow-sm border border-gray-100">
                                 <h3 className="text-sm font-black text-gray-400 mb-8 uppercase tracking-[0.3em]">Related Resources</h3>
                                 <ul className="space-y-6">
-                                    <li>
-                                        <Link href="/trademark-search" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faSearch} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Public Search</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/free-ai-powered-trademark-search" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faShieldHalved} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">AI Search Tool</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/trademark-class-finder" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faListUl} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Class Guide</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/process-and-steps-of-trademark-registration" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faScaleBalanced} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Filing Process</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/how-to-overcome-trademark-objection" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faFileContract} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Objection Guide</span>
-                                        </Link>
-                                    </li>
+                                    <li><Link href="/trademark-search" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faSearch} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Public Search</span></Link></li>
+                                    <li><Link href="/free-ai-powered-trademark-search" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faShieldHalved} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">AI Search Tool</span></Link></li>
+                                    <li><Link href="/trademark-class-finder" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faListUl} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Class Guide</span></Link></li>
+                                    <li><Link href="/process-and-steps-of-trademark-registration" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faScaleBalanced} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Filing Process</span></Link></li>
+                                    <li><Link href="/how-to-overcome-trademark-objection" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faFileContract} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Objection Guide</span></Link></li>
                                 </ul>
                             </div>
                         </aside>

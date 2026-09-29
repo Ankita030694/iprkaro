@@ -104,7 +104,7 @@ const faqs = [
     },
     {
         question: "When is it recommended to file separate single-class trademark applications?",
-        answer: "Single-class filings are strongly recommended when: (1) your brand operates in competitive or litigious sectors (such as pharmaceuticals, software, or apparel) where objections are common; (2) you need swift registration in core classes to enroll in Amazon Brand Registry; (3) different classes have different commercial prior use dates requiring distinct user affidavits; or (4) you anticipate future class-specific licensing or investment."
+        answer: "Single-class filings are strongly recommended when: (1) your brand operates in competitive or litigious sectors (such as pharmaceuticals, software, or apparel) where objections are common. (2) you need swift registration in core classes to enroll in Amazon Brand Registry. (3) different classes have different commercial prior use dates requiring distinct user affidavits. Or (4) you anticipate future class-specific licensing or investment."
     },
     {
         question: "When does filing a multi-class trademark application make practical sense?",
@@ -112,7 +112,7 @@ const faqs = [
     },
     {
         question: "Can I claim different 'User Dates' (prior use) across different classes in a multi-class filing?",
-        answer: "Yes, but it complicates the filing. Under Rule 25 of the Trade Marks Rules, 2017, if you claim prior commercial use, you must submit a notarized User Affidavit with documentary evidence. If your use dates vary by class (e.g., Class 25 used since 2021, but Class 35 used since 2024), you must provide separate evidential exhibits for each class in the single affidavit, increasing scrutiny during examination."
+        answer: "Yes. However, it complicates the filing. Under Rule 25 of the Trade Marks Rules, 2017, if you claim prior commercial use, you must submit a notarized User Affidavit with documentary evidence. If your use dates vary by class (e.g., Class 25 used since 2021, but Class 35 used since 2024), you must provide separate evidential exhibits for each class in the single affidavit, increasing scrutiny during examination."
     },
     {
         question: "How does a multi-class Indian trademark affect international registration under the Madrid Protocol?",
@@ -224,9 +224,7 @@ export default function SingleVsMultiClassTrademarkPage() {
                             <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-3 leading-tight text-gray-900 tracking-tighter">
                                 Single Class vs Multi-Class Trademark in India: <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'transparent' }}>Pros and Cons</span>
                             </h1>
-                            <p className="text-base md:text-lg mb-5 text-gray-700 font-medium leading-relaxed">
-                                When registering a brand across multiple product or service categories in India, business founders face a pivotal legal choice: should you file separate single-class applications or combine everything into one multi-class application on Form TM-A? While multi-class filing promises administrative simplicity, it introduces severe legal vulnerabilities—including statutory domino delays, all-or-nothing opposition risks, and costly division fees under Section 22. Uncover the statutory fee realities, tactical pros and cons, and expert legal strategies to protect your commercial brand assets.
-                            </p>
+                            <p className="text-base md:text-lg mb-5 text-gray-700 font-medium leading-relaxed">When registering a brand across multiple product or service categories in India, business founders face a pivotal legal choice: should you file separate single-class applications or combine everything into one multi-class application on Form TM-A? While multi-class filing promises administrative simplicity, it introduces severe legal vulnerabilities—including statutory domino delays, all-or-nothing opposition risks, and costly division fees under Section 22. Uncover the statutory fee realities, tactical pros and cons, and expert legal strategies to protect your commercial brand assets.</p>
 
                             <div className="flex flex-wrap items-center gap-4 mb-6">
                                 <div className="flex items-center mr-2">
@@ -317,36 +315,11 @@ export default function SingleVsMultiClassTrademarkPage() {
                                                 Close
                                             </span>
                                             <svg className="w-4 h-4 text-gray-500 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                                            </svg>
-                                        </div>
-                                    </summary>
-                                    <div className="p-3.5 pt-2 border-t border-purple-50 bg-white/70">
-                                        <nav className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
-                                            {tocSections.map((section, idx) => (
-                                                <a
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg></div></summary><div className="p-3.5 pt-2 border-t border-purple-50 bg-white/70"><nav className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">{tocSections.map((section, idx) => (<a
                                                     key={section.id}
                                                     href={`#${section.id}`}
                                                     className="flex items-center p-2 rounded-xl text-xs font-medium text-gray-700 hover:text-[#6E5E93] hover:bg-purple-50/80 transition-all border border-transparent hover:border-purple-100"
-                                                >
-                                                    <span className="w-5 h-5 rounded-full bg-purple-100 text-[#6E5E93] flex items-center justify-center text-[10px] font-bold mr-2 flex-shrink-0">
-                                                        {idx + 1}
-                                                    </span>
-                                                    <span className="truncate">{section.title}</span>
-                                                </a>
-                                            ))}
-                                        </nav>
-                                    </div>
-                                </details>
-                            </div>
-
-                            <div className="bg-white p-4 md:p-12 rounded-2xl shadow-sm border border-gray-100 space-y-12 md:space-y-20 article-content">
-                                <article className="prose prose-lg max-w-none text-gray-700 leading-relaxed font-normal">
-
-                                    <div className="flex items-center space-x-4 mb-10 p-4 bg-gray-50 rounded-xl border border-gray-100 not-prose">
-                                        <img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-12 h-12 rounded-full object-cover m-0" />
-                                        <div>
-                                            <p className="text-sm font-bold text-gray-900 m-0">Written by <Link href="/about-us" className="text-[rgb(110,94,147)] hover:underline">Rahul Roy</Link></p>
+                                                ><span className="w-5 h-5 rounded-full bg-purple-100 text-[#6E5E93] flex items-center justify-center text-[10px] font-bold mr-2 flex-shrink-0">{idx + 1}</span><span className="truncate">{section.title}</span></a>))}</nav></div></details></div><div className="bg-white p-4 md:p-12 rounded-2xl shadow-sm border border-gray-100 space-y-12 md:space-y-20 article-content"><article className="prose prose-lg max-w-none text-gray-700 leading-relaxed font-normal"><div className="flex items-center space-x-4 mb-10 p-4 bg-gray-50 rounded-xl border border-gray-100 not-prose"><img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-12 h-12 rounded-full object-cover m-0" /><div><p className="text-sm font-bold text-gray-900 m-0">Written by<Link href="/about-us" className="text-[rgb(110,94,147)] hover:underline">Rahul Roy</Link></p>
                                             <p className="text-xs text-gray-500 m-0">Trademark Research Specialist</p>
                                         </div>
                                     </div>
@@ -358,13 +331,9 @@ export default function SingleVsMultiClassTrademarkPage() {
                                             <span>Understanding Trademark Classes in India</span>
                                         </h2>
 
-                                        <p className="text-base leading-relaxed mb-6">
-                                            In India, brand registration operates under the international <strong>Nice Classification</strong> system, comprising <strong>45 discrete trademark classes</strong>: Classes 1 through 34 categorize physical manufactured goods (such as cosmetics in Class 3, pharmaceuticals in Class 5, electronics and software in Class 9, and apparel in Class 25), while Classes 35 through 45 cover services (such as retail/e-commerce in Class 35, fintech/financial services in Class 36, education in Class 41, and software development in Class 42).
-                                        </p>
+                                        <p className="text-base leading-relaxed mb-6">In India, brand registration operates under the international<strong>Nice Classification</strong>system, comprising<strong>45 discrete trademark classes</strong>: Classes 1 through 34 categorize physical manufactured goods (such as cosmetics in Class 3, pharmaceuticals in Class 5, electronics and software in Class 9, and apparel in Class 25), while Classes 35 through 45 cover services (such as retail/e-commerce in Class 35, fintech/financial services in Class 36, education in Class 41, and software development in Class 42).</p>
 
-                                        <p className="text-base leading-relaxed mb-6">
-                                            Under the <Link href="/process-and-steps-of-trademark-registration" className="text-[#6E5E93] font-bold hover:underline">Trade Marks Rules, 2017</Link>, the Trade Marks Registry consolidated all previous filing forms (such as TM-1, TM-2, TM-3, and the old multi-class Form TM-51) into a single unified <strong>Form TM-A</strong>. When submitting Form TM-A on the IP India e-filing portal, applicants can choose between two fundamental filing architectures:
-                                        </p>
+                                        <p className="text-base leading-relaxed mb-6">Under the<Link href="/process-and-steps-of-trademark-registration" className="text-[#6E5E93] font-bold hover:underline">Trade Marks Rules, 2017</Link>, the Trade Marks Registry consolidated all previous filing forms (such as TM-1, TM-2, TM-3, and the old multi-class Form TM-51) into a single unified<strong>Form TM-A</strong>. When submitting Form TM-A on the IP India e-filing portal, applicants can choose between two fundamental filing architectures:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 not-prose mb-8">
                                             <div className="bg-gradient-to-br from-indigo-50/70 to-white p-6 rounded-2xl border border-indigo-100 shadow-sm">
@@ -372,9 +341,7 @@ export default function SingleVsMultiClassTrademarkPage() {
                                                     <FontAwesomeIcon icon={faLayerGroup} className="w-5 h-5" />
                                                 </div>
                                                 <h3 className="text-base font-bold text-gray-900 mb-2">Single-Class Application</h3>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    A dedicated application filed for <strong>one specific Nice class</strong>. Each filing receives its own unique 7-digit trademark application number, independent examination report, separate journal publication, and standalone registration certificate.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">A dedicated application filed for<strong>one specific Nice class</strong>. Each filing receives its own unique 7-digit trademark application number, independent examination report, separate journal publication, and standalone registration certificate.</p>
                                             </div>
 
                                             <div className="bg-gradient-to-br from-purple-50/70 to-white p-6 rounded-2xl border border-purple-100 shadow-sm">
@@ -382,9 +349,7 @@ export default function SingleVsMultiClassTrademarkPage() {
                                                     <FontAwesomeIcon icon={faDiagramProject} className="w-5 h-5" />
                                                 </div>
                                                 <h3 className="text-base font-bold text-gray-900 mb-2">Multi-Class Application</h3>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    A single consolidated application covering <strong>two or more Nice classes</strong> under a single 7-digit trademark application number. All classes are examined collectively, advertised together in the Trade Marks Journal, and granted a single master certificate.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">A single consolidated application covering<strong>two or more Nice classes</strong>under a single 7-digit trademark application number. All classes are examined collectively, advertised together in the Trade Marks Journal, and granted a single master certificate.</p>
                                             </div>
                                         </div>
                                     </section>
@@ -396,25 +361,19 @@ export default function SingleVsMultiClassTrademarkPage() {
                                             <span>The Government Fee Myth Debunked</span>
                                         </h2>
 
-                                        <p className="text-base leading-relaxed mb-6">
-                                            The single most pervasive misconception among startup founders, D2C entrepreneurs, and business owners in India is the belief that <em>"filing a multi-class trademark is cheaper than filing individual applications."</em>
-                                        </p>
+                                        <p className="text-base leading-relaxed mb-6">The single most pervasive misconception among startup founders, D2C entrepreneurs, and business owners in India is the belief that<em>"filing a multi-class trademark is cheaper than filing individual applications."</em></p>
 
                                         <div className="bg-amber-50 border-l-4 border-amber-500 p-5 rounded-r-2xl mb-8 not-prose">
                                             <div className="flex items-start space-x-3">
                                                 <FontAwesomeIcon icon={faExclamationTriangle} className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" />
                                                 <div>
                                                     <h3 className="text-sm font-bold text-amber-900 m-0">Statutory Fact Under Trade Marks Rules, 2017</h3>
-                                                    <p className="text-xs text-amber-800 m-0 mt-1 leading-relaxed">
-                                                        The official government filing fee under the First Schedule of the Trade Marks Rules, 2017 is charged <strong>strictly per class</strong>. There is <strong>ZERO statutory discount</strong> or government fee waiver for combining multiple classes into one Form TM-A.
-                                                    </p>
+                                                    <p className="text-xs text-amber-800 m-0 mt-1 leading-relaxed">The official government filing fee under the First Schedule of the Trade Marks Rules, 2017 is charged<strong>strictly per class</strong>. There is<strong>ZERO statutory discount</strong>or government fee waiver for combining multiple classes into one Form TM-A.</p>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <p className="text-base leading-relaxed mb-6">
-                                            Whether you file three separate single-class applications or one multi-class application covering three classes, the statutory fee payable to the Trade Marks Registry is identical:
-                                        </p>
+                                        <p className="text-base leading-relaxed mb-6">Whether you file three separate single-class applications or one multi-class application covering three classes, the statutory fee payable to the Trade Marks Registry is identical:</p>
 
                                         <div className="overflow-x-auto not-prose mb-8">
                                             <table className="min-w-full bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm">
@@ -429,27 +388,21 @@ export default function SingleVsMultiClassTrademarkPage() {
                                                 </thead>
                                                 <tbody className="divide-y divide-gray-100 text-xs">
                                                     <tr className="hover:bg-gray-50/50">
-                                                        <td className="py-3 px-4 font-bold text-gray-900">
-                                                            Individual / Startup / <Link href="/trademark-fee-concession-msme-udyam-startup-india" className="text-[#6E5E93] hover:underline">MSME (Udyam)</Link>
-                                                        </td>
+                                                        <td className="py-3 px-4 font-bold text-gray-900"> Individual / Startup / <Link href="/trademark-fee-concession-msme-udyam-startup-india" className="text-[#6E5E93] hover:underline">MSME (Udyam)</Link> </td>
                                                         <td className="py-3 px-4 text-gray-700 font-medium">₹4,500</td>
                                                         <td className="py-3 px-4 text-gray-700 font-medium">3 × ₹4,500 = <strong>₹13,500</strong></td>
                                                         <td className="py-3 px-4 text-gray-700 font-medium">₹4,500 × 3 = <strong>₹13,500</strong></td>
                                                         <td className="py-3 px-4 text-emerald-700 font-bold bg-emerald-50/50">₹0 (Zero Savings)</td>
                                                     </tr>
                                                     <tr className="hover:bg-gray-50/50">
-                                                        <td className="py-3 px-4 font-bold text-gray-900">
-                                                            Companies / LLPs / Large Enterprises
-                                                        </td>
+                                                        <td className="py-3 px-4 font-bold text-gray-900"> Companies / LLPs / Large Enterprises </td>
                                                         <td className="py-3 px-4 text-gray-700 font-medium">₹9,000</td>
                                                         <td className="py-3 px-4 text-gray-700 font-medium">3 × ₹9,000 = <strong>₹27,000</strong></td>
                                                         <td className="py-3 px-4 text-gray-700 font-medium">₹9,000 × 3 = <strong>₹27,000</strong></td>
                                                         <td className="py-3 px-4 text-emerald-700 font-bold bg-emerald-50/50">₹0 (Zero Savings)</td>
                                                     </tr>
                                                     <tr className="hover:bg-gray-50/50">
-                                                        <td className="py-3 px-4 font-bold text-gray-900">
-                                                            Physical Counter Filing (Non-Online)
-                                                        </td>
+                                                        <td className="py-3 px-4 font-bold text-gray-900"> Physical Counter Filing (Non-Online) </td>
                                                         <td className="py-3 px-4 text-gray-700 font-medium">₹5,000 / ₹10,000</td>
                                                         <td className="py-3 px-4 text-gray-700 font-medium">3 × ₹5,000 = <strong>₹15,000</strong></td>
                                                         <td className="py-3 px-4 text-gray-700 font-medium">₹5,000 × 3 = <strong>₹15,000</strong></td>
@@ -459,9 +412,7 @@ export default function SingleVsMultiClassTrademarkPage() {
                                             </table>
                                         </div>
 
-                                        <p className="text-base leading-relaxed mb-6">
-                                            While some IP attorneys may offer marginal professional drafting discounts for a combined multi-class form due to reduced initial data entry, this minor upfront concession is heavily overshadowed by downstream legal costs if an objection or opposition arises.
-                                        </p>
+                                        <p className="text-base leading-relaxed mb-6">While some IP attorneys may offer marginal professional drafting discounts for a combined multi-class form due to reduced initial data entry, this minor upfront concession is heavily overshadowed by downstream legal costs if an objection or opposition arises.</p>
                                     </section>
 
                                     {/* SECTION 3: COMPARISON MATRIX */}
@@ -471,9 +422,7 @@ export default function SingleVsMultiClassTrademarkPage() {
                                             <span>Single Class vs Multi-Class Comparison</span>
                                         </h2>
 
-                                        <p className="text-base leading-relaxed mb-6">
-                                            Evaluating the procedural, operational, and litigation differences between single-class and multi-class applications provides crucial clarity for long-term brand strategy:
-                                        </p>
+                                        <p className="text-base leading-relaxed mb-6">Evaluating the procedural, operational, and litigation differences between single-class and multi-class applications provides crucial clarity for long-term brand strategy:</p>
 
                                         <div className="overflow-x-auto not-prose mb-8">
                                             <table className="min-w-full bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm">
@@ -497,21 +446,13 @@ export default function SingleVsMultiClassTrademarkPage() {
                                                     </tr>
                                                     <tr className="hover:bg-gray-50/50">
                                                         <td className="py-3.5 px-4 font-bold text-gray-900">Objection Impact (Sec 9 / Sec 11)</td>
-                                                        <td className="py-3.5 px-4 text-emerald-800 font-semibold bg-emerald-50/30">
-                                                            <strong>Isolated:</strong> Objections in Class A do not delay Class B or C
-                                                        </td>
-                                                        <td className="py-3.5 px-4 text-rose-800 font-semibold bg-rose-50/30">
-                                                            <strong>Contagion:</strong> Objection in any 1 class halts the entire application
-                                                        </td>
+                                                        <td className="py-3.5 px-4 text-emerald-800 font-semibold bg-emerald-50/30"> <strong>Isolated:</strong> Objections in Class A do not delay Class B or C </td>
+                                                        <td className="py-3.5 px-4 text-rose-800 font-semibold bg-rose-50/30"> <strong>Contagion:</strong> Objection in any 1 class halts the entire application </td>
                                                     </tr>
                                                     <tr className="hover:bg-gray-50/50">
                                                         <td className="py-3.5 px-4 font-bold text-gray-900">Third-Party Opposition (Sec 21)</td>
-                                                        <td className="py-3.5 px-4 text-emerald-800 font-semibold bg-emerald-50/30">
-                                                            Only the contested class undergoes opposition hearings
-                                                        </td>
-                                                        <td className="py-3.5 px-4 text-rose-800 font-semibold bg-rose-50/30">
-                                                            Registration of all classes is blocked until opposition concludes
-                                                        </td>
+                                                        <td className="py-3.5 px-4 text-emerald-800 font-semibold bg-emerald-50/30"> Only the contested class undergoes opposition hearings </td>
+                                                        <td className="py-3.5 px-4 text-rose-800 font-semibold bg-rose-50/30"> Registration of all classes is blocked until opposition concludes </td>
                                                     </tr>
                                                     <tr className="hover:bg-gray-50/50">
                                                         <td className="py-3.5 px-4 font-bold text-gray-900">Registration Certificate Timeline</td>
@@ -555,37 +496,22 @@ export default function SingleVsMultiClassTrademarkPage() {
                                             <span>The Domino Effect: Multi-Class Risks</span>
                                         </h2>
 
-                                        <p className="text-base leading-relaxed mb-6">
-                                            The legal phenomenon known as the <strong>"Domino Effect"</strong> or <strong>"Procedural Contagion"</strong> represents the single greatest vulnerability of multi-class trademark applications under the Trade Marks Act, 1999.
-                                        </p>
+                                        <p className="text-base leading-relaxed mb-6">The legal phenomenon known as the<strong>"Domino Effect"</strong>or<strong>"Procedural Contagion"</strong>represents the single greatest vulnerability of multi-class trademark applications under the Trade Marks Act, 1999.</p>
 
                                         <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 not-prose mb-8">
                                             <h3 className="text-base font-bold text-gray-900 mb-4 flex items-center">
                                                 <FontAwesomeIcon icon={faShieldHalved} className="w-4 h-4 text-[#6E5E93] mr-2" />
                                                 <span>Real-World Scenario: The D2C Startup Dilemma</span>
                                             </h3>
-                                            <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                                                Imagine an omnichannel fashion brand named <strong>"VELVET OAK"</strong> filing a multi-class application covering three classes:
-                                            </p>
+                                            <p className="text-sm text-gray-600 leading-relaxed mb-4">Imagine an omnichannel fashion brand named<strong>"VELVET OAK"</strong>filing a multi-class application covering three classes:</p>
                                             <ul className="space-y-2 text-xs text-gray-700 mb-4">
-                                                <li className="flex items-center">
-                                                    <span className="w-2 h-2 rounded-full bg-[#6E5E93] mr-2"></span>
-                                                    <strong>Class 25:</strong> Ready-made clothing, footwear, and headgear.
-                                                </li>
-                                                <li className="flex items-center">
-                                                    <span className="w-2 h-2 rounded-full bg-[#6E5E93] mr-2"></span>
-                                                    <strong>Class 9:</strong> Mobile e-commerce application and digital software.
-                                                </li>
-                                                <li className="flex items-center">
-                                                    <span className="w-2 h-2 rounded-full bg-[#6E5E93] mr-2"></span>
-                                                    <strong>Class 35:</strong> Online retail store and marketplace services.
-                                                </li>
+                                                <li className="flex items-center"><span className="w-2 h-2 rounded-full bg-[#6E5E93] mr-2"></span><strong>Class 25:</strong>Ready-made clothing, footwear, and headgear.</li>
+                                                <li className="flex items-center"><span className="w-2 h-2 rounded-full bg-[#6E5E93] mr-2"></span><strong>Class 9:</strong>Mobile e-commerce application and digital software.</li>
+                                                <li className="flex items-center"><span className="w-2 h-2 rounded-full bg-[#6E5E93] mr-2"></span><strong>Class 35:</strong>Online retail store and marketplace services.</li>
                                             </ul>
                                             <div className="p-4 bg-white rounded-xl border border-gray-200">
                                                 <p className="text-xs font-bold text-rose-700 mb-1">What Happens in a Multi-Class Filing:</p>
-                                                <p className="text-xs text-gray-600 leading-relaxed m-0">
-                                                    During examination, the Trade Marks Examiner cites an earlier conflicting registration for "OAK APPAREL" in Class 25 under Section 11(1). Because the entire application shares one number, the status changes to <Link href="/trademark-objected-what-to-do-next" className="text-[#6E5E93] font-semibold hover:underline">"Objected"</Link> for all three classes. Even though Classes 9 and 35 have zero conflicts, the Trade Marks Registry <strong>cannot issue registration certificates for Class 9 or Class 35</strong>. The startup is blocked from enrolling in <Link href="/amazon-brand-registry-trademark-requirements-india" className="text-[#6E5E93] font-semibold hover:underline">Amazon Brand Registry</Link> or executing investor warranties for up to 3 years while the Class 25 objection and hearing drag on.
-                                                </p>
+                                                <p className="text-xs text-gray-600 leading-relaxed m-0">During examination, the Trade Marks Examiner cites an earlier conflicting registration for "OAK APPAREL" in Class 25 under Section 11(1). Because the entire application shares one number, the status changes to<Link href="/trademark-objected-what-to-do-next" className="text-[#6E5E93] font-semibold hover:underline">"Objected"</Link>for all three classes. Even though Classes 9 and 35 have zero conflicts, the Trade Marks Registry<strong>cannot issue registration certificates for Class 9 or Class 35</strong>. The startup is blocked from enrolling in<Link href="/amazon-brand-registry-trademark-requirements-india" className="text-[#6E5E93] font-semibold hover:underline">Amazon Brand Registry</Link>or executing investor warranties for up to 3 years while the Class 25 objection and hearing drag on.</p>
                                             </div>
                                         </div>
 
@@ -595,9 +521,7 @@ export default function SingleVsMultiClassTrademarkPage() {
                                                     <FontAwesomeIcon icon={faGavel} className="w-5 h-5" />
                                                 </div>
                                                 <h3 className="text-base font-bold text-gray-900 mb-2">Opposition Deadlock (Section 21)</h3>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    If a competitor opposes your mark in just one product class after Trade Marks Journal publication, the opposition proceedings halt certificate issuance for every uncontested service class in that filing.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">If a competitor opposes your mark in just one product class after Trade Marks Journal publication, the opposition proceedings halt certificate issuance for every uncontested service class in that filing.</p>
                                             </div>
 
                                             <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
@@ -605,9 +529,7 @@ export default function SingleVsMultiClassTrademarkPage() {
                                                     <FontAwesomeIcon icon={faClock} className="w-5 h-5" />
                                                 </div>
                                                 <h3 className="text-base font-bold text-gray-900 mb-2">Commercial Stagnation</h3>
-                                                <p className="text-sm text-gray-600 leading-relaxed m-0">
-                                                    Without registered certificates for your clean classes, your business cannot issue formal legal notices, enforce rights against copycats, or license specific verticals to franchisees.
-                                                </p>
+                                                <p className="text-sm text-gray-600 leading-relaxed m-0">Without registered certificates for your clean classes, your business cannot issue formal legal notices, enforce rights against copycats, or license specific verticals to franchisees.</p>
                                             </div>
                                         </div>
                                     </section>
@@ -619,13 +541,9 @@ export default function SingleVsMultiClassTrademarkPage() {
                                             <span>Section 22: Dividing an Application</span>
                                         </h2>
 
-                                        <p className="text-base leading-relaxed mb-6">
-                                            When a multi-class application becomes stalled by an objection or opposition in a single class, the Trade Marks Act provides a statutory legal escape route: <strong>Division of Application</strong>.
-                                        </p>
+                                        <p className="text-base leading-relaxed mb-6">When a multi-class application becomes stalled by an objection or opposition in a single class, the Trade Marks Act provides a statutory legal escape route:<strong>Division of Application</strong>.</p>
 
-                                        <p className="text-base leading-relaxed mb-6">
-                                            Under <strong>Section 22 of the Trade Marks Act, 1999</strong> read with <strong>Rule 102 of the Trade Marks Rules, 2017</strong>, an applicant can file a formal interlocutory request on <strong>Form TM-M</strong> to divide the initial multi-class application into two or more separate divisional applications.
-                                        </p>
+                                        <p className="text-base leading-relaxed mb-6">Under<strong>Section 22 of the Trade Marks Act, 1999</strong>read with<strong>Rule 102 of the Trade Marks Rules, 2017</strong>, an applicant can file a formal interlocutory request on<strong>Form TM-M</strong>to divide the initial multi-class application into two or more separate divisional applications.</p>
 
                                         <div className="bg-gradient-to-r from-purple-50 via-indigo-50 to-white border border-purple-100 rounded-2xl p-6 not-prose mb-8">
                                             <h3 className="text-base font-bold text-gray-900 mb-3">The Hidden Costs of Section 22 Division</h3>
@@ -645,9 +563,7 @@ export default function SingleVsMultiClassTrademarkPage() {
                                             </div>
                                         </div>
 
-                                        <p className="text-base leading-relaxed mb-6">
-                                            <strong>The Strategic Reality:</strong> Filing a multi-class application to "save effort" often backfires. When an objection strikes, the applicant pays more in division fees, legal counsel charges, and administrative delays than if they had simply filed separate single-class applications on day one.
-                                        </p>
+                                        <p className="text-base leading-relaxed mb-6"><strong>The Strategic Reality:</strong>Filing a multi-class application to "save effort" often backfires. When an objection strikes, the applicant pays more in division fees, legal counsel charges, and administrative delays than if they had simply filed separate single-class applications on day one.</p>
                                     </section>
 
                                     {/* SECTION 6: SINGLE CLASS PROS & CONS */}
@@ -657,9 +573,7 @@ export default function SingleVsMultiClassTrademarkPage() {
                                             <span>Pros & Cons of Single Class Filing</span>
                                         </h2>
 
-                                        <p className="text-base leading-relaxed mb-6">
-                                            Filing individual, standalone trademark applications for each relevant Nice class is the gold-standard recommendation of experienced IP litigators across India. Here is a comprehensive breakdown of its merits and drawbacks:
-                                        </p>
+                                        <p className="text-base leading-relaxed mb-6">Filing individual, standalone trademark applications for each relevant Nice class is the gold-standard recommendation of experienced IP litigators across India. Here is a comprehensive breakdown of its merits and drawbacks:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 not-prose mb-8">
                                             {/* PROS */}
@@ -669,26 +583,11 @@ export default function SingleVsMultiClassTrademarkPage() {
                                                     <span>Advantages (Pros)</span>
                                                 </h3>
                                                 <ul className="space-y-3 text-xs text-emerald-950">
-                                                    <li className="flex items-start">
-                                                        <FontAwesomeIcon icon={faCheck} className="w-3.5 h-3.5 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" />
-                                                        <span><strong>Zero Contagion Risk:</strong> An objection in Class 25 has zero legal effect on Class 9 or Class 35.</span>
-                                                    </li>
-                                                    <li className="flex items-start">
-                                                        <FontAwesomeIcon icon={faCheck} className="w-3.5 h-3.5 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" />
-                                                        <span><strong>Rapid Registration:</strong> Clean, uncontested classes receive registration certificates in as little as 6–8 months.</span>
-                                                    </li>
-                                                    <li className="flex items-start">
-                                                        <FontAwesomeIcon icon={faCheck} className="w-3.5 h-3.5 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" />
-                                                        <span><strong>Modular Commercialization:</strong> Seamlessly sell, license, or pledge specific classes to investors without dividing registrations.</span>
-                                                    </li>
-                                                    <li className="flex items-start">
-                                                        <FontAwesomeIcon icon={faCheck} className="w-3.5 h-3.5 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" />
-                                                        <span><strong>Class-Specific Prior Use:</strong> Easily attach distinct user affidavits and invoices matching true commercial launch dates per category.</span>
-                                                    </li>
-                                                    <li className="flex items-start">
-                                                        <FontAwesomeIcon icon={faCheck} className="w-3.5 h-3.5 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" />
-                                                        <span><strong>Selective Maintenance:</strong> If a product line is discontinued, you can simply let that specific class expire at renewal without altering other certificates.</span>
-                                                    </li>
+                                                    <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-3.5 h-3.5 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" /><span><strong>Zero Contagion Risk:</strong>An objection in Class 25 has zero legal effect on Class 9 or Class 35.</span></li>
+                                                    <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-3.5 h-3.5 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" /><span><strong>Rapid Registration:</strong>Clean, uncontested classes receive registration certificates in as little as 6–8 months.</span></li>
+                                                    <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-3.5 h-3.5 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" /><span><strong>Modular Commercialization:</strong>Seamlessly sell, license, or pledge specific classes to investors without dividing registrations.</span></li>
+                                                    <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-3.5 h-3.5 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" /><span><strong>Class-Specific Prior Use:</strong>Easily attach distinct user affidavits and invoices matching true commercial launch dates per category.</span></li>
+                                                    <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-3.5 h-3.5 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" /><span><strong>Selective Maintenance:</strong>If a product line is discontinued, you can simply let that specific class expire at renewal without altering other certificates.</span></li>
                                                 </ul>
                                             </div>
 
@@ -699,18 +598,9 @@ export default function SingleVsMultiClassTrademarkPage() {
                                                     <span>Disadvantages (Cons)</span>
                                                 </h3>
                                                 <ul className="space-y-3 text-xs text-rose-950">
-                                                    <li className="flex items-start">
-                                                        <span className="w-3.5 h-3.5 rounded-full bg-rose-200 text-rose-700 flex items-center justify-center text-[10px] font-bold mr-2 mt-0.5 flex-shrink-0">✕</span>
-                                                        <span><strong>Multiple Numbers to Track:</strong> Requires managing separate 7-digit application numbers and diary entries.</span>
-                                                    </li>
-                                                    <li className="flex items-start">
-                                                        <span className="w-3.5 h-3.5 rounded-full bg-rose-200 text-rose-700 flex items-center justify-center text-[10px] font-bold mr-2 mt-0.5 flex-shrink-0">✕</span>
-                                                        <span><strong>Multiple Certificates:</strong> Results in separate physical/digital registration certificates for corporate records.</span>
-                                                    </li>
-                                                    <li className="flex items-start">
-                                                        <span className="w-3.5 h-3.5 rounded-full bg-rose-200 text-rose-700 flex items-center justify-center text-[10px] font-bold mr-2 mt-0.5 flex-shrink-0">✕</span>
-                                                        <span><strong>Multiple Renewal Filings:</strong> Requires filing separate Form TM-R applications every 10 years (though statutory fee totals are identical).</span>
-                                                    </li>
+                                                    <li className="flex items-start"><span className="w-3.5 h-3.5 rounded-full bg-rose-200 text-rose-700 flex items-center justify-center text-[10px] font-bold mr-2 mt-0.5 flex-shrink-0">✕</span><span><strong>Multiple Numbers to Track:</strong>Requires managing separate 7-digit application numbers and diary entries.</span></li>
+                                                    <li className="flex items-start"><span className="w-3.5 h-3.5 rounded-full bg-rose-200 text-rose-700 flex items-center justify-center text-[10px] font-bold mr-2 mt-0.5 flex-shrink-0">✕</span><span><strong>Multiple Certificates:</strong>Results in separate physical/digital registration certificates for corporate records.</span></li>
+                                                    <li className="flex items-start"><span className="w-3.5 h-3.5 rounded-full bg-rose-200 text-rose-700 flex items-center justify-center text-[10px] font-bold mr-2 mt-0.5 flex-shrink-0">✕</span><span><strong>Multiple Renewal Filings:</strong>Requires filing separate Form TM-R applications every 10 years (though statutory fee totals are identical).</span></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -723,9 +613,7 @@ export default function SingleVsMultiClassTrademarkPage() {
                                             <span>Pros & Cons of Multi-Class Filing</span>
                                         </h2>
 
-                                        <p className="text-base leading-relaxed mb-6">
-                                            Multi-class applications serve a specific purpose for certain enterprise brand owners. Understanding when this structure is advantageous—and when it poses severe risks—is essential:
-                                        </p>
+                                        <p className="text-base leading-relaxed mb-6">Multi-class applications serve a specific purpose for certain enterprise brand owners. Understanding when this structure is advantageous—and when it poses severe risks—is essential:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 not-prose mb-8">
                                             {/* PROS */}
@@ -735,22 +623,10 @@ export default function SingleVsMultiClassTrademarkPage() {
                                                     <span>Advantages (Pros)</span>
                                                 </h3>
                                                 <ul className="space-y-3 text-xs text-indigo-950">
-                                                    <li className="flex items-start">
-                                                        <FontAwesomeIcon icon={faCheck} className="w-3.5 h-3.5 text-indigo-600 mr-2 mt-0.5 flex-shrink-0" />
-                                                        <span><strong>Unified Portfolio Tracking:</strong> Single 7-digit trademark application number across all registered classes.</span>
-                                                    </li>
-                                                    <li className="flex items-start">
-                                                        <FontAwesomeIcon icon={faCheck} className="w-3.5 h-3.5 text-indigo-600 mr-2 mt-0.5 flex-shrink-0" />
-                                                        <span><strong>Single Registration Certificate:</strong> One master certificate enumerating all protected goods and services.</span>
-                                                    </li>
-                                                    <li className="flex items-start">
-                                                        <FontAwesomeIcon icon={faCheck} className="w-3.5 h-3.5 text-indigo-600 mr-2 mt-0.5 flex-shrink-0" />
-                                                        <span><strong>Consolidated Renewals:</strong> Renew all classes simultaneously on a single Form TM-R every 10 years.</span>
-                                                    </li>
-                                                    <li className="flex items-start">
-                                                        <FontAwesomeIcon icon={faCheck} className="w-3.5 h-3.5 text-indigo-600 mr-2 mt-0.5 flex-shrink-0" />
-                                                        <span><strong>Single Form TM-48:</strong> One <Link href="/form-tm-48-power-of-attorney-trademark-india" className="text-[#6E5E93] font-bold hover:underline">Power of Attorney</Link> covers all classes in that application.</span>
-                                                    </li>
+                                                    <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-3.5 h-3.5 text-indigo-600 mr-2 mt-0.5 flex-shrink-0" /><span><strong>Unified Portfolio Tracking:</strong>Single 7-digit trademark application number across all registered classes.</span></li>
+                                                    <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-3.5 h-3.5 text-indigo-600 mr-2 mt-0.5 flex-shrink-0" /><span><strong>Single Registration Certificate:</strong>One master certificate enumerating all protected goods and services.</span></li>
+                                                    <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-3.5 h-3.5 text-indigo-600 mr-2 mt-0.5 flex-shrink-0" /><span><strong>Consolidated Renewals:</strong>Renew all classes simultaneously on a single Form TM-R every 10 years.</span></li>
+                                                    <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-3.5 h-3.5 text-indigo-600 mr-2 mt-0.5 flex-shrink-0" /><span><strong>Single Form TM-48:</strong>One<Link href="/form-tm-48-power-of-attorney-trademark-india" className="text-[#6E5E93] font-bold hover:underline">Power of Attorney</Link>covers all classes in that application.</span></li>
                                                 </ul>
                                             </div>
 
@@ -761,22 +637,10 @@ export default function SingleVsMultiClassTrademarkPage() {
                                                     <span>Disadvantages (Cons)</span>
                                                 </h3>
                                                 <ul className="space-y-3 text-xs text-rose-950">
-                                                    <li className="flex items-start">
-                                                        <span className="w-3.5 h-3.5 rounded-full bg-rose-200 text-rose-700 flex items-center justify-center text-[10px] font-bold mr-2 mt-0.5 flex-shrink-0">✕</span>
-                                                        <span><strong>All-or-Nothing Delay:</strong> One citation or opposition halts certificate issuance for every single class.</span>
-                                                    </li>
-                                                    <li className="flex items-start">
-                                                        <span className="w-3.5 h-3.5 rounded-full bg-rose-200 text-rose-700 flex items-center justify-center text-[10px] font-bold mr-2 mt-0.5 flex-shrink-0">✕</span>
-                                                        <span><strong>Zero Govt Fee Discount:</strong> You pay the exact same ₹4,500/₹9,000 per class statutory rate.</span>
-                                                    </li>
-                                                    <li className="flex items-start">
-                                                        <span className="w-3.5 h-3.5 rounded-full bg-rose-200 text-rose-700 flex items-center justify-center text-[10px] font-bold mr-2 mt-0.5 flex-shrink-0">✕</span>
-                                                        <span><strong>Costly Application Division:</strong> Section 22 division on Form TM-M adds ₹900/₹1,800 plus legal fees.</span>
-                                                    </li>
-                                                    <li className="flex items-start">
-                                                        <span className="w-3.5 h-3.5 rounded-full bg-rose-200 text-rose-700 flex items-center justify-center text-[10px] font-bold mr-2 mt-0.5 flex-shrink-0">✕</span>
-                                                        <span><strong>Rigid Licensing & Assignment:</strong> Transferring one business unit to an acquirer requires complex register carving.</span>
-                                                    </li>
+                                                    <li className="flex items-start"><span className="w-3.5 h-3.5 rounded-full bg-rose-200 text-rose-700 flex items-center justify-center text-[10px] font-bold mr-2 mt-0.5 flex-shrink-0">✕</span><span><strong>All-or-Nothing Delay:</strong>One citation or opposition halts certificate issuance for every single class.</span></li>
+                                                    <li className="flex items-start"><span className="w-3.5 h-3.5 rounded-full bg-rose-200 text-rose-700 flex items-center justify-center text-[10px] font-bold mr-2 mt-0.5 flex-shrink-0">✕</span><span><strong>Zero Govt Fee Discount:</strong>You pay the exact same ₹4,500/₹9,000 per class statutory rate.</span></li>
+                                                    <li className="flex items-start"><span className="w-3.5 h-3.5 rounded-full bg-rose-200 text-rose-700 flex items-center justify-center text-[10px] font-bold mr-2 mt-0.5 flex-shrink-0">✕</span><span><strong>Costly Application Division:</strong>Section 22 division on Form TM-M adds ₹900/₹1,800 plus legal fees.</span></li>
+                                                    <li className="flex items-start"><span className="w-3.5 h-3.5 rounded-full bg-rose-200 text-rose-700 flex items-center justify-center text-[10px] font-bold mr-2 mt-0.5 flex-shrink-0">✕</span><span><strong>Rigid Licensing & Assignment:</strong>Transferring one business unit to an acquirer requires complex register carving.</span></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -789,9 +653,7 @@ export default function SingleVsMultiClassTrademarkPage() {
                                             <span>Strategic Decision Framework</span>
                                         </h2>
 
-                                        <p className="text-base leading-relaxed mb-6">
-                                            To determine whether your enterprise should file single-class or multi-class applications on Form TM-A, apply this practical decision framework based on your business profile:
-                                        </p>
+                                        <p className="text-base leading-relaxed mb-6">To determine whether your enterprise should file single-class or multi-class applications on Form TM-A, apply this practical decision framework based on your business profile:</p>
 
                                         <div className="space-y-4 not-prose mb-8">
                                             <div className="p-5 bg-white rounded-2xl border border-gray-200 shadow-sm flex items-start space-x-4">
@@ -800,9 +662,7 @@ export default function SingleVsMultiClassTrademarkPage() {
                                                 </div>
                                                 <div>
                                                     <h3 className="text-sm font-bold text-gray-900 mb-1">Early-Stage Startups & D2C Brands &rarr; File Single Class</h3>
-                                                    <p className="text-xs text-gray-600 leading-relaxed m-0">
-                                                        If you sell across products (e.g. clothing in Class 25) and services (e.g. e-commerce in Class 35), file <strong>separate single-class applications</strong>. Getting your Class 35 registration quickly allows you to enroll in Amazon Brand Registry, protect your domain, and secure investor funding without waiting for Class 25 clearance.
-                                                    </p>
+                                                    <p className="text-xs text-gray-600 leading-relaxed m-0">If you sell across products (e.g. Clothing in Class 25) and services (e.g. E-commerce in Class 35), file<strong>separate single-class applications</strong>. Getting your Class 35 registration quickly allows you to enroll in Amazon Brand Registry, protect your domain, and secure investor funding without waiting for Class 25 clearance.</p>
                                                 </div>
                                             </div>
 
@@ -812,9 +672,7 @@ export default function SingleVsMultiClassTrademarkPage() {
                                                 </div>
                                                 <div>
                                                     <h3 className="text-sm font-bold text-gray-900 mb-1">Different Commercial Launch Dates &rarr; File Single Class</h3>
-                                                    <p className="text-xs text-gray-600 leading-relaxed m-0">
-                                                        If you began selling software in 2021 (Class 9) but launched consulting services in 2024 (Class 42), separate filings enable you to file precise <Link href="/trademark-user-affidavit-format-and-rules-india" className="text-[#6E5E93] font-bold hover:underline">User Affidavits (Rule 25)</Link> with clear, unclouded documentary proof for each class.
-                                                    </p>
+                                                    <p className="text-xs text-gray-600 leading-relaxed m-0">If you began selling software in 2021 (Class 9) but launched consulting services in 2024 (Class 42), separate filings enable you to file precise<Link href="/trademark-user-affidavit-format-and-rules-india" className="text-[#6E5E93] font-bold hover:underline">User Affidavits (Rule 25)</Link>with clear, unclouded documentary proof for each class.</p>
                                                 </div>
                                             </div>
 
@@ -824,9 +682,7 @@ export default function SingleVsMultiClassTrademarkPage() {
                                                 </div>
                                                 <div>
                                                     <h3 className="text-sm font-bold text-gray-900 mb-1">Conglomerates with Coined House Marks &rarr; File Multi-Class</h3>
-                                                    <p className="text-xs text-gray-600 leading-relaxed m-0">
-                                                        Large corporate entities registering invented, highly distinctive coined words (e.g., "KODAK", "INFOSYS") across coordinated, non-contentious goods and services can leverage multi-class filings to minimize corporate docketing and manage a single master certificate.
-                                                    </p>
+                                                    <p className="text-xs text-gray-600 leading-relaxed m-0">Large corporate entities registering invented, highly distinctive coined words (e.g., "KODAK", "INFOSYS") across coordinated, non-contentious goods and services can leverage multi-class filings to minimize corporate docketing and manage a single master certificate.</p>
                                                 </div>
                                             </div>
 
@@ -836,9 +692,7 @@ export default function SingleVsMultiClassTrademarkPage() {
                                                 </div>
                                                 <div>
                                                     <h3 className="text-sm font-bold text-gray-900 mb-1">Businesses Planning Future Spin-Offs or M&A &rarr; File Single Class</h3>
-                                                    <p className="text-xs text-gray-600 leading-relaxed m-0">
-                                                        If you plan to sell one product line to an acquirer or raise vertical-specific venture funding, holding standalone single-class trademark certificates allows instantaneous assignment on Form TM-P without expensive registry division.
-                                                    </p>
+                                                    <p className="text-xs text-gray-600 leading-relaxed m-0">If you plan to sell one product line to an acquirer or raise vertical-specific venture funding, holding standalone single-class trademark certificates allows instantaneous assignment on Form TM-P without expensive registry division.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -878,9 +732,7 @@ export default function SingleVsMultiClassTrademarkPage() {
                                             <span>Strategic Advice & Action Plan</span>
                                         </h2>
 
-                                        <p className="text-base leading-relaxed mb-6">
-                                            Protecting your brand across multiple business categories is essential for preventing competitor encroachment and securing market dominance. However, combining multiple classes into a single application creates severe legal vulnerabilities with zero government fee savings. For the vast majority of Indian businesses, <strong>filing separate single-class applications provides maximum legal protection, swift registration timelines, and uncompromised commercial agility</strong>.
-                                        </p>
+                                        <p className="text-base leading-relaxed mb-6">Protecting your brand across multiple business categories is essential for preventing competitor encroachment and securing market dominance. However, combining multiple classes into a single application creates severe legal vulnerabilities with zero government fee savings. For the vast majority of Indian businesses,<strong>filing separate single-class applications provides maximum legal protection, swift registration timelines, and uncompromised commercial agility</strong>.</p>
 
                                         <div className="rounded-3xl bg-gradient-to-br from-[#0C002B] via-[#1A0B3B] to-[#2D1254] p-8 md:p-12 text-white shadow-2xl relative overflow-hidden not-prose border border-purple-500/20">
                                             <div className="absolute -right-10 -bottom-10 w-60 h-60 bg-purple-600/20 rounded-full blur-3xl pointer-events-none"></div>
@@ -897,9 +749,7 @@ export default function SingleVsMultiClassTrademarkPage() {
                                                     Architect Your Multi-Class Brand Defense
                                                 </h3>
 
-                                                <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">
-                                                    Get comprehensive clearance searches across all 45 Nice classes, strategic Form TM-A classification, and end-to-end IP attorney representation with zero compliance errors.
-                                                </p>
+                                                <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">Get comprehensive clearance searches across all 45 Nice classes, strategic Form TM-A classification, and end-to-end IP attorney representation with zero compliance errors.</p>
 
                                                 <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
                                                     <Link
@@ -917,9 +767,7 @@ export default function SingleVsMultiClassTrademarkPage() {
                                                     </a>
                                                 </div>
 
-                                                <p className="mt-6 text-xs font-medium tracking-wide text-white/50 sm:text-sm">
-                                                    Certified IP Advocates • Zero Hidden Costs • Same-Day Form TM-A E-Filing
-                                                </p>
+                                                <p className="mt-6 text-xs font-medium tracking-wide text-white/50 sm:text-sm">Certified IP Advocates • Zero Hidden Costs • Same-Day Form TM-A E-Filing</p>
                                             </div>
                                         </div>
                                     </section>
@@ -952,70 +800,14 @@ export default function SingleVsMultiClassTrademarkPage() {
                             <div className="bg-gray-50 p-10 rounded-[2.5rem] shadow-sm border border-gray-100">
                                 <h3 className="text-sm font-black text-gray-400 mb-8 uppercase tracking-[0.3em]">Related Resources</h3>
                                 <ul className="space-y-6">
-                                    <li>
-                                        <Link href="/trademark-class-finder" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faTable} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Class Finder</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/trademark-fee-concession-msme-udyam-startup-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faBuilding} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">50% MSME Discount</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/word-mark-vs-device-mark-trademark-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faLayerGroup} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Word vs Device Mark</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/trademark-user-affidavit-format-and-rules-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faFileContract} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">User Affidavit</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/form-tm-48-power-of-attorney-trademark-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faScaleBalanced} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Form TM-48</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/how-to-search-for-existing-trademark" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faSearch} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">TM Search Guide</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/process-and-steps-of-trademark-registration" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faListUl} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Filing Process</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/trademark-application-status" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faCheckCircle} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">TM Status Tracker</span>
-                                        </Link>
-                                    </li>
+                                    <li><Link href="/trademark-class-finder" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faTable} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Class Finder</span></Link></li>
+                                    <li><Link href="/trademark-fee-concession-msme-udyam-startup-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faBuilding} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">50% MSME Discount</span></Link></li>
+                                    <li><Link href="/word-mark-vs-device-mark-trademark-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faLayerGroup} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Word vs Device Mark</span></Link></li>
+                                    <li><Link href="/trademark-user-affidavit-format-and-rules-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faFileContract} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">User Affidavit</span></Link></li>
+                                    <li><Link href="/form-tm-48-power-of-attorney-trademark-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faScaleBalanced} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Form TM-48</span></Link></li>
+                                    <li><Link href="/how-to-search-for-existing-trademark" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faSearch} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">TM Search Guide</span></Link></li>
+                                    <li><Link href="/process-and-steps-of-trademark-registration" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faListUl} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Filing Process</span></Link></li>
+                                    <li><Link href="/trademark-application-status" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faCheckCircle} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">TM Status Tracker</span></Link></li>
                                 </ul>
                             </div>
                         </aside>

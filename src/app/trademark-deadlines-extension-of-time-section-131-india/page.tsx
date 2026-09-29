@@ -217,7 +217,7 @@ export default function TrademarkDeadlinesExtensionPage() {
                                 <span className="text-[10px] sm:text-xs font-bold tracking-wider text-[#6E5E93] uppercase">Statutory Time Limits &amp; Compliance</span>
                             </div>
                             <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-3 leading-tight text-gray-900 tracking-tighter">
-                                Trademark Deadlines in India: <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'transparent' }}>Strict Time Limits &amp; Section 131 Extension Rules</span>
+                                Trademark Deadlines &amp; <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'transparent' }}>Section 131 Extension Rules</span> in India
                             </h1>
                             <p className="text-base md:text-lg mb-5 text-gray-700 font-medium leading-relaxed">
                                 Missing a statutory trademark deadline in India causes automatic abandonment, permanent loss of brand priority, or forfeiture of legal defenses. Under <strong>Section 131 of the Trade Marks Act, 1999</strong> and <strong>Rule 109 of the Trade Marks Rules, 2017</strong>, applicants can seek procedural time extensions on <strong>Form TM-M</strong>. Understand which deadlines are strictly non-extendable by law, how to secure objection response extensions, manage hearing adjournments, and restore abandoned marks.

@@ -215,7 +215,7 @@ export default function TradeNameVsTrademarkPage() {
                                 <span className="text-[10px] sm:text-xs font-bold tracking-wider text-[#6E5E93] uppercase">Brand Protection &amp; IP Strategy</span>
                             </div>
                             <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-3 leading-tight text-gray-900 tracking-tighter">
-                                Trade Name vs Trademark in India: <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'transparent' }}>Why GST &amp; MSME Registration Does Not Protect Your Brand</span>
+                                Trade Name vs Trademark in India: <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'transparent' }}>Key Differences</span>
                             </h1>
                             <p className="text-base md:text-lg mb-5 text-gray-700 font-medium leading-relaxed">
                                 Millions of Indian entrepreneurs, MSME founders, and traders mistakenly believe that securing a <strong>GST registration</strong>, <strong>MSME Udyam certificate</strong>, <strong>Shop Act license</strong>, or <strong>MCA company incorporation</strong> gives them legal ownership over their brand name. In reality, commercial and tax registrations offer <strong>zero intellectual property protection</strong>. Learn why only a registered trademark under the <strong>Trade Marks Act, 1999</strong> grants an exclusive nationwide monopoly, and how failing to register leaves your brand vulnerable to theft, copycats, and devastating cease-and-desist lawsuits.
@@ -687,7 +687,7 @@ export default function TradeNameVsTrademarkPage() {
                                     <section id="final-takeaway" className="scroll-mt-32 pt-8 border-t border-gray-100">
                                         <h2 className="text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLightbulb} className="w-7 h-7 mr-3 text-yellow-500" />
-                                            Strategic Brand Protection Advice
+                                            Strategic Trade Name vs Trademark Advice
                                         </h2>
                                         <p className="mb-4">
                                             Your brand name, logo, and commercial reputation are among the most valuable intangible assets of your business. Do not make the fatal mistake of relying on GST, MSME, or Shop Act licenses for brand security. Tax registrations certify your obligation to pay taxes; only a registered trademark certifies your right to own and defend your brand.

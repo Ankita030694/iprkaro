@@ -218,7 +218,7 @@ export default function SeriesTrademarkApplicationPage() {
                                 <span className="text-[10px] sm:text-xs font-bold tracking-wider text-[#6E5E93] uppercase">Advanced Portfolio Filing &amp; Cost Optimization</span>
                             </div>
                             <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-3 leading-tight text-gray-900 tracking-tighter">
-                                Series Trademark Application in India: <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'transparent' }}>Section 15 Guide to Save Government Filing Fees</span>
+                                Series Trademark Application in India: <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'transparent' }}>Section 15 Guide</span>
                             </h1>
                             <p className="text-base md:text-lg mb-5 text-gray-700 font-medium leading-relaxed">
                                 Launching product lines with multiple flavors, colorways, sizes, or geographic variations often forces enterprises to spend lakhs in separate trademark filing fees. Under <strong>Section 15 of the Trade Marks Act, 1999</strong> and <strong>Rule 25 of the Trade Marks Rules, 2017</strong>, businesses can consolidate an entire family of closely resembling marks into a <strong>single Series Trademark Application</strong> on Form TM-A—slashing official government fees by up to 80% while securing comprehensive nationwide protection.

@@ -81,11 +81,11 @@ export const metadata: Metadata = {
 const faqs = [
     {
         question: "What is Section 14 of the Trade Marks Act, 1999?",
-        answer: "Section 14 of the Trade Marks Act, 1999 regulates trademark applications that falsely suggest a connection with any living person or a person who died within 20 years prior to the application date. In such cases, the Registrar of Trade Marks requires the applicant to submit the written consent of the living individual or the legal representatives of the deceased person before proceeding with registration."
+        answer: "Section 14 of the Trade Marks Act, 1999 regulates trademark applications that falsely suggest a connection with any living person or a person who died within 20 years before the application date. In such cases, the Registrar of Trade Marks requires the applicant to submit the written consent of the living individual or the legal representatives of the deceased person before proceeding with registration."
     },
     {
         question: "What is the 20-year rule under Section 14 for deceased persons?",
-        answer: "The 20-year rule stipulates that if a trademark incorporates the name or representation of a person who passed away within 20 years prior to the trademark filing date, mandatory written consent from all legal heirs or executors is required. If the individual passed away more than 20 years before the filing date, Section 14 consent is not statutorily required, though the mark must still comply with Section 9 and the Emblems and Names Act, 1950."
+        answer: "The 20-year rule stipulates that if a trademark incorporates the name or representation of a person who passed away within 20 years before the trademark filing date, mandatory written consent from all legal heirs or executors is required. If the individual passed away more than 20 years before the filing date, Section 14 consent is not statutorily required, though the mark must still comply with Section 9 and the Emblems and Names Act, 1950."
     },
     {
         question: "Can I register my own personal name as a trademark without Section 14 objection?",
@@ -217,11 +217,9 @@ export default function Section14TrademarkConsentPage() {
                                 <span className="text-[10px] sm:text-xs font-bold tracking-wider text-[#6E5E93] uppercase">Trade Marks Act 1999 Compliance</span>
                             </div>
                             <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-3 leading-tight text-gray-900 tracking-tighter">
-                                Trademark Objection Under Section 14: <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'transparent' }}>Names of Living or Deceased Persons</span>
+                                Trademark Objection Under Section 14: <span className="text-[#6E5E93] bg-clip-text text-transparent bg-gradient-to-r from-[#6E5E93] to-[#8A7AB5]" style={{ WebkitTextFillColor: 'transparent' }}>Names of Persons</span>
                             </h1>
-                            <p className="text-base md:text-lg mb-5 text-gray-700 font-medium leading-relaxed">
-                                Naming a brand after a founder, family patriarch, celebrity, or historical luminary is a time-honored branding tradition in India. However, under <strong>Section 14 of the Trade Marks Act, 1999</strong>, the Trade Marks Registry mandates express written consent to prevent unauthorized commercial exploitation and deceptive association. Master the <strong>20-year deceased rule</strong>, Consent Affidavit drafting, legal heir verification, personality rights defense, and step-by-step objection resolution protocols.
-                            </p>
+                            <p className="text-base md:text-lg mb-5 text-gray-700 font-medium leading-relaxed">Naming a brand after a founder, family patriarch, celebrity, or historical luminary is a time-honored branding tradition in India. However, under<strong>Section 14 of the Trade Marks Act, 1999</strong>, the Trade Marks Registry mandates express written consent to prevent unauthorized commercial exploitation and deceptive association. Master the<strong>20-year deceased rule</strong>, Consent Affidavit drafting, legal heir verification, personality rights defense, and step-by-step objection resolution protocols.</p>
 
                             <div className="flex flex-wrap items-center gap-4 mb-6">
                                 <div className="flex items-center mr-2">
@@ -312,36 +310,11 @@ export default function Section14TrademarkConsentPage() {
                                                 Close
                                             </span>
                                             <svg className="w-4 h-4 text-gray-500 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                                            </svg>
-                                        </div>
-                                    </summary>
-                                    <div className="p-3.5 pt-2 border-t border-purple-50 bg-white/70">
-                                        <nav className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
-                                            {tocSections.map((section, idx) => (
-                                                <a
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg></div></summary><div className="p-3.5 pt-2 border-t border-purple-50 bg-white/70"><nav className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">{tocSections.map((section, idx) => (<a
                                                     key={section.id}
                                                     href={`#${section.id}`}
                                                     className="flex items-center p-2 rounded-xl text-xs font-medium text-gray-700 hover:text-[#6E5E93] hover:bg-purple-50/80 transition-all border border-transparent hover:border-purple-100"
-                                                >
-                                                    <span className="w-5 h-5 rounded-full bg-purple-100 text-[#6E5E93] flex items-center justify-center text-[10px] font-bold mr-2 flex-shrink-0">
-                                                        {idx + 1}
-                                                    </span>
-                                                    <span className="truncate">{section.title}</span>
-                                                </a>
-                                            ))}
-                                        </nav>
-                                    </div>
-                                </details>
-                            </div>
-
-                            <div className="bg-white p-4 md:p-12 rounded-2xl shadow-sm border border-gray-100 space-y-12 md:space-y-20 article-content">
-                                <article className="prose prose-lg max-w-none text-gray-700 leading-relaxed font-normal">
-
-                                    <div className="flex items-center space-x-4 mb-10 p-4 bg-gray-50 rounded-xl border border-gray-100 not-prose">
-                                        <img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-12 h-12 rounded-full object-cover m-0" />
-                                        <div>
-                                            <p className="text-sm font-bold text-gray-900 m-0">Written by <Link href="/about-us" className="text-[rgb(110,94,147)] hover:underline">Rahul Roy</Link></p>
+                                                ><span className="w-5 h-5 rounded-full bg-purple-100 text-[#6E5E93] flex items-center justify-center text-[10px] font-bold mr-2 flex-shrink-0">{idx + 1}</span><span className="truncate">{section.title}</span></a>))}</nav></div></details></div><div className="bg-white p-4 md:p-12 rounded-2xl shadow-sm border border-gray-100 space-y-12 md:space-y-20 article-content"><article className="prose prose-lg max-w-none text-gray-700 leading-relaxed font-normal"><div className="flex items-center space-x-4 mb-10 p-4 bg-gray-50 rounded-xl border border-gray-100 not-prose"><img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-12 h-12 rounded-full object-cover m-0" /><div><p className="text-sm font-bold text-gray-900 m-0">Written by<Link href="/about-us" className="text-[rgb(110,94,147)] hover:underline">Rahul Roy</Link></p>
                                             <p className="text-xs text-gray-500 m-0">Trademark Research Specialist</p>
                                         </div>
                                     </div>
@@ -354,20 +327,12 @@ export default function Section14TrademarkConsentPage() {
                                         </h2>
 
                                         <div id="quick-answer" className="bg-purple-50 border-l-4 border-[rgb(110,94,147)] p-6 rounded-r-xl mb-8">
-                                            <p className="font-semibold text-gray-900 m-0">
-                                                Under Section 14 of the Trade Marks Act, 1999, if a trademark application incorporates the name, signature, portrait, or representation of a living person or a person who died within 20 years prior to the application date, the Registrar of Trade Marks will issue an examination objection. To overcome this objection, the applicant must submit a formal, notarized written consent letter or Consent Affidavit on non-judicial stamp paper from the living individual or all legal heirs of the deceased person, explicitly authorizing the commercial use and registration of the personal name.
-                                            </p>
+                                            <p className="font-semibold text-gray-900 m-0">Under Section 14 of the Trade Marks Act, 1999, if a trademark application incorporates the name, signature, portrait, or representation of a living person or a person who died within 20 years before the application date, the Registrar of Trade Marks will issue an examination objection. To overcome this objection, the applicant must submit a formal, notarized written consent letter or Consent Affidavit on non-judicial stamp paper from the living individual or all legal heirs of the deceased person, explicitly authorizing the commercial use and registration of the personal name.</p>
                                         </div>
 
-                                        <p className="mb-6">
-                                            Personal names, family surnames, signatures, and ancestral titles form the cornerstone of commercial branding across India—from heritage sweets manufacturers and fashion designer couture houses to multi-specialty hospitals, legal practices, and real estate empires. However, Indian trademark law strictly balances commercial creativity against personal privacy, reputation, and the prevention of public confusion.
-                                        </p>
-                                        <p className="mb-6">
-                                            When an entrepreneur files a trademark containing a personal name (e.g., &ldquo;Dr. Roy&apos;s Clinic&rdquo;, &ldquo;Kapoor Jewelers&rdquo;, or &ldquo;Ananya Couture&rdquo;), the Trademark Examiner scrutinizes whether the mark falsely implies an endorsement, sponsorship, or association with an actual person. Under <strong>Section 14 of the Trade Marks Act, 1999</strong>, the registry enforces statutory checks requiring verifiable authorization before granting exclusive monopoly rights.
-                                        </p>
-                                        <p className="mb-6">
-                                            Failing to respond properly to a Section 14 objection or submitting an unverified consent document leads to application abandonment or refusal. Understand how personal names fit within distinctiveness criteria in our comprehensive analysis on <Link href="/can-you-trademark-your-own-name-in-india" className="text-[rgb(110,94,147)] hover:underline font-medium">can you trademark your own name in India</Link> and <Link href="/trademark-consent-letter-coexistence-agreement-india" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark consent letter and coexistence agreements</Link>.
-                                        </p>
+                                        <p className="mb-6">Personal names, family surnames, signatures, and ancestral titles form the cornerstone of commercial branding across India—from heritage sweets manufacturers and fashion designer couture houses to multi-specialty hospitals, legal practices, and real estate empires. However, Indian trademark law strictly balances commercial creativity against personal privacy, reputation, and the prevention of public confusion.</p>
+                                        <p className="mb-6">When an entrepreneur files a trademark containing a personal name (e.g., &ldquo;Dr. Roy&apos;s Clinic&rdquo;, &ldquo;Kapoor Jewelers&rdquo;, or &ldquo;Ananya Couture&rdquo;), the Trademark Examiner scrutinizes whether the mark falsely implies an endorsement, sponsorship, or association with an actual person. Under<strong>Section 14 of the Trade Marks Act, 1999</strong>, the registry enforces statutory checks requiring verifiable authorization before granting exclusive monopoly rights.</p>
+                                        <p className="mb-6">Failing to respond properly to a Section 14 objection or submitting an unverified consent document leads to application abandonment or refusal. Understand how personal names fit within distinctiveness criteria in our comprehensive analysis on<Link href="/can-you-trademark-your-own-name-in-india" className="text-[rgb(110,94,147)] hover:underline font-medium">can you trademark your own name in India</Link>and<Link href="/trademark-consent-letter-coexistence-agreement-india" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark consent letter and coexistence agreements</Link>.</p>
                                     </section>
 
                                     {/* SECTION 2: STATUTORY TEXT & PURPOSE */}
@@ -376,9 +341,7 @@ export default function Section14TrademarkConsentPage() {
                                             <FontAwesomeIcon icon={faBookOpen} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Statutory Text of Section 14
                                         </h2>
-                                        <p className="mb-6">
-                                            Section 14 of the Trade Marks Act, 1999 is titled <em>&ldquo;Use of names and representations of living persons or persons recently deceased&rdquo;</em> and provides as follows:
-                                        </p>
+                                        <p className="mb-6">Section 14 of the Trade Marks Act, 1999 is titled<em>&ldquo;Use of names and representations of living persons or persons recently deceased&rdquo;</em>and provides as follows:</p>
 
                                         <div className="bg-gray-50 border-l-4 border-indigo-600 p-6 rounded-r-2xl mb-8 not-prose">
                                             <blockquote className="text-sm md:text-base italic text-gray-800 leading-relaxed m-0">
@@ -389,23 +352,17 @@ export default function Section14TrademarkConsentPage() {
                                         <div className="space-y-6">
                                             <div className="border-l-4 border-[#6E5E93] pl-4 py-2 bg-purple-50/40 rounded-r-xl">
                                                 <h3 className="text-lg font-bold text-gray-900 mb-1">1. Protection Against False Commercial Association</h3>
-                                                <p className="text-sm text-gray-700 leading-relaxed m-0">
-                                                    The primary legislative objective is preventing applicants from unfairly trading upon the goodwill, prestige, or consumer trust associated with an individual without their knowledge or permission.
-                                                </p>
+                                                <p className="text-sm text-gray-700 leading-relaxed m-0">The primary legislative objective is preventing applicants from unfairly trading upon the goodwill, prestige, or consumer trust associated with an individual without their knowledge or permission.</p>
                                             </div>
 
                                             <div className="border-l-4 border-indigo-500 pl-4 py-2 bg-indigo-50/40 rounded-r-xl">
                                                 <h3 className="text-lg font-bold text-gray-900 mb-1">2. Scope Beyond Word Names (Portraits &amp; Signatures)</h3>
-                                                <p className="text-sm text-gray-700 leading-relaxed m-0">
-                                                    Section 14 applies not only to textual names or surnames but equally to artistic representations, photographic portraits, caricatures, monograms, and handwritten signatures of individuals.
-                                                </p>
+                                                <p className="text-sm text-gray-700 leading-relaxed m-0">Section 14 applies not only to textual names or surnames but equally to artistic representations, photographic portraits, caricatures, monograms, and handwritten signatures of individuals.</p>
                                             </div>
 
                                             <div className="border-l-4 border-emerald-500 pl-4 py-2 bg-emerald-50/40 rounded-r-xl">
                                                 <h3 className="text-lg font-bold text-gray-900 mb-1">3. Discretionary Powers of the Registrar</h3>
-                                                <p className="text-sm text-gray-700 leading-relaxed m-0">
-                                                    The Registrar has statutory discretion to demand written proof whenever an application appears to reference an identifiable person. In default of such furnished consent, the Registrar is statutorily empowered to refuse the application.
-                                                </p>
+                                                <p className="text-sm text-gray-700 leading-relaxed m-0">The Registrar has statutory discretion to demand written proof whenever an application appears to reference an identifiable person. In default of such furnished consent, the Registrar is statutorily empowered to refuse the application.</p>
                                             </div>
                                         </div>
                                     </section>
@@ -416,9 +373,7 @@ export default function Section14TrademarkConsentPage() {
                                             <FontAwesomeIcon icon={faClock} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             The 20-Year Rule for Deceased Persons
                                         </h2>
-                                        <p className="mb-6">
-                                            A distinct feature of Section 14 is the temporal threshold governing deceased individuals. Indian law recognizes that a deceased person&apos;s commercial identity and estate rights retain immediate post-mortem significance for two decades:
-                                        </p>
+                                        <p className="mb-6">A distinct feature of Section 14 is the temporal threshold governing deceased individuals. Indian law recognizes that a deceased person&apos;s commercial identity and estate rights retain immediate post-mortem significance for two decades:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
                                             <div className="bg-purple-50/50 p-6 rounded-2xl border border-purple-200">
@@ -426,9 +381,7 @@ export default function Section14TrademarkConsentPage() {
                                                     <span className="w-3 h-3 bg-[#6E5E93] rounded-full mr-2"></span>
                                                     <h3 className="text-base font-bold text-gray-900 m-0">Death Occurred Within 20 Years</h3>
                                                 </div>
-                                                <p className="text-xs sm:text-sm text-gray-700 leading-relaxed mb-4">
-                                                    If the individual passed away within 20 years prior to the trademark filing date, mandatory written consent must be obtained from the executor or all surviving legal representatives.
-                                                </p>
+                                                <p className="text-xs sm:text-sm text-gray-700 leading-relaxed mb-4">If the individual passed away within 20 years before the trademark filing date, mandatory written consent must be obtained from the executor or all surviving legal representatives.</p>
                                                 <div className="bg-purple-100 p-3 rounded-xl text-xs font-semibold text-[#6E5E93]">
                                                     Statutory Requirement: Death Certificate + Heirship Certificate + Notarized Consent Affidavit
                                                 </div>
@@ -439,9 +392,7 @@ export default function Section14TrademarkConsentPage() {
                                                     <span className="w-3 h-3 bg-slate-700 rounded-full mr-2"></span>
                                                     <h3 className="text-base font-bold text-gray-900 m-0">Death Occurred Over 20 Years Ago</h3>
                                                 </div>
-                                                <p className="text-xs sm:text-sm text-gray-700 leading-relaxed mb-4">
-                                                    If the individual died more than 20 years before the trademark filing date, Section 14 consent is statutorily exempted. The applicant need not secure legal heir permissions.
-                                                </p>
+                                                <p className="text-xs sm:text-sm text-gray-700 leading-relaxed mb-4">If the individual died more than 20 years before the trademark filing date, Section 14 consent is statutorily exempted. The applicant need not secure legal heir permissions.</p>
                                                 <div className="bg-slate-200/70 p-3 rounded-xl text-xs font-semibold text-slate-800">
                                                     Statutory Requirement: Exemption Statement under Section 14 + Historical Proof of Demise
                                                 </div>
@@ -453,9 +404,7 @@ export default function Section14TrademarkConsentPage() {
                                                 <FontAwesomeIcon icon={faExclamationTriangle} className="w-4 h-4 mr-2 text-amber-800" />
                                                 Crucial Caveat: Emblems &amp; Names Act &amp; Section 9(2)
                                             </h3>
-                                            <p className="text-xs sm:text-sm text-amber-900 leading-relaxed m-0">
-                                                Even if a historical luminary or national leader died more than 20 years ago, commercial registration may still be strictly barred under the <strong>Emblems and Names (Prevention of Improper Use) Act, 1950</strong> or <strong>Section 9(2)(b)</strong> of the Trade Marks Act (marks likely to hurt religious or cultural susceptibilities). You cannot register marks such as &ldquo;Mahatma Gandhi&rdquo;, &ldquo;Rabindranath Tagore&rdquo;, or &ldquo;Chhatrapati Shivaji Maharaj&rdquo; for commercial goods.
-                                            </p>
+                                            <p className="text-xs sm:text-sm text-amber-900 leading-relaxed m-0">Even if a historical luminary or national leader died more than 20 years ago, commercial registration may still be strictly barred under the<strong>Emblems and Names (Prevention of Improper Use) Act, 1950</strong>or<strong>Section 9(2)(b)</strong>of the Trade Marks Act (marks likely to hurt religious or cultural susceptibilities). You cannot register marks such as &ldquo;Mahatma Gandhi&rdquo;, &ldquo;Rabindranath Tagore&rdquo;, or &ldquo;Chhatrapati Shivaji Maharaj&rdquo; for commercial goods.</p>
                                         </div>
                                     </section>
 
@@ -465,37 +414,27 @@ export default function Section14TrademarkConsentPage() {
                                             <FontAwesomeIcon icon={faFileSignature} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Consent Letter &amp; Affidavit Drafting
                                         </h2>
-                                        <p className="mb-6">
-                                            A standard informal letter or handwritten email note is insufficient to satisfy the Trademark Registry. The consent document must be executed as a legally binding Consent Affidavit or No Objection Certificate (NOC) compliant with Indian evidentiary laws:
-                                        </p>
+                                        <p className="mb-6">A standard informal letter or handwritten email note is insufficient to satisfy the Trademark Registry. The consent document must be executed as a legally binding Consent Affidavit or No Objection Certificate (NOC) compliant with Indian evidentiary laws:</p>
 
                                         <div className="space-y-6">
                                             <div className="border-l-4 border-[#6E5E93] pl-4 py-2 bg-purple-50/30 rounded-r-xl">
                                                 <h3 className="text-base font-bold text-gray-900 mb-1">1. Non-Judicial Stamp Paper &amp; Notarization</h3>
-                                                <p className="text-sm text-gray-700 leading-relaxed m-0">
-                                                    The consent affidavit must be printed on non-judicial stamp paper of appropriate denomination (typically ₹50 or ₹100 depending on the state of execution) and attested before a Notary Public or Oath Commissioner.
-                                                </p>
+                                                <p className="text-sm text-gray-700 leading-relaxed m-0">The consent affidavit must be printed on non-judicial stamp paper of appropriate denomination (typically ₹50 or ₹100 depending on the state of execution) and attested before a Notary Public or Oath Commissioner.</p>
                                             </div>
 
                                             <div className="border-l-4 border-indigo-500 pl-4 py-2 bg-indigo-50/30 rounded-r-xl">
                                                 <h3 className="text-base font-bold text-gray-900 mb-1">2. Clear Identification of the Consenting Party</h3>
-                                                <p className="text-sm text-gray-700 leading-relaxed m-0">
-                                                    Specify the full legal name, parentage, permanent residential address, age, and official government identity numbers (Aadhaar Card, Passport, or PAN) of the consenting person.
-                                                </p>
+                                                <p className="text-sm text-gray-700 leading-relaxed m-0">Specify the full legal name, parentage, permanent residential address, age, and official government identity numbers (Aadhaar Card, Passport, or PAN) of the consenting person.</p>
                                             </div>
 
                                             <div className="border-l-4 border-[#6E5E93] pl-4 py-2 bg-purple-50/30 rounded-r-xl">
                                                 <h3 className="text-base font-bold text-gray-900 mb-1">3. Explicit Reference to the Trademark Application</h3>
-                                                <p className="text-sm text-gray-700 leading-relaxed m-0">
-                                                    The affidavit must state the exact trademark name/device, application number, trademark class, description of goods/services, and the name and constitution of the applicant entity (Proprietorship, LLP, or Private Limited).
-                                                </p>
+                                                <p className="text-sm text-gray-700 leading-relaxed m-0">The affidavit must state the exact trademark name/device, application number, trademark class, description of goods/services, and the name and constitution of the applicant entity (Proprietorship, LLP, or Private Limited).</p>
                                             </div>
 
                                             <div className="border-l-4 border-indigo-500 pl-4 py-2 bg-indigo-50/30 rounded-r-xl">
                                                 <h3 className="text-base font-bold text-gray-900 mb-1">4. Unconditional &amp; Irrevocable Authorization</h3>
-                                                <p className="text-sm text-gray-700 leading-relaxed m-0">
-                                                    The affidavit must contain an unambiguous declaration confirming that the affiant has no objection whatsoever to the applicant using and registering the name/likeness, and confirms that such use will not cause public deception.
-                                                </p>
+                                                <p className="text-sm text-gray-700 leading-relaxed m-0">The affidavit must contain an unambiguous declaration confirming that the affiant has no objection whatsoever to the applicant using and registering the name/likeness, and confirms that such use will not cause public deception.</p>
                                             </div>
                                         </div>
                                     </section>
@@ -506,9 +445,7 @@ export default function Section14TrademarkConsentPage() {
                                             <FontAwesomeIcon icon={faIdCard} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Legal Heirs Consent Protocol for Deceased
                                         </h2>
-                                        <p className="mb-6">
-                                            When applying for a trademark commemorating a founder or family patriarch deceased within 20 years, establishing the authority of the consenting party is critical. Submitting consent from one sibling while excluding others will invite registry refusal or future trademark rectification disputes:
-                                        </p>
+                                        <p className="mb-6">When applying for a trademark commemorating a founder or family patriarch deceased within 20 years. This establishes the authority of the consenting party is critical. Submitting consent from one sibling while excluding others will invite registry refusal or future trademark rectification disputes:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8 not-prose">
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -516,9 +453,7 @@ export default function Section14TrademarkConsentPage() {
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2"></span>
                                                     1. Certified Death Certificate
                                                 </h3>
-                                                <p className="text-xs text-gray-600 leading-relaxed m-0">
-                                                    Submit an official death certificate issued by the Municipal Corporation, Registrar of Births and Deaths, or local Gram Panchayat establishing the precise date of demise.
-                                                </p>
+                                                <p className="text-xs text-gray-600 leading-relaxed m-0">Submit an official death certificate issued by the Municipal Corporation, Registrar of Births and Deaths, or local Gram Panchayat establishing the precise date of demise.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -526,9 +461,7 @@ export default function Section14TrademarkConsentPage() {
                                                     <span className="w-2.5 h-2.5 bg-indigo-500 rounded-full mr-2"></span>
                                                     2. Proof of Legal Heirship
                                                 </h3>
-                                                <p className="text-xs text-gray-600 leading-relaxed m-0">
-                                                    Furnish a Surviving Member Certificate, Legal Heir Certificate from the Tehsildar, or Succession Certificate / Letter of Administration issued by a civil court confirming all surviving Class I legal heirs.
-                                                </p>
+                                                <p className="text-xs text-gray-600 leading-relaxed m-0">Furnish a Surviving Member Certificate, Legal Heir Certificate from the Tehsildar, or Succession Certificate / Letter of Administration issued by a civil court confirming all surviving Class I legal heirs.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
@@ -536,9 +469,7 @@ export default function Section14TrademarkConsentPage() {
                                                     <span className="w-2.5 h-2.5 bg-emerald-500 rounded-full mr-2"></span>
                                                     3. Joint Consent / NOC
                                                 </h3>
-                                                <p className="text-xs text-gray-600 leading-relaxed m-0">
-                                                    All identified legal heirs must either jointly execute the Consent Affidavit or execute individual notarized No Objection Certificates authorizing the applicant entity to hold trademark ownership.
-                                                </p>
+                                                <p className="text-xs text-gray-600 leading-relaxed m-0">All identified legal heirs must either jointly execute the Consent Affidavit or execute individual notarized No Objection Certificates authorizing the applicant entity to hold trademark ownership.</p>
                                             </div>
                                         </div>
                                     </section>
@@ -549,30 +480,22 @@ export default function Section14TrademarkConsentPage() {
                                             <FontAwesomeIcon icon={faScaleBalanced} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Personality Rights &amp; Celebrity Trademarks
                                         </h2>
-                                        <p className="mb-6">
-                                            Section 14 operates as the statutory gateway protecting celebrity personality rights, publicity rights, and privacy rights in Indian trademark prosecution. Unauthorized attempts to trademark celebrity names, stage monikers, or sports personalities are routinely struck down:
-                                        </p>
+                                        <p className="mb-6">Section 14 operates as the statutory gateway protecting celebrity personality rights, publicity rights, and privacy rights in Indian trademark prosecution. Unauthorized attempts to trademark celebrity names, stage monikers, or sports personalities are routinely struck down:</p>
 
                                         <div className="space-y-6">
                                             <div className="border-l-4 border-[#6E5E93] pl-4 py-2 bg-purple-50/40 rounded-r-xl">
                                                 <h3 className="text-base font-bold text-gray-900 mb-1">Gautam Gambhir v. D.A.P. &amp; Co. (Delhi High Court)</h3>
-                                                <p className="text-sm text-gray-700 leading-relaxed m-0">
-                                                    The Delhi High Court affirmed that an individual has a natural, proprietary right in their own name. While a person running a restaurant with the same bona fide personal name may use it honestly under Section 35, they cannot commercially exploit the celebrity aura or mislead the public into believing an endorsement exists.
-                                                </p>
+                                                <p className="text-sm text-gray-700 leading-relaxed m-0">The Delhi High Court affirmed that an individual has a natural, proprietary right in their own name. While a person running a restaurant with the same bona fide personal name may use it honestly under Section 35, they cannot commercially exploit the celebrity aura or mislead the public into believing an endorsement exists.</p>
                                             </div>
 
                                             <div className="border-l-4 border-indigo-500 pl-4 py-2 bg-indigo-50/40 rounded-r-xl">
                                                 <h3 className="text-base font-bold text-gray-900 mb-1">Titan Industries Ltd. v. M/s Ramkumar Jewellers (Delhi High Court)</h3>
-                                                <p className="text-sm text-gray-700 leading-relaxed m-0">
-                                                    The court recognized the right of publicity, holding that when the identity of a famous living personality is used commercially without consent, the celebrity suffers misappropriation of their right to control their commercial likeness.
-                                                </p>
+                                                <p className="text-sm text-gray-700 leading-relaxed m-0">The court recognized the right of publicity, holding that when the identity of a famous living personality is used commercially without consent, the celebrity suffers misappropriation of their right to control their commercial likeness.</p>
                                             </div>
 
                                             <div className="border-l-4 border-emerald-500 pl-4 py-2 bg-emerald-50/40 rounded-r-xl">
                                                 <h3 className="text-base font-bold text-gray-900 mb-1">D.M. Entertainment Pvt. Ltd. v. Baby Gift House (Delhi High Court)</h3>
-                                                <p className="text-sm text-gray-700 leading-relaxed m-0">
-                                                    In the landmark Daler Mehndi caricature case, the court held that creating novelty dolls singing and looking like the pop artist without licensing constituted false endorsement and passing off under common law.
-                                                </p>
+                                                <p className="text-sm text-gray-700 leading-relaxed m-0">In the landmark Daler Mehndi caricature case, the court held that creating novelty dolls singing and looking like the pop artist without licensing constituted false endorsement and passing off under common law.</p>
                                             </div>
                                         </div>
                                     </section>
@@ -583,37 +506,27 @@ export default function Section14TrademarkConsentPage() {
                                             <FontAwesomeIcon icon={faStamp} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Replying to a Section 14 Examination Objection
                                         </h2>
-                                        <p className="mb-6">
-                                            When the Trademark Registry issues an Examination Report citing Section 14, the applicant has a strict statutory window of <strong>30 days</strong> (extendable under Section 131) to file a formal written response. Follow this strategic approach based on your factual scenario:
-                                        </p>
+                                        <p className="mb-6">When the Trademark Registry issues an Examination Report citing Section 14, the applicant has a strict statutory window of<strong>30 days</strong>(extendable under Section 131) to file a formal written response. Follow this strategic approach based on your factual scenario:</p>
 
                                         <div className="space-y-6">
                                             <div className="border-l-4 border-[#6E5E93] pl-4 py-2 bg-purple-50/30 rounded-r-xl">
                                                 <h3 className="text-base font-bold text-gray-900 mb-1">Scenario A: The Mark is the Applicant&apos;s Own Name</h3>
-                                                <p className="text-sm text-gray-700 leading-relaxed m-0">
-                                                    If your trademark reflects your own personal name or signature, file a self-declaration affidavit affirming that the applicant and the named person are one and the same entity. Attach certified copies of your Passport, Aadhaar, and PAN card. Citing Section 35 (bona fide use of one&apos;s own name) reinforces your entitlement.
-                                                </p>
+                                                <p className="text-sm text-gray-700 leading-relaxed m-0">If your trademark reflects your own personal name or signature, file a self-declaration affidavit affirming that the applicant and the named person are one and the same entity. Attach certified copies of your Passport, Aadhaar, and PAN card. Citing Section 35 (bona fide use of one&apos;s own name) reinforces your entitlement.</p>
                                             </div>
 
                                             <div className="border-l-4 border-indigo-500 pl-4 py-2 bg-indigo-50/30 rounded-r-xl">
                                                 <h3 className="text-base font-bold text-gray-900 mb-1">Scenario B: The Mark Uses a Third-Party Living Person&apos;s Name</h3>
-                                                <p className="text-sm text-gray-700 leading-relaxed m-0">
-                                                    Submit the formal notarized Consent Affidavit and NOC executed by the living individual on non-judicial stamp paper, accompanied by self-attested identity proofs of the affiant.
-                                                </p>
+                                                <p className="text-sm text-gray-700 leading-relaxed m-0">Submit the formal notarized Consent Affidavit and NOC executed by the living individual on non-judicial stamp paper, accompanied by self-attested identity proofs of the affiant.</p>
                                             </div>
 
                                             <div className="border-l-4 border-emerald-500 pl-4 py-2 bg-emerald-50/30 rounded-r-xl">
                                                 <h3 className="text-base font-bold text-gray-900 mb-1">Scenario C: The Person Died Over 20 Years Ago</h3>
-                                                <p className="text-sm text-gray-700 leading-relaxed m-0">
-                                                    Submit historical evidence, obituary archives, or biographical records establishing that the individual passed away more than 20 years prior to the filing date. Clarify that Section 14 consent is statutorily inapplicable, and demonstrate compliance with Section 9.
-                                                </p>
+                                                <p className="text-sm text-gray-700 leading-relaxed m-0">Submit historical evidence, obituary archives, or biographical records establishing that the individual passed away more than 20 years before the filing date. Clarify that Section 14 consent is statutorily inapplicable, and demonstrate compliance with Section 9.</p>
                                             </div>
 
                                             <div className="border-l-4 border-purple-500 pl-4 py-2 bg-purple-50/30 rounded-r-xl">
                                                 <h3 className="text-base font-bold text-gray-900 mb-1">Scenario D: The Name is Coincidental / Arbitrary Word</h3>
-                                                <p className="text-sm text-gray-700 leading-relaxed m-0">
-                                                    If the mark happens to coincide with a common first name or surname but was coined arbitrarily (e.g., &ldquo;AURA&rdquo;, &ldquo;NOVA&rdquo;, or &ldquo;MAX&rdquo;), submit written submissions explaining the conceptual origin of the mark and demonstrating that it does not falsely suggest any connection with any identifiable individual.
-                                                </p>
+                                                <p className="text-sm text-gray-700 leading-relaxed m-0">If the mark happens to coincide with a common first name or surname but was coined arbitrarily (e.g., &ldquo;AURA&rdquo;, &ldquo;NOVA&rdquo;, or &ldquo;MAX&rdquo;), submit written submissions explaining the conceptual origin of the mark and demonstrating that it does not falsely suggest any connection with any identifiable individual.</p>
                                             </div>
                                         </div>
                                     </section>
@@ -624,9 +537,7 @@ export default function Section14TrademarkConsentPage() {
                                             <FontAwesomeIcon icon={faTable} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Name Trademark Categories Comparison
                                         </h2>
-                                        <p className="mb-6">
-                                            The table below outlines the statutory requirements, consent protocols, and evidentiary thresholds for different personal name scenarios under Indian trademark practice:
-                                        </p>
+                                        <p className="mb-6">The table below outlines the statutory requirements, consent protocols, and evidentiary thresholds for different personal name scenarios under Indian trademark practice:</p>
 
                                         <div className="overflow-x-auto my-6 border border-gray-200 rounded-2xl shadow-sm not-prose">
                                             <table className="w-full text-left text-xs sm:text-sm text-gray-700 bg-white">
@@ -680,31 +591,14 @@ export default function Section14TrademarkConsentPage() {
                                             <FontAwesomeIcon icon={faCheckCircle} className="w-8 h-8 mr-3 text-green-500" />
                                             Section 14 Compliance Action Checklist
                                         </h2>
-                                        <p className="mb-6">
-                                            Execute this verified checklist to eliminate procedural defects and secure registration for personal name marks:
-                                        </p>
+                                        <p className="mb-6">Execute this verified checklist to eliminate procedural defects and secure registration for personal name marks:</p>
 
                                         <ul className="space-y-4 my-6 not-prose list-none p-0">
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Examine Name Provenance:</strong> Ascertain whether the mark constitutes an applicant name, living third party, recently deceased founder, or arbitrary word.</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Execute Non-Judicial Stamp Affidavit:</strong> Draft the formal consent on stamp paper of appropriate state value and complete public notarization.</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Collect Government ID Proofs:</strong> Obtain self-attested copies of Aadhaar, Passport, or PAN card of the consenting person or legal representatives.</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Verify All Legal Heirs:</strong> For deceased founders (&lt;20 yrs), attach the Death Certificate and Legal Heir Certificate signed by all surviving members.</span>
-                                            </li>
-                                            <li className="flex items-start">
-                                                <FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" />
-                                                <span><strong>Submit Online via Form TM-M:</strong> File the comprehensive written reply and supporting documents through the IP India e-filing portal within 30 days.</span>
-                                            </li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Examine Name Provenance:</strong>Ascertain whether the mark constitutes an applicant name, living third party, recently deceased founder, or arbitrary word.</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Execute Non-Judicial Stamp Affidavit:</strong>Draft the formal consent on stamp paper of appropriate state value and complete public notarization.</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Collect Government ID Proofs:</strong>Obtain self-attested copies of Aadhaar, Passport, or PAN card of the consenting person or legal representatives.</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Verify All Legal Heirs:</strong>For deceased founders (&lt;20 yrs), attach the Death Certificate and Legal Heir Certificate signed by all surviving members.</span></li>
+                                            <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Submit Online via Form TM-M:</strong>File the comprehensive written reply and supporting documents through the IP India e-filing portal within 30 days.</span></li>
                                         </ul>
                                     </section>
 
@@ -729,14 +623,10 @@ export default function Section14TrademarkConsentPage() {
                                     <section id="final-takeaway" className="scroll-mt-32 pt-16">
                                         <h2 className="text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLightbulb} className="w-8 h-8 mr-3 text-yellow-500" />
-                                            Strategic Brand Protection Advice
+                                            Strategic Section 14 Name Trademarking Advice
                                         </h2>
-                                        <p className="mb-6">
-                                            Trademarking personal names, founder legacies, and heritage signatures is a powerful strategy to build emotional resonance and enterprise value. However, statutory compliance under Section 14 is non-negotiable. Securing proper consent affidavits and legal heir clearances at the filing stage prevents costly delays, show-cause hearings, and post-registration rectification battles.
-                                        </p>
-                                        <p className="mb-6">
-                                            Partner with seasoned trademark attorneys to draft airtight consent affidavits, navigate Section 14 examination reports, and protect your intellectual property assets across India. For related procedural guides, explore our resources on <Link href="/how-to-respond-to-trademark-examination-report" className="text-[rgb(110,94,147)] hover:underline font-medium">how to respond to trademark examination reports</Link>, <Link href="/trademark-user-affidavit-format-and-rules-india" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark user affidavit rules</Link>, and <Link href="/form-tm-48-power-of-attorney-trademark-india" className="text-[rgb(110,94,147)] hover:underline font-medium">Form TM-48 Power of Attorney rules</Link>.
-                                        </p>
+                                        <p className="mb-6">Trademarking personal names, founder legacies, and heritage signatures is a powerful strategy to build emotional resonance and enterprise value. However, statutory compliance under Section 14 is non-negotiable. Securing proper consent affidavits and legal heir clearances at the filing stage prevents costly delays, show-cause hearings, and post-registration rectification battles.</p>
+                                        <p className="mb-6">Partner with seasoned trademark attorneys to draft airtight consent affidavits, navigate Section 14 examination reports, and protect your intellectual property assets across India. For related procedural guides, explore our resources on<Link href="/how-to-respond-to-trademark-examination-report" className="text-[rgb(110,94,147)] hover:underline font-medium">how to respond to trademark examination reports</Link>,<Link href="/trademark-user-affidavit-format-and-rules-india" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark user affidavit rules</Link>, and<Link href="/form-tm-48-power-of-attorney-trademark-india" className="text-[rgb(110,94,147)] hover:underline font-medium">Form TM-48 Power of Attorney rules</Link>.</p>
                                     </section>
 
                                     {/* BOTTOM CTA SECTION */}
@@ -753,9 +643,7 @@ export default function Section14TrademarkConsentPage() {
                                                     Resolve Section 14 Trademark Objections Fast
                                                 </h3>
 
-                                                <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">
-                                                    Draft legally binding Consent Affidavits, compile legal heir documentation, and file expert written replies with the Trade Marks Registry.
-                                                </p>
+                                                <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">Draft legally binding Consent Affidavits, compile legal heir documentation, and file expert written replies with the Trade Marks Registry.</p>
 
                                                 <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
                                                     <Link
@@ -773,9 +661,7 @@ export default function Section14TrademarkConsentPage() {
                                                     </a>
                                                 </div>
 
-                                                <p className="mt-6 text-xs font-medium tracking-wide text-white/50 sm:text-sm">
-                                                    Registered Trademark Attorneys • Consent Affidavits • Legal Heir Approvals • Pan-India Representation
-                                                </p>
+                                                <p className="mt-6 text-xs font-medium tracking-wide text-white/50 sm:text-sm">Registered Trademark Attorneys • Consent Affidavits • Legal Heir Approvals • Pan-India Representation</p>
                                             </div>
                                         </div>
                                     </section>
@@ -808,78 +694,15 @@ export default function Section14TrademarkConsentPage() {
                             <div className="bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-100">
                                 <h3 className="text-xs font-black text-gray-400 mb-5 uppercase tracking-[0.25em]">Related Resources</h3>
                                 <ul className="space-y-6">
-                                    <li>
-                                        <Link href="/can-you-trademark-your-own-name-in-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faIdCard} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Trademark Your Name</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/trademark-consent-letter-coexistence-agreement-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faSignature} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Consent Letter Rules</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/how-to-respond-to-trademark-examination-report" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faFileContract} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Exam Report Reply</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/trademark-objection-reply-format-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faStamp} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Objection Formats</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/trademark-user-affidavit-format-and-rules-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faFileSignature} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">User Affidavit Guide</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/form-tm-48-power-of-attorney-trademark-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faFileContract} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Form TM-48 Guide</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/prior-user-rights-section-34-trade-marks-act-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faShieldHalved} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Prior User Rights</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/trade-dress-protection-under-indian-trademark-law" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faBuildingShield} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Trade Dress Guide</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/how-to-change-trademark-attorney-in-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">
-                                            <div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all">
-                                                <FontAwesomeIcon icon={faGavel} className="w-5 h-5" />
-                                            </div>
-                                            <span className="font-black text-xs uppercase tracking-widest">Change TM Attorney</span>
-                                        </Link>
-                                    </li>
+                                    <li><Link href="/can-you-trademark-your-own-name-in-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faIdCard} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Trademark Your Name</span></Link></li>
+                                    <li><Link href="/trademark-consent-letter-coexistence-agreement-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faSignature} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Consent Letter Rules</span></Link></li>
+                                    <li><Link href="/how-to-respond-to-trademark-examination-report" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faFileContract} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Exam Report Reply</span></Link></li>
+                                    <li><Link href="/trademark-objection-reply-format-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faStamp} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Objection Formats</span></Link></li>
+                                    <li><Link href="/trademark-user-affidavit-format-and-rules-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faFileSignature} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">User Affidavit Guide</span></Link></li>
+                                    <li><Link href="/form-tm-48-power-of-attorney-trademark-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faFileContract} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Form TM-48 Guide</span></Link></li>
+                                    <li><Link href="/prior-user-rights-section-34-trade-marks-act-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faShieldHalved} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Prior User Rights</span></Link></li>
+                                    <li><Link href="/trade-dress-protection-under-indian-trademark-law" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faBuildingShield} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Trade Dress Guide</span></Link></li>
+                                    <li><Link href="/how-to-change-trademark-attorney-in-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faGavel} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Change TM Attorney</span></Link></li>
                                 </ul>
                             </div>
                         </aside>
