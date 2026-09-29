@@ -366,34 +366,34 @@ export default function BestTrademarkRegistrationCompanyGurgaonPage() {
 
                                     {/* SECTION 2: OUR TRADEMARK SERVICES */}
                                     <section id="our-services" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faShieldHalved} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Our Trademark Services in Gurgaon
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Securing a trademark is not merely filling an electronic form; it requires strategic planning, precise classification, and proactive legal management throughout the examination lifecycle. IPR Karo offers an integrated suite of IP services tailored to Gurgaon businesses:</p>
 
-                                        <h3 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 mb-4">1. AI-Driven Preliminary Clearance Search</h3>
+                                        <h4 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 mb-4">1. AI-Driven Preliminary Clearance Search</h4>
                                         <p className="mb-6">Before spending capital on official filing fees, our proprietary screening evaluates your mark across active registry databases. Using our<Link href="/free-ai-powered-trademark-search" className="text-[rgb(110,94,147)] hover:underline font-medium">free AI powered trademark search</Link>, we identify identical matches, close phonetic parallels, and visual resemblances under Section 11 of the Trade Marks Act, 1999. This prevents costly rejections before they occur.</p>
 
-                                        <h3 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 mb-4">2. Precise Class Selection and Goods Specification</h3>
+                                        <h4 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 mb-4">2. Precise Class Selection and Goods Specification</h4>
                                         <p className="mb-6">Selecting incorrect classes or drafting overly broad goods and services descriptions is the number one cause of registry delays. Our legal analysts leverage our<Link href="/trademark-class-finder" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark class finder</Link>across all 45 Nice Classification classes. This ensures comprehensive commercial coverage without triggering unnecessary registry queries.</p>
 
-                                        <h3 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 mb-4">3. E-Filing of Form TM-A with Delhi Registry</h3>
+                                        <h4 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 mb-4">3. E-Filing of Form TM-A with Delhi Registry</h4>
                                         <p className="mb-6">We prepare and file your official Form TM-A online through the IP India gateway within 24 hours of receiving your details. You immediately receive an official government acknowledgment containing your unique trademark application number. This allows you to legally display the ™ symbol next to your brand.</p>
 
-                                        <h3 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 mb-4">4. Strategic Objection Drafting & Hearing Defense</h3>
+                                        <h4 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 mb-4">4. Strategic Objection Drafting & Hearing Defense</h4>
                                         <p className="mb-6">If an examiner issues an adverse examination report, our experienced advocates prepare a comprehensive legal reply citing Supreme Court and High Court precedents. When required, we provide personal or virtual appearance defense at the Delhi Registry office in Dwarka to secure official mark acceptance.</p>
 
-                                        <h3 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 mb-4">5. Trademark Journal Monitoring & Opposition Management</h3>
+                                        <h4 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 mb-4">5. Trademark Journal Monitoring & Opposition Management</h4>
                                         <p className="mb-6">Once your mark is advertised in the Trade Marks Journal, we monitor competitor filings to protect your exclusive rights. We also defend your brand against hostile third-party oppositions during the statutory four-month window, safeguarding your investments.</p>
                                     </section>
 
                                     {/* SECTION 3: CORPORATE LANDSCAPE */}
                                     <section id="corporate-landscape" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faCity} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Gurgaon Corporate IP Landscape
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Gurgaon is widely recognized as the corporate and financial nerve center of Haryana and the National Capital Region (NCR). With more than 500 Fortune 500 branch offices, hundreds of unicorns, and thousands of disruptive MSMEs, brand creation in the city happens at a rapid pace.</p>
                                         <p className="mb-6">However, high density also creates significant legal risk. Trademark registry statistics show that the Delhi Registry (which oversees Gurgaon, Delhi, Haryana, and neighboring northern territories) processes one of the highest volumes of brand conflicts, objections, and oppositions in the country. Businesses operating in prominent hubs like DLF Cyber City, Udyog Vihar, Sohna Road, and Manesar frequently face:</p>
                                         <ul className="list-disc list-inside space-y-2 mb-6 text-gray-700">
@@ -406,10 +406,10 @@ export default function BestTrademarkRegistrationCompanyGurgaonPage() {
 
                                     {/* SECTION 4: COMPARISON TABLE */}
                                     <section id="comparison" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faTable} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             IPR Karo vs Traditional Firms
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Selecting the right partner for your brand protection directly impacts your approval probability, legal expenses, and timeline. The table below illustrates how IPR Karo outperforms both conventional law offices and generic document filing portals:</p>
 
                                         <div className="overflow-x-auto mb-8 shadow-sm rounded-xl border border-gray-200">
@@ -466,14 +466,14 @@ export default function BestTrademarkRegistrationCompanyGurgaonPage() {
 
                                     {/* SECTION 5: STEP-BY-STEP PROCESS */}
                                     <section id="registration-process" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faListUl} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Step-by-Step Registration Process
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Registering your trademark with IPR Karo is effortless, transparent, and entirely digital. Here is how our legal workflow guides your brand from preliminary idea to registered asset:</p>
 
                                         <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm mb-8">
-                                            <h3 className="text-xl font-bold mb-4 border-b pb-2 text-gray-900">IPR Karo 7-Step Trademark Workflow</h3>
+                                            <h4 className="text-xl font-bold mb-4 border-b pb-2 text-gray-900">IPR Karo 7-Step Trademark Workflow</h4>
                                             <ol className="list-decimal list-inside space-y-4 text-gray-700">
                                                 <li><strong>Comprehensive Brand Clearance & AI Search:</strong><span className="block pl-5 text-sm text-gray-600 mt-1">We run your name, slogan, or logo across millions of registered and pending marks to identify phonetic, visual, and conceptual conflicts.</span></li>
                                                 <li><strong>Appropriate Trademark Class Identification:</strong><span className="block pl-5 text-sm text-gray-600 mt-1">Our attorneys match your commercial activities with the correct classes under the international Nice Classification system.</span></li>
@@ -488,18 +488,18 @@ export default function BestTrademarkRegistrationCompanyGurgaonPage() {
 
                                     {/* SECTION 6: DOCUMENTS REQUIRED */}
                                     <section id="documents-required" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faFileContract} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Documents Required for Filing
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">To ensure seamless compliance without registry queries, ensure you have the following documentation ready based on your entity type:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 not-prose">
                                             <div className="bg-gray-50 border border-gray-200 rounded-xl p-6">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <FontAwesomeIcon icon={faBuilding} className="w-5 h-5 text-[rgb(110,94,147)] mr-2" />
                                                     Companies, Startups & LLPs
-                                                </h3>
+                                                </h4>
                                                 <ul className="space-y-2 text-sm text-gray-700">
                                                     <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-4 h-4 text-green-500 mt-1 mr-2 shrink-0" /><span>Certificate of Incorporation (COI) / Partnership Deed</span></li>
                                                     <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-4 h-4 text-green-500 mt-1 mr-2 shrink-0" /><span>Udyam MSME Certificate or DPIIT Recognition (for 50% discount)</span></li>
@@ -510,10 +510,10 @@ export default function BestTrademarkRegistrationCompanyGurgaonPage() {
                                             </div>
 
                                             <div className="bg-gray-50 border border-gray-200 rounded-xl p-6">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <FontAwesomeIcon icon={faAward} className="w-5 h-5 text-[rgb(110,94,147)] mr-2" />
                                                     Proprietors & Individuals
-                                                </h3>
+                                                </h4>
                                                 <ul className="space-y-2 text-sm text-gray-700">
                                                     <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-4 h-4 text-green-500 mt-1 mr-2 shrink-0" /><span>Identity Proof (PAN Card / Aadhaar Card / Passport)</span></li>
                                                     <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-4 h-4 text-green-500 mt-1 mr-2 shrink-0" /><span>Address Proof (Voter ID / Driving License / Utility Bill)</span></li>
@@ -527,10 +527,10 @@ export default function BestTrademarkRegistrationCompanyGurgaonPage() {
 
                                     {/* SECTION 7: TIMELINES AND MILESTONES */}
                                     <section id="timeline-stages" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faRocket} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Timeline and Examination Stages
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Understanding the statutory milestones set by the Controller General of Patents, Designs, and Trade Marks helps founders plan brand launches with clarity:</p>
                                         <ul className="list-none space-y-4 mb-8">
                                             <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Day 1 (Within 24 Hours):</strong>Online filing completed; official TM Application Number issued; instant legal right to use the ™ symbol.</span></li>
@@ -543,10 +543,10 @@ export default function BestTrademarkRegistrationCompanyGurgaonPage() {
 
                                     {/* SECTION 8: OVERCOMING OBJECTIONS */}
                                     <section id="objection-opposition" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faGavel} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Overcoming Objections & Opposition
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">An examination objection does not mean your trademark is refused. Approximately 40% to 50% of applications in India face preliminary objections under the Trade Marks Act, 1999. Success depends on the quality of your legal representation.</p>
                                         <p className="mb-6">The two primary statutory hurdles raised by examiners at the Delhi Registry include:</p>
                                         <ul className="list-disc list-inside space-y-3 mb-6 text-gray-700">
@@ -558,27 +558,27 @@ export default function BestTrademarkRegistrationCompanyGurgaonPage() {
 
                                     {/* SECTION 9: BUSINESS HUBS WE SERVE */}
                                     <section id="business-hubs" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faMapMarkerAlt} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Top Business Hubs We Serve
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">As the best trademark registration company in Gurgaon, IPR Karo serves enterprises across all major commercial corridors of Gurugram and Manesar:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 not-prose">
                                             <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
-                                                <h3 className="font-bold text-gray-900 text-base mb-1">DLF Cyber City & Cyber Hub</h3>
+                                                <h4 className="font-bold text-gray-900 text-base mb-1">DLF Cyber City & Cyber Hub</h4>
                                                 <p className="text-xs text-gray-600">Enterprise software, fintech platforms, global consultancies, and digital agencies requiring rapid multi-class IP protection.</p>
                                             </div>
                                             <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
-                                                <h3 className="font-bold text-gray-900 text-base mb-1">Golf Course Road & Extension</h3>
+                                                <h4 className="font-bold text-gray-900 text-base mb-1">Golf Course Road & Extension</h4>
                                                 <p className="text-xs text-gray-600">Venture capital firms, luxury lifestyle labels, consumer healthcare brands, and high-growth consumer startups.</p>
                                             </div>
                                             <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
-                                                <h3 className="font-bold text-gray-900 text-base mb-1">Udyog Vihar (Phases I to V)</h3>
+                                                <h4 className="font-bold text-gray-900 text-base mb-1">Udyog Vihar (Phases I to V)</h4>
                                                 <p className="text-xs text-gray-600">Apparel exporters, electronics manufacturers, pharmaceutical packaging, and logistics supply chain firms.</p>
                                             </div>
                                             <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
-                                                <h3 className="font-bold text-gray-900 text-base mb-1">IMT Manesar & Sohna Road</h3>
+                                                <h4 className="font-bold text-gray-900 text-base mb-1">IMT Manesar & Sohna Road</h4>
                                                 <p className="text-xs text-gray-600">Automotive ancillaries, engineering plants, warehousing giants, and regional retail commercial centers.</p>
                                             </div>
                                         </div>
@@ -586,15 +586,15 @@ export default function BestTrademarkRegistrationCompanyGurgaonPage() {
 
                                     {/* SECTION 10: FAQS */}
                                     <section id="faqs" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl lg:text-3xl font-black text-gray-900 mb-8 text-center text-[rgb(110,94,147)]">
+                                        <h3 className="text-xl md:text-2xl lg:text-3xl font-black text-gray-900 mb-8 text-center text-[rgb(110,94,147)]">
                                             Frequently Asked Questions
-                                        </h2>
+                                        </h3>
                                         <div className="space-y-4">
                                             {faqs.map((faq, index) => (
                                                 <div key={index} className="bg-white border border-gray-100 rounded-3xl p-8 shadow-sm hover:shadow-md transition-shadow">
-                                                    <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-4 flex items-start leading-snug">
+                                                    <h4 className="text-lg md:text-xl font-bold text-gray-900 mb-4 flex items-start leading-snug">
                                                         <span className="text-[rgb(110,94,147)] mr-4 font-black text-2xl">Q.</span>{faq.question}
-                                                    </h3>
+                                                    </h4>
                                                     <p className="text-gray-600 pl-10 m-0">{faq.answer}</p>
                                                 </div>
                                             ))}
@@ -603,10 +603,10 @@ export default function BestTrademarkRegistrationCompanyGurgaonPage() {
 
                                     {/* SECTION 11: FINAL TAKEAWAY */}
                                     <section id="final-takeaway" className="scroll-mt-32 pt-16">
-                                        <h2 className="text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLightbulb} className="w-8 h-8 mr-3 text-yellow-500" />
                                             Secure Your Brand with IPR Karo
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Building a distinguished company in Gurgaon requires immense dedication, resource allocation, and continuous innovation. Do not leave your most valuable asset—your brand equity—unprotected against competitors and copycats. Registering your trademark transforms your business name and visual identity into an enforceable, defensible intellectual property asset that enhances company valuation.</p>
                                         <p className="mb-6">Partnering with IPR Karo guarantees that your trademark application is executed with technological speed and attorney precision. Check your brand availability today with our clearance tools or consult directly with our legal advocates. For official government IP schedules and guidelines, visit the<a href="https://ipindia.gov.in/" target="_blank" rel="noopener noreferrer" className="text-[rgb(110,94,147)] hover:underline font-medium">IP India Official Portal</a>.</p>
                                     </section>
@@ -621,9 +621,9 @@ export default function BestTrademarkRegistrationCompanyGurgaonPage() {
                                                     </span>
                                                 </div>
 
-                                                <h3 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl mb-4">
+                                                <h4 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl mb-4">
                                                     Protect Your Gurgaon Brand Today
-                                                </h3>
+                                                </h4>
 
                                                 <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">File your trademark application in 24 hours with IPR Karo. Enjoy AI brand clearance, expert attorney drafting, and complete legal protection before the Delhi Registry.</p>
 
@@ -656,7 +656,7 @@ export default function BestTrademarkRegistrationCompanyGurgaonPage() {
                             {/* Author Info */}
                             <div className="bg-white p-6 rounded-[2.5rem] shadow-sm border border-gray-100 flex flex-col items-center text-center">
                                 <img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-24 h-24 rounded-full mb-4 shadow-md object-cover" />
-                                <h3 className="text-xl font-bold text-gray-900 mb-2">Rahul Roy</h3>
+                                <h4 className="text-xl font-bold text-gray-900 mb-2">Rahul Roy</h4>
                                 <p className="text-sm text-gray-600 mb-4 font-medium">Trademark Research Specialist</p>
                                 <p className="text-sm text-gray-700 leading-relaxed mb-6">Rahul specializes in trademark clearance searches, brand valuation, and intellectual property strategy for enterprises across Delhi NCR and Gurgaon.</p>
                             </div>
@@ -664,7 +664,7 @@ export default function BestTrademarkRegistrationCompanyGurgaonPage() {
                             {/* Trademark Search CTA Widget */}
                             <div className="bg-[#0C002B] p-8 rounded-[2.5rem] shadow-2xl border border-white/5 text-white relative overflow-hidden group">
                                 <div className="absolute top-0 right-0 w-40 h-40 bg-[rgb(110,94,147)] rounded-full blur-[100px] opacity-30 group-hover:opacity-50 transition-opacity"></div>
-                                <h3 className="text-xl font-black mb-4 relative z-10 leading-tight">Check Gurgaon Brand Availability</h3>
+                                <h4 className="text-xl font-black mb-4 relative z-10 leading-tight">Check Gurgaon Brand Availability</h4>
                                 <p className="text-sm opacity-70 mb-8 leading-relaxed relative z-10 font-medium">Run a free AI similarity search before filing your application with the Trade Marks Registry.</p>
                                 <Link href="/trademark-search" className="block relative z-10">
                                     <button className="w-full bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-3.5 px-4 rounded-xl transition-all shadow-xl text-xs uppercase tracking-wider">
@@ -675,7 +675,7 @@ export default function BestTrademarkRegistrationCompanyGurgaonPage() {
 
                             {/* Related Resources */}
                             <div className="bg-gray-50 p-10 rounded-[2.5rem] shadow-sm border border-gray-100">
-                                <h3 className="text-sm font-black text-gray-400 mb-8 uppercase tracking-[0.3em]">Related Resources</h3>
+                                <h4 className="text-sm font-black text-gray-400 mb-8 uppercase tracking-[0.3em]">Related Resources</h4>
                                 <ul className="space-y-6">
                                     <li><Link href="/our-services/trademark-registration" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faShieldHalved} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Trademark Registration</span></Link></li>
                                     <li><Link href="/trademark-registration-in-gurgaon" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faMapMarkerAlt} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Gurgaon IP Services</span></Link></li>

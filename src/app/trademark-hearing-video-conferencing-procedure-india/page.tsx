@@ -395,7 +395,7 @@ export default function TrademarkVideoHearingPage() {
                                                     <FontAwesomeIcon icon={faScaleBalanced} className="w-4 h-4 sm:w-5 sm:h-5" />
                                                 </div>
                                                 <div className="min-w-0">
-                                                    <h3 className="text-sm sm:text-base font-bold text-gray-900 mb-1">Statutory Right to be Heard under Section 18(4)</h3>
+                                                    <h4 className="text-sm sm:text-base font-bold text-gray-900 mb-1">Statutory Right to be Heard under Section 18(4)</h4>
                                                     <p className="text-xs sm:text-sm text-gray-600 leading-relaxed m-0">
                                                         Under the Trade Marks Act, 1999, the Registrar cannot unilaterally refuse a trademark application without offering the applicant a formal opportunity to be heard. The video hearing is your statutory oral trial where you or your appointed advocate present live evidence, explain distinctiveness, distinguish conflicting citations, and convince the Hearing Officer to grant publication in the Trade Marks Journal.
                                                     </p>
@@ -410,10 +410,10 @@ export default function TrademarkVideoHearingPage() {
 
                                     {/* SECTION 2: TRIGGERS */}
                                     <section id="hearing-triggers" className="scroll-mt-32">
-                                        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 flex items-center break-words">
+                                        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 flex items-center break-words">
                                             <FontAwesomeIcon icon={faGavel} className="w-5 h-5 sm:w-6 sm:h-6 text-[#6E5E93] mr-2.5 sm:mr-3 flex-shrink-0" />
                                             Why is a Trademark Video Hearing Scheduled?
-                                        </h2>
+                                        </h3>
                                         <p>
                                             A virtual hearing is not triggered automatically for every trademark filing. It occurs when procedural or substantive legal hurdles cannot be resolved through written correspondence alone. The three primary legal triggers include:
                                         </p>
@@ -424,7 +424,7 @@ export default function TrademarkVideoHearingPage() {
                                                     <span className="px-2.5 py-1 bg-purple-100 text-[#6E5E93] text-[11px] font-bold rounded-full uppercase">Trigger 1</span>
                                                     <span className="text-[11px] text-gray-500 font-semibold">Ex-Parte Hearing</span>
                                                 </div>
-                                                <h3 className="text-sm sm:text-base font-bold text-gray-900 mb-2">Show-Cause Examination Hearing</h3>
+                                                <h4 className="text-sm sm:text-base font-bold text-gray-900 mb-2">Show-Cause Examination Hearing</h4>
                                                 <p className="text-xs sm:text-sm text-gray-600 leading-relaxed mb-4">
                                                     You filed a written reply to the Examination Report contesting <Link href="/what-does-objected-mean-in-trademark-status" className="text-[#6E5E93] font-semibold hover:underline">Section 9 or Section 11 objections</Link>, but the Examiner remained unconvinced. Status updates to <em>&ldquo;Ready for Show Cause Hearing&rdquo;</em>.
                                                 </p>
@@ -438,7 +438,7 @@ export default function TrademarkVideoHearingPage() {
                                                     <span className="px-2.5 py-1 bg-indigo-100 text-indigo-700 text-[11px] font-bold rounded-full uppercase">Trigger 2</span>
                                                     <span className="text-[11px] text-gray-500 font-semibold">Inter-Partes Hearing</span>
                                                 </div>
-                                                <h3 className="text-sm sm:text-base font-bold text-gray-900 mb-2">Opposition Final Hearing (Sec 21)</h3>
+                                                <h4 className="text-sm sm:text-base font-bold text-gray-900 mb-2">Opposition Final Hearing (Sec 21)</h4>
                                                 <p className="text-xs sm:text-sm text-gray-600 leading-relaxed mb-4">
                                                     A third party filed a Form TM-O Notice of Opposition against your published brand. Both parties completed Rule 45, 46, and 47 evidentiary affidavits, and the matter is listed for final oral trial.
                                                 </p>
@@ -452,7 +452,7 @@ export default function TrademarkVideoHearingPage() {
                                                     <span className="px-2.5 py-1 bg-emerald-100 text-emerald-800 text-[11px] font-bold rounded-full uppercase">Trigger 3</span>
                                                     <span className="text-[11px] text-gray-500 font-semibold">Rectification</span>
                                                 </div>
-                                                <h3 className="text-sm sm:text-base font-bold text-gray-900 mb-2">Non-Use Cancellation Hearing</h3>
+                                                <h4 className="text-sm sm:text-base font-bold text-gray-900 mb-2">Non-Use Cancellation Hearing</h4>
                                                 <p className="text-xs sm:text-sm text-gray-600 leading-relaxed mb-4">
                                                     A competitor filed a petition under <Link href="/trademark-cancellation-non-use-5-years-section-47-india" className="text-[#6E5E93] font-semibold hover:underline">Section 47 for 5 years non-use</Link> or Section 57 for invalidity before the Registrar seeking removal of a registered mark.
                                                 </p>
@@ -477,19 +477,19 @@ export default function TrademarkVideoHearingPage() {
 
                                     {/* SECTION 3: CAUSE LIST TRACKING */}
                                     <section id="cause-list-tracking" className="scroll-mt-32">
-                                        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 flex items-center break-words">
+                                        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 flex items-center break-words">
                                             <FontAwesomeIcon icon={faDesktop} className="w-5 h-5 sm:w-6 sm:h-6 text-[#6E5E93] mr-2.5 sm:mr-3 flex-shrink-0" />
                                             How to Check Hearing Cause List & Download Hearing Notice
-                                        </h2>
+                                        </h3>
                                         <p>
                                             The Trade Marks Registry publishes scheduled hearings weeks in advance through the <strong>Dynamic Cause List</strong> on the official portal (<code>ipindiaonline.gov.in</code>). Tracking this cause list ensures you do not miss your allotted date, session slot, or serial number.
                                         </p>
 
                                         <div className="my-6 p-4 sm:p-6 bg-gray-50 rounded-2xl border border-gray-200 not-prose">
-                                            <h3 className="text-sm sm:text-base font-bold text-gray-900 mb-3 flex items-center">
+                                            <h4 className="text-sm sm:text-base font-bold text-gray-900 mb-3 flex items-center">
                                                 <FontAwesomeIcon icon={faClock} className="w-4 h-4 text-[#6E5E93] mr-2 flex-shrink-0" />
                                                 Step-by-Step Method to Retrieve Your Hearing Details
-                                            </h3>
+                                            </h4>
 
                                             <div className="space-y-3 text-xs sm:text-sm text-gray-700">
                                                 <div className="flex items-start bg-white p-3 rounded-xl border border-gray-200 shadow-sm">
@@ -536,10 +536,10 @@ export default function TrademarkVideoHearingPage() {
 
                                     {/* SECTION 4: TECHNICAL SETUP */}
                                     <section id="technical-setup" className="scroll-mt-32">
-                                        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 flex items-center break-words">
+                                        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 flex items-center break-words">
                                             <FontAwesomeIcon icon={faLaptop} className="w-5 h-5 sm:w-6 sm:h-6 text-[#6E5E93] mr-2.5 sm:mr-3 flex-shrink-0" />
                                             Cisco Webex Setup, Hardware & Display Name Protocol
-                                        </h2>
+                                        </h3>
                                         <p>
                                             The Trade Marks Registry enforces strict technical and decorum rules for virtual proceedings. Failing to adhere to the naming convention is the single most common reason applicants remain stranded in the Webex waiting lobby without being admitted by the court master.
                                         </p>
@@ -565,7 +565,7 @@ export default function TrademarkVideoHearingPage() {
                                             <div className="bg-gray-50 p-4 rounded-xl border border-gray-200 flex items-start space-x-3">
                                                 <FontAwesomeIcon icon={faCircleCheck} className="w-4 h-4 text-emerald-600 mt-1 flex-shrink-0" />
                                                 <div className="min-w-0">
-                                                    <h3 className="text-sm font-bold text-gray-900 mb-1">Hardware & Device Requirements</h3>
+                                                    <h4 className="text-sm font-bold text-gray-900 mb-1">Hardware & Device Requirements</h4>
                                                     <p className="text-xs text-gray-600 m-0 leading-relaxed">Always use a desktop or laptop equipped with an HD webcam and noise-canceling headset. Representation via smartphones is strongly discouraged by the Registry.</p>
                                                 </div>
                                             </div>
@@ -573,7 +573,7 @@ export default function TrademarkVideoHearingPage() {
                                             <div className="bg-gray-50 p-4 rounded-xl border border-gray-200 flex items-start space-x-3">
                                                 <FontAwesomeIcon icon={faCircleCheck} className="w-4 h-4 text-emerald-600 mt-1 flex-shrink-0" />
                                                 <div className="min-w-0">
-                                                    <h3 className="text-sm font-bold text-gray-900 mb-1">Dual Internet Connectivity</h3>
+                                                    <h4 className="text-sm font-bold text-gray-900 mb-1">Dual Internet Connectivity</h4>
                                                     <p className="text-xs text-gray-600 m-0 leading-relaxed">Ensure a stable high-speed broadband connection (minimum 20 Mbps) paired with a standby 4G/5G mobile hotspot to prevent abrupt mid-argument disconnections.</p>
                                                 </div>
                                             </div>
@@ -581,7 +581,7 @@ export default function TrademarkVideoHearingPage() {
                                             <div className="bg-gray-50 p-4 rounded-xl border border-gray-200 flex items-start space-x-3">
                                                 <FontAwesomeIcon icon={faCircleCheck} className="w-4 h-4 text-emerald-600 mt-1 flex-shrink-0" />
                                                 <div className="min-w-0">
-                                                    <h3 className="text-sm font-bold text-gray-900 mb-1">Audio/Video Decorum & Dress Code</h3>
+                                                    <h4 className="text-sm font-bold text-gray-900 mb-1">Audio/Video Decorum & Dress Code</h4>
                                                     <p className="text-xs text-gray-600 m-0 leading-relaxed">Advocates must wear formal court attire (white shirt, black coat, neckband/tie). Direct applicants must dress in neat business formals with a neutral background.</p>
                                                 </div>
                                             </div>
@@ -589,7 +589,7 @@ export default function TrademarkVideoHearingPage() {
                                             <div className="bg-gray-50 p-4 rounded-xl border border-gray-200 flex items-start space-x-3">
                                                 <FontAwesomeIcon icon={faCircleCheck} className="w-4 h-4 text-emerald-600 mt-1 flex-shrink-0" />
                                                 <div className="min-w-0">
-                                                    <h3 className="text-sm font-bold text-gray-900 mb-1">Microphone Mute Protocol</h3>
+                                                    <h4 className="text-sm font-bold text-gray-900 mb-1">Microphone Mute Protocol</h4>
                                                     <p className="text-xs text-gray-600 m-0 leading-relaxed">Keep your microphone muted at all times in the virtual hearing room until the Hearing Officer calls your item serial number to prevent audio feedback.</p>
                                                 </div>
                                             </div>
@@ -598,10 +598,10 @@ export default function TrademarkVideoHearingPage() {
 
                                     {/* SECTION 5: DOCUMENT CHECKLIST */}
                                     <section id="document-checklist" className="scroll-mt-32">
-                                        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 flex items-center break-words">
+                                        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 flex items-center break-words">
                                             <FontAwesomeIcon icon={faFolderOpen} className="w-5 h-5 sm:w-6 sm:h-6 text-[#6E5E93] mr-2.5 sm:mr-3 flex-shrink-0" />
                                             Essential Document Checklist & Digital Evidence Dossier
-                                        </h2>
+                                        </h3>
                                         <p>
                                             During a video hearing, the Hearing Officer typically reviews dozens of applications within a single 3-hour session. You have approximately <strong>5 to 10 minutes</strong> to articulate your position. Having a pre-indexed, consolidated PDF folder ready on your screen is mandatory for persuasive advocacy.
                                         </p>
@@ -661,10 +661,10 @@ export default function TrademarkVideoHearingPage() {
 
                                     {/* SECTION 6: 7-STEP PROCESS */}
                                     <section id="step-by-step" className="scroll-mt-32">
-                                        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 flex items-center break-words">
+                                        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 flex items-center break-words">
                                             <FontAwesomeIcon icon={faDiagramProject} className="w-5 h-5 sm:w-6 sm:h-6 text-[#6E5E93] mr-2.5 sm:mr-3 flex-shrink-0" />
                                             Step-by-Step Walkthrough on the Day of the Hearing
-                                        </h2>
+                                        </h3>
                                         <p>
                                             Executing a flawless virtual appearance requires following a systematic chronological workflow on the hearing date:
                                         </p>
@@ -673,7 +673,7 @@ export default function TrademarkVideoHearingPage() {
                                             <div className="flex items-start p-3.5 sm:p-4 bg-gray-50 rounded-2xl border border-gray-200">
                                                 <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-xs sm:text-sm mr-3 sm:mr-4 flex-shrink-0">1</div>
                                                 <div className="min-w-0">
-                                                    <h3 className="text-xs sm:text-sm font-bold text-gray-900 mb-1">Pre-Hearing System Check (30 Mins Prior)</h3>
+                                                    <h4 className="text-xs sm:text-sm font-bold text-gray-900 mb-1">Pre-Hearing System Check (30 Mins Prior)</h4>
                                                     <p className="text-xs text-gray-600 leading-relaxed m-0">
                                                         Re-test your camera, microphone, and internet bandwidth. Launch Cisco Webex Meetings application and verify that your screen name matches the required format: <code>Item [No] - App [No] - [Name]</code>.
                                                     </p>
@@ -683,7 +683,7 @@ export default function TrademarkVideoHearingPage() {
                                             <div className="flex items-start p-3.5 sm:p-4 bg-gray-50 rounded-2xl border border-gray-200">
                                                 <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-xs sm:text-sm mr-3 sm:mr-4 flex-shrink-0">2</div>
                                                 <div className="min-w-0">
-                                                    <h3 className="text-xs sm:text-sm font-bold text-gray-900 mb-1">Join the Virtual Lobby (15 Mins Prior)</h3>
+                                                    <h4 className="text-xs sm:text-sm font-bold text-gray-900 mb-1">Join the Virtual Lobby (15 Mins Prior)</h4>
                                                     <p className="text-xs text-gray-600 leading-relaxed m-0">
                                                         Click the official Webex link from your Hearing Notice. You will be placed in the &ldquo;Virtual Waiting Lobby&rdquo;. Do not disconnect; the registry moderator monitors the lobby and admits parties based on the dynamic cause list order.
                                                     </p>
@@ -693,7 +693,7 @@ export default function TrademarkVideoHearingPage() {
                                             <div className="flex items-start p-3.5 sm:p-4 bg-gray-50 rounded-2xl border border-gray-200">
                                                 <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-xs sm:text-sm mr-3 sm:mr-4 flex-shrink-0">3</div>
                                                 <div className="min-w-0">
-                                                    <h3 className="text-xs sm:text-sm font-bold text-gray-900 mb-1">Admission into the Hearing Courtroom</h3>
+                                                    <h4 className="text-xs sm:text-sm font-bold text-gray-900 mb-1">Admission into the Hearing Courtroom</h4>
                                                     <p className="text-xs text-gray-600 leading-relaxed m-0">
                                                         When your cause list item number is called, the moderator admits you into the main virtual room. Ensure your camera is immediately switched ON and your microphone remains muted until addressed.
                                                     </p>
@@ -703,7 +703,7 @@ export default function TrademarkVideoHearingPage() {
                                             <div className="flex items-start p-3.5 sm:p-4 bg-gray-50 rounded-2xl border border-gray-200">
                                                 <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-xs sm:text-sm mr-3 sm:mr-4 flex-shrink-0">4</div>
                                                 <div className="min-w-0">
-                                                    <h3 className="text-xs sm:text-sm font-bold text-gray-900 mb-1">Formal Appearance & Identity Recording</h3>
+                                                    <h4 className="text-xs sm:text-sm font-bold text-gray-900 mb-1">Formal Appearance & Identity Recording</h4>
                                                     <p className="text-xs text-gray-600 leading-relaxed m-0">
                                                         Unmute and announce your formal appearance: <em>&ldquo;Good morning / afternoon Officer, I am appearing on behalf of the Applicant in Item Number 14, Application Number 5678912 for the mark [Brand Name].&rdquo;</em>
                                                     </p>
@@ -713,7 +713,7 @@ export default function TrademarkVideoHearingPage() {
                                             <div className="flex items-start p-3.5 sm:p-4 bg-gray-50 rounded-2xl border border-gray-200">
                                                 <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-xs sm:text-sm mr-3 sm:mr-4 flex-shrink-0">5</div>
                                                 <div className="min-w-0">
-                                                    <h3 className="text-xs sm:text-sm font-bold text-gray-900 mb-1">Crisp Oral Submissions & Screen Sharing</h3>
+                                                    <h4 className="text-xs sm:text-sm font-bold text-gray-900 mb-1">Crisp Oral Submissions & Screen Sharing</h4>
                                                     <p className="text-xs text-gray-600 leading-relaxed m-0">
                                                         Address the specific objection cited. Ask the officer: <em>&ldquo;May I share my screen to display our user invoices and comparison chart?&rdquo;</em> Present your strongest points within 3 to 5 minutes without reading lengthy paragraphs.
                                                     </p>
@@ -723,7 +723,7 @@ export default function TrademarkVideoHearingPage() {
                                             <div className="flex items-start p-3.5 sm:p-4 bg-gray-50 rounded-2xl border border-gray-200">
                                                 <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-xs sm:text-sm mr-3 sm:mr-4 flex-shrink-0">6</div>
                                                 <div className="min-w-0">
-                                                    <h3 className="text-xs sm:text-sm font-bold text-gray-900 mb-1">Responding to Officer Queries & Conditions</h3>
+                                                    <h4 className="text-xs sm:text-sm font-bold text-gray-900 mb-1">Responding to Officer Queries & Conditions</h4>
                                                     <p className="text-xs text-gray-600 leading-relaxed m-0">
                                                         The Hearing Officer may propose standard conditions, such as: (a) Disclaimer of generic terms, (b) Restriction of goods specification, or (c) Association with an earlier mark under Section 16. Carefully accept reasonable conditions to secure acceptance.
                                                     </p>
@@ -733,7 +733,7 @@ export default function TrademarkVideoHearingPage() {
                                             <div className="flex items-start p-3.5 sm:p-4 bg-gray-50 rounded-2xl border border-gray-200">
                                                 <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-xs sm:text-sm mr-3 sm:mr-4 flex-shrink-0">7</div>
                                                 <div className="min-w-0">
-                                                    <h3 className="text-xs sm:text-sm font-bold text-gray-900 mb-1">Order Pronouncement & Post-Hearing Directions</h3>
+                                                    <h4 className="text-xs sm:text-sm font-bold text-gray-900 mb-1">Order Pronouncement & Post-Hearing Directions</h4>
                                                     <p className="text-xs text-gray-600 leading-relaxed m-0">
                                                         The officer will verbally pronounce whether the application is <strong>Accepted</strong>, <strong>Directed for Written Arguments</strong>, or <strong>Refused</strong>. Note the directions, thank the Officer, and disconnect from the call.
                                                     </p>
@@ -744,10 +744,10 @@ export default function TrademarkVideoHearingPage() {
 
                                     {/* SECTION 7: ORAL ADVOCACY */}
                                     <section id="oral-advocacy" className="scroll-mt-32">
-                                        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 flex items-center break-words">
+                                        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 flex items-center break-words">
                                             <FontAwesomeIcon icon={faScaleBalanced} className="w-5 h-5 sm:w-6 sm:h-6 text-[#6E5E93] mr-2.5 sm:mr-3 flex-shrink-0" />
                                             Effective Oral Advocacy: Tackling Section 9 & Section 11 Objections
-                                        </h2>
+                                        </h3>
                                         <p>
                                             To win a show-cause hearing, your oral submissions must be structured around settled principles of Indian trademark jurisprudence:
                                         </p>
@@ -755,7 +755,7 @@ export default function TrademarkVideoHearingPage() {
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 my-6 not-prose">
                                             <div className="bg-white p-4 sm:p-6 rounded-2xl border border-purple-200 shadow-sm">
                                                 <span className="px-2.5 py-1 bg-purple-100 text-[#6E5E93] text-[11px] font-bold rounded-full uppercase mb-3 inline-block">Defending Section 9</span>
-                                                <h3 className="text-sm sm:text-base font-bold text-gray-900 mb-2">Absolute Grounds (Non-Distinctive / Descriptive)</h3>
+                                                <h4 className="text-sm sm:text-base font-bold text-gray-900 mb-2">Absolute Grounds (Non-Distinctive / Descriptive)</h4>
                                                 <ul className="text-xs sm:text-sm text-gray-600 space-y-2 mb-3">
                                                     <li>• <strong>Arbitrary or Coined Mark:</strong> Demonstrate that the mark is an invented word having no direct dictionary meaning to the goods (e.g., <em>KODAK</em> or <em>EXXON</em>).</li>
                                                     <li>• <strong>Acquired Distinctiveness (Sec 9 Proviso):</strong> Present audited turnover and continuous commercial use establishing that consumers exclusively associate the mark with your company.</li>
@@ -765,7 +765,7 @@ export default function TrademarkVideoHearingPage() {
 
                                             <div className="bg-white p-4 sm:p-6 rounded-2xl border border-indigo-200 shadow-sm">
                                                 <span className="px-2.5 py-1 bg-indigo-100 text-indigo-700 text-[11px] font-bold rounded-full uppercase mb-3 inline-block">Defending Section 11</span>
-                                                <h3 className="text-sm sm:text-base font-bold text-gray-900 mb-2">Relative Grounds (Conflict with Prior Marks)</h3>
+                                                <h4 className="text-sm sm:text-base font-bold text-gray-900 mb-2">Relative Grounds (Conflict with Prior Marks)</h4>
                                                 <ul className="text-xs sm:text-sm text-gray-600 space-y-2 mb-3">
                                                     <li>• <strong>Phonetic & Visual Dissimilarity:</strong> Walk the Officer through syllable counts, prefix/suffix distinctions, visual font logos, and color differences.</li>
                                                     <li>• <strong>Different Trade Channels & Class Specialization:</strong> Prove that although goods share a class, customer profiles, price points, and retail channels are entirely distinct.</li>
@@ -778,16 +778,16 @@ export default function TrademarkVideoHearingPage() {
 
                                     {/* SECTION 8: ADJOURNMENT RULES */}
                                     <section id="adjournment-rules" className="scroll-mt-32">
-                                        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 flex items-center break-words">
+                                        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 flex items-center break-words">
                                             <FontAwesomeIcon icon={faHourglassHalf} className="w-5 h-5 sm:w-6 sm:h-6 text-[#6E5E93] mr-2.5 sm:mr-3 flex-shrink-0" />
                                             Postponing a Hearing: Form TM-M Adjournment Rules
-                                        </h2>
+                                        </h3>
                                         <p>
                                             If the applicant or their authorized advocate cannot attend the scheduled hearing due to unavoidable emergencies, an official adjournment must be sought under <strong>Rule 115 of the Trade Marks Rules, 2017</strong>.
                                         </p>
 
                                         <div className="bg-gradient-to-r from-purple-50 via-white to-indigo-50 p-4 sm:p-6 rounded-2xl border border-purple-200 my-6 not-prose">
-                                            <h3 className="text-sm sm:text-base font-bold text-gray-900 mb-2">Statutory Protocol for Adjournment on Form TM-M</h3>
+                                            <h4 className="text-sm sm:text-base font-bold text-gray-900 mb-2">Statutory Protocol for Adjournment on Form TM-M</h4>
                                             <ul className="text-xs sm:text-sm text-gray-700 space-y-2 mb-4">
                                                 <li>• <strong>Mandatory Form:</strong> File Form TM-M electronically under the sub-category <em>&ldquo;Request for Adjournment of Hearing&rdquo;</em>.</li>
                                                 <li>• <strong>Statutory Government Fee:</strong> ₹900 per application for e-filing (₹1,000 for physical filing).</li>
@@ -803,10 +803,10 @@ export default function TrademarkVideoHearingPage() {
 
                                     {/* SECTION 9: TECHNICAL GLITCHES */}
                                     <section id="tech-contingency" className="scroll-mt-32">
-                                        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 flex items-center break-words">
+                                        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 flex items-center break-words">
                                             <FontAwesomeIcon icon={faHeadset} className="w-5 h-5 sm:w-6 sm:h-6 text-[#6E5E93] mr-2.5 sm:mr-3 flex-shrink-0" />
                                             Handling Technical Glitches, Disconnections & Dropped Calls
-                                        </h2>
+                                        </h3>
                                         <p>
                                             In virtual courtrooms, sudden bandwidth drops, audio feedback, or Webex server errors can occasionally occur. The Trade Marks Registry provides defined contingency mechanisms to safeguard applicant rights:
                                         </p>
@@ -829,10 +829,10 @@ export default function TrademarkVideoHearingPage() {
 
                                     {/* SECTION 10: POST-HEARING ORDERS */}
                                     <section id="post-hearing" className="scroll-mt-32">
-                                        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 flex items-center break-words">
+                                        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 flex items-center break-words">
                                             <FontAwesomeIcon icon={faRotate} className="w-5 h-5 sm:w-6 sm:h-6 text-[#6E5E93] mr-2.5 sm:mr-3 flex-shrink-0" />
                                             Post-Hearing Orders, Status Tracking & High Court Appeals
-                                        </h2>
+                                        </h3>
                                         <p>
                                             Following the conclusion of oral arguments, the Hearing Officer updates the application status on the IP India database within 3 to 15 working days. The possible statutory outcomes include:
                                         </p>
@@ -874,10 +874,10 @@ export default function TrademarkVideoHearingPage() {
 
                                     {/* SECTION 11: COMPARISON TABLE */}
                                     <section id="comparison-table" className="scroll-mt-32">
-                                        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 flex items-center break-words">
+                                        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 flex items-center break-words">
                                             <FontAwesomeIcon icon={faTable} className="w-5 h-5 sm:w-6 sm:h-6 text-[#6E5E93] mr-2.5 sm:mr-3 flex-shrink-0" />
                                             Comparison Matrix: Virtual Video Hearing vs Physical Appearance
-                                        </h2>
+                                        </h3>
                                         <p>
                                             Evaluating the procedural and strategic parameters of the current virtual hearing mechanism against historical physical courtroom hearings:
                                         </p>
@@ -924,10 +924,10 @@ export default function TrademarkVideoHearingPage() {
 
                                     {/* SECTION 12: STATUTORY FEES */}
                                     <section id="statutory-fees" className="scroll-mt-32">
-                                        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 flex items-center break-words">
+                                        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 flex items-center break-words">
                                             <FontAwesomeIcon icon={faCalculator} className="w-5 h-5 sm:w-6 sm:h-6 text-[#6E5E93] mr-2.5 sm:mr-3 flex-shrink-0" />
                                             Official Statutory Fee Schedule & Forms
-                                        </h2>
+                                        </h3>
                                         <p>
                                             Statutory government fees related to trademark hearing proceedings under the First Schedule of the Trade Marks Rules, 2017:
                                         </p>
@@ -938,7 +938,7 @@ export default function TrademarkVideoHearingPage() {
                                                     <span className="px-2.5 py-1 bg-purple-100 text-[#6E5E93] text-[11px] font-bold rounded-full uppercase">Form TM-M</span>
                                                     <span className="text-[11px] text-gray-500 font-semibold">Rule 115</span>
                                                 </div>
-                                                <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2">Hearing Adjournment Request</h3>
+                                                <h4 className="text-base sm:text-lg font-bold text-gray-900 mb-2">Hearing Adjournment Request</h4>
                                                 <div className="text-xl sm:text-2xl font-extrabold text-[#6E5E93] mb-3">₹900 <span className="text-xs text-gray-500 font-normal">/ class (E-filing)</span></div>
                                                 <p className="text-xs text-gray-600 leading-relaxed mb-2">
                                                     Official fee for seeking formal postponement of a scheduled virtual hearing date. Physical filing fee is ₹1,000 per application.
@@ -950,7 +950,7 @@ export default function TrademarkVideoHearingPage() {
                                                     <span className="px-2.5 py-1 bg-gray-100 text-gray-700 text-[11px] font-bold rounded-full uppercase">Form TM-M</span>
                                                     <span className="text-[11px] text-gray-500 font-semibold">Section 18(5)</span>
                                                 </div>
-                                                <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2">Grounds of Refusal Decision</h3>
+                                                <h4 className="text-base sm:text-lg font-bold text-gray-900 mb-2">Grounds of Refusal Decision</h4>
                                                 <div className="text-xl sm:text-2xl font-extrabold text-gray-900 mb-3">₹1,800 <span className="text-xs text-gray-500 font-normal">/ class (E-filing)</span></div>
                                                 <p className="text-xs text-gray-600 leading-relaxed mb-2">
                                                     Required to obtain the official written speaking order from the Hearing Officer before filing a High Court IPD appeal. Physical filing fee is ₹2,000.
@@ -961,10 +961,10 @@ export default function TrademarkVideoHearingPage() {
 
                                     {/* SECTION 13: FAQS */}
                                     <section id="faqs" className="scroll-mt-32">
-                                        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 flex items-center break-words">
+                                        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 flex items-center break-words">
                                             <FontAwesomeIcon icon={faLightbulb} className="w-5 h-5 sm:w-6 sm:h-6 text-[#6E5E93] mr-2.5 sm:mr-3 flex-shrink-0" />
                                             Frequently Asked Questions
-                                        </h2>
+                                        </h3>
                                         <div className="space-y-3 sm:space-y-4 not-prose">
                                             {faqs.map((faq, index) => (
                                                 <details key={index} className="group bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm transition-all duration-200 open:shadow-md">
@@ -984,10 +984,10 @@ export default function TrademarkVideoHearingPage() {
 
                                     {/* SECTION 14: STRATEGIC TAKEAWAYS */}
                                     <section id="final-takeaway" className="scroll-mt-32 pt-6 sm:pt-8 md:pt-12 border-t border-gray-100 mt-6 sm:mt-8 md:mt-12">
-                                        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 flex items-center break-words">
+                                        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 flex items-center break-words">
                                             <FontAwesomeIcon icon={faRocket} className="w-5 h-5 sm:w-6 sm:h-6 text-[#6E5E93] mr-2.5 sm:mr-3 flex-shrink-0" />
                                             Strategic Legal Counsel for Founders & Brand Custodians
-                                        </h2>
+                                        </h3>
 
                                         <p>
                                             A trademark hearing before the Trade Marks Registry is not a casual meeting; it is a formal statutory quasi-judicial proceeding that permanently determines whether your brand secures exclusive proprietary rights or suffers statutory abandonment.
@@ -1002,7 +1002,7 @@ export default function TrademarkVideoHearingPage() {
                                         </p>
 
                                         <div className="bg-gradient-to-br from-purple-900 via-[#2A2A38] to-[#1A1A24] text-white p-5 sm:p-8 rounded-3xl shadow-xl not-prose mt-6 sm:mt-8 overflow-hidden">
-                                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 text-white">Need Senior Counsel for Your Upcoming Trademark Video Hearing?</h3>
+                                            <h4 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 text-white">Need Senior Counsel for Your Upcoming Trademark Video Hearing?</h4>
                                             <p className="text-gray-300 text-xs sm:text-sm leading-relaxed mb-6 max-w-2xl">
                                                 Our team of senior trademark litigators and registered attorneys represent applicants across all zonal Trade Marks Registry boards via Cisco Webex, handling dossier preparation, oral advocacy, and written arguments.
                                             </p>
@@ -1044,7 +1044,7 @@ export default function TrademarkVideoHearingPage() {
                                     <FontAwesomeIcon icon={faShieldHalved} className="w-3 h-3 mr-1.5 text-pink-400" />
                                     Virtual Hearing Litigators
                                 </div>
-                                <h3 className="text-xl font-bold mb-3 text-white">Protect Your Brand from Refusal</h3>
+                                <h4 className="text-xl font-bold mb-3 text-white">Protect Your Brand from Refusal</h4>
                                 <p className="text-gray-300 text-xs sm:text-sm leading-relaxed mb-6">
                                     Received a show-cause hearing notice? Our registered trademark advocates represent you before the Hearing Officer via Cisco Webex.
                                 </p>
@@ -1063,10 +1063,10 @@ export default function TrademarkVideoHearingPage() {
 
                             {/* Quick Takeaways Box */}
                             <div className="bg-amber-50/60 p-6 rounded-2xl border border-amber-200 shadow-sm">
-                                <h3 className="text-xs font-black text-amber-900 mb-3 uppercase tracking-widest flex items-center">
+                                <h4 className="text-xs font-black text-amber-900 mb-3 uppercase tracking-widest flex items-center">
                                     <FontAwesomeIcon icon={faLightbulb} className="w-3.5 h-3.5 text-amber-600 mr-2" />
                                     Hearing Quick Checklist
-                                </h3>
+                                </h4>
                                 <ul className="space-y-3 text-xs text-amber-950 font-medium">
                                     <li className="flex items-start">
                                         <span className="text-amber-600 font-bold mr-2">•</span>
@@ -1097,7 +1097,7 @@ export default function TrademarkVideoHearingPage() {
 
                             {/* Related Resources */}
                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-100 shadow-sm">
-                                <h3 className="text-xs font-black text-gray-500 mb-4 uppercase tracking-widest">Related Legal Guides</h3>
+                                <h4 className="text-xs font-black text-gray-500 mb-4 uppercase tracking-widest">Related Legal Guides</h4>
                                 <ul className="space-y-4 text-xs font-semibold text-gray-800">
                                     <li>
                                         <Link href="/trademark-hearing-notice-what-to-do" className="flex items-center hover:text-[rgb(110,94,147)] transition-colors">

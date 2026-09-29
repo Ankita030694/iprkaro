@@ -333,10 +333,10 @@ export default function TradeNameVsTrademarkPage() {
 
                                     {/* SECTION 2: CORE DEFINITIONS */}
                                     <section id="core-definitions" className="scroll-mt-32 pt-8 border-t border-gray-100">
-                                        <h2 className="text-2xl font-black text-gray-900 mb-4 flex items-center">
+                                        <h3 className="text-2xl font-black text-gray-900 mb-4 flex items-center">
                                             <FontAwesomeIcon icon={faScaleBalanced} className="w-7 h-7 mr-3 text-[rgb(110,94,147)]" />
                                             Defining Trade Name vs Registered Trademark
-                                        </h2>
+                                        </h3>
                                         <p className="mb-4">
                                             To understand why tax registrations fail to protect your commercial goodwill, it is essential to distinguish between a Trade Name and a Trademark under Indian legal jurisprudence.
                                         </p>
@@ -347,7 +347,7 @@ export default function TradeNameVsTrademarkPage() {
                                                     <span className="w-8 h-8 rounded-lg bg-blue-100 text-blue-800 flex items-center justify-center font-bold mr-3">
                                                         <FontAwesomeIcon icon={faStore} className="w-4 h-4" />
                                                     </span>
-                                                    <h3 className="text-lg font-bold text-gray-900 m-0">What is a Trade Name?</h3>
+                                                    <h4 className="text-lg font-bold text-gray-900 m-0">What is a Trade Name?</h4>
                                                 </div>
                                                 <p className="text-sm text-gray-600 mb-3">
                                                     A <strong>Trade Name</strong> (or business/trading name) is the official or operational name under which an individual, partnership firm, LLP, or company conducts its day-to-day business. It is used on invoices, tax filings, lease agreements, vendor contracts, and bank accounts.
@@ -365,7 +365,7 @@ export default function TradeNameVsTrademarkPage() {
                                                     <span className="w-8 h-8 rounded-lg bg-[#6E5E93] text-white flex items-center justify-center font-bold mr-3">
                                                         <FontAwesomeIcon icon={faStamp} className="w-4 h-4" />
                                                     </span>
-                                                    <h3 className="text-lg font-bold text-gray-900 m-0">What is a Trademark?</h3>
+                                                    <h4 className="text-lg font-bold text-gray-900 m-0">What is a Trademark?</h4>
                                                 </div>
                                                 <p className="text-sm text-gray-600 mb-3">
                                                     A <strong>Trademark</strong> under Section 2(1)(zb) of the Trade Marks Act, 1999 is a visually distinctive mark (word, brand, heading, label, ticket, name, signature, letter, numeral, shape of goods, packaging, or combination of colours) capable of distinguishing the goods or services of one enterprise from those of others.
@@ -382,20 +382,20 @@ export default function TradeNameVsTrademarkPage() {
 
                                     {/* SECTION 3: WHY GST & MSME FAIL TO PROTECT */}
                                     <section id="why-gst-msme-fail" className="scroll-mt-32 pt-8 border-t border-gray-100">
-                                        <h2 className="text-2xl font-black text-gray-900 mb-4 flex items-center">
+                                        <h3 className="text-2xl font-black text-gray-900 mb-4 flex items-center">
                                             <FontAwesomeIcon icon={faCircleXmark} className="w-7 h-7 mr-3 text-red-500" />
                                             Why GST, MSME &amp; Shop Act Do Not Protect Your Brand
-                                        </h2>
+                                        </h3>
                                         <p className="mb-4">
                                             Let us dissect the precise legal limitations of standard commercial registrations that business owners commonly rely upon in place of a registered trademark:
                                         </p>
 
                                         <div className="space-y-6">
                                             <div className="p-5 rounded-2xl bg-white border border-gray-200 shadow-sm">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-2 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-2 flex items-center">
                                                     <FontAwesomeIcon icon={faFileInvoiceDollar} className="w-5 h-5 mr-2 text-[rgb(110,94,147)]" />
                                                     1. GST Registration (CGST Act, 2017)
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 mb-2">
                                                     GST registration is a tax collection mechanism enacted under Article 246A of the Indian Constitution and the Central Goods and Services Tax Act, 2017. When you apply for a GST number, the tax officer only verifies PAN details, identity proofs, and principal place of business.
                                                 </p>
@@ -405,10 +405,10 @@ export default function TradeNameVsTrademarkPage() {
                                             </div>
 
                                             <div className="p-5 rounded-2xl bg-white border border-gray-200 shadow-sm">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-2 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-2 flex items-center">
                                                     <FontAwesomeIcon icon={faIdCard} className="w-5 h-5 mr-2 text-[rgb(110,94,147)]" />
                                                     2. MSME Udyam Registration (MSMED Act, 2006)
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 mb-2">
                                                     Udyam Registration is a self-declared government portal operated by the Ministry of Micro, Small and Medium Enterprises to categorize businesses based on investment in plant/machinery and annual turnover.
                                                 </p>
@@ -418,10 +418,10 @@ export default function TradeNameVsTrademarkPage() {
                                             </div>
 
                                             <div className="p-5 rounded-2xl bg-white border border-gray-200 shadow-sm">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-2 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-2 flex items-center">
                                                     <FontAwesomeIcon icon={faStore} className="w-5 h-5 mr-2 text-[rgb(110,94,147)]" />
                                                     3. Shop &amp; Establishment Act Licenses (Gumasta / Trade License)
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 mb-2">
                                                     Issued by local municipal corporations (e.g., BMC Mumbai, MCD Delhi, BBMP Bengaluru), these licenses regulate working hours, weekly holidays, wage payments, and health/fire safety standards for commercial establishments.
                                                 </p>
@@ -434,10 +434,10 @@ export default function TradeNameVsTrademarkPage() {
 
                                     {/* SECTION 4: STATUTORY COMPARISON MATRIX */}
                                     <section id="statutory-comparison-matrix" className="scroll-mt-32 pt-8 border-t border-gray-100">
-                                        <h2 className="text-2xl font-black text-gray-900 mb-4 flex items-center">
+                                        <h3 className="text-2xl font-black text-gray-900 mb-4 flex items-center">
                                             <FontAwesomeIcon icon={faTable} className="w-7 h-7 mr-3 text-[rgb(110,94,147)]" />
                                             Comprehensive Statutory Comparison Matrix
-                                        </h2>
+                                        </h3>
                                         <p className="mb-4">
                                             Compare the legal standing, territorial jurisdiction, and protection levels of common Indian business registrations against a registered trademark:
                                         </p>
@@ -502,10 +502,10 @@ export default function TradeNameVsTrademarkPage() {
 
                                     {/* SECTION 5: MCA COMPANY NAME CONFLICT */}
                                     <section id="mca-company-name-conflict" className="scroll-mt-32 pt-8 border-t border-gray-100">
-                                        <h2 className="text-2xl font-black text-gray-900 mb-4 flex items-center">
+                                        <h3 className="text-2xl font-black text-gray-900 mb-4 flex items-center">
                                             <FontAwesomeIcon icon={faLandmark} className="w-7 h-7 mr-3 text-[rgb(110,94,147)]" />
                                             MCA Company Name vs Registered Trademark
-                                        </h2>
+                                        </h3>
                                         <p className="mb-4">
                                             Many founders believe that incorporating a Private Limited Company or LLP with the Ministry of Corporate Affairs (MCA) grants complete brand security because the Registrar of Companies (ROC) checks name availability under the SPICe+ portal.
                                         </p>
@@ -514,7 +514,7 @@ export default function TradeNameVsTrademarkPage() {
                                         </p>
 
                                         <div className="p-5 bg-purple-50 border border-purple-200 rounded-2xl my-6">
-                                            <h3 className="text-base font-bold text-purple-950 mb-2">Section 16(1)(b) of the Companies Act, 2013 (Rectification of Name)</h3>
+                                            <h4 className="text-base font-bold text-purple-950 mb-2">Section 16(1)(b) of the Companies Act, 2013 (Rectification of Name)</h4>
                                             <p className="text-sm text-purple-900 m-0">
                                                 Under Section 16(1)(b) of the Companies Act, 2013, if a company is registered with a name that is identical with or too nearly resembles a registered trademark, the proprietor of the registered trademark can file an application before the Regional Director (RD) / Central Government. The government will direct the infringing company to <strong>change its registered company name within three months</strong>!
                                             </p>
@@ -526,31 +526,31 @@ export default function TradeNameVsTrademarkPage() {
 
                                     {/* SECTION 6: HIGH COURT CASE LAWS */}
                                     <section id="case-law-precedents" className="scroll-mt-32 pt-8 border-t border-gray-100">
-                                        <h2 className="text-2xl font-black text-gray-900 mb-4 flex items-center">
+                                        <h3 className="text-2xl font-black text-gray-900 mb-4 flex items-center">
                                             <FontAwesomeIcon icon={faGavel} className="w-7 h-7 mr-3 text-[rgb(110,94,147)]" />
                                             Landmark Judicial Precedents on Trade Names
-                                        </h2>
+                                        </h3>
                                         <p className="mb-4">
                                             The Supreme Court of India and various High Courts have repeatedly affirmed the supremacy of registered trademarks over mere trade names, company names, and tax registrations:
                                         </p>
 
                                         <div className="space-y-4 my-6">
                                             <div className="p-4 rounded-xl bg-gray-50 border-l-4 border-[rgb(110,94,147)]">
-                                                <h3 className="text-base font-bold text-gray-900 mb-1">Montari Overseas Ltd. v. Montari Industries Ltd. (1996 - Delhi High Court)</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-1">Montari Overseas Ltd. v. Montari Industries Ltd. (1996 - Delhi High Court)</h4>
                                                 <p className="text-xs sm:text-sm text-gray-700 m-0">
                                                     The Delhi High Court held that adopting a corporate name under the Companies Act does not grant immunity from trademark infringement. An enterprise cannot start a business using a corporate name that is deceptively similar to an existing established trademark or trade name of another company, as it causes confusion in the minds of consumers.
                                                 </p>
                                             </div>
 
                                             <div className="p-4 rounded-xl bg-gray-50 border-l-4 border-[rgb(110,94,147)]">
-                                                <h3 className="text-base font-bold text-gray-900 mb-1">Mahendra &amp; Mahendra Paper Mills Ltd. v. Mahindra &amp; Mahindra Ltd. (2002 - Supreme Court of India)</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-1">Mahendra &amp; Mahendra Paper Mills Ltd. v. Mahindra &amp; Mahindra Ltd. (2002 - Supreme Court of India)</h4>
                                                 <p className="text-xs sm:text-sm text-gray-700 m-0">
                                                     The Supreme Court restrained the appellant from using the name &quot;Mahendra &amp; Mahendra&quot; for their paper mill business despite having corporate registration, holding that the name was deceptively similar to the famous registered mark &quot;Mahindra &amp; Mahindra&quot;, creating an undeniable likelihood of commercial confusion and dilution of goodwill.
                                                 </p>
                                             </div>
 
                                             <div className="p-4 rounded-xl bg-gray-50 border-l-4 border-[rgb(110,94,147)]">
-                                                <h3 className="text-base font-bold text-gray-900 mb-1">Laxmikant V. Patel v. Chetanbhai Shah (2002 - Supreme Court of India)</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-1">Laxmikant V. Patel v. Chetanbhai Shah (2002 - Supreme Court of India)</h4>
                                                 <p className="text-xs sm:text-sm text-gray-700 m-0">
                                                     The Supreme Court ruled that honest commercial adoption of a business name requires conducting thorough due diligence. If an entity uses a trade name that damages the reputation or diverts customers from an established prior business, courts must immediately grant interim injunctions to protect goodwill, regardless of local commercial registrations.
                                                 </p>
@@ -560,10 +560,10 @@ export default function TradeNameVsTrademarkPage() {
 
                                     {/* SECTION 7: REAL-WORLD RISKS */}
                                     <section id="real-world-risks" className="scroll-mt-32 pt-8 border-t border-gray-100">
-                                        <h2 className="text-2xl font-black text-gray-900 mb-4 flex items-center">
+                                        <h3 className="text-2xl font-black text-gray-900 mb-4 flex items-center">
                                             <FontAwesomeIcon icon={faExclamationTriangle} className="w-7 h-7 mr-3 text-red-500" />
                                             Real-World Business Risks of Operating Without a Trademark
-                                        </h2>
+                                        </h3>
                                         <p className="mb-4">
                                             Relying solely on GST and MSME registrations exposes your enterprise to devastating operational, legal, and financial catastrophes:
                                         </p>
@@ -594,10 +594,10 @@ export default function TradeNameVsTrademarkPage() {
 
                                     {/* SECTION 8: 6-STEP TRADEMARK ROADMAP */}
                                     <section id="transition-playbook" className="scroll-mt-32 pt-8 border-t border-gray-100">
-                                        <h2 className="text-2xl font-black text-gray-900 mb-4 flex items-center">
+                                        <h3 className="text-2xl font-black text-gray-900 mb-4 flex items-center">
                                             <FontAwesomeIcon icon={faCheckCircle} className="w-7 h-7 mr-3 text-emerald-600" />
                                             6-Step Roadmap: Transition from Trade Name to Trademark
-                                        </h2>
+                                        </h3>
                                         <p className="mb-4">
                                             Transform your vulnerable business trade name into a legally protected intellectual property asset through this systematic process:
                                         </p>
@@ -606,7 +606,7 @@ export default function TradeNameVsTrademarkPage() {
                                             <div className="flex items-start bg-white p-4 rounded-xl border border-gray-200 shadow-sm">
                                                 <span className="w-7 h-7 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-xs shrink-0 mr-3 mt-0.5">1</span>
                                                 <div>
-                                                    <h3 className="text-sm sm:text-base font-bold text-gray-900 m-0">Public Trademark Clearance Search</h3>
+                                                    <h4 className="text-sm sm:text-base font-bold text-gray-900 m-0">Public Trademark Clearance Search</h4>
                                                     <p className="text-xs sm:text-sm text-gray-600 mt-1 m-0">
                                                         Conduct an exhaustive phonetic, visual, and semantic clearance search across the IP India public database to verify that your proposed mark is not deceptively similar to existing marks under Section 11.
                                                     </p>
@@ -616,7 +616,7 @@ export default function TradeNameVsTrademarkPage() {
                                             <div className="flex items-start bg-white p-4 rounded-xl border border-gray-200 shadow-sm">
                                                 <span className="w-7 h-7 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-xs shrink-0 mr-3 mt-0.5">2</span>
                                                 <div>
-                                                    <h3 className="text-sm sm:text-base font-bold text-gray-900 m-0">Accurate Trademark Class Mapping</h3>
+                                                    <h4 className="text-sm sm:text-base font-bold text-gray-900 m-0">Accurate Trademark Class Mapping</h4>
                                                     <p className="text-xs sm:text-sm text-gray-600 mt-1 m-0">
                                                         Identify all applicable classes among the 45 NICE classification classes (e.g., Class 25 for apparel, Class 30 for food products, Class 35 for retail/e-commerce, Class 42 for SaaS/software) to guarantee complete protection.
                                                     </p>
@@ -626,7 +626,7 @@ export default function TradeNameVsTrademarkPage() {
                                             <div className="flex items-start bg-white p-4 rounded-xl border border-gray-200 shadow-sm">
                                                 <span className="w-7 h-7 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-xs shrink-0 mr-3 mt-0.5">3</span>
                                                 <div>
-                                                    <h3 className="text-sm sm:text-base font-bold text-gray-900 m-0">Claim 50% MSME Government Fee Concession</h3>
+                                                    <h4 className="text-sm sm:text-base font-bold text-gray-900 m-0">Claim 50% MSME Government Fee Concession</h4>
                                                     <p className="text-xs sm:text-sm text-gray-600 mt-1 m-0">
                                                         Attach your valid MSME Udyam Registration or DPIIT Startup India Certificate to reduce the official government filing fee from ₹9,000 to ₹4,500 per mark per class under the Trade Marks Rules, 2017. See our detailed guide on <Link href="/trademark-fee-concession-msme-udyam-startup-india" className="text-[rgb(110,94,147)] font-medium hover:underline">MSME trademark fee concessions</Link>.
                                                     </p>
@@ -636,7 +636,7 @@ export default function TradeNameVsTrademarkPage() {
                                             <div className="flex items-start bg-white p-4 rounded-xl border border-gray-200 shadow-sm">
                                                 <span className="w-7 h-7 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-xs shrink-0 mr-3 mt-0.5">4</span>
                                                 <div>
-                                                    <h3 className="text-sm sm:text-base font-bold text-gray-900 m-0">Draft Prior User Date Affidavit (Rule 25)</h3>
+                                                    <h4 className="text-sm sm:text-base font-bold text-gray-900 m-0">Draft Prior User Date Affidavit (Rule 25)</h4>
                                                     <p className="text-xs sm:text-sm text-gray-600 mt-1 m-0">
                                                         If you have already been operating under your trade name, compile historical GST invoices, domain receipts, and packaging bills to claim your continuous prior use date under <Link href="/prior-user-rights-section-34-trade-marks-act-india" className="text-[rgb(110,94,147)] font-medium hover:underline">Section 34 prior user rights</Link>.
                                                     </p>
@@ -646,7 +646,7 @@ export default function TradeNameVsTrademarkPage() {
                                             <div className="flex items-start bg-white p-4 rounded-xl border border-gray-200 shadow-sm">
                                                 <span className="w-7 h-7 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-xs shrink-0 mr-3 mt-0.5">5</span>
                                                 <div>
-                                                    <h3 className="text-sm sm:text-base font-bold text-gray-900 m-0">File Form TM-A Online &amp; Use ™ Symbol</h3>
+                                                    <h4 className="text-sm sm:text-base font-bold text-gray-900 m-0">File Form TM-A Online &amp; Use ™ Symbol</h4>
                                                     <p className="text-xs sm:text-sm text-gray-600 mt-1 m-0">
                                                         Submit Form TM-A through a registered trademark attorney. Immediately upon receiving your electronic acknowledgment receipt and application number, you are legally entitled to display the ™ symbol next to your brand. Review the <Link href="/difference-between-tm-and-r-symbol-in-india" className="text-[rgb(110,94,147)] font-medium hover:underline">difference between TM and R symbol</Link>.
                                                     </p>
@@ -656,7 +656,7 @@ export default function TradeNameVsTrademarkPage() {
                                             <div className="flex items-start bg-white p-4 rounded-xl border border-gray-200 shadow-sm">
                                                 <span className="w-7 h-7 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-xs shrink-0 mr-3 mt-0.5">6</span>
                                                 <div>
-                                                    <h3 className="text-sm sm:text-base font-bold text-gray-900 m-0">Secure Certificate &amp; Enforce Brand Monopoly</h3>
+                                                    <h4 className="text-sm sm:text-base font-bold text-gray-900 m-0">Secure Certificate &amp; Enforce Brand Monopoly</h4>
                                                     <p className="text-xs sm:text-sm text-gray-600 mt-1 m-0">
                                                         Overcome examination objections, clear trademark journal publication, and receive your 10-year renewable Registration Certificate (®), unlocking nationwide brand lock and enforcement powers.
                                                     </p>
@@ -667,16 +667,16 @@ export default function TradeNameVsTrademarkPage() {
 
                                     {/* SECTION 9: FAQS */}
                                     <section id="faqs" className="scroll-mt-32 pt-8 border-t border-gray-100">
-                                        <h2 className="text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faListUl} className="w-7 h-7 mr-3 text-[rgb(110,94,147)]" />
                                             Frequently Asked Questions
-                                        </h2>
+                                        </h3>
                                         <div className="space-y-4">
                                             {faqs.map((faq, index) => (
                                                 <div key={index} className="bg-gray-50 p-5 rounded-2xl border border-gray-200/80">
-                                                    <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2 flex items-start leading-snug">
+                                                    <h4 className="text-base sm:text-lg font-bold text-gray-900 mb-2 flex items-start leading-snug">
                                                         <span className="text-[rgb(110,94,147)] mr-3 font-black text-xl">Q.</span>{faq.question}
-                                                    </h3>
+                                                    </h4>
                                                     <p className="text-xs sm:text-sm text-gray-600 pl-8 m-0 leading-relaxed">{faq.answer}</p>
                                                 </div>
                                             ))}
@@ -685,10 +685,10 @@ export default function TradeNameVsTrademarkPage() {
 
                                     {/* SECTION 10: STRATEGIC LEGAL ADVICE */}
                                     <section id="final-takeaway" className="scroll-mt-32 pt-8 border-t border-gray-100">
-                                        <h2 className="text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLightbulb} className="w-7 h-7 mr-3 text-yellow-500" />
                                             Strategic Trade Name vs Trademark Advice
-                                        </h2>
+                                        </h3>
                                         <p className="mb-4">
                                             Your brand name, logo, and commercial reputation are among the most valuable intangible assets of your business. Do not make the fatal mistake of relying on GST, MSME, or Shop Act licenses for brand security. Tax registrations certify your obligation to pay taxes; only a registered trademark certifies your right to own and defend your brand.
                                         </p>
@@ -707,9 +707,9 @@ export default function TradeNameVsTrademarkPage() {
                                                     </span>
                                                 </div>
 
-                                                <h3 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl mb-4">
+                                                <h4 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl mb-4">
                                                     Protect Your Brand with an Official Registered Trademark
-                                                </h3>
+                                                </h4>
 
                                                 <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">
                                                     Do not leave your business name unprotected. Claim 50% MSME government fee discounts and secure pan-India brand ownership with senior IP advocates.
@@ -745,7 +745,7 @@ export default function TradeNameVsTrademarkPage() {
                             {/* About Author */}
                             <div className="bg-white p-4 sm:p-5 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center">
                                 <img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-16 h-16 rounded-full mb-2.5 shadow-md object-cover border-2 border-[#6E5E93]/20" />
-                                <h3 className="text-base font-bold text-gray-900 mb-0.5">Rahul Roy</h3>
+                                <h4 className="text-base font-bold text-gray-900 mb-0.5">Rahul Roy</h4>
                                 <p className="text-xs text-[#6E5E93] font-semibold mb-2">Trademark Research Specialist</p>
                                 <p className="text-xs text-gray-600 leading-relaxed m-0">Rahul specializes in brand protection strategies, trade name vs trademark disputes, Section 16 MCA rectifications, and trademark registration for Indian MSMEs.</p>
                             </div>
@@ -753,7 +753,7 @@ export default function TradeNameVsTrademarkPage() {
                             {/* Dark CTA Box */}
                             <div className="bg-[#0C002B] p-5 rounded-2xl shadow-xl border border-white/5 text-white relative overflow-hidden group">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-[rgb(110,94,147)] rounded-full blur-[70px] opacity-30 group-hover:opacity-50 transition-opacity"></div>
-                                <h3 className="text-base font-black mb-1.5 relative z-10 leading-tight">Secure Your Brand Name</h3>
+                                <h4 className="text-base font-black mb-1.5 relative z-10 leading-tight">Secure Your Brand Name</h4>
                                 <p className="text-xs text-white/80 mb-3.5 leading-relaxed relative z-10 font-normal">Operating with only GST or MSME? Prevent copycats from stealing your brand name with a registered trademark.</p>
                                 <Link href="/contact-us" className="block relative z-10">
                                     <button className="w-full bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-2.5 px-4 rounded-xl transition-all shadow-md text-xs uppercase tracking-wider">
@@ -764,7 +764,7 @@ export default function TradeNameVsTrademarkPage() {
 
                             {/* Related Resources */}
                             <div className="bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-100">
-                                <h3 className="text-xs font-black text-gray-400 mb-5 uppercase tracking-[0.25em]">Related Resources</h3>
+                                <h4 className="text-xs font-black text-gray-400 mb-5 uppercase tracking-[0.25em]">Related Resources</h4>
                                 <ul className="space-y-6">
                                     <li>
                                         <Link href="/trademark-fee-concession-msme-udyam-startup-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">

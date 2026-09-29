@@ -85,9 +85,10 @@ interface FaqSectionProps {
   title?: React.ReactNode;
   badge?: string;
   categories?: FaqCategory[];
+  headingTag?: 'h1' | 'h2' | 'h3' | 'h4';
 }
 
-export default function FaqSection({ items, title, badge, categories }: FaqSectionProps) {
+export default function FaqSection({ items, title, badge, categories, headingTag: HeadingTag = 'h3' }: FaqSectionProps) {
   const [activeCategoryIndex, setActiveCategoryIndex] = useState(0);
   const [openIndex, setOpenIndex] = useState<number | null>(0); // First item open by default
 
@@ -116,7 +117,7 @@ export default function FaqSection({ items, title, badge, categories }: FaqSecti
         )}
 
         {/* Heading */}
-        <h2 className="text-center font-nunito mb-6 sm:mb-8 md:mb-10 font-bold tracking-tight text-[32px] sm:text-[40px] md:text-[46px] leading-[1.15] text-[#0C002B]">
+        <HeadingTag className="text-center font-nunito mb-6 sm:mb-8 md:mb-10 font-bold tracking-tight text-[32px] sm:text-[40px] md:text-[46px] leading-[1.15] text-[#0C002B]">
           {title ? (
             title
           ) : (
@@ -124,7 +125,7 @@ export default function FaqSection({ items, title, badge, categories }: FaqSecti
               Frequently Asked <span className="text-[#1952C7]">Questions</span>
             </>
           )}
-        </h2>
+        </HeadingTag>
 
         {/* Card Container */}
         <div className="w-full bg-white rounded-[24px] sm:rounded-[32px] md:rounded-[36px] p-4 sm:p-6 md:p-8 lg:p-10 border border-slate-200/90 shadow-[0_8px_30px_rgba(12,0,43,0.05)]">
@@ -175,11 +176,11 @@ export default function FaqSection({ items, title, badge, categories }: FaqSecti
                   }`}
                 >
                   <div className="flex items-center justify-between gap-4">
-                    <h3 className={`font-nunito font-bold text-[15.5px] sm:text-[17px] md:text-[17.5px] leading-snug tracking-tight transition-colors duration-200 ${
+                    <h4 className={`font-nunito font-bold text-[15.5px] sm:text-[17px] md:text-[17.5px] leading-snug tracking-tight transition-colors duration-200 ${
                       isOpen ? 'text-[#1952C7]' : 'text-[#0C002B]'
                     }`}>
                       {faq.question}
-                    </h3>
+                    </h4>
                     <div className={`flex-shrink-0 w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center transition-all duration-200 ${
                       isOpen
                         ? 'bg-[#1952C7] text-white shadow-sm'

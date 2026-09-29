@@ -336,18 +336,18 @@ export default function PriorUserRightsSection34Page() {
 
                                     {/* SECTION 2: FIRST TO USE VS FIRST TO FILE */}
                                     <section id="first-to-use-doctrine" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faHistory} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             First-to-Use vs First-to-File Doctrine
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Globally, intellectual property regimes divide into two contrasting philosophies:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
                                             <div className="bg-purple-50/50 p-6 rounded-2xl border border-purple-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2 flex items-center">
+                                                <h4 className="text-base font-bold text-gray-900 mb-2 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2"></span>
                                                     First-to-Use Principle (India, UK, USA)
-                                                </h3>
+                                                </h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed mb-3">Proprietary rights arise from actual commercial use and consumer goodwill created in the marketplace. Registration serves merely as formal statutory recognition of pre-existing rights. A prior user who established reputation first cannot be displaced by a subsequent registrant.</p>
                                                 <div className="bg-white p-2.5 rounded-lg text-xs font-bold text-[#6E5E93] border border-purple-100">
                                                     Governed by Section 34 &amp; Section 27(2) Common Law
@@ -355,10 +355,10 @@ export default function PriorUserRightsSection34Page() {
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2 flex items-center">
+                                                <h4 className="text-base font-bold text-gray-900 mb-2 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-gray-500 rounded-full mr-2"></span>
                                                     First-to-File Principle (China, EU Systems)
-                                                </h3>
+                                                </h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed mb-3">Proprietary rights belong strictly to the first entity that submits an application at the Trademark Office, regardless of who invented or used the mark first in the market. Unregistered prior users enjoy minimal protection against trademark squatters.</p>
                                                 <div className="bg-white p-2.5 rounded-lg text-xs font-bold text-gray-600 border border-gray-200">
                                                     Strict Formalistic Registration System
@@ -371,10 +371,10 @@ export default function PriorUserRightsSection34Page() {
 
                                     {/* SECTION 3: SECTION 34 STATUTORY ELEMENTS */}
                                     <section id="section-34-statutory-analysis" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faBookOpen} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Section 34 Statutory Analysis &amp; Elements
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Section 34 of the Trade Marks Act, 1999 is titled<strong>&ldquo;Saving for vested rights&rdquo;</strong>. The statutory text states:</p>
 
                                         <div className="bg-gray-900 text-gray-100 p-6 rounded-2xl mb-6 font-mono text-xs md:text-sm leading-relaxed border-l-4 border-[#8A7AB5]">
@@ -388,17 +388,17 @@ export default function PriorUserRightsSection34Page() {
 
                                         <div className="space-y-6">
                                             <div className="border-l-4 border-[#6E5E93] pl-4 py-2 bg-purple-50/40 rounded-r-xl">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">1. Priority in Point of Time (Earlier Date)</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">1. Priority in Point of Time (Earlier Date)</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">The defendant&apos;s commercial use must predate<em>both</em>: (i) the registered proprietor&apos;s actual commercial use, and (ii) the registered proprietor&apos;s filing / registration date, whichever occurred earlier.</p>
                                             </div>
 
                                             <div className="border-l-4 border-indigo-500 pl-4 py-2 bg-indigo-50/40 rounded-r-xl">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">2. Continuous Commercial Use</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">2. Continuous Commercial Use</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">The prior use cannot be sporadic, secretive, experimental, or abandoned. The prior user must demonstrate an unbroken chain of commercial trade, invoicing, and marketing down to the present day.</p>
                                             </div>
 
                                             <div className="border-l-4 border-emerald-500 pl-4 py-2 bg-emerald-50/40 rounded-r-xl">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">3. Same or Closely Allied Goods / Services</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">3. Same or Closely Allied Goods / Services</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">The prior user&apos;s protection applies in relation to the specific goods or services on which the mark was continuously used (or closely related commercial categories within the same trade channel).</p>
                                             </div>
                                         </div>
@@ -406,25 +406,25 @@ export default function PriorUserRightsSection34Page() {
 
                                     {/* SECTION 4: INTERPLAY WITH ACT */}
                                     <section id="interplay-with-act" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faScaleBalanced} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Interplay with Sections 27, 28, &amp; 57
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Understanding how Section 34 integrates into the broader statutory architecture is critical for IP litigation:</p>
 
                                         <div className="space-y-4 mb-8">
                                             <div className="p-5 bg-gray-50 rounded-xl border border-gray-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-1">Section 27(2) — Common Law Passing Off Preserved</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-1">Section 27(2) — Common Law Passing Off Preserved</h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">Section 27(2) explicitly provides that nothing in the Act affects the common law rights of action against passing off. A prior user can sue a subsequent registered owner for passing off and obtain an injunction restraining the registered owner from misleading consumers.</p>
                                             </div>
 
                                             <div className="p-5 bg-gray-50 rounded-xl border border-gray-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-1">Section 28(1) — Registration Subordinated</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-1">Section 28(1) — Registration Subordinated</h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">Section 28(1) gives the registered owner the exclusive right to use the mark, but starts with:<em>&ldquo;Subject to the other provisions of this Act.&rdquo;</em>Thus, Section 28 rights are legally subject to Section 34 prior user rights and Section 27(2) passing off remedies.</p>
                                             </div>
 
                                             <div className="p-5 bg-gray-50 rounded-xl border border-gray-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-1">Section 57 — Rectification &amp; Cancellation</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-1">Section 57 — Rectification &amp; Cancellation</h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">A prior user whose rights are threatened by an improper registration is a &ldquo;person aggrieved&rdquo. Entitled to file a Rectification Petition under Section 57 before the High Court or Registry to expunge the conflicting trademark.</p>
                                             </div>
                                         </div>
@@ -432,18 +432,18 @@ export default function PriorUserRightsSection34Page() {
 
                                     {/* SECTION 5: LANDMARK JUDGMENTS */}
                                     <section id="landmark-judgments" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faGavel} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Landmark Prior User Rights Precedents
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Indian trademark jurisprudence contains definitive Supreme Court and High Court authorities confirming the superiority of prior commercial use:</p>
 
                                         <div className="space-y-6">
                                             <div className="bg-purple-50/40 p-6 rounded-2xl border border-purple-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2 flex items-center">
+                                                <h4 className="text-base font-bold text-gray-900 mb-2 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2"></span>
                                                     Neon Laboratories Ltd. v. Medical Technologies Ltd. (2016) 2 SCC 672
-                                                </h3>
+                                                </h4>
                                                 <p className="text-xs text-gray-700 leading-relaxed mb-3"><strong>The Landmark Ruling:</strong>Neon applied for &lsquo;ROFOL&rsquo; in 1992 on a &ldquo;proposed to be used&rdquo; basis and obtained registration in 2001, but did not commercially launch the drug until 2004. Meanwhile, Medical Technologies adopted &lsquo;PROFOL&rsquo; in 1998 and built massive market presence. The Supreme Court upheld the interim injunction in favor of Medical Technologies (the prior commercial user), ruling that prior commercial adoption defeats a prior registration that remained dormant in the market.</p>
                                                 <div className="text-[11px] font-semibold text-[#6E5E93]">
                                                     Key Principle: A prior registrant cannot remain dormant and later wake up to extinguish an active prior user&apos;s established market goodwill.
@@ -451,10 +451,10 @@ export default function PriorUserRightsSection34Page() {
                                             </div>
 
                                             <div className="bg-indigo-50/40 p-6 rounded-2xl border border-indigo-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2 flex items-center">
+                                                <h4 className="text-base font-bold text-gray-900 mb-2 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-indigo-600 rounded-full mr-2"></span>
                                                     S. Syed Mohideen v. P. Sulochana Bai (2016) 2 SCC 683
-                                                </h3>
+                                                </h4>
                                                 <p className="text-xs text-gray-700 leading-relaxed mb-3"><strong>The Three-Judge Bench Authority:</strong>The Supreme Court resolved conflicts between registered owners, holding that registration does not grant an absolute right over common law goodwill. An action for passing off under Section 27(2) and prior user protection under Section 34 operates independently and overrides statutory registration rights under Section 28.</p>
                                                 <div className="text-[11px] font-semibold text-indigo-700">
                                                     Key Principle: Common law tort of passing off based on prior goodwill trumps statutory registration certificates.
@@ -462,10 +462,10 @@ export default function PriorUserRightsSection34Page() {
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2 flex items-center">
+                                                <h4 className="text-base font-bold text-gray-900 mb-2 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-gray-700 rounded-full mr-2"></span>
                                                     Century Traders v. Roshan Lal Duggar &amp; Co. (AIR 1978 Del 250)
-                                                </h3>
+                                                </h4>
                                                 <p className="text-xs text-gray-700 leading-relaxed mb-3"><strong>The Bedrock Common Law Rule:</strong>The Delhi High Court Division Bench held that for claiming trademark rights, registration is not essential. Proof of prior commercial use in the market establishes proprietary ownership, and the first user in point of time is entitled to restrain all subsequent adopters.</p>
                                                 <div className="text-[11px] font-semibold text-gray-700">
                                                     Key Principle: Prior continuous use in the market is the foundational origin of trademark title in India.
@@ -473,10 +473,10 @@ export default function PriorUserRightsSection34Page() {
                                             </div>
 
                                             <div className="bg-emerald-50/40 p-6 rounded-2xl border border-emerald-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2 flex items-center">
+                                                <h4 className="text-base font-bold text-gray-900 mb-2 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-emerald-600 rounded-full mr-2"></span>
                                                     Milmet Oftho Industries v. Allergan Inc. (2004) 12 SCC 624
-                                                </h3>
+                                                </h4>
                                                 <p className="text-xs text-gray-700 leading-relaxed mb-3"><strong>Transborder Prior Reputation:</strong>The Supreme Court held that prior global adoption and international reputation by a multinational brand can protect prior rights in India against domestic competitors who registered the mark first in India.</p>
                                                 <div className="text-[11px] font-semibold text-emerald-800">
                                                     Key Principle: Multinational prior adoption with spillover reputation protects against opportunistic local filers.
@@ -487,10 +487,10 @@ export default function PriorUserRightsSection34Page() {
 
                                     {/* SECTION 6: EVIDENTIARY PROOF STANDARDS */}
                                     <section id="evidentiary-standard" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faFileInvoice} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Evidentiary Proof Standards in Court
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Asserting Section 34 in litigation is entirely an evidence-driven battle. Courts require concrete, contemporaneous documentary proof demonstrating unbroken commercial activity before the adversary&apos;s priority date:</p>
 
                                         <div className="overflow-x-auto my-8">
@@ -542,25 +542,25 @@ export default function PriorUserRightsSection34Page() {
 
                                     {/* SECTION 7: DEFENSE AGAINST LEGAL NOTICES */}
                                     <section id="defense-against-injunction" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faShieldHalved} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Defense Against Infringement Notices
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">When served with a cease-and-desist letter or an ex-parte injunction, panicking or halting your factory operations is the worst mistake. Follow this strategic litigation roadmap:</p>
 
                                         <div className="space-y-4 mb-8">
                                             <div className="p-5 bg-purple-50/50 rounded-xl border border-purple-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-1">1. Reply to Legal Notice with Ironclad Prior Evidence</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-1">1. Reply to Legal Notice with Ironclad Prior Evidence</h4>
                                                 <p className="text-xs text-gray-700 leading-relaxed m-0">Engage veteran IP litigators to draft a robust statutory reply under Section 34. Cite your earliest invoices, tax records, and landmark Supreme Court rulings (<em>Neon Laboratories</em>,<em>S. Syed Mohideen</em>). Warn the claimant that continuing litigation exposes them to damages for groundless threats under Section 142.</p>
                                             </div>
 
                                             <div className="p-5 bg-indigo-50/50 rounded-xl border border-indigo-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-1">2. Vacate Ex-Parte Injunctions — Order 39 Rule 4 CPC</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-1">2. Vacate Ex-Parte Injunctions — Order 39 Rule 4 CPC</h4>
                                                 <p className="text-xs text-gray-700 leading-relaxed m-0">If the claimant obtained a stay order behind your back by suppressing your prior existence, immediately file an application under<strong>Order 39 Rule 4 of the Code of Civil Procedure (CPC)</strong>for discharge of the injunction on grounds of material suppression and prima facie prior user immunity.</p>
                                             </div>
 
                                             <div className="p-5 bg-emerald-50/50 rounded-xl border border-emerald-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-1">3. File Counterclaim for Passing Off &amp; Permanent Injunction</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-1">3. File Counterclaim for Passing Off &amp; Permanent Injunction</h4>
                                                 <p className="text-xs text-gray-700 leading-relaxed m-0">Turn the tables in District Court or High Court Commercial Divisions by filing a Counterclaim under Section 27(2), praying for a permanent injunction restraining the registered owner from passing off their spurious goods as yours.</p>
                                             </div>
                                         </div>
@@ -568,10 +568,10 @@ export default function PriorUserRightsSection34Page() {
 
                                     {/* SECTION 8: SECTION 57 RECTIFICATION */}
                                     <section id="rectification-procedure" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faBan} className="w-8 h-8 mr-3 text-red-500" />
                                             Rectification under Section 47 &amp; 57
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">A defensive posture alone is insufficient. Prior users should proactively purge the fraudulent mark from the electronic Trade Marks Register:</p>
 
                                         <ul className="list-none space-y-4 mb-8">
@@ -583,10 +583,10 @@ export default function PriorUserRightsSection34Page() {
 
                                     {/* SECTION 9: PRIOR USER VS REGISTERED OWNER MATRIX */}
                                     <section id="comparison-matrix" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faTable} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Prior User vs Registered Owner Matrix
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Understand the key legal distinctions, remedies, and burdens between prior unregistered users and subsequent registered proprietors:</p>
 
                                         <div className="overflow-x-auto my-8">
@@ -631,10 +631,10 @@ export default function PriorUserRightsSection34Page() {
 
                                     {/* SECTION 10: PRIOR USER DEFENSE PLAYBOOK */}
                                     <section id="defense-playbook" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faCheckCircle} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Prior User Action Checklist
-                                        </h2>
+                                        </h3>
                                         <ul className="list-none space-y-4 mb-8">
                                             <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Collate Chronological Invoices:</strong>Extract commercial invoices for every year of operation from adoption date to present.</span></li>
                                             <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Obtain CA Turnover Certificate:</strong>Secure chartered accountant certification of annual sales figures and advertising expenditure.</span></li>
@@ -647,15 +647,15 @@ export default function PriorUserRightsSection34Page() {
 
                                     {/* SECTION 11: FAQS */}
                                     <section id="faqs" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl lg:text-3xl font-black text-gray-900 mb-8 text-center text-[rgb(110,94,147)]">
+                                        <h3 className="text-xl md:text-2xl lg:text-3xl font-black text-gray-900 mb-8 text-center text-[rgb(110,94,147)]">
                                             Frequently Asked Questions
-                                        </h2>
+                                        </h3>
                                         <div className="space-y-4">
                                             {faqs.map((faq, index) => (
                                                 <div key={index} className="bg-white border border-gray-100 rounded-3xl p-8 shadow-sm hover:shadow-md transition-shadow">
-                                                    <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-4 flex items-start leading-snug">
+                                                    <h4 className="text-lg md:text-xl font-bold text-gray-900 mb-4 flex items-start leading-snug">
                                                         <span className="text-[rgb(110,94,147)] mr-4 font-black text-2xl">Q.</span>{faq.question}
-                                                    </h3>
+                                                    </h4>
                                                     <p className="text-gray-600 pl-10 m-0">{faq.answer}</p>
                                                 </div>
                                             ))}
@@ -664,10 +664,10 @@ export default function PriorUserRightsSection34Page() {
 
                                     {/* SECTION 12: STRATEGIC BRAND PROTECTION ADVICE */}
                                     <section id="final-takeaway" className="scroll-mt-32 pt-16">
-                                        <h2 className="text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLightbulb} className="w-8 h-8 mr-3 text-yellow-500" />
                                             Strategic Legal Advice for Prior Users
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">While Section 34 provides an unshakeable statutory shield for prior users, relying exclusively on common law defense without securing formal registration leaves your business vulnerable to repeated legal harassment, marketplace confusion, and expensive civil litigation.</p>
                                         <p className="mb-6">The most effective commercial strategy is dual-pronged: fiercely enforce your Section 34 prior user rights to crush spurious infringement notices, while simultaneously filing your own formal trademark applications backed by comprehensive User Affidavits. For related litigation strategies, review our guides on<Link href="/civil-vs-criminal-trademark-infringement-india" className="text-[rgb(110,94,147)] hover:underline font-medium">civil vs criminal trademark infringement</Link>,<Link href="/how-to-send-trademark-legal-notice-india" className="text-[rgb(110,94,147)] hover:underline font-medium">how to send trademark legal notices</Link>, and<Link href="/how-to-file-trademark-rectification-india" className="text-[rgb(110,94,147)] hover:underline font-medium">how to file trademark rectification in India</Link>.</p>
                                     </section>
@@ -682,9 +682,9 @@ export default function PriorUserRightsSection34Page() {
                                                     </span>
                                                 </div>
 
-                                                <h3 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl mb-4">
+                                                <h4 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl mb-4">
                                                     Defend Your Prior User Rights with Supreme Court Precedents
-                                                </h3>
+                                                </h4>
 
                                                 <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">Facing a frivolous infringement notice or an ex-parte stay order? Deploy specialized IP litigators to assert Section 34, vacate injunctions under Order 39 Rule 4, and cancel conflicting trademarks under Section 57.</p>
 
@@ -716,7 +716,7 @@ export default function PriorUserRightsSection34Page() {
                             {/* About Author */}
                             <div className="bg-white p-4 sm:p-5 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center">
                                 <img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-16 h-16 rounded-full mb-2.5 shadow-md object-cover border-2 border-[#6E5E93]/20" />
-                                <h3 className="text-base font-bold text-gray-900 mb-0.5">Rahul Roy</h3>
+                                <h4 className="text-base font-bold text-gray-900 mb-0.5">Rahul Roy</h4>
                                 <p className="text-xs text-[#6E5E93] font-semibold mb-2">Trademark Research Specialist</p>
                                 <p className="text-xs text-gray-600 leading-relaxed m-0">Rahul specializes in trademark litigation, Section 34 prior user rights defense, commercial passing off, and High Court IPD rectification petitions.</p>
                             </div>
@@ -724,7 +724,7 @@ export default function PriorUserRightsSection34Page() {
                             {/* Dark CTA Box */}
                             <div className="bg-[#0C002B] p-5 rounded-2xl shadow-xl border border-white/5 text-white relative overflow-hidden group">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-[rgb(110,94,147)] rounded-full blur-[70px] opacity-30 group-hover:opacity-50 transition-opacity"></div>
-                                <h3 className="text-base font-black mb-1.5 relative z-10 leading-tight">Threatened with Injunction?</h3>
+                                <h4 className="text-base font-black mb-1.5 relative z-10 leading-tight">Threatened with Injunction?</h4>
                                 <p className="text-xs text-white/80 mb-3.5 leading-relaxed relative z-10 font-normal">Were you using your brand before the competitor filed? Defend your established market goodwill under Section 34.</p>
                                 <Link href="/contact-us" className="block relative z-10">
                                     <button className="w-full bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-2.5 px-4 rounded-xl transition-all shadow-md text-xs uppercase tracking-wider">
@@ -735,7 +735,7 @@ export default function PriorUserRightsSection34Page() {
 
                             {/* Related Resources */}
                             <div className="bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-100">
-                                <h3 className="text-xs font-black text-gray-400 mb-5 uppercase tracking-[0.25em]">Related Resources</h3>
+                                <h4 className="text-xs font-black text-gray-400 mb-5 uppercase tracking-[0.25em]">Related Resources</h4>
                                 <ul className="space-y-6">
                                     <li><Link href="/passing-off-vs-trademark-infringement-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faScaleBalanced} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Passing Off vs TM</span></Link></li>
                                     <li><Link href="/how-to-respond-to-trademark-infringement-legal-notice-in-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faShieldHalved} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Reply to TM Notice</span></Link></li>

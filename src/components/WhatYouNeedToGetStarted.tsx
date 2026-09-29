@@ -101,9 +101,9 @@ export default function WhatYouNeedToGetStarted() {
                 </div>
 
                 {/* Step Title */}
-                <h3 className="text-[#0C002B] group-hover:text-[#1952C7] font-nunito text-[18px] sm:text-[20px] md:text-[21px] font-bold mb-1.5 md:mb-2 tracking-tight transition-colors duration-200">
+                <h4 className="text-[#0C002B] group-hover:text-[#1952C7] font-nunito text-[18px] sm:text-[20px] md:text-[21px] font-bold mb-1.5 md:mb-2 tracking-tight transition-colors duration-200">
                   {step.title}
-                </h3>
+                </h4>
 
                 {/* Step Description */}
                 <p className="text-[#334155] font-nunito text-[12.5px] sm:text-[13.5px] md:text-[14.5px] leading-relaxed max-w-[200px] sm:max-w-[240px] md:max-w-[250px]">
@@ -118,13 +118,13 @@ export default function WhatYouNeedToGetStarted() {
         <div className="w-full max-w-6xl mt-10 md:mt-14 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Left Column: Heading, description, bullet points */}
           <div className="lg:col-span-6 flex flex-col items-center lg:items-start text-center lg:text-left">
-            <h2
+            <h3
               id="what-you-get-heading"
               className="text-[#0C002B] font-nunito text-[32px] sm:text-[40px] md:text-[46px] font-extrabold leading-[1.15] tracking-tight mb-4 sm:mb-5 text-center lg:text-left"
             >
               What You Get <br />
               <span className="text-[#1952C7]">After Filing</span>
-            </h2>
+            </h3>
 
             <p className="text-[#334155] font-nunito text-[16px] sm:text-[17px] leading-relaxed mb-6 sm:mb-8 max-w-lg text-center lg:text-left mx-auto lg:mx-0">
               Once your trademark is filed, you receive official documents
@@ -163,9 +163,9 @@ export default function WhatYouNeedToGetStarted() {
               >
                 {/* Text Content */}
                 <div className="flex-1 pr-2">
-                  <h3 className="text-[#0C002B] group-hover:text-[#1952C7] font-nunito text-[21px] sm:text-[23px] font-bold mb-2 tracking-tight transition-colors duration-200">
+                  <h4 className="text-[#0C002B] group-hover:text-[#1952C7] font-nunito text-[21px] sm:text-[23px] font-bold mb-2 tracking-tight transition-colors duration-200">
                     {item.title}
-                  </h3>
+                  </h4>
                   <p className="text-[#334155] font-nunito text-[14px] sm:text-[15px] leading-relaxed max-w-[280px]">
                     {item.description}
                   </p>

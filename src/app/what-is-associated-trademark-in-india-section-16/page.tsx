@@ -385,10 +385,10 @@ export default function AssociatedTrademarkPage() {
 
                                     {/* SECTION 2: STATUTORY PROVISIONS */}
                                     <section id="statutory-provisions" className="scroll-mt-32">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faScaleBalanced} className="w-8 h-5 mr-3 text-[rgb(110,94,147)]" />
                                             Statutory Framework: Section 16 of the Trade Marks Act
-                                        </h2>
+                                        </h3>
 
                                         <p>
                                             The Trade Marks Act, 1999 dedicates several statutory sections to governing how associated marks are created, classified, and maintained on the register:
@@ -400,7 +400,7 @@ export default function AssociatedTrademarkPage() {
                                                     <span className="w-8 h-8 rounded-lg bg-[#6E5E93]/10 text-[#6E5E93] flex items-center justify-center font-bold text-sm">
                                                         16(1)
                                                     </span>
-                                                    <h3 className="font-bold text-gray-900 text-base m-0">Mandatory Association</h3>
+                                                    <h4 className="font-bold text-gray-900 text-base m-0">Mandatory Association</h4>
                                                 </div>
                                                 <p className="text-gray-600 text-sm leading-relaxed m-0">
                                                     Where a trademark applied for is identical with or so nearly resembles another trademark of the same proprietor for the same goods or description of goods/services that it is likely to deceive or cause confusion if used by someone else, the Registrar may require the marks to be entered as associated marks.
@@ -412,7 +412,7 @@ export default function AssociatedTrademarkPage() {
                                                     <span className="w-8 h-8 rounded-lg bg-[#6E5E93]/10 text-[#6E5E93] flex items-center justify-center font-bold text-sm">
                                                         16(2)
                                                     </span>
-                                                    <h3 className="font-bold text-gray-900 text-base m-0">Parts of Trademarks</h3>
+                                                    <h4 className="font-bold text-gray-900 text-base m-0">Parts of Trademarks</h4>
                                                 </div>
                                                 <p className="text-gray-600 text-sm leading-relaxed m-0">
                                                     Where a trademark and any part or parts thereof are registered as separate trademarks in the name of the same proprietor (under Section 15(3)), they shall automatically be deemed to be, and shall be registered as, associated trademarks.
@@ -424,7 +424,7 @@ export default function AssociatedTrademarkPage() {
                                                     <span className="w-8 h-8 rounded-lg bg-[#6E5E93]/10 text-[#6E5E93] flex items-center justify-center font-bold text-sm">
                                                         16(3)
                                                     </span>
-                                                    <h3 className="font-bold text-gray-900 text-base m-0">Series Trademarks</h3>
+                                                    <h4 className="font-bold text-gray-900 text-base m-0">Series Trademarks</h4>
                                                 </div>
                                                 <p className="text-gray-600 text-sm leading-relaxed m-0">
                                                     Where a series of trademarks is registered in the name of the same proprietor in respect of the same or similar goods/services (under Section 15(4)), all marks comprising the series are statutorily deemed to be associated trademarks.
@@ -436,7 +436,7 @@ export default function AssociatedTrademarkPage() {
                                                     <span className="w-8 h-8 rounded-lg bg-[#6E5E93]/10 text-[#6E5E93] flex items-center justify-center font-bold text-sm">
                                                         16(4)
                                                     </span>
-                                                    <h3 className="font-bold text-gray-900 text-base m-0">Dissolution Mechanism</h3>
+                                                    <h4 className="font-bold text-gray-900 text-base m-0">Dissolution Mechanism</h4>
                                                 </div>
                                                 <p className="text-gray-600 text-sm leading-relaxed m-0">
                                                     The registered proprietor may apply to the Registrar on Form TM-M to dissolve the association if they prove there would be no likelihood of deception or confusion if the marks were used by different persons in the marketplace.
@@ -448,7 +448,7 @@ export default function AssociatedTrademarkPage() {
                                             <div className="flex items-start">
                                                 <FontAwesomeIcon icon={faExclamationTriangle} className="w-5 h-5 text-amber-600 mr-3 mt-1 flex-shrink-0" />
                                                 <div>
-                                                    <h4 className="text-base font-bold text-amber-900 m-0 mb-1">Critical Prerequisite: Identical Proprietorship</h4>
+                                                    <h5 className="text-base font-bold text-amber-900 m-0 mb-1">Critical Prerequisite: Identical Proprietorship</h5>
                                                     <p className="text-sm text-amber-800 m-0">
                                                         Trademarks can <strong>only</strong> be associated if they belong to the <em>exact same legal entity or individual</em>. If Mark A is owned by "ABC Private Limited" and Mark B is owned by "Mr. John Doe (Director)", the registry cannot associate them until both marks are formally assigned under Form TM-P to a single proprietor.
                                                     </p>
@@ -459,10 +459,10 @@ export default function AssociatedTrademarkPage() {
 
                                     {/* SECTION 3: WHY REGISTRY ASSOCIATES */}
                                     <section id="why-registry-associates" className="scroll-mt-32">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faDiagramProject} className="w-8 h-5 mr-3 text-[rgb(110,94,147)]" />
                                             Why Does the Trade Marks Registry Associate Marks?
-                                        </h2>
+                                        </h3>
 
                                         <p>
                                             The Trade Marks Registry does not mandate association to burden applicants with administrative red tape. Instead, the association rule is a core pillar of Indian intellectual property jurisprudence designed to accomplish three fundamental commercial goals:
@@ -472,7 +472,7 @@ export default function AssociatedTrademarkPage() {
                                             <div className="flex items-start p-4 bg-gray-50 rounded-xl border border-gray-200">
                                                 <div className="w-8 h-8 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-xs mr-4 flex-shrink-0">1</div>
                                                 <div>
-                                                    <h3 className="font-bold text-gray-900 text-base m-0 mb-1">Preventing Public Deception & Dual Source Confusion</h3>
+                                                    <h4 className="font-bold text-gray-900 text-base m-0 mb-1">Preventing Public Deception & Dual Source Confusion</h4>
                                                     <p className="text-gray-600 text-sm m-0">
                                                         Trademarks function as badges of commercial origin. If a brand owner registers "NEXUS" in plain text and "NEXUS PRO" with a stylized crest, ordinary consumers perceive both as emerging from the same company. By associating the marks, the registry ensures these related assets cannot be sold off separately, which would lead to two competing businesses manufacturing goods with nearly identical marks.
                                                     </p>
@@ -482,7 +482,7 @@ export default function AssociatedTrademarkPage() {
                                             <div className="flex items-start p-4 bg-gray-50 rounded-xl border border-gray-200">
                                                 <div className="w-8 h-8 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-xs mr-4 flex-shrink-0">2</div>
                                                 <div>
-                                                    <h3 className="font-bold text-gray-900 text-base m-0 mb-1">Accommodating Natural Brand Identity Evolution</h3>
+                                                    <h4 className="font-bold text-gray-900 text-base m-0 mb-1">Accommodating Natural Brand Identity Evolution</h4>
                                                     <p className="text-gray-600 text-sm m-0">
                                                         Businesses routinely refresh their corporate visual identity, redesign logos, or adapt marks for digital apps. Rather than abandoning an older registered logo (and losing valuable priority dates), brand owners file a new application for the redesigned version. Association allows the proprietor to hold both registrations peacefully without the registry citing the applicant’s own older mark as a conflicting Section 11 objection.
                                                     </p>
@@ -492,7 +492,7 @@ export default function AssociatedTrademarkPage() {
                                             <div className="flex items-start p-4 bg-gray-50 rounded-xl border border-gray-200">
                                                 <div className="w-8 h-8 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-xs mr-4 flex-shrink-0">3</div>
                                                 <div>
-                                                    <h3 className="font-bold text-gray-900 text-base m-0 mb-1">Facilitating Cross-Class Line Expansions</h3>
+                                                    <h4 className="font-bold text-gray-900 text-base m-0 mb-1">Facilitating Cross-Class Line Expansions</h4>
                                                     <p className="text-gray-600 text-sm m-0">
                                                         When a fashion company (Class 25) expands into luxury perfumes (Class 3) and eyewear (Class 9) using the same flagship brand name, filing <Link href="/single-class-vs-multi-class-trademark-application-india" className="text-[rgb(110,94,147)] font-medium underline">multi-class or single-class applications</Link> often leads examiners to link the filings across related classes to maintain an unbroken corporate title chain.
                                                     </p>
@@ -503,10 +503,10 @@ export default function AssociatedTrademarkPage() {
 
                                     {/* SECTION 4: ASSIGNMENT RESTRICTIONS UNDER SECTION 44 */}
                                     <section id="assignment-restrictions" className="scroll-mt-32">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faHandshake} className="w-8 h-5 mr-3 text-[rgb(110,94,147)]" />
                                             The Section 44 Mandatory Joint Assignment Rule
-                                        </h2>
+                                        </h3>
 
                                         <p>
                                             The most critical practical consequence of trademark association lies in <strong>Section 44 of the Trade Marks Act, 1999</strong>. Section 44 explicitly states:
@@ -516,7 +516,7 @@ export default function AssociatedTrademarkPage() {
                                             &ldquo;Associated trademarks shall be assignable and transmissible only as a whole and not separately, but they shall be deemed - severally registered trademarks for all other purposes.&rdquo;
                                         </blockquote>
 
-                                        <h3 className="text-lg font-bold text-gray-900 mt-6 mb-3">What Does This Mean in Commercial Practice?</h3>
+                                        <h4 className="text-lg font-bold text-gray-900 mt-6 mb-3">What Does This Mean in Commercial Practice?</h4>
                                         <p>
                                             If your company owns three associated trademarks (e.g., Mark 1: Wordmark, Mark 2: Label Design, Mark 3: Sub-brand):
                                         </p>
@@ -533,10 +533,10 @@ export default function AssociatedTrademarkPage() {
                                         </ul>
 
                                         <div className="bg-slate-900 text-white p-6 rounded-2xl shadow-md my-8 not-prose">
-                                            <h3 className="text-base font-bold text-amber-400 mb-2 flex items-center">
+                                            <h4 className="text-base font-bold text-amber-400 mb-2 flex items-center">
                                                 <FontAwesomeIcon icon={faBuildingShield} className="w-4 h-4 mr-2" />
                                                 Mergers & Acquisitions (M&A) Due Diligence Warning
-                                            </h3>
+                                            </h4>
                                             <p className="text-gray-300 text-sm leading-relaxed m-0">
                                                 During startup acquisitions, joint ventures, or IP asset sales, corporate buyers conduct rigorous IP due diligence. If the seller promises to transfer a specific standalone trademark without realizing that the mark is statutorily associated with 4 other legacy marks still used by the seller’s parent entity, the transaction will hit an immediate regulatory deadlock at the IP India counter. The association must either be dissolved under Section 16(4) prior to closing, or the entire associated bundle must be transferred together.
                                             </p>
@@ -545,10 +545,10 @@ export default function AssociatedTrademarkPage() {
 
                                     {/* SECTION 5: DEFENSIVE BENEFIT UNDER SECTION 55 */}
                                     <section id="defensive-use-benefit" className="scroll-mt-32">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faShieldHalved} className="w-8 h-5 mr-3 text-[rgb(110,94,147)]" />
                                             The Strategic Superpower: Defensive Use Under Section 55
-                                        </h2>
+                                        </h3>
 
                                         <p>
                                             While association imposes assignment restrictions, it also grants brand owners one of the most potent defensive shields in Indian IP law under <strong>Section 55(1) of the Trade Marks Act, 1999</strong>:
@@ -558,7 +558,7 @@ export default function AssociatedTrademarkPage() {
                                             &ldquo;Where under the provisions of this Act, use of a registered trade mark is required to be proved for any purpose, the tribunal may accept the use of an associated registered trade mark, or of the trade mark with additions or alterations not substantially affecting its identity, as an equivalent for the use required to be proved.&rdquo;
                                         </blockquote>
 
-                                        <h3 className="text-lg font-bold text-gray-900 mt-6 mb-3">Defending Against 5-Year Non-Use Rectification (Section 47)</h3>
+                                        <h4 className="text-lg font-bold text-gray-900 mt-6 mb-3">Defending Against 5-Year Non-Use Rectification (Section 47)</h4>
                                         <p>
                                             Under Section 47 of the Act, any third party or competitor can file a rectification petition to cancel your registered trademark if you fail to show bona fide commercial use of the mark in India for a continuous period of <strong>5 years and 1 month</strong>.
                                         </p>
@@ -569,20 +569,20 @@ export default function AssociatedTrademarkPage() {
 
                                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6 not-prose">
                                             <div className="bg-emerald-50 border border-emerald-200 p-5 rounded-xl">
-                                                <h4 className="font-bold text-emerald-900 text-sm mb-2 flex items-center">
+                                                <h5 className="font-bold text-emerald-900 text-sm mb-2 flex items-center">
                                                     <FontAwesomeIcon icon={faCircleCheck} className="w-4 h-4 text-emerald-600 mr-2" />
                                                     Case A: Marks are Associated
-                                                </h4>
+                                                </h5>
                                                 <p className="text-xs text-emerald-800 m-0 leading-relaxed">
                                                     Competitor files non-use cancellation against your registered Logo B. You prove continuous sales invoices under Associated Wordmark A. <strong>Result:</strong> Section 55 applies; cancellation petition is dismissed; your Logo B remains registered.
                                                 </p>
                                             </div>
 
                                             <div className="bg-rose-50 border border-rose-200 p-5 rounded-xl">
-                                                <h4 className="font-bold text-rose-900 text-sm mb-2 flex items-center">
+                                                <h5 className="font-bold text-rose-900 text-sm mb-2 flex items-center">
                                                     <FontAwesomeIcon icon={faExclamationTriangle} className="w-4 h-4 text-rose-600 mr-2" />
                                                     Case B: Marks are Unassociated
-                                                </h4>
+                                                </h5>
                                                 <p className="text-xs text-rose-800 m-0 leading-relaxed">
                                                     Competitor files non-use cancellation against independent Logo B. You prove use of Wordmark A, but the marks were never associated. <strong>Result:</strong> Section 55 does not automatically rescue Logo B; high risk of removal from register.
                                                 </p>
@@ -592,10 +592,10 @@ export default function AssociatedTrademarkPage() {
 
                                     {/* SECTION 6: COMPARISON TABLE */}
                                     <section id="comparison-table" className="scroll-mt-32">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faTable} className="w-8 h-5 mr-3 text-[rgb(110,94,147)]" />
                                             Legal Comparison: Associated vs Independent vs Series Trademarks
-                                        </h2>
+                                        </h3>
 
                                         <p>
                                             Understanding the precise operational differences between associated trademarks, independent marks, and series filings helps brand managers structure their corporate IP portfolios efficiently:
@@ -661,10 +661,10 @@ export default function AssociatedTrademarkPage() {
 
                                     {/* SECTION 7: DISSOLUTION PROCEDURE */}
                                     <section id="dissolution-procedure" className="scroll-mt-32">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLinkSlash} className="w-8 h-5 mr-3 text-[rgb(110,94,147)]" />
                                             How to Dissolve Trademark Association: Step-by-Step Guide
-                                        </h2>
+                                        </h3>
 
                                         <p>
                                             If a business wishes to divest a product line, sell a specific trademark to an investor, or restructure its subsidiaries, it must formally sever the statutory link between associated marks. Under <strong>Section 16(4) of the Trade Marks Act, 1999</strong>, a registered proprietor can apply to the Registrar for <strong>Dissolution of Association</strong>.
@@ -674,7 +674,7 @@ export default function AssociatedTrademarkPage() {
                                             <div className="flex items-start bg-purple-50/50 p-5 rounded-2xl border border-purple-100">
                                                 <div className="w-8 h-8 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">1</div>
                                                 <div>
-                                                    <h3 className="font-bold text-gray-900 text-base mb-1">Step 1: Conduct Portfolio Audit & Verify Registration Status</h3>
+                                                    <h4 className="font-bold text-gray-900 text-base mb-1">Step 1: Conduct Portfolio Audit & Verify Registration Status</h4>
                                                     <p className="text-gray-600 text-sm m-0 leading-relaxed">
                                                         Identify all trademark application and registration numbers currently marked as "Associated" in the IP India public register. Confirm that both marks are fully registered, in active standing, and not subject to pending opposition proceedings.
                                                     </p>
@@ -684,7 +684,7 @@ export default function AssociatedTrademarkPage() {
                                             <div className="flex items-start bg-purple-50/50 p-5 rounded-2xl border border-purple-100">
                                                 <div className="w-8 h-8 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">2</div>
                                                 <div>
-                                                    <h3 className="font-bold text-gray-900 text-base mb-1">Step 2: Establish Grounds Showing No Likelihood of Public Confusion</h3>
+                                                    <h4 className="font-bold text-gray-900 text-base mb-1">Step 2: Establish Grounds Showing No Likelihood of Public Confusion</h4>
                                                     <p className="text-gray-600 text-sm m-0 leading-relaxed">
                                                         The Registrar will only approve dissolution if convinced that separate ownership will not deceive the public. Valid legal grounds include: distinct goods/services specifications, separate commercial channels, substantial differences in visual design, or territorial market divisions.
                                                     </p>
@@ -694,7 +694,7 @@ export default function AssociatedTrademarkPage() {
                                             <div className="flex items-start bg-purple-50/50 p-5 rounded-2xl border border-purple-100">
                                                 <div className="w-8 h-8 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">3</div>
                                                 <div>
-                                                    <h3 className="font-bold text-gray-900 text-base mb-1">Step 3: Draft Legal Statement of Grounds & Supporting Affidavit</h3>
+                                                    <h4 className="font-bold text-gray-900 text-base mb-1">Step 3: Draft Legal Statement of Grounds & Supporting Affidavit</h4>
                                                     <p className="text-gray-600 text-sm m-0 leading-relaxed">
                                                         Draft a comprehensive Statement of Case explaining why the association is no longer necessary. Accompany this with an <Link href="/trademark-user-affidavit-format-and-rules-india" className="text-[rgb(110,94,147)] font-medium underline">affidavit</Link> from the authorized signatory detailing business separation, turnover data, and evidence of distinct consumer target demographics.
                                                     </p>
@@ -704,7 +704,7 @@ export default function AssociatedTrademarkPage() {
                                             <div className="flex items-start bg-purple-50/50 p-5 rounded-2xl border border-purple-100">
                                                 <div className="w-8 h-8 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">4</div>
                                                 <div>
-                                                    <h3 className="font-bold text-gray-900 text-base mb-1">Step 4: Execute Form TM-48 (Power of Attorney)</h3>
+                                                    <h4 className="font-bold text-gray-900 text-base mb-1">Step 4: Execute Form TM-48 (Power of Attorney)</h4>
                                                     <p className="text-gray-600 text-sm m-0 leading-relaxed">
                                                         If the dissolution is being filed through an intellectual property attorney or registered trademark agent, execute a specific <Link href="/form-tm-48-power-of-attorney-trademark-india" className="text-[rgb(110,94,147)] font-medium underline">Form TM-48 Power of Attorney</Link> authorizing the counsel to represent the applicant in dissolution proceedings.
                                                     </p>
@@ -714,7 +714,7 @@ export default function AssociatedTrademarkPage() {
                                             <div className="flex items-start bg-purple-50/50 p-5 rounded-2xl border border-purple-100">
                                                 <div className="w-8 h-8 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">5</div>
                                                 <div>
-                                                    <h3 className="font-bold text-gray-900 text-base mb-1">Step 5: E-File Form TM-M & Remit Statutory Government Fees</h3>
+                                                    <h4 className="font-bold text-gray-900 text-base mb-1">Step 5: E-File Form TM-M & Remit Statutory Government Fees</h4>
                                                     <p className="text-gray-600 text-sm m-0 leading-relaxed">
                                                         File Form TM-M (Request for Dissolution of Association under Section 16(4)) on the IP India e-filing gateway. The statutory government fee is <strong>₹1,800 per mark</strong> for individuals, startups, and MSMEs (or ₹3,000 for standard corporate bodies).
                                                     </p>
@@ -724,7 +724,7 @@ export default function AssociatedTrademarkPage() {
                                             <div className="flex items-start bg-purple-50/50 p-5 rounded-2xl border border-purple-100">
                                                 <div className="w-8 h-8 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">6</div>
                                                 <div>
-                                                    <h3 className="font-bold text-gray-900 text-base mb-1">Step 6: Hearing & Entry of Dissolution Order on Register</h3>
+                                                    <h4 className="font-bold text-gray-900 text-base mb-1">Step 6: Hearing & Entry of Dissolution Order on Register</h4>
                                                     <p className="text-gray-600 text-sm m-0 leading-relaxed">
                                                         The Registrar scrutinizes the submission. If satisfied, an official order is passed severing the link and amending the Register of Trade Marks. The marks now become completely independent and can be assigned freely.
                                                     </p>
@@ -735,10 +735,10 @@ export default function AssociatedTrademarkPage() {
 
                                     {/* SECTION 8: HANDLING EXAMINATION CONDITIONS */}
                                     <section id="examination-condition" className="scroll-mt-32">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faFileLines} className="w-8 h-5 mr-3 text-[rgb(110,94,147)]" />
                                             How to Respond to Examination Report Association Conditions
-                                        </h2>
+                                        </h3>
 
                                         <p>
                                             When you file a new trademark application, the Trade Marks Examiner might issue a condition in your <Link href="/how-to-respond-to-trademark-examination-report" className="text-[rgb(110,94,147)] font-medium underline">Examination Report</Link> stating:
@@ -748,24 +748,24 @@ export default function AssociatedTrademarkPage() {
                                             &ldquo;The applicant shall agree to associate the mark with registered/pending trademark application no(s). [XXXXXXX] under Section 16 of the Trade Marks Act, 1999.&rdquo;
                                         </div>
 
-                                        <h3 className="text-lg font-bold text-gray-900 mt-6 mb-3">Strategic Action Plan for Applicants</h3>
+                                        <h4 className="text-lg font-bold text-gray-900 mt-6 mb-3">Strategic Action Plan for Applicants</h4>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-6 not-prose">
                                             <div className="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
-                                                <h4 className="font-bold text-gray-900 text-sm mb-2 flex items-center">
+                                                <h5 className="font-bold text-gray-900 text-sm mb-2 flex items-center">
                                                     <span className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-xs mr-2">A</span>
                                                     When to Agree to Association
-                                                </h4>
+                                                </h5>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">
                                                     If the cited mark is indeed your own earlier trademark and you plan to keep both marks permanently within the same company, simply accept the condition in your formal written reply. Agreeing to association clears the Section 11 conflict and allows the application to proceed smoothly to <em>"Accepted & Advertised"</em> in the Trade Marks Journal.
                                                 </p>
                                             </div>
 
                                             <div className="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
-                                                <h4 className="font-bold text-gray-900 text-sm mb-2 flex items-center">
+                                                <h5 className="font-bold text-gray-900 text-sm mb-2 flex items-center">
                                                     <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-xs mr-2">B</span>
                                                     When to Contest Association
-                                                </h4>
+                                                </h5>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">
                                                     If the examiner mistakenly associates marks covering completely unrelated goods/services (e.g., software in Class 9 vs agricultural seeds in Class 31), or if the cited mark belongs to a different legal entity that happens to share a similar name, you should contest the association condition by highlighting the lack of commercial overlap and non-identical proprietorship.
                                                 </p>
@@ -775,10 +775,10 @@ export default function AssociatedTrademarkPage() {
 
                                     {/* SECTION 9: COMPLIANCE CHECKLIST */}
                                     <section id="compliance-checklist" className="scroll-mt-32">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faCheckCircle} className="w-8 h-5 mr-3 text-[rgb(110,94,147)]" />
                                             Brand Owner’s Section 16 Compliance Checklist
-                                        </h2>
+                                        </h3>
 
                                         <p>
                                             Before executing any brand licensing agreement, corporate restructuring, venture capital round, or M&A exit, review this essential compliance checklist:
@@ -822,10 +822,10 @@ export default function AssociatedTrademarkPage() {
 
                                     {/* SECTION 10: FAQS */}
                                     <section id="faqs" className="scroll-mt-32">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLightbulb} className="w-8 h-5 mr-3 text-[rgb(110,94,147)]" />
                                             Frequently Asked Questions on Associated Trademarks
-                                        </h2>
+                                        </h3>
 
                                         <div className="space-y-4 my-6 not-prose">
                                             {faqs.map((faq, index) => (
@@ -851,10 +851,10 @@ export default function AssociatedTrademarkPage() {
 
                                     {/* SECTION 11: FINAL TAKEAWAYS */}
                                     <section id="final-takeaway" className="scroll-mt-32">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faRocket} className="w-8 h-5 mr-3 text-[rgb(110,94,147)]" />
                                             Strategic Takeaways for Brand Custodians
-                                        </h2>
+                                        </h3>
 
                                         <p>
                                             Associated trademarks under Section 16 represent a dual-edged legal instrument in Indian IP management. On one hand, they safeguard brand integrity by eliminating public confusion and allow brand owners to assert defensive proof of use across registrations under Section 55. On the other hand, their mandatory joint assignment restriction under Section 44 can complicate corporate spinoffs, licensing deals, and asset sales if not proactively managed.
@@ -865,7 +865,7 @@ export default function AssociatedTrademarkPage() {
                                         </p>
 
                                         <div className="bg-gradient-to-r from-purple-900 to-[#1A1A24] text-white p-8 rounded-2xl shadow-xl mt-8 not-prose text-center">
-                                            <h3 className="text-xl sm:text-2xl font-black mb-3 text-white">Need Help Managing Your Associated Trademarks?</h3>
+                                            <h4 className="text-xl sm:text-2xl font-black mb-3 text-white">Need Help Managing Your Associated Trademarks?</h4>
                                             <p className="text-gray-300 text-sm max-w-2xl mx-auto mb-6">
                                                 Our team of registered trademark attorneys and IP consultants provides end-to-end portfolio management, examination reply drafting, Form TM-M dissolution filing, and M&A IP due diligence.
                                             </p>
@@ -895,7 +895,7 @@ export default function AssociatedTrademarkPage() {
                                     <FontAwesomeIcon icon={faShieldHalved} className="w-3 h-3 mr-1.5 text-pink-400" />
                                     Expert IP Legal Advisory
                                 </div>
-                                <h3 className="text-xl font-bold mb-3 text-white">Trademark Portfolio Audit & Dissolution</h3>
+                                <h4 className="text-xl font-bold mb-3 text-white">Trademark Portfolio Audit & Dissolution</h4>
                                 <p className="text-gray-300 text-xs sm:text-sm leading-relaxed mb-6">
                                     Facing an association condition in your Examination Report, or need to dissolve Section 16 links for an upcoming brand sale? Get expert legal guidance from registered IP attorneys.
                                 </p>
@@ -914,10 +914,10 @@ export default function AssociatedTrademarkPage() {
 
                             {/* Quick Takeaways Box */}
                             <div className="bg-amber-50/60 p-6 rounded-2xl border border-amber-200 shadow-sm">
-                                <h3 className="text-xs font-black text-amber-900 mb-3 uppercase tracking-widest flex items-center">
+                                <h4 className="text-xs font-black text-amber-900 mb-3 uppercase tracking-widest flex items-center">
                                     <FontAwesomeIcon icon={faLightbulb} className="w-3.5 h-3.5 text-amber-600 mr-2" />
                                     Key Section 16 Takeaways
-                                </h3>
+                                </h4>
                                 <ul className="space-y-3 text-xs text-amber-950 font-medium">
                                     <li className="flex items-start">
                                         <span className="text-amber-600 font-bold mr-2">•</span>
@@ -944,7 +944,7 @@ export default function AssociatedTrademarkPage() {
 
                             {/* Related Resources */}
                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-100 shadow-sm">
-                                <h3 className="text-xs font-black text-gray-500 mb-4 uppercase tracking-widest">Related Legal Guides</h3>
+                                <h4 className="text-xs font-black text-gray-500 mb-4 uppercase tracking-widest">Related Legal Guides</h4>
                                 <ul className="space-y-4 text-xs font-semibold text-gray-800">
                                     <li>
                                         <Link href="/trademark-assignment-vs-licensing-in-india" className="flex items-center hover:text-[rgb(110,94,147)] transition-colors">

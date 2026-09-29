@@ -336,10 +336,10 @@ export default function TrademarkAssignmentVsLicensingPage() {
 
                                     {/* SECTION 2: KEY DIFFERENCES AT A GLANCE */}
                                     <section id="key-differences" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faTable} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Trademark Assignment vs Licensing: Key Differences
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">To evaluate the structural, procedural, and commercial distinctions between trademark assignment and licensing under Indian law, review this comparative breakdown:</p>
 
                                         <div className="overflow-x-auto my-8 not-prose">
@@ -404,27 +404,27 @@ export default function TrademarkAssignmentVsLicensingPage() {
 
                                     {/* SECTION 3: TRADEMARK ASSIGNMENT */}
                                     <section id="trademark-assignment" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faFileContract} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Trademark Assignment Under Section 37
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Under Section 2(1)(b) of the Trade Marks Act, 1999, an<strong>&ldquo;assignment&rdquo;</strong>is defined as an assignment in writing by act of the parties concerned. It represents a permanent legal conveyance where the original brand owner (Assignor) completely divests all proprietary rights, title, and commercial interest in the trademark, transferring them unconditionally to the purchaser (Assignee).</p>
                                         <p className="mb-6">Section 37 explicitly affirms the power of the registered proprietor to assign the trade mark and give effectual receipts for any consideration for such assignment. Once the assignment deed is finalized, the original owner ceases to possess any legal title to the mark and cannot subsequently restrict the assignee&apos;s use, alter its presentation, or demand royalties.</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     Complete Assignment
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Transfers all rights, privileges, and exclusive ownership across all registered classes, goods, and commercial activities. The assignee assumes absolute ownership for all operational verticals without geographical reservations in India.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     Partial Assignment
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Transfers rights restricted to specific goods, services, or product categories. For instance, transferring a mark for clothing while retaining it for retail services, subject to statutory restrictions under Sections 40 and 41 to avoid public deception.</p>
                                             </div>
                                         </div>
@@ -434,27 +434,27 @@ export default function TrademarkAssignmentVsLicensingPage() {
 
                                     {/* SECTION 4: WITH VS WITHOUT GOODWILL */}
                                     <section id="goodwill-comparison" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faHandshake} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Assignment With vs Without Goodwill
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Sections 38 and 39 of the Trade Marks Act, 1999 establish that both registered and unregistered trademarks are assignable either<strong>with the goodwill of the business</strong>or<strong>without the goodwill of the business</strong>. This distinction is critical in commercial valuation and procedural compliance.</p>
 
                                         <div className="space-y-6 my-8 not-prose">
                                             <div className="border border-purple-200 bg-purple-50/50 p-6 rounded-2xl">
-                                                <h3 className="text-lg font-black text-[#6E5E93] mb-2 flex items-center">
+                                                <h4 className="text-lg font-black text-[#6E5E93] mb-2 flex items-center">
                                                     <FontAwesomeIcon icon={faCheckCircle} className="w-5 h-5 mr-2 text-[#6E5E93]" />
                                                     1. Assignment With Goodwill (Business Transfer)
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed mb-3">Under an assignment with goodwill, the assignee acquires not only the physical trademark and registration certificate, but also the entire established commercial reputation, customer base, prior trading history, and marketing equity built by the assignor.</p>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0"><strong>Strategic Benefit:</strong>The assignee can directly claim the original applicant&apos;s priority filing date and historical prior commercial use. This provides bulletproof defense in opposition hearings and passing off disputes. To establish unbroken prior use, the assignee should review how evidence is presented in a<Link href="/trademark-user-affidavit-format-and-rules-india" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark user affidavit</Link>.</p>
                                             </div>
 
                                             <div className="border border-amber-200 bg-amber-50/50 p-6 rounded-2xl">
-                                                <h3 className="text-lg font-black text-amber-900 mb-2 flex items-center">
+                                                <h4 className="text-lg font-black text-amber-900 mb-2 flex items-center">
                                                     <FontAwesomeIcon icon={faExclamationTriangle} className="w-5 h-5 mr-2 text-amber-700" />
                                                     2. Assignment Without Goodwill (Gross Assignment)
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed mb-3">Under an assignment without goodwill, the brand mark is transferred for specific products or services, while the assignor retains the general commercial business goodwill or continues trading under related business lines.</p>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0"><strong>Mandatory Section 42 Condition:</strong>Under Section 42, an assignment without goodwill does not take legal effect until the assignee applies to the Registrar within<strong>6 months</strong>(extendable up to 9 months) for directions to advertise the assignment. The assignee must publish the assignment notice in newspapers and the Trade Marks Journal as directed by the Registrar. Overlooking Section 42 renders the assignment legally void!</p>
                                             </div>
@@ -463,10 +463,10 @@ export default function TrademarkAssignmentVsLicensingPage() {
 
                                     {/* SECTION 5: FORM TM-P WORKFLOW */}
                                     <section id="form-tm-p-workflow" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faListUl} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Form TM-P Assignment Procedure
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Under Section 45 of the Trade Marks Act, 1999 and Rule 75 of the Trade Marks Rules, 2017, where a person becomes entitled by assignment or transmission to a registered trade mark, they must apply to the Registrar on<strong>Form TM-P</strong>to register their title. Follow this 6-step statutory procedure:</p>
 
                                         {/* STEP 1 */}
@@ -475,7 +475,7 @@ export default function TrademarkAssignmentVsLicensingPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 1</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Commercial &amp; Legal Audit</span>
                                             </div>
-                                            <h3 className="text-lg font-bold text-gray-900 mb-2">Title Due Diligence &amp; Trademark Audit</h3>
+                                            <h4 className="text-lg font-bold text-gray-900 mb-2">Title Due Diligence &amp; Trademark Audit</h4>
                                             <p className="text-gray-700 leading-relaxed m-0 text-sm">Audit the target trademark across the official register. Verify that the mark is in &ldquo;Registered&rdquo; status, check renewal dates under the decennial cycle (as detailed in our<Link href="/how-to-renew-a-trademark" className="text-[rgb(110,94,147)] hover:underline font-medium">how to renew a trademark guide</Link>), and confirm whether any licensing agreements, hypothecations, or pending rectification proceedings exist.</p>
                                         </div>
 
@@ -485,7 +485,7 @@ export default function TrademarkAssignmentVsLicensingPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 2</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Contract Drafting &amp; Execution</span>
                                             </div>
-                                            <h3 className="text-lg font-bold text-gray-900 mb-2">Execution of Deed of Assignment</h3>
+                                            <h4 className="text-lg font-bold text-gray-900 mb-2">Execution of Deed of Assignment</h4>
                                             <p className="text-gray-700 leading-relaxed m-0 text-sm">Draft a formal, comprehensive Deed of Assignment defining: (a) transfer of proprietary rights and title. (b) explicit specification of whether transfer is with or without goodwill. (c) consideration amount. (d) indemnification clauses protecting against prior infringements. And (e) no-objection declarations. Both parties execute the deed in the presence of two witnesses.</p>
                                         </div>
 
@@ -495,7 +495,7 @@ export default function TrademarkAssignmentVsLicensingPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 3</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: State Revenue Compliance</span>
                                             </div>
-                                            <h3 className="text-lg font-bold text-gray-900 mb-2">Stamp Duty Adjudication &amp; Notarization</h3>
+                                            <h4 className="text-lg font-bold text-gray-900 mb-2">Stamp Duty Adjudication &amp; Notarization</h4>
                                             <p className="text-gray-700 leading-relaxed m-0 text-sm">Pay statutory stamp duty on the assignment deed under the relevant State Stamp Act where the instrument is executed. The deed must be attested by a Notary Public. If executing through legal counsel, execute a stamped<Link href="/form-tm-48-power-of-attorney-trademark-india" className="text-[rgb(110,94,147)] hover:underline font-medium">Form TM-48 Power of Attorney</Link>.</p>
                                         </div>
 
@@ -505,7 +505,7 @@ export default function TrademarkAssignmentVsLicensingPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 4</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Online Portal Submission</span>
                                             </div>
-                                            <h3 className="text-lg font-bold text-gray-900 mb-2">E-Filing Form TM-P on IP India Gateway</h3>
+                                            <h4 className="text-lg font-bold text-gray-900 mb-2">E-Filing Form TM-P on IP India Gateway</h4>
                                             <p className="text-gray-700 leading-relaxed m-0 text-sm">File Form TM-P electronically on the comprehensive e-filing gateway. Upload the stamped Assignment Deed, Statement of Case under Rule 76, original registration certificate copy, Form TM-48, and corporate resolution documents. Remit the statutory fee of ₹9,000 per class.</p>
                                         </div>
 
@@ -515,7 +515,7 @@ export default function TrademarkAssignmentVsLicensingPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 5</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Scrutiny &amp; Advertisement</span>
                                             </div>
-                                            <h3 className="text-lg font-bold text-gray-900 mb-2">Registry Scrutiny &amp; Journal Notification</h3>
+                                            <h4 className="text-lg font-bold text-gray-900 mb-2">Registry Scrutiny &amp; Journal Notification</h4>
                                             <p className="text-gray-700 leading-relaxed m-0 text-sm">The Trade Marks Registry scrutinizes the assignment documents. If compliant, the assignment details are published in the Trade Marks Journal. For assignments without goodwill, compliance with Section 42 directions and newspaper advertisement clippings must be filed on record.</p>
                                         </div>
 
@@ -525,33 +525,33 @@ export default function TrademarkAssignmentVsLicensingPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 6</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Register Update</span>
                                             </div>
-                                            <h3 className="text-lg font-bold text-gray-900 mb-2">Certificate of Assignment Recordal</h3>
+                                            <h4 className="text-lg font-bold text-gray-900 mb-2">Certificate of Assignment Recordal</h4>
                                             <p className="text-gray-700 leading-relaxed m-0 text-sm">Upon approval, the Registrar issues an official Certificate of Recordal of Assignment. The Assignee&apos;s legal name and address replace the original proprietor on the Register of Trade Marks. Under Section 45(2), this official recordal is essential to prove title before courts in trademark infringement litigation.</p>
                                         </div>
                                     </section>
 
                                     {/* SECTION 6: TRADEMARK LICENSING */}
                                     <section id="trademark-licensing" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faShieldHalved} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Trademark Licensing Under Section 48
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Under Chapter VI of the Trade Marks Act, 1999,<strong>trademark licensing</strong>is an agreement whereby the trademark proprietor (Licensor) grants another commercial entity (Licensee) legal permission to use the trademark in commerce, subject to strict contractual conditions, territorial boundaries, and quality standards.</p>
                                         <p className="mb-6">Crucially, in a licensing arrangement,<strong>ownership, legal title, and underlying brand equity are NEVER transferred</strong>. The licensor remains the sole registered proprietor on the Trade Marks Register. In return for usage rights, the licensee typically pays an upfront franchise fee, ongoing percentage royalties, or reciprocal commercial consideration.</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8 not-prose">
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2">Exclusive License</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-2">Exclusive License</h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">Grants rights solely to the licensee, excluding all other third parties and even prohibiting the licensor themselves from commercializing the mark in the designated territory or business vertical.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2">Sole License</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-2">Sole License</h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">Grants usage rights to the licensee while allowing the licensor to continue using the trademark concurrently. However, the licensor cannot license the mark to any other third-party competitors.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2">Non-Exclusive License</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-2">Non-Exclusive License</h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">Allows the licensor to grant simultaneous usage rights to multiple licensees, franchisees, or distributors across different territories, maximizing market reach and recurring royalty inflows.</p>
                                             </div>
                                         </div>
@@ -559,27 +559,27 @@ export default function TrademarkAssignmentVsLicensingPage() {
 
                                     {/* SECTION 7: REGISTERED VS PERMITTED USER */}
                                     <section id="registered-vs-permitted" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faGavel} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Registered User vs Permitted User
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Indian trademark jurisprudence draws a sharp statutory distinction between a<strong>Registered User</strong>and a<strong>Permitted User</strong>. Understanding this distinction is vital when structuring franchising agreements or enforcing trademark rights against counterfeiters:</p>
 
                                         <div className="space-y-6 my-8 not-prose">
                                             <div className="border border-indigo-200 bg-indigo-50/40 p-6 rounded-2xl">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-2 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-2 flex items-center">
                                                     <span className="w-3 h-3 bg-[#6E5E93] rounded-full mr-2"></span>
                                                     Registered User (Section 49 Formal Registration)
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed mb-3">A Registered User is a licensee who has been officially registered with the Trade Marks Registry by filing<strong>Form TM-U</strong>. Once registered, the user is recorded on the Register of Trade Marks.</p>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0"><strong>Litigation Power Under Section 52:</strong>A Registered User has the statutory right to call upon the proprietor to institute proceedings for infringement. If the proprietor refuses or neglects to do so within<strong>three months</strong>, the Registered User can institute infringement proceedings in their own name, making the proprietor a co-defendant!</p>
                                             </div>
 
                                             <div className="border border-gray-200 bg-gray-50/60 p-6 rounded-2xl">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-2 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-2 flex items-center">
                                                     <span className="w-3 h-3 bg-gray-600 rounded-full mr-2"></span>
                                                     Permitted User (Section 2(1)(r)(ii) Unregistered Licensee)
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed mb-3">A Permitted User uses the registered mark under a written license agreement with the consent of the proprietor, but without recording their name on Form TM-U at the Trade Marks Registry.</p>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0"><strong>Statutory Bar Under Section 53:</strong>Section 53 explicitly bars a permitted user from instituting infringement proceedings. Unregistered licensees cannot file trademark infringement lawsuits independently; all litigation must be instituted solely by the registered proprietor.</p>
                                             </div>
@@ -590,30 +590,30 @@ export default function TrademarkAssignmentVsLicensingPage() {
 
                                     {/* SECTION 8: FORM TM-U LICENSING PROCEDURE */}
                                     <section id="form-tm-u-workflow" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faStamp} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Form TM-U Licensing Procedure
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">To officially record a licensee as a Registered User on the Trade Marks Register, the licensor and licensee must jointly file Form TM-U under Rule 86 of the Trade Marks Rules, 2017. The process requires specific statutory documentation:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2">1. License Agreement Execution</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-2">1. License Agreement Execution</h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">A written Trademark License Agreement executed on non-judicial stamp paper, specifying exact goods/services, territorial limitations, royalty mechanics, and mandatory quality inspection mechanisms.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2">2. Statutory Section 49 Affidavit</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-2">2. Statutory Section 49 Affidavit</h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">An affidavit signed by the proprietor exhibiting details of the commercial relationship, terms of payment, degree of quality control, and whether the proposed user is an exclusive or non-exclusive licensee.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2">3. Form TM-U Online E-Filing</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-2">3. Form TM-U Online E-Filing</h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">Submission of Form TM-U on the IP India gateway with the statutory fee of ₹4,500 per mark per class, supported by corporate resolutions and Form TM-48 legal authorization.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2">4. Journal Notification &amp; Entry</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-2">4. Journal Notification &amp; Entry</h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">The Registrar examines the application to ensure it does not facilitate trademark trafficking, advertises the user entry in the Trade Marks Journal, and issues the official Registered User Entry.</p>
                                             </div>
                                         </div>
@@ -621,14 +621,14 @@ export default function TrademarkAssignmentVsLicensingPage() {
 
                                     {/* SECTION 9: STAMP DUTY & FORMALITIES */}
                                     <section id="stamp-duty-formalities" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faMoneyBillWave} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Stamp Duty &amp; Mandatory Formalities
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">One of the most frequent legal reasons trademark assignment applications encounter objections or are rejected in commercial courts is the failure to pay adequate state stamp duty. Intellectual property is legally classified as movable property, and deeds transferring title or licensing usage must comply with the Indian Stamp Act, 1899 or specific State Stamp Acts.</p>
 
                                         <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200 my-8 not-prose">
-                                            <h3 className="text-base font-bold text-gray-900 mb-3">State Stamp Duty Rates for Trademark Assignment Deeds:</h3>
+                                            <h4 className="text-base font-bold text-gray-900 mb-3">State Stamp Duty Rates for Trademark Assignment Deeds:</h4>
                                             <ul className="space-y-3 text-sm text-gray-700">
                                                 <li className="flex items-start"><span className="font-bold text-[#6E5E93] mr-2">• Maharashtra:</span><span>Governed by Article 25 of the Maharashtra Stamp Act. Stamp duty on an assignment deed transferring movable property/goodwill is typically levied at<strong>3% to 5%</strong>ad valorem based on the market value or consideration.</span></li>
                                                 <li className="flex items-start"><span className="font-bold text-[#6E5E93] mr-2">• Delhi:</span><span>Under the Delhi Stamp Rules, assignment of intellectual property is assessed as a conveyance deed on consideration or value of the asset (commonly<strong>3% to 5%</strong>depending on whether goodwill is included).</span></li>
@@ -641,15 +641,15 @@ export default function TrademarkAssignmentVsLicensingPage() {
 
                                     {/* SECTION 10: TAX AND GST LIABILITY */}
                                     <section id="tax-and-gst" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faBuilding} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Tax Implications &amp; GST Liability
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Transferring trademark rights triggers immediate direct and indirect tax liabilities under Indian tax statutes. The tax treatment differs significantly between assignment and licensing:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
                                             <div className="border border-purple-200 bg-purple-50/40 p-6 rounded-2xl">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2">Taxation on Trademark Assignment</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-2">Taxation on Trademark Assignment</h4>
                                                 <ul className="space-y-2 text-xs text-gray-700">
                                                     <li><strong>Capital Gains Tax:</strong>Under Section 55(2)(a) of the Income Tax Act, 1961, self-generated trademarks have a deemed acquisition cost of NIL. The entire consideration received is taxed as Capital Gains (Short-Term or Long-Term based on 24-month holding period).</li>
                                                     <li><strong>GST Rate:</strong>Permanent transfer of intellectual property rights is treated as a supply of goods or services taxed at<strong>18% GST</strong>.</li>
@@ -658,7 +658,7 @@ export default function TrademarkAssignmentVsLicensingPage() {
                                             </div>
 
                                             <div className="border border-emerald-200 bg-emerald-50/40 p-6 rounded-2xl">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2">Taxation on Trademark Licensing</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-2">Taxation on Trademark Licensing</h4>
                                                 <ul className="space-y-2 text-xs text-gray-700">
                                                     <li><strong>Revenue Income (Royalty):</strong>Royalties received by the licensor are treated as regular business income taxed at prevailing corporate or personal income tax rates.</li>
                                                     <li><strong>TDS Deductions:</strong>The licensee must deduct Tax Deducted at Source (TDS) under Section 194J at<strong>10% or 2%</strong>upon royalty payouts.</li>
@@ -670,25 +670,25 @@ export default function TrademarkAssignmentVsLicensingPage() {
 
                                     {/* SECTION 11: NAKED LICENSING PITFALLS */}
                                     <section id="naked-licensing-pitfalls" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faExclamationTriangle} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Common Pitfalls &amp; Naked Licensing
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">When transferring or licensing brand rights in India, business owners frequently commit procedural and strategic mistakes that compromise their legal exclusivity:</p>
 
                                         <div className="space-y-6 my-8 not-prose">
                                             <div className="border border-red-200 bg-red-50/50 p-6 rounded-2xl">
-                                                <h3 className="text-base font-black text-red-900 mb-2">1. Naked Licensing (Failure of Quality Control)</h3>
+                                                <h4 className="text-base font-black text-red-900 mb-2">1. Naked Licensing (Failure of Quality Control)</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">The primary legal purpose of a trademark is to guarantee the source and consistent quality of goods to consumers. If a licensor licenses a mark without active inspection, audit rights, and technical standards enforcement, the law deems this &ldquo;naked licensing.&rdquo. Indian courts hold that uncontrolled licensing destroys the mark&apos;s distinctiveness, deceiving consumers and rendering the registration liable to cancellation under Section 57.</p>
                                             </div>
 
                                             <div className="border border-amber-200 bg-amber-50/50 p-6 rounded-2xl">
-                                                <h3 className="text-base font-black text-amber-900 mb-2">2. Section 40 &amp; 41 Anti-Fragmentation Violations</h3>
+                                                <h4 className="text-base font-black text-amber-900 mb-2">2. Section 40 &amp; 41 Anti-Fragmentation Violations</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">Section 40 prohibits assignments that create multiple exclusive rights in different persons for identical or confusingly similar goods. Section 41 restricts territorial splitting within India. Any assignment deed that creates confusing market fragmentation will be refused registration by the Registrar.</p>
                                             </div>
 
                                             <div className="border border-gray-200 bg-gray-50 p-6 rounded-2xl">
-                                                <h3 className="text-base font-black text-gray-900 mb-2">3. Unregistered Licensees Attempting Infringement Litigation</h3>
+                                                <h4 className="text-base font-black text-gray-900 mb-2">3. Unregistered Licensees Attempting Infringement Litigation</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">Many franchisees or distributors attempt to file trademark infringement suits against local counterfeiters. However, under Section 53, an unregistered licensee has no locus standi to sue. All infringement suits filed without joining the registered proprietor or registering on Form TM-U are summarily dismissed.</p>
                                             </div>
                                         </div>
@@ -696,18 +696,18 @@ export default function TrademarkAssignmentVsLicensingPage() {
 
                                     {/* SECTION 12: DECISION MATRIX */}
                                     <section id="decision-matrix" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLightbulb} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Decision Matrix for Brand Owners
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">To determine whether your enterprise should execute a Trademark Assignment or Trademark License, apply this practical commercial decision framework:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
                                             <div className="bg-purple-50/60 border border-purple-200 p-6 rounded-2xl">
-                                                <h3 className="text-base font-bold text-[#6E5E93] mb-3 flex items-center">
+                                                <h4 className="text-base font-bold text-[#6E5E93] mb-3 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2"></span>
                                                     Choose Trademark Assignment When:
-                                                </h3>
+                                                </h4>
                                                 <ul className="space-y-2 text-xs text-gray-700">
                                                     <li>• Executing a complete corporate M&amp;A, slump sale, or business buyout.</li>
                                                     <li>• Exiting a brand completely to realize maximum upfront lump-sum capital.</li>
@@ -718,10 +718,10 @@ export default function TrademarkAssignmentVsLicensingPage() {
                                             </div>
 
                                             <div className="bg-emerald-50/60 border border-emerald-200 p-6 rounded-2xl">
-                                                <h3 className="text-base font-bold text-emerald-900 mb-3 flex items-center">
+                                                <h4 className="text-base font-bold text-emerald-900 mb-3 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-emerald-600 rounded-full mr-2"></span>
                                                     Choose Trademark Licensing When:
-                                                </h3>
+                                                </h4>
                                                 <ul className="space-y-2 text-xs text-gray-700">
                                                     <li>• Expanding rapidly through franchising networks (QSRs, gyms, retail chains).</li>
                                                     <li>• Generating predictable, long-term recurring royalty cash flows.</li>
@@ -735,19 +735,19 @@ export default function TrademarkAssignmentVsLicensingPage() {
 
                                     {/* SECTION 13: FAQS */}
                                     <section id="faqs" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faRocket} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Frequently Asked Questions
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Explore answers to the most critical legal and commercial queries regarding trademark assignment and licensing under Indian law:</p>
 
                                         <div className="space-y-4 my-8 not-prose">
                                             {faqs.map((faq, index) => (
                                                 <div key={index} className="border border-gray-200 rounded-2xl p-6 bg-white shadow-sm hover:border-[rgb(110,94,147)] transition-colors">
-                                                    <h3 className="text-base font-bold text-gray-900 mb-3 flex items-start">
+                                                    <h4 className="text-base font-bold text-gray-900 mb-3 flex items-start">
                                                         <span className="text-[#6E5E93] font-black mr-2">Q{index + 1}:</span>
                                                         <span>{faq.question}</span>
-                                                    </h3>
+                                                    </h4>
                                                     <p className="text-sm text-gray-700 leading-relaxed m-0 pl-6 border-l-2 border-purple-100">{faq.answer}</p>
                                                 </div>
                                             ))}
@@ -756,18 +756,18 @@ export default function TrademarkAssignmentVsLicensingPage() {
 
                                     {/* SECTION 14: STRATEGIC ADVICE */}
                                     <section id="strategic-advice" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faShieldHalved} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Strategic Legal Recommendations
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Transferring intellectual property brand rights is among the most consequential transactions in the lifecycle of any commercial enterprise. Executing an unvetted agreement or failing to record instruments on the official IP India register can irrevocably damage your asset valuation and leave your business defenseless against infringers.</p>
                                         <p className="mb-6">Always partner with certified trademark attorneys to conduct due diligence, adjudicate correct state stamp duty, incorporate stringent quality control covenants, and file Form TM-P or Form TM-U within statutory timelines. Before drafting transfer agreements, ensure your logos and device marks comply with proper classifications and<Link href="/vienna-code-search-for-logo-trademark-india" className="text-[rgb(110,94,147)] hover:underline font-medium">Vienna code search standards</Link>to ensure undisputed brand boundaries.</p>
 
                                         <div className="mt-12 overflow-hidden rounded-[2.5rem] bg-[#0C002B] p-8 text-white shadow-2xl border border-white/10 sm:p-12">
                                             <div className="text-center">
-                                                <h3 className="text-2xl font-black sm:text-3xl text-white mb-4">
+                                                <h4 className="text-2xl font-black sm:text-3xl text-white mb-4">
                                                     Transfer Your Brand Rights with Legal Certainty
-                                                </h3>
+                                                </h4>
 
                                                 <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">Partner with expert IP attorneys at IPR Karo to structure your trademark assignment or licensing transaction. From due diligence and stamp duty adjudication to Form TM-P and Form TM-U recording on the IP India portal.</p>
 
@@ -799,7 +799,7 @@ export default function TrademarkAssignmentVsLicensingPage() {
                             {/* About Author */}
                             <div className="bg-white p-6 rounded-[2.5rem] shadow-sm border border-gray-100 flex flex-col items-center text-center">
                                 <img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-24 h-24 rounded-full mb-4 shadow-md object-cover" />
-                                <h3 className="text-xl font-bold text-gray-900 mb-2">Rahul Roy</h3>
+                                <h4 className="text-xl font-bold text-gray-900 mb-2">Rahul Roy</h4>
                                 <p className="text-sm text-gray-600 mb-4 font-medium">Trademark Research Specialist</p>
                                 <p className="text-sm text-gray-700 leading-relaxed mb-6">Rahul specializes in brand asset commercialization, trademark assignment due diligence, licensing agreements, and portfolio monetization under the Trade Marks Act, 1999.</p>
                             </div>
@@ -807,7 +807,7 @@ export default function TrademarkAssignmentVsLicensingPage() {
                             {/* Dark CTA Box */}
                             <div className="bg-[#0C002B] p-8 rounded-[2.5rem] shadow-2xl border border-white/5 text-white relative overflow-hidden group">
                                 <div className="absolute top-0 right-0 w-40 h-40 bg-[rgb(110,94,147)] rounded-full blur-[100px] opacity-30 group-hover:opacity-50 transition-opacity"></div>
-                                <h3 className="text-xl font-black mb-4 relative z-10 leading-tight">Transfer Brand Rights</h3>
+                                <h4 className="text-xl font-black mb-4 relative z-10 leading-tight">Transfer Brand Rights</h4>
                                 <p className="text-sm opacity-70 mb-8 leading-relaxed relative z-10 font-medium">Safeguard your title with bulletproof assignment deeds and Form TM-P or Form TM-U e-filing.</p>
                                 <Link href="/e-filing-trademark" className="block relative z-10">
                                     <button className="w-full bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-3.5 px-4 rounded-xl transition-all shadow-xl text-xs uppercase tracking-wider">
@@ -818,7 +818,7 @@ export default function TrademarkAssignmentVsLicensingPage() {
 
                             {/* Related Resources */}
                             <div className="bg-gray-50 p-10 rounded-[2.5rem] shadow-sm border border-gray-100">
-                                <h3 className="text-sm font-black text-gray-400 mb-8 uppercase tracking-[0.3em]">Related Resources</h3>
+                                <h4 className="text-sm font-black text-gray-400 mb-8 uppercase tracking-[0.3em]">Related Resources</h4>
                                 <ul className="space-y-6">
                                     <li><Link href="/single-class-vs-multi-class-trademark-application-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faTable} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Single vs Multi</span></Link></li>
                                     <li><Link href="/form-tm-48-power-of-attorney-trademark-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faFileContract} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Form TM-48</span></Link></li>

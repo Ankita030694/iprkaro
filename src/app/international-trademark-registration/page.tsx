@@ -330,42 +330,42 @@ export default function InternationalTrademarkRegistrationPage() {
 
                                     {/* SECTION 2: PREREQUISITES */}
                                     <section id="prerequisites" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faFileContract} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Key Prerequisites Before International Filing
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Filing an international trademark through the Madrid System is not an independent or isolated action. The system is structurally anchored to your domestic IP assets. Before initiating an application, Indian applicants must verify four mandatory legal prerequisites.</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     Active Indian Base Mark
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">The applicant must hold either an active pending trademark application (filed via Form TM-A) or a registered trademark certificate issued by the Indian Trade Marks Registry. This is known as the &ldquo;basic application&rdquo; or &ldquo;basic registration&rdquo;. Without an existing Indian filing number, an international Madrid application cannot be created.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     Statutory Entitlement Criterion
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">The applicant must establish a legal connection with India. Under Article 2 of the Madrid Protocol, the applicant must be an Indian citizen, be domiciled in India, or maintain a real and effective industrial or commercial establishment within Indian territory. For startups, check our guide on<Link href="/how-to-register-a-trademark-for-my-startup" className="text-[rgb(110,94,147)] hover:underline font-medium">how to register a trademark for my startup</Link>.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     Absolute Identity of the Mark
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">The mark depicted in the international application must be identical in all respects to the Indian base mark. If your Indian mark is a wordmark, the international mark must remain a wordmark with matching spelling and capitalization. If it is a figurative device or logo, the identical graphic file must be submitted.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     Specification &amp; Nice Class Alignment
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">The list of goods and services in the international application cannot be broader than the goods and services covered by the basic Indian filing. While you may narrow the specification for specific target countries, adding new items or classes will result in immediate rejection by the Indian Office of Origin. Verify classifications using our<Link href="/trademark-class-finder" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark class finder</Link>.</p>
                                             </div>
                                         </div>
@@ -373,10 +373,10 @@ export default function InternationalTrademarkRegistrationPage() {
 
                                     {/* SECTION 3: FILING PATHWAYS */}
                                     <section id="filing-pathways" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faEarthAmericas} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Two Primary Filing Pathways: Madrid vs Direct National
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">When designing a global intellectual property strategy, enterprises must evaluate whether to file centrally via the Madrid Protocol or file directly through national patent offices in each target jurisdiction.</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
@@ -385,7 +385,7 @@ export default function InternationalTrademarkRegistrationPage() {
                                                     <div className="w-10 h-10 rounded-xl bg-indigo-50 flex items-center justify-center mr-3 text-[#6E5E93]">
                                                         <FontAwesomeIcon icon={faGlobe} className="w-5 h-5" />
                                                     </div>
-                                                    <h3 className="text-lg font-bold text-gray-900 m-0">Pathway A: Madrid Protocol System</h3>
+                                                    <h4 className="text-lg font-bold text-gray-900 m-0">Pathway A: Madrid Protocol System</h4>
                                                 </div>
                                                 <p className="text-sm text-gray-600 leading-relaxed mb-4">A centralized, multilateral treaty administered by WIPO. You file one electronic application (Form MM2(E)) through the Indian Trade Marks Registry, select your designated contracting parties, and pay a single fee in Swiss Francs.</p>
                                                 <ul className="text-xs text-gray-600 space-y-2 list-disc list-inside m-0">
@@ -401,7 +401,7 @@ export default function InternationalTrademarkRegistrationPage() {
                                                     <div className="w-10 h-10 rounded-xl bg-amber-50 flex items-center justify-center mr-3 text-amber-700">
                                                         <FontAwesomeIcon icon={faPassport} className="w-5 h-5" />
                                                     </div>
-                                                    <h3 className="text-lg font-bold text-gray-900 m-0">Pathway B: Direct National Filing</h3>
+                                                    <h4 className="text-lg font-bold text-gray-900 m-0">Pathway B: Direct National Filing</h4>
                                                 </div>
                                                 <p className="text-sm text-gray-600 leading-relaxed mb-4">Direct filing with individual foreign trademark offices (such as the USPTO in the US, EUIPO in Europe, or SAIP in Saudi Arabia). Requires engaging a qualified local trademark attorney in each foreign territory.</p>
                                                 <ul className="text-xs text-gray-600 space-y-2 list-disc list-inside m-0">
@@ -414,17 +414,17 @@ export default function InternationalTrademarkRegistrationPage() {
                                         </div>
 
                                         <div className="bg-amber-50 p-6 rounded-xl border border-amber-200">
-                                            <h3 className="text-base font-bold text-amber-900 mb-2">Paris Convention 6-Month Priority Window</h3>
+                                            <h4 className="text-base font-bold text-amber-900 mb-2">Paris Convention 6-Month Priority Window</h4>
                                             <p className="text-sm text-amber-800 leading-relaxed m-0">Under Article 4 of the Paris Convention for the Protection of Industrial Property, if you file an international trademark application within<strong>6 months</strong>of filing your initial Form TM-A in India, you can claim convention priority. This legally backdates your international filing date in all foreign member countries to the exact date of your original Indian application, preempting overseas copycats who filed after your Indian date.</p>
                                         </div>
                                     </section>
 
                                     {/* SECTION 4: 7-STEP PROCESS */}
                                     <section id="step-by-step" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faListUl} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             7-Step International Trademark Registration Process
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Filing an international trademark under the Madrid Protocol follows an organized, multi-tier regulatory pathway involving the Indian Trade Marks Registry, WIPO in Geneva, and individual foreign national intellectual property offices.</p>
 
                                         {/* STEP 1 */}
@@ -433,7 +433,7 @@ export default function InternationalTrademarkRegistrationPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 1</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Global Availability Clearance</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Conduct Comprehensive International Prior Art Clearance</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Conduct Comprehensive International Prior Art Clearance</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Before committing capital to international filing fees, brand owners must verify whether their desired mark is legally available in every target country. Conducting domestic clearance on the IP India database is insufficient. You must search global databases including the<a href="https://branddb.wipo.int/" target="_blank" rel="noopener noreferrer" className="text-[rgb(110,94,147)] hover:underline font-medium">WIPO Global Brand Database</a>, TMview for European marks, and the USPTO TESS database for American registrations.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">Clearance must account for local linguistic connotations, phonetically equivalent terms in foreign scripts (such as Cyrillic, Arabic, or Chinese Hanzi), and prior unregistered common-law rights in target jurisdictions. Begin your search with our<Link href="/free-ai-powered-trademark-search" className="text-[rgb(110,94,147)] hover:underline font-medium">free AI powered trademark search</Link>or consult our guide on<Link href="/how-to-search-for-existing-trademark" className="text-[rgb(110,94,147)] hover:underline font-medium">how to search for existing trademark</Link>.</p>
                                         </div>
@@ -444,7 +444,7 @@ export default function InternationalTrademarkRegistrationPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 2</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Home Base Establishment</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Secure the Baseline Application or Registration in India</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Secure the Baseline Application or Registration in India</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">The Madrid System requires an active &ldquo;Office of Origin&rdquo; base mark. Indian applicants must file Form TM-A with the Indian Trade Marks Registry across the relevant classes. It is not mandatory to wait for the final registration certificate; a valid pending application with an issued application number is legally sufficient to anchor an international application.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">However, because the international registration will be tied to this basic Indian filing for 5 years. This ensures that the Indian base mark is robust, distinctive, and defended against Section 9 or 11 objections is crucial. You can initiate domestic filing immediately through our<Link href="/e-filing-trademark" className="text-[rgb(110,94,147)] hover:underline font-medium">e-filing trademark portal</Link>.</p>
                                         </div>
@@ -455,7 +455,7 @@ export default function InternationalTrademarkRegistrationPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 3</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: International Application E-Filing</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Prepare and Submit Form MM2(E) via IP India Portal</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Prepare and Submit Form MM2(E) via IP India Portal</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Under Indian Madrid Regulations, international applications are submitted electronically through the official IP India gateway using<strong>Form MM2(E)</strong>. Applicants cannot file directly with WIPO; the application must be routed through the Indian Patent Office as the Office of Origin.</p>
                                             <p className="text-gray-700 leading-relaxed mb-4">The application requires specifying:</p>
                                             <ul className="list-disc list-inside space-y-2 text-gray-700 mb-4">
@@ -473,7 +473,7 @@ export default function InternationalTrademarkRegistrationPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 4</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Office of Origin Certification</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Certification and Transmission by the Indian Registry</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Certification and Transmission by the Indian Registry</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Upon receiving Form MM2(E), a designated international examiner at the Indian Trade Marks Registry conducts a strict comparison between the international application and the Indian base filing. The examiner verifies applicant identity, mark representation, and ensures that the goods/services do not exceed the Indian specification.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">Once verified, the Indian Registry certifies the application and transmits it electronically to the WIPO International Bureau in Geneva. If the Indian Registry transmits the application within<strong>2 months</strong>of receipt, the official international registration date corresponds to the date Form MM2(E) was submitted in India.</p>
                                         </div>
@@ -484,7 +484,7 @@ export default function InternationalTrademarkRegistrationPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 5</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: WIPO Formal Examination</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Formal Review and Publication in the WIPO Gazette</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Formal Review and Publication in the WIPO Gazette</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Upon transmission, WIPO examiners conduct a formal examination. WIPO does<em>not</em>assess whether your mark conflicts with existing trademarks or lacks distinctiveness; they evaluate classification accuracy, linguistic translations, clarity of specifications, and fee computations.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">If formal requirements are met, WIPO registers the mark in the International Register, assigns an<strong>International Registration Number (IRN)</strong>, issues the official Certificate of International Registration to the applicant, and publishes the mark in the<em>WIPO Gazette of International Marks</em>. WIPO then formally notifies the trademark offices of all designated countries.</p>
                                         </div>
@@ -495,7 +495,7 @@ export default function InternationalTrademarkRegistrationPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 6</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Substantive National Examination</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Substantive Examination by Designated Foreign Offices</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Substantive Examination by Designated Foreign Offices</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Each designated country evaluates the international registration under its domestic intellectual property statutes, exactly as if it were a direct national application. Examiners examine the mark for relative grounds (prior confusing marks on their domestic registers) and absolute grounds (descriptive, generic, or deceptive terms).</p>
                                             <p className="text-gray-700 leading-relaxed m-0">Under Madrid Protocol Article 5, designated offices must complete their examination and notify WIPO of any refusal within a statutory timeframe—either<strong>12 months</strong>(standard) or<strong>18 months</strong>(for contracting parties that elected the extended window, such as the United States, United Kingdom, and China). If an office fails to notify WIPO within this deadline, protection is automatically granted by default.</p>
                                         </div>
@@ -506,7 +506,7 @@ export default function InternationalTrademarkRegistrationPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 7</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Grant of Protection &amp; Statements of Grant</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Issuance of Grant Statements and Global Portfolio Management</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Issuance of Grant Statements and Global Portfolio Management</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">If a designated national office raises no objections, or after any objections or third-party oppositions are resolved, that office issues an official<strong>Statement of Grant of Protection</strong>to WIPO. WIPO records the grant in the International Register and forwards the notice to the applicant.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">At this stage, your trademark possesses the exact same legal force and remedies against infringement as a domestic trademark registered directly in that foreign nation. The international registration remains valid for 10 years, renewable centrally via WIPO. If an examiner raises issues, learn how our attorneys help you<Link href="/how-to-overcome-trademark-objection" className="text-[rgb(110,94,147)] hover:underline font-medium">overcome trademark objections</Link>.</p>
                                         </div>
@@ -514,10 +514,10 @@ export default function InternationalTrademarkRegistrationPage() {
 
                                     {/* SECTION 5: TABLE OF STAGES, TIMELINES, & FEES */}
                                     <section id="process-stages-table" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faTable} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             International Trademark Stages, Timelines, and Legal Standards
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Understanding the statutory fee architecture and procedural duration is essential for budgeting international IP expansion. Below is a structured comparative analysis of international registration stages.</p>
 
                                         <div className="overflow-x-auto mb-8 shadow-sm rounded-xl border border-gray-200">
@@ -588,17 +588,17 @@ export default function InternationalTrademarkRegistrationPage() {
 
                                     {/* SECTION 6: CENTRAL ATTACK */}
                                     <section id="central-attack" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faShieldHalved} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Central Attack Doctrine and Legal Defense Strategies
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">The single most critical legal nuance of the Madrid Protocol is the<strong>Five-Year Dependency Rule</strong>, colloquially known in international intellectual property law as the<em>Central Attack</em>.</p>
                                         <div className="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-xl mb-8">
-                                            <h3 className="text-lg font-bold text-red-900 mb-2">The Central Attack Mechanism (Article 6)</h3>
+                                            <h4 className="text-lg font-bold text-red-900 mb-2">The Central Attack Mechanism (Article 6)</h4>
                                             <p className="text-sm text-red-800 leading-relaxed m-0">For exactly 5 years from its international registration date, the international registration remains legally tethered to the fate of the basic Indian mark. If the Indian application is abandoned, refused by the examiner under Section 9/11, revoked after opposition, or withdrawn by the applicant within this 5-year window, the international registration is automatically cancelled in<strong>all designated countries</strong>to the exact same extent.</p>
                                         </div>
                                         <p className="mb-6">A predatory competitor in the United States or Europe can defeat your international protection across the globe simply by hiring an Indian counsel to oppose or invalidate your domestic Indian base application. Once the domestic trunk is severed, all foreign international branches immediately fall.</p>
-                                        <h3 className="text-xl font-bold text-gray-900 mb-4">Strategic Safeguards Against Central Attack</h3>
+                                        <h4 className="text-xl font-bold text-gray-900 mb-4">Strategic Safeguards Against Central Attack</h4>
                                         <ul className="list-disc list-inside space-y-3 text-gray-700 mb-6">
                                             <li><strong>Anchor on a Registered Mark:</strong>Whenever feasible, base your Madrid application on a fully registered Indian trademark that has already survived opposition and examination, rather than a vulnerable pending application.</li>
                                             <li><strong>File a Separate International Base Application:</strong>If your commercial Indian mark faces opposition, file a fresh, narrowly tailored Indian application specifically formulated for international transmission.</li>
@@ -608,30 +608,30 @@ export default function InternationalTrademarkRegistrationPage() {
 
                                     {/* SECTION 7: COMMON PITFALLS */}
                                     <section id="common-pitfalls" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faExclamationTriangle} className="w-8 h-8 mr-3 text-amber-500" />
                                             Common International Trademark Pitfalls
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Cross-border intellectual property filings involve diverse domestic legal traditions, varying examination standards, and strict statutory timelines. Avoiding these common procedural errors saves months of delays and thousands of dollars in foreign counsel costs.</p>
 
                                         <div className="space-y-6">
                                             <div className="border-l-4 border-red-500 pl-4 py-2">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">1. Overly Broad Specifications of Goods</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">1. Overly Broad Specifications of Goods</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">While the Indian Trade Marks Registry accepts broad class headings, foreign offices—most notably the United States Patent and Trademark Office (USPTO)—reject indefinite descriptions such as &ldquo;computer software&rdquo. Or &ldquo;consulting services&rdquo;. The USPTO requires explicit identification of software functionality and commercial purpose, triggering automatic provisional refusals.</p>
                                             </div>
 
                                             <div className="border-l-4 border-red-500 pl-4 py-2">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">2. Ignoring Local Language Translations and Transliterations</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">2. Ignoring Local Language Translations and Transliterations</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">A mark that sounds distinctive and catchy in English may translate into an offensive, generic, or descriptive term in target markets like Germany, Spain, or China. Failing to conduct cross-linguistic phonetic and semantic clearance often results in immediate public policy or descriptiveness refusals abroad.</p>
                                             </div>
 
                                             <div className="border-l-4 border-red-500 pl-4 py-2">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">3. Missing Provisional Refusal Statutory Response Windows</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">3. Missing Provisional Refusal Statutory Response Windows</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">When a foreign office issues an objection, WIPO forwards the notification to the Indian applicant. In many countries (such as the UK, Japan, and the US), the deadline to respond is non-extendable (often between 30 and 90 days). Failing to instruct local counsel before the deadline results in total abandonment of your mark in that territory.</p>
                                             </div>
 
                                             <div className="border-l-4 border-red-500 pl-4 py-2">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">4. Forgetting United States Intention-to-Use Declarations (MM18)</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">4. Forgetting United States Intention-to-Use Declarations (MM18)</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Whenever designating the United States in Form MM2(E), applicants must mandatorily complete and execute<strong>Form MM18</strong>(Declaration of Intention to Use the Mark in Commerce). Omitting Form MM18 or signing it without proper officer authority causes WIPO and the USPTO to invalidate the US designation immediately.</p>
                                             </div>
                                         </div>
@@ -639,10 +639,10 @@ export default function InternationalTrademarkRegistrationPage() {
 
                                     {/* SECTION 8: CHECKLIST */}
                                     <section id="checklist" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faCheckCircle} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             International Trademark Filing Checklist
-                                        </h2>
+                                        </h3>
                                         <ul className="list-none space-y-4 mb-8">
                                             <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Conduct Multi-Jurisdictional Clearance:</strong>Search the WIPO Global Brand Database, TMview, and USPTO databases to verify availability in all export territories.</span></li>
                                             <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Establish Indian Base Application:</strong>File Form TM-A with the Indian Registry to secure a home application number and establish your priority anchor.</span></li>
@@ -656,15 +656,15 @@ export default function InternationalTrademarkRegistrationPage() {
 
                                     {/* SECTION 9: FAQS */}
                                     <section id="faqs" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl lg:text-3xl font-black text-gray-900 mb-8 text-center text-[rgb(110,94,147)]">
+                                        <h3 className="text-xl md:text-2xl lg:text-3xl font-black text-gray-900 mb-8 text-center text-[rgb(110,94,147)]">
                                             Frequently Asked Questions
-                                        </h2>
+                                        </h3>
                                         <div className="space-y-4">
                                             {faqs.map((faq, index) => (
                                                 <div key={index} className="bg-white border border-gray-100 rounded-3xl p-8 shadow-sm hover:shadow-md transition-shadow">
-                                                    <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-4 flex items-start leading-snug">
+                                                    <h4 className="text-lg md:text-xl font-bold text-gray-900 mb-4 flex items-start leading-snug">
                                                         <span className="text-[rgb(110,94,147)] mr-4 font-black text-2xl">Q.</span>{faq.question}
-                                                    </h3>
+                                                    </h4>
                                                     <p className="text-gray-600 pl-10 m-0">{faq.answer}</p>
                                                 </div>
                                             ))}
@@ -673,10 +673,10 @@ export default function InternationalTrademarkRegistrationPage() {
 
                                     {/* SECTION 10: FINAL STRATEGIC ADVICE */}
                                     <section id="final-takeaway" className="scroll-mt-32 pt-16">
-                                        <h2 className="text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLightbulb} className="w-8 h-8 mr-3 text-yellow-500" />
                                             Final Strategic Advice for Global Brand Protection
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">In today&apos;s hyper-connected digital economy, software solutions, direct-to-consumer goods, and industrial brands cross international borders almost instantaneously. Delaying your international trademark registration until you achieve substantial sales in a foreign territory exposes your brand to predatory squatters and expensive trademark litigation.</p>
                                         <p className="mb-6">By coordinating your domestic Indian trademark filing with the Madrid Protocol&apos;s 6-month convention priority window, you establish an impenetrable global perimeter around your brand name, logos, and commercial reputation. For complex jurisdictions or non-Madrid nations, a blended strategy combining Madrid filings with direct national applications ensures robust, cost-effective coverage.</p>
                                     </section>
@@ -691,9 +691,9 @@ export default function InternationalTrademarkRegistrationPage() {
                                                     </span>
                                                 </div>
 
-                                                <h3 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl mb-4">
+                                                <h4 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl mb-4">
                                                     Protect Your Brand Across 130+ Countries
-                                                </h3>
+                                                </h4>
 
                                                 <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">Partner with experienced international trademark attorneys to manage your end-to-end global IP portfolio. From multi-country clearance searches and Form MM2(E) filing to provisional refusal defense.</p>
 
@@ -725,7 +725,7 @@ export default function InternationalTrademarkRegistrationPage() {
                             {/* About Author */}
                             <div className="bg-white p-6 rounded-[2.5rem] shadow-sm border border-gray-100 flex flex-col items-center text-center">
                                 <img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-24 h-24 rounded-full mb-4 shadow-md object-cover" />
-                                <h3 className="text-xl font-bold text-gray-900 mb-2">Rahul Roy</h3>
+                                <h4 className="text-xl font-bold text-gray-900 mb-2">Rahul Roy</h4>
                                 <p className="text-sm text-gray-600 mb-4 font-medium">Trademark Research Specialist</p>
                                 <p className="text-sm text-gray-700 leading-relaxed mb-6">Rahul specializes in preliminary trademark clearance, cross-border brand protection, and Madrid Protocol filings. He assists Indian businesses in navigating international trademark law with legal clarity.</p>
                             </div>
@@ -733,7 +733,7 @@ export default function InternationalTrademarkRegistrationPage() {
                             {/* Dark CTA Box */}
                             <div className="bg-[#0C002B] p-8 rounded-[2.5rem] shadow-2xl border border-white/5 text-white relative overflow-hidden group">
                                 <div className="absolute top-0 right-0 w-40 h-40 bg-[rgb(110,94,147)] rounded-full blur-[100px] opacity-30 group-hover:opacity-50 transition-opacity"></div>
-                                <h3 className="text-xl font-black mb-4 relative z-10 leading-tight">Global TM Filing</h3>
+                                <h4 className="text-xl font-black mb-4 relative z-10 leading-tight">Global TM Filing</h4>
                                 <p className="text-sm opacity-70 mb-8 leading-relaxed relative z-10 font-medium">Secure your brand across the USA, EU, UK, UAE, and 130+ countries through the Madrid System.</p>
                                 <Link href="/e-filing-trademark" className="block relative z-10">
                                     <button className="w-full bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-3.5 px-4 rounded-xl transition-all shadow-xl text-xs uppercase tracking-wider">
@@ -744,7 +744,7 @@ export default function InternationalTrademarkRegistrationPage() {
 
                             {/* Related Resources */}
                             <div className="bg-gray-50 p-10 rounded-[2.5rem] shadow-sm border border-gray-100">
-                                <h3 className="text-sm font-black text-gray-400 mb-8 uppercase tracking-[0.3em]">Related Resources</h3>
+                                <h4 className="text-sm font-black text-gray-400 mb-8 uppercase tracking-[0.3em]">Related Resources</h4>
                                 <ul className="space-y-6">
                                     <li><Link href="/how-to-file-international-trademark-madrid-protocol-from-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faGlobe} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Madrid System Guide</span></Link></li>
                                     <li><Link href="/process-and-steps-of-trademark-registration" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faListUl} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Indian TM Steps</span></Link></li>

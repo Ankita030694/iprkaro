@@ -335,42 +335,42 @@ export default function TrademarkFeeConcessionPage() {
 
                                     {/* SECTION 2: ELIGIBILITY */}
                                     <section id="eligibility" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faBuilding} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Who is Eligible for the 50% Fee Concession?
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">The Trade Marks Registry categorizes applicants into two distinct brackets:<strong>&ldquo;Individual / Startup / Small Enterprise&rdquo;</strong>and<strong>&ldquo;Others&rdquo;</strong>. To secure the ₹4,500 e-filing fee tier, the applicant must satisfy the legal criteria established under Indian statutory law:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     Micro &amp; Small Enterprises (Udyam)
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Private Limited companies, LLPs, Partnership Firms, and OPCs holding a valid Udyam Registration Certificate under the MSMED Act, 2006. Qualifying criteria:<strong>Micro</strong>(Investment ≤ ₹1 Cr &amp; Turnover ≤ ₹5 Cr) or<strong>Small</strong>(Investment ≤ ₹10 Cr &amp; Turnover ≤ ₹50 Cr).</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     DPIIT Recognized Startups
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Entities recognized by the Department for Promotion of Industry and Internal Trade under the Startup India initiative. Must hold a valid DPIIT Certificate of Recognition under Rule 2(1)(tb) of the Trade Marks Rules, 2017. Learn more in our<Link href="/how-to-register-a-trademark-for-my-startup" className="text-[rgb(110,94,147)] hover:underline font-medium">startup trademark guide</Link>.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     Individuals &amp; Sole Proprietorships
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Natural persons filing in their personal name (or as a Sole Proprietorship trading under a business alias) automatically qualify for the ₹4,500 fee rate without requiring mandatory MSME registration, though holding Udyam provides additional commercial benefits.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-red-500 rounded-full mr-2.5"></span>
                                                     Ineligible Entities (&ldquo;Others&rdquo; Tier)
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Large corporate entities exceeding the MSME thresholds (Investment &gt; ₹10 Cr or Turnover &gt; ₹50 Cr), foreign corporations without Indian MSME status, and uncertified domestic companies. These entities must remit the standard statutory fee of ₹9,000 per class.</p>
                                             </div>
                                         </div>
@@ -378,10 +378,10 @@ export default function TrademarkFeeConcessionPage() {
 
                                     {/* SECTION 3: FEE COMPARISON & SAVINGS TABLE */}
                                     <section id="fee-comparison" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faTable} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Fee Structure &amp; Comparative Savings Breakdown
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">The 50% discount applies across every registered commercial Nice class. Because modern businesses frequently require multi-class protection covering software, goods, and retail services, the cumulative financial savings scale dramatically:</p>
 
                                         <div className="overflow-x-auto mb-8 shadow-sm rounded-xl border border-gray-200">
@@ -449,10 +449,10 @@ export default function TrademarkFeeConcessionPage() {
 
                                     {/* SECTION 4: 8-STEP CLAIM WORKFLOW */}
                                     <section id="step-by-step" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faListUl} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             8-Step Workflow to Claim 50% Trademark Fee Discount
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Claiming the statutory fee concession requires precise execution during the e-filing workflow on the official IP India gateway. Follow these 8 verified procedural steps:</p>
 
                                         {/* STEP 1 */}
@@ -461,7 +461,7 @@ export default function TrademarkFeeConcessionPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 1</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: MSME Procurement</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Procure or Update Udyam Registration Certificate</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Procure or Update Udyam Registration Certificate</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">If your enterprise is not yet registered under the MSME framework, visit the official government portal at<a href="https://udyamregistration.gov.in" target="_blank" rel="noopener noreferrer" className="text-[rgb(110,94,147)] hover:underline font-medium">udyamregistration.gov.in</a>. Udyam registration is 100% free, paperless, and instant using your corporate PAN, GSTIN, and director/proprietor Aadhaar OTP.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">Ensure that the generated dynamic PDF certificate displays a valid 19-digit Udyam number in the format `UDYAM-XX-00-0000000` and clearly classifies your enterprise as &ldquo;Micro&rdquo; or &ldquo;Small&rdquo;.</p>
                                         </div>
@@ -472,7 +472,7 @@ export default function TrademarkFeeConcessionPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 2</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Identity &amp; Title Check</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Audit Applicant Entity Name &amp; Corporate Details</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Audit Applicant Entity Name &amp; Corporate Details</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Under Indian trademark registry examination standards, the<strong>Applicant Name on Form TM-A must strictly match the Enterprise Name on the Udyam Certificate</strong>. For instance, if your company is &ldquo;Apex Innovations Private Limited&rdquo;, the Udyam certificate must be issued in the corporate name, not in the personal name of a director.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">For sole proprietorships, the applicant name should be structured as &ldquo;[Proprietor Full Name] Trading As [Business Alias]&rdquo; to reconcile individual ownership with the commercial trade name.</p>
                                         </div>
@@ -483,7 +483,7 @@ export default function TrademarkFeeConcessionPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 3</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: NIC Code Alignment</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Align National Industry Classification (NIC) with Nice Classes</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Align National Industry Classification (NIC) with Nice Classes</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Your Udyam Certificate contains 2-digit, 4-digit, and 5-digit NIC codes reflecting your commercial manufacturing and service activities. Before filing Form TM-A, cross-reference these NIC activities with the Nice Classification classes selected for your trademark.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">You can look up the correct classification using our interactive<Link href="/trademark-class-finder" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark class finder</Link>. If your Udyam certificate omits a relevant business activity (such as software services under Class 42), log in to the Udyam portal and add the relevant NIC code before TM filing.</p>
                                         </div>
@@ -494,7 +494,7 @@ export default function TrademarkFeeConcessionPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 4</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Legal Authorization</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Execute Stamped Power of Attorney (Form TM-48)</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Execute Stamped Power of Attorney (Form TM-48)</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">If engaging a registered trademark attorney or agent to represent your application, an executed and stamped Power of Attorney on Form TM-48 is statutory under Rule 19 of the Trade Marks Rules, 2017.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">The authorization must be executed on state-mandated non-judicial stamp paper (e.g., ₹100 in Delhi/Karnataka/UP, ₹500 in Maharashtra) and signed by an authorized director, partner, or proprietor. Read our comprehensive guide on<Link href="/form-tm-48-power-of-attorney-trademark-india" className="text-[rgb(110,94,147)] hover:underline font-medium">Form TM-48 rules and stamp duty</Link>.</p>
                                         </div>
@@ -505,7 +505,7 @@ export default function TrademarkFeeConcessionPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 5</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Portal Authentication</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Log in to the IP India Gateway via Class 3 DSC</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Log in to the IP India Gateway via Class 3 DSC</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Navigate to the official<a href="https://ipindiaonline.gov.in/trademarkefiling/user/frmloginNew.aspx" target="_blank" rel="noopener noreferrer" className="text-[rgb(110,94,147)] hover:underline font-medium">IP India E-Filing Gateway</a>. Authenticate the session using an active Class 3 Digital Signature Certificate (DSC) registered with the Controller General of Patents, Designs and Trade Marks (CGPDTM).</p>
                                             <p className="text-gray-700 leading-relaxed m-0">Before submission, verify that the mark is distinct and available by conducting an exhaustive clearance via our<Link href="/trademark-search" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark search tool</Link>.</p>
                                         </div>
@@ -516,7 +516,7 @@ export default function TrademarkFeeConcessionPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 6</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Form TM-A Drafting</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Select &ldquo;Small Enterprise&rdquo; or &ldquo;Startup&rdquo; Category</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Select &ldquo;Small Enterprise&rdquo; or &ldquo;Startup&rdquo; Category</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">When initiating Form TM-A (Application for Registration of Trademark), navigate to the<strong>&ldquo;Category of Applicant&rdquo;</strong>dropdown. It is crucial to select either:</p>
                                             <ul className="list-disc list-inside space-y-2 text-gray-700 mb-4">
                                                 <li><strong>Small Enterprise:</strong>For Private Limited companies, LLPs, or partnerships with Udyam registration.</li>
@@ -532,7 +532,7 @@ export default function TrademarkFeeConcessionPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 7</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Statutory Evidence Upload</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Enter Udyam Details &amp; Upload Authenticated Certificate</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Enter Udyam Details &amp; Upload Authenticated Certificate</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">The gateway will generate dedicated data fields requesting your 19-digit Udyam Registration Number or DPIIT Recognition Number. Input the alphanumeric string exactly as printed on your government certificate.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">In the document attachment tab, upload the digitally authenticated Udyam Certificate in PDF format (file size below 10 MB). If claiming prior commercial use, attach your notarized user affidavit along with commercial invoices. For format guidelines, consult our guide on<Link href="/trademark-user-affidavit-format-and-rules-india" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark user affidavit rules</Link>.</p>
                                         </div>
@@ -543,7 +543,7 @@ export default function TrademarkFeeConcessionPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 8</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Payment &amp; CBR Generation</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Remit Subsidized Fee (₹4,500) &amp; Download CBR Receipt</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Remit Subsidized Fee (₹4,500) &amp; Download CBR Receipt</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Proceed to the integrated Bharatkosh payment portal. The gateway calculates the discounted fee of<strong>₹4,500 per class</strong>. Complete the payment via net banking, debit card, or UPI.</p>
                                             <p className="text-gray-700 leading-relaxed mb-4">Upon successful remittance, the portal immediately issues an electronic<strong>Cash Book Receipt (CBR)</strong>containing your official application number. Your trademark status transitions to &ldquo;Send to Vienna Codification&rdquo; or &ldquo;Marked for Exam&rdquo;. You can track real-time milestones via our<Link href="/trademark-application-status" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark status tracking guide</Link>.</p>
                                         </div>
@@ -551,25 +551,25 @@ export default function TrademarkFeeConcessionPage() {
 
                                     {/* SECTION 5: UDYAM VERIFICATION & NIC CODES */}
                                     <section id="udyam-verification" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faIdCard} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Udyam Certificate &amp; NIC Code Alignment Rules
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">During the initial examination phase, the Trade Marks Registry Formalities Check division performs automated and manual verification of your attached Udyam document. Understanding the relationship between National Industry Classification (NIC) codes and Nice trademark classes prevents unnecessary scrutiny:</p>
 
                                         <div className="space-y-6 mb-8">
                                             <div className="border-l-4 border-[rgb(110,94,147)] pl-4 py-2 bg-purple-50/40 rounded-r-xl">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">1. Manufacturing vs Service NIC Codes</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">1. Manufacturing vs Service NIC Codes</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">NIC codes are divided into Manufacturing (Goods) and Service activities. If you are applying for a trademark in Class 25 (Clothing &amp; Footwear), your Udyam certificate should ideally reflect NIC Division 14 (Manufacture of Wearing Apparel). If applying in Class 35 (Online Retail / E-commerce), ensure NIC Division 47 (Retail Trade) or Division 62 (Computer Programming &amp; IT) is incorporated.</p>
                                             </div>
 
                                             <div className="border-l-4 border-[rgb(110,94,147)] pl-4 py-2 bg-purple-50/40 rounded-r-xl">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">2. Adding Free NIC Codes Prior to TM Application</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">2. Adding Free NIC Codes Prior to TM Application</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Entrepreneurs can add multiple manufacturing and service NIC codes to their existing Udyam Certificate at zero government cost on `udyamregistration.gov.in`. Modifying your Udyam profile takes less than 5 minutes and prevents examiners from raising queries regarding enterprise business scope.</p>
                                             </div>
 
                                             <div className="border-l-4 border-[rgb(110,94,147)] pl-4 py-2 bg-purple-50/40 rounded-r-xl">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">3. Dynamic QR Code Authentication</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">3. Dynamic QR Code Authentication</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Modern Udyam certificates feature an encrypted dynamic QR code. The registry e-system validates this QR code against the Ministry of MSME database. Never upload scanned low-resolution screenshots or edited documents; always upload the authentic digitally generated PDF.</p>
                                             </div>
                                         </div>
@@ -577,30 +577,30 @@ export default function TrademarkFeeConcessionPage() {
 
                                     {/* SECTION 6: COMMON PITFALLS & DISCREPANCIES */}
                                     <section id="common-pitfalls" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faExclamationTriangle} className="w-8 h-8 mr-3 text-amber-500" />
                                             Common Pitfalls &amp; Discrepancy Notice Prevention
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Filing under the subsidized MSME tier without adhering to strict documentary standards can trigger registry objections and delay examination by months. Avoid these critical mistakes:</p>
 
                                         <div className="space-y-6">
                                             <div className="border-l-4 border-red-500 pl-4 py-2">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">1. Attaching Obsolete Udyog Aadhaar (UAM) or EM-II</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">1. Attaching Obsolete Udyog Aadhaar (UAM) or EM-II</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Legacy Udyog Aadhaar Memorandum (UAM) and Entrepreneurs Memorandum (EM-II) registrations were officially invalidated by the Ministry of MSME as of June 30, 2022. Submitting a legacy UAM certificate will cause an immediate<Link href="/trademark-formalities-check-fail-meaning" className="text-[rgb(110,94,147)] hover:underline font-medium">Formality Check Fail</Link>notice requiring the submission of a valid Udyam certificate.</p>
                                             </div>
 
                                             <div className="border-l-4 border-red-500 pl-4 py-2">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">2. Company vs Director Name Mismatch</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">2. Company vs Director Name Mismatch</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">A common corporate blunder occurs when a Private Limited company applies on Form TM-A, but attaches an Udyam certificate registered in the personal name of a promoter or director. The entity name, PAN, and corporate address on Form TM-A must match the Udyam document 100%. If discrepant, learn how to handle<Link href="/trademark-discrepancy-meaning" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark discrepancy notices</Link>.</p>
                                             </div>
 
                                             <div className="border-l-4 border-red-500 pl-4 py-2">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">3. Medium Enterprise Misclassification</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">3. Medium Enterprise Misclassification</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Under Rule 2(1)(v) of the Trade Marks Rules, 2017, the fee concession is specifically designated for<strong>&ldquo;Small Enterprises&rdquo;</strong>(encompassing Micro and Small units). If your enterprise has graduated into a &ldquo;Medium Enterprise&rdquo. (Investment &gt. ₹10 Cr or Turnover &gt. ₹50 Cr), you are legally obligated to remit the standard ₹9,000 corporate fee.</p>
                                             </div>
 
                                             <div className="border-l-4 border-red-500 pl-4 py-2">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">4. Forgetting to Upload the Document During Filing</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">4. Forgetting to Upload the Document During Filing</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Selecting &ldquo;Small Enterprise&rdquo; and paying ₹4,500 without attaching the PDF certificate triggers a fee deficit notice. The applicant must file Form TM-M with an official fee of ₹900 to submit the missing certificate or pay the remaining ₹4,500 deficit.</p>
                                             </div>
                                         </div>
@@ -608,45 +608,45 @@ export default function TrademarkFeeConcessionPage() {
 
                                     {/* SECTION 7: ADDITIONAL MSME BENEFITS */}
                                     <section id="additional-benefits" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faRocket} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Additional MSME Benefits: Fast-Track &amp; SIPP Perks
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Holding MSME or Startup recognition unlocks substantial regulatory advantages beyond initial application fee discounts:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
                                             <div className="bg-purple-50/60 p-6 rounded-2xl border border-purple-100">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <FontAwesomeIcon icon={faClock} className="w-5 h-5 text-[#6E5E93] mr-2.5" />
                                                     Rule 34 Expedited Examination
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0 mb-3">MSMEs and DPIIT Startups can bypass the standard 8–12 month examination waitlist by filing for<Link href="/fast-track-trademark-registration" className="text-[rgb(110,94,147)] hover:underline font-medium">fast-track expedited trademark registration</Link>on Form TM-M.</p>
                                                 <p className="text-xs text-purple-900 font-semibold m-0">⚡ Subsidized Fee: ₹20,000 (vs ₹40,000 for large enterprises) with examination completed within 30 to 60 days.</p>
                                             </div>
 
                                             <div className="bg-purple-50/60 p-6 rounded-2xl border border-purple-100">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <FontAwesomeIcon icon={faShieldHalved} className="w-5 h-5 text-[#6E5E93] mr-2.5" />
                                                     SIPP Scheme Legal Facilitators
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0 mb-3">Under the Government&rsquo;s SIPP Scheme (Scheme for Facilitating Start-Ups and MSMEs in IP Protection), registered facilitators assist in patent and trademark drafting where legal fees are subsidized by the government.</p>
                                                 <p className="text-xs text-purple-900 font-semibold m-0">🛡️ Professional Representation with transparent government-regulated facilitator fee caps.</p>
                                             </div>
 
                                             <div className="bg-purple-50/60 p-6 rounded-2xl border border-purple-100">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <FontAwesomeIcon icon={faReceipt} className="w-5 h-5 text-[#6E5E93] mr-2.5" />
                                                     State Government IP Subsidies
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0 mb-3">Numerous state industrial policies (including Gujarat, Maharashtra, Karnataka, and Tamil Nadu) offer 50% to 75% reimbursements on trademark registration expenses incurred by registered MSMEs.</p>
                                                 <p className="text-xs text-purple-900 font-semibold m-0">💰 Additional financial reimbursements up to ₹25,000 per registered domestic trademark.</p>
                                             </div>
 
                                             <div className="bg-purple-50/60 p-6 rounded-2xl border border-purple-100">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <FontAwesomeIcon icon={faGlobe} className="w-5 h-5 text-[#6E5E93] mr-2.5" />
                                                     International Brand Building
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0 mb-3">Securing a cost-effective Indian base trademark enables MSMEs to expand globally via<Link href="/international-trademark-registration" className="text-[rgb(110,94,147)] hover:underline font-medium">international trademark registration</Link>under the Madrid Protocol across 130+ countries.</p>
                                                 <p className="text-xs text-purple-900 font-semibold m-0">🌍 Protect export revenue and cross-border brand equity with institutional backing.</p>
                                             </div>
@@ -655,10 +655,10 @@ export default function TrademarkFeeConcessionPage() {
 
                                     {/* SECTION 8: CHECKLIST */}
                                     <section id="checklist" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faCheckCircle} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             MSME Trademark Filing Checklist
-                                        </h2>
+                                        </h3>
                                         <ul className="list-none space-y-4 mb-8">
                                             <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Valid Udyam Certificate:</strong>Ensure your enterprise holds an active Udyam certificate with dynamic QR code showing Micro or Small status.</span></li>
                                             <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Reconcile Entity Name:</strong>Confirm that the applicant name on Form TM-A exactly matches the enterprise name on the Udyam document.</span></li>
@@ -672,15 +672,15 @@ export default function TrademarkFeeConcessionPage() {
 
                                     {/* SECTION 9: FAQS (EXACTLY 8 MATCHING SCHEMA) */}
                                     <section id="faqs" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl lg:text-3xl font-black text-gray-900 mb-8 text-center text-[rgb(110,94,147)]">
+                                        <h3 className="text-xl md:text-2xl lg:text-3xl font-black text-gray-900 mb-8 text-center text-[rgb(110,94,147)]">
                                             Frequently Asked Questions
-                                        </h2>
+                                        </h3>
                                         <div className="space-y-4">
                                             {faqs.map((faq, index) => (
                                                 <div key={index} className="bg-white border border-gray-100 rounded-3xl p-8 shadow-sm hover:shadow-md transition-shadow">
-                                                    <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-4 flex items-start leading-snug">
+                                                    <h4 className="text-lg md:text-xl font-bold text-gray-900 mb-4 flex items-start leading-snug">
                                                         <span className="text-[rgb(110,94,147)] mr-4 font-black text-2xl">Q.</span>{faq.question}
-                                                    </h3>
+                                                    </h4>
                                                     <p className="text-gray-600 pl-10 m-0">{faq.answer}</p>
                                                 </div>
                                             ))}
@@ -689,10 +689,10 @@ export default function TrademarkFeeConcessionPage() {
 
                                     {/* SECTION 10: STRATEGIC RECOMMENDATIONS */}
                                     <section id="final-takeaway" className="scroll-mt-32 pt-16">
-                                        <h2 className="text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLightbulb} className="w-8 h-8 mr-3 text-yellow-500" />
                                             Strategic Recommendations for Founders
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Securing trademark protection early is the single most effective legal measure to protect your brand against copycats, trademark squatters, and infringement disputes. By leveraging the 50% MSME fee concession, private limited companies, LLPs, and startups can protect their core brand across multiple classes at half the conventional statutory expenditure.</p>
                                         <p className="mb-6">Do not allow minor paperwork mismatches or obsolete registrations to forfeit your statutory fee benefits. Verify your Udyam certificates, align your NIC classifications, and partner with registered IP attorneys to execute seamless Form TM-A filings on the official IP India gateway. Start your filing assessment today to safeguard your commercial equity with maximum cost efficiency.</p>
                                     </section>
@@ -707,9 +707,9 @@ export default function TrademarkFeeConcessionPage() {
                                                     </span>
                                                 </div>
 
-                                                <h3 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl mb-4">
+                                                <h4 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl mb-4">
                                                     Claim Your 50% Trademark Fee Concession
-                                                </h3>
+                                                </h4>
 
                                                 <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">Protect your brand name, logo, and tagline with certified trademark attorneys. We ensure 100% compliant Udyam linking, comprehensive clearance searches, and seamless Form TM-A e-filing with zero discrepancy notices.</p>
 
@@ -741,7 +741,7 @@ export default function TrademarkFeeConcessionPage() {
                             {/* About Author */}
                             <div className="bg-white p-6 rounded-[2.5rem] shadow-sm border border-gray-100 flex flex-col items-center text-center">
                                 <img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-24 h-24 rounded-full mb-4 shadow-md object-cover" />
-                                <h3 className="text-xl font-bold text-gray-900 mb-2">Rahul Roy</h3>
+                                <h4 className="text-xl font-bold text-gray-900 mb-2">Rahul Roy</h4>
                                 <p className="text-sm text-gray-600 mb-4 font-medium">Trademark Research Specialist</p>
                                 <p className="text-sm text-gray-700 leading-relaxed mb-6">Rahul specializes in brand protection strategy, MSME intellectual property subsidies, and fast-track trademark compliance under the Trade Marks Rules, 2017. He assists growing startups in building defensible IP portfolios.</p>
                             </div>
@@ -749,7 +749,7 @@ export default function TrademarkFeeConcessionPage() {
                             {/* Dark CTA Box */}
                             <div className="bg-[#0C002B] p-8 rounded-[2.5rem] shadow-2xl border border-white/5 text-white relative overflow-hidden group">
                                 <div className="absolute top-0 right-0 w-40 h-40 bg-[rgb(110,94,147)] rounded-full blur-[100px] opacity-30 group-hover:opacity-50 transition-opacity"></div>
-                                <h3 className="text-xl font-black mb-4 relative z-10 leading-tight">Save 50% on TM Fees</h3>
+                                <h4 className="text-xl font-black mb-4 relative z-10 leading-tight">Save 50% on TM Fees</h4>
                                 <p className="text-sm opacity-70 mb-8 leading-relaxed relative z-10 font-medium">File Form TM-A with verified Udyam certificate linking and expert IP attorney assistance today.</p>
                                 <Link href="/e-filing-trademark" className="block relative z-10">
                                     <button className="w-full bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-3.5 px-4 rounded-xl transition-all shadow-xl text-xs uppercase tracking-wider">
@@ -760,7 +760,7 @@ export default function TrademarkFeeConcessionPage() {
 
                             {/* Related Resources */}
                             <div className="bg-gray-50 p-10 rounded-[2.5rem] shadow-sm border border-gray-100">
-                                <h3 className="text-sm font-black text-gray-400 mb-8 uppercase tracking-[0.3em]">Related Resources</h3>
+                                <h4 className="text-sm font-black text-gray-400 mb-8 uppercase tracking-[0.3em]">Related Resources</h4>
                                 <ul className="space-y-6">
                                     <li><Link href="/process-and-steps-of-trademark-registration" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faListUl} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Filing Steps</span></Link></li>
                                     <li><Link href="/how-to-register-a-trademark-for-my-startup" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faRocket} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Startup TM Guide</span></Link></li>

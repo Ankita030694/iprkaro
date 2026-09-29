@@ -195,9 +195,7 @@ export default function BlogListingClient() {
                       />
                     </div>
                     {/* Featured Title */}
-                    <h3 className="text-[#0C002B] font-nunito text-[22px] md:text-[28px] lg:text-[24px] font-bold leading-tight mb-3 group-hover:text-[#B3A1FF] transition-colors duration-300">
-                      {featuredBlog.title}
-                    </h3>
+                    <h4></h4>
                     {/* Featured Date */}
                     <p className="text-[#0C002B]/40 font-nunito text-[14px] md:text-[16px]">
                       {featuredBlog.date}

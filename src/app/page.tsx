@@ -155,11 +155,11 @@ export default function Home() {
         {/* <WhatCanYouTrademark /> */}
         <WhatYouNeedToGetStarted />
         <ResultsGrid />
-        <SmarterDecisions />
+        <SmarterDecisions headingTag="h3" />
         <WhatWeProtect />
         <ReviewSnippets />
         <BuiltToProtect />
-        <FaqSection />
+        <FaqSection headingTag="h3" />
       </div>
 
 

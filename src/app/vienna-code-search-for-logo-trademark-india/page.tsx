@@ -346,7 +346,7 @@ export default function ViennaCodeSearchPage() {
                                             <div className="flex items-start space-x-3">
                                                 <FontAwesomeIcon icon={faLightbulb} className="w-6 h-6 text-[#6E5E93] flex-shrink-0 mt-1" />
                                                 <div>
-                                                    <h3 className="text-base font-bold text-gray-900 mb-1">The Critical Blind Spot of Wordmark Searches</h3>
+                                                    <h4 className="text-base font-bold text-gray-900 mb-1">The Critical Blind Spot of Wordmark Searches</h4>
                                                     <p className="text-sm text-gray-700 leading-relaxed m-0">A traditional trademark search looks exclusively for text strings. If Company A registers an emblem of a roaring tiger without any textual wording, and Company B searches for the brand name &quot;Apex Enterprises&quot. Accompanied by an identical tiger graphic, a standard wordmark search will return<strong>zero conflicts</strong>. Conducting a Vienna Code search for Category 03 (Animals) is the<em>only</em>mechanism to unearth preexisting visual collisions before filing.</p>
                                                 </div>
                                             </div>
@@ -357,21 +357,21 @@ export default function ViennaCodeSearchPage() {
                                                 <div className="w-10 h-10 rounded-xl bg-indigo-100 text-[#6E5E93] flex items-center justify-center font-bold text-lg mb-3">
                                                     <FontAwesomeIcon icon={faGlobe} className="w-5 h-5" />
                                                 </div>
-                                                <h3 className="text-sm font-bold text-gray-900 mb-1">WIPO International Standard</h3>
+                                                <h4 className="text-sm font-bold text-gray-900 mb-1">WIPO International Standard</h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">Standardized across 35+ member nations. This enables seamless international brand clearance under the Madrid Protocol.</p>
                                             </div>
                                             <div className="bg-gray-50 p-5 rounded-2xl border border-gray-200/80">
                                                 <div className="w-10 h-10 rounded-xl bg-purple-100 text-[#6E5E93] flex items-center justify-center font-bold text-lg mb-3">
                                                     <FontAwesomeIcon icon={faGavel} className="w-5 h-5" />
                                                 </div>
-                                                <h3 className="text-sm font-bold text-gray-900 mb-1">Rule 33 Statutory Mandate</h3>
+                                                <h4 className="text-sm font-bold text-gray-900 mb-1">Rule 33 Statutory Mandate</h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">Enforces mandatory figurative codification by Trade Marks Registry examiners during initial application scrutiny.</p>
                                             </div>
                                             <div className="bg-gray-50 p-5 rounded-2xl border border-gray-200/80">
                                                 <div className="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-lg mb-3">
                                                     <FontAwesomeIcon icon={faShieldHalved} className="w-5 h-5" />
                                                 </div>
-                                                <h3 className="text-sm font-bold text-gray-900 mb-1">Section 11 Defense</h3>
+                                                <h4 className="text-sm font-bold text-gray-900 mb-1">Section 11 Defense</h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">Eliminates relative grounds objections and prevents devastating trademark infringement notices from incumbent logo owners.</p>
                                             </div>
                                         </div>
@@ -379,10 +379,10 @@ export default function ViennaCodeSearchPage() {
 
                                     {/* SECTION 2: 6-DIGIT HIERARCHY */}
                                     <section id="code-structure" className="scroll-mt-32">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLayerGroup} className="w-8 h-5 mr-3 text-[rgb(110,94,147)]" />
                                             <span>The 6-Digit Vienna Code Hierarchy Explained</span>
-                                        </h2>
+                                        </h3>
 
                                         <p className="text-base leading-relaxed mb-6">The Vienna Classification assigns a 6-digit numerical tag composed of three hierarchical pairs of numbers:<strong>Category</strong>,<strong>Division</strong>, and<strong>Section</strong>. Understanding this taxonomy enables legal professionals and designers to navigate the IP India database with mathematical precision.</p>
 
@@ -392,9 +392,9 @@ export default function ViennaCodeSearchPage() {
                                                 <span className="text-[10px] font-extrabold uppercase tracking-widest bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full border border-purple-400/30">
                                                     Hierarchical Architecture
                                                 </span>
-                                                <h3 className="text-xl md:text-2xl font-bold mt-3 text-white">
+                                                <h4 className="text-xl md:text-2xl font-bold mt-3 text-white">
                                                     Anatomy of a Vienna Classification Code
-                                                </h3>
+                                                </h4>
                                                 <p className="text-xs text-gray-300 mt-2">Example: Code<span className="font-mono text-amber-400 font-bold">03.01.08</span>(Representing a stylized dog, wolf, or fox silhouette)</p>
                                             </div>
 
@@ -435,10 +435,10 @@ export default function ViennaCodeSearchPage() {
 
                                     {/* SECTION 3: CATEGORY TABLE */}
                                     <section id="category-table" className="scroll-mt-32">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faTable} className="w-8 h-5 mr-3 text-[rgb(110,94,147)]" />
                                             <span>Master Vienna Code Category Cheatsheet</span>
-                                        </h2>
+                                        </h3>
 
                                         <p className="text-base leading-relaxed mb-6">The Vienna Classification comprises 29 overarching categories. Below is an exhaustive reference cheatsheet detailing the most critical categories and frequent divisions encountered during Indian trademark searches:</p>
 
@@ -508,10 +508,10 @@ export default function ViennaCodeSearchPage() {
 
                                     {/* SECTION 4: 7-STEP SEARCH PROTOCOL */}
                                     <section id="search-methodology" className="scroll-mt-32">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faDiagramProject} className="w-8 h-5 mr-3 text-[rgb(110,94,147)]" />
                                             <span>7-Step Protocol for Vienna Logo Search</span>
-                                        </h2>
+                                        </h3>
 
                                         <p className="text-base leading-relaxed mb-6">Executing an airtight visual trademark clearance search requires a systematic, multi-layered methodology. Follow this 7-step protocol used by senior intellectual property attorneys on the official IP India portal:</p>
 
@@ -522,7 +522,7 @@ export default function ViennaCodeSearchPage() {
                                                     1
                                                 </div>
                                                 <div>
-                                                    <h3 className="text-base font-bold text-gray-900 mb-1">Visual Deconstruction of Artwork</h3>
+                                                    <h4 className="text-base font-bold text-gray-900 mb-1">Visual Deconstruction of Artwork</h4>
                                                     <p className="text-sm text-gray-600 leading-relaxed m-0">Break down your proposed logo into every standalone graphical component. Identify primary subjects (e.g., animal, humanoid, tree), secondary containers (e.g., shields, badges, concentric circles), and typographic styling (e.g., bespoke ligature letters, stylized calligraphy).</p>
                                                 </div>
                                             </div>
@@ -533,7 +533,7 @@ export default function ViennaCodeSearchPage() {
                                                     2
                                                 </div>
                                                 <div>
-                                                    <h3 className="text-base font-bold text-gray-900 mb-1">Mapping to 6-Digit Vienna Classifications</h3>
+                                                    <h4 className="text-base font-bold text-gray-900 mb-1">Mapping to 6-Digit Vienna Classifications</h4>
                                                     <p className="text-sm text-gray-600 leading-relaxed m-0">Consult the WIPO Vienna Classification manual or the IP India classification index. List every plausible 6-digit code for each identified visual element. Never limit your search to just one code—capture related sub-divisions (e.g., searching both 03.01.01 for lions and 03.01.02 for tigers).</p>
                                                 </div>
                                             </div>
@@ -544,7 +544,7 @@ export default function ViennaCodeSearchPage() {
                                                     3
                                                 </div>
                                                 <div>
-                                                    <h3 className="text-base font-bold text-gray-900 mb-1">Accessing IP India Public Search Portal</h3>
+                                                    <h4 className="text-base font-bold text-gray-900 mb-1">Accessing IP India Public Search Portal</h4>
                                                     <p className="text-sm text-gray-600 leading-relaxed m-0">Visit the official Trade Marks Registry search portal (<em>ipindiaonline.gov.in</em>). On the search dashboard, change the top dropdown filter from<strong>&quot;Wordmark&quot;</strong>to<strong>&quot;Device Mark&quot;</strong>. This unlocks the dedicated Vienna Code search parameters.</p>
                                                 </div>
                                             </div>
@@ -555,7 +555,7 @@ export default function ViennaCodeSearchPage() {
                                                     4
                                                 </div>
                                                 <div>
-                                                    <h3 className="text-base font-bold text-gray-900 mb-1">Executing Class-Filtered Primary Queries</h3>
+                                                    <h4 className="text-base font-bold text-gray-900 mb-1">Executing Class-Filtered Primary Queries</h4>
                                                     <p className="text-sm text-gray-600 leading-relaxed m-0">Enter your relevant<Link href="/trademark-class-finder" className="text-[#6E5E93] font-bold hover:underline">Trademark Nice Class</Link>(e.g., Class 25 for apparel or Class 9 for software). Input your primary 6-digit Vienna code into the &quot;Vienna Code&quot; box. Set the search filter to &quot;Contains&quot; or &quot;Match With&quot; and execute the search.</p>
                                                 </div>
                                             </div>
@@ -566,7 +566,7 @@ export default function ViennaCodeSearchPage() {
                                                     5
                                                 </div>
                                                 <div>
-                                                    <h3 className="text-base font-bold text-gray-900 mb-1">Composite Hybrid Wildcard Searches</h3>
+                                                    <h4 className="text-base font-bold text-gray-900 mb-1">Composite Hybrid Wildcard Searches</h4>
                                                     <p className="text-sm text-gray-600 leading-relaxed m-0">If your device mark includes both a logo and text initials, execute hybrid searches by combining the Vienna Code with wildcard character strings (e.g., typing &quot;AP%&quot. In the Wordmark box alongside Vienna Code 26.01.01 in Class 35). This isolates directly competing composite brand identities.</p>
                                                 </div>
                                             </div>
@@ -577,7 +577,7 @@ export default function ViennaCodeSearchPage() {
                                                     6
                                                 </div>
                                                 <div>
-                                                    <h3 className="text-base font-bold text-gray-900 mb-1">Visual Similarity & Imperfect Recollection Test</h3>
+                                                    <h4 className="text-base font-bold text-gray-900 mb-1">Visual Similarity & Imperfect Recollection Test</h4>
                                                     <p className="text-sm text-gray-600 leading-relaxed m-0">Inspect the image thumbnail of every active, registered, and opposed mark returned. Evaluate whether an average customer possessing imperfect recollection would confuse the visual silhouette, spatial layout, or overall commercial impression under Section 11(1).</p>
                                                 </div>
                                             </div>
@@ -588,7 +588,7 @@ export default function ViennaCodeSearchPage() {
                                                     7
                                                 </div>
                                                 <div>
-                                                    <h3 className="text-base font-bold text-gray-900 mb-1">Clearance Report & Design Optimization</h3>
+                                                    <h4 className="text-base font-bold text-gray-900 mb-1">Clearance Report & Design Optimization</h4>
                                                     <p className="text-sm text-gray-600 leading-relaxed m-0">Document all visual citations in a Search Clearance Report. If high-risk collisions are discovered, collaborate with your graphic design team to pivot distinctive angles, modify geometric curvature, or alter visual weights before filing<Link href="/e-filing-trademark" className="text-[#6E5E93] font-bold hover:underline">Form TM-A</Link>.</p>
                                                 </div>
                                             </div>
@@ -597,10 +597,10 @@ export default function ViennaCodeSearchPage() {
 
                                     {/* SECTION 5: WORDMARK VS VIENNA */}
                                     <section id="wordmark-vs-vienna" className="scroll-mt-32">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faScaleBalanced} className="w-8 h-5 mr-3 text-[rgb(110,94,147)]" />
                                             <span>Wordmark Search vs Vienna Device Search</span>
-                                        </h2>
+                                        </h3>
 
                                         <p className="text-base leading-relaxed mb-6">To build an unassailable trademark fortress, applicants must comprehend the distinct legal and technical roles of Wordmark searches versus Vienna Code Device Mark searches:</p>
 
@@ -650,10 +650,10 @@ export default function ViennaCodeSearchPage() {
 
                                     {/* SECTION 6: SEND TO VIENNA CODIFICATION STATUS */}
                                     <section id="status-send-to-vienna" className="scroll-mt-32">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faClock} className="w-8 h-5 mr-3 text-[rgb(110,94,147)]" />
                                             <span>Send to Vienna Codification Status Guide</span>
-                                        </h2>
+                                        </h3>
 
                                         <p className="text-base leading-relaxed mb-6">After submitting Form TM-A for a logo or device mark, applicants tracking their application on the IP India portal frequently encounter the status:<Link href="/trademark-application-status" className="text-[#6E5E93] font-bold hover:underline">&quot;Send to Vienna Codification&quot;</Link>.</p>
 
@@ -661,13 +661,13 @@ export default function ViennaCodeSearchPage() {
                                             <div className="flex items-start space-x-3">
                                                 <FontAwesomeIcon icon={faExclamationTriangle} className="w-6 h-6 text-amber-600 flex-shrink-0 mt-1" />
                                                 <div>
-                                                    <h3 className="text-base font-bold text-gray-900 mb-1">Is &quot;Send to Vienna Codification&quot; an Objection?</h3>
+                                                    <h4 className="text-base font-bold text-gray-900 mb-1">Is &quot;Send to Vienna Codification&quot; an Objection?</h4>
                                                     <p className="text-sm text-gray-700 leading-relaxed m-0"><strong>No.</strong>&quot;Send to Vienna Codification&quot; is NOT an objection, rejection, or formality check failure. It is a mandatory administrative routing step where the Trade Marks Registry's technical officers tag your mark's figurative elements. Once codification is complete, the application automatically progresses to<em>&quot;Formalities Check Pass&quot;</em>or<em>&quot;Marked for Exam&quot;</em>.</p>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <h3 className="text-lg font-bold text-gray-900 mb-4">Why Does Vienna Codification Sometimes Get Delayed?</h3>
+                                        <h4 className="text-lg font-bold text-gray-900 mb-4">Why Does Vienna Codification Sometimes Get Delayed?</h4>
                                         <p className="text-base leading-relaxed mb-4">While this internal step normally resolves within 3 to 10 days, applications can remain stuck in Vienna Codification for several weeks due to:</p>
 
                                         <ul className="space-y-3 mb-8">
@@ -677,7 +677,7 @@ export default function ViennaCodeSearchPage() {
                                         </ul>
 
                                         <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 mb-8 not-prose">
-                                            <h3 className="text-base font-bold text-gray-900 mb-2">How to Rectify Incorrect Vienna Codes Assigned by Examiners</h3>
+                                            <h4 className="text-base font-bold text-gray-900 mb-2">How to Rectify Incorrect Vienna Codes Assigned by Examiners</h4>
                                             <p className="text-sm text-gray-700 leading-relaxed mb-3">If an examiner accidentally miscodes your logo (e.g., categorizing an abstract mechanical gear as a floral plant), it can result in an erroneous Examination Report citing irrelevant plant-related marks while overlooking actual mechanical gear competitors.</p>
                                             <p className="text-sm text-gray-700 leading-relaxed m-0 font-medium text-[#6E5E93]"><strong>Legal Remedy:</strong>Your trademark attorney can file a formal clarification under<strong>Form TM-M</strong>requesting rectification of the Vienna Classification data on the Trade Marks Register with an attached visual breakdown sheet.</p>
                                         </div>
@@ -685,10 +685,10 @@ export default function ViennaCodeSearchPage() {
 
                                     {/* SECTION 7: SECTION 11(1) RISK */}
                                     <section id="section-11-risk" className="scroll-mt-32">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faGavel} className="w-8 h-5 mr-3 text-[rgb(110,94,147)]" />
                                             <span>Section 11(1) Visual Conflict & Likelihood of Confusion</span>
-                                        </h2>
+                                        </h3>
 
                                         <p className="text-base leading-relaxed mb-6">The ultimate objective of conducting a Vienna Code search is ensuring compliance with<strong>Section 11(1) of the Trade Marks Act, 1999</strong>(Relative Grounds for Refusal of Registration). Section 11(1) bars registration of any trademark that is identical or deceptively similar to an earlier mark for similar goods or services. This creates a likelihood of public confusion.</p>
 
@@ -697,7 +697,7 @@ export default function ViennaCodeSearchPage() {
                                                 <div className="w-10 h-10 rounded-xl bg-indigo-50 text-[#6E5E93] flex items-center justify-center font-bold text-base mb-3">
                                                     <FontAwesomeIcon icon={faEye} className="w-5 h-5" />
                                                 </div>
-                                                <h3 className="text-base font-bold text-gray-900 mb-2">The Imperfect Recollection Test</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-2">The Imperfect Recollection Test</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">As established by the Supreme Court of India in landmark precedents like<em>Cadila Healthcare Ltd. V. Cadila Pharmaceuticals Ltd.</em>and<em>Amritdhara Pharmacy v. Satyadeo Gupta</em>, visual similarity is not evaluated by placing two logos side-by-side. Instead, the court assesses whether a consumer with an average memory and imperfect recollection would confuse the marks when encountered at different times.</p>
                                             </div>
 
@@ -705,7 +705,7 @@ export default function ViennaCodeSearchPage() {
                                                 <div className="w-10 h-10 rounded-xl bg-purple-50 text-[#6E5E93] flex items-center justify-center font-bold text-base mb-3">
                                                     <FontAwesomeIcon icon={faPalette} className="w-5 h-5" />
                                                 </div>
-                                                <h3 className="text-base font-bold text-gray-900 mb-2">The Anti-Dissection Rule</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-2">The Anti-Dissection Rule</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Under Section 17 of the Act, a trademark must be judged as a whole. While Vienna Code searches deconstruct logos into discrete pieces for indexing, judicial scrutiny compares the<strong>overall commercial impression</strong>created by the combination of colors, shapes, typographic arrangements, and dominant visual features.</p>
                                             </div>
                                         </div>
@@ -713,10 +713,10 @@ export default function ViennaCodeSearchPage() {
 
                                     {/* SECTION 8: DESIGNER CHECKLIST */}
                                     <section id="designer-checklist" className="scroll-mt-32">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faCheckCircle} className="w-8 h-5 mr-3 text-[rgb(110,94,147)]" />
                                             <span>Logo Clearance Checklist Before Filing TM-A</span>
-                                        </h2>
+                                        </h3>
 
                                         <p className="text-base leading-relaxed mb-6">Before finalizing your brand's visual identity or submitting Form TM-A, ensure your legal and design teams execute this comprehensive clearance checklist:</p>
 
@@ -775,10 +775,10 @@ export default function ViennaCodeSearchPage() {
 
                                     {/* SECTION 9: FAQS */}
                                     <section id="faqs" className="scroll-mt-32">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLightbulb} className="w-8 h-5 mr-3 text-[rgb(110,94,147)]" />
                                             <span>Frequently Asked Questions on Vienna Search</span>
-                                        </h2>
+                                        </h3>
 
                                         <div className="space-y-4 not-prose">
                                             {faqs.map((faq, index) => (
@@ -802,10 +802,10 @@ export default function ViennaCodeSearchPage() {
 
                                     {/* SECTION 10: STRATEGIC TAKEAWAY & BOTTOM CTA */}
                                     <section id="final-takeaway" className="scroll-mt-32">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faRocket} className="w-8 h-5 mr-3 text-[rgb(110,94,147)]" />
                                             <span>Strategic Takeaways for Brand Protection</span>
-                                        </h2>
+                                        </h3>
 
                                         <p className="text-base leading-relaxed mb-6">Conducting a meticulous Vienna Code search is not merely an administrative formality—it is an indispensable risk mitigation strategy for modern brand owners. A visually conflicted trademark filed today can invite severe opposition proceedings in the Trade Marks Journal 6 months later, court injunctions, and mandatory rebranding after investing millions in packaging and advertising.</p>
 
@@ -820,9 +820,9 @@ export default function ViennaCodeSearchPage() {
                                                     </span>
                                                 </div>
 
-                                                <h3 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl mb-4">
+                                                <h4 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl mb-4">
                                                     Protect Your Brand Logo with Certified IP Attorneys
-                                                </h3>
+                                                </h4>
 
                                                 <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">Get comprehensive Vienna classification audits, AI-driven visual similarity checks, and strategic Form TM-A e-filing. We safeguard your brand identity across all 45 trademark classes with zero compliance errors.</p>
 
@@ -854,7 +854,7 @@ export default function ViennaCodeSearchPage() {
                             {/* About Author */}
                             <div className="bg-white p-6 rounded-[2.5rem] shadow-sm border border-gray-100 flex flex-col items-center text-center">
                                 <img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-24 h-24 rounded-full mb-4 shadow-md object-cover" />
-                                <h3 className="text-xl font-bold text-gray-900 mb-2">Rahul Roy</h3>
+                                <h4 className="text-xl font-bold text-gray-900 mb-2">Rahul Roy</h4>
                                 <p className="text-sm text-gray-600 mb-4 font-medium">Trademark Research Specialist</p>
                                 <p className="text-sm text-gray-700 leading-relaxed mb-6">Rahul specializes in visual brand clearance, Vienna Codification taxonomy, and relative grounds litigation defense under the Trade Marks Act, 1999. He assists creative agencies and tech enterprises in securing nationwide design exclusivity.</p>
                             </div>
@@ -862,7 +862,7 @@ export default function ViennaCodeSearchPage() {
                             {/* Dark CTA Box */}
                             <div className="bg-[#0C002B] p-8 rounded-[2.5rem] shadow-2xl border border-white/5 text-white relative overflow-hidden group">
                                 <div className="absolute top-0 right-0 w-40 h-40 bg-[rgb(110,94,147)] rounded-full blur-[100px] opacity-30 group-hover:opacity-50 transition-opacity"></div>
-                                <h3 className="text-xl font-black mb-4 relative z-10 leading-tight">Clear Your Logo Today</h3>
+                                <h4 className="text-xl font-black mb-4 relative z-10 leading-tight">Clear Your Logo Today</h4>
                                 <p className="text-sm opacity-70 mb-8 leading-relaxed relative z-10 font-medium">Run multi-code Vienna classification search and protect your brand from Section 11 relative grounds objections.</p>
                                 <Link href="/free-ai-powered-trademark-search" className="block relative z-10">
                                     <button className="w-full bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-3.5 px-4 rounded-xl transition-all shadow-xl text-xs uppercase tracking-wider">
@@ -873,7 +873,7 @@ export default function ViennaCodeSearchPage() {
 
                             {/* Related Resources */}
                             <div className="bg-gray-50 p-10 rounded-[2.5rem] shadow-sm border border-gray-100">
-                                <h3 className="text-sm font-black text-gray-400 mb-8 uppercase tracking-[0.3em]">Related Resources</h3>
+                                <h4 className="text-sm font-black text-gray-400 mb-8 uppercase tracking-[0.3em]">Related Resources</h4>
                                 <ul className="space-y-6">
                                     <li><Link href="/word-mark-vs-device-mark-trademark-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faShapes} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Word vs Device Mark</span></Link></li>
                                     <li><Link href="/how-to-search-for-existing-trademark" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faSearch} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">TM Search Guide</span></Link></li>

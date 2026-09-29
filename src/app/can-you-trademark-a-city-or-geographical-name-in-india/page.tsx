@@ -338,10 +338,10 @@ export default function TrademarkGeographicalNamePage() {
 
                                     {/* SECTION 2: SECTION 9(1)(b) STATUTORY PROVISION */}
                                     <section id="section-9-1-b-law" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLandmark} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Section 9(1)(b) Statutory Mandate
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Section 9(1)(b) of the Trade Marks Act, 1999 establishes an absolute ground for the refusal of trademark registration:</p>
 
                                         <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 my-6 not-prose">
@@ -357,10 +357,10 @@ export default function TrademarkGeographicalNamePage() {
 
                                     {/* SECTION 3: PUBLIC DOMAIN RATIONALE */}
                                     <section id="public-domain-rationale" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faGlobe} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Why Place Names Belong in Public Domain
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">The legal prohibition against monopolizing geographical names is anchored in three foundational IP doctrines:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8 not-prose">
@@ -368,7 +368,7 @@ export default function TrademarkGeographicalNamePage() {
                                                 <div className="w-10 h-10 bg-[#6E5E93] text-white rounded-xl flex items-center justify-center font-bold mb-4 shadow-sm">
                                                     1
                                                 </div>
-                                                <h3 className="text-base font-bold text-gray-900 mb-2">Protection of Honest Trade</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-2">Protection of Honest Trade</h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">Traders operating in a specific city (e.g., brass artisans in Moradabad or leather tanners in Kanpur) have a legitimate commercial right to state their geographical location on invoices, packaging, and advertising.</p>
                                             </div>
 
@@ -376,7 +376,7 @@ export default function TrademarkGeographicalNamePage() {
                                                 <div className="w-10 h-10 bg-indigo-600 text-white rounded-xl flex items-center justify-center font-bold mb-4 shadow-sm">
                                                     2
                                                 </div>
-                                                <h3 className="text-base font-bold text-gray-900 mb-2">Preventing Consumer Deception</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-2">Preventing Consumer Deception</h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">If an enterprise uses a renowned place name (e.g., &ldquo;Kashmiri Saffron&rdquo;) for products grown in Maharashtra, it misleads buyers regarding the authenticity, climate, and soil characteristics of the goods.</p>
                                             </div>
 
@@ -384,7 +384,7 @@ export default function TrademarkGeographicalNamePage() {
                                                 <div className="w-10 h-10 bg-[#6E5E93] text-white rounded-xl flex items-center justify-center font-bold mb-4 shadow-sm">
                                                     3
                                                 </div>
-                                                <h3 className="text-base font-bold text-gray-900 mb-2">Preserving Public Commons</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-2">Preserving Public Commons</h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">Names of sovereign states, capital cities, pilgrimage towns, and natural rivers are collective national heritage and cannot be privatized by a single corporate entity.</p>
                                             </div>
                                         </div>
@@ -392,14 +392,14 @@ export default function TrademarkGeographicalNamePage() {
 
                                     {/* SECTION 4: THE SECTION 9 PROVISO EXCEPTION */}
                                     <section id="secondary-meaning-exception" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faScaleBalanced} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             The Proviso: Secondary Meaning Defense
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">The statutory bar under Section 9(1)(b) is not insurmountable. The<strong>Proviso to Section 9(1)</strong>creates an explicit statutory exception:</p>
 
                                         <div className="bg-emerald-50/70 border-l-4 border-emerald-600 p-6 rounded-r-2xl mb-8 not-prose">
-                                            <h3 className="text-sm font-bold text-emerald-900 uppercase tracking-wider mb-2">Section 9(1) Statutory Proviso</h3>
+                                            <h4 className="text-sm font-bold text-emerald-900 uppercase tracking-wider mb-2">Section 9(1) Statutory Proviso</h4>
                                             <p className="text-sm text-emerald-950 leading-relaxed m-0"><em>&ldquo;Provided that a trade mark shall not be refused registration, if before the date of application for registration it has in fact acquired a distinctive character as a result of the use made of it or is a well-known trade mark.&rdquo;</em></p>
                                         </div>
 
@@ -409,20 +409,20 @@ export default function TrademarkGeographicalNamePage() {
 
                                     {/* SECTION 5: BARE VS ARBITRARY VS COMPOSITE */}
                                     <section id="bare-vs-arbitrary-composite" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faCompassDrafting} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Bare vs Arbitrary &amp; Composite Marks
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Indian trademark jurisprudence categorizes geographical name applications into three distinct legal classes:</p>
 
                                         <div className="space-y-6">
                                             <div className="border-l-4 border-red-500 pl-4 py-2 bg-red-50/40 rounded-r-xl">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">1. Bare Descriptive Geographical Marks (Strictly Prohibited)</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">1. Bare Descriptive Geographical Marks (Strictly Prohibited)</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">Applying for a plain word mark of a geographical location for goods directly originating from or famous in that location (e.g., &ldquo;Agra&rdquo. For Petha, &ldquo;Nagpur&rdquo. For Oranges, &ldquo;Surat&rdquo. For Diamonds, or &ldquo;Banaras&rdquo. For Sarees). These applications face immediate refusal under Section 9(1)(b) because no single trader can privatize descriptive origin markers.</p>
                                             </div>
 
                                             <div className="border-l-4 border-emerald-500 pl-4 py-2 bg-emerald-50/40 rounded-r-xl">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">2. Arbitrary / Fanciful Geographical Marks (Permissible)</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">2. Arbitrary / Fanciful Geographical Marks (Permissible)</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">When a geographical name is used on goods that have<strong>no geographical connection or historical association</strong>with that location, the name is arbitrary and inherently distinctive. Classic examples include:</p>
                                                 <ul className="text-xs text-gray-600 mt-2 space-y-1 list-disc list-inside">
                                                     <li><strong>Amazon:</strong>Geographical river/forest used for an e-commerce platform.</li>
@@ -433,7 +433,7 @@ export default function TrademarkGeographicalNamePage() {
                                             </div>
 
                                             <div className="border-l-4 border-[#6E5E93] pl-4 py-2 bg-purple-50/40 rounded-r-xl">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">3. Composite Device Marks with Disclaimers (Widely Accepted)</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">3. Composite Device Marks with Disclaimers (Widely Accepted)</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">Combining a geographical name with distinctive graphic devices, logos, crests, stylized typography, or unique prefix/suffix words (e.g., &ldquo;Jaipur Jewels&rdquo; inside a distinctive royal crest logo). The Registry accepts such applications by entering a statutory disclaimer under Section 18(4) disclaiming exclusive proprietary rights over the standalone geographical word.</p>
                                             </div>
                                         </div>
@@ -441,10 +441,10 @@ export default function TrademarkGeographicalNamePage() {
 
                                     {/* SECTION 6: TRADEMARK VS GI ACT 1999 */}
                                     <section id="trademark-vs-gi-act" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faStamp} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Trademark vs Geographical Indication (GI)
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">A critical legal distinction exists between individual Trademarks under the Trade Marks Act, 1999 and registered Geographical Indications under the<strong>Geographical Indications of Goods (Registration and Protection) Act, 1999</strong>:</p>
 
                                         <div className="overflow-x-auto my-8">
@@ -494,16 +494,16 @@ export default function TrademarkGeographicalNamePage() {
 
                                     {/* SECTION 7: LANDMARK CASE LAWS */}
                                     <section id="landmark-case-laws" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faGavel} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Landmark Judicial Precedents on Geographical Trademarks
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Indian High Courts and the Supreme Court have developed a rich body of jurisprudence regarding geographical trademarks:</p>
 
                                         <div className="space-y-6 not-prose">
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
                                                 <div className="flex items-center justify-between mb-2">
-                                                    <h3 className="text-base font-bold text-gray-900">Imperial Tobacco Co. of India v. Registrar of Trade Marks (AIR 1977 Cal 413)</h3>
+                                                    <h4 className="text-base font-bold text-gray-900">Imperial Tobacco Co. of India v. Registrar of Trade Marks (AIR 1977 Cal 413)</h4>
                                                     <span className="text-xs bg-red-100 text-red-800 font-bold px-2.5 py-1 rounded-full">Simla Case</span>
                                                 </div>
                                                 <p className="text-xs text-gray-600 leading-relaxed mb-3"><strong>The Dispute:</strong>Imperial Tobacco sought to register the word mark &ldquo;SIMLA&rdquo; for cigarettes with a snow-capped mountain label. The Registrar refused under Section 9, holding Simla to be a well-known hill city.</p>
@@ -512,7 +512,7 @@ export default function TrademarkGeographicalNamePage() {
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
                                                 <div className="flex items-center justify-between mb-2">
-                                                    <h3 className="text-base font-bold text-gray-900">Bikanervala v. Aggarwal Bikanervala (Delhi High Court)</h3>
+                                                    <h4 className="text-base font-bold text-gray-900">Bikanervala v. Aggarwal Bikanervala (Delhi High Court)</h4>
                                                     <span className="text-xs bg-emerald-100 text-emerald-800 font-bold px-2.5 py-1 rounded-full">Secondary Meaning</span>
                                                 </div>
                                                 <p className="text-xs text-gray-600 leading-relaxed mb-3"><strong>The Dispute:</strong>The plaintiff registered &ldquo;Bikanervala&rdquo; for sweets and savouries and sued a competitor using an identical geographical business name.</p>
@@ -521,7 +521,7 @@ export default function TrademarkGeographicalNamePage() {
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
                                                 <div className="flex items-center justify-between mb-2">
-                                                    <h3 className="text-base font-bold text-gray-900">London Dairy vs Londonderry (Bombay High Court)</h3>
+                                                    <h4 className="text-base font-bold text-gray-900">London Dairy vs Londonderry (Bombay High Court)</h4>
                                                     <span className="text-xs bg-purple-100 text-[#6E5E93] font-bold px-2.5 py-1 rounded-full">Foreign Location</span>
                                                 </div>
                                                 <p className="text-xs text-gray-600 leading-relaxed mb-3"><strong>The Dispute:</strong>Conflict between premium ice cream brand &ldquo;London Dairy&rdquo; and confectionery brand &ldquo;Londonderry&rdquo; regarding phonetics and geographical associations.</p>
@@ -532,42 +532,42 @@ export default function TrademarkGeographicalNamePage() {
 
                                     {/* SECTION 8: HOW TO REPLY TO SECTION 9(1)(b) OBJECTION */}
                                     <section id="reply-objection-strategy" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faFileContract} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Overcoming Section 9(1)(b) Examination Objections
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">When the Trade Marks Registry issues a Section 9(1)(b) objection in your Examination Report, your IP counsel can adopt four proven defense strategies:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
                                             <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2 flex items-center">
+                                                <h4 className="text-base font-bold text-gray-900 mb-2 flex items-center">
                                                     <FontAwesomeIcon icon={faCheckCircle} className="w-4 h-4 text-emerald-600 mr-2" />
                                                     1. Establish Arbitrary Non-Origin Use
-                                                </h3>
+                                                </h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">Demonstrate that the geographical location has zero reputation or commercial association with the applied goods or services (e.g., using &ldquo;Everest&rdquo; for spices or &ldquo;Sahara&rdquo; for airline services). Prove that the average consumer would never assume the goods are produced there.</p>
                                             </div>
 
                                             <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2 flex items-center">
+                                                <h4 className="text-base font-bold text-gray-900 mb-2 flex items-center">
                                                     <FontAwesomeIcon icon={faCheckCircle} className="w-4 h-4 text-emerald-600 mr-2" />
                                                     2. File Rule 25 User Affidavit with Sales
-                                                </h3>
+                                                </h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">Invoke the Section 9(1) Proviso by submitting a formal User Affidavit on stamp paper enclosing audited balance sheets, CA sales turnover certificates, pan-India invoices, and advertising spends showing acquired distinctiveness.</p>
                                             </div>
 
                                             <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2 flex items-center">
+                                                <h4 className="text-base font-bold text-gray-900 mb-2 flex items-center">
                                                     <FontAwesomeIcon icon={faCheckCircle} className="w-4 h-4 text-emerald-600 mr-2" />
                                                     3. Offer a Voluntary Section 18(4) Disclaimer
-                                                </h3>
+                                                </h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">Explicitly state:<em>&ldquo;The applicant disclaims any exclusive right to the standalone use of the geographical term [City Name] except as substantially shown in the composite logo representation.&rdquo;</em>This frequently secures immediate registry acceptance.</p>
                                             </div>
 
                                             <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2 flex items-center">
+                                                <h4 className="text-base font-bold text-gray-900 mb-2 flex items-center">
                                                     <FontAwesomeIcon icon={faCheckCircle} className="w-4 h-4 text-emerald-600 mr-2" />
                                                     4. Amend to Composite Device Mark (TM-M)
-                                                </h3>
+                                                </h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">If a plain word mark is rejected, file Form TM-M to convert the application into a distinctive composite device mark featuring unique geometric badges, custom fonts, emblem artwork, and taglines.</p>
                                             </div>
                                         </div>
@@ -577,10 +577,10 @@ export default function TrademarkGeographicalNamePage() {
 
                                     {/* SECTION 9: EVIDENCE DOSSIER CHECKLIST */}
                                     <section id="evidence-checklist" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faFileLines} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Acquired Distinctiveness Evidence Dossier
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">To successfully invoke the Section 9(1) Proviso before the Trade Marks Hearing Officer, your legal dossier should compile:</p>
 
                                         <div className="space-y-4 not-prose">
@@ -620,10 +620,10 @@ export default function TrademarkGeographicalNamePage() {
 
                                     {/* SECTION 10: GEOGRAPHICAL NAMING MATRIX */}
                                     <section id="clearance-matrix" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faTable} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Geographical Brand Clearance Matrix
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Evaluate your proposed brand name against the Indian Trade Marks Registry clearance matrix:</p>
 
                                         <div className="overflow-x-auto my-8">
@@ -663,17 +663,17 @@ export default function TrademarkGeographicalNamePage() {
 
                                     {/* SECTION 11: STEP-BY-STEP FILING STRATEGY */}
                                     <section id="step-by-step-registration" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faListUl} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             7-Step Roadmap to Register a Geographical Brand
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Follow this systematic legal roadmap to successfully secure trademark registration for a brand containing geographical elements:</p>
 
                                         <div className="space-y-6 not-prose">
                                             <div className="flex items-start p-6 bg-gray-50 rounded-2xl border border-gray-200">
                                                 <div className="w-8 h-8 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">1</div>
                                                 <div>
-                                                    <h3 className="text-base font-bold text-gray-900 mb-1">Search &amp; Geographical Link Analysis</h3>
+                                                    <h4 className="text-base font-bold text-gray-900 mb-1">Search &amp; Geographical Link Analysis</h4>
                                                     <p className="text-xs text-gray-600 leading-relaxed m-0">Conduct public search on the IP India portal. Evaluate whether the location is historically or commercially linked to the designated goods.</p>
                                                 </div>
                                             </div>
@@ -681,7 +681,7 @@ export default function TrademarkGeographicalNamePage() {
                                             <div className="flex items-start p-6 bg-gray-50 rounded-2xl border border-gray-200">
                                                 <div className="w-8 h-8 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">2</div>
                                                 <div>
-                                                    <h3 className="text-base font-bold text-gray-900 mb-1">Verify Non-Conflict with GI Registry</h3>
+                                                    <h4 className="text-base font-bold text-gray-900 mb-1">Verify Non-Conflict with GI Registry</h4>
                                                     <p className="text-xs text-gray-600 leading-relaxed m-0">Cross-reference the official Geographical Indications Registry at Chennai to ensure no registered GI exists for that product category.</p>
                                                 </div>
                                             </div>
@@ -689,7 +689,7 @@ export default function TrademarkGeographicalNamePage() {
                                             <div className="flex items-start p-6 bg-gray-50 rounded-2xl border border-gray-200">
                                                 <div className="w-8 h-8 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">3</div>
                                                 <div>
-                                                    <h3 className="text-base font-bold text-gray-900 mb-1">Design a Distinctive Composite Device</h3>
+                                                    <h4 className="text-base font-bold text-gray-900 mb-1">Design a Distinctive Composite Device</h4>
                                                     <p className="text-xs text-gray-600 leading-relaxed m-0">Instead of a bare word mark, design a distinct logo with stylized typography, graphic crests, and unique color schemes.</p>
                                                 </div>
                                             </div>
@@ -697,7 +697,7 @@ export default function TrademarkGeographicalNamePage() {
                                             <div className="flex items-start p-6 bg-gray-50 rounded-2xl border border-gray-200">
                                                 <div className="w-8 h-8 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">4</div>
                                                 <div>
-                                                    <h3 className="text-base font-bold text-gray-900 mb-1">Compile Prior Use Evidence Dossier</h3>
+                                                    <h4 className="text-base font-bold text-gray-900 mb-1">Compile Prior Use Evidence Dossier</h4>
                                                     <p className="text-xs text-gray-600 leading-relaxed m-0">Gather CA turnover certificates, tax invoices, media coverage, and advertisement expenses to substantiate prior commercial use.</p>
                                                 </div>
                                             </div>
@@ -705,7 +705,7 @@ export default function TrademarkGeographicalNamePage() {
                                             <div className="flex items-start p-6 bg-gray-50 rounded-2xl border border-gray-200">
                                                 <div className="w-8 h-8 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">5</div>
                                                 <div>
-                                                    <h3 className="text-base font-bold text-gray-900 mb-1">Draft &amp; File User Affidavit under Rule 25</h3>
+                                                    <h4 className="text-base font-bold text-gray-900 mb-1">Draft &amp; File User Affidavit under Rule 25</h4>
                                                     <p className="text-xs text-gray-600 leading-relaxed m-0">Execute an affidavit on non-judicial stamp paper stating the exact date of continuous commercial use across India.</p>
                                                 </div>
                                             </div>
@@ -713,7 +713,7 @@ export default function TrademarkGeographicalNamePage() {
                                             <div className="flex items-start p-6 bg-gray-50 rounded-2xl border border-gray-200">
                                                 <div className="w-8 h-8 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">6</div>
                                                 <div>
-                                                    <h3 className="text-base font-bold text-gray-900 mb-1">Respond to Section 9(1)(b) Objection</h3>
+                                                    <h4 className="text-base font-bold text-gray-900 mb-1">Respond to Section 9(1)(b) Objection</h4>
                                                     <p className="text-xs text-gray-600 leading-relaxed m-0">Submit a comprehensive legal response citing Imperial Tobacco, Bikanervala, and arbitrary usage doctrines within 30 days.</p>
                                                 </div>
                                             </div>
@@ -721,7 +721,7 @@ export default function TrademarkGeographicalNamePage() {
                                             <div className="flex items-start p-6 bg-gray-50 rounded-2xl border border-gray-200">
                                                 <div className="w-8 h-8 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">7</div>
                                                 <div>
-                                                    <h3 className="text-base font-bold text-gray-900 mb-1">Accept Disclaimer &amp; Obtain Grant Certificate</h3>
+                                                    <h4 className="text-base font-bold text-gray-900 mb-1">Accept Disclaimer &amp; Obtain Grant Certificate</h4>
                                                     <p className="text-xs text-gray-600 leading-relaxed m-0">Accept a Section 18(4) disclaimer condition during the show cause hearing to secure journal advertisement and final registration.</p>
                                                 </div>
                                             </div>
@@ -730,16 +730,16 @@ export default function TrademarkGeographicalNamePage() {
 
                                     {/* SECTION 12: FAQS */}
                                     <section id="faqs" className="scroll-mt-32 pt-16">
-                                        <h2 className="text-2xl font-black text-gray-900 mb-8 flex items-center">
+                                        <h3 className="text-2xl font-black text-gray-900 mb-8 flex items-center">
                                             <FontAwesomeIcon icon={faLightbulb} className="w-8 h-8 mr-3 text-yellow-500" />
                                             Frequently Asked Questions
-                                        </h2>
+                                        </h3>
                                         <div className="space-y-6">
                                             {faqs.map((faq, index) => (
                                                 <div key={index} className="bg-gray-50 p-6 rounded-2xl border border-gray-100">
-                                                    <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-4 flex items-start leading-snug">
+                                                    <h4 className="text-lg md:text-xl font-bold text-gray-900 mb-4 flex items-start leading-snug">
                                                         <span className="text-[rgb(110,94,147)] mr-4 font-black text-2xl">Q.</span>{faq.question}
-                                                    </h3>
+                                                    </h4>
                                                     <p className="text-gray-600 pl-10 m-0">{faq.answer}</p>
                                                 </div>
                                             ))}
@@ -748,10 +748,10 @@ export default function TrademarkGeographicalNamePage() {
 
                                     {/* SECTION 13: STRATEGIC ENFORCEMENT ADVICE */}
                                     <section id="final-takeaway" className="scroll-mt-32 pt-16">
-                                        <h2 className="text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faBuildingShield} className="w-8 h-8 mr-3 text-[#6E5E93]" />
                                             Strategic Geographical Trademark Counsel
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Securing trademark protection for a brand containing geographical terms requires meticulous clearance search, creative brand structuring, and robust evidentiary proof. Relying on an unprepared word mark application often triggers avoidable Section 9(1)(b) refusals and prolonged Registry litigation.</p>
                                         <p className="mb-6">Partner with experienced trademark attorneys at IPR Karo to conduct pre-filing clearance searches, structure arbitrary or composite logo applications, draft bulletproof Rule 25 user affidavits, and represent your brand during Registry show cause hearings. For further strategic guidance, explore our analyses on<Link href="/prior-user-rights-section-34-trade-marks-act-india" className="text-[rgb(110,94,147)] hover:underline font-medium">prior user rights under Section 34</Link>,<Link href="/word-mark-vs-device-mark-trademark-india" className="text-[rgb(110,94,147)] hover:underline font-medium">word mark vs device mark strategies</Link>, and<Link href="/trademark-hearing-video-conferencing-procedure-india" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark hearing procedures</Link>.</p>
                                     </section>
@@ -766,9 +766,9 @@ export default function TrademarkGeographicalNamePage() {
                                                     </span>
                                                 </div>
 
-                                                <h3 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl mb-4">
+                                                <h4 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl mb-4">
                                                     Register Your Geographical Brand with Legal Certainty
-                                                </h3>
+                                                </h4>
 
                                                 <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">Deploy expert trademark advocates to structure composite marks, overcome Section 9(1)(b) objections, draft user affidavits, and secure proprietary brand ownership.</p>
 
@@ -800,7 +800,7 @@ export default function TrademarkGeographicalNamePage() {
                             {/* About Author */}
                             <div className="bg-white p-4 sm:p-5 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center">
                                 <img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-16 h-16 rounded-full mb-2.5 shadow-md object-cover border-2 border-[#6E5E93]/20" />
-                                <h3 className="text-base font-bold text-gray-900 mb-0.5">Rahul Roy</h3>
+                                <h4 className="text-base font-bold text-gray-900 mb-0.5">Rahul Roy</h4>
                                 <p className="text-xs text-[#6E5E93] font-semibold mb-2">Trademark Research Specialist</p>
                                 <p className="text-xs text-gray-600 leading-relaxed m-0">Rahul specializes in trademark clearance searches, absolute grounds Section 9 replies, acquired distinctiveness evidence, and Registry hearings across India.</p>
                             </div>
@@ -808,7 +808,7 @@ export default function TrademarkGeographicalNamePage() {
                             {/* Dark CTA Box */}
                             <div className="bg-[#0C002B] p-5 rounded-2xl shadow-xl border border-white/5 text-white relative overflow-hidden group">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-[rgb(110,94,147)] rounded-full blur-[70px] opacity-30 group-hover:opacity-50 transition-opacity"></div>
-                                <h3 className="text-base font-black mb-1.5 relative z-10 leading-tight">Got a Section 9 Objection?</h3>
+                                <h4 className="text-base font-black mb-1.5 relative z-10 leading-tight">Got a Section 9 Objection?</h4>
                                 <p className="text-xs text-white/80 mb-3.5 leading-relaxed relative z-10 font-normal">Facing a geographical or descriptive objection from IP India? Get an expert response drafted within 24 hours.</p>
                                 <Link href="/contact-us" className="block relative z-10">
                                     <button className="w-full bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-2.5 px-4 rounded-xl transition-all shadow-md text-xs uppercase tracking-wider">
@@ -819,7 +819,7 @@ export default function TrademarkGeographicalNamePage() {
 
                             {/* Related Resources */}
                             <div className="bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-100">
-                                <h3 className="text-xs font-black text-gray-400 mb-5 uppercase tracking-[0.25em]">Related Resources</h3>
+                                <h4 className="text-xs font-black text-gray-400 mb-5 uppercase tracking-[0.25em]">Related Resources</h4>
                                 <ul className="space-y-6">
                                     <li><Link href="/what-are-absolute-and-relative-grounds-for-rejection-section-9-11" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faScaleBalanced} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Section 9 &amp; 11 Grounds</span></Link></li>
                                     <li><Link href="/trademark-disclaimer-condition-meaning-in-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faStamp} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">TM Disclaimer Meaning</span></Link></li>

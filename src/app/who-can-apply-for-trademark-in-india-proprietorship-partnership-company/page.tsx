@@ -338,10 +338,10 @@ export default function WhoCanApplyTrademarkPage() {
 
                                     {/* SECTION 2: SECTION 18 STATUTORY RULE */}
                                     <section id="legal-definition" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLandmark} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Section 18 Statutory Rule &amp; Legal Personhood
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">The statutory threshold for trademark applicant eligibility is codified under<strong>Section 18(1) of the Trade Marks Act, 1999</strong>:</p>
 
                                         <div className="bg-gray-50 border-l-4 border-gray-400 p-6 rounded-r-xl my-6 not-prose">
@@ -356,19 +356,19 @@ export default function WhoCanApplyTrademarkPage() {
                                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8 not-prose">
                                             <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
                                                 <div className="w-10 h-10 bg-purple-50 text-[#6E5E93] rounded-xl flex items-center justify-center font-bold text-lg mb-4">1</div>
-                                                <h3 className="text-base font-bold text-gray-900 mb-2">Legal Personhood</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-2">Legal Personhood</h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">The term &ldquo;Person&rdquo. Is interpreted in light of the General Clauses Act, 1897 to include any individual human being, company, association, or body of individuals, whether incorporated or not.</p>
                                             </div>
 
                                             <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
                                                 <div className="w-10 h-10 bg-purple-50 text-[#6E5E93] rounded-xl flex items-center justify-center font-bold text-lg mb-4">2</div>
-                                                <h3 className="text-base font-bold text-gray-900 mb-2">Claim of Proprietorship</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-2">Claim of Proprietorship</h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">The applicant must have adopted the mark in good faith, possessing either active commercial use (supported by a<Link href="/trademark-user-affidavit-format-and-rules-india" className="text-[rgb(110,94,147)] hover:underline font-medium">user affidavit</Link>) or a bona fide intent to use (&ldquo;proposed to be used&rdquo;).</p>
                                             </div>
 
                                             <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
                                                 <div className="w-10 h-10 bg-purple-50 text-[#6E5E93] rounded-xl flex items-center justify-center font-bold text-lg mb-4">3</div>
-                                                <h3 className="text-base font-bold text-gray-900 mb-2">Address for Service</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-2">Address for Service</h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">Under Rule 17 of the Trade Marks Rules, 2017, the applicant must provide a valid postal address for service within the territory of India, or retain a registered attorney via<Link href="/form-tm-48-power-of-attorney-trademark-india" className="text-[rgb(110,94,147)] hover:underline font-medium">Form TM-48</Link>.</p>
                                             </div>
                                         </div>
@@ -376,10 +376,10 @@ export default function WhoCanApplyTrademarkPage() {
 
                                     {/* SECTION 3: DETAILED ENTITY BREAKDOWN */}
                                     <section id="entity-breakdown" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faUsers} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Who Can Apply: Complete Entity Breakdown
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Indian trademark jurisprudence recognizes a broad spectrum of commercial and non-commercial entities. Below is the statutory classification of all eligible applicant categories:</p>
 
                                         {/* ENTITY 1: INDIVIDUAL */}
@@ -388,10 +388,10 @@ export default function WhoCanApplyTrademarkPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Category 1</span>
                                                 <span className="text-xs text-green-700 bg-green-50 font-bold px-2.5 py-1 rounded-md">Govt Fee: ₹4,500</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
                                                 <FontAwesomeIcon icon={faUserCheck} className="w-5 h-5 mr-2 text-[#6E5E93]" />
                                                 Individual (Natural Person)
-                                            </h3>
+                                            </h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Any individual human being—regardless of whether they currently run an active commercial business—can file a trademark application in their own personal name. This includes freelancers, content creators, artists, independent consultants, and early-stage startup founders who have not yet incorporated a company.</p>
                                             <ul className="text-sm text-gray-600 space-y-2 mb-4 list-disc pl-5">
                                                 <li><strong>Title Format on Form TM-A:</strong>&ldquo;Mr. Rajesh Kumar&rdquo; or &ldquo;Ms. Ananya Sen&rdquo;</li>
@@ -407,10 +407,10 @@ export default function WhoCanApplyTrademarkPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Category 2</span>
                                                 <span className="text-xs text-green-700 bg-green-50 font-bold px-2.5 py-1 rounded-md">Govt Fee: ₹4,500</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
                                                 <FontAwesomeIcon icon={faBriefcase} className="w-5 h-5 mr-2 text-[#6E5E93]" />
                                                 Sole Proprietorship Firm (Trading As)
-                                            </h3>
+                                            </h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">A sole proprietorship is the most common business structure for micro-enterprises and local retailers in India. However, under Indian legal doctrine, a sole proprietorship is<strong>not a separate legal entity</strong>distinct from its owner. It cannot sue, be sued, or hold property in its trade name alone.</p>
                                             <div className="bg-amber-50 border-l-4 border-amber-400 p-4 rounded-r-xl mb-4 text-xs text-amber-900 leading-relaxed font-medium">
                                                 <strong>CRITICAL FILING RULE:</strong> Never file a trademark solely in the name of &ldquo;Apex Retail Enterprises&rdquo;. The application will receive a mandatory examination objection. It must strictly be filed in the format: <em>&ldquo;Mr. Rajesh Kumar trading as M/s Apex Retail Enterprises&rdquo;</em>.
@@ -428,10 +428,10 @@ export default function WhoCanApplyTrademarkPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Category 3</span>
                                                 <span className="text-xs text-blue-700 bg-blue-50 font-bold px-2.5 py-1 rounded-md">Govt Fee: ₹4,500 (with MSME) / ₹9,000</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
                                                 <FontAwesomeIcon icon={faHandshake} className="w-5 h-5 mr-2 text-[#6E5E93]" />
                                                 Partnership Firm (Partnership Act, 1932)
-                                            </h3>
+                                            </h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">A general partnership firm formed under the Indian Partnership Act, 1932 is an association of persons. While the firm operates under a collective trade name, property rights vest in the partners jointly. Therefore, the Trade Marks Registry requires that the full legal names of<strong>all active partners</strong>be explicitly stated on Form TM-A.</p>
                                             <ul className="text-sm text-gray-600 space-y-2 mb-0 list-disc pl-5">
                                                 <li><strong>Title Format on Form TM-A:</strong>&ldquo;Mr. Vikram Malhotra, Mrs. Priya Sharma, and Mr. Amit Dave trading as M/s Alpha Logistics&rdquo;</li>
@@ -446,10 +446,10 @@ export default function WhoCanApplyTrademarkPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Category 4</span>
                                                 <span className="text-xs text-blue-700 bg-blue-50 font-bold px-2.5 py-1 rounded-md">Govt Fee: ₹4,500 (with MSME) / ₹9,000</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
                                                 <FontAwesomeIcon icon={faBuilding} className="w-5 h-5 mr-2 text-[#6E5E93]" />
                                                 Limited Liability Partnership (LLP Act, 2008)
-                                            </h3>
+                                            </h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Unlike a traditional partnership, an LLP is a<strong>body corporate</strong>with separate legal personality and perpetual succession. The LLP can hold, acquire, and assign intellectual property directly in its own corporate name, independent of its designated partners.</p>
                                             <ul className="text-sm text-gray-600 space-y-2 mb-0 list-disc pl-5">
                                                 <li><strong>Title Format on Form TM-A:</strong>&ldquo;Zenith Technologies LLP&rdquo; (along with LLPIN).</li>
@@ -464,10 +464,10 @@ export default function WhoCanApplyTrademarkPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Category 5</span>
                                                 <span className="text-xs text-blue-700 bg-blue-50 font-bold px-2.5 py-1 rounded-md">Govt Fee: ₹4,500 (with MSME/DPIIT) / ₹9,000</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
                                                 <FontAwesomeIcon icon={faRocket} className="w-5 h-5 mr-2 text-[#6E5E93]" />
                                                 Private Limited Company / Public Limited / OPC (Companies Act, 2013)
-                                            </h3>
+                                            </h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">A registered company is an independent juristic person. Registering the trademark under the company name ensures the brand exists as an intangible corporate asset on the company&apos;s balance sheet. This is the gold standard required by venture capitalists, angel investors, and private equity funds during funding rounds.</p>
                                             <ul className="text-sm text-gray-600 space-y-2 mb-0 list-disc pl-5">
                                                 <li><strong>Title Format on Form TM-A:</strong>&ldquo;NextGen FinTech Solutions Private Limited&rdquo; (along with Corporate Identification Number - CIN).</li>
@@ -482,10 +482,10 @@ export default function WhoCanApplyTrademarkPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Category 6</span>
                                                 <span className="text-xs text-gray-700 bg-gray-100 font-bold px-2.5 py-1 rounded-md">Govt Fee: ₹9,000 per class</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
                                                 <FontAwesomeIcon icon={faLandmark} className="w-5 h-5 mr-2 text-[#6E5E93]" />
                                                 Trusts, Societies, and Section 8 NGOs
-                                            </h3>
+                                            </h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Non-profit organizations, educational institutions, religious trusts, and registered societies frequently register trademarks to protect educational marks, charitable emblems, certification symbols, and collective marks.</p>
                                             <ul className="text-sm text-gray-600 space-y-2 mb-0 list-disc pl-5">
                                                 <li><strong>Title Format:</strong>For a Trust: &ldquo;Mr. K. R. Nambiar (Managing Trustee) for and on behalf of Shanti Educational Trust&rdquo;. For a Registered Society: In the registered name of the Society represented by the President/Secretary.</li>
@@ -499,10 +499,10 @@ export default function WhoCanApplyTrademarkPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Category 7</span>
                                                 <span className="text-xs text-blue-700 bg-blue-50 font-bold px-2.5 py-1 rounded-md">Govt Fee: ₹4,500 (if all are individuals)</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
                                                 <FontAwesomeIcon icon={faUsers} className="w-5 h-5 mr-2 text-[#6E5E93]" />
                                                 Joint Applicants / Co-Owners (Section 24)
-                                            </h3>
+                                            </h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Under Section 24 of the Trade Marks Act, 1999, two or more individuals or distinct corporate entities can file a single trademark application jointly as co-proprietors. Each co-applicant holds an undivided co-ownership share in the brand.</p>
                                             <ul className="text-sm text-gray-600 space-y-2 mb-0 list-disc pl-5">
                                                 <li><strong>Title Format:</strong>&ldquo;Mr. Rohan Kapoor and Ms. Neha Gupta (Joint Applicants)&rdquo;</li>
@@ -516,10 +516,10 @@ export default function WhoCanApplyTrademarkPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Category 8</span>
                                                 <span className="text-xs text-gray-700 bg-gray-100 font-bold px-2.5 py-1 rounded-md">Govt Fee: ₹9,000 per class</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
                                                 <FontAwesomeIcon icon={faGlobe} className="w-5 h-5 mr-2 text-[#6E5E93]" />
                                                 Foreign Nationals &amp; Overseas Corporations
-                                            </h3>
+                                            </h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Foreign businesses and non-resident individuals can secure exclusive trademark rights across India. They can apply either directly through a national application on the IP India portal or internationally via the<Link href="/international-trademark-registration" className="text-[rgb(110,94,147)] hover:underline font-medium">Madrid Protocol</Link>.</p>
                                             <ul className="text-sm text-gray-600 space-y-2 mb-0 list-disc pl-5">
                                                 <li><strong>Address for Service:</strong>Under Rule 17, foreign applicants must designate an Indian address for service (usually their retained Indian trademark attorney).</li>
@@ -530,10 +530,10 @@ export default function WhoCanApplyTrademarkPage() {
 
                                     {/* SECTION 4: COMPARISON MATRIX TABLE */}
                                     <section id="proprietorship-vs-company" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faTable} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Proprietorship vs LLP vs Company Comparison
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">The following comparative matrix illustrates key legal, financial, and procedural distinctions across the four most prominent business entity types in India:</p>
 
                                         <div className="overflow-x-auto my-8 not-prose">
@@ -604,10 +604,10 @@ export default function WhoCanApplyTrademarkPage() {
 
                                     {/* SECTION 5: PERSONAL VS CORPORATE IP OWNERSHIP */}
                                     <section id="founder-dilemma" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLightbulb} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Personal vs Corporate IP Ownership for Startups
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">One of the most frequent dilemmas encountered by startup founders and co-founding teams is deciding whether to file the trademark in their<strong>individual personal names</strong>or under their newly incorporated<strong>Private Limited Company</strong>. Both approaches carry strategic pros and cons:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
@@ -616,7 +616,7 @@ export default function WhoCanApplyTrademarkPage() {
                                                 <div className="inline-flex items-center bg-[#6E5E93] text-white text-xs font-bold px-3 py-1 rounded-full mb-4">
                                                     Option A: Founder&apos;s Personal Name
                                                 </div>
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3">Filing as an Individual Founder</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3">Filing as an Individual Founder</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed mb-4">The founder registers the brand in their personal capacity before or immediately after business inception.</p>
                                                 <div className="space-y-3 text-xs text-gray-700">
                                                     <p className="m-0"><strong>Advantages:</strong></p>
@@ -638,7 +638,7 @@ export default function WhoCanApplyTrademarkPage() {
                                                 <div className="inline-flex items-center bg-[#1A1A24] text-white text-xs font-bold px-3 py-1 rounded-full mb-4">
                                                     Option B: Company Corporate Name
                                                 </div>
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3">Filing Directly as Private Limited / LLP</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3">Filing Directly as Private Limited / LLP</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed mb-4">The incorporated entity files the trademark directly, anchoring brand goodwill as a corporate asset.</p>
                                                 <div className="space-y-3 text-xs text-gray-700">
                                                     <p className="m-0"><strong>Advantages:</strong></p>
@@ -656,10 +656,10 @@ export default function WhoCanApplyTrademarkPage() {
 
                                     {/* SECTION 6: FORM TM-A APPLICANT CATEGORIES */}
                                     <section id="form-tma-categories" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faCoins} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Form TM-A Applicant Categories &amp; Fees
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Under the Trade Marks Rules, 2017, all new trademark applications are submitted on the unified<strong>Form TM-A</strong>. The IP India portal categorizes applicants into two distinct pricing schedules:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
@@ -668,7 +668,7 @@ export default function WhoCanApplyTrademarkPage() {
                                                     <span className="text-sm font-extrabold text-green-900 uppercase tracking-wide">Category I</span>
                                                     <span className="text-lg font-black text-green-700">₹4,500 / class</span>
                                                 </div>
-                                                <h3 className="text-base font-bold text-gray-900 mb-2">Individual / Startup / Small Enterprise</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-2">Individual / Startup / Small Enterprise</h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed mb-3">Eligible for 50% statutory concession on online e-filing (physical counter filing is ₹5,000 per class):</p>
                                                 <ul className="text-xs text-gray-700 space-y-1.5 list-disc pl-4">
                                                     <li>Individual natural persons and Sole Proprietorships.</li>
@@ -682,7 +682,7 @@ export default function WhoCanApplyTrademarkPage() {
                                                     <span className="text-sm font-extrabold text-purple-900 uppercase tracking-wide">Category II</span>
                                                     <span className="text-lg font-black text-[#6E5E93]">₹9,000 / class</span>
                                                 </div>
-                                                <h3 className="text-base font-bold text-gray-900 mb-2">Others (Standard Corporate Bodies)</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-2">Others (Standard Corporate Bodies)</h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed mb-3">Standard statutory fee for entities that do not qualify for MSME/Startup status (physical counter filing is ₹10,000 per class):</p>
                                                 <ul className="text-xs text-gray-700 space-y-1.5 list-disc pl-4">
                                                     <li>Private Limited and Public Limited Companies without Udyam.</li>
@@ -696,18 +696,18 @@ export default function WhoCanApplyTrademarkPage() {
 
                                     {/* SECTION 7: DOCUMENT CHECKLIST BY ENTITY TYPE */}
                                     <section id="documents-required" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faFileContract} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Document Checklist by Legal Entity Type
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">To ensure seamless scrutiny during registry formalities check, compile the following statutory documents according to your entity structure:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-base font-bold text-gray-900 mb-3 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     Individual / Sole Proprietor
-                                                </h3>
+                                                </h4>
                                                 <ul className="text-xs text-gray-600 space-y-2 list-disc pl-4 m-0">
                                                     <li>Self-attested copy of PAN Card and Aadhaar Card / Passport.</li>
                                                     <li>Business trade license, GST Certificate, or Shop &amp; Establishment registration (for sole proprietorship).</li>
@@ -718,10 +718,10 @@ export default function WhoCanApplyTrademarkPage() {
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-base font-bold text-gray-900 mb-3 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     Partnership Firm
-                                                </h3>
+                                                </h4>
                                                 <ul className="text-xs text-gray-600 space-y-2 list-disc pl-4 m-0">
                                                     <li>Executed Partnership Deed (registered or notarized).</li>
                                                     <li>PAN Card of the Partnership Firm.</li>
@@ -732,10 +732,10 @@ export default function WhoCanApplyTrademarkPage() {
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-base font-bold text-gray-900 mb-3 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     LLP / Private Limited / OPC
-                                                </h3>
+                                                </h4>
                                                 <ul className="text-xs text-gray-600 space-y-2 list-disc pl-4 m-0">
                                                     <li>Certificate of Incorporation (CIN / LLPIN) issued by MCA.</li>
                                                     <li>Memorandum &amp; Articles of Association (MOA/AOA) or LLP Agreement.</li>
@@ -747,10 +747,10 @@ export default function WhoCanApplyTrademarkPage() {
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-base font-bold text-gray-900 mb-3 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     Trust / Society / Foreign Entity
-                                                </h3>
+                                                </h4>
                                                 <ul className="text-xs text-gray-600 space-y-2 list-disc pl-4 m-0">
                                                     <li>Trust Deed or Society Registration Certificate &amp; Bylaws.</li>
                                                     <li>Managing Committee Resolution authorizing trademark application.</li>
@@ -763,17 +763,17 @@ export default function WhoCanApplyTrademarkPage() {
 
                                     {/* SECTION 8: COMMON PITFALLS */}
                                     <section id="common-pitfalls" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faExclamationTriangle} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Common Pitfalls in Trademark Applicant Naming
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Filing errors in the applicant section of Form TM-A can cause prolonged examination delays, Formalities Check Fail notices, or costly ownership rectifications:</p>
 
                                         <div className="space-y-4 my-8 not-prose">
                                             <div className="p-5 rounded-2xl bg-red-50/60 border border-red-200 flex items-start space-x-4">
                                                 <div className="w-8 h-8 rounded-full bg-red-100 text-red-700 flex items-center justify-center font-black text-sm flex-shrink-0 mt-0.5">1</div>
                                                 <div>
-                                                    <h3 className="text-sm font-bold text-gray-900 mb-1">Filing in Sole Proprietorship Trade Name Alone</h3>
+                                                    <h4 className="text-sm font-bold text-gray-900 mb-1">Filing in Sole Proprietorship Trade Name Alone</h4>
                                                     <p className="text-xs text-gray-600 leading-relaxed m-0">Submitting an application as &ldquo;M/s Royal Bakery&rdquo; without stating the individual proprietor name (&ldquo;Mr. Ankit Verma trading as M/s Royal Bakery&rdquo;) triggers an immediate<em>Formalities Check Fail</em>objection because an unincorporated firm lacks legal standing.</p>
                                                 </div>
                                             </div>
@@ -781,7 +781,7 @@ export default function WhoCanApplyTrademarkPage() {
                                             <div className="p-5 rounded-2xl bg-red-50/60 border border-red-200 flex items-start space-x-4">
                                                 <div className="w-8 h-8 rounded-full bg-red-100 text-red-700 flex items-center justify-center font-black text-sm flex-shrink-0 mt-0.5">2</div>
                                                 <div>
-                                                    <h3 className="text-sm font-bold text-gray-900 mb-1">Omitting Partner Names in Partnership Applications</h3>
+                                                    <h4 className="text-sm font-bold text-gray-900 mb-1">Omitting Partner Names in Partnership Applications</h4>
                                                     <p className="text-xs text-gray-600 leading-relaxed m-0">Filing in the partnership firm name without enumerating all partners creates severe title defects. If a partner subsequently retires or a partnership dispute emerges, the Trade Marks Register cannot determine lawful title without extensive litigation.</p>
                                                 </div>
                                             </div>
@@ -789,7 +789,7 @@ export default function WhoCanApplyTrademarkPage() {
                                             <div className="p-5 rounded-2xl bg-red-50/60 border border-red-200 flex items-start space-x-4">
                                                 <div className="w-8 h-8 rounded-full bg-red-100 text-red-700 flex items-center justify-center font-black text-sm flex-shrink-0 mt-0.5">3</div>
                                                 <div>
-                                                    <h3 className="text-sm font-bold text-gray-900 mb-1">Paying ₹9,000 Corporate Fee Without Attaching Udyam</h3>
+                                                    <h4 className="text-sm font-bold text-gray-900 mb-1">Paying ₹9,000 Corporate Fee Without Attaching Udyam</h4>
                                                     <p className="text-xs text-gray-600 leading-relaxed m-0">Many newly incorporated Private Limited companies mistakenly file under the &ldquo;Others&rdquo. Category paying ₹9,000 per class because they were unaware that obtaining a simple Udyam MSME certificate entitles them to file under the ₹4,500 concession tier.</p>
                                                 </div>
                                             </div>
@@ -797,7 +797,7 @@ export default function WhoCanApplyTrademarkPage() {
                                             <div className="p-5 rounded-2xl bg-red-50/60 border border-red-200 flex items-start space-x-4">
                                                 <div className="w-8 h-8 rounded-full bg-red-100 text-red-700 flex items-center justify-center font-black text-sm flex-shrink-0 mt-0.5">4</div>
                                                 <div>
-                                                    <h3 className="text-sm font-bold text-gray-900 mb-1">Unregulated Joint Ownership Between Non-Partners</h3>
+                                                    <h4 className="text-sm font-bold text-gray-900 mb-1">Unregulated Joint Ownership Between Non-Partners</h4>
                                                     <p className="text-xs text-gray-600 leading-relaxed m-0">Registering a brand in joint individual names without an accompanying co-existence or IP sharing agreement creates operational paralysis if the co-founders experience a falling out. Neither party can license or monetize the mark without the other&apos;s signature.</p>
                                                 </div>
                                             </div>
@@ -806,10 +806,10 @@ export default function WhoCanApplyTrademarkPage() {
 
                                     {/* SECTION 9: FAQS */}
                                     <section id="faqs" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faShieldHalved} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Frequently Asked Questions
-                                        </h2>
+                                        </h3>
                                         <div className="space-y-4 not-prose">
                                             {faqs.map((faq, index) => (
                                                 <details key={index} className="group bg-gray-50 rounded-2xl border border-gray-200 p-5 transition-all open:bg-white open:shadow-md">
@@ -825,25 +825,25 @@ export default function WhoCanApplyTrademarkPage() {
 
                                     {/* SECTION 10: EXPERT SUMMARY & STRATEGIC ADVICE */}
                                     <section id="expert-summary" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faCertificate} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Strategic Advice on Trademark Ownership
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Structuring your trademark ownership correctly from day zero safeguards your intellectual property against costly rectifications, corporate disputes, and investor diligence friction. Here is the recommended roadmap for businesses at various stages:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8 not-prose">
                                             <div className="p-6 bg-white rounded-2xl border border-gray-200 shadow-sm">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2">Early Stage / Solo Founders</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-2">Early Stage / Solo Founders</h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">File immediately in your personal name under the ₹4,500 fee tier to secure priority. You can execute a simple licensing agreement once your company is incorporated.</p>
                                             </div>
 
                                             <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2">Funded / High-Growth Startups</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-2">Funded / High-Growth Startups</h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">File directly under the Private Limited Company name. Secure an Udyam MSME certificate to enjoy the 50% discount while anchoring brand valuation on the balance sheet.</p>
                                             </div>
 
                                             <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2">Partnerships &amp; LLPs</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-2">Partnerships &amp; LLPs</h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">Ensure all active partners are named on Form TM-A or register an LLP to hold the mark as an independent body corporate. This prevents partner exit disputes.</p>
                                             </div>
                                         </div>
@@ -853,9 +853,9 @@ export default function WhoCanApplyTrademarkPage() {
                                             <div className="absolute top-0 right-0 w-80 h-80 bg-[#7664A0] rounded-full blur-[120px] opacity-30 pointer-events-none"></div>
 
                                             <div className="relative z-10 text-center max-w-2xl mx-auto">
-                                                <h3 className="text-2xl sm:text-3xl font-black tracking-tight mb-4 text-white">
+                                                <h4 className="text-2xl sm:text-3xl font-black tracking-tight mb-4 text-white">
                                                     Structure Your Trademark Filing with Expert Attorneys
-                                                </h3>
+                                                </h4>
 
                                                 <p className="text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">Don&apos;t let applicant naming errors or missing MSME discounts derail your brand protection. Our registered trademark attorneys help you select the optimal entity structure, file Form TM-A, and secure end-to-end IP protection.</p>
 
@@ -887,7 +887,7 @@ export default function WhoCanApplyTrademarkPage() {
                             {/* About Author */}
                             <div className="bg-white p-6 rounded-[2.5rem] shadow-sm border border-gray-100 flex flex-col items-center text-center">
                                 <img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-24 h-24 rounded-full mb-4 shadow-md object-cover" />
-                                <h3 className="text-xl font-bold text-gray-900 mb-2">Rahul Roy</h3>
+                                <h4 className="text-xl font-bold text-gray-900 mb-2">Rahul Roy</h4>
                                 <p className="text-sm text-gray-600 mb-4 font-medium">Trademark Research Specialist</p>
                                 <p className="text-sm text-gray-700 leading-relaxed mb-6">Rahul specializes in corporate IP strategy, applicant entity structuring, and brand portfolio management under the Trade Marks Act, 1999. He assists founders, LLPs, and enterprises across India in securing bulletproof trademark rights.</p>
                             </div>
@@ -895,7 +895,7 @@ export default function WhoCanApplyTrademarkPage() {
                             {/* Dark CTA Box */}
                             <div className="bg-[#0C002B] p-8 rounded-[2.5rem] shadow-2xl border border-white/5 text-white relative overflow-hidden group">
                                 <div className="absolute top-0 right-0 w-40 h-40 bg-[rgb(110,94,147)] rounded-full blur-[100px] opacity-30 group-hover:opacity-50 transition-opacity"></div>
-                                <h3 className="text-xl font-black mb-4 relative z-10 leading-tight">Need Filing Assistance?</h3>
+                                <h4 className="text-xl font-black mb-4 relative z-10 leading-tight">Need Filing Assistance?</h4>
                                 <p className="text-sm opacity-70 mb-8 leading-relaxed relative z-10 font-medium">Verify your applicant eligibility, save 50% on government fees, and file Form TM-A with expert IP attorneys.</p>
                                 <Link href="/e-filing-trademark" className="block relative z-10">
                                     <button className="w-full bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-3.5 px-4 rounded-xl transition-all shadow-xl text-xs uppercase tracking-wider">
@@ -906,7 +906,7 @@ export default function WhoCanApplyTrademarkPage() {
 
                             {/* Related Resources */}
                             <div className="bg-gray-50 p-10 rounded-[2.5rem] shadow-sm border border-gray-100">
-                                <h3 className="text-sm font-black text-gray-400 mb-8 uppercase tracking-[0.3em]">Related Resources</h3>
+                                <h4 className="text-sm font-black text-gray-400 mb-8 uppercase tracking-[0.3em]">Related Resources</h4>
                                 <ul className="space-y-6">
                                     <li><Link href="/process-and-steps-of-trademark-registration" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faListUl} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Filing Steps</span></Link></li>
                                     <li><Link href="/trademark-fee-concession-msme-udyam-startup-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faCoins} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">50% MSME Fee</span></Link></li>

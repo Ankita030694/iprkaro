@@ -338,30 +338,30 @@ export default function ReclaimSocialMediaUsernamePage() {
 
                                     {/* SECTION 2: LEGAL FRAMEWORK */}
                                     <section id="legal-framework" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faScaleBalanced} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Legal Grounding: Section 31 &amp; IT Rules
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Digital handle reclamation relies on an interplay between statutory trademark law, Indian judicial precedents, and intermediary liability regulations:</p>
 
                                         <div className="space-y-6">
                                             <div className="border-l-4 border-[#6E5E93] pl-4 py-2 bg-purple-50/40 rounded-r-xl">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">1. Prima Facie Evidence of Validity — Section 31(1) Trade Marks Act</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">1. Prima Facie Evidence of Validity — Section 31(1) Trade Marks Act</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">Section 31 of the Trade Marks Act, 1999 establishes that an official trademark registration certificate is<em>prima facie</em>conclusive evidence of the mark&apos;s validity and proprietary ownership. When submitted to social media platforms, it eliminates subjective ownership disputes and places the burden of proof squarely on the squatter.</p>
                                             </div>
 
                                             <div className="border-l-4 border-indigo-500 pl-4 py-2 bg-indigo-50/40 rounded-r-xl">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">2. Statutory Infringement &amp; Unfair Advantage — Section 29</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">2. Statutory Infringement &amp; Unfair Advantage — Section 29</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">Under Section 29(1) and Section 29(8), using a registered trademark in advertising or commercial communications without authorization to take unfair advantage of its distinctive character or repute constitutes direct infringement. Squatting a brand handle to divert consumer traffic or harm brand goodwill directly attracts Section 29 remedies.</p>
                                             </div>
 
                                             <div className="border-l-4 border-[#6E5E93] pl-4 py-2 bg-purple-50/40 rounded-r-xl">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">3. Intermediary Due Diligence — Rule 3(1)(b) IT Rules, 2021</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">3. Intermediary Due Diligence — Rule 3(1)(b) IT Rules, 2021</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">Under the<strong>Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021</strong>, social media intermediaries (Meta, X, Google, ByteDance) must observe strict due diligence. Under Rule 3(1)(b)(iv), intermediaries are legally obligated not to host content that infringes any patent, trademark, copyright, or other proprietary rights.</p>
                                             </div>
 
                                             <div className="border-l-4 border-red-500 pl-4 py-2 bg-red-50/40 rounded-r-xl">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">4. 36-Hour Mandatory Takedown Window — Rule 3(2) IT Rules</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">4. 36-Hour Mandatory Takedown Window — Rule 3(2) IT Rules</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">Upon receiving a formal grievance or court order regarding intellectual property violation, intermediary platforms must acknowledge the complaint within 24 hours and disable access or reassign infringing handles within<strong>36 hours</strong>to maintain their statutory &ldquo;Safe Harbor&rdquo; immunity under Section 79 of the Information Technology Act, 2000.</p>
                                             </div>
                                         </div>
@@ -369,18 +369,18 @@ export default function ReclaimSocialMediaUsernamePage() {
 
                                     {/* SECTION 3: SQUATTING VS ACTIVE INFRINGEMENT */}
                                     <section id="squatting-vs-infringement" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faAt} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Handle Squatting vs Active Infringement
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Different types of username usurpation require distinct recovery strategies. Understanding which category your target falls under determines your legal pathway:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8 not-prose">
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2 flex items-center">
+                                                <h4 className="text-base font-bold text-gray-900 mb-2 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2"></span>
                                                     Passive Handle Squatting
-                                                </h3>
+                                                </h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed mb-3">The account has zero posts, default avatar, no bio, and has been inactive for months/years. The creator registered it purely to hoard the username.</p>
                                                 <div className="bg-purple-100/60 p-2.5 rounded-lg text-xs font-bold text-[#6E5E93]">
                                                     Remedy: Inactive Account Release + TM Policy Report
@@ -388,10 +388,10 @@ export default function ReclaimSocialMediaUsernamePage() {
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2 flex items-center">
+                                                <h4 className="text-base font-bold text-gray-900 mb-2 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-indigo-500 rounded-full mr-2"></span>
                                                     Bad-Faith Extortion
-                                                </h3>
+                                                </h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed mb-3">The account owner sends DMs or emails stating: &ldquo;Buy this handle for ₹1,50,000 / $2,000 or I will sell it to your direct competitor.&rdquo;</p>
                                                 <div className="bg-indigo-100/60 p-2.5 rounded-lg text-xs font-bold text-indigo-800">
                                                     Remedy: Instant Terms of Service Ban + Reassignment
@@ -399,10 +399,10 @@ export default function ReclaimSocialMediaUsernamePage() {
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2 flex items-center">
+                                                <h4 className="text-base font-bold text-gray-900 mb-2 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-red-500 rounded-full mr-2"></span>
                                                     Impersonation &amp; Scams
-                                                </h3>
+                                                </h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed mb-3">The account uses your official logo, publishes fake job postings, collects customer payments, or sells counterfeit merchandise under your name.</p>
                                                 <div className="bg-red-100/60 p-2.5 rounded-lg text-xs font-bold text-red-800">
                                                     Remedy: Urgent IP Takedown + Criminal Cyber Police Report
@@ -411,40 +411,40 @@ export default function ReclaimSocialMediaUsernamePage() {
                                         </div>
 
                                         <div className="bg-amber-50/70 p-6 rounded-2xl border border-amber-200 mb-8 not-prose">
-                                            <h3 className="text-base font-bold text-amber-950 mb-2 flex items-center">
+                                            <h4 className="text-base font-bold text-amber-950 mb-2 flex items-center">
                                                 <FontAwesomeIcon icon={faExclamationTriangle} className="w-4 h-4 mr-2 text-amber-800" />
                                                 Why Simply Changing Your Handle is Dangerous for Brands
-                                            </h3>
+                                            </h4>
                                             <p className="text-xs sm:text-sm text-amber-900 leading-relaxed m-0">Many early-stage founders settle for compromised handles such as<code>@brand_official_india</code>or<code>@get_brand_app</code>. While workable initially, leaving the pristine handle<code>@brand</code>in unauthorized hands exposes customers to phishing, splits organic search traffic, and diminishes brand valuation during M&amp;A due diligence. For actionable legal responses, review our guide on<Link href="/how-to-respond-to-trademark-infringement-legal-notice-in-india" className="text-[rgb(110,94,147)] hover:underline font-bold">how to respond to trademark infringement legal notices</Link>.</p>
                                         </div>
                                     </section>
 
                                     {/* SECTION 4: PLATFORM-BY-PLATFORM WORKFLOWS */}
                                     <section id="platform-workflows" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faGlobe} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Platform-by-Platform Recovery Workflows
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Each social network operates proprietary IP resolution desks with specific documentation requirements. Here is how to navigate the top platforms:</p>
 
                                         <div className="space-y-6">
                                             <div className="border-l-4 border-[#6E5E93] pl-4 py-2 bg-purple-50/30 rounded-r-xl">
-                                                <h3 className="text-base font-bold text-gray-900 mb-1">1. Meta (Instagram &amp; Facebook) Handle Recovery</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-1">1. Meta (Instagram &amp; Facebook) Handle Recovery</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">Meta provides the<strong>Meta IP Reporting Form</strong>and the enterprise-tier<strong>Meta Brand Rights Protection Tool</strong>. Select &ldquo;I am the trademark owner&rdquo;, provide your Indian Trademark Registration Number, Class, Goods/Services description, and upload a high-resolution PDF of Form TM-RG. Under &ldquo;Specific Content&rdquo;, select &ldquo;The entire account&rdquo; and request &ldquo;Username Reassignment to my verified business account&rdquo;. If the account is inactive, Meta releases the handle directly to your linked Facebook Business Manager.</p>
                                             </div>
 
                                             <div className="border-l-4 border-indigo-500 pl-4 py-2 bg-indigo-50/30 rounded-r-xl">
-                                                <h3 className="text-base font-bold text-gray-900 mb-1">2. X (formerly Twitter) Trademark Policy Dispute</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-1">2. X (formerly Twitter) Trademark Policy Dispute</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">X enforces a strict<em>Trademark Policy</em>against username squatting. Submit the official<strong>X Trademark Complaint Form</strong>. You must establish that the squatted username causes consumer confusion or is being held for resale. X will evaluate the account&apos;s activity. If the squatter has no legitimate business association with the mark, X will either reassign the handle to your corporate email or permanently ban the squatter.</p>
                                             </div>
 
                                             <div className="border-l-4 border-[#6E5E93] pl-4 py-2 bg-purple-50/30 rounded-r-xl">
-                                                <h3 className="text-base font-bold text-gray-900 mb-1">3. YouTube Custom URL &amp; Handle Reclamation</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-1">3. YouTube Custom URL &amp; Handle Reclamation</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">Google handles YouTube handles (e.g.,<code>youtube.com/@brand</code>) through its<strong>Google Trademark Infringement Webform</strong>. If an unauthorized channel utilizes your trademarked name in its custom handle or channel branding, submit your trademark credentials. YouTube reviews the complaint within 48 to 72 hours and strips the handle from the unauthorized uploader.</p>
                                             </div>
 
                                             <div className="border-l-4 border-indigo-500 pl-4 py-2 bg-indigo-50/30 rounded-r-xl">
-                                                <h3 className="text-base font-bold text-gray-900 mb-1">4. LinkedIn Corporate Page Handle Disputes</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-1">4. LinkedIn Corporate Page Handle Disputes</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">LinkedIn takes corporate impersonation very seriously. Submit the<strong>LinkedIn Trademark Infringement Notice</strong>along with your company&apos;s Ministry of Corporate Affairs (MCA) Certificate of Incorporation and Trademark Certificate. LinkedIn will reassign the<code>linkedin.com/company/brand</code>URL to your verified corporate administrator.</p>
                                             </div>
                                         </div>
@@ -452,42 +452,42 @@ export default function ReclaimSocialMediaUsernamePage() {
 
                                     {/* SECTION 5: EVIDENCE DOSSIER */}
                                     <section id="evidence-dossier" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faFileContract} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Evidence Dossier Required for Takedown
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Platform automated filters reject incomplete or poorly documented complaints. Before initiating a dispute, compile an airtight digital evidence bundle:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6 not-prose">
                                             <div className="p-4 bg-gray-50 rounded-xl border border-gray-200">
-                                                <h3 className="text-sm font-bold text-gray-900 mb-1 flex items-center">
+                                                <h4 className="text-sm font-bold text-gray-900 mb-1 flex items-center">
                                                     <FontAwesomeIcon icon={faCheckCircle} className="w-4 h-4 text-emerald-600 mr-2" />
                                                     1. Certified Trademark Certificate
-                                                </h3>
+                                                </h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">Official Form TM-RG issued by the Trade Marks Registry of India, displaying your registration number, registered classes, date of application, and word/device mark representation.</p>
                                             </div>
 
                                             <div className="p-4 bg-gray-50 rounded-xl border border-gray-200">
-                                                <h3 className="text-sm font-bold text-gray-900 mb-1 flex items-center">
+                                                <h4 className="text-sm font-bold text-gray-900 mb-1 flex items-center">
                                                     <FontAwesomeIcon icon={faCheckCircle} className="w-4 h-4 text-emerald-600 mr-2" />
                                                     2. Corporate Authorization / Power of Attorney
-                                                </h3>
+                                                </h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">Form TM-48 or a formal Board Resolution authorizing your IP counsel or Brand Protection Officer to act on behalf of the registered proprietor.</p>
                                             </div>
 
                                             <div className="p-4 bg-gray-50 rounded-xl border border-gray-200">
-                                                <h3 className="text-sm font-bold text-gray-900 mb-1 flex items-center">
+                                                <h4 className="text-sm font-bold text-gray-900 mb-1 flex items-center">
                                                     <FontAwesomeIcon icon={faCheckCircle} className="w-4 h-4 text-emerald-600 mr-2" />
                                                     3. Timestamped Screenshots &amp; Web Archives
-                                                </h3>
+                                                </h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">Full-page captures of the squatted profile showing handle URL, bio, follower count, post history (or lack thereof), and timestamped HTTP headers.</p>
                                             </div>
 
                                             <div className="p-4 bg-gray-50 rounded-xl border border-gray-200">
-                                                <h3 className="text-sm font-bold text-gray-900 mb-1 flex items-center">
+                                                <h4 className="text-sm font-bold text-gray-900 mb-1 flex items-center">
                                                     <FontAwesomeIcon icon={faCheckCircle} className="w-4 h-4 text-emerald-600 mr-2" />
                                                     4. Commercial Extortion / Confusion Evidence
-                                                </h3>
+                                                </h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">Exported chat logs, DM screenshots, or email correspondence demonstrating extortion demands, or customer support complaints showing actual consumer confusion.</p>
                                             </div>
                                         </div>
@@ -495,10 +495,10 @@ export default function ReclaimSocialMediaUsernamePage() {
 
                                     {/* SECTION 6: CEASE AND DESIST */}
                                     <section id="cease-and-desist" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faPaperPlane} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Drafting Cease &amp; Desist to Squatters
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Serving a formal Cease and Desist Legal Notice before or concurrently with platform reporting puts the squatter on notice and creates invaluable documentary proof of bad faith. A robust legal notice drafted by an IP advocate should contain:</p>
 
                                         <ul className="list-disc pl-6 space-y-3 mb-6">
@@ -513,17 +513,17 @@ export default function ReclaimSocialMediaUsernamePage() {
 
                                     {/* SECTION 7: STEP BY STEP RECOVERY PROTOCOL */}
                                     <section id="step-by-step-recovery" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faListUl} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             7-Step Social Media Handle Recovery
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Follow this field-tested procedural workflow to secure handle reassignments systematically across digital platforms:</p>
 
                                         <div className="space-y-6 my-8 not-prose">
                                             <div className="flex items-start bg-purple-50/50 p-5 rounded-2xl border border-purple-100">
                                                 <span className="w-8 h-8 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">1</span>
                                                 <div>
-                                                    <h3 className="text-base font-bold text-gray-900 mb-1">Digital Footprint Mapping &amp; Timestamping</h3>
+                                                    <h4 className="text-base font-bold text-gray-900 mb-1">Digital Footprint Mapping &amp; Timestamping</h4>
                                                     <p className="text-xs sm:text-sm text-gray-700 leading-relaxed m-0">Audit all major platforms (Instagram, X, Facebook, LinkedIn, YouTube, TikTok, Telegram) to identify every unauthorized handle variant. Capture cryptographic web archive hashes of each profile.</p>
                                                 </div>
                                             </div>
@@ -531,7 +531,7 @@ export default function ReclaimSocialMediaUsernamePage() {
                                             <div className="flex items-start bg-indigo-50/50 p-5 rounded-2xl border border-indigo-100">
                                                 <span className="w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">2</span>
                                                 <div>
-                                                    <h3 className="text-base font-bold text-gray-900 mb-1">Secure Certified Trademark Title (Form TM-RG)</h3>
+                                                    <h4 className="text-base font-bold text-gray-900 mb-1">Secure Certified Trademark Title (Form TM-RG)</h4>
                                                     <p className="text-xs sm:text-sm text-gray-700 leading-relaxed m-0">Ensure your registered trademark certificate is active and properly matches your corporate entity name. If pending, expedite your application via fast-track channels or prepare common law passing-off evidence.</p>
                                                 </div>
                                             </div>
@@ -539,7 +539,7 @@ export default function ReclaimSocialMediaUsernamePage() {
                                             <div className="flex items-start bg-purple-50/50 p-5 rounded-2xl border border-purple-100">
                                                 <span className="w-8 h-8 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">3</span>
                                                 <div>
-                                                    <h3 className="text-base font-bold text-gray-900 mb-1">Issue Cease &amp; Desist Demand to Squatter</h3>
+                                                    <h4 className="text-base font-bold text-gray-900 mb-1">Issue Cease &amp; Desist Demand to Squatter</h4>
                                                     <p className="text-xs sm:text-sm text-gray-700 leading-relaxed m-0">Serve a formal legal notice via registered post, email, and social platform direct message demanding voluntary handover within 48 to 72 hours.</p>
                                                 </div>
                                             </div>
@@ -547,7 +547,7 @@ export default function ReclaimSocialMediaUsernamePage() {
                                             <div className="flex items-start bg-indigo-50/50 p-5 rounded-2xl border border-indigo-100">
                                                 <span className="w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">4</span>
                                                 <div>
-                                                    <h3 className="text-base font-bold text-gray-900 mb-1">Submit Formal Platform IP Violation Form</h3>
+                                                    <h4 className="text-base font-bold text-gray-900 mb-1">Submit Formal Platform IP Violation Form</h4>
                                                     <p className="text-xs sm:text-sm text-gray-700 leading-relaxed m-0">Access Meta IP Reporting Tool, X Trademark Complaint Form, or Google IP Portal. Fill in trademark details, attach TM-RG certificate, and request handle transfer to your verified account.</p>
                                                 </div>
                                             </div>
@@ -555,7 +555,7 @@ export default function ReclaimSocialMediaUsernamePage() {
                                             <div className="flex items-start bg-purple-50/50 p-5 rounded-2xl border border-purple-100">
                                                 <span className="w-8 h-8 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">5</span>
                                                 <div>
-                                                    <h3 className="text-base font-bold text-gray-900 mb-1">Invoke IT Rules 2021 with Resident Grievance Officer</h3>
+                                                    <h4 className="text-base font-bold text-gray-900 mb-1">Invoke IT Rules 2021 with Resident Grievance Officer</h4>
                                                     <p className="text-xs sm:text-sm text-gray-700 leading-relaxed m-0">If automated systems stall, send a formal statutory letter to the platform&apos;s designated Resident Grievance Officer in India citing Rule 3(1)(b) and demanding compliance within 36 hours.</p>
                                                 </div>
                                             </div>
@@ -563,7 +563,7 @@ export default function ReclaimSocialMediaUsernamePage() {
                                             <div className="flex items-start bg-indigo-50/50 p-5 rounded-2xl border border-indigo-100">
                                                 <span className="w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">6</span>
                                                 <div>
-                                                    <h3 className="text-base font-bold text-gray-900 mb-1">Enroll in Brand Protection Enterprise Portals</h3>
+                                                    <h4 className="text-base font-bold text-gray-900 mb-1">Enroll in Brand Protection Enterprise Portals</h4>
                                                     <p className="text-xs sm:text-sm text-gray-700 leading-relaxed m-0">Register with Meta Brand Rights Protection and Amazon Brand Registry to automate trademark monitoring and instantly block future spoof handles.</p>
                                                 </div>
                                             </div>
@@ -571,7 +571,7 @@ export default function ReclaimSocialMediaUsernamePage() {
                                             <div className="flex items-start bg-purple-50/50 p-5 rounded-2xl border border-purple-100">
                                                 <span className="w-8 h-8 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">7</span>
                                                 <div>
-                                                    <h3 className="text-base font-bold text-gray-900 mb-1">High Court Commercial Litigation (If Required)</h3>
+                                                    <h4 className="text-base font-bold text-gray-900 mb-1">High Court Commercial Litigation (If Required)</h4>
                                                     <p className="text-xs sm:text-sm text-gray-700 leading-relaxed m-0">In stubborn cases involving bad-faith commercial impersonation or syndicate squatting, file a commercial suit to secure ex-parte ad-interim injunctions ordering immediate handle reallocation.</p>
                                                 </div>
                                             </div>
@@ -580,10 +580,10 @@ export default function ReclaimSocialMediaUsernamePage() {
 
                                     {/* SECTION 8: PLATFORM COMPARISON MATRIX */}
                                     <section id="platform-comparison" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faTable} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Platform Disputing Protocols Comparison
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Evaluate the policy thresholds, processing timelines, and resolution mechanisms across leading digital intermediaries:</p>
 
                                         <div className="overflow-x-auto my-8 not-prose">
@@ -640,10 +640,10 @@ export default function ReclaimSocialMediaUsernamePage() {
 
                                     {/* SECTION 9: HIGH COURT REMEDIES */}
                                     <section id="court-remedies" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faGavel} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             High Court Remedies &amp; John Doe Orders
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">When automated portal complaints fail or when anonymous fraudsters operate multiple coordinated accounts across platforms, direct judicial intervention before the High Court Commercial Division provides swift, decisive relief.</p>
                                         <p className="mb-6">Under<strong>Order 39 Rules 1 &amp; 2 of the Code of Civil Procedure (CPC)</strong>read with<strong>Section 135 of the Trade Marks Act, 1999</strong>, Indian High Courts (such as Delhi High Court in numerous landmark rulings) routinely pass<em>ex-parte ad-interim injunctions</em>against unknown defendants (<strong>John Doe / Ashok Kumar orders</strong>).</p>
                                         <p className="mb-6">Such orders direct social media intermediaries to immediately suspend, block, and reassign infringing handles, disclose the registrant&apos;s IP logs, phone numbers, and KYC details, and freeze connected fraudulent payment gateways. Learn more about emergency judicial relief in our specialized guide on<Link href="/john-doe-ashok-kumar-order-trademark-infringement-india" className="text-[rgb(110,94,147)] hover:underline font-bold">John Doe Ashok Kumar orders in Indian trademark law</Link>and<Link href="/civil-vs-criminal-trademark-infringement-india" className="text-[rgb(110,94,147)] hover:underline font-medium">civil vs criminal trademark enforcement</Link>.</p>
@@ -651,10 +651,10 @@ export default function ReclaimSocialMediaUsernamePage() {
 
                                     {/* SECTION 10: PREEMPTIVE BRAND DEFENSE */}
                                     <section id="preemptive-protection" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faBuildingShield} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Preemptive Brand Defense Checklist
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Proactive asset protection prevents costly handle disputes. Implement these foundational measures before public launch:</p>
 
                                         <div className="space-y-4 my-6 not-prose">
@@ -679,14 +679,14 @@ export default function ReclaimSocialMediaUsernamePage() {
 
                                     {/* SECTION 11: FAQS */}
                                     <section id="faqs" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLightbulb} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Frequently Asked Questions
-                                        </h2>
+                                        </h3>
                                         <div className="space-y-4 not-prose">
                                             {faqs.map((faq, index) => (
                                                 <div key={index} className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                    <h3 className="text-base font-bold text-gray-900 mb-2">{faq.question}</h3>
+                                                    <h4 className="text-base font-bold text-gray-900 mb-2">{faq.question}</h4>
                                                     <p className="text-xs sm:text-sm text-gray-600 leading-relaxed m-0">{faq.answer}</p>
                                                 </div>
                                             ))}
@@ -695,16 +695,16 @@ export default function ReclaimSocialMediaUsernamePage() {
 
                                     {/* SECTION 12: FINAL TAKEAWAY & CTA */}
                                     <section id="final-takeaway" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLock} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Expert Legal Assistance &amp; Recovery
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Reclaiming a squatted social media handle is a time-sensitive legal operation. Allowing squatters or impersonators to hold your brand name diminishes customer trust, risks revenue loss from counterfeit sales, and creates needless brand confusion. With an active Indian trademark certificate and seasoned IP litigators, reclaiming your rightful digital identity is fast, structured, and conclusive.</p>
 
                                         <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#0C002B] via-[#1A0B3B] to-[#2D1254] p-8 sm:p-12 text-white shadow-2xl my-10 not-prose">
                                             <div className="absolute top-0 right-0 -mt-8 -mr-8 h-48 w-48 rounded-full bg-[#7664A0] blur-3xl opacity-30"></div>
                                             <div className="relative z-10 text-center max-w-2xl mx-auto">
-                                                <h3 className="text-2xl sm:text-3xl font-black mb-4 tracking-tight">Reclaim Your Brand Handles Across All Platforms</h3>
+                                                <h4 className="text-2xl sm:text-3xl font-black mb-4 tracking-tight">Reclaim Your Brand Handles Across All Platforms</h4>
                                                 <p className="text-sm sm:text-base text-gray-300 mb-8 leading-relaxed">Don&apos;t let cybersquatters extort your business. Partner with certified IP attorneys to file verified platform takedown reports, serve statutory IT Rule notices, and secure prompt handle reassignments.</p>
                                                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                                                     <Link
@@ -734,7 +734,7 @@ export default function ReclaimSocialMediaUsernamePage() {
                             {/* About Author */}
                             <div className="bg-white p-4 sm:p-5 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center">
                                 <img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-16 h-16 rounded-full mb-2.5 shadow-md object-cover border-2 border-[#6E5E93]/20" />
-                                <h3 className="text-base font-bold text-gray-900 mb-0.5">Rahul Roy</h3>
+                                <h4 className="text-base font-bold text-gray-900 mb-0.5">Rahul Roy</h4>
                                 <p className="text-xs text-[#6E5E93] font-semibold mb-2">Trademark Research Specialist</p>
                                 <p className="text-xs text-gray-600 leading-relaxed m-0">Rahul specializes in digital asset trademark enforcement, social media handle reclamation, IT Intermediary Rules compliance, and High Court IP litigation.</p>
                             </div>
@@ -742,7 +742,7 @@ export default function ReclaimSocialMediaUsernamePage() {
                             {/* Dark CTA Box */}
                             <div className="bg-[#0C002B] p-5 rounded-2xl shadow-xl border border-white/5 text-white relative overflow-hidden group">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-[rgb(110,94,147)] rounded-full blur-[70px] opacity-30 group-hover:opacity-50 transition-opacity"></div>
-                                <h3 className="text-base font-black mb-1.5 relative z-10 leading-tight">Reclaim Your Handle Now</h3>
+                                <h4 className="text-base font-black mb-1.5 relative z-10 leading-tight">Reclaim Your Handle Now</h4>
                                 <p className="text-xs text-white/80 mb-3.5 leading-relaxed relative z-10 font-normal">Is someone squatting or impersonating your registered trademark on Instagram, X, or YouTube? Initiate instant legal recovery.</p>
                                 <Link href="/contact-us" className="block relative z-10">
                                     <button className="w-full bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-2.5 px-4 rounded-xl transition-all shadow-md text-xs uppercase tracking-wider">
@@ -753,7 +753,7 @@ export default function ReclaimSocialMediaUsernamePage() {
 
                             {/* Related Resources */}
                             <div className="bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-100">
-                                <h3 className="text-xs font-black text-gray-400 mb-5 uppercase tracking-[0.25em]">Related Resources</h3>
+                                <h4 className="text-xs font-black text-gray-400 mb-5 uppercase tracking-[0.25em]">Related Resources</h4>
                                 <ul className="space-y-6">
                                     <li><Link href="/domain-name-trademark-dispute-cybersquatting-indrp-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faGlobe} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Domain Cybersquatting</span></Link></li>
                                     <li><Link href="/competitor-bidding-on-my-trademark-google-ads-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faSearch} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Google Ads TM Bidding</span></Link></li>

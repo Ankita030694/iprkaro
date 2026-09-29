@@ -342,17 +342,17 @@ export default function DifferenceBetweenTrademarkAndCopyrightRegistrationPage()
 
                                     {/* SECTION 2: WHAT IS TRADEMARK */}
                                     <section id="what-is-trademark" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faShieldHalved} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             What Is Trademark Registration?
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Under Section 2(1)(zb) of the<Link href="/trademark-registration-india" className="text-[rgb(110,94,147)] hover:underline font-medium">Trade Marks Act, 1999</Link>, a trademark is defined as a visual mark capable of being represented graphically and capable of distinguishing the goods or services of one enterprise from those of others.</p>
                                         <p className="mb-6">Trademarks represent commercial goodwill and market source. They protect words, letters, numerals, device marks (logos), combinations of colors, the shape of goods, packaging (trade dress), slogans, and sound marks. When you obtain a trademark registration certificate from the Trade Marks Registry (CGPDTM), you earn the exclusive statutory right to use the registered trademark symbol (&reg;) across the classes in which your mark is filed.</p>
                                         <div className="bg-gray-50 border border-gray-200 rounded-xl p-6 mb-6">
-                                            <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                            <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                 <FontAwesomeIcon icon={faCheckCircle} className="w-5 h-5 text-green-600 mr-2" />
                                                 Core Examples of Trademarks
-                                            </h3>
+                                            </h4>
                                             <ul className="list-disc list-inside space-y-2 text-gray-700">
                                                 <li><strong>Brand Names & Wordmarks:</strong>&ldquo;IPR Karo&rdquo;, &ldquo;Tata&rdquo;, &ldquo;Infosys&rdquo;.</li>
                                                 <li><strong>Brand Slogans & Taglines:</strong>&ldquo;Just Do It&rdquo;, &ldquo;Connecting People&rdquo;.</li>
@@ -365,17 +365,17 @@ export default function DifferenceBetweenTrademarkAndCopyrightRegistrationPage()
 
                                     {/* SECTION 3: WHAT IS COPYRIGHT */}
                                     <section id="what-is-copyright" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faBook} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             What Is Copyright Registration?
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Governed by the<strong>Copyright Act, 1957</strong>, copyright is a bundle of exclusive legal rights granted to creators of original literary, dramatic, musical, and artistic works, cinematographic films, and sound recordings. Copyright protects the specific tangible expression of an idea, rather than the abstract idea itself.</p>
                                         <p className="mb-6">While copyright protection automatically vests in an author the moment an original work is created and fixed in a tangible medium, official copyright registration with the Copyright Office (Department for Promotion of Industry and Internal Trade) provides an indispensable certificate of registration (Extract from the Register of Copyrights, Form ROC). This certificate acts as prima facie evidence in courts of law under Section 48 of the Copyright Act.</p>
                                         <div className="bg-gray-50 border border-gray-200 rounded-xl p-6 mb-6">
-                                            <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                            <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                 <FontAwesomeIcon icon={faCheckCircle} className="w-5 h-5 text-purple-600 mr-2" />
                                                 Core Examples of Copyrightable Works
-                                            </h3>
+                                            </h4>
                                             <ul className="list-disc list-inside space-y-2 text-gray-700">
                                                 <li><strong>Literary Works:</strong>Books, research papers, marketing whitepapers, articles, and compilations.</li>
                                                 <li><strong>Software Code:</strong>Source code, object code, system scripts, and database architectures.</li>
@@ -388,10 +388,10 @@ export default function DifferenceBetweenTrademarkAndCopyrightRegistrationPage()
 
                                     {/* SECTION 4: DETAILED COMPARISON TABLE */}
                                     <section id="core-differences" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faTable} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Comprehensive Legal Comparison
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">The table below highlights the crucial differences between trademark registration and copyright registration under Indian statutes, regulatory practices, and commercial enforcement frameworks:</p>
 
                                         <div className="overflow-x-auto mb-8 shadow-sm rounded-xl border border-gray-200">
@@ -461,26 +461,26 @@ export default function DifferenceBetweenTrademarkAndCopyrightRegistrationPage()
 
                                     {/* SECTION 5: PROTECTION SCOPE */}
                                     <section id="scope-and-subject" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLayerGroup} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Subject Matter & Protection Scope
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">The scope of legal protection defines what competitors can and cannot do under each framework:</p>
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                                             <div className="bg-purple-50/50 border border-purple-100 rounded-xl p-6">
-                                                <h3 className="text-lg font-bold text-[#6E5E93] mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-[#6E5E93] mb-3 flex items-center">
                                                     <FontAwesomeIcon icon={faShieldHalved} className="w-5 h-5 mr-2" />
                                                     Trademark Scope
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-700 mb-3">Trademark protection operates on a<strong>class-specific principle</strong>using the international Nice Classification system (45 classes). A trademark registered for footwear (Class 25) does not automatically block a third party from using the same word for computer software (Class 9), unless the mark has achieved &ldquo;well-known trademark&rdquo. Status under Section 11(2) of the Act.</p>
                                                 <p className="text-sm text-gray-700">Trademarks prevent competitor confusion, deceptive similarity, and deceptive imitation. You can check classification overlap using our<Link href="/trademark-class-finder" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark class finder</Link>.</p>
                                             </div>
 
                                             <div className="bg-indigo-50/50 border border-indigo-100 rounded-xl p-6">
-                                                <h3 className="text-lg font-bold text-indigo-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-indigo-900 mb-3 flex items-center">
                                                     <FontAwesomeIcon icon={faPalette} className="w-5 h-5 mr-2" />
                                                     Copyright Scope
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-700 mb-3">Copyright protection operates on a<strong>universal, cross-industry basis</strong>. Once your original book, software codebase, or vector illustration is protected under copyright, no one can copy, reproduce, translate, or commercially distribute your creative work in any industry or sector without authorization.</p>
                                                 <p className="text-sm text-gray-700">However, copyright does not protect single words, titles, brand names, or functional business systems. Anyone is free to create another software solving the same problem, provided they write original code.</p>
                                             </div>
@@ -489,22 +489,22 @@ export default function DifferenceBetweenTrademarkAndCopyrightRegistrationPage()
 
                                     {/* SECTION 6: DURATION AND RENEWAL */}
                                     <section id="duration-and-renewal" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faCertificate} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Duration, Renewal & Ownership Rules
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">A major practical difference between trademark and copyright lies in how long rights endure and how ownership is sustained over time:</p>
                                         <div className="space-y-4 mb-8">
                                             <div className="border border-gray-200 rounded-xl p-5 hover:border-[rgb(110,94,147)] transition-colors">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2">Trademark Duration: Indefinitely Renewable</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-2">Trademark Duration: Indefinitely Renewable</h4>
                                                 <p className="text-sm text-gray-700">A registered trademark in India is valid for<strong>10 years</strong>from the application filing date. It can be renewed every 10 years indefinitely by submitting Form TM-R with the statutory renewal fee. Famous marks like Coca-Cola or Tata have maintained trademark exclusivity for over a century through timely renewals. If not renewed, the mark enters an &ldquo;expired&rdquo; status and can be abandoned.</p>
                                             </div>
                                             <div className="border border-gray-200 rounded-xl p-5 hover:border-[rgb(110,94,147)] transition-colors">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2">Copyright Duration: Lifetime + 60 Years</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-2">Copyright Duration: Lifetime + 60 Years</h4>
                                                 <p className="text-sm text-gray-700">For published literary, dramatic, musical, and artistic works, copyright protection lasts for the<strong>entire lifetime of the author plus 60 years</strong>from the beginning of the calendar year following the author&apos;s death. For cinematographic films, sound recordings, photographs, and works published posthumously, the term is 60 years from the date of publication. Once this statutory period lapses, the work enters the public domain and cannot be renewed.</p>
                                             </div>
                                             <div className="border border-gray-200 rounded-xl p-5 hover:border-[rgb(110,94,147)] transition-colors">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2">Work Made for Hire & Ownership Transfer</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-2">Work Made for Hire & Ownership Transfer</h4>
                                                 <p className="text-sm text-gray-700">In copyright law, under Section 17 of the Copyright Act, the author is the first owner unless created in the course of employment under a contract of service. For independent freelancers or agencies designing your company logo or coding software, ownership remains with the contractor unless explicitly assigned in writing under Section 19. Trademarks, on the other hand, are applied for directly in the name of the commercial enterprise or proprietor.</p>
                                             </div>
                                         </div>
@@ -512,16 +512,16 @@ export default function DifferenceBetweenTrademarkAndCopyrightRegistrationPage()
 
                                     {/* SECTION 7: LOGO DUAL PROTECTION & TM-C */}
                                     <section id="dual-protection-logos" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faPalette} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Dual Protection for Logos & TM-C NOC
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">One of the most frequent legal intersections between trademark and copyright occurs when protecting a company logo, brand mascot, or packaging artwork. A stylized logo is simultaneously an<strong>artistic work</strong>and a<strong>commercial brand mark</strong>.</p>
                                         <div className="bg-amber-50 border-l-4 border-amber-500 p-6 rounded-r-xl mb-6">
-                                            <h3 className="text-base font-bold text-amber-900 mb-2 flex items-center">
+                                            <h4 className="text-base font-bold text-amber-900 mb-2 flex items-center">
                                                 <FontAwesomeIcon icon={faInfoCircle} className="w-5 h-5 text-amber-600 mr-2" />
                                                 Section 45 of the Copyright Act: Mandatory Search Certificate
-                                            </h3>
+                                            </h4>
                                             <p className="text-sm text-amber-800 m-0">Under Section 45(1) of the Copyright Act, 1957, if an applicant applies for copyright registration of an artistic work which is used or capable of being used in relation to any goods or services, the application must be accompanied by a<strong>Search Certificate (Form TM-C)</strong>issued by the Registrar of Trade Marks certifying that no identical or deceptively similar trademark has been registered or applied for by another person.</p>
                                         </div>
                                         <p className="mb-6">Why do growing enterprises choose dual protection?</p>
@@ -534,17 +534,17 @@ export default function DifferenceBetweenTrademarkAndCopyrightRegistrationPage()
 
                                     {/* SECTION 8: REGISTRATION PROCESS */}
                                     <section id="registration-workflow" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faListUl} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Registration Process & Timelines
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Both registration procedures are handled electronically through government web portals, but their statutory scrutiny steps differ significantly:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                                             <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-4 pb-2 border-b">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-4 pb-2 border-b">
                                                     Trademark Registration Flow
-                                                </h3>
+                                                </h4>
                                                 <ol className="list-decimal list-inside space-y-3 text-sm text-gray-700">
                                                     <li><strong>Pre-Filing Clearance Search:</strong>Check the IP India portal to avoid<Link href="/why-search-trademark-before-registration" className="text-[rgb(110,94,147)] hover:underline font-medium">Section 11 similarity conflicts</Link>.</li>
                                                     <li><strong>Application Filing (Form TM-A):</strong>File online to immediately receive the trademark application number and use &trade;.</li>
@@ -556,9 +556,9 @@ export default function DifferenceBetweenTrademarkAndCopyrightRegistrationPage()
                                             </div>
 
                                             <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-4 pb-2 border-b">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-4 pb-2 border-b">
                                                     Copyright Registration Flow
-                                                </h3>
+                                                </h4>
                                                 <ol className="list-decimal list-inside space-y-3 text-sm text-gray-700">
                                                     <li><strong>Work Preparation:</strong>Prepare manuscript, source code, or artwork copies along with author NOCs.</li>
                                                     <li><strong>TM-C Certificate (If Commercial Art):</strong>Obtain Search Certificate from Trade Marks Registry under Section 45.</li>
@@ -573,18 +573,18 @@ export default function DifferenceBetweenTrademarkAndCopyrightRegistrationPage()
 
                                     {/* SECTION 9: INFRINGEMENT AND REMEDIES */}
                                     <section id="infringement-remedies" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faGavel} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Infringement Penalties & Remedies
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">When a competitor unlawfully uses your intellectual property, both statutes empower you to seek stringent civil and criminal remedies through District Courts and Commercial Courts in India:</p>
                                         <div className="space-y-4 mb-8">
                                             <div className="bg-gray-50 border border-gray-200 rounded-xl p-5">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2">Civil Injunctions & Damages</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-2">Civil Injunctions & Damages</h4>
                                                 <p className="text-sm text-gray-700">Under both the Trade Marks Act (Section 135) and Copyright Act (Section 55), the owner can file a civil suit for an interim injunction (stay order), permanent injunction, delivery up of infringing goods, and rendition of profits or punitive damages. Learn more about<Link href="/civil-vs-criminal-trademark-infringement-india" className="text-[rgb(110,94,147)] hover:underline font-medium">civil vs criminal infringement remedies in India</Link>.</p>
                                             </div>
                                             <div className="bg-gray-50 border border-gray-200 rounded-xl p-5">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2">Criminal Sanctions & Police Raids</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-2">Criminal Sanctions & Police Raids</h4>
                                                 <p className="text-sm text-gray-700">Both statutes contain powerful criminal provisions. Under Section 103/104 of the Trade Marks Act and Section 63/64 of the Copyright Act, intentional infringement is a cognizable offense punishable with imprisonment for a term not less than<strong>6 months up to 3 years</strong>, along with fines ranging from ₹50,000 to ₹2,00,000. Police officers are empowered to conduct search and seizure operations without a prior court warrant upon obtaining the Registrar&apos;s opinion.</p>
                                             </div>
                                         </div>
@@ -592,10 +592,10 @@ export default function DifferenceBetweenTrademarkAndCopyrightRegistrationPage()
 
                                     {/* SECTION 10: WHICH DO YOU NEED */}
                                     <section id="decision-guide" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLightbulb} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Which Registration Does Your Business Need?
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Use this decision framework to determine which registration protects each asset in your enterprise:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -603,7 +603,7 @@ export default function DifferenceBetweenTrademarkAndCopyrightRegistrationPage()
                                                 <div className="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center mb-4 text-[#6E5E93]">
                                                     <FontAwesomeIcon icon={faShieldHalved} className="w-5 h-5" />
                                                 </div>
-                                                <h3 className="text-lg font-bold text-gray-900 mb-2">Register a Trademark</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-2">Register a Trademark</h4>
                                                 <p className="text-xs text-gray-600 mb-4 font-medium uppercase tracking-wider">Commercial Identifiers</p>
                                                 <ul className="text-sm text-gray-700 space-y-2 list-disc list-inside">
                                                     <li>Company name & trading style</li>
@@ -618,7 +618,7 @@ export default function DifferenceBetweenTrademarkAndCopyrightRegistrationPage()
                                                 <div className="w-10 h-10 bg-indigo-100 rounded-xl flex items-center justify-center mb-4 text-indigo-700">
                                                     <FontAwesomeIcon icon={faBook} className="w-5 h-5" />
                                                 </div>
-                                                <h3 className="text-lg font-bold text-gray-900 mb-2">Register a Copyright</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-2">Register a Copyright</h4>
                                                 <p className="text-xs text-gray-600 mb-4 font-medium uppercase tracking-wider">Creative Content</p>
                                                 <ul className="text-sm text-gray-700 space-y-2 list-disc list-inside">
                                                     <li>Software source code & APIs</li>
@@ -633,7 +633,7 @@ export default function DifferenceBetweenTrademarkAndCopyrightRegistrationPage()
                                                 <div className="w-10 h-10 bg-amber-100 rounded-xl flex items-center justify-center mb-4 text-amber-700">
                                                     <FontAwesomeIcon icon={faLayerGroup} className="w-5 h-5" />
                                                 </div>
-                                                <h3 className="text-lg font-bold text-gray-900 mb-2">Register Both</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-2">Register Both</h4>
                                                 <p className="text-xs text-gray-600 mb-4 font-medium uppercase tracking-wider">Hybrid Visual Assets</p>
                                                 <ul className="text-sm text-gray-700 space-y-2 list-disc list-inside">
                                                     <li>Stylized corporate logos</li>
@@ -648,10 +648,10 @@ export default function DifferenceBetweenTrademarkAndCopyrightRegistrationPage()
 
                                     {/* SECTION 11: FILING CHECKLIST */}
                                     <section id="filing-checklist" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faCheckCircle} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             IP Registration Decision Checklist
-                                        </h2>
+                                        </h3>
                                         <ul className="list-none space-y-4 mb-8">
                                             <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Asset Classification:</strong>Categorized each asset as a commercial identifier (brand name, slogan) or creative work (content, code, art).</span></li>
                                             <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Pre-Filing Trademark Clearance:</strong>Executed an exact, phonetic, and similarity search on the IP India registry across target Nice classes.</span></li>
@@ -665,16 +665,16 @@ export default function DifferenceBetweenTrademarkAndCopyrightRegistrationPage()
 
                                     {/* SECTION 12: FAQS */}
                                     <section id="faqs" className="scroll-mt-32 pt-16">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-8 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-8 flex items-center">
                                             <FontAwesomeIcon icon={faLightbulb} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Frequently Asked Questions
-                                        </h2>
+                                        </h3>
                                         <div className="space-y-6">
                                             {faqs.map((faq, index) => (
                                                 <div key={index} className="bg-white border border-gray-100 rounded-3xl p-8 shadow-sm hover:shadow-md transition-shadow">
-                                                    <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-4 flex items-start leading-snug">
+                                                    <h4 className="text-lg md:text-xl font-bold text-gray-900 mb-4 flex items-start leading-snug">
                                                         <span className="text-[rgb(110,94,147)] mr-4 font-black text-2xl">Q.</span>{faq.question}
-                                                    </h3>
+                                                    </h4>
                                                     <p className="text-gray-600 pl-10 m-0">{faq.answer}</p>
                                                 </div>
                                             ))}
@@ -683,10 +683,10 @@ export default function DifferenceBetweenTrademarkAndCopyrightRegistrationPage()
 
                                     {/* SECTION 13: FINAL TAKEAWAY */}
                                     <section id="final-takeaway" className="scroll-mt-32 pt-16">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLightbulb} className="w-8 h-8 mr-3 text-yellow-500" />
                                             Final Takeaway & Legal Advice
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Choosing between trademark registration and copyright registration is never an either/or dilemma for growing companies. A robust intellectual property portfolio deploys both instruments strategically: trademark registration to monopolize brand names, slogans, and customer loyalty in commerce, alongside copyright registration to prevent unauthorized reproduction of software code, marketing literature, and artistic designs.</p>
                                         <p className="mb-6">For artistic logos and mascots, securing dual protection under both the Trade Marks Act, 1999 and the Copyright Act, 1957 provides airtight legal defense against copycats across India and international jurisdictions. To consult official government records or file applications, visit the official<a href="https://ipindia.gov.in/" target="_blank" rel="noopener noreferrer" className="text-[rgb(110,94,147)] hover:underline font-medium">IP India Portal</a>and the Copyright Office portal. For professional clearance, TM-C certificates, and end-to-end filing, consult the certified IP attorneys at IPR Karo.</p>
                                     </section>
@@ -703,9 +703,9 @@ export default function DifferenceBetweenTrademarkAndCopyrightRegistrationPage()
                                                 </div>
 
                                                 {/* Heading */}
-                                                <h3 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl mb-4">
+                                                <h4 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl mb-4">
                                                     Protect Your Brand and Creative Assets Today
-                                                </h3>
+                                                </h4>
 
                                                 {/* Description */}
                                                 <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">Consult our certified IP attorneys to determine the right combination of trademark and copyright protection for your business names, software, and logos in India.</p>
@@ -743,7 +743,7 @@ export default function DifferenceBetweenTrademarkAndCopyrightRegistrationPage()
                             {/* About Author */}
                             <div className="bg-white p-6 rounded-[2.5rem] shadow-sm border border-gray-100 flex flex-col items-center text-center">
                                 <img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-24 h-24 rounded-full mb-4 shadow-md object-cover" />
-                                <h3 className="text-xl font-bold text-gray-900 mb-2">Rahul Roy</h3>
+                                <h4 className="text-xl font-bold text-gray-900 mb-2">Rahul Roy</h4>
                                 <p className="text-sm text-gray-600 mb-4 font-medium">Trademark Research Specialist</p>
                                 <p className="text-sm text-gray-700 leading-relaxed mb-6">Rahul specializes in intellectual property strategy, trademark clearance, and dual brand-copyright asset management for startups and expanding enterprises across India.</p>
                             </div>
@@ -751,7 +751,7 @@ export default function DifferenceBetweenTrademarkAndCopyrightRegistrationPage()
                             {/* Card 1 */}
                             <div className="bg-[#0C002B] p-8 rounded-[2.5rem] shadow-2xl border border-white/5 text-white relative overflow-hidden group">
                                 <div className="absolute top-0 right-0 w-40 h-40 bg-[rgb(110,94,147)] rounded-full blur-[100px] opacity-30 group-hover:opacity-50 transition-opacity"></div>
-                                <h3 className="text-xl font-black mb-4 relative z-10 leading-tight">Check Your Trademark</h3>
+                                <h4 className="text-xl font-black mb-4 relative z-10 leading-tight">Check Your Trademark</h4>
                                 <p className="text-sm opacity-70 mb-8 leading-relaxed relative z-10 font-medium">Use our intelligent tools to analyze potential brand conflicts before filing your application.</p>
                                 <Link href="/trademark-search" className="block relative z-10">
                                     <button className="w-full bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-3.5 px-4 rounded-xl transition-all shadow-xl text-xs uppercase tracking-wider">
@@ -762,7 +762,7 @@ export default function DifferenceBetweenTrademarkAndCopyrightRegistrationPage()
 
                             {/* Card 2 */}
                             <div className="bg-gray-50 p-10 rounded-[2.5rem] shadow-sm border border-gray-100">
-                                <h3 className="text-sm font-black text-gray-400 mb-8 uppercase tracking-[0.3em]">Related Resources</h3>
+                                <h4 className="text-sm font-black text-gray-400 mb-8 uppercase tracking-[0.3em]">Related Resources</h4>
                                 <ul className="space-y-6">
                                     <li><Link href="/trademark-registration-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faSearch} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Registration Services</span></Link></li>
                                     <li><Link href="/trademark-class-finder" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faListUl} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Class Guide</span></Link></li>

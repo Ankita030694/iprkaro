@@ -340,7 +340,7 @@ export default function SingleVsMultiClassTrademarkPage() {
                                                 <div className="w-10 h-10 rounded-xl bg-indigo-100 text-[#6E5E93] flex items-center justify-center font-bold text-base mb-3">
                                                     <FontAwesomeIcon icon={faLayerGroup} className="w-5 h-5" />
                                                 </div>
-                                                <h3 className="text-base font-bold text-gray-900 mb-2">Single-Class Application</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-2">Single-Class Application</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">A dedicated application filed for<strong>one specific Nice class</strong>. Each filing receives its own unique 7-digit trademark application number, independent examination report, separate journal publication, and standalone registration certificate.</p>
                                             </div>
 
@@ -348,7 +348,7 @@ export default function SingleVsMultiClassTrademarkPage() {
                                                 <div className="w-10 h-10 rounded-xl bg-purple-100 text-[#6E5E93] flex items-center justify-center font-bold text-base mb-3">
                                                     <FontAwesomeIcon icon={faDiagramProject} className="w-5 h-5" />
                                                 </div>
-                                                <h3 className="text-base font-bold text-gray-900 mb-2">Multi-Class Application</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-2">Multi-Class Application</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">A single consolidated application covering<strong>two or more Nice classes</strong>under a single 7-digit trademark application number. All classes are examined collectively, advertised together in the Trade Marks Journal, and granted a single master certificate.</p>
                                             </div>
                                         </div>
@@ -356,10 +356,10 @@ export default function SingleVsMultiClassTrademarkPage() {
 
                                     {/* SECTION 2: FEE MYTH */}
                                     <section id="fee-myth" className="scroll-mt-32">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faCoins} className="w-8 h-5 mr-3 text-[rgb(110,94,147)]" />
                                             <span>The Government Fee Myth Debunked</span>
-                                        </h2>
+                                        </h3>
 
                                         <p className="text-base leading-relaxed mb-6">The single most pervasive misconception among startup founders, D2C entrepreneurs, and business owners in India is the belief that<em>"filing a multi-class trademark is cheaper than filing individual applications."</em></p>
 
@@ -367,7 +367,7 @@ export default function SingleVsMultiClassTrademarkPage() {
                                             <div className="flex items-start space-x-3">
                                                 <FontAwesomeIcon icon={faExclamationTriangle} className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" />
                                                 <div>
-                                                    <h3 className="text-sm font-bold text-amber-900 m-0">Statutory Fact Under Trade Marks Rules, 2017</h3>
+                                                    <h4 className="text-sm font-bold text-amber-900 m-0">Statutory Fact Under Trade Marks Rules, 2017</h4>
                                                     <p className="text-xs text-amber-800 m-0 mt-1 leading-relaxed">The official government filing fee under the First Schedule of the Trade Marks Rules, 2017 is charged<strong>strictly per class</strong>. There is<strong>ZERO statutory discount</strong>or government fee waiver for combining multiple classes into one Form TM-A.</p>
                                                 </div>
                                             </div>
@@ -417,10 +417,10 @@ export default function SingleVsMultiClassTrademarkPage() {
 
                                     {/* SECTION 3: COMPARISON MATRIX */}
                                     <section id="comparison-matrix" className="scroll-mt-32">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faTable} className="w-8 h-5 mr-3 text-[rgb(110,94,147)]" />
                                             <span>Single Class vs Multi-Class Comparison</span>
-                                        </h2>
+                                        </h3>
 
                                         <p className="text-base leading-relaxed mb-6">Evaluating the procedural, operational, and litigation differences between single-class and multi-class applications provides crucial clarity for long-term brand strategy:</p>
 
@@ -491,18 +491,18 @@ export default function SingleVsMultiClassTrademarkPage() {
 
                                     {/* SECTION 4: THE DOMINO EFFECT */}
                                     <section id="domino-effect" className="scroll-mt-32">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faExclamationTriangle} className="w-8 h-5 mr-3 text-[rgb(110,94,147)]" />
                                             <span>The Domino Effect: Multi-Class Risks</span>
-                                        </h2>
+                                        </h3>
 
                                         <p className="text-base leading-relaxed mb-6">The legal phenomenon known as the<strong>"Domino Effect"</strong>or<strong>"Procedural Contagion"</strong>represents the single greatest vulnerability of multi-class trademark applications under the Trade Marks Act, 1999.</p>
 
                                         <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 not-prose mb-8">
-                                            <h3 className="text-base font-bold text-gray-900 mb-4 flex items-center">
+                                            <h4 className="text-base font-bold text-gray-900 mb-4 flex items-center">
                                                 <FontAwesomeIcon icon={faShieldHalved} className="w-4 h-4 text-[#6E5E93] mr-2" />
                                                 <span>Real-World Scenario: The D2C Startup Dilemma</span>
-                                            </h3>
+                                            </h4>
                                             <p className="text-sm text-gray-600 leading-relaxed mb-4">Imagine an omnichannel fashion brand named<strong>"VELVET OAK"</strong>filing a multi-class application covering three classes:</p>
                                             <ul className="space-y-2 text-xs text-gray-700 mb-4">
                                                 <li className="flex items-center"><span className="w-2 h-2 rounded-full bg-[#6E5E93] mr-2"></span><strong>Class 25:</strong>Ready-made clothing, footwear, and headgear.</li>
@@ -520,7 +520,7 @@ export default function SingleVsMultiClassTrademarkPage() {
                                                 <div className="w-10 h-10 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center font-bold text-base mb-3">
                                                     <FontAwesomeIcon icon={faGavel} className="w-5 h-5" />
                                                 </div>
-                                                <h3 className="text-base font-bold text-gray-900 mb-2">Opposition Deadlock (Section 21)</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-2">Opposition Deadlock (Section 21)</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">If a competitor opposes your mark in just one product class after Trade Marks Journal publication, the opposition proceedings halt certificate issuance for every uncontested service class in that filing.</p>
                                             </div>
 
@@ -528,7 +528,7 @@ export default function SingleVsMultiClassTrademarkPage() {
                                                 <div className="w-10 h-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center font-bold text-base mb-3">
                                                     <FontAwesomeIcon icon={faClock} className="w-5 h-5" />
                                                 </div>
-                                                <h3 className="text-base font-bold text-gray-900 mb-2">Commercial Stagnation</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-2">Commercial Stagnation</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Without registered certificates for your clean classes, your business cannot issue formal legal notices, enforce rights against copycats, or license specific verticals to franchisees.</p>
                                             </div>
                                         </div>
@@ -536,17 +536,17 @@ export default function SingleVsMultiClassTrademarkPage() {
 
                                     {/* SECTION 5: SECTION 22 DIVISION */}
                                     <section id="division-remedy" className="scroll-mt-32">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faCodeBranch} className="w-8 h-5 mr-3 text-[rgb(110,94,147)]" />
                                             <span>Section 22: Dividing an Application</span>
-                                        </h2>
+                                        </h3>
 
                                         <p className="text-base leading-relaxed mb-6">When a multi-class application becomes stalled by an objection or opposition in a single class, the Trade Marks Act provides a statutory legal escape route:<strong>Division of Application</strong>.</p>
 
                                         <p className="text-base leading-relaxed mb-6">Under<strong>Section 22 of the Trade Marks Act, 1999</strong>read with<strong>Rule 102 of the Trade Marks Rules, 2017</strong>, an applicant can file a formal interlocutory request on<strong>Form TM-M</strong>to divide the initial multi-class application into two or more separate divisional applications.</p>
 
                                         <div className="bg-gradient-to-r from-purple-50 via-indigo-50 to-white border border-purple-100 rounded-2xl p-6 not-prose mb-8">
-                                            <h3 className="text-base font-bold text-gray-900 mb-3">The Hidden Costs of Section 22 Division</h3>
+                                            <h4 className="text-base font-bold text-gray-900 mb-3">The Hidden Costs of Section 22 Division</h4>
                                             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
                                                 <div className="bg-white p-4 rounded-xl border border-purple-100 shadow-sm">
                                                     <p className="font-bold text-gray-900 mb-1">Additional Govt Fees</p>
@@ -568,20 +568,20 @@ export default function SingleVsMultiClassTrademarkPage() {
 
                                     {/* SECTION 6: SINGLE CLASS PROS & CONS */}
                                     <section id="single-class-pros-cons" className="scroll-mt-32">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faShieldHalved} className="w-8 h-5 mr-3 text-[rgb(110,94,147)]" />
                                             <span>Pros & Cons of Single Class Filing</span>
-                                        </h2>
+                                        </h3>
 
                                         <p className="text-base leading-relaxed mb-6">Filing individual, standalone trademark applications for each relevant Nice class is the gold-standard recommendation of experienced IP litigators across India. Here is a comprehensive breakdown of its merits and drawbacks:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 not-prose mb-8">
                                             {/* PROS */}
                                             <div className="bg-emerald-50/50 border border-emerald-200 rounded-2xl p-6">
-                                                <h3 className="text-base font-bold text-emerald-900 mb-4 flex items-center">
+                                                <h4 className="text-base font-bold text-emerald-900 mb-4 flex items-center">
                                                     <FontAwesomeIcon icon={faCheckCircle} className="w-5 h-5 text-emerald-600 mr-2" />
                                                     <span>Advantages (Pros)</span>
-                                                </h3>
+                                                </h4>
                                                 <ul className="space-y-3 text-xs text-emerald-950">
                                                     <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-3.5 h-3.5 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" /><span><strong>Zero Contagion Risk:</strong>An objection in Class 25 has zero legal effect on Class 9 or Class 35.</span></li>
                                                     <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-3.5 h-3.5 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" /><span><strong>Rapid Registration:</strong>Clean, uncontested classes receive registration certificates in as little as 6–8 months.</span></li>
@@ -593,10 +593,10 @@ export default function SingleVsMultiClassTrademarkPage() {
 
                                             {/* CONS */}
                                             <div className="bg-rose-50/50 border border-rose-200 rounded-2xl p-6">
-                                                <h3 className="text-base font-bold text-rose-900 mb-4 flex items-center">
+                                                <h4 className="text-base font-bold text-rose-900 mb-4 flex items-center">
                                                     <FontAwesomeIcon icon={faExclamationTriangle} className="w-5 h-5 text-rose-600 mr-2" />
                                                     <span>Disadvantages (Cons)</span>
-                                                </h3>
+                                                </h4>
                                                 <ul className="space-y-3 text-xs text-rose-950">
                                                     <li className="flex items-start"><span className="w-3.5 h-3.5 rounded-full bg-rose-200 text-rose-700 flex items-center justify-center text-[10px] font-bold mr-2 mt-0.5 flex-shrink-0">✕</span><span><strong>Multiple Numbers to Track:</strong>Requires managing separate 7-digit application numbers and diary entries.</span></li>
                                                     <li className="flex items-start"><span className="w-3.5 h-3.5 rounded-full bg-rose-200 text-rose-700 flex items-center justify-center text-[10px] font-bold mr-2 mt-0.5 flex-shrink-0">✕</span><span><strong>Multiple Certificates:</strong>Results in separate physical/digital registration certificates for corporate records.</span></li>
@@ -608,20 +608,20 @@ export default function SingleVsMultiClassTrademarkPage() {
 
                                     {/* SECTION 7: MULTI-CLASS PROS & CONS */}
                                     <section id="multi-class-pros-cons" className="scroll-mt-32">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faDiagramProject} className="w-8 h-5 mr-3 text-[rgb(110,94,147)]" />
                                             <span>Pros & Cons of Multi-Class Filing</span>
-                                        </h2>
+                                        </h3>
 
                                         <p className="text-base leading-relaxed mb-6">Multi-class applications serve a specific purpose for certain enterprise brand owners. Understanding when this structure is advantageous—and when it poses severe risks—is essential:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 not-prose mb-8">
                                             {/* PROS */}
                                             <div className="bg-indigo-50/50 border border-indigo-200 rounded-2xl p-6">
-                                                <h3 className="text-base font-bold text-indigo-900 mb-4 flex items-center">
+                                                <h4 className="text-base font-bold text-indigo-900 mb-4 flex items-center">
                                                     <FontAwesomeIcon icon={faCheckCircle} className="w-5 h-5 text-indigo-600 mr-2" />
                                                     <span>Advantages (Pros)</span>
-                                                </h3>
+                                                </h4>
                                                 <ul className="space-y-3 text-xs text-indigo-950">
                                                     <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-3.5 h-3.5 text-indigo-600 mr-2 mt-0.5 flex-shrink-0" /><span><strong>Unified Portfolio Tracking:</strong>Single 7-digit trademark application number across all registered classes.</span></li>
                                                     <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-3.5 h-3.5 text-indigo-600 mr-2 mt-0.5 flex-shrink-0" /><span><strong>Single Registration Certificate:</strong>One master certificate enumerating all protected goods and services.</span></li>
@@ -632,10 +632,10 @@ export default function SingleVsMultiClassTrademarkPage() {
 
                                             {/* CONS */}
                                             <div className="bg-rose-50/50 border border-rose-200 rounded-2xl p-6">
-                                                <h3 className="text-base font-bold text-rose-900 mb-4 flex items-center">
+                                                <h4 className="text-base font-bold text-rose-900 mb-4 flex items-center">
                                                     <FontAwesomeIcon icon={faExclamationTriangle} className="w-5 h-5 text-rose-600 mr-2" />
                                                     <span>Disadvantages (Cons)</span>
-                                                </h3>
+                                                </h4>
                                                 <ul className="space-y-3 text-xs text-rose-950">
                                                     <li className="flex items-start"><span className="w-3.5 h-3.5 rounded-full bg-rose-200 text-rose-700 flex items-center justify-center text-[10px] font-bold mr-2 mt-0.5 flex-shrink-0">✕</span><span><strong>All-or-Nothing Delay:</strong>One citation or opposition halts certificate issuance for every single class.</span></li>
                                                     <li className="flex items-start"><span className="w-3.5 h-3.5 rounded-full bg-rose-200 text-rose-700 flex items-center justify-center text-[10px] font-bold mr-2 mt-0.5 flex-shrink-0">✕</span><span><strong>Zero Govt Fee Discount:</strong>You pay the exact same ₹4,500/₹9,000 per class statutory rate.</span></li>
@@ -648,10 +648,10 @@ export default function SingleVsMultiClassTrademarkPage() {
 
                                     {/* SECTION 8: DECISION MATRIX */}
                                     <section id="decision-matrix" className="scroll-mt-32">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLightbulb} className="w-8 h-5 mr-3 text-[rgb(110,94,147)]" />
                                             <span>Strategic Decision Framework</span>
-                                        </h2>
+                                        </h3>
 
                                         <p className="text-base leading-relaxed mb-6">To determine whether your enterprise should file single-class or multi-class applications on Form TM-A, apply this practical decision framework based on your business profile:</p>
 
@@ -661,7 +661,7 @@ export default function SingleVsMultiClassTrademarkPage() {
                                                     1
                                                 </div>
                                                 <div>
-                                                    <h3 className="text-sm font-bold text-gray-900 mb-1">Early-Stage Startups & D2C Brands &rarr; File Single Class</h3>
+                                                    <h4 className="text-sm font-bold text-gray-900 mb-1">Early-Stage Startups & D2C Brands &rarr; File Single Class</h4>
                                                     <p className="text-xs text-gray-600 leading-relaxed m-0">If you sell across products (e.g. Clothing in Class 25) and services (e.g. E-commerce in Class 35), file<strong>separate single-class applications</strong>. Getting your Class 35 registration quickly allows you to enroll in Amazon Brand Registry, protect your domain, and secure investor funding without waiting for Class 25 clearance.</p>
                                                 </div>
                                             </div>
@@ -671,7 +671,7 @@ export default function SingleVsMultiClassTrademarkPage() {
                                                     2
                                                 </div>
                                                 <div>
-                                                    <h3 className="text-sm font-bold text-gray-900 mb-1">Different Commercial Launch Dates &rarr; File Single Class</h3>
+                                                    <h4 className="text-sm font-bold text-gray-900 mb-1">Different Commercial Launch Dates &rarr; File Single Class</h4>
                                                     <p className="text-xs text-gray-600 leading-relaxed m-0">If you began selling software in 2021 (Class 9) but launched consulting services in 2024 (Class 42), separate filings enable you to file precise<Link href="/trademark-user-affidavit-format-and-rules-india" className="text-[#6E5E93] font-bold hover:underline">User Affidavits (Rule 25)</Link>with clear, unclouded documentary proof for each class.</p>
                                                 </div>
                                             </div>
@@ -681,7 +681,7 @@ export default function SingleVsMultiClassTrademarkPage() {
                                                     3
                                                 </div>
                                                 <div>
-                                                    <h3 className="text-sm font-bold text-gray-900 mb-1">Conglomerates with Coined House Marks &rarr; File Multi-Class</h3>
+                                                    <h4 className="text-sm font-bold text-gray-900 mb-1">Conglomerates with Coined House Marks &rarr; File Multi-Class</h4>
                                                     <p className="text-xs text-gray-600 leading-relaxed m-0">Large corporate entities registering invented, highly distinctive coined words (e.g., "KODAK", "INFOSYS") across coordinated, non-contentious goods and services can leverage multi-class filings to minimize corporate docketing and manage a single master certificate.</p>
                                                 </div>
                                             </div>
@@ -691,7 +691,7 @@ export default function SingleVsMultiClassTrademarkPage() {
                                                     4
                                                 </div>
                                                 <div>
-                                                    <h3 className="text-sm font-bold text-gray-900 mb-1">Businesses Planning Future Spin-Offs or M&A &rarr; File Single Class</h3>
+                                                    <h4 className="text-sm font-bold text-gray-900 mb-1">Businesses Planning Future Spin-Offs or M&A &rarr; File Single Class</h4>
                                                     <p className="text-xs text-gray-600 leading-relaxed m-0">If you plan to sell one product line to an acquirer or raise vertical-specific venture funding, holding standalone single-class trademark certificates allows instantaneous assignment on Form TM-P without expensive registry division.</p>
                                                 </div>
                                             </div>
@@ -700,10 +700,10 @@ export default function SingleVsMultiClassTrademarkPage() {
 
                                     {/* SECTION 9: FAQS */}
                                     <section id="faqs" className="scroll-mt-32">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLightbulb} className="w-8 h-5 mr-3 text-[rgb(110,94,147)]" />
                                             <span>Frequently Asked Questions</span>
-                                        </h2>
+                                        </h3>
 
                                         <div className="space-y-4 not-prose">
                                             {faqs.map((faq, index) => (
@@ -727,10 +727,10 @@ export default function SingleVsMultiClassTrademarkPage() {
 
                                     {/* SECTION 10: STRATEGIC TAKEAWAY & BOTTOM CTA */}
                                     <section id="final-takeaway" className="scroll-mt-32">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faRocket} className="w-8 h-5 mr-3 text-[rgb(110,94,147)]" />
                                             <span>Strategic Advice & Action Plan</span>
-                                        </h2>
+                                        </h3>
 
                                         <p className="text-base leading-relaxed mb-6">Protecting your brand across multiple business categories is essential for preventing competitor encroachment and securing market dominance. However, combining multiple classes into a single application creates severe legal vulnerabilities with zero government fee savings. For the vast majority of Indian businesses,<strong>filing separate single-class applications provides maximum legal protection, swift registration timelines, and uncompromised commercial agility</strong>.</p>
 
@@ -745,9 +745,9 @@ export default function SingleVsMultiClassTrademarkPage() {
                                                     </span>
                                                 </div>
 
-                                                <h3 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl mb-4">
+                                                <h4 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl mb-4">
                                                     Architect Your Multi-Class Brand Defense
-                                                </h3>
+                                                </h4>
 
                                                 <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">Get comprehensive clearance searches across all 45 Nice classes, strategic Form TM-A classification, and end-to-end IP attorney representation with zero compliance errors.</p>
 
@@ -779,7 +779,7 @@ export default function SingleVsMultiClassTrademarkPage() {
                             {/* About Author */}
                             <div className="bg-white p-6 rounded-[2.5rem] shadow-sm border border-gray-100 flex flex-col items-center text-center">
                                 <img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-24 h-24 rounded-full mb-4 shadow-md object-cover" />
-                                <h3 className="text-xl font-bold text-gray-900 mb-2">Rahul Roy</h3>
+                                <h4 className="text-xl font-bold text-gray-900 mb-2">Rahul Roy</h4>
                                 <p className="text-sm text-gray-600 mb-4 font-medium">Trademark Research Specialist</p>
                                 <p className="text-sm text-gray-700 leading-relaxed mb-6">Rahul specializes in multi-class trademark portfolio architectures, relative grounds litigation defense under Section 11, and application division proceedings under Section 22 of the Trade Marks Act, 1999.</p>
                             </div>
@@ -787,7 +787,7 @@ export default function SingleVsMultiClassTrademarkPage() {
                             {/* Dark CTA Box */}
                             <div className="bg-[#0C002B] p-8 rounded-[2.5rem] shadow-2xl border border-white/5 text-white relative overflow-hidden group">
                                 <div className="absolute top-0 right-0 w-40 h-40 bg-[rgb(110,94,147)] rounded-full blur-[100px] opacity-30 group-hover:opacity-50 transition-opacity"></div>
-                                <h3 className="text-xl font-black mb-4 relative z-10 leading-tight">Multi-Class TM Strategy</h3>
+                                <h4 className="text-xl font-black mb-4 relative z-10 leading-tight">Multi-Class TM Strategy</h4>
                                 <p className="text-sm opacity-70 mb-8 leading-relaxed relative z-10 font-medium">Protect your brand across multiple classes without triggering Section 11 domino delays.</p>
                                 <Link href="/free-ai-powered-trademark-search" className="block relative z-10">
                                     <button className="w-full bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-3.5 px-4 rounded-xl transition-all shadow-xl text-xs uppercase tracking-wider">
@@ -798,7 +798,7 @@ export default function SingleVsMultiClassTrademarkPage() {
 
                             {/* Related Resources */}
                             <div className="bg-gray-50 p-10 rounded-[2.5rem] shadow-sm border border-gray-100">
-                                <h3 className="text-sm font-black text-gray-400 mb-8 uppercase tracking-[0.3em]">Related Resources</h3>
+                                <h4 className="text-sm font-black text-gray-400 mb-8 uppercase tracking-[0.3em]">Related Resources</h4>
                                 <ul className="space-y-6">
                                     <li><Link href="/trademark-class-finder" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faTable} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Class Finder</span></Link></li>
                                     <li><Link href="/trademark-fee-concession-msme-udyam-startup-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faBuilding} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">50% MSME Discount</span></Link></li>

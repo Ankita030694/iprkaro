@@ -418,7 +418,7 @@ export default function AboutClient() {
       {/* Our Story Timeline Section */}
       <div className="w-full py-7 sm:py-12 relative bg-white">
         <div className="text-center mb-6 sm:mb-10 px-4">
-          <h3
+          <h2
             className="text-3xl sm:text-4xl lg:text-[42px] font-bold"
             style={{
               color: '#0C002B',
@@ -428,7 +428,7 @@ export default function AboutClient() {
             }}
           >
             Our Story: From Inception to Ecosystem
-          </h3>
+          </h2>
           <p className="text-gray-500 text-sm sm:text-base max-w-2xl mx-auto mt-2">
             How a commitment to democratizing Indian intellectual property transformed into a national LegalTech engine.
           </p>
@@ -510,9 +510,9 @@ export default function AboutClient() {
                 <span className="text-xs font-bold text-[#1952C7] uppercase tracking-wider bg-blue-50 px-2.5 py-1 rounded-full border border-blue-200/60">
                   PHASE 01 • INCEPTION
                 </span>
-                <h4 className="text-3xl font-extrabold text-[#0C002B] mt-1" style={{ fontFamily: 'Aileron' }}>
+                <h3 className="text-3xl font-extrabold text-[#0C002B] mt-1" style={{ fontFamily: 'Aileron' }}>
                   2019
-                </h4>
+                </h3>
                 <p className="text-xs text-gray-500 font-medium mt-1">Foundation & LegalTech Blueprint</p>
               </div>
 
@@ -522,9 +522,9 @@ export default function AboutClient() {
               {/* Card (Right) */}
               <div className="w-1/2 pl-12">
                 <div className="p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300">
-                  <h5 className="text-xl font-bold text-[#0C002B] mb-2" style={{ fontFamily: 'Aileron' }}>
+                  <h4 className="text-xl font-bold text-[#0C002B] mb-2" style={{ fontFamily: 'Aileron' }}>
                     The Foundation: Democratizing IP
-                  </h5>
+                  </h4>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
                     IPR Karo began with an urgent mission: to eliminate traditional legal opacity and simplify trademark registration for India's growing startup generation.
                   </p>
@@ -542,9 +542,9 @@ export default function AboutClient() {
               {/* Card (Left) */}
               <div className="w-1/2 pr-12 text-right">
                 <div className="p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-left">
-                  <h5 className="text-xl font-bold text-[#0C002B] mb-2" style={{ fontFamily: 'Aileron' }}>
+                  <h4 className="text-xl font-bold text-[#0C002B] mb-2" style={{ fontFamily: 'Aileron' }}>
                     The AI Revolution: India's 1st Engine
-                  </h5>
+                  </h4>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
                     We developed and launched India's first proprietary AI-powered trademark search, scanning millions of registered and pending records to detect phonetic, visual, and semantic conflicts in seconds.
                   </p>
@@ -564,9 +564,9 @@ export default function AboutClient() {
                 <span className="text-xs font-bold text-[#1952C7] uppercase tracking-wider bg-blue-50 px-2.5 py-1 rounded-full border border-blue-200/60">
                   PHASE 02 • TECH BREAKTHROUGH
                 </span>
-                <h4 className="text-3xl font-extrabold text-[#0C002B] mt-1" style={{ fontFamily: 'Aileron' }}>
+                <h3 className="text-3xl font-extrabold text-[#0C002B] mt-1" style={{ fontFamily: 'Aileron' }}>
                   2020
-                </h4>
+                </h3>
                 <p className="text-xs text-gray-500 font-medium mt-1">Proprietary NLP & Similarity Algorithms</p>
               </div>
             </div>
@@ -578,9 +578,9 @@ export default function AboutClient() {
                 <span className="text-xs font-bold text-[#1952C7] uppercase tracking-wider bg-blue-50 px-2.5 py-1 rounded-full border border-blue-200/60">
                   PHASE 03 • NATIONAL SCALE
                 </span>
-                <h4 className="text-3xl font-extrabold text-[#0C002B] mt-1" style={{ fontFamily: 'Aileron' }}>
+                <h3 className="text-3xl font-extrabold text-[#0C002B] mt-1" style={{ fontFamily: 'Aileron' }}>
                   2021
-                </h4>
+                </h3>
                 <p className="text-xs text-gray-500 font-medium mt-1">Trust Milestone & Enterprise Adoption</p>
               </div>
 
@@ -590,9 +590,9 @@ export default function AboutClient() {
               {/* Card (Right) */}
               <div className="w-1/2 pl-12">
                 <div className="p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300">
-                  <h5 className="text-xl font-bold text-[#0C002B] mb-2" style={{ fontFamily: 'Aileron' }}>
+                  <h4 className="text-xl font-bold text-[#0C002B] mb-2" style={{ fontFamily: 'Aileron' }}>
                     Scale & Trust: 5,000+ Filings Secured
-                  </h5>
+                  </h4>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
                     Crossing 5,000 successful registrations, IPR Karo became a household brand for Indian startups, MSMEs, and digital creators seeking guaranteed, attorney-backed defense.
                   </p>
@@ -610,9 +610,9 @@ export default function AboutClient() {
               {/* Card (Left) */}
               <div className="w-1/2 pr-12 text-right">
                 <div className="p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-left">
-                  <h5 className="text-xl font-bold text-[#0C002B] mb-2" style={{ fontFamily: 'Aileron' }}>
+                  <h4 className="text-xl font-bold text-[#0C002B] mb-2" style={{ fontFamily: 'Aileron' }}>
                     360° Brand Protection Ecosystem
-                  </h5>
+                  </h4>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
                     Today, IPR Karo offers end-to-end protection: instant CGPDTM e-filing within 24 hours, Madrid Protocol cross-border filings across 130+ nations, and 24/7 automated Trademark Journal Watchdogs.
                   </p>
@@ -632,9 +632,9 @@ export default function AboutClient() {
                 <span className="text-xs font-bold text-emerald-700 uppercase tracking-wider bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200/60">
                   PHASE 04 • ENTERPRISE ECOSYSTEM
                 </span>
-                <h4 className="text-3xl font-extrabold text-[#0C002B] mt-1" style={{ fontFamily: 'Aileron' }}>
+                <h3 className="text-3xl font-extrabold text-[#0C002B] mt-1" style={{ fontFamily: 'Aileron' }}>
                   2025 to Present
-                </h4>
+                </h3>
                 <p className="text-xs text-gray-500 font-medium mt-1">Full-Lifecycle Global Brand Defense</p>
               </div>
             </div>
@@ -672,7 +672,7 @@ export default function AboutClient() {
                     <span className="text-xl font-bold text-[#1952C7]">2019</span>
                     <span className="text-[10px] font-bold text-gray-500 bg-gray-100 px-2 py-0.5 rounded">INCEPTION</span>
                   </div>
-                  <h5 className="text-base font-bold text-[#0C002B] mb-2">The Foundation: Democratizing IP</h5>
+                  <h3 className="text-base font-bold text-[#0C002B] mb-2">The Foundation: Democratizing IP</h3>
                   <p className="text-xs text-gray-600 leading-relaxed mb-3">
                     IPR Karo began with a mission: to eliminate traditional legal opacity and make online trademark registration fast and accessible for all.
                   </p>
@@ -691,7 +691,7 @@ export default function AboutClient() {
                     <span className="text-xl font-bold text-[#1952C7]">2020</span>
                     <span className="text-[10px] font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded">AI LAUNCH</span>
                   </div>
-                  <h5 className="text-base font-bold text-[#0C002B] mb-2">The AI Revolution</h5>
+                  <h3 className="text-base font-bold text-[#0C002B] mb-2">The AI Revolution</h3>
                   <p className="text-xs text-gray-600 leading-relaxed mb-3">
                     We launched India's first AI-powered trademark search, scanning millions of marks in seconds for phonetic and semantic similarity.
                   </p>
@@ -710,7 +710,7 @@ export default function AboutClient() {
                     <span className="text-xl font-bold text-[#1952C7]">2021</span>
                     <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">5,000+ MARKS</span>
                   </div>
-                  <h5 className="text-base font-bold text-[#0C002B] mb-2">National Scale & Trust</h5>
+                  <h3 className="text-base font-bold text-[#0C002B] mb-2">National Scale & Trust</h3>
                   <p className="text-xs text-gray-600 leading-relaxed mb-3">
                     Trusted across 28 states and union territories, achieving a 94.5% success rate for startups and enterprises alike.
                   </p>
@@ -729,7 +729,7 @@ export default function AboutClient() {
                     <span className="text-xl font-bold text-emerald-600">Present</span>
                     <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">ECOSYSTEM</span>
                   </div>
-                  <h5 className="text-base font-bold text-[#0C002B] mb-2">360° Brand Protection</h5>
+                  <h3 className="text-base font-bold text-[#0C002B] mb-2">360° Brand Protection</h3>
                   <p className="text-xs text-gray-600 leading-relaxed mb-3">
                     From 24h e-filing to Madrid Protocol international filings and 24/7 Trademark Journal Watchdogs.
                   </p>
@@ -747,7 +747,7 @@ export default function AboutClient() {
       {/* What makes IPR Karo Different Section */}
       <div className="w-full py-7 sm:py-12 px-4 sm:px-8 lg:px-20 bg-slate-50/50">
         <div className="text-center mb-6 sm:mb-10 max-w-4xl mx-auto">
-          <h3
+          <h2
             className="text-2xl sm:text-3xl lg:text-[40px] font-bold mb-3"
             style={{
               color: '#0C002B',
@@ -757,7 +757,7 @@ export default function AboutClient() {
             }}
           >
             What Makes IPR Karo Different
-          </h3>
+          </h2>
           <p className="text-gray-500 text-sm sm:text-base leading-relaxed">
             See how our AI-powered legal infrastructure outclasses traditional, manual trademark processing across every critical metric.
           </p>
@@ -767,12 +767,6 @@ export default function AboutClient() {
         {/* PICTOGRAPHIC COMPARISON MATRIX: TRADITIONAL VS IPR KARO                    */}
         {/* ========================================================================= */}
         <div className="max-w-5xl mx-auto mb-0">
-          {/* Mobile swipe hint */}
-          {/* <div className="flex md:hidden items-center justify-end gap-1.5 text-xs text-gray-500 mb-2 px-1">
-            <span>Swipe horizontally to compare</span>
-            <span className="animate-pulse">👉</span>
-          </div> */}
-
           <div className="w-full overflow-x-auto rounded-2xl border border-gray-200/80 bg-white shadow-sm">
             <div className="min-w-[720px]">
               <div className="grid grid-cols-12 bg-slate-100/80 py-4 px-6 border-b border-gray-200 text-xs sm:text-sm font-bold text-[#0C002B]">
@@ -841,170 +835,6 @@ export default function AboutClient() {
             </div>
           </div>
         </div>
-
-        {/* 5 Enhanced Feature Cards */}
-        {/* 
-        <div className="max-w-6xl mx-auto">
-          <div className="block lg:hidden space-y-4">
-            <div
-              className="p-6 rounded-2xl bg-white border border-gray-100 shadow-sm cursor-pointer"
-              onClick={() => setActiveCard(activeCard === 1 ? null : 1)}
-            >
-              <h4 className="text-lg font-bold text-[#0C002B] mb-2">AI-Powered Trademark Search</h4>
-              <p className="text-xs text-gray-600 leading-relaxed mb-4">
-                Instantly scan 10M+ records. Our AI finds identical, sound-alike, and confusingly similar marks before you spend government fees.
-              </p>
-              <div className="flex justify-center">
-                <Image src="/figmacomp/searchabout.svg" alt="Search Icon" width={200} height={55} className="h-auto opacity-80" />
-              </div>
-            </div>
-
-            <div
-              className="p-6 rounded-2xl bg-white border border-gray-100 shadow-sm cursor-pointer"
-              onClick={() => setActiveCard(activeCard === 2 ? null : 2)}
-            >
-              <h4 className="text-lg font-bold text-[#0C002B] mb-2">Expert-Led Guidance</h4>
-              <p className="text-xs text-gray-600 leading-relaxed">
-                Certified IP attorneys review your AI clearance report, advise on Nice classification (Classes 1–45), and prepare defense affidavits.
-              </p>
-            </div>
-
-            <div
-              className="p-6 rounded-2xl bg-white border border-gray-100 shadow-sm cursor-pointer"
-              onClick={() => setActiveCard(activeCard === 3 ? null : 3)}
-            >
-              <h4 className="text-lg font-bold text-[#0C002B] mb-2">Fast 24-Hour Processing</h4>
-              <p className="text-xs text-gray-600 leading-relaxed">
-                Optimized digital workflows cut filing turnaround to deliver search reports in 3 seconds and guaranteed Form TM-A e-filing within 24 hours.
-              </p>
-            </div>
-
-            <div
-              className="p-6 rounded-2xl bg-white border border-gray-100 shadow-sm cursor-pointer"
-              onClick={() => setActiveCard(activeCard === 4 ? null : 4)}
-            >
-              <h4 className="text-lg font-bold text-[#0C002B] mb-2">Affordable & Transparent Pricing</h4>
-              <p className="text-xs text-gray-600 leading-relaxed">
-                Zero hidden surcharges. Clear, upfront packages with single-page invoices that detail every official government fee and professional cost.
-              </p>
-            </div>
-
-            <div
-              className="p-6 rounded-2xl bg-white border border-blue-100 shadow-sm cursor-pointer"
-              onClick={() => setActiveCard(activeCard === 5 ? null : 5)}
-            >
-              <h4 className="text-lg font-bold text-[#1952C7] mb-2">End-to-End Brand Protection</h4>
-              <p className="text-xs text-gray-600 leading-relaxed mb-4">
-                From initial search to official filing, hearing replies, and post-registration renewals, we manage the complete lifecycle.
-              </p>
-              <div className="space-y-2 text-xs text-[#0C002B]">
-                <div className="flex items-center gap-2"><span className="w-5 h-5 rounded-full bg-blue-50 text-[#1952C7] font-bold flex items-center justify-center text-[10px]">1</span> AI Trademark Search & Analysis</div>
-                <div className="flex items-center gap-2"><span className="w-5 h-5 rounded-full bg-blue-50 text-[#1952C7] font-bold flex items-center justify-center text-[10px]">2</span> Attorney Consultation & Drafting</div>
-                <div className="flex items-center gap-2"><span className="w-5 h-5 rounded-full bg-blue-50 text-[#1952C7] font-bold flex items-center justify-center text-[10px]">3</span> Complete CGPDTM E-Filing</div>
-                <div className="flex items-center gap-2"><span className="w-5 h-5 rounded-full bg-blue-50 text-[#1952C7] font-bold flex items-center justify-center text-[10px]">4</span> 24/7 Journal Watchdog & Renewal</div>
-              </div>
-            </div>
-          </div>
-
-          <div className="hidden lg:flex flex-row gap-6">
-            <div className="flex-1 grid grid-cols-2 gap-6">
-              <div className="p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-lg hover:border-blue-200 transition-all duration-300 flex flex-col justify-between group">
-                <div>
-                  <h4 className="text-xl font-bold text-[#0C002B] mb-2">AI-Powered Trademark Search</h4>
-                  <p className="text-xs text-gray-600 leading-relaxed">
-                    Instantly scan 10M+ records. Our AI finds identical, sound-alike, and confusingly similar marks before you pay government fees.
-                  </p>
-                </div>
-                <div className="mt-4 flex justify-center">
-                  <Image src="/figmacomp/searchabout.svg" alt="Search Icon" width={220} height={60} className="w-auto h-12 object-contain opacity-70 group-hover:opacity-100 transition-opacity" />
-                </div>
-              </div>
-
-              <div className="p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-lg hover:border-blue-200 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden">
-                <div className="absolute top-2 right-2 opacity-30 group-hover:opacity-100 transition-opacity">
-                  <Image src="/figmacomp/expert-guidance.svg" alt="Expert Icon" width={70} height={70} className="w-14 h-14 object-contain" />
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold text-[#0C002B] mb-2">Expert-Led Guidance</h4>
-                  <p className="text-xs text-gray-600 leading-relaxed max-w-[200px]">
-                    Certified IP attorneys review your AI clearance report, advise on Nice classification (Classes 1–45), and prepare defense affidavits.
-                  </p>
-                </div>
-              </div>
-
-              <div className="p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-lg hover:border-blue-200 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden">
-                <div className="absolute top-2 right-2 opacity-30 group-hover:opacity-100 transition-opacity">
-                  <Image src="/figmacomp/fast-processing.svg" alt="Fast Processing Icon" width={70} height={70} className="w-14 h-14 object-contain" />
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold text-[#0C002B] mb-2">Fast 24-Hour Processing</h4>
-                  <p className="text-xs text-gray-600 leading-relaxed max-w-[200px]">
-                    Optimized digital workflows cut filing turnaround to deliver search reports in 3 seconds and guaranteed Form TM-A e-filing within 24 hours.
-                  </p>
-                </div>
-              </div>
-
-              <div className="p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-lg hover:border-blue-200 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden">
-                <div className="absolute bottom-2 right-2 opacity-30 group-hover:opacity-100 transition-opacity">
-                  <Image src="/figmacomp/affordable-pricing.svg" alt="Pricing Icon" width={100} height={80} className="w-20 h-auto object-contain" />
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold text-[#0C002B] mb-2">Affordable Flat Pricing</h4>
-                  <p className="text-xs text-gray-600 leading-relaxed max-w-[200px]">
-                    Zero hidden surcharges. Clear, upfront packages with single-page invoices that detail every official government fee and professional cost.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="w-80 flex-shrink-0">
-              <div className="h-full p-8 rounded-2xl bg-gradient-to-b from-blue-50/70 via-white to-slate-50 border border-blue-200 shadow-md flex flex-col justify-between">
-                <div>
-                  <div className="w-10 h-10 rounded-xl bg-[#1952C7] text-white flex items-center justify-center font-bold mb-4 shadow-sm">
-                    <FontAwesomeIcon icon={faShieldAlt} />
-                  </div>
-                  <h4 className="text-2xl font-bold text-[#0C002B] mb-2">End-to-End Brand Protection</h4>
-                  <p className="text-xs text-gray-600 leading-relaxed mb-6">
-                    From search to e-filing and 24/7 Trademark Journal Watchdogs, we handle filings, replies, and renewals so your brand stays protected forever.
-                  </p>
-
-                  <div className="space-y-3.5 text-xs text-[#0C002B]">
-                    <div className="flex items-center gap-3">
-                      <div className="w-6 h-6 rounded-full bg-[#1952C7] text-white font-bold flex items-center justify-center text-[10px] flex-shrink-0">1</div>
-                      <span className="font-semibold">AI Trademark Search & Risk Analysis</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <div className="w-6 h-6 rounded-full bg-[#1952C7] text-white font-bold flex items-center justify-center text-[10px] flex-shrink-0">2</div>
-                      <span className="font-semibold">Certified IP Attorney Consultation</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <div className="w-6 h-6 rounded-full bg-[#1952C7] text-white font-bold flex items-center justify-center text-[10px] flex-shrink-0">3</div>
-                      <span className="font-semibold">Form TM-A Filing in 24 Hours</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <div className="w-6 h-6 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center text-[10px] flex-shrink-0">4</div>
-                      <span className="font-semibold text-emerald-700">24/7 Journal Watchdog & Renewal</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="pt-6 border-t border-gray-200 text-center">
-                  <span className="text-[11px] font-bold text-[#1952C7] uppercase tracking-wider">
-                    Full Legal Lifespan Covered
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="w-full text-center mt-10">
-            <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white border border-gray-200/80 shadow-xs max-w-4xl text-xs font-semibold text-gray-700">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
-              <span>Trusted by 5,000+ entrepreneurs, startups, and enterprises with official filings, attorney review, and secure document handling.</span>
-            </div>
-          </div>
-        </div>
-        */}
       </div>
 
       <AboutContentExpanded />
@@ -1022,13 +852,13 @@ export default function AboutClient() {
             {/* Left Section - Questions */}
             <div className="space-y-[20px] sm:space-y-[28.8px] flex flex-col justify-start">
               <div className="space-y-[12px] sm:space-y-[18px]">
-                <h3 className="text-[#0C002B] text-center lg:text-left font-sans text-[23.4px] md:text-[36px] font-bold leading-[28.8px] md:leading-[39.6px] w-full">
+                <h2 className="text-[#0C002B] text-center lg:text-left font-sans text-[23.4px] md:text-[36px] font-bold leading-[28.8px] md:leading-[39.6px] w-full">
                   Have Question?
                   <br />
                   <span className="text-[#1952C7]">
                     We've Got Answers.
                   </span>
-                </h3>
+                </h2>
 
                 <p className="text-gray-500 text-center lg:text-left font-sans text-[11px] md:text-[12.6px] lg:text-[13.5px] xl:text-[14.4px] font-medium">
                   Still have questions? <span className="text-[#1952C7] font-bold">Contact us</span> anytime.
@@ -1061,9 +891,9 @@ export default function AboutClient() {
                   className="p-[18px] rounded-[10.8px] max-w-lg animate-fade-in-up bg-white border border-gray-100 shadow-lg"
                 >
                   <div className="flex justify-between items-start mb-[10.8px]">
-                    <h5 className="text-[#1952C7] font-sans text-[14.4px] md:text-[16.2px] font-bold leading-snug">
+                    <h3 className="text-[#1952C7] font-sans text-[14.4px] md:text-[16.2px] font-bold leading-snug">
                       {searchResult.question}
-                    </h5>
+                    </h3>
                     <button
                       onClick={() => setSearchResult(null)}
                       className="text-gray-400 hover:text-[#0C002B] transition-colors ml-[10.8px] flex-shrink-0"
@@ -1117,9 +947,9 @@ export default function AboutClient() {
                     onClick={() => toggleFaq(index)}
                   >
                     <div className="flex justify-between items-center mb-[10.8px]">
-                      <h4 className={`font-sans text-[13.5px] md:text-[16.2px] lg:text-[18px] font-bold pr-[14.4px] leading-snug transition-colors duration-300 ${openFaq === index ? 'text-[#1952C7]' : 'text-[#0C002B]'}`}>
+                      <h3 className={`font-sans text-[13.5px] md:text-[16.2px] lg:text-[18px] font-bold pr-[14.4px] leading-snug transition-colors duration-300 ${openFaq === index ? 'text-[#1952C7]' : 'text-[#0C002B]'}`}>
                         {faq.question}
-                      </h4>
+                      </h3>
                       <FontAwesomeIcon
                         icon={faChevronDown}
                         className={`w-[14px] h-[14px] transition-all duration-500 ease-in-out flex-shrink-0 ${openFaq === index ? 'rotate-180 text-[#1952C7]' : 'rotate-0 text-[#0C002B] opacity-50'

@@ -39,12 +39,12 @@ const SectionTitle = ({
   subtitle?: string;
 }) => (
   <div className="text-center mb-6 sm:mb-10">
-    <h3
+    <h2
       className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4"
       style={{ color: '#0C002B', fontFamily: 'Aileron', lineHeight: '1.2' }}
     >
       {title}
-    </h3>
+    </h2>
     {subtitle && (
       <p className="text-sm sm:text-base text-gray-500 max-w-3xl mx-auto font-sans leading-relaxed">
         {subtitle}
@@ -274,7 +274,7 @@ export default function AboutContentExpanded() {
                       {pillar.badge}
                     </span>
                   </div>
-                  <h4 className="text-xl font-bold text-[#0C002B] mb-3" style={{ fontFamily: 'Aileron' }}>{pillar.title}</h4>
+                  <h3 className="text-xl font-bold text-[#0C002B] mb-3" style={{ fontFamily: 'Aileron' }}>{pillar.title}</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">{pillar.desc}</p>
                 </div>
                 <div className="mt-6 pt-4 border-t border-gray-100 flex items-center gap-2 text-xs font-bold text-[#1952C7]">
@@ -320,8 +320,8 @@ export default function AboutContentExpanded() {
                 key={idx}
                 onClick={() => setActiveStage(idx)}
                 className={`p-4 rounded-xl text-left transition-all duration-300 border ${activeStage === idx
-                    ? 'bg-white border-[#1952C7] shadow-md scale-[1.02]'
-                    : 'bg-white/60 border-gray-200/70 hover:bg-white hover:border-blue-200'
+                  ? 'bg-white border-[#1952C7] shadow-md scale-[1.02]'
+                  : 'bg-white/60 border-gray-200/70 hover:bg-white hover:border-blue-200'
                   }`}
               >
                 <div className="flex items-center justify-between mb-2">
@@ -343,7 +343,7 @@ export default function AboutContentExpanded() {
                 <div className="flex items-center gap-3">
                   <span className="text-3xl font-extrabold text-[#1952C7]">{pipelineStages[activeStage].num}</span>
                   <div>
-                    <h4 className="text-xl sm:text-2xl font-bold text-[#0C002B]">{pipelineStages[activeStage].title}</h4>
+                    <h3 className="text-xl sm:text-2xl font-bold text-[#0C002B]">{pipelineStages[activeStage].title}</h3>
                     <span className="text-xs font-semibold text-emerald-600 uppercase tracking-wider">{pipelineStages[activeStage].tag}</span>
                   </div>
                 </div>
@@ -398,8 +398,8 @@ export default function AboutContentExpanded() {
                 key={type}
                 onClick={() => setActiveIpAsset(type)}
                 className={`py-3 px-4 rounded-xl font-bold text-sm transition-all duration-300 border flex items-center justify-center gap-2 ${activeIpAsset === type
-                    ? 'bg-[#1952C7] text-white border-[#1952C7] shadow-md'
-                    : 'bg-white text-gray-700 border-gray-200 hover:border-blue-200'
+                  ? 'bg-[#1952C7] text-white border-[#1952C7] shadow-md'
+                  : 'bg-white text-gray-700 border-gray-200 hover:border-blue-200'
                   }`}
               >
                 <span>{ipAssetsData[type].title.split(' ')[0]}</span>
@@ -421,9 +421,9 @@ export default function AboutContentExpanded() {
                   </span>
                 </div>
 
-                <h4 className="text-2xl sm:text-3xl font-bold text-[#0C002B]">
+                <h3 className="text-2xl sm:text-3xl font-bold text-[#0C002B]">
                   {ipAssetsData[activeIpAsset].title}
-                </h4>
+                </h3>
 
                 <div className="space-y-3">
                   <div>
@@ -497,9 +497,9 @@ export default function AboutContentExpanded() {
                     </span>
                   </div>
 
-                  <h4 className="text-xl font-bold text-[#0C002B] mb-3" style={{ fontFamily: 'Aileron' }}>
+                  <h3 className="text-xl font-bold text-[#0C002B] mb-3" style={{ fontFamily: 'Aileron' }}>
                     {caseStudiesData[activeCaseStudy].title}
-                  </h4>
+                  </h3>
 
                   <div className="space-y-3 text-xs leading-relaxed">
                     <div className="p-3 bg-red-50/70 rounded-xl border border-red-100/80">
@@ -573,7 +573,7 @@ export default function AboutContentExpanded() {
                     <span className="text-xs font-semibold text-gray-500">{study.sector}</span>
                   </div>
 
-                  <h4 className="text-xl font-bold text-[#0C002B] mb-4" style={{ fontFamily: 'Aileron' }}>{study.title}</h4>
+                  <h3 className="text-xl font-bold text-[#0C002B] mb-4" style={{ fontFamily: 'Aileron' }}>{study.title}</h3>
 
                   <div className="space-y-3 text-xs leading-relaxed">
                     <div className="p-3 bg-red-50/60 rounded-xl border border-red-100">
@@ -697,27 +697,24 @@ export default function AboutContentExpanded() {
             ].map((item, idx) => (
               <div key={idx} className="group relative">
                 <div
-                  className={`p-3.5 sm:p-5 rounded-xl sm:rounded-2xl border transition-all duration-300 ${
-                    activeMyth === idx
+                  className={`p-3.5 sm:p-5 rounded-xl sm:rounded-2xl border transition-all duration-300 ${activeMyth === idx
                       ? 'bg-white border-blue-300 shadow-md scale-[1.01]'
                       : 'bg-slate-50/70 border-gray-100 hover:bg-white hover:border-gray-200'
-                  }`}
+                    }`}
                   onClick={() => toggleMyth(idx)}
                 >
                   <div className="flex justify-between items-center cursor-pointer gap-2 sm:gap-4">
-                    <h4 className={`text-[13px] sm:text-base font-bold flex items-center gap-2 sm:gap-3 transition-colors leading-snug ${
-                      activeMyth === idx ? 'text-[#1952C7]' : 'text-[#0C002B]'
-                    }`}>
+                    <h3 className={`text-[13px] sm:text-base font-bold flex items-center gap-2 sm:gap-3 transition-colors leading-snug ${activeMyth === idx ? 'text-[#1952C7]' : 'text-[#0C002B]'
+                      }`}>
                       <span className="text-red-600 font-bold text-[10px] sm:text-xs uppercase px-2 py-0.5 sm:px-2.5 sm:py-1 rounded bg-red-50 border border-red-100 flex-shrink-0">
                         Myth
                       </span>
                       <span>{item.myth}</span>
-                    </h4>
+                    </h3>
                     <FontAwesomeIcon
                       icon={faChevronDown}
-                      className={`text-gray-400 text-xs transition-transform duration-300 flex-shrink-0 ${
-                        activeMyth === idx ? 'rotate-180 text-[#1952C7]' : ''
-                      }`}
+                      className={`text-gray-400 text-xs transition-transform duration-300 flex-shrink-0 ${activeMyth === idx ? 'rotate-180 text-[#1952C7]' : ''
+                        }`}
                     />
                   </div>
 

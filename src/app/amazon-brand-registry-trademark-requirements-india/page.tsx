@@ -333,42 +333,42 @@ export default function AmazonBrandRegistryPage() {
 
                                     {/* SECTION 2: TRADEMARK PREREQUISITES */}
                                     <section id="trademark-prerequisites" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faFileContract} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Trademark Eligibility &amp; Pending TM Rules
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Historically, Amazon required a fully registered trademark certificate (which takes 12 to 18 months in India). Under the updated Amazon Brand Registry guidelines, sellers can now enroll immediately upon obtaining an official<strong>pending trademark application number</strong>from the Controller General of Patents, Designs and Trade Marks (CGPDTM).</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     Pending TM Application (TM Status)
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">You can apply for Brand Registry the moment your<Link href="/process-and-steps-of-trademark-registration" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark registration application</Link>is e-filed on Form TM-A. As soon as the IP India portal issues an official CBR receipt and application number, your brand qualifies for enrollment.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     Registered Trademark (R Status)
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">If your trademark has completed examination, journal advertisement, and opposition windows, you can enroll using your official Trademark Registration Certificate (Form TM-RG). This unlocks advanced tiers like Project Zero and Transparency serialization.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     Appropriate Goods Classification
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Your trademark must cover the specific Nice classification corresponding to the physical goods listed on Amazon.in (Classes 1 through 34). Explore relevant classes using our<Link href="/types-of-trademark-classes" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark classes guide</Link>and<Link href="/trademark-class-finder" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark class finder</Link>.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     Active Application Standing
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Your application on the public IP India e-register must show an active standing such as &ldquo;New Application&rdquo;, &ldquo;Send to Vienna Codification&rdquo;, or &ldquo;Marked for Exam&rdquo;. Applications marked as Abandoned, Refused, or Formalities Chk Fail will be denied.</p>
                                             </div>
                                         </div>
@@ -376,20 +376,20 @@ export default function AmazonBrandRegistryPage() {
 
                                     {/* SECTION 3: WORD MARK VS DEVICE MARK */}
                                     <section id="wordmark-vs-device" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faScaleBalanced} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Word Mark vs Device Mark Requirements
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">When applying on Form TM-A with the Indian Trade Marks Registry, applicants must choose whether to file as a Word Mark or a Device Mark (Logo). Both marks are accepted by Amazon Brand Registry, but they carry distinct advantages for e-commerce sellers:</p>
 
                                         <div className="space-y-6">
                                             <div className="border-l-4 border-[#6E5E93] pl-4 py-2 bg-purple-50/40 rounded-r-xl">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">1. Text-Based Trademark (Word Mark) — Recommended for Sellers</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">1. Text-Based Trademark (Word Mark) — Recommended for Sellers</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">A Word Mark protects the literal alphabetical characters regardless of font style, typography, letter sizing, or background color. Amazon prefers Word Marks because its automated search crawlers index text directly to match product titles and ASIN catalog entries. A Word Mark allows you to redesign your brand logo on packaging without losing your Brand Registry status.</p>
                                             </div>
 
                                             <div className="border-l-4 border-indigo-500 pl-4 py-2 bg-indigo-50/40 rounded-r-xl">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">2. Image-Based Trademark with Words, Letters, or Numbers (Device Mark)</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">2. Image-Based Trademark with Words, Letters, or Numbers (Device Mark)</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">A Device Mark protects stylized lettering, graphic icons, or artistic emblems. Amazon accepts Device Marks provided the exact brand text is legibly embedded within the design. If you file a purely abstract design mark with zero legible text, Amazon will reject your Brand Registry submission because the system cannot map an abstract graphic to an Amazon text brand name.</p>
                                             </div>
                                         </div>
@@ -401,18 +401,18 @@ export default function AmazonBrandRegistryPage() {
 
                                     {/* SECTION 4: PACKAGING RULES */}
                                     <section id="permanent-branding" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faBoxOpen} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Product &amp; Packaging Branding Rules
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">The number one cause of Brand Registry rejections in India is non-compliant product photography. Amazon enforces rigorous physical branding standards to verify that applicants are genuine brand manufacturers rather than generic drop-shippers.</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
                                             <div className="border border-green-200 bg-green-50/50 p-6 rounded-2xl">
-                                                <h3 className="text-lg font-bold text-green-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-green-900 mb-3 flex items-center">
                                                     <FontAwesomeIcon icon={faCheckCircle} className="w-5 h-5 text-green-600 mr-2" />
                                                     Compliant Permanent Branding
-                                                </h3>
+                                                </h4>
                                                 <ul className="text-sm text-gray-700 space-y-2.5">
                                                     <li>• Brand name printed directly onto primary retail packaging (corrugated boxes, pouches).</li>
                                                     <li>• Laser-etched, embossed, or engraved logos on metal, wood, or plastic goods.</li>
@@ -423,10 +423,10 @@ export default function AmazonBrandRegistryPage() {
                                             </div>
 
                                             <div className="border border-red-200 bg-red-50/50 p-6 rounded-2xl">
-                                                <h3 className="text-lg font-bold text-red-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-red-900 mb-3 flex items-center">
                                                     <FontAwesomeIcon icon={faExclamationTriangle} className="w-5 h-5 text-red-600 mr-2" />
                                                     Non-Compliant (Strictly Rejected)
-                                                </h3>
+                                                </h4>
                                                 <ul className="text-sm text-gray-700 space-y-2.5">
                                                     <li>• Paper adhesive stickers or peelable labels pasted onto unbranded generic boxes.</li>
                                                     <li>• 3D digital computer mockups or Photoshop renders with superimposed logos.</li>
@@ -440,10 +440,10 @@ export default function AmazonBrandRegistryPage() {
 
                                     {/* SECTION 5: 6-STEP APPLICATION PROCESS */}
                                     <section id="step-by-step" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faListUl} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             6-Step Brand Registry Application
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Enrolling in Amazon Brand Registry India is conducted entirely online through the dedicated Amazon Brand Services portal. Follow this step-by-step procedure:</p>
 
                                         {/* STEP 1 */}
@@ -452,7 +452,7 @@ export default function AmazonBrandRegistryPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 1</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Trademark Filing</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Conduct Clearance Search &amp; E-File Form TM-A</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Conduct Clearance Search &amp; E-File Form TM-A</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Before filing, run a comprehensive<Link href="/trademark-search" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark search</Link>to ensure your proposed brand name does not conflict with prior registrations under Section 11 of the Trade Marks Act, 1999.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">File Form TM-A on the official IP India portal through a registered trademark attorney. Secure your official government CBR acknowledgment receipt containing your permanent 7 or 8-digit application number.</p>
                                         </div>
@@ -463,7 +463,7 @@ export default function AmazonBrandRegistryPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 2</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Asset Photography</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Capture High-Resolution Physical Product Images</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Capture High-Resolution Physical Product Images</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Photograph at least 2 to 4 distinct angles of your physical product and retail packaging. Ensure the camera clearly captures the permanently affixed brand name, batch details, manufacturer address, and MRP sticker.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">Do not apply digital retouching, watermarks, or studio cutouts. Raw, well-lit smartphone photos showing the product resting naturally on a table or in hand achieve the highest approval rate with Amazon&apos;s automated image review systems.</p>
                                         </div>
@@ -474,7 +474,7 @@ export default function AmazonBrandRegistryPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 3</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Portal Access</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Log into Amazon Brand Services &amp; Initiate Enrollment</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Log into Amazon Brand Services &amp; Initiate Enrollment</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Navigate to the official<a href="https://brandservices.amazon.in/" target="_blank" rel="noopener noreferrer" className="text-[rgb(110,94,147)] hover:underline font-medium">Amazon Brand Services India</a>portal. Sign in using your existing Amazon Seller Central or Vendor Central account credentials.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">Click on &ldquo;Enroll a new brand&rdquo; and review the eligibility criteria. Linking your primary Seller Central account ensures that brand ownership privileges sync seamlessly across your listing inventory.</p>
                                         </div>
@@ -485,7 +485,7 @@ export default function AmazonBrandRegistryPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 4</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Trademark Submission</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Enter Trademark &amp; Manufacturing Information</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Enter Trademark &amp; Manufacturing Information</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Select &ldquo;India&rdquo; as the trademark office (India Patent and Trademark Office / CGPDTM). Enter the exact brand name and provide your trademark application or registration number.</p>
                                             <p className="text-gray-700 leading-relaxed mb-4">Upload your physical product images and packaging photos. Select the primary product categories (apparel, electronics, home decor, etc.) and indicate your manufacturing relationship (whether you manufacture your own goods or contract through third-party OEM vendors).</p>
                                             <div className="bg-indigo-50 p-4 rounded-xl border border-indigo-200">
@@ -499,7 +499,7 @@ export default function AmazonBrandRegistryPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 5</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Verification Code</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Coordinate Attorney Verification Code Retrieval</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Coordinate Attorney Verification Code Retrieval</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Within 24 to 48 hours of submission, Amazon automatically parses the public IP India e-register database. Amazon identifies the registered Trademark Attorney or Agent of record associated with your Form TM-A application and sends a secure verification email containing an alphanumeric code.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">Contact your trademark attorney immediately to retrieve this verification string. Your attorney must verify that they authorized the application on your behalf.</p>
                                         </div>
@@ -510,7 +510,7 @@ export default function AmazonBrandRegistryPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 6</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Activation</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Submit Verification Code &amp; Activate Benefits</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Submit Verification Code &amp; Activate Benefits</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Log in to your Amazon Brand Registry case log, paste the verification code provided by your attorney, and submit the response.</p>
                                             <p className="text-gray-700 leading-relaxed mb-4">Amazon completes final verification within 1 to 3 business days. Once approved, your brand shield badge activates. This grants immediate access to A+ Content Manager, Amazon Brand Analytics, Brand Stores, and automated listing protection tools.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">Ensure ongoing legal compliance by monitoring your filing progress. Read our guide on<Link href="/trademark-application-status" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark application status</Link>to manage examination reports and hearing notices seamlessly.</p>
@@ -519,25 +519,25 @@ export default function AmazonBrandRegistryPage() {
 
                                     {/* SECTION 6: ATTORNEY VERIFICATION WORKFLOW */}
                                     <section id="attorney-verification" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faKey} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Attorney Verification Code Workflow
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">The Trademark Attorney Verification Code is Amazon&apos;s cryptographic security gate to prevent unauthorized sellers from hijacking third-party brand names. Understanding this mechanism prevents unnecessary delays:</p>
 
                                         <div className="space-y-6">
                                             <div className="border-l-4 border-purple-500 pl-4 py-2">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">1. Automated Registry Data Extraction</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">1. Automated Registry Data Extraction</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Amazon&apos;s system queries the Trade Marks Registry public portal (`ipindiaonline.gov.in`) and extracts the correspondent email listed under the &ldquo;Agent / Attorney Information&rdquo; section of your trademark application. Amazon does<em>not</em>send the code to your seller email address.</p>
                                             </div>
 
                                             <div className="border-l-4 border-purple-500 pl-4 py-2">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">2. 30-Day Expiration Window</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">2. 30-Day Expiration Window</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">The verification email dispatched by Amazon contains a unique Case ID and alphanumeric authentication code. The seller has exactly 30 days to obtain the code from their attorney and reply through the Brand Registry case log. If 30 days elapse without a response, the case is closed and marked invalid.</p>
                                             </div>
 
                                             <div className="border-l-4 border-purple-500 pl-4 py-2">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">3. What If You Self-Filed without an Attorney?</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">3. What If You Self-Filed without an Attorney?</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">If you filed Form TM-A directly as an individual applicant without legal counsel, Amazon sends the verification code directly to the applicant email address listed on your trademark e-filing profile. Ensure you check your spam and promotional folders for communications from `brand-registry-support@amazon.com`.</p>
                                             </div>
                                         </div>
@@ -545,30 +545,30 @@ export default function AmazonBrandRegistryPage() {
 
                                     {/* SECTION 7: COMMON REJECTIONS */}
                                     <section id="common-rejections" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faExclamationTriangle} className="w-8 h-8 mr-3 text-amber-500" />
                                             Common Rejection Causes &amp; Solutions
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Over 35% of initial Amazon Brand Registry applications in India face rejection due to avoidable procedural errors. Review these common pitfalls and their legal remedies:</p>
 
                                         <div className="space-y-6">
                                             <div className="border-l-4 border-red-500 pl-4 py-2">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">1. &ldquo;Brand Ineligible&rdquo; due to Application Discrepancies</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">1. &ldquo;Brand Ineligible&rdquo; due to Application Discrepancies</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">If your trademark status on IP India is &ldquo;Formalities Chk Fail&rdquo; or &ldquo;Objected&rdquo; with an unresolved compliance notice, Amazon may flag the mark as ineligible. Work with an IP attorney to file a prompt Form TM-M correction or examination response to restore good standing.</p>
                                             </div>
 
                                             <div className="border-l-4 border-red-500 pl-4 py-2">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">2. Mismatch Between Legal Entity and Trademark Owner</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">2. Mismatch Between Legal Entity and Trademark Owner</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">If your Amazon Seller Central account is registered under &ldquo;ABC Retailers Pvt Ltd&rdquo. But your trademark was filed in the personal name of &ldquo;Founder Name&rdquo;, Amazon requires proof of authorization. Submit a stamped Trademark License Agreement or Board Resolution authorizing the corporate seller account to enroll the brand.</p>
                                             </div>
 
                                             <div className="border-l-4 border-red-500 pl-4 py-2">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">3. Abusive Conduct / Brand Associated with Prior Infringement</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">3. Abusive Conduct / Brand Associated with Prior Infringement</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">If the seller account has a history of high policy violations, counterfeit strikes, or abusive IP complaints, Amazon&apos;s risk assessment system will reject Brand Registry enrollment under its &ldquo;Account Health&rdquo. Guidelines. Resolve all open Account Health warnings before re-applying.</p>
                                             </div>
 
                                             <div className="border-l-4 border-red-500 pl-4 py-2">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">4. Submitting Digital Renders instead of Physical Packaging</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">4. Submitting Digital Renders instead of Physical Packaging</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Never submit 3D digital mockups created in Photoshop or CAD software. Amazon&apos;s review algorithms instantly flag artificial lighting and transparent layers. Always capture physical samples showing genuine industrial manufacturing and packaging.</p>
                                             </div>
                                         </div>
@@ -576,10 +576,10 @@ export default function AmazonBrandRegistryPage() {
 
                                     {/* SECTION 8: TABLE OF STAGES & TIMELINES */}
                                     <section id="registry-stages-table" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faTable} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Requirements &amp; Timelines Comparison
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Evaluate the requirements, processing timelines, and unlocked capabilities across different trademark stages for Amazon Brand Registry India:</p>
 
                                         <div className="overflow-x-auto mb-8 shadow-sm rounded-xl border border-gray-200">
@@ -634,10 +634,10 @@ export default function AmazonBrandRegistryPage() {
 
                                     {/* SECTION 9: SELLER CHECKLIST */}
                                     <section id="checklist" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faCheckCircle} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Amazon Brand Registry Checklist
-                                        </h2>
+                                        </h3>
                                         <ul className="list-none space-y-4 mb-8">
                                             <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Trademark Clearance &amp; Filing:</strong>Confirm trademark availability and obtain an active Form TM-A application number from IP India.</span></li>
                                             <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Goods Classification Alignment:</strong>Ensure your registered class covers the specific physical products sold on Amazon.in (e.g. Class 25 for apparel, Class 3 for cosmetics).</span></li>
@@ -651,15 +651,15 @@ export default function AmazonBrandRegistryPage() {
 
                                     {/* SECTION 10: FAQS (EXACTLY 8 MATCHING SCHEMA) */}
                                     <section id="faqs" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl lg:text-3xl font-black text-gray-900 mb-8 text-center text-[rgb(110,94,147)]">
+                                        <h3 className="text-xl md:text-2xl lg:text-3xl font-black text-gray-900 mb-8 text-center text-[rgb(110,94,147)]">
                                             Frequently Asked Questions
-                                        </h2>
+                                        </h3>
                                         <div className="space-y-4">
                                             {faqs.map((faq, index) => (
                                                 <div key={index} className="bg-white border border-gray-100 rounded-3xl p-8 shadow-sm hover:shadow-md transition-shadow">
-                                                    <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-4 flex items-start leading-snug">
+                                                    <h4 className="text-lg md:text-xl font-bold text-gray-900 mb-4 flex items-start leading-snug">
                                                         <span className="text-[rgb(110,94,147)] mr-4 font-black text-2xl">Q.</span>{faq.question}
-                                                    </h3>
+                                                    </h4>
                                                     <p className="text-gray-600 pl-10 m-0">{faq.answer}</p>
                                                 </div>
                                             ))}
@@ -668,10 +668,10 @@ export default function AmazonBrandRegistryPage() {
 
                                     {/* SECTION 11: FINAL STRATEGIC ADVICE */}
                                     <section id="final-takeaway" className="scroll-mt-32 pt-16">
-                                        <h2 className="text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLightbulb} className="w-8 h-8 mr-3 text-yellow-500" />
                                             Strategic Amazon Brand Registry Advice
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">In today&apos;s hyper-competitive e-commerce marketplace, intellectual property is not merely a legal certificate—it is your primary commercial defensive weapon. Amazon Brand Registry transforms your trademark into automated algorithmic protection, locking in your Buy Box share and elevating your brand presentation above generic competitors.</p>
                                         <p className="mb-6">Do not wait for a counterfeit seller to hijack your best-selling ASIN before initiating your trademark filing. By securing a fast-track Form TM-A application through experienced IP counsel, you can enroll in Amazon Brand Registry within days, deploy compelling A+ marketing modules, and build an enduring, defensible consumer brand across India and global marketplaces.</p>
                                     </section>
@@ -686,9 +686,9 @@ export default function AmazonBrandRegistryPage() {
                                                     </span>
                                                 </div>
 
-                                                <h3 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl mb-4">
+                                                <h4 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl mb-4">
                                                     Protect Your Amazon Brand Today
-                                                </h3>
+                                                </h4>
 
                                                 <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">Fast-track your trademark filing for immediate Amazon Brand Registry enrollment. From clearance search and Form TM-A e-filing to attorney verification code management and brand store activation.</p>
 
@@ -720,7 +720,7 @@ export default function AmazonBrandRegistryPage() {
                             {/* About Author */}
                             <div className="bg-white p-6 rounded-[2.5rem] shadow-sm border border-gray-100 flex flex-col items-center text-center">
                                 <img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-24 h-24 rounded-full mb-4 shadow-md object-cover" />
-                                <h3 className="text-xl font-bold text-gray-900 mb-2">Rahul Roy</h3>
+                                <h4 className="text-xl font-bold text-gray-900 mb-2">Rahul Roy</h4>
                                 <p className="text-sm text-gray-600 mb-4 font-medium">Trademark Research Specialist</p>
                                 <p className="text-sm text-gray-700 leading-relaxed mb-6">Rahul specializes in e-commerce brand protection, marketplace IP enforcement, and trademark prosecution under the Trade Marks Act, 1999. He assists hundreds of Indian D2C brands in securing marketplace exclusivity.</p>
                             </div>
@@ -728,7 +728,7 @@ export default function AmazonBrandRegistryPage() {
                             {/* Dark CTA Box */}
                             <div className="bg-[#0C002B] p-8 rounded-[2.5rem] shadow-2xl border border-white/5 text-white relative overflow-hidden group">
                                 <div className="absolute top-0 right-0 w-40 h-40 bg-[rgb(110,94,147)] rounded-full blur-[100px] opacity-30 group-hover:opacity-50 transition-opacity"></div>
-                                <h3 className="text-xl font-black mb-4 relative z-10 leading-tight">Enroll in Brand Registry</h3>
+                                <h4 className="text-xl font-black mb-4 relative z-10 leading-tight">Enroll in Brand Registry</h4>
                                 <p className="text-sm opacity-70 mb-8 leading-relaxed relative z-10 font-medium">Get your official trademark application number today and unlock Amazon A+ Content and Buy Box security.</p>
                                 <Link href="/e-filing-trademark" className="block relative z-10">
                                     <button className="w-full bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-3.5 px-4 rounded-xl transition-all shadow-xl text-xs uppercase tracking-wider">
@@ -739,7 +739,7 @@ export default function AmazonBrandRegistryPage() {
 
                             {/* Related Resources */}
                             <div className="bg-gray-50 p-10 rounded-[2.5rem] shadow-sm border border-gray-100">
-                                <h3 className="text-sm font-black text-gray-400 mb-8 uppercase tracking-[0.3em]">Related Resources</h3>
+                                <h4 className="text-sm font-black text-gray-400 mb-8 uppercase tracking-[0.3em]">Related Resources</h4>
                                 <ul className="space-y-6">
                                     <li><Link href="/trademark-for-ecommerce" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faCartShopping} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">E-Com TM</span></Link></li>
                                     <li><Link href="/trademark-for-d2c-brand-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faRocket} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">D2C Brand</span></Link></li>

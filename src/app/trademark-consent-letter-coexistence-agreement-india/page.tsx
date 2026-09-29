@@ -347,10 +347,10 @@ export default function TrademarkConsentCoexistencePage() {
 
                                     {/* SECTION 2: SECTION 11 OBJECTIONS */}
                                     <section id="section-11-objection" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faTriangleExclamation} className="w-8 h-8 mr-3 text-amber-600" />
                                             Overcoming Section 11 Relative Grounds
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Section 11(1) of the Trade Marks Act, 1999 creates a statutory bar against the registration of a trademark if:</p>
                                         <div className="bg-purple-50/50 border-l-4 border-[#6E5E93] p-5 rounded-r-xl my-6">
                                             <p className="text-sm font-semibold text-gray-800 m-0">(a) Its identity with an earlier trade mark and similarity of goods or services covered; or<br />(b) Its similarity to an earlier trade mark and the identity or similarity of goods or services,<br />creates a likelihood of confusion on the part of the public, including the likelihood of association with the earlier trade mark.</p>
@@ -361,10 +361,10 @@ export default function TrademarkConsentCoexistencePage() {
 
                                     {/* SECTION 3: SECTION 12 HONEST CONCURRENT USE */}
                                     <section id="section-12-honest-use" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faFileContract} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Section 12: Honest Concurrent Use & Discretion
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">The Trade Marks Act, 1999 recognizes that in a dynamic, continent-sized economy, multiple businesses may adopt similar marks in good faith without deceitful intent. To address this reality,<strong>Section 12</strong>provides:</p>
                                         <blockquote className="border-l-4 border-[#6E5E93] bg-purple-50/50 p-4 rounded-r-xl italic my-6 text-gray-800">
                                             &ldquo;In the case of honest concurrent use or of other special circumstances which in the opinion of the Registrar, make it proper so to do, the Registrar may permit the registration of trade marks which are identical or similar in respect of the same or similar goods or services, subject to such conditions and limitations, if any, as the Registrar may think fit to impose.&rdquo;
@@ -376,10 +376,10 @@ export default function TrademarkConsentCoexistencePage() {
 
                                     {/* SECTION 4: CONSENT VS COEXISTENCE */}
                                     <section id="consent-vs-coexistence" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faHandshake} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Consent Letter (NOC) vs Coexistence Agreement
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">While practitioners often use the terms interchangeably, a Letter of Consent and a Trademark Coexistence Agreement serve distinct legal functions and carry differing levels of complexity:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
@@ -388,7 +388,7 @@ export default function TrademarkConsentCoexistencePage() {
                                                     <span className="text-xs font-black uppercase tracking-wider text-indigo-800 bg-indigo-100 px-3 py-1 rounded-full">Unilateral NOC</span>
                                                     <span className="text-xs font-bold text-gray-500">Registry Filing</span>
                                                 </div>
-                                                <h3 className="text-lg font-bold text-gray-900 mb-2">Letter of Consent (NOC)</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-2">Letter of Consent (NOC)</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed mb-4">A formal written declaration signed solely by the cited proprietor confirming they have examined the applicant&apos;s mark and raise no objection to its registration.</p>
                                                 <ul className="text-xs text-gray-600 space-y-1.5 list-disc pl-4">
                                                     <li>Ideal for sister entities, group subsidiaries, or holding companies.</li>
@@ -402,7 +402,7 @@ export default function TrademarkConsentCoexistencePage() {
                                                     <span className="text-xs font-black uppercase tracking-wider text-purple-800 bg-purple-100 px-3 py-1 rounded-full">Bilateral Contract</span>
                                                     <span className="text-xs font-bold text-gray-500">Commercial Bounds</span>
                                                 </div>
-                                                <h3 className="text-lg font-bold text-gray-900 mb-2">Coexistence Agreement</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-2">Coexistence Agreement</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed mb-4">A bilateral contract between independent commercial competitors defining strict market, visual, territorial, and digital boundaries for long-term coexistence.</p>
                                                 <ul className="text-xs text-gray-600 space-y-1.5 list-disc pl-4">
                                                     <li>Essential for unrelated businesses operating in adjacent markets.</li>
@@ -417,10 +417,10 @@ export default function TrademarkConsentCoexistencePage() {
 
                                     {/* SECTION 5: COMPARISON MATRIX */}
                                     <section id="comparison-matrix" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faTable} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Legal Comparison Matrix
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">The table below provides a comprehensive comparison across key legal, procedural, and commercial parameters under Indian intellectual property law:</p>
 
                                         <div className="overflow-x-auto my-8 not-prose">
@@ -480,35 +480,35 @@ export default function TrademarkConsentCoexistencePage() {
 
                                     {/* SECTION 6: REGISTRY ACCEPTANCE & PUBLIC INTEREST */}
                                     <section id="registry-acceptance" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faGavel} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Will the Registry Accept an NOC? (Public Interest Test)
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">A critical misconception among businesses is that obtaining a consent letter guarantees immediate registration. Under Indian law,<strong>the Registrar is not a mere passive recorder of private contracts</strong>. The Registrar of Trade Marks is a statutory authority charged with protecting the general purchasing public from confusion and deceptive association.</p>
                                         <p className="mb-6">The Delhi High Court and IPAB (Intellectual Property Appellate Board) have consistently held that private parties cannot contract out of statutory confusion. When evaluating a Letter of Consent or Coexistence Agreement under Section 12, the Registry applies a three-fold<strong>Public Interest Test</strong>:</p>
 
                                         <div className="space-y-4 my-6 not-prose">
                                             <div className="bg-gray-50 p-5 rounded-2xl border border-gray-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-1 flex items-center">
+                                                <h4 className="text-base font-bold text-gray-900 mb-1 flex items-center">
                                                     <span className="w-6 h-6 rounded-full bg-[rgb(110,94,147)] text-white text-xs flex items-center justify-center mr-3 font-bold">1</span>
                                                     Degree of Mark Similarity & Visual Distinctiveness
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 pl-9 m-0">If the marks are identical wordmarks with identical spellings, the Registry will be highly skeptical. However, if the marks share a common prefix or suffix but possess distinctive logos, stylized fonts, or device elements, the consent letter carries substantial persuasive weight.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-5 rounded-2xl border border-gray-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-1 flex items-center">
+                                                <h4 className="text-base font-bold text-gray-900 mb-1 flex items-center">
                                                     <span className="w-6 h-6 rounded-full bg-[rgb(110,94,147)] text-white text-xs flex items-center justify-center mr-3 font-bold">2</span>
                                                     Nature of Goods, Services & Trade Channels
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 pl-9 m-0">Consent letters succeed easily when goods within the same broad class serve distinct consumer segments (e.g., luxury industrial machinery vs consumer hand tools in Class 7, or enterprise B2B software vs casual mobile games in Class 9).</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-5 rounded-2xl border border-gray-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-1 flex items-center">
+                                                <h4 className="text-base font-bold text-gray-900 mb-1 flex items-center">
                                                     <span className="w-6 h-6 rounded-full bg-[rgb(110,94,147)] text-white text-xs flex items-center justify-center mr-3 font-bold">3</span>
                                                     Sophistication of the Relevant Purchasing Public
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 pl-9 m-0">Specialized business buyers, engineers, and corporate procurement heads exercise higher discernment and are unlikely to be confused. Conversely, ordinary retail consumers purchasing low-cost FMCG products are deemed more susceptible to casual deception.</p>
                                             </div>
                                         </div>
@@ -516,10 +516,10 @@ export default function TrademarkConsentCoexistencePage() {
 
                                     {/* SECTION 7: PHARMACEUTICAL EXCEPTION */}
                                     <section id="pharma-exception" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faExclamationTriangle} className="w-8 h-8 mr-3 text-red-600" />
                                             Strict Scrutiny: The Pharmaceutical Exception
-                                        </h2>
+                                        </h3>
                                         <div className="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-xl mb-6">
                                             <p className="text-sm font-bold text-red-900 m-0">WARNING FOR CLASS 5 APPLICANTS: The Trade Marks Registry and Indian Courts virtually never accept consent letters or coexistence agreements for pharmaceutical, medicinal, and healthcare preparations.</p>
                                         </div>
@@ -529,51 +529,51 @@ export default function TrademarkConsentCoexistencePage() {
 
                                     {/* SECTION 8: 10 KEY CLAUSES */}
                                     <section id="essential-clauses" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faBuilding} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             10 Crucial Coexistence Agreement Clauses
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">A robust Trademark Coexistence Agreement must balance immediate registration objectives with long-term brand equity protection. When drafting the contract, ensure the following 10 clauses are meticulously defined:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6 not-prose">
                                             <div className="p-4 bg-white border border-gray-200 rounded-xl shadow-sm">
-                                                <h3 className="text-sm font-bold text-gray-900 mb-1">1. Recitals & Title Verification</h3>
+                                                <h4 className="text-sm font-bold text-gray-900 mb-1">1. Recitals & Title Verification</h4>
                                                 <p className="text-xs text-gray-600 m-0">Accurately details the application numbers, registration certificates, filing dates, and current business activities of both parties.</p>
                                             </div>
                                             <div className="p-4 bg-white border border-gray-200 rounded-xl shadow-sm">
-                                                <h3 className="text-sm font-bold text-gray-900 mb-1">2. Delimitation of Goods/Services</h3>
+                                                <h4 className="text-sm font-bold text-gray-900 mb-1">2. Delimitation of Goods/Services</h4>
                                                 <p className="text-xs text-gray-600 m-0">Defines exact carve-outs, class specifications, and negative covenants barring expansion into the other party&apos;s commercial domain.</p>
                                             </div>
                                             <div className="p-4 bg-white border border-gray-200 rounded-xl shadow-sm">
-                                                <h3 className="text-sm font-bold text-gray-900 mb-1">3. Territorial & Geographic Allocation</h3>
+                                                <h4 className="text-sm font-bold text-gray-900 mb-1">3. Territorial & Geographic Allocation</h4>
                                                 <p className="text-xs text-gray-600 m-0">Restricts sales, distribution channels, or physical store operations to specific domestic states or international jurisdictions.</p>
                                             </div>
                                             <div className="p-4 bg-white border border-gray-200 rounded-xl shadow-sm">
-                                                <h3 className="text-sm font-bold text-gray-900 mb-1">4. Visual Trade Dress & Logo Restraints</h3>
+                                                <h4 className="text-sm font-bold text-gray-900 mb-1">4. Visual Trade Dress & Logo Restraints</h4>
                                                 <p className="text-xs text-gray-600 m-0">Mandates distinct font typography, color combinations, house-mark prefix additions, and logo stylization rules.</p>
                                             </div>
                                             <div className="p-4 bg-white border border-gray-200 rounded-xl shadow-sm">
-                                                <h3 className="text-sm font-bold text-gray-900 mb-1">5. Digital, Domain & Social Media Rules</h3>
+                                                <h4 className="text-sm font-bold text-gray-900 mb-1">5. Digital, Domain & Social Media Rules</h4>
                                                 <p className="text-xs text-gray-600 m-0">Governs top-level domain names, social media handles, e-commerce keywords, and paid Google Ads bidding parameters.</p>
                                             </div>
                                             <div className="p-4 bg-white border border-gray-200 rounded-xl shadow-sm">
-                                                <h3 className="text-sm font-bold text-gray-900 mb-1">6. Covenant Not to Oppose or Cancel</h3>
+                                                <h4 className="text-sm font-bold text-gray-900 mb-1">6. Covenant Not to Oppose or Cancel</h4>
                                                 <p className="text-xs text-gray-600 m-0">Mutual undertaking not to file Section 21 oppositions, Section 57 rectifications, or civil infringement lawsuits against compliant use.</p>
                                             </div>
                                             <div className="p-4 bg-white border border-gray-200 rounded-xl shadow-sm">
-                                                <h3 className="text-sm font-bold text-gray-900 mb-1">7. Registry Cooperation & NOC Execution</h3>
+                                                <h4 className="text-sm font-bold text-gray-900 mb-1">7. Registry Cooperation & NOC Execution</h4>
                                                 <p className="text-xs text-gray-600 m-0">Express obligation on the prior owner to execute and notarize the standalone Letter of Consent for filing before the Trade Marks Registry.</p>
                                             </div>
                                             <div className="p-4 bg-white border border-gray-200 rounded-xl shadow-sm">
-                                                <h3 className="text-sm font-bold text-gray-900 mb-1">8. Third-Party Enforcement Coordination</h3>
+                                                <h4 className="text-sm font-bold text-gray-900 mb-1">8. Third-Party Enforcement Coordination</h4>
                                                 <p className="text-xs text-gray-600 m-0">Mechanisms for dealing with third-party copycats, including joint policing, unilateral enforcement rights, or mutual notifications.</p>
                                             </div>
                                             <div className="p-4 bg-white border border-gray-200 rounded-xl shadow-sm">
-                                                <h3 className="text-sm font-bold text-gray-900 mb-1">9. Assignment & Successor Binding</h3>
+                                                <h4 className="text-sm font-bold text-gray-900 mb-1">9. Assignment & Successor Binding</h4>
                                                 <p className="text-xs text-gray-600 m-0">Ensures that in the event of<Link href="/trademark-assignment-vs-licensing-in-india" className="text-[rgb(110,94,147)] hover:underline font-semibold">trademark assignment or licensing</Link>, the agreement remains binding on future acquirers.</p>
                                             </div>
                                             <div className="p-4 bg-white border border-gray-200 rounded-xl shadow-sm">
-                                                <h3 className="text-sm font-bold text-gray-900 mb-1">10. Dispute Resolution & Seat of Arbitration</h3>
+                                                <h4 className="text-sm font-bold text-gray-900 mb-1">10. Dispute Resolution & Seat of Arbitration</h4>
                                                 <p className="text-xs text-gray-600 m-0">Specifies governing Indian law, commercial court jurisdiction, and fast-track arbitration under the Arbitration &amp; Conciliation Act, 1996.</p>
                                             </div>
                                         </div>
@@ -581,10 +581,10 @@ export default function TrademarkConsentCoexistencePage() {
 
                                     {/* SECTION 9: SAMPLE NOC FORMAT */}
                                     <section id="noc-format-template" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faFileSignature} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Standard Format & Sample NOC Template
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Below is a standard, verified template for a<strong>Letter of Consent / No Objection Certificate (NOC)</strong>to be submitted to the Trade Marks Registry on the official letterhead of the consenting proprietor (duly stamped and notarized):</p>
 
                                         <div className="bg-gray-900 text-gray-100 p-6 rounded-2xl shadow-xl overflow-x-auto my-6 font-mono text-xs leading-relaxed not-prose border border-gray-800">
@@ -633,17 +633,17 @@ export default function TrademarkConsentCoexistencePage() {
 
                                     {/* SECTION 10: 7-STEP RESOLUTION WORKFLOW */}
                                     <section id="resolution-workflow" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faRocket} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             7-Step Objection Resolution Workflow
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Follow this systematic legal roadmap to successfully negotiate, execute, and file a Trademark Consent Letter before the Trade Marks Registry:</p>
 
                                         <div className="space-y-6 my-8 not-prose">
                                             <div className="flex items-start bg-purple-50/40 p-5 rounded-2xl border border-purple-100">
                                                 <div className="w-9 h-9 rounded-xl bg-[rgb(110,94,147)] text-white font-bold flex items-center justify-center mr-4 flex-shrink-0">1</div>
                                                 <div>
-                                                    <h3 className="text-base font-bold text-gray-900 mb-1">Analyze Section 11 Citations</h3>
+                                                    <h4 className="text-base font-bold text-gray-900 mb-1">Analyze Section 11 Citations</h4>
                                                     <p className="text-sm text-gray-600 m-0">Examine the official Examination Report. Note all cited application/registration numbers, owner names, class classifications, and cited mark representations.</p>
                                                 </div>
                                             </div>
@@ -651,7 +651,7 @@ export default function TrademarkConsentCoexistencePage() {
                                             <div className="flex items-start bg-purple-50/40 p-5 rounded-2xl border border-purple-100">
                                                 <div className="w-9 h-9 rounded-xl bg-[rgb(110,94,147)] text-white font-bold flex items-center justify-center mr-4 flex-shrink-0">2</div>
                                                 <div>
-                                                    <h3 className="text-base font-bold text-gray-900 mb-1">Conduct Commercial & Legal Diligence</h3>
+                                                    <h4 className="text-base font-bold text-gray-900 mb-1">Conduct Commercial & Legal Diligence</h4>
                                                     <p className="text-sm text-gray-600 m-0">Conduct an IP audit to verify if the cited mark is actively used, renewed, abandoned, or belonging to a corporate entity with whom your business maintains commercial relations.</p>
                                                 </div>
                                             </div>
@@ -659,7 +659,7 @@ export default function TrademarkConsentCoexistencePage() {
                                             <div className="flex items-start bg-purple-50/40 p-5 rounded-2xl border border-purple-100">
                                                 <div className="w-9 h-9 rounded-xl bg-[rgb(110,94,147)] text-white font-bold flex items-center justify-center mr-4 flex-shrink-0">3</div>
                                                 <div>
-                                                    <h3 className="text-base font-bold text-gray-900 mb-1">Initiate Constructive Dialogue</h3>
+                                                    <h4 className="text-base font-bold text-gray-900 mb-1">Initiate Constructive Dialogue</h4>
                                                     <p className="text-sm text-gray-600 m-0">Engage senior leadership or IP counsel of the cited entity. Offer clear commercial delimitations (such as restricting your goods specification) to assure them of zero market conflict.</p>
                                                 </div>
                                             </div>
@@ -667,7 +667,7 @@ export default function TrademarkConsentCoexistencePage() {
                                             <div className="flex items-start bg-purple-50/40 p-5 rounded-2xl border border-purple-100">
                                                 <div className="w-9 h-9 rounded-xl bg-[rgb(110,94,147)] text-white font-bold flex items-center justify-center mr-4 flex-shrink-0">4</div>
                                                 <div>
-                                                    <h3 className="text-base font-bold text-gray-900 mb-1">Draft Coexistence Terms & Standalone NOC</h3>
+                                                    <h4 className="text-base font-bold text-gray-900 mb-1">Draft Coexistence Terms & Standalone NOC</h4>
                                                     <p className="text-sm text-gray-600 m-0">Draft the bilateral Coexistence Agreement incorporating trade dress rules, digital boundaries, and dispute terms alongside the clean standalone Letter of Consent for the Registry.</p>
                                                 </div>
                                             </div>
@@ -675,7 +675,7 @@ export default function TrademarkConsentCoexistencePage() {
                                             <div className="flex items-start bg-purple-50/40 p-5 rounded-2xl border border-purple-100">
                                                 <div className="w-9 h-9 rounded-xl bg-[rgb(110,94,147)] text-white font-bold flex items-center justify-center mr-4 flex-shrink-0">5</div>
                                                 <div>
-                                                    <h3 className="text-base font-bold text-gray-900 mb-1">Formal Execution & Stamping</h3>
+                                                    <h4 className="text-base font-bold text-gray-900 mb-1">Formal Execution & Stamping</h4>
                                                     <p className="text-sm text-gray-600 m-0">Execute the documents on appropriate stamp paper with corporate seals, Board Resolutions of authorized signatories, and formal notarization.</p>
                                                 </div>
                                             </div>
@@ -683,7 +683,7 @@ export default function TrademarkConsentCoexistencePage() {
                                             <div className="flex items-start bg-purple-50/40 p-5 rounded-2xl border border-purple-100">
                                                 <div className="w-9 h-9 rounded-xl bg-[rgb(110,94,147)] text-white font-bold flex items-center justify-center mr-4 flex-shrink-0">6</div>
                                                 <div>
-                                                    <h3 className="text-base font-bold text-gray-900 mb-1">File Form TM-M & Written Examination Reply</h3>
+                                                    <h4 className="text-base font-bold text-gray-900 mb-1">File Form TM-M & Written Examination Reply</h4>
                                                     <p className="text-sm text-gray-600 m-0">Submit the formal written response on the IP India portal. Upload the notarized Consent Letter on Form TM-M alongside Section 12 user evidence and amended class specifications if required.</p>
                                                 </div>
                                             </div>
@@ -691,7 +691,7 @@ export default function TrademarkConsentCoexistencePage() {
                                             <div className="flex items-start bg-purple-50/40 p-5 rounded-2xl border border-purple-100">
                                                 <div className="w-9 h-9 rounded-xl bg-[rgb(110,94,147)] text-white font-bold flex items-center justify-center mr-4 flex-shrink-0">7</div>
                                                 <div>
-                                                    <h3 className="text-base font-bold text-gray-900 mb-1">Advocate at Show Cause Hearing</h3>
+                                                    <h4 className="text-base font-bold text-gray-900 mb-1">Advocate at Show Cause Hearing</h4>
                                                     <p className="text-sm text-gray-600 m-0">Your trademark attorney appears before the Hearing Officer to establish honest concurrent use and special circumstances, securing the order for journal advertisement.</p>
                                                 </div>
                                             </div>
@@ -700,10 +700,10 @@ export default function TrademarkConsentCoexistencePage() {
 
                                     {/* SECTION 11: PROCEDURAL CHECKLIST */}
                                     <section id="procedural-checklist" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faCheckCircle} className="w-8 h-8 mr-3 text-emerald-600" />
                                             Documentation & Procedural Checklist
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Before submitting your consent package to the Trade Marks Registry, ensure the evidentiary dossier contains every mandatory compliance item:</p>
 
                                         <div className="bg-emerald-50/50 p-6 rounded-2xl border border-emerald-100 my-6 not-prose">
@@ -720,16 +720,16 @@ export default function TrademarkConsentCoexistencePage() {
 
                                     {/* SECTION 12: LANDMARK PRECEDENTS */}
                                     <section id="case-laws" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faGavel} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Landmark Indian Judicial Precedents
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Indian High Courts and the Supreme Court have shaped the doctrine of honest concurrent use and trademark coexistence through foundational rulings:</p>
 
                                         <div className="space-y-6 my-6 not-prose">
                                             <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
                                                 <div className="flex items-center justify-between mb-2">
-                                                    <h3 className="text-base font-bold text-gray-900">1. Cadila Health Care Ltd. v. Cadila Pharmaceuticals Ltd. (2001)</h3>
+                                                    <h4 className="text-base font-bold text-gray-900">1. Cadila Health Care Ltd. v. Cadila Pharmaceuticals Ltd. (2001)</h4>
                                                     <span className="text-xs bg-red-100 text-red-800 font-bold px-2.5 py-1 rounded-full">Supreme Court</span>
                                                 </div>
                                                 <p className="text-xs font-semibold text-[rgb(110,94,147)] mb-2">Principle: Paramount Public Interest in Medicinal Brands</p>
@@ -738,7 +738,7 @@ export default function TrademarkConsentCoexistencePage() {
 
                                             <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
                                                 <div className="flex items-center justify-between mb-2">
-                                                    <h3 className="text-base font-bold text-gray-900">2. Century Traders v. Roshan Lal Duggar &amp; Co. (1977)</h3>
+                                                    <h4 className="text-base font-bold text-gray-900">2. Century Traders v. Roshan Lal Duggar &amp; Co. (1977)</h4>
                                                     <span className="text-xs bg-indigo-100 text-indigo-800 font-bold px-2.5 py-1 rounded-full">Delhi High Court</span>
                                                 </div>
                                                 <p className="text-xs font-semibold text-[rgb(110,94,147)] mb-2">Principle: Foundations of Honest Concurrent Adoption</p>
@@ -747,7 +747,7 @@ export default function TrademarkConsentCoexistencePage() {
 
                                             <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
                                                 <div className="flex items-center justify-between mb-2">
-                                                    <h3 className="text-base font-bold text-gray-900">3. Stiefel Laboratories Inc. v. Registrar of Trade Marks (2014)</h3>
+                                                    <h4 className="text-base font-bold text-gray-900">3. Stiefel Laboratories Inc. v. Registrar of Trade Marks (2014)</h4>
                                                     <span className="text-xs bg-purple-100 text-purple-800 font-bold px-2.5 py-1 rounded-full">IPAB Ruling</span>
                                                 </div>
                                                 <p className="text-xs font-semibold text-[rgb(110,94,147)] mb-2">Principle: Weight of Consent Letters in Allied Commercial Lines</p>
@@ -758,15 +758,15 @@ export default function TrademarkConsentCoexistencePage() {
 
                                     {/* SECTION 13: FAQS */}
                                     <section id="faqs" className="scroll-mt-32 pt-16">
-                                        <h2 className="text-xl md:text-2xl lg:text-3xl font-black text-gray-900 mb-8 text-center text-[rgb(110,94,147)]">
+                                        <h3 className="text-xl md:text-2xl lg:text-3xl font-black text-gray-900 mb-8 text-center text-[rgb(110,94,147)]">
                                             Frequently Asked Questions
-                                        </h2>
+                                        </h3>
                                         <div className="space-y-4">
                                             {faqs.map((faq, index) => (
                                                 <div key={index} className="bg-white border border-gray-100 rounded-3xl p-8 shadow-sm hover:shadow-md transition-shadow">
-                                                    <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-4 flex items-start leading-snug">
+                                                    <h4 className="text-lg md:text-xl font-bold text-gray-900 mb-4 flex items-start leading-snug">
                                                         <span className="text-[rgb(110,94,147)] mr-4 font-black text-2xl">Q.</span>{faq.question}
-                                                    </h3>
+                                                    </h4>
                                                     <p className="text-gray-600 pl-10 m-0">{faq.answer}</p>
                                                 </div>
                                             ))}
@@ -775,10 +775,10 @@ export default function TrademarkConsentCoexistencePage() {
 
                                     {/* SECTION 14: STRATEGIC ADVICE */}
                                     <section id="strategic-takeaway" className="scroll-mt-32 pt-16">
-                                        <h2 className="text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLightbulb} className="w-8 h-8 mr-3 text-yellow-500" />
                                             Strategic Brand & Legal Takeaway
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">A Section 11 Examination Objection should never be viewed as a dead end. In commercial brand building, discovering an earlier cited trademark often represents an opportunity to establish constructive industry relationships through a negotiated<strong>Trademark Coexistence Agreement</strong>or<strong>Letter of Consent (NOC)</strong>.</p>
                                         <p className="mb-6">By formally bounding product specifications, trade dress packaging, and digital marketing channels, both businesses can coexist harmoniously without incurring the paralyzing costs of High Court<Link href="/passing-off-vs-trademark-infringement-india" className="text-[rgb(110,94,147)] hover:underline font-medium">passing off and trademark infringement litigation</Link>.</p>
                                         <p className="mb-6">If your trademark application is currently marked as &ldquo;Objected&rdquo; on the Trade Marks Registry portal, do not attempt informal or unvetted responses. Consult experienced intellectual property attorneys to evaluate whether your cited mark can be resolved via Section 12 honest concurrent use, negotiate formal coexistence terms, and secure the legal exclusivity your business deserves.</p>
@@ -794,9 +794,9 @@ export default function TrademarkConsentCoexistencePage() {
                                                     </span>
                                                 </div>
 
-                                                <h3 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl mb-4">
+                                                <h4 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl mb-4">
                                                     Resolve Section 11 Trademark Objections
-                                                </h3>
+                                                </h4>
 
                                                 <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">Facing conflicting mark citations? Partner with registered trademark attorneys to draft airtight Coexistence Agreements, secure valid Consent NOCs, and achieve Section 12 registry acceptance.</p>
 
@@ -829,7 +829,7 @@ export default function TrademarkConsentCoexistencePage() {
                             {/* About Author */}
                             <div className="bg-white p-6 rounded-[2.5rem] shadow-sm border border-gray-100 flex flex-col items-center text-center">
                                 <img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-24 h-24 rounded-full mb-4 shadow-md object-cover" />
-                                <h3 className="text-xl font-bold text-gray-900 mb-2">Rahul Roy</h3>
+                                <h4 className="text-xl font-bold text-gray-900 mb-2">Rahul Roy</h4>
                                 <p className="text-sm text-gray-600 mb-4 font-medium">Trademark Research Specialist</p>
                                 <p className="text-sm text-gray-700 leading-relaxed mb-6">Rahul specializes in trademark prosecution, Section 11 objection resolution, honest concurrent use strategies under Section 12, and negotiating cross-border coexistence frameworks for enterprise brands.</p>
                             </div>
@@ -837,7 +837,7 @@ export default function TrademarkConsentCoexistencePage() {
                             {/* Dark CTA Box */}
                             <div className="bg-[#0C002B] p-8 rounded-[2.5rem] shadow-2xl border border-white/5 text-white relative overflow-hidden group">
                                 <div className="absolute top-0 right-0 w-40 h-40 bg-[rgb(110,94,147)] rounded-full blur-[100px] opacity-30 group-hover:opacity-50 transition-opacity"></div>
-                                <h3 className="text-xl font-black mb-4 relative z-10 leading-tight">Need an Objection Strategy?</h3>
+                                <h4 className="text-xl font-black mb-4 relative z-10 leading-tight">Need an Objection Strategy?</h4>
                                 <p className="text-sm opacity-70 mb-8 leading-relaxed relative z-10 font-medium">Received an Examination Report with conflicting mark citations? Consult registered trademark attorneys to draft custom coexistence contracts and formal NOC filings.</p>
                                 <Link href="/e-filing-trademark" className="block relative z-10">
                                     <button className="w-full bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-3.5 px-4 rounded-xl transition-all shadow-xl text-xs uppercase tracking-wider">
@@ -848,7 +848,7 @@ export default function TrademarkConsentCoexistencePage() {
 
                             {/* Related Resources */}
                             <div className="bg-gray-50 p-10 rounded-[2.5rem] shadow-sm border border-gray-100">
-                                <h3 className="text-sm font-black text-gray-400 mb-8 uppercase tracking-[0.3em]">Related Resources</h3>
+                                <h4 className="text-sm font-black text-gray-400 mb-8 uppercase tracking-[0.3em]">Related Resources</h4>
                                 <ul className="space-y-6">
                                     <li><Link href="/passing-off-vs-trademark-infringement-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faGavel} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Passing Off vs Infringement</span></Link></li>
                                     <li><Link href="/trademark-assignment-vs-licensing-in-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faHandshake} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Assignment vs License</span></Link></li>

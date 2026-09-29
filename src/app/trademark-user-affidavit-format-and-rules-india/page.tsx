@@ -339,42 +339,42 @@ export default function TrademarkUserAffidavitPage() {
 
                                     {/* SECTION 2: WHAT IS A USER AFFIDAVIT */}
                                     <section id="what-is-user-affidavit" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faStamp} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             What is a Trademark User Affidavit?
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">A<strong>Trademark User Affidavit</strong>is an official legal instrument sworn by the proprietor, partner, or authorized director of the applicant business. It acts as sworn testimony under oath attesting to the precise historical facts surrounding the adoption, continuous commercial exploitation, geographic spread, sales volume, and promotional expenditure of the brand.</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <FontAwesomeIcon icon={faScaleBalanced} className="w-4 h-4 text-[#6E5E93] mr-2" />
                                                     Rule 25(1) Statutory Mandate
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Rule 25(1) of Trade Marks Rules, 2017 stipulates:<em>&ldquo;An application to register a trade mark shall specify the user date. In case the use of the trade mark is claimed before the date of application, the applicant shall file an affidavit testifying to such user with supporting documents.&rdquo;</em></p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <FontAwesomeIcon icon={faShieldHalved} className="w-4 h-4 text-[#6E5E93] mr-2" />
                                                     Section 34 Prior User Shield
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Section 34 shields prior users from infringement lawsuits filed by subsequent registrants. The user affidavit establishes the foundational documentary paper trail necessary to prove continuous prior adoption in commercial litigation.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <FontAwesomeIcon icon={faReceipt} className="w-4 h-4 text-[#6E5E93] mr-2" />
                                                     Overcoming Section 9 Inherent Weakness
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Under the proviso to Section 9(1), weakly distinctive or suggestive marks can achieve registration if the user affidavit proves they have acquired secondary meaning and distinctive character through prolonged commercial use.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <FontAwesomeIcon icon={faGavel} className="w-4 h-4 text-[#6E5E93] mr-2" />
                                                     Honest Concurrent Use (Section 12)
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">If a similar mark is cited during examination under Section 11, a robust user affidavit enables counsel to argue honest concurrent adoption under Section 12. This allows co-existence on the Trade Marks Register.</p>
                                             </div>
                                         </div>
@@ -382,10 +382,10 @@ export default function TrademarkUserAffidavitPage() {
 
                                     {/* SECTION 3: PRIOR USE VS PROPOSED TO BE USED */}
                                     <section id="prior-use-vs-proposed" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faTable} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Prior Use vs Proposed to be Used: Comparison
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">When drafting Form TM-A, applicants must choose between two distinct legal paths: claiming a specific historical user date or applying on a &ldquo;Proposed to be used&rdquo; basis. Compare the strategic and compliance implications:</p>
 
                                         <div className="overflow-x-auto my-8 border border-gray-200 rounded-2xl shadow-sm not-prose">
@@ -440,17 +440,17 @@ export default function TrademarkUserAffidavitPage() {
 
                                     {/* SECTION 4: STATUTORY AFFIDAVIT STRUCTURE */}
                                     <section id="affidavit-format-structure" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faListUl} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Statutory Structure of a User Affidavit
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">The Trade Marks Registry requires affidavits to follow a precise legal hierarchy. Submitting an informal letter or unsworn declaration will lead to summary rejection. A valid Rule 25 User Affidavit consists of eight essential statutory segments:</p>
 
                                         <div className="space-y-6 not-prose mb-8">
                                             <div className="border border-gray-200 rounded-2xl p-5 bg-white shadow-sm">
                                                 <div className="flex items-center space-x-3 mb-2">
                                                     <span className="w-7 h-7 rounded-full bg-[#6E5E93] text-white flex items-center justify-center text-xs font-bold">1</span>
-                                                    <h3 className="text-base font-bold text-gray-900 m-0">Cause Title &amp; Registry Forum</h3>
+                                                    <h4 className="text-base font-bold text-gray-900 m-0">Cause Title &amp; Registry Forum</h4>
                                                 </div>
                                                 <p className="text-sm text-gray-600 pl-10 m-0">Must specify the appropriate Trade Marks Registry jurisdiction (e.g., &ldquo;BEFORE THE REGISTRAR OF TRADE MARKS, NEW DELHI / MUMBAI / CHENNAI / KOLKATA / AHMEDABAD&rdquo;) along with the pending Application Number, Mark name, and registered Class.</p>
                                             </div>
@@ -458,7 +458,7 @@ export default function TrademarkUserAffidavitPage() {
                                             <div className="border border-gray-200 rounded-2xl p-5 bg-white shadow-sm">
                                                 <div className="flex items-center space-x-3 mb-2">
                                                     <span className="w-7 h-7 rounded-full bg-[#6E5E93] text-white flex items-center justify-center text-xs font-bold">2</span>
-                                                    <h3 className="text-base font-bold text-gray-900 m-0">Deponent Identification &amp; Authority</h3>
+                                                    <h4 className="text-base font-bold text-gray-900 m-0">Deponent Identification &amp; Authority</h4>
                                                 </div>
                                                 <p className="text-sm text-gray-600 pl-10 m-0">The deponent must clearly state their full legal name, father&apos;s name, age, residential address, and capacity (e.g., Sole Proprietor, Managing Partner, or Director authorized via Board Resolution dated DD/MM/YYYY).</p>
                                             </div>
@@ -466,7 +466,7 @@ export default function TrademarkUserAffidavitPage() {
                                             <div className="border border-gray-200 rounded-2xl p-5 bg-white shadow-sm">
                                                 <div className="flex items-center space-x-3 mb-2">
                                                     <span className="w-7 h-7 rounded-full bg-[#6E5E93] text-white flex items-center justify-center text-xs font-bold">3</span>
-                                                    <h3 className="text-base font-bold text-gray-900 m-0">Specific Prior Use Date Declaration</h3>
+                                                    <h4 className="text-base font-bold text-gray-900 m-0">Specific Prior Use Date Declaration</h4>
                                                 </div>
                                                 <p className="text-sm text-gray-600 pl-10 m-0">The date of first adoption and commercial use must be declared in exact DD/MM/YYYY format. Vague declarations like &ldquo;since 2018&rdquo; or &ldquo;for the last 5 years&rdquo; violate Rule 25 and trigger formality objections.</p>
                                             </div>
@@ -474,7 +474,7 @@ export default function TrademarkUserAffidavitPage() {
                                             <div className="border border-gray-200 rounded-2xl p-5 bg-white shadow-sm">
                                                 <div className="flex items-center space-x-3 mb-2">
                                                     <span className="w-7 h-7 rounded-full bg-[#6E5E93] text-white flex items-center justify-center text-xs font-bold">4</span>
-                                                    <h3 className="text-base font-bold text-gray-900 m-0">Turnover &amp; Sales Breakdown Table</h3>
+                                                    <h4 className="text-base font-bold text-gray-900 m-0">Turnover &amp; Sales Breakdown Table</h4>
                                                 </div>
                                                 <p className="text-sm text-gray-600 pl-10 m-0">An annual financial-year breakdown of revenue generated under the brand name from the inception date to the filing year, cross-referenced with an attached CA Turnover Certificate.</p>
                                             </div>
@@ -482,7 +482,7 @@ export default function TrademarkUserAffidavitPage() {
                                             <div className="border border-gray-200 rounded-2xl p-5 bg-white shadow-sm">
                                                 <div className="flex items-center space-x-3 mb-2">
                                                     <span className="w-7 h-7 rounded-full bg-[#6E5E93] text-white flex items-center justify-center text-xs font-bold">5</span>
-                                                    <h3 className="text-base font-bold text-gray-900 m-0">Advertising &amp; Publicity Spends</h3>
+                                                    <h4 className="text-base font-bold text-gray-900 m-0">Advertising &amp; Publicity Spends</h4>
                                                 </div>
                                                 <p className="text-sm text-gray-600 pl-10 m-0">Financial breakdown of marketing, digital advertising, print publicity, and exhibition expenditures deployed to popularize the brand in Indian commerce.</p>
                                             </div>
@@ -490,7 +490,7 @@ export default function TrademarkUserAffidavitPage() {
                                             <div className="border border-gray-200 rounded-2xl p-5 bg-white shadow-sm">
                                                 <div className="flex items-center space-x-3 mb-2">
                                                     <span className="w-7 h-7 rounded-full bg-[#6E5E93] text-white flex items-center justify-center text-xs font-bold">6</span>
-                                                    <h3 className="text-base font-bold text-gray-900 m-0">Schedule of Exhibited Documents (Annexures)</h3>
+                                                    <h4 className="text-base font-bold text-gray-900 m-0">Schedule of Exhibited Documents (Annexures)</h4>
                                                 </div>
                                                 <p className="text-sm text-gray-600 pl-10 m-0">Explicit index of attached documentary proof: Annexure A (Earliest Invoices), Annexure B (CA Certificate), Annexure C (Domain WHOIS / Website Proofs), Annexure D (Product Labels), and Annexure E (Media Advertisements).</p>
                                             </div>
@@ -498,7 +498,7 @@ export default function TrademarkUserAffidavitPage() {
                                             <div className="border border-gray-200 rounded-2xl p-5 bg-white shadow-sm">
                                                 <div className="flex items-center space-x-3 mb-2">
                                                     <span className="w-7 h-7 rounded-full bg-[#6E5E93] text-white flex items-center justify-center text-xs font-bold">7</span>
-                                                    <h3 className="text-base font-bold text-gray-900 m-0">Verification &amp; Truthfulness Clause</h3>
+                                                    <h4 className="text-base font-bold text-gray-900 m-0">Verification &amp; Truthfulness Clause</h4>
                                                 </div>
                                                 <p className="text-sm text-gray-600 pl-10 m-0">Statutory affirmation certifying that the contents of paragraphs 1 to 8 are true and correct to the personal knowledge and official records of the deponent, and nothing material has been concealed.</p>
                                             </div>
@@ -506,7 +506,7 @@ export default function TrademarkUserAffidavitPage() {
                                             <div className="border border-gray-200 rounded-2xl p-5 bg-white shadow-sm">
                                                 <div className="flex items-center space-x-3 mb-2">
                                                     <span className="w-7 h-7 rounded-full bg-[#6E5E93] text-white flex items-center justify-center text-xs font-bold">8</span>
-                                                    <h3 className="text-base font-bold text-gray-900 m-0">Notary Attestation &amp; Official Seal</h3>
+                                                    <h4 className="text-base font-bold text-gray-900 m-0">Notary Attestation &amp; Official Seal</h4>
                                                 </div>
                                                 <p className="text-sm text-gray-600 pl-10 m-0">Execution signature of deponent accompanied by the official stamp, registration number, signature, and Notarial Seal of an authorized Notary Public or Oath Commissioner.</p>
                                             </div>
@@ -515,10 +515,10 @@ export default function TrademarkUserAffidavitPage() {
 
                                     {/* SECTION 5: SAMPLE AFFIDAVIT DRAFT */}
                                     <section id="sample-draft-format" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faFileLines} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Sample Trademark User Affidavit Draft Format
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Below is a standardized legal draft template for a Trademark User Affidavit in India under Rule 25 of Trade Marks Rules, 2017. This template can be adapted for Sole Proprietorships, Partnerships, LLPs, or Private Limited Companies:</p>
 
                                         <div className="bg-slate-900 text-slate-100 p-6 md:p-8 rounded-2xl font-mono text-xs md:text-sm leading-relaxed overflow-x-auto shadow-xl not-prose mb-8">
@@ -587,10 +587,10 @@ export default function TrademarkUserAffidavitPage() {
 
                                     {/* SECTION 6: STAMP PAPER & NOTARIZATION RULES */}
                                     <section id="stamp-paper-notarization" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faStamp} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Stamp Paper Values &amp; Notarization Rules
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Under the Indian Stamp Act, 1899 and state-specific stamp schedules, an affidavit executed for quasi-judicial proceedings before the Trade Marks Registry must carry requisite stamp duty. The stamp duty varies across states:</p>
 
                                         <div className="overflow-x-auto my-8 border border-gray-200 rounded-2xl shadow-sm not-prose">
@@ -651,42 +651,42 @@ export default function TrademarkUserAffidavitPage() {
 
                                     {/* SECTION 7: ACCEPTABLE EVIDENTIARY PROOFS */}
                                     <section id="acceptable-evidence" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faFolderOpen} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Acceptable Documentary Evidentiary Proofs
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">The Trade Marks Examiner scrutinizes the evidentiary exhibits annexed to your Rule 25 affidavit. High-quality, dated, and unassailable documentary evidence includes:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2 flex items-center">
+                                                <h4 className="text-base font-bold text-gray-900 mb-2 flex items-center">
                                                     <FontAwesomeIcon icon={faReceipt} className="w-4 h-4 text-[#6E5E93] mr-2" />
                                                     1. Earliest Tax &amp; GST Invoices
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Dated GST/VAT invoices matching or immediately following the claimed use date. The invoice description must explicitly mention the brand name or product line.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2 flex items-center">
+                                                <h4 className="text-base font-bold text-gray-900 mb-2 flex items-center">
                                                     <FontAwesomeIcon icon={faBuilding} className="w-4 h-4 text-[#6E5E93] mr-2" />
                                                     2. CA Certified Turnover Certificate
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">An audited certificate issued by an independent Chartered Accountant stating annual sales revenue and marketing expenses specifically generated under the trademark with UDIN.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2 flex items-center">
+                                                <h4 className="text-base font-bold text-gray-900 mb-2 flex items-center">
                                                     <FontAwesomeIcon icon={faGlobe} className="w-4 h-4 text-[#6E5E93] mr-2" />
                                                     3. Domain WHOIS &amp; Website Proofs
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Domain registration certificates (WHOIS timestamp records), Wayback Machine internet archive captures, and e-commerce seller dashboard screenshots.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2 flex items-center">
+                                                <h4 className="text-base font-bold text-gray-900 mb-2 flex items-center">
                                                     <FontAwesomeIcon icon={faFileContract} className="w-4 h-4 text-[#6E5E93] mr-2" />
                                                     4. Commercial Agreements &amp; POs
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Distribution agreements, supply contracts, customer purchase orders, and export bills of lading demonstrating interstate or international trade.</p>
                                             </div>
                                         </div>
@@ -694,10 +694,10 @@ export default function TrademarkUserAffidavitPage() {
 
                                     {/* SECTION 8: 7-STEP FILING WORKFLOW */}
                                     <section id="step-by-step-filing" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faRocket} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             7-Step User Affidavit Filing Workflow
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">To ensure seamless acceptance without registry objections, follow this 7-step statutory workflow:</p>
 
                                         {/* STEP 1 */}
@@ -706,7 +706,7 @@ export default function TrademarkUserAffidavitPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 1</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Date Audit</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Audit Historical Evidence and Fix Exact User Date</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Audit Historical Evidence and Fix Exact User Date</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Review your historical business archives to identify the single oldest verifiable commercial invoice or domain registration record. Do not guess a date; your user claim must be anchored to concrete documentary proof.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">Confirm that the mark was not used earlier by an unregistered predecessor entity without a valid Assignment Deed. You can verify whether any similar marks were registered during this window by conducting a comprehensive<Link href="/trademark-search" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark search</Link>.</p>
                                         </div>
@@ -717,7 +717,7 @@ export default function TrademarkUserAffidavitPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 2</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Financial Collation</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Collate CA Certified Turnover and Promotional Spends</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Collate CA Certified Turnover and Promotional Spends</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Engage your Chartered Accountant to draft an official Turnover &amp; Advertising Certificate on their professional letterhead, certifying annual revenue figures specifically generated under the trademark.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">Ensure the certificate includes the Chartered Accountant&apos;s Membership Number and statutory Unique Document Identification Number (UDIN) for digital verification by registry examiners.</p>
                                         </div>
@@ -728,7 +728,7 @@ export default function TrademarkUserAffidavitPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 3</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Legal Drafting</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Draft Statutory User Affidavit under Rule 25</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Draft Statutory User Affidavit under Rule 25</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Draft the complete affidavit strictly conforming to the 8-part statutory structure outlined above. Incorporate exact deponent details, continuous prior use dates, class descriptions using our<Link href="/trademark-class-finder" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark class finder</Link>, and the schedule of annexures.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">Review the wording carefully to ensure that it aligns with whether you are filing a Word Mark or a Device Mark under our<Link href="/word-mark-vs-device-mark-trademark-india" className="text-[rgb(110,94,147)] hover:underline font-medium">word mark vs device mark strategy</Link>.</p>
                                         </div>
@@ -739,7 +739,7 @@ export default function TrademarkUserAffidavitPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 4</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Stamp Duty</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Execute on Non-Judicial Stamp Paper (₹100)</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Execute on Non-Judicial Stamp Paper (₹100)</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Print the drafted affidavit on appropriate Non-Judicial Stamp Paper or attach it to an official Stock Holding Corporation (SHCIL) e-stamp certificate of ₹100 value.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">The authorized deponent must sign all pages of the affidavit and initial every attached documentary exhibit.</p>
                                         </div>
@@ -750,7 +750,7 @@ export default function TrademarkUserAffidavitPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 5</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Notarization</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Notarize before Authorized Notary Public</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Notarize before Authorized Notary Public</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Present the executed affidavit before an authorized Notary Public or Oath Commissioner in your jurisdiction.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">The Notary will verify deponent identity, record the entry in their register, apply the official notary stamp and signature, and affix the required notarial adhesive revenue stamps.</p>
                                         </div>
@@ -761,7 +761,7 @@ export default function TrademarkUserAffidavitPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 6</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: E-Filing Attachment</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Upload with Form TM-A on IP India Portal</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Upload with Form TM-A on IP India Portal</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Digitize the notarized affidavit and all supporting annexures into an optimized, high-resolution PDF document.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">During online e-filing of Form TM-A, select &ldquo;User claim date&rdquo;, enter the exact DD/MM/YYYY date, and upload the combined PDF under the mandatory &ldquo;User Affidavit&rdquo. Attachment section using a Class 3 Digital Signature Certificate.</p>
                                         </div>
@@ -772,7 +772,7 @@ export default function TrademarkUserAffidavitPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 7</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Examination &amp; Approval</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Monitor Examination and Defend Prior Use</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Monitor Examination and Defend Prior Use</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Track the electronic status of your application. When the examination report is issued, your trademark attorney can cite your Rule 25 affidavit to defeat cited marks. If objections arise, refer to our comprehensive guide on<Link href="/how-to-respond-to-trademark-examination-report" className="text-[rgb(110,94,147)] hover:underline font-medium">how to respond to trademark examination report</Link>and<Link href="/how-to-overcome-trademark-objection" className="text-[rgb(110,94,147)] hover:underline font-medium">how to overcome trademark objection</Link>.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">Once accepted and advertised in the Trade Marks Journal, your verified prior user date stands as unassailable statutory proof of seniority.</p>
                                         </div>
@@ -780,30 +780,30 @@ export default function TrademarkUserAffidavitPage() {
 
                                     {/* SECTION 9: COMMON PITFALLS TO AVOID */}
                                     <section id="common-mistakes" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faExclamationTriangle} className="w-8 h-8 mr-3 text-amber-500" />
                                             Common User Affidavit Pitfalls to Avoid
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Overlooking procedural formalities when preparing a Rule 25 affidavit can cause fatal rejections. Avoid these 4 critical mistakes:</p>
 
                                         <div className="space-y-6">
                                             <div className="border-l-4 border-red-500 pl-4 py-2">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">1. Claiming Use Dates Prior to Company Incorporation without Assignment</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">1. Claiming Use Dates Prior to Company Incorporation without Assignment</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">If your Private Limited company was incorporated on 01/01/2022, you cannot directly claim use &ldquo;since 2018&rdquo. Under the company name unless you execute and file a formal Trademark Assignment Deed transferring the founder&apos;s prior individual rights to the corporate entity.</p>
                                             </div>
 
                                             <div className="border-l-4 border-red-500 pl-4 py-2">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">2. Attaching Invoices Lacking the Brand Name or Trademark Logo</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">2. Attaching Invoices Lacking the Brand Name or Trademark Logo</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Submitting general company sales invoices that mention product categories (e.g. &ldquo;Cotton Shirts&rdquo;) without explicitly displaying the trademark name (e.g. &ldquo;BrandX Cotton Shirts&rdquo;) will be rejected by the examiner as inconclusive proof of mark adoption.</p>
                                             </div>
 
                                             <div className="border-l-4 border-red-500 pl-4 py-2">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">3. Vague or Ambiguous Date Declarations</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">3. Vague or Ambiguous Date Declarations</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Phrases like &ldquo;since 2019&rdquo; or &ldquo;for approximately four years&rdquo; violate Rule 25. The registry e-filing system strictly requires an unambiguous day, month, and year (DD/MM/YYYY).</p>
                                             </div>
 
                                             <div className="border-l-4 border-red-500 pl-4 py-2">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">4. Unnotarized Affidavits or Defective Stamp Duty</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">4. Unnotarized Affidavits or Defective Stamp Duty</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Executing an affidavit on plain company letterhead or submitting a scanned copy without a live Notary Public seal and serial entry number constitutes a formal defect resulting in a Formality Check Fail notice.</p>
                                             </div>
                                         </div>
@@ -811,10 +811,10 @@ export default function TrademarkUserAffidavitPage() {
 
                                     {/* SECTION 10: PRE-FILING CHECKLIST */}
                                     <section id="checklist" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faCheckCircle} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Trademark User Affidavit Checklist
-                                        </h2>
+                                        </h3>
                                         <ul className="list-none space-y-4 mb-8">
                                             <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Fix Exact User Date:</strong>Identify the oldest authenticated invoice date and enter it in DD/MM/YYYY format.</span></li>
                                             <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Procure ₹100 Stamp Paper:</strong>Purchase Non-Judicial E-Stamp paper in the name of the applicant entity or deponent.</span></li>
@@ -827,15 +827,15 @@ export default function TrademarkUserAffidavitPage() {
 
                                     {/* SECTION 11: FAQS (EXACTLY 8 MATCHING SCHEMA) */}
                                     <section id="faqs" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl lg:text-3xl font-black text-gray-900 mb-8 text-center text-[rgb(110,94,147)]">
+                                        <h3 className="text-xl md:text-2xl lg:text-3xl font-black text-gray-900 mb-8 text-center text-[rgb(110,94,147)]">
                                             Frequently Asked Questions
-                                        </h2>
+                                        </h3>
                                         <div className="space-y-4">
                                             {faqs.map((faq, index) => (
                                                 <div key={index} className="bg-white border border-gray-100 rounded-3xl p-8 shadow-sm hover:shadow-md transition-shadow">
-                                                    <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-4 flex items-start leading-snug">
+                                                    <h4 className="text-lg md:text-xl font-bold text-gray-900 mb-4 flex items-start leading-snug">
                                                         <span className="text-[rgb(110,94,147)] mr-4 font-black text-2xl">Q.</span>{faq.question}
-                                                    </h3>
+                                                    </h4>
                                                     <p className="text-gray-600 pl-10 m-0">{faq.answer}</p>
                                                 </div>
                                             ))}
@@ -844,10 +844,10 @@ export default function TrademarkUserAffidavitPage() {
 
                                     {/* SECTION 12: FINAL STRATEGIC ADVICE */}
                                     <section id="final-takeaway" className="scroll-mt-32 pt-16">
-                                        <h2 className="text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLightbulb} className="w-8 h-8 mr-3 text-yellow-500" />
                                             Strategic Legal Counsel
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Claiming prior use is one of the most powerful legal strategies available in Indian trademark practice. It transforms a vulnerable mark into a senior intellectual property asset that can defeat younger registrations, overcome examination objections, and withstand third-party oppositions.</p>
                                         <p className="mb-6">However, the strength of your prior use claim depends entirely on the legal accuracy of your Rule 25 User Affidavit. Partnering with seasoned trademark attorneys ensures your affidavit is drafted flawlessly, stamp duty is reconciled, and documentary exhibits are structured to secure fast-track acceptance. Initiate your prior use trademark filing today to solidify your brand legacy.</p>
                                     </section>
@@ -862,9 +862,9 @@ export default function TrademarkUserAffidavitPage() {
                                                     </span>
                                                 </div>
 
-                                                <h3 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl mb-4">
+                                                <h4 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl mb-4">
                                                     Claim Your Brand Seniority Today
-                                                </h3>
+                                                </h4>
 
                                                 <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">Work with expert IP attorneys to draft, stamp, notarize, and file your Trademark User Affidavit under Rule 25. Protect years of goodwill and secure nationwide exclusivity.</p>
 
@@ -896,7 +896,7 @@ export default function TrademarkUserAffidavitPage() {
                             {/* About Author */}
                             <div className="bg-white p-6 rounded-[2.5rem] shadow-sm border border-gray-100 flex flex-col items-center text-center">
                                 <img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-24 h-24 rounded-full mb-4 shadow-md object-cover" />
-                                <h3 className="text-xl font-bold text-gray-900 mb-2">Rahul Roy</h3>
+                                <h4 className="text-xl font-bold text-gray-900 mb-2">Rahul Roy</h4>
                                 <p className="text-sm text-gray-600 mb-4 font-medium">Trademark Research Specialist</p>
                                 <p className="text-sm text-gray-700 leading-relaxed mb-6">Rahul specializes in brand protection strategy, prior use evidence compilation, and trademark user affidavit compliance under Rule 25 of the Trade Marks Rules, 2017.</p>
                             </div>
@@ -904,7 +904,7 @@ export default function TrademarkUserAffidavitPage() {
                             {/* Dark CTA Box */}
                             <div className="bg-[#0C002B] p-8 rounded-[2.5rem] shadow-2xl border border-white/5 text-white relative overflow-hidden group">
                                 <div className="absolute top-0 right-0 w-40 h-40 bg-[rgb(110,94,147)] rounded-full blur-[100px] opacity-30 group-hover:opacity-50 transition-opacity"></div>
-                                <h3 className="text-xl font-black mb-4 relative z-10 leading-tight">Claim Prior Use</h3>
+                                <h4 className="text-xl font-black mb-4 relative z-10 leading-tight">Claim Prior Use</h4>
                                 <p className="text-sm opacity-70 mb-8 leading-relaxed relative z-10 font-medium">Lock in your historical brand usage date. File Form TM-A with a certified User Affidavit today.</p>
                                 <Link href="/e-filing-trademark" className="block relative z-10">
                                     <button className="w-full bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-3.5 px-4 rounded-xl transition-all shadow-xl text-xs uppercase tracking-wider">
@@ -915,7 +915,7 @@ export default function TrademarkUserAffidavitPage() {
 
                             {/* Related Resources */}
                             <div className="bg-gray-50 p-10 rounded-[2.5rem] shadow-sm border border-gray-100">
-                                <h3 className="text-sm font-black text-gray-400 mb-8 uppercase tracking-[0.3em]">Related Resources</h3>
+                                <h4 className="text-sm font-black text-gray-400 mb-8 uppercase tracking-[0.3em]">Related Resources</h4>
                                 <ul className="space-y-6">
                                     <li><Link href="/process-and-steps-of-trademark-registration" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faListUl} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Filing Steps</span></Link></li>
                                     <li><Link href="/word-mark-vs-device-mark-trademark-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faScaleBalanced} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Word vs Logo</span></Link></li>

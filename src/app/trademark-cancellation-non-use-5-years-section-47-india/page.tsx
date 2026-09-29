@@ -394,7 +394,7 @@ export default function TrademarkCancellationNonUsePage() {
                                                     <FontAwesomeIcon icon={faScaleBalanced} className="w-5 h-5" />
                                                 </div>
                                                 <div>
-                                                    <h3 className="text-base font-bold text-gray-900 mb-1">The &ldquo;Use It or Lose It&rdquo; Doctrine in Indian IP Law</h3>
+                                                    <h4 className="text-base font-bold text-gray-900 mb-1">The &ldquo;Use It or Lose It&rdquo; Doctrine in Indian IP Law</h4>
                                                     <p className="text-xs sm:text-sm text-gray-600 leading-relaxed m-0">
                                                         Indian trademark law is strictly rooted in commercial use. Under <strong>Section 47</strong>, if a registered mark remains dormant without continuous bona fide commercial use for <strong>5 years</strong>, any aggrieved business owner possesses the statutory right to petition the Registrar of Trade Marks or the High Court to cancel, expunge, or restrict the registration.
                                                     </p>
@@ -409,10 +409,10 @@ export default function TrademarkCancellationNonUsePage() {
 
                                     {/* SECTION 2: STATUTORY GROUNDS */}
                                     <section id="statutory-grounds" className="scroll-mt-32">
-                                        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faGavel} className="w-6 h-6 text-[#6E5E93] mr-3" />
                                             Statutory Grounds Under Section 47 Explained
-                                        </h2>
+                                        </h3>
                                         <p>
                                             Section 47(1) of the Trade Marks Act, 1999 lays down two separate, independent, and distinct statutory grounds under which a registered trademark can be taken off the Register:
                                         </p>
@@ -423,7 +423,7 @@ export default function TrademarkCancellationNonUsePage() {
                                                     <span className="px-3 py-1 bg-purple-100 text-[#6E5E93] text-xs font-bold rounded-full uppercase">Ground A</span>
                                                     <span className="text-xs text-gray-500 font-semibold">Section 47(1)(a)</span>
                                                 </div>
-                                                <h3 className="text-lg font-bold text-gray-900 mb-2">No Bona Fide Intention to Use</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-2">No Bona Fide Intention to Use</h4>
                                                 <p className="text-xs sm:text-sm text-gray-600 leading-relaxed mb-4">
                                                     The trademark was registered <strong>without any bona fide intention</strong> on the part of the applicant to use it in relation to those goods or services, <strong>AND</strong> there has been no bona fide use of the trademark up to a date <strong>3 months before</strong> the date of the cancellation application.
                                                 </p>
@@ -437,7 +437,7 @@ export default function TrademarkCancellationNonUsePage() {
                                                     <span className="px-3 py-1 bg-indigo-100 text-indigo-700 text-xs font-bold rounded-full uppercase">Ground B</span>
                                                     <span className="text-xs text-gray-500 font-semibold">Section 47(1)(b)</span>
                                                 </div>
-                                                <h3 className="text-lg font-bold text-gray-900 mb-2">Continuous 5-Year Non-Use</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-2">Continuous 5-Year Non-Use</h4>
                                                 <p className="text-xs sm:text-sm text-gray-600 leading-relaxed mb-4">
                                                     Up to a date <strong>3 months before</strong> the date of the application, a continuous period of <strong>5 years or longer</strong> has elapsed during which the trademark was registered and during which there was no bona fide commercial use thereof in relation to the registered goods or services.
                                                 </p>
@@ -462,19 +462,19 @@ export default function TrademarkCancellationNonUsePage() {
 
                                     {/* SECTION 3: CALCULATING THE 5-YEAR CLOCK */}
                                     <section id="calculating-5-years" className="scroll-mt-32">
-                                        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faCalculator} className="w-6 h-6 text-[#6E5E93] mr-3" />
                                             Calculating the 5 Years & 3 Months Non-Use Clock
-                                        </h2>
+                                        </h3>
                                         <p>
                                             One of the most critical legal technicalities in Section 47 litigation revolves around <strong>when the 5-year clock starts ticking</strong>. Miscalculating this timeline can lead to immediate dismissal of your cancellation petition as premature.
                                         </p>
 
                                         <div className="my-6 p-6 bg-gray-50 rounded-2xl border border-gray-200 not-prose">
-                                            <h3 className="text-base font-bold text-gray-900 mb-3 flex items-center">
+                                            <h4 className="text-base font-bold text-gray-900 mb-3 flex items-center">
                                                 <FontAwesomeIcon icon={faClock} className="w-4 h-4 text-[#6E5E93] mr-2" />
                                                 Statutory Rule Established by the Supreme Court of India
-                                            </h3>
+                                            </h4>
                                             <p className="text-xs sm:text-sm text-gray-700 leading-relaxed mb-4">
                                                 In landmark decisions including <em>Cycle Corporation of India Ltd. v. Richter & Co. (1991)</em> and <em>Vishnudas Trading v. Vazir Sultan Tobacco Co. Ltd. (1997)</em>, the Supreme Court ruled that the words <strong>&ldquo;during which the trade mark was registered&rdquo;</strong> in Section 47(1)(b) refer strictly to the period <strong>after the mark is actually entered into the Register</strong>, and NOT the date of application.
                                             </p>
@@ -505,10 +505,10 @@ export default function TrademarkCancellationNonUsePage() {
 
                                     {/* SECTION 4: PERSON AGGRIEVED */}
                                     <section id="person-aggrieved" className="scroll-mt-32">
-                                        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faUserSlash} className="w-6 h-6 text-[#6E5E93] mr-3" />
                                             Who Qualifies as a &lsquo;Person Aggrieved&rsquo;?
-                                        </h2>
+                                        </h3>
                                         <p>
                                             An application under Section 47 cannot be filed by a random member of the public. The applicant must establish <em>locus standi</em> as a <strong>&ldquo;Person Aggrieved&rdquo;</strong>.
                                         </p>
@@ -520,7 +520,7 @@ export default function TrademarkCancellationNonUsePage() {
                                             <div className="bg-gray-50 p-4 rounded-xl border border-gray-200 flex items-start space-x-3">
                                                 <FontAwesomeIcon icon={faCircleCheck} className="w-4 h-4 text-emerald-600 mt-1 flex-shrink-0" />
                                                 <div>
-                                                    <h3 className="text-sm font-bold text-gray-900 mb-1">Blocked Trademark Applicants</h3>
+                                                    <h4 className="text-sm font-bold text-gray-900 mb-1">Blocked Trademark Applicants</h4>
                                                     <p className="text-xs text-gray-600 m-0">You filed for trademark registration, but the Examiner cited the dormant mark under Section 11 as a conflicting prior registration.</p>
                                                 </div>
                                             </div>
@@ -528,7 +528,7 @@ export default function TrademarkCancellationNonUsePage() {
                                             <div className="bg-gray-50 p-4 rounded-xl border border-gray-200 flex items-start space-x-3">
                                                 <FontAwesomeIcon icon={faCircleCheck} className="w-4 h-4 text-emerald-600 mt-1 flex-shrink-0" />
                                                 <div>
-                                                    <h3 className="text-sm font-bold text-gray-900 mb-1">Defendants in Infringement Suits</h3>
+                                                    <h4 className="text-sm font-bold text-gray-900 mb-1">Defendants in Infringement Suits</h4>
                                                     <p className="text-xs text-gray-600 m-0">You have been served with a cease-and-desist notice or a lawsuit for <Link href="/passing-off-vs-trademark-infringement-india" className="text-[#6E5E93] hover:underline">trademark infringement</Link> by an owner who has not used the mark.</p>
                                                 </div>
                                             </div>
@@ -536,7 +536,7 @@ export default function TrademarkCancellationNonUsePage() {
                                             <div className="bg-gray-50 p-4 rounded-xl border border-gray-200 flex items-start space-x-3">
                                                 <FontAwesomeIcon icon={faCircleCheck} className="w-4 h-4 text-emerald-600 mt-1 flex-shrink-0" />
                                                 <div>
-                                                    <h3 className="text-sm font-bold text-gray-900 mb-1">Direct Commercial Competitors</h3>
+                                                    <h4 className="text-sm font-bold text-gray-900 mb-1">Direct Commercial Competitors</h4>
                                                     <p className="text-xs text-gray-600 m-0">Trading in the exact same industry whose legitimate brand expansion or marketing is hindered by the broad, unused registered specification.</p>
                                                 </div>
                                             </div>
@@ -544,7 +544,7 @@ export default function TrademarkCancellationNonUsePage() {
                                             <div className="bg-gray-50 p-4 rounded-xl border border-gray-200 flex items-start space-x-3">
                                                 <FontAwesomeIcon icon={faCircleCheck} className="w-4 h-4 text-emerald-600 mt-1 flex-shrink-0" />
                                                 <div>
-                                                    <h3 className="text-sm font-bold text-gray-900 mb-1">Target of Coercive Demands</h3>
+                                                    <h4 className="text-sm font-bold text-gray-900 mb-1">Target of Coercive Demands</h4>
                                                     <p className="text-xs text-gray-600 m-0">Entrepreneurs targeted by trademark squatters demanding exorbitant buy-out or licensing fees for a dead mark.</p>
                                                 </div>
                                             </div>
@@ -553,10 +553,10 @@ export default function TrademarkCancellationNonUsePage() {
 
                                     {/* SECTION 5: WHERE TO FILE */}
                                     <section id="forum-jurisdiction" className="scroll-mt-32">
-                                        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLandmark} className="w-6 h-6 text-[#6E5E93] mr-3" />
                                             Where to File: Registry vs High Court IPD
-                                        </h2>
+                                        </h3>
                                         <p>
                                             Historically, rectification applications were filed before the Intellectual Property Appellate Board (IPAB). However, following the enactment of the <strong>Tribunals Reforms Act, 2021</strong>, the IPAB was abolished, and statutory rectification jurisdiction was transferred directly to the <strong>High Courts</strong>.
                                         </p>
@@ -570,7 +570,7 @@ export default function TrademarkCancellationNonUsePage() {
                                                     <FontAwesomeIcon icon={faFileContract} className="w-4 h-4" />
                                                     <span>Option 1: Trade Marks Registry</span>
                                                 </div>
-                                                <h3 className="text-base font-bold text-gray-900 mb-2">Filing Before the Registrar</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-2">Filing Before the Registrar</h4>
                                                 <ul className="text-xs sm:text-sm text-gray-600 space-y-2 mb-4">
                                                     <li>• Filed online via the IP India portal using <strong>Form TM-O</strong>.</li>
                                                     <li>• Handled by the Hearing Officer / Registrar of Trade Marks at the appropriate branch (Delhi, Mumbai, Chennai, Kolkata, or Ahmedabad).</li>
@@ -584,7 +584,7 @@ export default function TrademarkCancellationNonUsePage() {
                                                     <FontAwesomeIcon icon={faGavel} className="w-4 h-4 text-[#6E5E93]" />
                                                     <span>Option 2: High Court IPD</span>
                                                 </div>
-                                                <h3 className="text-base font-bold text-gray-900 mb-2">Filing Before the High Court</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-2">Filing Before the High Court</h4>
                                                 <ul className="text-xs sm:text-sm text-gray-600 space-y-2 mb-4">
                                                     <li>• Filed before the High Court having jurisdiction (e.g., Delhi High Court Intellectual Property Division - IPD).</li>
                                                     <li>• Mandatory under <strong>Section 124</strong> if a trademark infringement suit is already pending before a civil court.</li>
@@ -597,10 +597,10 @@ export default function TrademarkCancellationNonUsePage() {
 
                                     {/* SECTION 6: 7-STEP PROCEDURE */}
                                     <section id="step-by-step" className="scroll-mt-32">
-                                        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faDiagramProject} className="w-6 h-6 text-[#6E5E93] mr-3" />
                                             Step-by-Step Procedure for Trademark Cancellation
-                                        </h2>
+                                        </h3>
                                         <p>
                                             Filing a successful Section 47 cancellation requires strict adherence to statutory evidentiary timelines under the <strong>Trade Marks Rules, 2017</strong>. Below is the systematic 7-step process:
                                         </p>
@@ -609,7 +609,7 @@ export default function TrademarkCancellationNonUsePage() {
                                             <div className="flex items-start p-4 bg-gray-50 rounded-2xl border border-gray-200">
                                                 <div className="w-8 h-8 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">1</div>
                                                 <div>
-                                                    <h3 className="text-sm font-bold text-gray-900 mb-1">Pre-Filing Market Due Diligence</h3>
+                                                    <h4 className="text-sm font-bold text-gray-900 mb-1">Pre-Filing Market Due Diligence</h4>
                                                     <p className="text-xs text-gray-600 leading-relaxed">
                                                         Conduct thorough online searches, physical retail audits, e-commerce reviews (Amazon, Flipkart, Blinkit, Zepto), domain checks, ROC/MCA filings, and GST status checks to verify total absence of commercial use.
                                                     </p>
@@ -619,7 +619,7 @@ export default function TrademarkCancellationNonUsePage() {
                                             <div className="flex items-start p-4 bg-gray-50 rounded-2xl border border-gray-200">
                                                 <div className="w-8 h-8 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">2</div>
                                                 <div>
-                                                    <h3 className="text-sm font-bold text-gray-900 mb-1">Investigator Affidavit & Evidence Dossier</h3>
+                                                    <h4 className="text-sm font-bold text-gray-900 mb-1">Investigator Affidavit & Evidence Dossier</h4>
                                                     <p className="text-xs text-gray-600 leading-relaxed">
                                                         Engage an independent market investigator to compile an exhaustive Investigation Report and execute a sworn <Link href="/trademark-user-affidavit-format-and-rules-india" className="text-[#6E5E93] font-semibold hover:underline">Affidavit of Non-Use</Link> affirming that no goods/services bearing the mark exist in commercial circulation.
                                                     </p>
@@ -629,7 +629,7 @@ export default function TrademarkCancellationNonUsePage() {
                                             <div className="flex items-start p-4 bg-gray-50 rounded-2xl border border-gray-200">
                                                 <div className="w-8 h-8 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">3</div>
                                                 <div>
-                                                    <h3 className="text-sm font-bold text-gray-900 mb-1">Drafting Statement of Grounds & Form TM-O</h3>
+                                                    <h4 className="text-sm font-bold text-gray-900 mb-1">Drafting Statement of Grounds & Form TM-O</h4>
                                                     <p className="text-xs text-gray-600 leading-relaxed">
                                                         Draft a comprehensive Statement of Case setting out the applicant&rsquo;s locus standi as an aggrieved person, the exact registration timeline (5 years + 3 months calculation), and precise grounds under Section 47(1)(a) or 47(1)(b).
                                                     </p>
@@ -639,7 +639,7 @@ export default function TrademarkCancellationNonUsePage() {
                                             <div className="flex items-start p-4 bg-gray-50 rounded-2xl border border-gray-200">
                                                 <div className="w-8 h-8 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">4</div>
                                                 <div>
-                                                    <h3 className="text-sm font-bold text-gray-900 mb-1">Online E-Filing & Power of Attorney</h3>
+                                                    <h4 className="text-sm font-bold text-gray-900 mb-1">Online E-Filing & Power of Attorney</h4>
                                                     <p className="text-xs text-gray-600 leading-relaxed">
                                                         File the application electronically on Form TM-O (or High Court rectification petition) accompanied by <Link href="/form-tm-48-power-of-attorney-trademark-india" className="text-[#6E5E93] font-semibold hover:underline">Form TM-48 Power of Attorney</Link> and remittance of statutory government fees.
                                                     </p>
@@ -649,7 +649,7 @@ export default function TrademarkCancellationNonUsePage() {
                                             <div className="flex items-start p-4 bg-gray-50 rounded-2xl border border-gray-200">
                                                 <div className="w-8 h-8 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">5</div>
                                                 <div>
-                                                    <h3 className="text-sm font-bold text-gray-900 mb-1">Service of Notice & Counter-Statement</h3>
+                                                    <h4 className="text-sm font-bold text-gray-900 mb-1">Service of Notice & Counter-Statement</h4>
                                                     <p className="text-xs text-gray-600 leading-relaxed">
                                                         The Registry serves official notice along with the statement of grounds upon the registered proprietor. The proprietor must file a Counter-Statement on Form TM-O within <strong>2 months</strong> (Rule 97/98), failing which the non-use claim may be admitted ex-parte.
                                                     </p>
@@ -659,7 +659,7 @@ export default function TrademarkCancellationNonUsePage() {
                                             <div className="flex items-start p-4 bg-gray-50 rounded-2xl border border-gray-200">
                                                 <div className="w-8 h-8 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">6</div>
                                                 <div>
-                                                    <h3 className="text-sm font-bold text-gray-900 mb-1">Evidentiary Pleadings & Rebuttal</h3>
+                                                    <h4 className="text-sm font-bold text-gray-900 mb-1">Evidentiary Pleadings & Rebuttal</h4>
                                                     <p className="text-xs text-gray-600 leading-relaxed">
                                                         Both parties submit evidence by way of affidavits under Rule 99 and Rule 100. The registered proprietor bears the burden of demonstrating genuine commercial use or establishing statutory defenses.
                                                     </p>
@@ -669,7 +669,7 @@ export default function TrademarkCancellationNonUsePage() {
                                             <div className="flex items-start p-4 bg-gray-50 rounded-2xl border border-gray-200">
                                                 <div className="w-8 h-8 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">7</div>
                                                 <div>
-                                                    <h3 className="text-sm font-bold text-gray-900 mb-1">Final Hearing & Rectification Order</h3>
+                                                    <h4 className="text-sm font-bold text-gray-900 mb-1">Final Hearing & Rectification Order</h4>
                                                     <p className="text-xs text-gray-600 leading-relaxed">
                                                         The Registrar or High Court Judge hears oral arguments. Upon finding continuous non-use without valid defense, an order is issued directing the Registry to <strong>cancel the mark, expunge it from the Register</strong>, and publish the removal in the Trade Marks Journal.
                                                     </p>
@@ -680,10 +680,10 @@ export default function TrademarkCancellationNonUsePage() {
 
                                     {/* SECTION 7: GENUINE VS SHAM USE */}
                                     <section id="genuine-use-vs-sham" className="scroll-mt-32">
-                                        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faBriefcase} className="w-6 h-6 text-[#6E5E93] mr-3" />
                                             Genuine Commercial Use vs Sham Token Use
-                                        </h2>
+                                        </h3>
                                         <p>
                                             In Section 47 proceedings, the core legal battlefield centers on what constitutes <strong>&ldquo;bona fide use&rdquo;</strong> in the course of trade. The registered proprietor cannot defeat a cancellation petition by producing manufactured, sporadic, or artificial evidence.
                                         </p>
@@ -729,20 +729,20 @@ export default function TrademarkCancellationNonUsePage() {
 
                                     {/* SECTION 8: SPECIAL CIRCUMSTANCES DEFENSE */}
                                     <section id="special-circumstances" className="scroll-mt-32">
-                                        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faShieldHalved} className="w-6 h-6 text-[#6E5E93] mr-3" />
                                             Statutory Defenses: Special Circumstances in Trade
-                                        </h2>
+                                        </h3>
                                         <p>
                                             Section 47(3) of the Trade Marks Act provides the registered proprietor with an affirmative statutory defense. If the proprietor can prove that non-use was caused by <strong>&ldquo;special circumstances in the trade&rdquo;</strong> and not by an intention to abandon the mark, the cancellation petition will be dismissed.
                                         </p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-6 not-prose">
                                             <div className="bg-emerald-50/60 p-6 rounded-2xl border border-emerald-200">
-                                                <h3 className="text-sm font-bold text-emerald-950 mb-3 flex items-center">
+                                                <h4 className="text-sm font-bold text-emerald-950 mb-3 flex items-center">
                                                     <FontAwesomeIcon icon={faCircleCheck} className="w-4 h-4 text-emerald-600 mr-2" />
                                                     Valid Special Circumstances (Accepted)
-                                                </h3>
+                                                </h4>
                                                 <ul className="text-xs sm:text-sm text-emerald-900 space-y-2">
                                                     <li>• <strong>Statutory Import/Export Bans:</strong> Total government ban on raw material or product imports.</li>
                                                     <li>• <strong>Mandatory Regulatory Delays:</strong> Awaiting statutory drug approval from the DCGI / CDSCO despite continuous, documented efforts.</li>
@@ -752,10 +752,10 @@ export default function TrademarkCancellationNonUsePage() {
                                             </div>
 
                                             <div className="bg-rose-50/60 p-6 rounded-2xl border border-rose-200">
-                                                <h3 className="text-sm font-bold text-rose-950 mb-3 flex items-center">
+                                                <h4 className="text-sm font-bold text-rose-950 mb-3 flex items-center">
                                                     <FontAwesomeIcon icon={faBan} className="w-4 h-4 text-rose-600 mr-2" />
                                                     Invalid Defenses (Rejected by Courts)
-                                                </h3>
+                                                </h4>
                                                 <ul className="text-xs sm:text-sm text-rose-900 space-y-2">
                                                     <li>• <strong>Financial Difficulties:</strong> Lack of operational funds, capital constraints, or economic downturn.</li>
                                                     <li>• <strong>Internal Corporate Disputes:</strong> Boardroom battles, shareholder litigation, or partnership breakups.</li>
@@ -772,10 +772,10 @@ export default function TrademarkCancellationNonUsePage() {
 
                                     {/* SECTION 9: PARTIAL CANCELLATION */}
                                     <section id="partial-cancellation" className="scroll-mt-32">
-                                        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faStamp} className="w-6 h-6 text-[#6E5E93] mr-3" />
                                             Partial Cancellation & Goods Limitation Rules
-                                        </h2>
+                                        </h3>
                                         <p>
                                             In many trademark disputes, the registered owner has indeed used the brand, but only on a single specific product, while their registration covers an entire class containing dozens of unrelated items.
                                         </p>
@@ -784,7 +784,7 @@ export default function TrademarkCancellationNonUsePage() {
                                         </p>
 
                                         <div className="bg-gradient-to-r from-purple-50 via-white to-indigo-50 p-6 rounded-2xl border border-purple-200 my-6 not-prose">
-                                            <h3 className="text-base font-bold text-gray-900 mb-2">The Landmark &lsquo;Charminar&rsquo; Precedent (Vishnudas Trading Case)</h3>
+                                            <h4 className="text-base font-bold text-gray-900 mb-2">The Landmark &lsquo;Charminar&rsquo; Precedent (Vishnudas Trading Case)</h4>
                                             <p className="text-xs sm:text-sm text-gray-700 leading-relaxed mb-3">
                                                 In the historic <em>Vishnudas Trading v. Vazir Sultan Tobacco Co. Ltd. (1997)</em> ruling, the Supreme Court held that where a trademark is registered for a broad genus of goods under a single class, but the proprietor has only commercially used it for a specific species (e.g., cigarettes), a rival trader who uses the mark for a different species (e.g., zarda/quiwam) is entitled to seek <strong>partial rectification / limitation</strong> under Section 47.
                                             </p>
@@ -796,10 +796,10 @@ export default function TrademarkCancellationNonUsePage() {
 
                                     {/* SECTION 10: EVIDENCE & INVESTIGATION */}
                                     <section id="evidence-standards" className="scroll-mt-32">
-                                        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faEye} className="w-6 h-6 text-[#6E5E93] mr-3" />
                                             Evidence Required & Market Investigation Standards
-                                        </h2>
+                                        </h3>
                                         <p>
                                             Under Indian evidence law, the initial burden of establishing a <em>prima facie</em> case of continuous non-use rests upon the applicant seeking cancellation. Once the applicant produces credible market investigation evidence, the evidentiary burden shifts entirely to the registered proprietor to prove active commercial use.
                                         </p>
@@ -822,10 +822,10 @@ export default function TrademarkCancellationNonUsePage() {
 
                                     {/* SECTION 11: COMPARISON TABLE */}
                                     <section id="comparison-table" className="scroll-mt-32">
-                                        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faTable} className="w-6 h-6 text-[#6E5E93] mr-3" />
                                             Key Legal Comparisons: Cancellation vs Rectification
-                                        </h2>
+                                        </h3>
                                         <p>
                                             Understanding the distinction between Section 47 (Non-Use Removal), Section 57 (General Rectification / Invalidity), and Section 21 (Opposition) is essential for developing an effective IP litigation strategy:
                                         </p>
@@ -872,10 +872,10 @@ export default function TrademarkCancellationNonUsePage() {
 
                                     {/* SECTION 12: STATUTORY FEES */}
                                     <section id="statutory-fees" className="scroll-mt-32">
-                                        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faFileSignature} className="w-6 h-6 text-[#6E5E93] mr-3" />
                                             Government Fee Schedule & Forms
-                                        </h2>
+                                        </h3>
                                         <p>
                                             The statutory government fees for filing an application for cancellation/rectification before the Registrar under the First Schedule of the Trade Marks Rules, 2017 are structured as follows:
                                         </p>
@@ -886,7 +886,7 @@ export default function TrademarkCancellationNonUsePage() {
                                                     <span className="px-3 py-1 bg-purple-100 text-[#6E5E93] text-xs font-bold rounded-full uppercase">Concession Category</span>
                                                     <span className="text-xs text-gray-500 font-semibold">Form TM-O</span>
                                                 </div>
-                                                <h3 className="text-lg font-bold text-gray-900 mb-2">Individuals, Startups & MSMEs</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-2">Individuals, Startups & MSMEs</h4>
                                                 <div className="text-2xl font-extrabold text-[#6E5E93] mb-3">₹2,700 <span className="text-xs text-gray-500 font-normal">/ class (E-filing)</span></div>
                                                 <p className="text-xs text-gray-600 leading-relaxed mb-2">
                                                     For applicants holding a valid <Link href="/trademark-fee-concession-msme-udyam-startup-india" className="text-[#6E5E93] font-semibold hover:underline">Udyam MSME or DPIIT Startup certificate</Link>. Physical paper filing fee is ₹3,000 per class.
@@ -898,7 +898,7 @@ export default function TrademarkCancellationNonUsePage() {
                                                     <span className="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-bold rounded-full uppercase">Standard Corporate</span>
                                                     <span className="text-xs text-gray-500 font-semibold">Form TM-O</span>
                                                 </div>
-                                                <h3 className="text-lg font-bold text-gray-900 mb-2">Companies, LLPs & Partnerships</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-2">Companies, LLPs & Partnerships</h4>
                                                 <div className="text-2xl font-extrabold text-gray-900 mb-3">₹9,000 <span className="text-xs text-gray-500 font-normal">/ class (E-filing)</span></div>
                                                 <p className="text-xs text-gray-600 leading-relaxed mb-2">
                                                     For private limited companies, foreign corporations, and partnerships without MSME recognition. Physical paper filing fee is ₹10,000 per class.
@@ -909,10 +909,10 @@ export default function TrademarkCancellationNonUsePage() {
 
                                     {/* SECTION 13: FAQS */}
                                     <section id="faqs" className="scroll-mt-32">
-                                        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLightbulb} className="w-6 h-6 text-[#6E5E93] mr-3" />
                                             Frequently Asked Questions
-                                        </h2>
+                                        </h3>
                                         <div className="space-y-4 not-prose">
                                             {faqs.map((faq, index) => (
                                                 <details key={index} className="group bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm transition-all duration-200 open:shadow-md">
@@ -932,10 +932,10 @@ export default function TrademarkCancellationNonUsePage() {
 
                                     {/* SECTION 14: STRATEGIC TAKEAWAYS */}
                                     <section id="final-takeaway" className="scroll-mt-32 pt-8 md:pt-12 border-t border-gray-100 mt-8 md:mt-12">
-                                        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faRocket} className="w-6 h-6 text-[#6E5E93] mr-3" />
                                             Strategic Legal Takeaways for Brand Custodians
-                                        </h2>
+                                        </h3>
 
                                         <p>
                                             Section 47 of the Trade Marks Act, 1999 serves as a vital equilibrating mechanism in Indian intellectual property law. It reinforces the core principle that statutory brand monopolies are granted for active commercial presence and genuine consumer recognition, not for speculative warehousing, defensive hoarding, or anticompetitive blocking of new market entrants.
@@ -950,7 +950,7 @@ export default function TrademarkCancellationNonUsePage() {
                                         </p>
 
                                         <div className="bg-gradient-to-br from-purple-900 via-[#2A2A38] to-[#1A1A24] text-white p-8 rounded-3xl shadow-xl not-prose mt-8">
-                                            <h3 className="text-xl sm:text-2xl font-bold mb-3 text-white">Need Expert Help Clearing an Abandoned Trademark?</h3>
+                                            <h4 className="text-xl sm:text-2xl font-bold mb-3 text-white">Need Expert Help Clearing an Abandoned Trademark?</h4>
                                             <p className="text-gray-300 text-sm leading-relaxed mb-6 max-w-2xl">
                                                 Our senior intellectual property litigators provide comprehensive market investigation, evidence affidavit preparation, Form TM-O drafting, and High Court IPD advocacy to unblock your brand.
                                             </p>
@@ -992,7 +992,7 @@ export default function TrademarkCancellationNonUsePage() {
                                     <FontAwesomeIcon icon={faShieldHalved} className="w-3 h-3 mr-1.5 text-pink-400" />
                                     IP Rectification Litigators
                                 </div>
-                                <h3 className="text-xl font-bold mb-3 text-white">Remove Dormant Trademark Blockers</h3>
+                                <h4 className="text-xl font-bold mb-3 text-white">Remove Dormant Trademark Blockers</h4>
                                 <p className="text-gray-300 text-xs sm:text-sm leading-relaxed mb-6">
                                     Is an inactive trademark registration preventing your brand approval? Our senior trademark litigators handle market investigation, Form TM-O drafting, and High Court IPD rectification.
                                 </p>
@@ -1011,10 +1011,10 @@ export default function TrademarkCancellationNonUsePage() {
 
                             {/* Quick Takeaways Box */}
                             <div className="bg-amber-50/60 p-6 rounded-2xl border border-amber-200 shadow-sm">
-                                <h3 className="text-xs font-black text-amber-900 mb-3 uppercase tracking-widest flex items-center">
+                                <h4 className="text-xs font-black text-amber-900 mb-3 uppercase tracking-widest flex items-center">
                                     <FontAwesomeIcon icon={faLightbulb} className="w-3.5 h-3.5 text-amber-600 mr-2" />
                                     Key Section 47 Takeaways
-                                </h3>
+                                </h4>
                                 <ul className="space-y-3 text-xs text-amber-950 font-medium">
                                     <li className="flex items-start">
                                         <span className="text-amber-600 font-bold mr-2">•</span>
@@ -1045,7 +1045,7 @@ export default function TrademarkCancellationNonUsePage() {
 
                             {/* Related Resources */}
                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-100 shadow-sm">
-                                <h3 className="text-xs font-black text-gray-500 mb-4 uppercase tracking-widest">Related Legal Guides</h3>
+                                <h4 className="text-xs font-black text-gray-500 mb-4 uppercase tracking-widest">Related Legal Guides</h4>
                                 <ul className="space-y-4 text-xs font-semibold text-gray-800">
                                     <li>
                                         <Link href="/what-is-associated-trademark-in-india-section-16" className="flex items-center hover:text-[rgb(110,94,147)] transition-colors">

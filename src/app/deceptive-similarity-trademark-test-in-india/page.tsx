@@ -337,10 +337,10 @@ export default function DeceptiveSimilarityTrademarkTestPage() {
 
                                     {/* SECTION 2: STATUTORY DEFINITION */}
                                     <section id="statutory-definition" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faBookOpen} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Section 2(1)(h) Statutory Definition
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Section 2(1)(h) of the Trade Marks Act, 1999 provides the foundational statutory definition of deceptive similarity in India:</p>
 
                                         <div className="bg-gray-50 border-l-4 border-indigo-600 p-6 rounded-r-2xl mb-8 not-prose">
@@ -351,17 +351,17 @@ export default function DeceptiveSimilarityTrademarkTestPage() {
 
                                         <div className="space-y-6">
                                             <div className="border-l-4 border-[#6E5E93] pl-4 py-2 bg-purple-50/40 rounded-r-xl">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">1. &lsquo;Deceive&rsquo; vs &lsquo;Cause Confusion&rsquo;</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">1. &lsquo;Deceive&rsquo; vs &lsquo;Cause Confusion&rsquo;</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">Indian courts draw a subtle but crucial distinction:<em>Deception</em>implies a false representation that actually induces a consumer to buy product B thinking it is product A.<em>Confusion</em>is a broader state of uncertainty, where the consumer wonders whether product B is affiliated with, licensed by, or a line extension of product A.</p>
                                             </div>
 
                                             <div className="border-l-4 border-indigo-500 pl-4 py-2 bg-indigo-50/40 rounded-r-xl">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">2. Likelihood of Confusion (Section 11(1))</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">2. Likelihood of Confusion (Section 11(1))</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">Under Section 11(1), a mark cannot be registered if its identity or similarity to an earlier trade mark, coupled with the identity or similarity of goods/services, creates a<em>likelihood of confusion on the part of the public</em>, which explicitly includes the<em>likelihood of association</em>with the earlier trademark.</p>
                                             </div>
 
                                             <div className="border-l-4 border-emerald-500 pl-4 py-2 bg-emerald-50/40 rounded-r-xl">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">3. Probability vs Mere Possibility</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">3. Probability vs Mere Possibility</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">The test is not whether confusion is remotely possible under bizarre or contrived scenarios, but whether there is a real, tangible commercial probability of confusion occurring in the normal course of trade.</p>
                                             </div>
                                         </div>
@@ -369,10 +369,10 @@ export default function DeceptiveSimilarityTrademarkTestPage() {
 
                                     {/* SECTION 3: THE TRIPARTITE TEST */}
                                     <section id="tripartite-test" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faBrain} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             The Tripartite Test of Similarity
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Indian jurisprudence evaluates deceptive similarity across three mutually reinforcing dimensions. A fatal conflict under any one of these prongs is sufficient to establish deceptive resemblance:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8 not-prose">
@@ -381,7 +381,7 @@ export default function DeceptiveSimilarityTrademarkTestPage() {
                                                     <div className="w-9 h-9 rounded-xl bg-purple-100 flex items-center justify-center text-[#6E5E93] mr-3">
                                                         <FontAwesomeIcon icon={faEarListen} className="w-4 h-4" />
                                                     </div>
-                                                    <h3 className="text-base font-bold text-gray-900 m-0">1. Phonetic (Auditory)</h3>
+                                                    <h4 className="text-base font-bold text-gray-900 m-0">1. Phonetic (Auditory)</h4>
                                                 </div>
                                                 <p className="text-xs text-gray-600 leading-relaxed mb-3">Compares spoken pronunciation, syllabic emphasis, consonant cadence, and vowel sounds. Critical in India where goods are ordered verbally across noisy retail counters.</p>
                                                 <div className="bg-purple-50 p-2 rounded-lg text-[11px] font-semibold text-[#6E5E93]">
@@ -394,7 +394,7 @@ export default function DeceptiveSimilarityTrademarkTestPage() {
                                                     <div className="w-9 h-9 rounded-xl bg-indigo-100 flex items-center justify-center text-indigo-700 mr-3">
                                                         <FontAwesomeIcon icon={faEye} className="w-4 h-4" />
                                                     </div>
-                                                    <h3 className="text-base font-bold text-gray-900 m-0">2. Visual (Ocular)</h3>
+                                                    <h4 className="text-base font-bold text-gray-900 m-0">2. Visual (Ocular)</h4>
                                                 </div>
                                                 <p className="text-xs text-gray-600 leading-relaxed mb-3">Evaluates letter arrangements, prefix/suffix symmetry, typeface stylization, colour combinations, device logos, and packaging get-up (trade dress).</p>
                                                 <div className="bg-indigo-50 p-2 rounded-lg text-[11px] font-semibold text-indigo-700">
@@ -407,7 +407,7 @@ export default function DeceptiveSimilarityTrademarkTestPage() {
                                                     <div className="w-9 h-9 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-700 mr-3">
                                                         <FontAwesomeIcon icon={faBrain} className="w-4 h-4" />
                                                     </div>
-                                                    <h3 className="text-base font-bold text-gray-900 m-0">3. Conceptual (Semantic)</h3>
+                                                    <h4 className="text-base font-bold text-gray-900 m-0">3. Conceptual (Semantic)</h4>
                                                 </div>
                                                 <p className="text-xs text-gray-600 leading-relaxed mb-3">Analyzes whether the two marks evoke the exact same central concept, mental imagery, translation, or semantic meaning, even if spelling and sounds differ.</p>
                                                 <div className="bg-emerald-50 p-2 rounded-lg text-[11px] font-semibold text-emerald-700">
@@ -419,25 +419,25 @@ export default function DeceptiveSimilarityTrademarkTestPage() {
 
                                     {/* SECTION 4: IMPERFECT RECOLLECTION & AVERAGE CONSUMER */}
                                     <section id="imperfect-recollection" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faBrain} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Average Consumer &amp; Imperfect Recollection
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">The benchmark against which similarity is tested is neither an intellectual property lawyer nor an expert technician with microscopic precision. The Supreme Court has repeatedly affirmed the<strong>Standard of an Average Consumer of Ordinary Prudence</strong>:</p>
 
                                         <div className="space-y-6">
                                             <div className="border-l-4 border-[#6E5E93] pl-4 py-2 bg-purple-50/40 rounded-r-xl">
-                                                <h3 className="text-base font-bold text-gray-900 mb-1">1. The &lsquo;Fleeting Glance&rsquo; Principle</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-1">1. The &lsquo;Fleeting Glance&rsquo; Principle</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">Consumers do not conduct side-by-side microscopic comparisons in stores or online marketplaces. They see a mark, form a general overall impression, and days or weeks later encounter the competing mark. They rely on an imperfect, fading mental memory.</p>
                                             </div>
 
                                             <div className="border-l-4 border-indigo-500 pl-4 py-2 bg-indigo-50/40 rounded-r-xl">
-                                                <h3 className="text-base font-bold text-gray-900 mb-1">2. Target Consumer Sophistication Varies by Product Class</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-1">2. Target Consumer Sophistication Varies by Product Class</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">The expected level of buyer care depends entirely on the nature of goods. Buyers of everyday FMCG products, confectionery, biscuits, and daily groceries exercise minimal caution. In contrast, corporate procurement heads purchasing industrial generators or enterprise ERP software exercise heightened diligence.</p>
                                             </div>
 
                                             <div className="border-l-4 border-emerald-500 pl-4 py-2 bg-emerald-50/40 rounded-r-xl">
-                                                <h3 className="text-base font-bold text-gray-900 mb-1">3. Linguistic &amp; Cultural Diversity in India</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-1">3. Linguistic &amp; Cultural Diversity in India</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">Given India&apos;s multi-lingual fabric, varying literacy levels, and diverse regional dialects, pronunciation nuances and imperfect English comprehension among rural consumers are given significant weight by Indian courts.</p>
                                             </div>
                                         </div>
@@ -445,10 +445,10 @@ export default function DeceptiveSimilarityTrademarkTestPage() {
 
                                     {/* SECTION 5: PARKER J.'S PIANOTIST TEST */}
                                     <section id="pianotist-test" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faGavel} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Parker J.&apos;s Classic Pianotist Test (1906)
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Formulated by Lord Parker in the historic English case<em>Re Pianotist Co.&apos;s Application (1906) 23 RPC 774</em>, this four-pillar test remains bedrock doctrine cited in hundreds of Indian Supreme Court and High Court judgments:</p>
 
                                         <div className="bg-gray-50 border-l-4 border-purple-600 p-6 rounded-r-2xl mb-8 not-prose">
@@ -479,35 +479,35 @@ export default function DeceptiveSimilarityTrademarkTestPage() {
 
                                     {/* SECTION 6: LANDMARK SUPREME COURT PRECEDENTS */}
                                     <section id="landmark-precedents" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faScaleBalanced} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Landmark Supreme Court Precedents on Deceptive Similarity
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">The Supreme Court of India has evolved a comprehensive body of jurisprudence defining deceptive similarity across five decades:</p>
 
                                         <div className="space-y-6">
                                             <div className="border-l-4 border-[#6E5E93] pl-4 py-2 bg-purple-50/40 rounded-r-xl">
-                                                <h3 className="text-base font-bold text-gray-900 mb-1">1. Cadila Health Care Ltd. v. Cadila Pharmaceuticals Ltd. (2001) 5 SCC 73</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-1">1. Cadila Health Care Ltd. v. Cadila Pharmaceuticals Ltd. (2001) 5 SCC 73</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">The definitive ruling on deceptive similarity in India. The Supreme Court laid down the<strong>7-Factor Test</strong>for evaluating competing marks, emphasizing that in a country like India with diverse languages and varied literacy, marks must be tested from the viewpoint of an ordinary consumer, with an exceptionally strict standard applied to pharmaceuticals.</p>
                                             </div>
 
                                             <div className="border-l-4 border-indigo-500 pl-4 py-2 bg-indigo-50/40 rounded-r-xl">
-                                                <h3 className="text-base font-bold text-gray-900 mb-1">2. Amritdhara Pharmacy v. Satya Deo Gupta (1963) AIR SC 449</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-1">2. Amritdhara Pharmacy v. Satya Deo Gupta (1963) AIR SC 449</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">Comparing Ayurvedic medicinal preparations<strong>Amritdhara</strong>and<strong>Lakshmandhara</strong>(later Satyadhara), the court held that an ordinary villager or town purchaser would remember only the broad overall sound and meaning (&ldquo;Dhara&rdquo. With an auspicious prefix). This establishes the doctrine of imperfect recollection in Indian law.</p>
                                             </div>
 
                                             <div className="border-l-4 border-[#6E5E93] pl-4 py-2 bg-purple-50/40 rounded-r-xl">
-                                                <h3 className="text-base font-bold text-gray-900 mb-1">3. Corn Products Refining Co. v. Shangrila Food Products Ltd. (1960) AIR SC 142</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-1">3. Corn Products Refining Co. v. Shangrila Food Products Ltd. (1960) AIR SC 142</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">Comparing<strong>Glucovita</strong>(glucose powder) and<strong>Gluvita</strong>(biscuits), the Supreme Court ruled that trade connection exists between glucose and biscuits because both are food products purchased by the general public. This creates clear deceptive similarity.</p>
                                             </div>
 
                                             <div className="border-l-4 border-indigo-500 pl-4 py-2 bg-indigo-50/40 rounded-r-xl">
-                                                <h3 className="text-base font-bold text-gray-900 mb-1">4. Parle Products (P) Ltd. v. J.P. &amp; Co. (1972) AIR SC 1359</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-1">4. Parle Products (P) Ltd. v. J.P. &amp; Co. (1972) AIR SC 1359</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">The landmark decision establishing the<strong>Anti-Dissection Rule</strong>. Comparing biscuit wrappers with a farm girl device, the court held:<em>&ldquo;It is not possible to dissect a mark and say that one part is identical and another is different. The broad and salient features must be compared.&rdquo;</em></p>
                                             </div>
 
                                             <div className="border-l-4 border-emerald-500 pl-4 py-2 bg-emerald-50/40 rounded-r-xl">
-                                                <h3 className="text-base font-bold text-gray-900 mb-1">5. Nandhini Deluxe v. Karnataka Cooperative Milk Federation (2018) 9 SCC 183</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-1">5. Nandhini Deluxe v. Karnataka Cooperative Milk Federation (2018) 9 SCC 183</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">The Supreme Court permitted the registration of<strong>Nandhini</strong>for restaurant services despite the well-known dairy trademark<strong>Nandini</strong>, observing distinct artistic stylization, non-competing goods, and bona fide concurrent adoption under Section 12.</p>
                                             </div>
                                         </div>
@@ -515,26 +515,26 @@ export default function DeceptiveSimilarityTrademarkTestPage() {
 
                                     {/* SECTION 7: ANTI-DISSECTION VS DOMINANT FEATURE */}
                                     <section id="anti-dissection-rule" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faShieldHalved} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Anti-Dissection Rule vs Dominant Feature
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">A recurring debate in trademark litigation involves balancing Section 17 (registration of parts of marks) with the common law principle of overall commercial impression:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
                                             <div className="bg-purple-50/50 p-6 rounded-2xl border border-purple-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2 flex items-center">
+                                                <h4 className="text-base font-bold text-gray-900 mb-2 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2"></span>
                                                     The Anti-Dissection Rule
-                                                </h3>
+                                                </h4>
                                                 <p className="text-xs sm:text-sm text-gray-700 leading-relaxed m-0">Derived from Section 17(1), this rule dictates that a trademark must be viewed as an indivisible composite whole. An examiner or court cannot split a mark into separate descriptive syllables or prefixes to manufacture difference or similarity. The total commercial impression governs.</p>
                                             </div>
 
                                             <div className="bg-indigo-50/50 p-6 rounded-2xl border border-indigo-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2 flex items-center">
+                                                <h4 className="text-base font-bold text-gray-900 mb-2 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-indigo-600 rounded-full mr-2"></span>
                                                     The Dominant Feature Doctrine
-                                                </h3>
+                                                </h4>
                                                 <p className="text-xs sm:text-sm text-gray-700 leading-relaxed m-0">While marks are compared as wholes, courts recognize that an average consumer naturally anchors their memory to the most distinctive, prominent, or essential feature of a mark. If the dominant element is copied, deceptive similarity exists even if minor surrounding matter varies.</p>
                                             </div>
                                         </div>
@@ -542,25 +542,25 @@ export default function DeceptiveSimilarityTrademarkTestPage() {
 
                                     {/* SECTION 8: PHARMACEUTICAL & MEDICINAL MARKS */}
                                     <section id="pharma-strict-standard" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faCapsules} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Heightened Scrutiny for Pharmaceutical Marks
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">In Indian trademark practice, medicinal and pharmaceutical brand names are held to an extraordinarily rigorous legal standard compared to ordinary consumer goods:</p>
 
                                         <div className="space-y-6">
                                             <div className="border-l-4 border-red-500 pl-4 py-2 bg-red-50/40 rounded-r-xl">
-                                                <h3 className="text-base font-bold text-gray-900 mb-1">1. Life-Threatening Public Health Consequences</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-1">1. Life-Threatening Public Health Consequences</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">In<em>Cadila Health Care</em>, the Supreme Court ruled that while confusion between competing soaps or biscuits merely causes economic loss, confusion between two pharmaceutical products with similar names can lead to grave physical harm or death if a patient consumes cardiac medicine instead of an antibiotic.</p>
                                             </div>
 
                                             <div className="border-l-4 border-amber-500 pl-4 py-2 bg-amber-50/40 rounded-r-xl">
-                                                <h3 className="text-base font-bold text-gray-900 mb-1">2. Prescriptions Do Not Eliminate Confusion</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-1">2. Prescriptions Do Not Eliminate Confusion</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">Courts have rejected the defense that prescription-only medicines (Schedule H/X) cannot confuse consumers because doctors write them. Given illegible handwriting, overworked dispensary staff, telephonic orders, and over-the-counter substitution, strict phonetic dissimilarity is mandatory.</p>
                                             </div>
 
                                             <div className="border-l-4 border-indigo-500 pl-4 py-2 bg-indigo-50/40 rounded-r-xl">
-                                                <h3 className="text-base font-bold text-gray-900 mb-1">3. Generic Stems &amp; Active Ingredients (Publici Juris)</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-1">3. Generic Stems &amp; Active Ingredients (Publici Juris)</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">Where pharma marks derive from international non-proprietary names (INN) or chemical molecules (e.g., &ldquo;Cef&rdquo. For Cephalosporin or &ldquo;Lox&rdquo. For Ofloxacin), the prefix is common to the trade (publici juris). In such cases, distinctiveness shifts to the remaining coined syllables and overall packaging get-up.</p>
                                             </div>
                                         </div>
@@ -568,10 +568,10 @@ export default function DeceptiveSimilarityTrademarkTestPage() {
 
                                     {/* SECTION 9: DECEPTIVE SIMILARITY MATRIX */}
                                     <section id="test-matrix" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faTable} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Deceptive Similarity Judicial Matrix
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">The table below provides a quick reference matrix summarizing seminal Indian judicial determinations on deceptive similarity across varied industry sectors:</p>
 
                                         <div className="overflow-x-auto my-6 border border-gray-200 rounded-2xl shadow-sm not-prose">
@@ -622,30 +622,30 @@ export default function DeceptiveSimilarityTrademarkTestPage() {
 
                                     {/* SECTION 10: DEFENSE FRAMEWORK */}
                                     <section id="defense-framework" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faStamp} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Overcoming Section 11 Similarity Objections
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">When the Trademark Registry cites a prior registered or pending mark under Section 11(1), applicants can deploy proven statutory and evidentiary arguments to secure acceptance:</p>
 
                                         <div className="space-y-6">
                                             <div className="border-l-4 border-[#6E5E93] pl-4 py-2 bg-purple-50/30 rounded-r-xl">
-                                                <h3 className="text-base font-bold text-gray-900 mb-1">1. Highlight Structural &amp; Visual Differentiation</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-1">1. Highlight Structural &amp; Visual Differentiation</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">Demonstrate that your mark possesses distinctive logo artwork, colour schemes, font typography, and unique prefixes/suffixes that prevent visual confusion under the Anti-Dissection Rule.</p>
                                             </div>
 
                                             <div className="border-l-4 border-indigo-500 pl-4 py-2 bg-indigo-50/30 rounded-r-xl">
-                                                <h3 className="text-base font-bold text-gray-900 mb-1">2. Demonstrate Disparity in Goods, Services &amp; Trade Channels</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-1">2. Demonstrate Disparity in Goods, Services &amp; Trade Channels</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">Prove that although both marks fall in the same broad Nice Class, the specific products cater to completely different consumer segments, price tiers, and distribution channels. This eliminates likelihood of confusion.</p>
                                             </div>
 
                                             <div className="border-l-4 border-emerald-500 pl-4 py-2 bg-emerald-50/30 rounded-r-xl">
-                                                <h3 className="text-base font-bold text-gray-900 mb-1">3. Plead Honest Concurrent Use under Section 12</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-1">3. Plead Honest Concurrent Use under Section 12</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">If both marks have coexisted in the market for several years without actual consumer confusion, submit sales invoices, tax records, and CA certificates to claim honest concurrent adoption under Section 12.</p>
                                             </div>
 
                                             <div className="border-l-4 border-purple-500 pl-4 py-2 bg-purple-50/30 rounded-r-xl">
-                                                <h3 className="text-base font-bold text-gray-900 mb-1">4. Secure Coexistence Agreement / Consent Letter</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-1">4. Secure Coexistence Agreement / Consent Letter</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">Negotiate a formal Trademark Coexistence Agreement or obtain a written Consent Letter from the proprietor of the cited mark. The Indian Trade Marks Registry accepts consent letters to waive Section 11 objections.</p>
                                             </div>
                                         </div>
@@ -653,15 +653,15 @@ export default function DeceptiveSimilarityTrademarkTestPage() {
 
                                     {/* SECTION 11: FAQS */}
                                     <section id="faqs" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl lg:text-3xl font-black text-gray-900 mb-8 text-center text-[rgb(110,94,147)]">
+                                        <h3 className="text-xl md:text-2xl lg:text-3xl font-black text-gray-900 mb-8 text-center text-[rgb(110,94,147)]">
                                             Frequently Asked Questions
-                                        </h2>
+                                        </h3>
                                         <div className="space-y-4">
                                             {faqs.map((faq, index) => (
                                                 <div key={index} className="bg-white border border-gray-100 rounded-3xl p-8 shadow-sm hover:shadow-md transition-shadow">
-                                                    <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-4 flex items-start leading-snug">
+                                                    <h4 className="text-lg md:text-xl font-bold text-gray-900 mb-4 flex items-start leading-snug">
                                                         <span className="text-[rgb(110,94,147)] mr-4 font-black text-2xl">Q.</span>{faq.question}
-                                                    </h3>
+                                                    </h4>
                                                     <p className="text-gray-600 pl-10 m-0">{faq.answer}</p>
                                                 </div>
                                             ))}
@@ -670,10 +670,10 @@ export default function DeceptiveSimilarityTrademarkTestPage() {
 
                                     {/* SECTION 12: STRATEGIC TAKEAWAY */}
                                     <section id="final-takeaway" className="scroll-mt-32 pt-16">
-                                        <h2 className="text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLightbulb} className="w-8 h-8 mr-3 text-yellow-500" />
                                             Strategic Deceptive Similarity Defense Advice
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Evaluating deceptive similarity requires a sophisticated synthesis of statutory analysis, phonetic metrics, visual typography, and commercial context. A trademark clearance search conducted before filing saves millions in rebranding expenses, while authoritative legal drafting overcomes relative grounds examination objections with ease.</p>
                                         <p className="mb-6">Work with veteran IP litigators and trademark search specialists to assess potential conflicts, draft Section 11 examination replies, and enforce your exclusive brand rights across India. For related trademark prosecution strategies, review our guides on<Link href="/how-to-overcome-trademark-objection" className="text-[rgb(110,94,147)] hover:underline font-medium">how to overcome trademark objections</Link>,<Link href="/free-ai-powered-trademark-search" className="text-[rgb(110,94,147)] hover:underline font-medium">free AI trademark search tool</Link>, and<Link href="/famous-trademark-infringement-cases-in-india" className="text-[rgb(110,94,147)] hover:underline font-medium">famous trademark infringement cases in India</Link>.</p>
                                     </section>
@@ -688,9 +688,9 @@ export default function DeceptiveSimilarityTrademarkTestPage() {
                                                     </span>
                                                 </div>
 
-                                                <h3 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl mb-4">
+                                                <h4 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl mb-4">
                                                     Overcome Deceptive Similarity Objections
-                                                </h3>
+                                                </h4>
 
                                                 <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">Deploy expert IP litigators to conduct phonetic &amp; visual clearance searches, draft airtight Section 11 objection replies, and defend your brand in Registry hearings.</p>
 
@@ -722,7 +722,7 @@ export default function DeceptiveSimilarityTrademarkTestPage() {
                             {/* About Author */}
                             <div className="bg-white p-4 sm:p-5 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center">
                                 <img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-16 h-16 rounded-full mb-2.5 shadow-md object-cover border-2 border-[#6E5E93]/20" />
-                                <h3 className="text-base font-bold text-gray-900 mb-0.5">Rahul Roy</h3>
+                                <h4 className="text-base font-bold text-gray-900 mb-0.5">Rahul Roy</h4>
                                 <p className="text-xs text-[#6E5E93] font-semibold mb-2">Trademark Research Specialist</p>
                                 <p className="text-xs text-gray-600 leading-relaxed m-0">Rahul specializes in trademark similarity assessments, Cadila doctrine applications, Section 11 examination defense, and high-stakes infringement litigation.</p>
                             </div>
@@ -730,7 +730,7 @@ export default function DeceptiveSimilarityTrademarkTestPage() {
                             {/* Dark CTA Box */}
                             <div className="bg-[#0C002B] p-5 rounded-2xl shadow-xl border border-white/5 text-white relative overflow-hidden group">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-[rgb(110,94,147)] rounded-full blur-[70px] opacity-30 group-hover:opacity-50 transition-opacity"></div>
-                                <h3 className="text-base font-black mb-1.5 relative z-10 leading-tight">Facing Similar Mark Issue?</h3>
+                                <h4 className="text-base font-black mb-1.5 relative z-10 leading-tight">Facing Similar Mark Issue?</h4>
                                 <p className="text-xs text-white/80 mb-3.5 leading-relaxed relative z-10 font-normal">Got a Section 11 similarity objection or conflicting trademark citation? Get an expert legal similarity analysis today.</p>
                                 <Link href="/contact-us" className="block relative z-10">
                                     <button className="w-full bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-2.5 px-4 rounded-xl transition-all shadow-md text-xs uppercase tracking-wider">
@@ -741,7 +741,7 @@ export default function DeceptiveSimilarityTrademarkTestPage() {
 
                             {/* Related Resources */}
                             <div className="bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-100">
-                                <h3 className="text-xs font-black text-gray-400 mb-5 uppercase tracking-[0.25em]">Related Resources</h3>
+                                <h4 className="text-xs font-black text-gray-400 mb-5 uppercase tracking-[0.25em]">Related Resources</h4>
                                 <ul className="space-y-6">
                                     <li><Link href="/passing-off-vs-trademark-infringement-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faScaleBalanced} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Passing Off vs TM</span></Link></li>
                                     <li><Link href="/how-to-overcome-trademark-objection" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faShieldHalved} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Overcome Objections</span></Link></li>

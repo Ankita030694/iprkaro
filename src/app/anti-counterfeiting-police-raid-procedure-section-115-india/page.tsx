@@ -338,30 +338,30 @@ export default function AntiCounterfeitingPoliceRaidPage() {
 
                                     {/* SECTION 2: SECTION 115 LEGAL FRAMEWORK */}
                                     <section id="legal-framework" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLandmark} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Section 115 Statutory Framework &amp; Mandate
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Section 115 of the Trade Marks Act, 1999 governs the cognizance of offences and vests specific search and seizure powers in Indian law enforcement authorities. Understanding its sub-clauses is essential for lawful raid execution:</p>
 
                                         <div className="space-y-6">
                                             <div className="border-l-4 border-[#6E5E93] pl-4 py-2 bg-purple-50/40 rounded-r-xl">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">1. Cognizance of General Registry Offences — Section 115(1)</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">1. Cognizance of General Registry Offences — Section 115(1)</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">Section 115(1) establishes that no court shall take cognizance of offences relating to false representation of a mark as registered (Section 107), improper description of a place of business (Section 108), or falsification of entries in the register (Section 109), except upon a written complaint made by the Registrar of Trade Marks or an authorized officer.</p>
                                             </div>
 
                                             <div className="border-l-4 border-indigo-500 pl-4 py-2 bg-indigo-50/40 rounded-r-xl">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">2. Cognizable Status of Counterfeiting Offences — Section 115(3)</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">2. Cognizable Status of Counterfeiting Offences — Section 115(3)</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">Section 115(3) explicitly declares that offences under<strong>Section 103</strong>(applying false trade marks and trade descriptions),<strong>Section 104</strong>(selling goods or providing services with false trade marks), and<strong>Section 105</strong>(enhanced penalty for second or subsequent conviction) are<strong>cognizable</strong>. This statutory recognition allows police officers to register a First Information Report (FIR) and start immediate criminal investigation.</p>
                                             </div>
 
                                             <div className="border-l-4 border-[#6E5E93] pl-4 py-2 bg-purple-50/40 rounded-r-xl">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">3. Search &amp; Seizure Without Warrant — Section 115(4)</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">3. Search &amp; Seizure Without Warrant — Section 115(4)</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">Section 115(4) grants extraordinary authority: any police officer not below the rank of<strong>Deputy Superintendent of Police (DSP)</strong>, Assistant Commissioner of Police (ACP), or equivalent, who is satisfied that an offence under Sections 103, 104, or 105 is being or is likely to be committed, may<em>search and seize without warrant</em>any goods, dies, blocks, machines, plates, or other instruments used in committing the crime.</p>
                                             </div>
 
                                             <div className="border-l-4 border-red-500 pl-4 py-2 bg-red-50/40 rounded-r-xl">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">4. The Mandatory Proviso: Registrar&apos;s Opinion — Section 115(4) Proviso</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">4. The Mandatory Proviso: Registrar&apos;s Opinion — Section 115(4) Proviso</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">The Proviso to Section 115(4) contains a vital procedural check:<em>&ldquo;Provided that the police officer, before making any search and seizure, shall obtain the opinion of the Registrar on facts involved in the offence and shall abide by the opinion so obtained.&rdquo;</em>Failure to comply with this proviso can render the entire search illegal and lead to discharge of the accused in High Court.</p>
                                             </div>
                                         </div>
@@ -369,18 +369,18 @@ export default function AntiCounterfeitingPoliceRaidPage() {
 
                                     {/* SECTION 3: OFFENCES & CRIMINAL PENALTIES */}
                                     <section id="offences-penalties" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faHandcuffs} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Offences &amp; Criminal Penalties in India
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">The Trade Marks Act, 1999 imposes strict criminal sanctions on individuals and corporate syndicates engaged in commercial counterfeiting:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8 not-prose">
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2 flex items-center">
+                                                <h4 className="text-base font-bold text-gray-900 mb-2 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2"></span>
                                                     Section 103 (Falsification)
-                                                </h3>
+                                                </h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed mb-3">Applies to anyone who applies a false trademark to goods, forges any trademark, or makes/possesses dies, blocks, or machines for falsification.</p>
                                                 <div className="bg-purple-100/60 p-2.5 rounded-lg text-xs font-bold text-[#6E5E93]">
                                                     6 Months to 3 Years Jail + ₹50,000 to ₹2,00,000 Fine
@@ -388,10 +388,10 @@ export default function AntiCounterfeitingPoliceRaidPage() {
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2 flex items-center">
+                                                <h4 className="text-base font-bold text-gray-900 mb-2 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-indigo-500 rounded-full mr-2"></span>
                                                     Section 104 (Trading Spurious)
-                                                </h3>
+                                                </h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed mb-3">Applies to wholesalers, retailers, distributors, and e-commerce vendors who sell, let for hire, or possess counterfeit goods for sale.</p>
                                                 <div className="bg-indigo-100/60 p-2.5 rounded-lg text-xs font-bold text-indigo-800">
                                                     6 Months to 3 Years Jail + ₹50,000 to ₹2,00,000 Fine
@@ -399,10 +399,10 @@ export default function AntiCounterfeitingPoliceRaidPage() {
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2 flex items-center">
+                                                <h4 className="text-base font-bold text-gray-900 mb-2 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-red-500 rounded-full mr-2"></span>
                                                     Section 105 (Repeat Offence)
-                                                </h3>
+                                                </h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed mb-3">Applies to habitual counterfeiters convicted of a second or subsequent offence under Section 103 or Section 104.</p>
                                                 <div className="bg-red-100/60 p-2.5 rounded-lg text-xs font-bold text-red-800">
                                                     1 Year to 3 Years Jail + ₹1,00,000 to ₹2,00,000 Fine
@@ -411,40 +411,40 @@ export default function AntiCounterfeitingPoliceRaidPage() {
                                         </div>
 
                                         <div className="bg-amber-50/70 p-6 rounded-2xl border border-amber-200 mb-8 not-prose">
-                                            <h3 className="text-base font-bold text-amber-950 mb-2 flex items-center">
+                                            <h4 className="text-base font-bold text-amber-950 mb-2 flex items-center">
                                                 <FontAwesomeIcon icon={faExclamationTriangle} className="w-4 h-4 mr-2 text-amber-800" />
                                                 Interplay with IPC / Bharatiya Nyaya Sanhita (BNS) 2023
-                                            </h3>
+                                            </h4>
                                             <p className="text-xs sm:text-sm text-amber-900 leading-relaxed m-0">Police complaints are routinely drafted invoking both the Trade Marks Act and general criminal provisions:<strong>Section 420 IPC / Section 318(4) BNS</strong>(Cheating and dishonestly inducing delivery of property),<strong>Section 486 IPC</strong>(Selling goods marked with a counterfeit property mark), and<strong>Sections 468 &amp; 471 IPC / Sections 336 &amp; 340 BNS</strong>(Forgery of packaging labels and security holograms for cheating). For more on statutory liabilities, review our comprehensive breakdown on<Link href="/penalty-for-trademark-infringement-india" className="text-[rgb(110,94,147)] hover:underline font-bold">penalty for trademark infringement in India</Link>.</p>
                                         </div>
                                     </section>
 
                                     {/* SECTION 4: PRE-RAID GROUNDWORK & INVESTIGATION */}
                                     <section id="pre-raid-groundwork" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faSearch} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Pre-Raid Market Intelligence &amp; Evidence Collation
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">A successful Section 115 police raid depends almost entirely on the quality and confidentiality of pre-raid intelligence. Police departments will not mobilize senior DSP/ACP officers based on mere hearsay or speculation. Brand owners must present an airtight investigation dossier.</p>
 
                                         <div className="space-y-6">
                                             <div className="border-l-4 border-[#6E5E93] pl-4 py-2 bg-purple-50/30 rounded-r-xl">
-                                                <h3 className="text-base font-bold text-gray-900 mb-1">1. Market Surveillance &amp; Supply Chain Mapping</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-1">1. Market Surveillance &amp; Supply Chain Mapping</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">Deploy certified private corporate investigators to trace the counterfeit distribution network. Identify manufacturing units, packaging printing presses, transit hubs, and clandestine storage godowns. Key counterfeit epicenters in India include Chandni Chowk, Sadar Bazar, and Gaffar Market in Delhi NCR, Bhiwandi and Crawford Market in Mumbai, Surat in Gujarat, and wholesale clusters in Kolkata, Chennai, and Ludhiana.</p>
                                             </div>
 
                                             <div className="border-l-4 border-indigo-500 pl-4 py-2 bg-indigo-50/30 rounded-r-xl">
-                                                <h3 className="text-base font-bold text-gray-900 mb-1">2. Sample Test Purchases (Mystery Shopping)</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-1">2. Sample Test Purchases (Mystery Shopping)</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">Execute controlled test purchases of the spurious products. Ensure undercover investigators obtain physical tax invoices, cash receipts, visiting cards, WhatsApp communication records, or UPI payment transaction IDs that directly link the counterfeit goods to the target premises and suspects.</p>
                                             </div>
 
                                             <div className="border-l-4 border-[#6E5E93] pl-4 py-2 bg-purple-50/30 rounded-r-xl">
-                                                <h3 className="text-base font-bold text-gray-900 mb-1">3. Technical Authenticity Verification Report</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-1">3. Technical Authenticity Verification Report</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">Brand technical experts or Quality Assurance (QA) directors must prepare a side-by-side comparative examination report. Document subtle discrepancies between authentic and counterfeit items, including micro-printing errors, inferior packaging cardstock, missing UV security ink, distorted logo proportions, altered batch serial numbers, and fake QR codes.</p>
                                             </div>
 
                                             <div className="border-l-4 border-indigo-500 pl-4 py-2 bg-indigo-50/30 rounded-r-xl">
-                                                <h3 className="text-base font-bold text-gray-900 mb-1">4. Title Verification &amp; Legal Proceedings Certificate</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-1">4. Title Verification &amp; Legal Proceedings Certificate</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">Ensure your trademark registration is active, renewed, and free from adverse registry orders. Obtain a certified copy of the<strong>Trademark Registration Certificate (Form TM-RG)</strong>or apply for a<strong>Legal Proceedings Certificate</strong>from the Indian Trade Marks Registry to prove clear statutory title under Section 28 and Section 31.</p>
                                             </div>
                                         </div>
@@ -452,17 +452,17 @@ export default function AntiCounterfeitingPoliceRaidPage() {
 
                                     {/* SECTION 5: REGISTRAR'S OPINION UNDER SECTION 115(4) */}
                                     <section id="registrar-opinion" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faStamp} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Obtaining Registrar&apos;s Opinion under Section 115(4)
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">The Proviso to Section 115(4) is one of the most litigated provisions in Indian criminal IP jurisprudence. It was introduced to prevent frivolous or vexatious criminal raids initiated by business rivals against genuine traders.</p>
 
                                         <div className="bg-gray-50 p-6 md:p-8 rounded-2xl border border-gray-200 mb-8 not-prose">
-                                            <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                            <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                 <FontAwesomeIcon icon={faGavel} className="w-5 h-5 mr-2 text-[#6E5E93]" />
                                                 Judicial Precedents on Section 115(4) Compliance
-                                            </h3>
+                                            </h4>
                                             <ul className="space-y-3 text-xs sm:text-sm text-gray-700 leading-relaxed list-disc list-inside">
                                                 <li><strong>Supreme Court of India (Aneeta Hada &amp; Subhashchandra Patni):</strong>The Apex Court and various High Courts have reiterated that obtaining the Registrar&apos;s opinion is a statutory condition precedent before a police officer conducts search and seizure under Section 115(4).</li>
                                                 <li><strong>Delhi High Court (Sanyo Electric Co. Ltd. V. State):</strong>The High Court affirmed that while police can initiate preliminary inquiry upon receiving a complaint, executing search and seizing goods without first seeking the Registrar&apos;s opinion vitiates the recovery.</li>
@@ -473,17 +473,17 @@ export default function AntiCounterfeitingPoliceRaidPage() {
 
                                     {/* SECTION 6: DRAFTING CRIMINAL COMPLAINT */}
                                     <section id="police-complaint-drafting" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faFileContract} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Drafting &amp; Lodging Criminal Complaints
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">A standard police complaint filed at a local police station desk is frequently delayed or mishandled due to lack of specialized IP training. Brand owners must draft a comprehensive complaint and present it to senior supervisory officers.</p>
 
                                         <div className="bg-gradient-to-br from-indigo-50/60 to-purple-50/60 p-6 md:p-8 rounded-2xl border border-purple-100 mb-8 not-prose">
-                                            <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
+                                            <h4 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
                                                 <FontAwesomeIcon icon={faBuildingShield} className="w-5 h-5 mr-2 text-[#6E5E93]" />
                                                 Where to Lodge the Anti-Counterfeiting Complaint in India
-                                            </h3>
+                                            </h4>
                                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm text-gray-700">
                                                 <div className="bg-white p-4 rounded-xl border border-gray-200">
                                                     <p className="font-bold text-gray-900 mb-1">1. Economic Offences Wing (EOW)</p>
@@ -507,10 +507,10 @@ export default function AntiCounterfeitingPoliceRaidPage() {
 
                                     {/* SECTION 7: 7-STEP POLICE RAID PROCESS */}
                                     <section id="step-by-step-raid-procedure" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faTruckFast} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             7-Step Anti-Counterfeiting Raid Execution Process
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Executing an anti-counterfeiting police raid in India requires synchronization between corporate brand protection teams, private investigators, IP advocates, and law enforcement officers:</p>
 
                                         <div className="space-y-6">
@@ -519,7 +519,7 @@ export default function AntiCounterfeitingPoliceRaidPage() {
                                                     1
                                                 </div>
                                                 <div>
-                                                    <h3 className="text-lg font-bold text-gray-900 mb-1">Ground Surveillance &amp; Target Dossier Finalization</h3>
+                                                    <h4 className="text-lg font-bold text-gray-900 mb-1">Ground Surveillance &amp; Target Dossier Finalization</h4>
                                                     <p className="text-sm text-gray-600 leading-relaxed m-0">Investigators conduct pre-raid reconnaissance 24 to 48 hours before the operation. Confirm suspect presence, active inventory movement, factory operating hours, and exact GPS coordinates with photographs of building entryways and godown shutters.</p>
                                                 </div>
                                             </div>
@@ -529,7 +529,7 @@ export default function AntiCounterfeitingPoliceRaidPage() {
                                                     2
                                                 </div>
                                                 <div>
-                                                    <h3 className="text-lg font-bold text-gray-900 mb-1">Briefing the Senior Police Officer (DSP / ACP Rank)</h3>
+                                                    <h4 className="text-lg font-bold text-gray-900 mb-1">Briefing the Senior Police Officer (DSP / ACP Rank)</h4>
                                                     <p className="text-sm text-gray-600 leading-relaxed m-0">Brand representatives and advocates brief the designated DSP/ACP. Present the investigation dossier, sample test purchases, authenticity discrepancies, and trademark registration proofs to satisfy statutory suspicion requirements under Section 115(4).</p>
                                                 </div>
                                             </div>
@@ -539,7 +539,7 @@ export default function AntiCounterfeitingPoliceRaidPage() {
                                                     3
                                                 </div>
                                                 <div>
-                                                    <h3 className="text-lg font-bold text-gray-900 mb-1">Mobilizing the Police Raiding Party</h3>
+                                                    <h4 className="text-lg font-bold text-gray-900 mb-1">Mobilizing the Police Raiding Party</h4>
                                                     <p className="text-sm text-gray-600 leading-relaxed m-0">Form the raiding team comprising the DSP/ACP, Station House Officer (SHO), sub-inspectors, armed constables, female police personnel (if residential/commercial premises involve female occupants), and two independent local respectable witnesses (Panchas).</p>
                                                 </div>
                                             </div>
@@ -549,7 +549,7 @@ export default function AntiCounterfeitingPoliceRaidPage() {
                                                     4
                                                 </div>
                                                 <div>
-                                                    <h3 className="text-lg font-bold text-gray-900 mb-1">Simultaneous Multi-Location Search &amp; Entry</h3>
+                                                    <h4 className="text-lg font-bold text-gray-900 mb-1">Simultaneous Multi-Location Search &amp; Entry</h4>
                                                     <p className="text-sm text-gray-600 leading-relaxed m-0">To prevent suspects from alerting suppliers or moving inventory, execute simultaneous entries across manufacturing units, printing presses, and retail outlets. Secure all exits, confiscate mobile devices, and isolate electronic billing terminals.</p>
                                                 </div>
                                             </div>
@@ -559,7 +559,7 @@ export default function AntiCounterfeitingPoliceRaidPage() {
                                                     5
                                                 </div>
                                                 <div>
-                                                    <h3 className="text-lg font-bold text-gray-900 mb-1">Identification, Physical Seizure &amp; Sealing</h3>
+                                                    <h4 className="text-lg font-bold text-gray-900 mb-1">Identification, Physical Seizure &amp; Sealing</h4>
                                                     <p className="text-sm text-gray-600 leading-relaxed m-0">Brand technical experts inspect and identify counterfeit goods on the spot. Police confiscate finished goods, packaging labels, cartons, dies, screen printing blocks, injection moulds, and raw chemical ingredients. Pack items into evidence sacks and apply official police wax seals.</p>
                                                 </div>
                                             </div>
@@ -569,7 +569,7 @@ export default function AntiCounterfeitingPoliceRaidPage() {
                                                     6
                                                 </div>
                                                 <div>
-                                                    <h3 className="text-lg font-bold text-gray-900 mb-1">Drafting the Panchnama (Seizure Memo) on the Spot</h3>
+                                                    <h4 className="text-lg font-bold text-gray-900 mb-1">Drafting the Panchnama (Seizure Memo) on the Spot</h4>
                                                     <p className="text-sm text-gray-600 leading-relaxed m-0">The investigating officer prepares a detailed recovery memo (Panchnama) under Section 100 CrPC / Section 103 BNSS 2023. Record exact quantities, descriptions, seal impressions, and obtain signatures from independent witnesses, the accused, and the raiding officer.</p>
                                                 </div>
                                             </div>
@@ -579,7 +579,7 @@ export default function AntiCounterfeitingPoliceRaidPage() {
                                                     7
                                                 </div>
                                                 <div>
-                                                    <h3 className="text-lg font-bold text-gray-900 mb-1">Arrest of Suspects, FIR Registration &amp; Court Remand</h3>
+                                                    <h4 className="text-lg font-bold text-gray-900 mb-1">Arrest of Suspects, FIR Registration &amp; Court Remand</h4>
                                                     <p className="text-sm text-gray-600 leading-relaxed m-0">Arrest the kingpins and operators under Sections 103 and 104 of the Trade Marks Act and Section 420 IPC / Section 318(4) BNS. Transport the accused and sealed evidence to the police station, register the formal FIR, and produce the accused before the Judicial Magistrate within 24 hours.</p>
                                                 </div>
                                             </div>
@@ -588,17 +588,17 @@ export default function AntiCounterfeitingPoliceRaidPage() {
 
                                     {/* SECTION 8: SEIZURE MEMO & CHAIN OF CUSTODY */}
                                     <section id="seizure-memo-chain-custody" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faBoxOpen} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Seizure Memo (Panchnama) &amp; Chain of Custody
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">The Seizure Memo (Panchnama) is the evidentiary backbone of the prosecution case. In criminal trials, defense advocates routinely challenge the integrity of the raid by attacking procedural lapses in the Panchnama.</p>
 
                                         <div className="bg-gray-50 p-6 md:p-8 rounded-2xl border border-gray-200 mb-8 not-prose">
-                                            <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
+                                            <h4 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
                                                 <FontAwesomeIcon icon={faCheckCircle} className="w-5 h-5 mr-2 text-green-600" />
                                                 Essential Elements of a Valid Section 115 Seizure Memo
-                                            </h3>
+                                            </h4>
                                             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm text-gray-700">
                                                 <li className="flex items-start"><span className="w-2 h-2 bg-[#6E5E93] rounded-full mt-1.5 mr-2 shrink-0"></span><span><strong>Exact Date &amp; Time:</strong>start and conclusion of search.</span></li>
                                                 <li className="flex items-start"><span className="w-2 h-2 bg-[#6E5E93] rounded-full mt-1.5 mr-2 shrink-0"></span><span><strong>Accurate Location Description:</strong>Full postal address and physical boundaries.</span></li>
@@ -614,10 +614,10 @@ export default function AntiCounterfeitingPoliceRaidPage() {
 
                                     {/* SECTION 9: CRIMINAL RAID VS CIVIL ACTION */}
                                     <section id="civil-vs-criminal-comparison" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faScaleBalanced} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Criminal Police Raid vs Civil Injunction Action
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Brand owners facing widespread infringement often debate whether to initiate a criminal police raid under Section 115 or file a civil commercial suit in High Court / District Commercial Court:</p>
 
                                         <div className="overflow-x-auto my-8 not-prose">
@@ -669,10 +669,10 @@ export default function AntiCounterfeitingPoliceRaidPage() {
 
                                     {/* SECTION 10: VULNERABLE INDUSTRY MATRIX */}
                                     <section id="vulnerable-industry-matrix" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faTable} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Industry Counterfeiting Vulnerability Matrix
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Counterfeiting impacts specific commercial sectors with distinct modus operandi. The following matrix illustrates key sectors, target classes, and specialized raid considerations:</p>
 
                                         <div className="overflow-x-auto my-8 not-prose">
@@ -725,10 +725,10 @@ export default function AntiCounterfeitingPoliceRaidPage() {
 
                                     {/* SECTION 11: RAID ACTION CHECKLIST */}
                                     <section id="brand-protection-checklist" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faCheckCircle} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Anti-Counterfeiting Raid Action Checklist
-                                        </h2>
+                                        </h3>
                                         <ul className="list-none space-y-4 mb-8">
                                             <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Verify Registered Title:</strong>Ensure valid Trademark Registration Certificate on Form TM-RG or Legal Proceedings Certificate from IP India.</span></li>
                                             <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Execute Mystery Shopping:</strong>Secure verified sample test purchases with authentic commercial receipts, UPI records, or video evidence.</span></li>
@@ -743,15 +743,15 @@ export default function AntiCounterfeitingPoliceRaidPage() {
 
                                     {/* SECTION 12: FAQS */}
                                     <section id="faqs" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl lg:text-3xl font-black text-gray-900 mb-8 text-center text-[rgb(110,94,147)]">
+                                        <h3 className="text-xl md:text-2xl lg:text-3xl font-black text-gray-900 mb-8 text-center text-[rgb(110,94,147)]">
                                             Frequently Asked Questions
-                                        </h2>
+                                        </h3>
                                         <div className="space-y-4">
                                             {faqs.map((faq, index) => (
                                                 <div key={index} className="bg-white border border-gray-100 rounded-3xl p-8 shadow-sm hover:shadow-md transition-shadow">
-                                                    <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-4 flex items-start leading-snug">
+                                                    <h4 className="text-lg md:text-xl font-bold text-gray-900 mb-4 flex items-start leading-snug">
                                                         <span className="text-[rgb(110,94,147)] mr-4 font-black text-2xl">Q.</span>{faq.question}
-                                                    </h3>
+                                                    </h4>
                                                     <p className="text-gray-600 pl-10 m-0">{faq.answer}</p>
                                                 </div>
                                             ))}
@@ -760,10 +760,10 @@ export default function AntiCounterfeitingPoliceRaidPage() {
 
                                     {/* SECTION 13: STRATEGIC ENFORCEMENT ADVICE */}
                                     <section id="final-takeaway" className="scroll-mt-32 pt-16">
-                                        <h2 className="text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLightbulb} className="w-8 h-8 mr-3 text-yellow-500" />
                                             Strategic Anti-Counterfeiting Enforcement Advice
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Protecting your intellectual property against counterfeit syndicates requires relentless vigilance, thorough investigation, and decisive legal execution. Conducting police raids under Section 115 dismantles illegal supply chains at their root, penalizes rogue operators, and sends a powerful deterrence message across the marketplace.</p>
                                         <p className="mb-6">Never permit counterfeit products to erode your brand reputation or endanger consumer safety. Partner with veteran intellectual property litigators and brand protection specialists to coordinate pre-raid investigations, secure Registrar opinions, liaison with Crime Branch and EOW officials, and obtain permanent commercial injunctions. For related enforcement workflows, review our guides on<Link href="/how-to-send-trademark-legal-notice-india" className="text-[rgb(110,94,147)] hover:underline font-medium">how to send trademark legal notices</Link>,<Link href="/flipkart-brand-approval-trademark-requirements-india" className="text-[rgb(110,94,147)] hover:underline font-medium">Flipkart brand approval &amp; lock</Link>, and<Link href="/amazon-brand-registry-trademark-requirements-india" className="text-[rgb(110,94,147)] hover:underline font-medium">Amazon Brand Registry requirements</Link>.</p>
                                     </section>
@@ -778,9 +778,9 @@ export default function AntiCounterfeitingPoliceRaidPage() {
                                                     </span>
                                                 </div>
 
-                                                <h3 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl mb-4">
+                                                <h4 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl mb-4">
                                                     Shut Down Counterfeiters with Section 115 Police Raids
-                                                </h3>
+                                                </h4>
 
                                                 <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">Deploy expert IP litigators to secure Registrar opinions, coordinate with State Police &amp; EOW, execute search and seizure raids, and prosecute infringers under Indian criminal law.</p>
 
@@ -812,7 +812,7 @@ export default function AntiCounterfeitingPoliceRaidPage() {
                             {/* About Author */}
                             <div className="bg-white p-4 sm:p-5 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center">
                                 <img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-16 h-16 rounded-full mb-2.5 shadow-md object-cover border-2 border-[#6E5E93]/20" />
-                                <h3 className="text-base font-bold text-gray-900 mb-0.5">Rahul Roy</h3>
+                                <h4 className="text-base font-bold text-gray-900 mb-0.5">Rahul Roy</h4>
                                 <p className="text-xs text-[#6E5E93] font-semibold mb-2">Trademark Research Specialist</p>
                                 <p className="text-xs text-gray-600 leading-relaxed m-0">Rahul specializes in criminal trademark litigation, anti-counterfeiting investigations, Section 115 police raid coordination, and border enforcement across India.</p>
                             </div>
@@ -820,7 +820,7 @@ export default function AntiCounterfeitingPoliceRaidPage() {
                             {/* Dark CTA Box */}
                             <div className="bg-[#0C002B] p-5 rounded-2xl shadow-xl border border-white/5 text-white relative overflow-hidden group">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-[rgb(110,94,147)] rounded-full blur-[70px] opacity-30 group-hover:opacity-50 transition-opacity"></div>
-                                <h3 className="text-base font-black mb-1.5 relative z-10 leading-tight">Stop Fake Goods Now</h3>
+                                <h4 className="text-base font-black mb-1.5 relative z-10 leading-tight">Stop Fake Goods Now</h4>
                                 <p className="text-xs text-white/80 mb-3.5 leading-relaxed relative z-10 font-normal">Facing counterfeiters copying your brand or packaging? Initiate police raids and injunctions with IP litigators.</p>
                                 <Link href="/contact-us" className="block relative z-10">
                                     <button className="w-full bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-2.5 px-4 rounded-xl transition-all shadow-md text-xs uppercase tracking-wider">
@@ -831,7 +831,7 @@ export default function AntiCounterfeitingPoliceRaidPage() {
 
                             {/* Related Resources */}
                             <div className="bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-100">
-                                <h3 className="text-xs font-black text-gray-400 mb-5 uppercase tracking-[0.25em]">Related Resources</h3>
+                                <h4 className="text-xs font-black text-gray-400 mb-5 uppercase tracking-[0.25em]">Related Resources</h4>
                                 <ul className="space-y-6">
                                     <li><Link href="/civil-vs-criminal-trademark-infringement-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faGavel} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Civil vs Criminal TM</span></Link></li>
                                     <li><Link href="/penalty-for-trademark-infringement-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faHandcuffs} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">TM Penalties India</span></Link></li>

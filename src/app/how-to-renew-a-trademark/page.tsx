@@ -330,42 +330,42 @@ export default function TrademarkRenewalPage() {
 
                                     {/* SECTION 2: PREREQUISITES */}
                                     <section id="prerequisites" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faFileContract} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Prerequisites for Filing Form TM-R
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Before submitting a renewal application on the official IP India portal, brand proprietors and trademark attorneys must verify crucial registry records and assemble statutory prerequisites. Overlooking these preliminary checks can cause administrative rejections or procedural defects.</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     Registry Status Verification
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Confirm that the mark on the Trade Marks Registry e-portal currently reflects a status of &ldquo;Registered&rdquo;. Marks under rectification, stay orders, or pending division proceedings require specialized compliance steps before submitting renewal fees.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     Chain of Title &amp; Address Alignment
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Check whether the applicant entity has changed its name, registered address, or corporate structure (such as conversion from a partnership into a Private Limited company). Any changes must be officially recorded on Form TM-P to avoid ownership disputes during renewal.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     Original Certificate &amp; Classes
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Collate the original Trademark Registration Certificate (Form TM-RG) or the most recent decennial renewal receipt. Identify all registered Nice classes so renewal fees are accurately calculated for each specific commercial class.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     Power of Attorney (Form TM-48)
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">If retaining a registered trademark agent or legal counsel to execute the renewal, an executed and stamped<Link href="/form-tm-48-power-of-attorney-trademark-india" className="text-[rgb(110,94,147)] hover:underline font-medium">Form TM-48 Power of Attorney</Link>authorization is statutory. It must be signed by the current authorized signatory of the proprietor entity.</p>
                                             </div>
                                         </div>
@@ -373,10 +373,10 @@ export default function TrademarkRenewalPage() {
 
                                     {/* SECTION 3: 7-STEP RENEWAL PROCESS */}
                                     <section id="step-by-step" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faListUl} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             7-Step Trademark Renewal Process
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Renewing a trademark under the Trade Marks Rules, 2017 is an online procedure conducted through the comprehensive e-filing gateway of the Controller General of Patents, Designs and Trade Marks (CGPDTM). Follow these 7 statutory stages:</p>
 
                                         {/* STEP 1 */}
@@ -385,7 +385,7 @@ export default function TrademarkRenewalPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 1</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Pre-Renewal Docket Audit</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Registry Audit &amp; Expiration Date Confirmation</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Registry Audit &amp; Expiration Date Confirmation</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Begin by accessing the public Trade Marks Registry database or conducting a thorough review using the official<a href="https://ipindia.gov.in/" target="_blank" rel="noopener noreferrer" className="text-[rgb(110,94,147)] hover:underline font-medium">IP India Portal</a>. Enter your registered application number to inspect the electronic register entries.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">Confirm the exact date of application and current validity deadline. Check if the Registrar has dispatched an O-3 notice (Notice of Expiration). Verify that your brand has not been cited in third-party rectification filings or subjected to conflicting trademark registrations across complementary classes. You can verify whether similar marks have appeared by performing a<Link href="/trademark-search" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark search</Link>.</p>
                                         </div>
@@ -396,7 +396,7 @@ export default function TrademarkRenewalPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 2</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Title &amp; Class Check</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Chain of Title &amp; Multi-Class Reassessment</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Chain of Title &amp; Multi-Class Reassessment</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Over a 10-year span, corporate dynamics change dramatically. Founders incorporate, companies rebrand subsidiary entities, or rights are assigned through commercial licensing. Under Indian trademark law, the renewal applicant must strictly match the current registered proprietor.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">If an assignment, transmission, or change in company name has taken place without being registered on Form TM-P, file the record of title concurrently. Furthermore, review your goods and services descriptions across all classes using our<Link href="/trademark-class-finder" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark class finder</Link>to decide whether all classes must be renewed or if non-operative classes can be pruned.</p>
                                         </div>
@@ -407,7 +407,7 @@ export default function TrademarkRenewalPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 3</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Legal Drafting</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Drafting Form TM-R &amp; Legal Authorization</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Drafting Form TM-R &amp; Legal Authorization</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">The Trade Marks Rules, 2017 consolidated multiple legacy renewal forms (such as TM-12, TM-13, and TM-10) into a single comprehensive statutory format:<strong>Form TM-R</strong>. The form covers four specific legal renewal scenarios:</p>
                                             <ul className="list-disc list-inside space-y-2 text-gray-700 mb-4">
                                                 <li><strong>Standard Renewal:</strong>Filed within 12 months before the expiration date.</li>
@@ -424,7 +424,7 @@ export default function TrademarkRenewalPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 4</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: E-Filing Submission</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Online Submission on the IP India Gateway</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Online Submission on the IP India Gateway</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Using a valid Class 3 Digital Signature Certificate (DSC), log in to the IP India comprehensive e-filing system. Select Form TM-R and enter the trademark registration number. The system will automatically populate historical registration data, including the trade mark representation, proprietor name, and class numbers.</p>
                                             <p className="text-gray-700 leading-relaxed mb-4">Select the appropriate category of renewal (Standard, With Surcharge, or Restoration). Upload supporting documents, including the copy of the registration certificate and stamped Form TM-48, and digitally sign the application.</p>
                                             <div className="bg-indigo-50 p-4 rounded-xl border border-indigo-200">
@@ -438,7 +438,7 @@ export default function TrademarkRenewalPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 5</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Statutory Fee Remittance</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Statutory Fee Remittance &amp; E-Receipt Generation</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Statutory Fee Remittance &amp; E-Receipt Generation</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Remit the official government fee through the integrated Bharatkosh payment gateway. The standard online renewal fee is<strong>₹9,000 per class</strong>. If filing within the post-expiry 6-month grace period, an additional statutory surcharge of<strong>₹4,500 per class</strong>is added automatically by the gateway.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">Upon successful electronic transaction, the portal generates an official e-acknowledgment receipt containing a distinct CBR (Cash Book Receipt) number and timestamp. This receipt serves as statutory proof that renewal was initiated within the permissible legal window.</p>
                                         </div>
@@ -449,7 +449,7 @@ export default function TrademarkRenewalPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 6</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Registry Scrutiny</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Registry Scrutiny &amp; Journal Advertisement</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Registry Scrutiny &amp; Journal Advertisement</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Once Form TM-R is lodged, the renewal division of the Trade Marks Registry scrutinizes the submission for formal accuracy. The examiner confirms whether the fee matches the registered classes, verifies attorney authorization, and reviews if the mark was subject to any unrecorded judicial assignments or cancellations.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">Under Rule 59 and Rule 61, the renewal is officially recorded and published in the weekly Trade Marks Journal under the section &ldquo;Registered Marks Renewed&rdquo;. This public notification puts competitors and industry stakeholders on notice that your statutory monopoly has been renewed for another ten years.</p>
                                         </div>
@@ -460,7 +460,7 @@ export default function TrademarkRenewalPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 7</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Certificate Issuance</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Issuance of Renewal Certificate &amp; Portfolio Docketing</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Issuance of Renewal Certificate &amp; Portfolio Docketing</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Following scrutiny and journal notification, the Registrar issues an electronically authenticated<strong>Certificate of Renewal</strong>under Rule 61. The electronic status on the IP India database updates to &ldquo;Registered - Valid until [New Expiry Date]&rdquo;.</p>
                                             <p className="text-gray-700 leading-relaxed mb-4">This certificate serves as conclusive evidence of unbroken brand ownership dating back to your original filing year. Download the authenticated PDF certificate and docket your next renewal deadline exactly 10 years into the future.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">If your mark was lapsed beyond the 6-month grace period, you will need to complete specialized restoration steps. Learn more about emergency procedures in our in-depth guide on<Link href="/how-to-restore-expired-trademark" className="text-[rgb(110,94,147)] hover:underline font-medium">how to restore expired trademark</Link>and read our analysis on<Link href="/what-happens-if-trademark-expires" className="text-[rgb(110,94,147)] hover:underline font-medium">what happens if trademark expires</Link>.</p>
@@ -469,10 +469,10 @@ export default function TrademarkRenewalPage() {
 
                                     {/* SECTION 4: TABLE OF STAGES, TIMELINES, & FEES */}
                                     <section id="renewal-stages-table" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faTable} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Renewal Timelines, Fees, and Surcharges
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">The Trade Marks Rules, 2017 structure the renewal process into three progressive statutory windows based on the date of application. Government fees escalate significantly if deadlines are missed:</p>
 
                                         <div className="overflow-x-auto mb-8 shadow-sm rounded-xl border border-gray-200">
@@ -527,30 +527,30 @@ export default function TrademarkRenewalPage() {
 
                                     {/* SECTION 5: COMMON PITFALLS */}
                                     <section id="common-pitfalls" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faExclamationTriangle} className="w-8 h-8 mr-3 text-amber-500" />
                                             Common Renewal Pitfalls to Avoid
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Managing decennial brand renewals requires strict compliance. Over a decade, organizational oversight can lead to avoidable mistakes that jeopardize your trademark exclusivity:</p>
 
                                         <div className="space-y-6">
                                             <div className="border-l-4 border-red-500 pl-4 py-2">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">1. Relying Solely on Physical Registry Notices (Form O-3)</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">1. Relying Solely on Physical Registry Notices (Form O-3)</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">While the Registrar is required under Section 25(3) to dispatch a notice of impending expiration (Form O-3), postal delays or outdated correspondence addresses on the register mean proprietors frequently never receive it. The statutory burden to renew rests entirely on the trademark proprietor.</p>
                                             </div>
 
                                             <div className="border-l-4 border-red-500 pl-4 py-2">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">2. Unrecorded Mergers, Name Changes, or Assignments</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">2. Unrecorded Mergers, Name Changes, or Assignments</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Submitting Form TM-R under a new corporate entity name without having filed Form TM-P to record the assignment or transmission will trigger an immediate discrepancy notice. Always record corporate changes before or concurrently with renewal.</p>
                                             </div>
 
                                             <div className="border-l-4 border-red-500 pl-4 py-2">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">3. Conflating Trademark Renewal with Trademark Alteration</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">3. Conflating Trademark Renewal with Trademark Alteration</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Form TM-R extends the legal life of a mark exactly as registered. It cannot be used to update your logo graphics, alter font styles, or expand goods specifications. Brand modernizations require filing Form TM-M (for minor variations) or submitting a fresh application on Form TM-A.</p>
                                             </div>
 
                                             <div className="border-l-4 border-red-500 pl-4 py-2">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">4. Missing the 12-Month Restoration Cutoff</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">4. Missing the 12-Month Restoration Cutoff</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Once 12 months have passed from the expiry date, the Registrar lacks statutory authority under Section 25(4) to entertain restoration. The trademark is permanently expunged from the register, sacrificing your decade-old priority date and leaving your mark open to competitor filings.</p>
                                             </div>
                                         </div>
@@ -558,10 +558,10 @@ export default function TrademarkRenewalPage() {
 
                                     {/* SECTION 6: RIGHTS MAINTAINED */}
                                     <section id="rights-maintained" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faScaleBalanced} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Rights Maintained After Renewal
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Timely execution of Form TM-R preserves the substantial legal remedies granted to registered proprietors under the Trade Marks Act, 1999:</p>
                                         <p className="mb-6"><strong>Unbroken Priority Date:</strong>Your original filing date remains the benchmark for all priority conflicts under Section 11. Even if competitors enter the market during your second decade of operations, your seniority remains unassailable in court.</p>
                                         <p className="mb-6"><strong>Statutory Infringement Remedies:</strong>Under Section 28 and Section 29, active registration provides prima facie legal proof of ownership in civil courts. You retain the right to obtain ex-parte interim injunctions, order delivery-up of counterfeit goods, and claim punitive damages or accounts of profit against infringers without the heavy evidentiary burden of proving common-law passing off.</p>
@@ -570,10 +570,10 @@ export default function TrademarkRenewalPage() {
 
                                     {/* SECTION 7: CHECKLIST */}
                                     <section id="checklist" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faCheckCircle} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Trademark Renewal Checklist
-                                        </h2>
+                                        </h3>
                                         <ul className="list-none space-y-4 mb-8">
                                             <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Audit Registry Status:</strong>Confirm that the mark status reads &ldquo;Registered&rdquo; and note the exact 10-year expiration date.</span></li>
                                             <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Verify All Registered Classes:</strong>Identify whether the mark is registered in single or multiple classes and calculate fees at ₹9,000 per class.</span></li>
@@ -587,15 +587,15 @@ export default function TrademarkRenewalPage() {
 
                                     {/* SECTION 8: FAQS (EXACTLY 8 MATCHING SCHEMA) */}
                                     <section id="faqs" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl lg:text-3xl font-black text-gray-900 mb-8 text-center text-[rgb(110,94,147)]">
+                                        <h3 className="text-xl md:text-2xl lg:text-3xl font-black text-gray-900 mb-8 text-center text-[rgb(110,94,147)]">
                                             Frequently Asked Questions
-                                        </h2>
+                                        </h3>
                                         <div className="space-y-4">
                                             {faqs.map((faq, index) => (
                                                 <div key={index} className="bg-white border border-gray-100 rounded-3xl p-8 shadow-sm hover:shadow-md transition-shadow">
-                                                    <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-4 flex items-start leading-snug">
+                                                    <h4 className="text-lg md:text-xl font-bold text-gray-900 mb-4 flex items-start leading-snug">
                                                         <span className="text-[rgb(110,94,147)] mr-4 font-black text-2xl">Q.</span>{faq.question}
-                                                    </h3>
+                                                    </h4>
                                                     <p className="text-gray-600 pl-10 m-0">{faq.answer}</p>
                                                 </div>
                                             ))}
@@ -604,10 +604,10 @@ export default function TrademarkRenewalPage() {
 
                                     {/* SECTION 9: FINAL STRATEGIC ADVICE */}
                                     <section id="final-takeaway" className="scroll-mt-32 pt-16">
-                                        <h2 className="text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLightbulb} className="w-8 h-8 mr-3 text-yellow-500" />
                                             Strategic Trademark Renewal Advice
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">A registered trademark is one of the very few commercial assets that appreciates in value the longer it is used in commerce. By maintaining strict renewal hygiene, brand owners safeguard decades of marketing capital, customer trust, and corporate enterprise value.</p>
                                         <p className="mb-6">Do not wait for statutory grace periods or journal removal warnings to initiate action. Establishing automated docketing cycles and engaging certified IP attorneys ensures that your Form TM-R is lodged cleanly, fees are reconciled without error, and your exclusive rights remain perpetual. Start your renewal assessment today to secure your brand legacy for the decade ahead.</p>
                                     </section>
@@ -622,9 +622,9 @@ export default function TrademarkRenewalPage() {
                                                     </span>
                                                 </div>
 
-                                                <h3 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl mb-4">
+                                                <h4 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl mb-4">
                                                     Renew Your Brand Exclusivity Today
-                                                </h3>
+                                                </h4>
 
                                                 <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">Partner with expert IP attorneys to manage your decennial trademark renewal. From portfolio docket audits and Form TM-R filing to journal notifications and final renewal certificate issuance.</p>
 
@@ -656,7 +656,7 @@ export default function TrademarkRenewalPage() {
                             {/* About Author */}
                             <div className="bg-white p-6 rounded-[2.5rem] shadow-sm border border-gray-100 flex flex-col items-center text-center">
                                 <img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-24 h-24 rounded-full mb-4 shadow-md object-cover" />
-                                <h3 className="text-xl font-bold text-gray-900 mb-2">Rahul Roy</h3>
+                                <h4 className="text-xl font-bold text-gray-900 mb-2">Rahul Roy</h4>
                                 <p className="text-sm text-gray-600 mb-4 font-medium">Trademark Research Specialist</p>
                                 <p className="text-sm text-gray-700 leading-relaxed mb-6">Rahul specializes in brand protection strategy, trademark renewal compliance, and portfolio maintenance under the Trade Marks Act, 1999. He helps enterprises protect their brand legacy with precision.</p>
                             </div>
@@ -664,7 +664,7 @@ export default function TrademarkRenewalPage() {
                             {/* Dark CTA Box */}
                             <div className="bg-[#0C002B] p-8 rounded-[2.5rem] shadow-2xl border border-white/5 text-white relative overflow-hidden group">
                                 <div className="absolute top-0 right-0 w-40 h-40 bg-[rgb(110,94,147)] rounded-full blur-[100px] opacity-30 group-hover:opacity-50 transition-opacity"></div>
-                                <h3 className="text-xl font-black mb-4 relative z-10 leading-tight">Start Renewal Now</h3>
+                                <h4 className="text-xl font-black mb-4 relative z-10 leading-tight">Start Renewal Now</h4>
                                 <p className="text-sm opacity-70 mb-8 leading-relaxed relative z-10 font-medium">Protect your brand for another 10 years. File Form TM-R seamlessly with registered trademark attorneys.</p>
                                 <Link href="/e-filing-trademark" className="block relative z-10">
                                     <button className="w-full bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-3.5 px-4 rounded-xl transition-all shadow-xl text-xs uppercase tracking-wider">
@@ -675,7 +675,7 @@ export default function TrademarkRenewalPage() {
 
                             {/* Related Resources */}
                             <div className="bg-gray-50 p-10 rounded-[2.5rem] shadow-sm border border-gray-100">
-                                <h3 className="text-sm font-black text-gray-400 mb-8 uppercase tracking-[0.3em]">Related Resources</h3>
+                                <h4 className="text-sm font-black text-gray-400 mb-8 uppercase tracking-[0.3em]">Related Resources</h4>
                                 <ul className="space-y-6">
                                     <li><Link href="/process-and-steps-of-trademark-registration" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faListUl} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Filing Steps</span></Link></li>
                                     <li><Link href="/how-to-restore-expired-trademark" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faClock} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Restore TM</span></Link></li>

@@ -331,42 +331,42 @@ export default function DifferenceBetweenTmandRSymbolPage() {
 
                                     {/* SECTION 2: WHAT THE TM SYMBOL MEANS */}
                                     <section id="tm-symbol-meaning" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faTrademark} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             What the TM Symbol Means in India
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">The<strong>TM (™)</strong>symbol stands for &ldquo;Trademark&rdquo;. It acts as a public declaration that the business regards the associated wordmark, logo, character, or shape as a distinctive commercial source identifier and intends to defend its proprietary rights against unauthorized imitators.</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     When to Use the TM Symbol
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">You can affix the ™ symbol immediately after completing<Link href="/e-filing-trademark" className="text-[rgb(110,94,147)] hover:underline font-semibold">online trademark e-filing</Link>on the IP India portal and securing your official application number. It may also be used for unregistered common law marks in commercial circulation.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     Notice to Competitors &amp; Copycats
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">The ™ symbol puts the commercial ecosystem on notice that you claim exclusive rights. This establishes prior adoption evidence and acts as a psychological deterrent against direct copying by competitors in your sector.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     Pending Application Lifecycle
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Throughout all intermediate registry milestones—including<Link href="/trademark-application-status" className="text-[rgb(110,94,147)] hover:underline font-semibold">trademark application status</Link>stages like &ldquo;Formality Check Pass&rdquo;, &ldquo;Marked for Exam&rdquo;, &ldquo;Objected&rdquo;, or &ldquo;Advertised&rdquo;—the TM symbol remains your sole authorized indicator.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     Legal Remedy: Passing Off
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Under Section 27(2) of the Trade Marks Act, 1999, an unregistered mark bearing the TM symbol is protected under the common law tort of<Link href="/what-to-do-if-someone-copies-your-trademark" className="text-[rgb(110,94,147)] hover:underline font-semibold">Passing Off</Link>. You must prove prior use, commercial goodwill, and actual consumer deception in court.</p>
                                             </div>
                                         </div>
@@ -374,17 +374,17 @@ export default function DifferenceBetweenTmandRSymbolPage() {
 
                                     {/* SECTION 3: WHAT THE R SYMBOL SIGNIFIES */}
                                     <section id="r-symbol-significance" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faCertificate} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             What the R Symbol Signifies
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">The<strong>® (Registered)</strong>symbol represents the pinnacle of intellectual property brand protection. Under Indian statutory law, this symbol indicates that the trademark has completed full administrative examination, survived public journal advertisement without opposition (or successfully defeated opposition), and received an official<strong>Certificate of Registration (Form TM-RG)</strong>from the Registrar of Trade Marks.</p>
 
                                         <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-6 md:p-8 mb-8">
-                                            <h3 className="text-lg font-bold text-emerald-950 mb-3 flex items-center">
+                                            <h4 className="text-lg font-bold text-emerald-950 mb-3 flex items-center">
                                                 <FontAwesomeIcon icon={faCheckCircle} className="w-5 h-5 text-emerald-600 mr-2" />
                                                 Statutory Rights Conferred by the ® Symbol in India
-                                            </h3>
+                                            </h4>
                                             <ul className="space-y-3 text-emerald-900 text-sm md:text-base m-0 list-disc pl-5">
                                                 <li><strong>Nationwide Exclusive Ownership:</strong>Under Section 28 of the Trade Marks Act, 1999, the registered proprietor obtains the exclusive right to use the mark across the entire territory of India in relation to the specified goods or services.</li>
                                                 <li><strong>Statutory Infringement Action:</strong>Under Section 29, the owner can initiate a direct trademark infringement lawsuit against unauthorized users without having to prove established public goodwill or consumer confusion.</li>
@@ -399,14 +399,14 @@ export default function DifferenceBetweenTmandRSymbolPage() {
 
                                     {/* SECTION 4: THE SM SYMBOL */}
                                     <section id="sm-symbol-usage" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLightbulb} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             The SM Symbol for Service Marks
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">The<strong>SM (℠)</strong>symbol stands for &ldquo;Service Mark&rdquo;. It functions analogously to the TM symbol, but applies specifically to enterprises providing intangible services rather than manufactured physical goods.</p>
 
                                         <div className="border border-gray-200 rounded-2xl p-6 md:p-8 bg-white shadow-sm mb-6">
-                                            <h3 className="text-lg font-bold text-gray-900 mb-3">Service Classes Under the Nice Classification (Classes 35 to 45)</h3>
+                                            <h4 className="text-lg font-bold text-gray-900 mb-3">Service Classes Under the Nice Classification (Classes 35 to 45)</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">In India, service-oriented enterprises frequently use the SM symbol during the pendency of their applications across service categories:</p>
                                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs md:text-sm text-gray-700 not-prose">
                                                 <div className="bg-gray-50 p-3 rounded-lg border border-gray-200"><strong>Class 35:</strong> Advertising, Retail &amp; E-commerce</div>
@@ -422,10 +422,10 @@ export default function DifferenceBetweenTmandRSymbolPage() {
 
                                     {/* SECTION 5: COMPREHENSIVE COMPARISON TABLE */}
                                     <section id="comparison-table" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faTable} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Detailed Comparison: TM vs R vs SM
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">The table below provides an exhaustive side-by-side analysis of the statutory differences, prerequisites, rights, and legal protections associated with each trademark symbol in India:</p>
 
                                         <div className="overflow-x-auto my-8 border border-gray-200 rounded-2xl shadow-sm not-prose">
@@ -488,10 +488,10 @@ export default function DifferenceBetweenTmandRSymbolPage() {
 
                                     {/* SECTION 6: LEGAL PENALTIES UNDER SECTION 107 */}
                                     <section id="legal-penalties" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faGavel} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Penalties for Unlawful Use of R Symbol
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Many business owners falsely believe that putting an ® symbol next to their logo makes their brand look prestigious, even before registration is granted. Under Indian intellectual property legislation, this is an explicit statutory crime known as<strong>False Representation as a Registered Trade Mark</strong>.</p>
 
                                         {/* CRITICAL STATUTORY WARNING BOX */}
@@ -499,18 +499,18 @@ export default function DifferenceBetweenTmandRSymbolPage() {
                                             <div className="flex items-start">
                                                 <FontAwesomeIcon icon={faExclamationTriangle} className="w-7 h-7 text-red-600 mr-4 mt-1 flex-shrink-0" />
                                                 <div>
-                                                    <h3 className="text-lg font-black text-red-950 mb-2 uppercase tracking-wide">
+                                                    <h4 className="text-lg font-black text-red-950 mb-2 uppercase tracking-wide">
                                                         Statutory Warning: Section 107 of the Trade Marks Act, 1999
-                                                    </h3>
+                                                    </h4>
                                                     <p className="text-red-900 text-sm md:text-base leading-relaxed mb-3">Under Section 107(1), no person shall make any representation regarding a mark not being a registered trade mark to the effect that it is a registered trade mark, or for goods/services for which it is not registered.</p>
                                                     <p className="text-red-950 text-xs md:text-sm font-bold m-0">Deemed Representations include using the word &ldquo;registered&rdquo;, the &ldquo;®&rdquo; symbol, or any other abbreviation indicating registration on packaging, business cards, websites, invoices, or advertising signboards.</p>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-4">
+                                        <h4 className="text-lg md:text-xl font-bold text-gray-900 mb-4">
                                             The Jan Vishwas Act, 2023 Amendment: Modern Monetary Penalties
-                                        </h3>
+                                        </h4>
                                         <p className="mb-6">Historically, Section 107 provided for criminal imprisonment of up to 3 years, a fine, or both. To ease the compliance burden on honest entrepreneurs while penalizing fraudulent commercial conduct, the Parliament of India enacted the<strong>Jan Vishwas (Amendment of Provisions) Act, 2023</strong>, amending Section 107 to establish an agile administrative adjudication framework:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8 not-prose">
@@ -518,7 +518,7 @@ export default function DifferenceBetweenTmandRSymbolPage() {
                                                 <div className="w-10 h-10 bg-red-100 rounded-xl flex items-center justify-center text-red-600 font-black mb-4">
                                                     ₹
                                                 </div>
-                                                <h4 className="font-bold text-gray-900 mb-2">Statutory Fine up to ₹5,00,000</h4>
+                                                <h5 className="font-bold text-gray-900 mb-2">Statutory Fine up to ₹5,00,000</h5>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">The Adjudicating Officer appointed by the Central Government can levy a direct monetary penalty of up to ₹5 Lakh or 0.5% of total annual turnover on the defaulting entity.</p>
                                             </div>
 
@@ -526,7 +526,7 @@ export default function DifferenceBetweenTmandRSymbolPage() {
                                                 <div className="w-10 h-10 bg-amber-100 rounded-xl flex items-center justify-center text-amber-600 font-black mb-4">
                                                     ⚠️
                                                 </div>
-                                                <h4 className="font-bold text-gray-900 mb-2">Consumer Protection Liability</h4>
+                                                <h5 className="font-bold text-gray-900 mb-2">Consumer Protection Liability</h5>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">Under the Consumer Protection Act, 2019 and CCPA guidelines, falsely using the ® symbol constitutes a &ldquo;Misleading Advertisement&rdquo. And an unfair trade practice subject to compounding consumer penalties.</p>
                                             </div>
 
@@ -534,7 +534,7 @@ export default function DifferenceBetweenTmandRSymbolPage() {
                                                 <div className="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center text-purple-600 font-black mb-4">
                                                     🚫
                                                 </div>
-                                                <h4 className="font-bold text-gray-900 mb-2">Doctrine of Unclean Hands</h4>
+                                                <h5 className="font-bold text-gray-900 mb-2">Doctrine of Unclean Hands</h5>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">If you falsely used the ® symbol before registration, courts may refuse to grant discretionary equitable relief or temporary injunctions during future infringement litigations under the equitable &ldquo;clean hands&rdquo. Doctrine.</p>
                                             </div>
                                         </div>
@@ -542,10 +542,10 @@ export default function DifferenceBetweenTmandRSymbolPage() {
 
                                     {/* SECTION 7: TRANSITION ROADMAP */}
                                     <section id="transition-roadmap" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faListUl} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Transition Roadmap: From TM to R
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Upgrading your enterprise branding from the TM symbol to the ® symbol involves a rigorous 6-step statutory procedure. Follow this compliant roadmap:</p>
 
                                         {/* STEP 1 */}
@@ -554,7 +554,7 @@ export default function DifferenceBetweenTmandRSymbolPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Stage 1</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Symbol: ™ (TM)</span>
                                             </div>
-                                            <h3 className="text-lg font-bold text-gray-900 mb-2">File Form TM-A &amp; Deploy TM Symbol</h3>
+                                            <h4 className="text-lg font-bold text-gray-900 mb-2">File Form TM-A &amp; Deploy TM Symbol</h4>
                                             <p className="text-gray-700 leading-relaxed text-sm m-0">Submit your initial trademark application on Form TM-A with the Trade Marks Registry. The moment the electronic system issues your official acknowledgment receipt and application number, immediately apply the ™ symbol to your brand assets.</p>
                                         </div>
 
@@ -564,7 +564,7 @@ export default function DifferenceBetweenTmandRSymbolPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Stage 2</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Symbol: ™ (TM)</span>
                                             </div>
-                                            <h3 className="text-lg font-bold text-gray-900 mb-2">Formal Examination &amp; Objection Resolution</h3>
+                                            <h4 className="text-lg font-bold text-gray-900 mb-2">Formal Examination &amp; Objection Resolution</h4>
                                             <p className="text-gray-700 leading-relaxed text-sm m-0">The trademark examiner reviews your mark under Section 9 (absolute grounds) and Section 11 (relative grounds). If an examination report is issued, your trademark attorney must submit a formal reply within 30 days. Maintain the ™ symbol during this entire period.</p>
                                         </div>
 
@@ -574,7 +574,7 @@ export default function DifferenceBetweenTmandRSymbolPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Stage 3</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Symbol: ™ (TM)</span>
                                             </div>
-                                            <h3 className="text-lg font-bold text-gray-900 mb-2">4-Month Journal Advertisement Window</h3>
+                                            <h4 className="text-lg font-bold text-gray-900 mb-2">4-Month Journal Advertisement Window</h4>
                                             <p className="text-gray-700 leading-relaxed text-sm m-0">Once accepted, the mark is published in the official Trade Marks Journal for a statutory 4-month public opposition window. Even though the mark is advertised,<em>do not switch to the ® symbol yet</em>—third parties may still file Form TM-O opposition.</p>
                                         </div>
 
@@ -584,7 +584,7 @@ export default function DifferenceBetweenTmandRSymbolPage() {
                                                 <span className="bg-emerald-600 text-white text-xs font-black uppercase px-3 py-1 rounded-full">Stage 4</span>
                                                 <span className="text-xs text-emerald-600 font-bold">Official Registration Milestone</span>
                                             </div>
-                                            <h3 className="text-lg font-bold text-gray-900 mb-2">Issuance of Certificate of Registration (Form TM-RG)</h3>
+                                            <h4 className="text-lg font-bold text-gray-900 mb-2">Issuance of Certificate of Registration (Form TM-RG)</h4>
                                             <p className="text-gray-700 leading-relaxed text-sm m-0">If no opposition is filed (or opposition is decided in your favor), the Registrar issues the official digital Certificate of Registration bearing the seal of the Trade Marks Registry.<strong>You are now legally entitled to use the ® symbol.</strong></p>
                                         </div>
 
@@ -594,7 +594,7 @@ export default function DifferenceBetweenTmandRSymbolPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Stage 5</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Symbol: ® (Registered)</span>
                                             </div>
-                                            <h3 className="text-lg font-bold text-gray-900 mb-2">Instant Digital Assets Upgrade</h3>
+                                            <h4 className="text-lg font-bold text-gray-900 mb-2">Instant Digital Assets Upgrade</h4>
                                             <p className="text-gray-700 leading-relaxed text-sm m-0">Immediately update website headers, footers, mobile app icons, software splash screens, social media banners, email signatures, and corporate presentations to the ® symbol.</p>
                                         </div>
 
@@ -604,49 +604,49 @@ export default function DifferenceBetweenTmandRSymbolPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Stage 6</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Symbol: ® (Registered)</span>
                                             </div>
-                                            <h3 className="text-lg font-bold text-gray-900 mb-2">Phased Physical Packaging &amp; Inventory Rollout</h3>
+                                            <h4 className="text-lg font-bold text-gray-900 mb-2">Phased Physical Packaging &amp; Inventory Rollout</h4>
                                             <p className="text-gray-700 leading-relaxed text-sm m-0">Coordinate with your manufacturing and packaging suppliers. Incorporate the ® symbol on all newly printed product labels, cartons, shipping boxes, and point-of-sale displays while phasing out legacy ™ inventory under production cycles.</p>
                                         </div>
                                     </section>
 
                                     {/* SECTION 8: COMPLIANCE BEST PRACTICES */}
                                     <section id="compliance-best-practices" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faShieldHalved} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Best Practices for Brand Compliance
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">To maintain complete regulatory compliance and maximize commercial enforcement strength, adhere to these legal rules across your commercial operations:</p>
 
                                         <div className="space-y-4 my-8 not-prose">
                                             <div className="p-5 bg-gray-50 rounded-xl border border-gray-200">
-                                                <h3 className="font-bold text-gray-900 mb-2 flex items-center text-base">
+                                                <h4 className="font-bold text-gray-900 mb-2 flex items-center text-base">
                                                     <FontAwesomeIcon icon={faCheck} className="text-[#6E5E93] mr-2.5 w-4 h-4" />
                                                     International Export Packaging Compliance
-                                                </h3>
+                                                </h4>
                                                 <p className="text-xs md:text-sm text-gray-600 leading-relaxed m-0">If exporting products outside India, verify whether your trademark is registered in the target destination country. Using the ® symbol in a foreign jurisdiction where your mark is unregistered may violate local intellectual property statutes. If your brand exports globally, consider filing an<Link href="/international-trademark-registration" className="text-[rgb(110,94,147)] hover:underline font-semibold">International Trademark Registration under the Madrid Protocol</Link>.</p>
                                             </div>
 
                                             <div className="p-5 bg-gray-50 rounded-xl border border-gray-200">
-                                                <h3 className="font-bold text-gray-900 mb-2 flex items-center text-base">
+                                                <h4 className="font-bold text-gray-900 mb-2 flex items-center text-base">
                                                     <FontAwesomeIcon icon={faCheck} className="text-[#6E5E93] mr-2.5 w-4 h-4" />
                                                     E-Commerce Marketplace Brand Registries
-                                                </h3>
+                                                </h4>
                                                 <p className="text-xs md:text-sm text-gray-600 leading-relaxed m-0">Amazon Brand Registry in India accepts pending trademark applications bearing application numbers (TM status) to unlock Enhanced Brand Content (A+ Content) and Brand Stores. However, automated counterfeit takedowns (Project Zero) require a fully registered ® certificate.</p>
                                             </div>
 
                                             <div className="p-5 bg-gray-50 rounded-xl border border-gray-200">
-                                                <h3 className="font-bold text-gray-900 mb-2 flex items-center text-base">
+                                                <h4 className="font-bold text-gray-900 mb-2 flex items-center text-base">
                                                     <FontAwesomeIcon icon={faCheck} className="text-[#6E5E93] mr-2.5 w-4 h-4" />
                                                     Accurate Visual Placement Guidelines
-                                                </h3>
+                                                </h4>
                                                 <p className="text-xs md:text-sm text-gray-600 leading-relaxed m-0">Place the symbol as a superscript (™ or ®) or subscript at the upper-right or lower-right corner of your brand name or logo. Ensure it is legible but distinct from the core trademark graphic so it does not alter the registered mark representation.</p>
                                             </div>
 
                                             <div className="p-5 bg-gray-50 rounded-xl border border-gray-200">
-                                                <h3 className="font-bold text-gray-900 mb-2 flex items-center text-base">
+                                                <h4 className="font-bold text-gray-900 mb-2 flex items-center text-base">
                                                     <FontAwesomeIcon icon={faCheck} className="text-[#6E5E93] mr-2.5 w-4 h-4" />
                                                     Class-Specific Use Restriction
-                                                </h3>
+                                                </h4>
                                                 <p className="text-xs md:text-sm text-gray-600 leading-relaxed m-0">If your business sells multiple product lines, remember that the ® symbol is strictly restricted to the specific classes listed on your registration certificate. If you expand into new product categories, you must file a new Form TM-A and use ™ on those new categories until registered.</p>
                                             </div>
                                         </div>
@@ -654,19 +654,19 @@ export default function DifferenceBetweenTmandRSymbolPage() {
 
                                     {/* SECTION 9: FAQS */}
                                     <section id="faqs" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLightbulb} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Frequently Asked Questions
-                                        </h2>
+                                        </h3>
                                         <p className="mb-8">Here are direct legal answers to the most common questions entrepreneurs, founders, and brand custodians ask regarding TM, ®, and SM symbol usage in India:</p>
 
                                         <div className="space-y-6 not-prose">
                                             {faqs.map((faq, index) => (
                                                 <div key={index} className="border border-gray-200 rounded-2xl p-6 bg-gray-50 hover:bg-white transition-all shadow-sm">
-                                                    <h3 className="text-base md:text-lg font-bold text-gray-900 mb-3 flex items-start">
+                                                    <h4 className="text-base md:text-lg font-bold text-gray-900 mb-3 flex items-start">
                                                         <span className="text-[#6E5E93] mr-3 font-black">Q{index + 1}.</span>
                                                         {faq.question}
-                                                    </h3>
+                                                    </h4>
                                                     <p className="text-sm md:text-base text-gray-700 leading-relaxed pl-8 m-0">{faq.answer}</p>
                                                 </div>
                                             ))}
@@ -675,10 +675,10 @@ export default function DifferenceBetweenTmandRSymbolPage() {
 
                                     {/* SECTION 10: STRATEGIC COUNSEL / FINAL TAKEAWAY */}
                                     <section id="final-takeaway" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faShieldHalved} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Strategic Counsel for Brand Custodians
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Your brand name, logo, and visual identity are among your enterprise&apos;s most valuable commercial assets. Understanding the precise legal divide between the<strong>™</strong>and<strong>®</strong>symbols ensures that you build an impenetrable brand fortress while staying fully compliant with Indian statutory law.</p>
                                         <p className="mb-6">For early-stage startups and established corporations alike, the recommended practice is straightforward: conduct a comprehensive clearance search via a<Link href="/trademark-search" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark search</Link>, file Form TM-A immediately to claim your ™ priority, actively resolve any examination objections, and proudly deploy the ® symbol the moment your registration certificate is sealed.</p>
                                     </section>
@@ -693,9 +693,9 @@ export default function DifferenceBetweenTmandRSymbolPage() {
                                                     </span>
                                                 </div>
 
-                                                <h3 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl mb-4">
+                                                <h4 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl mb-4">
                                                     Upgrade from ™ to ® with Expert IP Lawyers
-                                                </h3>
+                                                </h4>
 
                                                 <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">Secure nationwide legal exclusivity for your brand name and logo. Partner with seasoned IP attorneys for comprehensive trademark search, swift Form TM-A e-filing, objection management, and guaranteed compliance.</p>
 
@@ -727,7 +727,7 @@ export default function DifferenceBetweenTmandRSymbolPage() {
                             {/* About Author */}
                             <div className="bg-white p-6 rounded-[2.5rem] shadow-sm border border-gray-100 flex flex-col items-center text-center">
                                 <img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-24 h-24 rounded-full mb-4 shadow-md object-cover" />
-                                <h3 className="text-xl font-bold text-gray-900 mb-2">Rahul Roy</h3>
+                                <h4 className="text-xl font-bold text-gray-900 mb-2">Rahul Roy</h4>
                                 <p className="text-sm text-gray-600 mb-4 font-medium">Trademark Research Specialist</p>
                                 <p className="text-sm text-gray-700 leading-relaxed mb-6">Rahul specializes in brand protection strategy, trademark symbol compliance, and portfolio prosecution under the Trade Marks Act, 1999. He helps founders safeguard their commercial goodwill.</p>
                             </div>
@@ -735,7 +735,7 @@ export default function DifferenceBetweenTmandRSymbolPage() {
                             {/* Dark CTA Box */}
                             <div className="bg-[#0C002B] p-8 rounded-[2.5rem] shadow-2xl border border-white/5 text-white relative overflow-hidden group">
                                 <div className="absolute top-0 right-0 w-40 h-40 bg-[rgb(110,94,147)] rounded-full blur-[100px] opacity-30 group-hover:opacity-50 transition-opacity"></div>
-                                <h3 className="text-xl font-black mb-4 relative z-10 leading-tight">Secure Your ® Symbol</h3>
+                                <h4 className="text-xl font-black mb-4 relative z-10 leading-tight">Secure Your ® Symbol</h4>
                                 <p className="text-sm opacity-70 mb-8 leading-relaxed relative z-10 font-medium">File your brand trademark today. Transition legally from ™ to ® with registered IP advocates.</p>
                                 <Link href="/e-filing-trademark" className="block relative z-10">
                                     <button className="w-full bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-3.5 px-4 rounded-xl transition-all shadow-xl text-xs uppercase tracking-wider">
@@ -746,7 +746,7 @@ export default function DifferenceBetweenTmandRSymbolPage() {
 
                             {/* Related Resources */}
                             <div className="bg-gray-50 p-10 rounded-[2.5rem] shadow-sm border border-gray-100">
-                                <h3 className="text-sm font-black text-gray-400 mb-8 uppercase tracking-[0.3em]">Related Resources</h3>
+                                <h4 className="text-sm font-black text-gray-400 mb-8 uppercase tracking-[0.3em]">Related Resources</h4>
                                 <ul className="space-y-6">
                                     <li><Link href="/process-and-steps-of-trademark-registration" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faListUl} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Filing Steps</span></Link></li>
                                     <li><Link href="/trademark-application-status" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faMagnifyingGlass} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Track TM Status</span></Link></li>

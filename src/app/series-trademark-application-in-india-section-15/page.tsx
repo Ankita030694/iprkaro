@@ -373,17 +373,17 @@ export default function SeriesTrademarkApplicationPage() {
 
                                     {/* SECTION 2: SECTION 15 STATUTORY FRAMEWORK */}
                                     <section id="statutory-framework-section-15" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faScaleBalanced} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Section 15 Statutory Framework
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">
                                             Section 15 of the Trade Marks Act, 1999 governs both the registration of parts of trademarks and the registration of trademarks as a series. The specific statutory provisions governing series marks are:
                                         </p>
 
                                         <div className="space-y-4 my-8 not-prose">
                                             <div className="border-l-4 border-[#6E5E93] pl-4 py-3 bg-purple-50/40 rounded-r-xl">
-                                                <h3 className="text-sm font-bold text-gray-900 mb-1">Section 15(3): The Series Definition &amp; Scope</h3>
+                                                <h4 className="text-sm font-bold text-gray-900 mb-1">Section 15(3): The Series Definition &amp; Scope</h4>
                                                 <p className="text-xs text-gray-700 leading-relaxed m-0 italic">
                                                     &ldquo;Where a person claiming to be the proprietor of several trade marks in respect of the same or similar goods or services, which, while resembling each other in the material particulars thereof, yet differ in respect of—<br/>
                                                     (a) statements of the goods or services in relation to which they are respectively used or proposed to be used; or<br/>
@@ -395,7 +395,7 @@ export default function SeriesTrademarkApplicationPage() {
                                             </div>
 
                                             <div className="border-l-4 border-indigo-500 pl-4 py-3 bg-indigo-50/40 rounded-r-xl">
-                                                <h3 className="text-sm font-bold text-gray-900 mb-1">Section 15(4): Deemed Association</h3>
+                                                <h4 className="text-sm font-bold text-gray-900 mb-1">Section 15(4): Deemed Association</h4>
                                                 <p className="text-xs text-gray-700 leading-relaxed m-0 italic">
                                                     &ldquo;All trade marks so registered as a series in one registration shall be deemed to be, and shall be treated as, associated trade marks.&rdquo;
                                                 </p>
@@ -409,10 +409,10 @@ export default function SeriesTrademarkApplicationPage() {
 
                                     {/* SECTION 3: ELIGIBILITY CRITERIA FOR SERIES MARKS */}
                                     <section id="eligibility-criteria" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faCheckCircle} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Eligibility Criteria for Series Marks
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">
                                             To successfully secure registration of a series of trademarks before the Indian Trade Marks Registry, the application must satisfy four mandatory statutory tests:
                                         </p>
@@ -421,7 +421,7 @@ export default function SeriesTrademarkApplicationPage() {
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
                                                 <div className="flex items-center space-x-2 text-[#6E5E93] font-bold mb-2">
                                                     <span className="w-6 h-6 rounded-full bg-purple-100 text-[#6E5E93] flex items-center justify-center text-xs font-bold">1</span>
-                                                    <h3 className="text-base font-bold text-gray-900 m-0">Identical Material Particulars</h3>
+                                                    <h4 className="text-base font-bold text-gray-900 m-0">Identical Material Particulars</h4>
                                                 </div>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">
                                                     The primary distinctive word, logo, or figurative device must be identical across all marks in the series. The core identifier that creates brand recall cannot change between variants.
@@ -431,7 +431,7 @@ export default function SeriesTrademarkApplicationPage() {
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
                                                 <div className="flex items-center space-x-2 text-[#6E5E93] font-bold mb-2">
                                                     <span className="w-6 h-6 rounded-full bg-purple-100 text-[#6E5E93] flex items-center justify-center text-xs font-bold">2</span>
-                                                    <h3 className="text-base font-bold text-gray-900 m-0">Single Trademark Class</h3>
+                                                    <h4 className="text-base font-bold text-gray-900 m-0">Single Trademark Class</h4>
                                                 </div>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">
                                                     All goods or services covered by the series must fall strictly under a single trademark class (e.g., Class 30 for confectioneries, Class 3 for cosmetics, Class 25 for apparel). Multi-class series applications are impermissible.
@@ -441,7 +441,7 @@ export default function SeriesTrademarkApplicationPage() {
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
                                                 <div className="flex items-center space-x-2 text-[#6E5E93] font-bold mb-2">
                                                     <span className="w-6 h-6 rounded-full bg-purple-100 text-[#6E5E93] flex items-center justify-center text-xs font-bold">3</span>
-                                                    <h3 className="text-base font-bold text-gray-900 m-0">Non-Distinctive Differences</h3>
+                                                    <h4 className="text-base font-bold text-gray-900 m-0">Non-Distinctive Differences</h4>
                                                 </div>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">
                                                     The variations must be limited to descriptive elements—such as flavor names, packaging sizes, colors, grades, or geographical locations—that do not alter the commercial identity of the mark.
@@ -451,7 +451,7 @@ export default function SeriesTrademarkApplicationPage() {
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
                                                 <div className="flex items-center space-x-2 text-[#6E5E93] font-bold mb-2">
                                                     <span className="w-6 h-6 rounded-full bg-purple-100 text-[#6E5E93] flex items-center justify-center text-xs font-bold">4</span>
-                                                    <h3 className="text-base font-bold text-gray-900 m-0">Common Proprietary Ownership</h3>
+                                                    <h4 className="text-base font-bold text-gray-900 m-0">Common Proprietary Ownership</h4>
                                                 </div>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">
                                                     All marks in the series must be owned by the exact same legal entity (proprietor, company, or partnership firm). Co-applicants cannot file separate marks under one series.
@@ -462,10 +462,10 @@ export default function SeriesTrademarkApplicationPage() {
 
                                     {/* SECTION 4: PERMISSIBLE NON-DISTINCTIVE VARIATIONS */}
                                     <section id="permissible-variations" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faTags} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Permissible Non-Distinctive Variations
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">
                                             Section 15(3) specifically lists the types of differences allowed between marks in a series application. The table below details real-world commercial examples:
                                         </p>
@@ -518,10 +518,10 @@ export default function SeriesTrademarkApplicationPage() {
 
                                     {/* SECTION 5: PROHIBITED DIFFERENCES IN SERIES MARKS */}
                                     <section id="prohibited-differences" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faBan} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Prohibited Differences in Series Marks
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">
                                             The Trade Marks Registry strictly rejects series applications where the differences are substantive, distinctive, or alter consumer perception. Prohibited differences include:
                                         </p>
@@ -530,28 +530,28 @@ export default function SeriesTrademarkApplicationPage() {
                                             <div className="flex items-start">
                                                 <FontAwesomeIcon icon={faBan} className="w-4 h-4 text-red-500 mr-3 mt-1 flex-shrink-0" />
                                                 <div>
-                                                    <h3 className="text-sm font-bold text-red-950 m-0">Different Distinctive Words</h3>
+                                                    <h4 className="text-sm font-bold text-red-950 m-0">Different Distinctive Words</h4>
                                                     <p className="text-xs text-gray-700 m-0 mt-0.5">Attempting to bundle &ldquo;ROYAL FEAST&rdquo; and &ldquo;REGAL FEAST&rdquo; under one application is prohibited because &ldquo;ROYAL&rdquo; and &ldquo;REGAL&rdquo; are distinct verbal words.</p>
                                                 </div>
                                             </div>
                                             <div className="flex items-start">
                                                 <FontAwesomeIcon icon={faBan} className="w-4 h-4 text-red-500 mr-3 mt-1 flex-shrink-0" />
                                                 <div>
-                                                    <h3 className="text-sm font-bold text-red-950 m-0">Substantially Different Graphic Devices or Logos</h3>
+                                                    <h4 className="text-sm font-bold text-red-950 m-0">Substantially Different Graphic Devices or Logos</h4>
                                                     <p className="text-xs text-gray-700 m-0 mt-0.5">Using a Lion emblem in Mark A and an Eagle emblem in Mark B with the same wordmark creates visual divergence that destroys series eligibility.</p>
                                                 </div>
                                             </div>
                                             <div className="flex items-start">
                                                 <FontAwesomeIcon icon={faBan} className="w-4 h-4 text-red-500 mr-3 mt-1 flex-shrink-0" />
                                                 <div>
-                                                    <h3 className="text-sm font-bold text-red-950 m-0">Different Trademark Classes</h3>
+                                                    <h4 className="text-sm font-bold text-red-950 m-0">Different Trademark Classes</h4>
                                                     <p className="text-xs text-gray-700 m-0 mt-0.5">A single series application cannot protect biscuits in Class 30 and fruit juices in Class 32. Each class requires an independent series application.</p>
                                                 </div>
                                             </div>
                                             <div className="flex items-start">
                                                 <FontAwesomeIcon icon={faBan} className="w-4 h-4 text-red-500 mr-3 mt-1 flex-shrink-0" />
                                                 <div>
-                                                    <h3 className="text-sm font-bold text-red-950 m-0">Invented Sub-Brands with Independent Distinctiveness</h3>
+                                                    <h4 className="text-sm font-bold text-red-950 m-0">Invented Sub-Brands with Independent Distinctiveness</h4>
                                                     <p className="text-xs text-gray-700 m-0 mt-0.5">Adding coined distinctive words like &ldquo;ZYPHER&rdquo; or &ldquo;NEXUS&rdquo; to the main mark creates independent sub-brands that must be registered separately.</p>
                                                 </div>
                                             </div>
@@ -560,20 +560,20 @@ export default function SeriesTrademarkApplicationPage() {
 
                                     {/* SECTION 6: FILING COST SAVINGS: SERIES VS SEPARATE */}
                                     <section id="cost-savings-analysis" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faMoneyBillWave} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Filing Cost Savings: Series vs Separate
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">
                                             The financial benefits of utilizing Section 15 series applications are dramatic. Under the Trade Marks Rules, 2017, the official filing fee for a series trademark on Form TM-A is identical to the fee for a standard single application, regardless of whether you include 3, 5, or 8 variants.
                                         </p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
                                             <div className="bg-purple-50/60 p-6 rounded-2xl border border-purple-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-4 flex items-center">
+                                                <h4 className="text-base font-bold text-gray-900 mb-4 flex items-center">
                                                     <FontAwesomeIcon icon={faReceipt} className="w-4 h-4 text-[#6E5E93] mr-2" />
                                                     For Startups &amp; MSMEs (5 Product Variants)
-                                                </h3>
+                                                </h4>
                                                 <div className="space-y-3 text-xs text-gray-700">
                                                     <div className="flex justify-between pb-2 border-b border-purple-200">
                                                         <span>5 Standalone Applications (5 × ₹4,500):</span>
@@ -591,10 +591,10 @@ export default function SeriesTrademarkApplicationPage() {
                                             </div>
 
                                             <div className="bg-purple-50/60 p-6 rounded-2xl border border-purple-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-4 flex items-center">
+                                                <h4 className="text-base font-bold text-gray-900 mb-4 flex items-center">
                                                     <FontAwesomeIcon icon={faBoxesStacked} className="w-4 h-4 text-[#6E5E93] mr-2" />
                                                     For Large Enterprises (6 Product Variants)
-                                                </h3>
+                                                </h4>
                                                 <div className="space-y-3 text-xs text-gray-700">
                                                     <div className="flex justify-between pb-2 border-b border-purple-200">
                                                         <span>6 Standalone Applications (6 × ₹9,000):</span>
@@ -619,10 +619,10 @@ export default function SeriesTrademarkApplicationPage() {
 
                                     {/* SECTION 7: STEP-BY-STEP FORM TM-A SERIES FILING */}
                                     <section id="step-by-step-filing" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faFileContract} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Step-by-Step Form TM-A Series Filing
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">
                                             Under <strong>Rule 25 of the Trade Marks Rules, 2017</strong>, filing a series application requires specific formatting on Form TM-A. Follow this 6-step protocol:
                                         </p>
@@ -631,7 +631,7 @@ export default function SeriesTrademarkApplicationPage() {
                                             <div className="flex items-start bg-purple-50/40 p-4 rounded-xl border border-purple-100">
                                                 <span className="w-7 h-7 rounded-full bg-[#6E5E93] text-white flex items-center justify-center text-xs font-bold mr-3 flex-shrink-0 mt-0.5">1</span>
                                                 <div>
-                                                    <h3 className="text-sm font-bold text-gray-900 m-0">Step 1: Conduct Comprehensive Clearance Search</h3>
+                                                    <h4 className="text-sm font-bold text-gray-900 m-0">Step 1: Conduct Comprehensive Clearance Search</h4>
                                                     <p className="text-xs text-gray-600 m-0 mt-1">Perform clearance searches on the core wordmark and all variant names using our <Link href="/free-ai-powered-trademark-search" className="text-[#6E5E93] font-bold underline">free AI trademark search tool</Link> to ensure no conflicting registrations exist.</p>
                                                 </div>
                                             </div>
@@ -639,7 +639,7 @@ export default function SeriesTrademarkApplicationPage() {
                                             <div className="flex items-start bg-purple-50/40 p-4 rounded-xl border border-purple-100">
                                                 <span className="w-7 h-7 rounded-full bg-[#6E5E93] text-white flex items-center justify-center text-xs font-bold mr-3 flex-shrink-0 mt-0.5">2</span>
                                                 <div>
-                                                    <h3 className="text-sm font-bold text-gray-900 m-0">Step 2: Prepare Consolidated Representation Sheet</h3>
+                                                    <h4 className="text-sm font-bold text-gray-900 m-0">Step 2: Prepare Consolidated Representation Sheet</h4>
                                                     <p className="text-xs text-gray-600 m-0 mt-1">Under Rule 25(1), prepare a visual representation document displaying each mark in the series clearly in a sequential grid or numbered list.</p>
                                                 </div>
                                             </div>
@@ -647,7 +647,7 @@ export default function SeriesTrademarkApplicationPage() {
                                             <div className="flex items-start bg-purple-50/40 p-4 rounded-xl border border-purple-100">
                                                 <span className="w-7 h-7 rounded-full bg-[#6E5E93] text-white flex items-center justify-center text-xs font-bold mr-3 flex-shrink-0 mt-0.5">3</span>
                                                 <div>
-                                                    <h3 className="text-sm font-bold text-gray-900 m-0">Step 3: Select &ldquo;Series Trade Mark&rdquo; on Form TM-A</h3>
+                                                    <h4 className="text-sm font-bold text-gray-900 m-0">Step 3: Select &ldquo;Series Trade Mark&rdquo; on Form TM-A</h4>
                                                     <p className="text-xs text-gray-600 m-0 mt-1">In the IP India e-filing gateway, open Form TM-A, select standard filing, and check the checkbox designated for &ldquo;Series Application under Section 15(3)&rdquo;.</p>
                                                 </div>
                                             </div>
@@ -655,7 +655,7 @@ export default function SeriesTrademarkApplicationPage() {
                                             <div className="flex items-start bg-purple-50/40 p-4 rounded-xl border border-purple-100">
                                                 <span className="w-7 h-7 rounded-full bg-[#6E5E93] text-white flex items-center justify-center text-xs font-bold mr-3 flex-shrink-0 mt-0.5">4</span>
                                                 <div>
-                                                    <h3 className="text-sm font-bold text-gray-900 m-0">Step 4: Draft Consolidated Goods &amp; Services Description</h3>
+                                                    <h4 className="text-sm font-bold text-gray-900 m-0">Step 4: Draft Consolidated Goods &amp; Services Description</h4>
                                                     <p className="text-xs text-gray-600 m-0 mt-1">Define the specification of goods/services accurately under the relevant class, reflecting the scope of all variants in the series.</p>
                                                 </div>
                                             </div>
@@ -663,7 +663,7 @@ export default function SeriesTrademarkApplicationPage() {
                                             <div className="flex items-start bg-purple-50/40 p-4 rounded-xl border border-purple-100">
                                                 <span className="w-7 h-7 rounded-full bg-[#6E5E93] text-white flex items-center justify-center text-xs font-bold mr-3 flex-shrink-0 mt-0.5">5</span>
                                                 <div>
-                                                    <h3 className="text-sm font-bold text-gray-900 m-0">Step 5: Execute User Affidavit (If Claiming Prior Use)</h3>
+                                                    <h4 className="text-sm font-bold text-gray-900 m-0">Step 5: Execute User Affidavit (If Claiming Prior Use)</h4>
                                                     <p className="text-xs text-gray-600 m-0 mt-1">If the series marks have been used in commerce prior to filing, attach a <Link href="/trademark-user-affidavit-format-and-rules-india" className="text-[#6E5E93] font-bold underline">User Affidavit under Rule 25</Link> evidencing commercial usage of the series.</p>
                                                 </div>
                                             </div>
@@ -671,7 +671,7 @@ export default function SeriesTrademarkApplicationPage() {
                                             <div className="flex items-start bg-purple-50/40 p-4 rounded-xl border border-purple-100">
                                                 <span className="w-7 h-7 rounded-full bg-[#6E5E93] text-white flex items-center justify-center text-xs font-bold mr-3 flex-shrink-0 mt-0.5">6</span>
                                                 <div>
-                                                    <h3 className="text-sm font-bold text-gray-900 m-0">Step 6: Pay Government Fee &amp; Generate CBR</h3>
+                                                    <h4 className="text-sm font-bold text-gray-900 m-0">Step 6: Pay Government Fee &amp; Generate CBR</h4>
                                                     <p className="text-xs text-gray-600 m-0 mt-1">Submit the single class official fee and generate your permanent Application Number and Central Book Receipt (CBR).</p>
                                                 </div>
                                             </div>
@@ -680,30 +680,30 @@ export default function SeriesTrademarkApplicationPage() {
 
                                     {/* SECTION 8: SERIES EXAMINATION & DIVISION PROCESS */}
                                     <section id="examination-division-rules" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faGavel} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Series Examination &amp; Division Process
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">
                                             During substantive examination, the Examiner evaluates the entire series as a unit while assessing each individual variant for registrability under Sections 9 and 11.
                                         </p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2 flex items-center">
+                                                <h4 className="text-base font-bold text-gray-900 mb-2 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-emerald-500 rounded-full mr-2"></span>
                                                     Scenario A: Variant Objection Cured via Deletion
-                                                </h3>
+                                                </h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">
                                                     If the Examiner objects to Mark 3 (e.g., &ldquo;Brand Gold&rdquo;) due to a cited prior mark, the applicant can file <strong>Form TM-M</strong> to delete &ldquo;Brand Gold&rdquo; from the series. The remaining marks (&ldquo;Brand Silver&rdquo;, &ldquo;Brand Bronze&rdquo;) then proceed smoothly to journal advertisement.
                                                 </p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2 flex items-center">
+                                                <h4 className="text-base font-bold text-gray-900 mb-2 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-purple-600 rounded-full mr-2"></span>
                                                     Scenario B: Division of Series Application
-                                                </h3>
+                                                </h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">
                                                     Under <strong>Rule 25(2)</strong>, the applicant may apply to the Registrar on Form TM-M to divide the series application into independent individual applications. The divided marks retain the original filing priority date upon payment of applicable division fees.
                                                 </p>
@@ -713,10 +713,10 @@ export default function SeriesTrademarkApplicationPage() {
 
                                     {/* SECTION 9: SERIES VS ASSOCIATED VS MULTI-CLASS */}
                                     <section id="series-vs-associated-multiclass" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faBoxesStacked} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Series vs Associated vs Multi-Class
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">
                                             Brand proprietors frequently confuse Series Trademarks with Associated Trademarks and Multi-Class Applications. Here is the definitive legal comparison:
                                         </p>
@@ -763,31 +763,31 @@ export default function SeriesTrademarkApplicationPage() {
 
                                     {/* SECTION 10: REAL-WORLD COMMERCIAL FILING EXAMPLES */}
                                     <section id="commercial-use-cases" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faBoxOpen} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Commercial Brand Case Studies
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">
                                             Examine how top industries deploy Section 15 Series Trademark applications to establish impenetrable brand monopolies:
                                         </p>
 
                                         <div className="space-y-4 my-8 not-prose">
                                             <div className="p-5 bg-gray-50 rounded-2xl border border-gray-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-1">1. D2C FMCG &amp; Packaged Foods</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-1">1. D2C FMCG &amp; Packaged Foods</h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">
                                                     A snack manufacturer filed a series application for &ldquo;CRUNCHY BITES Peri Peri&rdquo;, &ldquo;CRUNCHY BITES Sour Cream&rdquo;, &ldquo;CRUNCHY BITES Salted&rdquo;, and &ldquo;CRUNCHY BITES Wasabi&rdquo; in Class 30. The common material distinctive core &ldquo;CRUNCHY BITES&rdquo; combined with non-distinctive seasoning descriptors secured 4 variant monopolies for a single ₹4,500 government fee.
                                                 </p>
                                             </div>
 
                                             <div className="p-5 bg-gray-50 rounded-2xl border border-gray-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-1">2. Hospitality &amp; Hotel Chains</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-1">2. Hospitality &amp; Hotel Chains</h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">
                                                     A boutique resort brand filed a series application in Class 43 for &ldquo;HERITAGE HAVEN Jaipur&rdquo;, &ldquo;HERITAGE HAVEN Udaipur&rdquo;, &ldquo;HERITAGE HAVEN Jodhpur&rdquo;, and &ldquo;HERITAGE HAVEN Varanasi&rdquo;, safeguarding its city expansions under one registration certificate.
                                                 </p>
                                             </div>
 
                                             <div className="p-5 bg-gray-50 rounded-2xl border border-gray-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-1">3. Cosmetics &amp; Skincare Lines</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-1">3. Cosmetics &amp; Skincare Lines</h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">
                                                     A skincare brand registered its core monogram logo in three packaging colour variants (Rose Gold label, Matte Black label, Pure White label) in Class 3, preventing counterfeiters from copying specific bottle colour combinations.
                                                 </p>
@@ -797,10 +797,10 @@ export default function SeriesTrademarkApplicationPage() {
 
                                     {/* SECTION 11: SERIES APPLICATION STRATEGIC CHECKLIST */}
                                     <section id="strategic-portfolio-checklist" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faShieldHalved} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Series Application Strategic Checklist
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">
                                             Ensure flawless execution of your Section 15 Series Trademark Application with this pre-filing compliance checklist:
                                         </p>
@@ -809,28 +809,28 @@ export default function SeriesTrademarkApplicationPage() {
                                             <div className="flex items-start">
                                                 <FontAwesomeIcon icon={faCheck} className="w-4 h-4 text-emerald-600 mr-3 mt-1 flex-shrink-0" />
                                                 <div>
-                                                    <h3 className="text-sm font-bold text-gray-900 m-0">Verify Identity of Material Particulars</h3>
+                                                    <h4 className="text-sm font-bold text-gray-900 m-0">Verify Identity of Material Particulars</h4>
                                                     <p className="text-xs text-gray-600 m-0 mt-0.5">Ensure the dominant wordmark, font styling, and logo structure are 100% identical across all variant representations.</p>
                                                 </div>
                                             </div>
                                             <div className="flex items-start">
                                                 <FontAwesomeIcon icon={faCheck} className="w-4 h-4 text-emerald-600 mr-3 mt-1 flex-shrink-0" />
                                                 <div>
-                                                    <h3 className="text-sm font-bold text-gray-900 m-0">Confirm All Goods Belong to One Class</h3>
+                                                    <h4 className="text-sm font-bold text-gray-900 m-0">Confirm All Goods Belong to One Class</h4>
                                                     <p className="text-xs text-gray-600 m-0 mt-0.5">Never mix classes in a series application. Audit your goods list to ensure every variant operates under the exact same class number.</p>
                                                 </div>
                                             </div>
                                             <div className="flex items-start">
                                                 <FontAwesomeIcon icon={faCheck} className="w-4 h-4 text-emerald-600 mr-3 mt-1 flex-shrink-0" />
                                                 <div>
-                                                    <h3 className="text-sm font-bold text-gray-900 m-0">Confirm Differences are Purely Non-Distinctive</h3>
+                                                    <h4 className="text-sm font-bold text-gray-900 m-0">Confirm Differences are Purely Non-Distinctive</h4>
                                                     <p className="text-xs text-gray-600 m-0 mt-0.5">Ensure variation text consists only of descriptive terms (flavors, numbers, weights, colors, places) without secondary coined words.</p>
                                                 </div>
                                             </div>
                                             <div className="flex items-start">
                                                 <FontAwesomeIcon icon={faCheck} className="w-4 h-4 text-emerald-600 mr-3 mt-1 flex-shrink-0" />
                                                 <div>
-                                                    <h3 className="text-sm font-bold text-gray-900 m-0">Maintain Unified Portfolio Assignment Records</h3>
+                                                    <h4 className="text-sm font-bold text-gray-900 m-0">Maintain Unified Portfolio Assignment Records</h4>
                                                     <p className="text-xs text-gray-600 m-0 mt-0.5">Remember that Section 15(4) creates mandatory association. If you ever license or assign your brand via a <Link href="/trademark-assignment-vs-licensing-in-india" className="text-[#6E5E93] font-bold underline">trademark assignment agreement</Link>, the entire series must be transferred together.</p>
                                                 </div>
                                             </div>
@@ -839,10 +839,10 @@ export default function SeriesTrademarkApplicationPage() {
 
                                     {/* SECTION 12: FAQS */}
                                     <section id="faqs" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faListUl} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Frequently Asked Questions
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">
                                             Explore expert answers to the most frequent questions regarding Section 15 Series Trademark applications in India:
                                         </p>
@@ -850,9 +850,9 @@ export default function SeriesTrademarkApplicationPage() {
                                         <div className="space-y-4 not-prose my-8">
                                             {faqs.map((faq, index) => (
                                                 <div key={index} className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                    <h3 className="text-base font-bold text-gray-900 mb-2">
+                                                    <h4 className="text-base font-bold text-gray-900 mb-2">
                                                         {index + 1}. {faq.question}
-                                                    </h3>
+                                                    </h4>
                                                     <p className="text-xs md:text-sm text-gray-700 leading-relaxed m-0">
                                                         {faq.answer}
                                                     </p>
@@ -863,10 +863,10 @@ export default function SeriesTrademarkApplicationPage() {
 
                                     {/* SECTION 13: STRATEGIC BRAND PORTFOLIO ADVICE */}
                                     <section id="strategic-brand-advice" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLightbulb} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Strategic Brand Portfolio Advice
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">
                                             Series Trademark filing under Section 15 is one of the most powerful, under-utilized cost-saving tools in Indian intellectual property law. When structured correctly by experienced trademark attorneys, a single application provides total defensive protection across all SKU variants without inflating your legal budget.
                                         </p>
@@ -876,9 +876,9 @@ export default function SeriesTrademarkApplicationPage() {
 
                                         <div className="mt-12 rounded-3xl bg-gradient-to-br from-[#0C002B] via-[#1A0B3B] to-[#2E1065] p-8 text-white shadow-2xl relative overflow-hidden not-prose">
                                             <div className="relative z-10 text-center max-w-2xl mx-auto">
-                                                <h3 className="text-2xl sm:text-3xl font-black tracking-tight text-white mb-4">
+                                                <h4 className="text-2xl sm:text-3xl font-black tracking-tight text-white mb-4">
                                                     Ready to Protect Your Product Lineup &amp; Save 80%?
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-purple-100/90 leading-relaxed mb-8">
                                                     Consult with our senior trademark attorneys to evaluate your product variants for Section 15 Series filing and secure unified brand protection across India.
                                                 </p>
@@ -911,7 +911,7 @@ export default function SeriesTrademarkApplicationPage() {
                             {/* About Author */}
                             <div className="bg-white p-4 sm:p-5 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center">
                                 <img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-16 h-16 rounded-full mb-2.5 shadow-md object-cover border-2 border-[#6E5E93]/20" />
-                                <h3 className="text-base font-bold text-gray-900 mb-0.5">Rahul Roy</h3>
+                                <h4 className="text-base font-bold text-gray-900 mb-0.5">Rahul Roy</h4>
                                 <p className="text-xs text-[#6E5E93] font-semibold mb-2">Trademark Research Specialist</p>
                                 <p className="text-xs text-gray-600 leading-relaxed m-0">Rahul specializes in corporate brand portfolio architecture, Section 15 series trademark filings, fee optimization strategies, and complex classification prosecution across India.</p>
                             </div>
@@ -919,7 +919,7 @@ export default function SeriesTrademarkApplicationPage() {
                             {/* Dark CTA Box */}
                             <div className="bg-[#0C002B] p-5 rounded-2xl shadow-xl border border-white/5 text-white relative overflow-hidden group">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-[rgb(110,94,147)] rounded-full blur-[70px] opacity-30 group-hover:opacity-50 transition-opacity"></div>
-                                <h3 className="text-base font-black mb-1.5 relative z-10 leading-tight">Save 80% on Filing Fees</h3>
+                                <h4 className="text-base font-black mb-1.5 relative z-10 leading-tight">Save 80% on Filing Fees</h4>
                                 <p className="text-xs text-white/80 mb-3.5 leading-relaxed relative z-10 font-normal">Have multiple flavours, sizes, or color variants? Register them in one Series Trademark application under Section 15.</p>
                                 <Link href="/contact-us" className="block relative z-10">
                                     <button className="w-full bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-2.5 px-4 rounded-xl transition-all shadow-md text-xs uppercase tracking-wider">
@@ -930,7 +930,7 @@ export default function SeriesTrademarkApplicationPage() {
 
                             {/* Related Resources */}
                             <div className="bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-100">
-                                <h3 className="text-xs font-black text-gray-400 mb-5 uppercase tracking-[0.25em]">Related Resources</h3>
+                                <h4 className="text-xs font-black text-gray-400 mb-5 uppercase tracking-[0.25em]">Related Resources</h4>
                                 <ul className="space-y-6">
                                     <li>
                                         <Link href="/single-class-vs-multi-class-trademark-application-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">

@@ -339,42 +339,42 @@ export default function TrademarkNoticeReplyPage() {
 
                                     {/* SECTION 2: ANATOMY OF A LEGAL NOTICE */}
                                     <section id="anatomy-of-notice" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faFileContract} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Anatomy of a Trademark Notice
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">A standard trademark infringement notice drafted by an IP advocate contains specific statutory assertions. Recognizing these structural components helps you and your counsel identify vulnerabilities in the claimant’s posture:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     Proprietary Title &amp; Class Scope
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">The notice outlines the claimant’s trademark registration numbers, registered word/device marks, filing dates, and specific<Link href="/trademark-class-finder" className="text-[rgb(110,94,147)] hover:underline font-medium">Nice classification classes</Link>. It asserts exclusive ownership rights under Section 28 of the Trade Marks Act, 1999.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     Allegations of Infringement &amp; Passing Off
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">The notice alleges that your commercial use creates consumer confusion, dilutes brand reputation, or dishonestly misappropriates goodwill under Section 29 (statutory infringement) or common-law passing off.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     Demands for Cease, Desist &amp; Surrender
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Demands typically mandate immediate cessation of commercial use, withdrawal of pending trademark applications, cancellation of domain names, destruction of packaging, and handover of promotional materials.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     Litigation Threats &amp; Time Deadlines
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">The document stipulates a strict reply window (typically 7 to 15 days), threatening civil suits under Section 134,<Link href="/civil-vs-criminal-trademark-infringement-india" className="text-[rgb(110,94,147)] hover:underline font-medium">criminal complaints</Link>under Sections 103/104, Anton Piller seizure orders, and heavy damages if compliance is not confirmed.</p>
                                             </div>
                                         </div>
@@ -382,35 +382,35 @@ export default function TrademarkNoticeReplyPage() {
 
                                     {/* SECTION 3: INITIAL 48-HOUR TRIAGE */}
                                     <section id="initial-triage" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faClock} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Immediate 48-Hour Triage Protocol
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">How you manage the initial 48 hours after receiving a trademark legal notice sets the trajectory of any future dispute. Follow this 5-point triage protocol to prevent unforced legal errors:</p>
 
                                         <div className="space-y-6">
                                             <div className="border-l-4 border-[#6E5E93] pl-4 py-2 bg-purple-50/30 rounded-r-xl">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">1. Do Not Panic and Never Ignore the Communication</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">1. Do Not Panic and Never Ignore the Communication</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Disregarding a formal notice is catastrophic. Silence allows the claimant to establish before a High Court or Commercial District Court that you had constructive knowledge of their proprietary mark and willfully continued infringing, making ex-parte injunctions far easier to obtain.</p>
                                             </div>
 
                                             <div className="border-l-4 border-[#6E5E93] pl-4 py-2 bg-purple-50/30 rounded-r-xl">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">2. Strictly Prohibit Direct Contact with the Sender</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">2. Strictly Prohibit Direct Contact with the Sender</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Do not call, WhatsApp, or email the sender or their legal counsel directly to apologize, offer settlements, or explain your innocence. Informal statements and admissions of similarity made in panic can be produced in court as admissible admissions of liability under the Indian Evidence Act.</p>
                                             </div>
 
                                             <div className="border-l-4 border-[#6E5E93] pl-4 py-2 bg-purple-50/30 rounded-r-xl">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">3. Record and Preserve the Exact Date of Receipt</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">3. Record and Preserve the Exact Date of Receipt</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Retain the postal envelope showing the India Post Speed Post / Registered AD tracking barcode, courier receipt, or email headers. The legal clock to reply starts strictly from the verified date you received the communication, not the drafting date on the letterhead.</p>
                                             </div>
 
                                             <div className="border-l-4 border-[#6E5E93] pl-4 py-2 bg-purple-50/30 rounded-r-xl">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">4. Conduct an Independent IP Registry Audit</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">4. Conduct an Independent IP Registry Audit</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Use the official<a href="https://ipindia.gov.in/" target="_blank" rel="noopener noreferrer" className="text-[rgb(110,94,147)] hover:underline font-medium">IP India Portal</a>or perform a comprehensive<Link href="/trademark-search" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark search</Link>to inspect the claimant’s trademark application number. Confirm whether the mark is actively registered, pending examination, opposed, abandoned, or subject to registry disclaimers and conditions.</p>
                                             </div>
 
                                             <div className="border-l-4 border-[#6E5E93] pl-4 py-2 bg-purple-50/30 rounded-r-xl">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">5. Engage Specialized Intellectual Property Counsel</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">5. Engage Specialized Intellectual Property Counsel</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Retain a registered trademark attorney or IP litigation advocate who understands the nuances of the Trade Marks Act, 1999 and the Commercial Courts Act, 2015. General civil lawyers frequently miss crucial IP-specific defenses such as prior user superiority, anti-dissection doctrines, and non-use vulnerabilities.</p>
                                             </div>
                                         </div>
@@ -418,10 +418,10 @@ export default function TrademarkNoticeReplyPage() {
 
                                     {/* SECTION 4: KEY STATUTORY DEFENSES */}
                                     <section id="statutory-defenses" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faScaleBalanced} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Key Legal Defenses in India
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">The Trade Marks Act, 1999 provides well-defined statutory shields against claims of infringement and passing off. When formulating your rebuttal reply, your advocate will evaluate which of the following statutory defenses apply to your commercial operations:</p>
 
                                         {/* DEFENSE 1 */}
@@ -430,7 +430,7 @@ export default function TrademarkNoticeReplyPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Defense 1</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Statutory Provision: Section 34</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Prior Continuous Commercial Use (First-to-Use Rule)</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Prior Continuous Commercial Use (First-to-Use Rule)</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">India is fundamentally a common-law &ldquo;first-to-use&rdquo; trademark jurisdiction rather than a &ldquo;first-to-file&rdquo; system. Under<strong>Section 34 of the Trade Marks Act, 1999</strong>, a registered trademark proprietor cannot interfere with or restrain the continuous commercial use of an identical or similar mark by a person who has continuously used that mark from a date before the claimant&rsquo;s registration date or claimed use date.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">This statutory defense was firmly upheld by the Supreme Court of India in the landmark judgment<em>Neon Laboratories Ltd. V. Medical Technologies Ltd. (2016)</em>. If your business possesses GST invoices, purchase orders, audited balance sheets, utility bills, or domain records showing continuous trade before the sender&rsquo;s priority date, your prior user rights override their registration. Learn more about compiling your commercial timeline in our guide on<Link href="/trademark-user-affidavit-format-and-rules-india" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark user affidavit format and rules</Link>.</p>
                                         </div>
@@ -441,7 +441,7 @@ export default function TrademarkNoticeReplyPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Defense 2</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Statutory Provision: Section 30</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Acts Not Constituting Infringement (Fair &amp; Descriptive Use)</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Acts Not Constituting Infringement (Fair &amp; Descriptive Use)</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Under<strong>Section 30 of the Trade Marks Act</strong>, certain categories of commercial use are statutorily declared as non-infringing:</p>
                                             <ul className="list-disc list-inside space-y-2 text-gray-700 mb-4">
                                                 <li><strong>Descriptive Indications (Section 30(2)(a)):</strong>Using a word mark in good faith to describe the kind, quality, quantity, intended purpose, value, geographical origin, or time of production of goods or services.</li>
@@ -456,7 +456,7 @@ export default function TrademarkNoticeReplyPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Defense 3</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Statutory Provision: Section 35</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Bona Fide Use of Personal Name or Place of Business</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Bona Fide Use of Personal Name or Place of Business</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4"><strong>Section 35</strong>provides absolute protection for individuals and business proprietors using their own bona fide personal names, family surnames, or names of their place of business in commercial dealings. A registered proprietor cannot restrain a person from genuinely trading under their actual name, provided the usage is honest and devoid of deceptive intention to piggyback on another&rsquo;s established goodwill.</p>
                                         </div>
 
@@ -466,7 +466,7 @@ export default function TrademarkNoticeReplyPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Defense 4</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Statutory Provision: Section 17 &amp; 28(2)</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Disclaimers, Composite Marks &amp; Anti-Dissection Rule</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Disclaimers, Composite Marks &amp; Anti-Dissection Rule</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Under<strong>Section 17 of the Trade Marks Act</strong>, when a trademark consists of several matters, its registration confers exclusive rights to the use of the mark taken as a whole. The proprietor cannot claim exclusive proprietary rights over individual non-distinctive, generic, or descriptive elements of a composite label.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">Furthermore, if the Trade Marks Registry granted registration with an explicit condition or disclaimer (e.g., &ldquo;No exclusive right over the descriptive word BIO or INDIA&rdquo;), the proprietor cannot enforce exclusivity over that specific term against third parties. Review how conditions operate in our detailed analysis on<Link href="/trademark-disclaimer-condition-meaning-in-india" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark disclaimer and condition meaning in India</Link>.</p>
                                         </div>
@@ -477,7 +477,7 @@ export default function TrademarkNoticeReplyPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Defense 5</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Statutory Provision: Section 29(1) &amp; Case Law</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Absence of Deceptive Similarity &amp; Disparate Trade Channels</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Absence of Deceptive Similarity &amp; Disparate Trade Channels</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">To establish infringement under Section 29(1), the claimant must prove that your mark is deceptively similar and likely to cause confusion among consumers with average intelligence and imperfect recollection (the classic<em>Cadila Healthcare Ltd. V. Cadila Pharmaceuticals Ltd.</em>7-factor test).</p>
                                             <p className="text-gray-700 leading-relaxed m-0">If the marks exhibit pronounced visual, phonetic, and structural differences, cater to sophisticated B2B buyers rather than ordinary consumers, or operate in distinctly separated trade channels with vast price differentials, the allegation of consumer confusion collapses under judicial scrutiny.</p>
                                         </div>
@@ -488,7 +488,7 @@ export default function TrademarkNoticeReplyPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Defense 6</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Statutory Provision: Section 47 &amp; 57</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Vulnerability to Rectification &amp; Non-Use Cancellation</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Vulnerability to Rectification &amp; Non-Use Cancellation</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Under<strong>Section 47 of the Trade Marks Act</strong>, a registered trademark that has remained unused in commerce for a continuous period of 5 years and 3 months from the date of registration is vulnerable to complete removal from the register.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">If the notice sender has parked their trademark without genuine commercial sales, your reply can place them on notice of an impending rectification petition under Section 57. The risk of losing their entire registration often induces aggressive claimants to withdraw notices or seek an amicable settlement. Explore our complete guide on<Link href="/trademark-cancellation-non-use-5-years-section-47-india" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark cancellation for 5-year non-use in India</Link>and<Link href="/how-to-file-trademark-rectification-india" className="text-[rgb(110,94,147)] hover:underline font-medium">how to file trademark rectification in India</Link>.</p>
                                         </div>
@@ -496,10 +496,10 @@ export default function TrademarkNoticeReplyPage() {
 
                                     {/* SECTION 5: 7-STEP PROFESSIONAL REPLY WORKFLOW */}
                                     <section id="step-by-step-reply" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faListUl} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             7-Step Professional Reply Process
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Executing a legally airtight reply to a trademark infringement notice requires systematic drafting, evidentiary validation, and formal service. Follow these 7 professional stages:</p>
 
                                         {/* STEP 1 */}
@@ -508,7 +508,7 @@ export default function TrademarkNoticeReplyPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 1</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Notice Deconstruction</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Notice Deconstruction &amp; Timeline Docketing</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Notice Deconstruction &amp; Timeline Docketing</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Carefully review every paragraph of the notice letter. Identify the claimant entity, their instructing legal counsel, specific registration citations, alleged infringing activities (e.g., logo, word mark, packaging trade dress, domain name), and demanded deadline.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">Calculate the exact reply deadline based on the date of physical receipt or electronic timestamp. If substantial evidentiary gathering is necessary, instruct your counsel to issue an immediate interim holding reply seeking a formal extension of 10 to 14 days.</p>
                                         </div>
@@ -519,7 +519,7 @@ export default function TrademarkNoticeReplyPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 2</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Registry Verification</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Claimant Standing &amp; Registry Scrutiny</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Claimant Standing &amp; Registry Scrutiny</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Inspect the electronic register of trademarks on the IP India portal. Examine the claimant’s original Form TM-A or TM-1, claimed user date affidavit, examination reports, and journal advertisements.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">Confirm whether the mark is actively registered or merely pending/objected. Check if the claimant claimed &ldquo;Proposed to be Used&rdquo; at the time of filing, as this severely compromises their claims against prior market users. You can evaluate the distinction between pending and registered marks in our guide on<Link href="/difference-between-tm-and-r-symbol-in-india" className="text-[rgb(110,94,147)] hover:underline font-medium">difference between TM and R symbol in India</Link>.</p>
                                         </div>
@@ -530,7 +530,7 @@ export default function TrademarkNoticeReplyPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 3</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Evidence Collation</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Collation of Commercial Inception Evidence</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Collation of Commercial Inception Evidence</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Gather comprehensive documentary proof establishing the commercial genesis and continuous market adoption of your mark:</p>
                                             <ul className="list-disc list-inside space-y-2 text-gray-700 mb-4">
                                                 <li>First GST sales invoices, vendor contracts, and purchase orders bearing the mark.</li>
@@ -546,7 +546,7 @@ export default function TrademarkNoticeReplyPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 4</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Defense Strategy</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Formulating the Defense Strategy &amp; Reply Posture</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Formulating the Defense Strategy &amp; Reply Posture</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Collaborate with your IP advocate to determine the strategic posture of your reply:</p>
                                             <ul className="list-disc list-inside space-y-2 text-gray-700 mb-4">
                                                 <li><strong>Aggressive Rebuttal:</strong>Asserting senior prior use under Section 34, disproving deceptive similarity, and threatening counter-suits under Section 142.</li>
@@ -561,7 +561,7 @@ export default function TrademarkNoticeReplyPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 5</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Rebuttal Drafting</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Drafting the Formal Legal Reply</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Drafting the Formal Legal Reply</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Your advocate drafts a comprehensive, point-by-point rebuttal on their official legal letterhead. The reply must include:</p>
                                             <ul className="list-disc list-inside space-y-2 text-gray-700 mb-4">
                                                 <li>Formal denial of all allegations of bad faith, piracy, passing off, and dishonest adoption.</li>
@@ -578,7 +578,7 @@ export default function TrademarkNoticeReplyPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 6</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Formal Service</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Formal Service via Registered AD &amp; Electronic Modes</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Formal Service via Registered AD &amp; Electronic Modes</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">The executed legal reply must be formally dispatched to both the claimant’s registered address and their instructing advocate&rsquo;s office address.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">Dispatch the response simultaneously via India Post Speed Post / Registered Post with Acknowledgment Due (RPAD) and digitally via email with read-receipt tracking. Retain postal receipts and India Post delivery tracking certificates as conclusive legal proof of service.</p>
                                         </div>
@@ -589,7 +589,7 @@ export default function TrademarkNoticeReplyPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 7</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Preemptive Injunction Safeguard</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Filing a Caveat Petition under Section 148A CPC</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Filing a Caveat Petition under Section 148A CPC</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">If the claimant is a well-funded enterprise with a history of aggressive IP litigation, do not wait passively for a court summons. File a<strong>Caveat Petition under Section 148A of the Code of Civil Procedure, 1908</strong>in the High Court or Commercial District Court having territorial jurisdiction.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">A Caveat remains valid for 90 days and legally obligates the court to notify your counsel and grant an oral hearing before passing any ex-parte ad-interim injunction, product seizure, or restraining order against your commercial operations.</p>
                                         </div>
@@ -597,10 +597,10 @@ export default function TrademarkNoticeReplyPage() {
 
                                     {/* SECTION 6: DEFENSE & RISK MATRIX TABLE */}
                                     <section id="defense-matrix-table" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faTable} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Defense &amp; Risk Strategy Matrix
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Evaluating your dispute scenario against established statutory thresholds enables you to select the most effective legal response while minimizing commercial litigation risks:</p>
 
                                         <div className="overflow-x-auto mb-8 shadow-sm rounded-xl border border-gray-200">
@@ -664,17 +664,17 @@ export default function TrademarkNoticeReplyPage() {
 
                                     {/* SECTION 7: SECTION 142 GROUNDLESS THREATS */}
                                     <section id="groundless-threats" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faGavel} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Countering Groundless Legal Threats
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Large corporations and aggressive competitors frequently weaponize trademark legal notices to stifle emerging competitors who have not committed any actual infringement. To prevent IP bullying, the Indian Parliament enacted a powerful legal deterrent:<strong>Section 142 of the Trade Marks Act, 1999</strong>(Groundless threats of legal proceedings).</p>
 
                                         <div className="bg-amber-50/60 p-6 md:p-8 rounded-2xl border border-amber-200 mb-8 not-prose">
-                                            <h3 className="text-lg font-bold text-amber-950 mb-3 flex items-center">
+                                            <h4 className="text-lg font-bold text-amber-950 mb-3 flex items-center">
                                                 <FontAwesomeIcon icon={faGavel} className="w-5 h-5 mr-2 text-amber-800" />
                                                 Statutory Remedies under Section 142
-                                            </h3>
+                                            </h4>
                                             <p className="text-sm text-amber-900 leading-relaxed mb-4">Where any person by circulars, advertisements, or written notices threatens any other person with an action or proceeding for trademark infringement, the person aggrieved may institute a civil suit against the sender and obtain:</p>
                                             <ul className="list-disc list-inside space-y-2 text-xs sm:text-sm text-amber-950 mb-4 font-medium">
                                                 <li>A judicial declaration that the threats are unjustifiable and unwarranted.</li>
@@ -689,30 +689,30 @@ export default function TrademarkNoticeReplyPage() {
 
                                     {/* SECTION 8: CRITICAL MISTAKES TO AVOID */}
                                     <section id="critical-mistakes" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faExclamationTriangle} className="w-8 h-8 mr-3 text-amber-500" />
                                             Mistakes to Avoid When Replying
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Responding to intellectual property notices requires strict precision. Avoid these common errors that routinely compromise legal defense strategies:</p>
 
                                         <div className="space-y-6">
                                             <div className="border-l-4 border-red-500 pl-4 py-2">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">1. Admitting Similarity or Inadvertent Copying</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">1. Admitting Similarity or Inadvertent Copying</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Phrases like &ldquo;we were unaware of your mark and will stop using it if asked&rdquo. Or &ldquo;we only chose this name because it was similar to yours&rdquo. Act as fatal admissions in court. Every communication must be reviewed by legal counsel.</p>
                                             </div>
 
                                             <div className="border-l-4 border-red-500 pl-4 py-2">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">2. Firing off an Emotional, Unrepresented Email</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">2. Firing off an Emotional, Unrepresented Email</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Responding directly from your personal or corporate email without formal legal backing signals weakness and lack of legal sophistication. Corporate notices require a formal response from an enrolled advocate under legal letterhead.</p>
                                             </div>
 
                                             <div className="border-l-4 border-red-500 pl-4 py-2">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">3. Destroying Historical Commercial Records</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">3. Destroying Historical Commercial Records</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Never discard old invoices, packaging archives, domain receipts, or brochures. In trademark litigation under Section 34, your oldest date-stamped document is your most valuable asset.</p>
                                             </div>
 
                                             <div className="border-l-4 border-red-500 pl-4 py-2">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">4. Venting on Social Media / Public Platforms</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">4. Venting on Social Media / Public Platforms</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Publishing the legal notice on LinkedIn, X (Twitter), or Instagram to garner sympathy often backfires. It gives the claimant grounds to file additional claims for commercial defamation, trade libel, and aggravated damages.</p>
                                             </div>
                                         </div>
@@ -720,10 +720,10 @@ export default function TrademarkNoticeReplyPage() {
 
                                     {/* SECTION 9: RESPONSE CHECKLIST */}
                                     <section id="checklist" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faCheckCircle} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Trademark Notice Response Checklist
-                                        </h2>
+                                        </h3>
                                         <ul className="list-none space-y-4 mb-8">
                                             <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Log &amp; Calculate Deadline:</strong>Record date of physical/email delivery and calculate the reply deadline (typically 7–15 days).</span></li>
                                             <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Verify IP India Database:</strong>Check claimant&rsquo;s registration status, classes, disclaimers, and user date on the official registry portal.</span></li>
@@ -737,15 +737,15 @@ export default function TrademarkNoticeReplyPage() {
 
                                     {/* SECTION 10: FAQS */}
                                     <section id="faqs" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl lg:text-3xl font-black text-gray-900 mb-8 text-center text-[rgb(110,94,147)]">
+                                        <h3 className="text-xl md:text-2xl lg:text-3xl font-black text-gray-900 mb-8 text-center text-[rgb(110,94,147)]">
                                             Frequently Asked Questions
-                                        </h2>
+                                        </h3>
                                         <div className="space-y-4">
                                             {faqs.map((faq, index) => (
                                                 <div key={index} className="bg-white border border-gray-100 rounded-3xl p-8 shadow-sm hover:shadow-md transition-shadow">
-                                                    <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-4 flex items-start leading-snug">
+                                                    <h4 className="text-lg md:text-xl font-bold text-gray-900 mb-4 flex items-start leading-snug">
                                                         <span className="text-[rgb(110,94,147)] mr-4 font-black text-2xl">Q.</span>{faq.question}
-                                                    </h3>
+                                                    </h4>
                                                     <p className="text-gray-600 pl-10 m-0">{faq.answer}</p>
                                                 </div>
                                             ))}
@@ -754,10 +754,10 @@ export default function TrademarkNoticeReplyPage() {
 
                                     {/* SECTION 11: FINAL STRATEGIC ADVICE */}
                                     <section id="final-takeaway" className="scroll-mt-32 pt-16">
-                                        <h2 className="text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLightbulb} className="w-8 h-8 mr-3 text-yellow-500" />
                                             Strategic Legal Advice &amp; Defense Guidance
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">A trademark infringement legal notice is a high-stakes legal juncture that demands swift, calculated action. By asserting prior use under Section 34. This establishes descriptive or fair use under Section 30, disproving deceptive similarity, and threatening counter-actions under Section 142 against groundless threats, you can effectively defend your brand and prevent commercial loss.</p>
                                         <p className="mb-6">Never attempt to resolve an infringement notice through informal phone calls or unvetted email admissions. Engaging specialized IP litigation advocates ensures that your legal reply is framed with judicial rigor, evidentiary strength, and procedural protection. If you are also looking to protect your brand proactively from unauthorized use by third parties, consult our comprehensive handbook on<Link href="/how-to-send-trademark-legal-notice-india" className="text-[rgb(110,94,147)] hover:underline font-medium">how to send trademark legal notice in India</Link>and learn<Link href="/how-to-stop-trademark-infringement" className="text-[rgb(110,94,147)] hover:underline font-medium">how to stop trademark infringement</Link>.</p>
                                     </section>
@@ -772,9 +772,9 @@ export default function TrademarkNoticeReplyPage() {
                                                     </span>
                                                 </div>
 
-                                                <h3 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl mb-4">
+                                                <h4 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl mb-4">
                                                     Respond to Trademark Legal Notice Today
-                                                </h3>
+                                                </h4>
 
                                                 <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">Partner with expert IP litigation attorneys to evaluate infringement claims, formulate statutory defenses under Section 30 &amp. 34, and draft an unassailable legal reply before the deadline expires.</p>
 
@@ -806,7 +806,7 @@ export default function TrademarkNoticeReplyPage() {
                             {/* About Author */}
                             <div className="bg-white p-6 rounded-[2.5rem] shadow-sm border border-gray-100 flex flex-col items-center text-center">
                                 <img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-24 h-24 rounded-full mb-4 shadow-md object-cover" />
-                                <h3 className="text-xl font-bold text-gray-900 mb-2">Rahul Roy</h3>
+                                <h4 className="text-xl font-bold text-gray-900 mb-2">Rahul Roy</h4>
                                 <p className="text-sm text-gray-600 mb-4 font-medium">Trademark Research Specialist</p>
                                 <p className="text-sm text-gray-700 leading-relaxed mb-6">Rahul specializes in brand protection strategy, trademark dispute resolution, and commercial litigation defense under the Trade Marks Act, 1999. He assists enterprises in safeguarding their brand autonomy.</p>
                             </div>
@@ -814,7 +814,7 @@ export default function TrademarkNoticeReplyPage() {
                             {/* Dark CTA Box */}
                             <div className="bg-[#0C002B] p-8 rounded-[2.5rem] shadow-2xl border border-white/5 text-white relative overflow-hidden group">
                                 <div className="absolute top-0 right-0 w-40 h-40 bg-[rgb(110,94,147)] rounded-full blur-[100px] opacity-30 group-hover:opacity-50 transition-opacity"></div>
-                                <h3 className="text-xl font-black mb-4 relative z-10 leading-tight">Draft Legal Reply Now</h3>
+                                <h4 className="text-xl font-black mb-4 relative z-10 leading-tight">Draft Legal Reply Now</h4>
                                 <p className="text-sm opacity-70 mb-8 leading-relaxed relative z-10 font-medium">Received an infringement notice? Defend your brand with senior IP litigation advocates before the court deadline lapses.</p>
                                 <Link href="/contact-us" className="block relative z-10">
                                     <button className="w-full bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-3.5 px-4 rounded-xl transition-all shadow-xl text-xs uppercase tracking-wider">
@@ -825,7 +825,7 @@ export default function TrademarkNoticeReplyPage() {
 
                             {/* Related Resources */}
                             <div className="bg-gray-50 p-10 rounded-[2.5rem] shadow-sm border border-gray-100">
-                                <h3 className="text-sm font-black text-gray-400 mb-8 uppercase tracking-[0.3em]">Related Resources</h3>
+                                <h4 className="text-sm font-black text-gray-400 mb-8 uppercase tracking-[0.3em]">Related Resources</h4>
                                 <ul className="space-y-6">
                                     <li><Link href="/how-to-send-trademark-legal-notice-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faFileContract} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Send Legal Notice</span></Link></li>
                                     <li><Link href="/passing-off-vs-trademark-infringement-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faScaleBalanced} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Infringement vs Passing Off</span></Link></li>

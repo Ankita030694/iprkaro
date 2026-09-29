@@ -37,9 +37,9 @@ export default function AboutHeroHealthScoreVisual() {
               <div className="flex items-center justify-between px-5 py-3 mb-4 rounded-2xl bg-slate-50/90 border border-slate-200/80">
                 <div className="flex items-center gap-2.5">
                   <span className="w-2.5 h-2.5 rounded-full bg-[#10B981] animate-pulse" />
-                  <h4 className="text-[#0C002B] font-nunito text-base sm:text-lg lg:text-xl font-bold">
+                  <p className="text-[#0C002B] font-nunito text-base sm:text-lg lg:text-xl font-bold">
                     Your Trademark Health Score
-                  </h4>
+                  </p>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-xs text-gray-400 font-medium hidden sm:inline">Overall Status:</span>
@@ -54,9 +54,9 @@ export default function AboutHeroHealthScoreVisual() {
                 
                 {/* Metric 1: Trademark Registrability */}
                 <div className="flex flex-col items-center h-full">
-                  <h5 className="text-[#0C002B] font-nunito text-sm sm:text-base font-bold mb-3 text-center">
+                  <p className="text-[#0C002B] font-nunito text-sm sm:text-base font-bold mb-3 text-center">
                     Trademark Registrability
-                  </h5>
+                  </p>
                   
                   <div className="relative mb-4" style={{ width: '160px', height: '80px' }}>
                     <ScoreGauge 
@@ -70,9 +70,9 @@ export default function AboutHeroHealthScoreVisual() {
                   {/* Remarks Card */}
                   <div className="w-full p-3.5 flex-1 flex flex-col rounded-2xl border border-slate-200/90 bg-white shadow-xs">
                     <div className="flex items-center justify-between mb-2">
-                      <h6 className="text-[#0C002B] font-nunito text-xs sm:text-sm font-bold">
+                      <p className="text-[#0C002B] font-nunito text-xs sm:text-sm font-bold">
                         Remarks
-                      </h6>
+                      </p>
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                         <polyline points="18 15 12 9 6 15"></polyline>
                       </svg>
@@ -97,9 +97,9 @@ export default function AboutHeroHealthScoreVisual() {
 
                 {/* Metric 2: Similarity Rate */}
                 <div className="flex flex-col items-center h-full">
-                  <h5 className="text-[#0C002B] font-nunito text-sm sm:text-base font-bold mb-3 text-center">
+                  <p className="text-[#0C002B] font-nunito text-sm sm:text-base font-bold mb-3 text-center">
                     Similarity Rate
-                  </h5>
+                  </p>
                   
                   <div className="relative mb-4" style={{ width: '160px', height: '80px' }}>
                     <ScoreGauge 
@@ -113,9 +113,9 @@ export default function AboutHeroHealthScoreVisual() {
                   {/* Remarks Card */}
                   <div className="w-full p-3.5 flex-1 flex flex-col rounded-2xl border border-slate-200/90 bg-white shadow-xs">
                     <div className="flex items-center justify-between mb-2">
-                      <h6 className="text-[#0C002B] font-nunito text-xs sm:text-sm font-bold">
+                      <p className="text-[#0C002B] font-nunito text-xs sm:text-sm font-bold">
                         Remarks
-                      </h6>
+                      </p>
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                         <polyline points="18 15 12 9 6 15"></polyline>
                       </svg>
@@ -140,9 +140,9 @@ export default function AboutHeroHealthScoreVisual() {
 
                 {/* Metric 3: Class Probability */}
                 <div className="flex flex-col items-center h-full">
-                  <h5 className="text-[#0C002B] font-nunito text-sm sm:text-base font-bold mb-3 text-center">
+                  <p className="text-[#0C002B] font-nunito text-sm sm:text-base font-bold mb-3 text-center">
                     Class Probability
-                  </h5>
+                  </p>
                   
                   <div className="relative mb-4" style={{ width: '160px', height: '80px' }}>
                     <ScoreGauge 
@@ -156,9 +156,9 @@ export default function AboutHeroHealthScoreVisual() {
                   {/* Remarks Card */}
                   <div className="w-full p-3.5 flex-1 flex flex-col rounded-2xl border border-slate-200/90 bg-white shadow-xs">
                     <div className="flex items-center justify-between mb-2">
-                      <h6 className="text-[#0C002B] font-nunito text-xs sm:text-sm font-bold">
+                      <p className="text-[#0C002B] font-nunito text-xs sm:text-sm font-bold">
                         Remarks
-                      </h6>
+                      </p>
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                         <polyline points="18 15 12 9 6 15"></polyline>
                       </svg>
@@ -187,9 +187,9 @@ export default function AboutHeroHealthScoreVisual() {
             {/* Right 1 Column: Key Factors */}
             <div className="lg:col-span-1 flex flex-col mt-4 lg:mt-0">
               <div className="flex items-center justify-center px-4 py-3 mb-4 rounded-2xl bg-slate-50/90 border border-slate-200/80">
-                <h4 className="text-[#0C002B] font-nunito text-base font-bold">
+                <p className="text-[#0C002B] font-nunito text-base font-bold">
                   Key Factors
-                </h4>
+                </p>
               </div>
 
               <div className="flex flex-col flex-1 space-y-2.5">

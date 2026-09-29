@@ -338,18 +338,18 @@ export default function FlipkartBrandApprovalPage() {
 
                                     {/* SECTION 2: BRAND APPROVAL VS BRAND LOCK */}
                                     <section id="brand-approval-vs-brand-lock" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLock} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Brand Approval vs Brand Lock Process
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Many sellers confuse Flipkart Brand Approval with Flipkart Brand Lock. While both mechanisms operate within the Flipkart Seller Hub, they serve distinct operational and legal objectives:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     Flipkart Brand Approval (Catalog Access)
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed mb-3">Brand Approval is the baseline entry permission. It authorizes your seller account to create new catalog listings (FSNs) or attach inventory to existing products under a designated brand name.</p>
                                                 <ul className="text-xs text-gray-500 space-y-1.5 list-disc list-inside">
                                                     <li>Accessible to brand owners, authorized resellers, and wholesalers.</li>
@@ -359,10 +359,10 @@ export default function FlipkartBrandApprovalPage() {
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     Flipkart Brand Lock (Catalog Protection)
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed mb-3">Brand Lock is an exclusive anti-counterfeiting gate. It locks the brand catalog so that no external seller can map or sell under your brand without your prior written authorization.</p>
                                                 <ul className="text-xs text-gray-500 space-y-1.5 list-disc list-inside">
                                                     <li>Reserved strictly for verified Brand Owners with registered or mature trademarks.</li>
@@ -375,30 +375,30 @@ export default function FlipkartBrandApprovalPage() {
 
                                     {/* SECTION 3: MANDATORY TRADEMARK PREREQUISITES */}
                                     <section id="trademark-prerequisites" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faFileContract} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Mandatory Trademark Prerequisites
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">To obtain Brand Approval and unlock Brand Lock protections, the Indian Trade Marks Registry documentation submitted must satisfy strict statutory and platform criteria:</p>
 
                                         <div className="space-y-6">
                                             <div className="border-l-4 border-[#6E5E93] pl-4 py-2 bg-purple-50/40 rounded-r-xl">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">1. Registered Trademark Certificate (R Status)</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">1. Registered Trademark Certificate (R Status)</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">A formal Trademark Registration Certificate issued on Form TM-RG by the Registrar of Trade Marks is the gold standard. It confirms definitive ownership under Section 28 of the Trade Marks Act, guaranteeing immediate Brand Approval and prioritized Brand Lock enforcement across Flipkart and Shopsy. Learn more about the legal transition in our guide on<Link href="/difference-between-tm-and-r-symbol-in-india" className="text-[rgb(110,94,147)] hover:underline font-medium">difference between TM and R symbol in India</Link>.</p>
                                             </div>
 
                                             <div className="border-l-4 border-indigo-500 pl-4 py-2 bg-indigo-50/40 rounded-r-xl">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">2. Pending Trademark Application (TM Status / Form TM-A)</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">2. Pending Trademark Application (TM Status / Form TM-A)</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">Flipkart accepts pending trademark applications filed on Form TM-A, provided the seller submits the official government Central Book Receipt (CBR) containing the permanent 7 or 8-digit application number. The application status on the public<a href="https://ipindia.gov.in/" target="_blank" rel="noopener noreferrer" className="text-[rgb(110,94,147)] hover:underline font-medium">IP India e-register</a>must reflect active standing (&ldquo;New Application&rdquo;, &ldquo;Send to Vienna Codification&rdquo;, or &ldquo;Marked for Exam&rdquo;). Applications marked as<Link href="/trademark-objected-what-to-do-next" className="text-[rgb(110,94,147)] hover:underline font-medium">Objected</Link>,<Link href="/trademark-opposed-what-happens-next-india" className="text-[rgb(110,94,147)] hover:underline font-medium">Opposed</Link>, or<Link href="/trademark-refused-what-are-options" className="text-[rgb(110,94,147)] hover:underline font-medium">Refused</Link>face scrutiny or rejection.</p>
                                             </div>
 
                                             <div className="border-l-4 border-[#6E5E93] pl-4 py-2 bg-purple-50/40 rounded-r-xl">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">3. Classification Alignment (Nice Classes 1 to 34)</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">3. Classification Alignment (Nice Classes 1 to 34)</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">The trademark must cover the specific goods class matching the physical product vertical being listed on Flipkart. For instance, footwear requires Class 25, cosmetics require Class 3, electronics require Class 9, and kitchenware requires Class 21. Holding only Class 35 (retail/trading services) does not qualify for manufacturer brand approval for tangible goods. Check your category in our<Link href="/trademark-class-finder" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark class finder</Link>and review<Link href="/types-of-trademark-classes" className="text-[rgb(110,94,147)] hover:underline font-medium">all trademark classes</Link>.</p>
                                             </div>
 
                                             <div className="border-l-4 border-indigo-500 pl-4 py-2 bg-indigo-50/40 rounded-r-xl">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">4. Entity &amp; GSTIN Reconciliation</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">4. Entity &amp; GSTIN Reconciliation</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">The applicant name on the trademark record must match the legal business name associated with the Flipkart Seller Account (as registered on the GSTIN). If the trademark is owned by an individual founder while the seller account is an LLP or Private Limited company, a formal<Link href="/trademark-assignment-vs-licensing-in-india" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark licensing agreement</Link>or No Objection Certificate must link the entities.</p>
                                             </div>
                                         </div>
@@ -406,17 +406,17 @@ export default function FlipkartBrandApprovalPage() {
 
                                     {/* SECTION 4: BRAND AUTHORIZATION LETTER & NOC FORMAT */}
                                     <section id="authorization-letter-noc" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faHandshake} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Brand Authorization Letter (NOC) Format
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">If you are a distributor, authorized reseller, franchisee, or sister concern selling products under another entity&apos;s brand name, Flipkart strictly mandates a formal<strong>Brand Authorization Letter / No Objection Certificate (NOC)</strong>.</p>
 
                                         <div className="bg-amber-50/70 p-6 md:p-8 rounded-2xl border border-amber-200 mb-8 not-prose">
-                                            <h3 className="text-lg font-bold text-amber-950 mb-3 flex items-center">
+                                            <h4 className="text-lg font-bold text-amber-950 mb-3 flex items-center">
                                                 <FontAwesomeIcon icon={faStamp} className="w-5 h-5 mr-2 text-amber-800" />
                                                 Mandatory Clauses for Flipkart Brand Authorization
-                                            </h3>
+                                            </h4>
                                             <p className="text-sm text-amber-900 leading-relaxed mb-4">To avoid automated rejection by Flipkart&apos;s Brand Operations team, the authorization document must be printed on the Brand Owner&apos;s official letterhead and include the following legal particulars:</p>
                                             <ul className="list-disc list-inside space-y-2 text-xs sm:text-sm text-amber-950 mb-4 font-medium">
                                                 <li><strong>Brand Owner Identity:</strong>Complete legal name, CIN/LLPIN, registered corporate address, official email, contact number, and GSTIN.</li>
@@ -432,18 +432,18 @@ export default function FlipkartBrandApprovalPage() {
 
                                     {/* SECTION 5: PACKAGING & LEGAL METROLOGY RULES */}
                                     <section id="packaging-metrology" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faBoxOpen} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Packaging &amp; Legal Metrology Rules
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">The most frequent reason for Flipkart Brand Approval rejection is non-compliant product packaging photography. Flipkart enforces strict adherence to the<strong>Legal Metrology (Packaged Commodities) Rules, 2011</strong>and marketplace authenticity guidelines.</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
                                             <div className="border border-green-200 bg-green-50/50 p-6 rounded-2xl">
-                                                <h3 className="text-lg font-bold text-green-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-green-900 mb-3 flex items-center">
                                                     <FontAwesomeIcon icon={faCheckCircle} className="w-5 h-5 text-green-600 mr-2" />
                                                     Compliant Permanent Branding
-                                                </h3>
+                                                </h4>
                                                 <ul className="text-sm text-gray-700 space-y-2.5">
                                                     <li>• Brand name printed directly on retail boxes, pouches, or containers.</li>
                                                     <li>• Woven fabric brand labels stitched into garments/textiles.</li>
@@ -455,10 +455,10 @@ export default function FlipkartBrandApprovalPage() {
                                             </div>
 
                                             <div className="border border-red-200 bg-red-50/50 p-6 rounded-2xl">
-                                                <h3 className="text-lg font-bold text-red-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-red-900 mb-3 flex items-center">
                                                     <FontAwesomeIcon icon={faExclamationTriangle} className="w-5 h-5 text-red-600 mr-2" />
                                                     Non-Compliant (Guaranteed Rejection)
-                                                </h3>
+                                                </h4>
                                                 <ul className="text-sm text-gray-700 space-y-2.5">
                                                     <li>• Paper adhesive stickers pasted onto unbranded generic white/brown boxes.</li>
                                                     <li>• Digital 3D computer mockups or Photoshop renders with overlay text.</li>
@@ -473,10 +473,10 @@ export default function FlipkartBrandApprovalPage() {
 
                                     {/* SECTION 6: 7-STEP STEP-BY-STEP APPROVAL & LOCK PROCESS */}
                                     <section id="step-by-step-process" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faListUl} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             7-Step Flipkart Brand Approval &amp; Lock
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Navigating the Flipkart Seller Hub verification workflow requires systematic execution. Follow this 7-step blueprint to secure your brand approval and initiate brand lock:</p>
 
                                         {/* STEP 1 */}
@@ -485,7 +485,7 @@ export default function FlipkartBrandApprovalPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 1</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: IP Clearance &amp; Filing</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Conduct Trademark Search &amp; E-File Form TM-A</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Conduct Trademark Search &amp; E-File Form TM-A</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Perform an exhaustive<Link href="/trademark-search" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark search</Link>to ensure your brand name is legally available and does not conflict with pre-existing marks under Section 11.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">File Form TM-A with the Indian Trade Marks Registry through an IP attorney. Obtain your official government CBR acknowledgment receipt and application number. Learn more about the steps in our guide on<Link href="/process-and-steps-of-trademark-registration" className="text-[rgb(110,94,147)] hover:underline font-medium">steps of trademark registration</Link>and<Link href="/e-filing-trademark" className="text-[rgb(110,94,147)] hover:underline font-medium">e-filing trademark online</Link>.</p>
                                         </div>
@@ -496,7 +496,7 @@ export default function FlipkartBrandApprovalPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 2</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Packaging Compliance</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Prepare Compliant Packaging &amp; High-Res Photos</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Prepare Compliant Packaging &amp; High-Res Photos</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Manufacture primary packaging featuring permanent branding and all 7 mandatory Legal Metrology declarations.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">Capture clear, raw smartphone photographs of the physical product from front, back, side, and close-up views showing the printed brand name and MRP label clearly.</p>
                                         </div>
@@ -507,7 +507,7 @@ export default function FlipkartBrandApprovalPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 3</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Seller Hub Access</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Access Flipkart Seller Hub &amp; Brand Approval Portal</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Access Flipkart Seller Hub &amp; Brand Approval Portal</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Log into your verified<strong>Flipkart Seller Dashboard</strong>. Navigate to the top navigation bar, select<em>Listings</em>, and click on<em>Add New Listings</em>.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">Click on<em>Add a Single Listing</em>. The portal will prompt you to select your product vertical and check for brand authorization. Enter your desired brand name and click<strong>Check Brand Approval</strong>.</p>
                                         </div>
@@ -518,7 +518,7 @@ export default function FlipkartBrandApprovalPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 4</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Vertical &amp; Brand Submission</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Submit Brand Identity &amp; Select Relationship Type</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Submit Brand Identity &amp; Select Relationship Type</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">If the brand is not pre-approved, the portal opens the Brand Approval Application form.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">Specify your relationship with the brand: (1)<strong>Brand Owner / Manufacturer</strong>, or (2)<strong>Authorized Distributor / Reseller</strong>. Enter your official brand website domain if active.</p>
                                         </div>
@@ -529,7 +529,7 @@ export default function FlipkartBrandApprovalPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 5</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Documentation Upload</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Upload Trademark Proof, NOC &amp; Packaging Images</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Upload Trademark Proof, NOC &amp; Packaging Images</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Attach your official PDF documentation in the respective upload slots:</p>
                                             <ul className="list-disc list-inside space-y-2 text-gray-700 mb-4">
                                                 <li><strong>Trademark Document:</strong>TM Registration Certificate (Form TM-RG) or TM Application Acknowledgment (Form TM-A CBR receipt).</li>
@@ -545,7 +545,7 @@ export default function FlipkartBrandApprovalPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 6</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Brand Ops Verification</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Track Flipkart Brand Operations Review (24–48 Hours)</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Track Flipkart Brand Operations Review (24–48 Hours)</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Submit the application and note the generated<strong>Seller Support Case ID / Ticket Number</strong>.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">Flipkart Brand Operations evaluates the submission within 24 to 48 hours. Once approved, the brand name status changes to<em>Approved</em>. This enables you to immediately publish single and bulk catalog listings under the official brand tag.</p>
                                         </div>
@@ -556,7 +556,7 @@ export default function FlipkartBrandApprovalPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 7</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Catalog Gating Activation</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Initiate Flipkart Brand Lock Protection Request</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Initiate Flipkart Brand Lock Protection Request</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">As a verified brand owner, raise a dedicated ticket under<em>Seller Support &gt; Brand Protection &gt; Request Brand Lock</em>or coordinate with your Flipkart Account Manager.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">Submit your Registered Trademark Certificate and list of authorized seller accounts (if any). Flipkart locks your FSN catalog. This prevents unauthorized third parties from mapping or piggybacking on your listings.</p>
                                         </div>
@@ -564,10 +564,10 @@ export default function FlipkartBrandApprovalPage() {
 
                                     {/* SECTION 7: ELIGIBILITY & COMPARISON MATRIX */}
                                     <section id="matrix-table" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faTable} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Flipkart Brand Approval Matrix
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Review seller categories, required documentation, approval turnaround, and Brand Lock gating eligibility:</p>
 
                                         <div className="overflow-x-auto mb-8 shadow-sm rounded-xl border border-gray-200">
@@ -624,25 +624,25 @@ export default function FlipkartBrandApprovalPage() {
 
                                     {/* SECTION 8: STOPPING CATALOG HIJACKING & LEGAL ACTION */}
                                     <section id="catalog-hijacking" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faGavel} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Stopping Listing Hijackers on Flipkart
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Listing hijacking occurs when an unauthorized seller maps their inventory to your established Flipkart FSN, selling counterfeit or low-quality imitations under your brand name at a lower price. This steals your Buy Box share and destroys customer reviews.</p>
 
                                         <div className="space-y-6">
                                             <div className="border-l-4 border-red-500 pl-4 py-2 bg-red-50/40 rounded-r-xl">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">1. Report via Flipkart IPR Infringement Notice Portal</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">1. Report via Flipkart IPR Infringement Notice Portal</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">Submit an official Notice of Infringement through the Flipkart Infringement Portal. Provide your Registered Trademark Certificate number, class, specific infringing FSN URLs, and seller details. Flipkart&apos;s Legal Trust &amp; Safety team is obligated under the Information Technology (Intermediary Guidelines) Rules, 2021 to take down infringing listings within statutory timelines.</p>
                                             </div>
 
                                             <div className="border-l-4 border-red-500 pl-4 py-2 bg-red-50/40 rounded-r-xl">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">2. Issue a Cease-and-Desist Legal Notice</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">2. Issue a Cease-and-Desist Legal Notice</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">Instruct a specialized IP advocate to serve a formal<Link href="/how-to-send-trademark-legal-notice-india" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark legal notice</Link>demanding immediate de-listing, destruction of counterfeit inventory, and damages for<Link href="/passing-off-vs-trademark-infringement-india" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark infringement and passing off</Link>. Explore our guide on<Link href="/how-to-stop-trademark-infringement" className="text-[rgb(110,94,147)] hover:underline font-medium">how to stop trademark infringement</Link>.</p>
                                             </div>
 
                                             <div className="border-l-4 border-red-500 pl-4 py-2 bg-red-50/40 rounded-r-xl">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">3. File Commercial Injunction &amp; Seek Counterfeiting Penalties</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">3. File Commercial Injunction &amp; Seek Counterfeiting Penalties</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">Under Section 135 of the Trade Marks Act, Commercial Courts grant ex-parte ad-interim injunctions restraining hijackers and appointing Local Commissioners to seize counterfeit goods. Know the liabilities in our detailed analysis on<Link href="/penalty-for-trademark-infringement-india" className="text-[rgb(110,94,147)] hover:underline font-medium">penalties for trademark infringement in India</Link>and<Link href="/civil-vs-criminal-trademark-infringement-india" className="text-[rgb(110,94,147)] hover:underline font-medium">civil vs criminal trademark enforcement</Link>.</p>
                                             </div>
                                         </div>
@@ -650,35 +650,35 @@ export default function FlipkartBrandApprovalPage() {
 
                                     {/* SECTION 9: COMMON REJECTION PITFALLS */}
                                     <section id="common-rejections" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faExclamationTriangle} className="w-8 h-8 mr-3 text-amber-500" />
                                             Common Brand Approval Rejection Causes
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">To ensure same-day brand approval without repeated ticket rejections, avoid these 5 prevalent operational mistakes:</p>
 
                                         <div className="space-y-6">
                                             <div className="border-l-4 border-amber-500 pl-4 py-2">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">1. Brand Name &amp; Trademark Typographical Discrepancy</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">1. Brand Name &amp; Trademark Typographical Discrepancy</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">The brand name entered on the Flipkart Seller Hub must match the exact spelling, spacing, and punctuation on your IP India trademark filing. Even minor deviations (e.g., &ldquo;Aura Craft&rdquo; vs &ldquo;AuraCraft&rdquo;) trigger automated system rejection.</p>
                                             </div>
 
                                             <div className="border-l-4 border-amber-500 pl-4 py-2">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">2. Temporary Sticker Labels on Generic Boxes</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">2. Temporary Sticker Labels on Generic Boxes</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Submitting photographs of paper stickers pasted onto blank corrugated boxes or generic packaging is the single highest cause of rejection. Branding must be permanently printed or embossed.</p>
                                             </div>
 
                                             <div className="border-l-4 border-amber-500 pl-4 py-2">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">3. Incomplete Legal Metrology Declarations</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">3. Incomplete Legal Metrology Declarations</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Missing any of the mandatory 7 declarations (Manufacturer name/address, generic commodity title, net quantity, month/year of packing, MRP, customer support) results in regulatory non-compliance rejection.</p>
                                             </div>
 
                                             <div className="border-l-4 border-amber-500 pl-4 py-2">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">4. Unreconciled Entity Names without an NOC</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">4. Unreconciled Entity Names without an NOC</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">If the trademark is registered under an individual director&apos;s personal name while the Flipkart Seller Account belongs to a corporate entity (LLP or Pvt Ltd), an executed NOC/Licensing agreement is mandatory.</p>
                                             </div>
 
                                             <div className="border-l-4 border-amber-500 pl-4 py-2">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">5. Trademark Application Marked with Registry Discrepancies</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">5. Trademark Application Marked with Registry Discrepancies</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">If your pending TM application reflects<Link href="/trademark-formalities-check-fail-meaning" className="text-[rgb(110,94,147)] hover:underline font-medium">Formalities Chk Fail</Link>or<Link href="/trademark-abandoned-how-to-restore" className="text-[rgb(110,94,147)] hover:underline font-medium">Abandoned</Link>, Flipkart&apos;s automated validation crawler will flag the document as invalid.</p>
                                             </div>
                                         </div>
@@ -686,10 +686,10 @@ export default function FlipkartBrandApprovalPage() {
 
                                     {/* SECTION 10: SELLER ACTION CHECKLIST */}
                                     <section id="seller-checklist" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faCheckCircle} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Flipkart Brand Approval Checklist
-                                        </h2>
+                                        </h3>
                                         <ul className="list-none space-y-4 mb-8">
                                             <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Trademark Clearance &amp; Filing:</strong>E-file Form TM-A with IP India in matching goods classes (Classes 1–34) and secure your government CBR receipt.</span></li>
                                             <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Permanent Packaging Production:</strong>Print brand names directly on primary retail packaging with full Legal Metrology compliance.</span></li>
@@ -703,15 +703,15 @@ export default function FlipkartBrandApprovalPage() {
 
                                     {/* SECTION 11: FAQS */}
                                     <section id="faqs" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl lg:text-3xl font-black text-gray-900 mb-8 text-center text-[rgb(110,94,147)]">
+                                        <h3 className="text-xl md:text-2xl lg:text-3xl font-black text-gray-900 mb-8 text-center text-[rgb(110,94,147)]">
                                             Frequently Asked Questions
-                                        </h2>
+                                        </h3>
                                         <div className="space-y-4">
                                             {faqs.map((faq, index) => (
                                                 <div key={index} className="bg-white border border-gray-100 rounded-3xl p-8 shadow-sm hover:shadow-md transition-shadow">
-                                                    <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-4 flex items-start leading-snug">
+                                                    <h4 className="text-lg md:text-xl font-bold text-gray-900 mb-4 flex items-start leading-snug">
                                                         <span className="text-[rgb(110,94,147)] mr-4 font-black text-2xl">Q.</span>{faq.question}
-                                                    </h3>
+                                                    </h4>
                                                     <p className="text-gray-600 pl-10 m-0">{faq.answer}</p>
                                                 </div>
                                             ))}
@@ -720,10 +720,10 @@ export default function FlipkartBrandApprovalPage() {
 
                                     {/* SECTION 12: FINAL STRATEGIC ADVICE */}
                                     <section id="final-takeaway" className="scroll-mt-32 pt-16">
-                                        <h2 className="text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLightbulb} className="w-8 h-8 mr-3 text-yellow-500" />
                                             Strategic Legal Advice for Flipkart Sellers
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Securing Flipkart Brand Approval and Brand Lock is not merely an operational checkbox—it is the foundational legal shield for your e-commerce enterprise. With a registered trademark and gated catalog listings, you protect your advertising spend, safeguard consumer reviews, and build enduring enterprise value.</p>
                                         <p className="mb-6">Never leave your marketplace listings exposed to unauthorized hijackers. Partner with seasoned intellectual property advocates to conduct pre-filing clearance, file Form TM-A, draft compliant Brand Authorization letters, and enforce your brand rights across Indian e-commerce platforms. Also explore our guides on<Link href="/trademark-for-ecommerce" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark for e-commerce</Link>,<Link href="/amazon-brand-registry-trademark-requirements-india" className="text-[rgb(110,94,147)] hover:underline font-medium">Amazon Brand Registry guide</Link>, and<Link href="/how-to-respond-to-trademark-infringement-legal-notice-in-india" className="text-[rgb(110,94,147)] hover:underline font-medium">responding to trademark infringement notices</Link>.</p>
                                     </section>
@@ -738,9 +738,9 @@ export default function FlipkartBrandApprovalPage() {
                                                     </span>
                                                 </div>
 
-                                                <h3 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl mb-4">
+                                                <h4 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl mb-4">
                                                     Protect Your Brand on Flipkart &amp; Shopsy Today
-                                                </h3>
+                                                </h4>
 
                                                 <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">Secure your official Trade Marks Registry application number, draft legally binding Brand Authorization Letters, and unlock Flipkart Brand Lock to eliminate listing hijackers.</p>
 
@@ -772,7 +772,7 @@ export default function FlipkartBrandApprovalPage() {
                             {/* About Author */}
                             <div className="bg-white p-4 sm:p-5 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center">
                                 <img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-16 h-16 rounded-full mb-2.5 shadow-md object-cover border-2 border-[#6E5E93]/20" />
-                                <h3 className="text-base font-bold text-gray-900 mb-0.5">Rahul Roy</h3>
+                                <h4 className="text-base font-bold text-gray-900 mb-0.5">Rahul Roy</h4>
                                 <p className="text-xs text-[#6E5E93] font-semibold mb-2">Trademark Research Specialist</p>
                                 <p className="text-xs text-gray-600 leading-relaxed m-0">Rahul specializes in e-commerce brand protection, trademark classification, and marketplace IP enforcement on Flipkart, Amazon, and Meesho under Indian IP laws.</p>
                             </div>
@@ -780,7 +780,7 @@ export default function FlipkartBrandApprovalPage() {
                             {/* Dark CTA Box */}
                             <div className="bg-[#0C002B] p-5 rounded-2xl shadow-xl border border-white/5 text-white relative overflow-hidden group">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-[rgb(110,94,147)] rounded-full blur-[70px] opacity-30 group-hover:opacity-50 transition-opacity"></div>
-                                <h3 className="text-base font-black mb-1.5 relative z-10 leading-tight">Secure Brand Approval</h3>
+                                <h4 className="text-base font-black mb-1.5 relative z-10 leading-tight">Secure Brand Approval</h4>
                                 <p className="text-xs text-white/80 mb-3.5 leading-relaxed relative z-10 font-normal">Need trademark filing or an NOC letter for your Flipkart account? Consult certified IP attorneys.</p>
                                 <Link href="/contact-us" className="block relative z-10">
                                     <button className="w-full bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-2.5 px-4 rounded-xl transition-all shadow-md text-xs uppercase tracking-wider">
@@ -791,7 +791,7 @@ export default function FlipkartBrandApprovalPage() {
 
                             {/* Related Resources */}
                             <div className="bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-100">
-                                <h3 className="text-xs font-black text-gray-400 mb-5 uppercase tracking-[0.25em]">Related Resources</h3>
+                                <h4 className="text-xs font-black text-gray-400 mb-5 uppercase tracking-[0.25em]">Related Resources</h4>
                                 <ul className="space-y-6">
                                     <li><Link href="/amazon-brand-registry-trademark-requirements-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faStore} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Amazon Brand Registry</span></Link></li>
                                     <li><Link href="/trademark-for-ecommerce" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faCartShopping} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">TM for E-Commerce</span></Link></li>

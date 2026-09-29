@@ -370,10 +370,10 @@ export default function TrademarkDeadlinesExtensionPage() {
 
                                     {/* SECTION 2: STATUTORY TIME LIMITS ACROSS ALL STAGES */}
                                     <section id="statutory-time-limits" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faTable} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Statutory Time Limits Across All Stages
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">
                                             Every procedural step in Indian trademark law operates on a defined statutory timeline. The table below outlines all primary milestones, their governing sections/rules, official deadlines, and whether an extension under Section 131 is legally permissible:
                                         </p>
@@ -467,10 +467,10 @@ export default function TrademarkDeadlinesExtensionPage() {
 
                                     {/* SECTION 3: SECTION 131 EXTENSION POWERS */}
                                     <section id="section-131-powers" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faScaleBalanced} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Section 131: Extension of Time Power
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">
                                             <strong>Section 131 of the Trade Marks Act, 1999</strong> is the foundational statutory provision granting the Registrar discretionary authority to extend procedural timelines. The text of Section 131 states:
                                         </p>
@@ -487,30 +487,30 @@ export default function TrademarkDeadlinesExtensionPage() {
 
                                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8 not-prose">
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2 flex items-center">
+                                                <h4 className="text-base font-bold text-gray-900 mb-2 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2"></span>
                                                     1. &ldquo;Sufficient Cause&rdquo; Test
-                                                </h3>
+                                                </h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">
                                                     The applicant must substantiate genuine reasons—such as foreign documentary legalisation, collecting verified sales turnover affidavits, or medical emergencies—showing no willful negligence.
                                                 </p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2 flex items-center">
+                                                <h4 className="text-base font-bold text-gray-900 mb-2 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-indigo-500 rounded-full mr-2"></span>
                                                     2. &ldquo;Not Expressly Provided&rdquo;
-                                                </h3>
+                                                </h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">
                                                     Section 131 cannot override time limits explicitly fixed in the primary Act (such as the 4-month opposition bar in Section 21(1) and the 2-month counter-statement bar in Section 21(2)).
                                                 </p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2 flex items-center">
+                                                <h4 className="text-base font-bold text-gray-900 mb-2 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-emerald-500 rounded-full mr-2"></span>
                                                     3. Discretionary Imposition
-                                                </h3>
+                                                </h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">
                                                     The Registrar may impose reasonable conditions, including costs or time caps (typically 30 additional days), and must notify opposing parties where inter-partes proceedings are ongoing.
                                                 </p>
@@ -520,10 +520,10 @@ export default function TrademarkDeadlinesExtensionPage() {
 
                                     {/* SECTION 4: EXTENDABLE VS STRICT NON-EXTENDABLE DEADLINES */}
                                     <section id="extendable-vs-strict-deadlines" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faExclamationTriangle} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Extendable vs Non-Extendable Deadlines
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">
                                             Indian trademark jurisprudence distinguishes between <em>substantive statutory time bars</em> (which cannot be extended by any administrative authority) and <em>procedural registry timelines</em> (which can be extended under Section 131 and Rule 109).
                                         </p>
@@ -532,7 +532,7 @@ export default function TrademarkDeadlinesExtensionPage() {
                                             <div className="bg-emerald-50/60 p-6 rounded-2xl border border-emerald-200">
                                                 <div className="flex items-center space-x-2 text-emerald-800 font-bold mb-3">
                                                     <FontAwesomeIcon icon={faCheckCircle} className="w-5 h-5 text-emerald-600" />
-                                                    <h3 className="text-base font-bold text-emerald-950 m-0">Extendable Timelines (Section 131)</h3>
+                                                    <h4 className="text-base font-bold text-emerald-950 m-0">Extendable Timelines (Section 131)</h4>
                                                 </div>
                                                 <ul className="space-y-2 text-xs text-gray-700 leading-relaxed">
                                                     <li className="flex items-start">
@@ -557,7 +557,7 @@ export default function TrademarkDeadlinesExtensionPage() {
                                             <div className="bg-red-50/60 p-6 rounded-2xl border border-red-200">
                                                 <div className="flex items-center space-x-2 text-red-800 font-bold mb-3">
                                                     <FontAwesomeIcon icon={faBan} className="w-5 h-5 text-red-600" />
-                                                    <h3 className="text-base font-bold text-red-950 m-0">Strictly Non-Extendable Deadlines</h3>
+                                                    <h4 className="text-base font-bold text-red-950 m-0">Strictly Non-Extendable Deadlines</h4>
                                                 </div>
                                                 <ul className="space-y-2 text-xs text-gray-700 leading-relaxed">
                                                     <li className="flex items-start">
@@ -583,10 +583,10 @@ export default function TrademarkDeadlinesExtensionPage() {
 
                                     {/* SECTION 5: FORM TM-M EXTENSION FILING PROCEDURE */}
                                     <section id="form-tm-m-filing-steps" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faFileContract} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Form TM-M Extension Filing Procedure
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">
                                             Under <strong>Rule 109 of the Trade Marks Rules, 2017</strong>, any application for an extension of time under Section 131 must be submitted electronically through the IP India Comprehensive E-Filing portal on <strong>Form TM-M</strong>. Follow this step-by-step workflow:
                                         </p>
@@ -595,7 +595,7 @@ export default function TrademarkDeadlinesExtensionPage() {
                                             <div className="flex items-start bg-purple-50/40 p-4 rounded-xl border border-purple-100">
                                                 <span className="w-7 h-7 rounded-full bg-[#6E5E93] text-white flex items-center justify-center text-xs font-bold mr-3 flex-shrink-0 mt-0.5">1</span>
                                                 <div>
-                                                    <h3 className="text-sm font-bold text-gray-900 m-0">Step 1: Track Impending Expiration Date</h3>
+                                                    <h4 className="text-sm font-bold text-gray-900 m-0">Step 1: Track Impending Expiration Date</h4>
                                                     <p className="text-xs text-gray-600 m-0 mt-1">Determine the exact calendar date when your 30-day or hearing timeline expires based on the dispatch date or registry record.</p>
                                                 </div>
                                             </div>
@@ -603,7 +603,7 @@ export default function TrademarkDeadlinesExtensionPage() {
                                             <div className="flex items-start bg-purple-50/40 p-4 rounded-xl border border-purple-100">
                                                 <span className="w-7 h-7 rounded-full bg-[#6E5E93] text-white flex items-center justify-center text-xs font-bold mr-3 flex-shrink-0 mt-0.5">2</span>
                                                 <div>
-                                                    <h3 className="text-sm font-bold text-gray-900 m-0">Step 2: Draft Sufficient Cause Petition</h3>
+                                                    <h4 className="text-sm font-bold text-gray-900 m-0">Step 2: Draft Sufficient Cause Petition</h4>
                                                     <p className="text-xs text-gray-600 m-0 mt-1">Prepare a formal legal application detailing the genuine factual impediment preventing compliance within the regular timeline.</p>
                                                 </div>
                                             </div>
@@ -611,7 +611,7 @@ export default function TrademarkDeadlinesExtensionPage() {
                                             <div className="flex items-start bg-purple-50/40 p-4 rounded-xl border border-purple-100">
                                                 <span className="w-7 h-7 rounded-full bg-[#6E5E93] text-white flex items-center justify-center text-xs font-bold mr-3 flex-shrink-0 mt-0.5">3</span>
                                                 <div>
-                                                    <h3 className="text-sm font-bold text-gray-900 m-0">Step 3: Access Form TM-M on IP India Gateway</h3>
+                                                    <h4 className="text-sm font-bold text-gray-900 m-0">Step 3: Access Form TM-M on IP India Gateway</h4>
                                                     <p className="text-xs text-gray-600 m-0 mt-1">Log into your attorney or applicant digital signature portal, select Form TM-M, and select category &ldquo;Application for Extension of Time (Rule 109 / Section 131)&rdquo;.</p>
                                                 </div>
                                             </div>
@@ -619,7 +619,7 @@ export default function TrademarkDeadlinesExtensionPage() {
                                             <div className="flex items-start bg-purple-50/40 p-4 rounded-xl border border-purple-100">
                                                 <span className="w-7 h-7 rounded-full bg-[#6E5E93] text-white flex items-center justify-center text-xs font-bold mr-3 flex-shrink-0 mt-0.5">4</span>
                                                 <div>
-                                                    <h3 className="text-sm font-bold text-gray-900 m-0">Step 4: Pay Prescribed Government Fee</h3>
+                                                    <h4 className="text-sm font-bold text-gray-900 m-0">Step 4: Pay Prescribed Government Fee</h4>
                                                     <p className="text-xs text-gray-600 m-0 mt-1">Pay ₹900 (for Individuals, Startups, and MSMEs with valid Udyam certificates) or ₹1,800 (for Other Corporate Entities) via the Bharatkosh payment gateway.</p>
                                                 </div>
                                             </div>
@@ -627,7 +627,7 @@ export default function TrademarkDeadlinesExtensionPage() {
                                             <div className="flex items-start bg-purple-50/40 p-4 rounded-xl border border-purple-100">
                                                 <span className="w-7 h-7 rounded-full bg-[#6E5E93] text-white flex items-center justify-center text-xs font-bold mr-3 flex-shrink-0 mt-0.5">5</span>
                                                 <div>
-                                                    <h3 className="text-sm font-bold text-gray-900 m-0">Step 5: File Substantive Response Within Extended Window</h3>
+                                                    <h4 className="text-sm font-bold text-gray-900 m-0">Step 5: File Substantive Response Within Extended Window</h4>
                                                     <p className="text-xs text-gray-600 m-0 mt-1">Once the extension is filed, submit your substantive reply, evidence affidavit, or documentation before the 30-day extended window lapses.</p>
                                                 </div>
                                             </div>
@@ -636,10 +636,10 @@ export default function TrademarkDeadlinesExtensionPage() {
 
                                     {/* SECTION 6: OBJECTION REPLY: 30-DAY LIMIT & EXTENSION */}
                                     <section id="objection-reply-extension" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faHourglassHalf} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Objection Reply: 30-Day Rule &amp; Extension
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">
                                             When the Trade Marks Registry issues an Examination Report citing objections under <strong>Section 9 (Absolute Grounds)</strong> or <strong>Section 11 (Relative Grounds)</strong>, Rule 33(1) mandates that the applicant file a formal written response within <strong>30 days</strong> from the date of receipt of the report.
                                         </p>
@@ -664,10 +664,10 @@ export default function TrademarkDeadlinesExtensionPage() {
 
                                     {/* SECTION 7: OPPOSITION DEADLINES: 4-MONTH STRICT BAR */}
                                     <section id="opposition-deadlines-bar" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faGavel} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Opposition: 4-Month Strict Statutory Bar
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">
                                             Under <strong>Section 21(1) of the Trade Marks Act, 1999</strong>, any person may give notice in writing on Form TM-O to the Registrar of opposition to the registration of an advertised mark <em>&ldquo;within four months from the date of the advertisement or re-advertisement of an application for registration&rdquo;</em>.
                                         </p>
@@ -675,7 +675,7 @@ export default function TrademarkDeadlinesExtensionPage() {
                                             Historically under the 1958 Act and early 2002 rules, an opponent could seek an extension of 1 month beyond the initial 3 months upon showing good cause. However, the <strong>Trade Marks Rules, 2017</strong> completely eliminated the extendable 1-month provision and established a single, fixed 4-month statutory window.
                                         </p>
                                         <div className="bg-purple-50 p-6 rounded-2xl border border-purple-100 my-6">
-                                            <h3 className="text-base font-bold text-gray-900 mb-2">Landmark Judicial Precedents on Non-Extendability of Section 21(1)</h3>
+                                            <h4 className="text-base font-bold text-gray-900 mb-2">Landmark Judicial Precedents on Non-Extendability of Section 21(1)</h4>
                                             <p className="text-xs text-gray-700 leading-relaxed mb-3">
                                                 The Delhi High Court, Intellectual Property Appellate Board (IPAB), and various High Courts have repeatedly held that the period of 4 months under Section 21(1) is a <strong>mandatory statutory period of limitation</strong>.
                                             </p>
@@ -687,10 +687,10 @@ export default function TrademarkDeadlinesExtensionPage() {
 
                                     {/* SECTION 8: HEARING ADJOURNMENTS UNDER RULE 50 */}
                                     <section id="hearing-adjournments-rule-50" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faCalendarDays} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Hearing Adjournments under Rule 50
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">
                                             When an application is scheduled for a show-cause hearing (before the Hearing Officer) or an inter-partes opposition hearing via video conferencing, either party can seek an adjournment under <strong>Rule 50 of the Trade Marks Rules, 2017</strong>.
                                         </p>
@@ -722,31 +722,31 @@ export default function TrademarkDeadlinesExtensionPage() {
 
                                     {/* SECTION 9: RENEWAL & RESTORATION TIMELINES */}
                                     <section id="renewal-restoration-deadlines" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faRotateRight} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Renewal &amp; Restoration Timelines
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">
                                             Under <strong>Section 25 of the Trade Marks Act, 1999</strong>, trademark registrations are valid for a duration of 10 years from the date of application, renewable indefinitely in successive 10-year periods. The three distinct renewal phases are:
                                         </p>
 
                                         <div className="space-y-4 my-8 not-prose">
                                             <div className="border-l-4 border-emerald-500 pl-4 py-3 bg-emerald-50/40 rounded-r-xl">
-                                                <h3 className="text-sm font-bold text-emerald-950 mb-1">Phase 1: Standard Renewal Window (1 Year Before Expiry)</h3>
+                                                <h4 className="text-sm font-bold text-emerald-950 mb-1">Phase 1: Standard Renewal Window (1 Year Before Expiry)</h4>
                                                 <p className="text-xs text-gray-700 leading-relaxed m-0">
                                                     The proprietor can file <strong>Form TM-R</strong> at any time within 1 year before the expiration of the last registration. Standard e-filing fee is ₹9,000 per class (or ₹4,500 if applicable) without any penalty. See our <Link href="/how-to-renew-a-registered-trademark-in-india" className="text-emerald-800 font-bold underline">trademark renewal guide</Link>.
                                                 </p>
                                             </div>
 
                                             <div className="border-l-4 border-amber-500 pl-4 py-3 bg-amber-50/40 rounded-r-xl">
-                                                <h3 className="text-sm font-bold text-amber-950 mb-1">Phase 2: Grace Period Renewal with Surcharge (0 to 6 Months After Expiry)</h3>
+                                                <h4 className="text-sm font-bold text-amber-950 mb-1">Phase 2: Grace Period Renewal with Surcharge (0 to 6 Months After Expiry)</h4>
                                                 <p className="text-xs text-gray-700 leading-relaxed m-0">
                                                     Under Section 25(3) and Rule 58, if the mark is not renewed before expiry, the proprietor has a statutory grace period of 6 months to file Form TM-R along with the prescribed late renewal surcharge.
                                                 </p>
                                             </div>
 
                                             <div className="border-l-4 border-red-500 pl-4 py-3 bg-red-50/40 rounded-r-xl">
-                                                <h3 className="text-sm font-bold text-red-950 mb-1">Phase 3: Restoration &amp; Renewal (6 Months to 1 Year After Expiry)</h3>
+                                                <h4 className="text-sm font-bold text-red-950 mb-1">Phase 3: Restoration &amp; Renewal (6 Months to 1 Year After Expiry)</h4>
                                                 <p className="text-xs text-gray-700 leading-relaxed m-0">
                                                     Under Section 25(4) and Rule 60, if the mark has been removed from the register for non-payment of renewal fees, the proprietor can apply for <strong>Restoration and Renewal</strong> on Form TM-R within 1 year from the expiration date, supported by an affidavit demonstrating valid reasons for the lapse. Learn more in our <Link href="/how-to-restore-expired-trademark" className="text-red-800 font-bold underline">expired trademark restoration guide</Link>.
                                                 </p>
@@ -756,40 +756,40 @@ export default function TrademarkDeadlinesExtensionPage() {
 
                                     {/* SECTION 10: REMEDIES FOR ABANDONED MARKS */}
                                     <section id="remedies-abandoned-marks" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faShieldHalved} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Remedies for Abandoned Trademark Marks
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">
                                             If your trademark application has been marked as &ldquo;Abandoned&rdquo; due to a missed deadline, all hope is not lost. The following legal remedies exist depending on why the deadline was missed:
                                         </p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8 not-prose">
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2 flex items-center">
+                                                <h4 className="text-base font-bold text-gray-900 mb-2 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2"></span>
                                                     1. Registry Restoration Petition
-                                                </h3>
+                                                </h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">
                                                     If the examination report or hearing notice was never served on the applicant or agent of record, file a Petition under Section 131 / Rule 109 on Form TM-M supported by an affidavit proving non-receipt and breach of natural justice principles.
                                                 </p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2 flex items-center">
+                                                <h4 className="text-base font-bold text-gray-900 mb-2 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-indigo-500 rounded-full mr-2"></span>
                                                     2. Review Petition (Sec. 127)
-                                                </h3>
+                                                </h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">
                                                     Under Section 127(c) and Rule 119, file a formal Application for Review of the Registrar&apos;s decision within 30 days of the abandonment order, citing errors apparent on the face of the record.
                                                 </p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2 flex items-center">
+                                                <h4 className="text-base font-bold text-gray-900 mb-2 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-emerald-500 rounded-full mr-2"></span>
                                                     3. High Court Writ Petition
-                                                </h3>
+                                                </h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">
                                                     In landmark cases like <em>Tata Motors Ltd. v. Registrar of Trade Marks</em>, the Delhi High Court set aside arbitrary online abandonment orders where the Registry failed to provide a mandatory personal hearing under Section 18(4).
                                                 </p>
@@ -799,10 +799,10 @@ export default function TrademarkDeadlinesExtensionPage() {
 
                                     {/* SECTION 11: DEADLINE ACTION CHECKLIST */}
                                     <section id="deadline-action-checklist" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faCheckCircle} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Deadline Compliance Action Checklist
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">
                                             Protect your brand from accidental abandonment by executing this rigorous statutory compliance checklist:
                                         </p>
@@ -811,28 +811,28 @@ export default function TrademarkDeadlinesExtensionPage() {
                                             <div className="flex items-start">
                                                 <FontAwesomeIcon icon={faCheck} className="w-4 h-4 text-emerald-600 mr-3 mt-1 flex-shrink-0" />
                                                 <div>
-                                                    <h3 className="text-sm font-bold text-gray-900 m-0">Implement Automated Docketing Systems</h3>
+                                                    <h4 className="text-sm font-bold text-gray-900 m-0">Implement Automated Docketing Systems</h4>
                                                     <p className="text-xs text-gray-600 m-0 mt-0.5">Track every application status weekly to catch examination reports and journal publications the moment they are generated.</p>
                                                 </div>
                                             </div>
                                             <div className="flex items-start">
                                                 <FontAwesomeIcon icon={faCheck} className="w-4 h-4 text-emerald-600 mr-3 mt-1 flex-shrink-0" />
                                                 <div>
-                                                    <h3 className="text-sm font-bold text-gray-900 m-0">Verify Attorney &amp; Correspondence Email Addresses</h3>
+                                                    <h4 className="text-sm font-bold text-gray-900 m-0">Verify Attorney &amp; Correspondence Email Addresses</h4>
                                                     <p className="text-xs text-gray-600 m-0 mt-0.5">Ensure your Form TM-48 contains active email addresses so notices sent via IP India automated servers are not lost to spam filters. If you need to update counsel, read <Link href="/how-to-change-trademark-attorney-in-india" className="text-[#6E5E93] font-bold underline">how to change trademark attorney</Link>.</p>
                                                 </div>
                                             </div>
                                             <div className="flex items-start">
                                                 <FontAwesomeIcon icon={faCheck} className="w-4 h-4 text-emerald-600 mr-3 mt-1 flex-shrink-0" />
                                                 <div>
-                                                    <h3 className="text-sm font-bold text-gray-900 m-0">File TM-M Extension on Day 20-25</h3>
+                                                    <h4 className="text-sm font-bold text-gray-900 m-0">File TM-M Extension on Day 20-25</h4>
                                                     <p className="text-xs text-gray-600 m-0 mt-0.5">Never wait until Day 30 to file an extension request. Server timeouts or payment gateway reconciliation delays can result in irreparable abandonment.</p>
                                                 </div>
                                             </div>
                                             <div className="flex items-start">
                                                 <FontAwesomeIcon icon={faCheck} className="w-4 h-4 text-emerald-600 mr-3 mt-1 flex-shrink-0" />
                                                 <div>
-                                                    <h3 className="text-sm font-bold text-gray-900 m-0">Audit 10-Year Renewal Calendars</h3>
+                                                    <h4 className="text-sm font-bold text-gray-900 m-0">Audit 10-Year Renewal Calendars</h4>
                                                     <p className="text-xs text-gray-600 m-0 mt-0.5">Initiate renewal instructions 11 months before the 10-year expiry to avoid the need for surcharges or high-risk restoration proceedings.</p>
                                                 </div>
                                             </div>
@@ -841,10 +841,10 @@ export default function TrademarkDeadlinesExtensionPage() {
 
                                     {/* SECTION 12: FAQS */}
                                     <section id="faqs" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faListUl} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Frequently Asked Questions
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">
                                             Find definitive legal answers to the most common queries regarding trademark deadlines, Section 131 extensions, and abandonment rules in India:
                                         </p>
@@ -852,9 +852,9 @@ export default function TrademarkDeadlinesExtensionPage() {
                                         <div className="space-y-4 not-prose my-8">
                                             {faqs.map((faq, index) => (
                                                 <div key={index} className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                    <h3 className="text-base font-bold text-gray-900 mb-2">
+                                                    <h4 className="text-base font-bold text-gray-900 mb-2">
                                                         {index + 1}. {faq.question}
-                                                    </h3>
+                                                    </h4>
                                                     <p className="text-xs md:text-sm text-gray-700 leading-relaxed m-0">
                                                         {faq.answer}
                                                     </p>
@@ -865,10 +865,10 @@ export default function TrademarkDeadlinesExtensionPage() {
 
                                     {/* SECTION 13: STRATEGIC LITIGATION ADVICE */}
                                     <section id="strategic-litigation-advice" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLightbulb} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Strategic Advice from IP Litigators
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">
                                             Statutory deadlines in Indian trademark law are unyielding guardrails designed to maintain registry integrity. While <strong>Section 131</strong> offers vital relief for procedural bottlenecks, relying on last-minute extensions carries substantial risk. A single day of delay in a Section 21 opposition or Section 21(2) counter-statement permanently forfeits your brand&apos;s statutory protections.
                                         </p>
@@ -878,9 +878,9 @@ export default function TrademarkDeadlinesExtensionPage() {
 
                                         <div className="mt-12 rounded-3xl bg-gradient-to-br from-[#0C002B] via-[#1A0B3B] to-[#2E1065] p-8 text-white shadow-2xl relative overflow-hidden not-prose">
                                             <div className="relative z-10 text-center max-w-2xl mx-auto">
-                                                <h3 className="text-2xl sm:text-3xl font-black tracking-tight text-white mb-4">
+                                                <h4 className="text-2xl sm:text-3xl font-black tracking-tight text-white mb-4">
                                                     Facing an Impending Trademark Deadline?
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-purple-100/90 leading-relaxed mb-8">
                                                     Don&apos;t let procedural delays destroy your brand equity. Speak with our senior trademark attorneys to file urgent Form TM-M extension requests, draft solid objection replies, or restore abandoned applications.
                                                 </p>
@@ -913,7 +913,7 @@ export default function TrademarkDeadlinesExtensionPage() {
                             {/* About Author */}
                             <div className="bg-white p-4 sm:p-5 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center">
                                 <img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-16 h-16 rounded-full mb-2.5 shadow-md object-cover border-2 border-[#6E5E93]/20" />
-                                <h3 className="text-base font-bold text-gray-900 mb-0.5">Rahul Roy</h3>
+                                <h4 className="text-base font-bold text-gray-900 mb-0.5">Rahul Roy</h4>
                                 <p className="text-xs text-[#6E5E93] font-semibold mb-2">Trademark Research Specialist</p>
                                 <p className="text-xs text-gray-600 leading-relaxed m-0">Rahul specializes in trademark prosecution timelines, Section 131 extension filings, opposition proceedings, and high-stakes registry restoration petitions across India.</p>
                             </div>
@@ -921,7 +921,7 @@ export default function TrademarkDeadlinesExtensionPage() {
                             {/* Dark CTA Box */}
                             <div className="bg-[#0C002B] p-5 rounded-2xl shadow-xl border border-white/5 text-white relative overflow-hidden group">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-[rgb(110,94,147)] rounded-full blur-[70px] opacity-30 group-hover:opacity-50 transition-opacity"></div>
-                                <h3 className="text-base font-black mb-1.5 relative z-10 leading-tight">Urgent Deadline Relief</h3>
+                                <h4 className="text-base font-black mb-1.5 relative z-10 leading-tight">Urgent Deadline Relief</h4>
                                 <p className="text-xs text-white/80 mb-3.5 leading-relaxed relative z-10 font-normal">Is your trademark reply or hearing due in less than 72 hours? File Section 131 extension on Form TM-M immediately.</p>
                                 <Link href="/contact-us" className="block relative z-10">
                                     <button className="w-full bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-2.5 px-4 rounded-xl transition-all shadow-md text-xs uppercase tracking-wider">
@@ -932,7 +932,7 @@ export default function TrademarkDeadlinesExtensionPage() {
 
                             {/* Related Resources */}
                             <div className="bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-100">
-                                <h3 className="text-xs font-black text-gray-400 mb-5 uppercase tracking-[0.25em]">Related Resources</h3>
+                                <h4 className="text-xs font-black text-gray-400 mb-5 uppercase tracking-[0.25em]">Related Resources</h4>
                                 <ul className="space-y-6">
                                     <li>
                                         <Link href="/how-to-respond-to-trademark-examination-report" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all">

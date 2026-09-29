@@ -324,13 +324,13 @@ export default function WhatHappensTrademarkWithoutResearchPage() {
 
                                     {/* Section 2: Registry Objections */}
                                     <section id="registry-objections" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faScaleBalanced} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Registry Objections: Section 9 and Section 11 Barriers
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Once you file Form TM-A and pay the government fees, your mark passes into the Examination stage at the Trade Marks Registry. The Registry’s examiners use sophisticated internal tools to scrutinize your application against two major statutory hurdles defined in the Trade Marks Act, 1999:</p>
 
-                                        <h3 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 mb-4">1. Relative Grounds of Refusal (Section 11)</h3>
+                                        <h4 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 mb-4">1. Relative Grounds of Refusal (Section 11)</h4>
                                         <p className="mb-6">Section 11 is the most common pitfall for unresearched trademarks. Under Section 11(1), a trademark cannot be registered if it is:</p>
                                         <ul className="list-disc list-inside space-y-2 mb-6 text-gray-700">
                                             <li><strong>Identical with an earlier trademark</strong>protecting identical goods or services.</li>
@@ -339,16 +339,16 @@ export default function WhatHappensTrademarkWithoutResearchPage() {
                                         </ul>
                                         <p className="mb-6">When an examiner finds even a remote conflict, your application status shifts to<Link href="/what-does-objected-mean-in-trademark-status" className="text-[rgb(110,94,147)] hover:underline font-semibold">"Objected"</Link>. You are then served with a formal Examination Report requiring a detailed, legally cogent reply drafted by an attorney within 30 days.</p>
 
-                                        <h3 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 mb-4">2. Absolute Grounds of Refusal (Section 9)</h3>
+                                        <h4 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 mb-4">2. Absolute Grounds of Refusal (Section 9)</h4>
                                         <p className="mb-6">Unresearched marks frequently run afoul of Section 9 because creators often pick purely descriptive, generic, or customary words (such as trying to register "Best Coffee" for a cafe or "Pure Silk" for clothing). An initial research phase highlights whether your term possesses distinctive character or if it will be summarily refused on absolute grounds.</p>
                                     </section>
 
                                     {/* Section 3: Third Party Oppositions */}
                                     <section id="third-party-opposition" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faFileContract} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Third-Party Opposition Battles and Infringement Litigation
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Even if your unresearched application miraculously squeaks past the examiner and is "Accepted & Advertised" in the Trade Marks Journal, your legal jeopardy is far from over.</p>
                                         <p className="mb-6">Under Section 21 of the Trade Marks Act, every published mark enters a mandatory<strong>four-month statutory opposition window</strong>. Well-established corporations and smart IP law firms run automated trademark watch systems that actively scan every bi-weekly journal edition.</p>
                                         <p className="mb-6">If an existing brand detects your conflicting mark, they will file a formal<strong>Notice of Opposition (Form TM-O)</strong>. What follows is a grueling quasi-judicial litigation process:</p>
@@ -358,33 +358,33 @@ export default function WhatHappensTrademarkWithoutResearchPage() {
                                             <li>The Registrar schedules physical or virtual hearings where trademark advocates present oral arguments. Opposition proceedings regularly drag on for 2 to 4 years, costing tens of thousands of rupees in legal fees.</li>
                                         </ul>
 
-                                        <h3 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 mb-4">Cease-and-Desist Notices & High Court Injunctions</h3>
+                                        <h4 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 mb-4">Cease-and-Desist Notices & High Court Injunctions</h4>
                                         <p className="mb-6">The risk does not stop at the Registry level. Filing for an unresearched trademark actually shines a spotlight on your infringement. If the prior trademark owner realizes you are actively selling in their commercial space, their lawyers will issue an urgent<strong>Cease-and-Desist Notice</strong>demanding immediate cessation of business.</p>
                                         <p className="mb-6">Failure to comply can trigger civil lawsuits for trademark infringement and passing off under Section 29 and Section 135. Courts can issue ad-interim ex-parte injunctions, appoint court commissioners to seize inventory, and award punitive damages against your company.</p>
                                     </section>
 
                                     {/* Section 4: Financial and Rebranding Costs */}
                                     <section id="financial-loss" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLightbulb} className="w-8 h-8 mr-3 text-amber-500" />
                                             Financial Loss and Forced Rebranding
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">The true financial catastrophe of skipping a trademark search rarely lies in the initial government filing fee alone. The compounding collateral damage can cripple an early-stage startup or SME:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 not-prose">
                                             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 text-left shadow-sm">
                                                 <div className="text-red-600 font-extrabold text-2xl mb-2">100% Sunk</div>
-                                                <h3 className="font-bold text-gray-900 mb-2">Non-Refundable Fees</h3>
+                                                <h4 className="font-bold text-gray-900 mb-2">Non-Refundable Fees</h4>
                                                 <p className="text-xs text-gray-600">Statutory fees (₹4,500 - ₹9,000 per class) are lost forever. You cannot transfer paid fees to an alternative brand name.</p>
                                             </div>
                                             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 text-left shadow-sm">
                                                 <div className="text-amber-600 font-extrabold text-2xl mb-2">₹25,000+</div>
-                                                <h3 className="font-bold text-gray-900 mb-2">Litigation Defense</h3>
+                                                <h4 className="font-bold text-gray-900 mb-2">Litigation Defense</h4>
                                                 <p className="text-xs text-gray-600">Drafting objection replies, attending hearing arguments, and defending TM-O oppositions quickly drain company cash flow.</p>
                                             </div>
                                             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 text-left shadow-sm">
                                                 <div className="text-purple-600 font-extrabold text-2xl mb-2">Catastrophic</div>
-                                                <h3 className="font-bold text-gray-900 mb-2">Forced Rebranding</h3>
+                                                <h4 className="font-bold text-gray-900 mb-2">Forced Rebranding</h4>
                                                 <p className="text-xs text-gray-600">Discarding printed packaging, re-registering domain names, rebuilding SEO rankings, and losing established customer recognition.</p>
                                             </div>
                                         </div>
@@ -394,10 +394,10 @@ export default function WhatHappensTrademarkWithoutResearchPage() {
 
                                     {/* Section 5: Comparison Table */}
                                     <section id="comparison-table" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faTable} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Researched vs. Unresearched Trademark Application
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Compare the typical lifecycle, risk profile, and financial outcomes of an informed trademark filing versus an unresearched submission:</p>
 
                                         <div className="overflow-x-auto mb-8 shadow-sm rounded-xl border border-gray-200">
@@ -447,29 +447,29 @@ export default function WhatHappensTrademarkWithoutResearchPage() {
 
                                     {/* Section 6: Failure Timeline */}
                                     <section id="procedural-timeline" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faListUl} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             The Anatomy of an Unresearched Trademark Failure
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Here is the step-by-step chronology that unfolds when an entrepreneur registers a trademark without verifying the register:</p>
 
                                         <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm mb-8">
                                             <ol className="relative border-l border-indigo-200 ml-4 space-y-6">
-                                                <li className="mb-6 ml-6"><span className="absolute -left-3 flex items-center justify-center w-6 h-6 bg-[rgb(110,94,147)] rounded-full text-white text-xs font-bold ring-4 ring-white">1</span><h3 className="font-bold text-gray-900 text-base md:text-lg mb-1">Premature Application Submission</h3><p className="text-sm text-gray-600 m-0">The applicant files Form TM-A directly, paying statutory fees without screening identical, phonetic, or visual similarities.</p></li>
-                                                <li className="mb-6 ml-6"><span className="absolute -left-3 flex items-center justify-center w-6 h-6 bg-red-500 rounded-full text-white text-xs font-bold ring-4 ring-white">2</span><h3 className="font-bold text-gray-900 text-base md:text-lg mb-1">Formal Section 11 Objection Issued</h3><p className="text-sm text-gray-600 m-0">Within 1 to 3 months, an examiner flags prior identical and similar marks in the official Examination Report, marking the status as "Objected".</p></li>
-                                                <li className="mb-6 ml-6"><span className="absolute -left-3 flex items-center justify-center w-6 h-6 bg-amber-500 rounded-full text-white text-xs font-bold ring-4 ring-white">3</span><h3 className="font-bold text-gray-900 text-base md:text-lg mb-1">Expensive Objection Replies & Hearings</h3><p className="text-sm text-gray-600 m-0">The applicant hires legal counsel to draft an objection reply. If the examiner remains unsatisfied, a formal show-cause hearing is scheduled.</p></li>
-                                                <li className="mb-6 ml-6"><span className="absolute -left-3 flex items-center justify-center w-6 h-6 bg-purple-600 rounded-full text-white text-xs font-bold ring-4 ring-white">4</span><h3 className="font-bold text-gray-900 text-base md:text-lg mb-1">Journal Publication & Third-Party Opposition</h3><p className="text-sm text-gray-600 m-0">If accepted for advertisement, existing brand owners discover the mark during the 4-month window and lodge a formal Notice of Opposition (TM-O).</p></li>
-                                                <li className="ml-6"><span className="absolute -left-3 flex items-center justify-center w-6 h-6 bg-gray-900 rounded-full text-white text-xs font-bold ring-4 ring-white">5</span><h3 className="font-bold text-gray-900 text-base md:text-lg mb-1">Cease-and-Desist Notice or Complete Refusal</h3><p className="text-sm text-gray-600 m-0">The application is refused, or the prior owner secures a court injunction. The applicant is forced to surrender the mark and rebrand entirely.</p></li>
+                                                <li className="mb-6 ml-6"><span className="absolute -left-3 flex items-center justify-center w-6 h-6 bg-[rgb(110,94,147)] rounded-full text-white text-xs font-bold ring-4 ring-white">1</span><h4 className="font-bold text-gray-900 text-base md:text-lg mb-1">Premature Application Submission</h4><p className="text-sm text-gray-600 m-0">The applicant files Form TM-A directly, paying statutory fees without screening identical, phonetic, or visual similarities.</p></li>
+                                                <li className="mb-6 ml-6"><span className="absolute -left-3 flex items-center justify-center w-6 h-6 bg-red-500 rounded-full text-white text-xs font-bold ring-4 ring-white">2</span><h4 className="font-bold text-gray-900 text-base md:text-lg mb-1">Formal Section 11 Objection Issued</h4><p className="text-sm text-gray-600 m-0">Within 1 to 3 months, an examiner flags prior identical and similar marks in the official Examination Report, marking the status as "Objected".</p></li>
+                                                <li className="mb-6 ml-6"><span className="absolute -left-3 flex items-center justify-center w-6 h-6 bg-amber-500 rounded-full text-white text-xs font-bold ring-4 ring-white">3</span><h4 className="font-bold text-gray-900 text-base md:text-lg mb-1">Expensive Objection Replies & Hearings</h4><p className="text-sm text-gray-600 m-0">The applicant hires legal counsel to draft an objection reply. If the examiner remains unsatisfied, a formal show-cause hearing is scheduled.</p></li>
+                                                <li className="mb-6 ml-6"><span className="absolute -left-3 flex items-center justify-center w-6 h-6 bg-purple-600 rounded-full text-white text-xs font-bold ring-4 ring-white">4</span><h4 className="font-bold text-gray-900 text-base md:text-lg mb-1">Journal Publication & Third-Party Opposition</h4><p className="text-sm text-gray-600 m-0">If accepted for advertisement, existing brand owners discover the mark during the 4-month window and lodge a formal Notice of Opposition (TM-O).</p></li>
+                                                <li className="ml-6"><span className="absolute -left-3 flex items-center justify-center w-6 h-6 bg-gray-900 rounded-full text-white text-xs font-bold ring-4 ring-white">5</span><h4 className="font-bold text-gray-900 text-base md:text-lg mb-1">Cease-and-Desist Notice or Complete Refusal</h4><p className="text-sm text-gray-600 m-0">The application is refused, or the prior owner secures a court injunction. The applicant is forced to surrender the mark and rebrand entirely.</p></li>
                                             </ol>
                                         </div>
                                     </section>
 
                                     {/* Section 7: How to Prevent */}
                                     <section id="how-to-prevent" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faMagnifyingGlass} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             How to Prevent Failure: Comprehensive Due Diligence
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">The good news is that 100% of these disasters can be avoided with minimal effort and cost before filing. A proper trademark clearance strategy consists of three non-negotiable steps:</p>
                                         <p className="mb-6"><strong>1. AI-Powered Similarity Screening:</strong>Use our<Link href="/free-ai-powered-trademark-search" className="text-[rgb(110,94,147)] hover:underline font-semibold">free AI powered trademark search</Link>to run preliminary checks. Modern algorithms scan millions of records in seconds, catching complex phonetic resemblances, spelling variations, and visual logo parallels that manual searches easily overlook.</p>
                                         <p className="mb-6"><strong>2. IP India Public Database Verification:</strong>Verify exact registrations, pending applications, and abandoned marks across relevant<Link href="/trademark-class-finder" className="text-[rgb(110,94,147)] hover:underline font-semibold">trademark classes</Link>on the official government portal.</p>
@@ -478,10 +478,10 @@ export default function WhatHappensTrademarkWithoutResearchPage() {
 
                                     {/* Section 8: Checklist */}
                                     <section id="pre-filing-checklist" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faCheckCircle} className="w-8 h-8 mr-3 text-green-500" />
                                             Pre-Filing Trademark Clearance Checklist
-                                        </h2>
+                                        </h3>
                                         <ul className="list-none space-y-4 mb-8">
                                             <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Exact Word Search:</strong>Verify that no identical mark exists in your primary and cross-allied classes.</span></li>
                                             <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Phonetic Similarity Check:</strong>Test alternative spellings, homophones, and phonetic variations.</span></li>
@@ -494,15 +494,15 @@ export default function WhatHappensTrademarkWithoutResearchPage() {
 
                                     {/* Section 9: FAQs */}
                                     <section id="faqs" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl lg:text-3xl font-black text-gray-900 mb-8 text-center text-[rgb(110,94,147)]">
+                                        <h3 className="text-xl md:text-2xl lg:text-3xl font-black text-gray-900 mb-8 text-center text-[rgb(110,94,147)]">
                                             Frequently Asked Questions
-                                        </h2>
+                                        </h3>
                                         <div className="space-y-4">
                                             {faqs.map((faq, index) => (
                                                 <div key={index} className="bg-white border border-gray-100 rounded-3xl p-8 shadow-sm hover:shadow-md transition-shadow">
-                                                    <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-4 flex items-start leading-snug">
+                                                    <h4 className="text-lg md:text-xl font-bold text-gray-900 mb-4 flex items-start leading-snug">
                                                         <span className="text-[rgb(110,94,147)] mr-4 font-black text-2xl">Q.</span>{faq.question}
-                                                    </h3>
+                                                    </h4>
                                                     <p className="text-gray-600 pl-10 m-0">{faq.answer}</p>
                                                 </div>
                                             ))}
@@ -511,10 +511,10 @@ export default function WhatHappensTrademarkWithoutResearchPage() {
 
                                     {/* Section 10: Final Takeaway */}
                                     <section id="final-takeaway" className="scroll-mt-32 pt-16">
-                                        <h2 className="text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLightbulb} className="w-8 h-8 mr-3 text-yellow-500" />
                                             Final Takeaway: Research First, Register with Confidence
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Attempting to register a trademark without researching is the ultimate false economy. In the best-case scenario, you waste months dealing with bureaucratic objections and losing non-refundable government fees. In the worst-case scenario, you invite crippling litigation that destroys your product line, burns your marketing capital, and obligates you to start over under a new identity.</p>
                                         <p className="mb-6">Taking 10 minutes to run an AI-powered clearance search and consulting with a qualified trademark professional ensures that the mark you build today remains your undisputed legal fortress tomorrow. Check official guidelines on the<a href="https://ipindia.gov.in/" target="_blank" rel="noopener noreferrer" className="text-[rgb(110,94,147)] hover:underline font-medium">IP India Portal</a>, and always screen before you file.</p>
                                     </section>
@@ -529,9 +529,9 @@ export default function WhatHappensTrademarkWithoutResearchPage() {
                                                     </span>
                                                 </div>
 
-                                                <h3 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl mb-4">
+                                                <h4 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl mb-4">
                                                     Don’t Risk Your Brand on Guesswork
-                                                </h3>
+                                                </h4>
 
                                                 <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">Search millions of registered and pending trademarks instantly with AI. Uncover potential conflicts, avoid Section 11 rejections, and file with absolute certainty.</p>
 
@@ -563,14 +563,14 @@ export default function WhatHappensTrademarkWithoutResearchPage() {
                             {/* About Author */}
                             <div className="bg-white p-6 rounded-[2.5rem] shadow-sm border border-gray-100 flex flex-col items-center text-center">
                                 <img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-24 h-24 rounded-full mb-4 shadow-md object-cover" />
-                                <h3 className="text-xl font-bold text-gray-900 mb-2">Rahul Roy</h3>
+                                <h4 className="text-xl font-bold text-gray-900 mb-2">Rahul Roy</h4>
                                 <p className="text-sm text-gray-600 mb-4 font-medium">Senior Trademark Clearance Strategist</p>
                                 <p className="text-sm text-gray-700 leading-relaxed mb-6">Rahul advises startups and enterprise brands on mitigating trademark conflict risks, handling registry objections, and structuring trademark portfolios across global jurisdictions.</p>
                             </div>
 
                             <div className="bg-[#0C002B] p-8 rounded-[2.5rem] shadow-2xl border border-white/5 text-white relative overflow-hidden group">
                                 <div className="absolute top-0 right-0 w-40 h-40 bg-[rgb(110,94,147)] rounded-full blur-[100px] opacity-30 group-hover:opacity-50 transition-opacity"></div>
-                                <h3 className="text-xl font-black mb-4 relative z-10 leading-tight">Check Your Trademark</h3>
+                                <h4 className="text-xl font-black mb-4 relative z-10 leading-tight">Check Your Trademark</h4>
                                 <p className="text-sm opacity-70 mb-8 leading-relaxed relative z-10 font-medium">Identify phonetic conflicts, registry objections, and similarity risks before filing your trademark application.</p>
                                 <Link href="/trademark-search" className="block relative z-10">
                                     <button className="w-full bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-3.5 px-4 rounded-xl transition-all shadow-xl text-xs uppercase tracking-wider">
@@ -579,7 +579,7 @@ export default function WhatHappensTrademarkWithoutResearchPage() {
                                 </Link>
                             </div>
                             <div className="bg-gray-50 p-10 rounded-[2.5rem] shadow-sm border border-gray-100">
-                                <h3 className="text-sm font-black text-gray-400 mb-8 uppercase tracking-[0.3em]">Related Resources</h3>
+                                <h4 className="text-sm font-black text-gray-400 mb-8 uppercase tracking-[0.3em]">Related Resources</h4>
                                 <ul className="space-y-6">
                                     <li><Link href="/free-ai-powered-trademark-search" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faSearch} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">AI Trademark Search</span></Link></li>
                                     <li><Link href="/trademark-registration-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faShieldHalved} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Registration Services</span></Link></li>

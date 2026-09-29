@@ -333,43 +333,43 @@ export default function WordMarkVsDeviceMarkPage() {
 
                                     {/* SECTION 2: WHAT IS A WORD MARK */}
                                     <section id="what-is-wordmark" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faFont} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             What is a Word Mark in Trademark Law?
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">A<strong>Word Mark</strong>consists exclusively of standard characters—letters, words, numbers, or standard typographical symbols—without any claim to stylized lettering, specific fonts, graphical shapes, embellishments, or colors.</p>
                                         <p className="mb-6">When you file a Word Mark on Form TM-A, the Registry records the plain string of characters. This provides the applicant with an expansive legal shield:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <FontAwesomeIcon icon={faShieldHalved} className="w-4 h-4 text-[#6E5E93] mr-2" />
                                                     Font and Layout Neutrality
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Your exclusive ownership applies regardless of whether your brand name is written in Arial, Times New Roman, cursive script, bold uppercase, or lowercase typography.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <FontAwesomeIcon icon={faPalette} className="w-4 h-4 text-[#6E5E93] mr-2" />
                                                     Complete Color Independence
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Under Section 10 of the Trade Marks Act, an unconditioned Word Mark is deemed registered for all colors. This prevents rivals from simply adopting your name in alternate color palettes.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <FontAwesomeIcon icon={faGavel} className="w-4 h-4 text-[#6E5E93] mr-2" />
                                                     Broadest Infringement Protection
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">In an infringement suit under Section 29, you only need to demonstrate phonetic, textual, or conceptual similarity without getting bogged down by graphic differences.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <FontAwesomeIcon icon={faRocket} className="w-4 h-4 text-[#6E5E93] mr-2" />
                                                     Future-Proof Rebranding
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">You can update your visual logo, application icon, website theme, and packaging design dozens of times over 10 years without requiring a new filing.</p>
                                             </div>
                                         </div>
@@ -379,15 +379,15 @@ export default function WordMarkVsDeviceMarkPage() {
 
                                     {/* SECTION 3: WHAT IS A DEVICE MARK */}
                                     <section id="what-is-device-mark" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faPalette} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             What is a Device Mark in Trademark Law?
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">A<strong>Device Mark</strong>includes any visual, graphic, or artistic representation. In trademark registry parlance, device marks encompass standalone artistic logos, symbols, stylized lettering, composite labels, monograms, and geometric emblems.</p>
                                         <p className="mb-6">When a Device Mark is filed, the Registry examines it under the<strong>Vienna Classification (Vienna Agreement)</strong>, assigning specific Vienna Codes to categorize visual elements such as crowns, animals, geometric figures, human silhouettes, or celestial bodies.</p>
 
                                         <div className="bg-purple-50 border border-purple-200 rounded-2xl p-6 mb-8">
-                                            <h3 className="text-base md:text-lg font-bold text-gray-900 mb-2">Sub-Types of Device Marks in Indian Practice:</h3>
+                                            <h4 className="text-base md:text-lg font-bold text-gray-900 mb-2">Sub-Types of Device Marks in Indian Practice:</h4>
                                             <ul className="list-disc pl-5 space-y-2 text-gray-700 text-sm md:text-base m-0">
                                                 <li><strong>Pure Figurative Logos:</strong>Standalone visual symbols with zero text (e.g., Apple&apos;s bitten apple silhouette, Nike&apos;s Swoosh symbol, Mercedes-Benz three-pointed star).</li>
                                                 <li><strong>Stylized Typography / Word Logos:</strong>Words represented in a stylized, hand-crafted font or distinctive lettering arrangement (e.g., Coca-Cola Spencerian script, Disney cursive signature).</li>
@@ -400,10 +400,10 @@ export default function WordMarkVsDeviceMarkPage() {
 
                                     {/* SECTION 4: COMPARISON TABLE */}
                                     <section id="comparison-table" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faTable} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Word Mark vs Device Mark Comparison
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">The table below highlights the statutory, procedural, and commercial distinctions between Word Marks, Device Marks, and Composite Marks in India:</p>
 
                                         <div className="overflow-x-auto my-8 border border-gray-200 rounded-2xl shadow-sm not-prose">
@@ -466,17 +466,17 @@ export default function WordMarkVsDeviceMarkPage() {
 
                                     {/* SECTION 5: ANTI-DISSECTION RULE */}
                                     <section id="anti-dissection-rule" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faGavel} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             The Anti-Dissection Rule and Section 17
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Many business owners mistakenly believe that registering a combined logo containing their brand name gives them independent legal ownership over both the logo and the name. Under Indian trademark jurisprudence, this assumption is legally flawed due to the<strong>Anti-Dissection Rule</strong>codified under Section 17 of the Trade Marks Act, 1999.</p>
 
                                         <div className="border border-red-200 bg-red-50/60 rounded-2xl p-6 mb-8">
-                                            <h3 className="text-base md:text-lg font-bold text-red-900 mb-2 flex items-center">
+                                            <h4 className="text-base md:text-lg font-bold text-red-900 mb-2 flex items-center">
                                                 <FontAwesomeIcon icon={faExclamationTriangle} className="w-5 h-5 text-red-600 mr-2" />
                                                 Statutory Mandate: Section 17(1) &amp; (2)
-                                            </h3>
+                                            </h4>
                                             <p className="text-sm text-red-800 leading-relaxed mb-3"><strong>Section 17(1):</strong>When a trade mark consists of several matter, its registration shall confer on the proprietor the exclusive right to the use of the trade mark taken as a whole.</p>
                                             <p className="text-sm text-red-800 leading-relaxed m-0"><strong>Section 17(2):</strong>Subject to sub-section (1), the registration thereof shall not confer any exclusive right in the matter forming only a part of the whole of the trade mark so registered, unless separate applications are made under Section 15 for each distinct part.</p>
                                         </div>
@@ -487,10 +487,10 @@ export default function WordMarkVsDeviceMarkPage() {
 
                                     {/* SECTION 6: WHICH TO REGISTER FIRST */}
                                     <section id="which-to-register-first" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLightbulb} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Which Trademark Should You File First?
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">To determine whether your enterprise should prioritize a Word Mark, a Device Mark, or a Composite Mark, evaluate your brand against this 3-factor strategic matrix:</p>
 
                                         {/* SCENARIO 1 */}
@@ -499,7 +499,7 @@ export default function WordMarkVsDeviceMarkPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Scenario A (Recommended for 90% of Startups)</span>
                                                 <span className="text-xs font-bold text-green-700">Priority: Word Mark First</span>
                                             </div>
-                                            <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">Unique, Coined, or Arbitrary Brand Names</h3>
+                                            <h4 className="text-lg md:text-xl font-bold text-gray-900 mb-2">Unique, Coined, or Arbitrary Brand Names</h4>
                                             <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-3">If your brand name is inherently distinctive (e.g., invented words like<em>KODAK</em>or arbitrary words like<em>APPLE</em>for computers),<strong>always file a Word Mark first</strong>.</p>
                                             <p className="text-gray-600 text-sm leading-relaxed m-0"><strong>Why:</strong>It secures the widest possible legal moat over the name in the relevant Nice class. You can design, tweak, and rebrand logos freely without losing priority.</p>
                                         </div>
@@ -510,7 +510,7 @@ export default function WordMarkVsDeviceMarkPage() {
                                                 <span className="bg-indigo-600 text-white text-xs font-black uppercase px-3 py-1 rounded-full">Scenario B</span>
                                                 <span className="text-xs font-bold text-indigo-700">Priority: Device Mark First</span>
                                             </div>
-                                            <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">Descriptive, Common, or Weak Brand Names</h3>
+                                            <h4 className="text-lg md:text-xl font-bold text-gray-900 mb-2">Descriptive, Common, or Weak Brand Names</h4>
                                             <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-3">If your brand name contains dictionary terms, geographic identifiers, or words describing the goods/services (e.g., &ldquo;Speedy Couriers&rdquo. Or &ldquo;Fresh Farm Organics&rdquo;), a plain Word Mark application will likely face Section 9 absolute grounds objections.</p>
                                             <p className="text-gray-600 text-sm leading-relaxed m-0"><strong>Why:</strong>A stylized Device Mark adds visual artistic distinctiveness, helping the application sail through Registry examination. Once market goodwill is established over 2–3 years, you can file the Word Mark claiming acquired distinctiveness.</p>
                                         </div>
@@ -521,7 +521,7 @@ export default function WordMarkVsDeviceMarkPage() {
                                                 <span className="bg-amber-600 text-white text-xs font-black uppercase px-3 py-1 rounded-full">Scenario C (Tight Budget Strategy)</span>
                                                 <span className="text-xs font-bold text-amber-700">Priority: Single Composite Mark</span>
                                             </div>
-                                            <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">Early Bootstrapped Startups with Constrained Capital</h3>
+                                            <h4 className="text-lg md:text-xl font-bold text-gray-900 mb-2">Early Bootstrapped Startups with Constrained Capital</h4>
                                             <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-3">If funding permits only a single application filing fee (₹4,500 govt fee for MSME/Startup), filing a composite mark (logo containing the brand name) provides a practical immediate balance.</p>
                                             <p className="text-gray-600 text-sm leading-relaxed m-0"><strong>Caveat:</strong>Commit to keeping that exact logo design locked for at least 3–5 years until cash flow allows filing independent Word and Logo registrations.</p>
                                         </div>
@@ -529,10 +529,10 @@ export default function WordMarkVsDeviceMarkPage() {
 
                                     {/* SECTION 7: REBRANDING & FONT FLEXIBILITY */}
                                     <section id="rebranding-protection" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faRotate} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Rebranding and Font Flexibility Impact
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Modern high-growth companies frequently modernize their brand identity as they scale. Understanding how trademark registrations respond to brand evolutions prevents catastrophic loss of trademark rights:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
@@ -540,7 +540,7 @@ export default function WordMarkVsDeviceMarkPage() {
                                                 <div className="w-10 h-10 bg-green-100 text-green-700 rounded-xl flex items-center justify-center font-bold mb-4">
                                                     <FontAwesomeIcon icon={faCheck} className="w-5 h-5" />
                                                 </div>
-                                                <h3 className="text-base font-bold text-gray-900 mb-2">When You Own a Word Mark:</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-2">When You Own a Word Mark:</h4>
                                                 <ul className="text-sm text-gray-600 space-y-2 list-disc pl-4 m-0">
                                                     <li>Change fonts from serif to sans-serif freely.</li>
                                                     <li>Switch brand colors across marketing seasons.</li>
@@ -553,7 +553,7 @@ export default function WordMarkVsDeviceMarkPage() {
                                                 <div className="w-10 h-10 bg-red-100 text-red-600 rounded-xl flex items-center justify-center font-bold mb-4">
                                                     <FontAwesomeIcon icon={faExclamationTriangle} className="w-5 h-5" />
                                                 </div>
-                                                <h3 className="text-base font-bold text-gray-900 mb-2">When You Only Own a Device Mark:</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-2">When You Only Own a Device Mark:</h4>
                                                 <ul className="text-sm text-gray-600 space-y-2 list-disc pl-4 m-0">
                                                     <li>Substantial logo alteration leaves the new mark unregistered.</li>
                                                     <li>Old registration becomes vulnerable to non-use cancellation under Section 47.</li>
@@ -568,17 +568,17 @@ export default function WordMarkVsDeviceMarkPage() {
 
                                     {/* SECTION 8: ECOMMERCE & AMAZON BRAND REGISTRY */}
                                     <section id="ecommerce-amazon" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faCartShopping} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Amazon Brand Registry &amp; Online Selling
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">For D2C founders, marketplace sellers, and e-commerce brands, securing trademark protection is the mandatory prerequisite for enrolling in<Link href="/amazon-brand-registry-trademark-requirements-india" className="text-[rgb(110,94,147)] hover:underline font-medium">Amazon Brand Registry India</Link>, Flipkart Brand Protection, and Meta Commerce Manager.</p>
 
                                         <div className="bg-gray-50 rounded-2xl p-6 md:p-8 border border-gray-200 my-8">
-                                            <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
+                                            <h4 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
                                                 <FontAwesomeIcon icon={faRocket} className="w-5 h-5 text-[#6E5E93] mr-2" />
                                                 Why Word Marks Perform Better on Amazon:
-                                            </h3>
+                                            </h4>
                                             <div className="space-y-4 text-sm md:text-base text-gray-700">
                                                 <p className="m-0"><strong>1. Automated Buy Box &amp; ASIN Protection:</strong>Amazon&apos;s brand algorithms match textual brand names on product listing titles, backend search terms, and manufacturer metadata. A registered Word Mark aligns 100% with these automated matching engines.</p>
                                                 <p className="m-0"><strong>2. Preventing Counterfeiter Font Variations:</strong>Counterfeit sellers often replicate brand names using slightly altered fonts or custom color schemes. A Word Mark empowers you to instantly execute Report a Violation (RAV) takedowns regardless of styling.</p>
@@ -589,10 +589,10 @@ export default function WordMarkVsDeviceMarkPage() {
 
                                     {/* SECTION 9: 4-STAGE FILING ROADMAP */}
                                     <section id="filing-roadmap" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faListUl} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Strategic 4-Stage Founder Filing Roadmap
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Follow this proven 4-stage intellectual property roadmap designed by experienced trademark attorneys to maximize legal protection while optimizing compliance budgets:</p>
 
                                         {/* STAGE 1 */}
@@ -601,7 +601,7 @@ export default function WordMarkVsDeviceMarkPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Stage 1</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Pre-Filing Clearance</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Comprehensive Textual &amp; Vienna Trademark Search</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Comprehensive Textual &amp; Vienna Trademark Search</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Before committing to a brand name or spending thousands on agency logo designs, conduct a rigorous<Link href="/trademark-search" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark search</Link>across the IP India portal.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">Search both textual wordmarks and Vienna Classification codes in your relevant<Link href="/types-of-trademark-classes" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark classes</Link>to ensure no conflicting prior marks exist under Section 11.</p>
                                         </div>
@@ -612,7 +612,7 @@ export default function WordMarkVsDeviceMarkPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Stage 2</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Foundation Protection</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">File Primary Word Mark Application (Form TM-A)</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">File Primary Word Mark Application (Form TM-A)</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Submit your initial trademark application for the plain text Word Mark under your primary goods or services classes. This locks in your nationwide priority date immediately.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">Upon receiving your official application number receipt, you can immediately begin displaying the<Link href="/difference-between-tm-and-r-symbol-in-india" className="text-[rgb(110,94,147)] hover:underline font-medium">TM symbol</Link>alongside your brand name.</p>
                                         </div>
@@ -623,7 +623,7 @@ export default function WordMarkVsDeviceMarkPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Stage 3</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Visual Identity Shield</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">File Secondary Device Mark (Logo &amp; Icon)</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">File Secondary Device Mark (Logo &amp; Icon)</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Once your visual brand guidelines, mobile app icon, packaging artwork, or primary logo design are finalized, file a separate Device Mark application.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">This prevents competitors from launching visually deceptive lookalike packaging or confusingly similar graphical icons under different names.</p>
                                         </div>
@@ -634,7 +634,7 @@ export default function WordMarkVsDeviceMarkPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Stage 4</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Portfolio &amp; Global Expansion</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Series Marks &amp; Madrid Protocol Filing</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Series Marks &amp; Madrid Protocol Filing</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">As your company expands into international markets, use your registered Indian Word Mark as the base application to file for<Link href="/international-trademark-registration" className="text-[rgb(110,94,147)] hover:underline font-medium">international trademark registration</Link>under the Madrid Protocol across the US, UK, EU, UAE, and Singapore.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">Maintain active docketing for decennial renewals under Section 25 to ensure your brand exclusivity remains perpetual through<Link href="/how-to-renew-a-trademark" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark renewal</Link>filings.</p>
                                         </div>
@@ -642,10 +642,10 @@ export default function WordMarkVsDeviceMarkPage() {
 
                                     {/* SECTION 10: CHECKLIST */}
                                     <section id="checklist" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faCheckCircle} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Trademark Filing Decision Checklist
-                                        </h2>
+                                        </h3>
                                         <ul className="list-none space-y-4 mb-8">
                                             <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Assess Inherent Distinctiveness:</strong>Evaluate whether your brand name is coined, arbitrary, suggestive, or descriptive on the Abercrombie spectrum.</span></li>
                                             <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Perform Comprehensive Search:</strong>Verify both phonetic spelling matches and Vienna classification codes on IP India portal.</span></li>
@@ -659,15 +659,15 @@ export default function WordMarkVsDeviceMarkPage() {
 
                                     {/* SECTION 11: FAQS (EXACTLY 8 MATCHING SCHEMA) */}
                                     <section id="faqs" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl lg:text-3xl font-black text-gray-900 mb-8 text-center text-[rgb(110,94,147)]">
+                                        <h3 className="text-xl md:text-2xl lg:text-3xl font-black text-gray-900 mb-8 text-center text-[rgb(110,94,147)]">
                                             Frequently Asked Questions
-                                        </h2>
+                                        </h3>
                                         <div className="space-y-4">
                                             {faqs.map((faq, index) => (
                                                 <div key={index} className="bg-white border border-gray-100 rounded-3xl p-8 shadow-sm hover:shadow-md transition-shadow">
-                                                    <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-4 flex items-start leading-snug">
+                                                    <h4 className="text-lg md:text-xl font-bold text-gray-900 mb-4 flex items-start leading-snug">
                                                         <span className="text-[rgb(110,94,147)] mr-4 font-black text-2xl">Q.</span>{faq.question}
-                                                    </h3>
+                                                    </h4>
                                                     <p className="text-gray-600 pl-10 m-0">{faq.answer}</p>
                                                 </div>
                                             ))}
@@ -676,10 +676,10 @@ export default function WordMarkVsDeviceMarkPage() {
 
                                     {/* SECTION 12: FINAL STRATEGIC ADVICE */}
                                     <section id="final-takeaway" className="scroll-mt-32 pt-16">
-                                        <h2 className="text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLightbulb} className="w-8 h-8 mr-3 text-yellow-500" />
                                             Strategic Legal Guidance
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Building a durable brand requires safeguarding both what customers hear (your brand name) and what customers see (your visual logo). While budget constraints often require a staged approach, securing your<strong>Word Mark first</strong>provides the strongest foundational shield for any commercial enterprise in India.</p>
                                         <p className="mb-6">As your startup grows, complement your word mark with dedicated device mark registrations to construct an impenetrable dual-layer intellectual property fortress. Consult certified trademark attorneys at IPR Karo to review your brand portfolio and formulate a customized filing roadmap today.</p>
                                     </section>
@@ -694,9 +694,9 @@ export default function WordMarkVsDeviceMarkPage() {
                                                     </span>
                                                 </div>
 
-                                                <h3 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl mb-4">
+                                                <h4 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl mb-4">
                                                     Protect Your Brand Name &amp; Logo Today
-                                                </h3>
+                                                </h4>
 
                                                 <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">Partner with expert IP attorneys to choose the right trademark filing strategy. From clearance search and Form TM-A filing to Section 9/11 objection handling and final registration certificate issuance.</p>
 
@@ -728,7 +728,7 @@ export default function WordMarkVsDeviceMarkPage() {
                             {/* About Author */}
                             <div className="bg-white p-6 rounded-[2.5rem] shadow-sm border border-gray-100 flex flex-col items-center text-center">
                                 <img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-24 h-24 rounded-full mb-4 shadow-md object-cover" />
-                                <h3 className="text-xl font-bold text-gray-900 mb-2">Rahul Roy</h3>
+                                <h4 className="text-xl font-bold text-gray-900 mb-2">Rahul Roy</h4>
                                 <p className="text-sm text-gray-600 mb-4 font-medium">Trademark Research Specialist</p>
                                 <p className="text-sm text-gray-700 leading-relaxed mb-6">Rahul specializes in brand protection strategy, trademark filing categorization, Section 17 Anti-Dissection analysis, and portfolio maintenance under the Trade Marks Act, 1999.</p>
                             </div>
@@ -736,7 +736,7 @@ export default function WordMarkVsDeviceMarkPage() {
                             {/* Dark CTA Box */}
                             <div className="bg-[#0C002B] p-8 rounded-[2.5rem] shadow-2xl border border-white/5 text-white relative overflow-hidden group">
                                 <div className="absolute top-0 right-0 w-40 h-40 bg-[rgb(110,94,147)] rounded-full blur-[100px] opacity-30 group-hover:opacity-50 transition-opacity"></div>
-                                <h3 className="text-xl font-black mb-4 relative z-10 leading-tight">Protect Your Brand</h3>
+                                <h4 className="text-xl font-black mb-4 relative z-10 leading-tight">Protect Your Brand</h4>
                                 <p className="text-sm opacity-70 mb-8 leading-relaxed relative z-10 font-medium">Get a customized filing strategy for your brand name and logo with registered trademark attorneys.</p>
                                 <Link href="/e-filing-trademark" className="block relative z-10">
                                     <button className="w-full bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-3.5 px-4 rounded-xl transition-all shadow-xl text-xs uppercase tracking-wider">
@@ -747,7 +747,7 @@ export default function WordMarkVsDeviceMarkPage() {
 
                             {/* Related Resources */}
                             <div className="bg-gray-50 p-10 rounded-[2.5rem] shadow-sm border border-gray-100">
-                                <h3 className="text-sm font-black text-gray-400 mb-8 uppercase tracking-[0.3em]">Related Resources</h3>
+                                <h4 className="text-sm font-black text-gray-400 mb-8 uppercase tracking-[0.3em]">Related Resources</h4>
                                 <ul className="space-y-6">
                                     <li><Link href="/trademark-search" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faSearch} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">TM Search</span></Link></li>
                                     <li><Link href="/difference-between-tm-and-r-symbol-in-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faShieldHalved} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">TM vs R Rules</span></Link></li>

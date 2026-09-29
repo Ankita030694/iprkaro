@@ -338,30 +338,30 @@ export default function CustomsRecordationTrademarksIndiaPage() {
 
                                     {/* SECTION 2: STATUTORY LEGAL FRAMEWORK */}
                                     <section id="legal-framework" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLandmark} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Customs IPR Statutory Framework
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Border enforcement of intellectual property in India operates at the intersection of international treaties, central customs statutes, and specialized procedural rules:</p>
 
                                         <div className="space-y-6">
                                             <div className="border-l-4 border-[#6E5E93] pl-4 py-2 bg-purple-50/40 rounded-r-xl">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">1. Section 11 of the Customs Act, 1962</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">1. Section 11 of the Customs Act, 1962</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">Empowers the Central Government to prohibit the import or export of goods of any specified description for the protection of patents, trademarks, copyrights, and designs, or for the prevention of deceptive trade practices.</p>
                                             </div>
 
                                             <div className="border-l-4 border-indigo-500 pl-4 py-2 bg-indigo-50/40 rounded-r-xl">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">2. IPR (Imported Goods) Enforcement Rules, 2007</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">2. IPR (Imported Goods) Enforcement Rules, 2007</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">Notified vide Notification No. 47/2007-Customs (N.T.) on May 8, 2007. These rules lay down the procedural mechanism for right holders to give notice to the Commissioner of Customs, execute indemnity bonds, participate in joint cargo inspections, and secure final confiscation orders.</p>
                                             </div>
 
                                             <div className="border-l-4 border-[#6E5E93] pl-4 py-2 bg-purple-50/40 rounded-r-xl">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">3. Section 140 of the Trade Marks Act, 1999</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">3. Section 140 of the Trade Marks Act, 1999</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">Empowers a registered trademark proprietor to serve written notice upon the Commissioner of Customs requesting the detention of imported goods suspected of bearing false or infringing trademarks.</p>
                                             </div>
 
                                             <div className="border-l-4 border-emerald-500 pl-4 py-2 bg-emerald-50/40 rounded-r-xl">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">4. WTO TRIPS Agreement (Articles 51 to 60)</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">4. WTO TRIPS Agreement (Articles 51 to 60)</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">India is a signatory to TRIPS, which mandates member states to establish effective border measures enabling right holders who suspect the importation of counterfeit trademark or pirated copyright goods to lodge an application for customs suspension of release.</p>
                                             </div>
                                         </div>
@@ -369,42 +369,42 @@ export default function CustomsRecordationTrademarksIndiaPage() {
 
                                     {/* SECTION 3: ICEGATE RECORDATION PROTOCOL */}
                                     <section id="icegate-recordation-process" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faPassport} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             ICEGATE Online IPR Recordation Protocol
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">The Central Board of Indirect Taxes and Customs (CBIC) maintains a digitized, centralized web portal via the Indian Customs Electronic Gateway (ICEGATE). Instead of approaching individual ports, brand owners execute a single centralized recordation that covers all Indian customs stations:</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2 flex items-center">
+                                                <h4 className="text-base font-bold text-gray-900 mb-2 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2"></span>
                                                     Step 1: Digital ICEGATE Registration
-                                                </h3>
+                                                </h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">The brand owner or authorized IP attorney creates an account on the CBIC IPR portal. Details of the corporate entity, registered addresses, and authorized signatory contacts are validated through Digital Signature Certificates (DSC Class 3).</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2 flex items-center">
+                                                <h4 className="text-base font-bold text-gray-900 mb-2 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-indigo-500 rounded-full mr-2"></span>
                                                     Step 2: Uploading Trademark Title
-                                                </h3>
+                                                </h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">Submit certified copies of Trademark Registration Certificates from IP India. Provide exact Nice Classifications, depiction of device logos, word marks, and valid renewal certificates demonstrating active proprietary rights under<Link href="/passing-off-vs-trademark-infringement-india" className="text-[#6E5E93] hover:underline font-bold">registered trademark rights</Link>.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2 flex items-center">
+                                                <h4 className="text-base font-bold text-gray-900 mb-2 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-purple-500 rounded-full mr-2"></span>
                                                     Step 3: Technical Product Guide
-                                                </h3>
+                                                </h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">Upload a comprehensive technical authenticity manual. This document educates Customs Appraisers on distinguishing genuine products from fakes (e.g., micro-text, QR codes, hologram features, typical country of origin, authorized packaging, and typical declared CIF pricing).</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-base font-bold text-gray-900 mb-2 flex items-center">
+                                                <h4 className="text-base font-bold text-gray-900 mb-2 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-emerald-500 rounded-full mr-2"></span>
                                                     Step 4: UTR Number Generation
-                                                </h3>
+                                                </h4>
                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">Upon scrutiny by the nodal Commissioner of Customs, the system issues a<strong>Unique Technical Reference (UTR)</strong>/ IPR Notice number. This UTR is integrated into the national Risk Management System (RMS) across all Indian customs EDI locations.</p>
                                             </div>
                                         </div>
@@ -412,10 +412,10 @@ export default function CustomsRecordationTrademarksIndiaPage() {
 
                                     {/* SECTION 4: REQUIRED DOCUMENTATION CHECKLIST */}
                                     <section id="documents-required" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faFileContract} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Required Documentation for Customs IPR Recordation
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">To ensure seamless approval by the Commissioner of Customs without deficiency requisitions, brand owners must compile the following mandatory evidentiary dossier:</p>
 
                                         <div className="bg-gray-50 p-6 md:p-8 rounded-2xl border border-gray-200 mb-8 not-prose">
@@ -432,20 +432,20 @@ export default function CustomsRecordationTrademarksIndiaPage() {
 
                                     {/* SECTION 5: INDEMNITY BOND & SECURITY RULES */}
                                     <section id="indemnity-bond-security" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faStamp} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Indemnity Bond &amp; Bank Guarantee Rules (Rule 5)
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">A critical legal prerequisite under Rule 5 of the IPR (Imported Goods) Enforcement Rules, 2007 is the execution of statutory bonds by the trademark proprietor:</p>
 
                                         <div className="space-y-6">
                                             <div className="border-l-4 border-[#6E5E93] pl-4 py-2 bg-purple-50/40 rounded-r-xl">
-                                                <h3 className="text-base font-bold text-gray-900 mb-1">1. General Indemnity Bond (At Time of Recordation)</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-1">1. General Indemnity Bond (At Time of Recordation)</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">The right holder executes a general bond binding themselves to pay any demurrage, port storage fees, customs costs, or damages claimed by an importer in the event of an erroneous or wrongful detention.</p>
                                             </div>
 
                                             <div className="border-l-4 border-amber-500 pl-4 py-2 bg-amber-50/40 rounded-r-xl">
-                                                <h3 className="text-base font-bold text-gray-900 mb-1">2. Consignment-Specific Bond &amp; Security (Upon Actual Detention)</h3>
+                                                <h4 className="text-base font-bold text-gray-900 mb-1">2. Consignment-Specific Bond &amp; Security (Upon Actual Detention)</h4>
                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">When Customs intercepts a specific suspicious container, the Deputy/Assistant Commissioner of Customs issues an order requiring the brand owner to execute a consignment-specific bond along with a<strong>Bank Guarantee or cash security</strong>(typically amounting to<strong>110% of the duty and CIF value</strong>of the detained cargo). This guarantees compensation if the goods are ultimately adjudicated as authentic.</p>
                                             </div>
                                         </div>
@@ -453,10 +453,10 @@ export default function CustomsRecordationTrademarksIndiaPage() {
 
                                     {/* SECTION 6: STEP-BY-STEP PORT SEIZURE WORKFLOW */}
                                     <section id="step-by-step-port-seizure" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faTruckFast} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             7-Step Port Detention &amp; Seizure Procedure
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">The operational workflow from cargo arrival at an Indian port to final confiscation involves strictly monitored statutory steps:</p>
 
                                         <div className="space-y-6">
@@ -465,7 +465,7 @@ export default function CustomsRecordationTrademarksIndiaPage() {
                                                     1
                                                 </div>
                                                 <div>
-                                                    <h3 className="text-lg font-bold text-gray-900 mb-1">Bill of Entry Filing &amp; Automated RMS Interception</h3>
+                                                    <h4 className="text-lg font-bold text-gray-900 mb-1">Bill of Entry Filing &amp; Automated RMS Interception</h4>
                                                     <p className="text-sm text-gray-600 leading-relaxed m-0">The overseas importer submits an electronic Bill of Entry. The Customs automated Risk Management System (RMS) matches the declared HS codes, trademark keywords, or consignor details against active IPR UTR notices and automatically flags the shipment for physical examination.</p>
                                                 </div>
                                             </div>
@@ -475,7 +475,7 @@ export default function CustomsRecordationTrademarksIndiaPage() {
                                                     2
                                                 </div>
                                                 <div>
-                                                    <h3 className="text-lg font-bold text-gray-900 mb-1">Notice of Cargo Suspension Issued (Rule 6)</h3>
+                                                    <h4 className="text-lg font-bold text-gray-900 mb-1">Notice of Cargo Suspension Issued (Rule 6)</h4>
                                                     <p className="text-sm text-gray-600 leading-relaxed m-0">The Proper Officer of Customs halts clearance and promptly serves a formal written Notice of Suspension of Clearance on both the Right Holder (or authorized attorney) and the Importer, stating reasons for suspension.</p>
                                                 </div>
                                             </div>
@@ -485,7 +485,7 @@ export default function CustomsRecordationTrademarksIndiaPage() {
                                                     3
                                                 </div>
                                                 <div>
-                                                    <h3 className="text-lg font-bold text-gray-900 mb-1">Right Holder Joins Joint Inspection within 10 Days</h3>
+                                                    <h4 className="text-lg font-bold text-gray-900 mb-1">Right Holder Joins Joint Inspection within 10 Days</h4>
                                                     <p className="text-sm text-gray-600 leading-relaxed m-0">Under Rule 6, the brand owner or their technical expert must join the physical joint inspection within<strong>10 working days</strong>(extendable by 10 days upon reasonable cause, or 3 days for perishable goods). Right holders are permitted to draw representative samples for forensic examination.</p>
                                                 </div>
                                             </div>
@@ -495,7 +495,7 @@ export default function CustomsRecordationTrademarksIndiaPage() {
                                                     4
                                                 </div>
                                                 <div>
-                                                    <h3 className="text-lg font-bold text-gray-900 mb-1">Submission of Product Authenticity Report &amp; Bond</h3>
+                                                    <h4 className="text-lg font-bold text-gray-900 mb-1">Submission of Product Authenticity Report &amp; Bond</h4>
                                                     <p className="text-sm text-gray-600 leading-relaxed m-0">The right holder submits a formal technical analysis report confirming whether the goods are counterfeit, accompanied by the consignment indemnity bond and bank guarantee. If the right holder confirms the goods are genuine or fails to respond, Customs releases the cargo.</p>
                                                 </div>
                                             </div>
@@ -505,7 +505,7 @@ export default function CustomsRecordationTrademarksIndiaPage() {
                                                     5
                                                 </div>
                                                 <div>
-                                                    <h3 className="text-lg font-bold text-gray-900 mb-1">Formal Seizure under Section 110 of Customs Act</h3>
+                                                    <h4 className="text-lg font-bold text-gray-900 mb-1">Formal Seizure under Section 110 of Customs Act</h4>
                                                     <p className="text-sm text-gray-600 leading-relaxed m-0">Once infringement is substantiated, the Customs Appraiser passes a formal Seizure Order under Section 110 of the Customs Act, 1962. The entire consignment is confiscated and transferred to bonded customs warehouses.</p>
                                                 </div>
                                             </div>
@@ -515,7 +515,7 @@ export default function CustomsRecordationTrademarksIndiaPage() {
                                                     6
                                                 </div>
                                                 <div>
-                                                    <h3 className="text-lg font-bold text-gray-900 mb-1">Customs Adjudication Proceedings (Section 122)</h3>
+                                                    <h4 className="text-lg font-bold text-gray-900 mb-1">Customs Adjudication Proceedings (Section 122)</h4>
                                                     <p className="text-sm text-gray-600 leading-relaxed m-0">The Commissioner or Additional Commissioner of Customs conducts quasi-judicial adjudication hearings. A Show Cause Notice (SCN) is issued to the rogue importer. This grants them an opportunity to prove legitimate authorization.</p>
                                                 </div>
                                             </div>
@@ -525,7 +525,7 @@ export default function CustomsRecordationTrademarksIndiaPage() {
                                                     7
                                                 </div>
                                                 <div>
-                                                    <h3 className="text-lg font-bold text-gray-900 mb-1">Final Confiscation &amp; Imposition of Personal Penalties</h3>
+                                                    <h4 className="text-lg font-bold text-gray-900 mb-1">Final Confiscation &amp; Imposition of Personal Penalties</h4>
                                                     <p className="text-sm text-gray-600 leading-relaxed m-0">The Adjudicating Authority orders absolute confiscation under Section 111(d) of the Customs Act, imposes heavy personal penalties under Section 112, and issues directions for the destruction of the counterfeit goods under Rule 9.</p>
                                                 </div>
                                             </div>
@@ -534,17 +534,17 @@ export default function CustomsRecordationTrademarksIndiaPage() {
 
                                     {/* SECTION 7: DESTRUCTION & IMPORTER PENALTIES */}
                                     <section id="destruction-penalties" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faBan} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Destruction Protocols &amp; Statutory Penalties
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Indian law enforces stringent prohibitions against counterfeit goods re-entering the market:</p>
 
                                         <div className="bg-gradient-to-br from-indigo-50/60 to-purple-50/60 p-6 md:p-8 rounded-2xl border border-purple-100 mb-8 not-prose">
-                                            <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
+                                            <h4 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
                                                 <FontAwesomeIcon icon={faBuildingShield} className="w-5 h-5 mr-2 text-[#6E5E93]" />
                                                 Mandatory Destruction under Rule 9
-                                            </h3>
+                                            </h4>
                                             <p className="text-xs sm:text-sm text-gray-700 leading-relaxed mb-4">Rule 9 of the IPR Rules 2007 explicitly states that confiscated infringing goods shall not be permitted to be re-exported in an unaltered state or sold at public customs auctions. Instead, they must be completely destroyed under customs supervision in environmentally approved facilities, or gifted to charitable institutions only after the counterfeit trademark has been permanently removed.</p>
                                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm text-gray-700">
                                                 <div className="bg-white p-4 rounded-xl border border-gray-200">
@@ -561,17 +561,17 @@ export default function CustomsRecordationTrademarksIndiaPage() {
 
                                     {/* SECTION 8: PARALLEL IMPORTS VS COUNTERFEITS */}
                                     <section id="parallel-imports-grey-market" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faScaleBalanced} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Parallel Imports vs Counterfeits (Kapil Wadhwa)
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">A crucial legal distinction exists under Indian trademark law between<strong>counterfeit (spurious) products</strong>and<strong>parallel imports (grey market goods)</strong>:</p>
 
                                         <div className="bg-gray-50 p-6 md:p-8 rounded-2xl border border-gray-200 mb-8 not-prose">
-                                            <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                            <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                 <FontAwesomeIcon icon={faGavel} className="w-5 h-5 mr-2 text-[#6E5E93]" />
                                                 The Doctrine of International Exhaustion in India
-                                            </h3>
+                                            </h4>
                                             <p className="text-xs sm:text-sm text-gray-700 leading-relaxed mb-4">Under<strong>Section 30(3)(b) of the Trade Marks Act, 1999</strong>, once genuine trademarked goods have been lawfully put on the market anywhere in the world by the proprietor or with their consent, the exclusive right to control further distribution is exhausted.</p>
                                             <ul className="space-y-3 text-xs sm:text-sm text-gray-700 leading-relaxed list-disc list-inside">
                                                 <li><strong>Kapil Wadhwa v. Samsung Electronics Co. Ltd. (Delhi High Court Division Bench, 2012):</strong>The High Court held that India recognizes the principle of<em>International Exhaustion</em>. Importing genuine Samsung printers from foreign markets without authorization from Samsung India did not constitute trademark infringement, provided the importer clearly disclaimed that after-sales services and warranties were not provided by the official Indian distributor.</li>
@@ -582,10 +582,10 @@ export default function CustomsRecordationTrademarksIndiaPage() {
 
                                     {/* SECTION 9: CUSTOMS VS POLICE RAID VS CIVIL ACTION */}
                                     <section id="customs-vs-police-vs-civil" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faTable} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Customs Recordation vs Police Raids vs Civil Suits
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Compare the three primary enforcement pillars available to brand owners in India:</p>
 
                                         <div className="overflow-x-auto my-8 not-prose">
@@ -636,10 +636,10 @@ export default function CustomsRecordationTrademarksIndiaPage() {
 
                                     {/* SECTION 10: VULNERABLE PORT-IMPORT SECTOR MATRIX */}
                                     <section id="vulnerable-port-matrix" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faBoxOpen} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Vulnerable Port-Import Industry Matrix
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Customs seizure patterns in India demonstrate high vulnerability across specific consumer goods classes:</p>
 
                                         <div className="overflow-x-auto my-8 not-prose">
@@ -692,10 +692,10 @@ export default function CustomsRecordationTrademarksIndiaPage() {
 
                                     {/* SECTION 11: ACTION CHECKLIST */}
                                     <section id="customs-action-checklist" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faCheckCircle} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Customs Recordation Action Checklist
-                                        </h2>
+                                        </h3>
                                         <ul className="list-none space-y-4 mb-8">
                                             <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Audit Registered Trademarks:</strong>Verify active trademark certificates on Form TM-RG from IP India for all critical product lines.</span></li>
                                             <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Compile Technical Authenticity Dossier:</strong>Document micro-printing, security packaging, and authorized overseas consignor data.</span></li>
@@ -709,15 +709,15 @@ export default function CustomsRecordationTrademarksIndiaPage() {
 
                                     {/* SECTION 12: FAQS */}
                                     <section id="faqs" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl lg:text-3xl font-black text-gray-900 mb-8 text-center text-[rgb(110,94,147)]">
+                                        <h3 className="text-xl md:text-2xl lg:text-3xl font-black text-gray-900 mb-8 text-center text-[rgb(110,94,147)]">
                                             Frequently Asked Questions
-                                        </h2>
+                                        </h3>
                                         <div className="space-y-4">
                                             {faqs.map((faq, index) => (
                                                 <div key={index} className="bg-white border border-gray-100 rounded-3xl p-8 shadow-sm hover:shadow-md transition-shadow">
-                                                    <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-4 flex items-start leading-snug">
+                                                    <h4 className="text-lg md:text-xl font-bold text-gray-900 mb-4 flex items-start leading-snug">
                                                         <span className="text-[rgb(110,94,147)] mr-4 font-black text-2xl">Q.</span>{faq.question}
-                                                    </h3>
+                                                    </h4>
                                                     <p className="text-gray-600 pl-10 m-0">{faq.answer}</p>
                                                 </div>
                                             ))}
@@ -726,10 +726,10 @@ export default function CustomsRecordationTrademarksIndiaPage() {
 
                                     {/* SECTION 13: STRATEGIC ENFORCEMENT ADVICE */}
                                     <section id="final-takeaway" className="scroll-mt-32 pt-16">
-                                        <h2 className="text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLightbulb} className="w-8 h-8 mr-3 text-yellow-500" />
                                             Strategic Border Enforcement Advice
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Customs recordation is the single most cost-effective brand protection instrument for enterprises operating in India. By establishing automated Risk Management System (RMS) filters at Indian borders, you intercept entire shipping containers of counterfeit inventory before they inflict catastrophic financial and reputational harm on your domestic market.</p>
                                         <p className="mb-6">Never wait for counterfeit goods to saturate Indian retail markets or online e-commerce platforms. Partner with veteran intellectual property attorneys and customs practitioners to manage your ICEGATE IPR filings, liaise with Customs Appraising Groups, execute port sampling, and ensure total destruction of spurious consignments. For multi-channel brand defense, explore our specialized guides on<Link href="/how-to-send-trademark-legal-notice-india" className="text-[rgb(110,94,147)] hover:underline font-medium">how to send trademark legal notices</Link>,<Link href="/flipkart-brand-approval-trademark-requirements-india" className="text-[rgb(110,94,147)] hover:underline font-medium">Flipkart brand approval</Link>, and<Link href="/amazon-brand-registry-trademark-requirements-india" className="text-[rgb(110,94,147)] hover:underline font-medium">Amazon Brand Registry requirements</Link>.</p>
                                     </section>
@@ -744,9 +744,9 @@ export default function CustomsRecordationTrademarksIndiaPage() {
                                                     </span>
                                                 </div>
 
-                                                <h3 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl mb-4">
+                                                <h4 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl mb-4">
                                                     Block Counterfeit Imports with Indian Customs Recordation
-                                                </h3>
+                                                </h4>
 
                                                 <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">Deploy seasoned IP attorneys to record your trademarks on ICEGATE, execute customs indemnity bonds, intercept suspicious port cargo, and shut down overseas counterfeiting syndicates.</p>
 
@@ -778,7 +778,7 @@ export default function CustomsRecordationTrademarksIndiaPage() {
                             {/* About Author */}
                             <div className="bg-white p-4 sm:p-5 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center">
                                 <img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-16 h-16 rounded-full mb-2.5 shadow-md object-cover border-2 border-[#6E5E93]/20" />
-                                <h3 className="text-base font-bold text-gray-900 mb-0.5">Rahul Roy</h3>
+                                <h4 className="text-base font-bold text-gray-900 mb-0.5">Rahul Roy</h4>
                                 <p className="text-xs text-[#6E5E93] font-semibold mb-2">Trademark Research Specialist</p>
                                 <p className="text-xs text-gray-600 leading-relaxed m-0">Rahul specializes in customs border recordation, anti-counterfeiting investigations, IPR Rules 2007 compliance, and international port enforcement across India.</p>
                             </div>
@@ -786,7 +786,7 @@ export default function CustomsRecordationTrademarksIndiaPage() {
                             {/* Dark CTA Box */}
                             <div className="bg-[#0C002B] p-5 rounded-2xl shadow-xl border border-white/5 text-white relative overflow-hidden group">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-[rgb(110,94,147)] rounded-full blur-[70px] opacity-30 group-hover:opacity-50 transition-opacity"></div>
-                                <h3 className="text-base font-black mb-1.5 relative z-10 leading-tight">Stop Port Counterfeits</h3>
+                                <h4 className="text-base font-black mb-1.5 relative z-10 leading-tight">Stop Port Counterfeits</h4>
                                 <p className="text-xs text-white/80 mb-3.5 leading-relaxed relative z-10 font-normal">Intercept fake imports before they clear customs. Record your brand on ICEGATE with expert IP counsels.</p>
                                 <Link href="/contact-us" className="block relative z-10">
                                     <button className="w-full bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-2.5 px-4 rounded-xl transition-all shadow-md text-xs uppercase tracking-wider">
@@ -797,7 +797,7 @@ export default function CustomsRecordationTrademarksIndiaPage() {
 
                             {/* Related Resources */}
                             <div className="bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-100">
-                                <h3 className="text-xs font-black text-gray-400 mb-5 uppercase tracking-[0.25em]">Related Resources</h3>
+                                <h4 className="text-xs font-black text-gray-400 mb-5 uppercase tracking-[0.25em]">Related Resources</h4>
                                 <ul className="space-y-6">
                                     <li><Link href="/anti-counterfeiting-police-raid-procedure-section-115-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faShieldHalved} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Section 115 Police Raids</span></Link></li>
                                     <li><Link href="/civil-vs-criminal-trademark-infringement-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faGavel} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Civil vs Criminal TM</span></Link></li>

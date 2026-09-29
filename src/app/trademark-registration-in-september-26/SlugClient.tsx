@@ -381,7 +381,7 @@ export default function SlugClient() {
                     ><span className="w-5 h-5 rounded-full bg-purple-100 text-[#6E5E93] flex items-center justify-center text-[10px] font-bold mr-2 flex-shrink-0">{idx + 1}</span><span className="truncate">{section.title}</span></a>))}</nav></div></details></div>{/* ======================================================= CENTER EDITORIAL COLUMN ======================================================== */}<div className="bg-white p-6 md:p-12 rounded-2xl shadow-sm space-y-12 border border-gray-50">{/* Meta details */}<div className="flex flex-wrap items-center justify-between border-b pb-6"><span className="text-xl font-bold text-gray-800">Trademark Registration in September 2026 Guide</span></div>{/* ===================================================== QUICK ANSWER ====================================================== */}<div
               id="quick-answer"
               className="bg-gray-50 border-l-4 border-[rgb(110,94,147)] p-6 rounded-r-xl shadow-inner"
-            ><h2 className="font-bold text-xl mb-3 text-gray-900">Quick Answer</h2><p className="text-gray-800 font-medium leading-relaxed">Trademark registration in September 2026 involves selecting a distinctive trademark, conducting a proper search, identifying the relevant trademark class, preparing accurate applicant and mark information and filing the application through the applicable Registry process. After filing, the application may proceed through examination, publication and registration, or may require a response if the Registry raises an objection.</p>
+            ><p className="font-bold text-xl mb-3 text-gray-900">Quick Answer</p><p className="text-gray-800 font-medium leading-relaxed">Trademark registration in September 2026 involves selecting a distinctive trademark, conducting a proper search, identifying the relevant trademark class, preparing accurate applicant and mark information and filing the application through the applicable Registry process. After filing, the application may proceed through examination, publication and registration, or may require a response if the Registry raises an objection.</p>
             </div>
 
             {/* =====================================================
@@ -403,9 +403,9 @@ export default function SlugClient() {
 
               <div className="grid md:grid-cols-2 gap-5">
                 <div className="border border-gray-200 rounded-xl p-6 bg-white">
-                  <h3 className="font-bold text-lg text-gray-900 mb-3">
+                  <h4 className="font-bold text-lg text-gray-900 mb-3">
                     Before Filing
-                  </h3>
+                  </h4>
 
                   <ul className="list-disc pl-5 space-y-2 text-gray-600">
                     <li>Choose a distinctive trademark.</li>
@@ -417,9 +417,9 @@ export default function SlugClient() {
                 </div>
 
                 <div className="border border-gray-200 rounded-xl p-6 bg-white">
-                  <h3 className="font-bold text-lg text-gray-900 mb-3">
+                  <h4 className="font-bold text-lg text-gray-900 mb-3">
                     After Filing
-                  </h3>
+                  </h4>
 
                   <ul className="list-disc pl-5 space-y-2 text-gray-600">
                     <li>Track application status.</li>
@@ -439,9 +439,9 @@ export default function SlugClient() {
               id="trademark-search"
               className="space-y-6 text-lg text-gray-700 leading-relaxed"
             >
-              <h2 className="text-3xl font-bold text-gray-900">
+              <h3 className="text-3xl font-bold text-gray-900">
                 Trademark Search Before Filing
-              </h2>
+              </h3>
 
               <p>A trademark search should generally be performed before filing an application. Searching only for an identical name may not provide a complete picture because similar, phonetic or visually comparable marks can also be relevant.</p>
 
@@ -452,9 +452,9 @@ export default function SlugClient() {
                 conflicting marks before an application is submitted.
               </blockquote>
 
-              <h3 className="text-2xl font-bold text-gray-900">
+              <h4 className="text-2xl font-bold text-gray-900">
                 What should a trademark search consider?
-              </h3>
+              </h4>
 
               <ul className="list-disc pl-6 space-y-3">
                 <li>Identical trademarks.</li>
@@ -473,9 +473,9 @@ export default function SlugClient() {
               id="trademark-class"
               className="space-y-6 text-lg text-gray-700 leading-relaxed"
             >
-              <h2 className="text-3xl font-bold text-gray-900">
+              <h3 className="text-3xl font-bold text-gray-900">
                 Choosing the Correct Trademark Class
-              </h2>
+              </h3>
 
               <p>Trademark protection is connected to the goods and services covered by an application. Selecting an appropriate class is therefore an important part of trademark registration.</p>
 
@@ -525,9 +525,9 @@ export default function SlugClient() {
               id="documents"
               className="space-y-6 text-lg text-gray-700 leading-relaxed"
             >
-              <h2 className="text-3xl font-bold text-gray-900">
+              <h3 className="text-3xl font-bold text-gray-900">
                 Documents Required for Trademark Registration
-              </h2>
+              </h3>
 
               <p>The exact documents and supporting information can vary depending on the applicant and the circumstances of the filing. The application should contain accurate and consistent applicant and trademark information.</p>
 
@@ -561,9 +561,9 @@ export default function SlugClient() {
               id="registration-process"
               className="space-y-6 text-lg text-gray-700 leading-relaxed"
             >
-              <h2 className="text-3xl font-bold text-gray-900">
+              <h3 className="text-3xl font-bold text-gray-900">
                 Trademark Registration Process in India
-              </h2>
+              </h3>
 
               <p>The trademark registration journey involves several stages. While the exact path can vary between applications, applicants should understand the general process before filing.</p>
 
@@ -619,9 +619,9 @@ export default function SlugClient() {
                     </div>
 
                     <div>
-                      <h3 className="font-bold text-gray-900">
+                      <h4 className="font-bold text-gray-900">
                         {title}
-                      </h3>
+                      </h4>
 
                       <p className="text-gray-600 text-base mt-1">{description}</p>
                     </div>
@@ -637,9 +637,9 @@ export default function SlugClient() {
               id="examination"
               className="space-y-6 text-lg text-gray-700 leading-relaxed"
             >
-              <h2 className="text-3xl font-bold text-gray-900">
+              <h3 className="text-3xl font-bold text-gray-900">
                 Trademark Examination and Objection
-              </h2>
+              </h3>
 
               <p>Filing a trademark application does not automatically mean that the mark will be registered. The application may undergo examination by the Trademark Registry.</p>
 
@@ -647,25 +647,25 @@ export default function SlugClient() {
 
               <div className="grid md:grid-cols-3 gap-5">
                 <div className="bg-gray-50 border rounded-xl p-6">
-                  <h3 className="font-bold text-gray-900 mb-2">
+                  <h4 className="font-bold text-gray-900 mb-2">
                     Review
-                  </h3>
+                  </h4>
 
                   <p className="text-base text-gray-600">Understand the specific issues mentioned in the examination report.</p>
                 </div>
 
                 <div className="bg-gray-50 border rounded-xl p-6">
-                  <h3 className="font-bold text-gray-900 mb-2">
+                  <h4 className="font-bold text-gray-900 mb-2">
                     Respond
-                  </h3>
+                  </h4>
 
                   <p className="text-base text-gray-600">Prepare the appropriate response within the applicable procedural period.</p>
                 </div>
 
                 <div className="bg-gray-50 border rounded-xl p-6">
-                  <h3 className="font-bold text-gray-900 mb-2">
+                  <h4 className="font-bold text-gray-900 mb-2">
                     Follow Up
-                  </h3>
+                  </h4>
 
                   <p className="text-base text-gray-600">Monitor subsequent Registry communications and proceedings.</p>
                 </div>
@@ -679,9 +679,9 @@ export default function SlugClient() {
               id="objection"
               className="space-y-6 text-lg text-gray-700 leading-relaxed"
             >
-              <h2 className="text-3xl font-bold text-gray-900">
+              <h3 className="text-3xl font-bold text-gray-900">
                 What to Do When a Trademark Objection Is Raised
-              </h2>
+              </h3>
 
               <p>A trademark objection should be reviewed carefully rather than treated as an automatic rejection. The applicant should first understand the specific grounds mentioned by the Registry.</p>
 
@@ -704,16 +704,16 @@ export default function SlugClient() {
               id="timeline"
               className="space-y-6 text-lg text-gray-700 leading-relaxed"
             >
-              <h2 className="text-3xl font-bold text-gray-900">
+              <h3 className="text-3xl font-bold text-gray-900">
                 Trademark Registration Timeline
-              </h2>
+              </h3>
 
               <p>There is no single guaranteed timeline that applies to every trademark application. The time involved can depend on examination, objections, hearings, opposition proceedings and other Registry processes.</p>
 
               <div className="bg-gray-50 border border-gray-200 rounded-xl p-6">
-                <h3 className="font-bold text-gray-900 mb-4">
+                <h4 className="font-bold text-gray-900 mb-4">
                   Factors that can affect the timeline
-                </h3>
+                </h4>
 
                 <ul className="list-disc pl-6 space-y-2">
                   <li>Application completeness</li>
@@ -733,9 +733,9 @@ export default function SlugClient() {
               id="cost"
               className="space-y-6 text-lg text-gray-700 leading-relaxed"
             >
-              <h2 className="text-3xl font-bold text-gray-900">
+              <h3 className="text-3xl font-bold text-gray-900">
                 Trademark Registration Cost
-              </h2>
+              </h3>
 
               <p>The overall cost of trademark registration can depend on several factors, including the applicant category, number of classes, professional assistance and whether additional proceedings become necessary.</p>
 
@@ -743,25 +743,25 @@ export default function SlugClient() {
 
               <div className="grid md:grid-cols-3 gap-4">
                 <div className="border rounded-xl p-5">
-                  <h3 className="font-bold text-gray-900">
+                  <h4 className="font-bold text-gray-900">
                     Government Fees
-                  </h3>
+                  </h4>
 
                   <p className="text-sm text-gray-600 mt-2">Applicable statutory filing and related government charges.</p>
                 </div>
 
                 <div className="border rounded-xl p-5">
-                  <h3 className="font-bold text-gray-900">
+                  <h4 className="font-bold text-gray-900">
                     Professional Fees
-                  </h3>
+                  </h4>
 
                   <p className="text-sm text-gray-600 mt-2">Charges for professional preparation and assistance.</p>
                 </div>
 
                 <div className="border rounded-xl p-5">
-                  <h3 className="font-bold text-gray-900">
+                  <h4 className="font-bold text-gray-900">
                     Additional Proceedings
-                  </h3>
+                  </h4>
 
                   <p className="text-sm text-gray-600 mt-2">Additional work may arise if objections, hearings or other proceedings occur.</p>
                 </div>
@@ -775,9 +775,9 @@ export default function SlugClient() {
               id="mistakes"
               className="space-y-6 text-lg text-gray-700 leading-relaxed"
             >
-              <h2 className="text-3xl font-bold text-gray-900">
+              <h3 className="text-3xl font-bold text-gray-900">
                 Common Trademark Registration Mistakes to Avoid
-              </h2>
+              </h3>
 
               <ul className="list-decimal pl-6 space-y-4">
                 <li><strong>Skipping the trademark search:</strong>Filing without checking potentially conflicting marks can create avoidable risks.</li>
@@ -801,9 +801,9 @@ export default function SlugClient() {
               id="renewal"
               className="space-y-6 text-lg text-gray-700 leading-relaxed"
             >
-              <h2 className="text-3xl font-bold text-gray-900">
+              <h3 className="text-3xl font-bold text-gray-900">
                 Trademark Renewal and Long-Term Protection
-              </h2>
+              </h3>
 
               <p>Trademark protection requires ongoing management after registration. Businesses should maintain accurate records of their registrations and monitor applicable renewal requirements.</p>
 
@@ -811,19 +811,19 @@ export default function SlugClient() {
 
               <div className="grid md:grid-cols-3 gap-4">
                 <div className="bg-gray-50 border rounded-xl p-5">
-                  <h3 className="font-bold">Track Registration</h3>
+                  <h4 className="font-bold">Track Registration</h4>
 
                   <p className="text-sm text-gray-600 mt-2">Keep registration details and important dates organized.</p>
                 </div>
 
                 <div className="bg-gray-50 border rounded-xl p-5">
-                  <h3 className="font-bold">Monitor Usage</h3>
+                  <h4 className="font-bold">Monitor Usage</h4>
 
                   <p className="text-sm text-gray-600 mt-2">Maintain relevant records of commercial use where appropriate.</p>
                 </div>
 
                 <div className="bg-gray-50 border rounded-xl p-5">
-                  <h3 className="font-bold">Plan Renewal</h3>
+                  <h4 className="font-bold">Plan Renewal</h4>
 
                   <p className="text-sm text-gray-600 mt-2">Monitor applicable renewal requirements in advance.</p>
                 </div>
@@ -837,18 +837,18 @@ export default function SlugClient() {
               id="international"
               className="space-y-6 text-lg text-gray-700 leading-relaxed"
             >
-              <h2 className="text-3xl font-bold text-gray-900">
+              <h3 className="text-3xl font-bold text-gray-900">
                 International Trademark Protection
-              </h2>
+              </h3>
 
               <p>Indian trademark registration provides protection in India. Businesses expanding into foreign markets should separately consider trademark protection in those jurisdictions.</p>
 
               <p>Depending on the countries involved, businesses may consider applicable national filing systems or international mechanisms such as the Madrid System, subject to the relevant requirements.</p>
 
               <div className="bg-gray-50 border border-gray-200 rounded-xl p-6">
-                <h3 className="font-bold text-gray-900 mb-3">
+                <h4 className="font-bold text-gray-900 mb-3">
                   Important distinction
-                </h3>
+                </h4>
 
                 <p className="text-gray-600">Registration in India should not be treated as automatic worldwide trademark protection. International expansion requires consideration of the protection available in each relevant market.</p>
               </div>
@@ -861,9 +861,9 @@ export default function SlugClient() {
               id="checklist"
               className="space-y-6 text-lg text-gray-700 leading-relaxed"
             >
-              <h2 className="text-3xl font-bold text-gray-900">
+              <h3 className="text-3xl font-bold text-gray-900">
                 September 2026 Trademark Registration Checklist
-              </h2>
+              </h3>
 
               <p>Before filing your trademark application in September 2026, review the following checklist to make sure the major preparation steps have been considered.</p>
 
@@ -904,9 +904,9 @@ export default function SlugClient() {
               id="faqs"
               className="space-y-4 pt-8 border-t border-gray-100"
             >
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              <h3 className="text-3xl font-bold text-gray-900 mb-6">
                 Frequently Asked Questions
-              </h2>
+              </h3>
 
               {[
                 {
@@ -970,9 +970,9 @@ export default function SlugClient() {
                 KEPT FROM ORIGINAL
             ====================================================== */}
             <div className="pt-8 pb-4">
-              <h3 className="font-bold text-xl text-gray-900 mb-4">
+              <h4 className="font-bold text-xl text-gray-900 mb-4">
                 More IP Guides
-              </h3>
+              </h4>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <Link
@@ -996,9 +996,9 @@ export default function SlugClient() {
                 KEPT FROM ORIGINAL
             ====================================================== */}
             <div className="pt-4 border-t border-gray-100">
-              <h3 className="font-bold text-lg text-gray-900 mb-2">
+              <h4 className="font-bold text-lg text-gray-900 mb-2">
                 References & Authority
-              </h3>
+              </h4>
 
               <ul className="list-disc pl-5 space-y-1 text-sm">
                 <li><a
@@ -1021,9 +1021,9 @@ export default function SlugClient() {
             <section className="mt-12">
               <div className="bg-[#16002F] rounded-[32px] px-6 py-14 md:px-12 md:py-20 text-center text-white">
                 
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
+                <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
                   Secure Your Trademark's Future
-                </h2>
+                </h3>
 
                 <p className="text-base md:text-xl lg:text-2xl text-gray-200 max-w-4xl mx-auto leading-relaxed mb-10">Don't leave your brand protection to chance. Search for potential conflicts, choose the right trademark class, prepare your application correctly, and build stronger protection for your brand in September 2026.</p>
 
@@ -1055,9 +1055,9 @@ export default function SlugClient() {
 
             {/* Need IP Protection? CTA Card */}
             <div className="bg-[#0C002B] text-white p-6 rounded-xl shadow-xl space-y-5 text-center">
-              <h3 className="font-bold text-xl">
+              <h4 className="font-bold text-xl">
                 Need Expert Advice?
-              </h3>
+              </h4>
 
               <p className="text-sm font-medium opacity-90 leading-relaxed">Speak with our trademark attorneys today. Get a free consultation and secure your brand.</p>
 
@@ -1076,9 +1076,9 @@ export default function SlugClient() {
 
             {/* Related Services Card */}
             <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-              <h3 className="font-bold text-gray-900 mb-4 text-lg">
+              <h4 className="font-bold text-gray-900 mb-4 text-lg">
                 Related Services
-              </h3>
+              </h4>
 
               <ul className="space-y-4 text-[15px]">
                 <li><Link
@@ -1125,9 +1125,9 @@ export default function SlugClient() {
               ✕
             </button>
 
-            <h3 className="text-2xl font-black text-gray-900 mb-2">
+            <h4 className="text-2xl font-black text-gray-900 mb-2">
               Request Legal Advisory
-            </h3>
+            </h4>
 
             <p className="text-sm text-gray-500 mb-6 font-medium">Our certified advocates will contact you shortly.</p>
 

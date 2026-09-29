@@ -326,42 +326,42 @@ export default function TrademarkProcessStepsPage() {
 
                                     {/* SECTION 2: PREREQUISITES */}
                                     <section id="prerequisites" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faFileContract} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Key Prerequisites Before Filing
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Before generating an application on the government portal, applicants must assemble critical business documentation and determine legal parameters. Completing these foundational tasks prevents procedural show-cause notices and filing defects.</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     Applicant Classification
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Determine whether the applicant is an Individual, Startup (recognized by DPIIT), Small Enterprise (with a valid Udyam Registration Certificate), or a Large Corporate entity. Founders can follow our dedicated guide on<Link href="/how-to-register-a-trademark-for-my-startup" className="text-[rgb(110,94,147)] hover:underline font-medium">how to register a trademark for my startup</Link>to claim a 50% concession on government filing fees.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     User Date Claim
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Decide whether the mark is applied on a &ldquo;Proposed to be Used&rdquo; basis or with prior continuous commercial use. Claiming prior use requires submitting a notarized User Affidavit accompanied by dated invoices, packaging specimens, or marketing collateral.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     Representation of the Mark
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Provide a high-resolution digital image of the logo, device, label, or 3D shape in standard JPEG format. If registering a standard wordmark, exact capitalization and phonetic spellings must be finalized.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     Power of Attorney (TM-48)
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">When retaining an advocate or registered trademark agent to handle filings and official correspondence, a duly executed Form TM-48 (stamped as per local state stamp acts) is mandatory.</p>
                                             </div>
                                         </div>
@@ -369,10 +369,10 @@ export default function TrademarkProcessStepsPage() {
 
                                     {/* SECTION 3: 7-STEP PROCESS */}
                                     <section id="step-by-step" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faListUl} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             7-Step Trademark Registration Process
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">The Indian registration workflow moves through clear statutory milestones designed to confirm brand distinctiveness and protect the legitimate rights of earlier mark holders.</p>
 
                                         {/* STEP 1 */}
@@ -381,7 +381,7 @@ export default function TrademarkProcessStepsPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 1</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Pre-Filing Clearance</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Comprehensive Trademark Search &amp; Availability Assessment</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Comprehensive Trademark Search &amp; Availability Assessment</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Before spending resources on filing, applicants must conduct a comprehensive availability search on the official Trade Marks Registry database and leverage tools like a<Link href="/free-ai-powered-trademark-search" className="text-[rgb(110,94,147)] hover:underline font-medium">free AI powered trademark search</Link>. Searching must go beyond exact character matches to identify phonetic equivalents, visual resemblances, and conceptual similarities under Section 11 of the Trade Marks Act, 1999.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">An effective search covers registered marks, pending applications, marks under opposition, and abandoned records across target classes and related industries. To conduct initial queries, use the dedicated<Link href="/trademark-search" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark search tool</Link>or follow our practical guide on<Link href="/how-to-search-for-existing-trademark" className="text-[rgb(110,94,147)] hover:underline font-medium">how to search for existing trademark</Link>.</p>
                                         </div>
@@ -392,7 +392,7 @@ export default function TrademarkProcessStepsPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 2</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Classification</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Classification of Goods and Services (Nice Classification)</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Classification of Goods and Services (Nice Classification)</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Trademarks in India are categorized under 45 distinct classes as established by the international Nice Agreement. Classes 1 through 34 encompass physical manufactured goods (such as electronics, apparel, pharmaceuticals, and packaged foods), while Classes 35 through 45 cover services (including software consulting, retail operations, healthcare, and educational institutes).</p>
                                             <p className="text-gray-700 leading-relaxed m-0">Selecting incorrect classes can leave core commercial offerings unprotected or result in immediate objection. Use our interactive<Link href="/trademark-class-finder" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark class finder</Link>to identify exact classifications and formulate comprehensive item specifications.</p>
                                         </div>
@@ -403,7 +403,7 @@ export default function TrademarkProcessStepsPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 3</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Documentation</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Document Compilation and User Affidavit Drafting</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Document Compilation and User Affidavit Drafting</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Accurate documentation is critical for smooth processing. Key requirements include:</p>
                                             <ul className="list-disc list-inside space-y-2 text-gray-700 mb-4">
                                                 <li><strong>Constitutional Documents:</strong>Incorporation certificate, partnership deed, or PAN/Aadhaar of individual applicants.</li>
@@ -419,7 +419,7 @@ export default function TrademarkProcessStepsPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 4</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Statutory Filing</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Online E-Filing of Form TM-A on IP India Portal</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Online E-Filing of Form TM-A on IP India Portal</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Form TM-A is the single unified application form for trademark registration across goods and services. The application is uploaded through the official portal using a secure digital signature.</p>
                                             <p className="text-gray-700 leading-relaxed mb-4">Once Form TM-A is submitted and the statutory fee is paid online, the system immediately generates an official Application Number and a stamped e-acknowledgment receipt.</p>
                                             <div className="bg-amber-50 p-4 rounded-xl border border-amber-200">
@@ -433,7 +433,7 @@ export default function TrademarkProcessStepsPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 5</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Substantive Examination</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Examination by the Registry and Reply to Objections</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Examination by the Registry and Reply to Objections</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">A designated examiner at the Trade Marks Registry conducts an exhaustive substantive examination to verify whether the mark fulfills statutory criteria. The examiner scrutinizes the mark for:</p>
                                             <ul className="list-disc list-inside space-y-2 text-gray-700 mb-4">
                                                 <li><strong>Absolute Grounds for Refusal (Section 9):</strong>Whether the mark is devoid of distinctive character, purely descriptive of goods/services, or customary in current trade language.</li>
@@ -448,7 +448,7 @@ export default function TrademarkProcessStepsPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 6</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Public Advertisement</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Publication in the Official Trade Marks Journal</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Publication in the Official Trade Marks Journal</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">When the examiner is satisfied by the written response or following a hearing, the trademark is formally &ldquo;Accepted &amp. Advertised&rdquo. In the weekly Trade Marks Journal published on the official<a href="https://ipindia.gov.in/" target="_blank" rel="noopener noreferrer" className="text-[rgb(110,94,147)] hover:underline font-medium">IP India Portal</a>.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">Publication opens a statutory<strong>4-month opposition period</strong>under Section 21 of the Act. Any third party who believes the mark infringes their prior rights or harms fair competition can file a Notice of Opposition on Form TM-O. If no opposition is filed within 4 months, or if an opposition is resolved in favor of the applicant, the mark proceeds directly to final registration.</p>
                                         </div>
@@ -459,7 +459,7 @@ export default function TrademarkProcessStepsPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 7</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Final Grant</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Issuance of Registration Certificate &amp; Maintenance</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Issuance of Registration Certificate &amp; Maintenance</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Upon clearing the opposition period, the Registrar issues an electronically authenticated Trademark Registration Certificate bearing the seal of the Trade Marks Registry.</p>
                                             <p className="text-gray-700 leading-relaxed mb-4">At this stage, you may officially replace the TM symbol with the registered<strong>&reg;</strong>symbol. The certificate guarantees exclusive commercial rights nationwide, retroactive to the original date of application, valid for 10 years.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">Protection can be preserved indefinitely through timely<Link href="/how-to-renew-a-trademark" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark renewals</Link>filed every 10 years via Form TM-R.</p>
@@ -468,10 +468,10 @@ export default function TrademarkProcessStepsPage() {
 
                                     {/* SECTION 4: TABLE OF STAGES, TIMELINES, & FEES */}
                                     <section id="process-stages-table" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faTable} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Domestic Trademark Registration Stages, Timelines, and Fees
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Below is a structured comparative breakdown of each operational stage in the Indian trademark lifecycle, detailing associated statutory forms, timelines, government fees, and primary legal standards.</p>
 
                                         <div className="overflow-x-auto mb-8 shadow-sm rounded-xl border border-gray-200">
@@ -550,30 +550,30 @@ export default function TrademarkProcessStepsPage() {
 
                                     {/* SECTION 5: COMMON PITFALLS */}
                                     <section id="common-pitfalls" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faExclamationTriangle} className="w-8 h-8 mr-3 text-amber-500" />
                                             Common Pitfalls and How to Avoid Them
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">A substantial percentage of trademark applications in India face administrative delays or refusal due to avoidable mistakes during initial drafting. Avoiding these pitfalls preserves legal rights and eliminates redundant expenses.</p>
 
                                         <div className="space-y-6">
                                             <div className="border-l-4 border-red-500 pl-4 py-2">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">1. Selecting Descriptive or Generic Names</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">1. Selecting Descriptive or Generic Names</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Attempting to register words that directly describe the function, quality, or characteristics of your product (such as &ldquo;Best Cotton&rdquo. For garments or &ldquo;Fast Delivery&rdquo. For courier services) attracts immediate Section 9(1)(a) objections. Favour coined, arbitrary, or suggestive marks.</p>
                                             </div>
 
                                             <div className="border-l-4 border-red-500 pl-4 py-2">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">2. Incorrect Class Selection</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">2. Incorrect Class Selection</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Filing in an inappropriate class or leaving out essential commercial activities means you hold no valid rights over your primary business vertical. Once filed, an application cannot be amended to add new classes; a fresh application must be submitted.</p>
                                             </div>
 
                                             <div className="border-l-4 border-red-500 pl-4 py-2">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">3. Inaccurate User Date Claims</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">3. Inaccurate User Date Claims</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Claiming continuous use from a historical date without solid documentary evidence (invoices, domain registration records, or tax receipts) will result in a show-cause notice. If evidence is unavailable, file on a &ldquo;Proposed to be Used&rdquo; basis.</p>
                                             </div>
 
                                             <div className="border-l-4 border-red-500 pl-4 py-2">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">4. Missing Statutory Deadlines</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">4. Missing Statutory Deadlines</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Failing to file an objection reply within the strict 30-day window causes the application status to change to &ldquo;Abandoned&rdquo;. While restoration is possible via Form TM-M, it involves substantial penalty fees and administrative complexities.</p>
                                             </div>
                                         </div>
@@ -581,10 +581,10 @@ export default function TrademarkProcessStepsPage() {
 
                                     {/* SECTION 6: POST-REGISTRATION RIGHTS */}
                                     <section id="post-registration" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faScaleBalanced} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Post-Registration Rights and Renewal
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Securing your official registration certificate transforms your brand from a vulnerable business asset into an enforceable, valuable piece of intellectual property.</p>
                                         <p className="mb-6">As a registered proprietor, you hold exclusive legal rights under Section 28 of the Act to use the mark across India in connection with the goods and services for which it is registered. You can file civil infringement suits against unauthorized parties, obtain interim injunctions, claim damages or accounts of profit, and seek criminal action against counterfeiters under Sections 103 and 104 of the Act.</p>
                                         <p className="mb-6">Furthermore, a registered trademark can be commercialized like any other capital asset: you can license it to franchisees for recurring royalties, assign it permanently via Form TM-P, or use it as collateral for corporate financing. Ensure you protect this asset by scheduling decennial renewals through Form TM-R before expiry.</p>
@@ -592,10 +592,10 @@ export default function TrademarkProcessStepsPage() {
 
                                     {/* SECTION 7: CHECKLIST */}
                                     <section id="checklist" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faCheckCircle} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Trademark Registration Checklist
-                                        </h2>
+                                        </h3>
                                         <ul className="list-none space-y-4 mb-8">
                                             <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Run Clearance Search:</strong>Validate name and logo availability across classes 1–45 using government and AI tools.</span></li>
                                             <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Map All Business Classes:</strong>Determine current product lines and anticipated expansions over the next 5 years.</span></li>
@@ -609,15 +609,15 @@ export default function TrademarkProcessStepsPage() {
 
                                     {/* SECTION 8: FAQS (EXACTLY 8 MATCHING SCHEMA) */}
                                     <section id="faqs" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl lg:text-3xl font-black text-gray-900 mb-8 text-center text-[rgb(110,94,147)]">
+                                        <h3 className="text-xl md:text-2xl lg:text-3xl font-black text-gray-900 mb-8 text-center text-[rgb(110,94,147)]">
                                             Frequently Asked Questions
-                                        </h2>
+                                        </h3>
                                         <div className="space-y-4">
                                             {faqs.map((faq, index) => (
                                                 <div key={index} className="bg-white border border-gray-100 rounded-3xl p-8 shadow-sm hover:shadow-md transition-shadow">
-                                                    <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-4 flex items-start leading-snug">
+                                                    <h4 className="text-lg md:text-xl font-bold text-gray-900 mb-4 flex items-start leading-snug">
                                                         <span className="text-[rgb(110,94,147)] mr-4 font-black text-2xl">Q.</span>{faq.question}
-                                                    </h3>
+                                                    </h4>
                                                     <p className="text-gray-600 pl-10 m-0">{faq.answer}</p>
                                                 </div>
                                             ))}
@@ -626,10 +626,10 @@ export default function TrademarkProcessStepsPage() {
 
                                     {/* SECTION 9: FINAL STRATEGIC ADVICE */}
                                     <section id="final-takeaway" className="scroll-mt-32 pt-16">
-                                        <h2 className="text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLightbulb} className="w-8 h-8 mr-3 text-yellow-500" />
                                             Final Strategic Advice
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">The trademark registration process in India is a disciplined legal journey that transforms your brand into a defensible corporate asset. By taking proactive steps—such as conducting thorough prior-art searches, categorizing goods accurately, and replying promptly to examiner reports—you position your enterprise for smooth approval and lasting market supremacy.</p>
                                         <p className="mb-6">Whether you are an ambitious startup launching your inaugural product or an established business consolidating your IP portfolio, professional counsel ensures that every statutory requirement is met flawlessly. Check availability today and initiate your official application with complete confidence.</p>
                                     </section>
@@ -644,9 +644,9 @@ export default function TrademarkProcessStepsPage() {
                                                     </span>
                                                 </div>
 
-                                                <h3 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl mb-4">
+                                                <h4 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl mb-4">
                                                     Protect Your Brand Identity Today
-                                                </h3>
+                                                </h4>
 
                                                 <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">Partner with expert IP attorneys to handle your end-to-end trademark registration. From clearance search and Form TM-A filing to examination replies and final certificate issuance.</p>
 
@@ -678,7 +678,7 @@ export default function TrademarkProcessStepsPage() {
                             {/* About Author */}
                             <div className="bg-white p-6 rounded-[2.5rem] shadow-sm border border-gray-100 flex flex-col items-center text-center">
                                 <img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-24 h-24 rounded-full mb-4 shadow-md object-cover" />
-                                <h3 className="text-xl font-bold text-gray-900 mb-2">Rahul Roy</h3>
+                                <h4 className="text-xl font-bold text-gray-900 mb-2">Rahul Roy</h4>
                                 <p className="text-sm text-gray-600 mb-4 font-medium">Trademark Research Specialist</p>
                                 <p className="text-sm text-gray-700 leading-relaxed mb-6">Rahul specializes in preliminary trademark clearance, brand protection strategy, and IP portfolio management. He helps businesses navigate the procedural steps of trademark registration with legal clarity.</p>
                             </div>
@@ -686,7 +686,7 @@ export default function TrademarkProcessStepsPage() {
                             {/* Dark CTA Box */}
                             <div className="bg-[#0C002B] p-8 rounded-[2.5rem] shadow-2xl border border-white/5 text-white relative overflow-hidden group">
                                 <div className="absolute top-0 right-0 w-40 h-40 bg-[rgb(110,94,147)] rounded-full blur-[100px] opacity-30 group-hover:opacity-50 transition-opacity"></div>
-                                <h3 className="text-xl font-black mb-4 relative z-10 leading-tight">Start Registration</h3>
+                                <h4 className="text-xl font-black mb-4 relative z-10 leading-tight">Start Registration</h4>
                                 <p className="text-sm opacity-70 mb-8 leading-relaxed relative z-10 font-medium">Secure your brand name and logo across all 45 classes with certified trademark experts.</p>
                                 <Link href="/e-filing-trademark" className="block relative z-10">
                                     <button className="w-full bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-3.5 px-4 rounded-xl transition-all shadow-xl text-xs uppercase tracking-wider">
@@ -697,7 +697,7 @@ export default function TrademarkProcessStepsPage() {
 
                             {/* Related Resources */}
                             <div className="bg-gray-50 p-10 rounded-[2.5rem] shadow-sm border border-gray-100">
-                                <h3 className="text-sm font-black text-gray-400 mb-8 uppercase tracking-[0.3em]">Related Resources</h3>
+                                <h4 className="text-sm font-black text-gray-400 mb-8 uppercase tracking-[0.3em]">Related Resources</h4>
                                 <ul className="space-y-6">
                                     <li><Link href="/trademark-search" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faSearch} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Trademark Search</span></Link></li>
                                     <li><Link href="/trademark-class-finder" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faListUl} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Class Guide</span></Link></li>

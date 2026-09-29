@@ -327,42 +327,42 @@ export default function StartupTrademarkRegistrationPage() {
 
                                     {/* SECTION 2: PREREQUISITES */}
                                     <section id="prerequisites" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faFileContract} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Startup Trademark Prerequisites &amp; DPIIT Benefits
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Before filing Form TM-A on the government portal, startup founders must organize foundational legal structures to secure statutory rebates and prevent administrative defects.</p>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     DPIIT Recognition or MSME Udyam
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">To claim the 50% government fee rebate (&#8377;4,500 per class instead of &#8377;9,000), upload a valid DPIIT Startup Recognition Certificate or an MSME Udyam Registration Certificate along with Form TM-A.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     Applicant Ownership Structure
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Decide whether to file under the corporate entity (Private Limited / LLP) or under founder names. For VC-backed entities, filing directly under the incorporated company prevents complicated IP assignment transfers during due diligence.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     Commercial User Date Assessment
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Determine whether the mark is applied on a &ldquo;Proposed to be Used&rdquo; basis or with prior MVP/beta usage. Prior use requires a notarized Rule 25 User Affidavit with dated invoices, app store links, or domain receipts.</p>
                                             </div>
 
                                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                                                <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                                                     <span className="w-2.5 h-2.5 bg-[#6E5E93] rounded-full mr-2.5"></span>
                                                     Brand Representation &amp; Scope
-                                                </h3>
+                                                </h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Decide between a Word Mark (protects the text in any font or styling) or a Device/Logo Mark. Startups typically prioritize the Word Mark first for broad protection, followed by the mobile app icon and company logo.</p>
                                             </div>
                                         </div>
@@ -370,10 +370,10 @@ export default function StartupTrademarkRegistrationPage() {
 
                                     {/* SECTION 3: 7-STEP PROCESS */}
                                     <section id="step-by-step" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faListUl} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             7-Step Trademark Registration Process for Startups
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">The trademark registration roadmap for startups follows a disciplined sequence from pre-filing clearance to final certification. This ensures that the brand holds defensible value in front of customers, partners, and investors.</p>
 
                                         {/* STEP 1 */}
@@ -382,7 +382,7 @@ export default function StartupTrademarkRegistrationPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 1</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Pre-Filing Clearance</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Comprehensive Trademark Clearance &amp; Conflict Search</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Comprehensive Trademark Clearance &amp; Conflict Search</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Before committing capital to marketing, domain acquisition, or app development, conduct an exhaustive availability search on the official Trade Marks Registry database. You can also use our<Link href="/free-ai-powered-trademark-search" className="text-[rgb(110,94,147)] hover:underline font-medium">free AI powered trademark search</Link>to identify phonetic similarities, spelling variations, and visual resemblances that human keyword searches often miss.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">The search must evaluate conflicts under Section 9 (distinctiveness) and Section 11 (relative similarity) across primary and related classes. For step-by-step guidance on public registry records, consult our tutorial on<Link href="/how-to-search-for-existing-trademark" className="text-[rgb(110,94,147)] hover:underline font-medium">how to search for existing trademark</Link>or run queries directly via the<Link href="/trademark-search" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark search tool</Link>.</p>
                                         </div>
@@ -393,7 +393,7 @@ export default function StartupTrademarkRegistrationPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 2</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Strategic Classification</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Multi-Class Mapping for Tech, D2C, and Platforms</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Multi-Class Mapping for Tech, D2C, and Platforms</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Under the Nice Classification system, trademarks are registered across 45 classes (1–34 for goods, 35–45 for services). Startups often make the mistake of filing under only one class, leaving their core commercial activities completely exposed.</p>
                                             <p className="text-gray-700 leading-relaxed mb-4">For instance, a tech or SaaS startup typically requires protection under<strong>Class 9</strong>(downloadable software, mobile applications) and<strong>Class 42</strong>(cloud hosting, software-as-a-service, platform architecture). A direct-to-consumer (D2C) brand often requires<strong>Class 35</strong>(online marketplace and retail services) in addition to specific product classes.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">To determine your startup&apos;s precise classification breakdown, explore our interactive<Link href="/trademark-class-finder" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark class finder</Link>.</p>
@@ -405,7 +405,7 @@ export default function StartupTrademarkRegistrationPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 3</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Documentation &amp; Subsidies</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">DPIIT Recognition Verification &amp; Document Drafting</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">DPIIT Recognition Verification &amp; Document Drafting</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">To capture the 50% statutory fee discount and qualify for fast-track review, compile the necessary verification documents:</p>
                                             <ul className="list-disc list-inside space-y-2 text-gray-700 mb-4">
                                                 <li><strong>DPIIT Certificate / Udyam Certificate:</strong>Official proof of startup recognition for fee concessions.</li>
@@ -421,7 +421,7 @@ export default function StartupTrademarkRegistrationPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 4</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Statutory E-Filing</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Online E-Filing of Form TM-A &amp; TM Symbol Rights</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Online E-Filing of Form TM-A &amp; TM Symbol Rights</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Form TM-A is submitted electronically through the IP India gateway using a Class 3 Digital Signature Certificate (DSC). The government fee is processed instantly at the concessional rate of &#8377;4,500 per class.</p>
                                             <p className="text-gray-700 leading-relaxed mb-4">Upon successful transmission, the portal generates an official Application Number along with a time-stamped filing receipt.</p>
                                             <div className="bg-amber-50 p-4 rounded-xl border border-amber-200">
@@ -435,7 +435,7 @@ export default function StartupTrademarkRegistrationPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 5</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Fast-Track Examination</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Rule 34 Expedited Examination &amp; Objection Response</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Rule 34 Expedited Examination &amp; Objection Response</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Under Rule 34 of the Trade Marks Rules, 2017, recognized startups can request expedited examination by submitting Form TM-M. Instead of waiting 6 to 12 months for the initial examination report, expedited applications are reviewed in a matter of weeks. Learn more about the<Link href="/fast-track-trademark-registration" className="text-[rgb(110,94,147)] hover:underline font-medium">fast-track trademark registration</Link>route.</p>
                                             <p className="text-gray-700 leading-relaxed mb-4">If the examiner raises objections under Section 9 (distinctiveness) or Section 11 (conflict with earlier marks), an Examination Report is issued. The startup has exactly<strong>30 days</strong>to file a comprehensive written response.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">A robust reply highlights phonetic differences, commercial distinctions, and acquired reputation to secure acceptance. Review our detailed guide on<Link href="/how-to-overcome-trademark-objection" className="text-[rgb(110,94,147)] hover:underline font-medium">how to overcome trademark objections</Link>.</p>
@@ -447,7 +447,7 @@ export default function StartupTrademarkRegistrationPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 6</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Journal Advertisement</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Trade Marks Journal Publication &amp; 4-Month Opposition Watch</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Trade Marks Journal Publication &amp; 4-Month Opposition Watch</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">Once the examiner accepts the application, the mark is advertised in the weekly Trade Marks Journal on the official<a href="https://ipindia.gov.in/" target="_blank" rel="noopener noreferrer" className="text-[rgb(110,94,147)] hover:underline font-medium">IP India Portal</a>.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">Publication triggers a statutory<strong>4-month opposition window</strong>under Section 21. Third parties who believe the mark encroaches on their prior rights can file a Notice of Opposition (Form TM-O). If no opposition is filed, or if an opposition is decided in the applicant&apos;s favor, the application proceeds to final registration.</p>
                                         </div>
@@ -458,7 +458,7 @@ export default function StartupTrademarkRegistrationPage() {
                                                 <span className="bg-[#6E5E93] text-white text-xs font-black uppercase px-3 py-1 rounded-full">Step 7</span>
                                                 <span className="text-xs text-gray-500 font-semibold">Stage: Certificate Grant</span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Certificate Issuance, Corporate Assignment &amp; Maintenance</h3>
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">Certificate Issuance, Corporate Assignment &amp; Maintenance</h4>
                                             <p className="text-gray-700 leading-relaxed mb-4">After clearing the opposition period, the Registrar issues an electronically authenticated Trademark Registration Certificate bearing the seal of the Trade Marks Registry.</p>
                                             <p className="text-gray-700 leading-relaxed mb-4">You can now replace the TM symbol with the prestigious registered<strong>&reg;</strong>symbol. If the mark was originally filed in the personal name of a founder, execute a formal IP Assignment Agreement transferring all rights to the corporate entity via Form TM-P to satisfy investor due diligence.</p>
                                             <p className="text-gray-700 leading-relaxed m-0">Trademark protection is valid for 10 years from the date of application and can be preserved indefinitely through decennial<Link href="/how-to-renew-a-registered-trademark-in-india" className="text-[rgb(110,94,147)] hover:underline font-medium">trademark renewals</Link>via Form TM-R.</p>
@@ -467,10 +467,10 @@ export default function StartupTrademarkRegistrationPage() {
 
                                     {/* SECTION 4: TABLE OF STAGES, TIMELINES, & FEES */}
                                     <section id="process-stages-table" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faTable} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Startup Trademark Timelines, Costs &amp; Fast-Track
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Review the structured breakdown of the startup trademark lifecycle, highlighting statutory forms, government filing fees with startup concessions, standard durations, and fast-track expedited options.</p>
 
                                         <div className="overflow-x-auto mb-8 shadow-sm rounded-xl border border-gray-200">
@@ -549,30 +549,30 @@ export default function StartupTrademarkRegistrationPage() {
 
                                     {/* SECTION 5: COMMON PITFALLS */}
                                     <section id="common-pitfalls" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faExclamationTriangle} className="w-8 h-8 mr-3 text-amber-500" />
                                             Common Startup Trademark Pitfalls &amp; Solutions
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Startup founders face unique operational pressures that can lead to strategic mistakes during trademark filing. Avoid these common traps to safeguard your intellectual property and capital.</p>
 
                                         <div className="space-y-6">
                                             <div className="border-l-4 border-red-500 pl-4 py-2">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">1. Filing in the Founder&apos;s Personal Name Without Assignment</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">1. Filing in the Founder&apos;s Personal Name Without Assignment</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Founders often file trademarks personally before company incorporation. However, institutional investors require all IP to reside strictly within the corporate balance sheet. Failing to execute a formal IP Assignment Agreement (Form TM-P) can stall funding rounds and create co-founder equity disputes.</p>
                                             </div>
 
                                             <div className="border-l-4 border-red-500 pl-4 py-2">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">2. Choosing Descriptive or Generic Brand Names</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">2. Choosing Descriptive or Generic Brand Names</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Startups frequently choose literal names to explain what their product does (e.g., &ldquo;FastDeliver&rdquo; or &ldquo;EasyTax&rdquo;). The Trade Marks Registry refuses descriptive marks under Section 9(1)(a). Instead, opt for coined words (e.g., Swiggy, Zerodha) or suggestive marks that build distinctive brand equity.</p>
                                             </div>
 
                                             <div className="border-l-4 border-red-500 pl-4 py-2">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">3. Inadequate Multi-Class Coverage</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">3. Inadequate Multi-Class Coverage</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">Modern digital products rarely fit into a single category. Filing an e-commerce platform only under Class 35 leaves mobile app code (Class 9) and SaaS infrastructure (Class 42) unprotected against copycats. Map your product roadmap across all operational categories.</p>
                                             </div>
 
                                             <div className="border-l-4 border-red-500 pl-4 py-2">
-                                                <h3 className="text-lg font-bold text-gray-900 mb-1">4. Missing the 30-Day Objection Response Window</h3>
+                                                <h4 className="text-lg font-bold text-gray-900 mb-1">4. Missing the 30-Day Objection Response Window</h4>
                                                 <p className="text-sm text-gray-600 leading-relaxed m-0">If the registry issues an Examination Report, founders have strictly 30 days to file a legal reply. Missing this statutory deadline results in the application being marked &ldquo;Abandoned&rdquo;, forfeiting priority filing dates and government fees.</p>
                                             </div>
                                         </div>
@@ -580,10 +580,10 @@ export default function StartupTrademarkRegistrationPage() {
 
                                     {/* SECTION 6: POST-REGISTRATION, FUNDRAISING & VALUATION */}
                                     <section id="post-registration" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faScaleBalanced} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Trademark Rights, Fundraising &amp; Valuation for Startups
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Securing a registered trademark transforms your brand from an unprotected marketing label into an enforceable corporate asset that enhances balance sheet strength and investor confidence.</p>
                                         <p className="mb-6">Under Section 28 of the Trade Marks Act, 1999, registration grants exclusive commercial monopoly rights across all Indian states and Union Territories. Registered owners can enforce civil infringement actions, seek interim court injunctions, claim statutory damages, and initiate criminal anti-counterfeiting proceedings under Sections 103 and 104 of the Act.</p>
                                         <p className="mb-6">During seed, Series A, and growth funding rounds, venture capital firms conduct rigorous IP due diligence. Having a registered trademark or pending application with clean corporate ownership demonstrates regulatory maturity and defensible market moat. Furthermore, registered trademarks can be monetized through licensing, franchise agreements, and commercial assignment.</p>
@@ -591,10 +591,10 @@ export default function StartupTrademarkRegistrationPage() {
 
                                     {/* SECTION 7: CHECKLIST */}
                                     <section id="checklist" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faCheckCircle} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                             Startup Trademark Registration Checklist
-                                        </h2>
+                                        </h3>
                                         <ul className="list-none space-y-4 mb-8">
                                             <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Conduct Deep Clearance Search:</strong>Verify brand name and logo across primary and adjacent Nice classes using AI and registry databases.</span></li>
                                             <li className="flex items-start"><FontAwesomeIcon icon={faCheck} className="w-6 h-6 text-green-500 mt-1 mr-3 shrink-0" /><span><strong>Secure DPIIT / Udyam Certification:</strong>Obtain your official recognition certificate to claim the 50% government fee concession.</span></li>
@@ -608,15 +608,15 @@ export default function StartupTrademarkRegistrationPage() {
 
                                     {/* SECTION 8: FAQS (EXACTLY 8 MATCHING SCHEMA) */}
                                     <section id="faqs" className="scroll-mt-32 pt-12">
-                                        <h2 className="text-xl md:text-2xl lg:text-3xl font-black text-gray-900 mb-8 text-center text-[rgb(110,94,147)]">
+                                        <h3 className="text-xl md:text-2xl lg:text-3xl font-black text-gray-900 mb-8 text-center text-[rgb(110,94,147)]">
                                             Frequently Asked Questions
-                                        </h2>
+                                        </h3>
                                         <div className="space-y-4">
                                             {faqs.map((faq, index) => (
                                                 <div key={index} className="bg-white border border-gray-100 rounded-3xl p-8 shadow-sm hover:shadow-md transition-shadow">
-                                                    <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-4 flex items-start leading-snug">
+                                                    <h4 className="text-lg md:text-xl font-bold text-gray-900 mb-4 flex items-start leading-snug">
                                                         <span className="text-[rgb(110,94,147)] mr-4 font-black text-2xl">Q.</span>{faq.question}
-                                                    </h3>
+                                                    </h4>
                                                     <p className="text-gray-600 pl-10 m-0">{faq.answer}</p>
                                                 </div>
                                             ))}
@@ -625,10 +625,10 @@ export default function StartupTrademarkRegistrationPage() {
 
                                     {/* SECTION 9: FINAL STRATEGIC ADVICE */}
                                     <section id="final-takeaway" className="scroll-mt-32 pt-16">
-                                        <h2 className="text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                        <h3 className="text-2xl font-black text-gray-900 mb-6 flex items-center">
                                             <FontAwesomeIcon icon={faLightbulb} className="w-8 h-8 mr-3 text-yellow-500" />
                                             Strategic Brand Protection for Startup Growth
-                                        </h2>
+                                        </h3>
                                         <p className="mb-6">Registering a trademark for your startup is more than a defensive compliance checklist. It is a foundational business milestone that solidifies your enterprise value, builds competitive moats, and protects investor capital.</p>
                                         <p className="mb-6">By capitalizing on Startup India incentives—including the 50% government fee concession, SIPP facilitation, and Rule 34 fast-track examination—founders can secure institutional-grade brand protection without burning limited runway. Check your brand availability today and file with seasoned IP attorneys.</p>
                                     </section>
@@ -643,9 +643,9 @@ export default function StartupTrademarkRegistrationPage() {
                                                     </span>
                                                 </div>
 
-                                                <h3 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl mb-4">
+                                                <h4 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl mb-4">
                                                     Protect Your Startup Brand Identity Today
-                                                </h3>
+                                                </h4>
 
                                                 <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg sm:leading-8 mb-8">Partner with expert IP attorneys to file Form TM-A with DPIIT 50% fee concessions, comprehensive multi-class mapping, expedited examination, and investor-ready IP structuring.</p>
 
@@ -677,7 +677,7 @@ export default function StartupTrademarkRegistrationPage() {
                             {/* About Author */}
                             <div className="bg-white p-6 rounded-[2.5rem] shadow-sm border border-gray-100 flex flex-col items-center text-center">
                                 <img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-24 h-24 rounded-full mb-4 shadow-md object-cover" />
-                                <h3 className="text-xl font-bold text-gray-900 mb-2">Rahul Roy</h3>
+                                <h4 className="text-xl font-bold text-gray-900 mb-2">Rahul Roy</h4>
                                 <p className="text-sm text-gray-600 mb-4 font-medium">Trademark Research Specialist</p>
                                 <p className="text-sm text-gray-700 leading-relaxed mb-6">Rahul specializes in preliminary trademark clearance, startup brand protection strategy, and IP portfolio structuring for venture-backed enterprises.</p>
                             </div>
@@ -685,7 +685,7 @@ export default function StartupTrademarkRegistrationPage() {
                             {/* Dark CTA Box */}
                             <div className="bg-[#0C002B] p-8 rounded-[2.5rem] shadow-2xl border border-white/5 text-white relative overflow-hidden group">
                                 <div className="absolute top-0 right-0 w-40 h-40 bg-[rgb(110,94,147)] rounded-full blur-[100px] opacity-30 group-hover:opacity-50 transition-opacity"></div>
-                                <h3 className="text-xl font-black mb-4 relative z-10 leading-tight">Fast-Track for Startups</h3>
+                                <h4 className="text-xl font-black mb-4 relative z-10 leading-tight">Fast-Track for Startups</h4>
                                 <p className="text-sm opacity-70 mb-8 leading-relaxed relative z-10 font-medium">Claim your 50% government fee concession and Rule 34 expedited examination with certified trademark counsel.</p>
                                 <Link href="/e-filing-trademark" className="block relative z-10">
                                     <button className="w-full bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-3.5 px-4 rounded-xl transition-all shadow-xl text-xs uppercase tracking-wider">
@@ -696,7 +696,7 @@ export default function StartupTrademarkRegistrationPage() {
 
                             {/* Related Resources */}
                             <div className="bg-gray-50 p-10 rounded-[2.5rem] shadow-sm border border-gray-100">
-                                <h3 className="text-sm font-black text-gray-400 mb-8 uppercase tracking-[0.3em]">Related Resources</h3>
+                                <h4 className="text-sm font-black text-gray-400 mb-8 uppercase tracking-[0.3em]">Related Resources</h4>
                                 <ul className="space-y-6">
                                     <li><Link href="/trademark-search" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faSearch} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Trademark Search</span></Link></li>
                                     <li><Link href="/trademark-class-finder" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faListUl} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Class Guide</span></Link></li>

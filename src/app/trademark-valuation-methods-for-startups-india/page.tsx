@@ -338,25 +338,25 @@ export default function TrademarkValuationStartupsPage() {
 
                                                     {/* SECTION 2: 3 CORE VALUATION METHODS */}
                                                     <section id="valuation-methodologies" className="scroll-mt-32 pt-12">
-                                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                                             <FontAwesomeIcon icon={faScaleBalanced} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                                             The Three Core Valuation Methodologies
-                                                        </h2>
+                                                        </h3>
                                                         <p className="mb-6">Under both Indian and global valuation frameworks (such as IVS 210 and ISO 10668 for monetary brand valuation), three recognized valuation approaches exist:</p>
 
                                                         <div className="space-y-6">
                                                             <div className="border-l-4 border-[#6E5E93] pl-4 py-2 bg-purple-50/40 rounded-r-xl">
-                                                                <h3 className="text-lg font-bold text-gray-900 mb-1">1. The Income Approach (Primary &amp; Most Accurate)</h3>
+                                                                <h4 className="text-lg font-bold text-gray-900 mb-1">1. The Income Approach (Primary &amp; Most Accurate)</h4>
                                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">The Income Approach measures the future economic earnings directly attributable to the trademark over its remaining economic life and discounts those cash flows to Net Present Value (NPV). Sub-methods include: (a)<strong>Relief from Royalty (RfR)</strong>, (b)<strong>Multi-Period Excess Earnings Method (MPEEM)</strong>, and (c)<strong>Incremental Cash Flow / Price Premium Method</strong>.</p>
                                                             </div>
 
                                                             <div className="border-l-4 border-indigo-500 pl-4 py-2 bg-indigo-50/40 rounded-r-xl">
-                                                                <h3 className="text-lg font-bold text-gray-900 mb-1">2. The Market Approach (Comparable Transactions)</h3>
+                                                                <h4 className="text-lg font-bold text-gray-900 mb-1">2. The Market Approach (Comparable Transactions)</h4>
                                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">The Market Approach determines value by analyzing observable market transactions involving the sale, assignment, or licensing of comparable brands within the same industry sector. Key metrics include Enterprise Value to Revenue multiples (EV/Revenue) and Brand Value to EBITDA ratios. However, because proprietary brands are inherently unique, direct comparables can be challenging to locate in early-stage markets.</p>
                                                             </div>
 
                                                             <div className="border-l-4 border-[#6E5E93] pl-4 py-2 bg-purple-50/40 rounded-r-xl">
-                                                                <h3 className="text-lg font-bold text-gray-900 mb-1">3. The Cost Approach (Historical vs Replacement)</h3>
+                                                                <h4 className="text-lg font-bold text-gray-900 mb-1">3. The Cost Approach (Historical vs Replacement)</h4>
                                                                 <p className="text-sm text-gray-700 leading-relaxed m-0">The Cost Approach calculates the total financial expenditure necessary to recreate or replace an identical brand of equivalent utility and recognition. It encompasses: (a)<strong>Historical Cost</strong>(accumulated R&amp;D, trademark registration fees, marketing spend), and (b)<strong>Replacement Cost</strong>(current advertising costs to achieve equal brand awareness). This approach is primarily used as a baseline floor value for early-stage pre-revenue startups.</p>
                                                             </div>
                                                         </div>
@@ -364,18 +364,18 @@ export default function TrademarkValuationStartupsPage() {
 
                                                     {/* SECTION 3: RELIEF FROM ROYALTY DEEP DIVE */}
                                                     <section id="relief-from-royalty" className="scroll-mt-32 pt-12">
-                                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                                             <FontAwesomeIcon icon={faPercent} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                                             Income Approach &amp; Relief from Royalty
-                                                        </h2>
+                                                        </h3>
                                                         <p className="mb-6">The<strong>Relief from Royalty (RfR)</strong>method is universally recognized as the gold standard for trademark valuation by institutional investors, big-four audit firms, and Registered Valuers.</p>
                                                         <p className="mb-6"><strong>Core Premise:</strong>Owning a registered trademark relieves the business from having to pay an ongoing royalty fee to an independent third-party IP licensor. Therefore, the value of the trademark equals the present value of the stream of post-tax royalty payments saved over the asset&apos;s useful economic life.</p>
 
                                                         <div className="bg-purple-50 p-6 rounded-2xl border border-purple-200 my-6 not-prose">
-                                                            <h3 className="text-base font-bold text-[#0C002B] mb-3 flex items-center">
+                                                            <h4 className="text-base font-bold text-[#0C002B] mb-3 flex items-center">
                                                                 <FontAwesomeIcon icon={faCalculator} className="w-4 h-4 mr-2 text-[#6E5E93]" />
                                                                 The Relief from Royalty Mathematical Formula
-                                                            </h3>
+                                                            </h4>
                                                             <div className="bg-white p-4 rounded-xl border border-purple-100 font-mono text-xs sm:text-sm text-gray-800 leading-relaxed mb-4 overflow-x-auto">
                                                                 <strong>Trademark Value (NPV) = &sum; [ (Revenue<sub>t</sub> &times; Royalty Rate &times; (1 - Tax Rate)) / (1 + WACC)<sup>t</sup> ] + Tax Amortization Benefit (TAB)</strong>
                                                             </div>
@@ -391,18 +391,18 @@ export default function TrademarkValuationStartupsPage() {
 
                                                     {/* SECTION 4: BALANCE SHEET CAPITALIZATION (IND AS 38) */}
                                                     <section id="balance-sheet-capitalization" className="scroll-mt-32 pt-12">
-                                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                                             <FontAwesomeIcon icon={faLandmark} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                                             Balance Sheet Capitalization: Ind AS 38
-                                                        </h2>
+                                                        </h3>
                                                         <p className="mb-6">Founders frequently ask:<em>&ldquo;Can we show our ₹50 Crore brand valuation on our audited balance sheet to increase net worth?&rdquo;</em>The answer under Indian accounting frameworks is governed strictly by<strong>Ind AS 38 (Intangible Assets)</strong>and<strong>AS 26</strong>:</p>
 
                                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 not-prose">
                                                             <div className="bg-red-50/60 p-6 rounded-2xl border border-red-200">
-                                                                <h3 className="text-base font-bold text-red-950 mb-2 flex items-center">
+                                                                <h4 className="text-base font-bold text-red-950 mb-2 flex items-center">
                                                                     <FontAwesomeIcon icon={faBan} className="w-4 h-4 mr-2 text-red-600" />
                                                                     Self-Generated Trademarks (Ind AS 38.63)
-                                                                </h3>
+                                                                </h4>
                                                                 <p className="text-xs text-gray-700 leading-relaxed mb-3"><strong>Prohibited from Balance Sheet Capitalization.</strong>Expenditure incurred on internally generating brands, mastheads, publishing titles, and customer lists cannot be distinguished from the ongoing operating cost of developing the business as a whole. All brand-building expenses (advertising, PR, design) must be expensed in the Profit &amp; Loss statement.</p>
                                                                 <div className="bg-red-100/70 p-2.5 rounded-lg text-xs font-bold text-red-800">
                                                                     Accounting Treatment: 100% P&amp;L Expense • ₹0 Asset Entry
@@ -410,10 +410,10 @@ export default function TrademarkValuationStartupsPage() {
                                                             </div>
 
                                                             <div className="bg-emerald-50/60 p-6 rounded-2xl border border-emerald-200">
-                                                                <h3 className="text-base font-bold text-emerald-950 mb-2 flex items-center">
+                                                                <h4 className="text-base font-bold text-emerald-950 mb-2 flex items-center">
                                                                     <FontAwesomeIcon icon={faCheckCircle} className="w-4 h-4 mr-2 text-emerald-600" />
                                                                     Acquired Trademarks (Ind AS 103 / 38)
-                                                                </h3>
+                                                                </h4>
                                                                 <p className="text-xs text-gray-700 leading-relaxed mb-3"><strong>Permitted at Fair Market Value.</strong>When a company acquires a trademark separately or through a corporate takeover/amalgamation under Ind AS 103, the identifiable trademark is capitalized on the balance sheet at fair value determined via an independent Purchase Price Allocation (PPA) study.</p>
                                                                 <div className="bg-emerald-100/70 p-2.5 rounded-lg text-xs font-bold text-emerald-800">
                                                                     Accounting Treatment: Capitalized as Intangible Asset
@@ -422,35 +422,35 @@ export default function TrademarkValuationStartupsPage() {
                                                         </div>
 
                                                         <div className="bg-amber-50/70 p-6 rounded-2xl border border-amber-200 mb-8 not-prose">
-                                                            <h3 className="text-base font-bold text-amber-950 mb-2 flex items-center">
+                                                            <h4 className="text-base font-bold text-amber-950 mb-2 flex items-center">
                                                                 <FontAwesomeIcon icon={faExclamationTriangle} className="w-4 h-4 mr-2 text-amber-800" />
                                                                 Amortization vs Indefinite Useful Life (Ind AS 36 Impairment)
-                                                            </h3>
+                                                            </h4>
                                                             <p className="text-xs sm:text-sm text-amber-900 leading-relaxed m-0">Once an acquired trademark is capitalized, the company must assess whether its useful life is<strong>Finite</strong>(amortized over 10 to 20 years on a straight-line basis) or<strong>Indefinite</strong>(not amortized, but subjected to mandatory annual impairment testing under<strong>Ind AS 36</strong>). If brand revenues decline or consumer sentiment deteriorates, an impairment loss must be written down in the P&amp;L immediately.</p>
                                                         </div>
                                                     </section>
 
                                                     {/* SECTION 5: REGISTERED VALUER MANDATE (SECTION 247) */}
                                                     <section id="registered-valuer-mandate" className="scroll-mt-32 pt-12">
-                                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                                             <FontAwesomeIcon icon={faStamp} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                                             Registered Valuer Mandate: Section 247
-                                                        </h2>
+                                                        </h3>
                                                         <p className="mb-6">In India, brand valuation reports are not merely theoretical pitch-deck slides; they are statutory legal documents governed by strict regulatory oversight:</p>
 
                                                         <div className="space-y-4 my-6 not-prose">
                                                             <div className="p-4 bg-gray-50 rounded-xl border border-gray-200">
-                                                                <h3 className="text-sm font-bold text-gray-900 mb-1">Mandatory IBBI Registration</h3>
+                                                                <h4 className="text-sm font-bold text-gray-900 mb-1">Mandatory IBBI Registration</h4>
                                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">Under<strong>Section 247 of the Companies Act, 2013</strong>, any valuation of stocks, shares, debentures, securities, or intangible assets required under corporate law must be executed by a Registered Valuer registered with the Insolvency and Bankruptcy Board of India (IBBI).</p>
                                                             </div>
 
                                                             <div className="p-4 bg-gray-50 rounded-xl border border-gray-200">
-                                                                <h3 className="text-sm font-bold text-gray-900 mb-1">Income Tax Rule 11UA Compliance</h3>
+                                                                <h4 className="text-sm font-bold text-gray-900 mb-1">Income Tax Rule 11UA Compliance</h4>
                                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">When raising equity funds from domestic or foreign investors at a premium (Section 56(2)(viib) angel tax provisions), fair market value justification requires a valuation report signed by a SEBI-registered Merchant Banker or an IBBI Registered Valuer.</p>
                                                             </div>
 
                                                             <div className="p-4 bg-gray-50 rounded-xl border border-gray-200">
-                                                                <h3 className="text-sm font-bold text-gray-900 mb-1">Foreign Exchange Management Act (FEMA) Guidelines</h3>
+                                                                <h4 className="text-sm font-bold text-gray-900 mb-1">Foreign Exchange Management Act (FEMA) Guidelines</h4>
                                                                 <p className="text-xs text-gray-600 leading-relaxed m-0">Cross-border IP transfers, overseas technology licensing, and foreign direct investment (FDI) into Indian brand holding entities must satisfy RBI pricing guidelines and arm&apos;s length transfer pricing benchmarks under Section 92C of the Income Tax Act.</p>
                                                             </div>
                                                         </div>
@@ -458,10 +458,10 @@ export default function TrademarkValuationStartupsPage() {
 
                                                     {/* SECTION 6: STARTUP M&A DUE DILIGENCE */}
                                                     <section id="startup-ma-due-diligence" className="scroll-mt-32 pt-12">
-                                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                                             <FontAwesomeIcon icon={faHandshake} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                                             Trademark Valuation in Startup M&amp;A
-                                                        </h2>
+                                                        </h3>
                                                         <p className="mb-6">During mergers, corporate acquisitions, and strategic buyouts, intellectual property due diligence forms the bedrock of deal pricing:</p>
 
                                                         <ul className="list-disc pl-6 space-y-3 mb-6">
@@ -473,17 +473,17 @@ export default function TrademarkValuationStartupsPage() {
 
                                                     {/* SECTION 7: STEP BY STEP WORKFLOW */}
                                                     <section id="step-by-step-workflow" className="scroll-mt-32 pt-12">
-                                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                                             <FontAwesomeIcon icon={faListUl} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                                             7-Step Brand Valuation Workflow
-                                                        </h2>
+                                                        </h3>
                                                         <p className="mb-6">Commissioning a defensible brand valuation report involves a structured 7-step quantitative and legal procedure:</p>
 
                                                         <div className="space-y-6 my-8 not-prose">
                                                             <div className="flex items-start bg-purple-50/50 p-5 rounded-2xl border border-purple-100">
                                                                 <span className="w-8 h-8 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">1</span>
                                                                 <div>
-                                                                    <h3 className="text-base font-bold text-gray-900 mb-1">IP Legal Audit &amp; Registry Verification</h3>
+                                                                    <h4 className="text-base font-bold text-gray-900 mb-1">IP Legal Audit &amp; Registry Verification</h4>
                                                                     <p className="text-xs sm:text-sm text-gray-700 leading-relaxed m-0">Validate active status, renewal dates, class specifications, and freedom-to-operate status across Indian Trade Marks Registry portals.</p>
                                                                 </div>
                                                             </div>
@@ -491,7 +491,7 @@ export default function TrademarkValuationStartupsPage() {
                                                             <div className="flex items-start bg-indigo-50/50 p-5 rounded-2xl border border-indigo-100">
                                                                 <span className="w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">2</span>
                                                                 <div>
-                                                                    <h3 className="text-base font-bold text-gray-900 mb-1">Financial &amp; Revenue Projection Modeling</h3>
+                                                                    <h4 className="text-base font-bold text-gray-900 mb-1">Financial &amp; Revenue Projection Modeling</h4>
                                                                     <p className="text-xs sm:text-sm text-gray-700 leading-relaxed m-0">Collate 3-5 years historical P&amp;L statements and build 5-year discrete cash flow forecasts broken down by brand-specific product lines.</p>
                                                                 </div>
                                                             </div>
@@ -499,7 +499,7 @@ export default function TrademarkValuationStartupsPage() {
                                                             <div className="flex items-start bg-purple-50/50 p-5 rounded-2xl border border-purple-100">
                                                                 <span className="w-8 h-8 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">3</span>
                                                                 <div>
-                                                                    <h3 className="text-base font-bold text-gray-900 mb-1">Royalty Rate Benchmarking &amp; Brand Driver Analysis</h3>
+                                                                    <h4 className="text-base font-bold text-gray-900 mb-1">Royalty Rate Benchmarking &amp; Brand Driver Analysis</h4>
                                                                     <p className="text-xs sm:text-sm text-gray-700 leading-relaxed m-0">Conduct empirical benchmarking using global royalty databases (ktMINE, RoyaltyStat) to determine market royalty rates (e.g., 2.5% to 5.0%).</p>
                                                                 </div>
                                                             </div>
@@ -507,7 +507,7 @@ export default function TrademarkValuationStartupsPage() {
                                                             <div className="flex items-start bg-indigo-50/50 p-5 rounded-2xl border border-indigo-100">
                                                                 <span className="w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">4</span>
                                                                 <div>
-                                                                    <h3 className="text-base font-bold text-gray-900 mb-1">Discount Rate (WACC) &amp; Risk Premium Calculation</h3>
+                                                                    <h4 className="text-base font-bold text-gray-900 mb-1">Discount Rate (WACC) &amp; Risk Premium Calculation</h4>
                                                                     <p className="text-xs sm:text-sm text-gray-700 leading-relaxed m-0">Calculate Weighted Average Cost of Capital adding a specific intangible asset risk premium (typically WACC + 2% to 5%) to discount cash flows.</p>
                                                                 </div>
                                                             </div>
@@ -515,7 +515,7 @@ export default function TrademarkValuationStartupsPage() {
                                                             <div className="flex items-start bg-purple-50/50 p-5 rounded-2xl border border-purple-100">
                                                                 <span className="w-8 h-8 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">5</span>
                                                                 <div>
-                                                                    <h3 className="text-base font-bold text-gray-900 mb-1">Tax Amortization Benefit (TAB) Modeling</h3>
+                                                                    <h4 className="text-base font-bold text-gray-900 mb-1">Tax Amortization Benefit (TAB) Modeling</h4>
                                                                     <p className="text-xs sm:text-sm text-gray-700 leading-relaxed m-0">Incorporate present value of tax shields generated under Section 32(1)(ii) depreciation allowances into the net enterprise value.</p>
                                                                 </div>
                                                             </div>
@@ -523,7 +523,7 @@ export default function TrademarkValuationStartupsPage() {
                                                             <div className="flex items-start bg-indigo-50/50 p-5 rounded-2xl border border-indigo-100">
                                                                 <span className="w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">6</span>
                                                                 <div>
-                                                                    <h3 className="text-base font-bold text-gray-900 mb-1">Issuance of Statutory Valuation Certificate</h3>
+                                                                    <h4 className="text-base font-bold text-gray-900 mb-1">Issuance of Statutory Valuation Certificate</h4>
                                                                     <p className="text-xs sm:text-sm text-gray-700 leading-relaxed m-0">IBBI Registered Valuer issues the formal valuation certificate under Section 247 for regulatory filing, board approvals, and audit compliance.</p>
                                                                 </div>
                                                             </div>
@@ -531,7 +531,7 @@ export default function TrademarkValuationStartupsPage() {
                                                             <div className="flex items-start bg-purple-50/50 p-5 rounded-2xl border border-purple-100">
                                                                 <span className="w-8 h-8 rounded-full bg-[#6E5E93] text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">7</span>
                                                                 <div>
-                                                                    <h3 className="text-base font-bold text-gray-900 mb-1">Annual Ind AS 36 Impairment Monitoring</h3>
+                                                                    <h4 className="text-base font-bold text-gray-900 mb-1">Annual Ind AS 36 Impairment Monitoring</h4>
                                                                     <p className="text-xs sm:text-sm text-gray-700 leading-relaxed m-0">Establish annual intangible asset review protocols to ensure balance sheet book values remain aligned with recoverable market amounts.</p>
                                                                 </div>
                                                             </div>
@@ -540,10 +540,10 @@ export default function TrademarkValuationStartupsPage() {
 
                                                     {/* SECTION 8: METHODS COMPARISON MATRIX */}
                                                     <section id="methods-comparison-matrix" className="scroll-mt-32 pt-12">
-                                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                                             <FontAwesomeIcon icon={faTable} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                                             Valuation Approaches Comparison Matrix
-                                                        </h2>
+                                                        </h3>
                                                         <p className="mb-6">Compare the primary valuation approaches, ideal use cases, data requirements, and audit defensibility:</p>
 
                                                         <div className="overflow-x-auto my-8 not-prose">
@@ -593,25 +593,25 @@ export default function TrademarkValuationStartupsPage() {
 
                                                     {/* SECTION 9: TAXATION & DEPRECIATION */}
                                                     <section id="tax-and-depreciation" className="scroll-mt-32 pt-12">
-                                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                                             <FontAwesomeIcon icon={faFileInvoiceDollar} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                                             Tax &amp; Depreciation: Section 32 &amp; 55
-                                                        </h2>
+                                                        </h3>
                                                         <p className="mb-6">Trademark valuation carries profound direct and indirect tax consequences in India:</p>
 
                                                         <div className="space-y-4 my-6 not-prose">
                                                             <div className="border-l-4 border-[#6E5E93] pl-4 py-2 bg-purple-50/30 rounded-r-xl">
-                                                                <h3 className="text-sm font-bold text-gray-900 mb-1">Section 32(1)(ii) — 25% Tax Depreciation</h3>
+                                                                <h4 className="text-sm font-bold text-gray-900 mb-1">Section 32(1)(ii) — 25% Tax Depreciation</h4>
                                                                 <p className="text-xs text-gray-700 leading-relaxed m-0">Acquired trademarks qualify for 25% annual depreciation on Written Down Value (WDV). If the trademark is acquired and put to use for less than 180 days in the financial year, 50% of allowable depreciation (12.5%) is claimed in Year 1.</p>
                                                             </div>
 
                                                             <div className="border-l-4 border-indigo-500 pl-4 py-2 bg-indigo-50/30 rounded-r-xl">
-                                                                <h3 className="text-sm font-bold text-gray-900 mb-1">Section 55(2)(a) — Deemed Nil Cost on Self-Generated Brands</h3>
+                                                                <h4 className="text-sm font-bold text-gray-900 mb-1">Section 55(2)(a) — Deemed Nil Cost on Self-Generated Brands</h4>
                                                                 <p className="text-xs text-gray-700 leading-relaxed m-0">When selling an internally developed trademark, the cost of acquisition is legally deemed to be<strong>NIL</strong>. The full transfer consideration is taxable as capital gains without standard cost indexation benefits.</p>
                                                             </div>
 
                                                             <div className="border-l-4 border-[#6E5E93] pl-4 py-2 bg-purple-50/30 rounded-r-xl">
-                                                                <h3 className="text-sm font-bold text-gray-900 mb-1">GST &amp; TDS Withholding Mandates</h3>
+                                                                <h4 className="text-sm font-bold text-gray-900 mb-1">GST &amp; TDS Withholding Mandates</h4>
                                                                 <p className="text-xs text-gray-700 leading-relaxed m-0">Trademark licensing and assignment attract<strong>18% GST</strong>under SAC Code 997336. Domestic royalty payments require<strong>2% TDS withholding</strong>under Section 194J(1)(ba) for technical/royalty services.</p>
                                                             </div>
                                                         </div>
@@ -619,10 +619,10 @@ export default function TrademarkValuationStartupsPage() {
 
                                                     {/* SECTION 10: VALUATION READINESS CHECKLIST */}
                                                     <section id="valuation-readiness-checklist" className="scroll-mt-32 pt-12">
-                                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                                             <FontAwesomeIcon icon={faBuildingShield} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                                             Valuation Readiness Audit Checklist
-                                                        </h2>
+                                                        </h3>
                                                         <p className="mb-6">Before commissioning a registered brand valuation report for investors or statutory audits, ensure your corporate documentation is fully organized:</p>
 
                                                         <div className="space-y-4 my-6 not-prose">
@@ -647,14 +647,14 @@ export default function TrademarkValuationStartupsPage() {
 
                                                     {/* SECTION 11: FAQS */}
                                                     <section id="faqs" className="scroll-mt-32 pt-12">
-                                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                                             <FontAwesomeIcon icon={faLightbulb} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                                             Frequently Asked Questions
-                                                        </h2>
+                                                        </h3>
                                                         <div className="space-y-4 not-prose">
                                                             {faqs.map((faq, index) => (
                                                                 <div key={index} className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-                                                                    <h3 className="text-base font-bold text-gray-900 mb-2">{faq.question}</h3>
+                                                                    <h4 className="text-base font-bold text-gray-900 mb-2">{faq.question}</h4>
                                                                     <p className="text-xs sm:text-sm text-gray-600 leading-relaxed m-0">{faq.answer}</p>
                                                                 </div>
                                                             ))}
@@ -663,16 +663,16 @@ export default function TrademarkValuationStartupsPage() {
 
                                                     {/* SECTION 12: FINAL TAKEAWAY & CTA */}
                                                     <section id="final-takeaway" className="scroll-mt-32 pt-12">
-                                                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
+                                                        <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-6 flex items-center">
                                                             <FontAwesomeIcon icon={faCoins} className="w-8 h-8 mr-3 text-[rgb(110,94,147)]" />
                                                             Strategic IP Advisory &amp; Valuations
-                                                        </h2>
+                                                        </h3>
                                                         <p className="mb-6">An authoritative, mathematically defensible trademark valuation is one of the most powerful financial instruments a startup founder can possess. Whether you are pitching venture capital funds, preparing for an M&amp;A acquisition, structuring cross-border brand licensing, or fulfilling statutory Ind AS 103 purchase price allocations, partnering with accredited IBBI Registered Valuers and senior IP litigators ensures full audit defensibility and unlocks maximum brand value.</p>
 
                                                         <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#0C002B] via-[#1A0B3B] to-[#2D1254] p-8 sm:p-12 text-white shadow-2xl my-10 not-prose">
                                                             <div className="absolute top-0 right-0 -mt-8 -mr-8 h-48 w-48 rounded-full bg-[#7664A0] blur-3xl opacity-30"></div>
                                                             <div className="relative z-10 text-center max-w-2xl mx-auto">
-                                                                <h3 className="text-2xl sm:text-3xl font-black mb-4 tracking-tight">Commission an IBBI Certified Brand Valuation Report</h3>
+                                                                <h4 className="text-2xl sm:text-3xl font-black mb-4 tracking-tight">Commission an IBBI Certified Brand Valuation Report</h4>
                                                                 <p className="text-sm sm:text-base text-gray-300 mb-8 leading-relaxed">Get certified trademark valuation reports compliant with Section 247 Companies Act, Ind AS 38/103, and Rule 11UA for fundraising, M&amp;A due diligence, and balance sheet capitalization.</p>
                                                                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                                                                     <Link
@@ -702,7 +702,7 @@ export default function TrademarkValuationStartupsPage() {
                             {/* About Author */}
                             <div className="bg-white p-4 sm:p-5 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center">
                                 <img src="/images/author/rahul-roy.jpg" alt="Rahul Roy" className="w-16 h-16 rounded-full mb-2.5 shadow-md object-cover border-2 border-[#6E5E93]/20" />
-                                <h3 className="text-base font-bold text-gray-900 mb-0.5">Rahul Roy</h3>
+                                <h4 className="text-base font-bold text-gray-900 mb-0.5">Rahul Roy</h4>
                                 <p className="text-xs text-[#6E5E93] font-semibold mb-2">Trademark Research Specialist</p>
                                 <p className="text-xs text-gray-600 leading-relaxed m-0">Rahul specializes in intangible asset valuation, Relief from Royalty modeling, Ind AS 38 balance sheet capitalization, and IP due diligence in startup M&amp;A transactions.</p>
                             </div>
@@ -710,7 +710,7 @@ export default function TrademarkValuationStartupsPage() {
                             {/* Dark CTA Box */}
                             <div className="bg-[#0C002B] p-5 rounded-2xl shadow-xl border border-white/5 text-white relative overflow-hidden group">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-[rgb(110,94,147)] rounded-full blur-[70px] opacity-30 group-hover:opacity-50 transition-opacity"></div>
-                                <h3 className="text-base font-black mb-1.5 relative z-10 leading-tight">Value Your Brand Equity</h3>
+                                <h4 className="text-base font-black mb-1.5 relative z-10 leading-tight">Value Your Brand Equity</h4>
                                 <p className="text-xs text-white/80 mb-3.5 leading-relaxed relative z-10 font-normal">Preparing for fundraising or M&amp;A due diligence? Secure an IBBI certified trademark valuation report.</p>
                                 <Link href="/contact-us" className="block relative z-10">
                                     <button className="w-full bg-[rgb(110,94,147)] hover:bg-[rgb(90,74,127)] text-white font-bold py-2.5 px-4 rounded-xl transition-all shadow-md text-xs uppercase tracking-wider">
@@ -721,7 +721,7 @@ export default function TrademarkValuationStartupsPage() {
 
                             {/* Related Resources */}
                             <div className="bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-100">
-                                <h3 className="text-xs font-black text-gray-400 mb-5 uppercase tracking-[0.25em]">Related Resources</h3>
+                                <h4 className="text-xs font-black text-gray-400 mb-5 uppercase tracking-[0.25em]">Related Resources</h4>
                                 <ul className="space-y-6">
                                     <li><Link href="/gst-tds-and-tax-rules-on-trademark-royalty-sale-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faFileInvoiceDollar} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">Tax on TM Royalties</span></Link></li>
                                     <li><Link href="/trademark-assignment-vs-licensing-in-india" className="group flex items-center text-gray-900 hover:text-[rgb(110,94,147)] transition-all"><div className="w-10 h-10 bg-white shadow-sm flex items-center justify-center rounded-xl mr-4 group-hover:bg-[rgb(110,94,147)] group-hover:text-white transition-all"><FontAwesomeIcon icon={faHandshake} className="w-5 h-5" /></div><span className="font-black text-xs uppercase tracking-widest">TM Assignment vs License</span></Link></li>

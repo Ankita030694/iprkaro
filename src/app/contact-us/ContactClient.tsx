@@ -240,9 +240,9 @@ export default function ContactClient() {
                     {item.step}
                   </span>
                 </div>
-                <h3 className="font-nunito text-base sm:text-lg font-bold text-[#0C002B] mb-1.5 leading-snug">
+                <h4 className="font-nunito text-base sm:text-lg font-bold text-[#0C002B] mb-1.5 leading-snug">
                   {item.title}
-                </h3>
+                </h4>
                 <p className="text-slate-600 text-xs leading-relaxed">
                   {item.desc}
                 </p>
@@ -261,9 +261,9 @@ export default function ContactClient() {
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6 md:px-8">
           
           <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-8">
-            <h2 className="font-nunito text-2xl sm:text-3xl md:text-[34px] font-extrabold text-[#0C002B] tracking-tight leading-tight">
+            <h3 className="font-nunito text-2xl sm:text-3xl md:text-[34px] font-extrabold text-[#0C002B] tracking-tight leading-tight">
               Visit Our Head Office
-            </h2>
+            </h3>
             <p className="text-slate-600 text-xs sm:text-sm mt-1.5">
               Our central legal operations and client consultation center in Gurugram (Delhi NCR).
             </p>
@@ -283,9 +283,9 @@ export default function ContactClient() {
                   </span>
                 </div>
 
-                <h3 className="font-nunito text-xl sm:text-2xl font-extrabold text-[#0C002B]">
+                <h4 className="font-nunito text-xl sm:text-2xl font-extrabold text-[#0C002B]">
                   Gurugram (Headquarters)
-                </h3>
+                </h4>
 
                 <div className="space-y-2 text-xs sm:text-sm text-slate-600">
                   <div className="flex items-start gap-2">

@@ -354,21 +354,21 @@ export default function WellKnownTrademarkGuidePage() {
                                         <div className="w-8 h-8 rounded-lg bg-amber-600 text-white flex items-center justify-center font-bold text-sm mb-3">
                                             <FontAwesomeIcon icon={faCrown} className="w-4 h-4" />
                                         </div>
-                                        <h3 className="text-sm font-bold text-gray-900 mb-1">Universal Exclusivity</h3>
+                                        <h4 className="text-sm font-bold text-gray-900 mb-1">Universal Exclusivity</h4>
                                         <p className="text-xs text-gray-600 leading-relaxed">Complete protection across all 45 classes of goods and services, regardless of your primary line of trade.</p>
                                     </div>
                                     <div className="bg-purple-50/60 border border-purple-100 rounded-xl p-4">
                                         <div className="w-8 h-8 rounded-lg bg-[#6E5E93] text-white flex items-center justify-center font-bold text-sm mb-3">
                                             <FontAwesomeIcon icon={faShieldHalved} className="w-4 h-4" />
                                         </div>
-                                        <h3 className="text-sm font-bold text-gray-900 mb-1">Anti-Dilution Shield</h3>
+                                        <h4 className="text-sm font-bold text-gray-900 mb-1">Anti-Dilution Shield</h4>
                                         <p className="text-xs text-gray-600 leading-relaxed">Prevents dilution by blurring (loss of distinctiveness) and tarnishment (use on low-quality, offensive goods).</p>
                                     </div>
                                     <div className="bg-emerald-50/60 border border-emerald-100 rounded-xl p-4">
                                         <div className="w-8 h-8 rounded-lg bg-emerald-600 text-white flex items-center justify-center font-bold text-sm mb-3">
                                             <FontAwesomeIcon icon={faAward} className="w-4 h-4" />
                                         </div>
-                                        <h3 className="text-sm font-bold text-gray-900 mb-1">Official Registry Listing</h3>
+                                        <h4 className="text-sm font-bold text-gray-900 mb-1">Official Registry Listing</h4>
                                         <p className="text-xs text-gray-600 leading-relaxed">Published in the prestigious &ldquo;List of Well-Known Trade Marks&rdquo; maintained on the official IP India registry portal.</p>
                                     </div>
                                 </div>
@@ -376,17 +376,17 @@ export default function WellKnownTrademarkGuidePage() {
 
                             {/* SECTION 2 */}
                             <section id="rule-124-mechanism" className="mb-10 sm:mb-12 scroll-mt-24">
-                                <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">
+                                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">
                                     Rule 124 Framework: Direct Registrar Filing
-                                </h2>
+                                </h3>
                                 <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed mb-4">Before 2017, there was no direct administrative mechanism in India to request well-known recognition. A trademark owner had to wait until an infringer copied their mark, institute an expensive lawsuit in the High Court, or fight a contested opposition before the Intellectual Property Appellate Board (IPAB). Only when a judge explicitly declared the mark as &ldquo;well-known&rdquo; in a final decree could the Registrar record it.</p>
                                 <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed mb-4">The<strong>Trade Marks Rules, 2017</strong>revolutionized this landscape by enacting<strong>Rule 124</strong>. Under this provision, brand owners can bypass protracted litigation and proactively apply directly to the Registrar of Trade Marks for formal determination.</p>
 
                                 <div className="bg-gray-50 border border-gray-200 rounded-2xl p-5 my-6">
-                                    <h3 className="text-base font-bold text-gray-900 mb-3 flex items-center">
+                                    <h4 className="text-base font-bold text-gray-900 mb-3 flex items-center">
                                         <FontAwesomeIcon icon={faBuildingColumns} className="w-4 h-4 text-[#6E5E93] mr-2" />
                                         Core Provisions of Rule 124 (Trade Marks Rules, 2017)
-                                    </h3>
+                                    </h4>
                                     <ul className="space-y-3 text-xs sm:text-sm text-gray-700">
                                         <li className="flex items-start"><span className="font-bold text-[#6E5E93] mr-2">124(1):</span><span>Any person may make an application in<strong>Form TM-M</strong>to the Registrar for determination of a trademark as well-known, accompanied by a detailed statement of case and documentary evidence.</span></li>
                                         <li className="flex items-start"><span className="font-bold text-[#6E5E93] mr-2">124(2):</span><span>The application must be filed strictly through<strong>online e-filing</strong>, accompanied by the prescribed statutory fee of<strong>₹1,00,000</strong>.</span></li>
@@ -399,17 +399,17 @@ export default function WellKnownTrademarkGuidePage() {
 
                             {/* SECTION 3 */}
                             <section id="section-11-criteria" className="mb-10 sm:mb-12 scroll-mt-24">
-                                <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">
+                                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">
                                     Section 11 Criteria for Determination
-                                </h2>
+                                </h3>
                                 <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed mb-4">The Registrar does not grant well-known status casually. The application must satisfy the stringent statutory standards codified under<strong>Section 11(6), 11(7), 11(8), and 11(9)</strong>of the<Link href="/passing-off-vs-trademark-infringement-india" className="text-[#6E5E93] font-semibold underline hover:text-[#5a4c7a]">Trade Marks Act, 1999</Link>.</p>
 
                                 <div className="space-y-4 my-6">
                                     <div className="bg-white border-2 border-purple-100 rounded-xl p-4 shadow-sm">
-                                        <h3 className="text-sm sm:text-base font-bold text-gray-900 mb-2 flex items-center">
+                                        <h4 className="text-sm sm:text-base font-bold text-gray-900 mb-2 flex items-center">
                                             <span className="w-6 h-6 rounded-full bg-[#6E5E93] text-white text-xs flex items-center justify-center mr-2 font-bold">1</span>
                                             Section 11(6): Mandatory Determination Factors
-                                        </h3>
+                                        </h4>
                                         <p className="text-xs sm:text-sm text-gray-600 mb-3">The Registrar must evaluate the following five evidentiary pillars:</p>
                                         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-gray-700">
                                             <li className="bg-gray-50 p-2 rounded-lg border border-gray-200"><strong>Public Knowledge:</strong>Knowledge or recognition of the mark in the relevant section of the public in India.</li>
@@ -421,10 +421,10 @@ export default function WellKnownTrademarkGuidePage() {
                                     </div>
 
                                     <div className="bg-white border-2 border-purple-100 rounded-xl p-4 shadow-sm">
-                                        <h3 className="text-sm sm:text-base font-bold text-gray-900 mb-2 flex items-center">
+                                        <h4 className="text-sm sm:text-base font-bold text-gray-900 mb-2 flex items-center">
                                             <span className="w-6 h-6 rounded-full bg-[#6E5E93] text-white text-xs flex items-center justify-center mr-2 font-bold">2</span>
                                             Section 11(7): Who Constitutes the &ldquo;Relevant Public&rdquo;?
-                                        </h3>
+                                        </h4>
                                         <p className="text-xs sm:text-sm text-gray-600 mb-2">The mark does not need to be known to every citizen in India. Recognition is tested among:</p>
                                         <ul className="list-disc pl-5 text-xs sm:text-sm text-gray-700 space-y-1">
                                             <li>Actual and potential consumers of the specific goods or services.</li>
@@ -434,10 +434,10 @@ export default function WellKnownTrademarkGuidePage() {
                                     </div>
 
                                     <div className="bg-white border-2 border-amber-200 rounded-xl p-4 shadow-sm bg-amber-50/20">
-                                        <h3 className="text-sm sm:text-base font-bold text-gray-900 mb-2 flex items-center">
+                                        <h4 className="text-sm sm:text-base font-bold text-gray-900 mb-2 flex items-center">
                                             <span className="w-6 h-6 rounded-full bg-amber-600 text-white text-xs flex items-center justify-center mr-2 font-bold">3</span>
                                             Section 11(9): What is NOT Required (Global Brand Rule)
-                                        </h3>
+                                        </h4>
                                         <p className="text-xs sm:text-sm text-gray-600 mb-2">To facilitate protection for multinational enterprises and famous foreign marks, Section 11(9) explicitly provides that the Registrar shall<strong>NOT</strong>require:</p>
                                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-gray-700 mt-2">
                                             <div className="p-2 bg-white rounded border border-amber-200">❌ That the mark has been used in India.</div>
@@ -451,9 +451,9 @@ export default function WellKnownTrademarkGuidePage() {
 
                             {/* SECTION 4 */}
                             <section id="cross-class-protection" className="mb-10 sm:mb-12 scroll-mt-24">
-                                <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">
+                                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">
                                     Cross-Class Protection Across All 45 Classes
-                                </h2>
+                                </h3>
                                 <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed mb-4">The hallmark legal superpower of a Well-Known Trademark is<strong>Section 11(2)</strong>of the Trade Marks Act. This section mandates that a trademark application submitted by any third party<strong>shall be refused registration</strong>if it is identical or similar to an earlier well-known trademark, even if the goods or services are completely dissimilar!</p>
 
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
@@ -462,7 +462,7 @@ export default function WellKnownTrademarkGuidePage() {
                                             <FontAwesomeIcon icon={faBan} className="w-3.5 h-3.5" />
                                             <span>Standard Registered Trademark</span>
                                         </div>
-                                        <h3 className="text-sm font-bold text-gray-900 mb-2">Restricted Class Monopoly</h3>
+                                        <h4 className="text-sm font-bold text-gray-900 mb-2">Restricted Class Monopoly</h4>
                                         <p className="text-xs text-gray-600 leading-relaxed mb-2">A standard trademark registered in Class 9 (Software) cannot prevent a competitor from registering the exact same name in Class 33 (Alcohol) or Class 43 (Restaurants) unless the owner proves confusing similarity or passing off in court.</p>
                                         <span className="text-[11px] font-semibold text-gray-500 bg-white px-2 py-1 rounded border border-gray-200 inline-block">
                                             Scope: Only Registered Class(es)
@@ -474,7 +474,7 @@ export default function WellKnownTrademarkGuidePage() {
                                             <FontAwesomeIcon icon={faCrown} className="w-3.5 h-3.5" />
                                             <span>Rule 124 Well-Known Trademark</span>
                                         </div>
-                                        <h3 className="text-sm font-bold text-gray-900 mb-2">Omnipresent 45-Class Monopoly</h3>
+                                        <h4 className="text-sm font-bold text-gray-900 mb-2">Omnipresent 45-Class Monopoly</h4>
                                         <p className="text-xs text-gray-600 leading-relaxed mb-2">Once listed as well-known, the Trade Marks Registry&apos;s automated examination software directly flags and refuses any third-party application across all 45 classes during initial examination, saving millions in litigation costs.</p>
                                         <span className="text-[11px] font-semibold text-[#6E5E93] bg-white px-2 py-1 rounded border border-purple-200 inline-block">
                                             Scope: All 45 Nice Classification Classes
@@ -485,9 +485,9 @@ export default function WellKnownTrademarkGuidePage() {
 
                             {/* SECTION 5 */}
                             <section id="evidentiary-dossier" className="mb-10 sm:mb-12 scroll-mt-24">
-                                <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">
+                                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">
                                     Evidentiary Dossier & Document Checklist
-                                </h2>
+                                </h3>
                                 <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed mb-4">A Rule 124 application succeeds or fails entirely on the quality, structure, and depth of the<strong>Evidentiary Dossier</strong>. Indian trademark examiners thoroughly review every page. A typical dossier spans 500 to 2,000 pages, organized into a searchable, bookmarked PDF.</p>
 
                                 <div className="space-y-3 my-6">
@@ -543,16 +543,16 @@ export default function WellKnownTrademarkGuidePage() {
 
                             {/* SECTION 6 */}
                             <section id="step-by-step" className="mb-10 sm:mb-12 scroll-mt-24">
-                                <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">
+                                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">
                                     7-Step Procedure to Obtain Rule 124 Status
-                                </h2>
+                                </h3>
                                 <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed mb-6">Navigating a Rule 124 determination requires meticulous legal precision. Follow this proven 7-step roadmap:</p>
 
                                 <div className="space-y-6">
                                     <div className="flex items-start space-x-4 bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
                                         <div className="w-9 h-9 rounded-xl bg-[#6E5E93] text-white flex items-center justify-center font-black text-sm flex-shrink-0">1</div>
                                         <div className="flex-1">
-                                            <h3 className="text-sm sm:text-base font-bold text-gray-900 mb-1">Brand Audit & Pre-Filing Clearance</h3>
+                                            <h4 className="text-sm sm:text-base font-bold text-gray-900 mb-1">Brand Audit & Pre-Filing Clearance</h4>
                                             <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">Conduct a thorough evaluation of your brand&apos;s geographical reach, market share, consumer perception, and historical trademark records. Ensure the mark has clean title without pending revocations or title disputes.</p>
                                         </div>
                                     </div>
@@ -560,7 +560,7 @@ export default function WellKnownTrademarkGuidePage() {
                                     <div className="flex items-start space-x-4 bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
                                         <div className="w-9 h-9 rounded-xl bg-[#6E5E93] text-white flex items-center justify-center font-black text-sm flex-shrink-0">2</div>
                                         <div className="flex-1">
-                                            <h3 className="text-sm sm:text-base font-bold text-gray-900 mb-1">Dossier Compilation & CA Certification</h3>
+                                            <h4 className="text-sm sm:text-base font-bold text-gray-900 mb-1">Dossier Compilation & CA Certification</h4>
                                             <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">Gather certified turnover figures, tax records, sample invoices, marketing budgets, and media features. Index and digitally bookmark every exhibit into a structured, high-resolution PDF document under 10MB (or split into sequential volumes).</p>
                                         </div>
                                     </div>
@@ -568,7 +568,7 @@ export default function WellKnownTrademarkGuidePage() {
                                     <div className="flex items-start space-x-4 bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
                                         <div className="w-9 h-9 rounded-xl bg-[#6E5E93] text-white flex items-center justify-center font-black text-sm flex-shrink-0">3</div>
                                         <div className="flex-1">
-                                            <h3 className="text-sm sm:text-base font-bold text-gray-900 mb-1">Drafting Statement of Case & Legal Grounds</h3>
+                                            <h4 className="text-sm sm:text-base font-bold text-gray-900 mb-1">Drafting Statement of Case & Legal Grounds</h4>
                                             <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">Your IP attorney drafts the formal petition under Rule 124(1), meticulously mapping your evidence against every single statutory requirement of Section 11(6) to 11(9) and citing supporting judicial precedents.</p>
                                         </div>
                                     </div>
@@ -576,7 +576,7 @@ export default function WellKnownTrademarkGuidePage() {
                                     <div className="flex items-start space-x-4 bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
                                         <div className="w-9 h-9 rounded-xl bg-[#6E5E93] text-white flex items-center justify-center font-black text-sm flex-shrink-0">4</div>
                                         <div className="flex-1">
-                                            <h3 className="text-sm sm:text-base font-bold text-gray-900 mb-1">Online E-Filing of Form TM-M</h3>
+                                            <h4 className="text-sm sm:text-base font-bold text-gray-900 mb-1">Online E-Filing of Form TM-M</h4>
                                             <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">Submit Form TM-M on the official IP India Trade Marks portal under the &ldquo;Determination of Well-Known Mark&rdquo. Category using a Class 3 Digital Signature Certificate (DSC) and pay the official statutory fee of ₹1,00,000.</p>
                                         </div>
                                     </div>
@@ -584,7 +584,7 @@ export default function WellKnownTrademarkGuidePage() {
                                     <div className="flex items-start space-x-4 bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
                                         <div className="w-9 h-9 rounded-xl bg-[#6E5E93] text-white flex items-center justify-center font-black text-sm flex-shrink-0">5</div>
                                         <div className="flex-1">
-                                            <h3 className="text-sm sm:text-base font-bold text-gray-900 mb-1">Registry Scrutiny & Committee Evaluation</h3>
+                                            <h4 className="text-sm sm:text-base font-bold text-gray-900 mb-1">Registry Scrutiny & Committee Evaluation</h4>
                                             <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">The application is assigned to a high-level Well-Known Trademark Committee or Joint Registrar at the Trade Marks Registry. The committee evaluates the veracity of evidence, reputation claims, and distinctiveness.</p>
                                         </div>
                                     </div>
@@ -592,7 +592,7 @@ export default function WellKnownTrademarkGuidePage() {
                                     <div className="flex items-start space-x-4 bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
                                         <div className="w-9 h-9 rounded-xl bg-[#6E5E93] text-white flex items-center justify-center font-black text-sm flex-shrink-0">6</div>
                                         <div className="flex-1">
-                                            <h3 className="text-sm sm:text-base font-bold text-gray-900 mb-1">Trade Marks Journal Publication (30 Days)</h3>
+                                            <h4 className="text-sm sm:text-base font-bold text-gray-900 mb-1">Trade Marks Journal Publication (30 Days)</h4>
                                             <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">If prima facie satisfied, the Registrar publishes the proposed well-known trademark in the Trade Marks Journal inviting objections or representations from the public within a statutory 30-day window under Rule 124(4).</p>
                                         </div>
                                     </div>
@@ -600,7 +600,7 @@ export default function WellKnownTrademarkGuidePage() {
                                     <div className="flex items-start space-x-4 bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
                                         <div className="w-9 h-9 rounded-xl bg-[#6E5E93] text-white flex items-center justify-center font-black text-sm flex-shrink-0">7</div>
                                         <div className="flex-1">
-                                            <h3 className="text-sm sm:text-base font-bold text-gray-900 mb-1">Hearing, Final Order & Gazette Notification</h3>
+                                            <h4 className="text-sm sm:text-base font-bold text-gray-900 mb-1">Hearing, Final Order & Gazette Notification</h4>
                                             <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">If objections are raised, the Registrar conducts a formal hearing (in person or via<Link href="/trademark-hearing-video-conferencing-procedure-india" className="text-[#6E5E93] underline">video conference</Link>). Upon satisfaction, the Registrar passes a reasoned order and adds the brand to the official List of Well-Known Trade Marks.</p>
                                         </div>
                                     </div>
@@ -609,9 +609,9 @@ export default function WellKnownTrademarkGuidePage() {
 
                             {/* SECTION 7 */}
                             <section id="fee-and-timeline" className="mb-10 sm:mb-12 scroll-mt-24">
-                                <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">
+                                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">
                                     Official Government Fees and Timeline
-                                </h2>
+                                </h3>
                                 <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed mb-4">Applying for well-known status is an enterprise-level legal investment. Unlike standard Form TM-A filings, there are no fee concessions for startups or MSMEs under Rule 124.</p>
 
                                 <div className="overflow-x-auto my-6">
@@ -661,9 +661,9 @@ export default function WellKnownTrademarkGuidePage() {
 
                             {/* SECTION 8 */}
                             <section id="comparison-table" className="mb-10 sm:mb-12 scroll-mt-24">
-                                <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">
+                                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">
                                     Standard Trademark vs Well-Known Trademark
-                                </h2>
+                                </h3>
                                 <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed mb-4">Understanding the strategic difference between an ordinary registered trademark and a Rule 124 Well-Known Trademark is vital for corporate legal planning:</p>
 
                                 <div className="overflow-x-auto my-6">
@@ -713,15 +713,15 @@ export default function WellKnownTrademarkGuidePage() {
 
                             {/* SECTION 9 */}
                             <section id="landmark-judgments" className="mb-10 sm:mb-12 scroll-mt-24">
-                                <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">
+                                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">
                                     Landmark Judicial Precedents & Case Laws
-                                </h2>
+                                </h3>
                                 <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed mb-4">Indian courts have developed rich jurisprudence granting extensive cross-border and cross-class protections to iconic brand names:</p>
 
                                 <div className="space-y-4 my-6">
                                     <div className="bg-purple-50/40 border border-purple-100 rounded-xl p-4">
                                         <div className="flex items-center justify-between mb-2">
-                                            <h3 className="text-sm font-bold text-gray-900 m-0">1. Daimler Benz v. Hybo Hindustan (Delhi HC)</h3>
+                                            <h4 className="text-sm font-bold text-gray-900 m-0">1. Daimler Benz v. Hybo Hindustan (Delhi HC)</h4>
                                             <span className="text-[10px] font-bold bg-[#6E5E93] text-white px-2 py-0.5 rounded">Mercedes-Benz</span>
                                         </div>
                                         <p className="text-xs text-gray-700 leading-relaxed">The defendant used the mark &ldquo;BENZ&rdquo; along with the three-pointed star logo for men&apos;s undergarments. The Delhi High Court held that the name &ldquo;BENZ&rdquo. Possesses world-class reputation and cannot be appropriated by a third party for completely unrelated consumer goods. This establishes the foundation of<strong>trademark tarnishment and dilution</strong>in India.</p>
@@ -729,7 +729,7 @@ export default function WellKnownTrademarkGuidePage() {
 
                                     <div className="bg-purple-50/40 border border-purple-100 rounded-xl p-4">
                                         <div className="flex items-center justify-between mb-2">
-                                            <h3 className="text-sm font-bold text-gray-900 m-0">2. Tata Sons Ltd. v. Manoj Dodia (Delhi HC)</h3>
+                                            <h4 className="text-sm font-bold text-gray-900 m-0">2. Tata Sons Ltd. v. Manoj Dodia (Delhi HC)</h4>
                                             <span className="text-[10px] font-bold bg-[#6E5E93] text-white px-2 py-0.5 rounded">TATA Mark</span>
                                         </div>
                                         <p className="text-xs text-gray-700 leading-relaxed">The High Court laid down comprehensive guidelines on the factors that constitute a well-known trademark under Section 11(6), affirming that the &ldquo;TATA&rdquo. Brand enjoys omni-present cross-class protection against any entity attempting to ride upon its goodwill.</p>
@@ -737,7 +737,7 @@ export default function WellKnownTrademarkGuidePage() {
 
                                     <div className="bg-purple-50/40 border border-purple-100 rounded-xl p-4">
                                         <div className="flex items-center justify-between mb-2">
-                                            <h3 className="text-sm font-bold text-gray-900 m-0">3. Rolex SA v. Alex Jewellery Pvt. Ltd. (Delhi HC)</h3>
+                                            <h4 className="text-sm font-bold text-gray-900 m-0">3. Rolex SA v. Alex Jewellery Pvt. Ltd. (Delhi HC)</h4>
                                             <span className="text-[10px] font-bold bg-[#6E5E93] text-white px-2 py-0.5 rounded">ROLEX</span>
                                         </div>
                                         <p className="text-xs text-gray-700 leading-relaxed">The defendant used the trademark &ldquo;ROLEX&rdquo; for artificial fashion jewellery. The court held that Rolex had acquired widespread fame in luxury watches, and consumers seeing &ldquo;Rolex&rdquo. Jewellery would assume a trade connection. This grants an injunction despite watches and artificial jewellery being different trade channels.</p>
@@ -745,7 +745,7 @@ export default function WellKnownTrademarkGuidePage() {
 
                                     <div className="bg-purple-50/40 border border-purple-100 rounded-xl p-4">
                                         <div className="flex items-center justify-between mb-2">
-                                            <h3 className="text-sm font-bold text-gray-900 m-0">4. N.R. Dongre v. Whirlpool Corporation (Supreme Court)</h3>
+                                            <h4 className="text-sm font-bold text-gray-900 m-0">4. N.R. Dongre v. Whirlpool Corporation (Supreme Court)</h4>
                                             <span className="text-[10px] font-bold bg-[#6E5E93] text-white px-2 py-0.5 rounded">Whirlpool</span>
                                         </div>
                                         <p className="text-xs text-gray-700 leading-relaxed">The Supreme Court recognized the<strong>&ldquo;Doctrine of Trans-Border Reputation&rdquo;</strong>, ruling that a foreign trademark owner can enforce well-known rights in India even without physical product sales in the country, provided the brand&apos;s reputation has spilled over into India through international publications and media.</p>
@@ -755,9 +755,9 @@ export default function WellKnownTrademarkGuidePage() {
 
                             {/* SECTION 10 */}
                             <section id="rejection-pitfalls" className="mb-10 sm:mb-12 scroll-mt-24">
-                                <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">
+                                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">
                                     Common Rejection Pitfalls and Prevention
-                                </h2>
+                                </h3>
                                 <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed mb-4">Due to the ₹1,00,000 non-refundable statutory fee, a Rule 124 application must be prepared with extreme diligence. Avoid these 5 common mistakes that lead to rejection:</p>
 
                                 <div className="space-y-3 my-6">
@@ -805,16 +805,16 @@ export default function WellKnownTrademarkGuidePage() {
 
                             {/* SECTION 11 */}
                             <section id="faqs" className="mb-10 sm:mb-12 scroll-mt-24">
-                                <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6 pb-2 border-b border-gray-200">
+                                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6 pb-2 border-b border-gray-200">
                                     Frequently Asked Questions (Rule 124)
-                                </h2>
+                                </h3>
                                 <div className="space-y-4">
                                     {faqs.map((faq, index) => (
                                         <div key={index} className="bg-white border border-gray-200 rounded-2xl p-4 sm:p-5 shadow-sm hover:border-[#6E5E93]/40 transition-colors">
-                                            <h3 className="text-xs sm:text-sm md:text-base font-bold text-gray-900 mb-2 flex items-start">
+                                            <h4 className="text-xs sm:text-sm md:text-base font-bold text-gray-900 mb-2 flex items-start">
                                                 <span className="text-[#6E5E93] mr-2 font-extrabold flex-shrink-0">Q{index + 1}.</span>
                                                 <span>{faq.question}</span>
-                                            </h3>
+                                            </h4>
                                             <p className="text-xs sm:text-sm text-gray-700 leading-relaxed m-0 pl-6 border-l-2 border-purple-100">{faq.answer}</p>
                                         </div>
                                     ))}
@@ -825,9 +825,9 @@ export default function WellKnownTrademarkGuidePage() {
                             <section id="final-takeaway" className="mb-8 scroll-mt-24">
                                 <div className="bg-gradient-to-br from-[#1A1A24] via-[#2A2A38] to-[#1A1A24] rounded-2xl sm:rounded-3xl p-6 sm:p-8 text-white shadow-xl relative overflow-hidden">
                                     <div className="absolute top-0 right-0 w-64 h-64 bg-[#6E5E93]/20 rounded-full blur-3xl pointer-events-none"></div>
-                                    <h2 className="text-lg sm:text-2xl font-extrabold mb-3 text-white">
+                                    <h3 className="text-lg sm:text-2xl font-extrabold mb-3 text-white">
                                         Strategic Legal Action for Enterprise Brands
-                                    </h2>
+                                    </h3>
                                     <p className="text-xs sm:text-sm text-gray-300 mb-6 leading-relaxed">Acquiring Well-Known Trademark Status under Rule 124 is the ultimate milestone in corporate brand protection. It multiplies your enterprise valuation, eliminates the continuous expense of filing oppositions across 45 classes, and gives your brand unassailable legal monopoly in Indian courts. Partner with the senior trademark attorneys at IPR Karo to build a watertight evidentiary dossier and secure your rightful place on India&apos;s official Well-Known Trademark registry.</p>
 
                                     <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
