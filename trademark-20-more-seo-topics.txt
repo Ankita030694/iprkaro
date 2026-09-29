@@ -163,15 +163,7 @@ Search Intent     : Digital Asset Recovery / Social Media Compliance
 Target Audience   : D2C brands, consumer startups, and creators whose exact brand handle is squatted or impersonated
 Key Legal Hook    : Trademark Registration Certificate as prima facie conclusive evidence under Section 31; navigating Meta, X, and YouTube verified IP reporting portals; dispute arbitration routes
 
-TOPIC 37
---------
-Topic / Title     : Colour Trademark in India: Can You Register a Single Colour or Colour Combination?
-Search Query      : can you trademark a colour in india section 10 rules
-Target URL Slug   : /can-you-trademark-a-colour-in-india-section-10
-Primary Keywords  : single colour trademark registration india, colour combination trademark section 10 trade marks act, louboutin red sole cadbury purple trademark india, pantone shade trademark evidence
-Search Intent     : Premium Brand Protection / Niche IP Strategy
-Target Audience   : Fashion designers, cosmetics companies, paint manufacturers, luxury brands
-Key Legal Hook    : Section 10 limitation as to colour; establishing acquired distinctiveness through exhaustive customer survey evidence; Delhi High Court Christian Louboutin & Cadbury precedents
+
 
 TOPIC 38
 --------

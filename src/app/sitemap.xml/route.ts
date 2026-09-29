@@ -28,6 +28,20 @@ export async function GET() {
 
   // 3. Features and Services
   const staticUrls: string[] = [
+    '/can-you-trademark-a-city-or-geographical-name-in-india',
+    '/comparative-advertising-vs-trademark-disparagement-india',
+    '/reclaim-squatted-social-media-username-trademark-india',
+    '/trademark-valuation-methods-for-startups-india',
+    '/customs-recordation-of-trademark-in-india-ipr-rules',
+    '/john-doe-ashok-kumar-order-trademark-infringement-india',
+    '/trademark-deadlines-extension-of-time-section-131-india',
+    '/series-trademark-application-in-india-section-15',
+    '/difference-between-trade-name-and-trademark-in-india',
+    '/gst-tds-and-tax-rules-on-trademark-royalty-sale-india',
+    '/section-14-trade-marks-act-consent-living-deceased-person',
+    '/deceptive-similarity-trademark-test-in-india',
+    '/how-to-change-trademark-attorney-in-india',
+    '/prior-user-rights-section-34-trade-marks-act-india',
     '/anti-counterfeiting-police-raid-procedure-section-115-india',
     '/competitor-bidding-on-my-trademark-google-ads-india',
     '/trade-dress-protection-under-indian-trademark-law',
