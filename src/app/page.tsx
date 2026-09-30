@@ -152,12 +152,12 @@ export default function Home() {
       {/* Wrapper to prevent dark subpixel bleeding between white sections on mobile */}
       <div className="w-full bg-white flex flex-col">
         <BrandGrid />
+        <FormalAssessmentCTA headingTag="h3" />
         {/* <WhatCanYouTrademark /> */}
         <WhatYouNeedToGetStarted />
         <ResultsGrid />
         <SmarterDecisions headingTag="h3" />
         <WhatWeProtect />
-        <FormalAssessmentCTA headingTag="h3" />
         <ReviewSnippets />
         <BuiltToProtect />
         <FaqSection headingTag="h3" />
