@@ -28,6 +28,19 @@ export async function GET() {
 
   // 3. Features and Services
   const staticUrls: string[] = [
+    '/calculate-damages-account-of-profits-trademark-infringement-india',
+    '/ai-trademark-similarity-search-vs-ipindia-public-search',
+    '/groundless-threats-of-legal-proceedings-section-142-trademark-india',
+    '/protect-brand-trademark-infringement-whatsapp-telegram-india',
+    '/documents-proving-prior-continuous-use-trademark-india',
+    '/ayush-ayurvedic-brand-trademark-registration-india',
+    '/how-to-trademark-annual-event-summit-festival-name-india',
+    '/trademark-registration-for-trust-society-section-8-company-india',
+    '/trademark-registration-for-gaming-studios-esports-video-games-india',
+    '/trademark-renewal-surcharge-grace-period-section-25-3-india',
+    '/trademark-registration-for-edtech-online-courses-bootcamps-india',
+    '/can-you-trademark-podcast-name-audio-series-india',
+    '/trademark-registration-foreign-companies-nri-india',
     '/single-colour-combination-trademark-registration-india',
     '/how-to-file-trademark-opposition-counter-statement-form-tm-o',
     '/joint-trademark-ownership-co-founders-india',
